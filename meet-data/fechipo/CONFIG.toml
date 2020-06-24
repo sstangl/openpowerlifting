@@ -1,0 +1,48 @@
+# Configuration for FECHIPO (Chilean IPF affiliate).
+
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    youth = {name = "Youth", min=8, max=13}
+    youth1 = {name = "Youth 1", min=8, max=9} #Guessing at these
+    youth2 = {name = "Youth 2", min=10, max=11}
+    youth3 = {name = "Youth 3", min=12, max=13}
+    subjunior = {name = "Subjunior",min=0,max=17.5}
+    junior = {name = "Junior",min=0,max=22.5}
+    master1 = {name = "Master 1",min=39.5,max=48.5}
+    master2 = {name = "Master 2",min=49.5,max=58.5}
+    master3 = {name = "Master 3",min=59.5,max=69.5}
+    master4 = {name = "Master 4",min=69.5,max=999}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Junior","Subjunior"]
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Junior","Subjunior"]
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "M"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "F"
+
+[exemptions]

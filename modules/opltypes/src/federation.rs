@@ -317,6 +317,10 @@ pub enum Federation {
     #[strum(to_string = "FECAPOLIF", serialize = "fecapolif")]
     FECAPOLIF,
 
+    /// La Federación Chilena de Powerlifting, IPF.
+    #[strum(to_string = "FECHIPO", serialize = "fechipo")]
+    FECHIPO,
+
     /// Federación Mexicana de Powerlifting A.C., IPF.
     #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
@@ -1354,6 +1358,7 @@ impl Federation {
             Federation::FCA => false,
             Federation::FCST => false,
             Federation::FECAPOLIF => FULLY_TESTED,
+            Federation::FECHIPO => FULLY_TESTED,
             Federation::FEMEPO => FULLY_TESTED,
             Federation::FEPOA => false,
             Federation::FESUPO => FULLY_TESTED,
@@ -1657,6 +1662,7 @@ impl Federation {
             Federation::FCA => Some(Country::USA),
             Federation::FCST => Some(Country::Czechia),
             Federation::FECAPOLIF => Some(Country::Cameroon),
+            Federation::FECHIPO => Some(Country::Chile),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
@@ -1980,6 +1986,7 @@ impl Federation {
             Federation::FCA => None,
             Federation::FCST => Some(Federation::GPC),
             Federation::FECAPOLIF => Some(Federation::IPF),
+            Federation::FECHIPO => Some(Federation::IPF),
             Federation::FEMEPO => Some(Federation::IPF),
             Federation::FEPOA => Some(Federation::GPC),
             Federation::FESUPO => Some(Federation::IPF),
@@ -2348,6 +2355,7 @@ impl Federation {
             Federation::FCA => PointsSystem::Wilks,
             Federation::FCST => PointsSystem::Wilks,
             Federation::FECAPOLIF => Federation::ipf_rules_on(date),
+            Federation::FECHIPO => Federation::ipf_rules_on(date),
             Federation::FEMEPO => Federation::ipf_rules_on(date),
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
