@@ -8,6 +8,7 @@
     open = {name="open", min=0, max=999, sex='M'}
     youth = {name="youth", min=5, max=12, sex='M'}
     hs = {name="hs", min=13, max=19, sex='M'}
+    hsp = {name="hsp", min=13, max=19, sex='M'}
     teen = {name="teen", min=13, max=19, sex='M'}
     jr = {name="jr", min=20, max=23, sex='M'}
     int = {name="int", min=24, max=29, sex='M'}
