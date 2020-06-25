@@ -2,9 +2,12 @@
 name = "search"
 version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+description = "Search engine for all of powerlifting."
 edition = "2018"
+license = "AGPL-3.0-or-later"
 
 [dependencies]
 opldb = { version = "0.1", path = "../db/" }
 opltypes = { version = "0.1", path = "../opltypes/" }
+rustyline = "6.2"
 usernames = { version = "0.1", path = "../usernames/" }
