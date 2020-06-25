@@ -16,8 +16,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     loop {
         match rl.readline(READLINE_PROMPT) {
             Ok(line) => {
-                rl.add_history_entry(line.as_str());
-                println!("{}", line);
+                if !line.is_empty() {
+                    rl.add_history_entry(line.as_str());
+                    println!("{}", line);
+                }
             }
             Err(ReadlineError::Interrupted) | Err(ReadlineError::Eof) => {
                 break;
