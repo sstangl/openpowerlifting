@@ -8,6 +8,8 @@
     open = {name="open", min=0, max=999, sex='M'}
     youth = {name="youth", min=5, max=12, sex='M'}
     hs = {name="hs", min=13, max=19, sex='M'}
+    fs = {name="fs", min=13, max=19, sex='M'}
+    js = {name="js", min=13, max=19, sex='M'}
     hsp = {name="hsp", min=13, max=19, sex='M'}
     teen = {name="teen", min=13, max=19, sex='M'}
     jr = {name="jr", min=20, max=23, sex='M'}
@@ -34,6 +36,8 @@
     wopen = {name="wopen", min=0, max=999, sex='F'}
     wyouth = {name="wyouth", min=5, max=12, sex='F'}
     whs = {name="whs", min=13, max=19, sex='F'}
+    wfs = {name="wfs", min=13, max=19, sex='F'}
+    wjs = {name="wjs", min=13, max=19, sex='F'}
     wteen = {name="wteen", min=13, max=19, sex='F'}
     wjr = {name="wjr", min=20, max=23, sex='F'}
     wint = {name="wint", min=24, max=29, sex='F'}
@@ -58,6 +62,7 @@
     bpopen = {name="bpopen", min=0, max=999, sex='M'}
     bpyouth = {name="bpyouth", min=5, max=12, sex='M'}
     bphs = {name="bphs", min=13, max=19, sex='M'}
+    bphsp = {name="bphsp", min=13, max=19, sex='M'}
     bpteen = {name="bpteen", min=13, max=19, sex='M'}
     bpjr = {name="bpjr", min=20, max=23, sex='M'}
     bpint = {name="bpint", min=24, max=29, sex='M'}
@@ -253,13 +258,13 @@
     divisions = ["wyouth", "wbpyouth"]
 
 [weightclasses.old_youth_M]
-    classes = ["25","34","37","41","46","50","54", "58", "63", "70", "77.5", "85", "93", "103", "113.5", "127", "143", "143+"]
+    classes = ["25","35","40","46","50","54", "58", "63", "70", "77.5", "85", "93", "103", "113.5", "127", "143", "143+"]
     date_range = ["1900-01-01", "2003-12-31"]
     sex = "M"
     divisions = ["youth", "bpyouth", "dlyouth", "sqyouth"]
 
 [weightclasses.old_youth_F]
-    classes = ["25","34","37","41","46", "50", "54", "58", "63", "70", "77.5", "85", "85+"]
+    classes = ["25","35","40","46", "50", "54", "58", "63", "70", "77.5", "85", "85+"]
     date_range = ["1900-01-01", "2003-12-31"]
     sex = "F"
     divisions = ["wyouth", "wbpyouth", "wdlyouth"]
