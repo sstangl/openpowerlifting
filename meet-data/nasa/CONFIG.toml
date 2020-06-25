@@ -36,6 +36,7 @@
     wopen = {name="wopen", min=0, max=999, sex='F'}
     wyouth = {name="wyouth", min=5, max=12, sex='F'}
     whs = {name="whs", min=13, max=19, sex='F'}
+    whsp = {name="whsp", min=13, max=19, sex='F'}
     wfs = {name="wfs", min=13, max=19, sex='F'}
     wjs = {name="wjs", min=13, max=19, sex='F'}
     wteen = {name="wteen", min=13, max=19, sex='F'}
@@ -54,7 +55,7 @@
     wpure = {name="wpure", min=0, max=999, sex='F'}
     wpn = {name="wpn", min=0, max=999, sex='F'}
     wnat = {name="wnat", min=0, max=999, sex='F'}
-    wsmp = {name="wsmp", min=40, max=999, sex='F'} # Submasters Pure?
+    wsmp = {name="wsmp", min=30, max=39, sex='F'} # Submasters Pure?
     wmp = {name="wmp", min=40, max=999, sex='F'} # Masters Pure?
     wso = {name="wso", min=0, max=999, sex='F'} # Special olympics
 
@@ -79,7 +80,7 @@
     bppure = {name="bppure", min=0, max=999, sex='M'}
     bpnat = {name="bpnat", min=0, max=999, sex='M'}
     bppn = {name="bppn", min=0, max=999, sex='M'} #Pure novice
-    bpsmp = {name="bpsmp", min=40, max=999, sex='M'} # Submasters Pure?   
+    bpsmp = {name="bpsmp", min=30, max=39, sex='M'} # Submasters Pure?   
     bpmp = {name="bpmp", min=40, max=999, sex='M'} # Masters Pure?
     bpso = {name="bpso", min=0, max=999, sex='M'} # Special olympics
     bphc = {name="bphc", min=0, max=999, sex='M'} # Handicapped
@@ -159,6 +160,8 @@
     sqnov = {name="sqnov", min=0, max=999, sex='M'}
     sqpf = {name="sqp+f", min=0, max=999, sex='M'}
     sqpure = {name="sqpure", min=0, max=999, sex='M'}
+    sqnat = {name="sqnat", min=0, max=999, sex='M'} # Natural
+    sqpn = {name="sqpn", min=0, max=999, sex='M'} # Natural
     sqsmp = {name="sqsmp", min=40, max=999, sex='M'} # Submasters Pure?   
     sqmp = {name="sqmp", min=40, max=999, sex='M'} # Masters Pure?
 
