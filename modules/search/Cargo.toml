@@ -1,0 +1,10 @@
+[package]
+name = "search"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+opldb = { version = "0.1", path = "../db/" }
+opltypes = { version = "0.1", path = "../opltypes/" }
+usernames = { version = "0.1", path = "../usernames/" }

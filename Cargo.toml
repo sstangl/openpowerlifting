@@ -4,6 +4,7 @@ members = [
     "modules/coefficients",
     "modules/db",
     "modules/opltypes",
+    "modules/search",
     "modules/usernames",
     "server",
 ]
