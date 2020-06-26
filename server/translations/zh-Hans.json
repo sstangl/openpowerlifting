@@ -8,6 +8,7 @@
         "wraps": "绑膝",
         "single": "单层装备",
         "multi": "多层装备",
+        "unlimited": "Unlimited",
         "straps": "助力带",
         "classic": "经典",
         "equipped": "有装备"
@@ -275,7 +276,8 @@
             "wraps": "绑膝",
             "raw_wraps": "无装备+绑膝",
             "single": "单层背心",
-            "multi": "多层背心"
+            "multi": "多层背心",
+        	"unlimited": "Unlimited"
         },
         "weightclass": {
             "all": "所有级别",

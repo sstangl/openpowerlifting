@@ -8,6 +8,7 @@
 		"wraps": "Polvisiteet",
 		"single": "Single",
 		"multi": "Multi",
+		"unlimited": "Unlimited",
 		"straps": "Vetoremmit",
 		"classic": "Classic",
 		"equipped": "Equipped"
@@ -278,7 +279,8 @@
 			"wraps": "Wraps",
 			"raw_wraps": "Raw+Wraps",
 			"single": "Single-ply",
-			"multi": "Multi-ply"
+			"multi": "Multi-ply",
+			"unlimited": "Unlimited"
 		},
 		"weightclass": {
 			"all": "All Classes",

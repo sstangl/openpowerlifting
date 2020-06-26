@@ -46,6 +46,7 @@ pub enum EquipmentFilter {
     RawAndWraps,
     Single,
     Multi,
+    Unlimited,
 }
 
 impl Default for EquipmentFilter {
@@ -64,6 +65,7 @@ impl FromStr for EquipmentFilter {
             "raw-and-wraps" => Ok(EquipmentFilter::RawAndWraps),
             "single" => Ok(EquipmentFilter::Single),
             "multi" => Ok(EquipmentFilter::Multi),
+            "unlimited" => Ok(EquipmentFilter::Unlimited),
             _ => Err(()),
         }
     }

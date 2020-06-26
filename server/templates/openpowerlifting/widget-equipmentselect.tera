@@ -4,4 +4,5 @@
   <option value="raw_wraps"{% if selection.equipment == "RawAndWraps" %} selected{% endif %}>{{strings.selectors.equipment.raw_wraps}}</option>
   <option value="single"{% if selection.equipment == "Single" %} selected{% endif %}>{{strings.selectors.equipment.single}}</option>
   <option value="multi"{% if selection.equipment == "Multi" %} selected{% endif %}>{{strings.selectors.equipment.multi}}</option>
+  <option value="unlimited"{% if selection.equipment == "Unlimited" %} selected{% endif %}>{{strings.selectors.equipment.unlimited}}</option>
 </select>

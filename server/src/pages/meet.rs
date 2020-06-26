@@ -318,7 +318,8 @@ fn order_by_equipment(a: Equipment) -> u32 {
         Equipment::Wraps => 1,
         Equipment::Single => 2,
         Equipment::Multi => 3,
-        Equipment::Straps => 4,
+        Equipment::Unlimited => 4,
+        Equipment::Straps => 5,
     }
 }
 

@@ -8,6 +8,7 @@
         "wraps": "Kniebandagen",
         "single": "Einlagig",
         "multi": "Mehrlagig",
+        "unlimited": "Unlimited",
         "straps": "Zughilfen",
         "classic": "Classic",
         "equipped": "Equipped"
@@ -271,7 +272,8 @@
             "wraps": "Kniebandagen",
             "raw_wraps": "Raw+Bandage",
             "single": "Einlagig",
-            "multi": "Mehrlagig"
+            "multi": "Mehrlagig",
+        	"unlimited": "Unlimited"
         },
         "weightclass": {
             "all": "Alle Gewichtsklassen",

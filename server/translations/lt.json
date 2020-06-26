@@ -8,6 +8,7 @@
         "wraps": "Bintai",
         "single": "Vienasluoknės",
         "multi": "Daugiasluoksnės",
+        "unlimited": "Unlimited",
         "straps": "Raiščiai",
         "classic": "Klasikinė",
         "equipped": "Su Apranga"
@@ -278,7 +279,8 @@
             "wraps": "Bintai",
             "raw_wraps": "Klasikinė+Bintai",
             "single": "Vienasluoksnė",
-            "multi": "Daugiasluoksnė"
+            "multi": "Daugiasluoksnė",
+        	"unlimited": "Unlimited"
         },
         "weightclass": {
             "all": "Visos kategorijos",

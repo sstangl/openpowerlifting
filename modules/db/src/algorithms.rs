@@ -264,6 +264,7 @@ pub fn get_entry_indices_for<'db>(
         EquipmentFilter::RawAndWraps => &cache.log_linear_time.raw_wraps,
         EquipmentFilter::Single => &cache.log_linear_time.single,
         EquipmentFilter::Multi => &cache.log_linear_time.multi,
+        EquipmentFilter::Unlimited => &cache.log_linear_time.unlimited,
     };
     let mut cur = PossiblyOwnedNonSortedNonUnique::Borrowed(equipment);
 
@@ -505,6 +506,7 @@ pub fn get_full_sorted_uniqued<'db>(
             EquipmentFilter::RawAndWraps => &by_sort.raw_wraps,
             EquipmentFilter::Single => &by_sort.single,
             EquipmentFilter::Multi => &by_sort.multi,
+            EquipmentFilter::Unlimited => &by_sort.unlimited,
         };
 
         // Since each lifter is only one sex, sex selections

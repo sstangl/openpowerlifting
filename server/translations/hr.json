@@ -8,6 +8,7 @@
         "wraps": "Zavoji",
         "single": "Single",
         "multi": "Multi",
+        "unlimited": "Unlimited",
         "straps": "Gurtne",
         "classic": "Classic",
         "equipped": "Equipped"
@@ -278,7 +279,8 @@
             "wraps": "Zavoji",
             "raw_wraps": "Raw+Zavoji",
             "single": "Single-ply",
-            "multi": "Multi-ply"
+            "multi": "Multi-ply",
+        	"unlimited": "Unlimited"
         },
         "weightclass": {
             "all": "Sve kategorije",

@@ -254,6 +254,7 @@ pub struct ConstantTimeBy {
     pub raw_wraps: SortedUnique,
     pub single: SortedUnique,
     pub multi: SortedUnique,
+    pub unlimited: SortedUnique,
 }
 
 impl ConstantTimeBy {
@@ -276,6 +277,9 @@ impl ConstantTimeBy {
                 .sort_and_unique_by(ev, mv, compare, belongs),
             single: loglin.single.sort_and_unique_by(ev, mv, compare, belongs),
             multi: loglin.multi.sort_and_unique_by(ev, mv, compare, belongs),
+            unlimited: loglin
+                .unlimited
+                .sort_and_unique_by(ev, mv, compare, belongs),
         }
     }
 }
@@ -341,6 +345,8 @@ pub struct LogLinearTimeCache {
     pub single: NonSortedNonUnique,
     /// List of all non-DQ Multi-ply entry indices by LifterID.
     pub multi: NonSortedNonUnique,
+    /// List of all non-DQ Multi-ply and Unlimited entry indices by LifterID.
+    pub unlimited: NonSortedNonUnique,
 
     /// List of all non-DQ Male entry indices by LifterID.
     pub male: NonSortedNonUnique,
@@ -380,6 +386,9 @@ impl LogLinearTimeCache {
             }),
             single: Self::filter_entries(entries, |e| e.equipment == Equipment::Single),
             multi: Self::filter_entries(entries, |e| e.equipment == Equipment::Multi),
+            unlimited: Self::filter_entries(entries, |e| {
+                e.equipment == Equipment::Multi || e.equipment == Equipment::Unlimited
+            }),
 
             male: Self::filter_entries(entries, |e| e.sex == Sex::M),
             female: Self::filter_entries(entries, |e| e.sex == Sex::F),

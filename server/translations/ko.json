@@ -8,6 +8,7 @@
         "wraps": "니랩",
         "single": "싱글플라이",
         "multi": "멀티플라이",
+        "unlimited": "Unlimited",
         "straps": "스트랩",
         "classic": "클래식",
         "equipped": "장비대회"
@@ -271,7 +272,8 @@
             "wraps": "니랩",
             "raw_wraps": "무장비 + 니랩",
             "single": "싱글플라이",
-            "multi": "멀티플라이"
+            "multi": "멀티플라이",
+        	"unlimited": "Unlimited"
         },
         "weightclass": {
             "all": "전체 체급",

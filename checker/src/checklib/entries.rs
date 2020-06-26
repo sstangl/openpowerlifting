@@ -1386,7 +1386,7 @@ fn check_equipment_year(
     fn is_equipped(e: Option<Equipment>) -> bool {
         e.map_or(false, |eq| match eq {
             Equipment::Raw | Equipment::Wraps | Equipment::Straps => false,
-            Equipment::Single | Equipment::Multi => true,
+            Equipment::Single | Equipment::Multi | Equipment::Unlimited => true,
         })
     }
 

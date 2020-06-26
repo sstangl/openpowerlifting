@@ -8,6 +8,7 @@
 		"wraps": "Bandes",
 		"single": "Pli simple",
 		"multi": "Multi-plis",
+		"unlimited": "Unlimited",
 		"straps": "Sangles",
 		"classic": "Classic",
 		"equipped": "Equipped"
@@ -278,7 +279,8 @@
 			"wraps": "Bandes",
 			"raw_wraps": "Raw+Bandes",
 			"single": "Pli simple",
-			"multi": "Multi-plis"
+			"multi": "Multi-plis",
+			"unlimited": "Unlimited"
 		},
 		"weightclass": {
 			"all": "Toutes Classes",

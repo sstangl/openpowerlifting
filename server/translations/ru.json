@@ -8,6 +8,7 @@
 		"wraps": "Бинты",
 		"single": "Одно",
 		"multi": "Много",
+		"unlimited": "Unlimited",
 		"straps": "Лямки",
 		"classic": "Classic",
 		"equipped": "Equipped"
@@ -278,7 +279,8 @@
 			"wraps": "Бинты",
 			"raw_wraps": "Без+Бинты",
 			"single": "Однослойный",
-			"multi": "Многослойный"
+			"multi": "Многослойный",
+			"unlimited": "Unlimited"
 		},
 		"weightclass": {
 			"all": "Все Категории",

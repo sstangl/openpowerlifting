@@ -177,6 +177,7 @@ pub struct EquipmentTranslations {
     pub wraps: String,
     pub single: String,
     pub multi: String,
+    pub unlimited: String,
     pub straps: String,
 
     /// Terminology for OpenIPF, meaning "Raw".
@@ -483,6 +484,7 @@ pub struct EquipmentSelectorTranslations {
     pub raw_wraps: String,
     pub single: String,
     pub multi: String,
+    pub unlimited: String,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -769,6 +771,7 @@ impl Translations {
             Equipment::Wraps => &self.equipment.wraps,
             Equipment::Single => &self.equipment.single,
             Equipment::Multi => &self.equipment.multi,
+            Equipment::Unlimited => &self.equipment.unlimited,
             Equipment::Straps => &self.equipment.straps,
         }
     }

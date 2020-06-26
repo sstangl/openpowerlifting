@@ -32,7 +32,7 @@ fn get_parameters(sex: Sex, equipment: Equipment, event: Event) -> Parameters {
     // We do our best and just reuse those for Wraps and Multi-ply, respectively.
     let equipment = match equipment {
         Equipment::Raw | Equipment::Wraps | Equipment::Straps => Equipment::Raw,
-        Equipment::Single | Equipment::Multi => Equipment::Single,
+        Equipment::Single | Equipment::Multi | Equipment::Unlimited => Equipment::Single,
     };
 
     // IPF Points are only specified for Sex::M and Sex::F.
