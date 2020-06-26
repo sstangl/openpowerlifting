@@ -106,6 +106,20 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
     type Error = ();
 
     fn from_request(request: &'a Request<'r>) -> request::Outcome<AcceptLanguage, ()> {
+        // Allow an "X-Default-Language" header to override Accept-Language.
+        // This allows the "ru" subdomain to always begin serving in Russian.
+        let keys: Vec<_> = request
+            .headers()
+            .get("X-Default-Language")
+            .take(1)
+            .collect();
+        match keys.len() {
+            1 => {
+                return Outcome::Success(AcceptLanguage(Some(keys[0].to_string())));
+            }
+            _ => (), // Try the "Accept-Language" header below.
+        }
+
         let keys: Vec<_> = request.headers().get("Accept-Language").collect();
         match keys.len() {
             0 => Outcome::Success(AcceptLanguage(None)),
@@ -184,7 +198,7 @@ pub fn make_locale<'db>(
     cookies: &Cookies,
 ) -> Locale<'db> {
     let language = match lang.and_then(|s| s.parse::<Language>().ok()) {
-        // Allow an explicit "lang" GET parameter the "lang" cookie.
+        // Allow an explicit "lang" GET parameter.
         Some(lang) => lang,
         // Otherwise, consult the cookies or defaults.
         None => select_display_language(&languages, &cookies),
