@@ -304,6 +304,36 @@ fn calculate_bests<'db>(
         .map(|e| e.points(points_system, locale.units))
         .max();
 
+    let unlimited_squat: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Unlimited)
+        .map(|e| e.highest_squatkg())
+        .max();
+
+    let unlimited_bench: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Unlimited)
+        .map(|e| e.highest_benchkg())
+        .max();
+
+    let unlimited_deadlift: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.equipment == Equipment::Unlimited)
+        .map(|e| e.highest_deadliftkg())
+        .max();
+
+    let unlimited_total: Option<WeightKg> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Unlimited)
+        .map(|e| e.totalkg)
+        .max();
+
+    let unlimited_points: Option<Points> = non_dq
+        .iter()
+        .filter(|e| e.event.is_full_power() && e.equipment == Equipment::Unlimited)
+        .map(|e| e.points(points_system, locale.units))
+        .max();
+
     let mut rows = Vec::with_capacity(4);
 
     if raw_squat.is_some()
@@ -363,6 +393,22 @@ fn calculate_bests<'db>(
             multi_deadlift,
             multi_total,
             multi_points,
+        ));
+    }
+
+    if unlimited_squat.is_some()
+        || unlimited_bench.is_some()
+        || unlimited_deadlift.is_some()
+        || unlimited_total.is_some()
+    {
+        rows.push(PersonalBestsRow::new(
+            &locale,
+            &locale.strings.equipment.unlimited,
+            unlimited_squat,
+            unlimited_bench,
+            unlimited_deadlift,
+            unlimited_total,
+            unlimited_points,
         ));
     }
 
