@@ -121,6 +121,7 @@
     dlnov = {name="dlnov", min=0, max=999, sex='M'}
     dlpf = {name="dlp+f", min=0, max=999, sex='M'}
     dlpure = {name="dlpure", min=0, max=999, sex='M'}
+    dlpn = {name="dlpn", min=0, max=999, sex='M'} #Pure novice
     dlnat = {name="dlnat", min=0, max=999, sex='M'} # Natural
     dlsmp = {name="dlsmp", min=40, max=999, sex='M'} # Submasters Pure?   
     dlmp = {name="dlmp", min=40, max=999, sex='M'} # Masters Pure?

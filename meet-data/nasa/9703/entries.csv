@@ -76,7 +76,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 113.5,nat,M,1,Jason Macartney,KY,109.13,290,177.5,275,742.5,27,SBD,Single-ply
 127,nat,M,1,Mike Scheffler,TX,120.66,262.5,157.5,262.5,682.5,29,SBD,Single-ply
 103,nat,M,1,Jim Duree,KS,102.51,282.5,135,225,642.5,55,SBD,Single-ply
-143+,nat,M,1,David Oyler,IL,166.6,295,175,295,765,33,SBD,Single-ply
+143+,nat,M,1,David Oyler,IL,166.6,295,175,295,765,,SBD,Single-ply
 143+,nat,M,DQ,Anthony Troutman,KY,157.62,310,-235,,,28,SBD,Single-ply
 70,pure,M,1,Mark Woodworth,TX,69.85,232.5,150,227.5,610,34,SBD,Single-ply
 70,pure,M,2,Mike Ewoldsen,KS,69.63,235,135,240,610,32,SBD,Single-ply
@@ -99,7 +99,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 113.5,pure,M,1,Jason Macartney,KY,109.13,290,177.5,275,742.5,27,SBD,Single-ply
 127,pure,M,1,Mike Scheffler,TX,120.66,262.5,157.5,262.5,682.5,29,SBD,Single-ply
 143+,pure,M,1,Anthony Saunders,MA,164.52,400,227.5,290,917.5,33,SBD,Single-ply
-143+,pure,M,2,David Oyler,IL,166.6,295,175,295,765,33,SBD,Single-ply
+143+,pure,M,2,David Oyler,IL,166.6,295,175,295,765,,SBD,Single-ply
 143+,pure,M,DQ,Anthony Troutman,KY,157.62,310,-235,,,28,SBD,Single-ply
 77.5,pn,M,1,Dominic Lucente,KY,77.25,227.5,132.5,232.5,592.5,21,SBD,Single-ply
 85,pn,M,1,Daniel Lucente,NH,83.37,227.5,150,220,597.5,19,SBD,Single-ply
@@ -126,7 +126,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 127,sm,M,2,Stacy Miller #1,OK,125.42,227.5,140,227.5,595,38,SBD,Single-ply
 143+,sm,M,1,Anthony Saunders,MA,164.52,400,227.5,290,917.5,33,SBD,Single-ply
 143+,sm,M,2,Dick Cordial,OH,161.3,342.5,227.5,287.5,857.5,38,SBD,Single-ply
-143+,sm,M,3,David Oyler,IL,166.6,295,175,295,765,33,SBD,Single-ply
+143+,sm,M,3,David Oyler,IL,166.6,295,175,295,765,,SBD,Single-ply
 63,teen,M,1,Steve Anderson,UT,60.06,172.5,102.5,180,455,18,SBD,Single-ply
 85,teen,M,1,Daniel Lucente,NH,83.37,227.5,150,220,597.5,19,SBD,Single-ply
 85,teen,M,DQ,Chad Frazier,OK,77.93,160,,,,18,SBD,Single-ply
@@ -250,7 +250,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 127,sm,M,1,Eric Doublin,TX,114.17,,220,,220,33,B,Single-ply
 143,sm,M,1,Tom Mano,AZ,131.59,,220,,220,39,B,Single-ply
 143+,sm,M,1,Thomas McKinney #1,TX,162.98,,210,,210,35,B,Single-ply
-143+,sm,M,2,David Oyler,IL,166.6,,165,,165,33,B,Single-ply
+143+,sm,M,2,David Oyler,IL,166.6,,165,,165,,B,Single-ply
 63,teen,M,1,Steve Anderson,UT,60.06,,102.5,,102.5,18,B,Single-ply
 77.5,teen,M,1,Tony Wilson,IL,75.93,,117.5,,117.5,17,B,Single-ply
 93,teen,M,1,Ricky May #2,TX,91.63,,70,,70,13,B,Single-ply
