@@ -17,6 +17,12 @@
     dest: /etc/nginx/conf.d/openpowerlifting.org.conf
   notify: restart nginx
 
+- name: copy ru.openpowerlifting.org.conf
+  template:
+    src: ru.openpowerlifting.org.conf
+    dest: /etc/nginx/conf.d/ru.openpowerlifting.org.conf
+  notify: restart nginx
+
 - name: copy openipf.org.conf
   template:
     src: openipf.org.conf
