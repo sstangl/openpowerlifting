@@ -93,6 +93,7 @@
     mgemapf = {name ="M_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="M",place="G"} #Guest
     mgmem2apf = {name ="M_GMEM_2_APF",min=45,max=49,equipment="Multi-ply",sex="M",place="G"} #Guest
     mramapf = {name="M_RAM_APF", min=0, max=999, equipment="Multi-ply", sex="M"} # Soft Equipment.
+    mmilemapf = {name="M_MILEM_APF", min=0, max=999, equipment="Multi-ply", sex="M"} # Military
 
     forapf = {name ="F_OR_APF",min=0,max=999,equipment="Raw",sex="F"}
     focrapf = {name ="F_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
