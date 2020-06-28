@@ -67,6 +67,7 @@
     pro_masters = {name="Pro Masters", min=40, max=999}
     ama_teen_13_15 = {name="Amateur Teen 13-15", min=13, max=15, tested="Yes"}
     pro_teen_13_15 = {name="Pro Teen 13-15", min=13, max=15}
+    ama_novice = {name="Amateur Novice", min=0, max=999, tested="Yes"}
 
     # Some Russian meets disregarded the rulebook and just used standard divisions.
     # These contain age information, so we might as well interpret them.
