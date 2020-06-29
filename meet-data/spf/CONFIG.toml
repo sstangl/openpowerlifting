@@ -23,6 +23,7 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     grandmaster   = {name = "Grand-Masters", min = 80, max = 999}
 
+	adaptive = {name="Adaptive", min=0, max=999}
     police_fire = {name = "Police and Fire", min = 0, max = 999}
     special_olympics = {name = "Special Olympics", min = 0, max = 999}
     crossfit = {name = "Crossfit", min = 0, max = 999}
