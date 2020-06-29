@@ -8,21 +8,16 @@
         "wraps": "Kniebandagen",
         "single": "Einlagig",
         "multi": "Mehrlagig",
-        "unlimited": "Unlimited",
         "straps": "Zughilfen",
         "classic": "Classic",
-        "equipped": "Equipped"
+        "equipped": "Equipped",
+        "unlimited": "Unbegrenzt"
     },
     "sex": {
         "m": "M",
         "f": "W",
         "mx": "Mx"
     },
-	"page_titles": {
-		"rankings": "Powerlifting Rankings",
-		"records": "Powerlifting Records",
-		"meets": "Powerlifting Competitions"
-	},
     "header": {
         "rankings": "Platzierungen",
         "records": "Rekorde",
@@ -54,12 +49,12 @@
         "deadlift": "Kreuzheben",
         "total": "Gesamt",
         "wilks": "Wilks",
-        "wilks2020": "Wilks2020",
         "mcculloch": "McCulloch",
         "glossbrenner": "Gloss",
         "ipfpoints": "IPF",
         "num_lifters": "Starter",
         "dots": "Dots",
+        "wilks2020": "Wilks2020",
         "goodlift": "GLP"
     },
     "country": {
@@ -97,7 +92,6 @@
         "chile": "Chile",
         "china": "China",
         "colombia": "Kolumbien",
-        "comoros": "Comoros",
         "congo": "Kongo",
         "cookislands": "Cookinseln",
         "costarica": "Costa Rica",
@@ -105,7 +99,6 @@
         "croatia": "Kroatien",
         "cyprus": "Zypern",
         "czechia": "Tschechien",
-        "czechoslovakia": "Czechoslovakia",
         "denmark": "Dänemark",
         "djibouti": "Dschibuti",
         "dominicanrepublic": "Dominikanische Republik",
@@ -115,19 +108,15 @@
         "elsalvador": "\nEl Salvador",
         "england": "England",
         "estonia": "Estland",
-        "eswatini": "Eswatini",
         "ethiopia": "Äthiopien",
         "fiji": "Fidschi",
         "finland": "Finnland",
         "france": "Frankreich",
-        "gabon": "Gabon",
         "georgia": "Georgia",
         "germany": "Deutschland",
         "ghana": "Ghana",
         "greece": "Griechenland",
         "guatemala": "Guatemala",
-        "guinea": "Guinea",
-        "guineabissau": "Guinea-Bissau",
         "guyana": "Guyana",
         "haiti": "Haiti",
         "honduras": "Honduras",
@@ -153,7 +142,6 @@
         "laos": "Laos",
         "latvia": "Lettland",
         "lebanon": "Libanon",
-        "lesotho": "Lesotho",
         "liberia": "Liberien",
         "libya": "Libyen",
         "lithuania": "Litauen",
@@ -167,11 +155,9 @@
         "mauritius": "Mauritius",
         "mexico": "Mexiko",
         "moldova": "Moldau",
-        "monaco": "Monaco",
         "mongolia": "Mongolei",
         "montenegro": "Montenegro",
         "morocco": "Marokko",
-        "myanmar": "Myanmar",
         "namibia": "Namibia",
         "nauru": "Nauru",
         "nepal": "Nepal",
@@ -197,17 +183,14 @@
         "portugal": "Portugal",
         "puertorico": "Puerto Rico",
         "qatar": "Katar",
-        "rhodesia": "Rhodesia",
         "romania": "Rumänien",
         "russia": "Russland",
         "rwanda": "Ruanda",
         "samoa": "Samoa",
         "saudiarabia": "Saudi Arabien",
         "scotland": "Schottland",
-        "senegal": "Senegal",
         "serbia": "Serbien",
         "serbiaandmontenegro": "Serbien und Montenegro",
-        "sierraleone": "Sierra Leone",
         "singapore": "Singapur",
         "slovakia": "Slowakei",
         "slovenia": "Slowenien",
@@ -225,7 +208,6 @@
         "tajikistan": "Tadschikistan",
         "tanzania": "Tansania",
         "thailand": "Thaland",
-        "thegambia": "The Gambia",
         "togo": "Togo",
         "tonga": "Tonga",
         "transnistria": "Transnistrien",
@@ -249,7 +231,6 @@
         "wales": "Wales",
         "wallisandfutuna": "Wallis und Futuna",
         "westgermany": "Bundesrepublik Deutschland",
-        "yemen": "Yemen",
         "yugoslavia": "Jugoslawien",
         "zambia": "Sambia",
         "zimbabwe": "Simbabwe",
@@ -261,7 +242,21 @@
         "europe": "Europa",
         "south_america": "Südamerika",
         "north_america": "Nordamerika",
-        "oceania": "Ozeanien"
+        "oceania": "Ozeanien",
+        "czechoslovakia": "Tschechoslowakei",
+        "comoros": "Komoren",
+        "eswatini": "Eswatini",
+        "gabon": "Gabun",
+        "guinea": "Guinea",
+        "guineabissau": "Guinea-Bissau",
+        "lesotho": "Lesotho",
+        "monaco": "Monaco",
+        "myanmar": "Myanmar",
+        "rhodesia": "Rhodesien",
+        "senegal": "Senegal",
+        "sierraleone": "Sierra Leone",
+        "thegambia": "Gambia",
+        "yemen": "Jemen"
     },
     "buttons": {
         "search": "Suche"
@@ -273,7 +268,7 @@
             "raw_wraps": "Raw+Bandage",
             "single": "Einlagig",
             "multi": "Mehrlagig",
-        	"unlimited": "Unlimited"
+            "unlimited": "Unbegrenzt"
         },
         "weightclass": {
             "all": "Alle Gewichtsklassen",
@@ -298,13 +293,13 @@
             "by_nasa": "Nach NASA Punkten",
             "by_reshel": "Nach Reshel",
             "by_wilks": "Nach Wilks",
-			"by_wilks2020": "By Wilks 2020",
             "by_division": "Nach Kategorie",
             "weight": "Nach Gewicht",
             "points": "Nach Punkten",
             "by_dots": "Nach Dots",
-            "by_goodlift": "By GL Points",
-            "by_schwartzmalone": "Nach Schwartz/Malone"
+            "by_schwartzmalone": "Nach Schwartz/Malone",
+            "by_wilks2020": "Nach Wilks 2020",
+            "by_goodlift": "Nach GL Punkten"
         },
         "year": {
             "all": "Alle Jahre"
@@ -342,7 +337,6 @@
             "all_germany": "Alle deutschen Starter",
             "all_greece": "Alle griechischen Starter",
             "all_iceland": "Alle isländischen Starter",
-            "all_india": "All Indian Lifters",
             "all_ireland": "Alle irischen Starter",
             "all_israel": "Alle israelischen Starter",
             "all_italy": "Alle italienischen Starter",
@@ -392,32 +386,11 @@
             "continents": "Kontinente",
             "countries": "Länder",
             "all_affiliates": "Alle Verbände",
-            "all_internationals": "Alle internationalen Wettkämpfe"
+            "all_internationals": "Alle internationalen Wettkämpfe",
+            "all_india": "Alle indischen Starter"
         },
         "ageclass": {
             "all": "Alle Altersklassen",
-			"youth5_12": "Youth 5-12",
-			"teen13_15": "Teen 13-15",
-			"teen16_17": "Teen 16-17",
-			"teen18_19": "Teen 18-19",
-			"juniors20_23": "Juniors 20-23",
-			"seniors24_34": "Seniors 24-34",
-			"submasters35_39": "Submasters 35-39",
-			"masters40_44": "Masters 40-44",
-			"masters45_49": "Masters 45-49",
-			"masters50_54": "Masters 50-54",
-			"masters55_59": "Masters 55-59",
-			"masters60_64": "Masters 60-64",
-			"masters65_69": "Masters 65-69",
-			"masters70_74": "Masters 70-74",
-			"masters75_79": "Masters 75-79",
-			"masters80p": "Masters 80+",
-			"masters40_49": "Masters 40-49",
-			"masters50_59": "Masters 50-59",
-			"masters60_69": "Masters 60-69",
-			"masters70_79": "Masters 70-79",
-			"label_masters_by_5s": "Masters by 5s",
-			"label_masters_by_10s": "Masters by 10s",
             "ipf_open": "Alle Altersklassen",
             "ipf_subjunior": "Jugend",
             "ipf_junior": "Junioren",
@@ -425,13 +398,35 @@
             "ipf_master1": "AK I",
             "ipf_master2": "AK II",
             "ipf_master3": "AK III",
-            "ipf_master4": "AK IV"
+            "ipf_master4": "AK IV",
+            "youth5_12": "Jugend 5-12",
+            "teen13_15": "Teenager 13-15",
+            "teen16_17": "Teenager 16-17",
+            "teen18_19": "Teenager 18-19",
+            "juniors20_23": "Junioren 20-23",
+            "seniors24_34": "Aktive 24-34",
+            "submasters35_39": "Submaster 35-39",
+            "masters40_44": "Master 40-44",
+            "masters45_49": "Master 45-49",
+            "masters50_54": "Master 50-54",
+            "masters55_59": "Master 55-59",
+            "masters60_64": "Master 60-64",
+            "masters65_69": "Master 65-69",
+            "masters70_74": "Master 70-74",
+            "masters75_79": "Master 75-79",
+            "masters80p": "Master 80+",
+            "masters40_49": "Master 40-49",
+            "masters50_59": "Master 50-59",
+            "masters60_69": "Master 60-69",
+            "masters70_79": "Master 70-79",
+            "label_masters_by_5s": "Master in 5er",
+            "label_masters_by_10s": "Master in 10er"
         }
     },
     "lifter_page": {
         "personal_bests": "Persönliche Bestleistung",
         "competition_results": "Wettkampfsergebnisse",
-		"download_as_csv": "Download as CSV"
+        "download_as_csv": "Als CSV herunterladen"
     },
     "html_header": {
         "description": "Das Ziel des OpenPowerlifting Projekt ist es ein nachhaltiges, korrektes, bequemes, leicht zugängliches und offenes Archiv von Kraftdreikampf Daten aus aller Welt zu schaffen."
@@ -439,5 +434,10 @@
     "labels": {
         "sort": "sortieren",
         "category": "Kategorie"
+    },
+    "page_titles": {
+        "rankings": "Kraftdreikampf Platzierungen",
+        "records": "Kraftdreikampf Rekorde",
+        "meets": "Kraftdreikampf Wettkämpfe"
     }
 }
