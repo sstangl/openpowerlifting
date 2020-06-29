@@ -621,6 +621,28 @@ pub struct FedSelectorTranslations {
 #[derive(Serialize, Deserialize)]
 pub struct AgeClassSelectorTranslations {
     pub all: String,
+    pub youth5_12: String,
+    pub teen13_15: String,
+    pub teen16_17: String,
+    pub teen18_19: String,
+    pub juniors20_23: String,
+    pub seniors24_34: String,
+    pub submasters35_39: String,
+    pub masters40_44: String,
+    pub masters45_49: String,
+    pub masters50_54: String,
+    pub masters55_59: String,
+    pub masters60_64: String,
+    pub masters65_69: String,
+    pub masters70_74: String,
+    pub masters75_79: String,
+    pub masters80p: String,
+    pub masters40_49: String,
+    pub masters50_59: String,
+    pub masters60_69: String,
+    pub masters70_79: String,
+    pub label_masters_by_5s: String,
+    pub label_masters_by_10s: String,
     pub ipf_open: String,
     pub ipf_subjunior: String,
     pub ipf_junior: String,
@@ -635,6 +657,7 @@ pub struct AgeClassSelectorTranslations {
 pub struct LifterPageTranslations {
     pub personal_bests: String,
     pub competition_results: String,
+    pub download_as_csv: String,
 }
 
 #[derive(Serialize, Deserialize)]

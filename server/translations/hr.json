@@ -403,6 +403,28 @@
         },
         "ageclass": {
             "all": "Sva godišta",
+			"youth5_12": "Youth 5-12",
+			"teen13_15": "Teen 13-15",
+			"teen16_17": "Teen 16-17",
+			"teen18_19": "Teen 18-19",
+			"juniors20_23": "Juniors 20-23",
+			"seniors24_34": "Seniors 24-34",
+			"submasters35_39": "Submasters 35-39",
+			"masters40_44": "Masters 40-44",
+			"masters45_49": "Masters 45-49",
+			"masters50_54": "Masters 50-54",
+			"masters55_59": "Masters 55-59",
+			"masters60_64": "Masters 60-64",
+			"masters65_69": "Masters 65-69",
+			"masters70_74": "Masters 70-74",
+			"masters75_79": "Masters 75-79",
+			"masters80p": "Masters 80+",
+			"masters40_49": "Masters 40-49",
+			"masters50_59": "Masters 50-59",
+			"masters60_69": "Masters 60-69",
+			"masters70_79": "Masters 70-79",
+			"label_masters_by_5s": "Masters by 5s",
+			"label_masters_by_10s": "Masters by 10s",
 	    "ipf_open": "Open",
 	    "ipf_subjunior": "Sub-Junior",
 	    "ipf_junior": "Junior",
@@ -415,6 +437,7 @@
     },
     "lifter_page": {
         "personal_bests": "Osobni rekordi",
-        "competition_results": "Rezultati natjecanja"
+        "competition_results": "Rezultati natjecanja",
+		"download_as_csv": "Download as CSV"
     }
 }

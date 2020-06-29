@@ -57,7 +57,7 @@
       </tbody>
     </table>
 
-    <h2>{{strings.lifter_page.competition_results}} <a class="download-lifter-meets" href="/u/{{lifter.username}}/csv"><button style="width: 120px">Download as CSV</button></a></h2>
+    <h2>{{strings.lifter_page.competition_results}} <a class="download-lifter-meets" href="/u/{{lifter.username}}/csv"><button style="width: 120px">{{strings.lifter_page.download_as_csv}}</button></a></h2>
 
     <table id="lifterCompetitionTable">
       <thead><tr>

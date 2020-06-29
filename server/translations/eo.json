@@ -8,10 +8,10 @@
 		"wraps": "Rulaĵoj",
 		"single": "Unua",
 		"multi": "Pluraj",
-		"unlimited": "Unlimited",
+		"unlimited": "Senlima",
 		"straps": "Ligiloj",
-		"classic": "Classic",
-		"equipped": "Equipped"
+		"classic": "Klasika",
+		"equipped": "Ekipaĵa"
 	},
 	"sex": {
 		"m": "Viro",
@@ -66,13 +66,13 @@
 		"num_lifters": "Kiom"
 	},
 	"country": {
-	    "africa": "Africa",
-	    "antarctica": "Antarctica",
-	    "asia": "Asia",
-	    "europe": "Europe",
-	    "south_america": "South America",
-	    "north_america": "North America",
-	    "oceania": "Oceania",
+	    "africa": "Afriko",
+	    "antarctica": "Antarktio",
+	    "asia": "Azio",
+	    "europe": "Eŭropo",
+	    "south_america": "Sudameriko",
+	    "north_america": "Nordameriko",
+	    "oceania": "Oceanio",
 	    "afghanistan": "Afganio",
             "albania": "Albanio",
 	    "algeria": "Alĝerio",
@@ -86,7 +86,7 @@
 	    "azerbaijan": "Azerio",
 	    "bahamas": "Bahamoj",
 	    "bahrain": "Baĥrajno",
-	    "bangladesh": "Bangladesh",
+	    "bangladesh": "Bangladeŝo",
 	    "belarus": "Belorusio",
 	    "belgium": "Belgio",
 	    "belize": "Belizo",
@@ -267,11 +267,11 @@
 	    "zimbabwe": "Zimbabvo"
 	},
 	"buttons": {
-		"search": "Serĉu"
+		"search": "Serĉi"
 	},
 	"labels": {
-		"sort": "Sort",
-		"category": "Category"
+		"sort": "Ordo",
+		"category": "Kategorio"
 	},
 	"selectors": {
 		"equipment": {
@@ -280,15 +280,15 @@
 			"raw_wraps": "Sen aŭ Rulaĵoj",
 			"single": "Unutavolo",
 			"multi": "Plurtavoloj",
-			"unlimited": "Unlimited"
+			"unlimited": "Senlima"
 		},
 		"weightclass": {
 			"all": "Ĉiuj Pezokatoj",
 			"traditional": "Tradiciaj Pezokategorioj",
 			"ipfmen": "IPF por Viroj",
 			"ipfwomen": "IPF por Virinoj",
-			"para_men": "Para Men",
-			"para_women": "Para Women",
+			"para_men": "Para por Viroj",
+			"para_women": "Para por Virinoj",
 			"wp_men": "WP por Viroj",
 			"wp_women": "WP por Virinoj"
 		},
@@ -299,16 +299,16 @@
 			"by_total": "Laŭ Totalo",
 			"by_allometric": "Laŭ Skalado Alometrika",
 			"by_ah": "By AH (Haleczko)",
-			"by_dots": "By Dots",
+			"by_dots": "Laŭ Dots",
 			"by_glossbrenner": "Laŭ Glosbrenero",
-			"by_goodlift": "By GL Points",
-			"by_ipfpoints": "By IPF Points",
+			"by_goodlift": "Laŭ GL Poentoj",
+			"by_ipfpoints": "Laŭ IPF Poentoj",
 			"by_mcculloch": "Laŭ MkKuloko",
-			"by_nasa": "By NASA Points",
-			"by_reshel": "By Reshel",
-			"by_schwartzmalone": "By Schwartz/Malone",
+			"by_nasa": "Laŭ NASA Poentoj",
+			"by_reshel": "Laŭ Reŝel",
+			"by_schwartzmalone": "Laŭ Ŝvarco/Malono",
 			"by_wilks": "Laŭ Vilkso",
-			"by_wilks2020": "By Wilks 2020",
+			"by_wilks2020": "Laŭ Vilkso 2020",
 			"by_division": "Laŭ Divizio",
 			"weight": "Ordoj laŭ Pezoj",
 			"points": "Ordoj laŭ Poentoj"
@@ -403,7 +403,29 @@
 		},
 		"ageclass": {
 			"all": "Ĉiuj Aĝoj",
-			"ipf_open": "Open",
+			"youth5_12": "Junuloj 5-12",
+			"teen13_15": "Teen 13-15",
+			"teen16_17": "Teen 16-17",
+			"teen18_19": "Teen 18-19",
+			"juniors20_23": "Juniors 20-23",
+			"seniors24_34": "Seniors 24-34",
+			"submasters35_39": "Submasters 35-39",
+			"masters40_44": "Masters 40-44",
+			"masters45_49": "Masters 45-49",
+			"masters50_54": "Masters 50-54",
+			"masters55_59": "Masters 55-59",
+			"masters60_64": "Masters 60-64",
+			"masters65_69": "Masters 65-69",
+			"masters70_74": "Masters 70-74",
+			"masters75_79": "Masters 75-79",
+			"masters80p": "Masters 80+",
+			"masters40_49": "Masters 40-49",
+			"masters50_59": "Masters 50-59",
+			"masters60_69": "Masters 60-69",
+			"masters70_79": "Masters 70-79",
+			"label_masters_by_5s": "Masters by 5s",
+			"label_masters_by_10s": "Masters by 10s",
+			"ipf_open": "Aperta",
 			"ipf_subjunior": "Sub-Junior",
 			"ipf_junior": "Junior",
 			"ipf_senior": "Senior",
@@ -415,6 +437,7 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Propraj Rekordoj",
-		"competition_results": "Konkurso-Rezultoj"
+		"competition_results": "Konkurso-Rezultoj",
+		"download_as_csv": "Elŝuti CSV"
 	}
 }
