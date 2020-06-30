@@ -761,6 +761,10 @@ pub enum Federation {
     #[strum(to_string = "PRPA", serialize = "prpa")]
     PRPA,
 
+    /// Puerto Rico Powerlifting, IPF.
+    #[strum(to_string = "PRPL", serialize = "prpl")]
+    PRPL,
+
     /// Polish IPF affiliate.
     #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
     PZKFiTS,
@@ -1469,6 +1473,7 @@ impl Federation {
             Federation::PRIDE => false,
             Federation::ProRaw => false,
             Federation::PRPA => false,
+            Federation::PRPL => FULLY_TESTED,
             Federation::PZKFiTS => FULLY_TESTED,
             Federation::RAW => FULLY_TESTED,
             Federation::RAWCAN => FULLY_TESTED,
@@ -1774,6 +1779,7 @@ impl Federation {
             Federation::PRIDE => Some(Country::USA),
             Federation::ProRaw => Some(Country::Australia),
             Federation::PRPA => Some(Country::USA),
+            Federation::PRPL => Some(Country::PuertoRico),
             Federation::PZKFiTS => Some(Country::Poland),
             Federation::RAW => Some(Country::USA),
             Federation::RAWCAN => Some(Country::Canada),
@@ -2113,6 +2119,7 @@ impl Federation {
             Federation::PRIDE => None,
             Federation::ProRaw => None,
             Federation::PRPA => None,
+            Federation::PRPL => Some(Federation::IPF),
             Federation::PZKFiTS => Some(Federation::IPF),
             Federation::RAW => None,
             Federation::RAWCAN => None,
@@ -2489,6 +2496,7 @@ impl Federation {
             Federation::PRIDE => PointsSystem::Wilks,
             Federation::ProRaw => PointsSystem::Glossbrenner,
             Federation::PRPA => PointsSystem::Wilks,
+            Federation::PRPL => Federation::ipf_rules_on(date),
             Federation::PZKFiTS => Federation::ipf_rules_on(date),
             Federation::RAW => PointsSystem::SchwartzMalone,
             Federation::RAWCAN => PointsSystem::Wilks,

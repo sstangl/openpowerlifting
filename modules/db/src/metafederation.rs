@@ -363,6 +363,10 @@ pub enum MetaFederation {
     #[strum(to_string = "pngpf")]
     PNGPF,
 
+    /// PRPL, but with international results also.
+    #[strum(to_string = "prpl")]
+    PRPL,
+
     /// PZKFiTS, but with international results also.
     #[strum(to_string = "pzkfits")]
     PZKFiTS,
@@ -689,6 +693,7 @@ impl MetaFederation {
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
+            MetaFederation::PRPL => affiliation!(meet, entry, PRPL, IPF, NAPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
