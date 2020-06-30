@@ -235,6 +235,10 @@ pub enum MetaFederation {
     #[strum(to_string = "fipl")]
     FIPL,
 
+    /// FPPR, but with international results also.
+    #[strum(to_string = "fppr")]
+    FPPR,
+
     /// FPR, but with international results also.
     #[strum(to_string = "fpr")]
     FPR,
@@ -362,10 +366,6 @@ pub enum MetaFederation {
     /// PNGPF, but with international results also.
     #[strum(to_string = "pngpf")]
     PNGPF,
-
-    /// PRPL, but with international results also.
-    #[strum(to_string = "prpl")]
-    PRPL,
 
     /// PZKFiTS, but with international results also.
     #[strum(to_string = "pzkfits")]
@@ -624,6 +624,7 @@ impl MetaFederation {
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
             MetaFederation::FFForce => affiliation!(meet, entry, FFForce, IPF, EPF),
             MetaFederation::FIPL => affiliation!(meet, entry, FIPL, IPF, EPF),
+            MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
             MetaFederation::GPCAUS => affiliation!(meet, entry, GPCAUS, GPC),
@@ -693,7 +694,6 @@ impl MetaFederation {
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
-            MetaFederation::PRPL => affiliation!(meet, entry, PRPL, IPF, NAPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
