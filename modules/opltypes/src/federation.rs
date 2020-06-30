@@ -919,7 +919,6 @@ pub enum Federation {
     #[strum(to_string = "UnifiedSA", serialize = "unifiedsa")]
     UnifiedSA,
 
-
     /// United Powerlifting Association.
     #[strum(to_string = "UPA", serialize = "upa")]
     UPA,
@@ -2478,7 +2477,9 @@ impl Federation {
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
             Federation::PA => {
-                if date.year() >= 1997 {
+                if date.year() >= 2020 {
+                    PointsSystem::Wilks2020
+                } else if date.year() >= 1997 {
                     PointsSystem::Wilks
                 } else {
                     PointsSystem::SchwartzMalone
@@ -2568,7 +2569,13 @@ impl Federation {
             Federation::WBC => PointsSystem::Wilks,
             Federation::WDFPF => PointsSystem::Wilks,
             Federation::WelshPA => Federation::ipf_rules_on(date),
-            Federation::WP => PointsSystem::Wilks,
+            Federation::WP => {
+                if date.year() >= 2020 {
+                    PointsSystem::Wilks2020
+                } else {
+                    PointsSystem::Wilks
+                }
+            }
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPAGEO => PointsSystem::Wilks,
             Federation::WPARUS => PointsSystem::Wilks,
