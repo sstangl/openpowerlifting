@@ -551,5 +551,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     maybe_print_elapsed_for("total", program_start);
-    Ok(())
+
+    // Skip dropping owned allocations: takes too long.
+    process::exit(0);
 }
