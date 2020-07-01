@@ -1269,6 +1269,10 @@ pub enum Federation {
     #[strum(to_string = "WRPF-UK", serialize = "wrpf-uk")]
     WRPFUK,
 
+    /// Washington State High School Powerlifting.
+    #[strum(to_string = "WSHSPL", serialize = "wshspl")]
+    WSHSPL,
+
     /// World United Amateur Powerlifting.
     #[strum(to_string = "WUAP", serialize = "wuap")]
     WUAP,
@@ -1593,6 +1597,7 @@ impl Federation {
             Federation::WRPFSRB => false,
             Federation::WRPFSweden => false,
             Federation::WRPFUK => false,
+            Federation::WSHSPL => false,
             Federation::WUAP => false,
             Federation::WUAPAUT => false,
             Federation::WUAPSVK => false,
@@ -1892,6 +1897,7 @@ impl Federation {
             Federation::WRPFSRB => Some(Country::Serbia),
             Federation::WRPFSweden => Some(Country::Sweden),
             Federation::WRPFUK => Some(Country::UK),
+            Federation::WSHSPL => Some(Country::USA),
             Federation::WUAP => None,
             Federation::WUAPAUT => Some(Country::Austria),
             Federation::WUAPSVK => Some(Country::Slovakia),
@@ -2254,6 +2260,7 @@ impl Federation {
             Federation::WRPFSRB => Some(Federation::WRPF),
             Federation::WRPFSweden => Some(Federation::WRPF),
             Federation::WRPFUK => Some(Federation::WRPF),
+            Federation::WSHSPL => None,
             Federation::WUAP => Some(Federation::WUAP),
             Federation::WUAPAUT => Some(Federation::WUAP),
             Federation::WUAPSVK => Some(Federation::WUAP),
@@ -2624,6 +2631,7 @@ impl Federation {
             Federation::WRPFSRB => PointsSystem::Wilks,
             Federation::WRPFSweden => PointsSystem::Wilks,
             Federation::WRPFUK => PointsSystem::Wilks,
+            Federation::WSHSPL => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,
             Federation::WUAPAUT => PointsSystem::Wilks,
             Federation::WUAPSVK => PointsSystem::Wilks,
