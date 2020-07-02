@@ -1,4 +1,6 @@
 # Configuration for the USAPL.
+[options]
+    require_manual_disambiguation = true
 
 [divisions]
     # Official division names are as described in an email from the USAPL
