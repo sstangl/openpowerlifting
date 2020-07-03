@@ -225,8 +225,7 @@ impl Date {
 
         // Get the last year that matters for leap year math.
         let last_maybe_leap_year = match self.month() {
-            1 => self.year() - 1,
-            2 if self.day() < 29 => self.year() - 1,
+            1 | 2 => self.year() - 1,
             _ => self.year(),
         };
 
@@ -467,5 +466,12 @@ mod test {
         // 3 non-leap years and a leap year, but without passing Feb 29.
         let date = "0004-02-28".parse::<Date>().unwrap();
         assert_eq!(date.count_days(), (3 * 365) + 31 + 28);
+
+        // Make sure leap days are not double-counted.
+        let before_leap_day = "0004-02-28".parse::<Date>().unwrap();
+        let on_leap_day = "0004-02-29".parse::<Date>().unwrap();
+        let after_leap_day = "0004-03-01".parse::<Date>().unwrap();
+        assert_eq!(on_leap_day - before_leap_day, 1);
+        assert_eq!(after_leap_day - before_leap_day, 2);
     }
 }
