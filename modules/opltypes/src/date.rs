@@ -5,6 +5,7 @@ use serde::ser::Serialize;
 
 use std::fmt;
 use std::num;
+use std::ops;
 use std::str::FromStr;
 
 use crate::Age;
@@ -31,6 +32,9 @@ impl Date {
     // The year occupies the next 14 bits: ceil(log2(9999)) = 14.
     const YEAR_SHIFT: usize = 5 + 4;
     const YEAR_MASK: u32 = 0x3fff;
+
+    // The array has 13 elements so the month (starting from 1) can be an index.
+    const DAYS_IN_MONTH: [u32; 13] = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     /// Creates a Date object from parts.
     ///
@@ -124,16 +128,13 @@ impl Date {
     /// assert_eq!(date.is_valid(), false);
     /// ```
     pub fn is_valid(self) -> bool {
-        // The array has 13 elements so the month (starting from 1) can be an index.
-        let days_in_month: [u8; 13] = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
         // Ensure that the month is usable as an index into days_in_month (1-indexed).
         let month = self.month();
         if month > 12 {
             return false;
         }
 
-        let mut max_days = u32::from(days_in_month[month as usize]);
+        let mut max_days = Self::DAYS_IN_MONTH[month as usize];
 
         // February is a special case based on leap year logic.
         if month == 2 {
@@ -195,12 +196,71 @@ impl Date {
             Ok(Age::Exact(years - 1))
         }
     }
+
+    /// Counts the number of days for the Date in the Common Era (`0001-01-01`).
+    ///
+    /// This is used to provide a reference point to facilitate date math.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Date;
+    /// let first_day = "0001-01-01".parse::<Date>().unwrap();
+    /// assert_eq!(first_day.count_days(), 1); // The count is inclusive.
+    ///
+    /// let special_day = "1982-06-11".parse::<Date>().unwrap();
+    /// assert_eq!(special_day.count_days(), 723_707);
+    /// ```
+    ///
+    /// The absolute day count is also used to enable [Date] subtraction:
+    /// ```
+    /// # use opltypes::Date;
+    /// let sixth = "2019-04-06".parse::<Date>().unwrap();
+    /// let fifth = "2019-04-05".parse::<Date>().unwrap();
+    /// assert_eq!(sixth - fifth, 1);
+    /// ```
+    pub fn count_days(self) -> u32 {
+        // Count previous years, not yet worrying about leap days.
+        let whole_previous_year_days = 365 * (self.year() - 1);
+
+        // Get the last year that matters for leap year math.
+        let last_maybe_leap_year = match self.month() {
+            1 => self.year() - 1,
+            2 if self.day() < 29 => self.year() - 1,
+            _ => self.year(),
+        };
+
+        // How many leap years have there been?
+        let leap_4_years = last_maybe_leap_year / 4;
+        let leap_100_years = last_maybe_leap_year / 100;
+        let leap_400_years = last_maybe_leap_year / 400;
+
+        // Add one leap day for every 4 leap years;
+        // subtract one leap day for every 100 leap years;
+        // add one back for every 400 leap years.
+        let leap_days = leap_4_years - leap_100_years + leap_400_years;
+
+        // Count the days in the current year.
+        // If there is a leap day, it's already been counted above.
+        let previous_months_iter = Self::DAYS_IN_MONTH[1..(self.month() as usize)].iter();
+        let this_year_days: u32 = previous_months_iter.sum::<u32>() + self.day();
+
+        whole_previous_year_days + leap_days + this_year_days
+    }
 }
 
 impl fmt::Display for Date {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let (y, m, d) = (self.year(), self.month(), self.day());
         write!(f, "{:04}-{:02}-{:02}", y, m, d)
+    }
+}
+
+impl ops::Sub for Date {
+    type Output = i32;
+
+    fn sub(self, other: Date) -> i32 {
+        self.count_days() as i32 - other.count_days() as i32
     }
 }
 
@@ -387,5 +447,25 @@ mod test {
         // A date so far in the future that Age would be >256.
         let date = "3018-11-03".parse::<Date>().unwrap();
         assert!(birthdate.age_on(date).is_err());
+    }
+
+    #[test]
+    fn test_count_days() {
+        // 1 leap and 3 non-leap years: 366+(3*365) days.
+        let date = "0004-12-31".parse::<Date>().unwrap();
+        assert_eq!(date.count_days(), 366 + (3 * 365));
+
+        // 24 leap years ((100 / 4) - (100 / 100)) and 76 non-leap years.
+        let date = "0100-12-31".parse::<Date>().unwrap();
+        assert_eq!(date.count_days(), (24 * 366) + (76 * 365));
+
+        // 97 leap years ((400 / 4) - (400 / 100) + (400 / 400))
+        // and 303 non-leap years.
+        let date = "0400-12-31".parse::<Date>().unwrap();
+        assert_eq!(date.count_days(), (97 * 366) + (303 * 365));
+
+        // 3 non-leap years and a leap year, but without passing Feb 29.
+        let date = "0004-02-28".parse::<Date>().unwrap();
+        assert_eq!(date.count_days(), (3 * 365) + 31 + 28);
     }
 }
