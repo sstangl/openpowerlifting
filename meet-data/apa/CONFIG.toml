@@ -79,6 +79,8 @@
     8902 = ["ExemptWeightClassConsistency"]  # Unreported.
     8904 = ["ExemptWeightClassConsistency"]  # Unreported.
     8905 = ["ExemptWeightClassConsistency"]  # Unreported.
+    0202 = ["ExemptWeightClassConsistency"]  # Non open lifters don't have weightclasses
+    0203 = ["ExemptWeightClassConsistency"]  # Non open lifters don't have weightclasses
     0902 = ["ExemptDivision"]
     1616 = ["ExemptWeightClassConsistency"]
     0905 = ["ExemptWeightClassConsistency"]
