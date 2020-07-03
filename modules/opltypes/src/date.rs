@@ -224,9 +224,10 @@ impl Date {
         let whole_previous_year_days = 365 * (self.year() - 1);
 
         // Get the last year that matters for leap year math.
-        let last_maybe_leap_year = match self.month() {
-            1 | 2 => self.year() - 1,
-            _ => self.year(),
+        let last_maybe_leap_year = if self.month() <= 2 {
+            self.year() - 1
+        } else {
+            self.year()
         };
 
         // How many leap years have there been?
@@ -240,7 +241,7 @@ impl Date {
         let leap_days = leap_4_years - leap_100_years + leap_400_years;
 
         // Count the days in the current year.
-        // If there is a leap day, it's already been counted above.
+        // Any leap days in previous months have been counted above.
         let previous_months_iter = Self::DAYS_IN_MONTH[1..(self.month() as usize)].iter();
         let this_year_days: u32 = previous_months_iter.sum::<u32>() + self.day();
 
