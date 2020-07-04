@@ -420,82 +420,23 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Move out of atomics.
     let mut error_count = error_count.load(Ordering::SeqCst);
-    let warning_count = warning_count.load(Ordering::SeqCst);
+    let mut warning_count = warning_count.load(Ordering::SeqCst);
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
 
-    // Check for username errors.
-    // FIXME: This adds a whole second to the checker time.
-    // FIXME: Lifetimes are really making this harder than it should be.
-    // FIXME: Otherwise we could just do the checking in create_liftermap().
+    // Group entries by lifter.
     let timing = get_instant_if(args.debug_timing);
     let liftermap = meetdata.create_liftermap();
-    for lifter_indices in liftermap.values() {
-        let name = &meetdata.get_entry(lifter_indices[0]).name;
 
-        // Check for sex errors.
-        //
-        // Skip over users with lastname-only or initial-plus-lastname.
-        if name.contains(' ')
-            && name.chars().skip(1).take(1).collect::<Vec<char>>() != ['.']
-        {
-            let expected_sex = meetdata.get_entry(lifter_indices[0]).sex;
-            for index in lifter_indices.iter().skip(1) {
-                let sex = meetdata.get_entry(*index).sex;
-                if sex != expected_sex {
-                    let mut suppress_error = false;
+    // Check for consistency errors for individual lifters.
+    for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata) {
+        let (errors, warnings) = report.count_messages();
+        error_count += errors;
+        warning_count += warnings;
 
-                    let username = &meetdata.get_entry(*index).username;
-                    if let Some(data) = lifterdata.get(username) {
-                        if data.exempt_sex {
-                            suppress_error = true;
-                        }
-                    }
-
-                    if !suppress_error {
-                        let url =
-                            format!("https://www.openpowerlifting.org/u/{}", username);
-                        let msg = format!("Sex conflict for '{}' - {}", name, url);
-                        println!(" {}", msg.bold().red());
-                        error_count += 1;
-                    }
-                    break;
-                }
-            }
-        }
-
-        let mut japanesename = &meetdata.get_entry(lifter_indices[0]).japanesename;
-
-        for index in lifter_indices.iter().skip(1) {
-            let entry = &meetdata.get_entry(*index);
-
-            // The Name field must exactly match for the same username.
-            if name != &entry.name {
-                let msg = format!(
-                    "Conflict for '{}': '{}' vs '{}'",
-                    entry.username, name, entry.name
-                );
-                println!(" {}", msg.bold().red());
-                error_count += 1;
-            }
-
-            // If this is the first time seeing a JapaneseName, remember it.
-            if japanesename.is_none() && entry.japanesename.is_some() {
-                japanesename = &entry.japanesename;
-            }
-
-            // Otherwise, they should match.
-            if let Some(jp_name) = japanesename {
-                if let Some(entry_jp_name) = &entry.japanesename {
-                    if jp_name != entry_jp_name {
-                        let msg = format!(
-                            "Conflict for {}: '{}' vs '{}'",
-                            entry.username, jp_name, entry_jp_name
-                        );
-                        println!(" {}", msg.bold().red());
-                        error_count += 1;
-                    }
-                }
-            }
+        if report.has_messages() {
+            let stdout = io::stdout();
+            let mut handle = stdout.lock();
+            write_report(&mut handle, report);
         }
     }
     maybe_print_elapsed_for("liftermap", timing);

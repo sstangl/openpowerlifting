@@ -122,9 +122,9 @@ pub struct Entry {
     pub name: String,
     pub username: String,
     pub cyrillicname: Option<String>,
+    pub greekname: Option<String>,
     pub japanesename: Option<String>,
     pub koreanname: Option<String>,
-    pub greekname: Option<String>,
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -144,6 +144,7 @@ pub struct Entry {
     // do not have the ability to look up the meet date.
     pub birthyearclass: BirthYearClass,
     pub birthdate: Option<Date>,
+    pub entrydate: Option<Date>,
 
     pub weightclasskg: WeightClassKg,
     pub bodyweightkg: WeightKg,
@@ -2236,7 +2237,7 @@ where
             entry.country = check_column_country(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::EntryDate) {
-            check_column_entrydate(&record[idx], line, &mut report);
+            entry.entrydate = check_column_entrydate(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::State) {
             let c = entry.country;

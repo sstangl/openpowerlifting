@@ -2,6 +2,7 @@
 //! and applying data validation checks.
 
 pub mod config;
+pub mod consistency;
 pub mod entries;
 pub mod lifterdata;
 pub mod meet;

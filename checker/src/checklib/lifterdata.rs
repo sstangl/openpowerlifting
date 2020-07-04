@@ -43,6 +43,9 @@ pub struct LifterData {
     /// This is used to suppress errors where one lifter is marked as two
     /// conflicting sexes, in cases where we know that the data is correct.
     pub exempt_sex: bool,
+
+    /// True iff bodyweight consistency checks for this username are disabled.
+    pub exempt_bodyweight: bool,
 }
 
 /// Helper function to look for common whitespace errors.
@@ -216,6 +219,58 @@ fn check_sex_exemptions(
             None => {
                 let mut data = LifterData::default();
                 data.exempt_sex = true;
+                map.insert(username, data);
+            }
+        }
+    }
+
+    Ok(())
+}
+
+/// Specifies lifters for whom bodyweight conflict errors should be suppressed.
+///
+/// The data exists in `lifter-data/bw-exemptions.csv`.
+#[derive(Deserialize)]
+struct BodyweightExemptionsRow {
+    #[serde(rename = "Name")]
+    pub name: String,
+}
+
+/// Checks `lifter-data/bw-exemptions.csv`, mutating the LifterDataMap.
+fn check_bodyweight_exemptions(
+    report: &mut Report,
+    map: &mut LifterDataMap,
+) -> Result<(), Box<dyn Error>> {
+    if !report.path.exists() {
+        report.error("File does not exist");
+        return Ok(());
+    }
+
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .terminator(csv::Terminator::Any(b'\n'))
+        .from_path(&report.path)?;
+
+    for (rownum, result) in rdr.deserialize().enumerate() {
+        // Text editors are one-indexed, and the header line was skipped.
+        let line = (rownum as u64) + 2;
+
+        let row: BodyweightExemptionsRow = result?;
+        let username = match make_username(&row.name) {
+            Ok(s) => s,
+            Err(s) => {
+                report.error_on(line, s);
+                continue;
+            }
+        };
+
+        match map.get_mut(&username) {
+            Some(data) => {
+                data.exempt_bodyweight = true;
+            }
+            None => {
+                let mut data = LifterData::default();
+                data.exempt_bodyweight = true;
                 map.insert(username, data);
             }
         }
@@ -449,6 +504,18 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
     // Check sex-exemptions.csv.
     let mut report = Report::new(lifterdir.join("sex-exemptions.csv"));
     match check_sex_exemptions(&mut report, &mut map) {
+        Ok(()) => (),
+        Err(e) => {
+            report.error(e);
+        }
+    }
+    if report.has_messages() {
+        reports.push(report)
+    }
+
+    // Check bw-exemptions.csv.
+    let mut report = Report::new(lifterdir.join("bw-exemptions.csv"));
+    match check_bodyweight_exemptions(&mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);

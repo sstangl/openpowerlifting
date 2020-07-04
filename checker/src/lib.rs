@@ -15,6 +15,7 @@ extern crate unicode_normalization; // Used to normalize the name strings
 
 pub mod checklib;
 pub use crate::checklib::config::{check_config, Config};
+pub use crate::checklib::consistency;
 pub use crate::checklib::entries::{
     check_entries, check_entries_from_string, EntriesCheckResult, Entry,
 };
