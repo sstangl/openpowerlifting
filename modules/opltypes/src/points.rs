@@ -1,10 +1,11 @@
 //! Defines fields that represent points.
 
+use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
 use std::f32;
-use std::fmt;
+use std::fmt::{self, Write};
 use std::num;
 use std::str::FromStr;
 
@@ -107,8 +108,12 @@ impl Serialize for Points {
     where
         S: serde::Serializer,
     {
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        serializer.serialize_str(&format!("{}", self))
+        // 10 characters for the non-decimal number (-536870912).
+        // 3 characters for the '.' plus 2 fractional digits.
+        let mut buf = ArrayString::<[_; 13]>::new();
+        write!(buf, "{}", self).expect("ArrayString overflow");
+
+        serializer.serialize_str(&buf)
     }
 }
 

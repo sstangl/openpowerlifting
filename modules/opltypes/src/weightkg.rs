@@ -2,11 +2,12 @@
 
 use crate::Points;
 
+use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
 use std::f32;
-use std::fmt;
+use std::fmt::{self, Write};
 use std::num;
 use std::ops;
 use std::str::FromStr;
@@ -38,26 +39,30 @@ impl Serialize for WeightKg {
     where
         S: serde::Serializer,
     {
+        // Zero serializes as the empty string.
         if self.0 == 0 {
             return serializer.serialize_str("");
         }
 
+        // 10 characters for the non-decimal number (-536870912).
+        // 3 characters for the '.' plus 2 fractional digits.
+        let mut buf = ArrayString::<[_; 13]>::new();
+
         let integer = self.0 / 100;
         let fraction = self.0.abs() % 100;
 
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        if fraction == 0 {
-            serializer.serialize_str(&format!("{}", integer))
-        } else {
-            let fstr = if fraction % 10 == 0 {
-                // Serialize "50" as "5".
-                format!("{}", fraction / 10)
+        write!(buf, "{}", integer).expect("ArrayString overflow");
+        if fraction != 0 {
+            if fraction % 10 == 0 {
+                // Serialize "50" as ".5".
+                write!(buf, ".{}", fraction / 10).expect("ArrayString overflow");
             } else {
-                // Serialize "5" as "05".
-                format!("{:0>2}", fraction)
-            };
-            serializer.serialize_str(&format!("{}.{}", integer, fstr))
+                // Serialize "5" as ".05".
+                write!(buf, ".{:0>2}", fraction).expect("ArrayString overflow");
+            }
         }
+
+        serializer.serialize_str(&buf)
     }
 }
 
@@ -71,12 +76,14 @@ impl Serialize for WeightAny {
         S: serde::Serializer,
     {
         if self.0 == 0 {
-            // Avoid a call to format!().
-            serializer.serialize_str("")
-        } else {
-            // TODO: Write into a stack-allocated fixed-size buffer.
-            serializer.serialize_str(&format!("{}", self))
+            return serializer.serialize_str("");
         }
+
+        // Over-estimate of space required, just to future-proof it.
+        let mut buf = ArrayString::<[_; 13]>::new();
+        write!(buf, "{}", self).expect("ArrayString overflow");
+
+        serializer.serialize_str(&buf)
     }
 }
 

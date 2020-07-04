@@ -1,10 +1,11 @@
 //! Defines the `Age` field for the `entries` table.
 
+use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
 use std::cmp::Ordering;
-use std::fmt;
+use std::fmt::{self, Write};
 use std::num;
 use std::str::FromStr;
 
@@ -291,13 +292,15 @@ impl Serialize for Age {
     where
         S: serde::Serializer,
     {
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        let s = match *self {
-            Age::Exact(n) => format!("{}", n),
-            Age::Approximate(n) => format!("{}.5", n),
-            Age::None => String::default(),
+        // Largest possible string for a `u8` Age is "256.5", 5 characters.
+        let mut buf = ArrayString::<[_; 5]>::new();
+
+        match *self {
+            Age::Exact(n) => write!(buf, "{}", n).expect("ArrayString overflow"),
+            Age::Approximate(n) => write!(buf, "{}.5", n).expect("ArrayString overflow"),
+            Age::None => (),
         };
-        serializer.serialize_str(&s)
+        serializer.serialize_str(&buf)
     }
 }
 
@@ -346,13 +349,15 @@ impl Serialize for PrettyAge {
     where
         S: serde::Serializer,
     {
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        let s = match self.0 {
-            Age::Exact(n) => format!("{}", n),
-            Age::Approximate(n) => format!("{}~", n),
-            Age::None => String::default(),
+        // Largest possible string for a `u8` Age is "256~", 4 characters.
+        let mut buf = ArrayString::<[_; 4]>::new();
+
+        match self.0 {
+            Age::Exact(n) => write!(buf, "{}", n).expect("ArrayString overflow"),
+            Age::Approximate(n) => write!(buf, "{}~", n).expect("ArrayString overflow"),
+            Age::None => (),
         };
-        serializer.serialize_str(&s)
+        serializer.serialize_str(&buf)
     }
 }
 

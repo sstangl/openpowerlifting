@@ -1,9 +1,10 @@
 //! Defines the `Event` field for the `entries` table.
 
+use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
-use std::fmt;
+use std::fmt::{self, Write};
 use std::str::FromStr;
 
 /// The definition of the "Event" column.
@@ -198,7 +199,11 @@ impl Serialize for Event {
     where
         S: serde::Serializer,
     {
-        serializer.serialize_str(&format!("{}", self))
+        // The greatest possible string is "SBD", 3 characters.
+        let mut buf = ArrayString::<[_; 3]>::new();
+        write!(buf, "{}", self).expect("ArrayString overflow");
+
+        serializer.serialize_str(&buf)
     }
 }
 

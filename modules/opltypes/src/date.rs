@@ -1,9 +1,10 @@
 //! Defines the `Date` field for the `meets` table.
 
+use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
-use std::fmt;
+use std::fmt::{self, Write};
 use std::num;
 use std::ops;
 use std::str::FromStr;
@@ -269,9 +270,11 @@ impl Serialize for Date {
     where
         S: serde::Serializer,
     {
+        let mut buf = ArrayString::<[_; 10]>::new();
         let (y, m, d) = (self.year(), self.month(), self.day());
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        serializer.serialize_str(&format!("{:04}-{:02}-{:02}", y, m, d))
+        write!(buf, "{:04}-{:02}-{:02}", y, m, d).expect("ArrayString overflow");
+
+        serializer.serialize_str(&buf)
     }
 }
 

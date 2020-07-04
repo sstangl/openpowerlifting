@@ -1,10 +1,11 @@
 //! Defines the `WeightClassKg` field for the `entries` table.
 
+use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
 use std::cmp::Ordering;
-use std::fmt;
+use std::fmt::{self, Write};
 use std::num;
 use std::str::FromStr;
 
@@ -43,9 +44,15 @@ impl Serialize for WeightClassKg {
     where
         S: serde::Serializer,
     {
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        // TODO: Short-circuit "None" case.
-        serializer.serialize_str(&format!("{}", self))
+        if self.is_none() {
+            return serializer.serialize_str("");
+        }
+
+        // Maximum length of a serialized WeightKg, plus one for a SHW "+".
+        let mut buf = ArrayString::<[_; 14]>::new();
+        write!(buf, "{}", self).expect("ArrayString overflow");
+
+        serializer.serialize_str(&buf)
     }
 }
 
@@ -54,9 +61,15 @@ impl Serialize for WeightClassAny {
     where
         S: serde::Serializer,
     {
-        // TODO: Write into a stack-allocated fixed-size buffer.
-        // TODO: Short-circuit "None" case.
-        serializer.serialize_str(&format!("{}", self))
+        if self.is_none() {
+            return serializer.serialize_str("");
+        }
+
+        // Maximum length of a serialized WeightKg, plus one for a SHW "+".
+        let mut buf = ArrayString::<[_; 14]>::new();
+        write!(buf, "{}", self).expect("ArrayString overflow");
+
+        serializer.serialize_str(&buf)
     }
 }
 
@@ -99,6 +112,16 @@ impl WeightClassKg {
             WeightClassKg::UnderOrEqual(_) => false,
             WeightClassKg::Over(_) => true,
             WeightClassKg::None => false,
+        }
+    }
+
+    /// Whether this is the None kind.
+    #[inline]
+    pub fn is_none(self) -> bool {
+        match self {
+            WeightClassKg::UnderOrEqual(_) => false,
+            WeightClassKg::Over(_) => false,
+            WeightClassKg::None => true,
         }
     }
 }
@@ -148,6 +171,16 @@ impl WeightClassAny {
                 s
             }
             WeightClassAny::None => String::new(),
+        }
+    }
+
+    /// Whether this is the None kind.
+    #[inline]
+    pub fn is_none(self) -> bool {
+        match self {
+            WeightClassAny::UnderOrEqual(_) => false,
+            WeightClassAny::Over(_) => false,
+            WeightClassAny::None => true,
         }
     }
 }
