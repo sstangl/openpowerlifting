@@ -17,7 +17,7 @@ except ImportError:
 
 
 RESULTS_URL = "http://www.britishpowerliftingunion.co.uk/" \
-              "wpcbpu-uk-international-open-2013/"
+              "2013/09/05/results/"
 
 BASE_URL = "http://www.britishpowerliftingunion.co.uk/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
