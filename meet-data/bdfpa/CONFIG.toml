@@ -47,5 +47,6 @@
     sex = "F"
 
 [exemptions]
+    8901 = ["ExemptDivision"]
     1101 = ["ExemptDivision"]
     1302 = ["ExemptDivision"]
