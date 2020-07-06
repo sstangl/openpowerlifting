@@ -55,14 +55,16 @@ grep "${YESTERDAY}" "${LOGFILE}" | goaccess - --ignore-crawlers --config-file="/
 # Parse the ${TEMPFILE} into variables and clean up.
 TOTAL_REQUESTS=$(head -n 14 "${TEMPFILE}" | grep "total_requests" | cut -d , -f 11 | tr --delete \")
 UNIQUE_VISITORS=$(head -n 14 "${TEMPFILE}" | grep "unique_visitors" | cut -d , -f 11 | tr --delete \")
+BANDWIDTH=$(head -n 14 "${TEMPFILE}" | grep "bandwidth" | cut -d , -f 11 | tr --delete \")
 rm "${TEMPFILE}"
 
 # Pretty-print numbers with commas as thousands separators.
 PRETTY_REQUESTS=$(printf "%'d" "${TOTAL_REQUESTS}")
 PRETTY_VISITORS=$(printf "%'d" "${UNIQUE_VISITORS}")
+PRETTY_BANDWIDTH_MIB=$(printf "%'d" "$((${BANDWIDTH} / 1024 / 1024))")
 
 # Build the components into a message.
-MESSAGE="On ${PRETTY_DATE} we handled ${PRETTY_REQUESTS} requests from ${PRETTY_VISITORS} visitors."
+MESSAGE="On ${PRETTY_DATE} we handled ${PRETTY_REQUESTS} requests from ${PRETTY_VISITORS} visitors in ${PRETTY_BANDWIDTH_MIB}MiB."
 
 # Post the message to Zulip.
 curl https://openpl.zulipchat.com/api/v1/messages \
