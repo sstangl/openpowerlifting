@@ -307,11 +307,12 @@
     sex = "F"
 
 [exemptions]
-     1612 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1615 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1621 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1702 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1725 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1820 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1904 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
-     1909 = ["ExemptWeightClassConsistency"] # Missing weight info for one lifter.
+    1102 = ["ExemptDivision"] # Lifters competed in wrong age divisions.
+    1612 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1615 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1621 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1702 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1725 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1820 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1904 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
+    1909 = ["ExemptWeightClassConsistency"] # Missing weight info for one lifter.
