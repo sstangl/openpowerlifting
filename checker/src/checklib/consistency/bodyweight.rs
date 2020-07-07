@@ -2,19 +2,8 @@
 
 use opltypes::Date;
 
-use crate::checklib::consistency::{self, ConsistencyResult};
+use crate::checklib::consistency::{self, get_date, ConsistencyResult};
 use crate::{AllMeetData, Entry, EntryIndex, LifterDataMap, LifterMap, Report};
-
-/// Helper for getting the date of an [Entry].
-fn get_date(meetdata: &AllMeetData, entry: &Entry) -> Date {
-    if let Some(date) = entry.entrydate {
-        date
-    } else {
-        meetdata
-            .get_meet(entry.index.expect("Unassigned EntryIndex"))
-            .date
-    }
-}
 
 /// Get the average change in bodyweight from `a` to `b` as a percentage per
 /// day.

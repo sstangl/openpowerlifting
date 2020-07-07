@@ -1,6 +1,7 @@
 //! Checks for consistency errors across entries per lifter.
 
 use crate::{AllMeetData, Entry, LifterDataMap, LifterMap, Report};
+use opltypes::Date;
 
 mod bodyweight;
 use bodyweight::check_bodyweight_all;
@@ -8,12 +9,25 @@ mod name;
 use name::check_name_all;
 mod sex;
 use sex::check_sex_all;
+mod duplicates;
+use duplicates::check_duplicates_all;
 
 /// Return type for consistency check functions.
 pub enum ConsistencyResult {
     Consistent,
     Inconsistent,
     Skipped,
+}
+
+/// Helper for getting the date of an [Entry].
+pub fn get_date(meetdata: &AllMeetData, entry: &Entry) -> Date {
+    if let Some(date) = entry.entrydate {
+        date
+    } else {
+        meetdata
+            .get_meet(entry.index.expect("Unassigned EntryIndex"))
+            .date
+    }
 }
 
 /// Whether the lifter should be skipped for consistency checks.
@@ -47,6 +61,7 @@ pub fn check(
     check_sex_all(liftermap, meetdata, lifterdata, &mut reports);
     check_name_all(liftermap, meetdata, &mut reports);
     check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
+    check_duplicates_all(liftermap, meetdata, &mut reports);
 
     reports
 }
