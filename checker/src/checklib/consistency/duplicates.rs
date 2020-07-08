@@ -40,7 +40,7 @@ pub fn check_duplicates_one(
         let cur_meet: &Meet = meetdata.get_meet(ei_by_date[i]);
 
         if cur_entry.totalkg.is_zero() {
-            continue; // DQs can give false positivies.
+            continue; // DQs can give false positives.
         }
 
         for inner_i in i + 1..ei_by_date.len() {
