@@ -1,9 +1,17 @@
-Place,Name,Team,BodyweightKg,Best3BenchKg,Division,Sex,WeightClassKg,TotalKg,Equipment,Event
-1,Olof Ed,TK Trossö,57.55,65.00,Sub-Juniors,M,60,65.0,Single-ply,B
-2,Hendrik Nilsson,TK Trossö,56.65,50.00,Sub-Juniors,M,60,50.0,Single-ply,B
-1,Richard Ohlsson,TK Trossö,68.00,70.00,Sub-Juniors,M,75,70.0,Single-ply,B
-1,Sandra Säbom,TK Trossö,51.90,32.50,Sub-Juniors,F,52,32.5,Single-ply,B
-1,Hanna Leandersson,TK Trossö,61.00,42.50,Sub-Juniors,F,67.5,42.5,Single-ply,B
-2,Josefin Andersson,TK Trossö,63.00,35.00,Sub-Juniors,F,67.5,35.0,Single-ply,B
-3,Madicken Svensson,TK Trossö,63.65,35.00,Sub-Juniors,F,67.5,35.0,Single-ply,B
-1,Rubie Amar,TK Trossö,50.95,45.00,Juniors,F,52,45.0,Single-ply,B
+Place,Name,Team,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Division,Sex,WeightClassKg,Equipment,Event
+1,Hendrik Nilsson,TK Trossö,56.65,90,50,122.5,262.5,Sub-Juniors,M,60,Single-ply,SBD
+2,Olof Ed,TK Trossö,57.55,,65,,65,Sub-Juniors,M,60,Single-ply,B
+1,Richard Ohlsson,TK Trossö,68,120,70,150,340,Sub-Juniors,M,75,Single-ply,SBD
+1,Sandra Säbom,TK Trossö,50.9,57.5,32.5,85,175,Sub-Juniors,F,52,Single-ply,SBD
+1,Josefin Andersson,TK Trossö,63,70,35,105,210,Sub-Juniors,F,67.5,Single-ply,SBD
+2,Hanna Leandersson,TK Trossö,61,62.5,42.5,90,195,Sub-Juniors,F,67.5,Single-ply,SBD
+3,Madicken Svensson,TK Trossö,63.65,55,35,101,191,Sub-Juniors,F,67.5,Single-ply,SBD
+1,Rubie Amar,TK Trossö,50.95,,45,,45,Juniors,F,52,Single-ply,B
+1,Olof Ed,TK Trossö,57.55,,65,,65,Sub-Juniors,M,60,Single-ply,B
+2,Hendrik Nilsson,TK Trossö,56.65,,50,,50,Sub-Juniors,M,60,Single-ply,B
+1,Richard Ohlsson,TK Trossö,68,,70,,70,Sub-Juniors,M,75,Single-ply,B
+1,Sandra Säbom,TK Trossö,51.9,,32.5,,32.5,Sub-Juniors,F,52,Single-ply,B
+1,Hanna Leandersson,TK Trossö,61,,42.5,,42.5,Sub-Juniors,F,67.5,Single-ply,B
+2,Josefin Andersson,TK Trossö,63,,35,,35,Sub-Juniors,F,67.5,Single-ply,B
+3,Madicken Svensson,TK Trossö,63.65,,35,,35,Sub-Juniors,F,67.5,Single-ply,B
+1,Rubie Amar,TK Trossö,50.95,,45,,45,Juniors,F,52,Single-ply,B
