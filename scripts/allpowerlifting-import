@@ -43,13 +43,15 @@ def getmeetinfo(soup):
                       'MeetState', 'MeetTown', 'MeetName']
 
     # Get the info table.
-    infotable = soup.find('table', {'class': 'stdtable'})
+    infotable = soup.find('div', {'class': 'col-lg-6'})
+
     if infotable == []:
         error("Couldn't find the info table.")
 
     # Get the fed.
-    fedrow = infotable.find_all('tr')[0]
-    fed = fedrow.find_all('td')[1].text
+    fedrow = infotable.find_all('dd')[0]
+
+    fed = fedrow.text
     fed = fed[fed.find("(")+1:fed.find(")")]
 
     # Correct fed names to the form that we use
@@ -82,8 +84,8 @@ def getmeetinfo(soup):
                     'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta'}
 
     # Get the location.
-    venuerow = fedrow.find_next_sibling()
-    venue = venuerow.find_all('td')[1].text
+    venuerow = fedrow.find_next_sibling().find_next_sibling()
+    venue = venuerow.a['title']
     if venue[-2:] == ', ':
         venue = venue[:-2]
 
@@ -103,8 +105,8 @@ def getmeetinfo(soup):
         state = state_dict[town]
 
     # Get the date.
-    daterow = venuerow.find_next_sibling()
-    longdate = daterow.find_all('td')[1].text
+    daterow = venuerow.find_next_sibling().find_next_sibling()
+    longdate = daterow.text
     if ',' in longdate:
         [daymonth, year] = longdate.split(',')
         year = year.strip()
@@ -124,10 +126,10 @@ def getmeetinfo(soup):
         date = ''
 
     # Get the competition name.
-    h1 = soup.find('h1')
-    if len(h1) != 1:
+    h2 = soup.find('h2')
+    if len(h2) != 1:
         error("Couldn't find the competition name.")
-    name = h1.text.replace(';', '').replace(',', '')
+    name = h2.text.replace(';', '').replace(',', '')
 
     row = [fed, date, country, state, town, name]
     for i, r in enumerate(row):
@@ -158,6 +160,7 @@ def getresults(soup, url):
     # The english site is currently broken
     if 'en.' in url:
         [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
+
         csv.append_column('CyrillicName')
         cyrnameidx = csv.index('CyrillicName')
         nameidx = csv.index('Name')
@@ -234,18 +237,17 @@ def get_cyrillic_names_and_birthyears(url):
 
 
 # Get the results table.
-    table = soup.find('table', {'class': 'pldb-table2'})
+    table = soup.find('table', {'class': 'table-xs'})
     if table == []:
         error("Couldn't find the results table.")
-
     trs = table.find_all('tr')
 
     # Get column information.
-    headers = [x.text for x in trs[0].find_all('th')]
+    headers = [x.text for x in trs[1].find_all('th')]
     nameidx = None
     byidx = None
     for ii in range(len(headers)):
-        if headers[ii] == 'Спортсмен':
+        if headers[ii] in ['Спортсмен', 'Имя']:
             nameidx = ii
         elif headers[ii] == 'ГР':
             byidx = ii
@@ -260,7 +262,7 @@ def get_cyrillic_names_and_birthyears(url):
 
         if len(row) > 1:
             tds = tr.find_all('td')
-            name = tds[nameidx].text
+            name = ' '.join(tds[nameidx].text.split())
 
             names.append(name)
 
@@ -278,39 +280,43 @@ def getpagedata(soup):
     csv = Csv()
 
     # Get the results table.
-    table = soup.find('table', {'class': 'pldb-table2'})
+    table = soup.find('table', {'class': 'table-xs'})
     if table == []:
         error("Couldn't find the results table.")
 
     trs = table.find_all('tr')
 
     # Get column information.
-    headers = [x.text for x in trs[0].find_all('th')]
+    headers = [x.text for x in trs[1].find_all('th')]
     csv.fieldnames = []
     for h in headers:
-        if h in [' ', '\xa0']:
+        # Allpowerlifting is annoying and have removed the place header
+        # on their new site, it's the second column (always?)
+        if len(csv.fieldnames) == 1:
+            csv.fieldnames += ['Place']
+        elif h in [' ', '\xa0', '\n']:
             csv.fieldnames += ['IGNORE']
         elif h in ['Pl', 'М']:
             csv.fieldnames += ['Place']
-        elif h == 'Lifter':
+        elif h in ['Lifter', 'Name']:
             csv.fieldnames += ['Name']
-        elif h == 'Спортсмен':
+        elif h in ['Спортсмен', 'Имя']:
             csv.fieldnames += ['CyrillicName']
-        elif h in ['Age cls', 'Возр']:
+        elif h in ['Age cls', 'Возр', 'Age']:
             csv.fieldnames += ['Division']
-        elif h in ['BY', 'ГР']:
+        elif h in ['BY', 'ГР', 'YOB']:
             csv.fieldnames += ['BirthYear']
         elif h == 'From':
             csv.fieldnames += ['IGNORE']
-        elif h in ['Body wt', 'Вес']:
+        elif h in ['Body wt', 'Вес', 'Weight']:
             csv.fieldnames += ['BodyweightKg']
-        elif h in ['SQ1', 'П1']:
+        elif h in ['SQ1', 'П1', 'S1']:
             csv.fieldnames += ['Squat1Kg']
-        elif h in ['SQ2', 'П2']:
+        elif h in ['SQ2', 'П2', 'S2']:
             csv.fieldnames += ['Squat2Kg']
-        elif h in ['SQ3', 'П3']:
+        elif h in ['SQ3', 'П3', 'S3']:
             csv.fieldnames += ['Squat3Kg']
-        elif h in ['SQ', 'П']:
+        elif h in ['SQ', 'П', 'S']:
             csv.fieldnames += ['Best3SquatKg']
         elif h in ['BP1', 'Ж1']:
             csv.fieldnames += ['Bench1Kg']
@@ -330,11 +336,11 @@ def getpagedata(soup):
             csv.fieldnames += ['Best3DeadliftKg']
         elif h in ['Total', 'Сумма']:
             csv.fieldnames += ['TotalKg']
-        elif h in ['Nat', 'Откуда', 'Стр']:
+        elif h in ['Nat', 'Откуда', 'Стр', 'Location']:
             csv.fieldnames += ['Country']
         elif h == 'G':
             csv.fieldnames += ['IGNORE']
-        elif h in ['R', 'W', 'S/M', 'S', 'G']:  # Resh, Wilks, Schwartz/Malone
+        elif h in ['R', 'W', 'S/M', 'S', 'G', 'Points']:  # Resh, Wilks, Schwartz/Malone
             csv.fieldnames += ['IGNORE']
         elif h == 'Team':
             csv.fieldnames += ['IGNORE']
@@ -351,8 +357,8 @@ def getpagedata(soup):
     # If unspecified assume male and fix later
     sexstate = 'M'
 
-    for tr in trs[1:]:
-        row = [x.text for x in tr.find_all('td')]
+    for tr in trs[0:]:
+        row = [x.text for x in tr.find_all(['td', 'th'])]
 
         # Rows of length >1 are actual results, of length 1 are categories.
         if len(row) == 1:
@@ -363,11 +369,12 @@ def getpagedata(soup):
             elif 'men' in text or 'мужчины' in text:
                 sexstate = 'M'
             elif 'category' in text:
-                wcstate = text.replace('category ', '').replace(' kg', '')
+                wcstate = ' '.join(text.replace(
+                    'category ', '').replace(' kg', '').split())
                 if '+' in wcstate:
                     wcstate = wcstate.replace('+', '')+'+'
-        else:
 
+        elif tr.find_all('th') == []:  # Otherwise it's a header
             row = []
             for td in tr.find_all('td'):
                 text = td.text
