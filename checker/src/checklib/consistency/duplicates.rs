@@ -7,7 +7,7 @@ use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Meet, Report};
 pub fn check_duplicates_one(
     indices: &[EntryIndex],
     meetdata: &AllMeetData,
-    reports: &mut Vec<Report>,
+    report: &mut Report,
     scratch: &mut Vec<EntryIndex>,
 ) -> ConsistencyResult {
     if consistency::should_skip_lifter(&meetdata.get_entry(indices[0])) {
@@ -57,12 +57,10 @@ pub fn check_duplicates_one(
                 && (cur_entry.event == match_entry.event)
             {
                 let msg = format!(
-                    "Duplicate meet for {} on {}: {} and {}",
+                    "www.openpowerlifting.org/u/{} on {}: {} and {}",
                     username, cur_meet.date, cur_meet.path, match_meet.path,
                 );
-                let mut report = Report::new("[Consistency]".into());
                 report.warning(msg);
-                reports.push(report);
                 result = ConsistencyResult::Inconsistent;
             }
         }
@@ -77,9 +75,14 @@ pub fn check_duplicates_all(
     meetdata: &AllMeetData,
     reports: &mut Vec<Report>,
 ) {
+    let mut report = Report::new("[Duplicate Meets]".into());
     let mut scratch: Vec<EntryIndex> = Vec::new();
 
     for lifter_indices in liftermap.values() {
-        check_duplicates_one(lifter_indices, meetdata, reports, &mut scratch);
+        check_duplicates_one(lifter_indices, meetdata, &mut report, &mut scratch);
+    }
+
+    if report.has_messages() {
+        reports.push(report);
     }
 }

@@ -39,7 +39,7 @@ pub fn check_bodyweight_one(
     indices: &[EntryIndex],
     meetdata: &AllMeetData,
     lifterdata: &LifterDataMap,
-    reports: &mut Vec<Report>,
+    report: &mut Report,
 ) -> ConsistencyResult {
     if consistency::should_skip_lifter(&meetdata.get_entry(indices[0])) {
         return ConsistencyResult::Skipped;
@@ -76,7 +76,6 @@ pub fn check_bodyweight_one(
         const BODYWEIGHT_PERCENTAGE_CHANGE_PER_DAY_THRESHOLD: f32 = 80.0;
 
         if average_per_day.abs() > BODYWEIGHT_PERCENTAGE_CHANGE_PER_DAY_THRESHOLD {
-            let mut report = Report::new("[Consistency]".into());
             let days = this_date - prev_date;
             let plural = if days > 1 { "s" } else { "" };
             let msg = format!(
@@ -84,7 +83,6 @@ pub fn check_bodyweight_one(
                 entry.username, prev.bodyweightkg, entry.bodyweightkg, days, plural
             );
             report.warning(msg);
-            reports.push(report);
             return ConsistencyResult::Inconsistent;
         }
 
@@ -101,7 +99,13 @@ pub fn check_bodyweight_all(
     lifterdata: &LifterDataMap,
     reports: &mut Vec<Report>,
 ) {
+    let mut report = Report::new("[Bodyweight Consistency]".into());
+
     for lifter_indices in liftermap.values() {
-        check_bodyweight_one(&lifter_indices, meetdata, lifterdata, reports);
+        check_bodyweight_one(&lifter_indices, meetdata, lifterdata, &mut report);
+    }
+
+    if report.has_messages() {
+        reports.push(report);
     }
 }

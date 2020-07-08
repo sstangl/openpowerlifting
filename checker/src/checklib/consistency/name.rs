@@ -3,11 +3,7 @@
 use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Report};
 
 /// Checks that Name fields are consistent for this lifter.
-fn check_name_one(
-    indices: &[EntryIndex],
-    meetdata: &AllMeetData,
-    reports: &mut Vec<Report>,
-) {
+fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut Report) {
     let first_entry: &Entry = meetdata.get_entry(indices[0]);
 
     let name = &first_entry.name;
@@ -25,9 +21,7 @@ fn check_name_one(
                 "Name conflict for '{}': '{}' vs '{}'",
                 entry.username, name, entry.name
             );
-            let mut report = Report::new("[Consistency]".into());
             report.error(msg);
-            reports.push(report);
         }
 
         // If this is the first time seeing an optional name field, remember it.
@@ -52,9 +46,7 @@ fn check_name_one(
                         "CyrillicName conflict for {}: '{}' vs '{}'",
                         entry.username, cr_name, entry_cr_name
                     );
-                    let mut report = Report::new("[Consistency]".into());
                     report.error(msg);
-                    reports.push(report);
                 }
             }
         }
@@ -67,9 +59,7 @@ fn check_name_one(
                         "GreekName conflict for {}: '{}' vs '{}'",
                         entry.username, el_name, entry_el_name
                     );
-                    let mut report = Report::new("[Consistency]".into());
                     report.error(msg);
-                    reports.push(report);
                 }
             }
         }
@@ -82,9 +72,7 @@ fn check_name_one(
                         "JapaneseName conflict for {}: '{}' vs '{}'",
                         entry.username, jp_name, entry_jp_name
                     );
-                    let mut report = Report::new("[Consistency]".into());
                     report.error(msg);
-                    reports.push(report);
                 }
             }
         }
@@ -97,9 +85,7 @@ fn check_name_one(
                         "KoreanName conflict for {}: '{}' vs '{}'",
                         entry.username, ko_name, entry_ko_name
                     );
-                    let mut report = Report::new("[Consistency]".into());
                     report.error(msg);
-                    reports.push(report);
                 }
             }
         }
@@ -112,7 +98,13 @@ pub fn check_name_all(
     meetdata: &AllMeetData,
     reports: &mut Vec<Report>,
 ) {
+    let mut report = Report::new("[Name Consistency]".into());
+
     for lifter_indices in liftermap.values() {
-        check_name_one(&lifter_indices, meetdata, reports);
+        check_name_one(&lifter_indices, meetdata, &mut report);
+    }
+
+    if report.has_messages() {
+        reports.push(report);
     }
 }

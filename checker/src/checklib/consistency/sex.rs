@@ -8,7 +8,7 @@ pub fn check_sex_one(
     indices: &[EntryIndex],
     meetdata: &AllMeetData,
     lifterdata: &LifterDataMap,
-    reports: &mut Vec<Report>,
+    report: &mut Report,
 ) -> ConsistencyResult {
     if consistency::should_skip_lifter(&meetdata.get_entry(indices[0])) {
         return ConsistencyResult::Skipped;
@@ -26,12 +26,10 @@ pub fn check_sex_one(
     let expected_sex = meetdata.get_entry(indices[0]).sex;
     for index in indices.iter().skip(1) {
         if meetdata.get_entry(*index).sex != expected_sex {
-            let url = format!("https://www.openpowerlifting.org/u/{}", username);
+            let url = format!("www.openpowerlifting.org/u/{}", username);
             let name = &meetdata.get_entry(*index).name;
             let msg = format!("Sex conflict for '{}' - {}", name, url);
-            let mut report = Report::new("[Consistency]".into());
             report.error(msg);
-            reports.push(report);
             return ConsistencyResult::Inconsistent;
         }
     }
@@ -46,7 +44,13 @@ pub fn check_sex_all(
     lifterdata: &LifterDataMap,
     reports: &mut Vec<Report>,
 ) {
+    let mut report = Report::new("[Sex Consistency]".into());
+
     for lifter_indices in liftermap.values() {
-        check_sex_one(&lifter_indices, meetdata, lifterdata, reports);
+        check_sex_one(&lifter_indices, meetdata, lifterdata, &mut report);
+    }
+
+    if report.has_messages() {
+        reports.push(report);
     }
 }
