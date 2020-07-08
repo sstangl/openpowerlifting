@@ -39,7 +39,6 @@ server: csv
 check-data:
 	cargo run --bin checker
 	tests/check-lifter-data
-	tests/check-duplicates
 
 check: check-data
 	tests/check-python-style
