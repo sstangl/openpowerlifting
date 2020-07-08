@@ -46,9 +46,9 @@
         {% for this in bests %}
           <tr>
             <td>{{this.equipment}}</td>
-            <td>{% if this.squat %}{{this.squat}}{% endif %}</td>
-            <td>{% if this.bench %}{{this.bench}}{% endif %}</td>
-            <td>{% if this.deadlift %}{{this.deadlift}}{% endif %}</td>
+            <td class="squat">{% if this.squat %}{{this.squat}}{% endif %}</td>
+            <td class="bench">{% if this.bench %}{{this.bench}}{% endif %}</td>
+            <td class="deadlift">{% if this.deadlift %}{{this.deadlift}}{% endif %}</td>
             <td>{% if this.total %}{{this.total}}{% endif %}</td>
             <td>{% if this.points %}{{this.points}}{% endif %}</td>
             <td></td>{# Intentionally-blank filler column. #}
@@ -75,9 +75,9 @@
         <th>{{strings.columns.weightclass}}</th>
         <th>{{strings.columns.bodyweight}}</th>
         {% if show_attempts %}
-          <th colspan="4">{{strings.columns.squat}}</th>
-          <th colspan="4">{{strings.columns.bench}}</th>
-          <th colspan="4">{{strings.columns.deadlift}}</th>
+          <th colspan="3">{{strings.columns.squat}}</th>
+          <th colspan="3">{{strings.columns.bench}}</th>
+          <th colspan="3">{{strings.columns.deadlift}}</th>
         {% else %}
           <th>{{strings.columns.squat}}</th>
           <th>{{strings.columns.bench}}</th>
@@ -103,22 +103,19 @@
           <td>{{this.weightclass}}</td>
           <td>{{this.bodyweight}}</td>
           {% if show_attempts %}
-            <td>{% if this.squat1 %}{{this.squat1}}{% else %}{{this.best3squat}}{% endif %}</td>
-            <td>{{this.squat2}}</td>
-            <td>{{this.squat3}}</td>
-            <td>{{this.squat4}}</td>
-            <td>{% if this.bench1 %}{{this.bench1}}{% else %}{{this.best3bench}}{% endif %}</td>
-            <td>{{this.bench2}}</td>
-            <td>{{this.bench3}}</td>
-            <td>{{this.bench4}}</td>
-            <td>{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.best3deadlift}}{% endif %}</td>
-            <td>{{this.deadlift2}}</td>
-            <td>{{this.deadlift3}}</td>
-            <td>{{this.deadlift4}}</td>
+            <td class="squat">{% if this.squat1 %}{{this.squat1}}{% else %}{{this.best3squat}}{% endif %}</td>
+            <td class="squat">{{this.squat2}}</td>
+            <td class="squat">{{this.squat3}}</td>
+            <td class="bench">{% if this.bench1 %}{{this.bench1}}{% else %}{{this.best3bench}}{% endif %}</td>
+            <td class="bench">{{this.bench2}}</td>
+            <td class="bench">{{this.bench3}}</td>
+            <td class="deadlift">{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.best3deadlift}}{% endif %}</td>
+            <td class="deadlift">{{this.deadlift2}}</td>
+            <td class="deadlift">{{this.deadlift3}}</td>
           {% else %}
-            <td>{{this.squat}}</td>
-            <td>{{this.bench}}</td>
-            <td>{{this.deadlift}}</td>
+            <td class="squat">{{this.squat}}</td>
+            <td class="bench">{{this.bench}}</td>
+            <td class="deadlift">{{this.deadlift}}</td>
           {% endif %}
           <td>{{this.total}}</td>
           <td>{{this.points}}</td>

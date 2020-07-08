@@ -136,9 +136,9 @@ function makeDataProvider() {
                 equipment: entry[Column.Equipment],
                 weightclass: entry[Column.WeightClass],
                 bodyweight: entry[Column.Bodyweight],
-                squat: entry[Column.Squat],
-                bench: entry[Column.Bench],
-                deadlift: entry[Column.Deadlift],
+                squat: '<span class="squat">' + entry[Column.Squat] + '</span>',
+                bench: '<span class="bench">' + entry[Column.Bench] + '</span>',
+                deadlift: '<span class="deadlift">' + entry[Column.Deadlift] + '</span>',
                 total: entry[Column.Total],
                 points: entry[Column.Points],
                 idx: idx
@@ -508,9 +508,9 @@ function renderGridTable(): void {
         {id: "equipment", name: translation_column_equipment, field: "equipment", width: shortWidth},
         {id: "weightclass", name: translation_column_weightclass, field: "weightclass", width: numberWidth},
         {id: "bodyweight", name: translation_column_bodyweight, field: "bodyweight", width: numberWidth},
-        {id: "squat", name: translation_column_squat, field: "squat", width: numberWidth},
-        {id: "bench", name: translation_column_bench, field: "bench", width: numberWidth},
-        {id: "deadlift", name: translation_column_deadlift, field: "deadlift", width: numberWidth},
+        {id: "squat", name: translation_column_squat, field: "squat", width: numberWidth, formatter: urlformatter},
+        {id: "bench", name: translation_column_bench, field: "bench", width: numberWidth, formatter: urlformatter},
+        {id: "deadlift", name: translation_column_deadlift, field: "deadlift", width: numberWidth, formatter: urlformatter},
         {id: "total", name: translation_column_total, field: "total", width: numberWidth},
         {id: "points", name: selection_to_points_title(), field: "points", width: numberWidth}
     ];

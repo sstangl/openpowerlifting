@@ -10,6 +10,12 @@ $header-background-color: #303030;
 $default-color: #120D0B;
 $primary-color: #FDB93E;
 
+// Accent colors.
+$squat-color: $default-color;
+$bench-color: $default-color;
+$deadlift-color: $default-color;
+$accent-font-weight: normal;
+
 $table-header-background-color: $primary-color;
 $row-alt-background-color: #E8E6E7; // Every even-numbered row.
 $row-hover-background-color: #CACACA;

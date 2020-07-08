@@ -142,3 +142,17 @@ td a {
   padding-left: 20px;
   // background: url('../images/ajax-loader-small.gif') no-repeat center left;
 }
+
+// Accent colors.
+.squat {
+  color: $squat-color;
+  font-weight: $accent-font-weight;
+}
+.bench {
+  color: $bench-color;
+  font-weight: $accent-font-weight;
+}
+.deadlift {
+  color: $deadlift-color;
+  font-weight: $accent-font-weight;
+}
