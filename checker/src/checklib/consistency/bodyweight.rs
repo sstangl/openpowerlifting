@@ -79,7 +79,7 @@ pub fn check_bodyweight_one(
             let days = this_date - prev_date;
             let plural = if days > 1 { "s" } else { "" };
             let msg = format!(
-                "Bodyweight mismatch for {}: [{}, {}] in {} day{}",
+                "www.openpowerlifting.org/u/{} ranged [{}, {}] in {} day{}",
                 entry.username, prev.bodyweightkg, entry.bodyweightkg, days, plural
             );
             report.warning(msg);
