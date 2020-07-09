@@ -175,7 +175,7 @@ def getresults(soup, url):
 
             csv.rows[ii][byidx] = birthyears[ii]
 
-    subpages = soup.find('ul', id='pldb-table-subs')
+    subpages = soup.find('ul', {'class': 'nav-tabs'})
 
     if subpages:
         div_name = re.sub(r'\(.*?\)', '', subpages.find('li').text).strip()
@@ -184,7 +184,6 @@ def getresults(soup, url):
             row[-1] = div_name.lower()
 
         links = subpages.find_all('a')
-
         for link in links:
             div_name = re.sub(r'\(.*?\)', '', link.text).strip()
             subpage_ext = link['href'].split('/')[:-1][-1]
@@ -193,8 +192,7 @@ def getresults(soup, url):
             subpage_html = gethtml(subpage_url)
             subpage_html = subpage_html.replace(
                 '<span class="result-value-fail">', '<span class="result-value-fail">-')
-            # Remove record text
-            subpage_html = re.sub('<sup.*?sup>', '', subpage_html)
+
             subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
             subpage_csv = getpagedata(subpage_soup)
 
@@ -267,7 +265,8 @@ def get_cyrillic_names_and_birthyears(url):
             names.append(name)
 
             if byidx:
-                by = tds[byidx].text.replace('—', '')
+                by = ' '.join(tds[byidx].text.replace(
+                    '—', '').replace('-', '').split())
             else:
                 by = ''
 
@@ -318,21 +317,21 @@ def getpagedata(soup):
             csv.fieldnames += ['Squat3Kg']
         elif h in ['SQ', 'П', 'S']:
             csv.fieldnames += ['Best3SquatKg']
-        elif h in ['BP1', 'Ж1']:
+        elif h in ['BP1', 'Ж1', 'B1']:
             csv.fieldnames += ['Bench1Kg']
-        elif h in ['BP2', 'Ж2']:
+        elif h in ['BP2', 'Ж2', 'B2']:
             csv.fieldnames += ['Bench2Kg']
-        elif h in ['BP3', 'Ж3']:
+        elif h in ['BP3', 'Ж3', 'B3']:
             csv.fieldnames += ['Bench3Kg']
-        elif h in ['BP', 'Ж']:
+        elif h in ['BP', 'Ж', 'B']:
             csv.fieldnames += ['Best3BenchKg']
-        elif h in ['DL1', 'Т1']:
+        elif h in ['DL1', 'Т1', 'D1']:
             csv.fieldnames += ['Deadlift1Kg']
-        elif h in ['DL2', 'Т2']:
+        elif h in ['DL2', 'Т2', 'D2']:
             csv.fieldnames += ['Deadlift2Kg']
-        elif h in ['DL3', 'Т3']:
+        elif h in ['DL3', 'Т3', 'D3']:
             csv.fieldnames += ['Deadlift3Kg']
-        elif h in ['DL', 'Т']:
+        elif h in ['DL', 'Т', 'D']:
             csv.fieldnames += ['Best3DeadliftKg']
         elif h in ['Total', 'Сумма']:
             csv.fieldnames += ['TotalKg']
@@ -376,7 +375,15 @@ def getpagedata(soup):
 
         elif tr.find_all('th') == []:  # Otherwise it's a header
             row = []
+
             for td in tr.find_all('td'):
+
+                if td.has_attr('class') and td.attrs['class'] == ['font-weight-bold',
+                                                                  'general',
+                                                                  'border-right',
+                                                                  'text-right']:
+                    continue
+
                 text = td.text
 
                 # Get the country data
@@ -386,8 +393,8 @@ def getpagedata(soup):
                 if text is None:
                     text = ''
 
-                row.append(text.strip().replace(
-                    '  ', ' ').replace(',', ' ').replace('—', ''))
+                text = ' '.join(text.split())
+                row.append(text.strip().replace(',', ' ').replace('—', ''))
 
             row = row + [wcstate, sexstate]
             csv.rows += [row]
@@ -442,6 +449,34 @@ def fix_totals(csv):
             total += float(row[csv.index('Best3DeadliftKg')])
 
         row[totalidx] = str(total)
+
+
+def remove_records(csv):
+    def getevtindices(csv, fieldl):
+        indexlist = []
+        for f in fieldl:
+            try:
+                indexlist.append(csv.index(f))
+            except ValueError:
+                pass
+        return indexlist
+
+    squatidxl = getevtindices(
+        csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'Best3SquatKg'])
+    benchidxl = getevtindices(
+        csv, ['Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg', 'Best3BenchKg'])
+    deadliftidxl = getevtindices(
+        csv, ['Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg',
+              'Best3DeadliftKg'])
+
+    attempt_idcs = squatidxl + benchidxl + deadliftidxl
+    if 'TotalKg' in csv.fieldnames:
+        attempt_idcs = attempt_idcs + [csv.index('TotalKg')]
+
+    for row in csv.rows:
+        for col in attempt_idcs:
+            row[col] = row[col].replace('nr ', '').replace(
+                'wr ', '').replace('er ', '')
 
 
 def unreverse_names(csv):
@@ -600,10 +635,11 @@ def parse_sheetname(csv):
             elif 'dl' in row[sn_idx]:
                 row[event_idx] = 'D'
                 row[sn_idx] = row[sn_idx].replace('dl', '')
-            elif 'pp' in row[sn_idx]:
+            elif 'PP' in row[sn_idx]:
                 row[event_idx] = 'BD'
                 row[sn_idx] = row[sn_idx].replace('pp', '')
-            row[sn_idx] = row[sn_idx].strip().replace('  ', ' ')
+            row[sn_idx] = ' '.join(
+                row[sn_idx].strip().replace('  ', ' ').split())
     return csv
 
 
@@ -655,6 +691,8 @@ def main(url):
 
     # Figure out event information.
     markevent(entriescsv)
+
+    remove_records(entriescsv)
 
     entriescsv = parse_sheetname(entriescsv)
     entriescsv = standardise_division(meetcsv.rows[0][0], entriescsv)
