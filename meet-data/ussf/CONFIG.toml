@@ -1,9 +1,10 @@
 # Configuration for the USSF.
 
 [divisions]
-    open = {name = "Open", min = 0, max = 999}
-    light = {name = "Light", min = 0, max = 999}
-    heavy = {name = "Heavy", min = 0, max = 999}
+    open = {name="Open", min=0, max=999}
+    light = {name="Light", min=0, max=999}
+    heavy = {name="Heavy", min=0, max=999}
+    masters = {name="Masters", min=40, max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -17,3 +18,4 @@
 
 [exemptions]
     1901 = ["ExemptWeightClassConsistency"] # 125+ instead of 140/140+.
+    2001 = ["ExemptWeightClassConsistency"] # "All" weightclass used.
