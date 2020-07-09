@@ -141,21 +141,13 @@ def getmeetinfo(soup):
 def getresults(soup, url):
     csv = Csv()
 
-    if '?all_attempts=1' not in url:
-        url = url + '?all_attempts=1'
-
     subpage_html = gethtml(url)
     subpage_html = re.sub('<sup.*?sup>', '', subpage_html)
 
-    subpage_html = subpage_html.replace('<span class="result-value-fail">',
-                                        '<span class="result-value-fail">-')
+    subpage_html = subpage_html.replace('<del>', '<del>-')
 
     subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
     csv = getpagedata(subpage_soup)
-
-    # For some reason BirthYear sometimes vanishes when we show all attempts,
-    # so grab it with the Russian names
-    url = url.replace('?all_attempts=1', '')
 
     # The english site is currently broken
     if 'en.' in url:
@@ -184,21 +176,21 @@ def getresults(soup, url):
             row[-1] = div_name.lower()
 
         links = subpages.find_all('a')
+
         for link in links:
             div_name = re.sub(r'\(.*?\)', '', link.text).strip()
             subpage_ext = link['href'].split('/')[:-1][-1]
+            print(link['href'])
 
-            subpage_url = url + subpage_ext + '/?all_attempts=1'
+            subpage_url = url + subpage_ext
             subpage_html = gethtml(subpage_url)
-            subpage_html = subpage_html.replace(
-                '<span class="result-value-fail">', '<span class="result-value-fail">-')
 
             subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
             subpage_csv = getpagedata(subpage_soup)
 
             if 'Name' in subpage_csv.fieldnames:
                 [russian_names, birthyears] = get_cyrillic_names_and_birthyears(
-                    subpage_url.replace('?all_attempts=1', ''))
+                    subpage_url)
 
                 subpage_csv.append_column('CyrillicName')
                 cyrnameidx = subpage_csv.index('CyrillicName')
@@ -394,6 +386,7 @@ def getpagedata(soup):
                     text = ''
 
                 text = ' '.join(text.split())
+                text = text.replace('- ', '-')
                 row.append(text.strip().replace(',', ' ').replace('—', ''))
 
             row = row + [wcstate, sexstate]
@@ -461,6 +454,11 @@ def remove_records(csv):
                 pass
         return indexlist
 
+    def remove_all(text, replace_strings):
+        for rep_str in replace_strings:
+            text = text.replace(rep_str, "")
+        return text
+
     squatidxl = getevtindices(
         csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'Best3SquatKg'])
     benchidxl = getevtindices(
@@ -475,8 +473,8 @@ def remove_records(csv):
 
     for row in csv.rows:
         for col in attempt_idcs:
-            row[col] = row[col].replace('nr ', '').replace(
-                'wr ', '').replace('er ', '')
+            row[col] = remove_all(
+                row[col], ['nr ', 'wr ', 'er ', 'wt3 ', 'w ', 'e '])
 
 
 def unreverse_names(csv):
