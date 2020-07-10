@@ -108,7 +108,7 @@ def getmeetinfo(soup):
     daterow = venuerow.find_next_sibling().find_next_sibling()
 
     longdate = daterow.text
-    if ' ' in longdate:
+    if ' ' in longdate and '-' not in longdate:
         [day, month, year] = longdate.strip().split(' ')
         year = year.strip()
 
