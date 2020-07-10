@@ -106,13 +106,11 @@ def getmeetinfo(soup):
 
     # Get the date.
     daterow = venuerow.find_next_sibling().find_next_sibling()
-    longdate = daterow.text
-    if ',' in longdate:
-        [daymonth, year] = longdate.split(',')
-        year = year.strip()
 
-        month = daymonth.split(' ')[0]
-        day = daymonth.split(' ')[1]
+    longdate = daterow.text
+    if ' ' in longdate:
+        [day, month, year] = longdate.strip().split(' ')
+        year = year.strip()
 
         for month_key in month_dict.keys():
             if month.lower() in month_key:
@@ -180,7 +178,6 @@ def getresults(soup, url):
         for link in links:
             div_name = re.sub(r'\(.*?\)', '', link.text).strip()
             subpage_ext = link['href'].split('/')[:-1][-1]
-            print(link['href'])
 
             subpage_url = url + subpage_ext
             subpage_html = gethtml(subpage_url)
@@ -399,14 +396,14 @@ def expand_fourths(csv, bestlift, lift4):
     bestidx = csv.index(bestlift)
 
     for row in csv.rows:
-        if '(' in row[bestidx]:
+        if ' ' in row[bestidx]:
             if lift4 not in csv.fieldnames:
                 csv.insert_column(bestidx+1, lift4)
             lift4idx = csv.index(lift4)
 
-            [row[bestidx], row[lift4idx]] = row[bestidx].split('(')
+            [row[bestidx], row[lift4idx]] = row[bestidx].strip().split(' ')
             row[bestidx] = row[bestidx].strip()
-            row[lift4idx] = row[lift4idx].replace(')', '').strip()
+            row[lift4idx] = row[lift4idx].strip()
 
 
 def fix_place(csv):
@@ -475,6 +472,7 @@ def remove_records(csv):
         for col in attempt_idcs:
             row[col] = remove_all(
                 row[col], ['nr ', 'wr ', 'er ', 'wt3 ', 'w ', 'e '])
+            row[col] = row[col].replace('  ', ' ')
 
 
 def unreverse_names(csv):
@@ -675,6 +673,8 @@ def main(url):
     if len(entriescsv.rows) == 0:
         error("No rows found!")
 
+    remove_records(entriescsv)
+
     if 'Best3SquatKg' in entriescsv.fieldnames:
         expand_fourths(entriescsv, 'Best3SquatKg', 'Squat4Kg')
     if 'Best3BenchKg' in entriescsv.fieldnames:
@@ -689,8 +689,6 @@ def main(url):
 
     # Figure out event information.
     markevent(entriescsv)
-
-    remove_records(entriescsv)
 
     entriescsv = parse_sheetname(entriescsv)
     entriescsv = standardise_division(meetcsv.rows[0][0], entriescsv)
