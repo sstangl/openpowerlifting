@@ -82,6 +82,60 @@ impl Username {
     pub(crate) fn from_str(s: &str) -> Result<Self, ascii::FromAsciiError<&str>> {
         Ok(Username(s.into_ascii_string()?))
     }
+
+    /// Returns the base name and variant of a [Username], if applicable.
+    ///
+    /// Since variant numbers begin at 1, zero is used to indicate the
+    /// absence of variant information.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use opltypes::Username;
+    /// let u = Username::from_name("John Doe").unwrap();
+    /// let (base, variant) = u.get_parts();
+    /// assert_eq!(base.as_str(), "johndoe");
+    /// assert_eq!(variant, 0);
+    ///
+    /// let u = Username::from_name("John Doe #1").unwrap();
+    /// let (base, variant) = u.get_parts();
+    /// assert_eq!(base.as_str(), "johndoe");
+    /// assert_eq!(variant, 1);
+    /// ```
+    pub fn get_parts(&self) -> (&AsciiStr, u32) {
+        // Common case first: if no digit at end, it's not a variant.
+        if let Some(ascii_char) = self.0.last() {
+            if !ascii_char.is_ascii_digit() {
+                return (&self.0, 0);
+            }
+        } else {
+            return (&self.0, 0); // Username was the empty string.
+        }
+
+        // Slow case: the username ends with a digit.
+        //
+        // If the username begins with "ea-", then it's an East Asian name
+        // that is numerically encoded and cannot be disambiguated.
+        if self.0.as_str().starts_with("ea-") {
+            return (&self.0, 0);
+        }
+
+        // Definitely a variant.
+        //
+        // Walk the string backwards looking for the first index
+        // of an ASCII digit.
+        let mut start: usize = self.len() - 1;
+        for i in (0..start).rev() {
+            if self.0[i].is_ascii_digit() {
+                start = i;
+            } else {
+                break;
+            }
+        }
+
+        let variant = self.0.as_str()[start..].parse::<u32>().unwrap_or(0);
+        (&self.0[0..start], variant)
+    }
 }
 
 impl Serialize for Username {

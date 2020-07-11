@@ -5,12 +5,18 @@ use opltypes::Date;
 
 mod bodyweight;
 use bodyweight::check_bodyweight_all;
-mod name;
-use name::check_name_all;
-mod sex;
-use sex::check_sex_all;
+
+mod disambiguations;
+use disambiguations::check_disambiguations_all;
+
 mod duplicates;
 use duplicates::check_duplicates_all;
+
+mod name;
+use name::check_name_all;
+
+mod sex;
+use sex::check_sex_all;
 
 /// Return type for consistency check functions.
 pub enum ConsistencyResult {
@@ -60,6 +66,7 @@ pub fn check(
 
     check_sex_all(liftermap, meetdata, lifterdata, &mut reports);
     check_name_all(liftermap, meetdata, &mut reports);
+    check_disambiguations_all(liftermap, lifterdata, &mut reports);
     check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
     check_duplicates_all(liftermap, meetdata, &mut reports);
 
