@@ -146,6 +146,7 @@
     fm2frcx = {name = "F-M2F-RC-X", min=45, max=49, sex="F", equipment="Wraps"}
     fm3frcx = {name = "F-M3B-R-X", min=50, max=54, sex="F", equipment="Raw"}
     fm4frcx = {name = "F-M4F-RC-X", min=55, max=59, sex="F", equipment="Wraps"}
+    fm4brx = {name = "F-M4B-R-X", min=55, max=59, sex="F", equipment="Raw"}
     fm5bspx = {name = "F-M5B-SP-X", min=60, max=64, sex="F", equipment="Single-ply"}
     fmpffrx = {name = "F-MPFF-R-X", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     fmpffrcx = {name = "F-MPFF-RC-X", min=0, max=999, equipment="Wraps"}
