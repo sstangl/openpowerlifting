@@ -23,7 +23,7 @@
 
 use opltypes::*;
 
-use crate::wilks::{wilks_coefficient_men, wilks_coefficient_women};
+use crate::dots::{dots_coefficient_men, dots_coefficient_women};
 
 /// Lookup table of age coefficients, used as AGE_COEFFICIENTS[age].
 const AGE_COEFFICIENTS: [f64; 101] = [
@@ -184,18 +184,21 @@ fn age_coeff(age: Age) -> f64 {
 ///
 /// "McCulloch" specifically refers to only a specific range of Masters age coefficients,
 /// but the name was popularized by the USPA as the general term for Age-Adjusted Wilks.
+///
+/// For OpenPowerlifting purposes, this applies an age adjustment factor to the default
+/// rankings points system, which can change over time.
 pub fn mcculloch(sex: Sex, bodyweight: WeightKg, total: WeightKg, age: Age) -> Points {
     if bodyweight.is_zero() || total.is_zero() {
         return Points::from_i32(0);
     }
-    // Wilks coefficients are used directly to avoid Points boxing/unboxing overhead.
-    let wilks_coefficient: f64 = match sex {
-        Sex::M | Sex::Mx => wilks_coefficient_men(f64::from(bodyweight)),
-        Sex::F => wilks_coefficient_women(f64::from(bodyweight)),
+    // Coefficients are used directly to avoid Points boxing/unboxing overhead.
+    let dots_coefficient: f64 = match sex {
+        Sex::M | Sex::Mx => dots_coefficient_men(f64::from(bodyweight)),
+        Sex::F => dots_coefficient_women(f64::from(bodyweight)),
     };
 
     let age_coefficient: f64 = age_coeff(age);
-    Points::from(wilks_coefficient * age_coefficient * f64::from(total))
+    Points::from(dots_coefficient * age_coefficient * f64::from(total))
 }
 
 #[cfg(test)]

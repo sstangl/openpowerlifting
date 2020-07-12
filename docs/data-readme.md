@@ -174,7 +174,9 @@ The calculation of Wilks points is defined by [modules/coefficients/src/wilks.rs
 
 Optional. A positive number if McCulloch points could be calculated, empty if the lifter was disqualified.
 
-McCulloch is the name used by the USPA/IPL for Wilks points multiplied by an age-adjustment factor. McCulloch is technically just the coefficients for Masters lifters -- coefficients for Junior and Sub-Junior lifters are called "Foster Coefficients." Our implementation of McCulloch contains both.
+McCulloch is the name used for Dots points multiplied by an age-adjustment factor.
+
+McCulloch is technically just the coefficients for Masters lifters -- coefficients for Junior and Sub-Junior lifters are called "Foster Coefficients." Our implementation of McCulloch contains both.
 
 The calculation of McCulloch points is defined by [modules/coefficients/src/mcculloch.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/mcculloch.rs).
 
