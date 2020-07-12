@@ -149,9 +149,6 @@ def getresults(soup, url):
 
     subpages = soup.find('ul', {'class': 'nav-tabs'})
 
-
-
-
     if subpages:
         div_name = re.sub(r'\(.*?\)', '', subpages.find('li').text).strip()
         csv.append_column('SheetName')
