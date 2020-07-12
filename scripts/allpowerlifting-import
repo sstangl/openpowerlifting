@@ -147,25 +147,10 @@ def getresults(soup, url):
     subpage_soup = BeautifulSoup(subpage_html, 'html.parser')
     csv = getpagedata(subpage_soup)
 
-    # The english site is currently broken
-    if 'en.' in url:
-        [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
-
-        csv.append_column('CyrillicName')
-        cyrnameidx = csv.index('CyrillicName')
-        nameidx = csv.index('Name')
-
-        if 'BirthYear' not in csv.fieldnames:
-            csv.append_column('BirthYear')
-        byidx = csv.index('BirthYear')
-
-        for ii in range(len(csv.rows)):
-            if csv.rows[ii][nameidx] != russian_names[ii]:
-                csv.rows[ii][cyrnameidx] = russian_names[ii]
-
-            csv.rows[ii][byidx] = birthyears[ii]
-
     subpages = soup.find('ul', {'class': 'nav-tabs'})
+
+
+
 
     if subpages:
         div_name = re.sub(r'\(.*?\)', '', subpages.find('li').text).strip()
@@ -208,6 +193,24 @@ def getresults(soup, url):
                 row[-1] = div_name.lower()
 
             csv.cat(subpage_csv)
+    else:
+        # The english site is currently broken
+        if 'en.' in url:
+            [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
+
+        csv.append_column('CyrillicName')
+        cyrnameidx = csv.index('CyrillicName')
+        nameidx = csv.index('Name')
+
+        if 'BirthYear' not in csv.fieldnames:
+            csv.append_column('BirthYear')
+        byidx = csv.index('BirthYear')
+
+        for ii in range(len(csv.rows)):
+            if csv.rows[ii][nameidx] != russian_names[ii]:
+                csv.rows[ii][cyrnameidx] = russian_names[ii]
+
+            csv.rows[ii][byidx] = birthyears[ii]
 
     return csv
 
