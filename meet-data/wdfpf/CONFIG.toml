@@ -41,6 +41,8 @@
     fpfm = {name="F-PFM", min=0, max=99, sex="F"}
     mpfm = {name="M-PFM", min=0, max=99, sex="M"}
 
+    fy = {name="F-Y", min=5, max=13, sex="F"}
+    my = {name="M-Y", min=5, max=13, sex="M"}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
