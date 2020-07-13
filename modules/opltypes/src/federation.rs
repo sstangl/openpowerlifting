@@ -820,6 +820,10 @@ pub enum Federation {
     #[strum(to_string = "Russia-UA", serialize = "russia-ua")]
     RussiaUA,
 
+    /// Strong Athletes Against Steroids, US 90s "Fed"
+    #[strum(to_string = "SAAS", serialize = "saas")]
+    SAAS,
+
     /// Slovenská Asociácia Fitnes, Kulturistiky a Silového Trojboja.
     /// Slovakian IPF Affilate.
     #[strum(to_string = "SAFKST", serialize = "safkst")]
@@ -1496,6 +1500,7 @@ impl Federation {
             Federation::RPU => false,
             Federation::RUPC => false,
             Federation::RussiaUA => false,
+            Federation::SAAS => false,
             Federation::SAFKST => FULLY_TESTED,
             Federation::SAPF => FULLY_TESTED,
             Federation::SAST => false,
@@ -1796,6 +1801,7 @@ impl Federation {
             Federation::RPU => Some(Country::Russia),
             Federation::RUPC => Some(Country::USA),
             Federation::RussiaUA => Some(Country::Russia),
+            Federation::SAAS => Some(Country::USA),
             Federation::SAFKST => Some(Country::Slovakia),
             Federation::SAPF => Some(Country::SouthAfrica),
             Federation::SAST => Some(Country::Slovakia),
@@ -2137,6 +2143,7 @@ impl Federation {
             Federation::RPU => None,
             Federation::RUPC => None,
             Federation::RussiaUA => None,
+            Federation::SAAS => None,
             Federation::SAFKST => Some(Federation::IPF),
             Federation::SAPF => Some(Federation::IPF),
             Federation::SAST => Some(Federation::GPC),
@@ -2517,6 +2524,7 @@ impl Federation {
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,
             Federation::RussiaUA => PointsSystem::Wilks,
+            Federation::SAAS => PointsSystem::Wilks,
             Federation::SAFKST => Federation::ipf_rules_on(date),
             Federation::SAPF => Federation::ipf_rules_on(date),
             Federation::SAST => PointsSystem::Glossbrenner,
