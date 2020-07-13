@@ -205,6 +205,10 @@ pub enum Federation {
     #[strum(to_string = "CBLB", serialize = "cblb")]
     CBLB,
 
+    /// Central Bench Press League, US 90s "Fed"
+    #[strum(to_string = "CBPL", serialize = "cbpl")]
+    CBPL,
+
     /// Chinese Powerlifting Association, GPA.
     #[strum(to_string = "ChinaPA", serialize = "chinapa")]
     ChinaPA,
@@ -1349,6 +1353,7 @@ impl Federation {
             Federation::CAPONZ => false,
             Federation::CAST => false,
             Federation::CBLB => FULLY_TESTED,
+            Federation::CBPL => false,
             Federation::ChinaPA => false,
             Federation::ColPF => FULLY_TESTED,
             Federation::CommonwealthPF => FULLY_TESTED,
@@ -1656,6 +1661,7 @@ impl Federation {
             Federation::CAPONZ => Some(Country::NewZealand),
             Federation::CAST => Some(Country::Czechia),
             Federation::CBLB => Some(Country::Brazil),
+            Federation::CBPL => Some(Country::USA),
             Federation::ChinaPA => Some(Country::China),
             Federation::ColPF => Some(Country::Colombia),
             Federation::CommonwealthPF => None,
@@ -1978,6 +1984,7 @@ impl Federation {
             Federation::CAPONZ => Some(Federation::GPA),
             Federation::CAST => Some(Federation::GPC),
             Federation::CBLB => Some(Federation::IPF),
+            Federation::CBPL => None,
             Federation::ChinaPA => Some(Federation::GPA),
             Federation::ColPF => Some(Federation::IPF),
             Federation::CommonwealthPF => Some(Federation::IPF),
@@ -2358,6 +2365,7 @@ impl Federation {
             Federation::CAPONZ => PointsSystem::Glossbrenner,
             Federation::CAST => PointsSystem::Wilks,
             Federation::CBLB => Federation::ipf_rules_on(date),
+            Federation::CBPL => PointsSystem::Wilks,
             Federation::ChinaPA => PointsSystem::Wilks,
             Federation::ColPF => Federation::ipf_rules_on(date),
             Federation::CommonwealthPF => Federation::ipf_rules_on(date),
