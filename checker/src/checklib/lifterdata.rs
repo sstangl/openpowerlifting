@@ -1,12 +1,35 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
 use opltypes::Username;
+use serde_derive::Deserialize;
+use toml::de;
 
 use std::collections::HashMap;
 use std::error::Error;
+use std::fs;
 use std::path::Path;
 
 use crate::Report;
+
+/// Sex consistency exemptions, in the [sex] table of exemptions.toml.
+#[derive(Deserialize)]
+pub struct SexExemptions {
+    usernames: Vec<Username>,
+}
+
+/// Bodyweight consistency exemptions, in the [bodyweight] table of
+/// exemptions.toml.
+#[derive(Deserialize)]
+pub struct BodyweightExemptions {
+    usernames: Vec<Username>,
+}
+
+/// Deserialization target for `lifter-data/exemptions.toml`.
+#[derive(Deserialize)]
+pub struct ExemptionConfig {
+    sex: SexExemptions,
+    bodyweight: BodyweightExemptions,
+}
 
 #[derive(Debug)]
 pub struct LifterDataCheckResult {
@@ -175,17 +198,11 @@ fn check_flair(
     Ok(())
 }
 
-/// Specifies lifters for whom sex conflict errors should be suppressed.
+/// Loads an `exemptions.toml` file.
 ///
-/// The data exists in `lifter-data/sex-exemptions.csv`.
-#[derive(Deserialize)]
-struct SexExemptionsRow {
-    #[serde(rename = "Name")]
-    pub name: String,
-}
-
-/// Checks `lifter-data/sex-exemptions.csv`, mutating the LifterDataMap.
-fn check_sex_exemptions(
+/// This allows specifying a bunch of exemptions in a single place.
+/// There should only be one such file, in `lifter-data/`.
+pub fn load_exemptions(
     report: &mut Report,
     map: &mut LifterDataMap,
 ) -> Result<(), Box<dyn Error>> {
@@ -194,24 +211,11 @@ fn check_sex_exemptions(
         return Ok(());
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
+    let file_contents: String = fs::read_to_string(&report.path)?;
+    let exemptions: ExemptionConfig = de::from_str(file_contents.as_str())?;
 
-    for (rownum, result) in rdr.deserialize().enumerate() {
-        // Text editors are one-indexed, and the header line was skipped.
-        let line = (rownum as u64) + 2;
-
-        let row: SexExemptionsRow = result?;
-        let username = match Username::from_name(&row.name) {
-            Ok(s) => s,
-            Err(s) => {
-                report.error_on(line, s);
-                continue;
-            }
-        };
-
+    // Handle the [sex] section.
+    for username in exemptions.sex.usernames.into_iter() {
         match map.get_mut(&username) {
             Some(data) => {
                 data.exempt_sex = true;
@@ -224,46 +228,8 @@ fn check_sex_exemptions(
         }
     }
 
-    Ok(())
-}
-
-/// Specifies lifters for whom bodyweight conflict errors should be suppressed.
-///
-/// The data exists in `lifter-data/bw-exemptions.csv`.
-#[derive(Deserialize)]
-struct BodyweightExemptionsRow {
-    #[serde(rename = "Name")]
-    pub name: String,
-}
-
-/// Checks `lifter-data/bw-exemptions.csv`, mutating the LifterDataMap.
-fn check_bodyweight_exemptions(
-    report: &mut Report,
-    map: &mut LifterDataMap,
-) -> Result<(), Box<dyn Error>> {
-    if !report.path.exists() {
-        report.error("File does not exist");
-        return Ok(());
-    }
-
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
-
-    for (rownum, result) in rdr.deserialize().enumerate() {
-        // Text editors are one-indexed, and the header line was skipped.
-        let line = (rownum as u64) + 2;
-
-        let row: BodyweightExemptionsRow = result?;
-        let username = match Username::from_name(&row.name) {
-            Ok(s) => s,
-            Err(s) => {
-                report.error_on(line, s);
-                continue;
-            }
-        };
-
+    // Handle the [bodyweight] section.
+    for username in exemptions.bodyweight.usernames.into_iter() {
         match map.get_mut(&username) {
             Some(data) => {
                 data.exempt_bodyweight = true;
@@ -501,21 +467,9 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
         reports.push(report)
     }
 
-    // Check sex-exemptions.csv.
-    let mut report = Report::new(lifterdir.join("sex-exemptions.csv"));
-    match check_sex_exemptions(&mut report, &mut map) {
-        Ok(()) => (),
-        Err(e) => {
-            report.error(e);
-        }
-    }
-    if report.has_messages() {
-        reports.push(report)
-    }
-
-    // Check bw-exemptions.csv.
-    let mut report = Report::new(lifterdir.join("bw-exemptions.csv"));
-    match check_bodyweight_exemptions(&mut report, &mut map) {
+    // Load exemptions from exemptions.toml.
+    let mut report = Report::new(lifterdir.join("exemptions.toml"));
+    match load_exemptions(&mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
