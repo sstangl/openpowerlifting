@@ -21,32 +21,34 @@ pub fn check_disambiguations_all(
     // Check that all variant usernames are marked for disambiguation.
     for username in liftermap.keys() {
         let (base, variant) = username.get_parts();
-        if variant > 0 {
-            let base_username = Username::from_name(base.into()).unwrap();
+        if variant == 0 {
+            continue;
+        }
 
-            let mut marked = false;
-            if let Some(data) = lifterdatamap.get(&base_username) {
-                if data.disambiguation_count != 0 {
-                    marked = true;
-                }
+        let base_username = Username::from_name(base.into()).unwrap();
 
-                // While we're here, also check that the variant does not
-                // overflow the maximum number.
-                if data.disambiguation_count < variant {
-                    let msg = format!(
-                        "{} is variant {}, but only {} variants are defined",
-                        username.as_str(),
-                        variant,
-                        data.disambiguation_count
-                    );
-                    report.error(msg);
-                }
+        let mut marked = false;
+        if let Some(data) = lifterdatamap.get(&base_username) {
+            if data.disambiguation_count != 0 {
+                marked = true;
             }
 
-            if marked == false {
-                let msg = format!("{} not marked for disambiguation", username.as_str());
+            // While we're here, also check that the variant does not
+            // overflow the maximum number.
+            if data.disambiguation_count < variant {
+                let msg = format!(
+                    "{} is variant {}, but only {} variants are defined",
+                    username.as_str(),
+                    variant,
+                    data.disambiguation_count
+                );
                 report.error(msg);
             }
+        }
+
+        if marked == false {
+            let msg = format!("{} not marked for disambiguation", username.as_str());
+            report.error(msg);
         }
     }
 
