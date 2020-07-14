@@ -1,6 +1,6 @@
 //! Implements Name to Username conversion logic.
 
-use ascii::{AsciiChar, AsciiStr, AsciiString, IntoAsciiString, ToAsciiChar};
+use ascii::{AsciiStr, AsciiString, IntoAsciiString, ToAsciiChar};
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
@@ -36,9 +36,9 @@ impl Username {
         self.0.as_str()
     }
 
-    /// Returns the username as an [AsciiChar] slice.
-    pub fn as_ascii_slice(&self) -> &[AsciiChar] {
-        self.0.as_slice()
+    /// Returns the username as an [AsciiStr] slice.
+    pub fn as_ascii_str(&self) -> &AsciiStr {
+        &self.0
     }
 
     /// Returns the length of this [Username] in bytes.
