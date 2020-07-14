@@ -15,6 +15,7 @@ use common::*;
 #[cfg(test)]
 mod tests;
 
+use opltypes::Username;
 use rocket::fairing::AdHoc;
 use rocket::http::{ContentType, Cookies, Status};
 use rocket::request::{Form, Request};
@@ -529,8 +530,8 @@ fn dev_checker_post(
 
 #[get("/lifters.html?<q>")]
 fn old_lifters(opldb: State<ManagedOplDb>, q: String) -> Option<Redirect> {
-    let username: String = usernames::make_username(&q).ok()?;
-    opldb.get_lifter_id(&username)?; // Ensure username exists.
+    let username = Username::from_name(&q).ok()?;
+    opldb.get_lifter_id(username.as_str())?; // Ensure username exists.
     Some(Redirect::permanent(format!("/u/{}", username)))
 }
 

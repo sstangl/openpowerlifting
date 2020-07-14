@@ -463,7 +463,7 @@ fn interpolate_age_single_lifter(
 pub fn interpolate_age_debug_for(
     meetdata: &mut AllMeetData,
     liftermap: &LifterMap,
-    username: &str,
+    username: &Username,
 ) {
     match liftermap.get(username) {
         Some(indices) => interpolate_age_single_lifter(meetdata, indices, true),

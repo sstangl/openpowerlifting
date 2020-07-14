@@ -105,7 +105,7 @@ impl<'db> JsEntryRow<'db> {
             rank: locale.ordinal(sorted_index + 1, entry.sex),
 
             name: get_localized_name(lifter, locale.language),
-            username: &lifter.username,
+            username: lifter.username.as_str(),
             instagram: &lifter.instagram,
             vkontakte: &lifter.vkontakte,
             color: &lifter.color,

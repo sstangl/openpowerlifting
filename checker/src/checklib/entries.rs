@@ -120,7 +120,7 @@ fn canonicalize_name_utf8(s: &str) -> String {
 #[derive(Default)]
 pub struct Entry {
     pub name: String,
-    pub username: String,
+    pub username: Username,
     pub cyrillicname: Option<String>,
     pub greekname: Option<String>,
     pub japanesename: Option<String>,
@@ -523,9 +523,7 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<
         None
     } else {
         for c in s.chars() {
-            if usernames::get_writing_system(c) != usernames::WritingSystem::Cyrillic
-                && !"-' .".contains(c)
-            {
+            if get_writing_system(c) != WritingSystem::Cyrillic && !"-' .".contains(c) {
                 let msg = format!(
                     "CyrillicName '{}' contains non-Cyrillic character '{}'",
                     s, c
@@ -543,9 +541,7 @@ fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<
         None
     } else {
         for c in s.chars() {
-            if usernames::get_writing_system(c) != usernames::WritingSystem::Japanese
-                && c != ' '
-            {
+            if get_writing_system(c) != WritingSystem::Japanese && c != ' ' {
                 let msg = format!(
                     "JapaneseName '{}' contains non-Japanese character '{}'",
                     s, c
@@ -563,9 +559,7 @@ fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<Str
         None
     } else {
         for c in s.chars() {
-            if usernames::get_writing_system(c) != usernames::WritingSystem::Greek
-                && !"-' .".contains(c)
-            {
+            if get_writing_system(c) != WritingSystem::Greek && !"-' .".contains(c) {
                 let msg =
                     format!("GreekName '{}' contains non-Greek character '{}'", s, c);
                 report.error_on(line, msg);
@@ -581,9 +575,7 @@ fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<St
         None
     } else {
         for c in s.chars() {
-            if usernames::get_writing_system(c) != usernames::WritingSystem::Korean
-                && !"-' .".contains(c)
-            {
+            if get_writing_system(c) != WritingSystem::Korean && !"-' .".contains(c) {
                 let msg =
                     format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
                 report.error_on(line, msg);
@@ -2399,14 +2391,14 @@ where
 
         // Create the username if applicable.
         if !entry.name.is_empty() {
-            match usernames::make_username(&entry.name) {
+            match Username::from_name(&entry.name) {
                 Ok(username) => entry.username = username,
                 Err(msg) => report.error_on(line, format!("Username error: {}", msg)),
             }
         }
 
         // If requested, report if the username requires disambiguation.
-        if report_disambiguations && !entry.username.is_empty() {
+        if report_disambiguations && !entry.username.as_str().is_empty() {
             if let Some(datamap) = lifterdata {
                 if let Some(lifterdata) = datamap.get(&entry.username) {
                     if lifterdata.disambiguation_count > 0 {

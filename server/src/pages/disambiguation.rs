@@ -71,7 +71,7 @@ impl<'db> Context<'db> {
         // Sort the variants in order of ascending number.
         variants.sort_unstable_by_key(|v| {
             // Sort by disambiguation number.
-            let (_, number) = v.lifter.username.split_at(username_base.len());
+            let (_, number) = v.lifter.username.as_str().split_at(username_base.len());
             number.parse::<u32>().unwrap_or(0)
         });
 

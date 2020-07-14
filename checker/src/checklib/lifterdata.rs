@@ -1,6 +1,6 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
-use usernames::make_username;
+use opltypes::Username;
 
 use std::collections::HashMap;
 use std::error::Error;
@@ -15,7 +15,7 @@ pub struct LifterDataCheckResult {
 }
 
 /// Map from `Username` to `LifterData`.
-pub type LifterDataMap = HashMap<String, LifterData>;
+pub type LifterDataMap = HashMap<Username, LifterData>;
 
 /// A struct containing all `lifter-data/` metadata for a single Username.
 #[derive(Debug, Default)]
@@ -84,7 +84,7 @@ fn check_donator_colors(
         let line = (rownum as u64) + 2;
 
         let row: DonatorColorsRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -92,8 +92,8 @@ fn check_donator_colors(
             }
         };
 
-        if has_whitespace_errors(&username) {
-            report.error_on(line, format!("Whitespace error in '{}'", &username));
+        if has_whitespace_errors(username.as_str()) {
+            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
         if has_whitespace_errors(&row.color) {
             report.error_on(line, format!("Whitespace error in '{}'", &row.color));
@@ -145,7 +145,7 @@ fn check_flair(
         let line = (rownum as u64) + 2;
 
         let row: FlairRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -153,8 +153,8 @@ fn check_flair(
             }
         };
 
-        if has_whitespace_errors(&username) {
-            report.error_on(line, format!("Whitespace error in '{}'", &username));
+        if has_whitespace_errors(username.as_str()) {
+            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
         if has_whitespace_errors(&row.flair) {
             report.error_on(line, format!("Whitespace error in '{}'", &row.flair));
@@ -204,7 +204,7 @@ fn check_sex_exemptions(
         let line = (rownum as u64) + 2;
 
         let row: SexExemptionsRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -256,7 +256,7 @@ fn check_bodyweight_exemptions(
         let line = (rownum as u64) + 2;
 
         let row: BodyweightExemptionsRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -310,7 +310,7 @@ fn check_social_instagram(
         let line = (rownum as u64) + 2;
 
         let row: InstagramRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -318,8 +318,8 @@ fn check_social_instagram(
             }
         };
 
-        if has_whitespace_errors(&username) {
-            report.error_on(line, format!("Whitespace error in '{}'", &username));
+        if has_whitespace_errors(username.as_str()) {
+            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
         if has_whitespace_errors(&row.instagram) {
             report.error_on(line, format!("Whitespace error in '{}'", &row.instagram));
@@ -372,7 +372,7 @@ fn check_social_vkontakte(
         let line = (rownum as u64) + 2;
 
         let row: VKontakteRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -380,8 +380,8 @@ fn check_social_vkontakte(
             }
         };
 
-        if has_whitespace_errors(&username) {
-            report.error_on(line, format!("Whitespace error in '{}'", &username));
+        if has_whitespace_errors(username.as_str()) {
+            report.error_on(line, format!("Whitesace error in '{}'", username.as_str()));
         }
         if has_whitespace_errors(&row.userpage) {
             report.error_on(line, format!("Whitespace error in '{}'", &row.userpage));
@@ -440,7 +440,7 @@ fn check_name_disambiguation(
         let line = (rownum as u64) + 2;
 
         let row: NameDisambiguationRow = result?;
-        let username = match make_username(&row.name) {
+        let username = match Username::from_name(&row.name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -448,8 +448,8 @@ fn check_name_disambiguation(
             }
         };
 
-        if has_whitespace_errors(&username) {
-            report.error_on(line, format!("Whitespace error in '{}'", &username));
+        if has_whitespace_errors(username.as_str()) {
+            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
 
         match map.get_mut(&username) {

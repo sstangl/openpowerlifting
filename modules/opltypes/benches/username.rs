@@ -2,7 +2,7 @@
 
 #![feature(test)]
 
-extern crate usernames;
+extern crate opltypes;
 
 mod benches {
     use super::*;
@@ -10,12 +10,14 @@ mod benches {
     extern crate test;
     use self::test::Bencher;
 
+    use opltypes::Username;
+
     /// Tests the all-ASCII fast path (50 ASCII characters).
     #[bench]
     fn make_username_ascii(b: &mut Bencher) {
         let ascii_name = "1234567890".repeat(5);
         b.iter(|| {
-            usernames::make_username(&ascii_name).unwrap();
+            Username::from_name(&ascii_name).unwrap();
         });
     }
 
@@ -27,7 +29,7 @@ mod benches {
     fn make_username_utf8_expansion(b: &mut Bencher) {
         let utf8_name = "þ".repeat(50);
         b.iter(|| {
-            usernames::make_username(&utf8_name).unwrap();
+            Username::from_name(&utf8_name).unwrap();
         });
     }
 
@@ -36,7 +38,7 @@ mod benches {
     fn make_username_hiragana(b: &mut Bencher) {
         let hiragana_name = "なべやかん".repeat(10);
         b.iter(|| {
-            usernames::make_username(&hiragana_name).unwrap();
+            Username::from_name(&hiragana_name).unwrap();
         });
     }
 }

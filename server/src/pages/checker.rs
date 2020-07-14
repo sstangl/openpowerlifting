@@ -69,7 +69,7 @@ fn check_entries(
         Some(entries) => {
             // Ensure that the username and name do not introduce a conflict.
             for entry in entries.iter() {
-                if let Some(id) = opldb.get_lifter_id(&entry.username) {
+                if let Some(id) = opldb.get_lifter_id(entry.username.as_str()) {
                     let lifter = opldb.get_lifter(id);
                     if lifter.name != entry.name {
                         report.error(format!(

@@ -10,7 +10,6 @@ checker = { version = "0.1", path = "../checker" }
 coefficients = { version = "0.1", path = "../modules/coefficients/" }
 opldb = { version = "0.1", path = "../modules/db/" }
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
-usernames = { version = "0.1", path = "../modules/usernames/" }
 accept-language = "2.0"
 csv = "1.1"
 dotenv = "0.15"

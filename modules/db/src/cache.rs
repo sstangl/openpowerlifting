@@ -233,7 +233,7 @@ impl StaticCache {
     pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
         let mut username_map = HashMap::new();
         for (i, lifter) in lifters.iter().enumerate() {
-            username_map.insert(lifter.username.to_string(), i as u32);
+            username_map.insert(lifter.username.as_str().to_string(), i as u32);
         }
 
         let loglin = LogLinearTimeCache::new(meets, entries);

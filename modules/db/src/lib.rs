@@ -275,10 +275,10 @@ impl OplDb {
         let mut acc = vec![];
         for i in 0..self.lifters.len() {
             let username = &self.lifters[i].username;
-            if username.starts_with(base) {
+            if username.as_str().starts_with(base) {
                 // If the base is shared, the remainder of the string
                 // should be empty or a number for disambiguation.
-                let (_, remainder) = username.split_at(base.len());
+                let (_, remainder) = username.as_str().split_at(base.len());
                 if remainder.is_empty() || remainder.parse::<u8>().is_ok() {
                     acc.push(i as u32);
                 }

@@ -1,7 +1,8 @@
 [package]
 name = "opltypes"
 version = "0.1.0"
-authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+authors = ["Sean Stangl <sean.stangl@gmail.com>",
+           "Matt Pearce <matt@openpowerlifting.org>"]
 description = """
 Datatypes for the OpenPowerlifting database format.
 """
@@ -10,6 +11,7 @@ edition = "2018"
 
 [dependencies]
 arrayvec = "0.5"
+ascii = "1.0"
 serde = "1.0"
 serde_derive = "1.0"
 strum = "0.18"

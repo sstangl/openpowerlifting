@@ -271,7 +271,7 @@ impl<'md> EntryLifterData<'md> {
         EntryLifterData {
             id: lifter_id,
             name: &entry.name,
-            username: &entry.username,
+            username: &entry.username.as_str(),
             cyrillicname: entry.cyrillicname.as_deref(),
             greekname: entry.greekname.as_deref(),
             japanesename: entry.japanesename.as_deref(),
@@ -359,7 +359,7 @@ pub fn make_csv(
                     let lifter_id = next_lifter_id;
                     next_lifter_id += 1;
                     let data = EntryLifterData::from(&entry, lifter_id);
-                    lifter_hash.insert(&entry.username, data);
+                    lifter_hash.insert(entry.username.as_str(), data);
                     lifter_id
                 }
             };
@@ -375,7 +375,9 @@ pub fn make_csv(
 
     for lifter in lifters {
         let default = LifterData::default();
-        let data = lifterdata.get(lifter.username).unwrap_or(&default);
+        let data = lifterdata
+            .get(&Username::from_name(lifter.username).unwrap())
+            .unwrap_or(&default);
         lifters_wtr.serialize(LiftersRow::from(&lifter, &data))?;
     }
 

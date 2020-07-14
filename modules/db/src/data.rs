@@ -27,7 +27,7 @@ pub struct Lifter {
     #[serde(rename(deserialize = "KoreanName"))]
     pub korean_name: Option<String>,
     #[serde(rename(deserialize = "Username"))]
-    pub username: String,
+    pub username: Username,
     #[serde(rename(deserialize = "Instagram"))]
     pub instagram: Option<String>,
     #[serde(rename(deserialize = "VKontakte"))]

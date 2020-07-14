@@ -1,6 +1,7 @@
 //! Defines MeetData, the owner of all meet-related data produced by the
 //! Checker.
 
+use opltypes::Username;
 use std::collections::HashMap;
 
 use crate::checklib::{Entry, Meet};
@@ -61,7 +62,7 @@ impl EntryIndex {
 ///
 /// Note that because internal self-references are disallowed, this map
 /// must maintain a copy of the String and EntryIndex.
-pub type LifterMap = HashMap<String, Vec<EntryIndex>>;
+pub type LifterMap = HashMap<Username, Vec<EntryIndex>>;
 
 impl From<Vec<SingleMeetData>> for AllMeetData {
     fn from(v: Vec<SingleMeetData>) -> AllMeetData {

@@ -2,7 +2,7 @@
 
 use opldb::query::direct::RankingsQuery;
 use opldb::{algorithms, OplDb};
-use usernames::*;
+use opltypes::*;
 
 /// Searches the given rankings by lifter information.
 ///
@@ -24,8 +24,8 @@ pub fn search_rankings(
     // Convert the query string to a normalized form.
     // This tries to make it look like a username, since we're
     // just doing comparisons on the username.
-    let normalized_latin: String = match make_username(&query) {
-        Ok(s) => s,
+    let normalized_latin: String = match Username::from_name(&query) {
+        Ok(u) => u.into(),
         Err(_) => String::new(),
     };
 
@@ -62,8 +62,8 @@ pub fn search_rankings(
 
         // First, check if there's a match based on the username or IG.
         if !normalized_latin.is_empty()
-            && (lifter.username.contains(&normalized_latin)
-                || lifter.username.contains(&backwards)
+            && (lifter.username.as_str().contains(&normalized_latin)
+                || lifter.username.as_str().contains(&backwards)
                 || lifter
                     .instagram
                     .as_ref()

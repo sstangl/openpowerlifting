@@ -1,7 +1,7 @@
 //! Implementation of Country interpolation.
 
 use colored::*;
-use opltypes::Country;
+use opltypes::{Country, Username};
 
 use crate::{AllMeetData, EntryIndex, LifterMap};
 
@@ -129,7 +129,7 @@ fn interpolate_country_single_lifter(
 pub fn interpolate_country_debug_for(
     meetdata: &mut AllMeetData,
     liftermap: &LifterMap,
-    username: &str,
+    username: &Username,
 ) {
     match liftermap.get(username) {
         Some(indices) => interpolate_country_single_lifter(meetdata, indices, true),

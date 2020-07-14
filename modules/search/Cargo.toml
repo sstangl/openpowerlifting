@@ -10,4 +10,3 @@ license = "AGPL-3.0-or-later"
 opldb = { version = "0.1", path = "../db/" }
 opltypes = { version = "0.1", path = "../opltypes/" }
 rustyline = "6.2"
-usernames = { version = "0.1", path = "../usernames/" }

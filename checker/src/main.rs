@@ -8,6 +8,7 @@ extern crate walkdir; // Allows walking through a directory, looking at files.
 
 use checker::{compiler, AllMeetData, SingleMeetData};
 use colored::*;
+use opltypes::Username;
 use rayon::prelude::*;
 use walkdir::{DirEntry, WalkDir};
 
@@ -455,6 +456,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     if is_compiling || is_debugging {
         // Perform country interpolation.
         if let Some(u) = args.debug_country_username {
+            let u = Username::from_name(&u).unwrap();
             compiler::interpolate_country_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
@@ -464,6 +466,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         // Perform age interpolation.
         if let Some(u) = args.debug_age_username {
+            let u = Username::from_name(&u).unwrap();
             compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
