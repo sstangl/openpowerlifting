@@ -180,6 +180,7 @@
 [exemptions]
     6401 = ["ExemptWeightClassConsistency"]
     0001 = ["ExemptWeightClassConsistency"]
+    0105 = ["ExemptWeightClassConsistency"] #145 class
     0402 = ["ExemptWeightClassConsistency"]
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
