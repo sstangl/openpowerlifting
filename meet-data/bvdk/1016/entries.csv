@@ -3,10 +3,10 @@ Place,Name,Team,BirthDate,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,S
 1,Anita Pfeifer,Gostorfer SV,1983-07-04,51.9,57.5,62.5,-65,62.5,F,Open,52,B,Single-ply,62.5
 1,Martina Rummel,STHV Lechfeld,1976-03-25,54.85,75,80,82.5,82.5,F,Open,56,B,Single-ply,82.5
 2,Claudia Kist,KSV Langen 1959,1977-03-01,55.05,72.5,77.5,-82.5,77.5,F,Open,56,B,Single-ply,77.5
-2,Michael Meier,AC Eulenkopf Gießen,2005-05-30,55.6,100,105,110,110,M,Open,56,B,Single-ply,110
+2,Michael Meier,AC Eulenkopf Gießen,,55.6,100,105,110,110,M,Open,56,B,Single-ply,110
 1,Rainer Falke,Haldensleber SC,1965-11-20,56,110,115,120,120,M,Open,56,B,Single-ply,120
 2,Anke Wendt,KSV Fitnesskreis Witten,1979-09-28,56.75,80,85,87.5,87.5,F,Open,60,B,Single-ply,87.5
-1,Cristian Klein,AC Siegfried Darmstadt,2005-05-23,58.15,160,-170,-170,160,M,Open,60,B,Single-ply,160
+1,Cristian Klein,AC Siegfried Darmstadt,,58.15,160,-170,-170,160,M,Open,60,B,Single-ply,160
 5,Ingvild Bayer,ASV Grötzingen,1954-09-18,58.9,67.5,-72.5,-72.5,67.5,F,Open,60,B,Single-ply,67.5
 2,Marc Vaccaro,FC Rhein-Main Rüsselsheim,1992-05-18,59.25,105,107.5,-112.5,107.5,M,Open,60,B,Single-ply,107.5
 1,Ina Scholz,K&B Bautzen,1978-07-08,59.4,90,-92.5,-92.5,90,F,Open,60,B,Single-ply,90
@@ -24,7 +24,7 @@ DQ,Marcus Birner,AC Amberg,1980-08-01,67.2,-160,-160,-160,,M,Open,67.5,B,Single-
 1,Karsten Gelhar,TSV 90 Zehdenick,1957-11-26,67.33,137.5,142.5,147.5,147.5,M,Open,67.5,B,Single-ply,147.5
 4,Rosina Polster,SC Oberölsbach,1984-11-17,67.45,-95,95,-100,95,F,Open,67.5,B,Single-ply,95
 3,Mike Huschka,SSV Samswegen,1973-07-23,67.45,125,132.5,-142.5,132.5,M,Open,67.5,B,Single-ply,132.5
-2,Katja Birnfeld,AC Siegfried Darmstadt,2005-06-01,68.6,95,100,-105,100,F,Open,75,B,Single-ply,100
+2,Katja Birnfeld,AC Siegfried Darmstadt,,68.6,95,100,-105,100,F,Open,75,B,Single-ply,100
 3,Janine Kluske,Powerlifting Lauchhammer,1985-01-10,68.8,87.5,-92.5,92.5,92.5,F,Open,75,B,Single-ply,92.5
 2,Raik Günterberg,SV Motor Eberswalde,1989-09-14,70.7,162.5,170,175,175,M,Open,75,B,Single-ply,175
 1,Ursula Häuser,FC Rhein-Main Rüsselsheim,1960-05-11,73.75,107.5,112.5,-120,112.5,F,Open,75,B,Single-ply,112.5
@@ -36,11 +36,11 @@ DQ,Andreas Pöhls,HaV 77,1969-09-18,74.75,-180,-187.5,-192.5,,M,Open,75,B,Single
 4,Sascha Tripke,AC Heros Berlin,1975-05-31,74.8,175,,,175,M,Open,75,B,Single-ply,175
 1,Roy Berndt,SV Rotation Langenbach,1966-01-25,74.95,180,190,-192.5,190,M,Open,75,B,Single-ply,190
 DQ,Detlef Heirich,TSV 1860 Stralsund,1956-05-21,74.95,-187.5,-190,-192.5,,M,Open,75,B,Single-ply,
-7,Thomas Brantl,KKC Bodyfit Bad Abbach,2005-05-23,76.6,135,-140,142.5,142.5,M,Open,82.5,B,Single-ply,142.5
+7,Thomas Brantl,KKC Bodyfit Bad Abbach,,76.6,135,-140,142.5,142.5,M,Open,82.5,B,Single-ply,142.5
 6,Jens Schünemann,SG St. Blankenburg,1966-10-08,80.3,140,150,-160,150,M,Open,82.5,B,Single-ply,150
 5,Dirk Wetzel,SG Motor Arnstadt,1980-10-12,80.5,145,150,155,155,M,Open,82.5,B,Single-ply,155
 2,Eva-Maria Gall,STC Bavaria 20 Landshut,1970-03-10,80.65,110,115,120,120,F,Open,82.5,B,Single-ply,120
-1,Sarah Zihms,AC Eulenkopf Gießen,2005-06-02,81,120,125,130,130,F,Open,82.5,B,Single-ply,130
+1,Sarah Zihms,AC Eulenkopf Gießen,,81,120,125,130,130,F,Open,82.5,B,Single-ply,130
 4,Alexander Denk,STC Bavaria 20 Landshut,1986-04-03,81.2,170,-180,-185,170,M,Open,82.5,B,Single-ply,170
 3,Thomas Goldhahn,Kraftsport Lauter,1978-06-26,81.5,170,182.5,-185,182.5,M,Open,82.5,B,Single-ply,182.5
 DQ,Detlef Götzke,SSV Samswegen,1962-10-26,82,-205,-205,-207.5,,M,Open,82.5,B,Single-ply,
@@ -59,11 +59,11 @@ DQ,Peer Hänsicke,SV Motor Eberswalde,1961-10-02,89.65,-212.5,-212.5,-212.5,,M,O
 2,Lars Bretfeld,FC Erzgebirge Aue,1978-12-28,89.9,192.5,-202.5,-205,192.5,M,Open,90,B,Single-ply,192.5
 7,Michael Essmann,FC Ebenhofen,1980-04-18,95.75,185,-195,-200,185,M,Open,100,B,Single-ply,185
 DQ,Markus Hinz,AC Siegfried Darmstadt,1971-10-11,96.25,-235,-235,-235,,M,Open,100,B,Single-ply,
-6,Nico Dünkel,SV 1956 Großkochberg,2005-05-29,97.7,-185,185,195,195,M,Open,100,B,Single-ply,195
+6,Nico Dünkel,SV 1956 Großkochberg,,97.7,-185,185,195,195,M,Open,100,B,Single-ply,195
 5,Frank Barthel,SV 1956 Großkochberg,1980-02-20,97.8,210,-217.5,-220,210,M,Open,100,B,Single-ply,210
 4,Vitalij Bondarenko,TV Jahn Siegen,1973-06-24,97.85,205,212.5,217.5,217.5,M,Open,100,B,Single-ply,217.5
 2,Sven Stecklina,USV TU Dresden,1974-05-12,98.15,227.5,-235,-235,227.5,M,Open,100,B,Single-ply,227.5
-3,Florian Scheurer,KSV Höllhöhe,2005-05-23,98.75,-220,220,-230,220,M,Open,100,B,Single-ply,220
+3,Florian Scheurer,KSV Höllhöhe,,98.75,-220,220,-230,220,M,Open,100,B,Single-ply,220
 1,Björn Schneider,KSV Langen 1959,1979-08-06,99.45,240,245,260,260,M,Open,100,B,Single-ply,260
 1,Eva Speht,TSV Burgau,1954-05-06,99.75,135,-140,-140,135,F,Open,90+,B,Single-ply,135
 DQ,Thorsten Thenhardt,SV 05 Würzburg,1975-08-03,101.85,-187.5,-187.5,-187.5,,M,Open,110,B,Single-ply,
@@ -79,9 +79,9 @@ DQ,Patrick Gutt,Powerlifiting Duisburg,1971-11-24,108.65,-260,-260,,,M,Open,110,
 4,Mario Schwanke,STC Bavaria 20 Landshut,1971-05-18,119.05,245,-255,-267.5,245,M,Open,125,B,Single-ply,245
 5,Ronny Göbel,Powerlifting Lauchhammer,1976-11-07,119.8,230,240,-247.5,240,M,Open,125,B,Single-ply,240
 DQ,Marcus Hoen,FC Rhein-Main Rüsselsheim,1966-07-16,120.75,-240,-240,-250,,M,Open,125,B,Single-ply,
-2,Marcel Jahnke,SV Motor Barth,2005-06-02,120.85,270,-277.5,-280,270,M,Open,125,B,Single-ply,270
+2,Marcel Jahnke,SV Motor Barth,,120.85,270,-277.5,-280,270,M,Open,125,B,Single-ply,270
 DQ,Marco Hahn,SG Chemie Wolfen,1990-11-15,123.2,-205,-205,,,M,Open,125,B,Single-ply,
-3,Sven Lange,SV Motor Barth,2005-06-02,123.85,265,-275,-277.5,265,M,Open,125,B,Single-ply,265
+3,Sven Lange,SV Motor Barth,,123.85,265,-275,-277.5,265,M,Open,125,B,Single-ply,265
 DQ,Thomas Krümmling,SV H. 09 Oranienbaum,1976-08-11,125.7,-220,-220,-220,,M,Open,125+,B,Single-ply,
 3,Frank Girrulat,FSV 1895 Magdeburg,1959-06-26,125.8,235,245,260,260,M,Open,125+,B,Single-ply,260
 DQ,Jürgen Löthner,Lobensteiner AV 93,1963-08-14,126.45,-245,-250,-255,,M,Open,125+,B,Single-ply,
