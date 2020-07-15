@@ -284,11 +284,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
     }
 
-    // Validate arguments.
-    let is_compiling: bool = args.compile || args.compile_onefile;
-    let is_debugging: bool =
-        args.debug_age_username.is_some() || args.debug_country_username.is_some();
-
     // Any free argument is interpreted as a folder for limiting checking scope.
     let search_root = if args.free.is_empty() {
         meet_data_root.clone()
@@ -305,6 +300,12 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         }
     };
+
+    // Validate arguments.
+    let is_compiling: bool = args.compile || args.compile_onefile;
+    let is_debugging: bool =
+        args.debug_age_username.is_some() || args.debug_country_username.is_some();
+    let is_partial: bool = !search_root.ends_with("meet-data");
 
     let timing = get_instant_if(args.debug_timing);
     let configmap = match get_configurations(&meet_data_root) {
@@ -429,7 +430,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let liftermap = meetdata.create_liftermap();
 
     // Check for consistency errors for individual lifters.
-    for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata) {
+    for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial) {
         let (errors, warnings) = report.count_messages();
         error_count += errors;
         warning_count += warnings;

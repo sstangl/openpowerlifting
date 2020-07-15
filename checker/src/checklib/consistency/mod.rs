@@ -57,18 +57,29 @@ pub fn should_skip_lifter(entry: &Entry) -> bool {
 }
 
 /// Check entries for per-lifter consistency.
+///
+/// The `is_partial` argument is true iff only a subtree of the meet data
+/// is being checked. In that case, the `liftermap` does not contain
+/// full information from the database: it only contains information
+/// from the chosen subtree. Therefore, full-tree disambiguation consistency
+/// checks must be disabled.
 pub fn check(
     liftermap: &LifterMap,
     meetdata: &AllMeetData,
     lifterdata: &LifterDataMap,
+    is_partial: bool,
 ) -> Vec<Report> {
     let mut reports = Vec::new();
 
     check_sex_all(liftermap, meetdata, lifterdata, &mut reports);
     check_name_all(liftermap, meetdata, &mut reports);
-    check_disambiguations_all(liftermap, lifterdata, &mut reports);
     check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
     check_duplicates_all(liftermap, meetdata, &mut reports);
+
+    // The checks below require the full meet-data tree, not a subset.
+    if !is_partial {
+        check_disambiguations_all(liftermap, lifterdata, &mut reports);
+    }
 
     reports
 }
