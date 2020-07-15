@@ -10,7 +10,7 @@ license = "AGPL-3.0-or-later"
 coefficients = { version = "0.1", path = "../modules/coefficients/" }
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
 chrono = "0.4"
-colored = "1.8"
+colored = "2.0"
 csv = "1.1"
 pico-args = "0.3.0"
 rayon = "1.0"
