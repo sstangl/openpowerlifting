@@ -1,11 +1,11 @@
 //! Logic for efficiently selecting a subset of the database.
 
+use arrayvec::ArrayString;
 use opltypes::states::*;
 use opltypes::*;
 use serde::{self, Serialize};
 
-//use std::ffi::OsStr;
-//use std::path;
+use std::fmt::Write;
 use std::str::FromStr;
 
 use crate::MetaFederation;
@@ -595,7 +595,7 @@ impl FromStr for AgeClassFilter {
 }
 
 /// The year selector widget.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq)]
 pub enum YearFilter {
     AllYears,
     OneYear(u16),
@@ -615,6 +615,22 @@ impl YearFilter {
         match self {
             YearFilter::AllYears => None,
             YearFilter::OneYear(year) => Some(year as u32),
+        }
+    }
+}
+
+impl Serialize for YearFilter {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        match self {
+            YearFilter::AllYears => serializer.serialize_str("AllYears"),
+            YearFilter::OneYear(y) => {
+                let mut buf = ArrayString::<[_; 32]>::new();
+                write!(buf, "Year{}", y).expect("ArrayString overflow");
+                serializer.serialize_str(&buf)
+            }
         }
     }
 }

@@ -430,7 +430,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let liftermap = meetdata.create_liftermap();
 
     // Check for consistency errors for individual lifters.
-    for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial) {
+    for report in
+        checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial)
+    {
         let (errors, warnings) = report.count_messages();
         error_count += errors;
         warning_count += warnings;
