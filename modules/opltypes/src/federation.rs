@@ -794,6 +794,10 @@ pub enum Federation {
     #[strum(to_string = "RawIronPL", serialize = "rawironpl")]
     RawIronPL,
 
+    /// Finnish Series from 2002 to ~2011
+    #[strum(to_string = "RawPower", serialize = "rawpower")]
+    RawPower,
+
     /// 100% RAW Federation Ukraine.
     #[serde(rename = "RAW-UKR")]
     #[strum(to_string = "RAW-UKR", serialize = "raw-ukr")]
@@ -1498,6 +1502,7 @@ impl Federation {
                     FULLY_TESTED
                 }
             }
+            Federation::RawPower => false,
             Federation::RAWUKR => FULLY_TESTED,
             Federation::RAWU => false,
             Federation::RhinoPC => false,
@@ -1800,6 +1805,7 @@ impl Federation {
             Federation::RAWCAN => Some(Country::Canada),
             Federation::RAWIceland => Some(Country::Iceland),
             Federation::RawIronPL => Some(Country::USA),
+            Federation::RawPower => Some(Country::Finland),
             Federation::RAWUKR => Some(Country::Ukraine),
             Federation::RAWU => Some(Country::USA),
             Federation::RhinoPC => Some(Country::SouthAfrica),
@@ -2143,6 +2149,7 @@ impl Federation {
             Federation::RAWCAN => None,
             Federation::RAWIceland => None,
             Federation::RawIronPL => None,
+            Federation::RawPower => None,
             Federation::RAWUKR => None,
             Federation::RAWU => None,
             Federation::RhinoPC => Some(Federation::GPC),
@@ -2525,6 +2532,7 @@ impl Federation {
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,
             Federation::RawIronPL => PointsSystem::Wilks,
+            Federation::RawPower => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,
             Federation::RhinoPC => PointsSystem::Glossbrenner,

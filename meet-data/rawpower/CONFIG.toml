@@ -1,0 +1,15 @@
+# Configuration for RawPower.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    open = {name="Open", min=0, max=999, equipment="Raw"}
+
+[weightclasses.default_M]
+    classes = ["80","95","110","110+"]
+    date_range = ["2002-01-01","9999-01-01"]
+    sex = "M"
+
+[exemptions]
+    0201 = ["ExemptWeightClassConsistency"]
