@@ -392,7 +392,7 @@ def expand_fourths(csv, bestlift, lift4):
     bestidx = csv.index(bestlift)
 
     for row in csv.rows:
-        if ' ' in row[bestidx]:
+        if ' ' in row[bestidx].strip():
             if lift4 not in csv.fieldnames:
                 csv.insert_column(bestidx+1, lift4)
             lift4idx = csv.index(lift4)
