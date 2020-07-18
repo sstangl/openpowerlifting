@@ -56,6 +56,12 @@ pub fn check_duplicates_one(
                 && (cur_entry.totalkg == match_entry.totalkg)
                 && (cur_entry.event == match_entry.event)
             {
+                // FIXME: a USAPL meet was intentionally broken up into two
+                //        separate meets. This is instead of some exemption.
+                if cur_meet.date == opltypes::Date::from_parts(2016, 12, 9) {
+                    continue;
+                }
+
                 let msg = format!(
                     "www.openpowerlifting.org/u/{} on {}: {} and {}",
                     username, cur_meet.date, cur_meet.path, match_meet.path,
