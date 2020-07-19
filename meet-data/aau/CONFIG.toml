@@ -33,6 +33,7 @@
     m8589 = {name ="M 85-89",min=85,max=89}
     m9094 = {name ="M 90-94",min=90,max=94}
     m9599 = {name ="M 95-99",min=95,max=99}
+    coll = {name ="Coll",min=0,max=999} # Collegiate
 
     #Raw
     ropen = {name ="R Open",min=0,max=999,equipment="Raw"}
@@ -186,6 +187,10 @@
     0001 = ["ExemptWeightClassConsistency"]
     0105 = ["ExemptWeightClassConsistency"] #145 class
     0205 = ["ExemptWeightClassConsistency"] #145 class
+    0206 = ["ExemptWeightClassConsistency"] #T 14-15 in 44 class
+    0207 = ["ExemptWeightClassConsistency"] #Junior Olympics
+    0208 = ["ExemptWeightClassConsistency"] #145 class
+    0209 = ["ExemptWeightClassConsistency"] #145 class
     0402 = ["ExemptWeightClassConsistency"]
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
