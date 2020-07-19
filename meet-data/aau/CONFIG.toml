@@ -63,6 +63,7 @@
     rm8589 = {name ="RM 85-89",min=85,max=89,equipment="Raw"}
     rm9094 = {name ="RM 90-94",min=90,max=94,equipment="Raw"}
     rm9599 = {name ="RM 95-99",min=95,max=99,equipment="Raw"}
+    rcoll = {name ="R Coll",min=0,max=999,equipment="Raw"} # Collegiate
 
     #Lifetime
     lsub = {name ="L Sub",min=35,max=39}
