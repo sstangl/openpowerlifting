@@ -149,6 +149,9 @@
     rnovice = {name ="R Novice",min=0,max=999,equipment="Raw"}
     blind = {name ="Blind",min=0,max=999}
 
+    # Not cool AAU.
+    ry4_5 = {name ="RY 4-5",min=4,max=5,equipment="Raw"}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["2007-01-01","9999-01-01"]
@@ -171,10 +174,17 @@
     sex = "F"
 
 [weightclasses.youth_M]
-    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","145","140+","145+"]
-    date_range = ["0000-01-01","9999-01-01"]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2007-01-01","9999-01-01"]
     sex = "M"
     divisions = ["Y","RY","Y 5","RY 5","Y 6-7","RY 6-7","Y 7-8","Y 8-9","Y 9-10","RY 8-9","Y 10-11","RY 10-11","T 12-13", "RT 12-13", "T 14-15", "RT 14-15", "T 16-17", "RT 16-17", "T 18-19","RT 18-19"]
+
+[weightclasses.old_youth_M]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
+    date_range = ["0000-01-01","2006-12-31"]
+    sex = "M"
+    divisions = ["Y","RY","Y 5","RY 5","Y 6-7","RY 6-7","Y 7-8","Y 8-9","Y 9-10","RY 8-9","Y 10-11","RY 10-11","T 12-13", "RT 12-13", "T 14-15", "RT 14-15", "T 16-17", "RT 16-17", "T 18-19","RT 18-19","RY 4-5"]
+
 
 [weightclasses.youth_F]
     classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","90+","100+"]
@@ -185,12 +195,10 @@
 [exemptions]
     6401 = ["ExemptWeightClassConsistency"]
     0001 = ["ExemptWeightClassConsistency"]
-    0105 = ["ExemptWeightClassConsistency"] #145 class
-    0205 = ["ExemptWeightClassConsistency"] #145 class
-    0206 = ["ExemptWeightClassConsistency"] #T 14-15 in 44 class
-    0207 = ["ExemptWeightClassConsistency"] #Junior Olympics
-    0208 = ["ExemptWeightClassConsistency"] #145 class
-    0209 = ["ExemptWeightClassConsistency"] #145 class
+    0206 = ["ExemptWeightClassConsistency"] # T 14-15 in 44 class
+    0207 = ["ExemptWeightClassConsistency"] # Junior Olympics
+    0304 = ["ExemptWeightClassConsistency"] # Women in 110
+    0307 = ["ExemptAge"] # They decided to let a 4 year old compete...
     0402 = ["ExemptWeightClassConsistency"]
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
