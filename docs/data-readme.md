@@ -52,6 +52,7 @@ Values are as follows:
 - Wraps: Knee wraps were allowed.
 - Single-ply: Equipped, single-ply suits.
 - Multi-ply: Equipped, multi-ply suits (includes Double-ply).
+- Unlimited: Equipped, multi-ply suits or rubberized gear (like Bench Daddies).
 - Straps: Allowed straps on the deadlift (used mostly for exhibitions, not real meets).
 
 The `Equipment` column is defined by [modules/opltypes/src/equipment.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/equipment.rs).
