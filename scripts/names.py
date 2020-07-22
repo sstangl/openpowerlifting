@@ -194,6 +194,6 @@ if __name__ == '__main__':
         for i in range(1, len(v)):
             # For the moment, since there are so many name conflicts,
             # just consider the ones that have a minimal edit distance.
-            if levenshtein(v[0], v[i]) == 1:
+            if levenshtein(v[0], v[i]) <= 2:
                 print([(n, counts[n]) for n in v])
                 break
