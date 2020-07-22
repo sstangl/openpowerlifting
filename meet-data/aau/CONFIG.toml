@@ -129,6 +129,7 @@
     rlaw_mil9599 = {name ="R Law/Mil 95-99",min=95,max=99,equipment="Raw"}
 
     # Special Olympics
+    so = {name ="SO",min=0,max=999}
     rso = {name ="RSO",min=0,max=999,equipment="Raw"}
     rso_jr = {name ="RSO Jr",min=20,max=23,equipment="Raw"}
     rso_sub = {name ="RSO Sub",min=35,max=39,equipment="Raw"}
