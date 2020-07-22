@@ -44,7 +44,8 @@
         <option value="by-nasa" {% if sortselection == "ByNASA" %}selected{% endif %}>{{strings.selectors.sort.by_nasa}}</option>
         <option value="by-reshel" {% if sortselection == "ByReshel" %}selected{% endif %}>{{strings.selectors.sort.by_reshel}}</option>
         <option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
-        <option value="by-wilks2020" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks2020}}</option>
+        <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+        <option value="by-wilks2020" {% if sortselection == "ByWilks2020" %}selected{% endif %}>{{strings.selectors.sort.by_wilks2020}}</option>
       </optgroup>
     </select>
   </div>
