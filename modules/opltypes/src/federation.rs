@@ -217,6 +217,10 @@ pub enum Federation {
     #[strum(to_string = "ChinaPA", serialize = "chinapa")]
     ChinaPA,
 
+    /// Comite National de Force Athletique, old french IPF affiliate.
+    #[strum(to_string = "CNFA", serialize = "cnfa")]
+    CNFA,
+
     /// Colombian Powerlifting Federation, IPF.
     #[strum(to_string = "ColPF", serialize = "colpf")]
     ColPF,
@@ -1364,6 +1368,7 @@ impl Federation {
             Federation::CBLB => FULLY_TESTED,
             Federation::CBPL => false,
             Federation::ChinaPA => false,
+            Federation::CNFA => FULLY_TESTED,
             Federation::ColPF => FULLY_TESTED,
             Federation::CommonwealthPF => FULLY_TESTED,
             Federation::CONBRAP => false,
@@ -1674,6 +1679,7 @@ impl Federation {
             Federation::CBLB => Some(Country::Brazil),
             Federation::CBPL => Some(Country::USA),
             Federation::ChinaPA => Some(Country::China),
+            Federation::CNFA => Some(Country::France),
             Federation::ColPF => Some(Country::Colombia),
             Federation::CommonwealthPF => None,
             Federation::CONBRAP => Some(Country::Brazil),
@@ -1999,6 +2005,7 @@ impl Federation {
             Federation::CBLB => Some(Federation::IPF),
             Federation::CBPL => None,
             Federation::ChinaPA => Some(Federation::GPA),
+            Federation::CNFA => Some(Federation::IPF),
             Federation::ColPF => Some(Federation::IPF),
             Federation::CommonwealthPF => Some(Federation::IPF),
             Federation::CONBRAP => Some(Federation::GPC),
@@ -2382,6 +2389,7 @@ impl Federation {
             Federation::CBLB => Federation::ipf_rules_on(date),
             Federation::CBPL => PointsSystem::Wilks,
             Federation::ChinaPA => PointsSystem::Wilks,
+            Federation::CNFA => Federation::ipf_rules_on(date),
             Federation::ColPF => Federation::ipf_rules_on(date),
             Federation::CommonwealthPF => Federation::ipf_rules_on(date),
             Federation::CONBRAP => PointsSystem::Glossbrenner,
