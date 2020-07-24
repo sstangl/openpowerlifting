@@ -246,6 +246,9 @@ pub enum Federation {
     /// * 2020-06-17: the CPF dropped their WPC affiliation over WPC's continued
     ///   acceptance of Metal gear despite the Metal owner's racism.
     ///
+    /// * 2020-07-24: the CPF announced a merger with the CPL for 2021-01-01.
+    ///   The CPF does not exist from that date.
+    ///
     #[strum(to_string = "CPF", serialize = "cpf")]
     CPF,
 
@@ -2011,7 +2014,13 @@ impl Federation {
             Federation::CONBRAP => Some(Federation::GPC),
             Federation::CPA => Some(Federation::WPA),
             Federation::CPC => Some(Federation::WPC),
-            Federation::CPF => Some(Federation::GPA),
+            Federation::CPF => {
+                if date >= Date::from_parts(2020, 06, 17) {
+                    None
+                } else {
+                    Some(Federation::WPC)
+                }
+            }
             Federation::CPL => Some(Federation::IPL),
             Federation::CPO => Some(Federation::WPC),
             Federation::CPU => Some(Federation::IPF),
