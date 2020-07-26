@@ -1,0 +1,18 @@
+[package]
+name = "api"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+description = "The OpenPowerlifting Data API Server"
+edition = "2018"
+license = "AGPL-3.0-or-later"
+
+[dependencies]
+langpack = {version = "0.1", path = "../modules/langpack/" }
+opldb = { version = "0.1", path = "../modules/db/" }
+opltypes = { version = "0.1", path = "../modules/opltypes/" }
+dotenv = "0.15"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+rocket = "0.4"
+rocket_contrib = "0.4"

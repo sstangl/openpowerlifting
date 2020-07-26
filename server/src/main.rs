@@ -18,7 +18,6 @@ mod tests;
 use langpack::{LangInfo, Language, Locale};
 use opltypes::Username;
 
-use rocket::fairing::AdHoc;
 use rocket::http::{ContentType, Cookies, Status};
 use rocket::request::{Form, Request};
 use rocket::response::{NamedFile, Redirect, Responder, Response};
@@ -31,10 +30,8 @@ use std::env;
 use std::error::Error;
 use std::fs::File;
 use std::path::{Path, PathBuf};
-use std::time;
 
 use server::pages;
-use server::FromUrlPath;
 
 /// A file served from /static.
 enum StaticFile {
@@ -686,7 +683,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
         )
         .register(catchers![not_found, internal_error])
         .attach(Template::fairing())
-        .attach(AdHoc::on_response(
+        .attach(rocket::fairing::AdHoc::on_response(
             "Delete Server Header",
             |_request, response| {
                 response.remove_header("Server");
@@ -711,7 +708,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     env::var("STATICDIR").expect("STATICDIR envvar not set");
 
     // Load the OplDb.
-    let start = time::Instant::now();
+    let start = std::time::Instant::now();
     let lifters_csv = env::var("LIFTERS_CSV").expect("LIFTERS_CSV not set");
     let meets_csv = env::var("MEETS_CSV").expect("MEETS_CSV not set");
     let entries_csv = env::var("ENTRIES_CSV").expect("ENTRIES_CSV not set");

@@ -79,10 +79,15 @@ mod writing_system;
 pub use self::writing_system::{get_writing_system, infer_writing_system, WritingSystem};
 
 /// Units of weight.
-#[derive(Copy, Clone, Debug, EnumString, Serialize)]
+#[derive(Copy, Clone, Debug, EnumString, Serialize, Deserialize)]
 pub enum WeightUnits {
+    /// Kilograms.
+    #[serde(rename = "kg")]
     #[strum(serialize = "kg")]
     Kg,
+
+    /// Pounds.
+    #[serde(rename = "lbs")]
     #[strum(serialize = "lbs")]
     Lbs,
 }

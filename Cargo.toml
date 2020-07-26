@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "api",
     "checker",
     "modules/coefficients",
     "modules/db",

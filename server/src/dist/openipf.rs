@@ -15,7 +15,6 @@ use rocket::State;
 use rocket_contrib::templates::Template;
 
 use server::pages;
-use server::FromUrlPath;
 
 use std::path::PathBuf;
 

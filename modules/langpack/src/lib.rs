@@ -15,7 +15,7 @@ use std::fmt;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]
-#[derive(Clone, Copy, Debug, EnumIter, EnumString, PartialEq, Serialize)]
+#[derive(Clone, Copy, Debug, EnumIter, EnumString, PartialEq, Serialize, Deserialize)]
 pub enum Language {
     /// Czech.
     cz,

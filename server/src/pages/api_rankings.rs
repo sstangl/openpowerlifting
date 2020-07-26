@@ -31,6 +31,12 @@ pub fn get_slice<'db>(
     let list = algorithms::get_full_sorted_uniqued(selection, opldb);
     let total_length = list.0.len();
 
+    // Limit the request size to something sane.
+    // Arithmetic can't overflow since it's already been compared to total_length.
+    if end_row - start_row + 1 > ROW_LIMIT {
+        end_row = start_row + (ROW_LIMIT - 1);
+    }
+
     // The request must be in-bounds.
     if end_row >= total_length {
         if total_length > 0 {
@@ -46,12 +52,6 @@ pub fn get_slice<'db>(
         };
     }
 
-    // Limit the request size to something sane.
-    // Arithmetic can't overflow since it's already been compared to total_length.
-    if end_row - start_row + 1 > ROW_LIMIT {
-        end_row = start_row + (ROW_LIMIT - 1);
-    }
-
     // Figure out the points system to be used.
     let points_system = if selection.order_by.is_by_points() {
         PointsSystem::from(selection.order_by)
@@ -60,7 +60,7 @@ pub fn get_slice<'db>(
         PointsSystem::from(defaults.order_by)
     };
 
-    let rows: Vec<JsEntryRow> = list.0[start_row..(end_row + 1)]
+    let rows: Vec<JsEntryRow> = list.0[start_row..=end_row]
         .iter()
         .zip(start_row..)
         .map(|(&n, i)| {
