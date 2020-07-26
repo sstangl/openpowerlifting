@@ -1,10 +1,9 @@
 //! Types for raw data interchange from Rust to JS.
 
+use langpack::{get_localized_name, Locale, LocalizeNumber};
 use opldb::{Entry, OplDb};
 use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
-
-use crate::langpack::{self, get_localized_name, Locale, LocalizeNumber};
 
 /// Represents one row of JS data.
 ///

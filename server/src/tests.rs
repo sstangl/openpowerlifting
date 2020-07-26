@@ -3,8 +3,8 @@
 use super::rocket;
 use super::Device;
 
+use langpack::{LangInfo, Language};
 use opldb::OplDb;
-use server::langpack::{LangInfo, Language};
 
 use rocket::http::{Cookie, Header, Status};
 use rocket::local::Client;
@@ -38,7 +38,7 @@ static LANGINFO_INIT: Once = Once::new();
 fn langinfo() -> &'static LangInfo {
     unsafe {
         LANGINFO_INIT.call_once(|| {
-            LANGINFO_GLOBAL = Some(super::load_langinfo().unwrap());
+            LANGINFO_GLOBAL = Some(LangInfo::new());
         });
         LANGINFO_GLOBAL.as_ref().unwrap()
     }

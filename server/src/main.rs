@@ -15,7 +15,9 @@ use common::*;
 #[cfg(test)]
 mod tests;
 
+use langpack::{LangInfo, Language, Locale};
 use opltypes::Username;
+
 use rocket::fairing::AdHoc;
 use rocket::http::{ContentType, Cookies, Status};
 use rocket::request::{Form, Request};
@@ -24,8 +26,6 @@ use rocket::State;
 use rocket_contrib::json::Json;
 use rocket_contrib::templates::Template;
 
-use strum::IntoEnumIterator;
-
 use std::collections::HashMap;
 use std::env;
 use std::error::Error;
@@ -33,7 +33,6 @@ use std::fs::File;
 use std::path::{Path, PathBuf};
 use std::time;
 
-use server::langpack::{self, LangInfo, Language, Locale};
 use server::pages;
 use server::FromUrlPath;
 
@@ -695,15 +694,6 @@ fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
         ))
 }
 
-fn load_langinfo() -> Result<LangInfo, Box<dyn Error>> {
-    let mut langinfo = langpack::LangInfo::default();
-    for language in Language::iter() {
-        let path = format!("translations/{}.json", language);
-        langinfo.load_translations(language, &path)?;
-    }
-    Ok(langinfo)
-}
-
 fn main() -> Result<(), Box<dyn Error>> {
     // Accept an optional "--set-cwd" argument to manually specify the
     // current working directory. This allows the binary and the data
@@ -733,7 +723,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     );
 
     #[allow(unused_variables)]
-    let langinfo = load_langinfo()?;
+    let langinfo = LangInfo::new();
 
     #[cfg(not(test))]
     rocket(opldb, langinfo).launch();

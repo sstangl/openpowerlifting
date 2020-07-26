@@ -1,14 +1,17 @@
 //! Internationalization facilities.
 
+#[macro_use]
+extern crate serde_derive;
+#[macro_use]
+extern crate strum_macros;
+
+extern crate serde_json as json;
+
 use opltypes::*;
 use serde::ser::Serialize;
 use strum::IntoEnumIterator;
 
-use std::error::Error;
 use std::fmt;
-use std::fs::File;
-use std::io::prelude::*;
-use std::io::BufReader;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]
@@ -76,39 +79,36 @@ pub enum Language {
 
 impl fmt::Display for Language {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(
-            f,
-            "{}",
-            match self {
-                Language::cz => "cz",
-                Language::de => "de",
-                Language::el => "el",
-                Language::en => "en",
-                Language::eo => "eo",
-                Language::es => "es",
-                Language::fi => "fi",
-                Language::fr => "fr",
-                Language::hr => "hr",
-                Language::hu => "hu",
-                Language::it => "it",
-                Language::ja => "ja",
-                Language::ko => "ko",
-                Language::lt => "lt",
-                Language::nl => "nl",
-                Language::pl => "pl",
-                Language::pt => "pt",
-                Language::sk => "sk",
-                Language::sl => "sl",
-                Language::sr => "sr",
-                Language::sv => "sv",
-                Language::ru => "ru",
-                Language::tr => "tr",
-                Language::uk => "uk",
-                Language::vi => "vi",
-                Language::zh_hant => "zh-Hant",
-                Language::zh_hans => "zh-Hans",
-            }
-        )
+        let s = match self {
+            Language::cz => "cz",
+            Language::de => "de",
+            Language::el => "el",
+            Language::en => "en",
+            Language::eo => "eo",
+            Language::es => "es",
+            Language::fi => "fi",
+            Language::fr => "fr",
+            Language::hr => "hr",
+            Language::hu => "hu",
+            Language::it => "it",
+            Language::ja => "ja",
+            Language::ko => "ko",
+            Language::lt => "lt",
+            Language::nl => "nl",
+            Language::pl => "pl",
+            Language::pt => "pt",
+            Language::sk => "sk",
+            Language::sl => "sl",
+            Language::sr => "sr",
+            Language::sv => "sv",
+            Language::ru => "ru",
+            Language::tr => "tr",
+            Language::uk => "uk",
+            Language::vi => "vi",
+            Language::zh_hant => "zh-Hant",
+            Language::zh_hans => "zh-Hans",
+        };
+        write!(f, "{}", s)
     }
 }
 
@@ -135,11 +135,7 @@ pub struct Locale<'a> {
 }
 
 impl<'a> Locale<'a> {
-    pub fn new(
-        langinfo: &'a LangInfo,
-        language: Language,
-        units: WeightUnits,
-    ) -> Locale<'a> {
+    pub fn new(langinfo: &'a LangInfo, language: Language, units: WeightUnits) -> Locale<'a> {
         Locale {
             langinfo,
             language,
@@ -677,112 +673,104 @@ pub struct Translations {
 }
 
 /// Owner struct of all translation state.
-#[derive(Default)]
 pub struct LangInfo {
-    cz: Option<Translations>,
-    de: Option<Translations>,
-    el: Option<Translations>,
-    en: Option<Translations>,
-    eo: Option<Translations>,
-    es: Option<Translations>,
-    fi: Option<Translations>,
-    fr: Option<Translations>,
-    hr: Option<Translations>,
-    hu: Option<Translations>,
-    it: Option<Translations>,
-    ja: Option<Translations>,
-    ko: Option<Translations>,
-    lt: Option<Translations>,
-    nl: Option<Translations>,
-    pl: Option<Translations>,
-    pt: Option<Translations>,
-    sk: Option<Translations>,
-    sl: Option<Translations>,
-    sr: Option<Translations>,
-    sv: Option<Translations>,
-    ru: Option<Translations>,
-    tr: Option<Translations>,
-    uk: Option<Translations>,
-    vi: Option<Translations>,
-    zh_hant: Option<Translations>,
-    zh_hans: Option<Translations>,
+    cz: Translations,
+    de: Translations,
+    el: Translations,
+    en: Translations,
+    eo: Translations,
+    es: Translations,
+    fi: Translations,
+    fr: Translations,
+    hr: Translations,
+    hu: Translations,
+    it: Translations,
+    ja: Translations,
+    ko: Translations,
+    lt: Translations,
+    nl: Translations,
+    pl: Translations,
+    pt: Translations,
+    sk: Translations,
+    sl: Translations,
+    sr: Translations,
+    sv: Translations,
+    ru: Translations,
+    tr: Translations,
+    uk: Translations,
+    vi: Translations,
+    zh_hant: Translations,
+    zh_hans: Translations,
 }
 
 impl LangInfo {
-    pub fn load_translations(
-        &mut self,
-        language: Language,
-        filename: &str,
-    ) -> Result<(), Box<dyn Error>> {
-        let file = File::open(filename)?;
-        let mut buf_reader = BufReader::new(file);
-        let mut contents = String::new();
-        buf_reader.read_to_string(&mut contents)?;
-
-        let trans = serde_json::from_str(&contents)?;
-
-        match language {
-            Language::cz => self.cz = trans,
-            Language::de => self.de = trans,
-            Language::el => self.el = trans,
-            Language::en => self.en = trans,
-            Language::eo => self.eo = trans,
-            Language::es => self.es = trans,
-            Language::fi => self.fi = trans,
-            Language::fr => self.fr = trans,
-            Language::hr => self.hr = trans,
-            Language::hu => self.hu = trans,
-            Language::it => self.it = trans,
-            Language::ja => self.ja = trans,
-            Language::ko => self.ko = trans,
-            Language::lt => self.lt = trans,
-            Language::nl => self.nl = trans,
-            Language::pl => self.pl = trans,
-            Language::pt => self.pt = trans,
-            Language::sk => self.sk = trans,
-            Language::sl => self.sl = trans,
-            Language::sr => self.sr = trans,
-            Language::sv => self.sv = trans,
-            Language::ru => self.ru = trans,
-            Language::tr => self.tr = trans,
-            Language::uk => self.uk = trans,
-            Language::vi => self.vi = trans,
-            Language::zh_hant => self.zh_hant = trans,
-            Language::zh_hans => self.zh_hans = trans,
-        };
-
-        Ok(())
+    /// Constructs a new [LangInfo].
+    ///
+    /// The translations are hardcoded as strings at compile time, but parsing the strings
+    /// happens at runtime. A test ensures this succeeds.
+    ///
+    /// TODO: Use a build.rs to also parse at compile time.
+    pub fn new() -> LangInfo {
+        LangInfo {
+            cz: json::from_str(include_str!("../translations/cz.json")).expect("cz"),
+            de: json::from_str(include_str!("../translations/de.json")).expect("de"),
+            el: json::from_str(include_str!("../translations/el.json")).expect("el"),
+            en: json::from_str(include_str!("../translations/en.json")).expect("en"),
+            eo: json::from_str(include_str!("../translations/eo.json")).expect("eo"),
+            es: json::from_str(include_str!("../translations/es.json")).expect("es"),
+            fi: json::from_str(include_str!("../translations/fi.json")).expect("fi"),
+            fr: json::from_str(include_str!("../translations/fr.json")).expect("fr"),
+            hr: json::from_str(include_str!("../translations/hr.json")).expect("hr"),
+            hu: json::from_str(include_str!("../translations/hu.json")).expect("hu"),
+            it: json::from_str(include_str!("../translations/it.json")).expect("it"),
+            ja: json::from_str(include_str!("../translations/ja.json")).expect("ja"),
+            ko: json::from_str(include_str!("../translations/ko.json")).expect("ko"),
+            lt: json::from_str(include_str!("../translations/lt.json")).expect("lt"),
+            nl: json::from_str(include_str!("../translations/nl.json")).expect("nl"),
+            pl: json::from_str(include_str!("../translations/pl.json")).expect("pl"),
+            pt: json::from_str(include_str!("../translations/pt.json")).expect("pt"),
+            sk: json::from_str(include_str!("../translations/sk.json")).expect("sk"),
+            sl: json::from_str(include_str!("../translations/sl.json")).expect("sl"),
+            sr: json::from_str(include_str!("../translations/sr.json")).expect("sr"),
+            sv: json::from_str(include_str!("../translations/sv.json")).expect("sv"),
+            ru: json::from_str(include_str!("../translations/ru.json")).expect("ru"),
+            tr: json::from_str(include_str!("../translations/tr.json")).expect("tr"),
+            uk: json::from_str(include_str!("../translations/uk.json")).expect("uk"),
+            vi: json::from_str(include_str!("../translations/vi.json")).expect("vi"),
+            zh_hant: json::from_str(include_str!("../translations/zh-Hant.json")).expect("zh_hant"),
+            zh_hans: json::from_str(include_str!("../translations/zh-Hans.json")).expect("zh_hans"),
+        }
     }
 
     pub fn get_translations(&self, language: Language) -> &Translations {
         match language {
-            Language::cz => self.cz.as_ref().unwrap(),
-            Language::de => self.de.as_ref().unwrap(),
-            Language::el => self.el.as_ref().unwrap(),
-            Language::en => self.en.as_ref().unwrap(),
-            Language::eo => self.eo.as_ref().unwrap(),
-            Language::es => self.es.as_ref().unwrap(),
-            Language::fi => self.fi.as_ref().unwrap(),
-            Language::fr => self.fr.as_ref().unwrap(),
-            Language::hr => self.hr.as_ref().unwrap(),
-            Language::hu => self.hu.as_ref().unwrap(),
-            Language::it => self.it.as_ref().unwrap(),
-            Language::ja => self.ja.as_ref().unwrap(),
-            Language::ko => self.ko.as_ref().unwrap(),
-            Language::lt => self.lt.as_ref().unwrap(),
-            Language::nl => self.nl.as_ref().unwrap(),
-            Language::pl => self.pl.as_ref().unwrap(),
-            Language::pt => self.pt.as_ref().unwrap(),
-            Language::sk => self.sk.as_ref().unwrap(),
-            Language::sl => self.sl.as_ref().unwrap(),
-            Language::sr => self.sr.as_ref().unwrap(),
-            Language::sv => self.sv.as_ref().unwrap(),
-            Language::ru => self.ru.as_ref().unwrap(),
-            Language::tr => self.tr.as_ref().unwrap(),
-            Language::uk => self.uk.as_ref().unwrap(),
-            Language::vi => self.vi.as_ref().unwrap(),
-            Language::zh_hant => self.zh_hant.as_ref().unwrap(),
-            Language::zh_hans => self.zh_hans.as_ref().unwrap(),
+            Language::cz => &self.cz,
+            Language::de => &self.de,
+            Language::el => &self.el,
+            Language::en => &self.en,
+            Language::eo => &self.eo,
+            Language::es => &self.es,
+            Language::fi => &self.fi,
+            Language::fr => &self.fr,
+            Language::hr => &self.hr,
+            Language::hu => &self.hu,
+            Language::it => &self.it,
+            Language::ja => &self.ja,
+            Language::ko => &self.ko,
+            Language::lt => &self.lt,
+            Language::nl => &self.nl,
+            Language::pl => &self.pl,
+            Language::pt => &self.pt,
+            Language::sk => &self.sk,
+            Language::sl => &self.sl,
+            Language::sr => &self.sr,
+            Language::sv => &self.sv,
+            Language::ru => &self.ru,
+            Language::tr => &self.tr,
+            Language::uk => &self.uk,
+            Language::vi => &self.vi,
+            Language::zh_hant => &self.zh_hant,
+            Language::zh_hans => &self.zh_hans,
         }
     }
 }
@@ -1216,9 +1204,7 @@ pub fn get_localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
         Language::el => lifter.greek_name.as_ref().unwrap_or(&lifter.name),
         Language::ja => lifter.japanese_name.as_ref().unwrap_or(&lifter.name),
         Language::ko => lifter.korean_name.as_ref().unwrap_or(&lifter.name),
-        Language::ru | Language::uk => {
-            lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name)
-        }
+        Language::ru | Language::uk => lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name),
 
         _ => &lifter.name,
     }
@@ -1262,5 +1248,16 @@ impl LocalizeNumber for Points {
             format,
             points: self,
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn translation_validity() {
+        // This will panic if the translation files fail parsing.
+        LangInfo::new();
     }
 }

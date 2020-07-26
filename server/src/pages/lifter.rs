@@ -1,9 +1,9 @@
 //! Logic for each lifter's personal page.
 
+use langpack::{get_localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, Entry};
 use opltypes::*;
 
-use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 use crate::pages::meet::points_column_title; // FIXME: This should not be defined there.
 
 /// The context object passed to `templates/lifter.tera`

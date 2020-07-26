@@ -3,6 +3,7 @@ members = [
     "checker",
     "modules/coefficients",
     "modules/db",
+    "modules/langpack",
     "modules/opltypes",
     "modules/search",
     "server",

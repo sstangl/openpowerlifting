@@ -1,13 +1,12 @@
 //! Logic for the page that lists meets.
 
+use langpack::{Language, Locale};
 use opldb::query::direct::*;
 use opldb::{self, Meet, MetaFederation};
 use opltypes::*;
 
 use std::ffi::OsStr;
 use std::path;
-
-use crate::langpack::{self, Language, Locale};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 ///

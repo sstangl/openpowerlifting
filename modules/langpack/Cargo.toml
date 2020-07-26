@@ -1,0 +1,16 @@
+[package]
+name = "langpack"
+description = "Shared localization for OpenPowerlifting projects"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+license = "AGPL-3.0-or-later"
+edition = "2018"
+
+[dependencies]
+opldb = { version = "0.1", path = "../db/" }
+opltypes = { version = "0.1", path = "../opltypes/" }
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+strum = "0.18"
+strum_macros = "0.18"

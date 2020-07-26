@@ -24,8 +24,6 @@ devdocs:
 data: builddir client
 	mkdir -p "${BUILDDIR}/data/templates"
 	cp -r templates/* "${BUILDDIR}/data/templates/"
-	mkdir -p "${BUILDDIR}/data/translations"
-	cp -r translations/* "${BUILDDIR}/data/translations/"
 	mkdir -p "${BUILDDIR}/data/opldb"
 	cp ../build/lifters.csv "${BUILDDIR}/data/opldb/lifters.csv"
 	cp ../build/meets.csv "${BUILDDIR}/data/opldb/meets.csv"

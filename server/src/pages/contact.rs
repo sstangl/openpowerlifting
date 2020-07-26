@@ -1,6 +1,6 @@
 //! Logic for the contact page.
 
-use crate::langpack::{self, Locale};
+use langpack::Locale;
 
 /// The context object passed to `templates/contact.html.tera`
 #[derive(Serialize)]

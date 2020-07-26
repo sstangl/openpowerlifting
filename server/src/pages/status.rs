@@ -1,9 +1,9 @@
 //! Logic for the project status page.
 
+use langpack::{Language, Locale};
 use opltypes::*;
-use strum::IntoEnumIterator;
 
-use crate::langpack::{self, Language, Locale};
+use strum::IntoEnumIterator;
 
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]

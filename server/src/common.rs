@@ -5,9 +5,8 @@ use rocket::request::{self, FromRequest, Request};
 use rocket::response::{self, content, Responder};
 use rocket::Outcome;
 
+use langpack::{LangInfo, Language, Locale};
 use opltypes::WeightUnits;
-
-use server::langpack::{self, LangInfo, Language, Locale};
 
 // Use a single static database when testing.
 #[cfg(not(test))]

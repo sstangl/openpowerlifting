@@ -1,9 +1,9 @@
 //! Logic for the display of the rankings page.
 
+use langpack::Language;
 use opldb::query::direct::*;
 use opltypes::states::State;
 
-use crate::langpack::{self, Language};
 use crate::pages::api_rankings::get_slice;
 
 /// Flattened version of the RankingsQuery database object.

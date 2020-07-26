@@ -1,13 +1,13 @@
 //! Logic for each meet's individual results page.
 
-use itertools::Itertools;
+use langpack::{get_localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, algorithms, Entry};
 use opltypes::*;
 
+use itertools::Itertools;
+
 use std::cmp;
 use std::str::FromStr;
-
-use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 
 /// The context object passed to `templates/meet.html.tera`
 #[derive(Serialize)]

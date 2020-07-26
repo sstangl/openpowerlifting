@@ -1,11 +1,11 @@
 //! Implements the /api/rankings endpoint, used for dynamic loading of the
 //! rankings table via AJAX calls. Not intended for external use.
 
+use langpack::Locale;
 use opldb::query::direct::RankingsQuery;
 use opldb::{algorithms, OplDb};
 use opltypes::PointsSystem;
 
-use crate::langpack::Locale;
 use crate::pages::jsdata::JsEntryRow;
 
 #[derive(Serialize)]

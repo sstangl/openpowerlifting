@@ -4,6 +4,7 @@
 //! The openipf.org site works by using the same server as openpowerlifting.org,
 //! with Nginx rewriting URLs based on domain.
 
+use langpack::{Language, Locale};
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
@@ -13,7 +14,6 @@ use rocket::response::Redirect;
 use rocket::State;
 use rocket_contrib::templates::Template;
 
-use server::langpack::{Language, Locale};
 use server::pages;
 use server::FromUrlPath;
 

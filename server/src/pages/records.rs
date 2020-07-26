@@ -1,5 +1,6 @@
 //! Logic for the display of the records page, like a rankings summary.
 
+use langpack::{get_localized_name, Language, Locale, LocalizeNumber};
 use opldb::query::direct::*;
 use opldb::{algorithms, Entry, Lifter, Meet, OplDb};
 
@@ -10,8 +11,6 @@ use std::cmp::Ordering;
 use std::ffi::OsStr;
 use std::path;
 use std::str::FromStr;
-
-use crate::langpack::{self, get_localized_name, Language, Locale, LocalizeNumber};
 
 /// Query selection descriptor, corresponding to HTML widgets.
 #[derive(Copy, Clone, PartialEq, Serialize)]
