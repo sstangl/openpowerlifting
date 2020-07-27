@@ -47,6 +47,18 @@ type ManagedOplDb = opldb::OplDb;
 #[cfg(test)]
 type ManagedOplDb = &'static opldb::OplDb;
 
+#[post("/rankings", data = "<options>")]
+fn beta_rankings_default(
+    options: Json<beta::RankingsOptions>,
+    opldb: State<ManagedOplDb>,
+    langinfo: State<LangInfo>,
+) -> Option<JsonString> {
+    let query = opldb::query::direct::RankingsQuery::default();
+    let locale = Locale::new(&langinfo, options.language, options.units);
+    let res = beta::RankingsReturn::from(&opldb, &locale, &query, &options);
+    Some(JsonString(serde_json::to_string(&res).ok()?))
+}
+
 #[post("/rankings/<selections..>", data = "<options>")]
 fn beta_rankings(
     selections: Option<PathBuf>,
@@ -71,7 +83,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
     rocket::ignite()
         .manage(opldb)
         .manage(langinfo)
-        .mount("/beta/", routes![beta_rankings])
+        .mount("/beta/", routes![beta_rankings_default, beta_rankings])
         .register(catchers![not_found, internal_error])
         .attach(rocket::fairing::AdHoc::on_response(
             "Delete Server Header",
