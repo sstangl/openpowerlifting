@@ -276,47 +276,47 @@ impl<'a> Serialize for RankingsReturnRow<'a> {
                 MeetName => s.serialize_field("MeetName", &m.name)?,
                 AH => {
                     let v = e.points(PointsSystem::AH, units);
-                    s.serialize_field("AH", &v)?;
+                    s.serialize_field("AH", &v.in_format(nf))?;
                 }
                 Dots => {
                     let v = e.points(PointsSystem::Dots, units);
-                    s.serialize_field("Dots", &v)?;
+                    s.serialize_field("Dots", &v.in_format(nf))?;
                 }
                 Glossbrenner => {
                     let v = e.points(PointsSystem::Glossbrenner, units);
-                    s.serialize_field("Glossbrenner", &v)?;
+                    s.serialize_field("Glossbrenner", &v.in_format(nf))?;
                 }
                 Goodlift => {
                     let v = e.points(PointsSystem::Goodlift, units);
-                    s.serialize_field("Goodlift", &v)?;
+                    s.serialize_field("Goodlift", &v.in_format(nf))?;
                 }
                 IPFPoints => {
                     let v = e.points(PointsSystem::IPFPoints, units);
-                    s.serialize_field("IPFPoints", &v)?;
+                    s.serialize_field("IPFPoints", &v.in_format(nf))?;
                 }
                 McCulloch => {
                     let v = e.points(PointsSystem::McCulloch, units);
-                    s.serialize_field("McCulloch", &v)?;
+                    s.serialize_field("McCulloch", &v.in_format(nf))?;
                 }
                 NASA => {
                     let v = e.points(PointsSystem::NASA, units);
-                    s.serialize_field("NASA", &v)?;
+                    s.serialize_field("NASA", &v.in_format(nf))?;
                 }
                 Reshel => {
                     let v = e.points(PointsSystem::Reshel, units);
-                    s.serialize_field("Reshel", &v)?;
+                    s.serialize_field("Reshel", &v.in_format(nf))?;
                 }
                 SchwartzMalone => {
                     let v = e.points(PointsSystem::SchwartzMalone, units);
-                    s.serialize_field("SchwartzMalone", &v)?;
+                    s.serialize_field("SchwartzMalone", &v.in_format(nf))?;
                 }
                 Wilks => {
                     let v = e.points(PointsSystem::Wilks, units);
-                    s.serialize_field("Wilks", &v)?;
+                    s.serialize_field("Wilks", &v.in_format(nf))?;
                 }
                 Wilks2020 => {
                     let v = e.points(PointsSystem::Wilks2020, units);
-                    s.serialize_field("Wilks2020", &v)?;
+                    s.serialize_field("Wilks2020", &v.in_format(nf))?;
                 }
             }
         }
