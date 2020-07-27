@@ -784,7 +784,7 @@ pub enum Federation {
     #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
     PZKFiTS,
 
-    /// 100% RAW Federation, WP.
+    /// 100% RAW Federation, backronym of Redeemed Among the World.
     #[strum(to_string = "RAW", serialize = "100raw")]
     RAW,
 
@@ -1205,6 +1205,7 @@ pub enum Federation {
     WPURUS,
 
     /// World Natural Powerlifting Federation.
+    /// Was briefly called NPU (Natural Powerlifters United) in 1999.
     #[strum(to_string = "WNPF", serialize = "wnpf")]
     WNPF,
 
