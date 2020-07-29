@@ -279,7 +279,7 @@ pub enum Federation {
 
     /// Unaffiliated meets held in Czechia.
     #[serde(rename = "Czechia-UA")]
-    #[strum(to_string = "Czechia-UA", serialize = "chzechia-ua")]
+    #[strum(to_string = "Czechia-UA", serialize = "czechia-ua")]
     CzechiaUA,
 
     /// Deutscher Bodybuilding und Kraftsport Verband, first German federation.
