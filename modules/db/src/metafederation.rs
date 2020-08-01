@@ -718,13 +718,7 @@ impl MetaFederation {
             }
             MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
-            MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP)
-            }
-            MetaFederation::WPC-Finland => {
-                meet.federation == Federation::WPC-Finland
-                    || (meet.federation == Federation::WPC
-                        && entry.lifter_country.map_or(false, |c| c.is_in_finland())
-            }
+            MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
             MetaFederation::WRPFUSA => match meet.federation {
                 Federation::WRPF => match entry.lifter_country {
                     Some(Country::USA) => true,
