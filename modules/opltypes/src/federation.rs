@@ -537,6 +537,11 @@ pub enum Federation {
     #[strum(to_string = "ILPA", serialize = "ilpa")]
     ILPA,
 
+    /// International Nova Strength Association, tiny Texas "fed".
+    /// https://web.archive.org/web/20040807073200/http://www.novafitness.com/insa_fronts/index.htm
+    #[strum(to_string = "INSA", serialize = "insa")]
+    INSA,
+
     /// International Powerlifting Association.
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
@@ -1445,6 +1450,7 @@ impl Federation {
             Federation::IKF => false,
             Federation::GPCCAN => false,
             Federation::ILPA => false,
+            Federation::INSA => false,
             Federation::IPA => false,
             Federation::IPC => false,
             Federation::IPF => FULLY_TESTED,
@@ -1757,6 +1763,7 @@ impl Federation {
             Federation::IDFPF => Some(Country::Ireland),
             Federation::IKF => Some(Country::Iceland),
             Federation::ILPA => Some(Country::Israel),
+            Federation::INSA => Some(Country::USA),
             Federation::IPA => Some(Country::USA),
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
@@ -2095,6 +2102,7 @@ impl Federation {
             Federation::IDFPF => Some(Federation::WDFPF),
             Federation::IKF => Some(Federation::GPC),
             Federation::ILPA => Some(Federation::GPA),
+            Federation::INSA => None,
             Federation::IPA => None,
             Federation::IPC => None,
             Federation::IPF => Some(Federation::IPF),
@@ -2472,6 +2480,7 @@ impl Federation {
             Federation::IDFPF => PointsSystem::SchwartzMalone,
             Federation::IKF => PointsSystem::Wilks,
             Federation::ILPA => PointsSystem::Wilks,
+            Federation::INSA => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => Federation::ipf_rules_on(date),
