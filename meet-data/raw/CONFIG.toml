@@ -4,6 +4,12 @@
     require_manual_disambiguation = true
 
 [divisions]
+	# Youth divisions, only used historically.
+	youth_5 = {name="Youth 5 & Under", min=0, max=5, equipment="Raw"}
+	youth_6_7 = {name="Youth 6-7", min=6, max=7, equipment="Raw"}
+	youth_8_9 = {name="Youth 8-9", min=8, max=9, equipment="Raw"}
+	youth_10_11 = {name="Youth 10-11", min=10, max=11, equipment="Raw"}
+
     # Age in 100% RAW is determined by exact age on date of meet.
     open = {name = "Open", min = 0, max = 999, equipment="Raw"}
     youth = {name = "Youth", min = 0, max = 11, equipment="Raw"}
