@@ -18,8 +18,8 @@ except ImportError:
     import oplprobe
 
 
-URLS = ["http://www.powerliftings.lv/?pg=22"]
-BASEURL = "http://www.powerliftings.lv/"
+URLS = ["https://www.powerliftings.lv/?pg=22"]
+BASEURL = "https://www.powerliftings.lv/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -51,7 +51,7 @@ def getmeetlist(html):
         if not any(x in url for x in ['html', 'xls', 'doc', 'xlsx', 'docx']):
             continue
 
-        if 'http://' not in url:
+        if 'http://' not in url and 'https://' not in url:
             url = BASEURL + url
             url = url.replace('../', '')
         if url not in urls:
