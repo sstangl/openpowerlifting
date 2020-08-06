@@ -310,6 +310,7 @@
 
 [exemptions]
     1102 = ["ExemptDivision"] # Lifters competed in wrong age divisions.
+    1104 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Missing weight info for DQ lifts, Special Olympics Classes
     1612 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
     1615 = ["ExemptWeightClassConsistency"] # Missing weightclasses.
     1621 = ["ExemptWeightClassConsistency"] # Missing weightclasses.

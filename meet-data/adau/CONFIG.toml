@@ -46,3 +46,4 @@
     divisions = ["Youth Under 6","Youth 6-7","Youth 8-9","Youth 10-11","Teen 12-13"]
 
 [exemptions]
+    0401 = ["ExemptWeightClassConsistency"] # Men in lower weightclasses
