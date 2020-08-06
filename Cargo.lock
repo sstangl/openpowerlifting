@@ -1071,7 +1071,7 @@ dependencies = [
  "pest_meta",
  "proc-macro2 1.0.19",
  "quote 1.0.7",
- "syn 1.0.36",
+ "syn 1.0.38",
 ]
 
 [[package]]
@@ -1408,7 +1408,7 @@ checksum = "2a0be94b04690fbaed37cddffc5c134bf537c8e3329d53e982fe04c374978f8e"
 dependencies = [
  "proc-macro2 1.0.19",
  "quote 1.0.7",
- "syn 1.0.36",
+ "syn 1.0.38",
 ]
 
 [[package]]
@@ -1497,20 +1497,20 @@ checksum = "7345c971d1ef21ffdbd103a75990a15eb03604fc8b8852ca8cb418ee1a099028"
 
 [[package]]
 name = "strum"
-version = "0.19.1"
+version = "0.19.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "548779cd5867cc3c58521a613620578cf6cedc557d7dd5d51081f1c4c46adfa6"
+checksum = "3924a58d165da3b7b2922c667ab0673c7b5fd52b5c19ea3442747bcb3cd15abe"
 
 [[package]]
 name = "strum_macros"
-version = "0.19.1"
+version = "0.19.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "875812c05b8135f41dc640a3e268bdebbd832576a05cf56471fc1eb70c602eb6"
+checksum = "2d2ab682ecdcae7f5f45ae85cd7c1e6c8e68ea42c8a612d47fedf831c037146a"
 dependencies = [
  "heck",
  "proc-macro2 1.0.19",
  "quote 1.0.7",
- "syn 1.0.36",
+ "syn 1.0.38",
 ]
 
 [[package]]
@@ -1538,9 +1538,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.36"
+version = "1.0.38"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4cdb98bcb1f9d81d07b536179c269ea15999b5d14ea958196413869445bb5250"
+checksum = "e69abc24912995b3038597a7a593be5053eb0fb44f3cc5beec0deb421790c1f4"
 dependencies = [
  "proc-macro2 1.0.19",
  "quote 1.0.7",
