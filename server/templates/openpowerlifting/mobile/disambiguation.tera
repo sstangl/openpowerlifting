@@ -50,9 +50,9 @@
             <td>{{this.equipment}}</td>
             <td>{{this.weightclass}}</td>
             <td>{{this.bodyweight}}</td>
-            <td>{{this.squat}}</td>
-            <td>{{this.bench}}</td>
-            <td>{{this.deadlift}}</td>
+            <td class="squat">{{this.squat}}</td>
+            <td class="bench">{{this.bench}}</td>
+            <td class="deadlift">{{this.deadlift}}</td>
             <td>{{this.total}}</td>
             <td>{{this.points}}</td>
           </tr>
