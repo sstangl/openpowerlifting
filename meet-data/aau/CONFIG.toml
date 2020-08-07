@@ -34,6 +34,7 @@
     m9094 = {name ="M 90-94",min=90,max=94}
     m9599 = {name ="M 95-99",min=95,max=99}
     coll = {name ="Coll",min=0,max=999} # Collegiate
+    m40p = {name ="M 40+",min=40,max=999}
 
     #Raw
     ropen = {name ="R Open",min=0,max=999,equipment="Raw"}
@@ -200,6 +201,9 @@
     0207 = ["ExemptWeightClassConsistency"] # Junior Olympics
     0304 = ["ExemptWeightClassConsistency"] # Women in 110
     0307 = ["ExemptAge"] # They decided to let a 4 year old compete...
+    0311 = ["ExemptWeightClassConsistency"] # Guests missing weight classes
+    0312 = ["ExemptWeightClassConsistency"] # Youth missing weight class
+    0313 = ["ExemptWeightClassConsistency"] # 140+ class
     0402 = ["ExemptWeightClassConsistency"]
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.

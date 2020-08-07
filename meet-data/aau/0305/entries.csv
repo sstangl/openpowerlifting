@@ -1,13 +1,70 @@
-WeightClassKg,Name,State,Age,BodyweightKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Place
-110,Kenneth James,VA,41,109.77,Law/Mil 40-44,235,145,277.5,657.5,SBD,Single-ply,M,1
-110,Charles Swingler,VA,36,105.23,Law/Mil,255,182.5,255,692.5,SBD,Single-ply,M,1
-110,Charles Swingler,VA,36,105.23,Law/Mil Sub,255,182.5,255,692.5,SBD,Single-ply,M,1
-145,Paul Bates,VA,40,131.54,M 40-44,327.5,187.5,277.5,792.5,SBD,Single-ply,M,1
-145,Paul Bates,VA,40,131.54,Open,327.5,187.5,277.5,792.5,SBD,Single-ply,M,1
-100,Timothy Brien,RI,44,97.98,Law/Mil 40-44,260,150,260,670,SBD,Raw,M,1
-100,Timothy Brien,RI,44,97.98,Life,260,150,260,670,SBD,Raw,M,1
-100,Timothy Brien,RI,44,97.98,M 40-44,260,150,260,670,SBD,Raw,M,1
-75,Chris Ballance,,16,70.76,T 16-17,,100,,100,B,Single-ply,M,1
-82.5,Jason Metz,NC,23,79.83,JR,,147.5,,147.5,B,Single-ply,M,1
-82.5,Jason Metz,NC,23,79.83,Open,,147.5,,147.5,B,Single-ply,M,1
-110,Nathan Bryant,VA,45,105.69,LM 45-49,,117.5,,117.5,B,Single-ply,M,1
+WeightClassKg,Name,State,Age,BodyweightKg,Division,Best3SquatKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Place
+110,Kenneth James,VA,41,109.77,Law/Mil 40-44,235,145,,277.5,657.5,SBD,Single-ply,M,1
+110,Charles Swingler,VA,36,105.23,Law/Mil,255,182.5,,255,692.5,SBD,Single-ply,M,1
+110,Charles Swingler,VA,36,105.23,Law/Mil Sub,255,182.5,,255,692.5,SBD,Single-ply,M,1
+145,Paul Bates,VA,40,131.54,M 40-44,327.5,187.5,,277.5,792.5,SBD,Single-ply,M,1
+145,Paul Bates,VA,40,131.54,Open,327.5,187.5,,277.5,792.5,SBD,Single-ply,M,1
+100,Timothy Brien,RI,44,97.98,Law/Mil 40-44,260,150,,260,670,SBD,Raw,M,1
+100,Timothy Brien,RI,44,97.98,Life,260,150,,260,670,SBD,Raw,M,1
+100,Timothy Brien,RI,44,97.98,M 40-44,260,150,,260,670,SBD,Raw,M,1
+75,Chris Ballance,,16,70.76,T 16-17,,100,,,100,B,Single-ply,M,1
+82.5,Jason Metz,NC,23,79.83,JR,,147.5,,,147.5,B,Single-ply,M,1
+82.5,Jason Metz,NC,23,79.83,Open,,147.5,,,147.5,B,Single-ply,M,1
+110,Nathan Bryant,VA,45,105.69,LM 45-49,,117.5,,,117.5,B,Single-ply,M,1
+75,Sabrina Bailes,WV,35,74.39,Sub,,65,,,65,B,Single-ply,F,1
+75,Teresa Geer,VA,13,70.76,RT 12-13,,47.5,,,47.5,B,Raw,F,1
+82.5,Donna Pegram,VA,28,80.29,R Open,,87.5,,,87.5,B,Raw,F,1
+90,Sue Pack,WV,62,83.46,RLM 60-64,,82.5,,,82.5,B,Raw,F,1
+44,Jammee Terry,NC,11,43.54,RY 10-11,,30,,,30,B,Raw,M,1
+44,Hakeem Foster,NC,14,40.82,RT 14-15,,27.5,,,27.5,B,Raw,M,1
+48,Donterio Williams,NC,11,44.45,RY 10-11,,42.5,45,,42.5,B,Raw,M,1
+52,Darnell Floyd,NC,16,48.08,RT 16-17,,52.5,,,52.5,B,Raw,M,1
+52,Jonathan Marrow,NC,12,50.8,RT 12-13,,52.5,,,52.5,B,Raw,M,1
+56,Emmanuel Kearney,NC,13,53.52,RT 12-13,,52.5,,,52.5,B,Raw,M,1
+60,Curtis Munechika,VA,43,,RLM 40-44,,,,,,B,Raw,M,DQ
+60,Carlos Camachoh,VA,39,59.87,R Sub,,92.5,,,92.5,B,Raw,M,1
+67.5,William Turner,VA,60,67.13,RLM 60-64,,111,112.5,,111,B,Raw,M,1
+67.5,William Turner,VA,60,67.13,RM 60-64,,111,112.5,,111,B,Raw,M,1
+67.5,Jake Carter,VA,15,65.32,RT 14-15,,97.5,,,97.5,B,Raw,M,1
+67.5,Christopher Oliver,NC,15,64.86,RT 14-15,,65,,,65,B,Raw,M,2
+67.5,Donvan Taylor,NC,12,62.6,RT 12-13,,77.5,,,77.5,B,Raw,M,1
+67.5,Kelly Bullock,NC,13,62.14,RT 12-13,,52.5,,,52.5,B,Raw,M,2
+75,Thomas Dance,VA,23,73.48,R JR,,125,,,125,B,Raw,M,1
+75,Savey Alston,NC,11,70.76,RY 10-11,,42.5,,,42.5,B,Raw,M,1
+75,Thomas Dance,VA,23,73.48,R Life,,125,,,125,B,Raw,M,1
+75,Thomas Dance,VA,23,73.48,R Open,,125,,,125,B,Raw,M,1
+75,General Grant Marrow,NC,15,72.57,RT 14-15,,92.5,,,92.5,B,Raw,M,1
+75,James Kearney,NC,13,69.85,RT 12-13,,40,,,40,B,Raw,M,1
+82.5,Darien Hammetth,VA,30,80.74,R Law/Mil,,125,,,125,B,Raw,M,1
+82.5,Richard Spangler,VA,44,,RM 40-44,,,,,,B,Raw,M,DQ
+82.5,Joe Formato,VA,45,80.29,RM 45-49,,127.5,,,127.5,B,Raw,M,1
+82.5,Darien Hammetth,VA,30,80.74,R Open,,125,,,125,B,Raw,M,1
+82.5,Darin Baldwin,VA,36,79.83,R Sub,,122.5,,,122.5,B,Raw,M,1
+82.5,Charles Brock,NC,35,,R Sub,,,,,,B,Raw,M,DQ
+82.5,Nick Caton,VA,16,81.65,RT 16-17,,102.5,105,,102.5,B,Raw,M,1
+90,Jim Hansen,NC,45,89.81,RM 45-49,,145,,,145,B,Raw,M,1
+90,Paul Kershner,VA,54,88,RM 50-54,,100,,,100,B,Raw,M,1
+90,Craig Burgess,OH,15,87.54,RT 14-15,,120,,,120,B,Raw,M,1
+100,Robert Spiers,VA,61,97.98,RLM 60-64,,155,,,155,B,Raw,M,1
+100,Robert Spiers,VA,61,97.98,R Life,,155,,,155,B,Raw,M,1
+100,Ron Tuzzo,VA,45,99.34,RM 45-49,,,,,,B,Raw,M,DQ
+100,Robert Spiers,VA,61,97.98,RM 60-64,,155,,,155,B,Raw,M,1
+100,Tripp Brightwell,VA,26,97.52,R Open,,185,,,185,B,Raw,M,1
+100,Robert Spiers,VA,61,97.98,R Open,,155,,,155,B,Raw,M,2
+100,Bruce Miller,VA,35,91.63,R Sub,,160,,,160,B,Raw,M,1
+100,Adam Caton,VA,15,94.8,RT 14-15,,97.5,,,97.5,B,Raw,M,1
+100,Micah Greene,VA,17,99.34,RT 16-17,,155,,,155,B,Raw,M,1
+110,Anthony Ruffin,VA,40,107.05,RM 40-44,,195,,,195,B,Raw,M,1
+110,Dallas Adams,VA,39,102.51,R Open,,190,,,190,B,Raw,M,1
+110,Dallas Adams,VA,39,102.51,R Sub,,190,,,190,B,Raw,M,1
+110,Randall Abbott,NC,14,107.96,RT 14-15,,67.5,,,67.5,B,Raw,M,1
+110,Tyrell Jenkins,VA,18,109.77,RT 18-19,,152.5,,,152.5,B,Raw,M,1
+125,Matthew McQuaden,VA,44,111.58,RLM 40-44,,180,,,180,B,Raw,M,1
+125,Alvin Belfield,VA,40,120.66,RLM 40-44,,170,,,170,B,Raw,M,2
+125,Ray Cross #1,,56,117.48,RLM 55-59,,148.5,,,148.5,B,Raw,M,1
+125,Matthew McQuaden,VA,44,111.58,RM 40-44,,180,,,180,B,Raw,M,1
+125,Alvin Belfield,VA,40,120.66,RM 40-44,,170,,,170,B,Raw,M,2
+125,Ronald Gunton,MD,71,123.38,RM 70-74,,95,,,95,B,Raw,M,1
+145,Walter Ferguso,NC,47,127.01,RLM 45-49,,157.5,,,157.5,B,Raw,M,1
+145,Walter Ferguso,NC,47,127.01,RM 45-49,,157.5,,,157.5,B,Raw,M,1
+145+,Larry Hicks,VA,45,156.94,RM 45-49,,172.5,,,172.5,B,Raw,M,1
