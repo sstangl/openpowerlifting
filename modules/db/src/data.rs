@@ -5,7 +5,7 @@ use opltypes::*;
 
 use crate::yesno::deserialize_yes_no;
 
-/// Row for a  Data for a unique lifter.
+/// Row for a unique lifter.
 ///
 /// Lifters are uniquely identified throughout the database by any of:
 ///  1. LifterID

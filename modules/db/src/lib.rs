@@ -297,13 +297,13 @@ impl OplDb {
         None
     }
 
-    /// Returns all entries with the given lifter_id.
+    /// Returns all entry_ids with the given lifter_id.
     ///
     /// The vector of entries is sorted by lifter_id. This function uses binary
     /// search followed by a bi-directional linear scan.
     ///
     /// Panics if the lifter_id is not found.
-    pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
+    pub fn get_entry_ids_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<u32> {
         // Perform a binary search on lifter_id.
         let found_index = self
             .get_entries()
@@ -332,7 +332,18 @@ impl OplDb {
         assert!(first_index <= last_index);
 
         // Collect entries between first_index and last_index, inclusive.
-        (first_index..=last_index)
+        (first_index..=last_index).map(|i| i as u32).collect()
+    }
+
+    /// Returns all entries with the given lifter_id.
+    ///
+    /// The vector of entries is sorted by lifter_id. This function uses binary
+    /// search followed by a bi-directional linear scan.
+    ///
+    /// Panics if the lifter_id is not found.
+    pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
+        self.get_entry_ids_for_lifter(lifter_id)
+            .into_iter()
             .map(|i| self.get_entry(i as u32))
             .collect()
     }
@@ -345,6 +356,30 @@ impl OplDb {
         self.get_entries()
             .iter()
             .filter(|&e| e.meet_id == meet_id)
+            .collect()
+    }
+
+    /// Returns all entry_ids with the given meet_id.
+    ///
+    /// Those entries could be located anywhere in the entries vector,
+    /// so they are found using a linear scan.
+    pub fn get_entry_ids_for_meet<'a>(&'a self, meet_id: u32) -> Vec<u32> {
+        self.get_entries()
+            .iter()
+            .enumerate()
+            .filter(|&(_i, e)| e.meet_id == meet_id)
+            .map(|(i, _e)| i as u32)
+            .collect()
+    }
+
+    /// Returns all lifter IDs that competed at the given meet_id.
+    pub fn get_lifter_ids_for_meet<'a>(&'a self, meet_id: u32) -> Vec<u32> {
+        self.get_entries()
+            .iter()
+            .filter(|&e| e.meet_id == meet_id)
+            .group_by(|e| e.lifter_id)
+            .into_iter()
+            .map(|(lifter_id, _group)| lifter_id)
             .collect()
     }
 }

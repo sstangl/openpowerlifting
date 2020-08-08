@@ -3,6 +3,8 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
 #[macro_use]
+extern crate juniper;
+#[macro_use]
 extern crate rocket;
 #[macro_use]
 extern crate serde_derive;
@@ -20,6 +22,16 @@ use std::path::{Path, PathBuf};
 use langpack::{LangInfo, Locale};
 
 mod beta;
+mod graphql;
+
+/// Wrapper struct for the OplDb.
+///
+/// This is necessary in order to implement the juniper::Context trait
+/// without making GraphQL a dependency of the DB itself.
+#[cfg(not(test))]
+pub struct ManagedOplDb(opldb::OplDb);
+#[cfg(test)]
+pub struct ManagedOplDb(&'static opldb::OplDb);
 
 /// Return type for pre-rendered Json strings.
 #[derive(Debug)]
@@ -41,12 +53,6 @@ fn internal_error() -> &'static str {
     "500"
 }
 
-// Tests want to load the data only once.
-#[cfg(not(test))]
-type ManagedOplDb = opldb::OplDb;
-#[cfg(test)]
-type ManagedOplDb = &'static opldb::OplDb;
-
 #[post("/rankings", data = "<options>")]
 fn beta_rankings_default(
     options: Json<beta::RankingsOptions>,
@@ -55,7 +61,7 @@ fn beta_rankings_default(
 ) -> Option<JsonString> {
     let query = opldb::query::direct::RankingsQuery::default();
     let locale = Locale::new(&langinfo, options.language, options.units);
-    let res = beta::RankingsReturn::from(&opldb, &locale, &query, &options);
+    let res = beta::RankingsReturn::from(&opldb.0, &locale, &query, &options);
     Some(JsonString(serde_json::to_string(&res).ok()?))
 }
 
@@ -74,8 +80,34 @@ fn beta_rankings(
     };
 
     let locale = Locale::new(&langinfo, options.language, options.units);
-    let res = beta::RankingsReturn::from(&opldb, &locale, &query, &options);
+    let res = beta::RankingsReturn::from(&opldb.0, &locale, &query, &options);
     Some(JsonString(serde_json::to_string(&res).ok()?))
+}
+
+/// Generates an HTML page containing GraphiQL.
+#[get("/")]
+fn graphiql() -> rocket::response::content::Html<String> {
+    juniper_rocket::graphiql_source("/graphql") // TODO: What's this embedded URL?
+}
+
+/// GET handler for a GraphQL request.
+#[get("/?<request>")]
+fn graphql_get(
+    opldb: State<ManagedOplDb>,
+    request: juniper_rocket::GraphQLRequest,
+    schema: State<graphql::Schema>,
+) -> juniper_rocket::GraphQLResponse {
+    request.execute(&schema, &opldb)
+}
+
+/// POST handler for a GraphQL request.
+#[post("/", data = "<request>")]
+fn graphql_post(
+    opldb: State<ManagedOplDb>,
+    request: juniper_rocket::GraphQLRequest,
+    schema: State<graphql::Schema>,
+) -> juniper_rocket::GraphQLResponse {
+    request.execute(&schema, &opldb)
 }
 
 /// Connects the server endpoints together.
@@ -83,7 +115,9 @@ fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
     rocket::ignite()
         .manage(opldb)
         .manage(langinfo)
+        .manage(graphql::new_schema())
         .mount("/beta/", routes![beta_rankings_default, beta_rankings])
+        .mount("/graphql/", routes![graphiql, graphql_get, graphql_post])
         .register(catchers![not_found, internal_error])
         .attach(rocket::fairing::AdHoc::on_response(
             "Delete Server Header",
@@ -122,6 +156,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let langinfo = LangInfo::new();
 
     #[cfg(not(test))]
-    rocket(opldb, langinfo).launch();
+    rocket(ManagedOplDb(opldb), langinfo).launch();
     Ok(())
 }
