@@ -384,6 +384,46 @@ graphql_object!(Lifter: ManagedOplDb |&self| {
         lifter!(self, executor).username.as_str()
     }
 
+    /// The lifter's name in the Latin character set.
+    field latin_name(&executor) -> &str {
+        lifter!(self, executor).name.as_str()
+    }
+
+    /// The lifter's name in the Cyrillic character set.
+    field cyrillic_name(&executor) -> Option<&str> {
+        lifter!(self, executor).cyrillic_name.as_deref()
+    }
+
+    /// The lifter's name in the Greek character set.
+    field greek_name(&executor) -> Option<&str> {
+        lifter!(self, executor).greek_name.as_deref()
+    }
+
+    /// The lifter's name in the Japanese character set.
+    field japanese_name(&executor) -> Option<&str> {
+        lifter!(self, executor).japanese_name.as_deref()
+    }
+
+    /// The lifter's name in the Korean character set.
+    field korean_name(&executor) -> Option<&str> {
+        lifter!(self, executor).korean_name.as_deref()
+    }
+
+    /// The lifter's Instagram account.
+    field instagram(&executor) -> Option<&str> {
+        lifter!(self, executor).instagram.as_deref()
+    }
+
+    /// The lifter's VKontakte account.
+    field vkontakte(&executor) -> Option<&str> {
+        lifter!(self, executor).vkontakte.as_deref()
+    }
+
+    /// Colorization information.
+    field color(&executor) -> Option<&str> {
+        lifter!(self, executor).color.as_deref()
+    }
+
     /// Gets a list of all the lifter's entries.
     field entries(&executor) -> Vec<Entry> {
         db!(executor).get_entry_ids_for_lifter(self.0)
@@ -405,9 +445,38 @@ graphql_object!(Meet: ManagedOplDb |&self| {
         meet!(self, executor).path.as_str()
     }
 
+    /// The federation that hosted the meet.
+    field federation(&executor) -> String {
+        format!("{}", meet!(self, executor).federation)
+    }
+
+    /// The topmost federation under which the sanction fell.
+    field parent_federation(&executor) -> Option<String> {
+        let meet = meet!(self, executor);
+        meet.federation.sanctioning_body(meet.date).map(|f| format!("{}", f))
+    }
+
+    // TODO: Date
+    // TODO: Country
+
+    /// The state/province in which the meet was held.
+    field state(&executor) -> Option<&str> {
+        meet!(self, executor).state.as_deref()
+    }
+
+    /// The town/city in which the meet was held.
+    field town(&executor) -> Option<&str> {
+        meet!(self, executor).town.as_deref()
+    }
+
     /// The name of the meet.
     field name(&executor) -> &str {
         meet!(self, executor).name.as_str()
+    }
+
+    /// Counts how many entries were recorded for the meet.
+    field num_entries(&executor) -> i32 {
+        db!(executor).get_entry_ids_for_meet(self.0).len() as i32
     }
 
     /// Gets a list of all entries from the meet.
@@ -416,6 +485,11 @@ graphql_object!(Meet: ManagedOplDb |&self| {
             .into_iter()
             .map(|id| Entry(id))
             .collect()
+    }
+
+    /// Counts how many lifters competed in the meet.
+    field num_lifters(&executor) -> i32 {
+        meet!(self, executor).num_unique_lifters as i32
     }
 
     /// Gets a list of all lifters that competed in the meet.
