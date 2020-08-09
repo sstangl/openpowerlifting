@@ -3,7 +3,7 @@
 use crate::ManagedOplDb;
 use juniper::{EmptyMutation, FieldResult, RootNode};
 use opltypes::WeightUnits::Kg;
-use opltypes::*;
+use opltypes::{Age, PointsSystem, WeightClassKg};
 
 /// Mark that ManagedOplDb is a valid Context for a GraphQL query.
 impl juniper::Context for ManagedOplDb {}
@@ -95,8 +95,8 @@ graphql_object!(Entry: ManagedOplDb |&self| {
     }
 
     /// The equipment for this entry.
-    field equipment(&executor) -> String {
-        format!("{}", entry!(self, executor).equipment)
+    field equipment(&executor) -> Equipment {
+        entry!(self, executor).equipment.into()
     }
 
     /// The lifter's age at this entry.
@@ -500,3 +500,27 @@ graphql_object!(Meet: ManagedOplDb |&self| {
             .collect()
     }
 });
+
+/// The GraphQL variant of [opltypes::Equipment].
+#[derive(GraphQLEnum)]
+enum Equipment {
+    Raw,
+    Wraps,
+    SinglePly,
+    MultiPly,
+    Unlimited,
+    Straps,
+}
+
+impl From<opltypes::Equipment> for Equipment {
+    fn from(o: opltypes::Equipment) -> Equipment {
+        match o {
+            opltypes::Equipment::Raw => Equipment::Raw,
+            opltypes::Equipment::Wraps => Equipment::Wraps,
+            opltypes::Equipment::Single => Equipment::SinglePly,
+            opltypes::Equipment::Multi => Equipment::MultiPly,
+            opltypes::Equipment::Unlimited => Equipment::Unlimited,
+            opltypes::Equipment::Straps => Equipment::Straps,
+        }
+    }
+}
