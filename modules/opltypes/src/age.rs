@@ -40,6 +40,16 @@ impl From<Age> for PrettyAge {
     }
 }
 
+impl From<Age> for f64 {
+    fn from(a: Age) -> f64 {
+        match a {
+            Age::Exact(a) => a.into(),
+            Age::Approximate(a) => f64::from(a) + 0.5,
+            Age::None => 0.0,
+        }
+    }
+}
+
 impl Age {
     /// Convert from an i64. Used by the TOML deserializer.
     pub fn from_i64(n: i64) -> Result<Self, &'static str> {

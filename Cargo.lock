@@ -89,6 +89,7 @@ dependencies = [
 name = "api"
 version = "0.1.0"
 dependencies = [
+ "coefficients",
  "dotenv",
  "juniper",
  "juniper_rocket",

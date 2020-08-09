@@ -7,6 +7,7 @@ edition = "2018"
 license = "AGPL-3.0-or-later"
 
 [dependencies]
+coefficients = {version = "0.1", path = "../modules/coefficients/" }
 langpack = {version = "0.1", path = "../modules/langpack/" }
 opldb = { version = "0.1", path = "../modules/db/" }
 opltypes = { version = "0.1", path = "../modules/opltypes/" }

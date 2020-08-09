@@ -99,6 +99,38 @@ impl From<WeightKg> for f64 {
     }
 }
 
+impl From<WeightKg> for Option<f64> {
+    fn from(w: WeightKg) -> Option<f64> {
+        if w.is_zero() {
+            None
+        } else {
+            Some(w.into())
+        }
+    }
+}
+
+impl From<WeightAny> for f32 {
+    fn from(w: WeightAny) -> f32 {
+        (w.0 as f32) / 100.0
+    }
+}
+
+impl From<WeightAny> for f64 {
+    fn from(w: WeightAny) -> f64 {
+        f64::from(w.0) / 100.0
+    }
+}
+
+impl From<WeightAny> for Option<f64> {
+    fn from(w: WeightAny) -> Option<f64> {
+        if w.is_zero() {
+            None
+        } else {
+            Some(w.into())
+        }
+    }
+}
+
 impl WeightKg {
     #[inline]
     pub fn max_value() -> WeightKg {
@@ -230,6 +262,18 @@ impl WeightKg {
 }
 
 impl WeightAny {
+    /// Whether the weight is zero, representing a lift not taken.
+    #[inline]
+    pub fn is_zero(self) -> bool {
+        self.0 == 0
+    }
+
+    /// Whether the weight is not zero, representing a taken lift.
+    #[inline]
+    pub fn is_non_zero(self) -> bool {
+        !self.is_zero()
+    }
+
     // FIXME -- remove code duplication with fmt() somehow.
     pub fn format_comma(self) -> String {
         // Don't display empty weights.

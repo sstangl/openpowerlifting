@@ -57,6 +57,12 @@ impl From<f64> for Points {
     }
 }
 
+impl From<Points> for f64 {
+    fn from(p: Points) -> f64 {
+        f64::from(p.0) / 100.0
+    }
+}
+
 impl Points {
     #[inline]
     pub fn from_i32(i: i32) -> Points {
