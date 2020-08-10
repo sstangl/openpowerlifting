@@ -12,7 +12,14 @@ mod lifter;
 pub use lifter::Lifter;
 
 mod meet;
-pub use meet::Meet;
+pub use meet::{Meet, MeetFilter, MeetOrderBy};
+
+/// Helper for getting the OplDb.
+macro_rules! db {
+    ($executor:ident) => {
+        &$executor.context().0
+    };
+}
 
 /// Mark that ManagedOplDb is a valid Context for a GraphQL query.
 impl juniper::Context for ManagedOplDb {}
@@ -54,61 +61,18 @@ graphql_object!(Query: ManagedOplDb |&self| {
         order_by: Option<MeetOrderBy>,
         limit: i32,
     ) -> FieldResult<Vec<Meet>> {
+        if limit < 1 || limit > 100 {
+            Err("The limit must be between 1 and 100")?;
+        }
+        let limit = limit as usize;
+
+        // Without sorting or filtering, we can optimize harder.
+        if filter.is_none() && order_by.is_none() {
+            return Ok(db!(executor).get_meets().iter().enumerate().take(limit)
+                .map(|(id, _meet)| Meet(id as u32))
+                .collect());
+        }
+
         Err("query::meets() is unimplemented")?
     }
 });
-
-/// The final range is the intersection of all provided parameters.
-#[derive(GraphQLInputObject)]
-pub struct IntRange {
-    /// All values < x.
-    less_than: Option<i32>,
-
-    /// All values <= x.
-    less_than_or_equal: Option<i32>,
-
-    /// All values > x.
-    greater_than: Option<i32>,
-
-    /// All values >= x.
-    greater_than_or_equal: Option<i32>,
-}
-
-/// A filter for meet data.
-#[derive(GraphQLInputObject)]
-pub struct MeetFilter {
-    num_entries: Option<IntRange>,
-}
-
-/// An ordering on meet data.
-#[derive(GraphQLEnum)]
-pub enum MeetOrderBy {
-    /// By date, from earliest to most recent.
-    DateAsc,
-    /// By date, from most recent to earliest.
-    DateDesc,
-}
-
-/// The GraphQL variant of [opltypes::Equipment].
-#[derive(GraphQLEnum)]
-enum Equipment {
-    Raw,
-    Wraps,
-    SinglePly,
-    MultiPly,
-    Unlimited,
-    Straps,
-}
-
-impl From<opltypes::Equipment> for Equipment {
-    fn from(o: opltypes::Equipment) -> Equipment {
-        match o {
-            opltypes::Equipment::Raw => Equipment::Raw,
-            opltypes::Equipment::Wraps => Equipment::Wraps,
-            opltypes::Equipment::Single => Equipment::SinglePly,
-            opltypes::Equipment::Multi => Equipment::MultiPly,
-            opltypes::Equipment::Unlimited => Equipment::Unlimited,
-            opltypes::Equipment::Straps => Equipment::Straps,
-        }
-    }
-}
