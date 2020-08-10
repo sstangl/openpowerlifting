@@ -27,6 +27,8 @@ mod meetdata;
 use meetdata::EntryIndex;
 pub use meetdata::{AllMeetData, LifterMap, SingleMeetData};
 
+pub mod disambiguator;
+
 use std::error::Error;
 use std::path::{Path, PathBuf};
 

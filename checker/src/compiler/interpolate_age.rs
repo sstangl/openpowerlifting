@@ -16,15 +16,15 @@ use std::fmt;
 /// whether a given MeetDate is less than or greater than a (possibly
 /// nonexistent) Date.
 #[derive(Debug, PartialEq)]
-struct BirthDateRange {
+pub struct BirthDateRange {
     pub min: Date,
     pub max: Date,
 }
 
 /// An unrealistically low Date for use as a default minimum.
-const BDR_DEFAULT_MIN: Date = Date::from_parts(1100, 01, 01);
+pub const BDR_DEFAULT_MIN: Date = Date::from_parts(1100, 01, 01);
 /// An unrealistically high Date for use as a default maximum.
-const BDR_DEFAULT_MAX: Date = Date::from_parts(9997, 06, 15);
+pub const BDR_DEFAULT_MAX: Date = Date::from_parts(9997, 06, 15);
 
 impl Default for BirthDateRange {
     fn default() -> Self {
@@ -51,7 +51,7 @@ impl fmt::Display for BirthDateRange {
 
 /// Named return enum from the BirthDateRange narrow functions, for clarity.
 #[derive(Debug, PartialEq)]
-enum NarrowResult {
+pub enum NarrowResult {
     /// Returned if the new range information was successfully integrated.
     Integrated,
     /// Returned if the new data conflicted with the known range.
@@ -220,7 +220,7 @@ impl BirthDateRange {
 
 /// Helper function for debug-mode printing to keep the code legible.
 #[inline]
-fn trace_integrated<T>(
+pub fn trace_integrated<T>(
     debug: bool,
     range: &BirthDateRange,
     fieldname: &str,
@@ -245,7 +245,7 @@ fn trace_integrated<T>(
 
 /// Helper function for debug-mode printing to keep the code legible.
 #[inline]
-fn trace_conflict<T>(
+pub fn trace_conflict<T>(
     debug: bool,
     range: &BirthDateRange,
     meetdate: Date,

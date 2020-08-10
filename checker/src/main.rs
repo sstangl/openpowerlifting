@@ -6,7 +6,7 @@ extern crate opltypes; // Used for determining MeetPath for CONFIG.toml files.
 extern crate rayon; // A work-stealing auto-parallelism library.
 extern crate walkdir; // Allows walking through a directory, looking at files.
 
-use checker::{compiler, AllMeetData, SingleMeetData};
+use checker::{compiler, disambiguator, AllMeetData, SingleMeetData};
 use colored::*;
 use opltypes::Username;
 use rayon::prelude::*;
@@ -30,6 +30,9 @@ struct Args {
 
     /// Prints debug info for a single lifter's Age.
     debug_age_username: Option<String>,
+
+    /// Prints age data for a username grouped by consistency
+    debug_age_group_username: Option<String>,
 
     /// Prints debug info for a single lifter's Country.
     debug_country_username: Option<String>,
@@ -244,6 +247,7 @@ FLAGS:
 
 OPTIONS:
         --age <username>        Prints age debug info for the given username
+        --age-group <username>  Prints disambugation age debug info for the given username
         --country <username>    Prints country debug info for the given username
         --timing                Prints timing information for compiler phases
 
@@ -262,6 +266,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let args = Args {
         help: args.contains(["-h", "--help"]),
         debug_age_username: args.opt_value_from_str("--age")?,
+        debug_age_group_username: args.opt_value_from_str("--age-group")?,
         debug_country_username: args.opt_value_from_str("--country")?,
         debug_timing: args.contains("--timing"),
         compile: args.contains(["-c", "--compile"]),
@@ -303,8 +308,9 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Validate arguments.
     let is_compiling: bool = args.compile || args.compile_onefile;
-    let is_debugging: bool =
-        args.debug_age_username.is_some() || args.debug_country_username.is_some();
+    let is_debugging: bool = args.debug_age_username.is_some()
+        || args.debug_country_username.is_some()
+        || args.debug_age_group_username.is_some();
     let is_partial: bool = !search_root.ends_with("meet-data");
 
     let timing = get_instant_if(args.debug_timing);
@@ -474,6 +480,14 @@ fn main() -> Result<(), Box<dyn Error>> {
             compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
+
+        // Find age groupings.
+        if let Some(u) = args.debug_age_group_username {
+            let u = Username::from_name(&u).unwrap();
+            disambiguator::group_age_debug_for(&mut meetdata, &liftermap, &u);
+            process::exit(0); // TODO: Complain if someone passes --compile.
+        }
+
         let timing = get_instant_if(args.debug_timing);
         compiler::interpolate_age(&mut meetdata, &liftermap);
         maybe_print_elapsed_for("interpolate_age", timing);
