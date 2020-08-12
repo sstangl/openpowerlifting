@@ -9,16 +9,22 @@ import sys
 import urllib.request
 
 
+class UnexpectedRedirect(Exception):
+    pass
+
+
 def die(msg):
     print(msg, file=sys.stderr)
     sys.exit(1)
 
 
-def gethtml(url):
+def gethtml(url, raise_on_redirect=False):
     request = urllib.request.Request(url)
     request.add_header('User-Agent', 'Mozilla/5.0 Gecko/20100101 Firefox/52.0')
 
     with urllib.request.urlopen(request, timeout=10) as r:
+        if raise_on_redirect and r.geturl() != url:
+            raise UnexpectedRedirect(r.geturl())
         return r.read()
 
 
