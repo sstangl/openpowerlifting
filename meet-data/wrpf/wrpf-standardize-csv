@@ -113,6 +113,8 @@ def parse_sheetname(s):
             if equipment == 'Wraps':
                 equipment = 'Raw'
 
+        elif word in ['софт', 'slinghot', 'slingshot', 'soft'] and event == 'B':
+            equipment = 'Unlimited'
         # Equipment
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
                       '1ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
@@ -122,8 +124,7 @@ def parse_sheetname(s):
                       'мн', 'эипировке']:
             if equipment == '':  # Otherwise we might accidently mark single as multi
                 equipment = 'Multi-ply'
-        elif word in ['slinghot', 'slingshot', 'soft', 'СПР', 'софт',
-                      'облегченная', 'облегченной', 'слинг']:
+        elif word in ['СПР', 'облегченная', 'облегченной', 'слинг']:
             equipment = 'Multi-ply'
             event = 'B'
         elif 'бинт' in word or word == 'wraps':
