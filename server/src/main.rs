@@ -570,6 +570,7 @@ fn robots_txt() -> &'static str {
     r#"User-agent: *
 Disallow: /api/
 Disallow: /dev/
+Disallow: /u/pyrriasangster
 
 # Disallow bots from marketing and SEO companies.
 User-agent: AhrefsBot
