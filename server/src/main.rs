@@ -720,10 +720,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         start.elapsed()
     );
 
-    #[allow(unused_variables)]
-    let langinfo = LangInfo::new();
-
     #[cfg(not(test))]
-    rocket(opldb, langinfo).launch();
+    rocket(opldb, LangInfo::new()).launch();
     Ok(())
 }

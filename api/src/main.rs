@@ -86,8 +86,8 @@ fn beta_rankings(
 
 /// Generates an HTML page containing GraphiQL.
 #[get("/playground")]
-fn () -> rocket::response::content::Html<String> {
-    juniper_rocket::graphiql_source("/graphql")
+fn playground() -> rocket::response::content::Html<String> {
+    juniper_rocket::playground_source("/graphql")
 }
 
 /// GET handler for a GraphQL request.
@@ -117,7 +117,7 @@ fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
         .manage(langinfo)
         .manage(graphql::new_schema())
         .mount("/beta/", routes![beta_rankings_default, beta_rankings])
-        .mount("/graphql/", routes![graphiql, graphql_get, graphql_post])
+        .mount("/graphql/", routes![playground, graphql_get, graphql_post])
         .register(catchers![not_found, internal_error])
         .attach(rocket::fairing::AdHoc::on_response(
             "Delete Server Header",
@@ -153,9 +153,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         start.elapsed()
     );
 
-    let langinfo = LangInfo::new();
-
     #[cfg(not(test))]
-    rocket(ManagedOplDb(opldb), langinfo).launch();
+    rocket(ManagedOplDb(opldb), LangInfo::new()).launch();
+
     Ok(())
 }
