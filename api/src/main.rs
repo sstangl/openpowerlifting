@@ -1,13 +1,9 @@
-//! The OpenPowerlifting data API server.
+//! The OpenPowerlifting API server.
 
 #![feature(proc_macro_hygiene, decl_macro)]
 
 #[macro_use]
-extern crate juniper;
-#[macro_use]
 extern crate rocket;
-#[macro_use]
-extern crate serde_derive;
 
 use rocket::request::Request;
 use rocket::response::Responder;
@@ -19,19 +15,8 @@ use std::env;
 use std::error::Error;
 use std::path::{Path, PathBuf};
 
+use api::{beta, graphql, ManagedOplDb};
 use langpack::{LangInfo, Locale};
-
-mod beta;
-mod graphql;
-
-/// Wrapper struct for the OplDb.
-///
-/// This is necessary in order to implement the juniper::Context trait
-/// without making GraphQL a dependency of the DB itself.
-#[cfg(not(test))]
-pub struct ManagedOplDb(opldb::OplDb);
-#[cfg(test)]
-pub struct ManagedOplDb(&'static opldb::OplDb);
 
 /// Return type for pre-rendered Json strings.
 #[derive(Debug)]
@@ -153,8 +138,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         start.elapsed()
     );
 
-    #[cfg(not(test))]
     rocket(ManagedOplDb(opldb), LangInfo::new()).launch();
-
     Ok(())
 }
