@@ -85,9 +85,9 @@ fn beta_rankings(
 }
 
 /// Generates an HTML page containing GraphiQL.
-#[get("/")]
-fn graphiql() -> rocket::response::content::Html<String> {
-    juniper_rocket::graphiql_source("/graphql") // TODO: What's this embedded URL?
+#[get("/playground")]
+fn () -> rocket::response::content::Html<String> {
+    juniper_rocket::graphiql_source("/graphql")
 }
 
 /// GET handler for a GraphQL request.
