@@ -14,12 +14,6 @@ pub type ManagedOplDb = opldb::OplDb;
 #[cfg(test)]
 pub type ManagedOplDb = &'static opldb::OplDb;
 
-// Use a single static langpack when testing.
-#[cfg(not(test))]
-pub type ManagedLangInfo = langpack::LangInfo;
-#[cfg(test)]
-pub type ManagedLangInfo = &'static langpack::LangInfo;
-
 /// Request guard for reading the "Host" HTTP header.
 pub struct Host(pub Option<String>);
 

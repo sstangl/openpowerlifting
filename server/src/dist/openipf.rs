@@ -4,7 +4,7 @@
 //! The openipf.org site works by using the same server as openpowerlifting.org,
 //! with Nginx rewriting URLs based on domain.
 
-use langpack::{Language, Locale};
+use langpack::{LangInfo, Language, Locale};
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
@@ -65,7 +65,7 @@ fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
 pub fn index(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -93,7 +93,7 @@ pub fn rankings(
     selections: PathBuf,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -119,7 +119,7 @@ pub fn rankings_api(
     selections: Option<PathBuf>,
     query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
 ) -> Option<JsonString> {
     let default = default_openipf_rankings_query();
     let selection = match selections {
@@ -160,7 +160,7 @@ pub fn rankings_api(
 pub fn default_rankings_api(
     query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
 ) -> Option<JsonString> {
     rankings_api(None, query, opldb, langinfo)
 }
@@ -199,7 +199,7 @@ pub fn records(
     selections: Option<PathBuf>,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -240,7 +240,7 @@ pub fn records(
 pub fn records_default(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -262,7 +262,7 @@ pub fn lifter(
     username: String,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -362,7 +362,7 @@ pub fn meetlist(
     mselections: Option<PathBuf>,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -392,7 +392,7 @@ pub fn meetlist(
 pub fn meetlist_default(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -408,7 +408,7 @@ pub fn meet(
     meetpath: PathBuf,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -460,7 +460,7 @@ fn ipf_fed_filter(fed: Federation) -> bool {
 pub fn status(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -479,7 +479,7 @@ pub fn status(
 #[get("/data?<lang>")]
 pub fn data(
     lang: Option<String>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -498,7 +498,7 @@ pub fn data(
 #[get("/faq?<lang>")]
 pub fn faq(
     lang: Option<String>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -517,7 +517,7 @@ pub fn faq(
 #[get("/contact?<lang>")]
 pub fn contact(
     lang: Option<String>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,

@@ -32,28 +32,10 @@ fn db() -> &'static OplDb {
     }
 }
 
-static mut LANGINFO_GLOBAL: Option<LangInfo> = None;
-static LANGINFO_INIT: Once = Once::new();
-
-fn langinfo() -> &'static LangInfo {
-    unsafe {
-        LANGINFO_INIT.call_once(|| {
-            LANGINFO_GLOBAL = Some(LangInfo::new());
-        });
-        LANGINFO_GLOBAL.as_ref().unwrap()
-    }
-}
-
 /// Returns a client's view into the Rocket server, suitable for making
 /// requests.
 fn client() -> Client {
-    Client::new(rocket(db(), langinfo())).expect("valid rocket instance")
-}
-
-#[test]
-fn test_db_loads() {
-    db();
-    langinfo();
+    Client::new(rocket(db(), LangInfo::new())).expect("valid rocket instance")
 }
 
 /// Simulates a GET request to a url from a specific device.

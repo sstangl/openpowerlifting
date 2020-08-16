@@ -97,7 +97,7 @@ fn rankings(
     selections: PathBuf,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -126,7 +126,7 @@ fn records(
     selections: Option<PathBuf>,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -155,7 +155,7 @@ fn records(
 fn records_default(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -168,7 +168,7 @@ fn lifter(
     username: String,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -270,7 +270,7 @@ fn meetlist(
     mselections: Option<PathBuf>,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -293,7 +293,7 @@ fn meetlist(
 fn meetlist_default(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -306,7 +306,7 @@ fn meet(
     meetpath: PathBuf,
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -336,7 +336,7 @@ fn meet(
 fn status(
     lang: Option<String>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -353,7 +353,7 @@ fn status(
 #[get("/data?<lang>")]
 fn data(
     lang: Option<String>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -370,7 +370,7 @@ fn data(
 #[get("/faq?<lang>")]
 fn faq(
     lang: Option<String>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -387,7 +387,7 @@ fn faq(
 #[get("/contact?<lang>")]
 fn contact(
     lang: Option<String>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -412,7 +412,7 @@ fn index(
     lang: Option<String>,
     fed: Option<String>, // For handling old-style URLs.
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: Cookies,
@@ -441,7 +441,7 @@ fn rankings_api(
     selections: Option<PathBuf>,
     query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
 ) -> Option<JsonString> {
     let defaults = opldb::query::direct::RankingsQuery::default();
     let selection = match selections {
@@ -473,7 +473,7 @@ fn rankings_api(
 fn default_rankings_api(
     query: Form<RankingsApiQuery>,
     opldb: State<ManagedOplDb>,
-    langinfo: State<ManagedLangInfo>,
+    langinfo: State<LangInfo>,
 ) -> Option<JsonString> {
     rankings_api(None, query, opldb, langinfo)
 }
@@ -599,18 +599,7 @@ fn internal_error() -> &'static str {
     "500"
 }
 
-// Tests want to load the data only once.
-#[cfg(not(test))]
-type ManagedOplDb = opldb::OplDb;
-#[cfg(test)]
-type ManagedOplDb = &'static opldb::OplDb;
-
-#[cfg(not(test))]
-type ManagedLangInfo = langpack::LangInfo;
-#[cfg(test)]
-type ManagedLangInfo = &'static langpack::LangInfo;
-
-fn rocket(opldb: ManagedOplDb, langinfo: ManagedLangInfo) -> rocket::Rocket {
+fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
     // Initialize the server.
     rocket::ignite()
         .manage(opldb)
