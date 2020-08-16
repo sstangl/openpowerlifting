@@ -82,6 +82,9 @@ def getmeetlist(html):
         if url.startswith("contest-results?"):
             url = "http://powerlifting.ca/cpu/index.php/" + url
 
+        if url.startswith("../../contest-results?"):
+            url = url.replace("../../", "http://powerlifting.ca/cpu/index.php/")
+
         if url not in urls:
             urls.append(url)
 
