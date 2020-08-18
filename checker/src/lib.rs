@@ -1,5 +1,3 @@
-#![feature(inner_deref)] // Used for converting Option<String> to Option<&str>.
-
 extern crate chrono; // Used to get the current date.
 extern crate coefficients; // Calculates points.
 extern crate colored; // Used to provide pretty output for debug modes.
