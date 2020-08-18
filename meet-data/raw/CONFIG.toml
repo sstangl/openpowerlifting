@@ -58,6 +58,7 @@
     # Special occurrences.
     highschool_froshsoph = {name = "Frosh/Soph", min = 14, max = 17, equipment="Raw"}
     highschool_juniorsenior = {name = "Junior/Senior", min = 16, max = 19, equipment="Raw"}
+	seniors_20_24 = {name = "Seniors 20-24", min=20, max=24, equipment="Raw"}
 	seniors_30_34 = {name = "Seniors 30-34", min=30, max=34, equipment="Raw"}
 
 [weightclasses.current_M]
@@ -105,3 +106,4 @@
     1906 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
     1925 = ["ExemptWeightClassConsistency"]  # Used new classes for youth (30kg).
     2003 = ["ExemptWeightClassConsistency"]  # Used new classes for youth (30kg).
+    2008 = ["ExemptWeightClassConsistency"]  # Used new classes for youth (30kg).
