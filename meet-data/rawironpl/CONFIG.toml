@@ -12,6 +12,7 @@
     master1 = {name="Master 1", min=40, max=49}
     master2 = {name="Master 2", min=50, max=59}
     novice = {name="Novice", min=0, max=999}
+	first_responder = {name="First Responder", min=0, max=999}
 
     # Old-style divisions.
     teen = {name="Teen", min=13, max=19}
