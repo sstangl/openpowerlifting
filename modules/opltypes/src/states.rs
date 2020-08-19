@@ -15,6 +15,7 @@ pub enum State {
     InAustralia(AustraliaState),
     InBrazil(BrazilState),
     InCanada(CanadaState),
+    InChina(ChinaState),
     InEngland(EnglandState),
     InGermany(GermanyState),
     InIndia(IndiaState),
@@ -46,6 +47,7 @@ impl State {
             Country::Australia => Ok(State::InAustralia(s.parse::<AustraliaState>()?)),
             Country::Brazil => Ok(State::InBrazil(s.parse::<BrazilState>()?)),
             Country::Canada => Ok(State::InCanada(s.parse::<CanadaState>()?)),
+            Country::China => Ok(State::InChina(s.parse::<ChinaState>()?)),
             Country::England => Ok(State::InEngland(s.parse::<EnglandState>()?)),
             Country::Germany => Ok(State::InGermany(s.parse::<GermanyState>()?)),
             Country::India => Ok(State::InIndia(s.parse::<IndiaState>()?)),
@@ -100,6 +102,7 @@ impl State {
             State::InAustralia(_) => Country::Australia,
             State::InBrazil(_) => Country::Brazil,
             State::InCanada(_) => Country::Canada,
+            State::InChina(_) => Country::China,
             State::InEngland(_) => Country::England,
             State::InGermany(_) => Country::Germany,
             State::InIndia(_) => Country::India,
@@ -129,6 +132,7 @@ impl State {
             State::InAustralia(s) => s.to_string(),
             State::InBrazil(s) => s.to_string(),
             State::InCanada(s) => s.to_string(),
+            State::InChina(s) => s.to_string(),
             State::InEngland(s) => s.to_string(),
             State::InGermany(s) => s.to_string(),
             State::InIndia(s) => s.to_string(),
@@ -325,6 +329,80 @@ pub enum BrazilState {
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
+}
+
+/// A province in China.
+#[rustfmt::skip]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+pub enum ChinaState {
+    /// Anhui Province (安徽省, Ānhuī Shěng).
+    AH,
+    /// Beijing Municipality (北京市, Běijīng Shì).
+    BJ,
+    /// Chongqing Municipality (重庆市, Chóngqìng Shì).
+    CQ,
+    /// Fujian Province (福建省, Fújiàn Shěng).
+    FJ,
+    /// Guangdong Province (广东省, Guǎngdōng Shěng).
+    GD,
+    /// Gansu Province (甘肃省, Gānsù Shěng).
+    GS,
+    /// Guangxi Zhuang Autonomous Region (广西壮族自治区, Guǎngxī Zhuàngzú Zìzhìqū).
+    GX,
+    /// Guizhou Province (贵州省, Guìzhōu Shěng).
+    GZ,
+    /// Henan Province (河南省, Hénán Shěng).
+    HEN,
+    /// Hubei Province (湖北省, Húběi Shěng).
+    HUB,
+    /// Hebei Province (河北省, Héběi Shěng).
+    HEB,
+    /// Hainan Province (海南省, Hǎinán Shěng).
+    HI,
+    /// Hong Kong Special Administrative Region (香港特别行政区, Xiānggǎng Tèbié Xíngzhèngqū).
+    ///
+    /// We usually treat Hong Kong as a separate country. This is here for completeness.
+    HK,
+    /// Heilongjiang Province (黑龙江省, Hēilóngjiāng Shěng).
+    HL,
+    /// Hunan Province (湖南省, Húnán Shěng).
+    HUN,
+    /// Jilin Province (吉林省, Jílín Shěng).
+    JL,
+    /// Jiangsu Province (江苏省, Jiāngsū Shěng).
+    JS,
+    /// Jiangxi Province (江西省, Jiāngxī Shěng).
+    JX,
+    /// Liaoning Province (辽宁省, Liáoníng Shěng).
+    LN,
+    /// Macau Special Administrative Region (澳门特别行政区, Àomén Tèbié Xíngzhèngqū).
+    MO,
+    /// Inner Mongolia Autonomous Region (內蒙古自治区, Nèi Měnggǔ Zìzhìqū).
+    NM,
+    /// Ningxia Hui Autonomous Region (宁夏回族自治区, Níngxià Huízú Zìzhìqū).
+    NX,
+    /// Qinghai Province (青海省, Qīnghǎi Shěng).
+    QH,
+    /// Sichuan Province (四川省, Sìchuān Shěng).
+    SC,
+    /// Shandong Province (山东省, Shāndōng Shěng).
+    SD,
+    /// Shanghai Municipality (上海市, Shànghǎi Shì).
+    SH,
+    /// Shaanxi Province (陕西省, Shǎnxī Shěng).
+    SAA,
+    /// Shanxi Province (山西省, Shānxī Shěng).
+    SAX,
+    /// Tianjin Municipality (天津市, Tiānjīn Shì).
+    TJ,
+    /// Xinjiang Uyghur Autonomous Region (新疆维吾尔自治区, Xīnjiāng Wéiwú'ěr Zìzhìqū).
+    XJ,
+    /// Tibet Autonomous Region (西藏自治区, Xīzàng Zìzhìqū).
+    XZ,
+    /// Yunnan Province (云南省, Yúnnán Shěng).
+    YN,
+    /// Zhejiang Province (浙江省, Zhèjiāng Shěng).
+    ZJ,
 }
 
 /// A region in England, ill-defined and used only by BP.

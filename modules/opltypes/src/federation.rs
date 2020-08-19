@@ -1070,6 +1070,10 @@ pub enum Federation {
     #[strum(to_string = "WP", serialize = "wp")]
     WP,
 
+    /// World Powerlifting China.
+    #[strum(to_string = "WP-China", serialize = "wp-china")]
+    WPChina,
+
     /// World Powerlifting Alliance.
     #[strum(to_string = "WPA", serialize = "wpa")]
     WPA,
@@ -1584,6 +1588,7 @@ impl Federation {
             Federation::WelshPA => FULLY_TESTED,
             Federation::WNPF => FULLY_TESTED,
             Federation::WP => FULLY_TESTED,
+            Federation::WPChina => FULLY_TESTED,
             Federation::WPA => false,
             Federation::WPAGEO => false,
             Federation::WPARUS => false,
@@ -1890,6 +1895,7 @@ impl Federation {
             Federation::WDFPF => None,
             Federation::WelshPA => Some(Country::Wales),
             Federation::WP => None,
+            Federation::WPChina => Some(Country::China),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Country::Georgia),
             Federation::WPARUS => Some(Country::Russia),
@@ -2265,6 +2271,7 @@ impl Federation {
             Federation::WDFPF => Some(Federation::WDFPF),
             Federation::WelshPA => Some(Federation::IPF),
             Federation::WP => Some(Federation::WP),
+            Federation::WPChina => Some(Federation::WP),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Federation::WPA),
             Federation::WPARUS => Some(Federation::WPA),
@@ -2346,6 +2353,16 @@ impl Federation {
         // The change was implemented only by notifying their meet directors
         // and requiring use of an upgraded version of  their IronComp meet software.
         if date >= Date::from_parts(2020, 03, 04) {
+            PointsSystem::Wilks2020
+        } else {
+            PointsSystem::Wilks
+        }
+    }
+
+    /// Helper function for specifying the PointsSystem of federations under WP rules.
+    #[inline]
+    fn wp_rules_on(date: Date) -> PointsSystem {
+        if date.year() >= 2020 {
             PointsSystem::Wilks2020
         } else {
             PointsSystem::Wilks
@@ -2536,7 +2553,7 @@ impl Federation {
             Federation::NZPF => Federation::ipf_rules_on(date),
             Federation::NZAWLA => Federation::ipf_rules_on(date),
             Federation::NZUA => PointsSystem::Wilks,
-            Federation::OceaniaPF => PointsSystem::Wilks,
+            Federation::OceaniaPF => Federation::wp_rules_on(date),
             Federation::OceaniaPO => PointsSystem::Glossbrenner,
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
@@ -2635,13 +2652,8 @@ impl Federation {
             Federation::WBC => PointsSystem::Wilks,
             Federation::WDFPF => PointsSystem::Wilks,
             Federation::WelshPA => Federation::ipf_rules_on(date),
-            Federation::WP => {
-                if date.year() >= 2020 {
-                    PointsSystem::Wilks2020
-                } else {
-                    PointsSystem::Wilks
-                }
-            }
+            Federation::WP => Federation::wp_rules_on(date),
+            Federation::WPChina => Federation::wp_rules_on(date),
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPAGEO => PointsSystem::Wilks,
             Federation::WPARUS => PointsSystem::Wilks,
