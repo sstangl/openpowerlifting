@@ -85,16 +85,20 @@ impl NonSortedNonUnique {
             let a = self.0[self_index];
             let b = other.0[other_index];
 
-            if a == b {
-                acc.push(a);
-                self_index += 1;
-                other_index += 1;
-            } else if a < b {
-                acc.push(a);
-                self_index += 1;
-            } else {
-                acc.push(b);
-                other_index += 1;
+            match a.cmp(&b) {
+                Ordering::Equal => {
+                    acc.push(a);
+                    self_index += 1;
+                    other_index += 1;
+                }
+                Ordering::Less => {
+                    acc.push(a);
+                    self_index += 1;
+                }
+                Ordering::Greater => {
+                    acc.push(b);
+                    other_index += 1;
+                }
             }
         }
 

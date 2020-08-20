@@ -654,17 +654,17 @@ impl MetaFederation {
             MetaFederation::IPFAndAffiliates => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
             }
-            MetaFederation::IPFInternationals => match meet.federation {
+            MetaFederation::IPFInternationals => matches!(
+                meet.federation,
                 Federation::IPF
-                | Federation::AfricanPF
-                | Federation::AsianPF
-                | Federation::EPF
-                | Federation::FESUPO
-                | Federation::NAPF
-                | Federation::ORPF
-                | Federation::CommonwealthPF => true,
-                _ => false,
-            },
+                    | Federation::AfricanPF
+                    | Federation::AsianPF
+                    | Federation::EPF
+                    | Federation::FESUPO
+                    | Federation::NAPF
+                    | Federation::ORPF
+                    | Federation::CommonwealthPF
+            ),
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
             MetaFederation::JPA => affiliation!(meet, entry, JPA, IPF, AsianPF),
@@ -710,7 +710,7 @@ impl MetaFederation {
                 is_from(Country::USA, entry, meet)
                     && (meet.federation == Federation::USAPL
                         || ((meet.federation == NAPF || meet.federation == IPF)
-                            && meet.date >= Date::from_parts(1997, 12, 05)))
+                            && meet.date >= Date::from_parts(1997, 12, 5)))
             }
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
             MetaFederation::USPATested => {
@@ -755,16 +755,12 @@ impl MetaFederationCache {
 
         // Vector of list of meets for each MetaFederation.
         let mut ret: Vec<Vec<u32>> = Vec::with_capacity(num_metafeds);
-        for _ in 0..num_metafeds {
-            ret.push(vec![]);
-        }
+        ret.resize(num_metafeds, vec![]);
 
         // Vector of whether each meet has a match for the
         // given MetaFederation (accessed via index).
         let mut contains: Vec<bool> = Vec::with_capacity(num_metafeds);
-        for _ in 0..num_metafeds {
-            contains.push(false);
-        }
+        contains.resize(num_metafeds, false);
 
         let mut last_meet_id = 0;
 

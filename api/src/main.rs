@@ -138,6 +138,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         start.elapsed()
     );
 
-    rocket(ManagedOplDb(opldb), LangInfo::new()).launch();
+    rocket(ManagedOplDb(opldb), LangInfo::default()).launch();
     Ok(())
 }

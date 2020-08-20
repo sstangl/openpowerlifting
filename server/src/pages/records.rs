@@ -550,11 +550,8 @@ impl<'db> Table<'db> {
     ) where
         F: Fn(&Entry) -> WeightKg,
     {
-        let mut rank: u32 = 0;
-
-        for record in collector.accumulator.iter() {
-            rank += 1;
-
+        for (rank, record) in collector.accumulator.iter().enumerate() {
+            let rank = rank as u32;
             let weightclass_display = if rank == 1 { Some(weightclass) } else { None };
 
             let row = match record {

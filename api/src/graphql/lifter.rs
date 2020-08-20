@@ -73,7 +73,7 @@ graphql_object!(Lifter: ManagedOplDb |&self| {
     field entries(&executor) -> Vec<Entry> {
         db!(executor).get_entry_ids_for_lifter(self.0)
             .into_iter()
-            .map(|id| Entry(id))
+            .map(Entry)
             .collect()
     }
 });

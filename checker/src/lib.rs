@@ -1,15 +1,13 @@
-extern crate chrono; // Used to get the current date.
-extern crate coefficients; // Calculates points.
-extern crate colored; // Used to provide pretty output for debug modes.
-extern crate csv; // Provides CSV reading and writing.
-extern crate opltypes; // Datatypes common to all OpenPowerlifting projects.
+//! The OpenPowerlifting data checker library.
+
+// Suppress clippy warnings for date literals.
+#![allow(clippy::inconsistent_digit_grouping)]
+#![allow(clippy::zero_prefixed_literal)]
+
 #[macro_use]
 extern crate serde_derive; // Provides struct serialization and deserialization.
-extern crate strum; // Used for iterating over enums.
 #[macro_use]
 extern crate strum_macros; // Used for iterating over enums.
-extern crate toml; // Knows how to read the CONFIG.toml format.
-extern crate unicode_normalization; // Used to normalize the name strings
 
 pub mod checklib;
 pub use crate::checklib::config::{check_config, Config};

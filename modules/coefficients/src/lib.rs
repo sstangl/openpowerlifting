@@ -19,6 +19,9 @@
 // TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 
+// Allow polynomial functions with many coefficients.
+#![allow(clippy::many_single_char_names)]
+
 extern crate opltypes;
 
 mod ah;

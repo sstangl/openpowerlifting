@@ -67,7 +67,7 @@ graphql_object!(Meet: ManagedOplDb |&self| {
     field entries(&executor) -> Vec<Entry> {
         db!(executor).get_entry_ids_for_meet(self.0)
             .into_iter()
-            .map(|id| Entry(id))
+            .map(Entry)
             .collect()
     }
 
@@ -80,7 +80,7 @@ graphql_object!(Meet: ManagedOplDb |&self| {
     field lifters(&executor) -> Vec<Lifter> {
         db!(executor).get_lifter_ids_for_meet(self.0)
             .into_iter()
-            .map(|id| Lifter(id))
+            .map(Lifter)
             .collect()
     }
 });

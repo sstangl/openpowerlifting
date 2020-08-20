@@ -43,9 +43,9 @@ pub fn check_duplicates_one(
             continue; // DQs can give false positives.
         }
 
-        for inner_i in i + 1..ei_by_date.len() {
-            let match_entry: &Entry = meetdata.get_entry(ei_by_date[inner_i]);
-            let match_meet: &Meet = meetdata.get_meet(ei_by_date[inner_i]);
+        for &index in ei_by_date.iter().skip(i + 1) {
+            let match_entry: &Entry = meetdata.get_entry(index);
+            let match_meet: &Meet = meetdata.get_meet(index);
 
             if cur_meet.date != match_meet.date {
                 break; // No more pairs on this date with cur_entry.

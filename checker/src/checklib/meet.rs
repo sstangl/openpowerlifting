@@ -362,30 +362,26 @@ where
         report.error("Too many rows");
     }
 
-    // If all mandatory data is present, and there were no errors,
-    // forward a post-parsing Meet struct to the Entry-parsing phase.
-    if initial_errors == report.count_errors()
-        && federation.is_some()
-        && date.is_some()
-        && country.is_some()
-        && name.is_some()
-    {
-        let meet = Meet {
-            path: meetpath,
-            federation: federation.unwrap(),
-            date: date.unwrap(),
-            country: country.unwrap(),
-            state,
-            town,
-            name: name.unwrap(),
-            ruleset,
-        };
-        Ok(MeetCheckResult {
-            report,
-            meet: Some(meet),
-        })
-    } else {
-        Ok(MeetCheckResult { report, meet: None })
+    // If there were errors, return early.
+    if initial_errors != report.count_errors() {
+        return Ok(MeetCheckResult { report, meet: None });
+    }
+
+    match (federation, date, country, name) {
+        (Some(federation), Some(date), Some(country), Some(name)) => {
+            let meet = Some(Meet {
+                path: meetpath,
+                federation,
+                date,
+                country,
+                state,
+                town,
+                name,
+                ruleset,
+            });
+            Ok(MeetCheckResult { report, meet })
+        }
+        _ => Ok(MeetCheckResult { report, meet: None }),
     }
 }
 

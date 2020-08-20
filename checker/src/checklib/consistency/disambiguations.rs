@@ -46,7 +46,7 @@ pub fn check_disambiguations_all(
             }
         }
 
-        if marked == false {
+        if !marked {
             let msg = format!("{} not marked for disambiguation", username.as_str());
             report.error(msg);
         }
@@ -71,7 +71,7 @@ pub fn check_disambiguations_all(
                 report.error(msg);
             }
 
-            if let Some(u) = Username::from_name(&scratch).ok() {
+            if let Ok(u) = Username::from_name(&scratch) {
                 if liftermap.get(&u).is_none() {
                     let msg = format!("{} missing for {}", u.as_str(), username.as_str());
                     report.error(msg);

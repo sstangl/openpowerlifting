@@ -1,4 +1,9 @@
 #![feature(proc_macro_hygiene, decl_macro)]
+// Suppress clippy warnings for date literals.
+#![allow(clippy::inconsistent_digit_grouping)]
+#![allow(clippy::zero_prefixed_literal)]
+// Allow Rocket endpoints with a lot of arguments.
+#![allow(clippy::too_many_arguments)]
 
 use opltypes::{Federation, WeightUnits};
 
@@ -710,6 +715,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     );
 
     #[cfg(not(test))]
-    rocket(opldb, LangInfo::new()).launch();
+    rocket(opldb, LangInfo::default()).launch();
     Ok(())
 }

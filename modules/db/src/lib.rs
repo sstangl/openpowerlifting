@@ -303,7 +303,7 @@ impl OplDb {
     /// search followed by a bi-directional linear scan.
     ///
     /// Panics if the lifter_id is not found.
-    pub fn get_entry_ids_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<u32> {
+    pub fn get_entry_ids_for_lifter(&self, lifter_id: u32) -> Vec<u32> {
         // Perform a binary search on lifter_id.
         let found_index = self
             .get_entries()
@@ -363,7 +363,7 @@ impl OplDb {
     ///
     /// Those entries could be located anywhere in the entries vector,
     /// so they are found using a linear scan.
-    pub fn get_entry_ids_for_meet<'a>(&'a self, meet_id: u32) -> Vec<u32> {
+    pub fn get_entry_ids_for_meet(&self, meet_id: u32) -> Vec<u32> {
         self.get_entries()
             .iter()
             .enumerate()
@@ -373,7 +373,7 @@ impl OplDb {
     }
 
     /// Returns all lifter IDs that competed at the given meet_id.
-    pub fn get_lifter_ids_for_meet<'a>(&'a self, meet_id: u32) -> Vec<u32> {
+    pub fn get_lifter_ids_for_meet(&self, meet_id: u32) -> Vec<u32> {
         self.get_entries()
             .iter()
             .filter(|&e| e.meet_id == meet_id)

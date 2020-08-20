@@ -180,7 +180,7 @@ impl WeightKg {
     }
 
     pub fn as_lbs(self) -> WeightAny {
-        let f = (self.0 as f32) * 2.20462262;
+        let f = (self.0 as f32) * 2.2046225; // Max precision for f32.
 
         // Round to the hundredth place.
         // Half-way cases are rounded away from zero.

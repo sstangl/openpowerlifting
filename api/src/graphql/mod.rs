@@ -62,7 +62,7 @@ graphql_object!(Query: ManagedOplDb |&self| {
         limit: i32,
     ) -> FieldResult<Vec<Meet>> {
         if limit < 1 || limit > 100 {
-            Err("The limit must be between 1 and 100")?;
+            return Err("The limit must be between 1 and 100".into());
         }
         let limit = limit as usize;
 
@@ -73,6 +73,6 @@ graphql_object!(Query: ManagedOplDb |&self| {
                 .collect());
         }
 
-        Err("query::meets() is unimplemented")?
+        Err("query::meets() is unimplemented".into())
     }
 });

@@ -106,11 +106,8 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
             .get("X-Default-Language")
             .take(1)
             .collect();
-        match keys.len() {
-            1 => {
-                return Outcome::Success(AcceptLanguage(Some(keys[0].to_string())));
-            }
-            _ => (), // Try the "Accept-Language" header below.
+        if keys.len() == 1 {
+            return Outcome::Success(AcceptLanguage(Some(keys[0].to_string())));
         }
 
         let keys: Vec<_> = request.headers().get("Accept-Language").collect();

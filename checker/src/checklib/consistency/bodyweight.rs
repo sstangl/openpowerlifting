@@ -56,7 +56,7 @@ pub fn check_bodyweight_one(
     // Sort the entries by date.
     let mut entries: Vec<&Entry> =
         indices.iter().map(|i| meetdata.get_entry(*i)).collect();
-    entries.sort_unstable_by(|a, b| get_date(meetdata, a).cmp(&get_date(meetdata, b)));
+    entries.sort_unstable_by_key(|&e| get_date(meetdata, e));
 
     let mut prev: &Entry = entries[0];
     for entry in entries.iter().skip(1) {

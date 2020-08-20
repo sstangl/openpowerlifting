@@ -35,7 +35,7 @@ fn db() -> &'static OplDb {
 /// Returns a client's view into the Rocket server, suitable for making
 /// requests.
 fn client() -> Client {
-    Client::new(rocket(db(), LangInfo::new())).expect("valid rocket instance")
+    Client::new(rocket(db(), LangInfo::default())).expect("valid rocket instance")
 }
 
 /// Simulates a GET request to a url from a specific device.

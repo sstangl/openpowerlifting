@@ -703,14 +703,14 @@ pub struct LangInfo {
     zh_hans: Translations,
 }
 
-impl LangInfo {
+impl Default for LangInfo {
     /// Constructs a new [LangInfo].
     ///
     /// The translations are hardcoded as strings at compile time, but parsing the strings
     /// happens at runtime. A test ensures this succeeds.
     ///
     /// TODO: Use a build.rs to also parse at compile time.
-    pub fn new() -> LangInfo {
+    fn default() -> LangInfo {
         LangInfo {
             cz: json::from_str(include_str!("../translations/cz.json")).expect("cz"),
             de: json::from_str(include_str!("../translations/de.json")).expect("de"),
@@ -741,7 +741,9 @@ impl LangInfo {
             zh_hans: json::from_str(include_str!("../translations/zh-Hans.json")).expect("zh_hans"),
         }
     }
+}
 
+impl LangInfo {
     pub fn get_translations(&self, language: Language) -> &Translations {
         match language {
             Language::cz => &self.cz,
@@ -1258,6 +1260,6 @@ mod tests {
     #[test]
     fn translation_validity() {
         // This will panic if the translation files fail parsing.
-        LangInfo::new();
+        LangInfo::default();
     }
 }

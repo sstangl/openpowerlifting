@@ -307,9 +307,7 @@ fn check_headers(
     // Build a map of (Header -> index).
     let known_header_count = Header::iter().count();
     let mut header_index_vec: Vec<Option<usize>> = Vec::with_capacity(known_header_count);
-    for _ in 0..known_header_count {
-        header_index_vec.push(None);
-    }
+    header_index_vec.resize(known_header_count, None);
 
     // There must be headers.
     if headers.is_empty() {
@@ -921,10 +919,10 @@ fn check_nonnegative_weight(
 
 fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightKg {
     let weight = check_nonnegative_weight(s, line, Header::BodyweightKg, report);
-    if weight != WeightKg::from_i32(0) {
-        if weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300) {
-            report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
-        }
+    if weight != WeightKg::from_i32(0)
+        && (weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300))
+    {
+        report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
     }
     weight
 }
@@ -1036,7 +1034,7 @@ fn check_column_state(
     }
 
     // Get the country either from the Country column or from the MeetCountry.
-    match lifter_country.or(meet.map(|m| m.country)) {
+    match lifter_country.or_else(|| meet.map(|m| m.country)) {
         Some(country) => {
             let state = State::from_str_and_country(s, country).ok();
             if state.is_none() {
@@ -1248,6 +1246,7 @@ fn process_attempt_pair(
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 fn check_attempt_consistency_helper(
     lift: &str,
     attempt1: WeightKg,

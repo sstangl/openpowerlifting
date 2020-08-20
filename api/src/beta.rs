@@ -119,6 +119,7 @@ pub struct RankingsReturnRow<'a> {
 }
 
 impl<'a> Serialize for RankingsReturnRow<'a> {
+    #[allow(clippy::many_single_char_names)]
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: serde::Serializer,
@@ -346,7 +347,7 @@ impl<'a> RankingsReturn<'a> {
     ) -> Self {
         const ROW_LIMIT: usize = 100;
 
-        if options.columns.len() == 0 {
+        if options.columns.is_empty() {
             return Self {
                 error: Some("No columns requested"),
                 ..Self::default()

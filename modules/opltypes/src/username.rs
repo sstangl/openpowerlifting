@@ -49,6 +49,11 @@ impl Username {
         self.0.len()
     }
 
+    /// Returns whether the [Username] contains no bytes.
+    pub fn is_empty(&self) -> bool {
+        self.0.is_empty()
+    }
+
     /// Given a UTF-8 Name, create the corresponding ASCII Username.
     ///
     /// Usernames are used throughout the project as unique identifiers
@@ -68,7 +73,7 @@ impl Username {
             let ea_id: String = name
                 .chars()
                 .filter(|c| !c.is_whitespace())
-                .map(|c| hira_to_kata_char(c))
+                .map(hira_to_kata_char)
                 .map(|c| (c as u32).to_string())
                 .collect();
             let s = format!("ea-{}", ea_id);
@@ -185,7 +190,7 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
             continue;
         }
 
-        if let Some(ascii) = letter.to_ascii_char().ok() {
+        if let Ok(ascii) = letter.to_ascii_char() {
             if ascii.is_alphanumeric() {
                 ascii_name.push(ascii);
                 continue;
@@ -238,10 +243,7 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
 
 /// Whether the character should be silently omitted.
 fn is_exception(letter: char) -> bool {
-    match letter {
-        ' ' | '\\' | '#' | '.' | '-' | '\'' => true,
-        _ => false,
-    }
+    matches!(letter, ' ' | '\\' | '#' | '.' | '-' | '\'')
 }
 
 const HIRAGANA_START: u32 = 0x3041;

@@ -321,15 +321,13 @@ pub fn make_csv(
     lifter_hash.insert("seanstangl", EntryLifterData::seanstangl());
 
     // Data structures for assigning globally-unique IDs.
-    let mut next_meet_id: u32 = 0;
     let mut next_lifter_id: u32 = 1; // 0 is for "seanstangl", needed by server tests.
 
-    for SingleMeetData { meet, entries } in meetdata.get_meets() {
-        // Unique ID for this meet.
-        let meet_id = next_meet_id;
-        next_meet_id += 1;
-
+    for (meet_id, SingleMeetData { meet, entries }) in
+        meetdata.get_meets().iter().enumerate()
+    {
         // Write out the line for this meet.
+        let meet_id = meet_id as u32;
         meets_wtr.serialize(MeetsRow::from(&meet, meet_id))?;
 
         // Write a line for each entry.
