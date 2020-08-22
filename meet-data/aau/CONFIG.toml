@@ -99,6 +99,7 @@
 
     # Law/Mil
     law_mil = {name ="Law/Mil",min=0,max=999}
+    law_mil_jr = {name ="Law/Mil JR",min=20,max=23}
     law_mil_sub = {name ="Law/Mil Sub",min=35,max=39}
     law_mil4044 = {name ="Law/Mil 40-44",min=40,max=44}
     law_mil4549 = {name ="Law/Mil 45-49",min=45,max=49}
@@ -115,6 +116,7 @@
 
     # Raw Law/Mil
     rlaw_mil = {name ="R Law/Mil",min=0,max=999,equipment="Raw"}
+    rlaw_mil_jr = {name ="R Law/Mil JR",min=20,max=23,equipment="Raw"}
     rlaw_mil_sub = {name ="R Law/Mil Sub",min=35,max=39,equipment="Raw"}
     rlaw_mil4044 = {name ="R Law/Mil 40-44",min=40,max=44,equipment="Raw"}
     rlaw_mil4549 = {name ="R Law/Mil 45-49",min=45,max=49,equipment="Raw"}
@@ -144,6 +146,7 @@
 
     llaw_mil = {name ="L Law/Mil",min=0,max=999}
     life = {name ="Life",min=0,max=999}
+    life_sub = {name ="Life Sub",min=35,max=39}
     rlife = {name ="R Life",min=0,max=999,equipment="Raw"}
     disabled = {name ="Disabled",min=0,max=999}
 
@@ -205,6 +208,8 @@
     0312 = ["ExemptWeightClassConsistency"] # Youth missing weight class
     0313 = ["ExemptWeightClassConsistency"] # 140+ class
     0402 = ["ExemptWeightClassConsistency"]
+    0406 = ["ExemptWeightClassConsistency"] # 140+ class
+    0407 = ["ExemptWeightClassConsistency"] # 140+ class
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
     0701 = ["ExemptWeightClassConsistency"] # Uses 90+
