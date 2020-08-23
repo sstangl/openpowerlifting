@@ -131,6 +131,11 @@
     rlaw_mil9094 = {name ="R Law/Mil 90-94",min=90,max=94,equipment="Raw"}
     rlaw_mil9599 = {name ="R Law/Mil 95-99",min=95,max=99,equipment="Raw"}
 
+    # Law/Fire
+    law_fire = {name ="Law/Fire",min=0,max=999}
+    law_fire4044 = {name ="Law/Fire 40-44",min=40,max=44}
+
+
     # Special Olympics
     so = {name ="SO",min=0,max=999}
     rso = {name ="RSO",min=0,max=999,equipment="Raw"}
@@ -210,6 +215,7 @@
     0402 = ["ExemptWeightClassConsistency"]
     0406 = ["ExemptWeightClassConsistency"] # 140+ class
     0407 = ["ExemptWeightClassConsistency"] # 140+ class
+    0502 = ["ExemptWeightClassConsistency"] # 140+ class
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
     0701 = ["ExemptWeightClassConsistency"] # Uses 90+
