@@ -136,6 +136,22 @@
     law_fire4044 = {name ="Law/Fire 40-44",min=40,max=44}
     law_fire5559 = {name ="Law/Fire 55-59",min=55,max=59}
 
+    # Law/Fire/Mil
+    law_fire_mil = {name ="Law/Fire/Mil",min=0,max=999}
+    law_fire_mil_jr = {name ="Law/Fire/Mil JR",min=20,max=23}
+    law_fire_mil_4044 = {name ="Law/Fire/Mil 40-44",min=40,max=44}
+    law_fire_mil_4549 = {name ="Law/Fire/Mil 45-49",min=45,max=49}
+    law_fire_mil_5054 = {name ="Law/Fire/Mil 50-54",min=50,max=54}
+    law_fire_mil_5559 = {name ="Law/Fire/Mil 55-59",min=55,max=59}
+
+
+    rlaw_fire_mil = {name ="R Law/Fire/Mil",min=0,max=999,equipment="Raw"}
+    rlaw_fire_mil_jr = {name ="R Law/Fire/Mil JR",min=20,max=23,equipment="Raw"}
+    rlaw_fire_mil_sub = {name ="R Law/Fire/Mil Sub",min=35,max=39,equipment="Raw"}
+    rlaw_fire_mil_4044 = {name ="R Law/Fire/Mil 40-44",min=40,max=44,equipment="Raw"}
+    rlaw_fire_mil_4549 = {name ="R Law/Fire/Mil 45-49",min=45,max=49,equipment="Raw"}
+    rlaw_fire_mil_5054 = {name ="R Law/Fire/Mil 50-54",min=50,max=54,equipment="Raw"}
+    rlaw_fire_mil_5559 = {name ="R Law/Fire/Mil 55-59",min=55,max=59,equipment="Raw"}
 
     # Special Olympics
     so = {name ="SO",min=0,max=999}
