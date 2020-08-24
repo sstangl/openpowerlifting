@@ -2,6 +2,7 @@
 
 [divisions]
     open = {name = "Open",min=0,max=999}
+    senior = {name = "Senior",min=0,max=999}
 
     # New-style, no plurals. This is what the IPF uses.
     subjunior = {name = "Sub-Junior",min=0,max=17.5}
