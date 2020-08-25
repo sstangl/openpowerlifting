@@ -1096,6 +1096,13 @@ pub enum Federation {
     #[strum(to_string = "WPC", serialize = "wpc")]
     WPC,
 
+    /// World Powerlifting Committee Canada Powerlifting.
+    ///
+    /// Formed as the Canadian WPC affiliate after the CPF dropped WPC
+    /// affiliation in 2020.
+    #[strum(to_string = "WPCCP", serialize = "wpccp")]
+    WPCCP,
+
     /// WPC meets hosted by METAL gym Finland.
     #[serde(rename = "WPC-Finland")]
     #[strum(to_string = "WPC-Finland", serialize = "wpc-finland")]
@@ -1595,6 +1602,7 @@ impl Federation {
             Federation::WPAU => false,
             Federation::WBC => false,
             Federation::WPC => false,
+            Federation::WPCCP => false,
             Federation::WPCFinland => false,
             Federation::WPCFrance => false,
             Federation::WPCGermany => false,
@@ -1901,6 +1909,7 @@ impl Federation {
             Federation::WPARUS => Some(Country::Russia),
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
+            Federation::WPCCP => Some(Country::Canada),
             Federation::WPCFinland => Some(Country::Finland),
             Federation::WPCFrance => Some(Country::France),
             Federation::WPCGermany => Some(Country::Germany),
@@ -2277,6 +2286,7 @@ impl Federation {
             Federation::WPARUS => Some(Federation::WPA),
             Federation::WPAU => None,
             Federation::WPC => Some(Federation::WPC),
+            Federation::WPCCP => Some(Federation::WPC),
             Federation::WPCFinland => Some(Federation::WPC),
             Federation::WPCFrance => Some(Federation::WPC),
             Federation::WPCGermany => Some(Federation::WPC),
@@ -2659,6 +2669,7 @@ impl Federation {
             Federation::WPARUS => PointsSystem::Wilks,
             Federation::WPAU => PointsSystem::Wilks,
             Federation::WPC => PointsSystem::Glossbrenner,
+            Federation::WPCCP => PointsSystem::Glossbrenner,
             Federation::WPCFinland => PointsSystem::Glossbrenner,
             Federation::WPCFrance => PointsSystem::Glossbrenner,
             Federation::WPCGermany => PointsSystem::Glossbrenner,
