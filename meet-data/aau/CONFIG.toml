@@ -16,6 +16,7 @@
     t14_15 = {name ="T 14-15",min=14,max=15}
     t16_17 = {name ="T 16-17",min=16,max=17}
     t18_19 = {name ="T 18-19",min=18,max=19}
+    t13_19 = {name ="T 13-19",min=13,max=19}
     hs14_15 = {name ="HS 14-15",min=14,max=15}
     hs16_17 = {name ="HS 16-17",min=16,max=17}
     hs18_19 = {name ="HS 18-19",min=18,max=19}
@@ -35,6 +36,9 @@
     m9599 = {name ="M 95-99",min=95,max=99}
     coll = {name ="Coll",min=0,max=999} # Collegiate
     m40p = {name ="M 40+",min=40,max=999}
+    m4049 = {name ="M 40-49",min=40,max=49}
+    m5059 = {name ="M 50-59",min=50,max=59}
+    m6069 = {name ="M 60-69",min=60,max=69}
 
     #Raw
     ropen = {name ="R Open",min=0,max=999,equipment="Raw"}
@@ -51,6 +55,7 @@
     rhs14_15 = {name ="RHS 14-15",min=14,max=15,equipment="Raw"}
     rhs16_17 = {name ="RHS 16-17",min=16,max=17,equipment="Raw"}
     rhs18_19 = {name ="RHS 18-19",min=18,max=19,equipment="Raw"}
+    rt13_19 = {name ="RT 13-19",min=13,max=19,equipment="Raw"}
     rjr = {name ="R JR",min=20,max=23,equipment="Raw"}
     rsub = {name ="R Sub",min=35,max=39,equipment="Raw"}
     rm4044 = {name ="RM 40-44",min=40,max=44,equipment="Raw"}
