@@ -141,6 +141,9 @@
     law_fire4044 = {name ="Law/Fire 40-44",min=40,max=44}
     law_fire5559 = {name ="Law/Fire 55-59",min=55,max=59}
 
+    rlaw_fire = {name ="R Law/Fire",min=0,max=999,equipment="Raw"}
+
+
     # Law/Fire/Mil
     law_fire_mil = {name ="Law/Fire/Mil",min=0,max=999}
     law_fire_mil_jr = {name ="Law/Fire/Mil JR",min=20,max=23}
@@ -243,6 +246,11 @@
     0412 = ["ExemptWeightClassConsistency"] # 125+ class
     0413 = ["ExemptWeightClassConsistency"] # 140+ class
     0417 = ["ExemptWeightClassConsistency"] # 140+ class
+    0418 = ["ExemptWeightClassConsistency"] # 140+ class
+    0419 = ["ExemptWeightClassConsistency"] # 140+ class
+    0420 = ["ExemptWeightClassConsistency"] # 140+ class
+    0421 = ["ExemptWeightClassConsistency"] # 140+ class
+    0423 = ["ExemptWeightClassConsistency"] # 140+ class
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
     0701 = ["ExemptWeightClassConsistency"] # Uses 90+
