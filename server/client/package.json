@@ -22,12 +22,12 @@
     "slickgrid": "^2.4.27"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "@types/slickgrid": "^2.1.30",
     "babel-loader": "^8.1.0",
     "node-sass": "^4.14.1",
-    "ts-loader": "^8.0.2",
+    "ts-loader": "^8.0.3",
     "typescript": "^4.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
