@@ -110,10 +110,18 @@ pub struct MeetFilter {
 }
 
 /// An ordering on meet data.
-#[derive(GraphQLEnum)]
+#[derive(GraphQLEnum, Copy, Clone, PartialEq)]
 pub enum MeetOrderBy {
+    /// Whatever order the DB prefers at this time.
+    Arbitrary,
+
     /// By date, from earliest to most recent.
     DateAsc,
     /// By date, from most recent to earliest.
     DateDesc,
+
+    /// By number of lifters, from least to most.
+    NumLiftersAsc,
+    /// By number of lifters, from most to least.
+    NumLiftersDesc,
 }
