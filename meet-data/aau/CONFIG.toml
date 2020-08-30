@@ -73,6 +73,7 @@
     rcoll = {name ="R Coll",min=0,max=999,equipment="Raw"} # Collegiate
 
     #Lifetime
+    ljr = {name ="L JR",min=20,max=23}
     lsub = {name ="L Sub",min=35,max=39}
     lm4044 = {name ="LM 40-44",min=40,max=44}
     lm4549 = {name ="LM 45-49",min=45,max=49}
@@ -88,7 +89,8 @@
     lm9599 = {name ="LM 95-99",min=95,max=99}
 
     #Raw Lifetime
-    rlsub = {name ="RL Sub",min=35,max=39}
+    rljr = {name ="RL JR",min=20,max=23,equipment="Raw"}
+    rlsub = {name ="RL Sub",min=35,max=39,equipment="Raw"}
     rlm4044 = {name ="RLM 40-44",min=40,max=44,equipment="Raw"}
     rlm4549 = {name ="RLM 45-49",min=45,max=49,equipment="Raw"}
     rlm5054 = {name ="RLM 50-54",min=50,max=54,equipment="Raw"}
