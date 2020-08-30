@@ -61,12 +61,13 @@
   @include name-color(#39ff14);
 }
 
-.tealgreen {
-  @include name-color(#76baa5);
-}
-
 .olivegreen {
   @include name-color(#556B2F);
+}
+
+// Same teal color as the $bench-color for OpenPowerlifting.
+.benchteal {
+  @include name-color(#00E0D8);
 }
 
 .lightazure {
