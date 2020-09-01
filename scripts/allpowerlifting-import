@@ -328,7 +328,7 @@ def getpagedata(soup):
             csv.fieldnames += ['IGNORE']
         elif h == 'Team':
             csv.fieldnames += ['IGNORE']
-        elif h in ['Coach', 'Тренер']:
+        elif h in ['Coach', 'Тренер', 'Trainer']:
             csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
