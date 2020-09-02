@@ -314,6 +314,7 @@
 <optgroup label="{{strings.country.nauru}}">
   <option value="all-nauru" {% if selection.federation == "AllNauru" %}selected{% endif %}>{{strings.selectors.fed.all_nauru}}</option>
   <option value="naurupf" {% if selection.federation == "NauruPF" %}selected{% endif %}>NauruPF - Nauru Powerlifting Federation [IPF]</option>
+  <option value="wpnauru" {% if selection.federation == "WP-Nauru" %}selected{% endif %}>WP-Nauru - World Powerlifting Nauru [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.netherlands}}">
   <option value="all-netherlands" {% if selection.federation == "AllNetherlands" %}selected{% endif %}>{{strings.selectors.fed.all_netherlands}}</option>
