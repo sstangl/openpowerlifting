@@ -189,7 +189,8 @@ def getresults(soup, url):
     else:
         # The english site is currently broken
         if 'en.' in url:
-            [russian_names, birthyears] = get_cyrillic_names_and_birthyears(url)
+            [russian_names, birthyears] = get_cyrillic_names_and_birthyears(
+                url)
 
         csv.append_column('CyrillicName')
         cyrnameidx = csv.index('CyrillicName')
@@ -467,7 +468,8 @@ def remove_records(csv):
     for row in csv.rows:
         for col in attempt_idcs:
             row[col] = remove_all(
-                row[col], ['nr ', 'wr ', 'er ', 'wt3 ', 'w ', 'e ', 'n '])
+                row[col], ['nr ', 'wr ', 'er ', 'wt3 ', 'w ', 'e ', 'n ',
+                           'nm1', 'nm2', 'nm3', 'nm4', 'nm5', 'nm6', 'nsm', 'nj'])
             row[col] = row[col].replace('  ', ' ')
 
 
