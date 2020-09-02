@@ -80,9 +80,13 @@ def integrate_4ths(csv):
 
     for (i, row) in enumerate(csv.rows):
         for (j, cell) in enumerate(row):
-            if "4th" in cell:
+            if "4th" in cell or \
+                    (row[0] == '' and cell.startswith('(') and cell.endswith(')')):
                 # Appears like "4th: 122.5"
                 fourth = cell.replace("4th: ", "")
+
+                # Sometimes appears like "(122.5)"
+                fourth = cell.replace("(", "").replace(")", "")
 
                 # Look vertically to see what kind of a column this is.
                 fieldname = csv.fieldnames[j]
