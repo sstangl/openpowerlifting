@@ -72,6 +72,9 @@
 
 [exemptions]
     0503 = ["ExemptWeightClassConsistency"]
+    0504 = ["ExemptWeightClassConsistency"] # Fewer weight classes.
+    0605 = ["ExemptWeightClassConsistency"] # Fewer weight classes.
+    0608 = ["ExemptWeightClassConsistency"] # Fewer weight classes.
     0701 = ["ExemptWeightClassConsistency"]
     0703 = ["ExemptWeightClassConsistency"]
     0801 = ["ExemptWeightClassConsistency"]
