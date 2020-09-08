@@ -16,6 +16,7 @@
     mm7 = {name="M-M7", min=70, max=74, sex="M", equipment="Raw"}
     mm8 = {name="M-M8", min=75, max=79, sex="M", equipment="Raw"}
     mpmf = {name="M-PMF", min=0, max=999, sex="M", equipment="Raw"}
+    mt = {name="M-T", min=14, max=19, sex="M", equipment="Raw"}
 
     fo = {name="F-O", min=0, max=999, sex="F", equipment="Raw"}
     ft1 = {name="F-T1", min=14, max=15, sex="F", equipment="Raw"}
@@ -31,6 +32,7 @@
     fm7 = {name="F-M7", min=70, max=74, sex="F", equipment="Raw"}
     fm8 = {name="F-M8", min=75, max=79, sex="F", equipment="Raw"}
     fpmf = {name="F-PMF", min=0, max=999, sex="F", equipment="Raw"}
+    ft = {name="F-T", min=14, max=19, sex="F", equipment="Raw"}
 
     # New-style divisions, Equipped.
     meo = {name="M-EO", min=0, max=999, sex="M", equipment="Single-ply"}
@@ -47,6 +49,7 @@
     mem7 = {name="M-EM7", min=70, max=74, sex="M", equipment="Single-ply"}
     mem8 = {name="M-EM8", min=75, max=79, sex="M", equipment="Single-ply"}
     mepmf = {name="M-EPMF", min=0, max=999, sex="M", equipment="Single-ply"}
+    met = {name="M-ET", min=14, max=19, sex="M", equipment="Single-ply"}
 
     feo = {name="F-EO", min=0, max=999, sex="F", equipment="Single-ply"}
     fet1 = {name="F-ET1", min=14, max=15, sex="F", equipment="Single-ply"}
@@ -62,6 +65,7 @@
     fem7 = {name="F-EM7", min=70, max=74, sex="F", equipment="Single-ply"}
     fem8 = {name="F-EM8", min=75, max=79, sex="F", equipment="Single-ply"}
     fepmf = {name="F-EPMF", min=0, max=999, sex="F", equipment="Single-ply"}
+    fet = {name="F-ET", min=14, max=19, sex="F", equipment="Single-ply"}
 
     # Old-style divisions.
     open = {name ="Open",min=14,max=999}
