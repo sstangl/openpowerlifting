@@ -1094,18 +1094,18 @@ pub enum LocalizedOrdinal {
     NumberOnly(u32),
 
     /// Renders `1` as `1º`, for men.
-    SpanishMasculine(u32),
+    RomanceMasculine(u32),
 
     /// Renders `1` as `1ª`, for women.
-    SpanishFeminine(u32),
+    RomanceFeminine(u32),
 }
 
 impl LocalizedOrdinal {
     pub fn from(n: u32, language: Language, sex: Sex) -> LocalizedOrdinal {
         match language {
-            Language::es | Language::pt => match sex {
-                Sex::M | Sex::Mx => LocalizedOrdinal::SpanishMasculine(n),
-                Sex::F => LocalizedOrdinal::SpanishFeminine(n),
+            Language::es | Language::it | Language::pt => match sex {
+                Sex::M | Sex::Mx => LocalizedOrdinal::RomanceMasculine(n),
+                Sex::F => LocalizedOrdinal::RomanceFeminine(n),
             },
             _ => LocalizedOrdinal::NumberOnly(n),
         }
@@ -1119,11 +1119,11 @@ impl Serialize for LocalizedOrdinal {
     {
         match *self {
             Self::NumberOnly(n) => serializer.serialize_u32(n),
-            Self::SpanishMasculine(n) => {
+            Self::RomanceMasculine(n) => {
                 let s = format!("{}º", n);
                 serializer.serialize_str(&s)
             }
-            Self::SpanishFeminine(n) => {
+            Self::RomanceFeminine(n) => {
                 let s = format!("{}ª", n);
                 serializer.serialize_str(&s)
             }
