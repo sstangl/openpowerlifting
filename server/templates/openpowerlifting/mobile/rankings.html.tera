@@ -35,8 +35,8 @@
     const translation_column_mcculloch = "{{strings.columns.mcculloch}}";
     const translation_column_glossbrenner = "{{strings.columns.glossbrenner}}";
     const translation_column_goodlift = "{{strings.columns.goodlift}}";
-    const translation_column_ipfpoints = "{{strings.columns.ipfpoints}}";
     const translation_column_dots = "{{strings.columns.dots}}";
+    const translation_column_wilks2020 = "{{strings.columns.wilks2020}}";
   </script>
 
   <script defer src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>

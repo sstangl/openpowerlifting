@@ -133,8 +133,8 @@ pub struct Entry {
     pub glossbrenner: Points,
     #[serde(rename(deserialize = "Goodlift"))]
     pub goodlift: Points,
-    #[serde(rename(deserialize = "IPFPoints"))]
-    pub ipfpoints: Points,
+    #[serde(rename(deserialize = "Wilks2020"))]
+    pub wilks2020: Points,
     #[serde(rename(deserialize = "Dots"))]
     pub dots: Points,
     #[serde(
@@ -178,8 +178,11 @@ impl Entry {
     }
 
     /// Calculates the Entry's points.
+    #[inline(always)]
     pub fn points(&self, system: PointsSystem, units: WeightUnits) -> Points {
         let sex = self.sex;
+        let eqp = self.equipment;
+        let evt = self.event;
         let bw = self.bodyweightkg;
         let total = self.totalkg;
 
@@ -188,14 +191,14 @@ impl Entry {
             PointsSystem::Dots => self.dots,
             PointsSystem::Glossbrenner => self.glossbrenner,
             PointsSystem::Goodlift => self.goodlift,
-            PointsSystem::IPFPoints => self.ipfpoints,
+            PointsSystem::IPFPoints => coefficients::ipf(sex, eqp, evt, bw, total),
             PointsSystem::McCulloch => self.mcculloch,
             PointsSystem::NASA => coefficients::nasa(bw, total),
             PointsSystem::Reshel => coefficients::reshel(sex, bw, total),
             PointsSystem::SchwartzMalone => coefficients::schwartzmalone(sex, bw, total),
             PointsSystem::Total => self.totalkg.as_type(units).as_points(),
             PointsSystem::Wilks => self.wilks,
-            PointsSystem::Wilks2020 => coefficients::wilks2020(sex, bw, total),
+            PointsSystem::Wilks2020 => self.wilks2020,
         }
     }
 }

@@ -9,8 +9,8 @@
     <option value="by-dots" {% if selection.sort == "Dots" %}selected{% endif %}>{{strings.selectors.sort.by_dots}}</option>
     <option value="by-glossbrenner" {% if selection.sort == "Glossbrenner" %}selected{% endif %}>{{strings.selectors.sort.by_glossbrenner}}</option>
     <option value="by-goodlift" {% if selection.sort == "Goodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
-    <option value="by-ipf-points" {% if selection.sort == "IPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
     <option value="by-mcculloch" {% if selection.sort == "McCulloch" %}selected{% endif %}>{{strings.selectors.sort.by_mcculloch}}</option>
     <option value="by-wilks" {% if selection.sort == "Wilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
+    <option value="by-wilks-2020" {% if selection.sort == "Wilks2020" %}selected{% endif %}>{{strings.selectors.sort.by_wilks2020}}</option>
   </optgroup>
 </select>

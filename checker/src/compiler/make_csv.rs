@@ -1,6 +1,6 @@
 //! Transforms `AllMeetData` into the final CSV files.
 
-use coefficients::{dots, goodlift, ipf, mcculloch};
+use coefficients::{dots, goodlift, mcculloch, wilks2020};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
 use opltypes::states::*;
 use opltypes::*;
@@ -118,8 +118,8 @@ struct EntriesRow<'d> {
     glossbrenner: Points,
     #[serde(rename = "Goodlift")]
     goodlift: Points,
-    #[serde(rename = "IPFPoints")]
-    ipfpoints: Points,
+    #[serde(rename = "Wilks2020")]
+    wilks2020: Points,
     #[serde(rename = "Dots")]
     dots: Points,
     #[serde(rename = "Tested")]
@@ -189,13 +189,7 @@ impl<'d> EntriesRow<'d> {
                 entry.bodyweightkg,
                 entry.totalkg,
             ),
-            ipfpoints: ipf(
-                entry.sex,
-                entry.equipment,
-                entry.event,
-                entry.bodyweightkg,
-                entry.totalkg,
-            ),
+            wilks2020: wilks2020(entry.sex, entry.bodyweightkg, entry.totalkg),
             dots: dots(entry.sex, entry.bodyweightkg, entry.totalkg),
             tested: if entry.tested { "Yes" } else { "" },
             country: entry.country,

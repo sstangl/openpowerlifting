@@ -7,6 +7,5 @@
   </optgroup>
   <optgroup label="{{strings.selectors.sort.points}}">
     <option value="by-goodlift" {% if selection.sort == "Goodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
-    <option value="by-ipf-points" {% if selection.sort == "IPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
   </optgroup>
 </select>

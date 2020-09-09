@@ -39,42 +39,49 @@ pub fn filter_total(entry: &Entry) -> bool {
 #[inline]
 pub fn filter_mcculloch(entry: &Entry) -> bool {
     // McCulloch points are defined to be zero if DQ.
-    entry.mcculloch > Points::from_i32(0)
+    entry.points(PointsSystem::McCulloch, WeightUnits::Kg) > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByWilks` rankings and records.
 #[inline]
 pub fn filter_wilks(entry: &Entry) -> bool {
     // Wilks is defined to be zero if DQ.
-    entry.wilks > Points::from_i32(0)
+    entry.points(PointsSystem::Wilks, WeightUnits::Kg) > Points::from_i32(0)
+}
+
+/// Whether an `Entry` should be part of `ByWilks2020` rankings and records.
+#[inline]
+pub fn filter_wilks2020(entry: &Entry) -> bool {
+    // Wilks2020 is defined to be zero if DQ.
+    entry.points(PointsSystem::Wilks2020, WeightUnits::Kg) > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByGlossbrenner` rankings and records.
 #[inline]
 pub fn filter_glossbrenner(entry: &Entry) -> bool {
     // Glossbrenner is defined to be zero if DQ.
-    entry.glossbrenner > Points::from_i32(0)
+    entry.points(PointsSystem::Glossbrenner, WeightUnits::Kg) > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByGoodlift` rankings and records.
 #[inline]
 pub fn filter_goodlift(entry: &Entry) -> bool {
     // Goodlift Points are defined to be zero if DQ.
-    entry.goodlift > Points::from_i32(0)
+    entry.points(PointsSystem::Goodlift, WeightUnits::Kg) > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByIPFPoints` rankings and records.
 #[inline]
 pub fn filter_ipfpoints(entry: &Entry) -> bool {
     // IPF Points are defined to be zero if DQ.
-    entry.ipfpoints > Points::from_i32(0)
+    entry.points(PointsSystem::IPFPoints, WeightUnits::Kg) > Points::from_i32(0)
 }
 
 /// Whether an `Entry` should be part of `ByDots` rankings and records.
 #[inline]
 pub fn filter_dots(entry: &Entry) -> bool {
     // Dots points are defined to be zero if DQ.
-    entry.dots > Points::from_i32(0)
+    entry.points(PointsSystem::Dots, WeightUnits::Kg) > Points::from_i32(0)
 }
 
 /// Defines an `Ordering` of Entries by Squat.
@@ -153,13 +160,10 @@ pub fn cmp_total(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 
 /// Defines a generic `Ordering` of Entries by some points.
 #[inline(always)]
-fn cmp_generic_points(
-    meets: &[Meet],
-    a: &Entry,
-    b: &Entry,
-    a_points: Points,
-    b_points: Points,
-) -> cmp::Ordering {
+fn cmp_generic_points(meets: &[Meet], a: &Entry, b: &Entry, system: PointsSystem) -> cmp::Ordering {
+    let a_points = a.points(system, WeightUnits::Kg);
+    let b_points = b.points(system, WeightUnits::Kg);
+
     // First sort by points, higher first.
     a_points
         .cmp(&b_points)
@@ -177,77 +181,67 @@ fn cmp_generic_points(
 /// Defines an `Ordering` of Entries by McCulloch points.
 #[inline]
 pub fn cmp_mcculloch(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    cmp_generic_points(meets, a, b, a.mcculloch, b.mcculloch)
+    cmp_generic_points(meets, a, b, PointsSystem::McCulloch)
 }
 
 /// Defines an `Ordering` of Entries by Wilks.
 #[inline]
 pub fn cmp_wilks(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    cmp_generic_points(meets, a, b, a.wilks, b.wilks)
+    cmp_generic_points(meets, a, b, PointsSystem::Wilks)
 }
 
 /// Defines an `Ordering` of Entries by Dots points.
 #[inline]
 pub fn cmp_dots(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    cmp_generic_points(meets, a, b, a.dots, b.dots)
+    cmp_generic_points(meets, a, b, PointsSystem::Dots)
 }
 
 /// Defines an `Ordering` of Entries by Glossbrenner.
 #[inline]
 pub fn cmp_glossbrenner(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    cmp_generic_points(meets, a, b, a.glossbrenner, b.glossbrenner)
+    cmp_generic_points(meets, a, b, PointsSystem::Glossbrenner)
 }
 
 /// Defines an `Ordering` of Entries by Goodlift.
 #[inline]
 pub fn cmp_goodlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    cmp_generic_points(meets, a, b, a.goodlift, b.goodlift)
+    cmp_generic_points(meets, a, b, PointsSystem::Goodlift)
 }
 
 /// Defines an `Ordering` of Entries by IPF Points.
 #[inline]
 pub fn cmp_ipfpoints(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    cmp_generic_points(meets, a, b, a.ipfpoints, b.ipfpoints)
+    cmp_generic_points(meets, a, b, PointsSystem::IPFPoints)
 }
 
 /// Defines an `Ordering` of Entries by NASA Points.
 #[inline]
 pub fn cmp_nasa(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    let a_points = coefficients::nasa(a.bodyweightkg, a.totalkg);
-    let b_points = coefficients::nasa(b.bodyweightkg, b.totalkg);
-    cmp_generic_points(meets, a, b, a_points, b_points)
+    cmp_generic_points(meets, a, b, PointsSystem::NASA)
 }
 
 /// Defines an `Ordering` of Entries by Wilks2020 Points.
 #[inline]
 pub fn cmp_wilks2020(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    let a_points = coefficients::wilks2020(a.sex, a.bodyweightkg, a.totalkg);
-    let b_points = coefficients::wilks2020(b.sex, b.bodyweightkg, b.totalkg);
-    cmp_generic_points(meets, a, b, a_points, b_points)
+    cmp_generic_points(meets, a, b, PointsSystem::Wilks2020)
 }
 
 /// Defines an `Ordering` of Entries by Reshel points.
 #[inline]
 pub fn cmp_reshel(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    let a_points = coefficients::reshel(a.sex, a.bodyweightkg, a.totalkg);
-    let b_points = coefficients::reshel(b.sex, b.bodyweightkg, b.totalkg);
-    cmp_generic_points(meets, a, b, a_points, b_points)
+    cmp_generic_points(meets, a, b, PointsSystem::Reshel)
 }
 
 /// Defines an `Ordering` of Entries by Schwartz/Malone points.
 #[inline]
 pub fn cmp_schwartzmalone(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    let a_points = coefficients::schwartzmalone(a.sex, a.bodyweightkg, a.totalkg);
-    let b_points = coefficients::schwartzmalone(b.sex, b.bodyweightkg, b.totalkg);
-    cmp_generic_points(meets, a, b, a_points, b_points)
+    cmp_generic_points(meets, a, b, PointsSystem::SchwartzMalone)
 }
 
 /// Defines an `Ordering` of Entries by AH (Haleczko) points.
 #[inline]
 pub fn cmp_ah(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
-    let a_points = coefficients::ah(a.sex, a.bodyweightkg, a.totalkg);
-    let b_points = coefficients::ah(b.sex, b.bodyweightkg, b.totalkg);
-    cmp_generic_points(meets, a, b, a_points, b_points)
+    cmp_generic_points(meets, a, b, PointsSystem::AH)
 }
 
 /// Gets a list of all entry indices matching the given selection.
@@ -495,9 +489,9 @@ pub fn get_full_sorted_uniqued<'db>(
             OrderBy::Dots => &cache.constant_time.dots,
             OrderBy::Glossbrenner => &cache.constant_time.glossbrenner,
             OrderBy::Goodlift => &cache.constant_time.goodlift,
-            OrderBy::IPFPoints => &cache.constant_time.ipfpoints,
             OrderBy::McCulloch => &cache.constant_time.mcculloch,
             OrderBy::Wilks => &cache.constant_time.wilks,
+            OrderBy::Wilks2020 => &cache.constant_time.wilks2020,
         };
 
         let sorted_uniqued = match query.filter.equipment {
@@ -553,12 +547,12 @@ pub fn get_full_sorted_uniqued<'db>(
         OrderBy::Goodlift => {
             cur.sort_and_unique_by(&entries, &meets, cmp_goodlift, filter_goodlift)
         }
-        OrderBy::IPFPoints => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_ipfpoints, filter_ipfpoints)
-        }
         OrderBy::McCulloch => {
             cur.sort_and_unique_by(&entries, &meets, cmp_mcculloch, filter_mcculloch)
         }
         OrderBy::Wilks => cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks),
+        OrderBy::Wilks2020 => {
+            cur.sort_and_unique_by(&entries, &meets, cmp_wilks2020, filter_wilks2020)
+        }
     })
 }

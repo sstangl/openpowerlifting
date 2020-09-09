@@ -677,9 +677,9 @@ pub enum OrderBy {
     Dots,
     Glossbrenner,
     Goodlift,
-    IPFPoints,
     McCulloch,
     Wilks,
+    Wilks2020,
 }
 
 impl Default for OrderBy {
@@ -698,11 +698,11 @@ impl FromStr for OrderBy {
             "by-deadlift" => Ok(OrderBy::Deadlift),
             "by-total" => Ok(OrderBy::Total),
             "by-dots" => Ok(OrderBy::Dots),
-            "by-ipf-points" => Ok(OrderBy::IPFPoints),
             "by-glossbrenner" => Ok(OrderBy::Glossbrenner),
             "by-goodlift" => Ok(OrderBy::Goodlift),
             "by-mcculloch" => Ok(OrderBy::McCulloch),
             "by-wilks" => Ok(OrderBy::Wilks),
+            "by-wilks-2020" => Ok(OrderBy::Wilks2020),
             _ => Err(()),
         }
     }
@@ -721,9 +721,9 @@ impl From<OrderBy> for PointsSystem {
             OrderBy::Dots => PointsSystem::Dots,
             OrderBy::Glossbrenner => PointsSystem::Glossbrenner,
             OrderBy::Goodlift => PointsSystem::Goodlift,
-            OrderBy::IPFPoints => PointsSystem::IPFPoints,
             OrderBy::McCulloch => PointsSystem::McCulloch,
             OrderBy::Wilks => PointsSystem::Wilks,
+            OrderBy::Wilks2020 => PointsSystem::Wilks2020,
         }
     }
 }
@@ -742,9 +742,9 @@ impl OrderBy {
             OrderBy::Dots => true,
             OrderBy::Glossbrenner => true,
             OrderBy::Goodlift => true,
-            OrderBy::IPFPoints => true,
             OrderBy::McCulloch => true,
             OrderBy::Wilks => true,
+            OrderBy::Wilks2020 => true,
         }
     }
 }

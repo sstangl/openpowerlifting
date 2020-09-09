@@ -301,8 +301,8 @@ pub struct ConstantTimeCache {
     pub mcculloch: ConstantTimeBy,
     pub glossbrenner: ConstantTimeBy,
     pub goodlift: ConstantTimeBy,
-    pub ipfpoints: ConstantTimeBy,
     pub dots: ConstantTimeBy,
+    pub wilks2020: ConstantTimeBy,
 }
 
 impl ConstantTimeCache {
@@ -322,8 +322,8 @@ impl ConstantTimeCache {
                 &filter_glossbrenner,
             ),
             goodlift: ConstantTimeBy::new(loglin, mv, ev, &cmp_goodlift, &filter_goodlift),
-            ipfpoints: ConstantTimeBy::new(loglin, mv, ev, &cmp_ipfpoints, &filter_ipfpoints),
             dots: ConstantTimeBy::new(loglin, mv, ev, &cmp_dots, &filter_dots),
+            wilks2020: ConstantTimeBy::new(loglin, mv, ev, &cmp_wilks2020, &filter_wilks2020),
         }
     }
 }
