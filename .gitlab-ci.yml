@@ -1,3 +1,13 @@
+# Don't fire when we're not on master and the commit message or MR title 
+# says it's a work-in-progress
+workflow:
+  rules:
+    - if: $CI_COMMIT_MESSAGE =~ /^(WIP:|[nobuild]|[noci])/ 
+      when: never
+    - if: $CI_MERGE_REQUEST_TITLE =~ /^(WIP:|[nobuild]|[noci])/  
+      when: never
+    - when: always
+
 # The Nightly version of Rust is required, for the moment, due to server dependencies.
 # The Rocket framework we use requires Nightly features.
 image: rustlang/rust:nightly
