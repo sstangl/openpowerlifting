@@ -143,9 +143,11 @@
     # Law/Fire
     law_fire = {name ="Law/Fire",min=0,max=999}
     law_fire4044 = {name ="Law/Fire 40-44",min=40,max=44}
+    law_fire4549 = {name ="Law/Fire 45-49",min=45,max=49}
     law_fire5559 = {name ="Law/Fire 55-59",min=55,max=59}
 
     rlaw_fire = {name ="R Law/Fire",min=0,max=999,equipment="Raw"}
+    rlaw_fire4044 = {name ="R Law/Fire 40-44",min=40,max=44,equipment="Raw"}
 
 
     # Law/Fire/Mil
@@ -173,11 +175,15 @@
     rso_sub = {name ="RSO Sub",min=35,max=39,equipment="Raw"}
     rso_4044 = {name ="RSO 40-44",min=40,max=44,equipment="Raw"}
     rso_4549 = {name ="RSO 45-49",min=45,max=49,equipment="Raw"}
+    rso_5054 = {name ="RSO 50-54",min=50,max=54,equipment="Raw"}
 
     # Disabled
     rdisabled = {name ="R Disabled",min=0,max=999,equipment="Raw"}
     rdisabled_18_19 = {name ="R Disabled 18-19",min=18,max=19,equipment="Raw"}
     rdisabled_sub = {name ="R Disabled Sub",min=35,max=39,equipment="Raw"}
+    rdisabled_40_4s4 = {name ="R Disabled 40-44",min=40,max=44,equipment="Raw"}
+    rdisabled_50_54 = {name ="R Disabled 50-54",min=50,max=54,equipment="Raw"}
+
 
     llaw_mil = {name ="L Law/Mil",min=0,max=999}
     life = {name ="Life",min=0,max=999}
@@ -261,5 +267,7 @@
     0707 = ["ExemptWeightClassConsistency"] # 90+ Class
     0709 = ["ExemptWeightClassConsistency"] # 90+ Class
     0701 = ["ExemptWeightClassConsistency"] # Uses 90+
+    0710 = ["ExemptWeightClassConsistency"] # Uses 90+
+    0804 = ["ExemptWeightClassConsistency"] # Uses 90+
     1705 = ["ExemptWeightClassConsistency"]
     1901 = ["ExemptWeightClassConsistency"] # One lifter is missing weight info.
