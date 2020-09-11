@@ -1074,6 +1074,10 @@ pub enum Federation {
     #[strum(to_string = "WP-China", serialize = "wp-china")]
     WPChina,
 
+    /// World Powerlifting Nauru.
+    #[strum(to_string = "WP-Nauru", serialize = "wp-nauru")]
+    WPNauru,
+
     /// World Powerlifting Alliance.
     #[strum(to_string = "WPA", serialize = "wpa")]
     WPA,
@@ -1082,10 +1086,6 @@ pub enum Federation {
     #[serde(rename = "WPA-GEO")]
     #[strum(to_string = "WPA-GEO", serialize = "wpa-geo")]
     WPAGEO,
-
-    /// World Powerlifting Nauru.
-    #[strum(to_string = "WP-Nauru", serialize = "wp-nauru")]
-    WPNauru,
 
     /// World Powerlifting Alliance Russia.
     #[serde(rename = "WPA-RUS")]
@@ -1600,9 +1600,9 @@ impl Federation {
             Federation::WNPF => FULLY_TESTED,
             Federation::WP => FULLY_TESTED,
             Federation::WPChina => FULLY_TESTED,
+            Federation::WPNauru => FULLY_TESTED,
             Federation::WPA => false,
             Federation::WPAGEO => false,
-            Federation::WPNauru => FULLY_TESTED,
             Federation::WPARUS => false,
             Federation::WPAU => false,
             Federation::WBC => false,
@@ -1909,9 +1909,9 @@ impl Federation {
             Federation::WelshPA => Some(Country::Wales),
             Federation::WP => None,
             Federation::WPChina => Some(Country::China),
+            Federation::WPNauru => Some(Country::Nauru),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Country::Georgia),
-            Federation::WPNauru => Some(Country::China),
             Federation::WPARUS => Some(Country::Russia),
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
@@ -2287,9 +2287,9 @@ impl Federation {
             Federation::WelshPA => Some(Federation::IPF),
             Federation::WP => Some(Federation::WP),
             Federation::WPChina => Some(Federation::WP),
+            Federation::WPNauru => Some(Federation::WP),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Federation::WPA),
-            Federation::WPNauru => Some(Federation::WP),
             Federation::WPARUS => Some(Federation::WPA),
             Federation::WPAU => None,
             Federation::WPC => Some(Federation::WPC),
@@ -2671,9 +2671,9 @@ impl Federation {
             Federation::WelshPA => Federation::ipf_rules_on(date),
             Federation::WP => Federation::wp_rules_on(date),
             Federation::WPChina => Federation::wp_rules_on(date),
+            Federation::WPNauru => Federation::wp_rules_on(date),
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPAGEO => PointsSystem::Wilks,
-            Federation::WPNauru => Federation::wp_rules_on(date),
             Federation::WPARUS => PointsSystem::Wilks,
             Federation::WPAU => PointsSystem::Wilks,
             Federation::WPC => PointsSystem::Glossbrenner,
