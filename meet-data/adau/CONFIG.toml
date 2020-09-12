@@ -47,3 +47,4 @@
 
 [exemptions]
     0401 = ["ExemptWeightClassConsistency"] # Men in lower weightclasses
+    1201 = ["ExemptDivision","ExemptWeightClassConsistency"] #Juniors 20-24, 140+
