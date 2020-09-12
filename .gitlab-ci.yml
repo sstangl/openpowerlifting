@@ -2,9 +2,9 @@
 # says it's a work-in-progress
 workflow:
   rules:
-    - if: $CI_COMMIT_MESSAGE =~ /^(WIP:|[nobuild]|[noci])/ 
+    - if: $CI_COMMIT_MESSAGE =~ /(WIP:|[nobuild]|[noci])/ 
       when: never
-    - if: $CI_MERGE_REQUEST_TITLE =~ /^(WIP:|[nobuild]|[noci])/  
+    - if: $CI_MERGE_REQUEST_TITLE =~ /(WIP:|[nobuild]|[noci])/  
       when: never
     - when: always
 
