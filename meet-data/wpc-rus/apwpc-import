@@ -108,7 +108,7 @@ def getmeetinfo(soup):
     daterow = venuerow.find_next_sibling().find_next_sibling()
 
     longdate = daterow.text
-    longdate = longdate.replace(" - ","-")
+    longdate = longdate.replace(" - ", "-")
 
     if ' ' in longdate:
         [day, month, year] = longdate.strip().split(' ')
@@ -119,7 +119,7 @@ def getmeetinfo(soup):
 
         for month_key in month_dict.keys():
             if month.lower() in month_key:
-                month = month_dict[montfh_key]
+                month = month_dict[month_key]
                 break
         if len(day) == 1:
             day = '0' + day
@@ -145,9 +145,12 @@ def getresults(soup, url):
     csv = Csv()
 
     subpages = soup.find('ul', {'class': 'nav-tabs'})
+    csv.append_column('Tested')
+    csv.append_column('Equipment')
 
     if subpages:
         csv.append_column('SheetName')
+
         links = subpages.find_all('a')
 
         div_names = subpages.find_all('li')
@@ -326,7 +329,7 @@ def getpagedata(soup):
             csv.fieldnames += ['Best3DeadliftKg']
         elif h in ['Total', 'Сумма']:
             csv.fieldnames += ['TotalKg']
-        elif h in ['Nat', 'Откуда', 'Стр', 'Location']:
+        elif h in ['Nat', 'Откуда', 'Стр']:
             csv.fieldnames += ['Country']
         elif h == 'G':
             csv.fieldnames += ['IGNORE']
@@ -334,7 +337,7 @@ def getpagedata(soup):
             csv.fieldnames += ['IGNORE']
         elif h == 'Team':
             csv.fieldnames += ['IGNORE']
-        elif h in ['Coach', 'Тренер', 'Trainer']:
+        elif h in ['Coach', 'Тренер', 'Trainer', 'Location']:
             csv.fieldnames += ['IGNORE']
         else:
             error("Unknown column name: \"%s\"" % h)
@@ -413,7 +416,7 @@ def fix_place(csv):
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
         row[placeidx] = row[placeidx].replace('.', '')
-        if row[placeidx] == '':
+        if row[placeidx]in ['', '-']:
             row[placeidx] = 'DQ'
             row[totalidx] = ''  # Instead of a zero.
         elif row[placeidx] == 'DQ':  # Allpowerlifting marks doping disquals as DQ
@@ -614,6 +617,9 @@ def parse_sheetname(csv):
         sn_idx = csv.index('SheetName')
         sex_idx = csv.index('Sex')
         event_idx = csv.index('Event')
+        tested_idx = csv.index('Tested')
+        eqp_idx = csv.index('Equipment')
+
         for row in csv.rows:
             sheetname = row[sn_idx].lower()
             if 'women' in sheetname or 'wo' in sheetname:
@@ -622,6 +628,7 @@ def parse_sheetname(csv):
             elif 'men' in sheetname:
                 row[sex_idx] = 'M'
                 row[sn_idx] = sheetname.replace('men', '')
+
             if 'pl' in row[sn_idx]:
                 row[event_idx] = 'SBD'
                 row[sn_idx] = row[sn_idx].replace('pl', '')
@@ -637,6 +644,23 @@ def parse_sheetname(csv):
             elif 'PP' in row[sn_idx]:
                 row[event_idx] = 'BD'
                 row[sn_idx] = row[sn_idx].replace('pp', '')
+
+            if '(eq)' in sheetname:
+                row[eqp_idx] = 'Multi-ply'
+                row[sn_idx] = row[sn_idx].replace('(eq)', '')
+            elif '(raw)' in sheetname:
+                row[eqp_idx] = 'Raw'
+                row[sn_idx] = row[sn_idx].replace('(raw)', '')
+            else:
+                row[eqp_idx] = 'Multi-ply'
+
+            if 'awpc' in sheetname:
+                row[tested_idx] = 'Yes'
+                row[sn_idx] = row[sn_idx].replace('awpc', '')
+            else:
+                row[tested_idx] = 'No'
+                row[sn_idx] = row[sn_idx].replace('wpc', '')
+
             row[sn_idx] = ' '.join(
                 row[sn_idx].strip().replace('  ', ' ').split())
     return csv
@@ -644,9 +668,11 @@ def parse_sheetname(csv):
 
 def standardise_division(fed, csv):
     if 'Division' in csv.fieldnames:
+        div_idx = csv.index('Division')
+        tested_idx = csv.index('Tested')
+
         # IPF Feds that we are likely to use this script for
         if fed in ['FPR', 'KPF', 'UkrainePF']:
-            div_idx = csv.index('Division')
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Sub-Juniors'
@@ -662,7 +688,48 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-            
+        elif fed in ['WPC-RUS']:
+            for row in csv.rows:
+                if row[div_idx] == 'T':
+                    row[div_idx] = 'Teen'
+                elif row[div_idx] == 'T1':
+                    row[div_idx] = 'Teen 13-15'
+                elif row[div_idx] == 'T2':
+                    row[div_idx] = 'Teen 16-17'
+                elif row[div_idx] == 'T3':
+                    row[div_idx] = 'Teen 18-19'
+                elif row[div_idx] == 'J':
+                    row[div_idx] = 'Juniors 20-23'
+                elif row[div_idx] == 'O':
+                    row[div_idx] = 'Open'
+                elif row[div_idx] == 'M1':
+                    row[div_idx] = 'Masters 40-44'
+                elif row[div_idx] == 'M2':
+                    row[div_idx] = 'Masters 45-49'
+                elif row[div_idx] == 'M3':
+                    row[div_idx] = 'Masters 50-54'
+                elif row[div_idx] == 'M4':
+                    row[div_idx] = 'Masters 55-59'
+                elif row[div_idx] == 'M5':
+                    row[div_idx] = 'Masters 60-64'
+                elif row[div_idx] == 'M6':
+                    row[div_idx] = 'Masters 65-69'
+                elif row[div_idx] == 'M7':
+                    row[div_idx] = 'Masters 70-74'
+                elif row[div_idx] == 'M8':
+                    row[div_idx] = 'Masters 75-79'
+                elif row[div_idx] == 'M9':
+                    row[div_idx] = 'Masters 80-84'
+
+                if row[tested_idx] == "Yes":
+                    row[div_idx] = "Amateur "+row[div_idx]
+                else:
+                    row[div_idx] = "Pro " + row[div_idx]
+    else:
+        csv.append_column('Division')
+        div_idx = csv.index('Division')
+        for row in csv.rows:
+            row[div_idx] = "Pro Open"
     return csv
 
 
