@@ -75,13 +75,18 @@ def getmeetinfo(soup):
                   'Oryol': 'ORL', 'Yekaterinburg': 'SVE', 'Ukhta': 'KO',
                   'Yoshkar-Ola': 'ME', 'Yaroslavl': 'YAR', 'Voskresensk': 'MOW',
                   'Novgorod': 'NOV', 'Surgut': 'KHM', 'Myski': 'KEM',
-                  'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA'}
+                  'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA',
+                  'Kungur': 'PER', 'Kursk': 'KRS'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
                     'Leninsk-Kuznetskiy': 'Leninsk-Kuznetsky',
                     'Ruzaevka': 'Ruzayevka',
-                    'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta'}
+                    'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta',
+                    'Челябинск': 'Chelyabinsk', 'Пермь': 'Perm', 'Курск': 'Kursk',
+                    'Екатеринбург': 'Yekaterinburg'}
+
+    country_aliases = {'Россия': 'Russia'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling().find_next_sibling()
@@ -96,6 +101,9 @@ def getmeetinfo(soup):
     else:
         country = venue
         town = ''
+
+    if country in country_aliases:
+        country = country_aliases[country]
 
     if town in town_aliases:
         town = town_aliases[town]
@@ -416,7 +424,7 @@ def fix_place(csv):
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
         row[placeidx] = row[placeidx].replace('.', '')
-        if row[placeidx]in ['', '-']:
+        if row[placeidx]in ['', '-', 'нк']:
             row[placeidx] = 'DQ'
             row[totalidx] = ''  # Instead of a zero.
         elif row[placeidx] == 'DQ':  # Allpowerlifting marks doping disquals as DQ
