@@ -108,7 +108,7 @@ def getmeetinfo(soup):
     daterow = venuerow.find_next_sibling().find_next_sibling()
 
     longdate = daterow.text
-    longdate = longdate.replace(" - ","-")
+    longdate = longdate.replace(" - ", "-")
 
     if ' ' in longdate:
         [day, month, year] = longdate.strip().split(' ')
@@ -119,7 +119,7 @@ def getmeetinfo(soup):
 
         for month_key in month_dict.keys():
             if month.lower() in month_key:
-                month = month_dict[montfh_key]
+                month = month_dict[month_key]
                 break
         if len(day) == 1:
             day = '0' + day
@@ -662,7 +662,6 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-            
     return csv
 
 
