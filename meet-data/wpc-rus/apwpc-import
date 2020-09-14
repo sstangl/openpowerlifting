@@ -430,7 +430,7 @@ def fix_place(csv):
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
         row[placeidx] = row[placeidx].replace('.', '')
-        if row[placeidx]in ['', '-', 'нк']:
+        if row[placeidx] in ['', '-', 'нк']:
             row[placeidx] = 'DQ'
             row[totalidx] = ''  # Instead of a zero.
         elif row[placeidx] == 'DQ':  # Allpowerlifting marks doping disquals as DQ
