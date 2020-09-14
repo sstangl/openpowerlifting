@@ -88,7 +88,9 @@ def getmeetinfo(soup):
                     'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta',
                     'Челябинск': 'Chelyabinsk', 'Пермь': 'Perm', 'Курск': 'Kursk',
                     'Екатеринбург': 'Yekaterinburg', 'Вологда': 'Vologda',
-                    'Краснодар': 'Krasnodar', 'Crymsk': 'Krymsk'}
+                    'Краснодар': 'Krasnodar', 'Crymsk': 'Krymsk',
+                    'Санкт-Петербург': ' St. Petersburg', 'Саратов': 'Saratov',
+                    'Владивосток': 'Vladivostok', 'Крымск': 'Krymsk'}
 
     country_aliases = {'Россия': 'Russia'}
 
