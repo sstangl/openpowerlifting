@@ -1,10 +1,9 @@
-# Don't fire when we're not on master and the commit message or MR title 
-# says it's a work-in-progress
+# Skip CI if the commit message contains "WIP:", "[nobuild]", or "[noci]".
 workflow:
   rules:
-    - if: $CI_COMMIT_MESSAGE =~ /(WIP:|[nobuild]|[noci])/
+    - if: $CI_COMMIT_MESSAGE =~ /(WIP:|\[nobuild\]|\[noci\])/
       when: never
-    - if: $CI_MERGE_REQUEST_TITLE =~ /(WIP:|[nobuild]|[noci])/
+    - if: $CI_MERGE_REQUEST_TITLE =~ /(WIP:|\[nobuild\]|\[noci\])/
       when: never
     - when: always
 
