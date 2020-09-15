@@ -79,7 +79,8 @@ def getmeetinfo(soup):
                   'Kungur': 'PER', 'Kursk': 'KRS', 'Voronezh': 'VOR',
                   'Arsenyev': 'PRI', 'Vladikavkaz': 'SE', 'Saratov': 'SAR',
                   'Vologda': 'VLG', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
-                  'Krymsk': 'KDA', 'Vladivostok': 'PRI'}
+                  'Krymsk': 'KDA', 'Vladivostok': 'PRI', 'Novorossiysk': 'KDA',
+                  'Novosibirsk': 'NVS', 'Barnaul': 'ALT'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -90,7 +91,8 @@ def getmeetinfo(soup):
                     'Екатеринбург': 'Yekaterinburg', 'Вологда': 'Vologda',
                     'Краснодар': 'Krasnodar', 'Crymsk': 'Krymsk',
                     'Санкт-Петербург': ' St. Petersburg', 'Саратов': 'Saratov',
-                    'Владивосток': 'Vladivostok', 'Крымск': 'Krymsk'}
+                    'Владивосток': 'Vladivostok', 'Крымск': 'Krymsk', 'Ставрополь': 'Stavropol',
+                    'Новороссийск': 'Novorossiysk'}
 
     country_aliases = {'Россия': 'Russia'}
 
@@ -124,7 +126,7 @@ def getmeetinfo(soup):
     longdate = daterow.text
     longdate = longdate.replace(" - ", "-")
 
-    if ' ' in longdate:
+    if ' ' in longdate and longdate.count(' ') == 2:
         [day, month, year] = longdate.strip().split(' ')
         year = year.strip()
 
@@ -415,12 +417,13 @@ def expand_fourths(csv, bestlift, lift4):
     bestidx = csv.index(bestlift)
 
     for row in csv.rows:
+        row[bestidx] = row[bestidx].lstrip().strip()
         if ' ' in row[bestidx].strip():
             if lift4 not in csv.fieldnames:
                 csv.insert_column(bestidx+1, lift4)
             lift4idx = csv.index(lift4)
 
-            [row[bestidx], row[lift4idx]] = row[bestidx].strip().split(' ')
+            [row[bestidx], row[lift4idx]] = row[bestidx].split(' ')
             row[bestidx] = row[bestidx].strip()
             row[lift4idx] = row[lift4idx].strip()
 
@@ -430,7 +433,7 @@ def fix_place(csv):
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
         row[placeidx] = row[placeidx].replace('.', '')
-        if row[placeidx] in ['', '-', 'нк']:
+        if row[placeidx] in ['', '-', 'нк', 'н']:
             row[placeidx] = 'DQ'
             row[totalidx] = ''  # Instead of a zero.
         elif row[placeidx] == 'DQ':  # Allpowerlifting marks doping disquals as DQ
@@ -470,11 +473,6 @@ def remove_records(csv):
                 pass
         return indexlist
 
-    def remove_all(text, replace_strings):
-        for rep_str in replace_strings:
-            text = text.replace(rep_str, "")
-        return text
-
     squatidxl = getevtindices(
         csv, ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'Best3SquatKg'])
     benchidxl = getevtindices(
@@ -489,11 +487,10 @@ def remove_records(csv):
 
     for row in csv.rows:
         for col in attempt_idcs:
-            row[col] = remove_all(
-                row[col], ['nr ', 'wr ', 'er ', 'wt3 ', 'w ', 'e ', 'n ',
-                           'nm1', 'nm2', 'nm3', 'nm4', 'nm5', 'nm6', 'nsm', 'nj',
-                           'RK', 'ej', 'nrm4', 'r'])
-            row[col] = row[col].replace('  ', ' ')
+            row[col] = row[col].replace('  ', ' ').lstrip().strip()
+            splitentry = row[col].split(' ')
+            row[col] = ' '.join([s for s in splitentry if s.replace(
+                '.', '', 1).replace('-', '', 1).isdigit()])
 
 
 def unreverse_names(csv):
@@ -703,7 +700,7 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-        elif fed in ['WPC-RUS']:
+        elif fed in ['WPC-RUS', 'FPMO-WPC']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Teen'
@@ -717,6 +714,8 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Juniors 20-23'
                 elif row[div_idx] == 'O':
                     row[div_idx] = 'Open'
+                elif row[div_idx] == 'MS':
+                    row[div_idx] = 'Submasters 33-39'
                 elif row[div_idx] == 'M1':
                     row[div_idx] = 'Masters 40-44'
                 elif row[div_idx] == 'M2':
@@ -735,6 +734,8 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 75-79'
                 elif row[div_idx] == 'M9':
                     row[div_idx] = 'Masters 80-84'
+                elif row[div_idx] == 'M':
+                    row[div_idx] = 'Masters'
 
                 if row[tested_idx] == "Yes":
                     row[div_idx] = "Amateur "+row[div_idx]
