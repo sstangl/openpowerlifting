@@ -72,7 +72,7 @@ DQ,Róbert Duma,Multi-ply,M,B,82.5,1982,Hungary,M_OEM_WPC,82.1,,,,,,-210,-210,-2
 DQ,Zoltán Hachbold,Multi-ply,M,B,90,1986,Hungary,M_JEM_WPC,87.7,,,,,,-215,-220,-220,,,,,,,,
 1,János Hagymási,Multi-ply,M,B,90,1940,Hungary,M_MEM_6_WPC,89.9,,,,,,60,70,-75,,70,,,,,,70
 1,Valērijs Petrovs,Multi-ply,M,B,90,1946,Latvia,M_MEM_5_WPC,89,,,,,,155,160,167.5,,167.5,,,,,,167.5
-2,Yevgeny Khudoleev,Multi-ply,M,B,90,1946,Russia,M_MEM_5_WPC,87.2,,,,,,-155,155,165,,165,,,,,,165
+2,Evgeniy Khudoleev,Multi-ply,M,B,90,1946,Russia,M_MEM_5_WPC,87.2,,,,,,-155,155,165,,165,,,,,,165
 1,Ferenc Kelemen,Multi-ply,M,B,90,1954,Hungary,M_MEM_4_WPC,88.35,,,,,,130,135,140,,140,,,,,,140
 1,Alexander Petrov,Multi-ply,M,B,90,1960,Russia,M_MEM_2_WPC,89.3,,,,,,225,235,242.5,,242.5,,,,,,242.5
 2,Valery Tomilov,Multi-ply,M,B,90,1964,Israel,M_MEM_2_WPC,88.2,,,,,,202.5,212.5,217.5,,217.5,,,,,,217.5
@@ -191,7 +191,7 @@ DQ,Chantal Rostagnat,Multi-ply,F,SBD,60,1966,France,F_MEM_1_WPC,59.4,-110,-110,-
 DQ,Tobias Rojas,Multi-ply,M,SBD,90,1988,Hungary,M_JEM_WPC,87.8,220,240,-250,,240,-150,-150,-150,,,,,,,,
 1,Bartolomej Veres,Multi-ply,M,SBD,90,1935,Slovakia,M_MEM_7_WPC,82.6,-120,120,125,,125,-65,65,-72.5,,65,135,152.5,160,,160,350
 1,János Hagymási,Multi-ply,M,SBD,90,1940,Hungary,M_MEM_6_WPC,89.9,130,150,-160,,150,60,70,-80,,70,150,160,-170,,160,380
-1,Yevgeny Khudoleev,Multi-ply,M,SBD,90,1946,Russia,M_MEM_5_WPC,86.8,200,220,240,,240,150,160,167.5,,167.5,200,220,235,,235,642.5
+1,Evgeniy Khudoleev,Multi-ply,M,SBD,90,1946,Russia,M_MEM_5_WPC,86.8,200,220,240,,240,150,160,167.5,,167.5,200,220,235,,235,642.5
 2,Sándor Bezsenyi,Multi-ply,M,SBD,90,1948,Hungary,M_MEM_5_WPC,88.4,150,165,175,,175,90,100,110,,110,160,170,,,170,455
 1,Ferenc Smuk,Multi-ply,M,SBD,90,,Hungary,M_MEM_4_WPC,85.7,-210,210,230,,230,80,,,,80,190,200,-210,,200,510
 DQ,József Sztanke,Multi-ply,M,SBD,90,1954,Hungary,M_MEM_4_WPC,88.4,-270,-270,-270,,,,,,,,,,,,,
@@ -213,10 +213,10 @@ DQ,József Sztanke,Multi-ply,M,SBD,90,1954,Hungary,M_MEM_4_WPC,88.4,-270,-270,-2
 2,Stanislav Jurčišin,Multi-ply,M,SBD,100,1945,Slovakia,M_MEM_5_WPC,98.6,160,170,175,,175,125,-130,,,125,150,160,170,,170,470
 DQ,Oleg Tokarevoleg,Multi-ply,M,SBD,100,1953,Russia,M_MEM_4_WPC,98.5,-265,-265,-265,,,,,,,,,,,,,
 1,Oleg Kholodov,Multi-ply,M,SBD,100,1961,Russia,M_MEM_2_WPC,97.2,170,,,,170,110,-170,,,110,170,,,,170,450
-1,Alexey Kozlov,Multi-ply,M,SBD,100,1970,Russia,M_MEM_1_WPC,99.6,320,352.5,362.5,,362.5,210,222.5,-230.5,,222.5,300,320,327.5,,327.5,912.5
+1,Aleksey Kozlov,Multi-ply,M,SBD,100,1970,Russia,M_MEM_1_WPC,99.6,320,352.5,362.5,,362.5,210,222.5,-230.5,,222.5,300,320,327.5,,327.5,912.5
 1,Andrey Belyaev #1,Single-ply,M,SBD,100,1983,Russia,M_OES_WPC,95.8,350,380,400,,400,275,285,-295,,285,300,340,365,,365,1050
 2,Aleksandar Kyurchev,Multi-ply,M,SBD,100,1978,Bulgaria,M_OEM_WPC,98.9,360,-380,-380,,360,255,265,270,,270,300,-320,-320,,300,930
-3,Alexey Kozlov,Multi-ply,M,SBD,100,1970,Russia,M_OEM_WPC,99.6,320,352.5,362.5,,362.5,210,222.5,-230,,222.5,300,320,327.5,,327.5,912.5
+3,Aleksey Kozlov,Multi-ply,M,SBD,100,1970,Russia,M_OEM_WPC,99.6,320,352.5,362.5,,362.5,210,222.5,-230,,222.5,300,320,327.5,,327.5,912.5
 4,Attila Elek,Multi-ply,M,SBD,100,1985,Hungary,M_OEM_WPC,96.1,340,365,-377.5,,365,205,215,-220,,215,300,315,-320,,315,895
 5,Štefan Elek,Multi-ply,M,SBD,100,1982,Slovakia,M_OEM_WPC,99.3,-275,275,-290,,275,180,190,200,,200,-250,260,-285,,260,735
 DQ,Juha Miettinen,Multi-ply,M,SBD,100,1978,Finland,M_OEM_WPC,98.9,-330,-330,-345,,,,,,,,,,,,,
@@ -237,7 +237,7 @@ DQ,Ivars Cīrulis,Multi-ply,M,SBD,110,1979,Latvia,M_OEM_WPC,107.6,-400,-400,,,,,
 1,Tadas Petrokas,Multi-ply,M,SBD,125,1986,Lithuania,M_JEM_WPC,110.3,250,265,300,,300,170,182.5,-192.5,,182.5,260,-282.5,,,260,742.5
 2,László Kozák,Multi-ply,M,SBD,125,1987,Hungary,M_JEM_WPC,123.9,280,-300,300,,300,-180,185,195,,195,270,295,-302.5,,295,790
 DQ,Markus Jun Rinse,Multi-ply,M,SBD,125,1987,Sweden,M_JEM_WPC,125,345,-370,370,,370,-290,-290,-290,,,,,,,,
-1,Yevgeny Dmitriev,Multi-ply,M,SBD,125,1940,Russia,M_MEM_6_WPC,123.9,140,150,170,,170,120,135,145,,145,130,150,180,,180,495
+1,Evgeniy Dmitriev,Multi-ply,M,SBD,125,1940,Russia,M_MEM_6_WPC,123.9,140,150,170,,170,120,135,145,,145,130,150,180,,180,495
 1,Olli Ruohola,Multi-ply,M,SBD,125,1959,Finland,M_MEM_3_WPC,124,290,305,-320,,305,190,-200,,,190,270,285,-292.5,,285,780
 1,Vendel Böjtös,Multi-ply,M,SBD,125,1964,Hungary,M_MEM_2_WPC,115.5,180,190,200,,200,110,120,125,,125,180,200,-210,,200,525
 1,Todor Lyudmilov Isaev,Multi-ply,M,SBD,125,1967,Czechia,M_MEM_1_WPC,112.4,-220,220,240,,240,155,170,-180,,170,220,240,-250,,240,650
