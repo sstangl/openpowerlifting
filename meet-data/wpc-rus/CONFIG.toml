@@ -20,6 +20,7 @@
 
     am_teen = {name = "Amateur Teen", min = 13, max = 19,tested="Yes"}
     am_masters = {name = "Amateur Masters", min = 40, max = 999,tested="Yes"}
+    am_disabled = {name = "Amateur Disabled", min = 0, max = 999,tested="Yes"}
 
 
     pro_open = {name = "Pro Open", min = 0, max = 999}
