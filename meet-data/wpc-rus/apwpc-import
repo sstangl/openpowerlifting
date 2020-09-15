@@ -700,7 +700,7 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-        elif fed in ['WPC-RUS', 'FPMO-WPC']:
+        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Teen'
