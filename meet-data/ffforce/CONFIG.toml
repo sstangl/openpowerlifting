@@ -30,6 +30,9 @@
     jeunes = {name = "Jeunes", min=0, max=22.5}
     horsmatch = {name = "Hors Match", min=0, max=999, place="G"}
 
+    # Silent Worker Meet
+    primetime = {name ="Prime Time", min=0, max=999}
+
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
@@ -79,6 +82,7 @@
     1803 = ["ExemptWeightClassConsistency"] #83+ class
     1802 = ["ExemptWeightClassConsistency"] #83+ class
     1703 = ["ExemptWeightClassConsistency"] #83+ class
+    2034 = ["ExemptWeightClassConsistency"] # A -43 kg junior lifter competed in the Open division
 
     # Challenge Villenave (no weight classes)
     1808 = ["ExemptWeightClassConsistency"]
