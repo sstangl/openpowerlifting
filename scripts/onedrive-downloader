@@ -30,7 +30,7 @@ def download_file(url, resultsname):
     foptions.add_argument("--headless")
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
-    time.sleep(3)
+    time.sleep(5)
     iframe = driver.find_element_by_id('sdx_ow_iframe')
     driver.switch_to.frame(iframe)
     # Wait until we can click the download button
@@ -40,6 +40,7 @@ def download_file(url, resultsname):
     )
     file_button = driver.find_element_by_id(
         "m_excelWebRenderer_ewaCtl_Jewel-Default")
+    time.sleep(5)
     file_button.click()
 
     time.sleep(1)
