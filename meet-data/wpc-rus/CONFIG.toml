@@ -42,6 +42,7 @@
 
     pro_teen = {name = "Pro Teen", min = 13, max = 19}
     pro_masters = {name = "Pro Masters", min = 40, max = 999}
+    pro_disabled = {name = "Pro Disabled", min = 0, max = 999}
 
 
     dis_open = {name = "Disabled Open", min = 0, max = 999}
@@ -111,6 +112,8 @@
     1106 = ["ExemptWeightClassConsistency"] # Non standard weight classes
     1117 = ["ExemptWeightClassConsistency"] # Missing women's class
     1123 = ["ExemptWeightClassConsistency"] # Non standard weight classes
+    1124 = ["ExemptWeightClassConsistency"] # Non standard weight classes
+    1127 = ["ExemptWeightClassConsistency"] # No weight classes
     1720 = ["ExemptWeightClassConsistency"]
     1738 = ["ExemptWeightClassConsistency"]
     1774 = ["ExemptWeightClassConsistency"] # Youth weight classes.
