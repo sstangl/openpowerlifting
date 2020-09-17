@@ -80,7 +80,8 @@ def getmeetinfo(soup):
                   'Arsenyev': 'PRI', 'Vladikavkaz': 'SE', 'Saratov': 'SAR',
                   'Vologda': 'VLG', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
                   'Krymsk': 'KDA', 'Vladivostok': 'PRI', 'Novorossiysk': 'KDA',
-                  'Novosibirsk': 'NVS', 'Barnaul': 'ALT'}
+                  'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
+                  'Kazan': 'TA'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -92,7 +93,8 @@ def getmeetinfo(soup):
                     'Краснодар': 'Krasnodar', 'Crymsk': 'Krymsk',
                     'Санкт-Петербург': ' St. Petersburg', 'Саратов': 'Saratov',
                     'Владивосток': 'Vladivostok', 'Крымск': 'Krymsk',
-                    'Ставрополь': 'Stavropol', 'Новороссийск': 'Novorossiysk'}
+                    'Ставрополь': 'Stavropol', 'Новороссийск': 'Novorossiysk',
+                    'Rostov-na-Donu': 'Rostov-on-Don'}
 
     country_aliases = {'Россия': 'Russia'}
 
