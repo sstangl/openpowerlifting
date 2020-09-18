@@ -55,6 +55,7 @@ pub fn check_duplicates_one(
             if (cur_meet.path != match_meet.path)
                 && (cur_entry.totalkg == match_entry.totalkg)
                 && (cur_entry.event == match_entry.event)
+                && (cur_entry.equipment == match_entry.equipment)
             {
                 // FIXME: a USAPL meet was intentionally broken up into two
                 //        separate meets. This is instead of some exemption.
