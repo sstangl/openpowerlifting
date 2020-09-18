@@ -290,6 +290,10 @@ pub enum Federation {
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
 
+    /// Estonian IPF affiliate, IPF.
+    #[strum(to_string = "EJTL", serialize = "ejtl")]
+    EJTL,
+
     /// Elite Powerlifting Canada, IPL-affiliated prior to 2018.
     #[strum(to_string = "EPC", serialize = "epc")]
     EPC,
@@ -1407,6 +1411,7 @@ impl Federation {
             Federation::DBKV => false,
             Federation::CzechiaUA => false,
             Federation::DSF => FULLY_TESTED,
+            Federation::EJTL => FULLY_TESTED,
             Federation::EPC => false,
             Federation::EnglandUA => false,
             Federation::EPA => FULLY_TESTED,
@@ -1723,6 +1728,7 @@ impl Federation {
             Federation::DBKV => Some(Country::Germany),
             Federation::CzechiaUA => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
+            Federation::EJTL => Some(Country::Estonia),
             Federation::EPC => Some(Country::Canada),
             Federation::EnglandUA => Some(Country::England),
             Federation::EPA => Some(Country::England),
@@ -2058,6 +2064,7 @@ impl Federation {
             Federation::CzechiaUA => None,
             Federation::DBKV => None,
             Federation::DSF => Some(Federation::IPF),
+            Federation::EJTL => Some(Federation::IPF),
             Federation::EPC => {
                 // The EPC was IPL-affiliated until 2018.
                 if date.year() >= 2018 {
@@ -2456,6 +2463,7 @@ impl Federation {
             Federation::DBKV => PointsSystem::Wilks,
             Federation::CzechiaUA => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
+            Federation::EJTL => Federation::ipf_rules_on(date),
             Federation::EPC => PointsSystem::Wilks,
             Federation::EnglandUA => PointsSystem::Wilks,
             Federation::EPA => Federation::ipf_rules_on(date),
