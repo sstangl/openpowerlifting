@@ -27,6 +27,7 @@
   <option value="cpu" {% if selection.federation == "CPU" %}selected{% endif %}>CPU / {{strings.country.canada}}</option>
   <option value="csst" {% if selection.federation == "CSST" %}selected{% endif %}>CSST / {{strings.country.czechia}}</option>
   <option value="dsf" {% if selection.federation == "DSF" %}selected{% endif %}>DSF / {{strings.country.denmark}}</option>
+  <option value="ejtl" {% if selection.federation == "EJTL" %}selected{% endif %}>EJTL / {{strings.country.estonia}}</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA / {{strings.country.england}}</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO / {{strings.country.argentina}}</option>
   <option value="fecapolif" {% if selection.federation == "FECAPOLIF" %}selected{% endif %}>FECAPOLIF / {{strings.country.cameroon}}</option>
