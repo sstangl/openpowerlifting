@@ -115,7 +115,7 @@ def parse_sheetname(s):
         # Equipment
         elif word in ['slinghot', 'sling-shot', 'soft', 'софт', 'софстанд', 'соф']:
             equipment = 'Unlimited'
-            event = 'B'            
+            event = 'B'
         elif word in ['СПР', 'облегченная', 'облегченной', 'слинг']:
             equipment = 'Multi-ply'
             event = 'B'
