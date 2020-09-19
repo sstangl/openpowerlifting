@@ -113,16 +113,17 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Equipment
-        elif word in ['slinghot', 'sling-shot', 'soft', 'софт', 'софстанд', 'соф']:
+        elif word in ['СПР','slinghot', 'sling-shot', 'soft', 'софт',
+                      'софстанд', 'соф', 'слинг']:
             equipment = 'Unlimited'
             event = 'B'
-        elif word in ['СПР', 'облегченная', 'облегченной', 'слинг']:
+        elif word in ['облегченная', 'облегченной'] and equipment != 'Unlimited':
             equipment = 'Multi-ply'
             event = 'B'
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный']:
-            if equipment != 'Multi-ply':
+            if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
@@ -130,7 +131,8 @@ def parse_sheetname(s):
         elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной',
                       'многопетельная', 'многопетельный', 'трехпетельном',
                       'двухпетельном']:
-            equipment = 'Multi-ply'
+            if equipment != 'Unlimited':
+                equipment = 'Multi-ply'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
                       'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая', 'жест']:
@@ -300,7 +302,7 @@ def parse_fieldnames(sheet):
         elif text == 'team':
             fieldnames.append('Team')
         elif any(x in text for x in ['gloss', 'коэф', 'resh', 'залуцкий', 'рейшел',
-                                     'залутский', 'reichel']):
+                                     'залутский', 'reichel', 'rish']):
             # This is not the Wilks, but the WilksCoefficient.
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
