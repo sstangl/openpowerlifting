@@ -414,6 +414,8 @@ def getpagedata(soup):
                         text = 'Azerbaijan'
                     elif text == 'ua':
                         text = 'Ukraine'
+                    elif text == 'by':
+                        text = 'Belarus'
 
                 if text is None:
                     text = ''

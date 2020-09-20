@@ -38,6 +38,7 @@
     pro_masters_65_69 = {name = "Pro Masters 65-69", min = 65, max = 69}
     pro_masters_70_74 = {name = "Pro Masters 70-74", min = 70, max = 74}
     pro_masters_75_79 = {name = "Pro Masters 75-79", min = 75, max = 79}
+    pro_masters_80_84 = {name = "Pro Masters 80-84", min = 80, max = 84}
     pro_masters_80p = {name = "Pro Masters 80+", min = 80, max = 999}
 
     pro_teen = {name = "Pro Teen", min = 13, max = 19}
@@ -121,6 +122,7 @@
     1317 = ["ExemptWeightClassConsistency"] # Non standard weight classes
     1326 = ["ExemptWeightClassConsistency"] # Non standard weight classes
     1331 = ["ExemptWeightClassConsistency"] # Non standard weight classes
+    1341 = ["ExemptWeightClassConsistency"] # Missing weight classes
     1720 = ["ExemptWeightClassConsistency"]
     1738 = ["ExemptWeightClassConsistency"]
     1774 = ["ExemptWeightClassConsistency"] # Youth weight classes.
