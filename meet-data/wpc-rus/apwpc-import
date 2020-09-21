@@ -82,7 +82,8 @@ def getmeetinfo(soup):
                   'Krymsk': 'KDA', 'Vladivostok': 'PRI', 'Novorossiysk': 'KDA',
                   'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
                   'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
-                  'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA'}
+                  'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
+                  'Beryozovsky': 'SVE'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
