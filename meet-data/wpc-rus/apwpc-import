@@ -100,7 +100,8 @@ def getmeetinfo(soup):
                     'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal'}
 
-    country_aliases = {'Россия': 'Russia'}
+    country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
+                       'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling().find_next_sibling()
