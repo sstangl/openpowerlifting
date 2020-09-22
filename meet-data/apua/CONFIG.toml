@@ -1,0 +1,34 @@
+# From http://wabdl.org/documents/2018/08/wabdl-rule-book-as-of-892018.pdf
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    open = {name="OP", min=16, max=999}
+    teen1213 = {name="T1", min=12, max=13}
+    teen1415 = {name="T2", min=14, max=15}
+    teen1617 = {name="T3", min=16, max=17}
+    teen1819 = {name="T4", min=18, max=19}
+
+    juniors2025 = {name="Jun", min=20, max=25}
+    submasters3339 = {name="SubM", min=33, max=39}
+    masters4046 = {name="M1", min=40, max=46}
+    masters4753 = {name="M2", min=47, max=53}
+    masters5460 = {name="M3", min=54, max=60}
+    masters6167 = {name="M4", min=61, max=67}
+    masters6874 = {name="M5", min=68, max=74}
+    masters7579 = {name="M6", min=75, max=79}
+    masters8084 = {name="M7", min=80, max=84}
+    masters8589 = {name="M8", min=85, max=89}
+    masters90plus = {name="M9", min=90, max=999}
+
+[weightclasses.default_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","117.5","125","140","140+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","90+","100+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
