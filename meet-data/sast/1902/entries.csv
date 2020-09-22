@@ -2,7 +2,7 @@ Name,Sex,BirthYear,BodyweightKg,Country,Team,Division,WeightClassKg,Equipment,Be
 Samuel Sido,M,2004,80.7,Slovakia,Sládkovičovo,T13-15,82.5,Raw,60,70,77.5,77.5,,,,,77.5,B,1
 Adam Húdek,M,2003,84.8,Slovakia,,T13-15,90,Raw,-100,100,105,105,,,,,105,B,1
 Damien Benko,M,2003,85.1,Slovakia,Benchpress Team Santovka,T13-15,90,Raw,70,90,102.5,102.5,,,,,102.5,B,2
-David Kominko,M,2001,106.2,Slovakia,,T16-17,110,Raw,130,-140,-140,130,,,,,130,B,1
+Dávid Kominko,M,2001,106.2,Slovakia,,T16-17,110,Raw,130,-140,-140,130,,,,,130,B,1
 Beňadik Kolduš,M,2001,59.9,Slovakia,OST Spojena škola Sečovce,T16-17,60,Raw,80,85,90,90,,,,,90,B,1
 Matej Ševčík,M,2002,79.4,Slovakia,Fitness club Jamník,T16-17,82.5,Raw,132.5,-140,140,140,,,,,140,B,1
 Adrián Galo,M,2002,88.9,Slovakia,Big Bull Fitness Tornaľa,T16-17,90,Raw,100,110,115,115,,,,,115,B,1
@@ -46,7 +46,7 @@ Peter Vateha,M,1981,90.6,Slovakia,Športcentrum Žilina,O,100,Raw,120,130,,130,,
 Igor Golecký,M,1993,104.1,Slovakia,ŠK Kornel Banská Bystrica,O,110,Multi-ply,210,-230,-230,210,,,,,210,B,1
 Jozef Staňa,M,1987,105.8,Slovakia,Fitness club Jamník,O,110,Multi-ply,175,-185,-185,175,,,,,175,B,2
 Tomáš Knotek,M,1992,107.2,Slovakia,Gbely,O,110,Raw,150,160,-167.5,160,,,,,160,B,5
-Michal Král,M,1982,107.4,Slovakia,Powerlifting Club Kysuce,O,110,Raw,160,-165,-165,160,,,,,160,B,6
+Michal Kráľ,M,1982,107.4,Slovakia,Powerlifting Club Kysuce,O,110,Raw,160,-165,-165,160,,,,,160,B,6
 Viktor Girga,M,1992,102.3,Czechia,Powerlifting Vrchlabí,O,110,Raw,235,240,-245,240,,,,,240,B,1
 Tomáš Kríž,M,1992,103.6,Slovakia,Family Bardejov,O,110,Raw,200,207.5,-215,207.5,,,,,207.5,B,2
 Róbert Svanczár,M,1985,104.6,,,O,110,Raw,190,202.5,-210,202.5,,,,,202.5,B,3
@@ -64,7 +64,7 @@ Juraj Rákoci,M,1987,135.2,Slovakia,,O,140,Raw,,,,,,,,,,B,DQ
 Pavel Balážik,M,1979,55.8,Slovakia,Powerlifting Liptovský Hrádok,O,56,Raw,80,87.5,-93,87.5,,,,,87.5,B,1
 Mario Pudlajner,M,1990,65.8,Slovakia,Klub silových športov Myslava,O,67.5,Raw,120,125,-127.5,125,,,,,125,B,1
 Erik Valent,M,1984,71.6,Slovakia,Športcentrum Žilina,O,75,Multi-ply,160,-170,-170,160,,,,,160,B,1
-Lubomír Samseli,M,1986,74.3,Slovakia,Fitness club Jamník,O,75,Raw,120,127.5,-132.5,127.5,,,,,127.5,B,1
+Ľubomír Samseli,M,1986,74.3,Slovakia,Fitness club Jamník,O,75,Raw,120,127.5,-132.5,127.5,,,,,127.5,B,1
 Ján Šebo,M,1991,71.7,Slovakia,Silový trojboj Liptov,O,75,Raw,-105,110,115,115,,,,,115,B,2
 Michal Móry,M,1978,72.3,Slovakia,,O,75,Raw,107.5,112.5,-117.5,112.5,,,,,112.5,B,3
 Antonín Turek,M,1987,81.2,Czechia,TJ Sokol Mosty,O,82.5,Multi-ply,165,-175,-180,165,,,,,165,B,1
@@ -120,7 +120,7 @@ Nikol Deáková,F,1976,50.9,Slovakia,Gym Štúdio Albert,M40-44,52,Raw,35,-40,-4
 Anna Hudecová-Spišiaková,F,1977,77,Slovakia,ŠK Pressburg Powerlifting,M40-44,82.5,Raw,45,47.5,-52.5,47.5,,,,,47.5,B,1
 Rastislav Sokol,M,2003,93.7,Slovakia,,T13-15,100,Raw,,,,,160,175,190,190,190,D,1
 Adam Húdek,M,2003,84.1,Slovakia,,T13-15,90,Raw,,,,,160,180,200,200,200,D,1
-David Kominko,M,2001,106.2,Slovakia,,T16-17,110,Raw,,,,,195,-205,-205,195,195,D,1
+Dávid Kominko,M,2001,106.2,Slovakia,,T16-17,110,Raw,,,,,195,-205,-205,195,195,D,1
 Jakub Maťko,M,2002,64.4,Slovakia,Liptovský Mikuláš,T16-17,67.5,Raw,,,,,130,,,130,130,D,3
 Robert Hrubý,M,2002,63.1,Slovakia,OKaST Strážske,T16-17,67.5,Raw,,,,,150,160,-162.5,160,160,D,2
 Lukács Dömény,M,2001,64.3,Slovakia,Sport club Pohoda Trnava,T16-17,67.5,Raw,,,,,180,190,193.5,193.5,193.5,D,1
@@ -199,7 +199,7 @@ Pavel Balážik,M,1979,55.8,Slovakia,Powerlifting Liptovský Hrádok,O,56,Raw,,,
 Mário Pudleiner,M,1990,65.8,Slovakia,Klub silových športov Myslava,O,67.5,Raw,,,,,-200,205,210,210,210,D,1
 Michal Móry,M,1978,72.3,Slovakia,Trnava,O,75,Raw,,,,,205,215,-225,215,215,D,1
 Jozef Šimún,M,1991,73.3,Slovakia,Vráble,O,75,Raw,,,,,205,215,-225,215,215,D,2
-Lubomír Samseli,M,1986,74.3,Slovakia,Fitness club Jamník,O,75,Raw,,,,,190,202.5,-212.5,202.5,202.5,D,3
+Ľubomír Samseli,M,1986,74.3,Slovakia,Fitness club Jamník,O,75,Raw,,,,,190,202.5,-212.5,202.5,202.5,D,3
 Ján Šebo,M,1991,71.6,Slovakia,Silový trojboj Liptov,O,75,Raw,,,,,180,200,-210,200,200,D,4
 Ivan Egyed,M,1994,81.6,Slovakia,ŠK Pressburg Powerlifting,O,82.5,Multi-ply,,,,,250,260,270,270,270,D,1
 Zdenko Bystrianský,M,1989,80.4,Slovakia,,O,82.5,Raw,,,,,220,240,-250,240,240,D,2

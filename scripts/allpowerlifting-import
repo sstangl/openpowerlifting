@@ -64,7 +64,7 @@ def getmeetinfo(soup):
 
     # A list of Russian cities and their states as a timesaver
 
-    state_dict = {'Izhevsk': 'UD', 'St. Petersburg,': 'LEN', 'Khanty-Mansiysk': 'KHM',
+    state_dict = {'Izhevsk': 'UD', 'St. Petersburg': 'LEN', 'Khanty-Mansiysk': 'KHM',
                   'Sochi': 'KDA', 'Blagoveshchensk': 'AMU', 'Moscow': 'MOW',
                   'Belogorsk': 'AMU', 'Cherepovets ': 'VLG', 'Perm': 'PER',
                   'Kostroma': 'KOS', 'Samara': 'SAM', 'Zelenogorsk': 'LEN',
@@ -75,13 +75,32 @@ def getmeetinfo(soup):
                   'Oryol': 'ORL', 'Yekaterinburg': 'SVE', 'Ukhta': 'KO',
                   'Yoshkar-Ola': 'ME', 'Yaroslavl': 'YAR', 'Voskresensk': 'MOW',
                   'Novgorod': 'NOV', 'Surgut': 'KHM', 'Myski': 'KEM',
-                  'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA'}
+                  'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA',
+                  'Kungur': 'PER', 'Kursk': 'KRS', 'Voronezh': 'VOR',
+                  'Arsenyev': 'PRI', 'Vladikavkaz': 'SE', 'Saratov': 'SAR',
+                  'Vologda': 'VLG', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
+                  'Krymsk': 'KDA', 'Vladivostok': 'PRI', 'Novorossiysk': 'KDA',
+                  'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
+                  'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
+                  'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
+                  'Beryozovsky': 'SVE'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
                     'Leninsk-Kuznetskiy': 'Leninsk-Kuznetsky',
                     'Ruzaevka': 'Ruzayevka',
-                    'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta'}
+                    'Yekaterinbourg': 'Yekaterinburg', 'Uhkta': 'Ukhta',
+                    'Челябинск': 'Chelyabinsk', 'Пермь': 'Perm', 'Курск': 'Kursk',
+                    'Екатеринбург': 'Yekaterinburg', 'Вологда': 'Vologda',
+                    'Краснодар': 'Krasnodar', 'Crymsk': 'Krymsk',
+                    'Санкт-Петербург': ' St. Petersburg', 'Саратов': 'Saratov',
+                    'Владивосток': 'Vladivostok', 'Крымск': 'Krymsk',
+                    'Ставрополь': 'Stavropol', 'Новороссийск': 'Novorossiysk',
+                    'Rostov-na-Donu': 'Rostov-on-Don',
+                    'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
+                    'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal'}
+
+    country_aliases = {'Россия': 'Russia'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling().find_next_sibling()
@@ -97,13 +116,16 @@ def getmeetinfo(soup):
         country = venue
         town = ''
 
+    if country in country_aliases:
+        country = country_aliases[country]
+
     if town in town_aliases:
         town = town_aliases[town]
 
     state = ''
     if town in state_dict:
         state = state_dict[town]
-
+        
     # Get the date.
     daterow = venuerow.find_next_sibling().find_next_sibling()
 
