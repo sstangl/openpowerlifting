@@ -98,7 +98,8 @@ def getmeetinfo(soup):
                     'Ставрополь': 'Stavropol', 'Новороссийск': 'Novorossiysk',
                     'Rostov-na-Donu': 'Rostov-on-Don',
                     'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
-                    'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal'}
+                    'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
+                    'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
@@ -447,7 +448,7 @@ def fix_place(csv):
     totalidx = csv.index('TotalKg')
     for row in csv.rows:
         row[placeidx] = row[placeidx].replace('.', '')
-        if row[placeidx] == '':
+        if row[placeidx] in ['', '-', 'нк', 'н']:
             row[placeidx] = 'DQ'
             row[totalidx] = ''  # Instead of a zero.
         elif row[placeidx] == 'DQ':  # Allpowerlifting marks doping disquals as DQ
@@ -673,9 +674,10 @@ def parse_sheetname(csv):
 
 def standardise_division(fed, csv):
     if 'Division' in csv.fieldnames:
+        div_idx = csv.index('Division')
+
         # IPF Feds that we are likely to use this script for
         if fed in ['FPR', 'KPF', 'UkrainePF']:
-            div_idx = csv.index('Division')
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Sub-Juniors'
@@ -691,6 +693,43 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
+        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W']:
+            for row in csv.rows:
+                if row[div_idx] == 'T':
+                    row[div_idx] = 'Teen'
+                elif row[div_idx] == 'T1':
+                    row[div_idx] = 'Teen 13-15'
+                elif row[div_idx] == 'T2':
+                    row[div_idx] = 'Teen 16-17'
+                elif row[div_idx] == 'T3':
+                    row[div_idx] = 'Teen 18-19'
+                elif row[div_idx] == 'J':
+                    row[div_idx] = 'Juniors 20-23'
+                elif row[div_idx] == 'O':
+                    row[div_idx] = 'Open'
+                elif row[div_idx] == 'MS':
+                    row[div_idx] = 'Submasters 33-39'
+                elif row[div_idx] == 'M1':
+                    row[div_idx] = 'Masters 40-44'
+                elif row[div_idx] == 'M2':
+                    row[div_idx] = 'Masters 45-49'
+                elif row[div_idx] == 'M3':
+                    row[div_idx] = 'Masters 50-54'
+                elif row[div_idx] == 'M4':
+                    row[div_idx] = 'Masters 55-59'
+                elif row[div_idx] == 'M5':
+                    row[div_idx] = 'Masters 60-64'
+                elif row[div_idx] == 'M6':
+                    row[div_idx] = 'Masters 65-69'
+                elif row[div_idx] == 'M7':
+                    row[div_idx] = 'Masters 70-74'
+                elif row[div_idx] == 'M8':
+                    row[div_idx] = 'Masters 75-79'
+                elif row[div_idx] == 'M9':
+                    row[div_idx] = 'Masters 80-84'
+                elif row[div_idx] == 'M':
+                    row[div_idx] = 'Masters'
+
     return csv
 
 
