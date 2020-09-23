@@ -83,7 +83,7 @@ def getmeetinfo(soup):
                   'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
                   'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
-                  'Beryozovsky': 'SVE'}
+                  'Beryozovsky': 'SVE', 'Belgorod': 'BEL'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -99,7 +99,8 @@ def getmeetinfo(soup):
                     'Rostov-na-Donu': 'Rostov-on-Don',
                     'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
-                    'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow'}
+                    'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
+                    'Воронеж': 'Voronezh'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
@@ -693,7 +694,7 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W']:
+        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W', 'WPA-RUS']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Teen'
