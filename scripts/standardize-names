@@ -45,7 +45,8 @@ def correct_names(namehash, cyrhash, entriespath):
     assert 'Name' in csv.fieldnames
 
     nameidx = csv.index('Name')
-    cyridx = csv.index('CyrillicName') if 'CyrillicName' in csv.fieldnames else None
+    cyridx = csv.index(
+        'CyrillicName') if 'CyrillicName' in csv.fieldnames else None
 
     changed = False
     for row in csv.rows:

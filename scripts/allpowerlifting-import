@@ -406,16 +406,15 @@ def getpagedata(soup):
                 if td.find('i'):
                     text = td.i['class'][0]
                     text = text.replace('flag-icon-', '')
-                    if text == 'ru':
-                        text = 'Russia'
-                    elif text == 'kz':
-                        text = 'Kazakhstan'
-                    elif text == 'az':
-                        text = 'Azerbaijan'
-                    elif text == 'ua':
-                        text = 'Ukraine'
-                    elif text == 'by':
-                        text = 'Belarus'
+
+                    country_codes = {'ru': 'Russia', 'kz': 'Kazakhstan',
+                                     'az': 'Azerbaijan', 'ua': 'Ukraine',
+                                     'by': 'Belarus', 'tj': 'Tajikistan',
+                                     'ie': 'Ireland', 'lv': 'Latvia',
+                                     'kg': 'Kyrgyzstan', 'md': 'Moldova',
+                                     'mn': 'Mongolia', 'us': 'USA'}
+                    if text in country_codes:
+                        text = country_codes[text]
 
                 if text is None:
                     text = ''
