@@ -78,7 +78,7 @@ def getmeetinfo(soup):
                   'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA',
                   'Kungur': 'PER', 'Kursk': 'KRS', 'Voronezh': 'VOR',
                   'Arsenyev': 'PRI', 'Vladikavkaz': 'SE', 'Saratov': 'SAR',
-                  'Vologda': 'VLG', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
+                  'Belgorod': 'BEL', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
                   'Krymsk': 'KDA', 'Vladivostok': 'PRI', 'Novorossiysk': 'KDA',
                   'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
                   'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
@@ -99,7 +99,9 @@ def getmeetinfo(soup):
                     'Rostov-na-Donu': 'Rostov-on-Don',
                     'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
-                    'Благовещенск': 'Blagoveshchensk'}
+                    'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
+                    'Воронеж': 'Voronezh', 'Казань': 'Kazan',
+                    'Ростов-на-Дону': 'Rostov-on-Don'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
@@ -409,16 +411,15 @@ def getpagedata(soup):
                 if td.find('i'):
                     text = td.i['class'][0]
                     text = text.replace('flag-icon-', '')
-                    if text == 'ru':
-                        text = 'Russia'
-                    elif text == 'kz':
-                        text = 'Kazakhstan'
-                    elif text == 'az':
-                        text = 'Azerbaijan'
-                    elif text == 'ua':
-                        text = 'Ukraine'
-                    elif text == 'by':
-                        text = 'Belarus'
+
+                    country_codes = {'ru': 'Russia', 'kz': 'Kazakhstan',
+                                     'az': 'Azerbaijan', 'ua': 'Ukraine',
+                                     'by': 'Belarus', 'tj': 'Tajikistan',
+                                     'ie': 'Ireland', 'lv': 'Latvia',
+                                     'kg': 'Kyrgyzstan', 'md': 'Moldova',
+                                     'mn': 'Mongolia', 'us': 'USA'}
+                    if text in country_codes:
+                        text = country_codes[text]
 
                 if text is None:
                     text = ''

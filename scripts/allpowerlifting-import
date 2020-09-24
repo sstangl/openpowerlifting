@@ -100,7 +100,7 @@ def getmeetinfo(soup):
                     'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
                     'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
-                    'Воронеж': 'Voronezh'}
+                    'Воронеж': 'Voronezh', 'Казань': 'Kazan'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
