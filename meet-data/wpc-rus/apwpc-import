@@ -83,7 +83,7 @@ def getmeetinfo(soup):
                   'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
                   'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
-                  'Beryozovsky': 'SVE'}
+                  'Beryozovsky': 'SVE', 'Togliatti': 'SAM'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -101,7 +101,7 @@ def getmeetinfo(soup):
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
                     'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
                     'Воронеж': 'Voronezh', 'Казань': 'Kazan',
-                    'Ростов-на-Дону': 'Rostov-on-Don'}
+                    'Ростов-на-Дону': 'Rostov-on-Don', 'Тольятти': 'Togliatti'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
