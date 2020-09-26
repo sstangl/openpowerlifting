@@ -16,6 +16,7 @@
     # It's just a way to say "Tested Pro" and isn't actually a separate division.
     # Nevertheless for purposes of records it is a division.
     elite_open = {name = "Elite Open", min = 0, max = 999, tested="Yes"}
+    elite_teen_18_19 = {name = "Elite Teen 18-19", min = 18, max = 19, tested="Yes"}
     elite_junior_20_23 = {name = "Elite Juniors 20-23", min = 20, max = 23, tested="Yes"}
 
     # Youth -- Amateur only.
@@ -111,6 +112,7 @@
     # Occupation-based divisions, that have been used although they're not real divisions
     pro_pfm_open = {name = "Police/Fire/Military Pro Open", min = 0, max = 999}
     ama_pfm_open = {name = "Police/Fire/Military Amateur Open", min = 0, max = 999, tested="Yes"}
+    pro_pfm_masters_50_54 = {name = "Police/Fire/Military Pro Masters 50-54", min=50, max=54}
 
     # Adaptive divisions. Not sure what these are.
     adaptive_open= {name = "Adaptive Open", min = 0, max = 999}
