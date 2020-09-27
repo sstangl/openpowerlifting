@@ -433,6 +433,10 @@ pub enum MetaFederation {
     #[strum(to_string = "welshpa")]
     WelshPA,
 
+    /// WP-Nauru, but with international results also.
+    #[strum(to_string = "wp-nauru")]
+    WPNauru,
+
     /// WRPF-USA.
     #[strum(to_string = "wrpf-usa")]
     #[serde(rename = "WRPF-USA")]
@@ -727,6 +731,7 @@ impl MetaFederation {
             MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
             MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
+            MetaFederation::WPNauru => affiliation!(meet, entry, WPNauru, WP),
             MetaFederation::WRPFUSA => match meet.federation {
                 Federation::WRPF => match entry.lifter_country {
                     Some(Country::USA) => true,
