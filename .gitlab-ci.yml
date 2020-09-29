@@ -32,7 +32,7 @@ server:
   script:
     - make csv
     - make -C server checkprerequisites
-    - cargo test
+    - cargo test --workspace --locked
 
 # On success, update project documentation on GitLab Pages.
 pages:
