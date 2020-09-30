@@ -104,7 +104,8 @@ def getmeetinfo(soup):
                     'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
                     'Воронеж': 'Voronezh', 'Казань': 'Kazan',
                     'Ростов-на-Дону': 'Rostov-on-Don', 'Тольятти': 'Togliatti',
-                    'Череповец': 'Cherepovets'}
+                    'Череповец': 'Cherepovets', 'Белгород': 'Belgorod',
+                    'Нижний Новгород': 'Nizhny Novgorod'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
@@ -426,7 +427,7 @@ def getpagedata(soup):
                                      'pl': 'Poland', 'sk': 'Slovakia',
                                      'it': 'Italy', 'se': 'Sweden',
                                      'fr': 'France', 'ch': 'Switzerland',
-                                     'sr': 'Serbia'}
+                                     'sr': 'Serbia', '-': '', 'am': 'Armenia'}
                     if text in country_codes:
                         text = country_codes[text]
 
