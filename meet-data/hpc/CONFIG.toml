@@ -1,6 +1,7 @@
 [divisions]
     mor = {name ="MO", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     for = {name ="FO", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mtr = {name ="MT", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
     mt1r = {name ="MT1", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
     mt2r = {name ="MT2", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
     mt3r = {name ="MT3", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
@@ -31,6 +32,7 @@
 
     moe = {name ="MOE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
     mje = {name ="MJE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
+    met = {name ="MET", min=13, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
     met1 = {name ="MET1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
     met2 = {name ="MET2", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply"]}
     met3 = {name ="MET3", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
@@ -71,5 +73,10 @@
     sex = "F"
 
 [exemptions]
-   1401 = ["ExemptWeightClassConsistency","ExemptDivision"] # Janky Weightclasses, Elite Division
    1303 = ["ExemptWeightClassConsistency"] # No Weightclasses for Multi-ply
+   1401 = ["ExemptWeightClassConsistency","ExemptDivision"] # Janky Weightclasses, Elite Division
+   1501 = ["ExemptWeightClassConsistency","ExemptDivision"] # Non standard weight classes, Ten year age classes
+   1601 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Non standard weight classes, Ten year age classes
+   1801 = ["ExemptDivision"] # Ten year age classes
+   1802 = ["ExemptDivision"] # Ten year age classes
+   1901 = ["ExemptDivision"] # Ten year age classes

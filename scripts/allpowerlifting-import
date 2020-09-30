@@ -78,12 +78,14 @@ def getmeetinfo(soup):
                   'Volgograd': 'VGG', 'Vladimir': 'VLA', 'Stavropol': 'STA',
                   'Kungur': 'PER', 'Kursk': 'KRS', 'Voronezh': 'VOR',
                   'Arsenyev': 'PRI', 'Vladikavkaz': 'SE', 'Saratov': 'SAR',
-                  'Vologda': 'VLG', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
+                  'Belgorod': 'BEL', 'Nakhodka': 'PRI', 'Krasnodar': 'KDA',
                   'Krymsk': 'KDA', 'Vladivostok': 'PRI', 'Novorossiysk': 'KDA',
                   'Novosibirsk': 'NVS', 'Barnaul': 'ALT', 'Rostov-on-Don': 'ROS',
                   'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
-                  'Beryozovsky': 'SVE', 'Belgorod': 'BEL'}
+                  'Beryozovsky': 'SVE', 'Togliatti': 'SAM', 'Engels': 'SAR',
+                  'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA', 'Gurievsk': 'KGD',
+                  'Tomsk': 'TOM'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -100,10 +102,13 @@ def getmeetinfo(soup):
                     'Nizhniy Novgorod': 'Nizhny Novgorod', 'Калуга': 'Kaluga',
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
                     'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
-                    'Воронеж': 'Voronezh', 'Казань': 'Kazan'}
+                    'Воронеж': 'Voronezh', 'Казань': 'Kazan',
+                    'Ростов-на-Дону': 'Rostov-on-Don', 'Тольятти': 'Togliatti',
+                    'Череповец': 'Cherepovets'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
-                       'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
+                       'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
+                       'Австрия': 'Austria'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling().find_next_sibling()
@@ -412,7 +417,13 @@ def getpagedata(soup):
                                      'by': 'Belarus', 'tj': 'Tajikistan',
                                      'ie': 'Ireland', 'lv': 'Latvia',
                                      'kg': 'Kyrgyzstan', 'md': 'Moldova',
-                                     'mn': 'Mongolia', 'us': 'USA'}
+                                     'mn': 'Mongolia', 'us': 'USA',
+                                     'at': 'Austria', 'hu': 'Hungary',
+                                     'cz': 'Czechia', 'de': 'Germany',
+                                     'pl': 'Poland', 'sk': 'Slovakia',
+                                     'it': 'Italy', 'se': 'Sweden',
+                                     'fr': 'France', 'ch': 'Switzerland',
+                                     'sr': 'Serbia'}
                     if text in country_codes:
                         text = country_codes[text]
 
@@ -727,6 +738,42 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 75-79'
                 elif row[div_idx] == 'M9':
                     row[div_idx] = 'Masters 80-84'
+                elif row[div_idx] == 'M':
+                    row[div_idx] = 'Masters'
+        elif fed in ['WUAP']:
+            for row in csv.rows:
+                if row[div_idx] == 'T':
+                    row[div_idx] = 'Teen'
+                elif row[div_idx] == 'T1':
+                    row[div_idx] = 'T 13-15'
+                elif row[div_idx] == 'T2':
+                    row[div_idx] = 'T 16-17'
+                elif row[div_idx] == 'T3':
+                    row[div_idx] = 'T 18-19'
+                elif row[div_idx] == 'J':
+                    row[div_idx] = 'Juniors'
+                elif row[div_idx] == 'O':
+                    row[div_idx] = 'Open'
+                elif row[div_idx] == 'MS':
+                    row[div_idx] = 'Submasters'
+                elif row[div_idx] == 'M1':
+                    row[div_idx] = 'M 40-44'
+                elif row[div_idx] == 'M2':
+                    row[div_idx] = 'M 45-49'
+                elif row[div_idx] == 'M3':
+                    row[div_idx] = 'M 50-54'
+                elif row[div_idx] == 'M4':
+                    row[div_idx] = 'M 55-59'
+                elif row[div_idx] == 'M5':
+                    row[div_idx] = 'M 60-64'
+                elif row[div_idx] == 'M6':
+                    row[div_idx] = 'M 65-69'
+                elif row[div_idx] == 'M7':
+                    row[div_idx] = 'M 70-74'
+                elif row[div_idx] == 'M8':
+                    row[div_idx] = 'M 75-79'
+                elif row[div_idx] == 'M9':
+                    row[div_idx] = 'M 80+'
                 elif row[div_idx] == 'M':
                     row[div_idx] = 'Masters'
 

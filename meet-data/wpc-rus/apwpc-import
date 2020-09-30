@@ -84,7 +84,8 @@ def getmeetinfo(soup):
                   'Kazan': 'TA', 'Nizhny Novgorod': 'NIZ', 'Kavalerovo': 'PRI',
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
                   'Beryozovsky': 'SVE', 'Togliatti': 'SAM', 'Engels': 'SAR',
-                  'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA'}
+                  'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA', 'Gurievsk': 'KGD',
+                  'Tomsk': 'TOM'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -102,10 +103,12 @@ def getmeetinfo(soup):
                     'пгт Кавалерово': 'Kavalerovo', 'Суздаль': 'Suzdal',
                     'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
                     'Воронеж': 'Voronezh', 'Казань': 'Kazan',
-                    'Ростов-на-Дону': 'Rostov-on-Don', 'Тольятти': 'Togliatti'}
+                    'Ростов-на-Дону': 'Rostov-on-Don', 'Тольятти': 'Togliatti',
+                    'Череповец': 'Cherepovets'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
-                       'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan'}
+                       'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
+                       'Австрия': 'Austria'}
 
     # Get the location.
     venuerow = fedrow.find_next_sibling().find_next_sibling()
@@ -412,14 +415,18 @@ def getpagedata(soup):
                 if td.find('i'):
                     text = td.i['class'][0]
                     text = text.replace('flag-icon-', '')
-
                     country_codes = {'ru': 'Russia', 'kz': 'Kazakhstan',
                                      'az': 'Azerbaijan', 'ua': 'Ukraine',
                                      'by': 'Belarus', 'tj': 'Tajikistan',
                                      'ie': 'Ireland', 'lv': 'Latvia',
                                      'kg': 'Kyrgyzstan', 'md': 'Moldova',
                                      'mn': 'Mongolia', 'us': 'USA',
-                                     'il': 'Israel', 'uz': 'Uzbekistan'}
+                                     'at': 'Austria', 'hu': 'Hungary',
+                                     'cz': 'Czechia', 'de': 'Germany',
+                                     'pl': 'Poland', 'sk': 'Slovakia',
+                                     'it': 'Italy', 'se': 'Sweden',
+                                     'fr': 'France', 'ch': 'Switzerland',
+                                     'sr': 'Serbia'}
                     if text in country_codes:
                         text = country_codes[text]
 
