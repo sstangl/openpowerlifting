@@ -1161,6 +1161,11 @@ pub enum Federation {
     #[strum(to_string = "WPC-Moldova", serialize = "wpc-moldova")]
     WPCMoldova,
 
+    /// Polish WPC affiliate.
+    #[serde(rename = "WPC-Poland")]
+    #[strum(to_string = "WPC-Poland", serialize = "wpc-poland")]
+    WPCPoland,
+
     /// Portuguese WPC affiliate.
     #[serde(rename = "WPC-Portugal")]
     #[strum(to_string = "WPC-Portugal", serialize = "wpc-portugal")]
@@ -1629,6 +1634,7 @@ impl Federation {
             Federation::WPCLatvia => false,
             Federation::WPCMoldova => false,
             Federation::WPCPortugal => false,
+            Federation::WPCPoland => false,
             Federation::WPCRUS => false,
             Federation::WPCSA => false,
             Federation::WPCUKR => false,
@@ -1939,6 +1945,7 @@ impl Federation {
             Federation::WPCLatvia => Some(Country::Latvia),
             Federation::WPCMoldova => Some(Country::Moldova),
             Federation::WPCPortugal => Some(Country::Portugal),
+            Federation::WPCPoland => Some(Country::Poland),
             Federation::WPCRUS => Some(Country::Russia),
             Federation::WPCSA => Some(Country::SouthAfrica),
             Federation::WPCUKR => Some(Country::Ukraine),
@@ -2319,6 +2326,7 @@ impl Federation {
             Federation::WPCLatvia => Some(Federation::WPC),
             Federation::WPCMoldova => Some(Federation::WPC),
             Federation::WPCPortugal => Some(Federation::WPC),
+            Federation::WPCPoland => Some(Federation::WPC),
             Federation::WPCRUS => Some(Federation::WPC),
             Federation::WPCSA => Some(Federation::WPC),
             Federation::WPCUKR => Some(Federation::WPC),
@@ -2705,6 +2713,7 @@ impl Federation {
             Federation::WPCLatvia => PointsSystem::Glossbrenner,
             Federation::WPCMoldova => PointsSystem::Glossbrenner,
             Federation::WPCPortugal => PointsSystem::Glossbrenner,
+            Federation::WPCPoland => PointsSystem::Glossbrenner,
             Federation::WPCRUS => PointsSystem::Glossbrenner,
             Federation::WPCSA => PointsSystem::Glossbrenner,
             Federation::WPCUKR => PointsSystem::Glossbrenner,
