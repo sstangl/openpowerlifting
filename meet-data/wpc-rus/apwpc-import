@@ -470,6 +470,9 @@ def fix_place(csv):
         elif row[placeidx] == 'DQ':  # Allpowerlifting marks doping disquals as DQ
             row[placeidx] = 'DD'
             row[totalidx] = ''  # Instead of a zero.
+        elif row[totalidx] in ['0.0', '0']:
+            row[totalidx] = ''
+            row[placeidx] = 'DQ'
 
 
 def fix_totals(csv):
