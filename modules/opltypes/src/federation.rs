@@ -592,6 +592,10 @@ pub enum Federation {
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
 
+    /// Swiss Powerlifting Federation, IPF affiliate, Switzerland.
+    #[strum(to_string = "KDKS", serialize = "kdks")]
+    KDKS,
+
     /// Dutch IPF affiliate (Netherlands)
     #[serde(rename = "KNKF-SP")]
     #[strum(to_string = "KNKF-SP", serialize = "KNKF-SP")]
@@ -914,7 +918,7 @@ pub enum Federation {
     #[strum(to_string = "SVNL", serialize = "svnl")]
     SVNL,
 
-    /// Swiss IPF affiliate. Previously affiliated to many untested federations.
+    /// Swiss Powerlifting. Previously IPF affiliate. Now affiliated to many untested federations.
     #[strum(to_string = "SwissPL", serialize = "swisspl")]
     SwissPL,
 
@@ -1492,6 +1496,7 @@ impl Federation {
             Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
             Federation::JPA => FULLY_TESTED,
+            Federation::KDKS => FULLY_TESTED,
             Federation::KNKFSP => FULLY_TESTED,
             Federation::KPF => FULLY_TESTED,
             Federation::KRAFT => FULLY_TESTED,
@@ -1811,6 +1816,7 @@ impl Federation {
             Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
             Federation::JPA => Some(Country::Japan),
+            Federation::KDKS => Some(Country::Switzerland),
             Federation::KNKFSP => Some(Country::Netherlands),
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::KRAFT => Some(Country::Iceland),
@@ -2156,6 +2162,7 @@ impl Federation {
             Federation::IronBoy => None,
             Federation::IRP => None,
             Federation::JPA => Some(Federation::IPF),
+            Federation::KDKS => Some(Federation::IPF),
             Federation::KNKFSP => Some(Federation::IPF),
             Federation::KPF => Some(Federation::IPF),
             Federation::KRAFT => Some(Federation::IPF),
@@ -2248,8 +2255,8 @@ impl Federation {
             Federation::SSF => Some(Federation::IPF),
             Federation::SVNL => Some(Federation::IPF),
             Federation::SwissPL => {
-                // Not sure about the exact date of the switch to IPF.
-                if date.year() >= 2018 {
+                // Not sure about the exact date of the switch to IPF; ended in 2020.
+                if date.year() >= 2018 && date.year() < 2020 {
                     Some(Federation::IPF)
                 } else {
                     None
@@ -2557,6 +2564,7 @@ impl Federation {
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
+            Federation::KDKS => PointsSystem::Dots,
             Federation::KNKFSP => Federation::ipf_rules_on(date),
             Federation::KPF => Federation::ipf_rules_on(date),
             Federation::KRAFT => {
