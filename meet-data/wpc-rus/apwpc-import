@@ -85,7 +85,7 @@ def getmeetinfo(soup):
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
                   'Beryozovsky': 'SVE', 'Togliatti': 'SAM', 'Engels': 'SAR',
                   'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA', 'Gurievsk': 'KGD',
-                  'Tomsk': 'TOM', 'Lipetsk': 'LIP'}
+                  'Tomsk': 'TOM', 'Lipetsk': 'LIP', 'Tyumen': 'TYU'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -429,7 +429,7 @@ def getpagedata(soup):
                                      'it': 'Italy', 'se': 'Sweden',
                                      'fr': 'France', 'ch': 'Switzerland',
                                      'sr': 'Serbia', '-': '', 'am': 'Armenia',
-                                     'ir': 'Iran'}
+                                     'ir': 'Iran', 'ee': 'Estonia'}
                     if text in country_codes:
                         text = country_codes[text]
 
