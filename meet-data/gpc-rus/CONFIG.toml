@@ -11,6 +11,7 @@
     fgr = {name ="F-G", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
     moe = {name ="M-O-E", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
     foe = {name ="F-O-E", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    myr = {name ="M-Y", min=5, max=12, sex="M", equipment=["Raw","Wraps"]}
     mt1r = {name ="M-T1", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
     mt1e = {name ="M-T1-E", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
     mt2r = {name ="M-T2", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
