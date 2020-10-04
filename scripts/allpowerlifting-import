@@ -411,7 +411,6 @@ def getpagedata(soup):
                 if td.find('i'):
                     text = td.i['class'][0]
                     text = text.replace('flag-icon-', '')
-
                     country_codes = {'ru': 'Russia', 'kz': 'Kazakhstan',
                                      'az': 'Azerbaijan', 'ua': 'Ukraine',
                                      'by': 'Belarus', 'tj': 'Tajikistan',
@@ -423,7 +422,11 @@ def getpagedata(soup):
                                      'pl': 'Poland', 'sk': 'Slovakia',
                                      'it': 'Italy', 'se': 'Sweden',
                                      'fr': 'France', 'ch': 'Switzerland',
-                                     'sr': 'Serbia'}
+                                     'sr': 'Serbia', 'am': 'Armenia',
+                                     'ir': 'Iran', 'ee': 'Estonia',
+                                     'gb': 'UK', 'mt': 'Malta',
+                                     'za': 'South Africa', 'au': 'Australia',
+                                     'ro': 'Romania', 'be': 'Belgium'}
                     if text in country_codes:
                         text = country_codes[text]
 
