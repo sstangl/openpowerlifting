@@ -180,7 +180,7 @@ impl WeightKg {
     }
 
     pub fn as_lbs(self) -> WeightAny {
-        let f = (self.0 as f32) * 2.2046225; // Max precision for f32.
+        let f = (self.0.abs() as f32) * 2.2046225; // Max precision for f32.
 
         // Round to the hundredth place.
         // Half-way cases are rounded away from zero.
@@ -192,7 +192,11 @@ impl WeightKg {
             rounded += 1;
         }
 
-        WeightAny(rounded)
+        if self.0.is_positive() {
+            WeightAny(rounded)
+        } else {
+            WeightAny(-rounded)
+        }
     }
 
     /// Report as the "common name" of the weight class.
@@ -429,6 +433,12 @@ mod tests {
         // 317.5 should be just under 700lbs.
         let w = "317.5".parse::<WeightKg>().unwrap();
         assert_eq!(w.as_lbs().0, 699_97);
+
+        // Failed lifts should round the same as successful lifts.
+        let w = "340.19".parse::<WeightKg>().unwrap();
+        assert_eq!(w.as_lbs().0, 750_00);
+        let w = "-340.19".parse::<WeightKg>().unwrap();
+        assert_eq!(w.as_lbs().0, -750_00);
     }
 
     #[test]
