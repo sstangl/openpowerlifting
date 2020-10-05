@@ -8,7 +8,7 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 1,Adam Stribl,MT3,1994,Hungary,58.2,95,100,105,105,,60,M,Raw,B,105
 2,Dávid László Kiss,MT3,1994,Hungary,59,-55,55,-65,55,,60,M,Raw,B,55
 1,Zsolt Molnár,MO,1982,Hungary,57.3,85,-92.5,92.5,92.5,,60,M,Raw,B,92.5
-1,Ottó Antal,MM3,1959,Hungary,58.8,67.5,72.5,75,75,,60,M,Raw,B,75
+1,Ottó Antal,MM2,1959,Hungary,58.8,67.5,72.5,75,75,,60,M,Raw,B,75
 1,Gabriel Kovacs,MT2,1995,Slovakia,67.4,130,-140,140,140,,67.5,M,Raw,B,140
 2,Martin Hajdu,MT2,1994,Hungary,65.8,-120,120,-125,120,,67.5,M,Raw,B,120
 3,Krisztian Rozsa,MT2,1996,Hungary,61.4,100,105,110,110,,67.5,M,Raw,B,110
@@ -20,7 +20,7 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 2,Istvan Pados,MJ,1991,Hungary,66,80,85,87.5,87.5,,67.5,M,Raw,B,87.5
 3,Attila Bolcskei,MJ,1990,Hungary,66.8,67.5,72.5,77.5,77.5,,67.5,M,Raw,B,77.5
 1,Ferenc Lakner,MO,1983,Hungary,66.9,-125,130,-135,130,,67.5,M,Raw,B,130
-1,Csaba Harcsa-Halasz,MM2,1963,Hungary,66.5,75,80,-82.5,80,,67.5,M,Raw,B,80
+1,Csaba Harcsa-Halasz,MM1,1963,Hungary,66.5,75,80,-82.5,80,,67.5,M,Raw,B,80
 1,Miklós Nagy Nándor,MT1,1997,Hungary,68.8,-100,100,110,110,,75,M,Raw,B,110
 2,Renato Bagi,MT1,1996,Hungary,73.9,90,102.5,105,105,,75,M,Raw,B,105
 3,Milan Polonyi,MT1,1997,Hungary,74.2,-80,80,-85,80,,75,M,Raw,B,80
@@ -43,8 +43,8 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 3,Zsolt Horváth,MO,1975,Hungary,72.4,115,120,125,125,,75,M,Raw,B,125
 5,Viktor Kiss,MO,1978,Hungary,72.2,110,115,120,120,,75,M,Raw,B,120
 1,Lazslo Kotormann,MM1,1970,Hungary,71.9,125,130,135,135,,75,M,Raw,B,135
-1,Laszlo Rubos,MM5,1948,Hungary,72.4,90,100,-110,100,,75,M,Raw,B,100
-1,József Baranyai,MM7,1940,Hungary,74.1,92.5,-95,,92.5,,75,M,Raw,B,92.5
+1,Laszlo Rubos,MM3,1948,Hungary,72.4,90,100,-110,100,,75,M,Raw,B,100
+1,József Baranyai,MM4,1940,Hungary,74.1,92.5,-95,,92.5,,75,M,Raw,B,92.5
 DQ,Daniel Golley,MT1,1998,Hungary,77.7,-70,-70,-70,,,82.5,M,Raw,B,
 1,Viktor Gergő Vakarcs,MT2,1995,Hungary,81.2,140,145,151,151,152.5,82.5,M,Raw,B,151
 2,Norbert Berta,MT2,1996,Hungary,80.3,115,-125,125,125,,82.5,M,Raw,B,125
@@ -66,8 +66,8 @@ DQ,Norbert Csalami,MO,1987,Hungary,81,-147.5,-147.5,-147.5,,,82.5,M,Raw,B,
 DQ,Menyhért Horák,MO,1974,Hungary,76.9,-135,-140,-140,,,82.5,M,Raw,B,
 1,Nguyen Tam,MM1,1970,Hungary,81.8,140,150,-160,150,,82.5,M,Raw,B,150
 2,Attila Nyikos-Kiss,MM1,1970,Hungary,81.8,110,117.5,-122.5,117.5,,82.5,M,Raw,B,117.5
-1,István Gyuricska Jr,MM2,1967,Hungary,82.5,180,190,192.5,192.5,,82.5,M,Raw,B,192.5
-1,Miklós Kardos,MM5,1951,Hungary,82.5,80,85,-87.5,85,,82.5,M,Raw,B,85
+1,István Gyuricska Jr,MM1,1967,Hungary,82.5,180,190,192.5,192.5,,82.5,M,Raw,B,192.5
+1,Miklós Kardos,MM3,1951,Hungary,82.5,80,85,-87.5,85,,82.5,M,Raw,B,85
 1,Tamas Rajna,MT2,1995,Hungary,89.7,-95,95,-100,95,,90,M,Raw,B,95
 1,Zsolt Mák,MT3,1992,Hungary,88.2,180,185,-190,185,,90,M,Raw,B,185
 2,Alex Bak,MT3,1994,Hungary,87.5,170,177.5,-180,177.5,,90,M,Raw,B,177.5
@@ -88,12 +88,12 @@ DQ,David Galambos,MJ,1989,Hungary,85.7,-150,-150,-150,,,90,M,Raw,B,
 5,Gabor Soos,MO,1987,Hungary,85.2,140,-145,-145,140,,90,M,Raw,B,140
 6,Patrik Stanko,MO,1986,Hungary,85.3,130,-135,140,140,,90,M,Raw,B,140
 7,Daniel Vegh,MO,1984,Hungary,90,110,-120,-122.5,110,,90,M,Raw,B,110
-1,Flórián Dolán,MM3,1962,Slovakia,86.3,105,112.5,120,120,,90,M,Raw,B,120
-1,Ferenc Smuk,MM5,1952,Hungary,88.2,90,,92.5,92.5,,90,M,Raw,B,92.5
+1,Flórián Dolán,MM2,1962,Slovakia,86.3,105,112.5,120,120,,90,M,Raw,B,120
+1,Ferenc Smuk,MM3,1952,Hungary,88.2,90,,92.5,92.5,,90,M,Raw,B,92.5
 1,Péter Takács,MT2,1995,Hungary,92.1,100,110,-120,110,,100,M,Raw,B,110
 2,Szabolcs Berkes,MT2,1996,Hungary,95.7,72.5,-80,,72.5,,100,M,Raw,B,72.5
 1,Dávid Mészáros,MT3,1993,Hungary,98.6,180,187.5,195,195,,100,M,Raw,B,195
-2,Laszlo Kovacs,MT3,1994,Hungary,90.8,145,150,155,155,,100,M,Raw,B,155
+2,László Kovács,MT3,1994,Hungary,90.8,145,150,155,155,,100,M,Raw,B,155
 3,János Rajmund Nagy,MT3,1993,Hungary,93.6,130,140,150,150,,100,M,Raw,B,150
 4,Andras Marko,MT3,1993,Hungary,93.7,120,-140,140,140,,100,M,Raw,B,140
 5,Attila Bányai,MT3,1993,Hungary,95.4,130,140,-147.5,140,,100,M,Raw,B,140
@@ -126,10 +126,10 @@ DQ,József Kovács,MO,1976,Hungary,91,-190,-190,-190,,,100,M,Raw,B,
 DQ,Zsolt Kovács,MO,1976,Hungary,90.9,-160,-170,-170,,,100,M,Raw,B,
 1,Imrich Klacso,MM1,1970,Hungary,98.4,170,175,-177.5,175,,100,M,Raw,B,175
 2,Sándor Bíró,MM1,1972,Hungary,97.1,160,165,-170,165,,100,M,Raw,B,165
-1,István Hegedüs,MM2,1967,Hungary,98.9,180,190,200,200,,100,M,Raw,B,200
-2,Zsolt Mohácsi,MM2,1966,Hungary,99.3,160,167.5,-172.5,167.5,,100,M,Raw,B,167.5
-3,Gabor Cseh,MM2,1967,Hungary,98.6,115,-120,-122.5,115,,100,M,Raw,B,115
-1,János Hagymási,MM7,1941,Hungary,92.2,60,-65,-65,60,,100,M,Raw,B,60
+1,István Hegedüs,MM1,1967,Hungary,98.9,180,190,200,200,,100,M,Raw,B,200
+2,Zsolt Mohácsi,MM1,1966,Hungary,99.3,160,167.5,-172.5,167.5,,100,M,Raw,B,167.5
+3,Gabor Cseh,MM1,1967,Hungary,98.6,115,-120,-122.5,115,,100,M,Raw,B,115
+1,János Hagymási,MM4,1941,Hungary,92.2,60,-65,-65,60,,100,M,Raw,B,60
 1,Balázs Fehér,MT2,1995,Hungary,102.9,-155,165,170,170,,110,M,Raw,B,170
 2,Istvan Anyos,MT2,1995,Hungary,104.7,150,160,-170,160,,110,M,Raw,B,160
 3,Bence Veres,MT2,1995,Hungary,108.7,80,85,-90,85,,110,M,Raw,B,85
@@ -144,11 +144,11 @@ DQ,Lorant Kovacs,MJ,1989,Hungary,108.4,-170,-172.5,-172.5,,,110,M,Raw,B,
 5,Erik Csókás,MO,1979,Hungary,107.2,-110,-120,120,120,,110,M,Raw,B,120
 1,Attila Kertesz-Farkas,MM1,1971,Hungary,107.7,190,200,,200,,110,M,Raw,B,200
 2,Endre Jánkó,MM1,1971,Hungary,108.9,180,190,-202.5,190,,110,M,Raw,B,190
-1,László Bugyi,MM2,1964,Hungary,100.4,150,160,-162.5,160,,110,M,Raw,B,160
-1,János Csatári,MM4,1956,Hungary,102.6,140,150,-160,150,,110,M,Raw,B,150
-2,Dome Ondrej,MM4,1956,Hungary,105.3,-145,145,-150,145,,110,M,Raw,B,145
-1,Mihaly Hajdu,MM5,1950,Hungary,107.6,162.5,172.5,-180,172.5,,110,M,Raw,B,172.5
-1,László Kasza,MM7,1941,Hungary,101.5,150,155,,155,,110,M,Raw,B,155
+1,László Bugyi,MM1,1964,Hungary,100.4,150,160,-162.5,160,,110,M,Raw,B,160
+1,János Csatári,MM2,1956,Hungary,102.6,140,150,-160,150,,110,M,Raw,B,150
+2,Dome Ondrej,MM2,1956,Hungary,105.3,-145,145,-150,145,,110,M,Raw,B,145
+1,Mihaly Hajdu,MM3,1950,Hungary,107.6,162.5,172.5,-180,172.5,,110,M,Raw,B,172.5
+1,László Kasza,MM4,1941,Hungary,101.5,150,155,,155,,110,M,Raw,B,155
 1,Norbert Kenderes,MJ,1991,Hungary,118.3,215,230,237.5,237.5,,125,M,Raw,B,237.5
 2,Gyorgy Kurucsai,MJ,1989,Hungary,113.3,-185,192.5,195,195,,125,M,Raw,B,195
 3,Laszlo Tamas,MJ,1991,Hungary,114.1,180,185,-195,185,,125,M,Raw,B,185
@@ -163,16 +163,16 @@ DQ,Gábor Rauschenberger,MO,1976,Hungary,117.5,-215,,,,,125,M,Raw,B,
 1,Geza Toth,MM1,1972,Hungary,113.7,195,205,-210,205,,125,M,Raw,B,205
 2,Erik Susztay,MM1,1972,Hungary,123.3,205,-210,-210,205,,125,M,Raw,B,205
 3,Tamás Szabó,MM1,1971,Hungary,115.7,180,-190,-190,180,,125,M,Raw,B,180
-1,Istvan Bogardi,MM6,1947,Hungary,114,135,142.5,150,150,,125,M,Raw,B,150
+1,Istvan Bogardi,MM3,1947,Hungary,114,135,142.5,150,150,,125,M,Raw,B,150
 1,László Mészáros,MO,1968,Hungary,130.3,280,290,,290,,140,M,Raw,B,290
 2,Zsolt Viktór Szabó,MO,1976,Hungary,134.6,190,200,-205,200,,140,M,Raw,B,200
-1,Sándor Béres,MM2,1967,Hungary,131,245,250,255,255,-260,140,M,Raw,B,255
-2,Ján Orosz,MM2,1964,Hungary,127.6,220,230,-240,230,,140,M,Raw,B,230
-DQ,Csongor Kocsis,MM2,1964,Hungary,132.2,,,,,,140,M,Raw,B,
-1,Jozef Péter,MM5,1950,Hungary,132.2,170,-180,-180,170,,140,M,Raw,B,170
+1,Sándor Béres,MM1,1967,Hungary,131,245,250,255,255,-260,140,M,Raw,B,255
+2,Ján Orosz,MM1,1964,Hungary,127.6,220,230,-240,230,,140,M,Raw,B,230
+DQ,Csongor Kocsis,MM1,1964,Hungary,132.2,,,,,,140,M,Raw,B,
+1,Jozef Péter,MM3,1950,Hungary,132.2,170,-180,-180,170,,140,M,Raw,B,170
 1,Laszlo Szelei,MT1,1997,Hungary,132.9,70,75,80,80,,140,M,Raw,B,80
 DQ,Mihaly Kormany,MO,1979,Hungary,149.9,-180,-180,-180,,,140+,M,Raw,B,
-1,István Bodnár,MM2,1965,Hungary,161.5,200,210,220,220,,140+,M,Raw,B,220
+1,István Bodnár,MM1,1965,Hungary,161.5,200,210,220,220,,140+,M,Raw,B,220
 1,Katalin Mezei,FO,1979,Hungary,45.8,50,52.5,-55,52.5,,48,F,Raw,B,52.5
 1,Beatrix Bíró,FT1,1997,Hungary,51.1,-60,62.5,65,65,,52,F,Raw,B,65
 1,Andrea Kovács,FO,1979,Hungary,50.4,50,52.5,-55,52.5,,52,F,Raw,B,52.5
@@ -188,11 +188,11 @@ DQ,Mihaly Kormany,MO,1979,Hungary,149.9,-180,-180,-180,,,140+,M,Raw,B,
 2,Eniko Furdos,FO,1988,Hungary,59.8,57.5,62.5,-68,62.5,,60,F,Raw,B,62.5
 3,Gaborne Kakas,FO,1979,Hungary,59.6,52.5,57.5,-60,57.5,,60,F,Raw,B,57.5
 4,Judit Neviczky,FO,1976,Hungary,56.4,50,55,-57.5,55,,60,F,Raw,B,55
-1,Flóra Kosztin,FM4,1955,Hungary,59.8,75,-80,80,80,,60,F,Raw,B,80
+1,Flóra Kosztin,FM2,1955,Hungary,59.8,75,-80,80,80,,60,F,Raw,B,80
 1,Anita Thier,FJ,1990,Hungary,66,65,67.5,-70,67.5,,67.5,F,Raw,B,67.5
 1,Rita Nagy,FO,1974,Hungary,67.5,100,107.5,112.5,112.5,,67.5,F,Raw,B,112.5
 2,Krisztina Lója,FO,1979,Hungary,61.4,60,65,-67.5,65,,67.5,F,Raw,B,65
-1,Zsuszana Németh,FM4,1955,Hungary,67,65,70,-72.5,70,,67.5,F,Raw,B,70
+1,Zsuszana Németh,FM2,1955,Hungary,67,65,70,-72.5,70,,67.5,F,Raw,B,70
 1,Alexandra Palko,FJ,1990,Hungary,71.9,55,-62.5,65,65,,75,F,Raw,B,65
 2,Edina Magyar,FJ,1990,Hungary,70.5,-60,60,-62.5,60,,75,F,Raw,B,60
 1,Aniko Vaszil,FO,1985,Hungary,70.9,65,70,-77.5,70,,75,F,Raw,B,70
@@ -200,6 +200,6 @@ DQ,Mihaly Kormany,MO,1979,Hungary,149.9,-180,-180,-180,,,140+,M,Raw,B,
 1,Piroska Horvathné Balogh,FM1,1971,Hungary,69.4,112.5,120,127.5,127.5,,75,F,Raw,B,127.5
 1,Tünde Olajos,FJ,1989,Hungary,79.6,75,80,-82.5,80,,82.5,F,Raw,B,80
 1,Ivett Kovács,FO,1986,Hungary,78.7,45,-50,-50,45,,82.5,F,Raw,B,45
-1,Katalin Rohrmann,FM4,1953,Hungary,76.4,80,85,-87.5,85,,82.5,F,Raw,B,85
+1,Katalin Rohrmann,FM2,1953,Hungary,76.4,80,85,-87.5,85,,82.5,F,Raw,B,85
 1,Edina Ulveczki,FO,1981,Hungary,101,130,132.5,135,135,,90+,F,Raw,B,135
 2,Melinda Lombosi,FO,1978,Hungary,113.2,107.5,117.5,-120,117.5,,90+,F,Raw,B,117.5
