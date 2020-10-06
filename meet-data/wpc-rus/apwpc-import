@@ -85,7 +85,8 @@ def getmeetinfo(soup):
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
                   'Beryozovsky': 'SVE', 'Togliatti': 'SAM', 'Engels': 'SAR',
                   'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA', 'Gurievsk': 'KGD',
-                  'Tomsk': 'TOM', 'Lipetsk': 'LIP', 'Tyumen': 'TYU', 'Gulkevichi': 'KDA'}
+                  'Tomsk': 'TOM', 'Lipetsk': 'LIP', 'Tyumen': 'TYU', 'Gulkevichi': 'KDA',
+                  'Penza': 'PNZ', 'Zabaykalsk': 'ZAB', 'Tambov': 'TAM'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -705,7 +706,10 @@ def parse_sheetname(csv):
                 row[eqp_idx] = 'Single-ply'
                 row[sn_idx] = row[sn_idx].replace('1ply', '').replace('sp', '')
             elif '(raw)' in split_name or 'raw' in split_name:
-                row[eqp_idx] = 'Raw'
+                if 'S' in row[event_idx]:
+                    row[eqp_idx] = 'Wraps'
+                else:
+                    row[eqp_idx] = 'Raw'
                 row[sn_idx] = row[sn_idx].replace(
                     '(raw)', '').replace('raw', '')
             else:
