@@ -73,7 +73,7 @@ pub fn check_bodyweight_one(
 
         // Chosen to only produce a few warnings.
         // The intention is that this be tightened-up over time.
-        const BODYWEIGHT_PERCENTAGE_CHANGE_PER_DAY_THRESHOLD: f32 = 100.0;
+        const BODYWEIGHT_PERCENTAGE_CHANGE_PER_DAY_THRESHOLD: f32 = 70.0;
 
         if average_per_day.abs() > BODYWEIGHT_PERCENTAGE_CHANGE_PER_DAY_THRESHOLD {
             let days = this_date - prev_date;
