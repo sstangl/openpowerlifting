@@ -1,42 +1,65 @@
-Tested,Equipment,Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,WeightClassKg,Sex,CyrillicName,Event,TotalKg
-No,Raw,1,Olga Dolgova,Pro Open,1985,Russia,46.7,37.5,40,42.5,42.5,48,F,Ольга Долгова,B,42.5
-No,Raw,1,Olga Khisamova,Pro Masters 40-44,1972,Russia,55.4,40,50,55,55,56,F,Ольга Хисамова,B,55
-No,Raw,1,Lyudmila Smirnova,Pro Teen 16-17,1998,Russia,59.1,42.5,-45,45,45,60,F,Людмила Смирнова,B,45
-No,Raw,2,Viktoriya Smotraeva,Pro Teen 16-17,2000,Russia,57.7,35,37.5,-40,37.5,60,F,Виктория Смотраева,B,37.5
-No,Raw,1,Polina Kuzmina,Pro Open,1976,Russia,72.5,65,-70,-70,65,75,F,Полина Кузьмина,B,65
-No,Raw,2,Alina Misfakhutdinova,Pro Open,1991,Russia,68.9,45,50,52.5,52.5,75,F,Алина Мисфахутдинова,B,52.5
-No,Raw,1,Ayrat Mukhametgaliev,Pro Open,1981,Russia,52,50,57.5,60,60,52,M,Айрат Мухаметгалиев,B,60
-No,Raw,1,Vladimir Karpov,Pro Teen 13-15,2000,Russia,59.2,60,67.5,70,70,60,M,Владимир Карпов,B,70
-No,Raw,1,Igor Loginov,Pro Teen 18-19,1998,Russia,64.9,95,100,102.5,102.5,67.5,M,Игорь Логинов,B,102.5
-No,Raw,2,Igor Benivalenskiy,Pro Teen 18-19,1996,Russia,65.5,-90,90,95,95,67.5,M,Игорь Бениваленский,B,95
-No,Raw,1,Dmitriy Skokov,Pro Open,1989,Russia,66.7,102.5,115,-117.5,115,67.5,M,Дмитрий Скоков,B,115
-No,Raw,1,Artem Rukavishnikov,Pro Teen 16-17,1999,Russia,72.6,115,120,-125,120,75,M,Артем Рукавишников,B,120
-No,Raw,2,Timur Galimullin,Pro Teen 16-17,1998,Russia,70.8,-100,105,-110,105,75,M,Тимур Галимуллин,B,105
-No,Raw,3,Arif Mekhtiev,Pro Teen 16-17,1998,Russia,75,95,100,-105,100,75,M,Ариф Мехтиев,B,100
-No,Raw,4,Adel Adelbaev,Pro Teen 16-17,1998,Russia,73.6,70,75,-80,75,75,M,Адель Адельбаев,B,75
-No,Raw,1,Vladislav Atlashkin,Pro Open,1985,Russia,74.5,142.5,150,-152.5,150,75,M,Владислав Атлашкин,B,150
-No,Raw,1,Rodion Zubov,Pro Open,1991,Russia,73.2,122.5,127.5,-132.5,127.5,75,M,Родион Зубов,B,127.5
-No,Raw,2,Rishat Yusupov,Pro Open,1991,Russia,59,80,85,-87.5,85,60,M,Ришат Юсупов,B,85
-No,Raw,1,Timur Galiev,Pro Teen 16-17,1998,Russia,77.5,65,70,75,75,82.5,M,Тимур Галиев,B,75
-No,Raw,1,Shatlyk Khemraev,Pro Juniors 20-23,1994,Russia,79.6,115,-120,-120,115,82.5,M,Шатлык Хемраев,B,115
-No,Raw,2,Yuriy Bikteev,Pro Juniors 20-23,1995,Russia,81.5,75,85,-102.5,85,82.5,M,Юрий Биктеев,B,85
-No,Raw,1,Konstantin Eryutov,Pro Open,1985,Russia,80.5,150,155,157.5,157.5,82.5,M,Константин Ерютов,B,157.5
-No,Raw,2,Konstantin Kirisov,Pro Open,1991,Russia,81.9,130,140,145,145,82.5,M,Константин Кирисов,B,145
-No,Raw,3,Ayrat Akberov,Pro Open,1980,Russia,76.3,125,130,132.5,132.5,82.5,M,Айрат Акберов,B,132.5
-No,Raw,4,Andrey Osipov,Pro Open,1985,Russia,81.3,115,-120,-120,115,82.5,M,Андрей Осипов,B,115
-No,Raw,DQ,Ilnaz Fakhraziev,Pro Open,1987,Russia,79.5,-115,-120,-127.5,,82.5,M,Ильназ Фахразиев,B,
-No,Raw,1,Rustem Nigmatullin,Pro Masters 40-44,1975,Russia,80.4,100,-115,,100,82.5,M,Рустем Нигматуллин,B,100
-No,Raw,1,Vladimir Firsov,Pro Masters 55-59,1958,Russia,81.9,115,-122.5,125,125,82.5,M,Владимир Фирсов,B,125
-No,Raw,1,Radik Khabibullin,Pro Juniors 20-23,1993,Russia,88.4,-170,170,-172.5,170,90,M,Радик Хабибуллин,B,170
-No,Raw,2,Kamil Galiev,Pro Juniors 20-23,1994,Kazakhstan,84.5,140,150,-155,150,90,M,,B,150
-No,Raw,1,Dmitriy Prozorov,Pro Open,1985,Russia,87.4,182.5,190,-200,190,90,M,Дмитрий Прозоров,B,190
-No,Raw,1,Vladimir Nikiforov,Pro Masters 40-44,1975,Russia,88.5,160,167.5,-175,167.5,90,M,Владимир Никифоров,B,167.5
-No,Raw,1,Rustem Sagdiev,Pro Open,1971,Russia,99.8,215,222.5,225,225,100,M,Рустем Сагдиев,B,225
-No,Raw,2,Yakov Kiperman,Pro Open,1985,Russia,99.9,170,177.5,185,185,100,M,Яков Киперман,B,185
-No,Raw,3,Aleksandr Lamzin,Pro Open,1990,Russia,97.8,175,180,-182.5,180,100,M,Александр Ламзин,B,180
-No,Raw,1,Pavel Zinkevich,Pro Masters 50-54,1964,Russia,99,150,155,-157.5,155,100,M,Павел Зинкевич,B,155
-No,Raw,1,Artem Loginov,Pro Juniors 20-23,1994,Russia,101.3,120,130,-135,130,110,M,Артем Логинов,B,130
-No,Raw,1,Evgeniy Aleksandrov,Pro Open,1974,Russia,105.4,180,190,-200,190,110,M,Евгений Александров,B,190
-No,Raw,1,Evgeniy Aleksandrov,Pro Masters 40-44,1974,Russia,105.4,180,190,-200,190,110,M,Евгений Александров,B,190
-No,Raw,1,Bakhtiyar Ismagilov,Pro Teen 13-15,2000,Russia,111.2,65,75,80,80,125,M,Бахтияр Исмагилов,B,80
-No,Single-ply,1,Oleg Pivovarov,Pro Masters 50-54,1963,Russia,110.8,207.5,215,,215,125,M,Олег Пивоваров,B,215
+Place,Name,CyrillicName,BirthDate,BodyweightKg,WeightClassKg,Sex,Division,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment
+1,Ekaterina Machtakova,Екатерина Мачтакова,1994-01-27,55,56,F,Pro Juniors 20-23,-60,-70,70,70,35,-40,-40,35,60,-80,-80,60,165,SBD,Wraps
+1,Irina Pantyukhina,Ирина Пантюхина,1992-01-24,54.6,56,F,Pro Open,-82.5,-85,85,85,40,-45,-45,40,80,85,-87.5,85,210,SBD,Wraps
+1,Anna Kulagina,Анна Кулагина,1988-04-30,66.3,67.5,F,Pro Open,85,90,95,95,42.5,47.5,-50,47.5,-95,95,100,100,242.5,SBD,Wraps
+1,Emil Yakubov,Эмиль Якубов,2001-03-02,74.2,75,M,Pro Teen,-120,-120,120,120,90,-100,100,100,140,150,160,160,380,SBD,Wraps
+DQ,Dmitriy Lonshakov,Дмитрий Лоншаков,1998-09-20,74.9,75,M,Pro Teen,-155,-155,-155,,-90,,,,-130,,,,,SBD,Wraps
+1,Dmitriy Yarmukhametov,Дмитрий Ярмухаметов,1979-06-15,74.2,75,M,Pro Open,165,-170,,165,102.5,110,,110,190,210,-220,210,485,SBD,Wraps
+1,Ildar Akhmadishin,Ильдар Ахмадишин,1992-03-06,82.2,82.5,M,Pro Juniors 20-23,210,-220,-220,210,135,-140,-140,135,230,240,250,250,595,SBD,Wraps
+2,Linur Khayrullin,Линур Хайруллин,1993-06-04,80.2,82.5,M,Pro Juniors 20-23,-140,150,160,160,90,-100,105,105,140,160,170,170,435,SBD,Wraps
+1,Andrey Osipov,Андрей Осипов,1985-06-18,81.3,82.5,M,Pro Open,80,100,110,110,115,-122.5,-122.5,115,130,-140,-140,130,355,SBD,Wraps
+1,Rustem Nigmatullin,Рустем Нигматуллин,1975-03-10,80.4,82.5,M,Pro Masters,-90,100,-110,100,100,-115,,100,-120,120,150,150,350,SBD,Wraps
+1,Danil Panov,Данил Панов,1995-10-22,87.4,90,M,Pro Juniors 20-23,-160,160,170,170,100,110,-120,110,200,210,220,220,500,SBD,Wraps
+1,Timur Shafikov,Тимур Шафиков,1987-08-04,89.3,90,M,Pro Open,195,-200,200,200,150,157.5,160,160,-220,222.5,-230,222.5,582.5,SBD,Wraps
+1,Ruslan Gaysin,Руслан Гайсин,1998-12-13,97.1,100,M,Pro Teen,180,195,205,205,105,115,125,125,180,-195,200,200,530,SBD,Wraps
+1,Ayzat Akhatov,Айзат Ахатов,1991-09-06,95.9,100,M,Pro Open,190,195,-202.5,195,135,145,-155,145,220,230,-240,230,570,SBD,Wraps
+1,Ilfat Gataullin,Ильфат Гатауллин,1988-05-27,109.2,110,M,Pro Open,210,217.5,-225,217.5,-145,150,-155,150,220,235,250,250,617.5,SBD,Wraps
+1,Aleksey Kovalevskiy,Алексей Ковалевский,1994-03-22,146,140+,M,Pro Juniors 20-23,-240,-240,240,240,-135,-135,135,135,220,240,-250,240,615,SBD,Wraps
+1,Artur Tuzhilov,Артур Тужилов,1988-01-05,154.7,140+,M,Pro Open,170,185,-200,185,140,150,160,160,200,215,-225,215,560,SBD,Wraps
+1,Dmitriy Nikitin,Дмитрий Никитин,1988-09-05,77.2,82.5,M,Pro Open,120,125,135,135,-115,115,125,125,140,150,155,155,415,SBD,Single-ply
+1,Olga Dolgova,Ольга Долгова,1985-09-29,46.7,48,F,Pro Open,,,,,37.5,40,42.5,42.5,,,,,42.5,B,Raw
+1,Olga Khisamova,Ольга Хисамова,1972-03-08,55.4,56,F,Pro Masters,,,,,40,50,55,55,,,,,55,B,Raw
+1,Lyudmila Smirnova,Людмила Смирнова,1998-02-02,59.1,60,F,Pro Teen,,,,,42.5,-45,45,45,,,,,45,B,Raw
+2,Viktoriya Smotraeva,Виктория Смотраева,2000-01-09,57.7,60,F,Pro Teen,,,,,35,37.5,-40,37.5,,,,,37.5,B,Raw
+1,Polina Kuzmina,Полина Кузьмина,1976-11-04,72.5,75,F,Pro Open,,,,,65,-70,-70,65,,,,,65,B,Raw
+2,Alina Misfakhutdinova,Алина Мисфахутдинова,1991-12-24,68.9,75,F,Pro Open,,,,,45,50,52.5,52.5,,,,,52.5,B,Raw
+1,Ayrat Mukhametgaliev,Айрат Мухаметгалиев,1981-04-23,52,52,M,Pro Open,,,,,50,57.5,60,60,,,,,60,B,Raw
+1,Vladimir Karpov,Владимир Карпов,2000-08-21,59.2,60,M,Pro Teen,,,,,60,67.5,70,70,,,,,70,B,Raw
+1,Rishat Yusupov,Ришат Юсупов,1989-12-01,59,60,M,Pro Open,,,,,80,85,-87.5,85,,,,,85,B,Raw
+1,Igor Loginov,Игорь Логинов,1998-07-17,64.9,67.5,M,Pro Teen,,,,,95,100,102.5,102.5,,,,,102.5,B,Raw
+2,Artemiy Benivalenskiy,Артемий Бениваленский,1996-06-03,65.5,67.5,M,Pro Teen,,,,,-90,90,95,95,,,,,95,B,Raw
+1,Dmitriy Skokov,Дмитрий Скоков,1986-03-04,66.7,67.5,M,Pro Open,,,,,102.5,115,-117.5,115,,,,,115,B,Raw
+1,Artyom Rukavishnikov,Артём Рукавишников,1999-12-11,72.6,75,M,Pro Teen,,,,,115,120,-125,120,,,,,120,B,Raw
+2,Timur Galimullin,Тимур Галимуллин,1998-07-27,70.8,75,M,Pro Teen,,,,,-100,105,-110,105,,,,,105,B,Raw
+3,Arif Mekhtiev,Ариф Мехтиев,1998-11-22,75,75,M,Pro Teen,,,,,95,100,-105,100,,,,,100,B,Raw
+4,Adel Adelbaev,Адель Адельбаев,1998-07-26,73.6,75,M,Pro Teen,,,,,70,75,-80,75,,,,,75,B,Raw
+1,Vladislav Atlashkin,Владислав Атлашкин,1985-06-17,74.5,75,M,Pro Open,,,,,142.5,150,-152.5,150,,,,,150,B,Raw
+2,Rodion Zubov,Родион Зубов,1991-07-28,73.2,75,M,Pro Open,,,,,122.5,127.5,-132.5,127.5,,,,,127.5,B,Raw
+1,Timur Galiev,Тимур Галиев,1998-07-14,77.5,82.5,M,Pro Teen,,,,,65,70,75,75,,,,,75,B,Raw
+1,Shatlyk Khemraev,Шатлык Хемраев,1994-05-09,79.6,82.5,M,Pro Juniors 20-23,,,,,115,-120,-120,115,,,,,115,B,Raw
+2,Yuriy Bikteev,Юрий Биктеев,1995-09-20,81.5,82.5,M,Pro Juniors 20-23,,,,,75,85,-102.5,85,,,,,85,B,Raw
+1,Konstantin Eryutov,Константин Ерютов,1985-12-21,80.5,82.5,M,Pro Open,,,,,150,155,157.5,157.5,,,,,157.5,B,Raw
+2,Konstantin Kirisov,Константин Кирисов,1991-01-14,81.9,82.5,M,Pro Open,,,,,130,140,145,145,,,,,145,B,Raw
+3,Ayrat Akberov,Айрат Акберов,1980-03-18,76.3,82.5,M,Pro Open,,,,,125,130,132.5,132.5,,,,,132.5,B,Raw
+4,Andrey Osispov,Андрей Осиспов,1985-06-18,81.3,82.5,M,Pro Open,,,,,115,-120,-120,115,,,,,115,B,Raw
+DQ,Ilnaz Fakhraziev,Ильназ Фахразиев,1987-01-02,79.5,82.5,M,Pro Open,,,,,-115,-120,-127.5,,,,,,,B,Raw
+1,Vladimir Firsov,Владимир Фирсов,1958-04-29,81.9,82.5,M,Pro Masters,,,,,115,-122.5,125,125,,,,,125,B,Raw
+2,Rustem Nigmatullin,Рустем Нигматуллин,1975-03-10,80.4,82.5,M,Pro Masters,,,,,100,-115,,100,,,,,100,B,Raw
+1,Radik Khabibullin,Радик Хабибуллин,1993-08-10,88.4,90,M,Pro Juniors 20-23,,,,,-170,170,-172.5,170,,,,,170,B,Raw
+2,Kamil Galiev,Камиль Галиев,1994-06-01,84.5,90,M,Pro Juniors 20-23,,,,,140,150,-155,150,,,,,150,B,Raw
+1,Dmitriy Prozorov,Дмитрий Прозоров,1985-03-12,87.4,90,M,Pro Open,,,,,182.5,190,-200,190,,,,,190,B,Raw
+1,Vladimir Nikiforov,Владимир Никифоров,1975-08-16,88.5,90,M,Pro Masters,,,,,160,167.5,-175,167.5,,,,,167.5,B,Raw
+1,Rustem Sagdiev,Рустем Сагдиев,1971-10-21,99.8,100,M,Pro Open,,,,,215,222.5,225,225,,,,,225,B,Raw
+2,Yakov Kiperman,Яков Киперман,1985-09-22,99.9,100,M,Pro Open,,,,,-170,177.5,185,185,,,,,185,B,Raw
+3,Aleksandr Lamzin,Александр Ламзин,1990-07-18,97.8,100,M,Pro Open,,,,,175,180,-182.5,180,,,,,180,B,Raw
+1,Pavel Zinkevich,Павел Зинкевич,1964-03-26,99,100,M,Pro Masters,,,,,150,155,-157.5,155,,,,,155,B,Raw
+1,Artyom Loginov,Артём Логинов,1994-05-07,101.3,110,M,Pro Juniors 20-23,,,,,120,130,-135,130,,,,,130,B,Raw
+1,Evgeniy Aleksandrov,Евгений Александров,1974-12-28,105.4,110,M,Pro Open,,,,,180,190,-200,190,,,,,190,B,Raw
+1,Evgeniy Aleksandrov,Евгений Александров,1974-12-28,105.4,110,M,Pro Masters,,,,,180,190,-200,190,,,,,190,B,Raw
+1,Bakhtiyar Ismagilov,Бахтияр Исмагилов,2000-09-16,111.2,125,M,Pro Teen,,,,,65,75,80,80,,,,,80,B,Raw
+1,Oleg Pivovarov,Олег Пивоваров,1963-03-18,110.8,125,M,Pro Masters,,,,,207,215,,215,,,,,215,B,Single-ply
+1,Rustem Nigmatullin,Рустем Нигматуллин,1975-03-10,80.4,82.5,M,Pro Masters,,,,,,,,,120,155,-170,155,155,D,Raw
+1,Ruslan Bagautdinov,Руслан Багаутдинов,1979-08-13,95.2,100,M,Pro Open,,,,,,,,,180,195,-200,195,195,D,Raw
+1,Artyom Loginov,Артём Логинов,1994-05-07,101.3,110,M,Pro Juniors 20-23,,,,,,,,,205,215,-230,215,215,D,Raw
+1,Nadezhda Stadnik,Надежда Стадник,1989-04-22,59.6,60,F,Pro Open,,,,,,,,,130,140,-150,140,140,D,Single-ply
+1,Dmitriy Nikitin,Дмитрий Никитин,1988-09-05,77.2,82.5,M,Pro Open,,,,,,,,,140,150,155,155,155,D,Single-ply
