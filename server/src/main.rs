@@ -577,6 +577,7 @@ Disallow: /api/
 Disallow: /dev/
 Disallow: /u/pyrriasangster
 Disallow: /u/petervoong
+Disallow: /u/savannabarajas
 
 # Disallow bots from marketing and SEO companies.
 User-agent: AhrefsBot
