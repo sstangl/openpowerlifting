@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Often it happens that wrpf-standardize-csv fails, and
+# Often it happens that wpc-rus-standardize-csv fails, and
 # the scripts must be updated to handle the new csv format.
 #
 # This file contains the commands that would be executed at the end
@@ -26,6 +26,7 @@ sed -i -e 's/,0\.0,/,,/g' entries.csv
 sed -i -e 's/,0\.0,/,,/g' entries.csv
 
 cp ${SCRIPTDIR}/../meet.template meet.csv
+echo "WPC-RUS,,Russia,,," >> meet.csv
 
 # Show any warnings.
 ${REPOTESTSDIR}/check
