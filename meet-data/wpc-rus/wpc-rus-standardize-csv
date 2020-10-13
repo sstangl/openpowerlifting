@@ -55,7 +55,7 @@ def parse_sheetname(s):
     # Parse word-by-word to make sure that every word is understood.
     s = s.lower()
 
-    s = s.replace(' б_э ', ' без эк ')
+    s = s.replace(' б_э', ' без эк')
 
     if 'без эк' in s:  # Need to do 'without equipment' seperately
         equipment = 'Raw'
@@ -155,6 +155,7 @@ def parse_sheetname(s):
             assert amateur == 'Pro'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
             tested = 'Yes'
+            amateur = 'Amateur'
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -296,7 +297,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
-        elif any(x in text for x in ['возра', 'возро', 'категорія', 'дивизион']):
+        elif any(x in text for x in ['возра', 'возро', 'категорія', 'дивизион',
+                                     'возр груп']):
             fieldnames.append('Division-Age')
         # Catch all for birthyear if this isn't a division-age column
         elif 'дата' in text or 'год рождения' in text:
@@ -530,8 +532,6 @@ def parse_sheet(sheet):
     while 'IGNORE' in csv.fieldnames:
         csv.remove_column_by_name('IGNORE')
 
-    unreverse_names(csv)
-
     return csv
 
 
@@ -588,6 +588,7 @@ def standardize_division_age(csv):
     idx = csv.index('Division-Age')
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
+    amateuridx = csv.index('Amateur')
     bdidx = csv.index('BirthDate')
 
     for row in csv.rows:
@@ -654,7 +655,7 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-        division = division
+        division = row[amateuridx] + ' ' + division
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
@@ -665,6 +666,15 @@ def standardize_division_age(csv):
 
 
 def cleanup_place(csv):
+    if 'Place' not in csv.fieldnames:
+        csv.fieldnames = ['Place'] + csv.fieldnames
+        for row in csv.rows:
+
+            [place, name] = row[0].split('. ')
+            row.insert(0, '')
+            row[0] = place.strip()
+            row[1] = name.strip()
+
     place_idx = csv.index('Place')
     total_idx = csv.index('TotalKg')
     for row in csv.rows:
@@ -771,6 +781,8 @@ def main(filename):
         sheetcsv = parse_sheet(sheet)
         csv.cat(sheetcsv)
 
+    cleanup_place(csv)
+
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg',
               'Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg',
               'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg', 'Deadlift4Kg', 'TotalKg']:
@@ -779,12 +791,11 @@ def main(filename):
     # Now it's time to standardize the CSV a little bit!
     # We have some temporary columns hanging out.
     standardize_division_age(csv)
-    cleanup_place(csv)
     split_country(csv)
     cleanup_names(csv)
     cleanup_weightclass(csv)
     cleanup_bodyweight(csv)
-
+    unreverse_names(csv)
     # At the moment, this is not useful information.
     csv.remove_column_by_name('Federation')
 
