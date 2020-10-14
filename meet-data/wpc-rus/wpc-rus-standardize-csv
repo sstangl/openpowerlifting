@@ -56,6 +56,10 @@ def parse_sheetname(s):
     s = s.lower()
 
     s = s.replace(' б_э', ' без эк')
+    s = s.replace('m.ply', 'm-ply')
+    s = s.replace('s.ply', 's-ply')
+    s = s.replace('soft eq', 'soft')
+    s = s.replace('std.soft', 'soft')
 
     if 'без эк' in s:  # Need to do 'without equipment' seperately
         equipment = 'Raw'
@@ -95,7 +99,8 @@ def parse_sheetname(s):
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
-                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг']:
+                      'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг',
+                      'powerlifting']:
             assert not event
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
@@ -125,7 +130,7 @@ def parse_sheetname(s):
         elif word in ['облегченная', 'облегченной'] and equipment != 'Unlimited':
             equipment = 'Multi-ply'
             event = 'B'
-        elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
+        elif word in ['однослой', 'однослое', 'односл', 's-ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный']:
             if equipment != 'Multi-ply' and equipment != 'Unlimited':
@@ -133,17 +138,17 @@ def parse_sheetname(s):
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
-        elif word in ['m ply', 'многослой', 'мног', 'многослойная', 'многослойной',
+        elif word in ['m-ply', 'многослой', 'мног', 'многослойная', 'многослойной',
                       'многопетельная', 'многопетельный', 'трехпетельном',
-                      'двухпетельном']:
+                      'двухпетельном', 'mply']:
             if equipment != 'Unlimited':
                 equipment = 'Multi-ply'
         # Extra terms for slingshot bench
         elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
                       'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая', 'жест']:
-            equipment = 'Multi-ply'
+            equipment = 'Unlimited'
             event = 'B'
-        elif 'бинт' in word or word == 'wraps':
+        elif 'бинт' in word or word in ['wraps', 'classic']:
             equipment = 'Wraps'
         elif word in ['безкипировки', 'raw', 'безэкип']:
             equipment = 'Raw'
@@ -231,7 +236,7 @@ def get_header_linenum(sheet):
             return ii
 
         # They've combined the name and place columns
-        if sheet[ii][0] == 'ФИО':
+        if sheet[ii][0] in ['ФИО', 'Name']:
             return ii
     die("get_header_linenum() failed to find the header.")
 
@@ -298,7 +303,7 @@ def parse_fieldnames(sheet):
         # There are a stupid number of ways to write this column so using this
         # as a catch-all
         elif any(x in text for x in ['возра', 'возро', 'категорія', 'дивизион',
-                                     'возр груп']):
+                                     'возр груп', 'age class']):
             fieldnames.append('Division-Age')
         # Catch all for birthyear if this isn't a division-age column
         elif 'дата' in text or 'год рождения' in text:
@@ -313,7 +318,7 @@ def parse_fieldnames(sheet):
         elif text == 'team':
             fieldnames.append('Team')
         elif any(x in text for x in ['gloss', 'коэф', 'resh', 'залуцкий', 'рейшел',
-                                     'залутский', 'reichel', 'rish']):
+                                     'залутский', 'reichel', 'rish', 'pts']):
             # This is not the Wilks, but the WilksCoefficient.
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
@@ -371,7 +376,7 @@ def parse_fieldnames(sheet):
         elif text == 'тренер':
             fieldnames.append('IGNORE')
 
-        elif text == 'страна/клуб':  # City/Club ?
+        elif text in ['страна/клуб', 'town/region']:
             fieldnames.append('IGNORE')
         elif text == 'страна':
             fieldnames.append('Country')
