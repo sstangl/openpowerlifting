@@ -18,6 +18,7 @@
     elite_open = {name = "Elite Open", min = 0, max = 999, tested="Yes"}
     elite_teen_18_19 = {name = "Elite Teen 18-19", min = 18, max = 19, tested="Yes"}
     elite_junior_20_23 = {name = "Elite Juniors 20-23", min = 20, max = 23, tested="Yes"}
+    elite_submaster_33_39 = {name = "Elite Submasters 33-39", min = 33, max = 39, tested="Yes"}
 
     # Youth -- Amateur only.
     ama_youth = {name = "Amateur Youth", min = 5, max = 13, tested="Yes"}
