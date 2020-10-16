@@ -1,9 +1,9 @@
-Sex,Division,Equipment,Event,WeightClassKg,Name,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthYear,BirthDate,Place
-F,Open,Raw,SBD,84,Danielle Todman,75.2,140,90,167.5,397.5,1984,,1
-F,Open,Raw,SBD,63,Deshawnie Larrimore,62.5,130,60,160,350,1990,,1
-M,Masters 2,Raw,SBD,74,Cory Watkins,72.57,147.5,107.5,192.5,447.5,1968,,1
-F,Open,Raw,SBD,84+,Brandi Sneed,119.74,172.5,112.5,170,455,1981,,1
-F,Juniors,Raw,SBD,57,Priscilla Delmoral,56.24,122.5,62.5,125,310,1998,,1
-F,Masters 2,Raw,SBD,63,Karan Sanford-Taylor,60.32,82.5,55,122.5,260,1966,,1
-F,Open,Raw,SBD,57,Priscilla Delmoral,56.24,122.5,62.5,125,310,1998,,1
-M,Open,Raw,SBD,83,Akeame Jones,78.3,205,145,240,590,1989,,1
+Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
+1,Priscilla Delmoral,F,1998-12-04,21,Raw,Juniors,56.24,57,115,122.5,-125,122.5,57.5,62.5,-75,62.5,117.5,125,-130,125,310,SBD
+1,Karan Sanford-Taylor,F,1966-03-21,54,Raw,Masters 2,60.32,63,-82.5,82.5,-87.5,82.5,50,52.5,55,55,120,122.5,-125,122.5,260,SBD
+1,Priscilla Delmoral,F,1998-12-04,21,Raw,Open,56.24,57,115,122.5,-125,122.5,57.5,62.5,-75,62.5,117.5,125,-130,125,310,SBD
+1,Deshawnie Larrimore,F,1990-10-03,30,Raw,Open,62.5,63,107.5,125,130,130,60,-67.5,-70,60,145,157.5,160,160,350,SBD
+1,Danielle Todman,F,1984-11-16,35,Raw,Open,75.2,84,127.5,137.5,140,140,82.5,87.5,90,90,175,182.5,187.5,187.5,417.5,SBD
+1,Brandi Sneed,F,1981-08-12,39,Raw,Open,119.74,84+,170,172.5,-195,172.5,112.5,-117.5,-117.5,112.5,162.5,165,170,170,455,SBD
+1,Cory Watkins,M,1968-07-21,52,Raw,Masters 2,72.57,74,142,147.5,-152.5,147.5,102.5,107.5,-112.5,107.5,-187.5,-192.5,192.5,192.5,447.5,SBD
+1,Akeame Jones,M,1989-12-07,30,Raw,Open,78.3,83,195,205,-212.5,205,137.5,140,145,145,220,232.5,240,240,590,SBD
