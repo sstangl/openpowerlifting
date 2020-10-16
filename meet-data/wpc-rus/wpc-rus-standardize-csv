@@ -56,6 +56,7 @@ def parse_sheetname(s):
     s = s.lower()
 
     s = s.replace(' б_э', ' без эк')
+    s = s.replace(' б э', ' без эк')
     s = s.replace('m.ply', 'm-ply')
     s = s.replace('m ply', 'm-ply')
     s = s.replace('multy ply', 'm-ply')
@@ -107,6 +108,13 @@ def parse_sheetname(s):
         elif word in ['wpc', 'awpc']:
             assert not federation
             federation = 'WPC-RUS'
+        elif word in ['gpc']:
+            assert not federation
+            federation = 'GPC-RUS'
+        elif word in ['awpa', 'wpa']:
+            assert not federation
+            federation = 'WPA-RUS'
+
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
@@ -147,7 +155,7 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 's-ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный',
-                      '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки']:
+                      '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st']:
             if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
@@ -217,8 +225,6 @@ def parse_sheetname(s):
             pass
         elif word == 'забавы':  # Fun? Maybe amateurs
             pass
-        elif word == 'колен':  # Knees
-            pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
 
@@ -242,12 +248,12 @@ def get_header_linenum(sheet):
             return ii
     # Sometimes place is not labelled, if not find name
     for ii in range(len(sheet)):
-        if sheet[ii][1] == 'ФИО':
+        if sheet[ii][1].replace('.','').replace(' ','') == 'ФИО':
             sheet[ii][0] = 'Место'
             return ii
 
         # They've combined the name and place columns
-        if sheet[ii][0] in ['ФИО', 'Name']:
+        if sheet[ii][0].replace('.','').replace(' ','') in ['ФИО', 'Name']:
             return ii
     die("get_header_linenum() failed to find the header.")
 
@@ -305,7 +311,7 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif text == 'фио' or text == 'имя' or 'прізвище' in text:
+        elif text.replace(' ','') == 'фио' or text == 'имя' or 'прізвище' in text:
             fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
@@ -329,7 +335,8 @@ def parse_fieldnames(sheet):
         elif text == 'team':
             fieldnames.append('Team')
         elif any(x in text for x in ['gloss', 'коэф', 'resh', 'залуцкий', 'рейшел',
-                                     'залутский', 'reichel', 'rish', 'pts']):
+                                     'залутский', 'reichel', 'rish', 'pts', 'shv/mel',
+                                     'closs']):
             # This is not the Wilks, but the WilksCoefficient.
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
@@ -364,9 +371,9 @@ def parse_fieldnames(sheet):
             else:
                 [next(iterable) for x in range(2)]
 
-        elif text in ['тяга', 'тяга 1', 'deadlift 1', 'становая тяга 1', 'dl1']:
-            assert header[i + 1].lower() in ['2', 'dl2']
-            assert header[i + 2].lower() in ['3', 'dl3']
+        elif text in ['тяга', 'тяга 1', 'deadlift 1', 'становая тяга 1', 'dl1', 'тяга1']:
+            assert header[i + 1].lower() in ['2', 'dl2', 'тяга2']
+            assert header[i + 2].lower() in ['3', 'dl3', 'тяга3']
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
@@ -402,6 +409,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
 
         else:
+            print(header)
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     return fieldnames
 
@@ -416,7 +424,8 @@ def parse_sheet(sheet):
     title = sheet[0][0].lower().replace('_', ' ').replace('.', '')
 
     # Ignore some sheets that don't contain any powerlifting.
-    if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19', 'лист18']):
+    if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19',
+                                'лист18', 'лист2']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat']):
@@ -512,7 +521,7 @@ def parse_sheet(sheet):
         # Stop iteration once the 'Best Lifters' section is reached.
         if ('Абсолютный' in text or 'List absolute winners' in text or
                 text == 'Мужчины' or 'Возрастная группа' in text or text == 'Женщины'
-                or 'Referee' in text):
+                or 'Referee' in text or 'абсолютный зачет' in text):
             break
         # Skip empty lines.
         if text == '':
@@ -666,7 +675,7 @@ def standardize_division_age(csv):
             division = get_division(row[ageidx], row[idx])
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
             division = get_division(row[ageidx], row[idx])
-        elif any(x in row[idx] for x in ['открытая', 'open', 'откртыая']):
+        elif any(x in row[idx] for x in ['открытая', 'open', 'откртыая', 'оpen']):
             division = 'Open'
         elif row[idx] != '':
             die('Fix standardize_division_age(): Unknown division "%s"' %
