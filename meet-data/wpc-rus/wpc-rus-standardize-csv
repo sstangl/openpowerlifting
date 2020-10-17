@@ -115,7 +115,6 @@ def parse_sheetname(s):
             assert not federation
             federation = 'WPA-RUS'
 
-
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
                       'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг',
@@ -242,19 +241,20 @@ def parse_sheetname(s):
 # Find the line that contains column information (the line below does also).
 def get_header_linenum(sheet):
     for ii in range(len(sheet)):
-        if ('Место' in sheet[ii][0] or 'Place' in sheet[ii][0] or
+        if ('место' in sheet[ii][0].lower() or 'Place' in sheet[ii][0] or
                 'Місце' in sheet[ii][0]):
             sheet[ii][0] = 'Место'
             return ii
     # Sometimes place is not labelled, if not find name
     for ii in range(len(sheet)):
-        if sheet[ii][1].replace('.','').replace(' ','') == 'ФИО':
+        if sheet[ii][1].replace('.', '').replace(' ', '') == 'ФИО':
             sheet[ii][0] = 'Место'
             return ii
 
         # They've combined the name and place columns
-        if sheet[ii][0].replace('.','').replace(' ','') in ['ФИО', 'Name']:
+        if sheet[ii][0].replace('.', '').replace(' ', '') in ['ФИО', 'Name']:
             return ii
+
     die("get_header_linenum() failed to find the header.")
 
 # Header is two merged rows, recombine these back into one row here
@@ -311,7 +311,7 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif text.replace(' ','') == 'фио' or text == 'имя' or 'прізвище' in text:
+        elif text.replace(' ', '') == 'фио' or text == 'имя' or 'прізвище' in text:
             fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
@@ -409,7 +409,6 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
 
         else:
-            print(header)
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     return fieldnames
 
