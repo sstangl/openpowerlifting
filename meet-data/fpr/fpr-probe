@@ -85,7 +85,7 @@ def getmeetlist(html, main_url):
     html = fix_html(str(html, 'windows-1251'))
 
     soup = BeautifulSoup(html, 'html.parser')
-    divs = soup.find_all("table", {"width": "101%"})
+    divs = soup.find_all("table", {"width": "101%", "width": "102%"})
 
     # Pre 2010 the tables are slightly different
     if divs == []:
