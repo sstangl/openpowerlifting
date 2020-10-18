@@ -49,9 +49,9 @@ def getmeetinfo(soup):
         error("Couldn't find the info table.")
 
     # Get the fed.
-    fedrow = infotable.find_all('dd')[0]
+    info = infotable.find_all('dd')
 
-    fed = fedrow.text
+    fed = info[0].text
     fed = fed[fed.find("(")+1:fed.find(")")]
 
     # Correct fed names to the form that we use
@@ -111,7 +111,7 @@ def getmeetinfo(soup):
                        'Австрия': 'Austria'}
 
     # Get the location.
-    venuerow = fedrow.find_next_sibling().find_next_sibling()
+    venuerow = info[2]
     venue = venuerow.a['title']
     if venue[-2:] == ', ':
         venue = venue[:-2]

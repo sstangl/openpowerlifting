@@ -1,0 +1,32 @@
+# Configuration for GPC.
+
+[rulesets.default]
+    ruleset = ["CombineRawAndWraps"]
+    date_range = ["0000-01-01", "9999-01-01"]
+
+[divisions]
+    o = {name ="O",min=0,max=999}
+    j = {name ="J",min=20,max=23}
+    t1 = {name ="T1",min=13,max=15}
+    t2 = {name ="T2",min=16,max=17}
+    t3 = {name ="T3",min=18,max=19}
+    m1 = {name ="M1",min=40,max=49}
+    m2 = {name ="M2",min=50,max=999}
+
+    ds = {name ="DS",min=0,max=999} #Disabled
+    pfm = {name ="PFM",min=0,max=999}
+    y = {name ="Y",min=5,max=12}
+    elite = {name ="Elite",min=0,max=999}
+
+[weightclasses.default_M]
+    classes = ["52", "56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "F"
+
+
+[exemptions]
