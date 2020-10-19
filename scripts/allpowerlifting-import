@@ -85,7 +85,8 @@ def getmeetinfo(soup):
                   'Suzdal': 'VLA', 'Taganrog': 'ROS', 'Khabarovsk': 'KHA',
                   'Beryozovsky': 'SVE', 'Togliatti': 'SAM', 'Engels': 'SAR',
                   'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA', 'Gurievsk': 'KGD',
-                  'Tomsk': 'TOM'}
+                  'Tomsk': 'TOM', 'Lipetsk': 'LIP', 'Tyumen': 'TYU', 'Gulkevichi': 'KDA',
+                  'Penza': 'PNZ', 'Zabaykalsk': 'ZAB', 'Tambov': 'TAM', 'Nalchik': 'KB'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -104,7 +105,10 @@ def getmeetinfo(soup):
                     'Благовещенск': 'Blagoveshchensk', 'Москва': 'Moscow',
                     'Воронеж': 'Voronezh', 'Казань': 'Kazan',
                     'Ростов-на-Дону': 'Rostov-on-Don', 'Тольятти': 'Togliatti',
-                    'Череповец': 'Cherepovets'}
+                    'Череповец': 'Cherepovets', 'Белгород': 'Belgorod',
+                    'Нижний Новгород': 'Nizhny Novgorod', 'Волгоград': 'Volgograd',
+                    'Новосибирск': 'Novosibirsk', 'Togliatty': 'Togliatti',
+                    'Blagoveschensk': 'Blagoveshchensk'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
