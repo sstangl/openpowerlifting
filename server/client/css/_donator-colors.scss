@@ -274,6 +274,13 @@
   background-image: linear-gradient(to right, $lightblue, $white);
 }
 
+.royalblue_to_lightblue {
+  $royalblue: #507CFF;
+  $lightblue: #00d4FF;
+  @include gradient-prereqs($royalblue);
+  background-image: linear-gradient(to right, $royalblue, $lightblue);
+}
+
 .limegreen_to_gray {
   $limegreen: #32CD32;
   $lightgray: #A1A1A1;
