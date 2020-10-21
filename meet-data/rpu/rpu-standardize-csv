@@ -55,8 +55,6 @@ def parse_sheetname(s):
     # Parse word-by-word to make sure that every word is understood.
     s = s.lower()
 
-    s = s.replace('жимовое двоеборье', 'жимовое')
-
     if 'без эк' in s:  # Need to do 'without equipment' seperately
         equipment = 'Raw'
         # We want to remove all strings that start with 'без эк'
@@ -98,18 +96,17 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим', 'bp', 'bench', 'жд', 'жимовое']:
+        elif word in ['жим', 'bp', 'bench', 'жд']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
         elif word in ['тяга', 'dl', 'тяге', 'становая']:
-            assert not event or  event == 'D'
+            assert not event
             event = 'D'
             if equipment == 'Wraps':
                 equipment = 'Raw'
         elif word in ['двоеборье', 'pp', 'ж+т', 'bp+dl', 'push&pull', 'cил']:
-            print(word)
             assert not event
             event = 'BD'
             if equipment == 'Wraps':
