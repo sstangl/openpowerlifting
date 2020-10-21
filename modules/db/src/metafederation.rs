@@ -413,6 +413,10 @@ pub enum MetaFederation {
     #[strum(to_string = "usapl")]
     USAPL,
 
+    /// Results for the relevant US IPF Affiliate at the time.
+    #[strum(to_string = "us-ipf")]
+    USIPF,
+
     /// USPA, plus IPL results for American lifters.
     #[strum(to_string = "uspa")]
     USPA,
@@ -722,8 +726,18 @@ impl MetaFederation {
                 is_from(Country::USA, entry, meet)
                     && (meet.federation == Federation::USAPL
                         || ((meet.federation == NAPF || meet.federation == IPF)
-                            && meet.date >= Date::from_parts(1997, 12, 5)))
+                            && meet.date >= Date::from_parts(1997, 12, 5))
+                        || (meet.federation == ADFPA && meet.date < Date::from_parts(1997, 12, 5)))
             }
+            // Results for US lifters in the IPF affiliate at the time, for <= 1997-12-5 this is the USPF
+            // and for > 1997-12-5 this is the USAPL
+            MetaFederation::USIPF => {
+                is_from(Country::USA, entry, meet)
+                    && ((meet.federation == Federation::USAPL
+                        || meet.federation == NAPF || meet.federation == IPF)
+                        || (meet.federation == USPF && meet.date < Date::from_parts(1997, 12, 05)))
+            }
+
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
