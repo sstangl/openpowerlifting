@@ -575,6 +575,7 @@ fn robots_txt() -> &'static str {
     r#"User-agent: *
 Disallow: /api/
 Disallow: /dev/
+Disallow: /u/bethzehe
 Disallow: /u/pyrriasangster
 Disallow: /u/petervoong
 Disallow: /u/savannabarajas
