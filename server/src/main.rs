@@ -38,6 +38,9 @@ use std::path::{Path, PathBuf};
 
 use server::pages;
 
+#[global_allocator]
+static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+
 /// A file served from /static.
 enum StaticFile {
     /// PathBuf is the path to the non-gz version of the file.

@@ -27,7 +27,7 @@ server:
       - server/client/node_modules
   before_script:
     - curl -sL https://deb.nodesource.com/setup_10.x | bash -
-    - apt-get update -qq && apt-get install -y nodejs python3-pip
+    - apt-get update -qq && apt-get install -y nodejs python3-pip cmake
     - pip3 install toml
   script:
     - make csv
