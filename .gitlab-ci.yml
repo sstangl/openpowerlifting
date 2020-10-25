@@ -14,7 +14,7 @@ image: rustlang/rust:nightly
 # Test the integrity of the data.
 meet-data:
   before_script:
-    - apt-get update -qq && apt-get install -y python3-pip
+    - apt-get update -qq && apt-get install -y python3-pip cmake
     - pip3 install flake8
   script:
     - make check
@@ -37,6 +37,8 @@ server:
 # On success, update project documentation on GitLab Pages.
 pages:
   stage: deploy
+  before_script:
+    - apt-get update -qq && apt-get install -y cmake
   script:
     - cargo doc --no-deps  # Builds into target/doc.
     - mv docs public  # GitLab Pages always deploys from a folder named "public".
