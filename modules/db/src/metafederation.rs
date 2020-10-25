@@ -156,6 +156,10 @@ pub enum MetaFederation {
     #[strum(to_string = "abpu")]
     ABPU,
 
+    /// ABS Series, a recurring Irish competition.
+    #[strum(to_string = "abs-series")]
+    ABSSeries,
+
     /// AEP, but with international results also.
     #[strum(to_string = "aep")]
     AEP,
@@ -575,6 +579,9 @@ impl MetaFederation {
             MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
             MetaFederation::ABPU => entry.tested && MetaFederation::BPU.contains(entry, meets),
+            MetaFederation::ABSSeries => {
+                meet.federation == Federation::IrelandUA && meet.name.starts_with("ABS")
+            }
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
 
