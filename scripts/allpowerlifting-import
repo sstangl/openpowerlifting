@@ -433,7 +433,7 @@ def getpagedata(soup):
                                      'ro': 'Romania', 'be': 'Belgium',
                                      'mx': 'Mexico', 'nl': 'Netherlands',
                                      'in': 'India', 'lu': 'Luxembourg',
-                                     'is': 'Iceland'}
+                                     'is': 'Iceland', 'uz': 'Uzbekistan'}
                     if text in country_codes:
                         text = country_codes[text]
 
