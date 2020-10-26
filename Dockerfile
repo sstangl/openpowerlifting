@@ -5,7 +5,7 @@ FROM rustlang/rust:nightly
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get update -qq && \
     apt-get install -y nodejs python3-pip && \
-    pip3 install toml flake8
+    pip3 install toml flake8 cmake
 
 # Move to our project directory
 WORKDIR /opt/openpowerlifting
