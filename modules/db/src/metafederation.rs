@@ -71,6 +71,9 @@ pub enum MetaFederation {
     AllIndia,
     #[strum(to_string = "all-indonesia")]
     AllIndonesia,
+    /// Results for the relevant US IPF Affiliate at the time.
+    #[strum(to_string = "all-ipf-usa")]
+    AllIPFUSA,
     #[strum(to_string = "all-iran")]
     AllIran,
     #[strum(to_string = "all-ireland")]
@@ -521,6 +524,14 @@ impl MetaFederation {
             MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
             MetaFederation::AllIndia => is_from(Country::India, entry, meet),
             MetaFederation::AllIndonesia => is_from(Country::Indonesia, entry, meet),
+            // Results for US lifters in the IPF affiliate at the time, for <= 1997-12-5 this is the USPF
+            // and for > 1997-12-5 this is the USAPL
+            MetaFederation::AllIPFUSA => {
+                is_from(Country::USA, entry, meet)
+                    && ((meet.federation == Federation::USAPL
+                        || meet.federation == NAPF || meet.federation == IPF)
+                        || (meet.federation == USPF && meet.date < Date::from_parts(1997, 12, 05)))
+            }
             MetaFederation::AllIran => is_from(Country::Iran, entry, meet),
             MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
             MetaFederation::AllIsrael => is_from(Country::Israel, entry, meet),
@@ -729,8 +740,10 @@ impl MetaFederation {
                 is_from(Country::USA, entry, meet)
                     && (meet.federation == Federation::USAPL
                         || ((meet.federation == NAPF || meet.federation == IPF)
-                            && meet.date >= Date::from_parts(1997, 12, 5)))
+                            && meet.date >= Date::from_parts(1997, 12, 5))
+                        || (meet.federation == ADFPA && meet.date < Date::from_parts(1997, 12, 5)))
             }
+
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
