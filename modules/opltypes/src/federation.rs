@@ -1368,7 +1368,14 @@ impl Federation {
             Federation::_365Strong => false,
             Federation::AAP => false,
             Federation::AAPLF => FULLY_TESTED,
-            Federation::AAU => FULLY_TESTED,
+            Federation::AAU => {
+                // The AAU was untested in it's original form
+                if date.year() >= 1995 {
+                    FULLY_TESTED
+                } else {
+                    false
+                }
+            },
             Federation::ACHIPO => false,
             Federation::ACPA => false,
             Federation::ADAU => FULLY_TESTED,
