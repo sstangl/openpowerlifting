@@ -113,7 +113,7 @@ export function RankingsSearcher() {
     function search(item: SearchWorkItem): void {
         terminateAllRequests();
         pendingItem = item;
-        activeTimeout = setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
+        activeTimeout = window.setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
     }
 
     return {

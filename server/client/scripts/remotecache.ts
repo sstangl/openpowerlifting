@@ -228,7 +228,7 @@ export function RemoteCache(
         // Ensure that an AJAX request will be made.
         pendingItem = item;
         if (activeTimeout === null) {
-            activeTimeout = setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
+            activeTimeout = window.setTimeout(makeAjaxRequest, AJAX_TIMEOUT);
         }
     }
 
