@@ -1375,7 +1375,7 @@ impl Federation {
                 } else {
                     false
                 }
-            },
+            }
             Federation::ACHIPO => false,
             Federation::ACPA => false,
             Federation::ADAU => FULLY_TESTED,
@@ -2403,10 +2403,14 @@ impl Federation {
     /// Helper function for specifying the PointsSystem of federations under IPL rules.
     #[inline]
     fn ipl_rules_on(date: Date) -> PointsSystem {
-        // The IPL silently switched from Wilks to Wilks2020 on 2020-03-04.
-        // The change was implemented only by notifying their meet directors
-        // and requiring use of an upgraded version of  their IronComp meet software.
-        if date >= Date::from_parts(2020, 03, 04) {
+        if date >= Date::from_parts(2020, 11, 11) {
+            // The IPL changed from Wilks2020 to Dots, presumably because Robert Wilks
+            // brought on the USPC (which forked from the USPA) as a WP affiliate.
+            PointsSystem::Dots
+        } else if date >= Date::from_parts(2020, 03, 04) {
+            // The IPL silently switched from Wilks to Wilks2020 on 2020-03-04.
+            // The change was implemented only by notifying their meet directors
+            // and requiring use of an upgraded version of  their IronComp meet software.
             PointsSystem::Wilks2020
         } else {
             PointsSystem::Wilks
