@@ -46,6 +46,8 @@
     sex = "F"
 
 [exemptions]
+    1001 = ["ExemptWeightClassConsistency"]  # 44Kg women in 48
+    1202 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
     1501 = ["ExemptWeightClassConsistency"]  # Uses 93+.
     1901 = ["ExemptWeightClassConsistency"]  # Lowest Juniors class was -52kg.
     1902 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs
