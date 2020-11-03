@@ -270,7 +270,7 @@ def get_cyrillic_names_and_birthyears(url):
     nameidx = None
     byidx = None
     for ii in range(len(headers)):
-        if headers[ii] in ['Спортсмен', 'Имя']:
+        if headers[ii] in ['Спортсмен', 'Имя', 'Name']:
             nameidx = ii
         elif headers[ii] == 'ГР':
             byidx = ii
