@@ -562,13 +562,13 @@
 
 // Runescape glow3
 @keyframes glow3 {
-  0%{
+  0% {
     color: #FFFFFF;
-  } 25%{
+  } 25% {
     color: #00B000;
   } 50% {
     color: #FFFFFF;
-  } 67.5%{
+  } 67.5% {
     color: #00FFFF;
   } 75% {
     color: #0000FF;
@@ -594,6 +594,21 @@
 .scroll_gradient {
   background-size: 200% 200%;
   animation: scroll_gradient 3s ease infinite;
+}
+
+// Switches from red to gold.
+@keyframes redgold {
+  0% {
+    color: #FB3640;
+  } 50% {
+    color: #FFD700;
+  } 100% {
+    color: #FB3640;
+  }
+}
+
+.redgold_anim {
+  animation: redgold 3s cubic-bezier(.77,0,.18,1) infinite;
 }
 
 .teal-shadow {
