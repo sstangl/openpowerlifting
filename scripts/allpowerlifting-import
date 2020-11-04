@@ -217,7 +217,8 @@ def getresults(soup, url):
                     if subpage_csv.rows[ii][nameidx] != russian_names[ii]:
                         subpage_csv.rows[ii][cyrnameidx] = russian_names[ii]
 
-                    subpage_csv.rows[ii][byidx] = birthyears[ii]
+                    if birthyears[ii] != '':
+                        subpage_csv.rows[ii][byidx] = birthyears[ii]
 
             subpage_csv.append_column('SheetName')
             for row in subpage_csv.rows:

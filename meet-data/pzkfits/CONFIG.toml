@@ -13,6 +13,7 @@
 
     masters40p = {name = "Masters 40+",min=39.5,max=999}
     masters50p = {name = "Masters 50+",min=49.5,max=999}
+    masters = {name = "Masters",min=39.5,max=999}
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -48,6 +49,9 @@
 [exemptions]
     1001 = ["ExemptWeightClassConsistency"]  # 44Kg women in 48
     1202 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
+    1401 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
+    1403 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
+    1404 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Juniors
     1501 = ["ExemptWeightClassConsistency"]  # Uses 93+.
     1901 = ["ExemptWeightClassConsistency"]  # Lowest Juniors class was -52kg.
     1902 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs
