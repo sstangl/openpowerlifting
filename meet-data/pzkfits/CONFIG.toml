@@ -53,6 +53,9 @@
     1403 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
     1404 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Juniors
     1501 = ["ExemptWeightClassConsistency"]  # Uses 93+.
+    1503 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
+    1502 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
+    1504 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
     1901 = ["ExemptWeightClassConsistency"]  # Lowest Juniors class was -52kg.
     1902 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs
     1903 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
