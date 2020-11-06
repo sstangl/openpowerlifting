@@ -112,7 +112,7 @@ def getmeetinfo(soup):
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
-                       'Австрия': 'Austria'}
+                       'Австрия': 'Austria', 'Польша': 'Poland'}
 
     # Get the location.
     venuerow = info[2]
