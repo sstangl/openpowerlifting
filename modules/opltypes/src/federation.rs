@@ -1086,6 +1086,10 @@ pub enum Federation {
     #[strum(to_string = "WP-Nauru", serialize = "wp-nauru")]
     WPNauru,
 
+    /// WP-Niue
+    #[strum(to_string = "WP-Niue", serialize = "wp-niue")]
+    WPNiue,
+
     /// World Powerlifting Alliance.
     #[strum(to_string = "WPA", serialize = "wpa")]
     WPA,
@@ -1628,6 +1632,7 @@ impl Federation {
             Federation::WP => FULLY_TESTED,
             Federation::WPChina => FULLY_TESTED,
             Federation::WPNauru => FULLY_TESTED,
+            Federation::WPNiue => FULLY_TESTED,
             Federation::WPA => false,
             Federation::WPAGEO => false,
             Federation::WPARUS => false,
@@ -1941,6 +1946,7 @@ impl Federation {
             Federation::WP => None,
             Federation::WPChina => Some(Country::China),
             Federation::WPNauru => Some(Country::Nauru),
+            Federation::WPNiue => Some(Country::Niue),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Country::Georgia),
             Federation::WPARUS => Some(Country::Russia),
@@ -2323,6 +2329,7 @@ impl Federation {
             Federation::WP => Some(Federation::WP),
             Federation::WPChina => Some(Federation::WP),
             Federation::WPNauru => Some(Federation::WP),
+            Federation::WPNiue => Some(Federation::WP),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Federation::WPA),
             Federation::WPARUS => Some(Federation::WPA),
@@ -2715,6 +2722,7 @@ impl Federation {
             Federation::WP => Federation::wp_rules_on(date),
             Federation::WPChina => Federation::wp_rules_on(date),
             Federation::WPNauru => Federation::wp_rules_on(date),
+            Federation::WPNiue => Federation::wp_rules_on(date),
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPAGEO => PointsSystem::Wilks,
             Federation::WPARUS => PointsSystem::Wilks,

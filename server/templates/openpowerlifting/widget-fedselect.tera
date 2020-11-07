@@ -335,6 +335,9 @@
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF - New Zealand Powerlifting Federation [IPF]</option>
   <option value="wp-nz" {% if selection.federation == "WP-NZ" %}selected{% endif %}>WP-NZ - World Powerlifting NZ</option>
 </optgroup>
+<optgroup label="{{strings.country.niue}}">
+  <option value="all-niue" {% if selection.federation == "AllNiue" %}selected{% endif %}>{{strings.selectors.fed.all_niue}}</option>
+</optgroup>
 <optgroup label="{{strings.country.norway}}">
   <option value="all-norway" {% if selection.federation == "AllNorway" %}selected{% endif %}>{{strings.selectors.fed.all_norway}}</option>
   <option value="nsf" {% if selection.federation == "NSF" %}selected{% endif %}>NSF - Norges Styrkeløftforbund [IPF]</option>
