@@ -108,7 +108,7 @@ def parse_sheetname(s):
         elif word in ['wpc', 'awpc']:
             assert not federation
             federation = 'WPC-RUS'
-        elif word in ['gpc']:
+        elif word in ['gpc', 'agpc']:
             assert not federation
             federation = 'GPC-RUS'
         elif word in ['awpa', 'wpa']:
@@ -118,7 +118,7 @@ def parse_sheetname(s):
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
                       'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг',
-                      'powerlifting']:
+                      'powerlifting', 'пауэрлиф', 'пауэрлифт']:
             assert not event or event == 'SBD'
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
@@ -145,7 +145,8 @@ def parse_sheetname(s):
         elif word in ['СПР', 'slinghot', 'sling-shot', 'soft', 'софт',
                       'софстанд', 'соф', 'слинг', 'softuip', 'spr', 'ultra',
                       'standart', 'стандарт', 'ультра', 'шоте', 'стандартдк', 'сандарт',
-                      'станд', 'стандврт', 'жесткая', 'жест', 'стд']:
+                      'станд', 'стандврт', 'жесткая', 'жест', 'стд', 'stand',
+                      'софтипировка', 'софти']:
             equipment = 'Unlimited'
             event = 'B'
         elif word in ['облегченная', 'облегченной'] and equipment != 'Unlimited':
@@ -154,7 +155,8 @@ def parse_sheetname(s):
         elif word in ['однослой', 'однослое', 'односл', 's-ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный',
-                      '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st']:
+                      '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st',
+                      '1-слойная', '1-слойный']:
             if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
@@ -162,13 +164,14 @@ def parse_sheetname(s):
             continue
         elif word in ['m-ply', 'многослой', 'мног', 'многослойная', 'многослойной',
                       'многопетельная', 'многопетельный', 'трехпетельном',
-                      'двухпетельном', 'mply', 'мн-слой', 'многослойной-эк', 'mpl']:
+                      'двухпетельном', 'mply', 'мн-слой', 'многослойной-эк', 'mpl', 'multi']:
             if equipment != 'Unlimited':
                 equipment = 'Multi-ply'
-        elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik']:
+        elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik', 'кл',
+                                        'классический']:
             equipment = 'Wraps'
             event = 'SBD'
-        elif word in ['безкипировки', 'raw', 'безэкип']:
+        elif word in ['безкипировки', 'raw', 'безэкип', 'без']:
             equipment = 'Raw'
 
         # Booleans.
@@ -311,7 +314,8 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif text.replace(' ', '') == 'фио' or text == 'имя' or 'прізвище' in text:
+        elif (text.replace(' ', '') == 'фио' or text == 'имя' or 'прізвище' in text 
+                or text == 'фамилия имя отчество'):
             fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
@@ -351,7 +355,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Squat1Kg')
             fieldnames.append('Squat2Kg')
             fieldnames.append('Squat3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'sq4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'sq4', '4']:
                 fieldnames.append('Squat4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -365,7 +369,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'bp4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'bp4', '4']:
                 fieldnames.append('Bench4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -377,7 +381,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'dl4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'dl4', '4']:
                 fieldnames.append('Deadlift4Kg')
                 [next(iterable) for x in range(3)]
             else:
@@ -424,7 +428,7 @@ def parse_sheet(sheet):
 
     # Ignore some sheets that don't contain any powerlifting.
     if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19',
-                                'лист18', 'лист2']):
+                                'лист18', 'лист2', 'лист16']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat']):
