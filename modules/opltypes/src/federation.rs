@@ -1013,6 +1013,13 @@ pub enum Federation {
     #[strum(to_string = "USPA", serialize = "uspa")]
     USPA,
 
+    /// United States Powerlifting Coalition, WP.
+    ///
+    /// The USPC splintered from USPA East in 2020 after the latter attempted to remove
+    /// a convicted child rapist from their board of directors.
+    #[strum(to_string = "USPC", serialize = "uspc")]
+    USPC,
+
     /// United States Strengthlifting Federation.
     #[strum(to_string = "USSF", serialize = "ussf")]
     USSF,
@@ -1615,6 +1622,7 @@ impl Federation {
             Federation::USPS => false,
             Federation::USPF => false,
             Federation::USPA => false,
+            Federation::USPC => false,
             Federation::USSF => false,
             Federation::USSports => false,
             Federation::USVIPF => FULLY_TESTED,
@@ -1929,6 +1937,7 @@ impl Federation {
             Federation::USPS => Some(Country::Serbia),
             Federation::USPF => Some(Country::USA),
             Federation::USPA => Some(Country::USA),
+            Federation::USPC => Some(Country::USA),
             Federation::USSF => Some(Country::USA),
             Federation::USSports => Some(Country::USA),
             Federation::USVIPF => Some(Country::USVirginIslands),
@@ -2304,6 +2313,7 @@ impl Federation {
                 }
             }
             Federation::USPA => Some(Federation::IPL),
+            Federation::USPC => None,
             Federation::USSF => None,
             Federation::USSports => None,
             Federation::USVIPF => Some(Federation::IPF),
@@ -2705,6 +2715,13 @@ impl Federation {
             Federation::USPS => PointsSystem::Wilks,
             Federation::USPF => PointsSystem::Wilks,
             Federation::USPA => Federation::ipl_rules_on(date),
+            Federation::USPC => {
+                if date >= Date::from_parts(2020, 11, 01) {
+                    PointsSystem::Wilks2020
+                } else {
+                    PointsSystem::Dots
+                }
+            }
             Federation::USSF => PointsSystem::Wilks,
             Federation::USSports => PointsSystem::Wilks,
             Federation::USVIPF => Federation::ipf_rules_on(date),
