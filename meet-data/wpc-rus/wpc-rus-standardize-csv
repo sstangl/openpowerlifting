@@ -314,7 +314,7 @@ def parse_fieldnames(sheet):
 
         if text == 'место' or text == 'place':
             fieldnames.append('Place')
-        elif (text.replace(' ', '') == 'фио' or text == 'имя' or 'прізвище' in text 
+        elif (text.replace(' ', '') == 'фио' or text == 'имя' or 'прізвище' in text
                 or text == 'фамилия имя отчество'):
             fieldnames.append('CyrillicName')
         elif text == 'name':
