@@ -62,6 +62,7 @@ def parse_sheetname(s):
     s = s.replace('multy ply', 'm-ply')
     s = s.replace('multi ply', 'm-ply')
     s = s.replace('мн. эк', 'm-ply')
+    s = s.replace('мн.сл', 'm-ply')
     s = s.replace('s.ply', 's-ply')
     s = s.replace('single ply', 's-ply')
     s = s.replace('одн. эк', 's-ply')
@@ -74,6 +75,7 @@ def parse_sheetname(s):
     s = s.replace('мн.слой', 'мн-слой')
     s = s.replace('софт эк', 'софт')
     s = s.replace('однослойной эки', 'однослойной-эки')
+    s = s.replace('однослойной эк', 'однослойной-эки')
     s = s.replace('многослойной эк', 'многослойной-эк')
 
     if 'без эк' in s:  # Need to do 'without equipment' seperately
@@ -149,9 +151,8 @@ def parse_sheetname(s):
                       'софстанд', 'соф', 'слинг', 'softuip', 'spr', 'ultra',
                       'standart', 'стандарт', 'ультра', 'шоте', 'стандартдк', 'сандарт',
                       'станд', 'стандврт', 'жесткая', 'жест', 'стд', 'stand',
-                      'софтипировка', 'софти', 'софтипировке']:
+                      'софтипировка', 'софти', 'софтипировке', 'софтип']:
             equipment = 'Unlimited'
-            event = 'B'
         elif word in ['облегченная', 'облегченной'] and equipment != 'Unlimited':
             equipment = 'Multi-ply'
             event = 'B'
@@ -168,7 +169,7 @@ def parse_sheetname(s):
         elif word in ['m-ply', 'многослой', 'мног', 'многослойная', 'многослойной',
                       'многопетельная', 'многопетельный', 'трехпетельном',
                       'двухпетельном', 'mply', 'мн-слой', 'многослойной-эк', 'mpl',
-                      'multi']:
+                      'multi', 'многослойн', 'mp', 'многосл', 'm-plyой']:
             if equipment != 'Unlimited':
                 equipment = 'Multi-ply'
         elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik',
@@ -350,7 +351,7 @@ def parse_fieldnames(sheet):
         elif text == 'команда' or text == 'coach':  # Coach
             fieldnames.append('IGNORE')
         elif text in ['сountry/city/state', 'страна/город/область', 'город/страна',
-                      'town']:
+                      'town', 'town/country']:
             fieldnames.append('Country/City/State')
         elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1',
                       'приседания 1']:
@@ -432,10 +433,11 @@ def parse_sheet(sheet):
 
     # Ignore some sheets that don't contain any powerlifting.
     if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19',
-                                'лист18', 'лист2', 'лист16', 'лист5']):
+                                'лист18', 'лист2', 'лист16', 'лист5', 'лист15',
+                                'лист39']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
-                                  'folk', 'm-rep', 'multy-repeat']):
+                                  'folk', 'm-rep', 'multy-repeat', 'mr bp']):
         # Bench for reps
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
@@ -456,7 +458,7 @@ def parse_sheet(sheet):
         return csv
     elif 'bullet' in title:
         return csv
-    elif 'block' in title or 'блок' in title or 'кирпич' in title:
+    elif any(x in title for x in ['block', 'блок', 'кирпич', 'brick']):
         return csv
     elif 'ось' in title:  # axle
         return csv
@@ -488,11 +490,12 @@ def parse_sheet(sheet):
         return csv
     elif 'чд' in title:  # Not sure what theses pages are, some kind of reps contest
         return csv
-    elif any(x in title for x in ['строгий', 'бицепс', 'стр', 'curl']):  # curl
+    elif (any(x in title for x in ['строгий', 'бицепс', 'стр', 'curl'])
+          or 'sc' in title.split()):  # curl
         return csv
     elif 'экскалибур' in title:
         return csv
-    elif 'стоя' in title:  # Overhead Press
+    elif 'стоя' in title or 'ob' in title.split():  # Overhead Press
         return csv
     elif 'saxon' in title:
         return csv
