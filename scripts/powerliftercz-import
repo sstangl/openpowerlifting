@@ -38,16 +38,17 @@ def get_tabs(url):
 
     soup = BeautifulSoup(driver.page_source, 'html.parser')
 
-    tab_button = soup.find("select", {"id": "ctl00_Content_Body_edtEvent"})
+    tab_button = soup.find("div", {"id": "ctl00_Content_Body_divTabs"})
 
     if tab_button:
-        tabs = tab_button.find_all('option')
+        tabs = tab_button.find_all('a')
 
         tabs_source = []
         for tab in tabs:
-            driver.get(tab['value'])
-            tabs_source.append([driver.page_source, tab.text])
-            time.sleep(0.1)
+            if tab.has_attr('href'):
+                driver.get(tab['href'])
+                tabs_source.append([driver.page_source, tab.text])
+                time.sleep(0.5)
     else:  # otherwise the meet data is all on one page
         tabs_source = [[driver.page_source, '']]
 
@@ -516,6 +517,7 @@ def main(dirname, url):
 
     entriescsv = Csv()
     for tab in tabs:
+        print(tab[1])
         soup = BeautifulSoup(tab[0], 'html.parser')
         currcsv = get_results(soup, tab[1])
         entriescsv.cat(currcsv)
