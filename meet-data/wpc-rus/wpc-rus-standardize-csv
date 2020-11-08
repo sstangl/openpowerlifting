@@ -167,11 +167,12 @@ def parse_sheetname(s):
             continue
         elif word in ['m-ply', 'многослой', 'мног', 'многослойная', 'многослойной',
                       'многопетельная', 'многопетельный', 'трехпетельном',
-                      'двухпетельном', 'mply', 'мн-слой', 'многослойной-эк', 'mpl', 'multi']:
+                      'двухпетельном', 'mply', 'мн-слой', 'многослойной-эк', 'mpl',
+                      'multi']:
             if equipment != 'Unlimited':
                 equipment = 'Multi-ply'
-        elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik', 'кл',
-                                        'классический', 'классичесический']:
+        elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik',
+                                        'кл', 'классический', 'классичесический']:
             equipment = 'Wraps'
             event = 'SBD'
         elif word in ['безкипировки', 'raw', 'безэкип', 'без']:
@@ -487,7 +488,7 @@ def parse_sheet(sheet):
         return csv
     elif 'чд' in title:  # Not sure what theses pages are, some kind of reps contest
         return csv
-    elif any(x in title for x in ['строгий','бицепс','стр', 'curl']):  # curl
+    elif any(x in title for x in ['строгий', 'бицепс', 'стр', 'curl']):  # curl
         return csv
     elif 'экскалибур' in title:
         return csv

@@ -309,7 +309,8 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
             fieldnames.append('IGNORE')
-        elif text in ['сountry/city/state', 'страна/город/область', 'город/страна', 'страна/город']:
+        elif text in ['сountry/city/state', 'страна/город/область', 'город/страна',
+                      'страна/город']:
             fieldnames.append('Country/City/State')
         elif text in ['присед 1', 'squat 1', 'присяд 1', 'приседание 1', 'sq1',
                       'приседания 1']:
