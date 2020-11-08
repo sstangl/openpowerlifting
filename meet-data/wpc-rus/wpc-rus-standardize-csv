@@ -61,8 +61,11 @@ def parse_sheetname(s):
     s = s.replace('m ply', 'm-ply')
     s = s.replace('multy ply', 'm-ply')
     s = s.replace('multi ply', 'm-ply')
+    s = s.replace('мн. эк', 'm-ply')
     s = s.replace('s.ply', 's-ply')
     s = s.replace('single ply', 's-ply')
+    s = s.replace('одн. эк', 's-ply')
+    s = s.replace('од. эк', 's-ply')
     s = s.replace('soft eq', 'soft')
     s = s.replace('std.soft', 'soft')
     s = s.replace('soft std', 'soft')
@@ -118,7 +121,7 @@ def parse_sheetname(s):
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
                       'ча-пл', 'ка-пл', 'паурлифтинг', 'приседание', 'паэрлифтинг',
-                      'powerlifting', 'пауэрлиф', 'пауэрлифт']:
+                      'powerlifting', 'пауэрлиф', 'пауэрлифт', 'пауэр']:
             assert not event or event == 'SBD'
             event = 'SBD'
         elif word == 'присед' or word == 'sq':
@@ -146,7 +149,7 @@ def parse_sheetname(s):
                       'софстанд', 'соф', 'слинг', 'softuip', 'spr', 'ultra',
                       'standart', 'стандарт', 'ультра', 'шоте', 'стандартдк', 'сандарт',
                       'станд', 'стандврт', 'жесткая', 'жест', 'стд', 'stand',
-                      'софтипировка', 'софти']:
+                      'софтипировка', 'софти', 'софтипировке']:
             equipment = 'Unlimited'
             event = 'B'
         elif word in ['облегченная', 'облегченной'] and equipment != 'Unlimited':
@@ -156,7 +159,7 @@ def parse_sheetname(s):
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный',
                       '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st',
-                      '1-слойная', '1-слойный']:
+                      '1-слойная', '1-слойный', 'однослойно', 'односло']:
             if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
@@ -168,7 +171,7 @@ def parse_sheetname(s):
             if equipment != 'Unlimited':
                 equipment = 'Multi-ply'
         elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik', 'кл',
-                                        'классический']:
+                                        'классический', 'классичесический']:
             equipment = 'Wraps'
             event = 'SBD'
         elif word in ['безкипировки', 'raw', 'безэкип', 'без']:
@@ -428,7 +431,7 @@ def parse_sheet(sheet):
 
     # Ignore some sheets that don't contain any powerlifting.
     if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19',
-                                'лист18', 'лист2', 'лист16']):
+                                'лист18', 'лист2', 'лист16', 'лист5']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat']):
@@ -456,7 +459,7 @@ def parse_sheet(sheet):
         return csv
     elif 'ось' in title:  # axle
         return csv
-    elif 'рулетка' in title:  # From the Russian Roulette division haha
+    elif 'рулетка' in title or 'roullette' in title:  # Russian Roulette division?!
         return csv
     elif 'лог лифт' in title:
         return csv
@@ -484,7 +487,7 @@ def parse_sheet(sheet):
         return csv
     elif 'чд' in title:  # Not sure what theses pages are, some kind of reps contest
         return csv
-    elif 'строгий' in title or 'бицепс' in title:  # curl
+    elif any(x in title for x in ['строгий','бицепс','стр', 'curl']):  # curl
         return csv
     elif 'экскалибур' in title:
         return csv
