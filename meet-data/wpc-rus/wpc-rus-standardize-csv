@@ -434,7 +434,7 @@ def parse_sheet(sheet):
     # Ignore some sheets that don't contain any powerlifting.
     if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19',
                                 'лист18', 'лист2', 'лист16', 'лист5', 'лист15',
-                                'лист39']):
+                                'лист39', 'лист4']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat', 'mr bp']):
@@ -561,7 +561,6 @@ def parse_sheet(sheet):
         line.append(obj['amateur'])
         line.append(obj['tested'])
         line.append(obj['federation'])
-
         assert len(line) == len(csv.fieldnames)
         csv.rows.append(line)
 
@@ -677,6 +676,11 @@ def standardize_division_age(csv):
         elif '80+' in row[idx]:
             division = 'Masters 80+'
 
+        elif 'дети 8' in row[idx]:  # This is a WPA-RUS division
+            division = 'Youth 8'
+        elif 'дети 11-12' in row[idx]:  # This is a WPA-RUS division
+            division = 'Sub-Teen 11-12'
+
         # Catch all for remaining divisions
         elif any(x in row[idx] for x in ['teen', 'юноши', 'юноша', 'девушки', 'девуши']):
             division = get_division(row[ageidx], row[idx])
@@ -705,7 +709,7 @@ def standardize_division_age(csv):
 
 def cleanup_place(csv):
     if 'Place' not in csv.fieldnames:
-        if '.' in csv.rows[0]:
+        if '.' in csv.rows[0][0]:
             csv.fieldnames = ['Place'] + csv.fieldnames
         else:
             return

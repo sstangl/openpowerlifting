@@ -1,5 +1,6 @@
 [divisions]
     open = {name = "Open", min = 0, max = 999}
+    youth_7 = {name = "Youth 7", min = 7, max = 7}
     youth_8 = {name = "Youth 8", min = 8, max = 8}
     youth_9 = {name = "Youth 9", min = 9, max = 9}
     youth_10 = {name = "Youth 10", min = 10, max = 10}
@@ -40,7 +41,7 @@
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1980-01-01", "9999-01-01"]
     sex = "M"
-    divisions= ["Youth 8","Youth 9","Youth 10","Sub-Teen 11-12"]
+    divisions= ["Youth 7","Youth 8","Youth 9","Youth 10","Sub-Teen 11-12"]
 
 [exemptions]
     1001 = ["ExemptWeightClassConsistency"]
