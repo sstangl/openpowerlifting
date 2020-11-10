@@ -232,6 +232,8 @@ def parse_sheetname(s):
             pass
         elif word == 'забавы':  # Fun? Maybe amateurs
             pass
+        elif word == 'mpf':
+            pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
 
@@ -434,7 +436,7 @@ def parse_sheet(sheet):
     # Ignore some sheets that don't contain any powerlifting.
     if any(x in title for x in ['судейская', 'судеская', 'судьи', 'лист19',
                                 'лист18', 'лист2', 'лист16', 'лист5', 'лист15',
-                                'лист39', 'лист4']):
+                                'лист39', 'лист4', 'лист8']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat', 'mr bp']):
