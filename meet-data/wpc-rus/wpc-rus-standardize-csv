@@ -110,9 +110,13 @@ def parse_sheetname(s):
         elif word == 'ipl':
             assert not federation
             federation = 'IPL'
-        elif word in ['wpc', 'awpc']:
+        elif word in ['wpc', 'wpс']:
             assert not federation
             federation = 'WPC-RUS'
+        elif word in ['awpc', 'awpс']:
+            assert not federation
+            federation = 'WPC-RUS'
+            tested = 'Yes'
         elif word in ['gpc', 'agpc']:
             assert not federation
             federation = 'GPC-RUS'
@@ -370,25 +374,27 @@ def parse_fieldnames(sheet):
 
         elif text in ['жим', 'жим 1', 'benchpress 1', 'жим макс кг 1',
                       'жим на максимум 1', 'жим вес', 'жим лежа 1', 'bp1',
-                      'жим лёжа 1', 'жим лёжа 2', 'жим лёжа 3']:
-            assert header[i + 1].lower() in ['2', 'bp2']
-            assert header[i + 2].lower() in ['3', 'bp3']
+                      'жим лёжа 1', 'жим лёжа 2', 'жим лёжа 3', '5']:
+            assert header[i + 1].lower() in ['2', 'bp2', '6']
+            assert header[i + 2].lower() in ['3', 'bp3', '7']
             fieldnames.append('Bench1Kg')
             fieldnames.append('Bench2Kg')
             fieldnames.append('Bench3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'bp4', '4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'bp4', '4', '8']:
                 fieldnames.append('Bench4Kg')
                 [next(iterable) for x in range(3)]
             else:
                 [next(iterable) for x in range(2)]
 
-        elif text in ['тяга', 'тяга 1', 'deadlift 1', 'становая тяга 1', 'dl1', 'тяга1']:
-            assert header[i + 1].lower() in ['2', 'dl2', 'тяга2']
-            assert header[i + 2].lower() in ['3', 'dl3', 'тяга3']
+        elif text in ['тяга', 'тяга 1', 'deadlift 1', 'становая тяга 1', 'dl1', 'тяга1',
+                      '9']:
+            assert header[i + 1].lower() in ['2', 'dl2', 'тяга2', '10']
+            assert header[i + 2].lower() in ['3', 'dl3', 'тяга3', '11']
             fieldnames.append('Deadlift1Kg')
             fieldnames.append('Deadlift2Kg')
             fieldnames.append('Deadlift3Kg')
-            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'dl4', '4']:
+            if header[i + 3].lower().replace('.', '') in ['рек', 'rec', 'dl4', '4',
+                                                          '12']:
                 fieldnames.append('Deadlift4Kg')
                 [next(iterable) for x in range(3)]
             else:
