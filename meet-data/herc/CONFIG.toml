@@ -32,6 +32,7 @@
     # Amateur variants.
     ama_open = {name = "Amateur Open", min = 0, max = 999, tested="Yes"}
     ama_youth = {name = "Amateur Youth", min = 0, max = 10, tested="Yes"}
+    ama_teen_11_13 = {name = "Amateur Teen 11-13", min = 11, max = 13, tested="Yes"}
     ama_teen_11_19 = {name = "Amateur Teen 11-19", min = 11, max = 19, tested="Yes"}
     ama_teen_14_15 = {name = "Amateur Teen 14-15", min = 14, max = 15, tested="Yes"}
     ama_junior = {name = "Amateur Juniors 20-23", min = 20, max = 23, tested="Yes"}
