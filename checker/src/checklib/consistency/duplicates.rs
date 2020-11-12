@@ -62,6 +62,10 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2016, 12, 9) {
                     continue;
                 }
+                // gpc-can/2003 and wrpf-can/2001 is a single meet, dual-sanctioned.
+                if cur_meet.date == opltypes::Date::from_parts(2020, 11, 7) {
+                    continue;
+                }
 
                 let msg = format!(
                     "www.openpowerlifting.org/u/{} on {}: {} and {}",
