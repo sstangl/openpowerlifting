@@ -1,6 +1,6 @@
 # The OpenPowerlifting Project
 
-[![Build Status](https://gitlab.com/openpowerlifting/opl-data/badges/master/pipeline.svg)](https://gitlab.com/openpowerlifting/opl-data/commits/master)
+[![Build Status](https://gitlab.com/openpowerlifting/opl-data/badges/main/pipeline.svg)](https://gitlab.com/openpowerlifting/opl-data/commits/main)
 
 A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.<br/>
 Presentation of this data is available at [OpenPowerlifting.org](https://www.openpowerlifting.org).
