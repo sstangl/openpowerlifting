@@ -117,12 +117,20 @@ def parse_sheetname(s):
             assert not federation
             federation = 'WPC-RUS'
             tested = 'Yes'
-        elif word in ['gpc', 'agpc']:
+        elif word in ['gpc']:
             assert not federation
             federation = 'GPC-RUS'
-        elif word in ['awpa', 'wpa']:
+        elif word in ['agpc']:
+            assert not federation
+            federation = 'GPC-RUS'
+            tested = 'Yes'
+        elif word in ['wpa']:
             assert not federation
             federation = 'WPA-RUS'
+        elif word in ['awpa']:
+            assert not federation
+            federation = 'WPA-RUS'
+            tested = 'Yes'
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
@@ -177,7 +185,8 @@ def parse_sheetname(s):
             if equipment != 'Unlimited':
                 equipment = 'Multi-ply'
         elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik',
-                                        'кл', 'классический', 'классичесический']:
+                                        'кл', 'классический', 'классичесический',
+                                        'клас']:
             equipment = 'Wraps'
             event = 'SBD'
         elif word in ['безкипировки', 'raw', 'безэкип', 'без']:
