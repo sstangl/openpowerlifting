@@ -1,6 +1,6 @@
 # OpenPowerlifting Data Distribution README
 
-For a rendered version of this document, [view the README on GitLab](https://gitlab.com/openpowerlifting/opl-data/blob/master/docs/data-readme.md).
+For a rendered version of this document, [view the README on GitLab](https://gitlab.com/openpowerlifting/opl-data/blob/main/docs/data-readme.md).
 
 
 ## CSV Data Format
@@ -22,7 +22,7 @@ Mandatory. The sex category in which the lifter competed, `M`, `F`, or `Mx`.
 
 Mx (pronounced *Muks*) is a gender-neutral title — like Mr and Ms — originating from the UK. It is a catch-all sex category that is particularly appropriate for non-binary lifters.
 
-The `Sex` column is defined by [modules/opltypes/src/sex.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/sex.rs).
+The `Sex` column is defined by [modules/opltypes/src/sex.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/sex.rs).
 
 ### Event
 
@@ -38,7 +38,7 @@ Values are as follows:
 - B: Bench-only.
 - D: Deadlift-only.
 
-The `Event` column is defined by [modules/opltypes/src/event.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/event.rs).
+The `Event` column is defined by [modules/opltypes/src/event.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/event.rs).
 
 ### Equipment
 
@@ -55,7 +55,7 @@ Values are as follows:
 - Unlimited: Equipped, multi-ply suits or rubberized gear (like Bench Daddies).
 - Straps: Allowed straps on the deadlift (used mostly for exhibitions, not real meets).
 
-The `Equipment` column is defined by [modules/opltypes/src/equipment.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/equipment.rs).
+The `Equipment` column is defined by [modules/opltypes/src/equipment.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/equipment.rs).
 
 ### Age
 
@@ -67,7 +67,7 @@ Approximate ages mean that the lifter could be either of *two* possible ages. Fo
 
 Approximate ages occur because some federations only provide us with birth year information. So another way to think about approximate ages is that `23.5` implies that the lifter turns `24` that year.
 
-The `Age` column is defined by [modules/opltypes/src/age.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/age.rs).
+The `Age` column is defined by [modules/opltypes/src/age.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/age.rs).
 
 ### AgeClass
 
@@ -75,7 +75,7 @@ Optional. The age class in which the filter falls, for example `40-45`. These cl
 
 AgeClass is mostly useful because sometimes a federation will report that a lifter competed in the 50-54 divison without providing any further age information. This way, we can still tag them as 50-54, even if the `Age` column is empty.
 
-The full range available to `AgeClass` is defined by [modules/opltypes/src/ageclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/ageclass.rs). 
+The full range available to `AgeClass` is defined by [modules/opltypes/src/ageclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/ageclass.rs). 
 
 ### BirthYearClass
 
@@ -83,7 +83,7 @@ Optional. The birth year class in which the filter falls, for example `40-49`. T
 
 `BirthYearClass` is used primarily by the IPF and by IPF affiliates. Non-IPF federations tend to use `AgeClass` instead.
 
-The full range available to `BirthYearClass` is defined by [modules/opltypes/src/birthyearclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/birthyearclass.rs). 
+The full range available to `BirthYearClass` is defined by [modules/opltypes/src/birthyearclass.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/birthyearclass.rs). 
 
 ### Division
 
@@ -103,7 +103,7 @@ Optional. The weight class in which the lifter competed, to two decimal places.
 
 Weight classes can be specified as a maximum or as a minimum. Maximums are specified by just the number, for example `90` means "up to (and including) 90kg." minimums are specified by a `+` to the right of the number, for example `90+` means "above (and excluding) 90kg."
 
-`WeightClassKg` is defined by [modules/opltypes/src/weightclasskg.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/weightclasskg.rs).
+`WeightClassKg` is defined by [modules/opltypes/src/weightclasskg.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/weightclasskg.rs).
 
 ### Squat1Kg, Bench1Kg, Deadlift1Kg
 
@@ -161,7 +161,7 @@ Values are as follows:
 - DD: Doping Disqualification. The lifter failed a drug test.
 - NS: No-Show. The lifter did not show up on the meet day.
 
-The `Place` column is defined by [modules/opltypes/src/place.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/place.rs).
+The `Place` column is defined by [modules/opltypes/src/place.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/place.rs).
 
 ### Wilks
 
@@ -169,7 +169,7 @@ Optional. A positive number if Wilks points could be calculated, empty if the li
 
 Wilks is the most common formula used for determining Best Lifter in a powerlifting meet.
 
-The calculation of Wilks points is defined by [modules/coefficients/src/wilks.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/wilks.rs).
+The calculation of Wilks points is defined by [modules/coefficients/src/wilks.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/wilks.rs).
 
 ### McCulloch
 
@@ -179,7 +179,7 @@ McCulloch is the name used for Dots points multiplied by an age-adjustment facto
 
 McCulloch is technically just the coefficients for Masters lifters -- coefficients for Junior and Sub-Junior lifters are called "Foster Coefficients." Our implementation of McCulloch contains both.
 
-The calculation of McCulloch points is defined by [modules/coefficients/src/mcculloch.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/mcculloch.rs).
+The calculation of McCulloch points is defined by [modules/coefficients/src/mcculloch.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/mcculloch.rs).
 
 ### Glossbrenner
 
@@ -187,7 +187,7 @@ Optional. A positive number if Glossbrenner points could be calculated, empty if
 
 Glossbrenner was created by Herb Glossbrenner as an update of the Wilks formula. It is most commonly used by GPC-affiliated federations.
 
-The calculation of Glossbrenner points is defined by [modules/coefficients/src/glossbrenner.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/glossbrenner.rs).
+The calculation of Glossbrenner points is defined by [modules/coefficients/src/glossbrenner.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/glossbrenner.rs).
 
 ### Goodlift
 
@@ -197,7 +197,7 @@ Optional. A positive number if IPF GL Points could be calculated, empty if the l
 
 IPF GL Points roughly express relative performance to the expected performance of that weight class at an IPF World Championship event, as a percentage.
 
-The calculation of IPF GL points is defined by [modules/coefficients/src/goodlift.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/coefficients/src/goodlift.rs).
+The calculation of IPF GL points is defined by [modules/coefficients/src/goodlift.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/goodlift.rs).
 
 ### Tested
 
@@ -209,7 +209,7 @@ Note that this records whether the results *count as drug-tested*, which does no
 
 Optional. The home country of the lifter, if known.
 
-The full list of valid Country values is defined by [modules/opltypes/src/country.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/country.rs).
+The full list of valid Country values is defined by [modules/opltypes/src/country.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/country.rs).
 
 ### Federation
 
@@ -217,7 +217,7 @@ Mandatory. The federation that hosted the meet.
 
 Note that this may be different than the international federation that provided sanction to the meet. For example, USPA meets are sanctioned by the IPL, but we record USPA meets as `USPA`.
 
-The full list of valid Federation values is defined by [modules/opltypes/src/federation.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/federation.rs). Comments in that file help explain what each federation value means.
+The full list of valid Federation values is defined by [modules/opltypes/src/federation.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/federation.rs). Comments in that file help explain what each federation value means.
 
 ### ParentFederation
 
@@ -235,13 +235,13 @@ Meets that last more than one day only have the start date recorded.
 
 Mandatory. The country in which the meet was held.
 
-The full list of valid Country values is defined by [modules/opltypes/src/country.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/country.rs).
+The full list of valid Country values is defined by [modules/opltypes/src/country.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/country.rs).
 
 ### MeetState
 
 Optional. The state, province, or region in which the meet was held.
 
-The full list of valid State values is defined by [modules/opltypes/src/state.rs](https://gitlab.com/openpowerlifting/opl-data/blob/master/modules/opltypes/src/state.rs).
+The full list of valid State values is defined by [modules/opltypes/src/state.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/state.rs).
 
 ### MeetName
 

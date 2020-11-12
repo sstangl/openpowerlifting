@@ -106,19 +106,19 @@ In git, every change (called a "commit") remembers its history, which is an orde
 
 That looks like this, as a list: `A <= B <= C`. We call `C` the "head" of the "branch".
 
-Now suppose someone made a merge request, and that merge request is `C` like above. Merge requests take a while to have tests run. In the meantime, I come along and I make some changes to the master branch, and I push a commit named `D`.
+Now suppose someone made a merge request, and that merge request is `C` like above. Merge requests take a while to have tests run. In the meantime, I come along and I make some changes to the main branch, and I push a commit named `D`.
 
-Because `C` wasn't merged yet, the most recent commit on the master branch was `B`. So `D` remembers that its parent was `B`. On the master branch, that looks like: `A <= B <= D`.
+Because `C` wasn't merged yet, the most recent commit on the main branch was `B`. So `D` remembers that its parent was `B`. On the main branch, that looks like: `A <= B <= D`.
 
 So now we have a conflict: you can't have both `A <= B <= C` and `A <= B <= D`!
 
 There are two ways to solve this. The way we use is called "rebasing", which means that we rewrite the history of the merge request to basically lie about where it came from, so that it makes sense linearly.
 
-So when you hit that green "Rebase" button, what it's doing is telling `C` that its parent is now actually `D`. It does that by replaying the changes on top of the master branch.
+So when you hit that green "Rebase" button, what it's doing is telling `C` that its parent is now actually `D`. It does that by replaying the changes on top of the main branch.
 
 So when you hit the Rebase button, the merge request changes to `A <= B <= D <= C`.
 
-At that point, GitLab recognizes that the merge request (`A <= B <= D <= C`) is linearly compatible with the master branch (`A <= B <= D`), and so it gives you an option to do a "fast-forward merge", which just means that it adds `C` to the master branch.
+At that point, GitLab recognizes that the merge request (`A <= B <= D <= C`) is linearly compatible with the main branch (`A <= B <= D`), and so it gives you an option to do a "fast-forward merge", which just means that it adds `C` to the main branch.
 
 Sometimes the green "Rebase" button can fail. That happens mostly if the merge request is old (like, a day) -- which is why we try to get to them quickly. Sometimes also people forget to give you the ability to click that button, and then it's just missing and has to be resolved on the command-line.
 
@@ -133,16 +133,16 @@ So the following is just bonus extra-credit material.
 
 This project uses a linear history via "squashing" and does not use what git calls "merges". Unfortunately, merging is the default behavior in git, and so it's very easy to accidentally cause a merge.
 
-The best way to prevent this is to open up your `.git/config` file and add the line `mergeoptions = --ff-only` to the master branch. For example, in my config:
+The best way to prevent this is to open up your `.git/config` file and add the line `mergeoptions = --ff-only` to the main branch. For example, in my config:
 
 ```
-[branch "master"]
+[branch "main"]
         remote = origin
-        merge = refs/heads/master
+        merge = refs/heads/main
         mergeoptions = --ff-only
 ```
 
-If you then use `git merge` on a branch that isn't just a fast-forward of the master branch, instead of adding a merge commit, it will merely complain.
+If you then use `git merge` on a branch that isn't just a fast-forward of the main branch, instead of adding a merge commit, it will merely complain.
 
 ### Fetching merge requests
 
