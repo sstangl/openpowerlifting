@@ -131,6 +131,9 @@ def parse_sheetname(s):
             assert not federation
             federation = 'WPA-RUS'
             tested = 'Yes'
+        elif word in ['wuap']:
+            assert not federation
+            federation = 'WUAP-RUS'
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
