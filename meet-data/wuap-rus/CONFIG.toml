@@ -4,7 +4,7 @@
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 5, max = 12}
     teen_13_15 = {name = "Teen 13-15", min = 13, max = 15}
-    teen_16_17 = {name = "Teen 16-19", min = 16, max = 19}
+    teen_16_19 = {name = "Teen 16-19", min = 16, max = 19}
     juniors_20_23 = {name = "Juniors 20-23", min = 20, max = 23}
     submasters_33_39 = {name = "Submasters 33-39", min = 33, max = 39}
     masters_40_44 = {name = "Masters 40-44", min = 40, max = 44}
@@ -17,6 +17,10 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
+
+    teen_16_17 = {name = "Teen 16-17", min = 16, max = 17}
+    teen_18_19 = {name = "Teen 18-19", min = 18, max = 19}
+
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
