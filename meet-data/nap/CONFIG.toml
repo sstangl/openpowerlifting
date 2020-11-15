@@ -22,6 +22,7 @@
     ama_masters_75_79 = {name="Amateur Masters 75-79", min=75, max=79, tested="Yes"}
     ama_masters_80p = {name="Amateur Masters 80+", min=80, max=999, tested="Yes"}
     ama_police = {name="Amateur Police", min=0, max=999, tested="Yes"}
+    ama_teen = {name="Amateur Teen", min=14, max=19, tested="Yes"}
 
     # Pro divisions.
     pro_teen_13 = {name="Pro Teen 13", min=0, max=13}
