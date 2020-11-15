@@ -106,7 +106,11 @@
 
 
 [exemptions]
+    1105 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Non standard WCs, combined Jr & Teen
+    1207 = ["ExemptWeightClassConsistency"] # Young lifters in 52
+    1208 = ["ExemptWeightClassConsistency"] # 125+ Class
     1303 = ["ExemptWeightClassConsistency"] # Elite lifters with no WC
+    1304 = ["ExemptWeightClassConsistency"] # Disabled lifters with no WC
     1402 = ["ExemptWeightClassConsistency"] # Elite lifters with no WC
     1914 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1944 = ["ExemptWeightClassConsistency"] # Non standard WCs

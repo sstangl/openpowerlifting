@@ -252,10 +252,10 @@ def getresults(soup, url):
 # Returns just the Russian names and BirthYears for lifters
 def get_cyrillic_names_and_birthyears(url):
     # Get the html for the Russian site
-    html = gethtml(url.replace('http://en.', 'http://'))
+    html = gethtml(url.replace('http://en.', 'http://')
+                      .replace('https://en.', 'https://'))
 
     soup = BeautifulSoup(html, 'html.parser')
-
     names = []
     birthyears = []
 
@@ -715,7 +715,7 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W', 'WPA-RUS']:
+        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W', 'WPA-RUS', 'NPA']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Teen'
