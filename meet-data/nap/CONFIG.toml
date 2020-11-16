@@ -23,6 +23,7 @@
     ama_masters_80p = {name="Amateur Masters 80+", min=80, max=999, tested="Yes"}
     ama_police = {name="Amateur Police", min=0, max=999, tested="Yes"}
     ama_teen = {name="Amateur Teen", min=14, max=19, tested="Yes"}
+    ama_masters = {name="Amateur Masters", min=40, max=999, tested="Yes"}
 
     # Pro divisions.
     pro_teen_13 = {name="Pro Teen 13", min=0, max=13}
@@ -114,6 +115,7 @@
     1304 = ["ExemptWeightClassConsistency"] # Disabled lifters with no WC
     1402 = ["ExemptWeightClassConsistency"] # Elite lifters with no WC
     1407 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    1509 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1914 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1944 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1958 = ["ExemptWeightClassConsistency"] # Non standard WCs
