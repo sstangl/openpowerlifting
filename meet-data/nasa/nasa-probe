@@ -35,7 +35,7 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    content = soup.find_all("div", {"id": "content"})
+    content = soup.find_all("main", {"id": "content"})
     if len(content) == 0:
         error("Page layout seems to have changed.")
     elif len(content) > 1:
