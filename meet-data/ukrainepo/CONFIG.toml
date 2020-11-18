@@ -33,3 +33,7 @@
 
 [exemptions]
     0801 =["ExemptWeightClassConsistency"] # No weightclasses
+    0805 =["ExemptWeightClassConsistency"] # Reduced weightclasses
+    0905 =["ExemptWeightClassConsistency"] # Reduced weightclasses
+    1005 =["ExemptWeightClassConsistency"] # Reduced weightclasses
+    1106 =["ExemptWeightClassConsistency"] # Reduced weightclasses
