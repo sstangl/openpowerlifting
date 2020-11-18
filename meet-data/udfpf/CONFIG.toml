@@ -1,5 +1,6 @@
 [divisions]
     o = {name="O", min=14, max=999}
+    y = {name="Y", min=5, max=13}
     t1 = {name="T1", min=14, max=15}
     t2 = {name="T2", min=16, max=17}
     t3 = {name="T3", min=18, max=19}

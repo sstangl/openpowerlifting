@@ -434,7 +434,11 @@ def getpagedata(soup):
                                      'ro': 'Romania', 'be': 'Belgium',
                                      'mx': 'Mexico', 'nl': 'Netherlands',
                                      'in': 'India', 'lu': 'Luxembourg',
-                                     'is': 'Iceland', 'uz': 'Uzbekistan'}
+                                     'is': 'Iceland', 'uz': 'Uzbekistan',
+                                     'ga': 'Georgia', 'cm': 'Cameroon',
+                                     'jp': 'Japan', 'hk': 'Hong Kong',
+                                     'tm': 'Turkmenistan', 'af': 'Afghanistan',
+                                     'lb': 'Lebanon', 'om': 'Oman', 'ae': 'UAE'}
                     if text in country_codes:
                         text = country_codes[text]
 
@@ -699,7 +703,7 @@ def standardise_division(fed, csv):
         div_idx = csv.index('Division')
 
         # IPF Feds that we are likely to use this script for
-        if fed in ['FPR', 'KPF', 'UkrainePF']:
+        if fed in ['FPR', 'KPF', 'UkrainePF', 'CPF']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Sub-Juniors'
@@ -715,7 +719,8 @@ def standardise_division(fed, csv):
                     row[div_idx] = 'Masters 3'
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
-        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W', 'WPA-RUS', 'NPA']:
+        elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W', 'WPA-RUS', 'NPA',
+                     'NPA-CRI']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Teen'

@@ -17,6 +17,7 @@
     m_70_74 = {name = "M7", min = 70, max = 74}
     m_75_79 = {name = "M8", min = 75, max = 79}
     m_80p = {name = "M9", min = 80, max = 999}
+    m = {name = "M", min = 40, max = 999}
 
     pfm = {name = "PFM", min = 0, max = 999}
 
