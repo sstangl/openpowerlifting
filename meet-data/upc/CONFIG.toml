@@ -25,6 +25,7 @@
 
     teen = {name = "Teen", min = 13, max = 19}
     masters = {name = "Masters", min = 40, max = 999}
+    teen_juniors = {name = "Teen/Juniors", min = 5, max = 23}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -37,8 +38,14 @@
     sex = "F"
 
 [exemptions]    
+    1302 = ["ExemptWeightClassConsistency"] # Women without weightclasses
+    1304 = ["ExemptWeightClassConsistency"] # Women without weightclasse
     1402 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
-    1404 = ["ExemptWeightClassConsistency"] # Women without weightclasse
+    1404 = ["ExemptWeightClassConsistency"] # Women without weightclasses
+    1405 = ["ExemptWeightClassConsistency"] # Women without weightclasses
+    1407 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1408 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1409 = ["ExemptWeightClassConsistency"] # Women without weightclasses
     1502 = ["ExemptWeightClassConsistency"] # Lifters without weightclasses
     1504 = ["ExemptWeightClassConsistency"] # Women without weightclasses
     1505 = ["ExemptWeightClassConsistency"] # Women without weightclasses

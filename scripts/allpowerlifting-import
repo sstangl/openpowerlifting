@@ -112,7 +112,7 @@ def getmeetinfo(soup):
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
-                       'Австрия': 'Austria', 'Польша': 'Poland'}
+                       'Австрия': 'Austria', 'Польша': 'Poland', 'Украина': 'Ukraine'}
 
     # Get the location.
     venuerow = info[2]
@@ -720,7 +720,7 @@ def standardise_division(fed, csv):
                 elif row[div_idx] == 'M4':
                     row[div_idx] = 'Masters 4'
         elif fed in ['WPC-RUS', 'FPMO-WPC', 'FPTO', 'POKK-WPC-W', 'WPA-RUS', 'NPA',
-                     'NPA-CRI']:
+                     'NPA-CRI', 'UPC']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Teen'
