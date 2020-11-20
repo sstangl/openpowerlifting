@@ -63,7 +63,7 @@ def parse_sheetname(s):
     s = s.replace('multi ply', 'm-ply')
     s = s.replace('мн. эк', 'm-ply')
     s = s.replace('мн.сл', 'm-ply')
-    s = s.replace('мн сл. эк', 'm-ply')    
+    s = s.replace('мн сл. эк', 'm-ply')
     s = s.replace('s.ply', 's-ply')
     s = s.replace('single ply', 's-ply')
     s = s.replace('одн. эк', 's-ply')
