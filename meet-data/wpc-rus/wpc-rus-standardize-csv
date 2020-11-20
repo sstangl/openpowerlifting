@@ -63,10 +63,12 @@ def parse_sheetname(s):
     s = s.replace('multi ply', 'm-ply')
     s = s.replace('мн. эк', 'm-ply')
     s = s.replace('мн.сл', 'm-ply')
+    s = s.replace('мн сл. эк', 'm-ply')    
     s = s.replace('s.ply', 's-ply')
     s = s.replace('single ply', 's-ply')
     s = s.replace('одн. эк', 's-ply')
     s = s.replace('од. эк', 's-ply')
+    s = s.replace('1-сл. эк', '1-сл')
     s = s.replace('soft eq', 'soft')
     s = s.replace('std.soft', 'soft')
     s = s.replace('soft std', 'soft')
@@ -175,7 +177,7 @@ def parse_sheetname(s):
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный',
                       '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st',
-                      '1-слойная', '1-слойный', 'однослойно', 'односло']:
+                      '1-слойная', '1-слойный', 'однослойно', 'односло', '1-сл']:
             if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
@@ -189,14 +191,14 @@ def parse_sheetname(s):
                 equipment = 'Multi-ply'
         elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik',
                                         'кл', 'классический', 'классичесический',
-                                        'клас']:
+                                        'клас', 'классик']:
             equipment = 'Wraps'
             event = 'SBD'
-        elif word in ['безкипировки', 'raw', 'безэкип', 'без']:
+        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк']:
             equipment = 'Raw'
 
         # Booleans.
-        elif word == 'люб.' or word == 'любители':
+        elif word in ['люб.', 'любители', 'am']:
             amateur = 'Amateur'
         elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
             assert amateur == 'Pro'
@@ -457,7 +459,7 @@ def parse_sheet(sheet):
                                 'лист39', 'лист4', 'лист8']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
-                                  'folk', 'm-rep', 'multy-repeat', 'mr bp']):
+                                  'folk', 'm-rep', 'multy-repeat', 'mr bp', 'мпж']):
         # Bench for reps
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
