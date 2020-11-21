@@ -596,9 +596,9 @@ pub enum Federation {
     #[strum(to_string = "KDKS", serialize = "kdks")]
     KDKS,
 
-    /// Dutch IPF affiliate (Netherlands)
+    /// Dutch IPF affiliate (Netherlands).
     #[serde(rename = "KNKF-SP")]
-    #[strum(to_string = "KNKF-SP", serialize = "KNKF-SP")]
+    #[strum(to_string = "KNKF-SP", serialize = "knkf-sp")]
     KNKFSP,
 
     /// Kazakhstan IPF affiliate.
