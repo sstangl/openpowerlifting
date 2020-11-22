@@ -32,7 +32,7 @@ WeightClassKg,Sex,Event,Equipment,Tested,Division,Name,CyrillicName,BirthDate,Bo
 90,M,SBD,Raw,Yes,Masters 40-49,Viktor Poshtarenko,Віктор Поштаренко,1970-02-06,88.35,190,197.5,202.5,202.5,-130,130,135,135,,-215,215,232.5,232.5,235,570,1
 90,M,SBD,Raw,Yes,Masters 40-49,Yuriy Stetsenko,Юрій Стеценко,1975-09-06,88.7,160,170,180,180,115,-125,-125,115,,160,170,180,180,,475,1
 90,M,SBD,Raw,Yes,Masters 50-59,Genadiy Ostrovskiy,Генадій Островський,1965-01-08,86.1,185,197.5,-205,197.5,115,122.5,-125,122.5,,200,-207.5,,200,,520,1
-100,M,SBD,Raw,Yes,Teen 13-15,Yaroslav Gavyada,Ярослав Гав'Яда,2003-02-18,95.1,160,170,180,180,-95,-100,-100,,,,,,,,,DQ
+100,M,SBD,Raw,Yes,Teen 13-15,Yaroslav Gavyada,Ярослав Гав'яда,2003-02-18,95.1,160,170,180,180,-95,-100,-100,,,,,,,,,DQ
 100,M,SBD,Raw,Yes,Juniors 20-23,Oleksandr Skachkov,Олександр Скачков,1995-08-22,95.6,-210,215,-225,215,135,140,145,145,,215,230,245,245,,605,3
 100,M,SBD,Raw,Yes,Open,Evgeniy Ivanets,Євгеній Іванець,1995-10-02,97.25,255,270,-280,270,130,137.5,142.5,142.5,,270,280,-290,280,,692.5,4
 100,M,SBD,Raw,Yes,Open,Maksim Gerasimenko,Максим Герасименко,1985-05-08,94.15,210,230,240,240,135,145,-150,145,,220,240,-250,240,,625,5
@@ -82,9 +82,9 @@ WeightClassKg,Sex,Event,Equipment,Tested,Division,Name,CyrillicName,BirthDate,Bo
 56,M,B,Raw,Yes,Open,Vitaliy Evtushok,Віталій Євтушок,1993-01-20,54.05,,,,,-110,110,-120,110,,,,,,,110,1
 56,M,B,Raw,Yes,Open,Vitaliy Churuta,Віталій Чурута,1992-09-18,55.6,,,,,-95,-95,-102.2,,,,,,,,,DQ
 67.5,M,B,Raw,Yes,Teen 18-19,Ruslan Ivanchik,Руслан Іванчик,1999-08-09,66.65,,,,,115,-121,-121,115,,,,,,,115,1
-67.5,M,B,Raw,Yes,Teen 18-19,Vitaliy Serbin,Віталій Сербин,1999-09-14,65.55,,,,,90,-95,-95,90,,,,,,,90,2
+67.5,M,B,Raw,Yes,Teen 18-19,Vitaliy Serbin,Віталій Сербін,1999-09-14,65.55,,,,,90,-95,-95,90,,,,,,,90,2
 67.5,M,B,Raw,Yes,Juniors 20-23,Andriy Kurachov,Андрій Курачов,1996-03-18,67.25,,,,,105,-110,-112.5,105,,,,,,,105,1
-67.5,M,B,Raw,Yes,Open,Vitaliy Pavlushko,Виталий Павлушко,1985-07-19,65.15,,,,,127.5,135,-140,135,,,,,,,135,1
+67.5,M,B,Raw,Yes,Open,Vitaliy Pavlushko,Віталій Павлушко,1985-07-19,65.15,,,,,127.5,135,-140,135,,,,,,,135,1
 67.5,M,B,Raw,Yes,Open,Ruslan Ivanchik,Руслан Іванчик,1999-08-09,66.65,,,,,115,-121,-121,115,,,,,,,115,2
 67.5,M,B,Raw,Yes,Open,Sergiy Rogoviy,Сергій Роговий,1987-05-07,65.95,,,,,100,-105,-105,100,,,,,,,100,3
 75,M,B,Raw,Yes,Teen 13-15,Vadim Zarudnitskiy,Вадим Зарудницький,2003-07-14,69.6,,,,,70,75,-80,75,,,,,,,75,1
@@ -114,7 +114,7 @@ WeightClassKg,Sex,Event,Equipment,Tested,Division,Name,CyrillicName,BirthDate,Bo
 90,M,B,Raw,Yes,Open,Sergey Kakhanchik,,1986-09-19,89,,,,,165,170,-175,170,,,,,,,170,6
 90,M,B,Raw,Yes,Masters 40-49,Sergiy Zolkin,Сергій Золкін,1970-08-04,87,,,,,115,120,122.5,122.5,,,,,,,122.5,1
 90,M,B,Raw,Yes,Masters 50-59,Igor Plotnikov #1,Ігор Плотніков,1966-06-15,88.3,,,,,110,115,-120,115,,,,,,,115,1
-100,M,B,Raw,Yes,Teen 13-15,Yaroslav Gavyada,Ярослав Гав'Яда,2003-02-18,95.1,,,,,-95,-100,-100,,,,,,,,,DQ
+100,M,B,Raw,Yes,Teen 13-15,Yaroslav Gavyada,Ярослав Гав'яда,2003-02-18,95.1,,,,,-95,-100,-100,,,,,,,,,DQ
 100,M,B,Raw,Yes,Open,Andriy Petruk,Андрій Петрук,1975-01-15,97.95,,,,,185,192.5,-195,192.5,,,,,,,192.5,4
 100,M,B,Raw,Yes,Open,Sergiy Kafelinos,Сергій Кафелінос,1977-07-16,97.75,,,,,180,190,-195,190,,,,,,,190,5
 100,M,B,Raw,Yes,Open,Volodimir Kutoviy,Володимир Кутовий,1972-07-29,98.5,,,,,190,-195,-195,190,,,,,,,190,6
@@ -185,7 +185,7 @@ WeightClassKg,Sex,Event,Equipment,Tested,Division,Name,CyrillicName,BirthDate,Bo
 90,M,D,Raw,Yes,Masters 40-49,Viktor Poshtarenko,Віктор Поштаренко,1970-02-06,88.35,,,,,,,,,,-215,215,232.5,232.5,235,232.5,1
 90,M,D,Raw,Yes,Masters 40-49,Oleksandr Drobilko,Олександр Дробілко,1972-11-13,86.65,,,,,,,,,,200,210,-212.5,210,,210,1
 90,M,D,Raw,Yes,Masters 50-59,Genadiy Ostrovskiy,Генадій Островський,1965-01-08,86.1,,,,,,,,,,200,-207.5,,200,,200,1
-100,M,D,Raw,Yes,Teen 13-15,Yaroslav Gavyada,Ярослав Гав'Яда,2003-02-18,95.1,,,,,,,,,,190,200,210,210,,210,1
+100,M,D,Raw,Yes,Teen 13-15,Yaroslav Gavyada,Ярослав Гав'яда,2003-02-18,95.1,,,,,,,,,,190,200,210,210,,210,1
 100,M,D,Raw,Yes,Juniors 20-23,Dmitro Nikolaev,Дмитро Ніколаєв,1996-09-11,94.65,,,,,,,,,,250,270,-280,270,,270,1
 100,M,D,Raw,Yes,Open,Dmitro Prosvirin,Дмитро Просвірін,1986-09-09,95.4,,,,,,,,,,285,295,305,305,,305,2
 100,M,D,Raw,Yes,Open,Evgeniy Ivanets,Євгеній Іванець,1995-10-02,97.25,,,,,,,,,,270,280,-290,280,,280,4
