@@ -337,6 +337,7 @@
 </optgroup>
 <optgroup label="{{strings.country.niue}}">
   <option value="all-niue" {% if selection.federation == "AllNiue" %}selected{% endif %}>{{strings.selectors.fed.all_niue}}</option>
+  <option value="wp-niue" {% if selection.federation == "WP-Niue" %}selected{% endif %}>{{strings.selectors.fed.wp-niue}}</option>
 </optgroup>
 <optgroup label="{{strings.country.norway}}">
   <option value="all-norway" {% if selection.federation == "AllNorway" %}selected{% endif %}>{{strings.selectors.fed.all_norway}}</option>
