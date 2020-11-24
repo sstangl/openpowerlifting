@@ -1,0 +1,245 @@
+Equipment,Place,Name,Division,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Sex,CyrillicName,Event
+Wraps,1,Nataliya Shepel,Teen,1998,Ukraine,57.35,75,80,85,85,45,47.5,50,50,75,80,85,85,220,56+,F,Наталія Шепель,SBD
+Wraps,1,Oksana Beseda,Open,1987,Ukraine,62.6,100,-110,-120,100,50,55,-60,55,120,140,145,145,300,56+,F,Оксана Беседа,SBD
+Wraps,2,Irina Krivokhizha,Open,1980,Ukraine,63.85,-105,105,110,110,-45,45,-52.5,45,120,125,-140,125,280,56+,F,Ірина Кривохижа,SBD
+Wraps,3,Viktoriya Kapustyan,Open,1988,Ukraine,70.6,-110,-110,110,110,40,45,-50,45,110,120,-127.5,120,275,56+,F,Вікторія Капустян,SBD
+Wraps,4,Nina Ochkas,Open,1986,Ukraine,56.85,75,-80,,75,52.5,55,-57.5,55,95,100,-110,100,230,56+,F,Ніна Очкась,SBD
+Wraps,5,Nataliya Shepel,Open,1998,Ukraine,57.35,75,80,85,85,45,47.5,50,50,75,80,85,85,220,56+,F,Наталія Шепель,SBD
+Wraps,6,Irina Vilchinska,Open,1973,Ukraine,65.35,75,82.5,-90,82.5,40,-45,-45,40,80,87.5,95,95,217.5,56+,F,Ірина Вільчинська,SBD
+Wraps,1,Irina Vilchinska,Masters,1973,Ukraine,65.35,75,82.5,-90,82.5,40,-45,-45,40,80,87.5,95,95,217.5,56+,F,Ірина Вільчинська,SBD
+Wraps,1,Yana Zhuk,Juniors 20-23,1995,Ukraine,45.15,45,52.5,-57.5,52.5,32.5,-35,35,35,55,62.5,70,70,157.5,56,F,Яна Жук,SBD
+Wraps,1,Anna Tarasenko,Open,1989,Ukraine,47.8,-110,110,-115,110,72.5,75,-77.5,75,-120,120,132.5,132.5,317.5,56,F,Анна Тарасенко,SBD
+Wraps,2,Oksana Storozhuk,Open,1984,Ukraine,55.1,100,-110,-110,100,50,57.5,65,65,110,120,-127.5,120,285,56,F,Оксана Сторожук,SBD
+Wraps,3,Irina Karasenko,Open,1986,Ukraine,53.15,-90,90,95,95,60,-65,-65,60,100,102.5,105,105,260,56,F,Ірина Карасенко,SBD
+Wraps,4,Yana Zhuk,Open,1995,Ukraine,45.15,45,52.5,-57.5,52.5,32.5,-35,35,35,55,62.5,70,70,157.5,56,F,Яна Жук,SBD
+Wraps,1,Sergiy Kalchuk,Open,1989,Ukraine,64.9,-140,140,160,160,105,112.5,-117.5,112.5,160,165,,165,437.5,67.5,M,Сергій Кальчук,SBD
+Wraps,2,Oleksandr Krizhevskiy,Open,1982,Ukraine,63.75,-100,-105,105,105,67.5,-72.5,-72.5,67.5,150,157.5,165,165,337.5,67.5,M,Олександр Крижевський,SBD
+Wraps,1,Vitaliy Salenko,Teen,2001,Ukraine,70.65,135,140,-150,140,62.5,67.5,-70,67.5,110,117.5,-122.5,117.5,325,75,M,Віталій Саленко,SBD
+Wraps,1,Valentin Nesin,Juniors 20-23,1994,Ukraine,72.15,-200,-200,200,200,120,130,-140,130,200,-210,-210,200,530,75,M,Валентин Несин,SBD
+Wraps,DQ,Vitaliy Rakovskiy,Juniors 20-23,1993,Ukraine,74.4,-165,-170,-170,,,,,,,,,,,75,M,Віталій Раковський,SBD
+Wraps,1,Valentin Nesin,Open,1994,Ukraine,72.15,-200,-200,200,200,120,130,-140,130,200,-210,-210,200,530,75,M,Валентин Несин,SBD
+Wraps,2,Sergiy Shevchenko,Open,1991,Ukraine,73.95,170,-182.5,185,185,105,110,115,115,-175,185,200,200,500,75,M,Сергій Шевченко,SBD
+Wraps,3,Sergiy Karyuk,Open,1993,Ukraine,73.5,-160,160,-172.5,160,130,135,-137.5,135,182.5,195,202.5,202.5,497.5,75,M,Сергій Карюк,SBD
+Wraps,4,Dmitro Shpak,Open,1991,Ukraine,70.75,-180,-190,190,190,110,115,-120,115,170,180,-185,180,485,75,M,Дмитро Шпак,SBD
+Wraps,5,Vitaliy Titarenko,Open,1990,Ukraine,72.25,155,170,,170,105,115,-122.5,115,180,-192.5,195,195,480,75,M,Виталий Титаренко,SBD
+Wraps,6,Vitaliy Salenko,Open,2001,Ukraine,70.65,135,140,-150,140,62.5,67.5,-70,67.5,110,117.5,-122.5,117.5,325,75,M,Віталій Саленко,SBD
+Wraps,DQ,Vitaliy Rakovskiy,Open,1993,Ukraine,74.4,-165,-170,-170,,,,,,,,,,,75,M,Віталій Раковський,SBD
+Wraps,1,Yuriy Chuyko,Teen,2000,Ukraine,77.9,100,120,-140,120,70,80,90,90,100,127.5,-140,127.5,337.5,82.5,M,Юрій Чуйко,SBD
+Wraps,DQ,Anton Kosenko,Teen,2000,Ukraine,81.7,-80,-80,-90,,,,,,,,,,,82.5,M,Антон Косенко,SBD
+Wraps,1,Artem Kutsevol,Juniors 20-23,1994,Ukraine,80.8,180,-190,190,190,135,140,145,145,200,210,220,220,555,82.5,M,Артем Куцевол,SBD
+Wraps,1,Illya Belikov,Open,1992,Ukraine,81.7,180,190,-200,190,130,135,137.5,137.5,210,225,235,235,562.5,82.5,M,Ілля Бєліков,SBD
+Wraps,2,Dmitro Shpachinskiy,Open,1991,Ukraine,81.85,180,-192.5,192.5,192.5,-127.5,127.5,132.5,132.5,215,225,235,235,560,82.5,M,Дмитро Шпачинський,SBD
+Wraps,3,Artem Kutsevol,Open,1994,Ukraine,80.8,180,-190,190,190,135,140,145,145,200,210,220,220,555,82.5,M,Артем Куцевол,SBD
+Wraps,4,Maksim Yakovenko,Open,1986,Ukraine,81.6,190,205,215,215,110,120,-125,120,190,205,215,215,550,82.5,M,Максим Яковенко,SBD
+Wraps,5,Sergiy Gichka,Open,1991,Ukraine,79.85,140,160,170,170,-120,120,130,130,200,210,225,225,525,82.5,M,Сергій Гичка,SBD
+Wraps,6,Yaroslav Panchenko,Open,1977,Ukraine,75.5,180,-190,-195,180,110,115,-120,115,190,200,-205,200,495,82.5,M,Ярослав Панченко,SBD
+Wraps,7,Yuriy Chuyko,Open,2000,Ukraine,77.9,100,120,-140,120,70,80,90,90,100,127.5,-140,127.5,337.5,82.5,M,Юрій Чуйко,SBD
+Wraps,DQ,Anton Kosenko,Open,2000,Ukraine,81.7,-80,-80,-90,,,,,,,,,,,82.5,M,Антон Косенко,SBD
+Wraps,DQ,Andrash Baratey,Teen,1998,Ukraine,88.15,-170,,-170,,,,,,,,,,,90,M,Андраш Баратей,SBD
+Wraps,1,Taras Dubrova,Juniors 20-23,1994,Ukraine,89.95,200,215,-225,215,-120,120,127.5,127.5,190,205,-215,205,547.5,90,M,Тарас Дуброва,SBD
+Wraps,1,Ilya Korshun,Open,1993,Belarus,87.85,230,240,-250,240,170,175,-180,175,267.5,275,282.5,282.5,697.5,90,M,,SBD
+Wraps,2,Mikola Tishuk,Open,1992,Ukraine,89.55,260,-270,-270,260,150,160,-165,160,-260,265,-277.5,265,685,90,M,Микола Тишук,SBD
+Wraps,3,Dmitro Goropakha,Open,1992,Ukraine,89.25,250,265,272.5,272.5,145,-152.5,-152.5,145,235,-250,250,250,667.5,90,M,Дмитро Горопаха,SBD
+Wraps,4,Taras Dubrova,Open,1994,Ukraine,89.95,200,215,-225,215,-120,120,127.5,127.5,190,205,-215,205,547.5,90,M,Тарас Дуброва,SBD
+Wraps,5,Viktor Poshtarenko,Open,1970,Ukraine,87.05,-180,180,190,190,125,132.5,-135,132.5,205,215,-222.5,215,537.5,90,M,Віктор Поштаренко,SBD
+Wraps,6,Gennadiy Ostrovskiy,Open,1965,Ukraine,87.4,180,192.5,-200,192.5,120,-130,130,130,200,207.5,-210,207.5,530,90,M,Геннадій Островський,SBD
+Wraps,DQ,Andriy Khraban,Open,1990,Ukraine,83.45,-210,-210,-215,,,,,,,,,,,90,M,Андрій Храбан,SBD
+Wraps,DQ,Andrash Baratey,Open,1998,Ukraine,88.15,-170,,-170,,,,,,,,,,,90,M,Андраш Баратей,SBD
+Wraps,1,Gennadiy Ostrovskiy,Masters,1965,Ukraine,87.4,180,192.5,-200,192.5,120,-130,130,130,200,207.5,-210,207.5,530,90,M,Геннадій Островський,SBD
+Wraps,2,Viktor Poshtarenko,Masters,1970,Ukraine,87.05,-180,180,190,190,125,132.5,-135,132.5,205,215,-222.5,215,537.5,90,M,Віктор Поштаренко,SBD
+Wraps,DQ,Maksim Stolyarenko,Juniors 20-23,1995,Ukraine,96.5,-170,-170,-170,,,,,,,,,,,100,M,Максим Столяренко,SBD
+Wraps,1,Andriy Sidorets,Open,1991,Ukraine,94.35,200,230,-235,230,130,135,-142.5,135,200,220,230,230,595,100,M,Андрій Сидорець,SBD
+Wraps,DQ,Maksim Stolyarenko,Open,1995,Ukraine,96.5,-170,-170,-170,,,,,,,,,,,100,M,Максим Столяренко,SBD
+Wraps,1,Sergiy Romanko,Juniors 20-23,1996,Ukraine,107.05,185,200,212.5,212.5,155,165,175,175,220,-240,-240,220,607.5,100+,M,Сергій Романко,SBD
+Wraps,2,Denis Alekseenko,Juniors 20-23,1993,Ukraine,116.35,170,-182.5,-182.5,170,140,145,,145,200,-210,-210,200,515,100+,M,Денис Алексеєнко,SBD
+Wraps,1,Vladimir Lukyanov,Open,1966,Belarus,104.45,-250,260,270,270,135,140,-150,140,280,290,-300,290,700,100+,M,,SBD
+Wraps,2,Sergiy Romanko,Open,1996,Ukraine,107.05,185,200,212.5,212.5,155,165,175,175,220,-240,-240,220,607.5,100+,M,Сергій Романко,SBD
+Wraps,3,Sergiy Punda,Open,1974,Ukraine,106.95,-190,200,210,210,-140,150,160,160,200,215,225,225,595,100+,M,Сергій Пунда,SBD
+Wraps,4,Igor Onischak,Open,1973,Ukraine,106.25,190,200,210,210,115,120,125,125,200,215,225,225,560,100+,M,Ігор Онищак,SBD
+Wraps,5,Denis Alekseenko,Open,1993,Ukraine,116.35,170,-182.5,-182.5,170,140,145,,145,200,-210,-210,200,515,100+,M,Денис Алексеєнко,SBD
+Wraps,1,Vladimir Lukyanov,Masters,1966,Belarus,104.45,-250,260,270,270,135,140,-150,140,280,290,-300,290,700,100+,M,,SBD
+Wraps,2,Sergiy Punda,Masters,1974,Ukraine,106.95,-190,200,210,210,-140,150,160,160,200,215,225,225,595,100+,M,Сергій Пунда,SBD
+Wraps,3,Igor Onischak,Masters,1973,Ukraine,106.25,190,200,210,210,115,120,125,125,200,215,225,225,560,100+,M,Ігор Онищак,SBD
+Single-ply,DQ,Mariya Brayko,Teen,1997,Ukraine,57.15,-100,-100,-110,,,,,,,,,,,60,F,Мария Брайко,SBD
+Single-ply,DQ,Mariya Brayko,Open,1997,Ukraine,57.15,-100,-100,-110,,,,,,,,,,,60,F,Мария Брайко,SBD
+Raw,1,Anastatsiya Kurdesha,Teen,1999,Ukraine,58,,,,,-60,65,-67.5,65,,,,,65,56+,F,Анастатсія Курдеша,B
+Raw,1,Renata Ignatova,Teen 13-15,2004,Ukraine,57,,,,,37.5,40,42.5,42.5,,,,,42.5,56+,F,Рената Ігнатова,B
+Raw,1,Nadiya Tischenko,Juniors 20-23,1993,Ukraine,67.95,,,,,95,-100,100,100,,,,,100,56+,F,Надія Тищенко,B
+Raw,1,Nadiya Tischenko,Open,1993,Ukraine,67.95,,,,,95,-100,100,100,,,,,100,56+,F,Надія Тищенко,B
+Raw,2,Anastatsiya Kurdesha,Open,1999,Ukraine,58,,,,,-60,65,-67.5,65,,,,,65,56+,F,Анастатсія Курдеша,B
+Raw,3,Svitlana Vorobyova,Open,1987,Ukraine,57.8,,,,,-60,-60,60,60,,,,,60,56+,F,Світлана Воробйова,B
+Raw,4,Liliana Katsalap,Open,1992,Ukraine,65.55,,,,,-60,-65,65,65,,,,,65,56+,F,Ліліана Кацалап,B
+Raw,5,Renata Ignatova,Open,2004,Ukraine,57,,,,,37.5,40,42.5,42.5,,,,,42.5,56+,F,Рената Ігнатова,B
+Raw,6,Zhaneta Shostak,Open,1972,Ukraine,61.7,,,,,37.5,40,-45,40,,,,,40,56+,F,Жанета Шостак,B
+Raw,7,Tetyana Fomenko,Open,1987,Ukraine,102.55,,,,,52.5,-57.5,-57.5,52.5,,,,,52.5,56+,F,Тетяна Фоменко,B
+Raw,1,Zhaneta Shostak,Masters,1972,Ukraine,61.7,,,,,37.5,40,-45,40,,,,,40,56+,F,Жанета Шостак,B
+Raw,1,Yevgeniya Sakaly,Teen,2004,Ukraine,51.35,,,,,55,60,-62.5,60,,,,,60,56,F,Євгенія Сакали,B
+Raw,1,Irina Dichenko,Juniors 20-23,1996,Ukraine,50,,,,,70,72.5,75,75,,,,,75,56,F,Ірина Диченко,B
+Raw,2,Valeriya Naumenko,Open,1990,Ukraine,53.45,,,,,40,42.5,-47.5,42.5,,,,,42.5,56,F,Валерія Науменко,B
+Raw,1,Anna Tarasenko,Open,1989,Ukraine,47.8,,,,,72.5,75,-77.5,75,,,,,75,56,F,Анна Тарасенко,B
+Raw,2,Irina Dichenko,Open,1996,Ukraine,50,,,,,70,72.5,75,75,,,,,75,56,F,Ірина Диченко,B
+Raw,3,Kseniya Pleva,Open,1978,Ukraine,51.3,,,,,52.5,57.5,60,60,,,,,60,56,F,Ксенія Плєва,B
+Raw,4,Yevgeniya Sakaly,Open,2004,Ukraine,51.35,,,,,55,60,-62.5,60,,,,,60,56,F,Євгенія Сакали,B
+Raw,5,Anna Kovalenko,Open,1989,Ukraine,46.45,,,,,50,52.5,-55,52.5,,,,,52.5,56,F,Анна Коваленко,B
+Raw,6,Valeriya Naumenko,Open,1990,Ukraine,53.45,,,,,40,42.5,-47.5,42.5,,,,,42.5,56,F,Валерія Науменко,B
+Raw,7,Marina Somova #2,Open,1989,Ukraine,52.5,,,,,-37.5,37.5,40,40,,,,,40,56,F,Марина Сьомова,B
+Raw,8,Mariya Kvashuk,Open,1990,Ukraine,51.1,,,,,-32.5,-32.5,35,35,,,,,35,56,F,Марія Квашук,B
+Raw,1,Vitaliy Evtushok,Open,1993,Ukraine,56.7,,,,,110,112.5,-115,112.5,,,,,112.5,60,M,Віталій Євтушок,B
+Raw,1,Vitaliy Serbin,Teen,1999,Ukraine,65.9,,,,,100,-102.5,-102.5,100,,,,,100,67.5,M,Віталій Сербін,B
+Raw,DQ,Denis Matvienko,Teen,1999,Ukraine,67.5,,,,,,,,,,,,,,67.5,M,Денис Матвієнко,B
+Raw,1,Miroslav Vernigora,Juniors 20-23,1996,Ukraine,63.95,,,,,125,130,132.5,132.5,,,,,132.5,67.5,M,Мирослав Вернигора,B
+Raw,1,Miroslav Vernigora,Open,1996,Ukraine,63.95,,,,,125,130,132.5,132.5,,,,,132.5,67.5,M,Мирослав Вернигора,B
+Raw,2,Vitaliy Serbin,Open,1999,Ukraine,65.9,,,,,100,-102.5,-102.5,100,,,,,100,67.5,M,Віталій Сербін,B
+Raw,1,Kirilo Gavrilyuk,Teen,2002,Ukraine,69.55,,,,,60,72.5,-80,72.5,,,,,72.5,75,M,Кирило Гаврилюк,B
+Raw,2,Andriy Karas,Teen,1999,Ukraine,70.3,,,,,72.5,-80,-80,72.5,,,,,72.5,75,M,Андрій Карась,B
+Raw,DQ,Yaroslav Slutskiy,Teen,2001,Ukraine,73.9,,,,,-95,-100,-100,,,,,,,75,M,Ярослав Слуцький,B
+Raw,1,Danilo Bruenkov,Juniors 20-23,1996,Belarus,74.7,,,,,120,127.5,135,135,,,,,135,75,M,,B
+Raw,1,Vyacheslav Nedavniy,Open,1992,Ukraine,72.2,,,,,130,140,150,150,,,,,150,75,M,Вячеслав Недавній,B
+Raw,2,Andriy Yatskov,Open,1993,Ukraine,72.85,,,,,-137.5,137.5,-142.5,137.5,,,,,137.5,75,M,Андрій Яцков,B
+Raw,3,Sergiy Karyuk,Open,1993,Ukraine,73.5,,,,,130,135,-137.5,135,,,,,135,75,M,Сергій Карюк,B
+Raw,4,Danilo Bruenkov,Open,1996,Belarus,74.7,,,,,120,127.5,135,135,,,,,135,75,M,,B
+Raw,5,Andriy Tsitson,Open,1983,Ukraine,74.7,,,,,130,132.5,-135,132.5,,,,,132.5,75,M,Андрій Цицонь,B
+Raw,6,Danilo Bobko,Open,1989,Ukraine,73.35,,,,,117.5,125,-130,125,,,,,125,75,M,Данило Бобко,B
+Raw,7,Vadim Dubchenko,Open,1988,Ukraine,72.2,,,,,100,-117.5,-117.5,100,,,,,100,75,M,Вадим Дубченко,B
+Raw,8,Kirilo Gavrilyuk,Open,2002,Ukraine,69.55,,,,,60,72.5,-80,72.5,,,,,72.5,75,M,Кирило Гаврилюк,B
+Raw,9,Andriy Karas,Open,1999,Ukraine,70.3,,,,,72.5,-80,-80,72.5,,,,,72.5,75,M,Андрій Карась,B
+Raw,DQ,Yaroslav Slutskiy,Open,2001,Ukraine,73.9,,,,,-95,-100,-100,,,,,,,75,M,Ярослав Слуцький,B
+Raw,1,Eldar Agaev #2,Teen,2001,Ukraine,80.7,,,,,60,-70,-80,60,,,,,60,82.5,M,Ельдар Агаєв,B
+Raw,DQ,Anton Saykevich,Teen,1999,Ukraine,80.35,,,,,-120,-127.5,-127.5,,,,,,,82.5,M,Антон Сайкевич,B
+Raw,1,Artem Dem'yanenko,Juniors 20-23,1996,Ukraine,79.8,,,,,155,160,-165,160,,,,,160,82.5,M,Артем Дем'яненко,B
+Raw,2,Artem Kutsevol,Juniors 20-23,1994,Ukraine,80.8,,,,,135,140,145,145,,,,,145,82.5,M,Артем Куцевол,B
+Raw,3,Dmitro Khramov,Juniors 20-23,1994,Ukraine,79.65,,,,,-122.5,127.5,-135,127.5,,,,,127.5,82.5,M,Дмитро Храмов,B
+Raw,1,Bogdan Vorobey,Open,1983,Ukraine,81.9,,,,,170,175,180,180,,,,,180,82.5,M,Богдан Воробей,B
+Raw,2,Artem Dem'yanenko,Open,1996,Ukraine,79.8,,,,,155,160,-165,160,,,,,160,82.5,M,Артем Дем'яненко,B
+Raw,3,Artem Kutsevol,Open,1994,Ukraine,80.8,,,,,135,140,145,145,,,,,145,82.5,M,Артем Куцевол,B
+Raw,4,Oleksandr Gora,Open,1987,Ukraine,80.45,,,,,137.5,-142.5,-142.5,137.5,,,,,137.5,82.5,M,Олександр Гора,B
+Raw,5,Dmitro Khramov,Open,1994,Ukraine,79.65,,,,,-122.5,127.5,-135,127.5,,,,,127.5,82.5,M,Дмитро Храмов,B
+Raw,6,Sergiy Konyukh,Open,1991,Ukraine,81.65,,,,,-127.5,127.5,-132.5,127.5,,,,,127.5,82.5,M,Сергій Конюх,B
+Raw,7,Eldar Agaev #2,Open,2001,Ukraine,80.7,,,,,60,-70,-80,60,,,,,60,82.5,M,Ельдар Агаєв,B
+Raw,DQ,Anton Saykevich,Open,1999,Ukraine,80.35,,,,,-120,-127.5,-127.5,,,,,,,82.5,M,Антон Сайкевич,B
+Raw,1,Mikola Suchkov,Teen,2000,Ukraine,86.4,,,,,80,-87.5,90,90,,,,,90,90,M,Микола Сучков,B
+Raw,1,Dmitro Stepanenko,Juniors 20-23,1994,Ukraine,89.7,,,,,147.5,152.5,157.5,157.5,,,,,157.5,90,M,Дмитро Степаненко,B
+Raw,2,Bogdan Fedko,Juniors 20-23,1994,Ukraine,87.7,,,,,150,-155,-155,150,,,,,150,90,M,Богдан Федько,B
+Raw,3,Mikola Gorbatko,Juniors 20-23,1993,Ukraine,86.25,,,,,137.5,-142.5,-142.5,137.5,,,,,137.5,90,M,Микола Горбатко,B
+Raw,4,Sergiy Krivosheya,Juniors 20-23,1994,Ukraine,86.25,,,,,120,-132.5,-132.5,120,,,,,120,90,M,Сергій Кривошея,B
+Raw,DQ,Ivan Chupriy,Juniors 20-23,1993,Ukraine,87.1,,,,,-152.5,-152.5,,,,,,,,90,M,Іван Чупрій,B
+Raw,1,Oleksiy Bronishevskiy,Open,1988,Ukraine,87.25,,,,,195,-205,-205,195,,,,,195,90,M,Олексій Бронішевський,B
+Raw,2,Aleksandr Valivashenko,Open,1987,Belarus,83.1,,,,,192.5,-197.5,-197.5,192.5,,,,,192.5,90,M,,B
+Raw,3,Viktor Borinets,Open,1989,Ukraine,89.55,,,,,187.5,-192.5,-192.5,187.5,,,,,187.5,90,M,Віктор Боринец,B
+Raw,4,Ilya Korshun,Open,1993,Belarus,87.85,,,,,170,175,-180,175,,,,,175,90,M,,B
+Raw,5,Oleg Zavolovich,Open,1976,Ukraine,84.7,,,,,-155,155,160,160,,,,,160,90,M,Олег Заволович,B
+Raw,6,Dmitro Stepanenko,Open,1994,Ukraine,89.7,,,,,147.5,152.5,157.5,157.5,,,,,157.5,90,M,Дмитро Степаненко,B
+Raw,7,Bogdan Fedko,Open,1994,Ukraine,87.7,,,,,150,-155,-155,150,,,,,150,90,M,Богдан Федько,B
+Raw,8,Viktor Yatsenko,Open,1977,Ukraine,87.85,,,,,137.5,142.5,-145,142.5,,,,,142.5,90,M,Віктор Яценко,B
+Raw,9,Andriy Gruzda,Open,1985,Ukraine,90,,,,,140,-147.5,,140,,,,,140,90,M,Андрій Грузда,B
+Raw,10,Mikola Gorbatko,Open,1993,Ukraine,86.25,,,,,137.5,-142.5,-142.5,137.5,,,,,137.5,90,M,Микола Горбатко,B
+Raw,11,Roman Avdeev #2,Open,1980,Ukraine,87.9,,,,,-120,132.5,-140,132.5,,,,,132.5,90,M,Роман Авдєєв,B
+Raw,12,Sergiy Zolkin,Open,1970,Ukraine,89.25,,,,,120,127.5,-132.5,127.5,,,,,127.5,90,M,Сергій Золкін,B
+Raw,13,Sergiy Krivosheya,Open,1994,Ukraine,86.25,,,,,120,-132.5,-132.5,120,,,,,120,90,M,Сергій Кривошея,B
+Raw,14,Igor Plotnikov,Open,1966,Ukraine,87.8,,,,,100,107.5,-110,107.5,,,,,107.5,90,M,Ігор Плотніков,B
+Raw,15,Mikola Suchkov,Open,2000,Ukraine,86.4,,,,,80,-87.5,90,90,,,,,90,90,M,Микола Сучков,B
+Raw,DQ,Ivan Chupriy,Open,1993,Ukraine,87.1,,,,,-152.5,-152.5,,,,,,,,90,M,Іван Чупрій,B
+Raw,1,Oleg Zavolovich,Masters,1976,Ukraine,84.7,,,,,-155,155,160,160,,,,,160,90,M,Олег Заволович,B
+Raw,2,Sergiy Zolkin,Masters,1970,Ukraine,89.25,,,,,120,127.5,-132.5,127.5,,,,,127.5,90,M,Сергій Золкін,B
+Raw,3,Igor Plotnikov,Masters,1966,Ukraine,87.8,,,,,100,107.5,-110,107.5,,,,,107.5,90,M,Ігор Плотніков,B
+Raw,1,Sergiy Plotnikov,Juniors 20-23,1995,Ukraine,98.45,,,,,140,150,160,160,,,,,160,100,M,Сергій Плотніков,B
+Raw,2,Eduard Bilik,Juniors 20-23,1995,Ukraine,97.5,,,,,145,150,152.5,152.5,,,,,152.5,100,M,Едуард Білик,B
+Raw,3,Ivan Shtolts,Juniors 20-23,1994,Ukraine,98.2,,,,,130,-140,140,140,,,,,140,100,M,Іван Штольц,B
+Raw,1,Igor Danilov #1,Open,1985,Ukraine,96.7,,,,,195,-200,200,200,,,,,200,100,M,Ігор Данилов,B
+Raw,2,Evgen Dobrokonniy,Open,1978,Ukraine,99.6,,,,,192.5,-195,-195,192.5,,,,,192.5,100,M,Євген Доброконний,B
+Raw,3,Yuriy Kostenko,Open,1971,Ukraine,98.6,,,,,170,180,-185,180,,,,,180,100,M,Юрій Костенко,B
+Raw,4,Sergiy Plotnikov,Open,1995,Ukraine,98.45,,,,,140,150,160,160,,,,,160,100,M,Сергій Плотніков,B
+Raw,5,Eduard Bilik,Open,1995,Ukraine,97.5,,,,,145,150,152.5,152.5,,,,,152.5,100,M,Едуард Білик,B
+Raw,6,Ivan Shtolts,Open,1994,Ukraine,98.2,,,,,130,-140,140,140,,,,,140,100,M,Іван Штольц,B
+Raw,7,Roman Radchuk,Open,1989,Ukraine,98.65,,,,,130,-140,-140,130,,,,,130,100,M,Роман Радчук,B
+Raw,8,Mikola Grigorovich,Open,1969,Ukraine,94.3,,,,,120,-125,125,125,,,,,125,100,M,Микола Григорович,B
+Raw,1,Yuriy Kostenko,Masters,1971,Ukraine,98.6,,,,,170,180,-185,180,,,,,180,100,M,Юрій Костенко,B
+Raw,2,Mikola Grigorovich,Masters,1969,Ukraine,94.3,,,,,120,-125,125,125,,,,,125,100,M,Микола Григорович,B
+Raw,1,Oleksandr Telnikh,Juniors 20-23,1994,Ukraine,109.7,,,,,150,160,-170,160,,,,,160,100+,M,Олександр Тельних,B
+Raw,2,Denis Alekseenko,Juniors 20-23,1993,Ukraine,116.35,,,,,140,145,,145,,,,,145,100+,M,Денис Алексеєнко,B
+Raw,1,Artem Tkachenko,Open,1991,Ukraine,103.78,,,,,210,220,-232.5,220,,,,,220,100+,M,Артем Ткаченко,B
+Raw,2,Oleksandr Chernish,Open,1988,Ukraine,106.55,,,,,195,207.5,212.5,212.5,,,,,212.5,100+,M,Олександр Черниш,B
+Raw,4,Oleksiy Mesyats,Open,1991,Ukraine,110.8,,,,,180,190,-200,190,,,,,190,100+,M,Олексій Месяц,B
+Raw,5,Volodimir Gorbachenko,Open,1978,Ukraine,111,,,,,180,190,-202.5,190,,,,,190,100+,M,Володимир Горбаченко,B
+Raw,6,Oleksandr Telnikh,Open,1994,Ukraine,109.7,,,,,150,160,-170,160,,,,,160,100+,M,Олександр Тельних,B
+Raw,7,Denis Alekseenko,Open,1993,Ukraine,116.35,,,,,140,145,,145,,,,,145,100+,M,Денис Алексеєнко,B
+Raw,8,Vitaliy Filonenko,Open,1964,Ukraine,100.95,,,,,132.5,137.5,-140,137.5,,,,,137.5,100+,M,Віталій Філоненко,B
+Raw,DQ,Volodimir Budniy,Open,1990,Ukraine,112.9,,,,,-155,,,,,,,,,100+,M,Володимир Будний,B
+Raw,1,Vitaliy Filonenko,Masters,1964,Ukraine,100.95,,,,,132.5,137.5,-140,137.5,,,,,137.5,100+,M,Віталій Філоненко,B
+Single-ply,1,Viktor Borinets,Open,1989,Ukraine,89.55,,,,,-210,220,-225,220,,,,,220,,M,Віктор Боринец,B
+Single-ply,2,Igor Zaychuk,Open,1989,Ukraine,112.9,,,,,-195,195,200,200,,,,,200,,M,Ігор Зайчук,B
+Raw,1,Tetyana Stronska,Open,1984,Ukraine,55.75,,,,,,,,,120,-125,125,125,125,56,F,Тетяна Стронська,D
+Raw,2,Yuliya Ribalchenko,Open,1983,Ukraine,50.1,,,,,,,,,65,70,75,75,75,56,F,Юлія Рибальченко,D
+Raw,DQ,Svetlana Kovaleva,Teen,1997,Belarus,57.25,,,,,,,,,-120,-127.5,-127.5,,,56+,F,,D
+Raw,1,Irina Krivokhizha,Open,1980,Ukraine,63.85,,,,,,,,,120,125,-140,125,125,56+,F,Ірина Кривохижа,D
+Raw,2,Liliana Katsalap,Open,1992,Ukraine,57,,,,,,,,,100,110,-115,110,110,56+,F,Ліліана Кацалап,D
+Raw,3,Viktoriya Kapustyan,Open,1988,Ukraine,70.6,,,,,,,,,110,120,-127.5,120,120,56+,F,Вікторія Капустян,D
+Raw,5,Tetyana Fomenko,Open,1987,Ukraine,102.55,,,,,,,,,62.5,70,85,85,85,56+,F,Тетяна Фоменко,D
+Raw,DQ,Svetlana Kovaleva,Open,1997,Belarus,57.25,,,,,,,,,-120,-127.5,-127.5,,,56+,F,,D
+Raw,4,Tetyana Tkachenko,Open,1982,Ukraine,66.45,,,,,,,,,-85,85,-100,85,85,56+,F,Тетяна Ткаченко,D
+Raw,1,Artur Ivaschenko,Teen,2000,Ukraine,59.7,,,,,,,,,160,180,185,185,185,60,M,Артур Іващенко,D
+Raw,1,Maksim Fedorets,Youth,2008,Ukraine,41.3,,,,,,,,,50,55,60,60,60,60,M,Максим Федорець,D
+Raw,1,Artur Ivaschenko,Open,2000,Ukraine,59.7,,,,,,,,,160,180,185,185,185,60,M,Артур Іващенко,D
+Raw,2,Oleksiy Bibik,Open,1989,Ukraine,58.75,,,,,,,,,152.5,-175,175,175,175,60,M,Олексій Бибик,D
+Raw,3,Maksim Fedorets,Open,2008,Ukraine,41.3,,,,,,,,,50,55,60,60,60,60,M,Максим Федорець,D
+Raw,1,Oleg Chernyavskiy #3,Open,1983,Ukraine,66.25,,,,,,,,,225,240,-250,240,240,67.5,M,Олег Чернявский,D
+Raw,2,Sergiy Kalchuk,Open,1989,Ukraine,64.9,,,,,,,,,160,165,,165,165,67.5,M,Сергій Кальчук,D
+Raw,3,Sergiy Rogoviy,Open,1987,Ukraine,66.5,,,,,,,,,140,-150,-150,140,140,67.5,M,Сергій Роговий,D
+Raw,1,Denis Mikulskiy,Teen 13-15,2004,Ukraine,68.25,,,,,,,,,100,110,120,120,120,75,M,Денис Микульський,D
+Raw,1,Stanislav Sinyagivskiy,Juniors 20-23,1995,Ukraine,69.3,,,,,,,,,-180,200,210,210,210,75,M,Станіслав Синягівський,D
+Raw,2,Volodimir Ivasyutin,Juniors 20-23,1995,Ukraine,74.1,,,,,,,,,180,-195,207.5,207.5,207.5,75,M,Володимир Івасютин,D
+Raw,3,Danilo Bruenkov,Juniors 20-23,1996,Belarus,74.7,,,,,,,,,190,200,-210,200,200,75,M,,D
+Raw,4,Yaroslav Golubenko,Juniors 20-23,1993,Ukraine,74.4,,,,,,,,,182.5,185,-190,185,185,75,M,Ярослав Голубенко,D
+Raw,1,Valentin Gontar,Open,1987,Ukraine,73.65,,,,,,,,,230,240,-245,240,240,75,M,Валентин Гонтар,D
+Raw,2,Ihor Hamarnik,Open,1988,Ukraine,74.7,,,,,,,,,222.5,-235,-242.5,222.5,222.5,75,M,Ігор Гамарник,D
+Raw,3,Stanislav Sinyagivskiy,Open,1995,Ukraine,69.3,,,,,,,,,-180,200,210,210,210,75,M,Станіслав Синягівський,D
+Raw,4,Volodimir Ivasyutin,Open,1995,Ukraine,74.1,,,,,,,,,180,-195,207.5,207.5,207.5,75,M,Володимир Івасютин,D
+Raw,5,Danilo Bruenkov,Open,1996,Belarus,74.7,,,,,,,,,190,200,-210,200,200,75,M,,D
+Raw,6,Yaroslav Golubenko,Open,1993,Ukraine,74.4,,,,,,,,,182.5,185,-190,185,185,75,M,Ярослав Голубенко,D
+Raw,7,Andriy Salenko,Open,1981,Ukraine,72.2,,,,,,,,,155,165,-175,165,165,75,M,Андрій Саленко,D
+Raw,8,Denis Mikulskiy,Open,2004,Ukraine,68.25,,,,,,,,,100,110,120,120,120,75,M,Денис Микульський,D
+Raw,1,Oleg Litvinenko,Juniors 20-23,1995,Ukraine,81.1,,,,,,,,,200,235,-240,235,235,82.5,M,Олег Литвиненко,D
+Raw,1,Bogdan Vorobey,Open,1983,Ukraine,81.9,,,,,,,,,-270,275,285,285,285,82.5,M,Богдан Воробей,D
+Raw,2,Vitaliy Pasechnik,Open,1985,Ukraine,78.25,,,,,,,,,255,-260,,255,255,82.5,M,Віталій Пасечник,D
+Raw,3,Oleg Litvinenko,Open,1995,Ukraine,81.1,,,,,,,,,200,235,-240,235,235,82.5,M,Олег Литвиненко,D
+Raw,4,Illya Belikov,Open,1992,Ukraine,81.7,,,,,,,,,210,225,235,235,235,82.5,M,Ілля Бєліков,D
+Raw,5,Dmitro Shpachinskiy,Open,1991,Ukraine,81.85,,,,,,,,,215,225,235,235,235,82.5,M,Дмитро Шпачинський,D
+Raw,6,Volodimir Galeta,Open,1964,Ukraine,81.05,,,,,,,,,155,160,-165,160,160,82.5,M,Володимир Галета,D
+Raw,7,Mikhaylo Litvinenko,Open,1969,Ukraine,81.75,,,,,,,,,140,142.5,-145,142.5,142.5,82.5,M,Михайло Литвиненко,D
+Raw,8,Volodimir Galeta,Masters,1964,Ukraine,81.05,,,,,,,,,155,160,-165,160,160,82.5,M,Володимир Галета,D
+Raw,9,Mikhaylo Litvinenko,Masters,1969,Ukraine,81.75,,,,,,,,,140,142.5,-145,142.5,142.5,82.5,M,Михайло Литвиненко,D
+Raw,1,Vitaliy Gerasimchuk,Juniors 20-23,1994,Ukraine,87.9,,,,,,,,,-250,250,-262.5,250,250,90,M,Віталій Герасимчук,D
+Raw,1,Ilya Korshun,Open,1993,Belarus,87.85,,,,,,,,,267.5,275,282.5,282.5,282.5,90,M,,D
+Raw,2,Dmytro Vorobey,Open,1988,Ukraine,84.4,,,,,,,,,250,-270,,250,250,90,M,Дмитро Воробей,D
+Raw,3,Viktor Poshtarenko,Open,1970,Ukraine,87.05,,,,,,,,,205,215,-222.5,215,215,90,M,Віктор Поштаренко,D
+Raw,4,Gennadiy Ostrovskiy,Open,1965,Ukraine,87.4,,,,,,,,,200,207.5,-210,207.5,207.5,90,M,Геннадій Островський,D
+Raw,5,Vitaliy Gerasimchuk,Open,1994,Ukraine,87.9,,,,,,,,,-250,250,-262.5,250,250,90,M,Віталій Герасимчук,D
+Raw,DQ,Anton Pokhilevich,Open,1992,Ukraine,87.05,,,,,,,,,-220,-220,-235,,,90,M,Антон Похилевич,D
+Raw,1,Gennadiy Ostrovskiy,Masters,1965,Ukraine,87.4,,,,,,,,,200,207.5,-210,207.5,207.5,90,M,Геннадій Островський,D
+Raw,2,Viktor Poshtarenko,Masters,1970,Ukraine,87.05,,,,,,,,,205,215,-222.5,215,215,90,M,Віктор Поштаренко,D
+Raw,1,Evgeniy Ivanets,Juniors 20-23,1995,Ukraine,95.68,,,,,,,,,250,-260,-260,250,250,100,M,Євгеній Іванець,D
+Raw,2,Sergiy Plotnikov,Juniors 20-23,1995,Ukraine,98.45,,,,,,,,,210,220,230,230,230,100,M,Сергій Плотніков,D
+Raw,3,Ivan Shtolts,Juniors 20-23,1994,Ukraine,98.2,,,,,,,,,170,180,190,190,190,100,M,Іван Штольц,D
+Raw,1,Mikhail Chernushevich,Open,1992,Belarus,97.3,,,,,,,,,295,-305,-305,295,295,100,M,,D
+Raw,2,Oleksandr Slavutskyy,Open,1991,Ukraine,95.55,,,,,,,,,260,275,-285,275,275,100,M,Олександр Славутський,D
+Raw,3,Yuriy Kostenko,Open,1971,Ukraine,98.6,,,,,,,,,260,270,,270,270,100,M,Юрій Костенко,D
+Raw,4,Evgeniy Ivanets,Open,1995,Ukraine,95.68,,,,,,,,,250,-260,-260,250,250,100,M,Євгеній Іванець,D
+Raw,5,Sergiy Plotnikov,Open,1995,Ukraine,98.45,,,,,,,,,210,220,230,230,230,100,M,Сергій Плотніков,D
+Raw,6,Andriy Alisov,Open,1971,Ukraine,97.7,,,,,,,,,220,227.5,-235,227.5,227.5,100,M,Андрій Алісов,D
+Raw,7,Ivan Shtolts,Open,1994,Ukraine,98.2,,,,,,,,,170,180,190,190,190,100,M,Іван Штольц,D
+Raw,1,Yuriy Kostenko,Masters,1971,Ukraine,98.6,,,,,,,,,260,270,,270,270,100,M,Юрій Костенко,D
+Raw,2,Andriy Alisov,Masters,1971,Ukraine,97.7,,,,,,,,,220,227.5,-235,227.5,227.5,100,M,Андрій Алісов,D
+Raw,1,Mikhaylo Savenko,Juniors 20-23,1996,Ukraine,103.45,,,,,,,,,290,300,305,305,305,100+,M,Михайло Савенко,D
+Raw,2,Andriy Bronishevskiy,Juniors 20-23,1993,Ukraine,105.95,,,,,,,,,250,-265,-265,250,250,100+,M,Андрій Бронішевський,D
+Raw,3,Denis Alekseenko,Juniors 20-23,1993,Ukraine,116.35,,,,,,,,,200,-210,-210,200,200,100+,M,Денис Алексеєнко,D
+Raw,1,Jorge-Seidu Tologa,Open,1989,Ukraine,108.9,,,,,,,,,-305,305,315,315,315,100+,M,Жорж-Сейду Толога,D
+Raw,DD,Mikhaylo Savenko,Open,1996,Ukraine,103.45,,,,,,,,,290,300,305,305,,100+,M,Михайло Савенко,D
+Raw,3,Vladimir Lukyanov,Open,1966,Belarus,104.45,,,,,,,,,280,290,-300,290,290,100+,M,,D
+Raw,4,Oleksandr Bayda,Open,1982,Ukraine,108.55,,,,,,,,,250,270,280,280,280,100+,M,Олександр Байда,D
+Raw,5,Andriy Bronishevskiy,Open,1993,Ukraine,105.95,,,,,,,,,250,-265,-265,250,250,100+,M,Андрій Бронішевський,D
+Raw,6,Volodimir Budniy,Open,1990,Ukraine,112.9,,,,,,,,,230,235,-240,235,235,100+,M,Володимир Будний,D
+Raw,7,Vyacheslav Karpenko,Open,1975,Ukraine,107.35,,,,,,,,,215,220,230,230,230,100+,M,Вячеслав Карпенко,D
+Raw,8,Denis Alekseenko,Open,1993,Ukraine,116.35,,,,,,,,,200,-210,-210,200,200,100+,M,Денис Алексеєнко,D
+Raw,DQ,Oleksandr Chernish,Open,1988,Ukraine,106.55,,,,,,,,,-300,-300,-300,,,100+,M,Олександр Черниш,D
+Raw,1,Vladimir Lukyanov,Masters,1966,Belarus,104.45,,,,,,,,,280,290,-300,290,290,100+,M,,D
+Raw,2,Vyacheslav Karpenko,Masters,1975,Ukraine,107.35,,,,,,,,,215,220,230,230,230,100+,M,Вячеслав Карпенко,D
