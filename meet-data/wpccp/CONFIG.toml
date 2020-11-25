@@ -9,6 +9,79 @@
     date_range = ["0000-01-01", "9999-01-01"]
 
 [divisions]
+    # New-style divisions, Raw.
+    mor = {name ="M-OR", min=0, max=999, sex="M", equipment="Raw"}
+    for = {name ="F-OR", min=0, max=999, sex="F", equipment="Raw"}
+    mgr = {name ="M-GR", min=0, max=999, sex="M", equipment="Raw", place="G"}
+    fgr = {name ="F-GR", min=0, max=999, sex="F", equipment="Raw", place="G"}
+    mtr = {name ="M-TR", min=13, max=19, sex="M", equipment="Raw"}
+    mt1r = {name ="M-T1R", min=13, max=15, sex="M", equipment="Raw"}
+    mt2r = {name ="M-T2R", min=16, max=17, sex="M", equipment="Raw"}
+    mt3r = {name ="M-T3R", min=18, max=19, sex="M", equipment="Raw"}
+    ftr = {name ="F-TR", min=13, max=19, sex="F", equipment="Raw"}
+    ft1r = {name ="F-T1R", min=13, max=15, sex="F", equipment="Raw"}
+    ft2r = {name ="F-T2R", min=16, max=17, sex="F", equipment="Raw"}
+    ft3r = {name ="F-T3R", min=18, max=19, sex="F", equipment="Raw"}
+    mjr = {name ="M-JR", min=20, max=23, sex="M", equipment="Raw"}
+    fjr = {name ="F-JR", min=20, max=23, sex="F", equipment="Raw"}
+    mm1r = {name ="M-M1R", min=40, max=44, sex="M", equipment="Raw"}
+    fm1r = {name ="F-M1R", min=40, max=44, sex="F", equipment="Raw"}
+    mm2r = {name ="M-M2R", min=45, max=49, sex="M", equipment="Raw"}
+    fm2r = {name ="F-M2R", min=45, max=49, sex="F", equipment="Raw"}
+    mm3r = {name ="M-M3R", min=50, max=54, sex="M", equipment="Raw"}
+    fm3r = {name ="F-M3R", min=50, max=54, sex="F", equipment="Raw"}
+    mm4r = {name ="M-M4R", min=55, max=59, sex="M", equipment="Raw"}
+    fm4r = {name ="F-M4R", min=55, max=59, sex="F", equipment="Raw"}
+    mm5r = {name ="M-M5R", min=60, max=64, sex="M", equipment="Raw"}
+    fm5r = {name ="F-M5R", min=60, max=64, sex="F", equipment="Raw"}
+    mm6r = {name ="M-M6R", min=65, max=69, sex="M", equipment="Raw"}
+    fm6r = {name ="F-M6R", min=65, max=69, sex="F", equipment="Raw"}
+    mm7r = {name ="M-M7R", min=70, max=74, sex="M", equipment="Raw"}
+    fm7r = {name ="F-M7R", min=70, max=74, sex="F", equipment="Raw"}
+    mm8r = {name ="M-M8R", min=75, max=79, sex="M", equipment="Raw"}
+    fm8r = {name ="F-M8R", min=75, max=79, sex="F", equipment="Raw"}
+    mm9r = {name ="M-M9R", min=80, max=999, sex="M", equipment="Raw"}
+    fm9r = {name ="F-M9R", min=80, max=999, sex="F", equipment="Raw"}
+
+	# New-style divisions, Wraps.
+    mocr = {name ="M-OCR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+    focr = {name ="F-OCR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mgcr = {name ="M-GCR", min=0, max=999, sex="M", equipment=["Raw","Wraps"], place="G"}
+    fgcr = {name ="F-GCR", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
+    mtcr = {name ="M-TCR", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
+    mt1cr = {name ="M-T1CR", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
+    mt2cr = {name ="M-T2CR", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
+    mt3cr = {name ="M-T3CR", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
+    ftcr = {name ="F-TCR", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
+    ft1cr = {name ="F-T1CR", min=13, max=15, sex="F", equipment=["Raw","Wraps"]}
+    ft2cr = {name ="F-T2CR", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
+    ft3cr = {name ="F-T3CR", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
+    mjcr = {name ="M-JCR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
+    fjcr = {name ="F-JCR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+    mm1cr = {name ="M-M1CR", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
+    fm1cr = {name ="F-M1CR", min=40, max=44, sex="F", equipment=["Raw","Wraps"]}
+    mm2cr = {name ="M-M2CR", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
+    fm2cr = {name ="F-M2CR", min=45, max=49, sex="F", equipment=["Raw","Wraps"]}
+    mm3cr = {name ="M-M3CR", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
+    fm3cr = {name ="F-M3CR", min=50, max=54, sex="F", equipment=["Raw","Wraps"]}
+    mm4cr = {name ="M-M4CR", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
+    fm4cr = {name ="F-M4CR", min=55, max=59, sex="F", equipment=["Raw","Wraps"]}
+    mm5cr = {name ="M-M5CR", min=60, max=64, sex="M", equipment=["Raw","Wraps"]}
+    fm5cr = {name ="F-M5CR", min=60, max=64, sex="F", equipment=["Raw","Wraps"]}
+    mm6cr = {name ="M-M6CR", min=65, max=69, sex="M", equipment=["Raw","Wraps"]}
+    fm6cr = {name ="F-M6CR", min=65, max=69, sex="F", equipment=["Raw","Wraps"]}
+    mm7cr = {name ="M-M7CR", min=70, max=74, sex="M", equipment=["Raw","Wraps"]}
+    fm7cr = {name ="F-M7CR", min=70, max=74, sex="F", equipment=["Raw","Wraps"]}
+    mm8cr = {name ="M-M8CR", min=75, max=79, sex="M", equipment=["Raw","Wraps"]}
+    fm8cr = {name ="F-M8CR", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
+    mm9cr = {name ="M-M9CR", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
+    fm9cr = {name ="F-M9CR", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
+
+	# New-style divisions, Equipped.
+    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mje = {name ="M-JE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
+    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+
     # CP Divisions.
     morcpf = {name ="M_OR_CP",min=0,max=999,equipment="Raw",sex="M"}
     mocrcpf = {name ="M_OCR_CP",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
