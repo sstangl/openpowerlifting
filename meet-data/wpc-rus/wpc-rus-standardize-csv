@@ -255,7 +255,7 @@ def parse_sheetname(s):
             pass
         elif word == 'mpf':
             pass
-        elif word == 'элита': #Elite
+        elif word == 'элита':  # Elite
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
