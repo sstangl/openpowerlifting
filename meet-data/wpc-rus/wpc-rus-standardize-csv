@@ -136,6 +136,9 @@ def parse_sheetname(s):
         elif word in ['wuap']:
             assert not federation
             federation = 'WUAP-RUS'
+        elif word in ['wpf']:
+            assert not federation
+            federation = 'WPF-RUS'
 
         # Events
         elif word in ['пл', 'пауэрлифтинг', 'pl', 'пауэрифтинг', 'пауэлифтинг',
@@ -146,12 +149,12 @@ def parse_sheetname(s):
         elif word == 'присед' or word == 'sq':
             assert not event
             event = 'S'
-        elif word in ['жим', 'bp', 'bench', 'жд', 'benchpress']:
+        elif word in ['жим', 'bp', 'bench', 'жд', 'benchpress', 'жл']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word in ['тяга', 'dl', 'тяге', 'становая', 'deadlift']:
+        elif word in ['тяга', 'dl', 'тяге', 'становая', 'deadlift', 'т']:
             assert not event or event == 'D'
             event = 'D'
             if equipment == 'Wraps':
@@ -177,7 +180,7 @@ def parse_sheetname(s):
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
                       'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный',
                       '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st',
-                      '1-слойная', '1-слойный', 'однослойно', 'односло', '1-сл']:
+                      '1-слойная', '1-слойный', 'однослойно', 'односло', '1-сл', '1сл']:
             if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
@@ -194,7 +197,7 @@ def parse_sheetname(s):
                                         'клас', 'классик']:
             equipment = 'Wraps'
             event = 'SBD'
-        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк']:
+        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк', 'бэ']:
             equipment = 'Raw'
 
         # Booleans.
@@ -251,6 +254,8 @@ def parse_sheetname(s):
         elif word == 'забавы':  # Fun? Maybe amateurs
             pass
         elif word == 'mpf':
+            pass
+        elif word == 'элита': #Elite
             pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
@@ -459,7 +464,8 @@ def parse_sheet(sheet):
                                 'лист39', 'лист4', 'лист8']):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
-                                  'folk', 'm-rep', 'multy-repeat', 'mr bp', 'мпж']):
+                                  'folk', 'm-rep', 'multy-repeat', 'mr bp', 'мпж',
+                                  'многоповторный']):
         # Bench for reps
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
