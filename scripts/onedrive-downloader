@@ -43,7 +43,7 @@ def download_file(url, resultsname):
     time.sleep(5)
     file_button.click()
 
-    time.sleep(1)
+    time.sleep(5)
 
     saveas_button = driver.find_element_by_id(
         "m_excelWebRenderer_ewaCtl_faSaveAs-Menu32")

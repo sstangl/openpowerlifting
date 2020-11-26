@@ -16,7 +16,7 @@ DQ,52,Oleg Nesterov,Олег Нестеров,M,D,Raw,Russia,1992-11-12,Disabled
 2,67.5,Anton Uporov,Антон Упоров,M,D,Raw,Russia,2001-04-27,Disabled Teen 14-15,63.05,,,,,,,,,,,105,115,125,,125,125
 3,67.5,Viktor Kiselyov,Виктор Киселёв,M,D,Raw,Russia,1999-10-25,Disabled Teen 14-15,60.45,,,,,,,,,,,100,110,120,,120,120
 1,75,Nikita Zhelev,Никита Желев,M,D,Raw,Russia,1994-08-30,Disabled Juniors 20-23,72.05,,,,,,,,,,,140,150,152.5,,152.5,152.5
-1,75,Dmitriy Ivanov,Дмитрий Иванов,M,D,Raw,Russia,1989-08-14,Disabled Open,72.45,,,,,,,,,,,200,206,-207.5,,206,206
+1,75,Dmitriy Ivanov #3,Дмитрий Иванов,M,D,Raw,Russia,1989-08-14,Disabled Open,72.45,,,,,,,,,,,200,206,-207.5,,206,206
 2,75,Aleksey Knyazkin,Алексей Князькин,M,D,Raw,Russia,1987-05-18,Disabled Open,72.55,,,,,,,,,,,145,155,162.5,,162.5,162.5
 1,75,Maksim Klimov,Максим Климов,M,D,Raw,Russia,1996-10-25,Disabled Teen 18-19,74.4,,,,,,,,,,,170,175,,,175,175
 2,75,Evgeniy Kvashnin,Евгений Квашнин,M,D,Raw,Russia,1997-06-23,Disabled Teen 18-19,72.3,,,,,,,,,,,110,120,,,120,120
@@ -44,7 +44,7 @@ DQ,52,Oleg Nesterov,Олег Нестеров,M,D,Raw,Russia,1992-11-12,Disabled
 2,67.5,Anton Uporov,Антон Упоров,M,SBD,Wraps,Russia,2001-04-27,Disabled Teen 14-15,63.05,75,85,-90,,85,45,55,-65,,55,105,115,125,,125,265
 3,67.5,Viktor Kiselyov,Виктор Киселёв,M,SBD,Wraps,Russia,1999-10-25,Disabled Teen 14-15,60.45,60,-70,75,,75,55,60,-67.5,,60,100,110,120,,120,255
 1,75,Nikita Zhelev,Никита Желев,M,SBD,Wraps,Russia,1994-08-30,Disabled Juniors 20-23,72.05,90,100,105,,105,87.5,92.5,95,,95,140,150,152.5,,152.5,352.5
-1,75,Dmitriy Ivanov,Дмитрий Иванов,M,SBD,Wraps,Russia,1989-08-14,Disabled Open,72.45,120,127.5,-132.5,,127.5,92.5,97.5,-102.5,,97.5,200,206,-207.5,,206,431
+1,75,Dmitriy Ivanov #3,Дмитрий Иванов,M,SBD,Wraps,Russia,1989-08-14,Disabled Open,72.45,120,127.5,-132.5,,127.5,92.5,97.5,-102.5,,97.5,200,206,-207.5,,206,431
 2,75,Aleksey Knyazkin,Алексей Князькин,M,SBD,Wraps,Russia,1987-05-18,Disabled Open,72.55,120,-127.5,127.5,,127.5,102.5,107.5,112.5,,112.5,145,155,162.5,,162.5,402.5
 1,75,Maksim Klimov,Максим Климов,M,SBD,Wraps,Russia,1996-10-25,Disabled Teen 18-19,74.4,120,-130,130,,130,87.5,92.5,-97.5,,92.5,170,175,,,175,397.5
 2,75,Evgeniy Kvashnin,Евгений Квашнин,M,SBD,Wraps,Russia,1997-06-23,Disabled Teen 18-19,72.3,100,-110,,,100,70,80,-85,,80,110,120,,,120,300
@@ -105,7 +105,7 @@ DQ,52,Aleksandr Semyonov,Александр Семёнов,M,B,Raw,Russia,1997-0
 1,75,Sergey Zavarukhin,Сергей Заварухин,M,B,Raw,Russia,1973-11-03,Disabled Masters 40-44,71.45,,,,,,110,120,-130,,120,,,,,,120
 2,75,Vadimir Stroganov,Вадимир Строганов,M,B,Raw,Russia,1974-10-08,Disabled Masters 40-44,71,,,,,,105,-110,-110,,105,,,,,,105
 1,75,Aleksey Knyazkin,Алексей Князькин,M,B,Raw,Russia,1987-05-18,Disabled Open,72.55,,,,,,102.5,107.5,112.5,,112.5,,,,,,112.5
-2,75,Dmitriy Ivanov,Дмитрий Иванов,M,B,Raw,Russia,1989-08-14,Disabled Open,72.45,,,,,,92.5,97.5,-102.5,,97.5,,,,,,97.5
+2,75,Dmitriy Ivanov #3,Дмитрий Иванов,M,B,Raw,Russia,1989-08-14,Disabled Open,72.45,,,,,,92.5,97.5,-102.5,,97.5,,,,,,97.5
 3,75,Denis Churkin,Денис Чуркин,M,B,Raw,Russia,1979-02-08,Disabled Open,68.8,,,,,,80,85,-87.5,,85,,,,,,85
 4,75,Aleksandr Pozharskiy,Александр Пожарский,M,B,Raw,Russia,1990-10-12,Disabled Open,70.7,,,,,,55,60,62.5,,62.5,,,,,,62.5
 1,75,Maksim Klimov,Максим Климов,M,B,Raw,Russia,1996-10-25,Disabled Teen 18-19,74.4,,,,,,87.5,92.5,-97.5,,92.5,,,,,,92.5
@@ -233,7 +233,7 @@ DQ,90,Maksim Ladyshkin,Максим Ладышкин,M,SBD,Wraps,Russia,1990-04-
 2,100,Dmitriy Bashkirov,Дмитрий Башкиров,M,SBD,Wraps,Russia,1991-11-24,Pro Juniors 20-23,94.4,230,-245,245,,245,140,145,150,,150,-270,-270,270,,270,665
 3,100,Vladislav Smirnov,Владислав Смирнов,M,SBD,Wraps,Russia,1992-09-06,Pro Juniors 20-23,98.95,205,220,232.5,,232.5,-152,157.5,162.5,,162.5,240,250,-260,,250,645
 4,100,Afzalsho Kholov,Афзалшо Холов,M,SBD,Wraps,Tajikistan,1995-09-03,Pro Juniors 20-23,98,-210,210,-220,,210,170,180,187.5,,187.5,-230,235,-245,,235,632.5
-5,100,Dmitriy Ivanov,Дмитрий Иванов,M,SBD,Wraps,Russia,1993-07-16,Pro Juniors 20-23,95.65,190,205,-212.5,,205,150,160,165,,165,230,245,-255,,245,615
+5,100,Dmitriy Ivanov #6,Дмитрий Иванов,M,SBD,Wraps,Russia,1993-07-16,Pro Juniors 20-23,95.65,190,205,-212.5,,205,150,160,165,,165,230,245,-255,,245,615
 1,100,Vyacheslav Myasnikov,Вячеслав Мясников,M,SBD,Wraps,Russia,1970-12-07,Pro Masters 40-44,98.4,-225,225,235,241,235,140,-150,150,,150,220,230,240,,240,625
 1,100,Valeriy Snigirev,Валерий Снигирев,M,SBD,Wraps,Russia,1969-05-07,Pro Masters 45-49,98.1,180,200,220,,220,-145,150,160,,160,-220,230,250,,250,630
 1,100,Aslambek Abaev,Асламбек Абаев,M,SBD,Wraps,Russia,1959-06-28,Pro Masters 55-59,95.3,265,280,290,,290,-200,200,-210,,200,265,275,-280,,275,765

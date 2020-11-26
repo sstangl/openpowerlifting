@@ -14,7 +14,7 @@ WeightClassKg,Name,CyrillicName,Event,Equipment,Sex,Tested,Country,BirthDate,Div
 67.5,Maksim Klimov,Максим Климов,S,Wraps,M,Yes,Russia,1996-10-25,Disabled Teen 16-17,67.5,95,-105,-110,,95,,,,,,,,,,,95,2
 67.5,Nikolay Borodinov,Николай Бородинов,S,Wraps,M,Yes,Russia,1997-09-29,Disabled Teen 16-17,61,80,90,-95,,90,,,,,,,,,,,90,3
 75,Aleksey Uymin,Алексей Уймин,S,Wraps,M,Yes,Russia,1990-02-15,Disabled Juniors 20-23,72.95,85,95,105,-113.5,105,,,,,,,,,,,105,1
-75,Dmitriy Ivanov,Дмитрий Иванов,S,Wraps,M,Yes,Russia,1989-08-14,Disabled Open,72.15,105,115,120,,120,,,,,,,,,,,120,1
+75,Dmitriy Ivanov #3,Дмитрий Иванов,S,Wraps,M,Yes,Russia,1989-08-14,Disabled Open,72.15,105,115,120,,120,,,,,,,,,,,120,1
 82.5,Pavel Zubov,Павел Зубов,S,Wraps,M,Yes,Russia,1990-03-04,Disabled Juniors 20-23,80.8,-165,165,-185,,165,,,,,,,,,,,165,1
 82.5,Vladimir Nagalyuk,Владимир Нагалюк,S,Wraps,M,Yes,Ukraine,1951-09-21,Disabled Masters 60-64,82.5,110,120,130,,130,,,,,,,,,,,130,1
 82.5,Pavel Chushkin,Павел Чушкин,S,Wraps,M,Yes,Russia,1987-05-14,Disabled Open,76,110,117.5,-125,,117.5,,,,,,,,,,,117.5,1
@@ -40,7 +40,7 @@ WeightClassKg,Name,CyrillicName,Event,Equipment,Sex,Tested,Country,BirthDate,Div
 67.5,Maksim Klimov,Максим Климов,D,Raw,M,Yes,Russia,1996-10-25,Disabled Teen 16-17,67.5,,,,,,,,,,,-145,145,155,,155,155,2
 67.5,Nikolay Borodinov,Николай Бородинов,D,Raw,M,Yes,Russia,1997-09-29,Disabled Teen 16-17,61,,,,,,,,,,,100,110,115,,115,115,3
 75,Aleksey Uymin,Алексей Уймин,D,Raw,M,Yes,Russia,1990-02-15,Disabled Juniors 20-23,72.95,,,,,,,,,,,145,155,-160,,155,155,1
-75,Dmitriy Ivanov,Дмитрий Иванов,D,Raw,M,Yes,Russia,1989-08-14,Disabled Open,72.15,,,,,,,,,,,175,187.5,197.5,,197.5,197.5,1
+75,Dmitriy Ivanov #3,Дмитрий Иванов,D,Raw,M,Yes,Russia,1989-08-14,Disabled Open,72.15,,,,,,,,,,,175,187.5,197.5,,197.5,197.5,1
 82.5,Pavel Zubov,Павел Зубов,D,Raw,M,Yes,Russia,1990-03-04,Disabled Juniors 20-23,80.8,,,,,,,,,,,185,195,-205,,195,195,1
 82.5,Vladimir Nagalyuk,Владимир Нагалюк,D,Raw,M,Yes,Ukraine,1951-09-21,Disabled Masters 60-64,82.5,,,,,,,,,,,140,150,160,,160,160,1
 82.5,Sergey Galanin,Сергей Галанин,D,Raw,M,Yes,Russia,1984-03-02,Disabled Open,81.7,,,,,,,,,,,175,187.5,200,,200,200,1
@@ -67,7 +67,7 @@ WeightClassKg,Name,CyrillicName,Event,Equipment,Sex,Tested,Country,BirthDate,Div
 67.5,Maksim Klimov,Максим Климов,SBD,Wraps,M,Yes,Russia,1996-10-25,Disabled Teen 16-17,67.5,95,-105,-110,,95,70,-80,-80,,70,-145,145,155,,155,320,2
 67.5,Nikolay Borodinov,Николай Бородинов,SBD,Wraps,M,Yes,Russia,1997-09-29,Disabled Teen 16-17,61,80,90,-95,,90,55,60,-62.5,,60,100,110,115,,115,265,3
 75,Aleksey Uymin,Алексей Уймин,SBD,Wraps,M,Yes,Russia,1990-02-15,Disabled Juniors 20-23,72.95,85,95,105,-113.5,105,80,85,87.5,,87.5,145,155,-160,,155,347.5,1
-75,Dmitriy Ivanov,Дмитрий Иванов,SBD,Wraps,M,Yes,Russia,1989-08-14,Disabled Open,72.15,105,115,120,,120,90,-97.5,-97.5,,90,175,187.5,197.5,,197.5,407.5,1
+75,Dmitriy Ivanov #3,Дмитрий Иванов,SBD,Wraps,M,Yes,Russia,1989-08-14,Disabled Open,72.15,105,115,120,,120,90,-97.5,-97.5,,90,175,187.5,197.5,,197.5,407.5,1
 82.5,Pavel Zubov,Павел Зубов,SBD,Wraps,M,Yes,Russia,1990-03-04,Disabled Juniors 20-23,80.8,-165,165,-185,,165,100,107.5,-112.5,,107.5,185,195,-205,,195,467.5,1
 82.5,Vladimir Nagalyuk,Владимир Нагалюк,SBD,Wraps,M,Yes,Ukraine,1951-09-21,Disabled Masters 60-64,82.5,110,120,130,,130,50,60,-65,,60,140,150,160,,160,350,1
 82.5,Pavel Chushkin,Павел Чушкин,SBD,Wraps,M,Yes,Russia,1987-05-14,Disabled Open,76,110,117.5,-125,,117.5,107.5,-112.5,-112.5,,107.5,170,180,-188,,180,405,1
@@ -115,7 +115,7 @@ WeightClassKg,Name,CyrillicName,Event,Equipment,Sex,Tested,Country,BirthDate,Div
 67.5,Aleksey Murzin,Алексей Мурзин,B,Raw,M,Yes,Russia,1993-10-20,Disabled Teen 18-19,64.95,,,,,,60,-65,-65,,60,,,,,,60,2
 75,Aleksey Uymin,Алексей Уймин,B,Raw,M,Yes,Russia,1990-02-15,Disabled Juniors 20-23,72.95,,,,,,80,85,87.5,,87.5,,,,,,87.5,1
 75,Nikita Simonov,Никита Симонов,B,Raw,M,Yes,Russia,1989-05-10,Disabled Open,68.8,,,,,,102.5,-107.5,-107.5,,102.5,,,,,,102.5,1
-75,Dmitriy Ivanov,Дмитрий Иванов,B,Raw,M,Yes,Russia,1989-08-14,Disabled Open,72.15,,,,,,90,-97.5,-97.5,,90,,,,,,90,2
+75,Dmitriy Ivanov #3,Дмитрий Иванов,B,Raw,M,Yes,Russia,1989-08-14,Disabled Open,72.15,,,,,,90,-97.5,-97.5,,90,,,,,,90,2
 82.5,Pavel Zubov,Павел Зубов,B,Raw,M,Yes,Russia,1990-03-04,Disabled Juniors 20-23,80.8,,,,,,100,107.5,-112.5,,107.5,,,,,,107.5,1
 82.5,Vladimir Nagalyuk,Владимир Нагалюк,B,Raw,M,Yes,Ukraine,1951-09-21,Disabled Masters 60-64,82.5,,,,,,,50,60,,60,,,,,,60,1
 82.5,Sergey Galanin,Сергей Галанин,B,Raw,M,Yes,Russia,1984-03-02,Disabled Open,81.7,,,,,,107.5,120,127.5,,127.5,,,,,,127.5,1

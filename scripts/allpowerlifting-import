@@ -703,7 +703,7 @@ def standardise_division(fed, csv):
         div_idx = csv.index('Division')
 
         # IPF Feds that we are likely to use this script for
-        if fed in ['FPR', 'KPF', 'UkrainePF', 'CPF']:
+        if fed in ['FPR', 'KPF', 'UkrainePF', 'CPF', 'BelPF']:
             for row in csv.rows:
                 if row[div_idx] == 'T':
                     row[div_idx] = 'Sub-Juniors'
