@@ -393,6 +393,10 @@ pub enum Federation {
     #[strum(to_string = "Germany-UA", serialize = "germany-ua")]
     GermanyUA,
 
+    /// Global Federation of Powerlifting
+    #[strum(to_string = "GFP", serialize = "gfp")]
+    GFP,
+
     /// Global Powerlifting Union, Ukrainian GPC affiliate.
     #[strum(to_string = "GlobalPU", serialize = "globalpu")]
     GlobalPU,
@@ -1473,6 +1477,7 @@ impl Federation {
             Federation::FRPL => FULLY_TESTED,
             Federation::GDFPF => FULLY_TESTED,
             Federation::GermanyUA => false,
+            Federation::GFP => false,
             Federation::GlobalPU => false,
             Federation::GPA => false,
             Federation::GPACRO => false,
@@ -1796,6 +1801,7 @@ impl Federation {
             Federation::FRPL => Some(Country::Romania),
             Federation::GDFPF => Some(Country::Germany),
             Federation::GermanyUA => Some(Country::Germany),
+            Federation::GFP => Some(Country::Russia),
             Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPA => None,
             Federation::GPACRO => Some(Country::Croatia),
@@ -2145,6 +2151,7 @@ impl Federation {
             Federation::FRPL => Some(Federation::IPF),
             Federation::GDFPF => Some(Federation::WDFPF),
             Federation::GermanyUA => None,
+            Federation::GFP => None,
             Federation::GlobalPU => Some(Federation::GPC),
             Federation::GPA => Some(Federation::GPA),
             Federation::GPACRO => Some(Federation::GPA),
@@ -2547,6 +2554,7 @@ impl Federation {
             Federation::FRPL => Federation::ipf_rules_on(date),
             Federation::GDFPF => PointsSystem::Wilks,
             Federation::GermanyUA => PointsSystem::Wilks,
+            Federation::GFP => PointsSystem::Wilks,
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
