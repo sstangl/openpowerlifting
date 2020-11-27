@@ -2,6 +2,7 @@
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=22.5}
     subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
+    masters = {name = "Masters",min=39.5,max=999}
     masters1 = {name = "Masters 1",min=39.5,max=48.5}
     masters2 = {name = "Masters 2",min=49.5,max=58.5}
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
@@ -50,3 +51,12 @@
     0903 = ["ExemptWeightClassConsistency"]
     0904 = ["ExemptWeightClassConsistency"]
     1001 = ["ExemptWeightClassConsistency"]
+    1003= ["ExemptWeightClassConsistency"]
+    1102 = ["ExemptWeightClassConsistency"]
+    1401 = ["ExemptWeightClassConsistency"] # Missing WCs & no 47.
+    1402 = ["ExemptWeightClassConsistency"] # No 72 Class for some reason
+    1403 = ["ExemptWeightClassConsistency"] # No 72 Class for some reason
+    1406 = ["ExemptWeightClassConsistency"] # No Weightclasses
+    1407 = ["ExemptWeightClassConsistency"] # No Weightclasses
+    1501 = ["ExemptWeightClassConsistency"] # 43 & 48 Classes for Jr men
+    1502 = ["ExemptWeightClassConsistency"] # 43 & 48 Classes for Jr men
