@@ -26,6 +26,7 @@
     teen = {name = "Teen", min = 13, max = 19}
     masters = {name = "Masters", min = 40, max = 999}
     teen_juniors = {name = "Teen/Juniors", min = 5, max = 23}
+    paralympic = {name = "Paralympic", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","100+","110+","140+"]
@@ -100,3 +101,7 @@
     1809 = ["ExemptWeightClassConsistency"] # Missing weightclasses
     1810 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
     1813 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1814 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1816 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1817 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    1901 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
