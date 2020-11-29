@@ -27,7 +27,7 @@ URL_NTL = "http://www.sporty.co.nz/northlandpowerlifting/" \
           "Northland-Champs-3-lift-Bench-results-Nominat/2018-2"
 URL_NTL_NOV = "http://www.sporty.co.nz/northlandpowerlifting/" \
     "Novice-Competition-results/2018-1"
-URL_OTA = "http://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
+URL_OTA = "https://www.sporty.co.nz/otagoweightlifting/Results/POWERLIFTING-1"
 URL_NZPF = "http://www.nzpowerlifting.co.nz/Results-1/National-Results"
 URL_WCPA = "https://www.sporty.co.nz/WellingtonCentralPowerlifting/Results-1/tab1#"
 
@@ -45,7 +45,7 @@ def color(s):
 def getmeetlist_sporty(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    div = soup.find("div", {"class": "splitter-column-sortable"})
+    div = soup.find_all("div", {"class": "splitter-column-sortable"})[1]
     splitter_settings = BeautifulSoup(
         div['data-widgetsettings'], 'html.parser')
     urls = []
@@ -64,8 +64,6 @@ def getmeetlist_sporty(html):
     return urls
 
 # Get the Auckland,WBOP and Northland meets which use file IDs instead of links
-
-
 def getmeetlist_sporty_partial(html, code):
     soup = BeautifulSoup(html, 'html.parser')
 
