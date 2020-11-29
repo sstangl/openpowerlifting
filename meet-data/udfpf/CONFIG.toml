@@ -19,6 +19,8 @@
     m12 = {name="M12", min=95, max=99}
 
     pfm = {name="PFM", min=14, max=999}
+    t = {name="T", min=14, max=19}
+    m = {name="M", min=40, max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
