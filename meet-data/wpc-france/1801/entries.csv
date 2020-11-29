@@ -24,7 +24,7 @@ DQ,D,Raw,Marouane Baoufi,30,M_OR_WPC,M,107.4,110,,,,,,,,,,,,,-290,,,
 1,D,Raw,David Chevron,40,M_MR_1_WPC,M,123.3,125,,,,,,,,,,,305,-315,,,305,305
 1,D,Raw,Jean-Luc Leon,29,M_OR_WPC,M,116.1,125,,,,,,,,,,,290,-315,-315,,290,290
 1,D,Raw,Karim Messai,24,M_OR_WPC,M,137.6,140,,,,,,,,,,,300,320,-335,,320,320
-1,D,Single-ply,Sandrine Platel,43,F_MES_1_WPC,F,69.4,75,,,,,,,,,,,160,170,175.5,,175.5,175.5
+1,D,Single-ply,Sandrine Chabert,43,F_MES_1_WPC,F,69.4,75,,,,,,,,,,,160,170,175.5,,175.5,175.5
 1,D,Single-ply,Patrick Breton,58,M_MES_4_WPC,M,79.6,82.5,,,,,,,,,,,240,260,-275,,260,260
 1,D,Single-ply,François Chazelle,80,M_MES_9_WPC,M,87.4,90,,,,,,,,,,,155,180,,,180,180
 1,D,Single-ply,Thomas Gioanni,26,M_OES_WPC,M,98.6,100,,,,,,,,,,,235,252.5,-260,,252.5,252.5
@@ -83,7 +83,7 @@ DQ,B,Raw,Jonathan Bottin,30,M_OR_WPC,M,106,110,,,,,,-205,-205,-205,,,,,,,,
 DQ,B,Raw,Naël Cetout,28,M_OR_WPC,M,106.6,110,,,,,,-200,-200,-200,,,,,,,,
 1,B,Raw,Maurice Agesilas,30,M_OR_WPC,M,110.6,125,,,,,,170,-190,,,170,,,,,,170
 1,B,Raw,Karim Messai,24,M_OR_WPC,M,137.6,140,,,,,,-200,200,-210,,200,,,,,,200
-1,B,Single-ply,Sandrine Platel,43,F_MES_1_WPC,F,69.4,75,,,,,,-110,110,,,110,,,,,,110
+1,B,Single-ply,Sandrine Chabert,43,F_MES_1_WPC,F,69.4,75,,,,,,-110,110,,,110,,,,,,110
 1,B,Single-ply,Théo Platel,17,M_TES_2_WPC,M,67.2,67.5,,,,,,-100,-100,100,-110,100,,,,,,100
 1,B,Single-ply,Vincent Eldin,46,M_MES_2_WPC,M,74.3,75,,,,,,170,-186,-186,,170,,,,,,170
 1,B,Single-ply,Denis Tomsin,44,M_MES_1_WPC,M,73.3,75,,,,,,155,-162.5,-162.5,,155,,,,,,155
@@ -98,7 +98,7 @@ DQ,B,Single-ply,Greg Roux Reymond,40,M_MES_1_WPC,M,103.5,110,,,,,,-200,-200,,,,,
 1,B,Single-ply,Mickaël Dupire,44,M_MES_1_WPC,M,114.9,125,,,,,,-260,260,-270,,260,,,,,,260
 1,B,Single-ply,Hervé Gainche,46,M_MES_2_WPC,M,122.5,125,,,,,,185,195,200,,200,,,,,,200
 DQ,B,Single-ply,Cédric Rathy,41,M_MES_1_WPC,M,112.8,125,,,,,,-190,-190,-190,,,,,,,,
-DQ,B,Multi-ply,Sandrine Platel,43,F_MEM_1_WPC,F,69.4,75,,,,,,-125,-125,,,,,,,,,
+DQ,B,Multi-ply,Sandrine Chabert,43,F_MEM_1_WPC,F,69.4,75,,,,,,-125,-125,,,,,,,,,
 DQ,B,Multi-ply,Valentin Cacici,28,M_OEM_WPC,M,88.4,90,,,,,,-290,-300,-300,,,,,,,,
 1,B,Multi-ply,Stéphane Gurini,52,M_MEM_3_WPC,M,92,100,,,,,,-190,190,-200,,190,,,,,,190
 1,B,Multi-ply,Francis Mattei,63,M_MEM_5_WPC,M,98.6,100,,,,,,160,-180,-180,,160,,,,,,160
@@ -140,7 +140,7 @@ DQ,SBD,Raw,Gérard Lama,36,M_SR_WPC,M,108.1,110,270,,,,270,-160,-160,-160,,,,,,,
 1,SBD,Raw,Jean-Luc Leon,29,M_OR_WPC,M,116.5,125,200,220,225,,225,175,180,-182.5,,180,305,,,,305,710
 1,SBD,Raw,Hérold Théozard,29,M_OR_WPC,M,129.2,140,250,-270,-270,,250,170,-180,-180,,170,-230,230,260,,260,680
 1,SBD,Wraps,Géraldine Faure,28,F_OCR_AWPC,F,48,48,85,90,-100,,90,47.5,50,-55,,50,90,100,110,112.5,110,250
-1,SBD,Wraps,Sandrine Platel,43,F_MCR_1_WPC,F,67.1,67.5,140,-150,150,-160,150,75,80.5,-85,,80.5,150,160,-170,,160,390.5
+1,SBD,Wraps,Sandrine Chabert,43,F_MCR_1_WPC,F,67.1,67.5,140,-150,150,-160,150,75,80.5,-85,,80.5,150,160,-170,,160,390.5
 1,SBD,Wraps,Ketty Zephirin Henry,35,F_SCR_WPC,F,67.2,67.5,100,-120,-130,,100,40,60,-70,,60,135,145,150,,150,310
 1,SBD,Wraps,Ophélie Rebaine,22,F_JCR_WPC,F,73.4,75,107.5,117.5,122.5,,122.5,60,65,-70,,65,150,160,-170,,160,347.5
 1,SBD,Wraps,Gabrielle Martin,22,F_JCR_WPC,F,76.7,82.5,125,135,140,,140,65,72.5,75,-80,75,147.5,155,-160,,155,370
