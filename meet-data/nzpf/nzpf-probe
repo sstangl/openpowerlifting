@@ -64,6 +64,8 @@ def getmeetlist_sporty(html):
     return urls
 
 # Get the Auckland,WBOP and Northland meets which use file IDs instead of links
+
+
 def getmeetlist_sporty_partial(html, code):
     soup = BeautifulSoup(html, 'html.parser')
 
