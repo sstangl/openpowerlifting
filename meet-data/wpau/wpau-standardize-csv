@@ -82,8 +82,7 @@ def split_by_sheet(lines):
 def parse_sheetname(s):
     obj = {}
     event = None
-    amateur = 'Pro'  # By default, unless otherwise specified.
-    tested = ''  # By default, unless otherwise specified.
+    tested = 'No'  # By default, unless otherwise specified.
     equipment = 'Wraps'  # By default, unless otherwise specified.
 
     s = s.replace(' & ', '&')
@@ -100,28 +99,32 @@ def parse_sheetname(s):
     elif 'drug tested' in s.lower():
         tested = 'Yes'
         s = s.lower().replace('drug tested', '').strip()
+        tested = 'Yes'
 
     s = s.replace("(", "").replace(")", "").strip()
     # Parse word-by-word to make sure that every word is understood.
     for word in s.lower().split():
 
         # Events
-        if (word == 'пл' or word == 'пауэрлифтинг' or word == 'pl' or
-                word == 'power' or word == 'powerlifting' or
-                word == 'пауерліфтинг' or word == 'powerlifitng'):
+        if word in ['пл', 'пауэрлифтинг', 'pl', 'power', 'powerlifting',
+                'пауерліфтинг', 'powerlifitng', 'двоборство']:
             assert not event or event == 'SBD'
             event = 'SBD'
-        elif word == 'жим' or word == 'им' or word == 'bench':
+        elif word in ['жим', 'им', 'bench', 'bp']:
             assert not event or event == 'B'
             event = 'B'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word == 'тяга' or word == 'deadlift':
+        elif word in ['тяга', 'deadlift', 'dl']:
             assert not event
             event = 'D'
             if equipment == 'Wraps':
                 equipment = 'Raw'
-        elif word == 'двоеборье' or word == 'push&pull':
+        elif word == 'sq':
+            assert not event
+            event = 'S'
+            equipment = 'Wraps'
+        elif word in ['двоеборье', 'push&pull', 'pp']:
             assert not event
             event = 'BD'
             if equipment == 'Wraps':
@@ -135,11 +138,11 @@ def parse_sheetname(s):
 
         # Booleans.
         elif word == 'люб.' or word == 'любители' or word == 'amateur':
-            amateur = 'Amateur'
-        elif word == 'pro':
-            assert amateur == 'Pro'
+            tested = 'Yes'
+        elif word in ['pro', 'призові']:
+            assert tested == 'No'
         elif word == 'дк' or word == 'д_к':
-            tested = 'Tested'
+            tested = 'Yes'
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -187,7 +190,6 @@ def parse_sheetname(s):
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
 
     obj['event'] = event
-    obj['amateur'] = amateur
     obj['tested'] = tested
     obj['equipment'] = equipment
 
@@ -421,7 +423,6 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Event')
     assert 'Equipment' not in csv.fieldnames
     csv.fieldnames.append('Equipment')
-    csv.fieldnames.append('Amateur')
     csv.fieldnames.append('Tested')
 
     weightclass = ''
@@ -446,7 +447,9 @@ def parse_sheet(sheet):
 
         # Detect lines that set WeightClassKg state.
         if ' кг' in text or ' kg' in text or 'до' in text:
-            weightclass = ''.join(re.findall(r"\d*\.\d+|(\d+|\+)", text))
+            wc_text = re.findall(r"(\d*\.\d+)|(\d+|\+)", text)
+
+            weightclass = ''.join([str(s[0] + s[1]) for s in wc_text])
             if '+' in weightclass:  # Put the plus at the end
                 weightclass = weightclass.replace('+', '') + '+'
             continue
@@ -479,9 +482,9 @@ def parse_sheet(sheet):
             else:
                 obj['equipment'] = 'Raw'
             if 'amateur' in text or ' am' in text:
-                obj['amateur'] = 'Amateur'
+                obj['tested'] = 'Yes'
             elif 'pro' in text:
-                obj['amateur'] = 'Pro'
+                obj['tested'] = 'No'
             if 'doping tested' in text:
                 obj['tested'] = 'Yes'
             elif 'not tested' in text:
@@ -491,9 +494,9 @@ def parse_sheet(sheet):
             text.replace('amatur', "amateur")
             obj['equipment'] = 'Multi-ply'
             if 'amateur' in text:
-                obj['amateur'] = 'Amateur'
+                obj['tested'] = 'Yes'
             elif 'pro' in text:
-                obj['amateur'] = 'Pro'
+                obj['tested'] = 'No'
             if 'doping tested' in text:
                 obj['tested'] = 'Yes'
             elif 'not tested' in text:
@@ -513,7 +516,6 @@ def parse_sheet(sheet):
         line.append(sex)
         line.append(obj['event'])
         line.append(obj['equipment'])
-        line.append(obj['amateur'])
         line.append(obj['tested'])
 
         assert len(line) == len(csv.fieldnames)
@@ -535,7 +537,6 @@ def parse_sheet(sheet):
 def standardize_division_age(csv):
 
     assert 'Tested' in csv.fieldnames
-    assert 'Amateur' in csv.fieldnames
     assert 'Division' in csv.fieldnames
 
     csv.append_columns(['BirthYear'])
@@ -545,7 +546,7 @@ def standardize_division_age(csv):
     if 'BirthDate' in csv.fieldnames:
         bdidx = csv.index('BirthDate')
     byidx = csv.index('BirthYear')
-    amateuridx = csv.index('Amateur')
+    testedidx = csv.index('Tested')
 
     for row in csv.rows:
         row[dividx] = row[dividx].lower()
@@ -628,12 +629,11 @@ def standardize_division_age(csv):
             die('Fix standardize_division_age(): Unknown division "%s"' %
                 row[dividx])
 
-        division = row[amateuridx] + ' ' + division
+        if row[testedidx] == 'No':
+            division = 'Pro ' + division
+        else:
+            division = 'Amateur ' + division
         row[dividx] = division.replace('  ', ' ').strip()
-
-    # Remove the now-extraneous columns.
-    csv.remove_column_by_name('BirthDate')
-    csv.remove_column_by_name('Amateur')
 
 
 # Mark DQs properly and make sure that place is an integer.
