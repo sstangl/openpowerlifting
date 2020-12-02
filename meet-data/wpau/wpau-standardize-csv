@@ -107,7 +107,7 @@ def parse_sheetname(s):
 
         # Events
         if word in ['пл', 'пауэрлифтинг', 'pl', 'power', 'powerlifting',
-                'пауерліфтинг', 'powerlifitng', 'двоборство']:
+                    'пауерліфтинг', 'powerlifitng', 'двоборство']:
             assert not event or event == 'SBD'
             event = 'SBD'
         elif word in ['жим', 'им', 'bench', 'bp']:
