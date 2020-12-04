@@ -91,10 +91,12 @@
     mrt = {name = "MR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="M"}
     mrsubjr = {name = "MR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="M"}
     mrjr = {name = "MR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="M"}
+    mrsm = {name = "MR-SM", min = 35, max = 39, equipment=["Raw", "Wraps"],sex="M"} 
     mrm = {name = "MR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="M"}
     mrm1 = {name = "MR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="M"}
     mrm2 = {name = "MR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="M"}
     mrm3 = {name = "MR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="M"}
+    mrm4 = {name = "MR-M4", min = 70, max = 79, equipment=["Raw", "Wraps"],sex="M"}
     fro = {name = "FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
     frt = {name = "FR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="F"}
     frsubjr = {name = "FR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="F"}
@@ -122,6 +124,7 @@
 
     meo = {name = "ME-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
     mem = {name = "ME-M", min = 40, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
+    mem1 = {name = "ME-M1", min = 40, max = 49, equipment=["Single-ply","Multi-ply"],sex="M"}
     feo = {name = "FE-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="F"}
 
 
