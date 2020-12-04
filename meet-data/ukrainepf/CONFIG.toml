@@ -1,4 +1,6 @@
 # Configuration for UkrainePF
+[options]
+    require_manual_disambiguation = true
 
 [divisions]
     open = {name ="Open",min=0,max=999}
@@ -121,6 +123,9 @@
     1218 = ["ExemptWeightClassConsistency"] # 46 & 49kg men
     1219 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     1220 = ["ExemptWeightClassConsistency"] # 46 & 49kg men
+    1224 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
+    1225 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
+    1226 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     1301 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     1305 = ["ExemptWeightClassConsistency"] # 46 & 49kg men
     1316 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
@@ -130,6 +135,7 @@
     1320 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     1321 = ["ExemptWeightClassConsistency"] # 46 & 49kg men
     1323 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
+    1327 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     1404 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     1405 = ["ExemptWeightClassConsistency","ExemptDivision"]
     1410 = ["ExemptWeightClassConsistency","ExemptDivision"]
