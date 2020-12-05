@@ -1,0 +1,67 @@
+# Configuration for Raw-UKR
+
+[divisions]
+    open = {name = "O", min = 0, max = 999}
+    youth = {name = "Y", min = 0, max = 12} #Not an official division
+    t_13_15 = {name = "T1", min = 13, max = 15}
+    t_16_17 = {name = "T2", min = 16, max = 17}
+    t_18_19 = {name = "T3", min = 18, max = 19}
+    juniors = {name = "J", min = 20, max = 24}
+    submasters = {name = "MS", min = 35, max = 39}
+    m_40_44 = {name = "M1", min = 40, max = 44}
+    m_45_49 = {name = "M2", min = 45, max = 49}
+    m_50_54 = {name = "M3", min = 50, max = 54}
+    m_55_59 = {name = "M4", min = 55, max = 59}
+    m_60_64 = {name = "M5", min = 60, max = 64}
+    m_65_69 = {name = "M6", min = 65, max = 69}
+    m_70_74 = {name = "M7", min = 70, max = 74}
+    m_75_79 = {name = "M8", min = 75, max = 79}
+    m_80p = {name = "M9", min = 80, max = 999}
+    m = {name = "M", min = 40, max = 999}
+
+    25_29 = {name = "25-29", min = 25, max = 29}
+    30_34 = {name = "30-34", min = 30, max = 34}
+
+    pfm = {name = "PFM", min = 0, max = 999}
+    teen = {name = "T", min = 13, max = 19}
+
+[weightclasses.default_M]
+    classes = ["48", "52", "56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44", "48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    1001 = ["ExemptWeightClassConsistency"] #145 class
+    1301 = ["ExemptWeightClassConsistency"] #125+ class
+    1302 = ["ExemptWeightClassConsistency"] #110+ class
+    1303 = ["ExemptWeightClassConsistency"] #125+ class
+    1304 = ["ExemptWeightClassConsistency"] #125+ class
+    1305 = ["ExemptWeightClassConsistency"] #110+ class
+    1401 = ["ExemptWeightClassConsistency"] #125+ class
+    1404 = ["ExemptWeightClassConsistency"] #110+ class
+    1406 = ["ExemptWeightClassConsistency"] #125+ class
+    1502 = ["ExemptWeightClassConsistency"] #125+ class
+    1505 = ["ExemptWeightClassConsistency"] #110+ class
+    1507 = ["ExemptWeightClassConsistency"] #125+ class
+    1602 = ["ExemptWeightClassConsistency"] #125+ class
+    1603 = ["ExemptWeightClassConsistency"] #125+ class
+    1605 = ["ExemptWeightClassConsistency"] #82.5+ class
+    1607 = ["ExemptWeightClassConsistency"] #110+ class
+    1703 = ["ExemptWeightClassConsistency"] #110+ class
+    1704 = ["ExemptWeightClassConsistency"] #110+ class
+    1706 = ["ExemptWeightClassConsistency"] #110+ class
+    1708 = ["ExemptWeightClassConsistency"] #125+ class
+    1709 = ["ExemptWeightClassConsistency"] #125+ class
+    1710 = ["ExemptWeightClassConsistency"] #110+ class
+    1802 = ["ExemptWeightClassConsistency"] #110+ class
+    1804 = ["ExemptWeightClassConsistency"] #110+ class
+    1805 = ["ExemptWeightClassConsistency"] #110+ class
+    1807 = ["ExemptWeightClassConsistency"] #110+ class
+    1808 = ["ExemptWeightClassConsistency"] #125+ class
+    1811 = ["ExemptWeightClassConsistency"] #110+ class
+    1907 = ["ExemptWeightClassConsistency"] #110+ class
