@@ -26,7 +26,8 @@ def main(filename):
 
     # Now get the name of the sheets
     jscript = soup.find("script", {"language": "JavaScript"})
-    sheet_names = [line for line in jscript.get_text().split("\n")
+
+    sheet_names = [line for line in str(jscript).split("\n")
                    if " c_rgszSh[" in line]
     sheet_names = [name[name.find(
         '"') + 1:name.rfind('"')].replace('\xa0', ' ') for name in sheet_names]

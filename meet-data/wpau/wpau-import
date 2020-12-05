@@ -28,7 +28,7 @@ if [ -f main2.html ]; then
 	mv main2.html main.html
 fi
 
-
+ ${SCRIPTDIR}/wpau-get-sheet-links main.html
 # Get the links to the individual sheets from the original file
 mapfile -t sheet_links < <( ${SCRIPTDIR}/wpau-get-sheet-links main.html )
 
