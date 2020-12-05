@@ -163,6 +163,14 @@ Values are as follows:
 
 The `Place` column is defined by [modules/opltypes/src/place.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/place.rs).
 
+### Dots
+
+Optional. A positive number if Dots points could be calculated, empty if the lifter was disqualified.
+
+Dots is very similar to (and drop-in compatible with) the original Wilks formula. It uses an updated, simpler polynomial and is built against data from drug-tested Raw lifters, as opposed to against data from drug-tested Single-ply lifters. The Dots formula was created by Tim Konertz of the BVDK in 2019.
+
+The calculation of Dots points is defined by [modules/coefficients/src/dots.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/dots.rs).
+
 ### Wilks
 
 Optional. A positive number if Wilks points could be calculated, empty if the lifter was disqualified.
@@ -170,16 +178,6 @@ Optional. A positive number if Wilks points could be calculated, empty if the li
 Wilks is the most common formula used for determining Best Lifter in a powerlifting meet.
 
 The calculation of Wilks points is defined by [modules/coefficients/src/wilks.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/wilks.rs).
-
-### McCulloch
-
-Optional. A positive number if McCulloch points could be calculated, empty if the lifter was disqualified.
-
-McCulloch is the name used for Dots points multiplied by an age-adjustment factor.
-
-McCulloch is technically just the coefficients for Masters lifters -- coefficients for Junior and Sub-Junior lifters are called "Foster Coefficients." Our implementation of McCulloch contains both.
-
-The calculation of McCulloch points is defined by [modules/coefficients/src/mcculloch.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/coefficients/src/mcculloch.rs).
 
 ### Glossbrenner
 
