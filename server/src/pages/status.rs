@@ -236,7 +236,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[AAP as usize].ease = difficult;
     statuses[AEP as usize].ease = medium;
     statuses[APA as usize].ease = medium;
-    statuses[APF as usize].ease = difficult;
+    statuses[APF as usize].ease = medium;
     statuses[APU as usize].ease = easy;
     statuses[AusPL as usize].ease = medium;
     statuses[BB as usize].ease = difficult;
