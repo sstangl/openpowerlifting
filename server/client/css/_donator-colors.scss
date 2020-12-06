@@ -546,6 +546,14 @@
   to { text-shadow: 0px -1px 3px #ffa200cc; }
 }
 
+.purple_fire_animation {
+  animation: fire_animation 0.75s infinite linear alternate;
+}
+@keyframes purple_fire_animation {
+  from { text-shadow: 0px -1px 3px #ce00f224; }
+  to { text-shadow: 0px -1px 3px #ce00f2cc; }
+}
+
 // Runescape flash3
 @keyframes flash3 {
   0%{
