@@ -289,6 +289,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WUAP as usize].ease = difficult;
 
     // Maintainership variables.
+    let email_alan = "<a href=\"mailto:alan.zgb@gmail.com\">alan@</a>";
     let email_boris = "<a href=\"mailto:boris@openpowerlifting.org\">boris@</a>";
     let email_enno = "<a href=\"mailto:enno@openpowerlifting.org\">enno@</a>";
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
@@ -299,7 +300,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
     let email_romi = "<a href=\"mailto:romi@openpowerlifting.org\">Romi@</a>";
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
-    let email_alan = "<a href=\"mailto:alan.zgb@gmail.com\">alan@</a>";
+    let email_stefanie = "<a href=\"mailto:stefanie@openpowerlifting.org\">stefanie@</a>";
 
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
@@ -335,6 +336,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[IrelandUA as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[KNKFSP as usize].maintainers = email_mbeelen;
+    statuses[LFPH as usize].maintainers = email_stefanie;
     statuses[LGBT as usize].maintainers = email_gem;
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
@@ -353,6 +355,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[THSPA as usize].maintainers = email_sean;
     statuses[THSWPA as usize].maintainers = email_sean;
     statuses[UPA as usize].maintainers = email_gem;
+    statuses[VGPF as usize].maintainers = email_stefanie;
     statuses[WelshPA as usize].maintainers = email_jo;
     statuses[WPC as usize].maintainers = email_gem;
     statuses[WPCFinland as usize].maintainers = email_gem;
