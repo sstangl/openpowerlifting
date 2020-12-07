@@ -1,5 +1,5 @@
 Place,Name,CyrillicName,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,TotalKg,WeightClassKg,Division,Sex,Event,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,BirthYear
-1,Dmitro Zaets,Дмитро Заєць,Ukraine,47.5,95,102.5,105,,42.5,47.5,50,,110,117.5,-122.5,,272.5,48,Amateur Children 11-12,M,SBD,Wraps,105,50,117.5,2002
+1,Dmitro Zaets,Дмитро Заєць,Ukraine,47.5,95,102.5,105,,42.5,47.5,50,,110,117.5,-122.5,,272.5,48,Amateur Sub-Teen 11-12,M,SBD,Wraps,105,50,117.5,2002
 1,Oleksandr Ovcharenko,Олександр Овчаренко,Ukraine,60,95,-102.5,102.5,,60,-67.5,-67.5,,80,-95,,,242.5,60,Amateur Teen 13-15,M,SBD,Wraps,102.5,60,80,2001
 1,Mikita Grechko,Микита Гречко,Ukraine,75,130,-140,145,,75,82.5,87.5,,125,132.5,-140,,365,75,Amateur Teen 13-15,M,SBD,Wraps,145,87.5,132.5,2002
 1,Oleksandr Sokolenko,Олександр Соколенко,Ukraine,67.3,-120,120,-130,,80,85,-90,,130,-140,140,,345,67.5,Amateur Teen 16-17,M,SBD,Wraps,120,85,140,1998
@@ -108,7 +108,7 @@ DQ,Anton Popov,Антон Попов,Ukraine,73.5,-190,-190,-190,,-150,,,,-200,,
 1,Andriy Voronovskiy,Андрій Вороновський,Ukraine,99.9,220,240,250,,180,-190,190,,200,225,240,,680,100,Pro Open,M,SBD,Multi-ply,250,190,240,1986
 1,Evgen Korotich,Євген Коротич,Ukraine,88.5,215,-225,225,,160,167.5,172.5,,222.5,230,,,627.5,90,Pro Submasters 33-39,M,SBD,Multi-ply,225,172.5,230,1977
 1,Yuriy Maligin,Юрій Малигін,Ukraine,102.2,120,160,180,,-100,100,150,,120,160,190,,520,110,Pro Masters 45-49,M,SBD,Multi-ply,180,150,190,1967
-1,Dmitro Zaets,Дмитро Заєць,Ukraine,47.5,,,,,42.5,47.5,50,,,,,,50,48,Amateur Children 11-12,M,B,Raw,,50,,2002
+1,Dmitro Zaets,Дмитро Заєць,Ukraine,47.5,,,,,42.5,47.5,50,,,,,,50,48,Amateur Sub-Teen 11-12,M,B,Raw,,50,,2002
 1,Oleksandr Ovcharenko,Олександр Овчаренко,Ukraine,60,,,,,60,-67.5,-67.5,,,,,,60,60,Amateur Teen 13-15,M,B,Raw,,60,,2001
 1,Mikita Grechko,Микита Гречко,Ukraine,75,,,,,75,82.5,-87.5,,,,,,82.5,75,Amateur Teen 13-15,M,B,Raw,,82.5,,2002
 1,Mikita Bublik,Микита Бублик,Ukraine,56.6,,,,,60,67.5,70,,,,,,70,60,Amateur Teen 16-17,M,B,Raw,,70,,1999
@@ -221,7 +221,7 @@ DQ,Svitlana Baganets,Світлана Баганець,Ukraine,51.5,,,,,-47.5,-4
 1,Viktoriya Solntseva,Вікторія Солнцева,Ukraine,89,,,,,77.5,-82.5,85,,,,,,85,90,Amateur Open,F,B,Raw,,85,,1991
 1,Olena Rublova,Олена Рубльова,Ukraine,61,,,,,40,-45,-45,,,,,,40,67.5,Amateur Submasters 33-39,F,B,Raw,,40,,1975
 1,Oksana Muzika,Оксана Музика,Ukraine,67.5,,,,,65,-70,-70,,,,,,65,67.5,Amateur Masters 45-49,F,B,Raw,,65,,1969
-1,Aleksandr Scherbakov,,Transnistria,50.1,,,,,45,50,-55,,,,,,50,52,Pro Children 11-12,M,B,Raw,,50,,2003
+1,Aleksandr Scherbakov,,Transnistria,50.1,,,,,45,50,-55,,,,,,50,52,Pro Sub-Teen 11-12,M,B,Raw,,50,,2003
 1,Anatoliy Starostenko,Анатолій Старостенко,Ukraine,59.5,,,,,80,85,-92.5,,,,,,85,60,Pro Teen 16-17,M,B,Raw,,85,,1999
 1,Bogdan Leontiev,Богдан Леонтієв,Ukraine,79.6,,,,,105,115,-120,,,,,,115,82.5,Pro Teen 16-17,M,B,Raw,,115,,1999
 1,Pavlo Dolgirev,Павло Долгірєв,Ukraine,98.5,,,,,105,110,-117.5,,,,,,110,100,Pro Teen 16-17,M,B,Raw,,110,,1998
@@ -288,7 +288,7 @@ DQ,Evgen Sergienko,Євген Сергієнко,Ukraine,112,,,,,190,,,,,,,,,125
 1,Evgen Korotich,Євген Коротич,Ukraine,88.5,,,,,160,167.5,172.5,,,,,,172.5,90,Pro Submasters 33-39,M,B,Multi-ply,,172.5,,1977
 1,Volodimir Chigirinskiy,Володимир Чигиринський,Ukraine,88.6,,,,,145,155,-173,,,,,,155,90,Pro Masters 50-54,M,B,Multi-ply,,155,,1962
 DQ,Vyacheslav Tsyganok,Вячеслав Цыганок,Ukraine,100.1,,,,,-140,,,,,,,,,110,Pro Masters 75-79,M,B,Multi-ply,,,,1938
-1,Dmitro Zaets,Дмитро Заєць,Ukraine,47.5,,,,,,,,,110,117.5,-122.5,,117.5,48,Amateur Children 11-12,M,D,Raw,,,117.5,2002
+1,Dmitro Zaets,Дмитро Заєць,Ukraine,47.5,,,,,,,,,110,117.5,-122.5,,117.5,48,Amateur Sub-Teen 11-12,M,D,Raw,,,117.5,2002
 1,Oleksandr Ovcharenko,Олександр Овчаренко,Ukraine,60,,,,,,,,,80,-95,,,80,60,Amateur Teen 13-15,M,D,Raw,,,80,2001
 1,Mikita Grechko,Микита Гречко,Ukraine,75,,,,,,,,,125,132.5,-140,,132.5,75,Amateur Teen 13-15,M,D,Raw,,,132.5,2002
 1,Vladislav Bondar,Владислав Бондар,Ukraine,67.5,,,,,,,,,180,200,205,,205,67.5,Amateur Teen 16-17,M,D,Raw,,,205,1998

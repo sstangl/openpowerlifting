@@ -1,5 +1,5 @@
 Place,Name,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,TotalKg,WeightClassKg,Division,Sex,Event,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,BirthYear
-1,Demian Karandeev,Ukraine,47.6,35,45,50,,-25,25,27.5,,45,55,-65,,132.5,48,Amateur Children 11-12,M,SBD,Wraps,50,27.5,55,2005
+1,Demian Karandeev,Ukraine,47.6,35,45,50,,-25,25,27.5,,45,55,-65,,132.5,48,Amateur Sub-Teen 11-12,M,SBD,Wraps,50,27.5,55,2005
 1,Erik Levonyan,Armenia,54.95,130,140,145,,-60,60,-65,,140,150,-160,,355,56,Amateur Teen 13-15,M,SBD,Wraps,145,60,150,2000
 1,Oleksandr Tymoshchuk,Ukraine,66.8,90,100,110,,60,65,70,,112.5,120,125,,305,67.5,Amateur Teen 13-15,M,SBD,Wraps,110,70,125,2002
 1,Volodymyr Kuzmenko,Ukraine,64.55,150,-165,-165,,-80,80,-100,,150,160,-192.5,,390,67.5,Amateur Teen 16-17,M,SBD,Wraps,150,80,160,2000
@@ -66,9 +66,9 @@ DQ,Yurii Khilchuk,Ukraine,99.1,230,-240,-245,,-160,-160,-160,,-230,,,,,100,Pro O
 1,Stefan Sochaňski,Poland,89.8,220,242.5,,,115,125,,,225,245,252.5,,620,90,Amateur Masters 65-69,M,SBD,Multi-ply,242.5,125,252.5,1948
 1,Igor Povazhniuk,Ukraine,77.55,275,285,,,220,230,-242.5,,250,275,300,,815,82.5,Pro Open,M,SBD,Multi-ply,285,230,300,1974
 2,Vitalii Kiyanenko,Ukraine,81.75,305,-335,335,,-170,170,-195,,250,-270,-270,,755,82.5,Pro Open,M,SBD,Multi-ply,335,170,250,1992
-1,David Yeghiarazyan,Armenia,37.2,,,,,40,45,-51,,,,,,45,44,Amateur Children 11-12,M,B,Raw,,45,,2004
-1,Alan Kviatkovskii,Ukraine,47.8,,,,,37.5,-40,40,,,,,,40,48,Amateur Children 11-12,M,B,Raw,,40,,2005
-2,Demian Karandeev,Ukraine,47.6,,,,,-25,25,27.5,,,,,,27.5,48,Amateur Children 11-12,M,B,Raw,,27.5,,2005
+1,David Yeghiarazyan,Armenia,37.2,,,,,40,45,-51,,,,,,45,44,Amateur Sub-Teen 11-12,M,B,Raw,,45,,2004
+1,Alan Kviatkovskii,Ukraine,47.8,,,,,37.5,-40,40,,,,,,40,48,Amateur Sub-Teen 11-12,M,B,Raw,,40,,2005
+2,Demian Karandeev,Ukraine,47.6,,,,,-25,25,27.5,,,,,,27.5,48,Amateur Sub-Teen 11-12,M,B,Raw,,27.5,,2005
 1,Vitalii Dragushchak,Ukraine,51.5,,,,,57.5,62.5,-67.5,,,,,,62.5,52,Amateur Teen 13-15,M,B,Raw,,62.5,,2001
 1,Rudik Avdalyan,Armenia,56,,,,,100,110,120,,,,,,120,56,Amateur Teen 13-15,M,B,Raw,,120,,2001
 1,Oleksandr Tymoshchuk,Ukraine,66.8,,,,,60,65,70,,,,,,70,67.5,Amateur Teen 13-15,M,B,Raw,,70,,2002
@@ -172,8 +172,8 @@ DQ,Dmytro Lyashuk,Ukraine,99.15,,,,,-190,-190,-190,,,,,,,100,Amateur Open,M,B,Ra
 1,Nataliya Melnychuk,Ukraine,52,,,,,67.5,-72.5,-72.5,,,,,,67.5,52,Amateur Masters 40-44,F,B,Raw,,67.5,,1975
 1,Yulia Nikitina,Ukraine,63.4,,,,,47.5,-50,50,,,,,,50,67.5,Amateur Masters 40-44,F,B,Raw,,50,,1973
 1,Marzena Janzer,Poland,73.35,,,,,82.5,87.5,90,,,,,,90,75,Amateur Masters 40-44,F,B,Raw,,90,,1974
-1,Oleg Mykhalskyy,Ukraine,35.6,,,,,42.5,45,47.5,,,,,,47.5,44,Pro Children 11-12,M,B,Raw,,47.5,,2004
-1,Vladyslav Pavlov,Ukraine,54.9,,,,,-65,-65,65,-70,,,,,65,56,Pro Children 11-12,M,B,Raw,,65,,2004
+1,Oleg Mykhalskyy,Ukraine,35.6,,,,,42.5,45,47.5,,,,,,47.5,44,Pro Sub-Teen 11-12,M,B,Raw,,47.5,,2004
+1,Vladyslav Pavlov,Ukraine,54.9,,,,,-65,-65,65,-70,,,,,65,56,Pro Sub-Teen 11-12,M,B,Raw,,65,,2004
 1,Vladyslav Sivak,Ukraine,71.05,,,,,67.5,72.5,75,,,,,,75,75,Pro Teen 13-15,M,B,Raw,,75,,2000
 1,Bogdan Golod,Ukraine,73.9,,,,,75,-80,80,,,,,,80,75,Pro Teen 16-17,M,B,Raw,,80,,1999
 2,Oleksandr Sukhynyuk,Ukraine,68.2,,,,,65,70,-72.5,,,,,,70,75,Pro Teen 16-17,M,B,Raw,,70,,1999
@@ -269,8 +269,8 @@ DQ,Dmytro Kuzmenko,Ukraine,83.35,,,,,-200,-200,-200,,,,,,,90,Pro Open,M,B,Multi-
 1,Sebastjan Balner,Poland,105.15,,,,,200,220,-230,,,,,,220,110,Pro Masters 40-44,M,B,Multi-ply,,220,,1973
 1,Franciszek Szabluk,Poland,95.45,,,,,200,210,-230,,,,,,210,100,Pro Masters 60-64,M,B,Multi-ply,,210,,1956
 1,Miroslaw Orłowski,Poland,96.75,,,,,-165,165,-170,,,,,,165,100,Pro Masters 70-74,M,B,Multi-ply,,165,,1943
-1,Alan Kviatkovskii,Ukraine,47.8,,,,,,,,,75,80,-85,,80,48,Amateur Children 11-12,M,D,Raw,,,80,2005
-2,Demian Karandeev,Ukraine,47.6,,,,,,,,,45,55,-65,,55,48,Amateur Children 11-12,M,D,Raw,,,55,2005
+1,Alan Kviatkovskii,Ukraine,47.8,,,,,,,,,75,80,-85,,80,48,Amateur Sub-Teen 11-12,M,D,Raw,,,80,2005
+2,Demian Karandeev,Ukraine,47.6,,,,,,,,,45,55,-65,,55,48,Amateur Sub-Teen 11-12,M,D,Raw,,,55,2005
 1,Hovik Babadjanayan,Armenia,44,,,,,,,,,95,100,-105,,100,44,Amateur Teen 13-15,M,D,Raw,,,100,2002
 1,Hayk Bozinyan,Armenia,59,,,,,,,,,140,145,150,,150,60,Amateur Teen 13-15,M,D,Raw,,,150,2001
 1,Oleksandr Tymoshchuk,Ukraine,66.8,,,,,,,,,112.5,120,125,,125,67.5,Amateur Teen 13-15,M,D,Raw,,,125,2002

@@ -1,7 +1,7 @@
 Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg
-1,Rafał Gromowski,SBD,Wraps,Amateur Teenage 13-15,Yes,M,Poland,13,82.5,79.7,110,117.5,127.5,127.5,,72.5,77.5,82.5,82.5,,117.5,127.5,135,135,,345
-1,Radosław Wąs,SBD,Wraps,Amateur Teenage 13-15,Yes,M,Poland,15,110,102.5,150,160,175,175,,95,100,105,105,,195,205,210,210,,490.00
-1,Wojciech Szczygieł,SBD,Wraps,Amateur Teenage 18-19,Yes,M,Poland,19,90,86.9,190,200,-210,200,,115,-125,-125,115,,210,-225,-242.5,210,,525
+1,Rafał Gromowski,SBD,Wraps,Amateur Teen 13-15,Yes,M,Poland,13,82.5,79.7,110,117.5,127.5,127.5,,72.5,77.5,82.5,82.5,,117.5,127.5,135,135,,345
+1,Radosław Wąs,SBD,Wraps,Amateur Teen 13-15,Yes,M,Poland,15,110,102.5,150,160,175,175,,95,100,105,105,,195,205,210,210,,490.00
+1,Wojciech Szczygieł,SBD,Wraps,Amateur Teen 18-19,Yes,M,Poland,19,90,86.9,190,200,-210,200,,115,-125,-125,115,,210,-225,-242.5,210,,525
 1,Gabriele Daidone,SBD,Wraps,Amateur Juniors 20-23,Yes,M,Italy,22,67.5,66.5,145,155,-157.5,155,,115,-120,-120,115,,195,215,220,220,,490
 2,Kamil Olewicz,SBD,Wraps,Amateur Juniors 20-23,Yes,M,Poland,23,67.5,64,170,180,,180,,105,-112.5,-112.5,105,,200,-207.5,-212.5,200,,485
 1,Jakub Harasim,SBD,Wraps,Amateur Juniors 20-23,Yes,M,Poland,20,75,72.7,155,165,-180,165,,85,92.5,-100,92.5,,140,150,162.5,162.5,,420
@@ -43,13 +43,13 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Mariusz Rufkiewicz,SBD,Wraps,Amateur Masters 50-54,Yes,M,Poland,50,110,100.5,200,215,232.5,232.5,,140,152.5,160,160,,200,220,235,235,242.5,627.50
 1,Stefan Sochaňski,SBD,Wraps,Amateur Masters 65-69,Yes,M,Poland,69,100,90.2,-167.5,167.5,-180,167.5,,90,95,-100,95,,185,205,212.5,212.5,,475
 1,Kazimierz Jasiński,SBD,Wraps,Amateur Masters 70-74,Yes,M,Poland,70,90,85.9,130,-140,145,145,,-85,85,87.5,87.5,,180,185,190,190,,422.50
-1,Przemysław Kawczyński,SBD,Wraps,Amateur MPF,Yes,M,Poland,23,82.5,82.3,-170,170,185,185,,100,-107.5,-107.5,100,,200,217.5,-222.5,217.5,,502.5
-1,Michael Dehner,SBD,Wraps,Amateur MPF,Yes,M,USA,49,90,83.3,227.5,235,240,240,,130,135,-137.5,135,,220,227.5,232.5,232.5,,607.50
-1,Mariusz Snarski,SBD,Wraps,Amateur MPF,Yes,M,Poland,33,100,100,250,270,280,280,,160,172.5,180,180,,260,275,285,285,,745.00
-1,Phillip Carr,SBD,Wraps,Amateur MPF,Yes,M,USA,28,110,107.9,215,-227.5,-227.5,215,,167.5,175,-180,175,,235,242.5,250,250,,640.00
-1,Katarzyna Czubek,SBD,Wraps,Amateur Teenage 13-15,Yes,F,Poland,15,82.5,79.2,107.5,112.5,117.5,117.5,,37.5,40,-42.5,40,,105,112.5,120,120,,277.5
-1,Kasandra Patelczyk,SBD,Wraps,Amateur Teenage 16-17,Yes,F,Poland,17,56,53.5,92.5,97.5,102.5,102.5,,52.5,-57.5,-57.5,52.5,,105,-115,115,115,,270.00
-1,Anna Syvokobylska,SBD,Wraps,Amateur Teenage 18-19,Yes,F,Ukraine,19,60,59.1,115,130,135,135,,52.5,57.5,60,60,,100,-115,-115,100,,295.00
+1,Przemysław Kawczyński,SBD,Wraps,Amateur Military/Fire/Police,Yes,M,Poland,23,82.5,82.3,-170,170,185,185,,100,-107.5,-107.5,100,,200,217.5,-222.5,217.5,,502.5
+1,Michael Dehner,SBD,Wraps,Amateur Military/Fire/Police,Yes,M,USA,49,90,83.3,227.5,235,240,240,,130,135,-137.5,135,,220,227.5,232.5,232.5,,607.50
+1,Mariusz Snarski,SBD,Wraps,Amateur Military/Fire/Police,Yes,M,Poland,33,100,100,250,270,280,280,,160,172.5,180,180,,260,275,285,285,,745.00
+1,Phillip Carr,SBD,Wraps,Amateur Military/Fire/Police,Yes,M,USA,28,110,107.9,215,-227.5,-227.5,215,,167.5,175,-180,175,,235,242.5,250,250,,640.00
+1,Katarzyna Czubek,SBD,Wraps,Amateur Teen 13-15,Yes,F,Poland,15,82.5,79.2,107.5,112.5,117.5,117.5,,37.5,40,-42.5,40,,105,112.5,120,120,,277.5
+1,Kasandra Patelczyk,SBD,Wraps,Amateur Teen 16-17,Yes,F,Poland,17,56,53.5,92.5,97.5,102.5,102.5,,52.5,-57.5,-57.5,52.5,,105,-115,115,115,,270.00
+1,Anna Syvokobylska,SBD,Wraps,Amateur Teen 18-19,Yes,F,Ukraine,19,60,59.1,115,130,135,135,,52.5,57.5,60,60,,100,-115,-115,100,,295.00
 1,Marcelina Szumera,SBD,Wraps,Amateur Open,Yes,F,Poland,26,67.5,65.6,105,115,130,130,,45,52.5,57.5,57.5,,100,115,-130,115,,302.5
 1,Ewa Skorupińska,SBD,Wraps,Amateur Open,Yes,F,Poland,24,75,69.3,-80,80,-90,80,,35,-40,-40,35,,100,110,120,120,,235
 1,Karolina Koszela,SBD,Wraps,Amateur Open,Yes,F,Poland,37,90,86.3,130,155,170,170,,60,-75,-85,60,,130,155,190,190,,420.00
@@ -58,14 +58,14 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Oleksandr Mushynskyi,SBD,Multi-ply,Amateur Open,Yes,M,Ukraine,24,82.5,81.4,195,210,220,220,,130,135,140,140,,210,225,-240,225,,585
 1,Mariusz Snarski,SBD,Multi-ply,Amateur Open,Yes,M,Poland,33,100,100,250,270,280,280,,160,172.5,180,180,,260,275,285,285,,745
 1,Stefan Sochaňski,SBD,Multi-ply,Amateur Masters 65-69,Yes,M,Poland,69,100,90.2,205,-225,225,225,,-100,100,120,120,,210,230,245,245,,590
-1,Mariusz Snarski,SBD,Multi-ply,Amateur MPF,Yes,M,Poland,33,100,100,250,270,280,280,,160,172.5,180,180,,260,275,285,285,,745
-1,Volodymyr Galyga,B,Raw,Amateur Children 11-12,Yes,M,Ukraine,12,48,46.3,,,,,,30,32.5,-35,32.5,,,,,,,32.5
-1,Bogdan Sukhovarov,B,Raw,Amateur Teenage 13-15,Yes,M,Ukraine,14,52,51.8,,,,,,25,30,-40,30,,,,,,,30
-1,Norik Karapetyan,B,Raw,Amateur Teenage 13-15,Yes,M,Armenia,14,56,54.2,,,,,,45,55,60,60,,,,,,,60
-1,Radosław Wąs,B,Raw,Amateur Teenage 13-15,Yes,M,Poland,15,110,102.5,,,,,,95,100,105,105,,,,,,,105
-1,Adrian Sadło,B,Raw,Amateur Teenage 18-19,Yes,M,Poland,19,82.5,82.2,,,,,,162.5,170.5,-172.5,170.5,,,,,,,170.5
-2,Ivan Messina,B,Raw,Amateur Teenage 18-19,Yes,M,Italy,19,82.5,78.7,,,,,,117.5,122.5,125,125,,,,,,,125
-1,Grzegorz Strambowski,B,Raw,Amateur Teenage 18-19,Yes,M,Poland,19,100,92.6,,,,,,145,157.5,-165,157.5,,,,,,,157.5
+1,Mariusz Snarski,SBD,Multi-ply,Amateur Military/Fire/Police,Yes,M,Poland,33,100,100,250,270,280,280,,160,172.5,180,180,,260,275,285,285,,745
+1,Volodymyr Galyga,B,Raw,Amateur Sub-Teen 11-12,Yes,M,Ukraine,12,48,46.3,,,,,,30,32.5,-35,32.5,,,,,,,32.5
+1,Bogdan Sukhovarov,B,Raw,Amateur Teen 13-15,Yes,M,Ukraine,14,52,51.8,,,,,,25,30,-40,30,,,,,,,30
+1,Norik Karapetyan,B,Raw,Amateur Teen 13-15,Yes,M,Armenia,14,56,54.2,,,,,,45,55,60,60,,,,,,,60
+1,Radosław Wąs,B,Raw,Amateur Teen 13-15,Yes,M,Poland,15,110,102.5,,,,,,95,100,105,105,,,,,,,105
+1,Adrian Sadło,B,Raw,Amateur Teen 18-19,Yes,M,Poland,19,82.5,82.2,,,,,,162.5,170.5,-172.5,170.5,,,,,,,170.5
+2,Ivan Messina,B,Raw,Amateur Teen 18-19,Yes,M,Italy,19,82.5,78.7,,,,,,117.5,122.5,125,125,,,,,,,125
+1,Grzegorz Strambowski,B,Raw,Amateur Teen 18-19,Yes,M,Poland,19,100,92.6,,,,,,145,157.5,-165,157.5,,,,,,,157.5
 1,Zakar Mkhitaryan,B,Raw,Amateur Juniors 20-23,Yes,M,Armenia,20,60,57.9,,,,,,60,-70,70,70,,,,,,,70
 1,Petro Kalynovskyy,B,Raw,Amateur Juniors 20-23,Yes,M,Ukraine,21,67.5,66.8,,,,,,115,125,-130,125,,,,,,,125
 2,Kamil Olewicz,B,Raw,Amateur Juniors 20-23,Yes,M,Poland,23,67.5,64,,,,,,105,-112.5,-112.5,105,,,,,,,105
@@ -133,15 +133,15 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Valērijs Petrovs,B,Raw,Amateur Masters 70-74,Yes,M,Latvia,71,82.5,82.5,,,,,,-105,105,-110,105,,,,,,,105
 2,Sylwester Kubacki,B,Raw,Amateur Masters 70-74,Yes,M,Poland,73,82.5,80.2,,,,,,80,85,87.5,87.5,,,,,,,87.5
 1,Kazimierz Jasiński,B,Raw,Amateur Masters 70-74,Yes,M,Poland,70,90,85.9,,,,,,-85,85,87.5,87.5,,,,,,,87.5
-1,Marek Tokarski,B,Raw,Amateur MPF,Yes,M,Poland,36,82.5,81.5,,,,,,140,147.5,152.5,152.5,,,,,,,152.5
-1,Andrzej Juraszek,B,Raw,Amateur MPF,Yes,M,Poland,40,90,90,,,,,,155,162.5,-167.5,162.5,,,,,,,162.5
-1,Dmytro Svyrydenko,B,Raw,Amateur MPF,Yes,M,Ukraine,40,100,99.4,,,,,,180,190,-192.5,190,,,,,,,190
-2,Volodymyr Ratushnyy,B,Raw,Amateur MPF,Yes,M,Ukraine,42,100,100,,,,,,157.5,-167.5,167.5,167.5,,,,,,,167.5
-1,Phillip Carr,B,Raw,Amateur MPF,Yes,M,USA,28,110,107.9,,,,,,167.5,175,-180,175,,,,,,,175
-1,Krzystof Halczyk,B,Raw,Amateur MPF,Yes,M,Poland,42,140,130.2,,,,,,175,-180,,175,,,,,,,175
-1,Kasandra Patelczyk,B,Raw,Amateur Teenage 16-17,Yes,F,Poland,17,56,53.5,,,,,,52.5,-57.5,-57.5,52.5,,,,,,,52.5
-1,Agata Imianowska,B,Raw,Amateur Teenage 18-19,Yes,F,Poland,19,56,55.2,,,,,,60,-62.5,-62.5,60,,,,,,,60
-1,Anna Syvokobylska,B,Raw,Amateur Teenage 18-19,Yes,F,Ukraine,19,60,59.1,,,,,,52.5,57.5,60,60,,,,,,,60
+1,Marek Tokarski,B,Raw,Amateur Military/Fire/Police,Yes,M,Poland,36,82.5,81.5,,,,,,140,147.5,152.5,152.5,,,,,,,152.5
+1,Andrzej Juraszek,B,Raw,Amateur Military/Fire/Police,Yes,M,Poland,40,90,90,,,,,,155,162.5,-167.5,162.5,,,,,,,162.5
+1,Dmytro Svyrydenko,B,Raw,Amateur Military/Fire/Police,Yes,M,Ukraine,40,100,99.4,,,,,,180,190,-192.5,190,,,,,,,190
+2,Volodymyr Ratushnyy,B,Raw,Amateur Military/Fire/Police,Yes,M,Ukraine,42,100,100,,,,,,157.5,-167.5,167.5,167.5,,,,,,,167.5
+1,Phillip Carr,B,Raw,Amateur Military/Fire/Police,Yes,M,USA,28,110,107.9,,,,,,167.5,175,-180,175,,,,,,,175
+1,Krzystof Halczyk,B,Raw,Amateur Military/Fire/Police,Yes,M,Poland,42,140,130.2,,,,,,175,-180,,175,,,,,,,175
+1,Kasandra Patelczyk,B,Raw,Amateur Teen 16-17,Yes,F,Poland,17,56,53.5,,,,,,52.5,-57.5,-57.5,52.5,,,,,,,52.5
+1,Agata Imianowska,B,Raw,Amateur Teen 18-19,Yes,F,Poland,19,56,55.2,,,,,,60,-62.5,-62.5,60,,,,,,,60
+1,Anna Syvokobylska,B,Raw,Amateur Teen 18-19,Yes,F,Ukraine,19,60,59.1,,,,,,52.5,57.5,60,60,,,,,,,60
 1,Kamila Korolewska,B,Raw,Amateur Juniors 20-23,Yes,F,Poland,23,67.5,66.3,,,,,,57.5,60,-62.5,60,,,,,,,60
 1,Agata Imianowska,B,Raw,Amateur Open,Yes,F,Poland,19,56,55.2,,,,,,60,-62.5,-62.5,60,,,,,,,60
 2,Anna Maj,B,Raw,Amateur Open,Yes,F,Poland,34,56,54.9,,,,,,50,55,-57.5,55,,,,,,,55
@@ -156,12 +156,12 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Stanisław Kozeko,B,Multi-ply,Amateur Masters 60-64,Yes,M,Poland,60,100,92.7,,,,,,145,-160,-160,145,,,,,,,145
 1,Kazimierz Tamiłowski,B,Multi-ply,Amateur Masters 65-69,Yes,M,Poland,69,82.5,81,,,,,,-150,152.5,160,160,,,,,,,160
 1,Valērijs Petrovs,B,Multi-ply,Amateur Masters 70-74,Yes,M,Latvia,71,82.5,82.5,,,,,,120,-125,,120,,,,,,,120
-1,Hovhannes Antonyan,D,Raw,Amateur Children 11-12,Yes,M,Armenia,11,52,52,,,,,,,,,,,70,92.5,95,95,,95
-1,Norik Karapetyan,D,Raw,Amateur Teenage 13-15,Yes,M,Armenia,14,56,54.2,,,,,,,,,,,70,92.5,95,95,,95
-1,Kevin Messina,D,Raw,Amateur Teenage 13-15,Yes,M,Italy,14,82.5,78.5,,,,,,,,,,,-160,160,171,171,180,171
-1,Radosław Wąs,D,Raw,Amateur Teenage 13-15,Yes,M,Poland,15,110,102.5,,,,,,,,,,,195,205,210,210,,210
-1,Krystian Zawadzki,D,Raw,Amateur Teenage 16-17,Yes,M,Poland,17,67.5,60.9,,,,,,,,,,,120,130,135,135,,135
-1,Ivan Messina,D,Raw,Amateur Teenage 18-19,Yes,M,Italy,19,82.5,78.7,,,,,,,,,,,-180,180,195,195,,195
+1,Hovhannes Antonyan,D,Raw,Amateur Sub-Teen 11-12,Yes,M,Armenia,11,52,52,,,,,,,,,,,70,92.5,95,95,,95
+1,Norik Karapetyan,D,Raw,Amateur Teen 13-15,Yes,M,Armenia,14,56,54.2,,,,,,,,,,,70,92.5,95,95,,95
+1,Kevin Messina,D,Raw,Amateur Teen 13-15,Yes,M,Italy,14,82.5,78.5,,,,,,,,,,,-160,160,171,171,180,171
+1,Radosław Wąs,D,Raw,Amateur Teen 13-15,Yes,M,Poland,15,110,102.5,,,,,,,,,,,195,205,210,210,,210
+1,Krystian Zawadzki,D,Raw,Amateur Teen 16-17,Yes,M,Poland,17,67.5,60.9,,,,,,,,,,,120,130,135,135,,135
+1,Ivan Messina,D,Raw,Amateur Teen 18-19,Yes,M,Italy,19,82.5,78.7,,,,,,,,,,,-180,180,195,195,,195
 1,Kamil Olewicz,D,Raw,Amateur Juniors 20-23,Yes,M,Poland,23,67.5,64,,,,,,,,,,,200,-207.5,-212.5,200,,200
 1,Przemysław Kawczyński,D,Raw,Amateur Juniors 20-23,Yes,M,Poland,23,82.5,82.3,,,,,,,,,,,200,217.5,-222.5,217.5,,217.5
 1,Arkadiusz Szmuc,D,Raw,Amateur Juniors 20-23,Yes,M,Poland,22,110,105.3,,,,,,,,,,,240,250,260,260,,260
@@ -198,13 +198,13 @@ Place,Name,Event,Equipment,Division,Tested,Sex,Country,Age,WeightClassKg,Bodywei
 1,Jan Łuka,D,Raw,Amateur Masters 65-69,Yes,M,Poland,68,90,85.5,,,,,,,,,,,220,-230,230,230,,230
 1,Stefan Sochaňski,D,Raw,Amateur Masters 65-69,Yes,M,Poland,69,100,90.2,,,,,,,,,,,185,205,212.5,212.5,,212.5
 1,Kazimierz Jasiński,D,Raw,Amateur Masters 70-74,Yes,M,Poland,70,90,85.9,,,,,,,,,,,180,185,190,190,,190
-1,Przemysław Kawczyński,D,Raw,Amateur MPF,Yes,M,Poland,23,82.5,82.3,,,,,,,,,,,200,217.5,-222.5,217.5,,217.5
-1,Phillip Carr,D,Raw,Amateur MPF,Yes,M,USA,28,110,107.9,,,,,,,,,,,235,242.5,250,250,,250
-1,Asia Kaczmarczyk,D,Raw,Amateur Teenage 13-15,Yes,F,Poland,13,44,32.6,,,,,,,,,,,50,55,60,60,,60
-1,Adriana Styrczula,D,Raw,Amateur Teenage 13-15,Yes,F,Poland,13,75,73.4,,,,,,,,,,,65,70,80,80,,80
-1,Kasandra Patelczyk,D,Raw,Amateur Teenage 16-17,Yes,F,Poland,17,56,53.5,,,,,,,,,,,105,-115,115,115,,115
-1,Anna Syvokobylska,D,Raw,Amateur Teenage 18-19,Yes,F,Ukraine,19,60,59.1,,,,,,,,,,,100,-115,-115,100,,100
-1,Gabriela Gacek,D,Raw,Amateur Teenage 18-19,Yes,F,Poland,19,67.5,61.5,,,,,,,,,,,105,112.5,117.5,117.5,,117.5
+1,Przemysław Kawczyński,D,Raw,Amateur Military/Fire/Police,Yes,M,Poland,23,82.5,82.3,,,,,,,,,,,200,217.5,-222.5,217.5,,217.5
+1,Phillip Carr,D,Raw,Amateur Military/Fire/Police,Yes,M,USA,28,110,107.9,,,,,,,,,,,235,242.5,250,250,,250
+1,Asia Kaczmarczyk,D,Raw,Amateur Teen 13-15,Yes,F,Poland,13,44,32.6,,,,,,,,,,,50,55,60,60,,60
+1,Adriana Styrczula,D,Raw,Amateur Teen 13-15,Yes,F,Poland,13,75,73.4,,,,,,,,,,,65,70,80,80,,80
+1,Kasandra Patelczyk,D,Raw,Amateur Teen 16-17,Yes,F,Poland,17,56,53.5,,,,,,,,,,,105,-115,115,115,,115
+1,Anna Syvokobylska,D,Raw,Amateur Teen 18-19,Yes,F,Ukraine,19,60,59.1,,,,,,,,,,,100,-115,-115,100,,100
+1,Gabriela Gacek,D,Raw,Amateur Teen 18-19,Yes,F,Poland,19,67.5,61.5,,,,,,,,,,,105,112.5,117.5,117.5,,117.5
 1,Renata Zapała,D,Raw,Amateur Juniors 20-23,Yes,F,Poland,23,75,70,,,,,,,,,,,125,135,142.5,142.5,,142.5
 1,Olga Yarmolyuk,D,Raw,Amateur Open,Yes,F,Ukraine,28,56,53.7,,,,,,,,,,,150,160,-165.5,160,,160
 2,Anna Maj,D,Raw,Amateur Open,Yes,F,Poland,34,56,54.9,,,,,,,,,,,100,105,-110,105,,105
@@ -245,12 +245,12 @@ DQ,Igor Povazhniuk,SBD,Wraps,Pro Masters 40-44,No,M,Ukraine,42,82.5,79.9,-240,-2
 1,Gagik Tonoyan,SBD,Wraps,Pro Masters 50-54,No,M,Armenia,51,110,108.5,-260,260,-285,260,,130,140,,140,,270,290,-300,290,,690.00
 1,Antoni Kaliňski,SBD,Wraps,Pro Masters 60-64,No,M,Poland,64,67.5,67,-120,120,135,135,,100,105,107.5,107.5,,120,130,135,135,,377.5
 1,Robert Feldman,SBD,Wraps,Pro Masters 60-64,No,M,USA,62,82.5,80.7,135,-147.5,150,150,,107.5,117.5,-122.5,117.5,,200,207.5,215,215,,482.50
-1,Ilia Kochiashvili,SBD,Wraps,Pro MPF,No,M,Georgia,26,110,109,170,190,220,220,,150,160,170,170,,220,250,260,260,,650
-1,Marcin Skowroński,SBD,Wraps,Pro MPF,No,M,Poland,27,125,121.8,280,295,305,305,,160,170,175,175,,280,300,-320,300,,780.00
+1,Ilia Kochiashvili,SBD,Wraps,Pro Military/Fire/Police,No,M,Georgia,26,110,109,170,190,220,220,,150,160,170,170,,220,250,260,260,,650
+1,Marcin Skowroński,SBD,Wraps,Pro Military/Fire/Police,No,M,Poland,27,125,121.8,280,295,305,305,,160,170,175,175,,280,300,-320,300,,780.00
 1,Tetiana Brodetska,SBD,Wraps,Pro Juniors 20-23,No,F,Ukraine,21,75,74.8,170,-180,180,180,185,80,85,87.5,87.5,-90,170,180,-182.5,180,,447.5
 1,Tatevik Mkrtchyan,SBD,Wraps,Pro Open,No,F,Armenia,28,67.5,62,100,120,-135,120,,60,70,75,75,,120,140,160,160,,355
-1,Zurab Abasidze,D,Raw,Pro Teenage 16-17,No,M,Georgia,17,100,99.9,,,,,,,,,,,200,220,235,235,,235
-2,Nika Diasamidze,D,Raw,Pro Teenage 16-17,No,M,Georgia,16,100,97.7,,,,,,,,,,,190,210,220,220,,220
+1,Zurab Abasidze,D,Raw,Pro Teen 16-17,No,M,Georgia,17,100,99.9,,,,,,,,,,,200,220,235,235,,235
+2,Nika Diasamidze,D,Raw,Pro Teen 16-17,No,M,Georgia,16,100,97.7,,,,,,,,,,,190,210,220,220,,220
 1,Nukri Diasamidze,D,Raw,Pro Juniors 20-23,No,M,Georgia,21,75,73.6,,,,,,,,,,,200,220,-230,220,,220
 1,Maciej Kopacewicz,D,Raw,Pro Juniors 20-23,No,M,Poland,22,110,100.1,,,,,,,,,,,230,260,270,270,,270
 1,Sergey Alvanyan,D,Raw,Pro Open,No,M,Armenia,32,90,89.9,,,,,,,,,,,255,275,-280,275,,275
@@ -287,7 +287,7 @@ DQ,Igor Povazhniuk,SBD,Wraps,Pro Masters 40-44,No,M,Ukraine,42,82.5,79.9,-240,-2
 2,Wiesław Wrŏbel,D,Raw,Pro Masters 60-64,No,M,Poland,60,100,96.6,,,,,,,,,,,230,240,250,250,,250
 1,Ryszard Śliwiński,D,Raw,Pro Masters 65-69,No,M,Poland,67,75,74.2,,,,,,,,,,,142.5,152.5,157.5,157.5,,157.5
 1,Witold Tarkowski,D,Raw,Pro Masters 70-74,No,M,Poland,73,60,59.2,,,,,,,,,,,100,105,107.5,107.5,,107.5
-1,Weronika Lenort,D,Raw,Pro Teenage 16-17,No,F,Poland,17,67.5,67.4,,,,,,,,,,,150,-172.5,-172.5,150,,150
+1,Weronika Lenort,D,Raw,Pro Teen 16-17,No,F,Poland,17,67.5,67.4,,,,,,,,,,,150,-172.5,-172.5,150,,150
 1,Tetiana Brodetska,D,Raw,Pro Juniors 20-23,No,F,Ukraine,21,75,74.8,,,,,,,,,,,170,180,-182.5,180,,180
 1,Tatevik Mkrtchyan,D,Raw,Pro Open,No,F,Armenia,28,67.5,62,,,,,,,,,,,120,140,160,160,,160
 1,Tetiana Brodetska,D,Raw,Pro Open,No,F,Ukraine,21,75,74.8,,,,,,,,,,,170,180,-182.5,180,,180
@@ -302,15 +302,15 @@ DQ,Igor Povazhniuk,SBD,Wraps,Pro Masters 40-44,No,M,Ukraine,42,82.5,79.9,-240,-2
 1,Valerii Poryadin,D,Multi-ply,Pro Masters 50-54,No,M,Russia,51,90,88.9,,,,,,,,,,,210,237.5,,237.5,,237.5
 1,Mieczysłąw Maczka,D,Multi-ply,Pro Masters 60-64,No,M,Germany,63,82.5,82,,,,,,,,,,,120,130,,130,,130
 1,Wiesław Wrŏbel,D,Multi-ply,Pro Masters 60-64,No,M,Poland,60,100,96.6,,,,,,,,,,,220,235,,235,,235
-1,Bartolomej Prukop,B,Raw,Pro Children 10,No,M,Poland,10,44,37.2,,,,,,-22.5,25,27.5,27.5,,,,,,,27.5
-1,Oleg Mykhalskyy,B,Raw,Pro Teenage 13-15,No,M,Ukraine,13,44,38.1,,,,,,52.5,55,-57.5,55,,,,,,,55
-1,Oleg Dyakiv,B,Raw,Pro Teenage 16-17,No,M,Ukraine,16,67.5,63.2,,,,,,80,90,-95,90,,,,,,,90
-1,Giorgi Lortkipanidze,B,Raw,Pro Teenage 16-17,No,M,Georgia,16,75,75,,,,,,75,90,102.5,102.5,,,,,,,102.5
-2,Patryk Strzałek,B,Raw,Pro Teenage 16-17,No,M,Poland,16,75,70.9,,,,,,90,95,100,100,,,,,,,100
-1,Mateusz Schmidla,B,Raw,Pro Teenage 16-17,No,M,Poland,17,82.5,81.4,,,,,,80,90,-100,90,,,,,,,90
-1,Dawid Urbanowicz,B,Raw,Pro Teenage 18-19,No,M,Poland,18,82.5,76.1,,,,,,100,110,-115,110,,,,,,,110
-1,Krystian Ludkowski,B,Raw,Pro Teenage 18-19,No,M,Poland,19,110,109.3,,,,,,145,-152.5,152.5,152.5,,,,,,,152.5
-1,Adam Kopka,B,Raw,Pro Teenage 18-19,No,M,Poland,19,140,129.5,,,,,,140,145,-150,145,,,,,,,145
+1,Bartolomej Prukop,B,Raw,Pro Youth 10,No,M,Poland,10,44,37.2,,,,,,-22.5,25,27.5,27.5,,,,,,,27.5
+1,Oleg Mykhalskyy,B,Raw,Pro Teen 13-15,No,M,Ukraine,13,44,38.1,,,,,,52.5,55,-57.5,55,,,,,,,55
+1,Oleg Dyakiv,B,Raw,Pro Teen 16-17,No,M,Ukraine,16,67.5,63.2,,,,,,80,90,-95,90,,,,,,,90
+1,Giorgi Lortkipanidze,B,Raw,Pro Teen 16-17,No,M,Georgia,16,75,75,,,,,,75,90,102.5,102.5,,,,,,,102.5
+2,Patryk Strzałek,B,Raw,Pro Teen 16-17,No,M,Poland,16,75,70.9,,,,,,90,95,100,100,,,,,,,100
+1,Mateusz Schmidla,B,Raw,Pro Teen 16-17,No,M,Poland,17,82.5,81.4,,,,,,80,90,-100,90,,,,,,,90
+1,Dawid Urbanowicz,B,Raw,Pro Teen 18-19,No,M,Poland,18,82.5,76.1,,,,,,100,110,-115,110,,,,,,,110
+1,Krystian Ludkowski,B,Raw,Pro Teen 18-19,No,M,Poland,19,110,109.3,,,,,,145,-152.5,152.5,152.5,,,,,,,152.5
+1,Adam Kopka,B,Raw,Pro Teen 18-19,No,M,Poland,19,140,129.5,,,,,,140,145,-150,145,,,,,,,145
 1,Jakub Chrzanowski,B,Raw,Pro Juniors 20-23,No,M,Poland,20,75,72.9,,,,,,175,185.5,-190,185.5,,,,,,,185.5
 1,Patryk Kaczmarek,B,Raw,Pro Juniors 20-23,No,M,Poland,22,90,89.6,,,,,,160,165,167.5,167.5,,,,,,,167.5
 2,Patryk Zgliński,B,Raw,Pro Juniors 20-23,No,M,Poland,23,90,89.5,,,,,,160,-165,-167.5,160,,,,,,,160
@@ -393,23 +393,23 @@ DQ,Piotr Czapiewski,B,Raw,Pro Masters 40-44,No,M,Poland,42,140,130,,,,,,-225,-22
 1,Miroslaw Orłowski,B,Raw,Pro Masters 70-74,No,M,Poland,73,100,97.4,,,,,,135,-140,-140,135,,,,,,,135
 1,Edward Limański,B,Raw,Pro Masters 80+,No,M,Poland,81,75,73.8,,,,,,50,55,-57.5,55,,,,,,,55
 1,Wiesław Dąbrowski,B,Raw,Pro Masters 80+,No,M,Poland,77,82.5,77.5,,,,,,20,-30,35,35,,,,,,,35
-1,Dawid Hartleb,B,Raw,Pro MPF,No,M,Poland,29,56,55.3,,,,,,75,-82.5,-82.5,75,,,,,,,75
-1,Patryk Popiołek,B,Raw,Pro MPF,No,M,Poland,26,82.5,81.2,,,,,,180,190,-195,190,,,,,,,190
-1,Rafał Kusz,B,Raw,Pro MPF,No,M,Poland,31,90,88,,,,,,170,177.5,180,180,,,,,,,180
-2,Zbigniew Boczar,B,Raw,Pro MPF,No,M,Poland,32,90,84.6,,,,,,170,177.5,-180,177.5,,,,,,,177.5
-3,Jacek Krysiuk,B,Raw,Pro MPF,No,M,Poland,44,90,84.6,,,,,,160,165,170,170,,,,,,,170
-4,Grzegorz Joka,B,Raw,Pro MPF,No,M,Poland,30,90,88,,,,,,160,165,170,170,,,,,,,170
-1,Tomasz Trzciński,B,Raw,Pro MPF,No,M,Poland,35,100,94.6,,,,,,205,215,220,220,,,,,,,220
-1,Andrzej Kocyła,B,Raw,Pro MPF,No,M,Poland,41,110,104.8,,,,,,-240,247.5,-255,247.5,,,,,,,247.5
-2,Tomasz Napierała,B,Raw,Pro MPF,No,M,Poland,38,110,104.9,,,,,,190,200,205,205,,,,,,,205
-3,Wojciech Różycki,B,Raw,Pro MPF,No,M,Poland,31,110,107.8,,,,,,180,190,-197.5,190,,,,,,,190
-4,Karol Bikowski,B,Raw,Pro MPF,No,M,Poland,30,110,102.9,,,,,,155,-160,-162.5,155,,,,,,,155
-1,Paweł Liszcz,B,Raw,Pro MPF,No,M,Poland,39,125,116.1,,,,,,242.5,250,255,255,,,,,,,255
+1,Dawid Hartleb,B,Raw,Pro Military/Fire/Police,No,M,Poland,29,56,55.3,,,,,,75,-82.5,-82.5,75,,,,,,,75
+1,Patryk Popiołek,B,Raw,Pro Military/Fire/Police,No,M,Poland,26,82.5,81.2,,,,,,180,190,-195,190,,,,,,,190
+1,Rafał Kusz,B,Raw,Pro Military/Fire/Police,No,M,Poland,31,90,88,,,,,,170,177.5,180,180,,,,,,,180
+2,Zbigniew Boczar,B,Raw,Pro Military/Fire/Police,No,M,Poland,32,90,84.6,,,,,,170,177.5,-180,177.5,,,,,,,177.5
+3,Jacek Krysiuk,B,Raw,Pro Military/Fire/Police,No,M,Poland,44,90,84.6,,,,,,160,165,170,170,,,,,,,170
+4,Grzegorz Joka,B,Raw,Pro Military/Fire/Police,No,M,Poland,30,90,88,,,,,,160,165,170,170,,,,,,,170
+1,Tomasz Trzciński,B,Raw,Pro Military/Fire/Police,No,M,Poland,35,100,94.6,,,,,,205,215,220,220,,,,,,,220
+1,Andrzej Kocyła,B,Raw,Pro Military/Fire/Police,No,M,Poland,41,110,104.8,,,,,,-240,247.5,-255,247.5,,,,,,,247.5
+2,Tomasz Napierała,B,Raw,Pro Military/Fire/Police,No,M,Poland,38,110,104.9,,,,,,190,200,205,205,,,,,,,205
+3,Wojciech Różycki,B,Raw,Pro Military/Fire/Police,No,M,Poland,31,110,107.8,,,,,,180,190,-197.5,190,,,,,,,190
+4,Karol Bikowski,B,Raw,Pro Military/Fire/Police,No,M,Poland,30,110,102.9,,,,,,155,-160,-162.5,155,,,,,,,155
+1,Paweł Liszcz,B,Raw,Pro Military/Fire/Police,No,M,Poland,39,125,116.1,,,,,,242.5,250,255,255,,,,,,,255
 1,Sławomir Jędrzejko,B,Raw,Pro Paralympian,No,M,Poland,29,90,89.5,,,,,,100,107.5,110,110,,,,,,,110
 1,Bartłomiej Rogoziński,B,Raw,Pro Paralympian,No,M,Poland,35,100,94.5,,,,,,140,147.5,,147.5,,,,,,,147.5
 1,Dawid Lange,B,Raw,Pro Paralympian,No,M,Poland,29,140,135,,,,,,200,-210,-215,200,,,,,,,200
-1,Anna Lyubarska,B,Raw,Pro Teenage 16-17,No,F,Ukraine,17,67.5,67.5,,,,,,80,85,-87.5,85,,,,,,,85
-1,Carmena Luty,B,Raw,Pro Teenage 18-19,No,F,Poland,18,75,73.1,,,,,,60,62.5,-65,62.5,,,,,,,62.5
+1,Anna Lyubarska,B,Raw,Pro Teen 16-17,No,F,Ukraine,17,67.5,67.5,,,,,,80,85,-87.5,85,,,,,,,85
+1,Carmena Luty,B,Raw,Pro Teen 18-19,No,F,Poland,18,75,73.1,,,,,,60,62.5,-65,62.5,,,,,,,62.5
 1,Anita Grądzka,B,Raw,Pro Open,No,F,Poland,33,44,40,,,,,,65,70,-75,70,,,,,,,70
 1,Honorata Kaczorowska,B,Raw,Pro Open,No,F,Poland,32,67.5,64.1,,,,,,120,-127.5,127.5,127.5,,,,,,,127.5
 2,Anna Lyubarska,B,Raw,Pro Open,No,F,Ukraine,17,67.5,67.5,,,,,,80,85,-87.5,85,,,,,,,85
@@ -425,10 +425,10 @@ DQ,Piotr Czapiewski,B,Raw,Pro Masters 40-44,No,M,Poland,42,140,130,,,,,,-225,-22
 1,Jolanta Anasiewicz-Popowicz,B,Raw,Pro Masters 45-49,No,F,Poland,48,60,60,,,,,,90,95,-97.5,95,,,,,,,95
 1,Svetlana Sinacheva,B,Raw,Pro Masters 50-54,No,F,Russia,50,82.5,78.7,,,,,,112.5,115,-117.5,115,,,,,,,115
 1,Krystyna Puzio,B,Raw,Pro Masters 50-54,No,F,Poland,52,90+,98,,,,,,60,65,70,70,,,,,,,70
-1,Dorota Kozakiewicz,B,Raw,Pro MPF,No,F,Poland,25,82.5,78,,,,,,90,95,97.5,97.5,,,,,,,97.5
-2,Iwona Poniatowska,B,Raw,Pro MPF,No,F,Poland,27,82.5,78.3,,,,,,-50,57.5,-60,57.5,,,,,,,57.5
+1,Dorota Kozakiewicz,B,Raw,Pro Military/Fire/Police,No,F,Poland,25,82.5,78,,,,,,90,95,97.5,97.5,,,,,,,97.5
+2,Iwona Poniatowska,B,Raw,Pro Military/Fire/Police,No,F,Poland,27,82.5,78.3,,,,,,-50,57.5,-60,57.5,,,,,,,57.5
 1,Magdalena Konior,B,Raw,Pro Paralympian,No,F,Poland,41,67.5,65.1,,,,,,85,90,92.5,92.5,,,,,,,92.5
-1,Dawid Urbanowicz,B,Multi-ply,Pro Teenage 18-19,No,M,Poland,18,82.5,76.1,,,,,,-130,130,140,140,,,,,,,140
+1,Dawid Urbanowicz,B,Multi-ply,Pro Teen 18-19,No,M,Poland,18,82.5,76.1,,,,,,-130,130,140,140,,,,,,,140
 DQ,Tomasz Wawrzyczek,B,Multi-ply,Pro Juniors 20-23,No,M,Poland,21,100,92.1,,,,,,-230,-230,-241,,,,,,,,
 1,Vilyam Saroyan,B,Multi-ply,Pro Open,No,M,Armenia,23,75,71.7,,,,,,100,-120,-145,100,,,,,,,100
 DQ,Volodymyr Galyga,B,Multi-ply,Pro Open,No,M,Ukraine,34,90,90,,,,,,-240,-240,-240,,,,,,,,

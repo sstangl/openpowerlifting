@@ -1,6 +1,6 @@
 Place,Name,CyrillicName,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,TotalKg,WeightClassKg,Division,Sex,Event,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,BirthYear
-1,Daniil Matvienko,Данііл Матвієнко,Ukraine,25.7,30,-35,35,,20,-25,,,45,50,55,,110,44,Amateur Children 9,M,SBD,Wraps,35,20,55,2007
-1,Dem'Yan Karandeev,Дем'Ян Карандєєв,Ukraine,50.5,40,50,55,,-25,25,-30,,50,60,70,,150,52,Amateur Children 11-12,M,SBD,Wraps,55,25,70,2005
+1,Daniil Matvienko,Данііл Матвієнко,Ukraine,25.7,30,-35,35,,20,-25,,,45,50,55,,110,44,Amateur Youth 9,M,SBD,Wraps,35,20,55,2007
+1,Dem'Yan Karandeev,Дем'Ян Карандєєв,Ukraine,50.5,40,50,55,,-25,25,-30,,50,60,70,,150,52,Amateur Sub-Teen 11-12,M,SBD,Wraps,55,25,70,2005
 1,Dmitro Brindin,Дмитро Бриндін,Ukraine,42,65,70,75,,45,50,-55,,90,-95,-95,,215,44,Amateur Teen 13-15,M,SBD,Wraps,75,50,90,2002
 1,Daniїl Brindin,Даніїл Бриндін,Ukraine,49.9,-100,100,110,,57.5,62.5,-65,,125,130,135,-140,307.5,52,Amateur Teen 13-15,M,SBD,Wraps,110,62.5,135,2002
 1,Dmitro Zaets,Дмитро Заєць,Ukraine,55.7,120,130,-140,,60,-67.5,67.5,,130,150,157.5,,355,56,Amateur Teen 13-15,M,SBD,Wraps,130,67.5,157.5,2002
@@ -115,9 +115,9 @@ DQ,Evgeniy Pavlov #10,Євгеній Павлов,Ukraine,120.65,-330,-340,-345,
 1,Olena Razuvaeva,Олена Разуваєва,Ukraine,67.4,-145,-150,150,,72.5,-80,80,,130,140,150,,380,67.5,Pro Open,F,SBD,Wraps,150,80,150,1988
 1,Marina Soltanova,Марина Солтанова,Ukraine,75,145,157.5,-165,,90,97.5,-105,,167.5,-177.5,-177.5,,422.5,75,Pro Open,F,SBD,Wraps,157.5,97.5,167.5,1985
 1,Vitaliy Menchuk,Віталій Менчук,Ukraine,90,-220,-220,220,,185,200,215,,200,215,222.5,,657.5,90,Amateur Teen 18-19,M,SBD,Multi-ply,220,215,222.5,1998
-1,Yuriy Lutsenko #1,Юрій Луценко,Ukraine,26,,,,,20,22.5,25,,,,,,25,44,Amateur Children 8,M,B,Raw,,25,,2009
-1,Alan Kvyatkovskiy,Алан Квятковський,Ukraine,49.6,,,,,-42.5,45,-47.5,,,,,,45,52,Amateur Children 11-12,M,B,Raw,,45,,2005
-2,Dem'Yan Karandeev,Дем'Ян Карандєєв,Ukraine,50.5,,,,,-25,25,-30,,,,,,25,52,Amateur Children 11-12,M,B,Raw,,25,,2005
+1,Yuriy Lutsenko #1,Юрій Луценко,Ukraine,26,,,,,20,22.5,25,,,,,,25,44,Amateur Youth 8,M,B,Raw,,25,,2009
+1,Alan Kvyatkovskiy,Алан Квятковський,Ukraine,49.6,,,,,-42.5,45,-47.5,,,,,,45,52,Amateur Sub-Teen 11-12,M,B,Raw,,45,,2005
+2,Dem'Yan Karandeev,Дем'Ян Карандєєв,Ukraine,50.5,,,,,-25,25,-30,,,,,,25,52,Amateur Sub-Teen 11-12,M,B,Raw,,25,,2005
 1,Vitaliy Dragushchak,Віталій Драгущак,Ukraine,50.5,,,,,57.5,-62.5,-62.5,,,,,,57.5,52,Amateur Teen 13-15,M,B,Raw,,57.5,,2001
 1,Dmitro Sitnikov,Дмитро Ситніков,Ukraine,55.4,,,,,50,-55,-57.5,,,,,,50,56,Amateur Teen 13-15,M,B,Raw,,50,,2002
 1,Oleksandr Tomashchuk,Олександр Томащук,Ukraine,67.45,,,,,-75,75,-82.5,,,,,,75,67.5,Amateur Teen 13-15,M,B,Raw,,75,,2002
@@ -226,8 +226,8 @@ DD,Andriy Tarnovskiy,Андрій Тарновський,Ukraine,108.15,,,,,-175
 1,Viktoriya Ryabkova,Вікторія Рябкова,Ukraine,57,,,,,45,-50,-50,,,,,,45,60,Amateur Masters 40-44,F,B,Raw,,45,,1975
 1,Oksana Muzika,Оксана Музика,Ukraine,67.2,,,,,60,65,67.5,,,,,,67.5,67.5,Amateur Masters 45-49,F,B,Raw,,67.5,,1969
 2,Marina Yavorovska,Марина Яворовська,Ukraine,66.2,,,,,45,-47.5,47.5,,,,,,47.5,67.5,Amateur Masters 45-49,F,B,Raw,,47.5,,1968
-1,Oleg Mikhalskiy,Олег Михальський,Ukraine,36.7,,,,,47.5,-52.5,-52.5,,,,,,47.5,44,Pro Children 11-12,M,B,Raw,,47.5,,2004
-1,Vladislav Pavlov,Владислав Павлов,Ukraine,55.6,,,,,60,65,-70,,,,,,65,56,Pro Children 11-12,M,B,Raw,,65,,2004
+1,Oleg Mikhalskiy,Олег Михальський,Ukraine,36.7,,,,,47.5,-52.5,-52.5,,,,,,47.5,44,Pro Sub-Teen 11-12,M,B,Raw,,47.5,,2004
+1,Vladislav Pavlov,Владислав Павлов,Ukraine,55.6,,,,,60,65,-70,,,,,,65,56,Pro Sub-Teen 11-12,M,B,Raw,,65,,2004
 1,Bogdan Reznikov,Богдан Резніков,Ukraine,96.4,,,,,180,-190,190,,,,,,190,100,Pro Teen 18-19,M,B,Raw,,190,,1998
 1,Viktor Smichuk,Віктор Смичук,Ukraine,56.7,,,,,95,100,107.5,-110,,,,,107.5,60,Pro Juniors 20-23,M,B,Raw,,107.5,,1994
 1,Artem Gayday,Артем Гайдай,Ukraine,83.5,,,,,155,162.5,-170,,,,,,162.5,90,Pro Juniors 20-23,M,B,Raw,,162.5,,1996
@@ -295,7 +295,7 @@ DQ,Volodimir Galiga,Володимир Галига,Ukraine,90,,,,,-250,,,,,,,,,
 DQ,Volodimir Galiga,Володимир Галига,Ukraine,90,,,,,-250,,,,,,,,,90,Pro Submasters 33-39,M,B,Multi-ply,,,,1983
 1,Valeriy Ternov,Валерій Тернов,Ukraine,111.6,,,,,-280,300,310,,,,,,310,125,Pro Masters 40-44,M,B,Multi-ply,,310,,1973
 1,Yukhim Stepatskiy,Юхим Степацький,Ukraine,91,,,,,195,-205,,,,,,,195,100,Pro Military/Fire/Police,M,B,Multi-ply,,195,,1987
-1,Dem'Yan Karandeev,Дем'Ян Карандєєв,Ukraine,50.5,,,,,,,,,50,60,70,,70,52,Amateur Children 11-12,M,D,Raw,,,70,2005
+1,Dem'Yan Karandeev,Дем'Ян Карандєєв,Ukraine,50.5,,,,,,,,,50,60,70,,70,52,Amateur Sub-Teen 11-12,M,D,Raw,,,70,2005
 1,Daniїl Brindin,Даніїл Бриндін,Ukraine,49.9,,,,,,,,,125,130,135,,135,52,Amateur Teen 13-15,M,D,Raw,,,135,2002
 1,Dmitro Zaets,Дмитро Заєць,Ukraine,55.7,,,,,,,,,130,150,157.5,,157.5,56,Amateur Teen 13-15,M,D,Raw,,,157.5,2002
 1,Sergiy Vishnevskiy,Сергій Вишневський,Ukraine,56.1,,,,,,,,,90,105,112.5,,112.5,60,Amateur Teen 13-15,M,D,Raw,,,112.5,2002
