@@ -323,9 +323,13 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Unexpected errors that occurred while reading files.
     let internal_error_count = AtomicUsize::new(0);
 
+    // Compile the CSV parser early.
+    // Doing this just once significantly increases performance.
+    let reader: csv::ReaderBuilder = checker::checklib::compile_csv_reader();
+
     // Check the lifter-data/ files.
     let timing = get_instant_if(args.debug_timing);
-    let result = checker::check_lifterdata(&project_root.join("lifter-data"));
+    let result = checker::check_lifterdata(&reader, &project_root.join("lifter-data"));
     for report in result.reports {
         let (errors, warnings) = report.count_messages();
         if errors > 0 {
@@ -363,7 +367,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             let config = configmap.get(&meetpath);
 
             // Check the meet.
-            match checker::check(dir.path(), config, Some(&lifterdata)) {
+            match checker::check(&reader, dir.path(), config, Some(&lifterdata)) {
                 Ok(checkresult) => {
                     let reports = checkresult.reports;
                     // Count how many new errors and warnings were generated.

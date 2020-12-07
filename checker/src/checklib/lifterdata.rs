@@ -89,6 +89,7 @@ struct DonatorColorsRow {
 
 /// Checks `lifter-data/donator-colors.csv`, mutating the LifterDataMap.
 fn check_donator_colors(
+    reader: &csv::ReaderBuilder,
     report: &mut Report,
     map: &mut LifterDataMap,
 ) -> Result<(), Box<dyn Error>> {
@@ -97,10 +98,7 @@ fn check_donator_colors(
         return Ok(());
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
+    let mut rdr = reader.from_path(&report.path)?;
 
     for (rownum, result) in rdr.deserialize().enumerate() {
         // Text editors are one-indexed, and the header line was skipped.
@@ -150,6 +148,7 @@ struct FlairRow {
 
 /// Checks `lifter-data/flair.csv`, mutating the LifterDataMap.
 fn check_flair(
+    reader: &csv::ReaderBuilder,
     report: &mut Report,
     map: &mut LifterDataMap,
 ) -> Result<(), Box<dyn Error>> {
@@ -158,10 +157,7 @@ fn check_flair(
         return Ok(());
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
+    let mut rdr = reader.from_path(&report.path)?;
 
     for (rownum, result) in rdr.deserialize().enumerate() {
         // Text editors are one-indexed, and the header line was skipped.
@@ -258,6 +254,7 @@ struct InstagramRow {
 
 /// Checks `lifter-data/social-instagram.csv`, mutating the LifterDataMap.
 fn check_social_instagram(
+    reader: &csv::ReaderBuilder,
     report: &mut Report,
     map: &mut LifterDataMap,
 ) -> Result<(), Box<dyn Error>> {
@@ -266,10 +263,7 @@ fn check_social_instagram(
         return Ok(());
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
+    let mut rdr = reader.from_path(&report.path)?;
 
     for (rownum, result) in rdr.deserialize().enumerate() {
         // Text editors are one-indexed, and the header line was skipped.
@@ -320,6 +314,7 @@ struct VKontakteRow {
 
 /// Checks `lifter-data/social-vkontakte.csv`, mutating the LifterDataMap.
 fn check_social_vkontakte(
+    reader: &csv::ReaderBuilder,
     report: &mut Report,
     map: &mut LifterDataMap,
 ) -> Result<(), Box<dyn Error>> {
@@ -328,10 +323,7 @@ fn check_social_vkontakte(
         return Ok(());
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
+    let mut rdr = reader.from_path(&report.path)?;
 
     for (rownum, result) in rdr.deserialize().enumerate() {
         // Text editors are one-indexed, and the header line was skipped.
@@ -388,6 +380,7 @@ struct NameDisambiguationRow {
 /// Checks `lifter-data/name-disambiguation.csv`, making a HashMap of all
 /// usernames requiring disambiguation.
 fn check_name_disambiguation(
+    reader: &csv::ReaderBuilder,
     report: &mut Report,
     map: &mut LifterDataMap,
 ) -> Result<(), Box<dyn Error>> {
@@ -396,10 +389,7 @@ fn check_name_disambiguation(
         return Ok(());
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
+    let mut rdr = reader.from_path(&report.path)?;
 
     for (rownum, result) in rdr.deserialize().enumerate() {
         // Text editors are one-indexed, and the header line was skipped.
@@ -438,14 +428,17 @@ fn check_name_disambiguation(
     Ok(())
 }
 
-pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
+pub fn check_lifterdata(
+    reader: &csv::ReaderBuilder,
+    lifterdir: &Path,
+) -> LifterDataCheckResult {
     let mut reports: Vec<Report> = vec![];
     let mut map = LifterDataMap::new();
 
     // Check donator-colors.csv.
     // Always create the report in order to catch internal errors.
     let mut report = Report::new(lifterdir.join("donator-colors.csv"));
-    match check_donator_colors(&mut report, &mut map) {
+    match check_donator_colors(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -457,7 +450,7 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
 
     // Check flair.csv.
     let mut report = Report::new(lifterdir.join("flair.csv"));
-    match check_flair(&mut report, &mut map) {
+    match check_flair(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -481,7 +474,7 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
 
     // Check social-instagram.csv.
     let mut report = Report::new(lifterdir.join("social-instagram.csv"));
-    match check_social_instagram(&mut report, &mut map) {
+    match check_social_instagram(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -493,7 +486,7 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
 
     // Check social-vkontakte.csv.
     let mut report = Report::new(lifterdir.join("social-vkontakte.csv"));
-    match check_social_vkontakte(&mut report, &mut map) {
+    match check_social_vkontakte(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -505,7 +498,7 @@ pub fn check_lifterdata(lifterdir: &Path) -> LifterDataCheckResult {
 
     // Check name-disambiguation.csv and produce a `HashMap<Username, Count>`.
     let mut report = Report::new(lifterdir.join("name-disambiguation.csv"));
-    match check_name_disambiguation(&mut report, &mut map) {
+    match check_name_disambiguation(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);

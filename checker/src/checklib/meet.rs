@@ -386,19 +386,18 @@ where
 }
 
 /// Checks a single meet.csv string, used by the server.
-pub fn check_meet_from_string(meet_csv: &str) -> Result<MeetCheckResult, Box<dyn Error>> {
+pub fn check_meet_from_string(
+    reader: &csv::ReaderBuilder,
+    meet_csv: &str,
+) -> Result<MeetCheckResult, Box<dyn Error>> {
     let report = Report::new(PathBuf::from("uploaded/content"));
-
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_reader(meet_csv.as_bytes());
-
+    let mut rdr = reader.from_reader(meet_csv.as_bytes());
     Ok(do_check(&mut rdr, None, report, "upload".to_string())?)
 }
 
 /// Checks a single meet.csv file by path.
 pub fn check_meet(
+    reader: &csv::ReaderBuilder,
     meet_csv: PathBuf,
     config: Option<&Config>,
 ) -> Result<MeetCheckResult, Box<dyn Error>> {
@@ -413,10 +412,6 @@ pub fn check_meet(
 
     let meetpath = check_meetpath(&mut report).unwrap_or_else(String::new);
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
-
+    let mut rdr = reader.from_path(&report.path)?;
     Ok(do_check(&mut rdr, config, report, meetpath)?)
 }

@@ -121,6 +121,7 @@ impl Report {
 
 /// Checks a directory with meet data.
 pub fn check(
+    reader: &csv::ReaderBuilder,
     meetdir: &Path,
     config: Option<&Config>,
     lifterdata: Option<&LifterDataMap>,
@@ -128,13 +129,14 @@ pub fn check(
     let mut acc = Vec::new();
 
     // Check the meet.csv.
-    let meetresult = check_meet(meetdir.join("meet.csv"), config)?;
+    let meetresult = check_meet(reader, meetdir.join("meet.csv"), config)?;
     if !meetresult.report.messages.is_empty() {
         acc.push(meetresult.report);
     }
 
     // Check the entries.csv.
     let entriesresult = check_entries(
+        reader,
         meetdir.join("entries.csv"),
         meetresult.meet.as_ref(),
         config,

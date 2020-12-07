@@ -2429,21 +2429,18 @@ where
 
 /// Checks a single entries.csv string, used by the server.
 pub fn check_entries_from_string(
+    reader: &csv::ReaderBuilder,
     entries_csv: &str,
     meet: Option<&Meet>,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     let report = Report::new(PathBuf::from("uploaded/content"));
-
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_reader(entries_csv.as_bytes());
-
+    let mut rdr = reader.from_reader(entries_csv.as_bytes());
     Ok(do_check(&mut rdr, meet, None, None, report)?)
 }
 
 /// Checks a single entries.csv file by path.
 pub fn check_entries(
+    reader: &csv::ReaderBuilder,
     entries_csv: PathBuf,
     meet: Option<&Meet>,
     config: Option<&Config>,
@@ -2461,10 +2458,6 @@ pub fn check_entries(
         });
     }
 
-    let mut rdr = csv::ReaderBuilder::new()
-        .quoting(false)
-        .terminator(csv::Terminator::Any(b'\n'))
-        .from_path(&report.path)?;
-
+    let mut rdr = reader.from_path(&report.path)?;
     Ok(do_check(&mut rdr, meet, config, lifterdata, report)?)
 }
