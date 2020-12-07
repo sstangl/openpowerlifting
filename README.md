@@ -102,9 +102,9 @@ sudo apt-get install curl make npm python3-bs4 flake8 ansible parallel uglifyjs 
 
 To run the server using Docker, simply build and run:
 
-```
+```bash
 docker build -t opl .
 docker run -p 8000:8000 opl
 ```
 
-Access at http://localhost:8000/ per usual.
+Access at <http://localhost:8000/> per usual.

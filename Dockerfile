@@ -1,5 +1,5 @@
 # Start from a rust:nightly base image
-FROM rustlang/rust:nightly
+FROM rustlang/rust:nightly AS builder
 
 # Install our box dependencies in one, easily-cached layer image
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
@@ -31,6 +31,7 @@ COPY Cargo.* ./
 COPY Makefile ./
 
 # project code
+COPY api api/
 COPY checker checker/
 COPY modules modules/
 COPY server server/
@@ -49,3 +50,10 @@ ENV ROCKET_ADDRESS=0.0.0.0
 
 # And we're ready to docker run
 CMD ["cargo", "run", "--release"]
+
+# Put server executable and data in a smaller image
+FROM debian:buster-slim
+WORKDIR /opt/openpowerlifting/
+COPY --from=builder /opt/openpowerlifting/server/build .
+EXPOSE 8000
+CMD ["/opt/openpowerlifting/server", "--set-cwd", "data"]
