@@ -35,7 +35,7 @@ fn execute<'a>(
     schema: &'a api::graphql::Schema,
     query: &'a str,
 ) -> Result<(juniper::Value, Vec<ExecutionError>), juniper::GraphQLError<'a>> {
-    juniper::execute(query, None, &schema, &juniper::Variables::new(), &db())
+    juniper::execute_sync(query, None, &schema, &juniper::Variables::new(), &db())
 }
 
 /// Executes a query and asserts that it matches a given result.
