@@ -3,6 +3,7 @@
 /// The Country column.
 #[derive(Copy, Clone, Debug, Deserialize, Serialize, PartialEq, EnumString, ToString)]
 pub enum Country {
+    Abkhazia,
     Afghanistan,
     Albania,
     Algeria,

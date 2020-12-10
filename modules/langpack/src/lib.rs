@@ -201,6 +201,7 @@ pub struct CountryTranslations {
     pub north_america: String,
     pub oceania: String,
 
+    pub abkhazia: String,
     pub afghanistan: String,
     pub albania: String,
     pub algeria: String,
@@ -801,6 +802,7 @@ impl Translations {
 
     pub fn translate_country(&self, country: Country) -> &str {
         match country {
+            Country::Abkhazia => &self.country.abkhazia,
             Country::Afghanistan => &self.country.afghanistan,
             Country::Albania => &self.country.albania,
             Country::Algeria => &self.country.algeria,
