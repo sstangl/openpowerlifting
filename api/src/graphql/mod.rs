@@ -1,7 +1,7 @@
 //! Exposes a GraphQL interface over the OplDb.
 
 use crate::ManagedOplDb;
-use juniper::{EmptyMutation, FieldResult, RootNode};
+use juniper::{EmptyMutation, EmptySubscription, FieldResult, RootNode};
 
 mod entry;
 pub use entry::Entry;
@@ -14,49 +14,49 @@ pub use lifter::Lifter;
 mod meet;
 pub use meet::{Meet, MeetFilter, MeetOrderBy};
 
-/// Helper for getting the OplDb.
-macro_rules! db {
-    ($executor:ident) => {
-        &$executor.context().0
-    };
-}
-
 /// Mark that ManagedOplDb is a valid Context for a GraphQL query.
 impl juniper::Context for ManagedOplDb {}
 
 /// A read-only schema over the OplDb.
-pub type Schema = RootNode<'static, Query, EmptyMutation<ManagedOplDb>>;
+pub type Schema =
+    RootNode<'static, Query, EmptyMutation<ManagedOplDb>, EmptySubscription<ManagedOplDb>>;
 
 /// Instantiates a new [Schema].
 pub fn new_schema() -> Schema {
-    Schema::new(Query, EmptyMutation::<ManagedOplDb>::new())
+    Schema::new(
+        Query,
+        EmptyMutation::<ManagedOplDb>::new(),
+        EmptySubscription::<ManagedOplDb>::new(),
+    )
 }
 
 /// The query root.
 pub struct Query;
-graphql_object!(Query: ManagedOplDb |&self| {
+
+#[graphql_object(context = ManagedOplDb)]
+impl Query {
     /// Reports the current API version.
-    field apiVersion() -> &str {
+    fn apiVersion() -> &str {
         "beta"
     }
 
     /// Looks up a lifter by their unique username.
-    field lifter(&executor, username: String) -> FieldResult<Lifter> {
-        let db = &executor.context().0;
-        let id: u32 = db.get_lifter_id(&username).ok_or("Username does not exist")?;
+    fn lifter(db: &ManagedOplDb, username: String) -> FieldResult<Lifter> {
+        let id: u32 =
+            db.0.get_lifter_id(&username)
+                .ok_or("Username does not exist")?;
         Ok(Lifter(id))
     }
 
     /// Looks up a meet by its unique path.
-    field meet(&executor, path: String) -> FieldResult<Meet> {
-        let db = &executor.context().0;
-        let id: u32 = db.get_meet_id(&path).ok_or("Meet path does not exist")?;
+    fn meet(db: &ManagedOplDb, path: String) -> FieldResult<Meet> {
+        let id: u32 = db.0.get_meet_id(&path).ok_or("Meet path does not exist")?;
         Ok(Meet(id))
     }
 
     /// Looks up a range of meets by a filter.
-    field meets(
-        &executor,
+    fn meets(
+        db: &ManagedOplDb,
         filter: Option<MeetFilter>,
         order_by: Option<MeetOrderBy>,
         limit: i32,
@@ -68,11 +68,16 @@ graphql_object!(Query: ManagedOplDb |&self| {
 
         // Without sorting or filtering, we can optimize harder.
         if filter.is_none() && order_by.is_none() {
-            return Ok(db!(executor).get_meets().iter().enumerate().take(limit)
+            return Ok(db
+                .0
+                .get_meets()
+                .iter()
+                .enumerate()
+                .take(limit)
                 .map(|(id, _meet)| Meet(id as u32))
                 .collect());
         }
 
         Err("query::meets() is unimplemented".into())
     }
-});
+}

@@ -7,80 +7,66 @@ use opltypes::{Age, PointsSystem, WeightClassKg};
 use crate::graphql::gqltypes;
 use crate::graphql::{Lifter, Meet};
 
-// TODO: See if we can share these macros.
-/// Helper for getting the OplDb.
-macro_rules! db {
-    ($executor:ident) => {
-        &$executor.context().0
-    };
-}
-
-/// Helper for looking up an [opldb::Entry].
-macro_rules! entry {
-    ($self: ident, $executor:ident) => {
-        $executor.context().0.get_entry($self.0)
-    };
-}
-
 /// A unique entry in the database.
 ///
 /// Each entry corresponds to a division placing.
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Entry(pub u32);
 
-graphql_object!(Entry: ManagedOplDb |&self| {
+#[graphql_object(context = ManagedOplDb)]
+impl Entry {
     /// The meet in which the entry occurred.
-    field meet(&executor) -> Meet {
-        Meet(entry!(self, executor).meet_id)
+    fn meet(&self, db: &ManagedOplDb) -> Meet {
+        Meet(db.0.get_entry(self.0).meet_id)
     }
 
     /// The lifter corresponding to this entry.
-    field lifter(&executor) -> Lifter {
-        Lifter(entry!(self, executor).lifter_id)
+    fn lifter(&self, db: &ManagedOplDb) -> Lifter {
+        Lifter(db.0.get_entry(self.0).lifter_id)
     }
 
     /// The lifter's sex for this entry.
-    field sex(&executor) -> String {
-        format!("{}", entry!(self, executor).sex)
+    fn sex(&self, db: &ManagedOplDb) -> String {
+        format!("{}", db.0.get_entry(self.0).sex)
     }
 
     /// The event for this entry, like "SBD".
-    field event(&executor) -> String {
-        format!("{}", entry!(self, executor).event)
+    fn event(&self, db: &ManagedOplDb) -> String {
+        format!("{}", db.0.get_entry(self.0).event)
     }
 
     /// The equipment for this entry.
-    field equipment(&executor) -> gqltypes::Equipment {
-        entry!(self, executor).equipment.into()
+    fn equipment(&self, db: &ManagedOplDb) -> gqltypes::Equipment {
+        db.0.get_entry(self.0).equipment.into()
     }
 
     /// The lifter's age at this entry.
-    field age(&executor) -> Option<f64> {
-        match entry!(self, executor).age {
+    fn age(&self, db: &ManagedOplDb) -> Option<f64> {
+        match db.0.get_entry(self.0).age {
             Age::None => None,
             age => Some(age.into()),
         }
     }
 
     /// The division for this entry.
-    field division(&executor) -> Option<&str> {
-        entry!(self, executor).get_division()
+    fn division(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_entry(self.0).get_division()
     }
 
     /// The lifter's bodyweight in kilograms.
-    field bodyweight_kg(&executor) -> Option<f64> {
-        entry!(self, executor).bodyweightkg.into()
+    fn bodyweight_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bodyweightkg.into()
     }
     /// The lifter's bodyweight in pounds.
-    field bodyweight_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).bodyweightkg.as_lbs().into()
+    fn bodyweight_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bodyweightkg.as_lbs().into()
     }
 
     /// The lifter's weightclass in kilograms.
     ///
     /// This is a String because SHW classes have a "+" suffix.
-    field weight_class_kg(&executor) -> Option<String> {
-        match entry!(self, executor).weightclasskg {
+    fn weight_class_kg(&self, db: &ManagedOplDb) -> Option<String> {
+        match db.0.get_entry(self.0).weightclasskg {
             WeightClassKg::None => None,
             wc => Some(format!("{}", wc)),
         }
@@ -88,241 +74,257 @@ graphql_object!(Entry: ManagedOplDb |&self| {
     /// The lifter's weightclass in pounds.
     ///
     /// This is a String because SHW classes have a "+" suffix.
-    field weight_class_lbs(&executor) -> Option<String> {
-        match entry!(self, executor).weightclasskg {
+    fn weight_class_lbs(&self, db: &ManagedOplDb) -> Option<String> {
+        match db.0.get_entry(self.0).weightclasskg {
             WeightClassKg::None => None,
             wc => Some(format!("{}", wc.as_lbs())),
         }
     }
 
     /// The first squat attempt in kilograms.
-    field squat1_kg(&executor) -> Option<f64> {
-        entry!(self, executor).squat1kg.into()
+    fn squat1_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat1kg.into()
     }
     /// The first squat attempt in pounds.
-    field squat1_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).squat1kg.as_lbs().into()
+    fn squat1_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat1kg.as_lbs().into()
     }
 
     /// The second squat attempt in kilograms.
-    field squat2_kg(&executor) -> Option<f64> {
-        entry!(self, executor).squat2kg.into()
+    fn squat2_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat2kg.into()
     }
     /// The second squat attempt in pounds.
-    field squat2_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).squat2kg.as_lbs().into()
+    fn squat2_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat2kg.as_lbs().into()
     }
 
     /// The third squat attempt in kilograms.
-    field squat3_kg(&executor) -> Option<f64> {
-        entry!(self, executor).squat3kg.into()
+    fn squat3_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat3kg.into()
     }
     /// The third squat attempt in pounds.
-    field squat3_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).squat3kg.as_lbs().into()
+    fn squat3_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat3kg.as_lbs().into()
     }
 
     /// The fourth squat attempt in kilograms.
-    field squat4_kg(&executor) -> Option<f64> {
-        entry!(self, executor).squat4kg.into()
+    fn squat4_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat4kg.into()
     }
     /// The third squat attempt in pounds.
-    field squat4_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).squat4kg.as_lbs().into()
+    fn squat4_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).squat4kg.as_lbs().into()
     }
 
     /// The best squat of the first 3 attempts in kilograms.
-    field best3_squat_kg(&executor) -> Option<f64> {
-        entry!(self, executor).best3squatkg.into()
+    fn best3_squat_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).best3squatkg.into()
     }
     /// The best squat of the first 3 attempts in pounds.
-    field best3_squat_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).best3squatkg.as_lbs().into()
+    fn best3_squat_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).best3squatkg.as_lbs().into()
     }
 
     /// The best squat of the first 4 attempts in kilograms.
-    field best4_squat_kg(&executor) -> Option<f64> {
-        entry!(self, executor).highest_squatkg().into()
+    fn best4_squat_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).highest_squatkg().into()
     }
     /// The best squat of the first 4 attempts in pounds.
-    field best4_squat_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).highest_squatkg().as_lbs().into()
+    fn best4_squat_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).highest_squatkg().as_lbs().into()
     }
 
     /// The first bench attempt in kilograms.
-    field bench1_kg(&executor) -> Option<f64> {
-        entry!(self, executor).bench1kg.into()
+    fn bench1_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench1kg.into()
     }
     /// The first bench attempt in pounds.
-    field bench1_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).bench1kg.as_lbs().into()
+    fn bench1_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench1kg.as_lbs().into()
     }
 
     /// The second bench attempt in kilograms.
-    field bench2_kg(&executor) -> Option<f64> {
-        entry!(self, executor).bench2kg.into()
+    fn bench2_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench2kg.into()
     }
     /// The second bench attempt in pounds.
-    field bench2_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).bench2kg.as_lbs().into()
+    fn bench2_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench2kg.as_lbs().into()
     }
 
     /// The third bench attempt in kilograms.
-    field bench3_kg(&executor) -> Option<f64> {
-        entry!(self, executor).bench3kg.into()
+    fn bench3_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench3kg.into()
     }
     /// The third bench attempt in pounds.
-    field bench3_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).bench3kg.as_lbs().into()
+    fn bench3_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench3kg.as_lbs().into()
     }
 
     /// The fourth bench attempt in kilograms.
-    field bench4_kg(&executor) -> Option<f64> {
-        entry!(self, executor).bench4kg.into()
+    fn bench4_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench4kg.into()
     }
     /// The third bench attempt in pounds.
-    field bench4_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).bench4kg.as_lbs().into()
+    fn bench4_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).bench4kg.as_lbs().into()
     }
 
     /// The best bench of the first 3 attempts in kilograms.
-    field best3_bench_kg(&executor) -> Option<f64> {
-        entry!(self, executor).best3benchkg.into()
+    fn best3_bench_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).best3benchkg.into()
     }
     /// The best bench of the first 3 attempts in pounds.
-    field best3_bench_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).best3benchkg.as_lbs().into()
+    fn best3_bench_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).best3benchkg.as_lbs().into()
     }
 
     /// The best bench of the first 4 attempts in kilograms.
-    field best4_bench_kg(&executor) -> Option<f64> {
-        entry!(self, executor).highest_benchkg().into()
+    fn best4_bench_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).highest_benchkg().into()
     }
     /// The best bench of the first 4 attempts in pounds.
-    field best4_bench_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).highest_benchkg().as_lbs().into()
+    fn best4_bench_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).highest_benchkg().as_lbs().into()
     }
 
     /// The first deadlift attempt in kilograms.
-    field deadlift1_kg(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift1kg.into()
+    fn deadlift1_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift1kg.into()
     }
     /// The first deadlift attempt in pounds.
-    field deadlift1_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift1kg.as_lbs().into()
+    fn deadlift1_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift1kg.as_lbs().into()
     }
 
     /// The second deadlift attempt in kilograms.
-    field deadlift2_kg(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift2kg.into()
+    fn deadlift2_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift2kg.into()
     }
     /// The second deadlift attempt in pounds.
-    field deadlift2_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift2kg.as_lbs().into()
+    fn deadlift2_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift2kg.as_lbs().into()
     }
 
     /// The third deadlift attempt in kilograms.
-    field deadlift3_kg(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift3kg.into()
+    fn deadlift3_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift3kg.into()
     }
     /// The third deadlift attempt in pounds.
-    field deadlift3_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift3kg.as_lbs().into()
+    fn deadlift3_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift3kg.as_lbs().into()
     }
 
     /// The fourth deadlift attempt in kilograms.
-    field deadlift4_kg(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift4kg.into()
+    fn deadlift4_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift4kg.into()
     }
-    /// The third deadlift attempt in pounds.
-    field deadlift4_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).deadlift4kg.as_lbs().into()
+    /// The fourth deadlift attempt in pounds.
+    fn deadlift4_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).deadlift4kg.as_lbs().into()
     }
 
     /// The best deadlift of the first 3 attempts in kilograms.
-    field best3_deadlift_kg(&executor) -> Option<f64> {
-        entry!(self, executor).best3deadliftkg.into()
+    fn best3_deadlift_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).best3deadliftkg.into()
     }
     /// The best deadlift of the first 3 attempts in pounds.
-    field best3_deadlift_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).best3deadliftkg.as_lbs().into()
+    fn best3_deadlift_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).best3deadliftkg.as_lbs().into()
     }
 
     /// The best deadlift of the first 4 attempts in kilograms.
-    field best4_deadlift_kg(&executor) -> Option<f64> {
-        entry!(self, executor).highest_deadliftkg().into()
+    fn best4_deadlift_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).highest_deadliftkg().into()
     }
     /// The best deadlift of the first 4 attempts in pounds.
-    field best4_deadlift_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).highest_deadliftkg().as_lbs().into()
+    fn best4_deadlift_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).highest_deadliftkg().as_lbs().into()
     }
 
     /// The event total in kilograms.
-    field total_kg(&executor) -> Option<f64> {
-        entry!(self, executor).totalkg.into()
+    fn total_kg(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).totalkg.into()
     }
     /// The event total in pounds.
-    field total_lbs(&executor) -> Option<f64> {
-        entry!(self, executor).totalkg.as_lbs().into()
+    fn total_lbs(&self, db: &ManagedOplDb) -> Option<f64> {
+        db.0.get_entry(self.0).totalkg.as_lbs().into()
     }
 
     /// The entry's place.
-    field place(&executor) -> String {
-        format!("{}", entry!(self, executor).place)
+    fn place(&self, db: &ManagedOplDb) -> String {
+        format!("{}", db.0.get_entry(self.0).place)
     }
 
     /// AH points.
-    field ah(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::AH, Kg).into()
+    fn ah(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0).points(PointsSystem::AH, Kg).into()
     }
     /// Dots points.
-    field dots(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::Dots, Kg).into()
+    fn dots(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0).points(PointsSystem::Dots, Kg).into()
     }
     /// Glossbrenner points.
-    field glossbrenner(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::Glossbrenner, Kg).into()
+    fn glossbrenner(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::Glossbrenner, Kg)
+            .into()
     }
     /// IPF Goodlift points.
-    field goodlift(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::Goodlift, Kg).into()
+    fn goodlift(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::Goodlift, Kg)
+            .into()
     }
     /// IPF points.
-    field ipf_points(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::IPFPoints, Kg).into()
+    fn ipf_points(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::IPFPoints, Kg)
+            .into()
     }
     /// McCulloch points.
-    field mcculloch(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::McCulloch, Kg).into()
+    fn mcculloch(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::McCulloch, Kg)
+            .into()
     }
     /// NASA points.
-    field nasa(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::NASA, Kg).into()
+    fn nasa(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0).points(PointsSystem::NASA, Kg).into()
     }
     /// Reshel points.
-    field reshel(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::Reshel, Kg).into()
+    fn reshel(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::Reshel, Kg)
+            .into()
     }
     /// Schwartz/Malone points.
-    field schwartz_malone(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::SchwartzMalone, Kg).into()
+    fn schwartz_malone(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::SchwartzMalone, Kg)
+            .into()
     }
     /// Wilks points.
-    field wilks(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::Wilks, Kg).into()
+    fn wilks(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::Wilks, Kg)
+            .into()
     }
     /// Wilks2020 points.
-    field wilks2020(&executor) -> f64 {
-        db!(executor).get_entry(self.0).points(PointsSystem::Wilks2020, Kg).into()
+    fn wilks2020(&self, db: &ManagedOplDb) -> f64 {
+        db.0.get_entry(self.0)
+            .points(PointsSystem::Wilks2020, Kg)
+            .into()
     }
 
     /// Whether this entry counts as drug-tested.
-    field tested(&executor) -> bool {
-        entry!(self, executor).tested
+    fn tested(&self, db: &ManagedOplDb) -> bool {
+        db.0.get_entry(self.0).tested
     }
 
     // TODO: AgeClass
     // TODO: BirthYearClass
     // TODO: LifterCountry
     // TODO: LifterState
-});
+}

@@ -12,8 +12,8 @@ langpack = {version = "0.1", path = "../modules/langpack/" }
 opldb = { version = "0.1", path = "../modules/db/" }
 opltypes = { version = "0.1", path = "../modules/opltypes/" }
 dotenv = "0.15"
-juniper = "0.14"
-juniper_rocket = "0.5"
+juniper = "0.15"
+juniper_rocket = "0.6"
 serde = "1.0"
 serde_derive = "1.0"
 serde_json = "1.0"

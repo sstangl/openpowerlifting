@@ -3,77 +3,64 @@
 use crate::graphql::Entry;
 use crate::ManagedOplDb;
 
-/// Helper for getting the OplDb.
-macro_rules! db {
-    ($executor:ident) => {
-        &$executor.context().0
-    };
-}
-
-/// Helper for looking up a [opldb::Lifter].
-macro_rules! lifter {
-    ($self: ident, $executor:ident) => {
-        $executor.context().0.get_lifter($self.0)
-    };
-}
-
 /// A unique lifter in the database.
 ///
 /// Lifters are uniquely identified by username.
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lifter(pub u32);
 
-graphql_object!(Lifter: ManagedOplDb |&self| {
+#[graphql_object(context = ManagedOplDb)]
+impl Lifter {
     /// The username that uniquely identifies each lifter.
-    field username(&executor) -> &str {
-        lifter!(self, executor).username.as_str()
+    fn username(&self, db: &ManagedOplDb) -> &str {
+        db.0.get_lifter(self.0).username.as_str()
     }
 
     /// The lifter's name in the Latin character set.
-    field latin_name(&executor) -> &str {
-        lifter!(self, executor).name.as_str()
+    fn latin_name(&self, db: &ManagedOplDb) -> &str {
+        db.0.get_lifter(self.0).name.as_str()
     }
 
     /// The lifter's name in the Cyrillic character set.
-    field cyrillic_name(&executor) -> Option<&str> {
-        lifter!(self, executor).cyrillic_name.as_deref()
+    fn cyrillic_name(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).cyrillic_name.as_deref()
     }
 
     /// The lifter's name in the Greek character set.
-    field greek_name(&executor) -> Option<&str> {
-        lifter!(self, executor).greek_name.as_deref()
+    fn greek_name(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).greek_name.as_deref()
     }
 
     /// The lifter's name in the Japanese character set.
-    field japanese_name(&executor) -> Option<&str> {
-        lifter!(self, executor).japanese_name.as_deref()
+    fn japanese_name(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).japanese_name.as_deref()
     }
 
     /// The lifter's name in the Korean character set.
-    field korean_name(&executor) -> Option<&str> {
-        lifter!(self, executor).korean_name.as_deref()
+    fn korean_name(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).korean_name.as_deref()
     }
 
     /// The lifter's Instagram account.
-    field instagram(&executor) -> Option<&str> {
-        lifter!(self, executor).instagram.as_deref()
+    fn instagram(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).instagram.as_deref()
     }
 
     /// The lifter's VKontakte account.
-    field vkontakte(&executor) -> Option<&str> {
-        lifter!(self, executor).vkontakte.as_deref()
+    fn vkontakte(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).vkontakte.as_deref()
     }
 
     /// Colorization information.
-    field color(&executor) -> Option<&str> {
-        lifter!(self, executor).color.as_deref()
+    fn color(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_lifter(self.0).color.as_deref()
     }
 
     /// Gets a list of all the lifter's entries.
-    field entries(&executor) -> Vec<Entry> {
-        db!(executor).get_entry_ids_for_lifter(self.0)
+    fn entries(&self, db: &ManagedOplDb) -> Vec<Entry> {
+        db.0.get_entry_ids_for_lifter(self.0)
             .into_iter()
             .map(Entry)
             .collect()
     }
-});
+}

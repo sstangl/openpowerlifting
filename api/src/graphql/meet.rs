@@ -3,87 +3,76 @@
 use crate::graphql::{Entry, Lifter};
 use crate::ManagedOplDb;
 
-/// Helper for getting the OplDb.
-macro_rules! db {
-    ($executor:ident) => {
-        &$executor.context().0
-    };
-}
-
-/// Helper for looking up a [opldb::Meet].
-macro_rules! meet {
-    ($self: ident, $executor:ident) => {
-        $executor.context().0.get_meet($self.0)
-    };
-}
-
 /// A unique meet in the database.
 ///
 /// Meets are uniquely identified by path.
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Meet(pub u32);
 
-graphql_object!(Meet: ManagedOplDb |&self| {
+#[graphql_object(context = ManagedOplDb)]
+impl Meet {
     /// The path that uniquely identifies each meet.
-    field path(&executor) -> &str {
-        meet!(self, executor).path.as_str()
+    fn path(&self, db: &ManagedOplDb) -> &str {
+        db.0.get_meet(self.0).path.as_str()
     }
 
     /// The federation that hosted the meet.
-    field federation(&executor) -> String {
-        format!("{}", meet!(self, executor).federation)
+    fn federation(&self, db: &ManagedOplDb) -> String {
+        format!("{}", db.0.get_meet(self.0).federation)
     }
 
     /// The topmost federation under which the sanction fell.
-    field parent_federation(&executor) -> Option<String> {
-        let meet = meet!(self, executor);
-        meet.federation.sanctioning_body(meet.date).map(|f| format!("{}", f))
+    fn parent_federation(&self, db: &ManagedOplDb) -> Option<String> {
+        let meet = db.0.get_meet(self.0);
+        meet.federation
+            .sanctioning_body(meet.date)
+            .map(|f| format!("{}", f))
     }
 
     // TODO: Date
     // TODO: Country
 
     /// The state/province in which the meet was held.
-    field state(&executor) -> Option<&str> {
-        meet!(self, executor).state.as_deref()
+    fn state(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_meet(self.0).state.as_deref()
     }
 
     /// The town/city in which the meet was held.
-    field town(&executor) -> Option<&str> {
-        meet!(self, executor).town.as_deref()
+    fn town(&self, db: &ManagedOplDb) -> Option<&str> {
+        db.0.get_meet(self.0).town.as_deref()
     }
 
     /// The name of the meet.
-    field name(&executor) -> &str {
-        meet!(self, executor).name.as_str()
+    fn name(&self, db: &ManagedOplDb) -> &str {
+        db.0.get_meet(self.0).name.as_str()
     }
 
     /// Counts how many entries were recorded for the meet.
-    field num_entries(&executor) -> i32 {
-        db!(executor).get_entry_ids_for_meet(self.0).len() as i32
+    fn num_entries(&self, db: &ManagedOplDb) -> i32 {
+        db.0.get_entry_ids_for_meet(self.0).len() as i32
     }
 
     /// Gets a list of all entries from the meet.
-    field entries(&executor) -> Vec<Entry> {
-        db!(executor).get_entry_ids_for_meet(self.0)
+    fn entries(&self, db: &ManagedOplDb) -> Vec<Entry> {
+        db.0.get_entry_ids_for_meet(self.0)
             .into_iter()
             .map(Entry)
             .collect()
     }
 
     /// Counts how many lifters competed in the meet.
-    field num_lifters(&executor) -> i32 {
-        meet!(self, executor).num_unique_lifters as i32
+    fn num_lifters(&self, db: &ManagedOplDb) -> i32 {
+        db.0.get_meet(self.0).num_unique_lifters as i32
     }
 
     /// Gets a list of all lifters that competed in the meet.
-    field lifters(&executor) -> Vec<Lifter> {
-        db!(executor).get_lifter_ids_for_meet(self.0)
+    fn lifters(&self, db: &ManagedOplDb) -> Vec<Lifter> {
+        db.0.get_lifter_ids_for_meet(self.0)
             .into_iter()
             .map(Lifter)
             .collect()
     }
-});
+}
 
 /// A range of integers for a filter.
 ///

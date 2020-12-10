@@ -72,7 +72,7 @@ fn beta_rankings(
 /// Generates an HTML page containing GraphiQL.
 #[get("/playground")]
 fn playground() -> rocket::response::content::Html<String> {
-    juniper_rocket::playground_source("/graphql")
+    juniper_rocket::playground_source("/graphql", None)
 }
 
 /// GET handler for a GraphQL request.
@@ -82,7 +82,7 @@ fn graphql_get(
     request: juniper_rocket::GraphQLRequest,
     schema: State<graphql::Schema>,
 ) -> juniper_rocket::GraphQLResponse {
-    request.execute(&schema, &opldb)
+    request.execute_sync(&schema, &opldb)
 }
 
 /// POST handler for a GraphQL request.
@@ -92,7 +92,7 @@ fn graphql_post(
     request: juniper_rocket::GraphQLRequest,
     schema: State<graphql::Schema>,
 ) -> juniper_rocket::GraphQLResponse {
-    request.execute(&schema, &opldb)
+    request.execute_sync(&schema, &opldb)
 }
 
 /// Connects the server endpoints together.
