@@ -14,8 +14,8 @@ except ImportError:
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-URL = "http://www.canadianpowerliftingleague.ca/meet-results/"
-BASEURL = "http://www.canadianpowerliftingleague.ca/"
+URL = "https://canadianpowerliftingleague.ca/competitionresults"
+BASEURL = "https://canadianpowerliftingleague.ca/"
 
 
 def color(s):
@@ -26,12 +26,19 @@ def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
-    for a in soup.find_all('a', {'class': 'et_pb_button'}):
+    for a in soup.find_all('a'):
         # All the results have the text "Results" somewhere in the link.
         if 'results' not in a.text.lower():
             continue
 
         url = a['href']
+        if url == '/competitionresults':
+            continue
+
+        # The CPL likes to link to OpenPowerlifting for official results.
+        if 'openpowerlifting' in url.lower():
+            continue
+
         if url not in urls:
             urls.append(url)
 
