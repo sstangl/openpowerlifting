@@ -137,34 +137,39 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         # Equipment
-        elif word in ['slinghot', 'sling-shot', 'soft', 'СПР', 'софт',
-                      'облегченная', 'облегченной', 'слинг', 'софстанд',
-                      'соф', 'cофт', 'мн-слой', '3сл', 'eq']:
+        # Slingshot
+        elif word in ['СПР', 'slinghot', 'sling-shot', 'soft', 'софт',
+                      'софстанд', 'соф', 'слинг', 'softuip', 'spr', 'ultra',
+                      'standart', 'стандарт', 'ультра', 'шоте', 'стандартдк', 'сандарт',
+                      'станд', 'стандврт', 'жесткая', 'жест', 'стд', 'stand',
+                      'софтипировка', 'софти', 'софтипировке', 'софтип']:
+            equipment = 'Unlimited'
+        elif word in ['облегченная', 'облегченной'] and equipment != 'Unlimited':
             equipment = 'Multi-ply'
             event = 'B'
-        elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
+        elif word in ['однослой', 'однослое', 'односл', 's-ply', 'однослойной',
                       '1-ой', '1ply', 'однослойная', 'однослойный', 'однолойной',
-                      'одн', 'однос', 'однослойн', 'однопетельная', '1-софт', '1-слой',
-                      '1сл']:
-            if equipment != 'Multi-ply':
+                      'одн', 'однос', 'однослойн', 'однопетельная', 'однопетельный',
+                      '1-слой', 'sp', 'eq', '1-ply', 'однослойной-эки', 'st',
+                      '1-слойная', '1-слойный', 'однослойно', 'односло', '1-сл', '1сл']:
+            if equipment != 'Multi-ply' and equipment != 'Unlimited':
                 equipment = 'Single-ply'
         elif word in ['экипировка', 'экипировке', 'eq', 'эипировке',
                       'экип'] and equipment == 'Single-ply':
             continue
         elif word in ['m-ply', 'многослой', 'мног', 'многослойная', 'многослойной',
-                      'многопетельная', 'многопетельный']:
-            equipment = 'Multi-ply'
-        # Extra terms for slingshot bench
-        elif word in ['spr', 'ultra', 'standart', 'стандарт', 'ультра', 'шоте',
-                      'стандартдк', 'сандарт', 'станд', 'стандврт', 'жесткая', 'жест',
-                      '1-пет', 'мн-пет', '1-петельная', 'мн-петельная', '2сл']:
-            equipment = 'Multi-ply'
-            event = 'B'
-        elif 'бинт' in word or word == 'wraps':
+                      'многопетельная', 'многопетельный', 'трехпетельном',
+                      'двухпетельном', 'mply', 'мн-слой', 'многослойной-эк', 'mpl',
+                      'multi', 'многослойн', 'mp', 'многосл', 'm-plyой']:
+            if equipment != 'Unlimited':
+                equipment = 'Multi-ply'
+        elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik',
+                                        'кл', 'классический', 'классичесический',
+                                        'клас', 'классик']:
             equipment = 'Wraps'
-        elif word in ['безкипировки', 'raw', 'безэкип', 'бэ']:
-            if event != 'SBD':
-                equipment = 'Raw'
+            event = 'SBD'
+        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк', 'бэ']:
+            equipment = 'Raw'
 
         # Booleans.
         elif word in (['люб', 'любители', 'амт', 'amt']):
@@ -300,7 +305,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('CyrillicName')
         elif text == 'name':
             fieldnames.append('Name')
-        elif text == 'город/область' or text == 'город':
+        elif text in ['город/область', 'город', 'город/команда']:
             fieldnames.append('IGNORE')
         # There are a stupid number of ways to write this column so using this
         # as a catch-all

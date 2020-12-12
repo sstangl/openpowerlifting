@@ -124,6 +124,10 @@
     1707 = ["ExemptWeightClassConsistency"] # Missing WCs
     1710 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Missing WCs, Masters 40-49 & 50+
     1711 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    1715 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    1717 = ["ExemptDivision","ExemptWeightClassConsistency"] # Non standard divisions
+    1719 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    1720 = ["ExemptWeightClassConsistency"] # Missing WCs
     1914 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1944 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1958 = ["ExemptWeightClassConsistency"] # Non standard WCs
