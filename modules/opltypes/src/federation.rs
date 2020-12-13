@@ -901,6 +901,10 @@ pub enum Federation {
     #[strum(to_string = "SPF", serialize = "spf")]
     SPF,
 
+    /// South Australian Drug-Free Powerlifting Association.
+    #[strum(to_string = "SADFPA", serialize = "sadfpa")]
+    SADFPA,
+
     /// Southern Powerlifting Federation Ireland.
     #[serde(rename = "SPF-IRL")]
     #[strum(to_string = "SPF-IRL", serialize = "spf-irl")]
@@ -1599,6 +1603,7 @@ impl Federation {
             Federation::RUPC => false,
             Federation::RussiaUA => false,
             Federation::SAAS => false,
+            Federation::SADFPA => FULLY_TESTED,
             Federation::SAFKST => FULLY_TESTED,
             Federation::SAPF => FULLY_TESTED,
             Federation::SAST => false,
@@ -1917,6 +1922,7 @@ impl Federation {
             Federation::RUPC => Some(Country::USA),
             Federation::RussiaUA => Some(Country::Russia),
             Federation::SAAS => Some(Country::USA),
+            Federation::SADFPA => Some(Country::Australia),
             Federation::SAFKST => Some(Country::Slovakia),
             Federation::SAPF => Some(Country::SouthAfrica),
             Federation::SAST => Some(Country::Slovakia),
@@ -2282,6 +2288,7 @@ impl Federation {
             Federation::RUPC => None,
             Federation::RussiaUA => None,
             Federation::SAAS => None,
+            Federation::SADFPA => Some(Federation::WDFPF),
             Federation::SAFKST => Some(Federation::IPF),
             Federation::SAPF => Some(Federation::IPF),
             Federation::SAST => Some(Federation::GPC),
@@ -2694,6 +2701,7 @@ impl Federation {
             Federation::RUPC => PointsSystem::Wilks,
             Federation::RussiaUA => PointsSystem::Wilks,
             Federation::SAAS => PointsSystem::Wilks,
+            Federation::SADFPA => PointsSystem::Wilks,
             Federation::SAFKST => Federation::ipf_rules_on(date),
             Federation::SAPF => Federation::ipf_rules_on(date),
             Federation::SAST => PointsSystem::Glossbrenner,
