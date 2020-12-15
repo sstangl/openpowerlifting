@@ -106,6 +106,10 @@ pub enum Federation {
     #[strum(to_string = "APF", serialize = "apf")]
     APF,
 
+    /// Alianza Paraguaya de Powerlifting, Paraguay GPA affiliate.
+    #[strum(to_string = "APP", serialize = "app")]
+    APP,
+
     /// Australian Powerlifting Union, IPF.
     #[strum(to_string = "APU", serialize = "apu")]
     APU,
@@ -1419,6 +1423,7 @@ impl Federation {
             Federation::APA => false,
             Federation::APC => false,
             Federation::APF => false,
+            Federation::APP => false,
             Federation::APU => FULLY_TESTED,
             Federation::APUA => FULLY_TESTED,
             Federation::ArgentinaPL => false,
@@ -1744,6 +1749,7 @@ impl Federation {
             Federation::APA => Some(Country::USA),
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
+            Federation::APP => Some(Country::Paraguay),
             Federation::APU => Some(Country::Australia),
             Federation::APUA => Some(Country::Argentina),
             Federation::ArgentinaPL => Some(Country::Argentina),
@@ -2070,6 +2076,7 @@ impl Federation {
             Federation::APA => Some(Federation::WPA),
             Federation::APC => Some(Federation::WUAP),
             Federation::APF => Some(Federation::WPC),
+            Federation::APP => Some(Federation::GPA),
             Federation::APU => Some(Federation::IPF),
             Federation::APUA => Some(Federation::WABDL),
             Federation::ArgentinaPL => Some(Federation::IPL),
@@ -2495,6 +2502,7 @@ impl Federation {
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
+            Federation::APP => PointsSystem::Wilks,
             Federation::APU => Federation::ipf_rules_on(date),
             Federation::APUA => PointsSystem::Wilks,
             Federation::ArgentinaPL => Federation::ipl_rules_on(date),

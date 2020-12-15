@@ -112,6 +112,8 @@ pub enum MetaFederation {
     AllNorway,
     #[strum(to_string = "all-papuanewguinea")]
     AllPapuaNewGuinea,
+    #[strum(to_string = "all-paraguay")]
+    AllParaguay,
     #[strum(to_string = "all-philippines")]
     AllPhilippines,
     #[strum(to_string = "all-poland")]
@@ -172,6 +174,10 @@ pub enum MetaFederation {
     /// AIWBPA, but with international results also.
     #[strum(to_string = "aiwbpa")]
     AIWBPA,
+
+    /// APP, but with international results also.
+    #[strum(to_string = "app")]
+    APP,
 
     /// APU, but with international results also.
     #[strum(to_string = "apu")]
@@ -554,6 +560,7 @@ impl MetaFederation {
             MetaFederation::AllNiue => is_from(Country::Niue, entry, meet),
             MetaFederation::AllNorway => is_from(Country::Norway, entry, meet),
             MetaFederation::AllPapuaNewGuinea => is_from(Country::PapuaNewGuinea, entry, meet),
+            MetaFederation::AllParaguay => is_from(Country::Paraguay, entry, meet),
             MetaFederation::AllPhilippines => is_from(Country::Philippines, entry, meet),
             MetaFederation::AllPoland => is_from(Country::Poland, entry, meet),
             MetaFederation::AllPortugal => is_from(Country::Portugal, entry, meet),
@@ -599,6 +606,7 @@ impl MetaFederation {
             }
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
+            MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
 
             //APU only formed 2018 and became IPF/ORPF affiliate at this time, without checking
             //date we also get PA, AusPF, and AAPLF lifters in IPF/ORPF comps
