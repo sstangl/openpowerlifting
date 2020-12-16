@@ -72,6 +72,7 @@
   <option value="warriorplf" {% if selection.federation == "WarriorPLF" %}selected{% endif %}>WarriorPLF - Warriors Powerlifting Federation</option>
   <option value="wnpf" {% if selection.federation == "WNPF" %}selected{% endif %}>WNPF - World Natural Powerlifting Federation</option>
   <option value="wrpf-usa" {% if selection.federation == "WRPF-USA" %}selected{% endif %}>WRPF USA</option>
+  <option value="wuap-usa" {% if selection.federation == "WUAP-USA" %}selected{% endif %}>WUAP USA</option>
   <option value="xpc" {% if selection.federation == "XPC" %}selected{% endif %}>XPC - Xtreme Powerlifting Coalition</option>
 </optgroup>
 <optgroup label="{{strings.country.uk}}">

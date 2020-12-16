@@ -1382,6 +1382,11 @@ pub enum Federation {
     #[strum(to_string = "WUAP-SVK", serialize = "wuap-svk")]
     WUAPSVK,
 
+    /// US WUAP affiliate.
+    #[serde(rename = "WUAP-USA")]
+    #[strum(to_string = "WUAP-USA", serialize = "wuap-usa")]
+    WUAPUSA,
+
     /// Xtreme Powerlifting Coalition.
     #[strum(to_string = "XPC", serialize = "xpc")]
     XPC,
@@ -1723,6 +1728,7 @@ impl Federation {
             Federation::WUAPAUT => false,
             Federation::WUAPRUS => false,
             Federation::WUAPSVK => false,
+            Federation::WUAPUSA => false,
             Federation::XPC => false,
             Federation::XPCPoland => false,
         }
@@ -2043,6 +2049,7 @@ impl Federation {
             Federation::WUAPAUT => Some(Country::Austria),
             Federation::WUAPRUS => Some(Country::Russia),
             Federation::WUAPSVK => Some(Country::Slovakia),
+            Federation::WUAPUSA => Some(Country::USA),
             Federation::XPC => Some(Country::USA),
             Federation::XPCPoland => Some(Country::Poland),
         }
@@ -2432,6 +2439,7 @@ impl Federation {
             Federation::WUAPAUT => Some(Federation::WUAP),
             Federation::WUAPRUS => Some(Federation::WUAP),
             Federation::WUAPSVK => Some(Federation::WUAP),
+            Federation::WUAPUSA => Some(Federation::WUAP),
             Federation::XPC => Some(Federation::XPC),
             Federation::XPCPoland => Some(Federation::XPC),
         }
@@ -2837,6 +2845,7 @@ impl Federation {
             Federation::WUAPAUT => PointsSystem::Wilks,
             Federation::WUAPRUS => PointsSystem::Wilks,
             Federation::WUAPSVK => PointsSystem::Wilks,
+            Federation::WUAPUSA => PointsSystem::Wilks,
             Federation::XPC => PointsSystem::Wilks,
             Federation::XPCPoland => PointsSystem::Wilks,
         }
