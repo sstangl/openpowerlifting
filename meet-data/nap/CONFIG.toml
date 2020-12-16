@@ -141,3 +141,8 @@
     1967 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1968 = ["ExemptWeightClassConsistency"] # Non standard WCs
     1972 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    1981 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Non standard divisions
+    1982 = ["ExemptWeightClassConsistency"] # 44kg Open men
+    1983 = ["ExemptDivision"] # Non standard divisions
+    1986 = ["ExemptWeightClassConsistency"] # Non standard WCs
+    2007 = ["ExemptWeightClassConsistency"] # 44kg Open men
