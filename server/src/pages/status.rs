@@ -90,6 +90,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[THSWPA as usize].status = complete;
     statuses[USAPL as usize].status = "Since 2014";
     statuses[USPA as usize].status = complete;
+    statuses[USPC as usize].status = complete;
     statuses[WP as usize].status = complete;
 
     // Probes.
@@ -166,6 +167,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     let html = "HTML";
     let jpg = "JPG Images";
     let magazines = "Magazines";
+    let openlifter = "OpenLifter";
     let pdf_structured = "PDF (Structured)";
     let pdf_unstructured = "PDF (Unstructured)";
     let xls_unstructured = "XLS (Unstructured)";
@@ -173,7 +175,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[_365Strong as usize].format = xls_structured;
     statuses[AAP as usize].format = pdf_structured;
     statuses[AEP as usize].format = html;
-    statuses[APA as usize].format = html;
+    statuses[APA as usize].format = openlifter;
     statuses[APF as usize].format = xls_unstructured;
     statuses[APU as usize].format = pdf_structured;
     statuses[AusPL as usize].format = pdf_structured;
@@ -220,6 +222,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[UPCGermany as usize].format = pdf_unstructured;
     statuses[USAPL as usize].format = database;
     statuses[USPA as usize].format = pdf_structured;
+    statuses[USPC as usize].format = openlifter;
     statuses[WelshPA as usize].format = pdf_unstructured;
     statuses[WPC as usize].format = xls_unstructured;
     statuses[WPCItaly as usize].format = jpg;
@@ -235,7 +238,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[_365Strong as usize].ease = easy;
     statuses[AAP as usize].ease = difficult;
     statuses[AEP as usize].ease = medium;
-    statuses[APA as usize].ease = medium;
+    statuses[APA as usize].ease = easy;
     statuses[APF as usize].ease = medium;
     statuses[APU as usize].ease = easy;
     statuses[AusPL as usize].ease = medium;
@@ -282,6 +285,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[UPCGermany as usize].ease = difficult;
     statuses[USAPL as usize].ease = easy;
     statuses[USPA as usize].ease = easy;
+    statuses[USPC as usize].ease = easy;
     statuses[WPC as usize].ease = medium;
     statuses[WPCItaly as usize].ease = difficult;
     statuses[WPNZ as usize].ease = difficult;
@@ -306,6 +310,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[_365Strong as usize].maintainers = email_sean;
     statuses[AEP as usize].maintainers = email_enno;
     statuses[APF as usize].maintainers = email_gem;
+    statuses[APA as usize].maintainers = email_sean;
     statuses[APU as usize].maintainers = email_sean;
     statuses[AusPL as usize].maintainers = email_matt;
     statuses[BAWLA as usize].maintainers = email_jo;
@@ -352,6 +357,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[SPF as usize].maintainers = email_sean;
     statuses[USAPL as usize].maintainers = email_sean;
     statuses[USPA as usize].maintainers = email_sean;
+    statuses[USPC as usize].maintainers = email_sean;
     statuses[THSPA as usize].maintainers = email_sean;
     statuses[THSWPA as usize].maintainers = email_sean;
     statuses[UPA as usize].maintainers = email_gem;
@@ -403,6 +409,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[UPC as usize].instagram = "powerliftingupc";
     statuses[USAPL as usize].instagram = "usapowerlifting";
     statuses[USPA as usize].instagram = "uspapower";
+    statuses[USPC as usize].instagram = "uspc.pl";
     statuses[WelshPA as usize].instagram = "welsh_powerlifting";
     statuses[WNPF as usize].instagram = "wnpf_powerlifting";
     statuses[WPAU as usize].instagram = "wpaukraine";
