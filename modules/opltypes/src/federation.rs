@@ -268,10 +268,6 @@ pub enum Federation {
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
 
-    /// Crimean Republic Powerlifting and Extreme Bench Press Association.
-    #[strum(to_string = "CRPEBA", serialize = "crpeba")]
-    CRPEBA,
-
     /// Unaffiliated meets held in Croatia.
     #[serde(rename = "Croatia-UA")]
     #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
@@ -1466,7 +1462,6 @@ impl Federation {
             Federation::CPL => false,
             Federation::CPO => false,
             Federation::CPU => FULLY_TESTED,
-            Federation::CRPEBA => false,
             Federation::CSST => FULLY_TESTED,
             Federation::DBKV => false,
             Federation::CzechiaUA => false,
@@ -1793,8 +1788,6 @@ impl Federation {
             Federation::CPL => Some(Country::Canada),
             Federation::CPO => Some(Country::Canada),
             Federation::CPU => Some(Country::Canada),
-            //Initially Ukraine,until annexation
-            Federation::CRPEBA => Some(Country::Russia),
             Federation::CSST => Some(Country::Czechia),
             Federation::DBKV => Some(Country::Germany),
             Federation::CzechiaUA => Some(Country::Czechia),
@@ -2141,7 +2134,6 @@ impl Federation {
             Federation::CPL => Some(Federation::IPL),
             Federation::CPO => Some(Federation::WPC),
             Federation::CPU => Some(Federation::IPF),
-            Federation::CRPEBA => None,
             Federation::CSST => Some(Federation::IPF),
             Federation::CzechiaUA => None,
             Federation::DBKV => None,
@@ -2555,7 +2547,6 @@ impl Federation {
             Federation::CPL => Federation::ipl_rules_on(date),
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => Federation::ipf_rules_on(date),
-            Federation::CRPEBA => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
             Federation::DBKV => PointsSystem::Wilks,
             Federation::CzechiaUA => PointsSystem::Wilks,
