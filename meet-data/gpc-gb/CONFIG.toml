@@ -81,5 +81,6 @@
     sex = "M"
 
 [exemptions]
+    2003 = ["ExemptLiftOrder"]  # Lifter allowed to lower weight.
     1914 = ["ExemptWeightClassConsistency"]  # No weightclasses
     1705 = ["ExemptWeightClassConsistency"]  # 100kg class women with no bw info
