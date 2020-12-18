@@ -48,7 +48,6 @@ def parse_sheetname(s):
 
     federation = ''
     event = None
-    amateur = 'Pro'  # By default, unless otherwise specified.
     tested = 'No'  # By default, unless otherwise specified.
     equipment = 'Wraps'  # By default, unless otherwise specified.
 
@@ -169,16 +168,15 @@ def parse_sheetname(s):
                                         'клас', 'классик']:
             equipment = 'Wraps'
             event = 'SBD'
-        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк', 'бэ']:
-            equipment = 'Raw'
+        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк', 'бэ']: #Raw/Wraps
+            pass
 
         # Booleans.
-        elif word in (['люб', 'любители', 'амт', 'amt', 'am']):
-            amateur = 'Amateur'
-        elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф', 'профи']):
-            assert amateur == 'Pro'
-        elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
+        elif word in (['люб', 'любители', 'амт', 'amt', 'am', 'дк', 'dr test', 'dt',
+                       'д к ', 'dc']):
             tested = 'Yes'
+        elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф', 'профи']):
+            assert tested == 'No'            
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -231,7 +229,6 @@ def parse_sheetname(s):
 
     obj['federation'] = federation
     obj['event'] = event
-    obj['amateur'] = amateur
     obj['tested'] = tested
     obj['equipment'] = equipment
 
@@ -321,7 +318,7 @@ def parse_fieldnames(sheet):
         elif text in ['собств вес', 'собств', 'соб', 'вес', 'собственный вес',
                       'собственный', 'body weight', 'собcтвенный вес', 'собст вес',
                       'соб вес', 'собстввес', 'вага', 'св', 'собствственный',
-                      'собственнный вес', 'собственныйвес', 'соственный вес']:
+                      'собственнный вес', 'собственныйвес', 'соственный вес', 'с вес']:
             fieldnames.append('BodyweightKg')
         elif text == 'весовая категория' or text == 'в/к':
             fieldnames.append('WeightClassKg')
@@ -537,7 +534,6 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Event')
     assert 'Equipment' not in csv.fieldnames
     csv.fieldnames.append('Equipment')
-    csv.fieldnames.append('Amateur')
     csv.fieldnames.append('Tested')
     csv.fieldnames.append('Federation')
 
@@ -575,7 +571,6 @@ def parse_sheet(sheet):
         line.append(weightclass)
         line.append(obj['event'])
         line.append(obj['equipment'])
-        line.append(obj['amateur'])
         line.append(obj['tested'])
         line.append(obj['federation'])
 
@@ -636,9 +631,9 @@ def get_division(age_str, currdiv):
 
 def standardize_division_age(csv):
     assert 'Division-Age' in csv.fieldnames
-    assert 'Amateur' in csv.fieldnames
     assert 'Division' not in csv.fieldnames
     assert 'Age' not in csv.fieldnames
+    assert 'Tested' in csv.fieldnames
 
     csv.append_columns(['Division', 'Age', 'BirthDate'])
 
@@ -646,7 +641,7 @@ def standardize_division_age(csv):
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
     bdidx = csv.index('BirthDate')
-    amidx = csv.index('Amateur')
+    testedidx = csv.index('Tested')
 
     for row in csv.rows:
         # Fill in the Age.
@@ -712,12 +707,15 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-        division = row[amidx] + " " + division
+        if row[testedidx] == 'Yes':
+            division = "Amateur " + division
+        else:
+            division = "Pro " + division
+           
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
     csv.remove_column_by_name('Division-Age')
-    csv.remove_column_by_name('Amateur')
 
 # Mark DQs properly and make sure that place is an integer.
 
