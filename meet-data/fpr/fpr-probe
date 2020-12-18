@@ -17,7 +17,8 @@ except ImportError:
 
 
 URLS = [
-        'http://fpr-info.ru/protokol.htm',
+        'http://fpr-info.ru/___protokoly/prot_2020/prot_2020.htm',
+        'http://fpr-info.ru/___protokoly/prot_2019/prot_2019.htm',
         'http://fpr-info.ru/___protokoly/prot_2018/prot_2018.htm',
         'http://fpr-info.ru/___protokoly/prot_2017/prot_2017.htm',
         'http://fpr-info.ru/___protokoly/prot_2016/prot_2016.htm',
