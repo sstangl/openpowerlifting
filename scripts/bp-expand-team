@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+#
+# Expands the "Team" column for BP/EPA meets, which stores division information,
+# into "Country" and "State" columns.
+
+import sys
+from oplcsv import Csv
+
+
+def main(filename):
+    csv = Csv(filename)
+    changed = False
+    errored = False
+
+    # Set up the columns we need.
+    if 'Team' not in csv.fieldnames:
+        return
+    if 'Country' not in csv.fieldnames:
+        csv.insert_column(csv.index('Team'), 'Country')
+    if 'State' not in csv.fieldnames:
+        csv.insert_column(csv.index('Country') + 1, 'State')
+
+    teammap = {
+        "EM": ("England", "EM"),
+        "GIB": ("Gibraltar", ""),
+        "GL": ("England", "GL"),
+        "NI": ("N.Ireland", ""),
+        "NM": ("England", "NM"),
+        "NW": ("England", "NW"),
+        "SCO": ("Scotland", ""),
+        "SE": ("England", "SE"),
+        "SM": ("England", "SM"),
+        "SW": ("England", "SW"),
+        "WAL": ("Wales", ""),
+        "WM": ("England", "WM"),
+        "YNE": ("England", "YNE")
+    }
+
+    for row in csv.rows:
+        team = row[csv.index('Team')]
+        if team == '':
+            continue
+        if team not in teammap:
+            print('Unknown Team "%s"' % team)
+            errored = True
+            continue
+
+        (country, state) = teammap[team]
+        row[csv.index('Country')] = country
+        row[csv.index('State')] = state
+        changed = True
+
+    csv.remove_column_by_name('Team')
+
+    if errored:
+        return
+    if changed:
+        with open(filename, 'w') as fd:
+            csv.write(fd)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(' Usage: %s csvfile' % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+    main(sys.argv[1])

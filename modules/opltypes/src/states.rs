@@ -421,10 +421,10 @@ pub enum EnglandState {
     NW,
     /// South East.
     SE,
-    /// South West.
-    SW,
     /// South Midlands.
     SM,
+    /// South West.
+    SW,
     /// West Midlands.
     WM,
     /// Yorkshire North East.
