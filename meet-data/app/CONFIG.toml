@@ -28,6 +28,7 @@
 
     teen = {name = "Teen", min = 13, max = 19}
     masters = {name = "Masters", min = 40, max = 999}
+    novice = {name = "Novice", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
