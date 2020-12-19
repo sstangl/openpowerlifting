@@ -283,6 +283,15 @@ pub enum Country {
 }
 
 impl Country {
+    /// Whether this Country contains the other. Countries contain themselves.
+    #[inline]
+    pub fn contains(self, other: Country) -> bool {
+        match self {
+            Country::UK => other.is_in_uk(),
+            _ => false,
+        }
+    }
+
     /// Whether the country is in the UK.
     #[inline]
     pub fn is_in_uk(self) -> bool {

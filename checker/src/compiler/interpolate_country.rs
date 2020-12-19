@@ -79,26 +79,27 @@ fn get_consistent_country(
 
         let entry = meetdata.get_entry(index);
 
-        if let Some(country) = entry.country {
-            if let Some(acc_country) = acc {
-                if country != acc_country {
-                    // Countries within the UK are compatible with Country::UK.
-                    if country == Country::UK && acc_country.is_in_uk() {
+        match (entry.country, acc) {
+            (Some(country), None) => {
+                trace_found_initial(debug, country, &path);
+                acc = Some(country);
+            }
+            (Some(country), Some(acc_country)) => {
+                if country == acc_country {
+                    trace_matched(debug, country, &path);
+                } else {
+                    if country.contains(acc_country) {
                         trace_matched(debug, country, &path);
-                    } else if acc_country == Country::UK && country.is_in_uk() {
+                    } else if acc_country.contains(country) {
+                        trace_matched(debug, country, &path);
                         acc = Some(country);
-                        trace_matched(debug, country, &path);
                     } else {
                         trace_conflict(debug, country, &path);
                         return None;
                     }
-                } else {
-                    trace_matched(debug, country, &path);
                 }
-            } else {
-                trace_found_initial(debug, country, &path);
-                acc = Some(country);
             }
+            (None, _) => (),
         }
     }
     acc
