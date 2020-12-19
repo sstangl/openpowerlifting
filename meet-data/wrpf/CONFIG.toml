@@ -139,19 +139,19 @@
     sex = "F"
 
 [exemptions]
-   1867 = ["ExemptWeightClassConsistency"] #Missing weightclasses
    1604 = ["ExemptWeightClassConsistency"] #Missing weightclasses
-   1866 = ["ExemptWeightClassConsistency"] #Missing weightclasses
-   1743 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
-   1716 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
-   1619 = ["ExemptWeightClassConsistency"] #Missing weightclasses
    1613 = ["ExemptWeightClassConsistency"] #Missing weightclasses
-   1722 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+   1619 = ["ExemptWeightClassConsistency"] #Missing weightclasses
    1714 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
+   1716 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
+   1722 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+   1743 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
+   1864 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
+   1867 = ["ExemptWeightClassConsistency"] #Missing weightclasses
+   1868 = ["ExemptWeightClassConsistency"] #Fewer weightclasses, missing weightclasses
+   1866 = ["ExemptWeightClassConsistency"] #Missing weightclasses
    1921 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
    1930 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
-   1868 = ["ExemptWeightClassConsistency"] #Fewer weightclasses, missing weightclasses
-   1864 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
    1948 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
    1949 = ["ExemptWeightClassConsistency"] #Missing weightclasses
    1957 = ["ExemptWeightClassConsistency"] #Light/Heavy.
