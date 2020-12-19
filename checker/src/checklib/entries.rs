@@ -1039,16 +1039,15 @@ fn check_column_state(
             let state = State::from_str_and_country(s, country).ok();
             if state.is_none() {
                 let c = country.to_string();
-                let msg = format!("Unknown State '{}' for Country '{}'", s, c,);
+                let msg = format!("Unknown State '{}' for Country '{}'", s, c);
                 report.error_on(line, msg);
             }
             state
         }
         None => {
-            // At the least, make sure it's ASCII.
-            if !s.is_ascii() {
-                report.error_on(line, format!("State '{}' must be ASCII", s));
-            }
+            // This can only happen if the MeetCountry is missing.
+            let msg = format!("Unknown State '{}': no available Country", s);
+            report.error_on(line, msg);
             None
         }
     }

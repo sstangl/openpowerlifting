@@ -95,8 +95,9 @@ pub enum Country {
     France,
     Gabon,
     Georgia,
-    Ghana,
     Germany,
+    Ghana,
+    Gibraltar,
     Greece,
     Guatemala,
     Guinea,
@@ -298,6 +299,7 @@ impl Country {
         matches!(
             self,
             Country::England
+                | Country::Gibraltar
                 | Country::NorthernIreland
                 | Country::UK
                 | Country::Scotland
