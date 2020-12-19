@@ -61,7 +61,7 @@ impl Query {
         order_by: Option<MeetOrderBy>,
         limit: i32,
     ) -> FieldResult<Vec<Meet>> {
-        if limit < 1 || limit > 100 {
+        if !(1..=100).contains(&limit) {
             return Err("The limit must be between 1 and 100".into());
         }
         let limit = limit as usize;

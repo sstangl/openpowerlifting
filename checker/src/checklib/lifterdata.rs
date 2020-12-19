@@ -125,8 +125,10 @@ fn check_donator_colors(
                 data.color = Some(row.color);
             }
             None => {
-                let mut data = LifterData::default();
-                data.color = Some(row.color);
+                let data = LifterData {
+                    color: Some(row.color),
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         }
@@ -184,8 +186,10 @@ fn check_flair(
                 data.flair = Some(row.flair);
             }
             None => {
-                let mut data = LifterData::default();
-                data.flair = Some(row.flair);
+                let data = LifterData {
+                    flair: Some(row.flair),
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         }
@@ -217,8 +221,10 @@ pub fn load_exemptions(
                 data.exempt_sex = true;
             }
             None => {
-                let mut data = LifterData::default();
-                data.exempt_sex = true;
+                let data = LifterData {
+                    exempt_sex: true,
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         }
@@ -231,8 +237,10 @@ pub fn load_exemptions(
                 data.exempt_bodyweight = true;
             }
             None => {
-                let mut data = LifterData::default();
-                data.exempt_bodyweight = true;
+                let data = LifterData {
+                    exempt_bodyweight: true,
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         }
@@ -290,8 +298,10 @@ fn check_social_instagram(
                 data.instagram = Some(row.instagram);
             }
             None => {
-                let mut data = LifterData::default();
-                data.instagram = Some(row.instagram);
+                let data = LifterData {
+                    instagram: Some(row.instagram),
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         }
@@ -350,8 +360,10 @@ fn check_social_vkontakte(
                 data.vkontakte = Some(row.userpage);
             }
             None => {
-                let mut data = LifterData::default();
-                data.vkontakte = Some(row.userpage);
+                let data = LifterData {
+                    vkontakte: Some(row.userpage),
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         }
@@ -418,8 +430,10 @@ fn check_name_disambiguation(
                 }
             }
             None => {
-                let mut data = LifterData::default();
-                data.disambiguation_count = row.count;
+                let data = LifterData {
+                    disambiguation_count: row.count,
+                    ..Default::default()
+                };
                 map.insert(username, data);
             }
         };

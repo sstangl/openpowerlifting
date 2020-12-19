@@ -596,7 +596,7 @@ fn check_column_birthyear(
 
     match s.parse::<u32>() {
         Ok(year) => {
-            if year < 1000 || year > 9999 {
+            if !(1000..=9999).contains(&year) {
                 report.error_on(line, format!("BirthYear '{}' must have 4 digits", year));
             }
 

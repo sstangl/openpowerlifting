@@ -206,8 +206,7 @@ impl FromStr for WeightClassKg {
             return Ok(WeightClassKg::None);
         }
 
-        if s.ends_with('+') {
-            let v = &s[..s.len() - 1];
+        if let Some(v) = s.strip_suffix('+') {
             v.parse::<WeightKg>().map(WeightClassKg::Over)
         } else {
             s.parse::<WeightKg>().map(WeightClassKg::UnderOrEqual)

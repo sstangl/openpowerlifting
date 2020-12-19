@@ -464,10 +464,7 @@ fn finish_table<'db>(
     };
 
     let class = entries[0].weightclasskg.as_type(units).in_format(format);
-    let div: &str = match entries[0].division {
-        Some(ref s) => s,
-        None => "",
-    };
+    let div: &str = entries[0].division.as_deref().unwrap_or("");
 
     // TODO: Internationalization.
     // TODO: Cover all the cases. Try to use some match arms.

@@ -256,7 +256,7 @@ const KATAKANA_START: u32 = 0x30A1;
 /// When changing this function, also change the test update hira_to_kata_char_is_safe().
 fn hira_to_kata_char(c: char) -> char {
     let scalar = c as u32;
-    if scalar >= HIRAGANA_START && scalar <= HIRAGANA_END {
+    if (HIRAGANA_START..=HIRAGANA_END).contains(&scalar) {
         // Shift from the Hiragana list to the equivalent Katakana list.
         let kata_scalar = scalar + (KATAKANA_START - HIRAGANA_START);
         // Safe because of the bounds checking above.

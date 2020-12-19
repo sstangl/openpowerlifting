@@ -286,13 +286,13 @@ impl Country {
     /// Whether the country is in the UK.
     #[inline]
     pub fn is_in_uk(self) -> bool {
-        match self {
-            Country::England => true,
-            Country::NorthernIreland => true,
-            Country::UK => true,
-            Country::Scotland => true,
-            Country::Wales => true,
-            _ => false,
-        }
+        matches!(
+            self,
+            Country::England
+                | Country::NorthernIreland
+                | Country::UK
+                | Country::Scotland
+                | Country::Wales
+        )
     }
 }

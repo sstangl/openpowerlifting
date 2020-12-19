@@ -341,7 +341,7 @@ impl OplDb {
     /// search followed by a bi-directional linear scan.
     ///
     /// Panics if the lifter_id is not found.
-    pub fn get_entries_for_lifter<'a>(&'a self, lifter_id: u32) -> Vec<&'a Entry> {
+    pub fn get_entries_for_lifter(&self, lifter_id: u32) -> Vec<&Entry> {
         self.get_entry_ids_for_lifter(lifter_id)
             .into_iter()
             .map(|i| self.get_entry(i as u32))
@@ -352,7 +352,7 @@ impl OplDb {
     ///
     /// Those entries could be located anywhere in the entries vector,
     /// so they are found using a linear scan.
-    pub fn get_entries_for_meet<'a>(&'a self, meet_id: u32) -> Vec<&'a Entry> {
+    pub fn get_entries_for_meet(&self, meet_id: u32) -> Vec<&Entry> {
         self.get_entries()
             .iter()
             .filter(|&e| e.meet_id == meet_id)
