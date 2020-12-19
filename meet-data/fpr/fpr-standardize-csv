@@ -148,23 +148,24 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(9)]
 
-            elif text in ['прис', 'пр'] or any(x in text for x in ['рез-т присед',
-                                                                   'резт присед',
-                                                           'результат присед',
-                                                           'прис резт', 'присед итог',
-                                                           'присед', 'прис результат',
-                                                           'результат прис']):
+            elif text in ['прис', 'пр'] or \
+                    any(x in text for x in ['рез-т присед', 'резт присед',
+                                            'результат присед', 'прис резт',
+                                            'присед итог', 'присед', 'прис результат',
+                                            'результат прис']):
                 fieldnames.append('Best3SquatKg')
-            elif text in ['жим', 'ж/л'] or any(x in text for x in ['рез-т жим', 'резт жим',
-                                                          'жим резт', 'жим итог']):
+            elif text in ['жим', 'ж/л'] or \
+                    any(x in text for x in ['рез-т жим', 'резт жим', 'жим резт',
+                                            'жим итог']):
                 fieldnames.append('Best3BenchKg')
-            elif text in ['тяга', 'стт'] or any(x in text for x in ['рез-т тяга', 'резт тяга',
-                                                           'тяга резт', 'тяга итог']):
+            elif text in ['тяга', 'стт'] or \
+                    any(x in text for x in ['рез-т тяга', 'резт тяга',
+                                            'тяга резт', 'тяга итог']):
                 fieldnames.append('Best3DeadliftKg')
 
             elif 'сумма троеб' in text or text == 'сумма':
                 fieldnames.append('TotalKg')
-            elif text == 'нмомер': # Lot
+            elif text == 'нмомер':  # Lot
                 fieldnames.append('IGNORE')
 
             # FPR fills their spreadsheets with lots of merged blank columns

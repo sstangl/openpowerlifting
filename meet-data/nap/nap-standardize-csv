@@ -168,7 +168,8 @@ def parse_sheetname(s):
                                         'клас', 'классик']:
             equipment = 'Wraps'
             event = 'SBD'
-        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк', 'бэ']: #Raw/Wraps
+        elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк',
+                      'бэ']:  # Raw/Wraps
             pass
 
         # Booleans.
@@ -176,7 +177,7 @@ def parse_sheetname(s):
                        'д к ', 'dc']):
             tested = 'Yes'
         elif word in (['pro', 'pro-', 'профессионалы', 'про', 'проф', 'профи']):
-            assert tested == 'No'            
+            assert tested == 'No'
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -711,7 +712,7 @@ def standardize_division_age(csv):
             division = "Amateur " + division
         else:
             division = "Pro " + division
-           
+
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
