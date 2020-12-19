@@ -150,6 +150,7 @@ impl RecordsQuery {
 #[derive(Copy, Clone, PartialEq, Serialize)]
 pub enum ClassKind {
     Traditional,
+    Expanded,
     IPF,
     Para,
     WP,
@@ -161,6 +162,7 @@ impl FromStr for ClassKind {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             // No parsing for Traditional: it's the default.
+            "expanded-classes" => Ok(ClassKind::Expanded),
             "ipf-classes" => Ok(ClassKind::IPF),
             "para-classes" => Ok(ClassKind::Para),
             "wp-classes" => Ok(ClassKind::WP),
@@ -379,6 +381,41 @@ fn make_collectors<'db>(
                     WeightClassFilter::T82_5,
                     WeightClassFilter::T90,
                     WeightClassFilter::TOver90,
+                ]
+            }
+        }
+
+        // Expanded classes.
+        ClassKind::Expanded => {
+            if sex == SexFilter::Men {
+                vec![
+                    WeightClassFilter::T52,
+                    WeightClassFilter::T56,
+                    WeightClassFilter::T60,
+                    WeightClassFilter::T67_5,
+                    WeightClassFilter::T75,
+                    WeightClassFilter::T82_5,
+                    WeightClassFilter::T90,
+                    WeightClassFilter::T100,
+                    WeightClassFilter::T110,
+                    WeightClassFilter::T125,
+                    WeightClassFilter::T140,
+                    WeightClassFilter::TOver140,
+                ]
+            } else {
+                vec![
+                    WeightClassFilter::T44,
+                    WeightClassFilter::T48,
+                    WeightClassFilter::T52,
+                    WeightClassFilter::T56,
+                    WeightClassFilter::T60,
+                    WeightClassFilter::T67_5,
+                    WeightClassFilter::T75,
+                    WeightClassFilter::T82_5,
+                    WeightClassFilter::T90,
+                    WeightClassFilter::T100,
+                    WeightClassFilter::T110,
+                    WeightClassFilter::TOver110,
                 ]
             }
         }

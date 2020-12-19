@@ -28,6 +28,7 @@
       {% include "openpowerlifting/widget-equipmentselect" %}
       <select id="classkindselect">
         <option value="traditional-classes" {% if selection.classkind == "Traditional" %}selected{% endif %}>{{strings.selectors.weightclass.traditional}}</option>
+        <option value="expanded-classes" {% if selection.classkind == "Expanded" %}selected{% endif %}>{{strings.selectors.weightclass.expanded}}</option>
         <option value="ipf-classes" {% if selection.classkind == "IPF" %}selected{% endif %}>IPF</option>
         <option value="para-classes" {% if selection.classkind == "Para" %}selected{% endif %}>Para</option>
         <option value="wp-classes" {% if selection.classkind == "WP" %}selected{% endif %}>WP</option>

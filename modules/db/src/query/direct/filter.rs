@@ -162,6 +162,9 @@ pub enum WeightClassFilter {
     T140,
     TOver140,
 
+    // Extended classes.
+    TOver110,
+
     // IPF Men.
     IpfM53,
     IpfM59,
@@ -263,6 +266,8 @@ impl WeightClassFilter {
             WeightClassFilter::T140 => make_bounds(125.0, 140.0),
             WeightClassFilter::TOver140 => make_bound_over(140.0),
 
+            WeightClassFilter::TOver110 => make_bound_over(110.0),
+
             WeightClassFilter::IpfM53 => make_bounds(0.0, 53.0),
             WeightClassFilter::IpfM59 => make_bounds(53.0, 59.0),
             WeightClassFilter::IpfM66 => make_bounds(59.0, 66.0),
@@ -344,6 +349,8 @@ impl WeightClassFilter {
             WeightClassFilter::T125 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(125)),
             WeightClassFilter::T140 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(140)),
             WeightClassFilter::TOver140 => WeightClassKg::Over(WeightKg::from_i32(140)),
+
+            WeightClassFilter::TOver110 => WeightClassKg::Over(WeightKg::from_i32(110)),
 
             WeightClassFilter::IpfM53 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
             WeightClassFilter::IpfM59 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(59)),
@@ -427,6 +434,8 @@ impl FromStr for WeightClassFilter {
             "125" => Ok(WeightClassFilter::T125),
             "140" => Ok(WeightClassFilter::T140),
             "over140" => Ok(WeightClassFilter::TOver140),
+
+            "over110" => Ok(WeightClassFilter::TOver110),
 
             "ipf53" => Ok(WeightClassFilter::IpfM53),
             "ipf59" => Ok(WeightClassFilter::IpfM59),

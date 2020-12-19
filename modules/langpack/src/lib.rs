@@ -488,6 +488,7 @@ pub struct EquipmentSelectorTranslations {
 pub struct WeightClassSelectorTranslations {
     pub all: String,
     pub traditional: String,
+    pub expanded: String,
     pub ipfmen: String,
     pub ipfwomen: String,
     pub para_men: String,
