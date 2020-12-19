@@ -94,10 +94,10 @@ def parse_fieldnames(sheet):
             elif 'фамилия имя' in text:
                 fieldnames.append('CyrillicName')
             elif any(x in text for x in ['год родж', 'год рожд', 'грожд', 'год рож',
-                                         'гр', 'г/р']):
+                                         'гр', 'г/р', 'год']):
                 fieldnames.append('BirthYear')
             elif any(x in text for x in ['разряд', 'вып разр', 'звание',
-                                         'раз ряд', 'дата рожд', 'рд зв']):  # Rank
+                                         'раз ряд', 'дата рожд', 'рд зв', 'разр']):  # Rank
                 fieldnames.append('IGNORE')
             elif 'регион' in text:  # Region
                 fieldnames.append('IGNORE')
