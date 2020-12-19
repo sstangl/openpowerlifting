@@ -93,7 +93,8 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Place')
             elif 'фамилия имя' in text:
                 fieldnames.append('CyrillicName')
-            elif any(x in text for x in ['год родж', 'год рожд', 'грожд', 'год рож']):
+            elif any(x in text for x in ['год родж', 'год рожд', 'грожд', 'год рож',
+                                         'гр', 'г/р']):
                 fieldnames.append('BirthYear')
             elif any(x in text for x in ['разряд', 'вып разр', 'звание',
                                          'раз ряд', 'дата рожд', 'рд зв']):  # Rank
@@ -101,15 +102,17 @@ def parse_fieldnames(sheet):
             elif 'регион' in text:  # Region
                 fieldnames.append('IGNORE')
             elif any(x in text for x in ['город', 'субьект рф',
-                                         'область', 'субъект рф']):  # City/Region
+                                         'область', 'субъект рф', 'мо',
+                                         'субьект']):  # City/Region
                 fieldnames.append('IGNORE')
             elif 'вес' in text:
                 fieldnames.append('BodyweightKg')
             elif 'ком очки' in text:
                 fieldnames.append('IGNORE')
             # Wilks/IPF Points
-            elif any(x in text for x in ['очки ipf', 'вилкс', 'абс кооф',
-                                         'очки абс', 'виллк', 'коэф виллс']):
+            elif text in ['очки ipf', 'вилкс', 'абс кооф', 'коэф',
+                          'очки абс', 'виллк',
+                          'коэф виллс', 'очки по вилксу']:
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
@@ -121,7 +124,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
-            elif text == 'возраст кат':
+            elif text in ['возраст кат', 'категория']:
                 fieldnames.append('Division')
             elif any(x in text for x in ['вуз', 'команда (во / род войск)',
                                          'спортивная школа', 'команда']):
@@ -145,26 +148,30 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(9)]
 
-            elif text == 'прис' or any(x in text for x in ['рез-т присед', 'резт присед',
+            elif text in ['прис', 'пр'] or any(x in text for x in ['рез-т присед',
+                                                                   'резт присед',
                                                            'результат присед',
                                                            'прис резт', 'присед итог',
-                                                           'присед']):
+                                                           'присед', 'прис результат']):
                 fieldnames.append('Best3SquatKg')
-            elif text == 'жим' or any(x in text for x in ['рез-т жим', 'резт жим',
+            elif text in ['жим', 'ж/л'] or any(x in text for x in ['рез-т жим', 'резт жим',
                                                           'жим резт', 'жим итог']):
                 fieldnames.append('Best3BenchKg')
-            elif text == 'тяга' or any(x in text for x in ['рез-т тяга', 'резт тяга',
+            elif text in ['тяга', 'стт'] or any(x in text for x in ['рез-т тяга', 'резт тяга',
                                                            'тяга резт', 'тяга итог']):
                 fieldnames.append('Best3DeadliftKg')
 
             elif 'сумма троеб' in text or text == 'сумма':
                 fieldnames.append('TotalKg')
+            elif text == 'нмомер': # Lot
+                fieldnames.append('IGNORE')
 
             # FPR fills their spreadsheets with lots of merged blank columns
             elif text == '':
                 fieldnames.append('IGNORE')
 
             else:
+                print(text)
                 die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     else:  # No header was given, use the default
         fieldnames = ['Place', 'IGNORE', 'CyrillicName']
