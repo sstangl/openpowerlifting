@@ -36,6 +36,7 @@ let selSex: HTMLSelectElement;
 let selFederation: HTMLSelectElement;
 let selAgeClass: HTMLSelectElement;
 let selRecordsYear: HTMLSelectElement;
+let selState: HTMLSelectElement;
 
 // Returns a string like "/women/uspa", or the empty string
 // for the default selection.
@@ -58,6 +59,9 @@ function records_selection_to_path(): string {
     }
     if (selRecordsYear.value !== default_year) {
         url += "/" + selRecordsYear.value;
+    }
+    if (selState.value !== "") {
+        url += "/" + selState.value;
     }
     return url;
 }
@@ -125,6 +129,9 @@ function renderSelectedFilters(): void {
     if (selRecordsYear.value !== default_year) {
         newFilter(div, selRecordsYear.selectedOptions[0].label);
     }
+    if (selState.value !== "") {
+        newFilter(div, selState.selectedOptions[0].label);
+    }
 }
 
 function initRecords() {
@@ -134,6 +141,7 @@ function initRecords() {
     selFederation = document.getElementById("fedselect") as HTMLSelectElement;
     selAgeClass = document.getElementById("ageselect") as HTMLSelectElement;
     selRecordsYear = document.getElementById("yearselect") as HTMLSelectElement;
+    selState = document.getElementById("stateselect") as HTMLSelectElement;
 
     records_addSelectorListeners(selEquipment);
     records_addSelectorListeners(selClassKind);
@@ -141,6 +149,7 @@ function initRecords() {
     records_addSelectorListeners(selFederation);
     records_addSelectorListeners(selAgeClass);
     records_addSelectorListeners(selRecordsYear);
+    // Intentionally missing selState: it's a hidden element.
 
     renderSelectedFilters();
 }

@@ -32,6 +32,9 @@
       </select>
       {% include "openipf/widget-ageselect" %}
       {% include "widget-yearselect" %}
+      <select id="stateselect" style="display: none">
+        <option value="{{selection.state}}" selected></option>
+      </select>
     </div>
 
 {% endblock controls %}
