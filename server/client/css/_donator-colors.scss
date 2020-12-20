@@ -249,6 +249,13 @@
   background-image: linear-gradient(to right, $blue, $lightblue);
 }
 
+.blue_to_orange {
+  $blue: #507CFF;
+  $orange: #FFA200;
+  @include gradient-prereqs($orange);
+  background-image: linear-gradient(to right, $blue, $orange);
+}
+
 .blue_to_yellow {
   $blue: #507CFF;
   $yellow: #FFFC00;
