@@ -651,6 +651,10 @@ pub enum Federation {
     #[strum(to_string = "MDFPA", serialize = "mdfpa")]
     MDFPA,
 
+    /// Moldova Drug Free Powerlifting Federation.
+    #[strum(to_string = "MDFPF", serialize = "mdfpf")]
+    MDFPF,
+
     /// Mississippi High School Athletic Association.
     #[strum(to_string = "MHSAA", serialize = "mhsaa")]
     MHSAA,
@@ -1559,6 +1563,7 @@ impl Federation {
             Federation::LPF => FULLY_TESTED,
             Federation::MalaysiaUA => false,
             Federation::MDFPA => FULLY_TESTED,
+            Federation::MDFPF => FULLY_TESTED,
             Federation::MHSAA => false,
             Federation::MHSPLA => false,
             Federation::MM => false,
@@ -1888,6 +1893,7 @@ impl Federation {
             Federation::MalaysiaUA => Some(Country::Malaysia),
             Federation::MHSAA => Some(Country::USA),
             Federation::MDFPA => Some(Country::Malta),
+            Federation::MDFPF => Some(Country::Moldova),
             Federation::MHSPLA => Some(Country::USA),
             Federation::MM => Some(Country::USA),
             Federation::MPA => Some(Country::Malaysia),
@@ -2242,6 +2248,7 @@ impl Federation {
             Federation::LPF => Some(Federation::IPF),
             Federation::MalaysiaUA => None,
             Federation::MDFPA => Some(Federation::WDFPF),
+            Federation::MDFPF => Some(Federation::WDFPF),
             Federation::MHSAA => None,
             Federation::MHSPLA => None,
             Federation::MM => None,
@@ -2664,6 +2671,7 @@ impl Federation {
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MalaysiaUA => PointsSystem::Wilks,
             Federation::MDFPA => PointsSystem::SchwartzMalone,
+            Federation::MDFPF => PointsSystem::SchwartzMalone,
             Federation::MHSAA => PointsSystem::Wilks,
             Federation::MHSPLA => PointsSystem::Wilks,
             Federation::MM => PointsSystem::Wilks,
