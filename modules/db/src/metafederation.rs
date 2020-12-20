@@ -31,6 +31,8 @@ pub enum MetaFederation {
     AllAustria,
     #[strum(to_string = "all-belarus")]
     AllBelarus,
+    #[strum(to_string = "all-belgium")]
+    AllBelgium,
     #[strum(to_string = "all-bosnia-and-herzegovina")]
     AllBosniaAndHerzegovina,
     #[strum(to_string = "all-brazil")]
@@ -144,6 +146,8 @@ pub enum MetaFederation {
     AllSwitzerland,
     #[strum(to_string = "all-thailand")]
     AllThailand,
+    #[strum(to_string = "all-turkey")]
+    AllTurkey,
     #[strum(to_string = "all-uk")]
     AllUK,
     #[strum(to_string = "all-uk-tested")]
@@ -154,6 +158,8 @@ pub enum MetaFederation {
     AllVietnam,
     #[strum(to_string = "all-usa")]
     AllUSA,
+    #[strum(to_string = "all-usvirginislands")]
+    AllUSVirginIslands,
 
     /// APF, but only Tested entries.
     #[strum(to_string = "aapf")]
@@ -505,6 +511,7 @@ impl MetaFederation {
             MetaFederation::AllAustralia => is_from(Country::Australia, entry, meet),
             MetaFederation::AllAustria => is_from(Country::Austria, entry, meet),
             MetaFederation::AllBelarus => is_from(Country::Belarus, entry, meet),
+            MetaFederation::AllBelgium => is_from(Country::Belgium, entry, meet),
             MetaFederation::AllBosniaAndHerzegovina => {
                 is_from(Country::BosniaAndHerzegovina, entry, meet)
             }
@@ -576,6 +583,8 @@ impl MetaFederation {
             MetaFederation::AllSweden => is_from(Country::Sweden, entry, meet),
             MetaFederation::AllSwitzerland => is_from(Country::Switzerland, entry, meet),
             MetaFederation::AllThailand => is_from(Country::Thailand, entry, meet),
+            MetaFederation::AllTurkey => is_from(Country::Turkey, entry, meet),
+            MetaFederation::AllUSVirginIslands => is_from(Country::USVirginIslands, entry, meet),
             MetaFederation::AllUK => {
                 // UK lifters sometimes switch country affiliation from UK to Ireland
                 // when they compete IrishPF.

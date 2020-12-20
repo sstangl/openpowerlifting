@@ -131,6 +131,7 @@
   <option value="wrpf-belarus" {% if selection.federation == "WRPF-Belarus" %}selected{% endif %}>WRPF Belarus</option>
 </optgroup>
 <optgroup label="{{strings.country.belgium}}">
+<option value="all-belgium" {% if selection.federation == "AllBelgium" %}selected{% endif %}>{{strings.selectors.fed.all_belgium}}</option>
   <option value="lfph" {% if selection.federation == "LFPH" %}selected{% endif %}>LFPH - Ligue Francophone des Poids & Haltères [IPF]</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF - Vlaamse Gewichtheffers en Powerlifting Federatie [IPF]</option>
 </optgroup>
@@ -439,6 +440,7 @@
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.turkey}}">
+<option value="all-turkey" {% if selection.federation == "AllTurkey" %}selected{% endif %}>{{strings.selectors.fed.all_turkey}}</option>
   <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.ukraine}}">
@@ -457,6 +459,7 @@
   <option value="wpuf" {% if selection.federation == "WPUF" %}selected{% endif %}>WPUF - World Powerlifting Union of Federations [WPUF]</option>
 </optgroup>
 <optgroup label="{{strings.country.usvirginislands}}">
+<option value="all-usvirginislands" {% if selection.federation == "AllUSVirginIslands" %}selected{% endif %}>{{strings.selectors.fed.all_usvirginislands}}</option>
   <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF - US Virgin Islands Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.vietnam}}">
