@@ -835,6 +835,10 @@ pub enum Federation {
     #[strum(to_string = "RAWU", serialize = "rawu")]
     RAWU,
 
+    /// Russian Drug Free Powerlifting Federation.
+    #[strum(to_string = "RDFPF", serialize = "rdfpf")]
+    RDFPF,
+
     /// Rhino Powerlifting Club, South African GPC Affiliate.
     #[strum(to_string = "RhinoPC", serialize = "rhinopc")]
     RhinoPC,
@@ -1602,6 +1606,7 @@ impl Federation {
             Federation::RawPower => false,
             Federation::RAWUKR => FULLY_TESTED,
             Federation::RAWU => false,
+            Federation::RDFPF => FULLY_TESTED,
             Federation::RhinoPC => false,
             Federation::RPS => false,
             Federation::RPU => false,
@@ -1921,6 +1926,7 @@ impl Federation {
             Federation::RawPower => Some(Country::Finland),
             Federation::RAWUKR => Some(Country::Ukraine),
             Federation::RAWU => Some(Country::USA),
+            Federation::RDFPF => Some(Country::Russia),
             Federation::RhinoPC => Some(Country::SouthAfrica),
             Federation::RPS => Some(Country::USA),
             Federation::RPU => Some(Country::Russia),
@@ -2288,6 +2294,7 @@ impl Federation {
             Federation::RawPower => None,
             Federation::RAWUKR => None,
             Federation::RAWU => None,
+            Federation::RDFPF => Some(Federation::WDFPF),
             Federation::RhinoPC => Some(Federation::GPC),
             Federation::RPS => None,
             Federation::RPU => None,
@@ -2702,6 +2709,7 @@ impl Federation {
             Federation::RawPower => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,
+            Federation::RDFPF => PointsSystem::SchwartzMalone,
             Federation::RhinoPC => PointsSystem::Glossbrenner,
             Federation::RPS => PointsSystem::Wilks,
             Federation::RPU => PointsSystem::Wilks,
