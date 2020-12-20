@@ -1,25 +1,25 @@
-Name,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Place,Event,Sex,Equipment,Division
-Robert Baxter,92.6,93,115,120,-150,120,120,1,B,M,Raw,MR-M3
-Lisa Cottenham,83.7,84,47.5,52.5,57.5,57.5,57.5,1,B,F,Raw,FR-M2
-Michael Coup,89,93,75,82.5,90,90,90,1,B,M,Raw,MR-O
-Wendie Kirkland,71.6,72,107.5,115.5,120,120,120,1,B,F,Single-ply,F-M1
-Luca Kawarahmra-Musiv,64.5,66,100,105,-107.5,105,105,1,B,M,Raw,MR-Sj
-Jacob Roost,91.1,93,135,145,-150,145,145,1,B,M,Raw,MR-O
-Amelia Maycock,62.3,63,60,-70.5,70.5,70.5,70.5,1,B,F,Raw,FR-Jr
-Nicola Maycock,83.1,84,52.5,60,-62.5,60,60,1,B,F,Raw,FR-M1
-Joy Mineo,68.1,72,-80,82.5,87.5,87.5,87.5,1,B,F,Single-ply,F-M2
-Georgina Burton,82.1,84,60,62.5,-65,62.5,62.5,1,B,F,Raw,FR-O
-Ben Hartley,69.2,74,90,100,105,105,105,1,B,M,Raw,MR-Sj
-Jack Clayton,109,120,170,180,185,185,185,1,B,M,Raw,MR-O
-Talal Al Kindi,104.6,105,150,160,165,165,165,2,B,M,Raw,MR-O
-Jacob Wymer,104,105,162.5,172.5,-180,172.5,172.5,2,B,M,Single-ply,M-Jr
-Callum Sidebottom,102.5,105,170,-185,185,185,185,1,B,M,Single-ply,M-O
-Jacqueline Gough,143.7,84+,132.5,142.5,-153.5,142.5,142.5,1,B,F,Single-ply,F-M1
-Khalon Hodson,91.7,93,180,,,180,180,1,B,M,Single-ply,M-O
-Glyn Belsher,96.9,105,137.5,-145,-145,137.5,137.5,1,B,M,Single-ply,M-M3
-Harold Houldershaw,98.7,105,100,105,110,110,110,1,B,M,Raw,MR-M2
-Nathan Oxford,103.6,105,155,165,172.5,172.5,172.5,1,B,M,Raw,MR-O
-Anujan Srikantha,81.2,83,170,177.5,185,185,185,1,B,M,Raw,MR-O
-Fin Suttie,99.5,105,-160,170,-182.5,170,170,1,B,M,Single-ply,M-Jr
-Amy Crossland,84,84,105,-105.5,-110,105,105,1,B,F,Single-ply,F-O
-Jonathan Pinder,126.8,120+,160,165,-170,165,165,1,B,M,Raw,MR-Jr
+Name,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Place,Event,Sex,Equipment,Division,State
+Robert Baxter,92.6,93,115,120,-150,120,120,1,B,M,Raw,MR-M3,NM
+Lisa Cottenham,83.7,84,47.5,52.5,57.5,57.5,57.5,1,B,F,Raw,FR-M2,NM
+Michael Coup,89,93,75,82.5,90,90,90,1,B,M,Raw,MR-O,NM
+Wendie Kirkland,71.6,72,107.5,115.5,120,120,120,1,B,F,Single-ply,F-M1,NM
+Luca Kawarahmra-Musiv,64.5,66,100,105,-107.5,105,105,1,B,M,Raw,MR-Sj,NM
+Jacob Roost,91.1,93,135,145,-150,145,145,1,B,M,Raw,MR-O,NM
+Amelia Maycock,62.3,63,60,-70.5,70.5,70.5,70.5,1,B,F,Raw,FR-Jr,NM
+Nicola Maycock,83.1,84,52.5,60,-62.5,60,60,1,B,F,Raw,FR-M1,NM
+Joy Mineo,68.1,72,-80,82.5,87.5,87.5,87.5,1,B,F,Single-ply,F-M2,NM
+Georgina Burton,82.1,84,60,62.5,-65,62.5,62.5,1,B,F,Raw,FR-O,NM
+Ben Hartley,69.2,74,90,100,105,105,105,1,B,M,Raw,MR-Sj,NM
+Jack Clayton,109,120,170,180,185,185,185,1,B,M,Raw,MR-O,NM
+Talal Al Kindi,104.6,105,150,160,165,165,165,2,B,M,Raw,MR-O,NM
+Jacob Wymer,104,105,162.5,172.5,-180,172.5,172.5,2,B,M,Single-ply,M-Jr,NM
+Callum Sidebottom,102.5,105,170,-185,185,185,185,1,B,M,Single-ply,M-O,NM
+Jacqueline Gough,143.7,84+,132.5,142.5,-153.5,142.5,142.5,1,B,F,Single-ply,F-M1,NM
+Khalon Hodson,91.7,93,180,,,180,180,1,B,M,Single-ply,M-O,NM
+Glyn Belsher,96.9,105,137.5,-145,-145,137.5,137.5,1,B,M,Single-ply,M-M3,NM
+Harold Houldershaw,98.7,105,100,105,110,110,110,1,B,M,Raw,MR-M2,NM
+Nathan Oxford,103.6,105,155,165,172.5,172.5,172.5,1,B,M,Raw,MR-O,NM
+Anujan Srikantha,81.2,83,170,177.5,185,185,185,1,B,M,Raw,MR-O,NM
+Fin Suttie,99.5,105,-160,170,-182.5,170,170,1,B,M,Single-ply,M-Jr,NM
+Amy Crossland,84,84,105,-105.5,-110,105,105,1,B,F,Single-ply,F-O,NM
+Jonathan Pinder,126.8,120+,160,165,-170,165,165,1,B,M,Raw,MR-Jr,NM
