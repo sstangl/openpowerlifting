@@ -13,7 +13,7 @@ Place,Name,Sex,Age,Division,BodyweightKg,WeightClassKg,Best3SquatKg,Best3BenchKg
 4,Tamara Thoma,F,25,Open,68.6,72,85,60,107.5,252.5,75,80,85,-55,-60,60,100,105,107.5,SBD,Raw
 DQ,Anne Pezzatti,F,26,Open,67,72,112.5,70,132.5,,-112.5,-112.5,112.5,65,67.5,70,130,132.5,-135,SBD,Raw
 1,Jessica Butera,F,26,Open,91,84+,170,80,170,420,152.5,162.5,170,75,80,-85,152.5,162.5,170,SBD,Raw
-2,Malgorzata Kot,F,29,Open,87.1,84+,140,75,185,400,140,-147.5,-147.5,70,75,-80,165,175,185,SBD,Raw
+2,Malgorzata Becker,F,29,Open,87.1,84+,140,75,185,400,140,-147.5,-147.5,70,75,-80,165,175,185,SBD,Raw
 3,Tamara Stricker,F,24,Open,79.1,84,135,72.5,165,372.5,135,-142.5,-142.5,70,72.5,-77.5,150,160,165,SBD,Raw
 4,Naomi Adam,F,26,Open,74.4,84,102.5,55,132.5,290,87.5,95,102.5,50,55,-60,115,125,132.5,SBD,Raw
 1,Alessio Gheller,M,21,Juniors,72.7,74,180,122.5,225,527.5,160,170,180,115,122.5,-130,200,215,225,SBD,Raw
@@ -31,7 +31,7 @@ NS,Sandro Gassner,M,23,Juniors,,,,,,,,,,,,,,,,SBD,Raw
 6,Gus Delhees,M,22,Juniors,91.7,93,185,117.5,190,492.5,170,177.5,185,117.5,-125,-125,175,185,190,SBD,Raw
 NS,Pascal Blatter,M,19,Juniors,,,,,,,,,,,,,,,,SBD,Raw
 1,Raphael Sauta,M,24,Open,81.9,83,210,160,245,615,195,205,210,155,-160,160,230,240,245,SBD,Raw
-2,Avsar Emre,M,26,Open,72.7,74,180,122.5,200,502.5,160,172.5,180,110,117.5,122.5,170,185,200,SBD,Raw
+2,Emre Avsar,M,26,Open,72.7,74,180,122.5,200,502.5,160,172.5,180,110,117.5,122.5,170,185,200,SBD,Raw
 3,Roberto Corbacio,M,27,Open,69.2,74,140,105,200,445,140,,,100,105,,160,200,,SBD,Raw
 1,Dario Herrsche,M,25,Open,93,93,265,175,282.5,722.5,245,257.5,265,170,175,-180,252.5,267.5,282.5,SBD,Raw
 2,Isaiah Raza,M,25,Open,88,93,232.5,147.5,247.5,627.5,210,222.5,232.5,135,142.5,147.5,235,240,247.5,SBD,Raw
@@ -51,6 +51,63 @@ NS,Pascal Blatter,M,19,Juniors,,,,,,,,,,,,,,,,SBD,Raw
 3,Fabian Becker,M,31,Open,100.5,105,185,130,230,545,180,185,-190,125,130,-132.5,220,230,-235,SBD,Raw
 4,Oliver Warth,M,24,Open,99.1,105,185,137.5,215,537.5,-170,175,185,130,137.5,-142.5,180,200,215,SBD,Raw
 5,Simon Messerli,M,35,Open,103.1,105,160,130,220,510,-145,160,-170,125,130,-135,200,220,-230,SBD,Raw
-1,Jäggi Patrick,M,32,Open,143.3,120+,300,162.5,285,747.5,270,285,300,162.5,-172.5,-172.5,270,-285,285,SBD,Raw
+1,Patrick Jäggi,M,32,Open,143.3,120+,300,162.5,285,747.5,270,285,300,162.5,-172.5,-172.5,270,-285,285,SBD,Raw
 2,Nikola Mitrovic,M,28,Open,135.8,120+,210,92.5,245,547.5,190,200,210,92.5,-100,-100,222.5,235,245,SBD,Raw
 1,Mathias Braun,M,41,Masters I,82.4,83,212.5,132.5,225,570,190,205,212.5,122.5,132.5,-137.5,190,210,225,SBD,Raw
+1,Luca Mastrogiovanni,M,22,Juniors,116,120,,180,,180,,,,-170,180,-187.5,,,,B,Raw
+2,Pablo Baschung,M,22,Juniors,102.7,105,,150,,150,,,,135,142.5,150,,,,B,Raw
+3,Brian Antonioli,M,23,Juniors,102.7,105,,140,,140,,,,130,137.5,140,,,,B,Raw
+4,David Wasserfallen,M,17,Sub-Juniors,88.3,93,,122.5,,122.5,,,,115,-122.5,122.5,,,,B,Raw
+5,Pascal Blatter,M,19,Juniors,90.5,93,,115,,115,,,,102.5,107.5,115,,,,B,Raw
+6,Antoine Feuvrier,M,20,Juniors,92.7,93,,115,,115,,,,115,-125,,,,,B,Raw
+1,Patrick Toggweiler,M,41,Masters I,92,93,,165,,165,,,,155,165,-170,,,,B,Raw
+2,Jerome Wittwer,M,36,Open,90.7,93,,160,,160,,,,160,-167.5,-167.5,,,,B,Raw
+3,Sinan Meral,M,28,Open,82.6,83,,155,,155,,,,150,152.5,155,,,,B,Raw
+4,Dominik Grob,M,24,Open,91.5,93,,155,,155,,,,142.5,150,155,,,,B,Raw
+5,Bryan Shemley,M,42,Masters I,90.2,93,,125,,125,,,,-115,125,-132.5,,,,B,Raw
+6,Camillo Ferreirinha,M,29,Open,84.1,93,,115,,115,,,,105,115,-122.5,,,,B,Raw
+7,Lukas Halter,M,26,Open,79.4,83,,112.5,,112.5,,,,100,107.5,112.5,,,,B,Raw
+1,Martin Bächler,M,36,Open,119.2,120,,135,,135,,,,125,130,135,,,,B,Raw
+2,Fabian Beck,M,23,Juniors,106.3,120,,132.5,,132.5,,,,117.5,127.5,132.5,,,,B,Raw
+NS,Mladen Djurdjevic,M,28,Open,,,,,,,,,,,,,,,,B,Raw
+NS,Gábor Magyar,M,28,Open,,,,,,,,,,,,,,,,B,Raw
+NS,Daniele Palmitessa,M,36,Open,,,,,,,,,,,,,,,,B,Raw
+1,Jonathan Latini,M,26,Open,74,74,,117.5,,117.5,,,,110,117.5,-125,,,,B,Raw
+DQ,Silvio Deplazes,M,30,Open,66.6,74,,,,,,,,-100,-105,-105,,,,B,Raw
+1,Bernd Rohrmann,M,54,Masters II,133.9,120+,,120,,120,,,,-115,115,120,,,,B,Raw
+1,Irene Pignataro,F,43,Masters I,73.9,84,,75,,75,,,,70,75,-80,,,,B,Raw
+2,Sandra Rebmann,F,32,Open,72.1,84,,52.5,,52.5,,,,45,50,52.5,,,,B,Raw
+3,Maria Latanioti,F,33,Open,60.9,63,,50,,50,,,,50,-55,-55,,,,B,Raw
+1,Luca Schwitter,M,18,Sub-Juniors,81.2,83,,107.5,,107.5,,,,102.5,107.5,-110,,,,B,Raw
+2,Aaron Eichhorn,M,22,Juniors,76.1,83,,102.5,,102.5,,,,95,102.5,-110,,,,B,Raw
+3,Roman Eichenberger,M,22,Juniors,72.4,74,,90,,90,,,,90,-100,-100,,,,B,Raw
+1,Peter Hofer,M,55,Masters II,85.6,93,,110,,110,,,,102.5,107.5,110,,,,B,Raw
+1,Maria Latanioti,F,33,Open,60.9,63,,,115,115,,,,,,,110,112.5,115,D,Raw
+2,Sandra Rebmann,F,32,Open,72.1,84,,,115,115,,,,,,,105,110,115,D,Raw
+NS,Hana Pifkova,F,33,Open,,,,,,,,,,,,,,,,D,Raw
+1,Aaron Eichhorn,M,22,Juniors,76.1,83,,,205,205,,,,,,,195,-202.5,205,D,Raw
+2,Luca Schwitter,M,18,Sub-Juniors,81.2,83,,,200,200,,,,,,,185,200,-205,D,Raw
+3,Jonas Bertschinger,M,18,Sub-Juniors,68.4,74,,,185,185,,,,,,,185,-200,-200,D,Raw
+4,Roman Eichenberger,M,22,Juniors,72.4,74,,,165,165,,,,,,,-165,165,-180,D,Raw
+1,Brian Antonioli,M,23,Juniors,102.7,105,,,245,245,,,,,,,-245,-245,245,D,Raw
+2,Antoine Feuvrier,M,20,Juniors,92.7,93,,,230,230,,,,,,,210,230,-250,D,Raw
+3,Pablo Baschung,M,22,Juniors,102.7,105,,,230,230,,,,,,,185,210,230,D,Raw
+4,David Wasserfallen,M,17,Sub-Juniors,88.3,93,,,215,215,,,,,,,200,210,215,D,Raw
+5,Elias Kälin,M,19,Juniors,114.9,120,,,200,200,,,,,,,185,200,-210,D,Raw
+6,Pascal Blatter,M,19,Juniors,90.5,93,,,172.5,172.5,,,,,,,157.5,167.5,172.5,D,Raw
+NS,Luca Mastrogiovanni,M,22,Juniors,,,,,,,,,,,,,,,,D,Raw
+1,Jonathan Latini,M,26,Open,74,74,,,205,205,,,,,,,180,195,205,D,Raw
+2,Lukas Jorysch,M,33,Open,70.8,74,,,182.5,182.5,,,,,,,160,170,182.5,D,Raw
+3,Daniel García,M,34,Open,65.9,66,,,170,170,,,,,,,160,170,-180,D,Raw
+4,Silvio Deplazes,M,30,Open,66.6,74,,,170,170,,,,,,,145,155,170,D,Raw
+1,Sinan Meral,M,28,Open,82.6,83,,,257.5,257.5,,,,,,,230,250,257.5,D,Raw
+2,Dominik Grob,M,24,Open,91.5,93,,,237.5,237.5,,,,,,,220,232.5,237.5,D,Raw
+3,Bryan Shemley,M,42,Masters I,90.2,93,,,230,230,,,,,,,215,230,-245,D,Raw
+4,Lukas Halter,M,26,Open,79.4,83,,,210,210,,,,,,,190,200,210,D,Raw
+5,Camillo Ferreirinha,M,29,Open,84.1,93,,,210,210,,,,,,,190,202.5,210,D,Raw
+1,Fabian Beck,M,23,Juniors,106.3,120,,,255,255,,,,,,,220,240,255,D,Raw
+2,Vivien Olivier,M,23,Juniors,94.3,105,,,200,200,,,,,,,187.5,195,200,D,Raw
+NS,Daniele Palmitessa,M,36,Open,,,,,,,,,,,,,,,,D,Raw
+NS,Mladen Djurdjevic,M,28,Open,,,,,,,,,,,,,,,,D,Raw
+NS,Igor Aufricht,M,32,Open,,,,,,,,,,,,,,,,D,Raw
+1,Peter Hofer,M,55,Masters II,85.6,93,,,202.5,202.5,,,,,,,185,195,202.5,D,Raw
