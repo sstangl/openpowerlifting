@@ -159,6 +159,10 @@ pub enum Federation {
     #[strum(to_string = "BDFPA", serialize = "bdfpa")]
     BDFPA,
 
+    /// Belgian Drug-Free Powerlifting Federation, WDFPF.
+    #[strum(to_string = "BDFPF", serialize = "bdfpf")]
+    BDFPF,
+
     /// Belarus Powerlifting Federation, IPF.
     #[strum(to_string = "BelPF", serialize = "belpf")]
     BelPF,
@@ -1449,6 +1453,7 @@ impl Federation {
             Federation::BAWLA => FULLY_TESTED,
             Federation::BB => false,
             Federation::BDFPA => FULLY_TESTED,
+            Federation::BDFPF => FULLY_TESTED,
             Federation::BelPF => FULLY_TESTED,
             Federation::BP => FULLY_TESTED,
             Federation::BPC => false,
@@ -1778,6 +1783,7 @@ impl Federation {
             Federation::BAWLA => Some(Country::UK),
             Federation::BB => Some(Country::Russia),
             Federation::BDFPA => Some(Country::UK),
+            Federation::BDFPF => Some(Country::Belgium),
             Federation::BelPF => Some(Country::Belarus),
             Federation::BP => Some(Country::UK),
             Federation::BPC => Some(Country::UK),
@@ -2107,6 +2113,7 @@ impl Federation {
             Federation::BAWLA => Some(Federation::IPF),
             Federation::BB => None,
             Federation::BDFPA => Some(Federation::WDFPF),
+            Federation::BDFPF => Some(Federation::WDFPF),
             Federation::BelPF => Some(Federation::IPF),
             Federation::BP => Some(Federation::IPF),
             Federation::BPC => {
@@ -2536,6 +2543,7 @@ impl Federation {
             Federation::BAWLA => PointsSystem::Wilks,
             Federation::BB => PointsSystem::Wilks,
             Federation::BDFPA => PointsSystem::Wilks,
+            Federation::BDFPF => PointsSystem::Wilks,
             Federation::BelPF => Federation::ipf_rules_on(date),
             Federation::BP => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,
