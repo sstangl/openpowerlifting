@@ -2729,7 +2729,13 @@ impl Federation {
             Federation::RAW => PointsSystem::SchwartzMalone,
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,
-            Federation::RawIronPL => PointsSystem::Wilks,
+            Federation::RawIronPL => {
+                if date >= Date::from_parts(2020, 12, 1) {
+                    PointsSystem::Dots
+                } else {
+                    PointsSystem::Wilks
+                }
+            }
             Federation::RawPower => PointsSystem::Wilks,
             Federation::RAWUKR => PointsSystem::Wilks,
             Federation::RAWU => PointsSystem::Wilks,

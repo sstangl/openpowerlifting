@@ -1,5 +1,8 @@
 # Configuration for RawIronPL.
 
+[options]
+    require_manual_disambiguation = true
+
 [rulesets.default]
     ruleset = ["CombineRawAndWraps"]
     date_range = ["0000-01-01", "9999-01-01"]
@@ -38,3 +41,4 @@
 
 [exemptions]
     2003 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Made divisions up as they went along, lifters missing bodyweight
+    2004 = ["ExemptDivision"] # Amateur/Elite divisions.
