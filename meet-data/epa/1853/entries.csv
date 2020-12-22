@@ -1,4 +1,4 @@
-Name,BirthDate,Team,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Sex,Equipment,Event
+Name,BirthDate,State,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Sex,Equipment,Event
 Dianne Hextall,,NM,F-C-M2,45.9,47,50,55,57.5,57.5,32.5,35,36.5,36.5,80,90,95,95,189,1,F,Raw,SBD
 Jenna Brown,,NM,F-C-Open,50.1,52,90,97.5,105,105,55,57.5,-62.5,57.5,105,115,122.5,122.5,285,1,F,Raw,SBD
 Lily Belsher,,NM,F-C-U23,50.5,52,50,55,57.5,57.5,25,30,33,33,67.5,72.5,77.5,77.5,168,1,F,Raw,SBD
@@ -16,7 +16,7 @@ Sarah Knowles,,NM,F-C-M1,68.3,72,80,85,-90,85,45,50,-52.5,50,125,132.5,140,140,2
 Lucy Smith,,NM,F-C-M1,69.5,72,70,75,80,80,32.5,35,37.5,37.5,95,102.5,-107.5,102.5,220,2,F,Raw,SBD
 Holly Bryans,,NM,F-C-Open,71,72,155,-170,170,170,77.5,82.5,87.5,87.5,165,180,185,185,442.5,1,F,Raw,SBD
 Amy May Saunders,,NM,F-C-Open,69.5,72,117.5,125,130,130,65,70,-72.5,70,132.5,140,145,145,345,2,F,Raw,SBD
-Holly Cox,,Guest,F-C-G,65.2,72,97.5,102.5,107.5,107.5,52.5,55,57.5,57.5,132.5,140,-142.5,140,305,G,F,Raw,SBD
+Holly Cox,,,F-C-G,65.2,72,97.5,102.5,107.5,107.5,52.5,55,57.5,57.5,132.5,140,-142.5,140,305,G,F,Raw,SBD
 Leanne Wilson,,NM,F-C-Open,70.2,72,90,100,107.5,107.5,42.5,47.5,50,50,120,135,142.5,142.5,300,4,F,Raw,SBD
 Charly Proctor,,NM,F-C-Open,69.7,72,100,105,110,110,55,57.5,60,60,105,112.5,120,120,290,5,F,Raw,SBD
 Natalie Hill #1,,NM,F-C-Open,68.2,72,92.5,97.5,102.5,102.5,42.5,47.5,52.5,52.5,102.5,112.5,120,120,275,6,F,Raw,SBD
@@ -32,7 +32,7 @@ Faye Gardner,,NM,F-C-Open,80.4,84,67.5,72.5,77.5,77.5,35,40,42.5,42.5,90,95,100,
 Rachael Ward,,NM,F-C-M2,96.2,84+,90,97.5,102.5,102.5,50,52.5,55,55,102.5,110,117.5,117.5,275,1,F,Raw,SBD
 Fionn Morven,,NM,F-C-M2,85.5,84+,75,80,85,85,40,42.5,-45,42.5,90,97.5,102.5,102.5,230,2,F,Raw,SBD
 Hollie Gardner,,NM,F-C-Open,93.9,84+,115,120,-125,120,50,52.5,55,55,125,135,150,150,325,1,F,Raw,SBD
-Emma Harris,,Guest,F-C-G,84.4,84+,100,105,-110,105,50,52.5,-55,52.5,142.5,150,-155,150,307.5,G,F,Raw,SBD
+Emma Harris,,,F-C-G,84.4,84+,100,105,-110,105,50,52.5,-55,52.5,142.5,150,-155,150,307.5,G,F,Raw,SBD
 Ted Byrne,,NM,M-C-M3,58.5,59,110,120,127.5,127.5,70,75,-81.5,75,-150,162.5,180,180,382.5,1,M,Raw,SBD
 Will McDonald,,NM,M-C-Open,64.8,66,140,150,155,155,100,110,-115,110,185,-200,-200,185,450,1,M,Raw,SBD
 Jody Carvell,,NM,M-C-M1,72,74,150,157.5,162.5,162.5,85,90,92.5,92.5,170,182.5,192.5,192.5,447.5,1,M,Raw,SBD
