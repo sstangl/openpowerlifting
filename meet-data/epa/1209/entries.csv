@@ -1,31 +1,31 @@
-Name,Sex,Equipment,BodyweightKg,WeightClassKg,Division,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,TotalKg,Place,Event,AgeRange
-Liz Cole,F,Raw,72,72,F-C-M1,40,47.5,52.5,-55,52.5,52.5,1,B,39.5-48.5
-Jerome Patick,M,Raw,45,53,M-C-U18,32.5,35,-37.5,40,35,35,1,B,0-17.5
-Sean Young,M,Raw,61,66,M-C-U16,47.5,50,52.5,55,52.5,52.5,1,B,0-15.5
-Mike Buckberry,M,Raw,82,83,M-C-U16,75,85,90,-92.5,90,90,1,B,0-15.5
-Chris Curtis,M,Raw,61,66,M-C-U16,40,50,-55,55,50,50,2,B,0-15.5
-Cameron Keyes,M,Raw,80.5,83,M-C-U18,95,102.5,-110,-110,102.5,102.5,1,B,0-17.5
-Liam Wilson,M,Raw,95.5,105,M-C-U18,80,87.5,95,-100,95,95,1,B,0-17.5
-Daniel Fletcher,M,Raw,105.4,120,M-C-U18,95,102.5,105,-107.5,105,105,1,B,0-17.5
-David Cridland,M,Raw,115.5,120,M-C-U18,110,117.5,-120,120,117.5,117.5,1,B,0-17.5
-Andrew Dixon #2,M,Raw,67,74,M-C-U20,85,92.5,97.5,-100,97.5,97.5,1,B,0-19.5
-Christopher Simmons,M,Raw,72,74,M-C-Open,140,147.5,152.5,-155,152.5,152.5,1,B,23.5-38.5
-Craig Wilkins,M,Raw,74.5,83,M-C-Open,102.5,117.5,122.5,127.5,122.5,122.5,3,B,23.5-38.5
-Balraj Gill,M,Raw,74.5,83,M-C-Open,130,-135,-135,-135,130,130,2,B,23.5-38.5
-Stephen Campbell,M,Raw,76.5,83,M-C-Open,147.5,-152.5,-152.5,-152.5,147.5,147.5,1,B,23.5-38.5
-Paul Rowan,M,Raw,81.5,83,M-C-Open,95,100,105,110,105,105,4,B,23.5-38.5
-Aaron Fillery,M,Raw,89,93,M-C-Open,-105,105,110,-115,110,110,1,B,23.5-38.5
-Russ Bullock,M,Raw,117.5,120,M-C-Open,115,-120,-120,-120,115,115,3,B,23.5-38.5
-Jack Greenhalf,M,Raw,115,120,M-C-Open,160,165,170,175,170,170,1,B,23.5-38.5
-Ben Johnson #4,M,Raw,115.5,120,M-C-Open,110,120,-122.5,-122.5,120,120,2,B,23.5-38.5
-Lee Richards,M,Raw,120.5,120+,M-C-Open,120,130,140,150,140,140,1,B,23.5-38.5
-John Burrows,M,Raw,88,93,M-C-M1,135,145,155,160,155,155,1,B,39.5-48.5
-Justin Jacubait,M,Raw,99.1,105,M-C-M1,125,135,137.5,-140,137.5,137.5,1,B,39.5-48.5
-Ed Shorttle,M,Raw,73.4,74,M-C-M2,72.5,75,-77.5,77.5,75,75,1,B,49.5-58.5
-Brian Parsons,M,Raw,83.7,93,M-C-M2,125,130,137.5,140,137.5,137.5,1,B,49.5-58.5
-Mark Macey,M,Raw,92.5,93,M-C-M2,110,120,-125,,120,120,3,B,49.5-58.5
-Roy Cole,M,Raw,92.5,93,M-C-M2,140,-150,-156,,140,140,2,B,49.5-58.5
-Steve Blackwell,M,Raw,101.5,105,M-C-M2,152.5,157.5,-162.5,-162.5,157.5,157.5,1,B,49.5-58.5
-Laurie Buckberry,M,Raw,109,120,M-C-M2,110,120,-125,-125,120,120,1,B,49.5-58.5
-Toby Eaves,M,Raw,117,120,M-C-M2,90,100,-110,-110,100,100,2,B,49.5-58.5
-John Hall,M,Raw,120,120,M-C-M2,140,145,150,155,150,150,1,B,49.5-58.5
+Name,Sex,Equipment,BodyweightKg,WeightClassKg,Division,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,TotalKg,Place,Event,AgeRange,State
+Liz Cole,F,Raw,72,72,F-C-M1,40,47.5,52.5,-55,52.5,52.5,1,B,39.5-48.5,SE
+Jerome Patick,M,Raw,45,53,M-C-U18,32.5,35,-37.5,40,35,35,1,B,14-17.5,SE
+Sean Young,M,Raw,61,66,M-C-U16,47.5,50,52.5,55,52.5,52.5,1,B,14-15.5,SE
+Mike Buckberry,M,Raw,82,83,M-C-U16,75,85,90,-92.5,90,90,1,B,14-15.5,SE
+Chris Curtis,M,Raw,61,66,M-C-U16,40,50,-55,55,50,50,2,B,14-15.5,SE
+Cameron Keyes,M,Raw,80.5,83,M-C-U18,95,102.5,-110,-110,102.5,102.5,1,B,14-17.5,SE
+Liam Wilson,M,Raw,95.5,105,M-C-U18,80,87.5,95,-100,95,95,1,B,14-17.5,SE
+Daniel Fletcher,M,Raw,105.4,120,M-C-U18,95,102.5,105,-107.5,105,105,1,B,14-17.5,SE
+David Cridland,M,Raw,115.5,120,M-C-U18,110,117.5,-120,120,117.5,117.5,1,B,14-17.5,SE
+Andrew Dixon #2,M,Raw,67,74,M-C-U20,85,92.5,97.5,-100,97.5,97.5,1,B,14-19.5,SE
+Christopher Simmons,M,Raw,72,74,M-C-Open,140,147.5,152.5,-155,152.5,152.5,1,B,23.5-38.5,SE
+Craig Wilkins,M,Raw,74.5,83,M-C-Open,102.5,117.5,122.5,127.5,122.5,122.5,3,B,23.5-38.5,SE
+Balraj Gill,M,Raw,74.5,83,M-C-Open,130,-135,-135,-135,130,130,2,B,23.5-38.5,SE
+Stephen Campbell,M,Raw,76.5,83,M-C-Open,147.5,-152.5,-152.5,-152.5,147.5,147.5,1,B,23.5-38.5,SE
+Paul Rowan,M,Raw,81.5,83,M-C-Open,95,100,105,110,105,105,4,B,23.5-38.5,SE
+Aaron Fillery,M,Raw,89,93,M-C-Open,-105,105,110,-115,110,110,1,B,23.5-38.5,SE
+Russ Bullock,M,Raw,117.5,120,M-C-Open,115,-120,-120,-120,115,115,3,B,23.5-38.5,SE
+Jack Greenhalf,M,Raw,115,120,M-C-Open,160,165,170,175,170,170,1,B,23.5-38.5,SE
+Ben Johnson #4,M,Raw,115.5,120,M-C-Open,110,120,-122.5,-122.5,120,120,2,B,23.5-38.5,SE
+Lee Richards,M,Raw,120.5,120+,M-C-Open,120,130,140,150,140,140,1,B,23.5-38.5,SE
+John Burrows,M,Raw,88,93,M-C-M1,135,145,155,160,155,155,1,B,39.5-48.5,SE
+Justin Jacubait,M,Raw,99.1,105,M-C-M1,125,135,137.5,-140,137.5,137.5,1,B,39.5-48.5,SE
+Ed Shorttle,M,Raw,73.4,74,M-C-M2,72.5,75,-77.5,77.5,75,75,1,B,49.5-58.5,SE
+Brian Parsons,M,Raw,83.7,93,M-C-M2,125,130,137.5,140,137.5,137.5,1,B,49.5-58.5,SE
+Mark Macey,M,Raw,92.5,93,M-C-M2,110,120,-125,,120,120,3,B,49.5-58.5,SE
+Roy Cole,M,Raw,92.5,93,M-C-M2,140,-150,-156,,140,140,2,B,49.5-58.5,SE
+Steve Blackwell,M,Raw,101.5,105,M-C-M2,152.5,157.5,-162.5,-162.5,157.5,157.5,1,B,49.5-58.5,SE
+Laurie Buckberry,M,Raw,109,120,M-C-M2,110,120,-125,-125,120,120,1,B,49.5-58.5,SE
+Toby Eaves,M,Raw,117,120,M-C-M2,90,100,-110,-110,100,100,2,B,49.5-58.5,SE
+John Hall,M,Raw,120,120,M-C-M2,140,145,150,155,150,150,1,B,49.5-58.5,SE

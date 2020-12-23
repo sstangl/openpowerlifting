@@ -1,35 +1,35 @@
-Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-1,Debbie Powell,F,SBD,F-C-M1,84,Raw,80,115,75,145,335
-1,Scott Mason,M,SBD,M-C-Open,66,Raw,65.5,132.5,75,170,377.5
-2,Peter Barrett #1,M,SBD,M-C-M3,66,Raw,64.5,100,70,160,330
-3,Jack Pearson,M,SBD,M-C-U16,66,Raw,66,105,65,130,300
-4,Ryan Harrison,M,SBD,M-C-U18,66,Raw,66,100,55,105,260
-5,David Pelta,M,SBD,M-C-M3,66,Raw,63,60,105,60,225
-1,Rodney Hypolite,M,SBD,M-E-M1,74,Single-ply,72,270,205,270,745
-1,Nazar Senechyn,M,SBD,M-C-U18,74,Raw,72,130,100,150,380
-G,Haniceff Shah,M,SBD,M-E-M3,74,Single-ply,74,100,85,165,350
-G,Stephen Campbell,M,SBD,M-C-Open,74,Raw,72,140,150,220,510
-1,TS Adewale,M,SBD,M-E-M1,83,Single-ply,82.5,230,140,250,620
-1,Andy Ly,M,SBD,M-C-Open,83,Raw,81,205,132.5,270,607.5
-2,Diego Martinez-Rodney,M,SBD,M-C-Open,83,Raw,81,192.5,127.5,260,580
-3,Alan Joseph,M,SBD,M-C-M1,83,Raw,81,180,120,250,550
-4,Leo Doubble,M,SBD,M-C-Open,83,Raw,81,160,112.5,215,487.5
-5,Forbes MacPherson,M,SBD,M-C-Open,83,Raw,82,155,100,190,445
-6,Richard Thompson,M,SBD,M-C-Open,83,Raw,82,147.5,100,190,437.5
-7,Zacharias Yiallouros,M,SBD,M-C-M2,83,Raw,80,140,105,170,415
-8,João Curro,M,SBD,M-C-Open,83,Raw,82.5,135,102.5,150,387.5
-1,Ola Oyefeso,M,SBD,M-E-Open,93,Single-ply,93,270,170,320,760
-1,Mark Jackson #3,M,SBD,M-C-U23,93,Raw,88.5,202.5,130,230,562.5
-2,Thomas Kaminski,M,SBD,M-C-U18,93,Raw,92,192.5,132.5,220,545
-3,Ivan Otim,M,SBD,M-C-Open,93,Raw,90.5,175,112.5,255,542.5
-4,David Rappazzini,M,SBD,M-C-Open,93,Raw,90,182.5,120,230,532.5
-5,Leo Johnson,M,SBD,M-C-Open,93,Raw,88,160,100,200,460
-6,Brian Ling,M,SBD,M-C-M1,93,Raw,92,155,105,180,440
-1,Thomas Celestin,M,SBD,M-C-Open,105,Raw,104,200,110,305,615
-2,Ryan Faldo,M,SBD,M-C-Open,105,Raw,102,215,140,230,585
-3,Alec Kyrle-Pope,M,SBD,M-C-Open,105,Raw,101,207.5,137.5,235,580
-4,Freddie Maguire-King,M,SBD,M-C-U23,105,Raw,99,182.5,140,227.5,550
-5,Oliver Driver,M,SBD,M-C-Open,105,Raw,105,190,120,230,540
-6,Tim Barrett,M,SBD,M-C-Open,105,Raw,103,205,125,205,535
-1,Eric Boama,M,SBD,M-C-Open,120,Raw,115,230,140,270,640
-2,Paul Doherty,M,SBD,M-C-Open,120,Raw,106,185,170,245,600
+Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,State
+1,Debbie Powell,F,SBD,F-C-M1,84,Raw,80,115,75,145,335,GL
+1,Scott Mason,M,SBD,M-C-Open,66,Raw,65.5,132.5,75,170,377.5,GL
+2,Peter Barrett #1,M,SBD,M-C-M3,66,Raw,64.5,100,70,160,330,GL
+3,Jack Pearson,M,SBD,M-C-U16,66,Raw,66,105,65,130,300,GL
+4,Ryan Harrison,M,SBD,M-C-U18,66,Raw,66,100,55,105,260,GL
+5,David Pelta,M,SBD,M-C-M3,66,Raw,63,60,105,60,225,GL
+1,Rodney Hypolite,M,SBD,M-E-M1,74,Single-ply,72,270,205,270,745,GL
+1,Nazar Senechyn,M,SBD,M-C-U18,74,Raw,72,130,100,150,380,GL
+G,Haniceff Shah,M,SBD,M-E-M3,74,Single-ply,74,100,85,165,350,
+G,Stephen Campbell,M,SBD,M-C-Open,74,Raw,72,140,150,220,510,
+1,TS Adewale,M,SBD,M-E-M1,83,Single-ply,82.5,230,140,250,620,GL
+1,Andy Ly,M,SBD,M-C-Open,83,Raw,81,205,132.5,270,607.5,GL
+2,Diego Martinez-Rodney,M,SBD,M-C-Open,83,Raw,81,192.5,127.5,260,580,GL
+3,Alan Joseph,M,SBD,M-C-M1,83,Raw,81,180,120,250,550,GL
+4,Leo Doubble,M,SBD,M-C-Open,83,Raw,81,160,112.5,215,487.5,GL
+5,Forbes MacPherson,M,SBD,M-C-Open,83,Raw,82,155,100,190,445,GL
+6,Richard Thompson,M,SBD,M-C-Open,83,Raw,82,147.5,100,190,437.5,GL
+7,Zacharias Yiallouros,M,SBD,M-C-M2,83,Raw,80,140,105,170,415,GL
+8,João Curro,M,SBD,M-C-Open,83,Raw,82.5,135,102.5,150,387.5,GL
+1,Ola Oyefeso,M,SBD,M-E-Open,93,Single-ply,93,270,170,320,760,GL
+1,Mark Jackson #3,M,SBD,M-C-U23,93,Raw,88.5,202.5,130,230,562.5,GL
+2,Thomas Kaminski,M,SBD,M-C-U18,93,Raw,92,192.5,132.5,220,545,GL
+3,Ivan Otim,M,SBD,M-C-Open,93,Raw,90.5,175,112.5,255,542.5,GL
+4,David Rappazzini,M,SBD,M-C-Open,93,Raw,90,182.5,120,230,532.5,GL
+5,Leo Johnson,M,SBD,M-C-Open,93,Raw,88,160,100,200,460,GL
+6,Brian Ling,M,SBD,M-C-M1,93,Raw,92,155,105,180,440,GL
+1,Thomas Celestin,M,SBD,M-C-Open,105,Raw,104,200,110,305,615,GL
+2,Ryan Faldo,M,SBD,M-C-Open,105,Raw,102,215,140,230,585,GL
+3,Alec Kyrle-Pope,M,SBD,M-C-Open,105,Raw,101,207.5,137.5,235,580,GL
+4,Freddie Maguire-King,M,SBD,M-C-U23,105,Raw,99,182.5,140,227.5,550,GL
+5,Oliver Driver,M,SBD,M-C-Open,105,Raw,105,190,120,230,540,GL
+6,Tim Barrett,M,SBD,M-C-Open,105,Raw,103,205,125,205,535,GL
+1,Eric Boama,M,SBD,M-C-Open,120,Raw,115,230,140,270,640,GL
+2,Paul Doherty,M,SBD,M-C-Open,120,Raw,106,185,170,245,600,GL

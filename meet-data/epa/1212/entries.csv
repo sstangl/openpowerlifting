@@ -1,20 +1,20 @@
-Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3BenchKg,TotalKg
-G,Liz Cole,F,B,F-C-Open,72,Raw,72,47.5,47.5
-G,Jerome Patrick,M,B,M-C-U16,53,Raw,42.5,40,40
-1,Aaron Gideon,M,B,M-C-Open,66,Raw,62,137.5,137.5
-2,Peter Barrett #1,M,B,M-C-M3,66,Raw,65,65,65
-1,Nazar Senechyn,M,B,M-C-U20,74,Raw,72,105,105
-2,Tobi Jenkins,M,B,M-C-Open,74,Raw,72,90,90
-G,Stephen Campbell,M,B,M-C-Open,83,Raw,77,150,150
-1,Andy Ly,M,B,M-C-Open,83,Raw,83,130,130
-2,Pawel Musial,M,B,M-C-Open,83,Raw,78,100,100
-G,Mark Macey,M,B,M-C-M2,93,Raw,91,125,125
-G,Roy Cole,M,B,M-C-M2,93,Raw,93,156,156
-1,Robert Rees,M,B,M-E-Open,105,Single-ply,103,192.5,192.5
-1,Alex Kyrie,M,B,M-C-Open,105,Raw,100,140,140
-2,Tim Barrett,M,B,M-C-Open,105,Raw,105,130,130
-3,Oliver Driver,M,B,M-C-Open,105,Raw,102,120,120
-1,Ben Banks,M,B,M-C-Open,120,Raw,119,220,220
-2,Paul Doherty,M,B,M-C-Open,120,Raw,110,175,175
-3,Julian Massey,M,B,M-C-M2,120,Raw,115,140,140
-G,Ben Johnson #4,M,B,M-C-Open,120,Raw,117,110,110
+Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BodyweightKg,Best3BenchKg,TotalKg,State
+G,Liz Cole,F,B,F-C-Open,72,Raw,72,47.5,47.5,
+G,Jerome Patrick,M,B,M-C-U16,53,Raw,42.5,40,40,
+1,Aaron Gideon,M,B,M-C-Open,66,Raw,62,137.5,137.5,GL
+2,Peter Barrett #1,M,B,M-C-M3,66,Raw,65,65,65,GL
+1,Nazar Senechyn,M,B,M-C-U20,74,Raw,72,105,105,GL
+2,Tobi Jenkins,M,B,M-C-Open,74,Raw,72,90,90,GL
+G,Stephen Campbell,M,B,M-C-Open,83,Raw,77,150,150,
+1,Andy Ly,M,B,M-C-Open,83,Raw,83,130,130,GL
+2,Pawel Musial,M,B,M-C-Open,83,Raw,78,100,100,GL
+G,Mark Macey,M,B,M-C-M2,93,Raw,91,125,125,
+G,Roy Cole,M,B,M-C-M2,93,Raw,93,156,156,
+1,Robert Rees,M,B,M-E-Open,105,Single-ply,103,192.5,192.5,GL
+1,Alex Kyrie,M,B,M-C-Open,105,Raw,100,140,140,GL
+2,Tim Barrett,M,B,M-C-Open,105,Raw,105,130,130,GL
+3,Oliver Driver,M,B,M-C-Open,105,Raw,102,120,120,GL
+1,Ben Banks,M,B,M-C-Open,120,Raw,119,220,220,GL
+2,Paul Doherty,M,B,M-C-Open,120,Raw,110,175,175,GL
+3,Julian Massey,M,B,M-C-M2,120,Raw,115,140,140,GL
+G,Ben Johnson #4,M,B,M-C-Open,120,Raw,117,110,110,

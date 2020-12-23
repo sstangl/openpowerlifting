@@ -1,30 +1,30 @@
-Name,Sex,Equipment,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Event,AgeRange
-Aimee Margott,F,Raw,77.65,84,F-C-U16,105,47.5,100,252.5,1,SBD,14-15.5
-Leigh Wetheridge,F,Raw,72.8,84,F-C-U18,85,65,140,290,1,SBD,16.5-17.5
-Kate Nyers,F,Raw,70.55,72,F-C-Open,80,55,115,250,1,SBD,23.5-38.5
-Sam Pile,M,Single-ply,58.35,59,M-E-U16,145,70,160,375,1,SBD,14-15.5
-Stan Moore,M,Raw,64,66,M-C-U16,110,70,145,325,1,SBD,14-15.5
-Cameron Keyes,M,Single-ply,80.95,83,M-E-U16,182.5,100,212.5,495,1,SBD,14-15.5
-Liam Wilson,M,Raw,92.6,93,M-C-U16,125,100,165,390,2,SBD,14-15.5
-Shane Pile,M,Single-ply,89.25,93,M-E-U16,175,120,220,515,1,SBD,14-15.5
-Daniel Fletcher,M,Raw,102.3,105,M-C-U16,150,90,192.5,432.5,1,SBD,14-15.5
-Diddy Cridland,M,Single-ply,112.1,120,M-E-U18,180,125,205,510,1,SBD,16.5-17.5
-Andrew Dixon #2,M,Single-ply,67,74,M-E-U18,162.5,90,205,457.5,1,SBD,16.5-17.5
-David Parnell,M,Raw,82.9,83,M-C-U20,132.5,102,165,400,2,SBD,18.5-19.5
-Jack Long,M,Raw,80,83,M-C-U23,180,140,240,560,1,SBD,20.5-22.5
-Ben Roberts,M,Raw,94.15,105,M-C-U23,200,110,210,520,2,SBD,20.5-22.5
-Aaron Cooper #2,M,Raw,99,105,M-C-U23,230,160,240,630,1,SBD,20.5-22.5
-Christopher Simmons,M,Raw,73.5,74,M-C-Open,182.5,147.5,220,550,1,SBD,23.5-38.5
-Stephen Campbell,M,Raw,72.4,74,M-C-Open,140,,220,,DQ,SBD,23.5-38.5
-Craig Wilkins,M,Raw,72.75,74,M-C-Open,145,110,160,415,2,SBD,23.5-38.5
-Dan Farrugia,M,Raw,87,93,M-C-Open,160,112.5,215,487.5,1,SBD,23.5-38.5
-Simon Timpson,M,Raw,126.2,120+,M-C-Open,240,170,300,710,1,SBD,23.5-38.5
-Mark Macey,M,Raw,90.6,93,M-C-M1,170,117.5,205,492.5,1,SBD,39.5-48.5
-Simon Darton,M,Single-ply,101.4,105,M-E-M1,,,,,DQ,SBD,39.5-48.5
-Brian Crowther,M,Single-ply,114,120,M-E-M1,222.5,165,212.5,600,1,SBD,39.5-48.5
-Ed Shorttle,M,Raw,74.3,83,M-C-M2,95,75,175,345,1,SBD,49.5-58.5
-Steve Blackwell,M,Raw,100.5,105,M-C-M2,200,150,270,620,1,SBD,49.5-58.5
-Steve Shah,M,Raw,73.1,74,M-C-M3,100,85,165,350,1,SBD,59.5-68.5
-Mick Ellender,M,Single-ply,90,93,M-E-M3,192.5,135,245,572.5,1,SBD,59.5-68.5
-Jeff Fearon,M,Single-ply,81.7,83,M-E-M4,90,80,130,300,1,SBD,69.5-999
-Ted Cooper #1,M,Single-ply,89.6,93,M-E-M4,,,,,DQ,SBD,69.5-999
+Name,Sex,Equipment,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Event,AgeRange,State
+Aimee Margott,F,Raw,77.65,84,F-C-U16,105,47.5,100,252.5,1,SBD,14-15.5,SE
+Leigh Wetheridge,F,Raw,72.8,84,F-C-U18,85,65,140,290,1,SBD,16.5-17.5,SE
+Kate Nyers,F,Raw,70.55,72,F-C-Open,80,55,115,250,1,SBD,23.5-38.5,SE
+Sam Pile,M,Single-ply,58.35,59,M-E-U16,145,70,160,375,1,SBD,14-15.5,SE
+Stan Moore,M,Raw,64,66,M-C-U16,110,70,145,325,1,SBD,14-15.5,SE
+Cameron Keyes,M,Single-ply,80.95,83,M-E-U16,182.5,100,212.5,495,1,SBD,14-15.5,SE
+Liam Wilson,M,Raw,92.6,93,M-C-U16,125,100,165,390,2,SBD,14-15.5,SE
+Shane Pile,M,Single-ply,89.25,93,M-E-U16,175,120,220,515,1,SBD,14-15.5,SE
+Daniel Fletcher,M,Raw,102.3,105,M-C-U16,150,90,192.5,432.5,1,SBD,14-15.5,SE
+Diddy Cridland,M,Single-ply,112.1,120,M-E-U18,180,125,205,510,1,SBD,16.5-17.5,SE
+Andrew Dixon #2,M,Single-ply,67,74,M-E-U18,162.5,90,205,457.5,1,SBD,16.5-17.5,SE
+David Parnell,M,Raw,82.9,83,M-C-U20,132.5,102,165,400,2,SBD,18.5-19.5,SE
+Jack Long,M,Raw,80,83,M-C-U23,180,140,240,560,1,SBD,20.5-22.5,SE
+Ben Roberts,M,Raw,94.15,105,M-C-U23,200,110,210,520,2,SBD,20.5-22.5,SE
+Aaron Cooper #2,M,Raw,99,105,M-C-U23,230,160,240,630,1,SBD,20.5-22.5,SE
+Christopher Simmons,M,Raw,73.5,74,M-C-Open,182.5,147.5,220,550,1,SBD,23.5-38.5,SE
+Stephen Campbell,M,Raw,72.4,74,M-C-Open,140,,220,,DQ,SBD,23.5-38.5,SE
+Craig Wilkins,M,Raw,72.75,74,M-C-Open,145,110,160,415,2,SBD,23.5-38.5,SE
+Dan Farrugia,M,Raw,87,93,M-C-Open,160,112.5,215,487.5,1,SBD,23.5-38.5,SE
+Simon Timpson,M,Raw,126.2,120+,M-C-Open,240,170,300,710,1,SBD,23.5-38.5,SE
+Mark Macey,M,Raw,90.6,93,M-C-M1,170,117.5,205,492.5,1,SBD,39.5-48.5,SE
+Simon Darton,M,Single-ply,101.4,105,M-E-M1,,,,,DQ,SBD,39.5-48.5,SE
+Brian Crowther,M,Single-ply,114,120,M-E-M1,222.5,165,212.5,600,1,SBD,39.5-48.5,SE
+Ed Shorttle,M,Raw,74.3,83,M-C-M2,95,75,175,345,1,SBD,49.5-58.5,SE
+Steve Blackwell,M,Raw,100.5,105,M-C-M2,200,150,270,620,1,SBD,49.5-58.5,SE
+Steve Shah,M,Raw,73.1,74,M-C-M3,100,85,165,350,1,SBD,59.5-68.5,SE
+Mick Ellender,M,Single-ply,90,93,M-E-M3,192.5,135,245,572.5,1,SBD,59.5-68.5,SE
+Jeff Fearon,M,Single-ply,81.7,83,M-E-M4,90,80,130,300,1,SBD,69.5-999,SE
+Ted Cooper #1,M,Single-ply,89.6,93,M-E-M4,,,,,DQ,SBD,69.5-999,SE

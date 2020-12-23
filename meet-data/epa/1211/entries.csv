@@ -1,38 +1,38 @@
-Place,Name,Sex,Event,Division,Equipment,BodyweightKg,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
-G,Abi Graham,F,SBD,F-C-Open,Raw,62.3,63,100,70,142.5,312.5
-1,Laura Porter,F,SBD,F-C-Open,Raw,70.2,72,85,45,115,245
-1,Debbie Powell,F,SBD,F-E-M1,Single-ply,85.5,84+,165,100,155,420
-1,Aaron Gideon,M,SBD,M-C-Open,Raw,62.3,66,147.5,125,170,442.5
-2,Péter Tóth,M,SBD,M-C-Open,Raw,60,66,100,100,125,325
-1,Nazar Senechyn,M,SBD,M-C-U20,Raw,72.8,74,155,120,160,435
-2,Josh Foo,M,SBD,M-C-U20,Raw,70.2,74,130,87.5,200,417.5
-3,Jack Pearson,M,SBD,M-C-U18,Raw,71.2,74,120,65,140,325
-G,Joao Arseno,M,SBD,M-E-M1,Single-ply,76.4,83,240,130,240,610
-1,Andy Ly,M,SBD,M-C-Open,Raw,79.7,83,210,130,250,590
-2,Diego Rodney,M,SBD,M-C-Open,Raw,79.9,83,195,130,250,575
-3,Alan Joseph,M,SBD,M-C-M1,Raw,81.9,83,195,125,250,570
-4,Ron Karim,M,SBD,M-C-Open,Raw,81.1,83,207.5,130,220,557.5
-G,Leo Doubble,M,SBD,M-C-Open,Raw,82,83,177.5,117.5,220,515
-5,Ed Karim,M,SBD,M-C-U23,Raw,77.8,83,160,125,175,460
-6,Ernie Parkes,M,SBD,M-C-M4,Raw,81.9,83,140,95,217.5,452.5
-7,Scott Mason,M,SBD,M-C-Open,Raw,75.4,83,157.5,80,200,437.5
-8,James MacDonald #2,M,SBD,M-C-Open,Raw,79.1,83,135,92.5,165,392.5
-1,Pierre Shillingford,M,SBD,M-C-Open,Raw,88.3,93,215,160,270,645
-2,Ivan Otim,M,SBD,M-C-Open,Raw,91.5,93,180,120,252.5,552.5
-3,Kevin O'Brien,M,SBD,M-C-M1,Raw,89,93,170,115,220,505
-4,Fred Jones,M,SBD,M-C-Open,Raw,88.6,93,167.5,105,220,492.5
-5,Leo Johnson,M,SBD,M-C-Open,Raw,85.6,93,170,105,205,480
-6,João Curro,M,SBD,M-C-Open,Raw,87.3,93,160,117.5,175,452.5
-7,Shane Lightowler,M,SBD,M-C-Open,Raw,88.3,93,150,102.5,180,432.5
-1,Gary Mitchell,M,SBD,M-E-M1,Single-ply,97.3,105,270,130,260,660
-1,Robbie Rees #1,M,SBD,M-C-Open,Raw,103.8,105,240,175,305,720
-2,Zac Becker,M,SBD,M-C-U23,Raw,96.7,105,245,140,275,660
-3,Ryan Faldo,M,SBD,M-C-Open,Raw,102.5,105,222.5,142.5,240,605
-4,Alex Kyrle-Pope,M,SBD,M-C-Open,Raw,98.3,105,212.5,140,230,582.5
-5,Tim Barrett,M,SBD,M-C-Open,Raw,104,105,215,140,210,565
-6,Oliver Driver,M,SBD,M-C-Open,Raw,103.5,105,187.5,127.5,230,545
-7,Tim Wheeler,M,SBD,M-C-Open,Raw,96.2,105,182.5,105,235,522.5
-8,Miles Casey,M,SBD,M-C-U20,Raw,102.5,105,150,122.5,250,522.5
-9,Steve Lavin,M,SBD,M-C-Open,Raw,99.4,105,155,150,215,520
-10,Thomas Shilling,M,SBD,M-C-Open,Raw,93.7,105,150,115,200,465
-1,Paul Doherty,M,SBD,M-C-Open,Raw,118.1,120,225,170,270,665
+Place,Name,Sex,Event,Division,Equipment,BodyweightKg,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,State
+G,Abi Graham,F,SBD,F-C-Open,Raw,62.3,63,100,70,142.5,312.5,
+1,Laura Porter,F,SBD,F-C-Open,Raw,70.2,72,85,45,115,245,GL
+1,Debbie Powell,F,SBD,F-E-M1,Single-ply,85.5,84+,165,100,155,420,GL
+1,Aaron Gideon,M,SBD,M-C-Open,Raw,62.3,66,147.5,125,170,442.5,GL
+2,Péter Tóth,M,SBD,M-C-Open,Raw,60,66,100,100,125,325,GL
+1,Nazar Senechyn,M,SBD,M-C-U20,Raw,72.8,74,155,120,160,435,GL
+2,Josh Foo,M,SBD,M-C-U20,Raw,70.2,74,130,87.5,200,417.5,GL
+3,Jack Pearson,M,SBD,M-C-U18,Raw,71.2,74,120,65,140,325,GL
+G,Joao Arseno,M,SBD,M-E-M1,Single-ply,76.4,83,240,130,240,610,
+1,Andy Ly,M,SBD,M-C-Open,Raw,79.7,83,210,130,250,590,GL
+2,Diego Rodney,M,SBD,M-C-Open,Raw,79.9,83,195,130,250,575,GL
+3,Alan Joseph,M,SBD,M-C-M1,Raw,81.9,83,195,125,250,570,GL
+4,Ron Karim,M,SBD,M-C-Open,Raw,81.1,83,207.5,130,220,557.5,GL
+G,Leo Doubble,M,SBD,M-C-Open,Raw,82,83,177.5,117.5,220,515,
+5,Ed Karim,M,SBD,M-C-U23,Raw,77.8,83,160,125,175,460,GL
+6,Ernie Parkes,M,SBD,M-C-M4,Raw,81.9,83,140,95,217.5,452.5,GL
+7,Scott Mason,M,SBD,M-C-Open,Raw,75.4,83,157.5,80,200,437.5,GL
+8,James MacDonald #2,M,SBD,M-C-Open,Raw,79.1,83,135,92.5,165,392.5,GL
+1,Pierre Shillingford,M,SBD,M-C-Open,Raw,88.3,93,215,160,270,645,GL
+2,Ivan Otim,M,SBD,M-C-Open,Raw,91.5,93,180,120,252.5,552.5,GL
+3,Kevin O'Brien,M,SBD,M-C-M1,Raw,89,93,170,115,220,505,GL
+4,Fred Jones,M,SBD,M-C-Open,Raw,88.6,93,167.5,105,220,492.5,GL
+5,Leo Johnson,M,SBD,M-C-Open,Raw,85.6,93,170,105,205,480,GL
+6,João Curro,M,SBD,M-C-Open,Raw,87.3,93,160,117.5,175,452.5,GL
+7,Shane Lightowler,M,SBD,M-C-Open,Raw,88.3,93,150,102.5,180,432.5,GL
+1,Gary Mitchell,M,SBD,M-E-M1,Single-ply,97.3,105,270,130,260,660,GL
+1,Robbie Rees #1,M,SBD,M-C-Open,Raw,103.8,105,240,175,305,720,GL
+2,Zac Becker,M,SBD,M-C-U23,Raw,96.7,105,245,140,275,660,GL
+3,Ryan Faldo,M,SBD,M-C-Open,Raw,102.5,105,222.5,142.5,240,605,GL
+4,Alex Kyrle-Pope,M,SBD,M-C-Open,Raw,98.3,105,212.5,140,230,582.5,GL
+5,Tim Barrett,M,SBD,M-C-Open,Raw,104,105,215,140,210,565,GL
+6,Oliver Driver,M,SBD,M-C-Open,Raw,103.5,105,187.5,127.5,230,545,GL
+7,Tim Wheeler,M,SBD,M-C-Open,Raw,96.2,105,182.5,105,235,522.5,GL
+8,Miles Casey,M,SBD,M-C-U20,Raw,102.5,105,150,122.5,250,522.5,GL
+9,Steve Lavin,M,SBD,M-C-Open,Raw,99.4,105,155,150,215,520,GL
+10,Thomas Shilling,M,SBD,M-C-Open,Raw,93.7,105,150,115,200,465,GL
+1,Paul Doherty,M,SBD,M-C-Open,Raw,118.1,120,225,170,270,665,GL
