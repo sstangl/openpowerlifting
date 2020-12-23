@@ -102,7 +102,7 @@
   <option value="argentinapl" {% if selection.federation == "ArgentinaPL" %}selected{% endif %}>ArgentinaPL [IPL]</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO - Federación Argentina de Levantamiento de Potencia [IPF]</option>
   <option value="fepoa" {% if selection.federation == "FEPOA" %}selected{% endif %}>FEPOA - Federación de Powerlifting Argentino [GPC]</option>
-  <option value="powerleague" {% if selection.federation == "PowerLeague" %}selected{% endif %}>Power League</option>
+  <option value="powerleague" {% if selection.federation == "PowerLeague" %}selected{% endif %}>PowerLeague</option>
 </optgroup>
 <optgroup label="{{strings.country.australia}}">
   <option value="all-australia" {% if selection.federation == "AllAustralia" %}selected{% endif %}>{{strings.selectors.fed.all_australia}}</option>
