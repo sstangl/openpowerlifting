@@ -797,6 +797,10 @@ pub enum Federation {
     #[strum(to_string = "PoliceAL", serialize = "policeal")]
     PoliceAL,
 
+    /// Power League, an Argentina invitational.
+    #[strum(to_string = "PowerLeague", serialize = "powerleague")]
+    PowerLeague,
+
     /// A defunct stand-alone US federation.
     #[strum(to_string = "PRIDE", serialize = "pride")]
     PRIDE,
@@ -1594,6 +1598,7 @@ impl Federation {
             Federation::OEVK => FULLY_TESTED,
             Federation::PA => FULLY_TESTED,
             Federation::PoliceAL => false,
+            Federation::PowerLeague => false,
             Federation::PAGermany => false,
             Federation::PAP => FULLY_TESTED,
             Federation::PHPL => false,
@@ -1924,6 +1929,7 @@ impl Federation {
             Federation::OEVK => Some(Country::Austria),
             Federation::PA => Some(Country::Australia),
             Federation::PoliceAL => Some(Country::USA),
+            Federation::PowerLeague => Some(Country::Argentina),
             Federation::PAGermany => Some(Country::Germany),
             Federation::PAP => Some(Country::Philippines),
             Federation::PHPL => Some(Country::Philippines),
@@ -2304,6 +2310,7 @@ impl Federation {
             Federation::PNGPF => Some(Federation::IPF),
             Federation::PolandUA => None,
             Federation::PoliceAL => None,
+            Federation::PowerLeague => None,
             Federation::PRIDE => None,
             Federation::ProRaw => None,
             Federation::PRPA => None,
@@ -2714,6 +2721,7 @@ impl Federation {
             }
             Federation::PAGermany => PointsSystem::Wilks,
             Federation::PoliceAL => PointsSystem::Wilks,
+            Federation::PowerLeague => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
             Federation::PI => Federation::ipf_rules_on(date),
