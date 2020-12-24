@@ -1,6 +1,9 @@
 # Configuration for Metal Militia.
 # They're not really configured, but we want "Amateur" to count correctly.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # Amateur divisions.
     ama_youth_5_12 = {name="Amateur Youth 5-12", min=5, max=12, tested="Yes"}
