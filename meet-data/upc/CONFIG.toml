@@ -23,6 +23,17 @@
     masters_70_74 = {name = "Masters 70-74", min = 70, max = 74}
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
 
+	# Unofficial, but specifies drug-testing.
+	amateur_open = {name = "Amateur Open", min = 0, max = 999, tested = "Yes"}
+	amateur_teenagers = {name = "Amateur Teenagers", min = 13, max = 19, tested = "Yes"}
+	amateur_juniors = {name = "Amateur Juniors 20-23", min = 20, max = 23, tested = "Yes"}
+	amateur_masters = {name = "Amateur Masters", min = 40, max = 999, tested = "Yes"}
+
+	pro_open = {name = "Pro Open", min = 0, max = 999}
+	pro_teenagers = {name = "Pro Teenagers", min = 13, max = 19}
+	pro_juniors = {name = "Pro Juniors 20-23", min = 20, max = 23}
+	pro_masters = {name = "Pro Masters", min = 40, max = 999}
+
     teen = {name = "Teen", min = 13, max = 19}
     masters = {name = "Masters", min = 40, max = 999}
     teen_juniors = {name = "Teen/Juniors", min = 5, max = 23}
@@ -120,3 +131,4 @@
     2004 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
     2005 = ["ExemptWeightClassConsistency"] # Fewer womens classes
     2006 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    2010 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
