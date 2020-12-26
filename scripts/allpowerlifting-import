@@ -441,7 +441,7 @@ def getpagedata(soup):
                                      'lb': 'Lebanon', 'om': 'Oman', 'ae': 'UAE',
                                      'lt': 'Lithuania', 'ng': 'Nigeria', 'ge': 'Georgia',
                                      'cu': 'Cuba', 'lk': 'Sri Lanka', 'il': 'Israel',
-                                     'iq': 'Iraq'}
+                                     'iq': 'Iraq', 'dk': 'Denmark'}
                     if text in country_codes:
                         text = country_codes[text]
 

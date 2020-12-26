@@ -34,7 +34,7 @@ Raw,1,100,Gilles Hubert,M,France,47,M-M2,98,185,195,-200,,195,,,,,,,,,,,195,S
 Raw,1,100,Serge Bustrel,M,France,66,M-M6,95.8,182.5,-192.5,-192.5,,182.5,,,,,,,,,,,182.5,S
 Raw,1,100,Alexsandru Paşa,M,Moldova,55,M-M4,98.4,162.5,180,182.5,,182.5,,,,,,,,,,,182.5,S
 Raw,2,100,Alain Chabert,M,France,57,M-M4,95.6,160,172.5,181,185,181,,,,,,,,,,,181,S
-Raw,2,100,John Walker,M,UK,72,M-M7,97.9,165,175,180,,180,,,,,,,,,,,180,S
+Raw,2,100,John Walker #6,M,UK,72,M-M7,97.9,165,175,180,,180,,,,,,,,,,,180,S
 Raw,1,110,James Hickey,M,Ireland,35,M-O,110,-230,230,,,230,,,,,,,,,,,230,S
 Raw,2,110,Ion Catana,M,Moldova,27,M-O,106.3,207.5,215,222.5,,222.5,,,,,,,,,,,222.5,S
 Raw,1,125,Roman Scorici,M,Moldova,28,M-O,118.8,265,272.5,282.5,291,282.5,,,,,,,,,,,282.5,S
@@ -53,7 +53,7 @@ Single-ply,DQ,75,Vyacheslav Novikov,M,Russia,30,M-O,73.6,-177.5,-177.5,-177.5,,,
 Single-ply,1,82.5,René Cabalec,M,France,73,M-M7,81.1,145,152.5,,,152.5,,,,,,,,,,,152.5,S
 Single-ply,1,90,Cyrille Vaillant,M,France,39,M-O,89.7,245,260,285,,285,,,,,,,,,,,285,S
 Single-ply,2,90,Ivan Lynch,M,Ireland,33,M-O,90,210,225,-232.5,,225,,,,,,,,,,,225,S
-Single-ply,3,90,Alex Smith,M,UK,25,M-O,86,220,-230,-230,,220,,,,,,,,,,,220,S
+Single-ply,3,90,Alex Smith #12,M,UK,25,M-O,86,220,-230,-230,,220,,,,,,,,,,,220,S
 Single-ply,1,100,Austin Hickey,M,Ireland,32,M-O,99.4,-212.5,-212.5,212.5,,212.5,,,,,,,,,,,212.5,S
 Single-ply,1,100,Vadim Budisteanu,M,Moldova,22,M-JR,100,192.5,200,210,,210,,,,,,,,,,,210,S
 Single-ply,1,100,Alexsandru Paşa,M,Moldova,55,M-M4,98.4,172.5,,,,172.5,,,,,,,,,,,172.5,S
@@ -136,7 +136,7 @@ Raw,3,82.5,Mohand Kadoun,M,France,48,M-M2,82.5,,,,,,125,130,132.5,,132.5,,,,,,13
 Raw,2,82.5,Barry Pigott,M,Ireland,20,M-JR,79.3,,,,,,130,-140,-140,,130,,,,,,130,B
 Raw,1,82.5,Nikolai Pjatnitski,M,Estonia,17,M-T2,81.5,,,,,,125,127.5,130,131,130,,,,,,130,B
 Raw,3,82.5,Andrey Olimov,M,Russia,23,M-JR,82.5,,,,,,120,125,130,,130,,,,,,130,B
-Raw,1,82.5,David Williams,M,UK,59,M-M4,80.8,,,,,,-120,120,122.5,,122.5,,,,,,122.5,B
+Raw,1,82.5,David Williams #2,M,UK,59,M-M4,80.8,,,,,,-120,120,122.5,,122.5,,,,,,122.5,B
 Raw,8,82.5,Travis Morgan,M,USA,27,M-O,79.7,,,,,,120,-127.5,-130,,120,,,,,,120,B
 Raw,2,82.5,Serge Myrtil,M,France,55,M-M4,81.9,,,,,,110,120,-122.5,,120,,,,,,120,B
 Raw,3,82.5,Igor Petrov,M,Russia,55,M-M4,82.3,,,,,,115,-120,-122.5,,115,,,,,,115,B
@@ -145,7 +145,7 @@ Raw,2,82.5,Tudor Moraru,M,Moldova,17,M-T2,78.7,,,,,,-102.5,107.5,-112.5,,107.5,,
 Raw,1,82.5,Ilio Polese,M,Italy,70,M-M7,76.7,,,,,,105,-112.5,-115,,105,,,,,,105,B
 Raw,2,82.5,Eric West,M,UK,72,M-M7,81.4,,,,,,85,-92.5,-92.5,,85,,,,,,85,B
 Raw,1,82.5,Gren Elmore,M,UK,86,M-M10,77.6,,,,,,70,75,78,,78,,,,,,78,B
-Raw,DQ,82.5,Mike Davies,M,UK,73,M-M7,81.5,,,,,,-77.5,-77.5,,,,,,,,,,B
+Raw,DQ,82.5,Mike Davies #2,M,UK,73,M-M7,81.5,,,,,,-77.5,-77.5,,,,,,,,,,B
 Raw,1,90,Roman Golubev,M,Russia,28,M-O,90,,,,,,197.5,205,-207.5,,205,,,,,,205,B
 Raw,2,90,Iegor Pyrogov,M,Ukraine,24,M-O,90,,,,,,170,180,-185,,180,,,,,,180,B
 Raw,1,90,Philippe Jacobs,M,Belarus,40,M-M1,87.3,,,,,,165,170,172.5,,172.5,,,,,,172.5,B
@@ -189,7 +189,7 @@ Raw,1,110,ValerII Karmazin,M,Ukraine,48,M-M2,109.2,,,,,,160,167.5,-170,,167.5,,,
 Raw,1,110,Joël Godon,M,France,55,M-M4,106.5,,,,,,150,160,162.5,-168,162.5,,,,,,162.5,B
 Raw,2,110,Doug Petersen,M,USA,57,M-M4,108,,,,,,150,162.5,-168,,162.5,,,,,,162.5,B
 Raw,3,110,Miroslav Filip,M,Moldova,43,M-M1,104.4,,,,,,150,160,,,160,,,,,,160,B
-Raw,2,110,Sergey Danielyan,M,Russia,54,M-M3,101.9,,,,,,152.5,-160,-160,,152.5,,,,,,152.5,B
+Raw,2,110,Sergey Danielyan #1,M,Russia,54,M-M3,101.9,,,,,,152.5,-160,-160,,152.5,,,,,,152.5,B
 Raw,1,110,Roberto Volpis,M,Italy,70,M-M7,100.9,,,,,,130,-135,135,,135,,,,,,135,B
 Raw,1,110,Jeanpaul Delapierre,M,France,63,M-M5,107.9,,,,,,115,-117.5,,,115,,,,,,115,B
 Raw,2,110,Michel Grosperrin,M,France,64,M-M5,104.8,,,,,,110,-115,,,110,,,,,,110,B
@@ -224,7 +224,7 @@ Single-ply,1,75,Tomas Humphries,M,Ireland,23,M-JR,74,,,,,,-130,130,-140,,130,,,,
 Single-ply,1,75,Vyacheslav Novikov,M,Russia,30,M-O,74,,,,,,122.5,-130,-130,,122.5,,,,,,122.5,B
 Single-ply,1,75,Pascal Chabeau,M,France,76,M-M8,72.5,,,,,,-100,102.5,,,102.5,,,,,,102.5,B
 Single-ply,1,82.5,Phillip Tempest,M,UK,41,M-M1,80.7,,,,,,175,-186,-186,,175,,,,,,175,B
-Single-ply,1,82.5,David Williams,M,UK,59,M-M4,80.8,,,,,,-145,145,150,,150,,,,,,150,B
+Single-ply,1,82.5,David Williams #2,M,UK,59,M-M4,80.8,,,,,,-145,145,150,,150,,,,,,150,B
 Single-ply,1,82.5,Sergey Morozov,M,Russia,47,M-M2,81.8,,,,,,145,150,,,150,,,,,,150,B
 Single-ply,1,82.5,Michel Sorenzo,M,France,54,M-M3,81.4,,,,,,-140,140,-145,,140,,,,,,140,B
 Single-ply,1,82.5,Roger Murray,M,Australia,66,M-M6,81.5,,,,,,100,110,115,-120,115,,,,,,115,B
@@ -234,7 +234,7 @@ Single-ply,2,90,Cyrille Vaillant,M,France,39,M-O,89.2,,,,,,180,205,-210,,205,,,,
 Single-ply,1,90,Philippe Jacobs,M,Belarus,40,M-M1,87.3,,,,,,-175,175,185,200.5,185,,,,,,185,B
 Single-ply,3,90,Victor Cotoman,M,Moldova,32,M-O,90,,,,,,-165,165,175,,175,,,,,,175,B
 Single-ply,1,90,Patrick Valfrey,M,France,47,M-M2,87.1,,,,,,160,-190,-195,,160,,,,,,160,B
-Single-ply,4,90,Alex Smith,M,UK,25,M-O,86.1,,,,,,140,-145,-145,,140,,,,,,140,B
+Single-ply,4,90,Alex Smith #12,M,UK,25,M-O,86.1,,,,,,140,-145,-145,,140,,,,,,140,B
 Single-ply,1,100,Austin Hickey,M,Ireland,32,M-O,98.9,,,,,,170,180,-185,,180,,,,,,180,B
 Single-ply,2,100,Tanguy Degardin,M,France,33,M-O,98.5,,,,,,-170,-170,170,,170,,,,,,170,B
 Single-ply,1,100,Vadim Budisteanu,M,Moldova,22,M-JR,99.5,,,,,,165,170,-177.5,,170,,,,,,170,B
@@ -291,7 +291,7 @@ Raw,1,82.5,Vitalie Ursu,M,Moldova,29,M-O,82,,,,,,,,,,,210,-225,225,,225,225,D
 Raw,1,82.5,Rémy Cortot,M,France,57,M-M4,79.9,,,,,,,,,,,180,200,-211,,200,200,D
 Raw,1,82.5,Andrey Torkov,M,Russia,65,M-M6,76.2,,,,,,,,,,,135,-145,,,135,135,D
 Raw,1,82.5,Eric West,M,UK,72,M-M7,81.3,,,,,,,,,,,130,140,-145,,140,140,D
-Raw,2,82.5,Mike Davies,M,UK,73,M-M7,82.5,,,,,,,,,,,122.5,130,,,130,130,D
+Raw,2,82.5,Mike Davies #2,M,UK,73,M-M7,82.5,,,,,,,,,,,122.5,130,,,130,130,D
 Raw,1,82.5,Gren Elmore,M,UK,86,M-M10,77.5,,,,,,,,,,,100,107.5,109,,109,109,D
 Raw,1,90,Benny Verbeke,M,Belarus,46,M-M2,88.9,,,,,,,,,,,270,282.5,-292.5,,282.5,282.5,D
 Raw,1,90,Pascal Mauhourat,M,France,53,M-M3,89,,,,,,,,,,,260,272.5,-280,,272.5,272.5,D
@@ -311,7 +311,7 @@ Raw,1,100,Fedir Zaremba,M,Ukraine,21,M-JR,98.4,,,,,,,,,,,240,-260,-260,,240,240,
 Raw,2,100,Darren Greville,M,UK,42,M-M1,99.5,,,,,,,,,,,205,240,-245,,240,240,D
 Raw,1,100,Gilles Hubert,M,France,47,M-M2,98.8,,,,,,,,,,,225,235,-245,,235,235,D
 Raw,1,100,Serge Bustrel,M,France,66,M-M6,96.3,,,,,,,,,,,220,230,-240,,230,230,D
-Raw,1,100,John Walker,M,UK,72,M-M7,98.6,,,,,,,,,,,205,215,220,225,220,220,D
+Raw,1,100,John Walker #6,M,UK,72,M-M7,98.6,,,,,,,,,,,205,215,220,225,220,220,D
 Raw,2,100,Valerij Bystrov,M,Russia,71,M-M7,97.7,,,,,,,,,,,195,205,-215,,205,205,D
 Raw,1,100,Vladimir Vasin,M,Russia,53,M-M3,96.7,,,,,,,,,,,185,,,,185,185,D
 Raw,1,100,Alexsandru Paşa,M,Moldova,55,M-M4,98.7,,,,,,,,,,,175,,,,175,175,D
@@ -347,11 +347,11 @@ Single-ply,1,82.5,Tudor Moraru,M,Moldova,17,M-T2,78.7,,,,,,,,,,,182.5,192.5,-195
 Single-ply,1,90,Benny Verbeke,M,Belarus,46,M-M2,88.9,,,,,,,,,,,270,285,-302.5,,285,285,D
 Single-ply,1,90,Cyrille Vaillant,M,France,39,M-O,89.8,,,,,,,,,,,245,255,275,,275,275,D
 Single-ply,2,90,Ivan Lynch,M,Ireland,33,M-O,90,,,,,,,,,,,240,255,-262.5,,255,255,D
-Single-ply,3,90,Alex Smith,M,UK,25,M-O,86.9,,,,,,,,,,,215,240,-255,,240,240,D
+Single-ply,3,90,Alex Smith #12,M,UK,25,M-O,86.9,,,,,,,,,,,215,240,-255,,240,240,D
 Single-ply,4,90,Victor Cotoman,M,Moldova,32,M-O,88.7,,,,,,,,,,,225,-240,,,225,225,D
 Single-ply,1,100,Austin Hickey,M,Ireland,32,M-O,99.5,,,,,,,,,,,230,255,270,,270,270,D
 Single-ply,2,100,Arkadya Zakaryan,M,Armenia,39,M-O,98.9,,,,,,,,,,,225,235,-260,,235,235,D
-Single-ply,1,100,John Walker,M,UK,72,M-M7,98.6,,,,,,,,,,,200,220,230,,230,230,D
+Single-ply,1,100,John Walker #6,M,UK,72,M-M7,98.6,,,,,,,,,,,200,220,230,,230,230,D
 Single-ply,1,100,Vladimir Vasin,M,Russia,53,M-M3,96.7,,,,,,,,,,,195,,,,195,195,D
 Single-ply,1,100,Alexsandru Paşa,M,Moldova,55,M-M4,98.7,,,,,,,,,,,185,,,,185,185,D
 Single-ply,1,110,Alexander Geitner,M,Germany,34,M-O,106.5,,,,,,,,,,,270,300,305,,305,305,D
