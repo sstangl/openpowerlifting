@@ -15,7 +15,7 @@ opltypes = { version = "0.1", path = "../modules/opltypes/" }
 accept-language = "2.0"
 csv = "1.1"
 dotenv = "0.15"
-itertools = "0.9"
+itertools = "0.10"
 search = { version = "0.1", path = "../modules/search" }
 serde = "1.0"
 serde_derive = "1.0"
