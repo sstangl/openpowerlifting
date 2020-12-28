@@ -531,7 +531,7 @@
   $lightblue: #43D1FF;
   $yellow: #FFFC00;
   @include gradient-prereqs($yellow);
-  background-image: linear-gradient(to bottom, $lightblue 40%, $yellow 40%);
+  background-image: linear-gradient(to bottom, $lightblue 50%, $yellow 50%);
 }
 
 // Designed by Jetter Lewis.
