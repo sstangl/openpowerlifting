@@ -150,6 +150,11 @@ def getknownmeets():
     for name in os.listdir(os.getcwd()):
         if name.isdigit():
             meets.append(name)
+
+    # Also check out the IGNORE file.
+    for line in open("IGNORE").readlines():
+        meets.append(line.strip())
+
     return meets
 
 
