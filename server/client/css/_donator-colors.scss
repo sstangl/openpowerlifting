@@ -526,6 +526,14 @@
   background-image: linear-gradient(to bottom, #f00 40%, #fff 40%, #fff 80%, #1E8AFB 80%, #1E8AFB 100%);
 }
 
+// Designed by Robert Knutsson.
+.sweden {
+  $lightblue: #43D1FF;
+  $yellow: #FFFC00;
+  @include gradient-prereqs($yellow);
+  background-image: linear-gradient(to bottom, $lightblue 40%, $yellow 40%);
+}
+
 // Designed by Jetter Lewis.
 .jetter_lewis {
   color: #FB3640; // Red
