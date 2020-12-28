@@ -8,9 +8,8 @@ from bs4 import BeautifulSoup
 import os
 import urllib.request
 
-
-CUTOFF = 200  # Ignore earlier meets, since they have invalid URLs anyway.
-RESULTSURL = 'https://docs.google.com/spreadsheets/d/' \
+CUTOFF = 0  # Ignore earlier meets, since they have invalid URLs anyway.
+RESULTSURL = 'https://docs.google.com/spreadsheets/u/0/d/' \
              '1HBpedvVS8N0H75Eg9qwTxClqtV1EqO-IuctYzgiyMNI/' \
              'pubhtml/sheet?hl=en_US&headers=false&gid=0'
 USPADIR = os.path.dirname(os.path.realpath(__file__))
@@ -105,7 +104,7 @@ def main():
     remote = getunknownmeets(meets, known)
 
     for meet in remote:
-        print(color('[USPA] ') + meet.url)
+        print(color('[USPA] (') + meet.num + color(') ') + meet.url)
 
 
 if __name__ == '__main__':
