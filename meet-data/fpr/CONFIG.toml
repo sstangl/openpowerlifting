@@ -17,7 +17,7 @@
     youth = {name = "Youth", min=5, max=16}
 
     teen_1316 = {name = "Teen Under 17",min=5,max=16}
-    teen_1719 = {name = "Teen 17-19",min=17,max=19}
+    teen_1718 = {name = "Teen 17-18",min=17,max=18}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -137,6 +137,7 @@
     0812 = ["ExemptWeightClassConsistency"]
     0814 = ["ExemptWeightClassConsistency"] # No men's 52
     0824 = ["ExemptWeightClassConsistency"] # No men's 52
+    0835 = ["ExemptWeightClassConsistency"] # Youth Classes
     0901 = ["ExemptWeightClassConsistency"]
     0903 = ["ExemptWeightClassConsistency"]
     0910 = ["ExemptWeightClassConsistency"]
@@ -172,6 +173,7 @@
     1038 = ["ExemptWeightClassConsistency"] # Fewer weight classes
     1040 = ["ExemptWeightClassConsistency"] # Fewer weight classes
     1041 = ["ExemptWeightClassConsistency"] # Fewer weight classes
+    1042 = ["ExemptWeightClassConsistency"] # Youth Classes
     1106 = ["ExemptWeightClassConsistency"]
     1107 = ["ExemptWeightClassConsistency"]
     1114 = ["ExemptWeightClassConsistency"] # Youth Classes
@@ -187,6 +189,7 @@
     1146 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1147 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1149 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
+    1150 = ["ExemptWeightClassConsistency"] # Youth Classes
     1203 = ["ExemptWeightClassConsistency"]
     1204 = ["ExemptWeightClassConsistency"] # Youth Classes
     1221 = ["ExemptWeightClassConsistency"] # Youth Classes
