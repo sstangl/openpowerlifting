@@ -285,8 +285,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
                                 vec.push(equipment);
                             }
                             Err(e) => {
-                                report
-                                    .error(format!("Error in {}.equipment: {}", key, e));
+                                report.error(format!("Error in {}.equipment: {}", key, e));
                             }
                         }
                     }
@@ -313,8 +312,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
                 "Yes" => Some(true),
                 "No" => Some(false),
                 _ => {
-                    report
-                        .error(format!("Failed parsing {}.tested: invalid '{}'", key, v));
+                    report.error(format!("Failed parsing {}.tested: invalid '{}'", key, v));
                     None
                 }
             },
@@ -438,18 +436,16 @@ fn parse_weightclasses(
                     let mut vec = Vec::with_capacity(a.len());
                     for div in a {
                         match div.as_str() {
-                            Some(div) => {
-                                match divisions.iter().position(|ref r| r.name == div) {
-                                    Some(idx) => vec.push(idx),
-                                    None => {
-                                        report.error(format!(
-                                            "Invalid division '{}' in {}.divisions",
-                                            div, key
-                                        ));
-                                        continue;
-                                    }
+                            Some(div) => match divisions.iter().position(|ref r| r.name == div) {
+                                Some(idx) => vec.push(idx),
+                                None => {
+                                    report.error(format!(
+                                        "Invalid division '{}' in {}.divisions",
+                                        div, key
+                                    ));
+                                    continue;
                                 }
-                            }
+                            },
                             None => {
                                 report.error(format!(
                                     "Array '{}.divisions' may only contain Strings",

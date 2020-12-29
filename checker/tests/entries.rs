@@ -165,7 +165,8 @@ fn test_column_equipment() {
     assert_eq!(check(data), 1);
 
     // Invalid Deadlift equipment
-    let data = "Name,WeightClassKg,Sex,Best3DeadliftKg,TotalKg,Equipment,DeadliftEquipment,Event,Place\n\
+    let data =
+        "Name,WeightClassKg,Sex,Best3DeadliftKg,TotalKg,Equipment,DeadliftEquipment,Event,Place\n\
                 Test User,90,M,100,100,Multi-ply,Wraps,D,1";
     assert_eq!(check(data), 1);
 

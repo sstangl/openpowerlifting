@@ -79,10 +79,7 @@ fn next_day(date: Date) -> Date {
 impl BirthDateRange {
     /// Shorthand constructor for use in test code.
     #[cfg(test)]
-    pub fn at(
-        min: Option<(u32, u32, u32)>,
-        max: Option<(u32, u32, u32)>,
-    ) -> BirthDateRange {
+    pub fn at(min: Option<(u32, u32, u32)>, max: Option<(u32, u32, u32)>) -> BirthDateRange {
         let default = BirthDateRange::default();
         BirthDateRange::new(
             min.map(|(y, m, d)| Date::from_parts(y, m, d))
@@ -445,11 +442,7 @@ fn infer_from_range(
 }
 
 /// Age interpolation for a single lifter's entries.
-fn interpolate_age_single_lifter(
-    meetdata: &mut AllMeetData,
-    indices: &[EntryIndex],
-    debug: bool,
-) {
+fn interpolate_age_single_lifter(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: bool) {
     // Attempt to determine bounds for a BirthDate. O(indices).
     let range = get_birthdate_range(meetdata, indices, debug);
 

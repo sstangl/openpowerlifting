@@ -55,8 +55,7 @@ impl Responder<'static> for StaticFile {
                 let mut r = f.respond_to(req)?;
                 r.set_raw_header("Content-Encoding", "gzip");
                 if let Some(ext) = p.extension() {
-                    if let Some(ct) = ContentType::from_extension(&ext.to_string_lossy())
-                    {
+                    if let Some(ct) = ContentType::from_extension(&ext.to_string_lossy()) {
                         r.set_header(ct);
                     }
                 }
@@ -112,11 +111,9 @@ fn rankings(
 ) -> Option<Template> {
     let defaults = opldb::query::direct::RankingsQuery::default();
     let selection =
-        opldb::query::direct::RankingsQuery::from_url_path(&selections, &defaults)
-            .ok()?;
+        opldb::query::direct::RankingsQuery::from_url_path(&selections, &defaults).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let cx =
-        pages::rankings::Context::new(&opldb, &locale, &selection, &defaults, false)?;
+    let cx = pages::rankings::Context::new(&opldb, &locale, &selection, &defaults, false)?;
 
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),
@@ -222,9 +219,7 @@ fn lifter(
                 None,
             );
             Some(Ok(match device {
-                Device::Desktop => {
-                    Template::render("openpowerlifting/desktop/lifter", cx)
-                }
+                Device::Desktop => Template::render("openpowerlifting/desktop/lifter", cx),
                 Device::Mobile => Template::render("openpowerlifting/mobile/lifter", cx),
             }))
         }
@@ -241,12 +236,8 @@ fn lifter(
                 &lifter_ids,
             );
             Some(Ok(match device {
-                Device::Desktop => {
-                    Template::render("openpowerlifting/desktop/disambiguation", cx)
-                }
-                Device::Mobile => {
-                    Template::render("openpowerlifting/mobile/disambiguation", cx)
-                }
+                Device::Desktop => Template::render("openpowerlifting/desktop/disambiguation", cx),
+                Device::Mobile => Template::render("openpowerlifting/mobile/disambiguation", cx),
             }))
         }
     }
@@ -454,9 +445,7 @@ fn rankings_api(
     let defaults = opldb::query::direct::RankingsQuery::default();
     let selection = match selections {
         None => defaults,
-        Some(path) => {
-            opldb::query::direct::RankingsQuery::from_url_path(&path, &defaults).ok()?
-        }
+        Some(path) => opldb::query::direct::RankingsQuery::from_url_path(&path, &defaults).ok()?,
     };
 
     let language = query.lang.parse::<Language>().ok()?;
@@ -496,13 +485,10 @@ fn search_rankings_api(
     let default = opldb::query::direct::RankingsQuery::default();
     let selection = match selections {
         None => default,
-        Some(path) => {
-            opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?
-        }
+        Some(path) => opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?,
     };
 
-    let result =
-        pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
+    let result = pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
 
     Some(JsonString(serde_json::to_string(&result).ok()?))
 }

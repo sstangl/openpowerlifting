@@ -202,10 +202,7 @@ fn check_flair(
 ///
 /// This allows specifying a bunch of exemptions in a single place.
 /// There should only be one such file, in `lifter-data/`.
-pub fn load_exemptions(
-    report: &mut Report,
-    map: &mut LifterDataMap,
-) -> Result<(), Box<dyn Error>> {
+pub fn load_exemptions(report: &mut Report, map: &mut LifterDataMap) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
         return Ok(());
@@ -423,8 +420,7 @@ fn check_name_disambiguation(
         match map.get_mut(&username) {
             Some(data) => {
                 if data.disambiguation_count > 0 {
-                    report
-                        .error_on(line, format!("Lifter '{}' is duplicated", &row.name));
+                    report.error_on(line, format!("Lifter '{}' is duplicated", &row.name));
                 } else {
                     data.disambiguation_count = row.count;
                 }
@@ -442,10 +438,7 @@ fn check_name_disambiguation(
     Ok(())
 }
 
-pub fn check_lifterdata(
-    reader: &csv::ReaderBuilder,
-    lifterdir: &Path,
-) -> LifterDataCheckResult {
+pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> LifterDataCheckResult {
     let mut reports: Vec<Report> = vec![];
     let mut map = LifterDataMap::new();
 

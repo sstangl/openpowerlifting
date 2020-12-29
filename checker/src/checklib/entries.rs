@@ -447,9 +447,9 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
         if word_index != 0 {
             match word {
                 // Common short words that mostly translate to "the".
-                "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di"
-                | "dos" | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "'t"
-                | "te" | "ten" | "v" | "v." | "v.d." | "van" | "von" | "zur" => {
+                "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di" | "dos"
+                | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "'t" | "te" | "ten" | "v"
+                | "v." | "v.d." | "van" | "von" | "zur" => {
                     continue;
                 }
 
@@ -558,8 +558,7 @@ fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<Str
     } else {
         for c in s.chars() {
             if get_writing_system(c) != WritingSystem::Greek && !"-' .".contains(c) {
-                let msg =
-                    format!("GreekName '{}' contains non-Greek character '{}'", s, c);
+                let msg = format!("GreekName '{}' contains non-Greek character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;
             }
@@ -574,8 +573,7 @@ fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<St
     } else {
         for c in s.chars() {
             if get_writing_system(c) != WritingSystem::Korean && !"-' .".contains(c) {
-                let msg =
-                    format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
+                let msg = format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;
             }
@@ -603,10 +601,7 @@ fn check_column_birthyear(
             // Compare the BirthYear to the meet date for some basic sanity checks.
             if let Some(m) = meet {
                 if year > m.date.year() - 4 || m.date.year() - year > 98 {
-                    report.error_on(
-                        line,
-                        format!("BirthYear '{}' looks implausible", year),
-                    );
+                    report.error_on(line, format!("BirthYear '{}' looks implausible", year));
                     return None;
                 }
             }
@@ -647,8 +642,7 @@ fn check_column_birthdate(
 
             // Ensure that the BirthDate exists in the Gregorian calendar.
             if !bd.is_valid() {
-                let msg =
-                    format!("BirthDate '{}' does not exist in the Gregorian calendar", s);
+                let msg = format!("BirthDate '{}' does not exist in the Gregorian calendar", s);
                 report.error_on(line, msg);
             }
 
@@ -681,11 +675,7 @@ fn check_column_equipment(s: &str, line: u64, report: &mut Report) -> Equipment 
     }
 }
 
-fn check_column_squatequipment(
-    s: &str,
-    line: u64,
-    report: &mut Report,
-) -> Option<Equipment> {
+fn check_column_squatequipment(s: &str, line: u64, report: &mut Report) -> Option<Equipment> {
     if s.is_empty() {
         return None;
     }
@@ -703,11 +693,7 @@ fn check_column_squatequipment(
     }
 }
 
-fn check_column_benchequipment(
-    s: &str,
-    line: u64,
-    report: &mut Report,
-) -> Option<Equipment> {
+fn check_column_benchequipment(s: &str, line: u64, report: &mut Report) -> Option<Equipment> {
     if s.is_empty() {
         return None;
     }
@@ -727,11 +713,7 @@ fn check_column_benchequipment(
     }
 }
 
-fn check_column_deadliftequipment(
-    s: &str,
-    line: u64,
-    report: &mut Report,
-) -> Option<Equipment> {
+fn check_column_deadliftequipment(s: &str, line: u64, report: &mut Report) -> Option<Equipment> {
     if s.is_empty() {
         return None;
     }
@@ -849,12 +831,7 @@ fn check_column_agerange(
     }
 }
 
-fn check_column_event(
-    s: &str,
-    line: u64,
-    headers: &HeaderIndexMap,
-    report: &mut Report,
-) -> Event {
+fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut Report) -> Event {
     match s.parse::<Event>() {
         Ok(event) => {
             if event.has_squat() && !headers.has(Header::Best3SquatKg) {
@@ -905,12 +882,7 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
     }
 }
 
-fn check_nonnegative_weight(
-    s: &str,
-    line: u64,
-    header: Header,
-    report: &mut Report,
-) -> WeightKg {
+fn check_nonnegative_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
     if s.starts_with('-') {
         report.error_on(line, format!("{} '{}' cannot be negative", header, s))
     }
@@ -1259,15 +1231,8 @@ fn check_attempt_consistency_helper(
     report: &mut Report,
 ) {
     // Check that the bar weight is ascending over attempts.
-    let mut maxweight = process_attempt_pair(
-        lift,
-        2,
-        attempt1,
-        attempt2,
-        exempt_lift_order,
-        line,
-        report,
-    );
+    let mut maxweight =
+        process_attempt_pair(lift, 2, attempt1, attempt2, exempt_lift_order, line, report);
     maxweight = process_attempt_pair(
         lift,
         3,
@@ -1304,10 +1269,7 @@ fn check_attempt_consistency_helper(
     }
 
     // If the best attempt was a failure, the least failure can be in the Best3Lift.
-    if best < WeightKg::from_i32(0)
-        && best3lift != WeightKg::from_i32(0)
-        && best != best3lift
-    {
+    if best < WeightKg::from_i32(0) && best3lift != WeightKg::from_i32(0) && best != best3lift {
         let s = format!(
             "Best3{}Kg '{}' does not match least failed attempt '{}'",
             lift, best3lift, best
@@ -1367,12 +1329,7 @@ fn check_attempt_consistency(
 }
 
 /// Checks that gear wasn't used prior to its date of invention.
-fn check_equipment_year(
-    entry: &Entry,
-    meet: Option<&Meet>,
-    line: u64,
-    report: &mut Report,
-) {
+fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &mut Report) {
     // Helper function for checking equipped status.
     fn is_equipped(e: Option<Equipment>) -> bool {
         e.map_or(false, |eq| match eq {
@@ -1416,9 +1373,7 @@ fn check_equipment_year(
     // TODO: This avoids conflation with the squat equipment.
     if date.year() < bench_shirt_invention_year
         && (is_equipped(entry.bench_equipment)
-            || (event.has_bench()
-                && !event.has_squat()
-                && is_equipped(Some(entry.equipment))))
+            || (event.has_bench() && !event.has_squat() && is_equipped(Some(entry.equipment))))
     {
         report.error_on(
             line,
@@ -1433,9 +1388,7 @@ fn check_equipment_year(
     // TODO: This avoids conflation with the squat equipment.
     if date.year() < deadlift_suit_invention_year
         && (is_equipped(entry.deadlift_equipment)
-            || (event.has_deadlift()
-                && !event.has_squat()
-                && is_equipped(Some(entry.equipment))))
+            || (event.has_deadlift() && !event.has_squat() && is_equipped(Some(entry.equipment))))
     {
         report.error_on(
             line,
@@ -1644,10 +1597,7 @@ fn check_weightclass_consistency(
                 line,
                 format!(
                     "BodyweightKg '{}' matches '{}', not '{}' in [weightclasses.{}]",
-                    entry.bodyweightkg,
-                    first_match,
-                    entry.weightclasskg,
-                    matched_group.name
+                    entry.bodyweightkg, first_match, entry.weightclasskg, matched_group.name
                 ),
             );
         }
@@ -1769,13 +1719,12 @@ fn check_division_age_consistency(
     }
 
     // Division string errors are already handled by check_column_division().
-    let (min_age, max_age) =
-        match config.divisions.iter().find(|d| d.name == entry.division) {
-            Some(div) => (div.min, div.max),
-            None => {
-                return (Age::None, Age::None);
-            }
-        };
+    let (min_age, max_age) = match config.divisions.iter().find(|d| d.name == entry.division) {
+        Some(div) => (div.min, div.max),
+        None => {
+            return (Age::None, Age::None);
+        }
+    };
 
     // Use the various age-related columns to calculate a representative Age value.
     let age = entry.age_on(meet_date);
@@ -2025,8 +1974,7 @@ where
     };
 
     // Should pending disambiguations be errors?
-    let report_disambiguations =
-        config.map_or(false, |c| c.does_require_manual_disambiguation());
+    let report_disambiguations = config.map_or(false, |c| c.does_require_manual_disambiguation());
 
     let fourths_may_lower: bool =
         meet.map_or(false, |m| m.ruleset.contains(Rule::FourthAttemptsMayLower));
@@ -2049,8 +1997,7 @@ where
     let exempt_age: bool =
         exemptions.map_or(false, |el| el.iter().any(|&e| e == Exemption::ExemptAge));
 
-    let headers: HeaderIndexMap =
-        check_headers(rdr.headers()?, meet, config, &mut report);
+    let headers: HeaderIndexMap = check_headers(rdr.headers()?, meet, config, &mut report);
     if !report.messages.is_empty() {
         return Ok(EntriesCheckResult {
             report,
@@ -2086,12 +2033,10 @@ where
             entry.equipment = check_column_equipment(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::SquatEquipment) {
-            entry.squat_equipment =
-                check_column_squatequipment(&record[idx], line, &mut report);
+            entry.squat_equipment = check_column_squatequipment(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BenchEquipment) {
-            entry.bench_equipment =
-                check_column_benchequipment(&record[idx], line, &mut report);
+            entry.bench_equipment = check_column_benchequipment(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::DeadliftEquipment) {
             entry.deadlift_equipment =
@@ -2110,20 +2055,16 @@ where
         // Check all the weight fields: they must contain non-zero values.
         // Squat.
         if let Some(idx) = headers.get(Header::Squat1Kg) {
-            entry.squat1kg =
-                check_weight(&record[idx], line, Header::Squat1Kg, &mut report);
+            entry.squat1kg = check_weight(&record[idx], line, Header::Squat1Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Squat2Kg) {
-            entry.squat2kg =
-                check_weight(&record[idx], line, Header::Squat2Kg, &mut report);
+            entry.squat2kg = check_weight(&record[idx], line, Header::Squat2Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Squat3Kg) {
-            entry.squat3kg =
-                check_weight(&record[idx], line, Header::Squat3Kg, &mut report);
+            entry.squat3kg = check_weight(&record[idx], line, Header::Squat3Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Squat4Kg) {
-            entry.squat4kg =
-                check_weight(&record[idx], line, Header::Squat4Kg, &mut report);
+            entry.squat4kg = check_weight(&record[idx], line, Header::Squat4Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Best3SquatKg) {
             entry.best3squatkg =
@@ -2132,20 +2073,16 @@ where
 
         // Bench.
         if let Some(idx) = headers.get(Header::Bench1Kg) {
-            entry.bench1kg =
-                check_weight(&record[idx], line, Header::Bench1Kg, &mut report);
+            entry.bench1kg = check_weight(&record[idx], line, Header::Bench1Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Bench2Kg) {
-            entry.bench2kg =
-                check_weight(&record[idx], line, Header::Bench2Kg, &mut report);
+            entry.bench2kg = check_weight(&record[idx], line, Header::Bench2Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Bench3Kg) {
-            entry.bench3kg =
-                check_weight(&record[idx], line, Header::Bench3Kg, &mut report);
+            entry.bench3kg = check_weight(&record[idx], line, Header::Bench3Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Bench4Kg) {
-            entry.bench4kg =
-                check_weight(&record[idx], line, Header::Bench4Kg, &mut report);
+            entry.bench4kg = check_weight(&record[idx], line, Header::Bench4Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Best3BenchKg) {
             entry.best3benchkg =
@@ -2154,20 +2091,16 @@ where
 
         // Deadlift.
         if let Some(idx) = headers.get(Header::Deadlift1Kg) {
-            entry.deadlift1kg =
-                check_weight(&record[idx], line, Header::Deadlift1Kg, &mut report);
+            entry.deadlift1kg = check_weight(&record[idx], line, Header::Deadlift1Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Deadlift2Kg) {
-            entry.deadlift2kg =
-                check_weight(&record[idx], line, Header::Deadlift2Kg, &mut report);
+            entry.deadlift2kg = check_weight(&record[idx], line, Header::Deadlift2Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Deadlift3Kg) {
-            entry.deadlift3kg =
-                check_weight(&record[idx], line, Header::Deadlift3Kg, &mut report);
+            entry.deadlift3kg = check_weight(&record[idx], line, Header::Deadlift3Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Deadlift4Kg) {
-            entry.deadlift4kg =
-                check_weight(&record[idx], line, Header::Deadlift4Kg, &mut report);
+            entry.deadlift4kg = check_weight(&record[idx], line, Header::Deadlift4Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Best3DeadliftKg) {
             entry.best3deadliftkg =
@@ -2176,21 +2109,15 @@ where
 
         // TotalKg is a positive weight if present or 0 if missing.
         if let Some(idx) = headers.get(Header::TotalKg) {
-            entry.totalkg = check_nonnegative_weight(
-                &record[idx],
-                line,
-                Header::TotalKg,
-                &mut report,
-            );
+            entry.totalkg =
+                check_nonnegative_weight(&record[idx], line, Header::TotalKg, &mut report);
         }
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {
-            entry.bodyweightkg =
-                check_column_bodyweightkg(&record[idx], line, &mut report);
+            entry.bodyweightkg = check_column_bodyweightkg(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::WeightClassKg) {
-            entry.weightclasskg =
-                check_column_weightclasskg(&record[idx], line, &mut report);
+            entry.weightclasskg = check_column_weightclasskg(&record[idx], line, &mut report);
         }
 
         // If no bodyweight is given but there is a bounded weightclass,
@@ -2209,13 +2136,7 @@ where
 
         // Check optional fields.
         if let Some(idx) = headers.get(Header::Division) {
-            check_column_division(
-                &record[idx],
-                config,
-                exempt_division,
-                line,
-                &mut report,
-            );
+            check_column_division(&record[idx], config, exempt_division, line, &mut report);
             entry.division = record[idx].to_string();
         }
 
@@ -2247,12 +2168,10 @@ where
             }
         }
         if let Some(idx) = headers.get(Header::CyrillicName) {
-            entry.cyrillicname =
-                check_column_cyrillicname(&record[idx], line, &mut report);
+            entry.cyrillicname = check_column_cyrillicname(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::JapaneseName) {
-            entry.japanesename =
-                check_column_japanesename(&record[idx], line, &mut report);
+            entry.japanesename = check_column_japanesename(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::GreekName) {
             entry.greekname = check_column_greekname(&record[idx], line, &mut report);
@@ -2261,14 +2180,12 @@ where
             entry.koreanname = check_column_koreanname(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::BirthYear) {
-            if let Some(y) = check_column_birthyear(&record[idx], meet, line, &mut report)
-            {
+            if let Some(y) = check_column_birthyear(&record[idx], meet, line, &mut report) {
                 entry.birthyearrange = BirthYearRange::from_birthyear(y);
             }
         }
         if let Some(idx) = headers.get(Header::BirthDate) {
-            entry.birthdate =
-                check_column_birthdate(&record[idx], meet, line, &mut report);
+            entry.birthdate = check_column_birthdate(&record[idx], meet, line, &mut report);
         }
 
         // Check consistency across fields.
@@ -2301,13 +2218,7 @@ where
 
         check_division_sex_consistency(&entry, config, line, &mut report);
         check_division_place_consistency(&entry, config, line, &mut report);
-        check_division_equipment_consistency(
-            &entry,
-            config,
-            exempt_division,
-            line,
-            &mut report,
-        );
+        check_division_equipment_consistency(&entry, config, exempt_division, line, &mut report);
 
         // If the Age wasn't assigned yet, infer it from any surrounding information.
         if let Some(meet) = meet {
@@ -2345,17 +2256,18 @@ where
             entry.birthyearrange = BirthYearRange::from_birthyear(birthdate.year());
         } else if let Some(meet) = meet {
             // Try using the AgeRange.
-            entry.birthyearrange =
-                entry.birthyearrange.intersect(BirthYearRange::from_range(
-                    entry.agerange.min,
-                    entry.agerange.max,
-                    meet.date,
-                ));
+            entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
+                entry.agerange.min,
+                entry.agerange.max,
+                meet.date,
+            ));
 
             // Try using division information.
-            entry.birthyearrange = entry.birthyearrange.intersect(
-                BirthYearRange::from_range(division_age_min, division_age_max, meet.date),
-            );
+            entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
+                division_age_min,
+                division_age_max,
+                meet.date,
+            ));
         }
 
         // Infer the BirthYearClass.
@@ -2400,14 +2312,8 @@ where
             if let Some(datamap) = lifterdata {
                 if let Some(lifterdata) = datamap.get(&entry.username) {
                     if lifterdata.disambiguation_count > 0 {
-                        let url = format!(
-                            "https://www.openpowerlifting.org/u/{}",
-                            entry.username
-                        );
-                        report.error_on(
-                            line,
-                            format!("Disambiguate {} ({})", entry.name, url),
-                        );
+                        let url = format!("https://www.openpowerlifting.org/u/{}", entry.username);
+                        report.error_on(line, format!("Disambiguate {} ({})", entry.name, url));
                     }
                 }
             }

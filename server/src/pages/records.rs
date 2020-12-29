@@ -92,10 +92,9 @@ impl RecordsQuery {
                 ret.equipment = e;
                 parsed_equipment = true;
             // Check whether this is federation information.
-            } else if let Ok(f) = FederationFilter::from_str_preferring(
-                segment,
-                FedPreference::PreferMetaFederation,
-            ) {
+            } else if let Ok(f) =
+                FederationFilter::from_str_preferring(segment, FedPreference::PreferMetaFederation)
+            {
                 if parsed_federation {
                     return Err(());
                 }
@@ -222,9 +221,7 @@ impl<'db> SingleRecordCollector<'db> {
         // The incoming entry is compared to the last element in the accumulator,
         // which is the Nth-highest-seen value. If it compares favorably, then
         // it replaces that Entry, and the accumulator is re-sorted.
-        if self.accumulator[last]
-            .map_or(true, |e| compare(meets, entry, e) == Ordering::Less)
-        {
+        if self.accumulator[last].map_or(true, |e| compare(meets, entry, e) == Ordering::Less) {
             // This entry matched.
             // Since each lifter is only to be counted once in each category,
             // scan through the accumulator and look to replace an existing entry.
@@ -347,10 +344,7 @@ impl<'db> RecordCollector<'db> {
     }
 }
 
-fn make_collectors<'db>(
-    sex: SexFilter,
-    classkind: ClassKind,
-) -> Vec<RecordCollector<'db>> {
+fn make_collectors<'db>(sex: SexFilter, classkind: ClassKind) -> Vec<RecordCollector<'db>> {
     let classes = match classkind {
         // Traditional classes.
         ClassKind::Traditional => {
@@ -533,8 +527,7 @@ fn find_records<'db>(
     };
 
     // Get a list of all entries corresponding to the selection.
-    let indices =
-        algorithms::get_entry_indices_for(&sel.to_full_selection(&default).filter, opldb);
+    let indices = algorithms::get_entry_indices_for(&sel.to_full_selection(&default).filter, opldb);
 
     // Build a vector of structs that can remember records.
     let mut collectors = make_collectors(sel.sex, sel.classkind);
@@ -617,10 +610,7 @@ impl<'db> Table<'db> {
                         date: Some(format!("{}", meet.date)),
                         path: Some(&meet.path),
                         federation: Some(meet.federation),
-                        localized_name: Some(get_localized_name(
-                            &lifter,
-                            locale.language,
-                        )),
+                        localized_name: Some(get_localized_name(&lifter, locale.language)),
                         lifter: Some(lifter),
                     }
                 }

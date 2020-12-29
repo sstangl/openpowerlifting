@@ -229,10 +229,7 @@ struct LiftersRow<'md, 'ld> {
 }
 
 impl<'md, 'ld> LiftersRow<'md, 'ld> {
-    fn from(
-        entrydata: &'md EntryLifterData,
-        lifterdata: &'ld LifterData,
-    ) -> LiftersRow<'md, 'ld> {
+    fn from(entrydata: &'md EntryLifterData, lifterdata: &'ld LifterData) -> LiftersRow<'md, 'ld> {
         LiftersRow {
             id: entrydata.id,
             name: entrydata.name,
@@ -317,9 +314,7 @@ pub fn make_csv(
     // Data structures for assigning globally-unique IDs.
     let mut next_lifter_id: u32 = 1; // 0 is for "seanstangl", needed by server tests.
 
-    for (meet_id, SingleMeetData { meet, entries }) in
-        meetdata.get_meets().iter().enumerate()
-    {
+    for (meet_id, SingleMeetData { meet, entries }) in meetdata.get_meets().iter().enumerate() {
         // Write out the line for this meet.
         let meet_id = meet_id as u32;
         meets_wtr.serialize(MeetsRow::from(&meet, meet_id))?;

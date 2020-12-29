@@ -93,11 +93,7 @@ fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut R
 }
 
 /// Checks Name consistency for all lifters.
-pub fn check_name_all(
-    liftermap: &LifterMap,
-    meetdata: &AllMeetData,
-    reports: &mut Vec<Report>,
-) {
+pub fn check_name_all(liftermap: &LifterMap, meetdata: &AllMeetData, reports: &mut Vec<Report>) {
     let mut report = Report::new("[Name Consistency]".into());
 
     for lifter_indices in liftermap.values() {

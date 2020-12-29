@@ -119,10 +119,7 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
     }
 }
 
-pub fn select_display_language(
-    languages: &AcceptLanguage,
-    cookies: &Cookies,
-) -> Language {
+pub fn select_display_language(languages: &AcceptLanguage, cookies: &Cookies) -> Language {
     let default = Language::en;
 
     // The user may explicitly override the language choice by using
@@ -139,8 +136,7 @@ pub fn select_display_language(
         Some(s) => {
             // TODO: It would be better if this vector was static.
             let known_languages: Vec<String> = Language::string_list();
-            let borrowed: Vec<&str> =
-                known_languages.iter().map(|s| s.as_ref()).collect();
+            let borrowed: Vec<&str> = known_languages.iter().map(|s| s.as_ref()).collect();
             let valid_languages = accept_language::intersection(&s, borrowed);
 
             if valid_languages.is_empty() {

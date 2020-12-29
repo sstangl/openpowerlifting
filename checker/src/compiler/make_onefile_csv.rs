@@ -62,10 +62,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
     }
 }
 
-pub fn make_onefile_csv(
-    meetdata: &AllMeetData,
-    buildpath: &Path,
-) -> Result<(), csv::Error> {
+pub fn make_onefile_csv(meetdata: &AllMeetData, buildpath: &Path) -> Result<(), csv::Error> {
     let mut csv = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
         .terminator(Terminator::Any(b'\n'))

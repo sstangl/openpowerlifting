@@ -53,10 +53,9 @@ impl MeetListQuery {
             .filter_map(|a| a.file_name().and_then(OsStr::to_str))
         {
             // Check whether this is federation information.
-            if let Ok(f) = FederationFilter::from_str_preferring(
-                segment,
-                FedPreference::PreferFederation,
-            ) {
+            if let Ok(f) =
+                FederationFilter::from_str_preferring(segment, FedPreference::PreferFederation)
+            {
                 if parsed_federation {
                     return Err(());
                 }
@@ -105,10 +104,7 @@ pub struct MeetInfo<'db> {
 }
 
 impl<'db> MeetInfo<'db> {
-    pub fn from(
-        meet: &'db opldb::Meet,
-        strings: &'db langpack::Translations,
-    ) -> MeetInfo<'db> {
+    pub fn from(meet: &'db opldb::Meet, strings: &'db langpack::Translations) -> MeetInfo<'db> {
         MeetInfo {
             path: &meet.path,
             federation: meet.federation,

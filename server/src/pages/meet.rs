@@ -178,11 +178,7 @@ impl MeetSortSelection {
     }
 
     /// Gets the title of the column to show for the given selection.
-    pub fn column_title<'db>(
-        self,
-        locale: &'db Locale,
-        default_points: PointsSystem,
-    ) -> &'db str {
+    pub fn column_title<'db>(self, locale: &'db Locale, default_points: PointsSystem) -> &'db str {
         let system = self.as_points_system(default_points);
         points_column_title(system, locale, default_points)
     }
@@ -212,10 +208,7 @@ pub struct MeetInfo<'a> {
 }
 
 impl<'a> MeetInfo<'a> {
-    pub fn from(
-        meet: &'a opldb::Meet,
-        strings: &'a langpack::Translations,
-    ) -> MeetInfo<'a> {
+    pub fn from(meet: &'a opldb::Meet, strings: &'a langpack::Translations) -> MeetInfo<'a> {
         MeetInfo {
             path: &meet.path,
             federation: meet.federation,
@@ -450,13 +443,11 @@ fn finish_table<'db>(
     let equip: &str = if ruleset.contains(Rule::CombineAllEquipment) {
         "" // No equipment specifier.
     } else if ruleset.contains(Rule::CombineRawAndWraps)
-        && (entries[0].equipment == Equipment::Raw
-            || entries[0].equipment == Equipment::Wraps)
+        && (entries[0].equipment == Equipment::Raw || entries[0].equipment == Equipment::Wraps)
     {
         locale.strings.translate_equipment(Equipment::Wraps)
     } else if ruleset.contains(Rule::CombineSingleAndMulti)
-        && (entries[0].equipment == Equipment::Single
-            || entries[0].equipment == Equipment::Multi)
+        && (entries[0].equipment == Equipment::Single || entries[0].equipment == Equipment::Multi)
     {
         locale.strings.translate_equipment(Equipment::Multi)
     } else {
@@ -633,13 +624,9 @@ impl<'db> Context<'db> {
         let default_points: PointsSystem = meet.federation.default_points(meet.date);
 
         let tables: Vec<Table> = match sort {
-            MeetSortSelection::ByDivision => make_tables_by_division(
-                &opldb,
-                &locale,
-                default_points,
-                meet_id,
-                meet.ruleset,
-            ),
+            MeetSortSelection::ByDivision => {
+                make_tables_by_division(&opldb, &locale, default_points, meet_id, meet.ruleset)
+            }
             _ => {
                 let system = sort.as_points_system(default_points);
                 make_tables_by_points(&opldb, &locale, system, meet_id)

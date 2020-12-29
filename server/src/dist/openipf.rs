@@ -73,8 +73,7 @@ pub fn index(
 ) -> Option<Template> {
     let locale = make_locale(&langinfo, lang, languages, &cookies);
     let default = default_openipf_rankings_query();
-    let mut cx =
-        pages::rankings::Context::new(&opldb, &locale, &default, &default, true)?;
+    let mut cx = pages::rankings::Context::new(&opldb, &locale, &default, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -103,8 +102,7 @@ pub fn rankings(
     let selection =
         opldb::query::direct::RankingsQuery::from_url_path(&selections, &default).ok()?;
     let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx =
-        pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
+    let mut cx = pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -124,9 +122,7 @@ pub fn rankings_api(
     let default = default_openipf_rankings_query();
     let selection = match selections {
         None => default,
-        Some(path) => {
-            opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?
-        }
+        Some(path) => opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?,
     };
 
     let language = query.lang.parse::<Language>().ok()?;
@@ -175,13 +171,10 @@ pub fn search_rankings_api(
     let default = default_openipf_rankings_query();
     let selection = match selections {
         None => default,
-        Some(path) => {
-            opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?
-        }
+        Some(path) => opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?,
     };
 
-    let result =
-        pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
+    let result = pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
 
     Some(JsonString(serde_json::to_string(&result).ok()?))
 }

@@ -182,11 +182,7 @@ pub fn check_meetcountry(s: &str, report: &mut Report) -> Option<Country> {
 }
 
 /// Checks the optional MeetState column.
-pub fn check_meetstate(
-    s: &str,
-    report: &mut Report,
-    country: Option<Country>,
-) -> Option<State> {
+pub fn check_meetstate(s: &str, report: &mut Report, country: Option<Country>) -> Option<State> {
     if s.is_empty() {
         return None;
     }
@@ -234,12 +230,7 @@ pub fn check_meettown(s: &str, report: &mut Report) -> Option<String> {
 }
 
 /// Checks the mandatory MeetName column.
-pub fn check_meetname(
-    s: &str,
-    report: &mut Report,
-    fedstr: &str,
-    datestr: &str,
-) -> Option<String> {
+pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str) -> Option<String> {
     if s.is_empty() {
         report.error("MeetName cannot be empty");
         return None;

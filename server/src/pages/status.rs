@@ -54,8 +54,7 @@ impl FederationStatus {
             has_probe: "No",
             format: "",
             ease: "",
-            maintainers:
-                "None (<a href=\"mailto:updates@openpowerlifting.org\">Apply</a>)",
+            maintainers: "None (<a href=\"mailto:updates@openpowerlifting.org\">Apply</a>)",
             instagram: "",
         }
     }

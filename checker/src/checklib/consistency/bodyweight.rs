@@ -7,12 +7,7 @@ use crate::{AllMeetData, Entry, EntryIndex, LifterDataMap, LifterMap, Report};
 
 /// Get the average change in bodyweight from `a` to `b` as a percentage per
 /// day.
-fn calc_average_percentage_change(
-    a: &Entry,
-    b: &Entry,
-    a_date: Date,
-    b_date: Date,
-) -> f32 {
+fn calc_average_percentage_change(a: &Entry, b: &Entry, a_date: Date, b_date: Date) -> f32 {
     // Handle division-by-zero cases early.
     if a.bodyweightkg.is_zero() || b.bodyweightkg.is_zero() || a_date == b_date {
         return 0.0;
@@ -54,8 +49,7 @@ pub fn check_bodyweight_one(
     }
 
     // Sort the entries by date.
-    let mut entries: Vec<&Entry> =
-        indices.iter().map(|i| meetdata.get_entry(*i)).collect();
+    let mut entries: Vec<&Entry> = indices.iter().map(|i| meetdata.get_entry(*i)).collect();
     entries.sort_unstable_by_key(|&e| get_date(meetdata, e));
 
     let mut prev: &Entry = entries[0];
@@ -68,8 +62,7 @@ pub fn check_bodyweight_one(
         let prev_date = get_date(meetdata, prev);
         let this_date = get_date(meetdata, entry);
 
-        let average_per_day =
-            calc_average_percentage_change(prev, entry, prev_date, this_date);
+        let average_per_day = calc_average_percentage_change(prev, entry, prev_date, this_date);
 
         // Chosen to only produce a few warnings.
         // The intention is that this be tightened-up over time.

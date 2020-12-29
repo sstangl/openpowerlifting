@@ -336,11 +336,7 @@ fn calculate_bests<'db>(
 
     let mut rows = Vec::with_capacity(4);
 
-    if raw_squat.is_some()
-        || raw_bench.is_some()
-        || raw_deadlift.is_some()
-        || raw_total.is_some()
-    {
+    if raw_squat.is_some() || raw_bench.is_some() || raw_deadlift.is_some() || raw_total.is_some() {
         rows.push(PersonalBestsRow::new(
             &locale,
             &locale.strings.equipment.raw,
@@ -489,11 +485,7 @@ impl<'a> Context<'a> {
             lifter_sex,
             show_sex_column: !consistent_sex,
             show_attempts: has_attempts,
-            points_column_title: points_column_title(
-                points_system,
-                &locale,
-                points_system,
-            ),
+            points_column_title: points_column_title(points_system, &locale, points_system),
             bests,
             meet_results,
         }

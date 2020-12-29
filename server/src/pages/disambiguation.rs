@@ -82,11 +82,7 @@ impl<'db> Context<'db> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            points_column_title: points_column_title(
-                points_system,
-                &locale,
-                points_system,
-            ),
+            points_column_title: points_column_title(points_system, &locale, points_system),
             variants,
         }
     }

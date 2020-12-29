@@ -50,8 +50,7 @@ struct Args {
 // either of the files "entries.csv" or "meet.csv".
 fn is_meetdir(entry: &DirEntry) -> bool {
     entry.file_type().is_dir()
-        && (entry.path().join("entries.csv").exists()
-            || entry.path().join("meet.csv").exists())
+        && (entry.path().join("entries.csv").exists() || entry.path().join("meet.csv").exists())
 }
 
 /// Determines the project root from the binary path.
@@ -398,9 +397,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
                     // Map to the SingleMeetData for collection.
                     match (checkresult.meet, checkresult.entries) {
-                        (Some(meet), Some(entries)) => {
-                            Some(SingleMeetData { meet, entries })
-                        }
+                        (Some(meet), Some(entries)) => Some(SingleMeetData { meet, entries }),
                         _ => None,
                     }
                 }
@@ -408,8 +405,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     internal_error_count.fetch_add(1, Ordering::SeqCst);
                     let stderr = io::stderr();
                     let mut handle = stderr.lock();
-                    let _ = handle
-                        .write_fmt(format_args!("{}\n", dir.path().to_str().unwrap()));
+                    let _ = handle.write_fmt(format_args!("{}\n", dir.path().to_str().unwrap()));
                     let _ = handle.write_fmt(format_args!(
                         " Internal Error: {}\n",
                         e.to_string().bold().red()
@@ -434,9 +430,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let liftermap = meetdata.create_liftermap();
 
     // Check for consistency errors for individual lifters.
-    for report in
-        checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial)
-    {
+    for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial) {
         let (errors, warnings) = report.count_messages();
         error_count += errors;
         warning_count += warnings;

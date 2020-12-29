@@ -18,9 +18,7 @@ pub use crate::checklib::entries::{
 pub use crate::checklib::lifterdata::{
     check_lifterdata, LifterData, LifterDataCheckResult, LifterDataMap,
 };
-pub use crate::checklib::meet::{
-    check_meet, check_meet_from_string, Meet, MeetCheckResult,
-};
+pub use crate::checklib::meet::{check_meet, check_meet_from_string, Meet, MeetCheckResult};
 pub use crate::checklib::CheckResult;
 
 pub mod compiler;

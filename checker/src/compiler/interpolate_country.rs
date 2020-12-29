@@ -182,8 +182,7 @@ mod tests {
             ..Entry::default()
         };
 
-        let mut meetdata =
-            meetdata_from_vec(vec![Entry::default(), usa, Entry::default()]);
+        let mut meetdata = meetdata_from_vec(vec![Entry::default(), usa, Entry::default()]);
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
@@ -204,8 +203,7 @@ mod tests {
             ..Entry::default()
         };
 
-        let mut meetdata =
-            meetdata_from_vec(vec![Entry::default(), usa, Entry::default(), russia]);
+        let mut meetdata = meetdata_from_vec(vec![Entry::default(), usa, Entry::default(), russia]);
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
