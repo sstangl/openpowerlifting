@@ -1,8 +1,8 @@
 //! Defines MeetData, the owner of all meet-related data produced by the
 //! Checker.
 
+use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::Username;
-use std::collections::HashMap;
 
 use crate::checklib::{Entry, Meet};
 
@@ -62,7 +62,7 @@ impl EntryIndex {
 ///
 /// Note that because internal self-references are disallowed, this map
 /// must maintain a copy of the String and EntryIndex.
-pub type LifterMap = HashMap<Username, Vec<EntryIndex>>;
+pub type LifterMap = FxHashMap<Username, Vec<EntryIndex>>;
 
 impl From<Vec<SingleMeetData>> for AllMeetData {
     fn from(v: Vec<SingleMeetData>) -> AllMeetData {
@@ -116,7 +116,7 @@ impl AllMeetData {
     /// so that the Entry can know its `SingleMeetData` context.
     pub fn create_liftermap(&mut self) -> LifterMap {
         // Initialize the LifterMap to be fairly large to avoid reallocation.
-        let mut map = LifterMap::with_capacity(400_000);
+        let mut map = LifterMap::with_capacity_and_hasher(800_000, FxBuildHasher::default());
 
         for (meet_index, singlemeet) in self.meets.iter_mut().enumerate() {
             for (entry_index, entry) in singlemeet.entries.iter_mut().enumerate() {

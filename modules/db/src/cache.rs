@@ -1,10 +1,10 @@
 //! Precalculated cache of data, such as sorts.
 
+use fxhash::{FxBuildHasher, FxHashMap};
 use itertools::Itertools;
 use opltypes::*;
 
 use std::cmp::Ordering;
-use std::collections::HashMap;
 use std::ops::Deref;
 
 use crate::algorithms::*;
@@ -230,12 +230,12 @@ pub(crate) struct StaticCache {
     pub log_linear_time: LogLinearTimeCache,
 
     /// Precalculated map of Lifter Username to Lifter ID.
-    pub username_map: HashMap<String, u32>,
+    pub username_map: FxHashMap<String, u32>,
 }
 
 impl StaticCache {
     pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
-        let mut username_map = HashMap::new();
+        let mut username_map = FxHashMap::with_hasher(FxBuildHasher::default());
         for (i, lifter) in lifters.iter().enumerate() {
             username_map.insert(lifter.username.as_str().to_string(), i as u32);
         }

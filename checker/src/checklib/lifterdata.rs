@@ -1,10 +1,10 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
+use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::Username;
 use serde_derive::Deserialize;
 use toml::de;
 
-use std::collections::HashMap;
 use std::error::Error;
 use std::fs;
 use std::path::Path;
@@ -38,7 +38,7 @@ pub struct LifterDataCheckResult {
 }
 
 /// Map from `Username` to `LifterData`.
-pub type LifterDataMap = HashMap<Username, LifterData>;
+pub type LifterDataMap = FxHashMap<Username, LifterData>;
 
 /// A struct containing all `lifter-data/` metadata for a single Username.
 #[derive(Debug, Default)]
@@ -370,7 +370,7 @@ fn check_social_vkontakte(
 }
 
 /// Map from `Username` to a count of disambiguations for that username.
-pub type DisambiguationMap = HashMap<String, u32>;
+pub type DisambiguationMap = FxHashMap<String, u32>;
 
 /// Specifies a Name (which is translated into a Username) and a Count of the
 /// number of disambiguations for people sharing that same Username.
@@ -440,7 +440,7 @@ fn check_name_disambiguation(
 
 pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> LifterDataCheckResult {
     let mut reports: Vec<Report> = vec![];
-    let mut map = LifterDataMap::new();
+    let mut map = LifterDataMap::with_hasher(FxBuildHasher::default());
 
     // Check donator-colors.csv.
     // Always create the report in order to catch internal errors.
