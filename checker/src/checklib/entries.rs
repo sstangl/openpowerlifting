@@ -1520,10 +1520,13 @@ fn check_weightclass_consistency(
 
     // If no group matched, the config is in trouble.
     if matched_group.is_none() {
-        report.error_on(
-            line,
-            "Could not match to any weightclass group in the CONFIG.toml",
-        );
+        // Federations don't define Mx weightclasses at this point.
+        if entry.sex != Sex::Mx {
+            report.error_on(
+                line,
+                "Could not match to any weightclass group in the CONFIG.toml",
+            );
+        }
         return;
     }
 
@@ -1879,12 +1882,11 @@ fn check_division_place_consistency(
 fn check_division_equipment_consistency(
     entry: &Entry,
     config: Option<&Config>,
-    exempt_division: bool,
     line: u64,
     report: &mut Report,
 ) {
     // Allow exemptions from division-specific checks.
-    if exempt_division || entry.division.is_empty() {
+    if entry.division.is_empty() {
         return;
     }
 
@@ -2216,9 +2218,11 @@ where
             &mut report,
         );
 
-        check_division_sex_consistency(&entry, config, line, &mut report);
-        check_division_place_consistency(&entry, config, line, &mut report);
-        check_division_equipment_consistency(&entry, config, exempt_division, line, &mut report);
+        if !exempt_division {
+            check_division_sex_consistency(&entry, config, line, &mut report);
+            check_division_place_consistency(&entry, config, line, &mut report);
+            check_division_equipment_consistency(&entry, config, line, &mut report);
+        }
 
         // If the Age wasn't assigned yet, infer it from any surrounding information.
         if let Some(meet) = meet {
