@@ -33,7 +33,7 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Sub-Juniors","13-18","Teen"]
+    divisions = ["Sub-Juniors","13-18","Teen", "Teen Under 17", "Teen 17-18"]
 
 
 [weightclasses.junior_M]
@@ -279,6 +279,7 @@
     1549 = ["ExemptWeightClassConsistency"] # Youth Classes
     1550 = ["ExemptWeightClassConsistency"] # Youth Classes
     1552 = ["ExemptWeightClassConsistency"] # Youth Classes
+    1553 = ["ExemptWeightClassConsistency"] # Youth Classes
     1604 = ["ExemptWeightClassConsistency"] # Para with IPF weight classes
     1607 = ["ExemptWeightClassConsistency"]
     1621 = ["ExemptWeightClassConsistency"] # Youth Classes
@@ -286,6 +287,7 @@
     1642 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1643 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1645 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
+    1648 = ["ExemptWeightClassConsistency"] # Youth Classes
     1705 = ["ExemptWeightClassConsistency"]
     1746 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1804 = ["ExemptWeightClassConsistency"]
