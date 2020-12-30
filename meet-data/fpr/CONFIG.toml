@@ -76,13 +76,27 @@
     sex = "F"
     divisions = ["Sub-Juniors"]
 
+[weightclasses.para_M]
+    classes = ["49","54","59","65","72","80","88","97","107","107+"]
+    date_range = ["2013-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Paralympics"]
+
 [weightclasses.para_F]
+    classes = ["41","45","50","55","61","67","73","79","86","86+"]
+    date_range = ["2013-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Paralympics"]
+
+
+
+[weightclasses.old_para_F]
     classes = ["40","44","48","52","56","60","67.5","75","82.5","82.5+"]
     date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
     divisions = ["Paralympics"]
 
-[weightclasses.para_M]
+[weightclasses.old_para_M]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","100+"]
     date_range = ["0000-01-01","2010-12-31"]
     sex = "M"
@@ -264,6 +278,8 @@
     1537 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1549 = ["ExemptWeightClassConsistency"] # Youth Classes
     1550 = ["ExemptWeightClassConsistency"] # Youth Classes
+    1552 = ["ExemptWeightClassConsistency"] # Youth Classes
+    1604 = ["ExemptWeightClassConsistency"] # Para with IPF weight classes
     1607 = ["ExemptWeightClassConsistency"]
     1621 = ["ExemptWeightClassConsistency"] # Youth Classes
     1631 = ["ExemptWeightClassConsistency"] # They stuffed up the womens classes
