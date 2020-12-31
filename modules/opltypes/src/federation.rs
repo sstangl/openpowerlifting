@@ -1237,6 +1237,16 @@ pub enum Federation {
     #[strum(to_string = "WPFG", serialize = "wpfg")]
     WPFG,
 
+    /// World Powerlifting Federation KRAWA (Not a WPF affiliate..)
+    #[serde(rename = "WPF-KRAWA")]
+    #[strum(to_string = "WPF-KRAWA", serialize = "wpf-krawa")]
+    WPFKRAWA,
+
+    /// World Powerlifting Federation Russia.
+    #[serde(rename = "WPF-RUS")]
+    #[strum(to_string = "WPF-RUS", serialize = "wpf-rus")]
+    WPFRUS,
+
     /// World Powerlifting League.
     #[strum(to_string = "WPLeague", serialize = "wpleague")]
     WPLeague,
@@ -1270,11 +1280,6 @@ pub enum Federation {
     /// World Powerlifting Union of Federations.
     #[strum(to_string = "WPUF", serialize = "wpuf")]
     WPUF,
-
-    /// World Powerlifting Federation Russia.
-    #[serde(rename = "WPF-RUS")]
-    #[strum(to_string = "WPF-RUS", serialize = "wpf-rus")]
-    WPFRUS,
 
     /// World Natural Powerlifting Federation.
     /// Was briefly called NPU (Natural Powerlifters United) in 1999.
@@ -1715,6 +1720,8 @@ impl Federation {
             Federation::WPCUKR => false,
             Federation::WPF => false,
             Federation::WPFG => false,
+            Federation::WPFKRAWA => false,
+            Federation::WPFRUS => false,
             Federation::WPLeague => false,
             Federation::WPNZ => FULLY_TESTED,
             Federation::WPPO => FULLY_TESTED,
@@ -1723,7 +1730,6 @@ impl Federation {
             Federation::WPSFBelarus => false,
             Federation::WPU => false,
             Federation::WPUF => false,
-            Federation::WPFRUS => false,
             Federation::WRPF => false,
             Federation::WRPFAUS => false,
             Federation::WRPFBelarus => false,
@@ -2038,6 +2044,8 @@ impl Federation {
             Federation::WPCUKR => Some(Country::Ukraine),
             Federation::WPF => None,
             Federation::WPFG => None,
+            Federation::WPFKRAWA => Some(Country::Ukraine),
+            Federation::WPFRUS => Some(Country::Russia),
             Federation::WPLeague => Some(Country::Ukraine),
             Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPPO => None,
@@ -2046,7 +2054,6 @@ impl Federation {
             Federation::WPSFBelarus => Some(Country::Belarus),
             Federation::WPU => None,
             Federation::WPUF => Some(Country::Ukraine),
-            Federation::WPFRUS => Some(Country::Russia),
             Federation::WNPF => Some(Country::USA),
             Federation::WRPF => Some(Country::Russia),
             Federation::WRPFAUS => Some(Country::Australia),
@@ -2432,6 +2439,8 @@ impl Federation {
             Federation::WPCUKR => Some(Federation::WPC),
             Federation::WPF => None,
             Federation::WPFG => None,
+            Federation::WPFKRAWA => None,
+            Federation::WPFRUS => Some(Federation::WPF),
             Federation::WPLeague => None,
             Federation::WPNZ => Some(Federation::WP),
             Federation::WPPO => None,
@@ -2440,7 +2449,6 @@ impl Federation {
             Federation::WPSFBelarus => Some(Federation::WPSF),
             Federation::WPU => None,
             Federation::WPUF => None,
-            Federation::WPFRUS => None,
             Federation::WNPF => None,
             Federation::WRPF => Some(Federation::WRPF),
             Federation::WRPFAUS => Some(Federation::WRPF),
@@ -2848,6 +2856,8 @@ impl Federation {
             Federation::WPCUKR => PointsSystem::Glossbrenner,
             Federation::WPF => PointsSystem::Wilks,
             Federation::WPFG => PointsSystem::Wilks,
+            Federation::WPFKRAWA => PointsSystem::Wilks,
+            Federation::WPFRUS => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
             Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPPO => PointsSystem::AH,
@@ -2856,7 +2866,6 @@ impl Federation {
             Federation::WPSFBelarus => PointsSystem::Wilks,
             Federation::WPU => PointsSystem::Wilks,
             Federation::WPUF => PointsSystem::Wilks,
-            Federation::WPFRUS => PointsSystem::Wilks,
             Federation::WNPF => PointsSystem::Wilks,
             Federation::WRPF => PointsSystem::Wilks,
             Federation::WRPFAUS => PointsSystem::Wilks,
