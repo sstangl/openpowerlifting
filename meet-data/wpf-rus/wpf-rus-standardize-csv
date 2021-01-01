@@ -48,7 +48,6 @@ def parse_sheetname(s):
 
     federation = ''
     event = None
-    amateur = 'Pro'  # By default, unless otherwise specified.
     tested = 'No'  # By default, unless otherwise specified.
     equipment = 'Raw'  # By default, unless otherwise specified.
 
@@ -208,12 +207,11 @@ def parse_sheetname(s):
 
         # Booleans.
         elif word in ['люб.', 'любители', 'am']:
-            amateur = 'Amateur'
+            tested = 'Yes'
         elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
-            assert amateur == 'Pro'
+            assert tested == 'No'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
             tested = 'Yes'
-            amateur = 'Amateur'
 
         # Grammatical ignorables.
         elif word == 'в':
@@ -261,7 +259,7 @@ def parse_sheetname(s):
             pass
         elif word == 'mpf':
             pass
-        elif word == 'элита':  # Elite
+        elif word in ['элита', 'elit']:  # Elite
             pass
         elif word == 'c':
             pass
@@ -272,7 +270,6 @@ def parse_sheetname(s):
 
     obj['federation'] = federation
     obj['event'] = event
-    obj['amateur'] = amateur
     obj['tested'] = tested
     obj['equipment'] = equipment
 
@@ -477,7 +474,7 @@ def parse_sheet(sheet):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat', 'mr bp', 'мпж',
-                                  'многоповторный']):
+                                  'многоповторный', 'mbp', 'мulty']):
         # Bench for reps
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
@@ -559,7 +556,6 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Event')
     assert 'Equipment' not in csv.fieldnames
     csv.fieldnames.append('Equipment')
-    csv.fieldnames.append('Amateur')
     csv.fieldnames.append('Tested')
     csv.fieldnames.append('Federation')
 
@@ -598,7 +594,6 @@ def parse_sheet(sheet):
         line.append(weightclass)
         line.append(obj['event'])
         line.append(obj['equipment'])
-        line.append(obj['amateur'])
         line.append(obj['tested'])
         line.append(obj['federation'])
         assert len(line) == len(csv.fieldnames)
@@ -654,7 +649,7 @@ def get_division(age_str, currdiv):
 
 def standardize_division_age(csv):
     assert 'Division-Age' in csv.fieldnames
-    assert 'Amateur' in csv.fieldnames
+    assert 'Tested' in csv.fieldnames
     assert 'Division' not in csv.fieldnames
     assert 'Age' not in csv.fieldnames
 
@@ -663,7 +658,7 @@ def standardize_division_age(csv):
     idx = csv.index('Division-Age')
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
-    amateuridx = csv.index('Amateur')
+    testedidx = csv.index('Tested')
     bdidx = csv.index('BirthDate')
 
     for row in csv.rows:
@@ -735,12 +730,15 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-        division = row[amateuridx] + ' ' + division
+        if row[testedidx] == 'Yes':
+            division = 'Amateur ' + division
+        else:
+            division = 'Pro ' + division
+
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
     csv.remove_column_by_name('Division-Age')
-    csv.remove_column_by_name('Amateur')
 
 # Mark DQs properly and make sure that place is an integer.
 
