@@ -13,13 +13,28 @@
     owner: root
   notify: restart openpl-app
 
-- name: make sure server data is latest
-  synchronize:
-    src: ../build/data/
+- name: make sure the entries.csv is latest
+  copy:
+    src: ../build/data/entries.csv
     dest: "{{ openpl_app_data_path }}/"
-    archive: no
-    times: yes
-    recursive: yes
+    mode: 0644
+    owner: root
+  notify: restart openpl-app
+
+- name: make sure the lifters.csv is latest
+  copy:
+    src: ../build/data/lifters.csv
+    dest: "{{ openpl_app_data_path }}/"
+    mode: 0644
+    owner: root
+  notify: restart openpl-app
+
+- name: make sure the meets.csv is latest
+  copy:
+    src: ../build/data/meets.csv
+    dest: "{{ openpl_app_data_path }}/"
+    mode: 0644
+    owner: root
   notify: restart openpl-app
 
 - name: make sure Rocket.toml is latest
