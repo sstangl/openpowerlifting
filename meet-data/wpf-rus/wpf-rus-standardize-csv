@@ -424,7 +424,8 @@ def parse_fieldnames(sheet):
                 [next(iterable) for x in range(2)]
 
         elif text in ['сумма', 'total', 'result', 'сумма баллов', 'резульат',
-                      'результат bp', 'результат', 'итог', 'рзультат', 'totall', 'рез-тат']:
+                      'результат bp', 'результат', 'итог', 'рзультат', 'totall',
+                      'рез-тат']:
             fieldnames.append('TotalKg')
 
         # This is the Wilks. But we prefer to re-calculate it ourselves.
@@ -473,7 +474,7 @@ def parse_sheet(sheet):
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat', 'mr bp', 'мпж',
                                   'многоповторный', 'mbp', 'мulty']):
-       # Bench for reps
+        # Bench for reps
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
         return csv  # "Power sport", overhead-press + bicep-curl
