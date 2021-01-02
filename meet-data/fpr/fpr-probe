@@ -126,7 +126,7 @@ def getmeetlist_SPB(html, main_url):
         for a in div.find_all('a'):
             url = a['href']
             url = base_url + "/" + url
-            url = url.replace('//', '/')
+            url = url.replace('.ru//', '.ru/')
             if url not in urls:
                 urls.append(url)
     return urls
