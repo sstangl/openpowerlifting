@@ -390,6 +390,7 @@
   <option value="vityaz" {% if selection.federation == "Vityaz" %}selected{% endif %}>Vityaz - Vityaz</option>
   <option value="wpa-rus" {% if selection.federation == "WPA-RUS" %}selected{% endif %}>WPA-RUS - WPA Russia</option>
   <option value="wpc-rus" {% if selection.federation == "WPC-RUS" %}selected{% endif %}>WPC-RUS - WPC Russia</option>
+  <option value="wpf-rus" {% if selection.federation == "WPF-RUS" %}selected{% endif %}>WPF-RUS - WPF Russia</option>
   <option value="wrpf" {% if selection.federation == "WRPF" %}selected{% endif %}>WRPF - World Raw Powerlifting Federation</option>
 </optgroup>
 <optgroup label="{{strings.country.serbia}}">
