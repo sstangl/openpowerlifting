@@ -207,23 +207,11 @@ def parse_sheetname(s):
 
         # Booleans.
         elif word in ['люб.', 'любители', 'am']:
-
-
-<< << << < Updated upstream
             tested = 'Yes'
         elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
             assert tested == 'No'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
             tested = 'Yes'
-=======
-            amateur = 'Amateur'
-        elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
-            assert amateur == 'Pro'
-        elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
-            tested = 'Yes'
-            amateur = 'Amateur'
->>>>>>> Stashed changes
-
         # Grammatical ignorables.
         elif word == 'в':
             pass
@@ -270,11 +258,7 @@ def parse_sheetname(s):
             pass
         elif word == 'mpf':
             pass
-<<<<<<< Updated upstream
         elif word in ['элита', 'elit']:  # Elite
-=======
-        elif word == 'элита':  # Elite
->>>>>>> Stashed changes
             pass
         elif word == 'c':
             pass
@@ -285,10 +269,6 @@ def parse_sheetname(s):
 
     obj['federation'] = federation
     obj['event'] = event
-<<<<<<< Updated upstream
-=======
-    obj['amateur'] = amateur
->>>>>>> Stashed changes
     obj['tested'] = tested
     obj['equipment'] = equipment
 
@@ -467,18 +447,10 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'баллы':  # Points
             fieldnames.append('IGNORE')
-<<<<<<< Updated upstream
         elif text == 'разряды':  # Rank
             fieldnames.append('IGNORE')
         elif text == 'subtotal':
             fieldnames.append('IGNORE')
-=======
-        elif text == 'разряды': #Rank
-            fieldnames.append('IGNORE')  
-        elif text == 'subtotal':
-            fieldnames.append('IGNORE')           
->>>>>>> Stashed changes
-
         else:
             die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     return fieldnames
@@ -500,12 +472,8 @@ def parse_sheet(sheet):
         return csv
     elif any(x in title for x in ['нж', 'народный', 'народн жим', 'нар',
                                   'folk', 'm-rep', 'multy-repeat', 'mr bp', 'мпж',
-<<<<<<< Updated upstream
                                   'многоповторный', 'mbp', 'мulty']):
-=======
-                                  'многоповторный']):
->>>>>>> Stashed changes
-        # Bench for reps
+       # Bench for reps
         return csv
     elif 'пауэрспорт' in title or 'powersport' in title or 'паэурспорт' in title:
         return csv  # "Power sport", overhead-press + bicep-curl
@@ -586,10 +554,6 @@ def parse_sheet(sheet):
     csv.fieldnames.append('Event')
     assert 'Equipment' not in csv.fieldnames
     csv.fieldnames.append('Equipment')
-<<<<<<< Updated upstream
-=======
-    csv.fieldnames.append('Amateur')
->>>>>>> Stashed changes
     csv.fieldnames.append('Tested')
     csv.fieldnames.append('Federation')
 
@@ -628,10 +592,6 @@ def parse_sheet(sheet):
         line.append(weightclass)
         line.append(obj['event'])
         line.append(obj['equipment'])
-<<<<<<< Updated upstream
-=======
-        line.append(obj['amateur'])
->>>>>>> Stashed changes
         line.append(obj['tested'])
         line.append(obj['federation'])
         assert len(line) == len(csv.fieldnames)
@@ -687,11 +647,7 @@ def get_division(age_str, currdiv):
 
 def standardize_division_age(csv):
     assert 'Division-Age' in csv.fieldnames
-<<<<<<< Updated upstream
     assert 'Tested' in csv.fieldnames
-=======
-    assert 'Amateur' in csv.fieldnames
->>>>>>> Stashed changes
     assert 'Division' not in csv.fieldnames
     assert 'Age' not in csv.fieldnames
 
@@ -700,11 +656,7 @@ def standardize_division_age(csv):
     idx = csv.index('Division-Age')
     dividx = csv.index('Division')
     ageidx = csv.index('Age')
-<<<<<<< Updated upstream
     testedidx = csv.index('Tested')
-=======
-    amateuridx = csv.index('Amateur')
->>>>>>> Stashed changes
     bdidx = csv.index('BirthDate')
 
     for row in csv.rows:
@@ -776,23 +728,14 @@ def standardize_division_age(csv):
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
-<<<<<<< Updated upstream
         if row[testedidx] == 'Yes':
             division = 'Amateur ' + division
         else:
             division = 'Pro ' + division
-
-=======
-        division = row[amateuridx] + ' ' + division
->>>>>>> Stashed changes
         row[dividx] = division.replace('  ', ' ').strip()
 
     # Remove the now-extraneous columns.
     csv.remove_column_by_name('Division-Age')
-<<<<<<< Updated upstream
-=======
-    csv.remove_column_by_name('Amateur')
->>>>>>> Stashed changes
 
 # Mark DQs properly and make sure that place is an integer.
 
