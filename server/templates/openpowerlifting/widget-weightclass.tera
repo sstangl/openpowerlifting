@@ -34,7 +34,8 @@
     <option value="ipf52" sex="women"{% if selection.weightclasses == "IpfF52" %} selected{% endif %}>{% if units == "kg" %}-52{% else %}-114{% endif %}</option>
     <option value="ipf57" sex="women"{% if selection.weightclasses == "IpfF57" %} selected{% endif %}>{% if units == "kg" %}-57{% else %}-125{% endif %}</option>
     <option value="ipf63" sex="women"{% if selection.weightclasses == "IpfF63" %} selected{% endif %}>{% if units == "kg" %}-63{% else %}-138{% endif %}</option>
-    <option value="ipf72" sex="women"{% if selection.weightclasses == "IpfF72" %} selected{% endif %}>{% if units == "kg" %}-72{% else %}-158{% endif %}</option>
+    <option value="ipf69" sex="women"{% if selection.weightclasses == "IpfF69" %} selected{% endif %}>{% if units == "kg" %}-69{% else %}-152{% endif %}</option>
+    <option value="ipf76" sex="women"{% if selection.weightclasses == "IpfF76" %} selected{% endif %}>{% if units == "kg" %}-76{% else %}-168{% endif %}</option>
     <option value="ipf84" sex="women"{% if selection.weightclasses == "IpfF84" %} selected{% endif %}>{% if units == "kg" %}-84{% else %}-185{% endif %}</option>
     <option value="ipfover84" sex="women"{% if selection.weightclasses == "IpfFOver84" %} selected{% endif %}>{% if units == "kg" %}84+{% else %}185+{% endif %}</option>
   </optgroup>

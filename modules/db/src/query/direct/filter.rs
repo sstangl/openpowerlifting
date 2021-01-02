@@ -182,7 +182,8 @@ pub enum WeightClassFilter {
     IpfF52,
     IpfF57,
     IpfF63,
-    IpfF72,
+    IpfF69,
+    IpfF76,
     IpfF84,
     IpfFOver84,
 
@@ -283,7 +284,8 @@ impl WeightClassFilter {
             WeightClassFilter::IpfF52 => make_bounds(47.0, 52.0),
             WeightClassFilter::IpfF57 => make_bounds(52.0, 57.0),
             WeightClassFilter::IpfF63 => make_bounds(57.0, 63.0),
-            WeightClassFilter::IpfF72 => make_bounds(63.0, 72.0),
+            WeightClassFilter::IpfF69 => make_bounds(63.0, 69.0),
+            WeightClassFilter::IpfF76 => make_bounds(69.0, 76.0),
             WeightClassFilter::IpfF84 => make_bounds(72.0, 84.0),
             WeightClassFilter::IpfFOver84 => make_bound_over(84.0),
 
@@ -367,7 +369,8 @@ impl WeightClassFilter {
             WeightClassFilter::IpfF52 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
             WeightClassFilter::IpfF57 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(57)),
             WeightClassFilter::IpfF63 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(63)),
-            WeightClassFilter::IpfF72 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(72)),
+            WeightClassFilter::IpfF69 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(69)),
+            WeightClassFilter::IpfF76 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(76)),
             WeightClassFilter::IpfF84 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(84)),
             WeightClassFilter::IpfFOver84 => WeightClassKg::Over(WeightKg::from_i32(84)),
 
@@ -452,7 +455,8 @@ impl FromStr for WeightClassFilter {
             "ipf52" => Ok(WeightClassFilter::IpfF52),
             "ipf57" => Ok(WeightClassFilter::IpfF57),
             "ipf63" => Ok(WeightClassFilter::IpfF63),
-            "ipf72" => Ok(WeightClassFilter::IpfF72),
+            "ipf69" => Ok(WeightClassFilter::IpfF69),
+            "ipf76" => Ok(WeightClassFilter::IpfF76),
             "ipf84" => Ok(WeightClassFilter::IpfF84),
             "ipfover84" => Ok(WeightClassFilter::IpfFOver84),
 

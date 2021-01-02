@@ -435,7 +435,8 @@ fn make_collectors<'db>(sex: SexFilter, classkind: ClassKind) -> Vec<RecordColle
                     WeightClassFilter::IpfF52,
                     WeightClassFilter::IpfF57,
                     WeightClassFilter::IpfF63,
-                    WeightClassFilter::IpfF72,
+                    WeightClassFilter::IpfF69,
+                    WeightClassFilter::IpfF76,
                     WeightClassFilter::IpfF84,
                     WeightClassFilter::IpfFOver84,
                 ]
