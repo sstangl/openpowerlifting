@@ -207,7 +207,9 @@ def parse_sheetname(s):
 
         # Booleans.
         elif word in ['люб.', 'любители', 'am']:
-<<<<<<< Updated upstream
+
+
+<< << << < Updated upstream
             tested = 'Yes'
         elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
             assert tested == 'No'
