@@ -23,7 +23,7 @@ Place,Name,CyrillicName,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,TotalKg,
 2,Artur Sozinov,Артур Созінов,Ukraine,62.3,65,-70,-70,65,67.5,Amateur Teen 13-15,M,B,Raw,Yes,,,,,,,,65,,1998
 1,Vladislav Kovalenko,Владислав Коваленко,Ukraine,73.5,105,112.5,120,120,75,Amateur Teen 16-17,M,B,Raw,Yes,,,,,,,,120,,1995
 1,Vasiliy Talpe,Василий Талпе,Moldova,58.1,82.5,87.5,-90,87.5,60,Amateur Teen 18-19,M,B,Raw,Yes,,,,,,,,87.5,,1993
-1,Oleksandr Adonin,Олександр Адонін,Ukraine,65.7,115,-125,-125,115,67.5,Amateur Teen 18-19,M,B,Raw,Yes,,,,,,,,115,,1990
+1,Oleksandr Adonin,Олександр Адонін,Ukraine,65.7,115,-125,-125,115,67.5,Amateur Juniors 20-23,M,B,Raw,Yes,,,,,,,,115,,1990
 1,Valeriy Khorechko,Валерій Хоречко,Ukraine,73.3,155,-162.5,162.5,162.5,75,Amateur Teen 18-19,M,B,Raw,Yes,,,,,,,,162.5,,1992
 2,Yuriy Umanets,Юрій Уманець,Moldova,73.8,115,125,132.5,132.5,75,Amateur Teen 18-19,M,B,Raw,Yes,,,,,,,,132.5,,1992
 1,Oleg Melnichuk,Олег Мельничук,Ukraine,87.2,117.5,-122.5,-122.5,117.5,90,Amateur Teen 18-19,M,B,Raw,Yes,,,,,,,,117.5,,1994
@@ -155,12 +155,12 @@ DQ,Viktor Kochmar,Віктор Кочмар,Ukraine,141,-230,-230,,,155,Pro Open
 2,Igor Lyutnitskiy,Ігор Лютницький,Ukraine,103,-110,-110,110,110,110,Pro Masters 45-49,M,B,Raw,No,,,,,,,,110,,1965
 1,Oleksiy Khromenkov,Олексій Хроменков,Ukraine,96,125,130,137.5,137.5,100,Pro Masters 50-54,M,B,Raw,No,,,,,,,,137.5,,1957
 1,Volodimir Lizurchik,Володимир Лізурчик,Ukraine,105.6,170,180,-185,180,110,Pro Masters 50-54,M,B,Raw,No,,,,,,,,180,,1958
-1,Andriy Grin,Андрій Гринь,Ukraine,131,210,-222.5,-222.5,210,140,Pro Masters 50-54,M,B,Raw,No,,,,,,,,210,,1968
+1,Andriy Grin,Андрій Гринь,Ukraine,131,210,-222.5,-222.5,210,140,Pro Masters 40-44,M,B,Raw,No,,,,,,,,210,,1968
 1,Viktor Papushoy,Виктор Папушой,Russia,72.5,150,160,-165,160,75,Pro Masters 55-59,M,B,Raw,No,,,,,,,,160,,1953
 1,Franciszek Szabluk,,Poland,90.5,140,150,155,155,100,Pro Masters 55-59,M,B,Raw,No,,,,,,,,155,,1956
 2,Sergiy Denisov,Сергій Денисов,Ukraine,99.2,130,140,-152.5,140,100,Pro Masters 55-59,M,B,Raw,No,,,,,,,,140,,1956
 1,Volodimir Nagalyuk,Володимир Нагалюк,Ukraine,81.9,70,75,-80,75,82.5,Pro Masters 60-64,M,B,Raw,No,,,,,,,,75,,1951
-1,Amirsalari Yaghob,,Iran,99.8,125,135,-140,135,100,Pro Masters 60-64,M,B,Raw,No,,,,,,,,135,,1962
+1,Amirsalari Yaghob,,Iran,99.8,125,135,-140,135,100,Pro Masters 50-54,M,B,Raw,No,,,,,,,,135,,1962
 1,Valeriy Kolyadyuk,Валерій Колядюк,Ukraine,106.8,140,150,155,155,110,Pro Masters 60-64,M,B,Raw,No,,,,,,,,155,,1949
 1,Viktor Glushchenko,Віктор Глущенко,Ukraine,73.9,115,120,-122,120,75,Pro Masters 70-74,M,B,Raw,No,,,,,,,,120,,1942
 1,Grigoriy Miroshnichenko,Григорій Мірошніченко,Ukraine,88,125,130,135,135,90,Pro Military/Fire/Police,M,B,Raw,No,,,,,,,,135,,1964
@@ -274,7 +274,7 @@ DQ,Oleg Khristoforov,Олег Христофоров,Ukraine,98.6,160,,,,100,Pro
 1,Shirvani Hossein,,Iran,137.6,200,215,,865,140,Pro Open,M,SBD,Wraps,No,280,310,325,300,325,-340,325,215,325,1981
 1,Oleksandr Gensitskyy,Олександр Генсіцький,Ukraine,140.2,200,210,220,730,155,Pro Open,M,SBD,Wraps,No,260,-280,,230,250,-260,260,220,250,1975
 1,Viktor Galabir,Віктор Галабір,Ukraine,89.8,130,135,140,585,90,Pro Submasters 33-39,M,SBD,Wraps,No,200,210,-215,210,225,235,210,140,235,1974
-2,Abolfazl Hashempour,,Iran,88.8,100,-120,125,485,90,Pro Submasters 33-39,M,SBD,Wraps,No,-160,-160,160,160,180,200,160,125,200,1971
+2,Abolfazl Hashempour,,Iran,88.8,100,-120,125,485,90,Pro Masters 40-44,M,SBD,Wraps,No,-160,-160,160,160,180,200,160,125,200,1971
 DQ,Oleg Khristoforov,Олег Христофоров,Ukraine,98.6,160,,,,100,Pro Submasters 33-39,M,SBD,Wraps,No,-305,-305,-305,230,250,-262.5,,160,250,1975
 1,Vadim Aliev,Вадим Алієв,Ukraine,74.1,140,150,-155,590,75,Pro Masters 40-44,M,SBD,Wraps,No,180,195,205,200,220,235,205,150,235,1970
 1,Oleksandr Leshukov,Олександр Лешуков,Ukraine,98.6,110,122.5,127.5,600,100,Pro Masters 40-44,M,SBD,Wraps,No,200,222.5,230,210,235,242.5,230,127.5,242.5,1968

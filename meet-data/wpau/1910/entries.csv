@@ -1,5 +1,5 @@
 Place,Name,CyrillicName,Country,BirthDate,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,TotalKg,WeightClassKg,Division,Sex,Event,Equipment,Tested,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,BirthYear
-1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,32.5,37.5,42.5,,25,27.5,-30,,30,45,55,,125,48,Pro Sub-Teen 11-12,M,SBD,Wraps,No,42.5,27.5,55,2008
+1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,32.5,37.5,42.5,,25,27.5,-30,,30,45,55,,125,48,Pro Youth 10,M,SBD,Wraps,No,42.5,27.5,55,2008
 1,Denis Skiba,Денис Скиба,Ukraine,2004-04-26,63,145,155,-160,,67.5,72.5,75,,150,160,-175,,390,67.5,Pro Teen 13-15,M,SBD,Wraps,No,155,75,160,2004
 1,Dmitro Yusupov,Дмитро Юсупов,Ukraine,2004-02-28,113.7,65,70,80,,42.5,50,-60,,-80,80,100,,230,125,Pro Teen 13-15,M,SBD,Wraps,No,80,50,100,2004
 1,Nazariy Levitskiy,Назарій Левицький,Ukraine,2000-04-28,83.3,180,190,-200,,130,-137.5,-137.5,,205,215,225,,545,90,Pro Teen 18-19,M,SBD,Wraps,No,190,130,225,2000
@@ -7,7 +7,7 @@ Place,Name,CyrillicName,Country,BirthDate,BodyweightKg,Squat1Kg,Squat2Kg,Squat3K
 1,Illya Kachan,Ілля Качан,Ukraine,1998-02-27,56.3,115,125,-135,,70,-77.5,-80,,-135,135,140,,335,60,Pro Juniors 20-23,M,SBD,Wraps,No,125,70,140,1998
 1,Borislav Tunik,Борислав Туник,Ukraine,1995-10-23,89.8,210,-217.5,-220,,150,155,157.5,,215,225,230,,597.5,90,Pro Juniors 20-23,M,SBD,Wraps,No,210,157.5,230,1995
 1,Andriy Patsera,Андрій Пацера,Ukraine,1995-12-13,99,230,-240,-247.5,,140,145,150,,225,235,-240,,615,100,Pro Juniors 20-23,M,SBD,Wraps,No,230,150,235,1995
-1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,32.5,37.5,42.5,,25,27.5,-30,,30,45,55,,125,48,Pro Open,M,SBD,Wraps,No,42.5,27.5,55,2008
+1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,32.5,37.5,42.5,,25,27.5,-30,,30,45,55,,125,52,Pro Open,M,SBD,Wraps,No,42.5,27.5,55,2008
 1,Kim Tarverdiev,Кім Тарвердієв,Ukraine,2008-07-09,54.9,30,,,,30,-35,-37.5,,30,,,,90,56,Pro Open,M,SBD,Wraps,No,30,30,30,2008
 1,Vitaliy Muzika,Віталій Музика,Ukraine,1995-10-28,60.2,70,100,110,,70,85,-90,,110,135,150,,345,67.5,Pro Open,M,SBD,Wraps,No,110,85,150,1995
 1,Ruslan Abbasov,Руслан Аббасов,Ukraine,1992-10-12,74.5,150,160,175,,100,105,110,,205,-222.5,222.5,,507.5,75,Pro Open,M,SBD,Wraps,No,175,110,222.5,1992
@@ -88,7 +88,7 @@ DD,Mikola Mikhaylov,Микола Михайлов,Ukraine,1988-12-29,119.7,-210,
 1,Adelaida Poddueva,Аделаїда Поддуєва,Ukraine,1989-10-21,65.7,-160,167.5,172.5,,92.5,-97.5,97.5,,135,140,147.5,,417.5,67.5,Pro Open,F,SBD,Wraps,No,172.5,97.5,147.5,1989
 2,Margarita Kasparova,Маргарита Каспарова,Ukraine,1995-02-28,62.7,110,115,120,,55,57.5,60,,120,125,130,,310,67.5,Pro Open,F,SBD,Wraps,No,120,60,130,1995
 1,Oleksandr Nayden,Олександр Найден,Ukraine,1997-05-24,87.3,225,235,240,,-135,-135,135,,220,230,235,,610,90,Pro Open,M,SBD,Multi-ply,No,240,135,235,1997
-1,Ivan Antonov,Іван Антонов,Ukraine,2006-10-24,66.8,,,,,57.5,65,-70,,100,110,112.5,,177.5,67.5,Pro Children 11-12,M,BD,Raw,No,,65,112.5,2006
+1,Ivan Antonov,Іван Антонов,Ukraine,2006-10-24,66.8,,,,,57.5,65,-70,,100,110,112.5,,177.5,67.5,Pro Sub-Teen 11-12,M,BD,Raw,No,,65,112.5,2006
 1,Denis Mamiko,Денис Мамико,Ukraine,2003-06-27,79.6,,,,,107.5,112.5,-117.5,,170,177.5,185,,297.5,82.5,Pro Teen 16-17,M,BD,Raw,No,,112.5,185,2003
 1,Stepan Savchuk,Степан Савчук,Ukraine,1996-04-18,82.1,,,,,140,150,-155,,-240,245,255,260,405,82.5,Pro Juniors 20-23,M,BD,Raw,No,,150,255,1996
 1,Roman Golishev,Роман Голишев,Ukraine,1991-03-07,66.4,,,,,125,-130,-130,,150,160,-170,,285,67.5,Pro Open,M,BD,Raw,No,,125,160,1991
@@ -111,8 +111,8 @@ DQ,Vitaliy Chunikhovskiy,Віталій Чуніховський,Ukraine,1983-04
 1,Ruslan Kornutich,Руслан Корнутич,Ukraine,1989-07-18,88.1,,,,,230,240,245,,,,,,245,90,Pro Open,M,B,Raw,No,,245,,1989
 1,Pavlo Semkovich,Павло Семкович,Ukraine,1980-05-12,99,,,,,-230,240,-247.5,,,,,,240,100,Pro Submasters 33-39,M,B,Raw,No,,240,,1980
 1,Kostyantin Ryabovol,Костянтин Рябовол,Ukraine,1969-01-21,96,,,,,160,170,180,,,,,,180,100,Pro Masters 50-54,M,B,Raw,No,,180,,1969
-1,Fedir Prezhin,Федір Прежин,Ukraine,2011-04-27,43.1,,,,,20,25,-30,,,,,,25,44,Pro Children 8,M,B,Raw,No,,25,,2011
-1,Makar Semkovich,Макар Семкович,Ukraine,2010-02-19,47.1,,,,,25,30,32.5,,,,,,32.5,48,Pro Children 9,M,B,Raw,No,,32.5,,2010
+1,Fedir Prezhin,Федір Прежин,Ukraine,2011-04-27,43.1,,,,,20,25,-30,,,,,,25,44,Pro Youth 8,M,B,Raw,No,,25,,2011
+1,Makar Semkovich,Макар Семкович,Ukraine,2010-02-19,47.1,,,,,25,30,32.5,,,,,,32.5,48,Pro Youth 9,M,B,Raw,No,,32.5,,2010
 1,Igor Rimarchuk,Ігор Римарчук,Ukraine,2004-02-20,73.4,,,,,90,95,-100,,,,,,95,75,Pro Teen 13-15,M,B,Raw,No,,95,,2004
 1,Oleg Gurazda,Олег Гуразда,Ukraine,2002-09-03,59.1,,,,,55,62.5,-70,,,,,,62.5,60,Pro Teen 16-17,M,B,Raw,No,,62.5,,2002
 1,Denis Mamiko,Денис Мамико,Ukraine,2003-06-27,79.6,,,,,107.5,112.5,-117.5,,,,,,112.5,82.5,Pro Teen 16-17,M,B,Raw,No,,112.5,,2003
@@ -124,7 +124,7 @@ DQ,Vitaliy Chunikhovskiy,Віталій Чуніховський,Ukraine,1983-04
 1,Borislav Tunik,Борислав Туник,Ukraine,1995-10-23,89.8,,,,,150,155,157.5,,,,,,157.5,90,Pro Juniors 20-23,M,B,Raw,No,,157.5,,1995
 1,Mikhaylo Korobko,Михайло Коробко,Ukraine,1997-01-22,96.4,,,,,120,-130,132.5,,,,,,132.5,100,Pro Juniors 20-23,M,B,Raw,No,,132.5,,1997
 DQ,Roman Kuzmenko,Роман Кузьменко,Ukraine,1997-04-10,,,,,,,,,,,,,,,100,Pro Juniors 20-23,M,B,Raw,No,,,,1997
-1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,,,,,25,27.5,-30,,,,,,27.5,48,Pro Open,M,B,Raw,No,,27.5,,2008
+1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,,,,,25,27.5,-30,,,,,,27.5,52,Pro Open,M,B,Raw,No,,27.5,,2008
 1,Kim Tarverdiev,Кім Тарвердієв,Ukraine,2008-07-09,54.9,,,,,30,-35,-37.5,,,,,,30,56,Pro Open,M,B,Raw,No,,30,,2008
 1,Valeriy Popovich,Валерій Попович,Ukraine,1994-07-27,58.4,,,,,75,85,,,,,,,85,60,Pro Open,M,B,Raw,No,,85,,1994
 1,Ruslan Sorochinskiy,Руслан Сорочинський,Ukraine,1993-08-27,65.8,,,,,117.5,122.5,125,,,,,,125,67.5,Pro Open,M,B,Raw,No,,125,,1993
@@ -230,7 +230,7 @@ DQ,Tetyana Kashulina,Тетяна Кашуліна,Ukraine,1986-07-16,74.3,,,,,-
 1,Volodimir Chigirinskiy,Володимир Чигиринський,Ukraine,1962-12-07,93.8,,,,,160,180,-200,,,,,,180,100,Pro Open,M,B,Multi-ply,No,,180,,1962
 1,Volodimir Chigirinskiy,Володимир Чигиринський,Ukraine,1962-12-07,93.8,,,,,160,180,-200,,,,,,180,100,Pro Masters 55-59,M,B,Multi-ply,No,,180,,1962
 1,Adelaida Poddueva,Аделаїда Поддуєва,Ukraine,1989-10-21,65.7,,,,,130,137.5,142.5,-150,,,,,142.5,67.5,Pro Open,F,B,Multi-ply,No,,142.5,,1989
-1,Ivan Antonov,Іван Антонов,Ukraine,2006-10-24,66.8,,,,,,,,,112.5,115,120,122.5,120,67.5,Pro Children 11-12,M,D,Raw,No,,,120,2006
+1,Ivan Antonov,Іван Антонов,Ukraine,2006-10-24,66.8,,,,,,,,,112.5,115,120,122.5,120,67.5,Pro Sub-Teen 11-12,M,D,Raw,No,,,120,2006
 1,Denis Skiba,Денис Скиба,Ukraine,2004-04-26,63,,,,,,,,,150,160,-175,,160,67.5,Pro Teen 13-15,M,D,Raw,No,,,160,2004
 1,Mukhamed Ragimov,Мухамед Рагімов,Ukraine,2003-09-30,74,,,,,,,,,150,160,-170,,160,75,Pro Teen 13-15,M,D,Raw,No,,,160,2003
 1,Denis Mamiko,Денис Мамико,Ukraine,2003-06-27,79.6,,,,,,,,,170,177.5,185,,185,82.5,Pro Teen 16-17,M,D,Raw,No,,,185,2003
@@ -244,7 +244,7 @@ DQ,Tetyana Kashulina,Тетяна Кашуліна,Ukraine,1986-07-16,74.3,,,,,-
 2,Oleksiy Kharkovenko,Олексій Харковенко,Ukraine,1995-12-13,72.9,,,,,,,,,150,160,170,,170,75,Pro Juniors 20-23,M,D,Raw,No,,,170,1995
 1,Stepan Savchuk,Степан Савчук,Ukraine,1996-04-18,82.1,,,,,,,,,-240,245,255,260,255,82.5,Pro Juniors 20-23,M,D,Raw,No,,,255,1996
 2,Dmitro Valchevskiy,Дмитро Вальчевський,Ukraine,1998-11-09,82.4,,,,,,,,,215,232.5,-240,,232.5,82.5,Pro Juniors 20-23,M,D,Raw,No,,,232.5,1998
-1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,,,,,,,,,30,45,55,,55,48,Pro Open,M,D,Raw,No,,,55,2008
+1,Danilo Prokopenko,Данило Прокопенко,Ukraine,2008-12-19,47.2,,,,,,,,,30,45,55,,55,52,Pro Open,M,D,Raw,No,,,55,2008
 1,Illya Kachan,Ілля Качан,Ukraine,1998-02-27,55.8,,,,,,,,,132.5,145,157.5,,157.5,56,Pro Open,M,D,Raw,No,,,157.5,1998
 2,Kim Tarverdiev,Кім Тарвердієв,Ukraine,2008-07-09,54.9,,,,,,,,,30,,,,30,56,Pro Open,M,D,Raw,No,,,30,2008
 1,Valeriy Popovich,Валерій Попович,Ukraine,1994-07-27,58.4,,,,,,,,,150,160,172.5,,172.5,60,Pro Open,M,D,Raw,No,,,172.5,1994

@@ -1,5 +1,5 @@
 Place,Name,CyrillicName,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,TotalKg,WeightClassKg,Division,Sex,Event,Equipment,Best3BenchKg,Best3DeadliftKg,BirthYear
-1,Pavlo Parnak,Павло Парнак,Ukraine,48,65,-70,70,,100,110,120,,190,48,Pro Teen 16-17,M,BD,Raw,70,120,1996
+1,Pavlo Parnak,Павло Парнак,Ukraine,48,65,-70,70,,100,110,120,,190,52,Pro Teen 16-17,M,BD,Raw,70,120,1996
 1,Valentin Litvechenko,Валентин Літвеченко,Ukraine,53.7,45,55,-60,,80,90,95,,150,56,Pro Teen 16-17,M,BD,Raw,55,95,1996
 1,Maksim Karasov,Максим Карасьов,Ukraine,71,90,-100,-100,,160,170,180,,270,75,Pro Teen 16-17,M,BD,Raw,90,180,1997
 1,Denis Fesenko,Денис Фесенко,Ukraine,85.8,140,145,-147.5,,215,-225,225,,370,90,Pro Juniors 20-23,M,BD,Raw,145,225,1984
@@ -29,7 +29,7 @@ DQ,Dmitro Cherkay,Дмитро Черкай,Ukraine,71.7,-150,-150,,,-230,,,,,75
 DQ,Maksim Fesun,Максим Фесун,Ukraine,,,,,,,,,,,100,Pro Teen 18-19,M,BD,Multi-ply,,,1995
 1,Oleksandr Levchenko,Олександр Левченко,Ukraine,81.2,-160,160,170,,-200,205,-220,,375,82.5,Pro Juniors 20-23,M,BD,Multi-ply,170,205,1992
 1,Arkadiy Shalokha,Аркадий Шалоха,Ukraine,75.3,-225,230,-245,,285,295,-302.5,,525,82.5,Pro Open,M,BD,Single-ply,230,295,1983
-1,Pavlo Parnak,Павло Парнак,Ukraine,48,65,-70,70,,,,,,70,48,Pro Teen 16-17,M,B,Raw,70,,1996
+1,Pavlo Parnak,Павло Парнак,Ukraine,48,65,-70,70,,,,,,70,52,Pro Teen 16-17,M,B,Raw,70,,1996
 1,Oleg Ogli,Олег Огли,Ukraine,65.8,-90,90,-100,,,,,,90,67.5,Pro Teen 16-17,M,B,Raw,90,,1996
 1,Volodimir Kolisnik,Володимир Колісник,Ukraine,71,125,132.5,-140,,,,,,132.5,75,Pro Teen 16-17,M,B,Raw,132.5,,1997
 DQ,Rostislav Kim,Ростислав Кім,Ukraine,85,,,,,,,,,,90,Pro Teen 16-17,M,B,Raw,,,1996
@@ -133,7 +133,7 @@ DQ,Konstyantin Martinenko,Констянтин Мартиненко,Ukraine,104.
 1,Andriy Shchetinin,Андрій Щетінін,Ukraine,92.7,140,150,155,,240,260,275,,430,100,Amateur Juniors 20-23,M,BD,Raw,155,275,1990
 2,Danilo Udovik,Данило Удовик,Ukraine,94.8,102.5,107.5,112.5,,160,175,182.5,,295,100,Amateur Juniors 20-23,M,BD,Raw,112.5,182.5,1992
 1,Oleg Omelyanenko,Олег Омельяненко,Ukraine,101.6,140,147.5,-152.5,,-185,195,205,,352.5,110,Amateur Juniors 20-23,M,BD,Raw,147.5,205,1993
-1,Dmitro Zaets,Дмитро Заєць,Ukraine,33.6,35,-37.5,-37.5,,80,90,-95,,125,44,Amateur Open,M,BD,Raw,35,90,2002
+1,Dmitro Zaets,Дмитро Заєць,Ukraine,33.6,35,-37.5,-37.5,,80,90,-95,,125,52,Amateur Open,M,BD,Raw,35,90,2002
 1,Mikita Kravets,Микита Кравець,Ukraine,49.2,60,65,-67.5,,97.5,107.5,110,,175,52,Amateur Open,M,BD,Raw,65,110,2000
 1,Vitaliy Muzika,Віталій Музика,Ukraine,66.4,102.5,107.5,110,,182.5,190,200,,310,67.5,Amateur Open,M,BD,Raw,110,200,1995
 2,Vladislav Sklyarov,Владислав Скляров,Ukraine,67.4,82.5,-90,-90,,132.5,140,-145,,222.5,67.5,Amateur Open,M,BD,Raw,82.5,140,1998
@@ -209,7 +209,7 @@ DQ,Igor Kashinskiy,Ігор Кашинський,Ukraine,74.4,-130,-130,,,,,,,,7
 3,Sergiy Marushkin,Сергій Марушкін,Ukraine,81.6,115,-125,-125,,,,,,115,82.5,Amateur Juniors 20-23,M,B,Raw,115,,1992
 1,Artem Salnik,Артем Сальник,Ukraine,86.5,100,105,107.5,,,,,,107.5,90,Amateur Juniors 20-23,M,B,Raw,107.5,,1990
 1,Oleksandr Varenya,Олександр Вареня,Ukraine,104.4,155,160,-162.5,,,,,,160,110,Amateur Juniors 20-23,M,B,Raw,160,,1990
-1,Dmitro Zaets,Дмитро Заєць,Ukraine,33.6,35,-37.5,-37.5,,,,,,35,44,Amateur Open,M,B,Raw,35,,2002
+1,Dmitro Zaets,Дмитро Заєць,Ukraine,33.6,35,-37.5,-37.5,,,,,,35,52,Amateur Open,M,B,Raw,35,,2002
 1,Mikita Kravets,Микита Кравець,Ukraine,49.2,60,65,-67.5,,,,,,65,52,Amateur Open,M,B,Raw,65,,2000
 1,Oleksiy Kudrin,Олексій Кудрін,Ukraine,59.4,85,-97.5,-97.5,,,,,,85,60,Amateur Open,M,B,Raw,85,,1981
 1,Evgen Shevchenko,Євген Шевченко,Ukraine,65.9,100,-110,110,,,,,,110,67.5,Amateur Open,M,B,Raw,110,,1989
@@ -282,7 +282,7 @@ DQ,Denis Kovalov,Денис Ковальов,Ukraine,,,,,,,,,,,100,Amateur Open,
 2,Andriy Korpusenko,Андрій Корпусенко,Ukraine,87.3,,,,,185,-190,190,,190,90,Amateur Juniors 20-23,M,D,Raw,,190,1991
 3,Artem Salnik,Артем Сальник,Ukraine,86.5,,,,,150,160,165,,165,90,Amateur Juniors 20-23,M,D,Raw,,165,1990
 1,Andriy Shchetinin,Андрій Щетінін,Ukraine,92.7,,,,,240,260,275,,275,100,Amateur Juniors 20-23,M,D,Raw,,275,1990
-1,Dmitro Zaets,Дмитро Заєць,Ukraine,33.6,,,,,80,90,-95,,90,44,Amateur Open,M,D,Raw,,90,2002
+1,Dmitro Zaets,Дмитро Заєць,Ukraine,33.6,,,,,80,90,-95,,90,52,Amateur Open,M,D,Raw,,90,2002
 1,Mikita Kravets,Микита Кравець,Ukraine,49.2,,,,,97.5,107.5,110,,110,52,Amateur Open,M,D,Raw,,110,2000
 1,Vitaliy Muzika,Віталій Музика,Ukraine,66.4,,,,,182.5,190,200,,200,67.5,Amateur Open,M,D,Raw,,200,1995
 2,Stanislav Shidlovskiy,Станіслав Шидловський,Ukraine,67.2,,,,,155,175,185,,185,67.5,Amateur Open,M,D,Raw,,185,1984
