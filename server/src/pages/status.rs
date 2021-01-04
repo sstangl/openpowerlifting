@@ -379,11 +379,13 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[AAP as usize].instagram = "alianzaargentinapowerlifting_";
     statuses[APA as usize].instagram = "apawpa_official";
     statuses[APF as usize].instagram = "apf_powerlifting";
+    statuses[ArgentinaPL as usize].instagram = "powerlifting.apl";
     statuses[AsianPF as usize].instagram = "asian.powerlifting.federation";
     statuses[BVDK as usize].instagram = "derkraftdreikaempfer";
     statuses[BPU as usize].instagram = "british_powerlifting_union";
     statuses[CAPO as usize].instagram = "capopowerlifting";
     statuses[ChinaPA as usize].instagram = "gpachina";
+    statuses[DSF as usize].instagram = "danskstyrkeloeftforbund";
     statuses[FFForce as usize].instagram = "ffforce__";
     statuses[GPCAUS as usize].instagram = "gpcaustralia";
     statuses[GPCGB as usize].instagram = "gpc_gb";
@@ -397,11 +399,14 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[NPB as usize].instagram = "powerliften";
     statuses[NIPF as usize].instagram = "nipowerlifting";
     statuses[NZPF as usize].instagram = "newzealandpowerlifting";
+    statuses[PowerLeague as usize].instagram = "power.league";
     statuses[ProRaw as usize].instagram = "prorawpowerlifting";
+    statuses[RawIronPL as usize].instagram = "rawironpowerliftingleague";
     statuses[RAWUKR as usize].instagram = "raw100power";
     statuses[RPS as usize].instagram = "rps_powerlifting";
     statuses[ScottishPL as usize].instagram = "scottishpowerlifting";
     statuses[SPF as usize].instagram = "southernpowerliftingfederation";
+    statuses[SVNL as usize].instagram = "voimanostoliitto";
     statuses[SwissPL as usize].instagram = "swiss_powerlifting";
     statuses[ThaiPF as usize].instagram = "thaipowerlifting";
     statuses[UPA as usize].instagram = "upa_events_";
@@ -426,6 +431,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WRPFSpain as usize].instagram = "wrpf_spain";
     statuses[WRPFSweden as usize].instagram = "wrpf.sweden";
     statuses[WUAP as usize].instagram = "wuapusa";
+    statuses[WUAPUSA as usize].instagram = "wuapusa";
 }
 
 impl<'a> Context<'a> {
