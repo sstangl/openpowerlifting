@@ -15,6 +15,7 @@ use walkdir::{DirEntry, WalkDir};
 use std::collections::BTreeMap;
 use std::env;
 use std::error::Error;
+use std::ffi::OsString;
 use std::fs;
 use std::io::{self, Write};
 use std::path::{Path, PathBuf};
@@ -43,7 +44,7 @@ struct Args {
     compile_onefile: bool,
 
     /// Any remaining unrecognized arguments.
-    free: Vec<String>,
+    free: Vec<OsString>,
 }
 
 // For purposes of testing, a meet directory is any directory containing
@@ -265,7 +266,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         debug_timing: args.contains("--timing"),
         compile: args.contains(["-c", "--compile"]),
         compile_onefile: args.contains(["-1", "--compile-onefile"]),
-        free: args.free()?,
+        free: args.finish(),
     };
 
     // If the help message was requested, display it and exit immediately.
