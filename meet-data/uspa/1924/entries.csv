@@ -7,7 +7,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 3,Channing Liverett,AL,67.5,66.6,,27,100,112.5,120,120,67.5,-72.5,-72.5,67.5,125,135,-142.5,135,322.5,,,,SBD,Raw,F,Open,Yes
 4,Brooke Causland,AL,67.5,64.9,,28,95,-100,105,105,50,-55,57.5,57.5,130,142.5,150,150,312.5,,,,SBD,Raw,F,Open,Yes
 5,Corey Elder,AL,67.5,65.9,,27,105,112.5,-125,112.5,47.5,-55,-55,47.5,112.5,127.5,137.5,137.5,297.5,,,,SBD,Raw,F,Open,Yes
-6,Evelyn Mcswain,AL,67.5,66.6,,48,-95,100,105,105,50,-52.5,-52.5,50,110,120,122.5,122.5,277.5,,,,SBD,Raw,F,Open,Yes
+6,Evelyn McSwain,AL,67.5,66.6,1972-05-21,48,-95,100,105,105,50,-52.5,-52.5,50,110,120,122.5,122.5,277.5,,,,SBD,Raw,F,Open,Yes
 7,Alexis Mcginty,AL,67.5,63.3,,30,75,82.5,87.5,87.5,40,45,-50,45,97.5,102.5,107.5,107.5,240,,,,SBD,Raw,F,Open,Yes
 1,Sarah Menary,AL,75,73.7,,39,125,132.5,137.5,137.5,70,75,-80,75,125,137.5,142.5,142.5,355,,,,SBD,Raw,F,Open,Yes
 2,Amelia Flournoy,AL,75,74.2,,40,110,115,117.5,117.5,70,75,-80,75,135,145,-152.5,145,337.5,,,,SBD,Raw,F,Open,Yes
@@ -29,7 +29,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 2,Christen Bridges,AL,90+,108.1,,35,-87.5,92.5,-97.5,92.5,47.5,50,-52.5,50,102.5,110,115,115,257.5,,,,SBD,Raw,F,Submasters 35-39,Yes
 1,Karan Sanford-Taylor,GA,60,59.85,,54,75,82.5,90,90,50,55,-60,55,120,125,130,130,275,95.5,,,SBD,Raw,F,Masters 50-54,Yes
 1,Carolyn Harris,AL,60,59.5,,57,75,82.5,92.5,92.5,47.5,-50,50,50,120,127.5,130,130,272.5,,,,SBD,Raw,F,Masters 55-59,Yes
-1,Evelyn Mcswain,AL,67.5,66.6,,48,-95,100,105,105,50,-52.5,-52.5,50,110,120,122.5,122.5,277.5,,,,SBD,Raw,F,Masters 45-49,Yes
+1,Evelyn McSwain,AL,67.5,66.6,,48,-95,100,105,105,50,-52.5,-52.5,50,110,120,122.5,122.5,277.5,,,,SBD,Raw,F,Masters 45-49,Yes
 1,Joni Keach,AL,67.5,65.85,,56,40,45,47.5,47.5,42.5,-47.5,-47.5,42.5,67.5,72.5,75,75,165,,,,SBD,Raw,F,Masters 55-59,Yes
 1,Amelia Flournoy,AL,75,74.2,,40,110,115,117.5,117.5,70,75,-80,75,135,145,-152.5,145,337.5,,,,SBD,Raw,F,Masters 40-44,Yes
 1,Denise Moore,AL,75,70.9,,57,75,-80,80,80,32.5,37.5,40,40,100,107.5,112.5,112.5,232.5,,,,SBD,Raw,F,Masters 55-59,Yes
@@ -86,9 +86,9 @@ DQ,Steve Luckey,AL,100,98.8,,63,,,,,-60,-60,-60,,,,,,,,,,B,Raw,M,Masters 60-64,Y
 1,Jessie Lindsey,AL,90,88.7,,41,,,,,140,-145,147.5,147.5,,,,,147.5,,,,B,Single-ply,M,Masters 40-44,Yes
 1,Emily Thompson,AL,90+,102.45,,23,,,,,,,,,150,165,-175,165,165,,,,D,Raw,F,Juniors 20-23,Yes
 1,Channing Liverett,AL,67.5,66.6,,27,,,,,,,,,125,135,-142.5,135,135,,,,D,Raw,F,Open,Yes
-2,Evelyn Mcswain,AL,67.5,66.6,,48,,,,,,,,,110,120,122.5,122.5,122.5,,,,D,Raw,F,Open,Yes
+2,Evelyn McSwain,AL,67.5,66.6,,48,,,,,,,,,110,120,122.5,122.5,122.5,,,,D,Raw,F,Open,Yes
 1,Emily Thompson,AL,90+,102.45,,23,,,,,,,,,150,165,-175,165,165,,,,D,Raw,F,Open,Yes
-1,Evelyn Mcswain,AL,67.5,66.6,,48,,,,,,,,,110,120,122.5,122.5,122.5,,,,D,Raw,F,Masters 45-49,Yes
+1,Evelyn McSwain,AL,67.5,66.6,,48,,,,,,,,,110,120,122.5,122.5,122.5,,,,D,Raw,F,Masters 45-49,Yes
 1,Craig Liverett,AL,90,87.4,,38,,,,,,,,,150,170,182.5,182.5,182.5,,,,D,Raw,M,Open,Yes
 1,Craig Liverett,AL,90,87.4,,38,,,,,,,,,150,170,182.5,182.5,182.5,,,,D,Raw,M,Submasters 35-39,Yes
 1,Jeff Ray,AL,100,96.35,,54,,,,,,,,,260,272.5,-280,272.5,272.5,,,,D,Raw,M,Masters 50-54,Yes
