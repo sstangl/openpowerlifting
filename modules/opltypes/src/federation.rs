@@ -118,9 +118,9 @@ pub enum Federation {
     #[strum(to_string = "APUA", serialize = "apua")]
     APUA,
 
-    /// Argentinia Powerlifting League, IPL.
-    #[strum(to_string = "ArgentinaPL", serialize = "argentinapl")]
-    ArgentinaPL,
+    /// Argentina Powerlifting League, IPL.
+    #[strum(to_string = "ARPL", serialize = "arpl")]
+    ARPL,
 
     /// Asian Powerlifting Federation, IPF.
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
@@ -1452,7 +1452,7 @@ impl Federation {
             Federation::APP => false,
             Federation::APU => FULLY_TESTED,
             Federation::APUA => FULLY_TESTED,
-            Federation::ArgentinaPL => false,
+            Federation::ARPL => false,
             Federation::AsianPF => FULLY_TESTED,
             Federation::AusDFPF => FULLY_TESTED,
             Federation::AusPF => false,
@@ -1784,7 +1784,7 @@ impl Federation {
             Federation::APP => Some(Country::Paraguay),
             Federation::APU => Some(Country::Australia),
             Federation::APUA => Some(Country::Argentina),
-            Federation::ArgentinaPL => Some(Country::Argentina),
+            Federation::ARPL => Some(Country::Argentina),
             Federation::AsianPF => None,
             Federation::AusDFPF => Some(Country::Australia),
             Federation::AusPF => Some(Country::Australia),
@@ -2116,7 +2116,7 @@ impl Federation {
             Federation::APP => Some(Federation::GPA),
             Federation::APU => Some(Federation::IPF),
             Federation::APUA => Some(Federation::WABDL),
-            Federation::ArgentinaPL => Some(Federation::IPL),
+            Federation::ARPL => Some(Federation::IPL),
             Federation::AsianPF => Some(Federation::IPF),
             Federation::AusDFPF => Some(Federation::WDFPF),
             Federation::AusPF => Some(Federation::IPF),
@@ -2548,7 +2548,7 @@ impl Federation {
             Federation::APP => PointsSystem::Wilks,
             Federation::APU => Federation::ipf_rules_on(date),
             Federation::APUA => PointsSystem::Wilks,
-            Federation::ArgentinaPL => Federation::ipl_rules_on(date),
+            Federation::ARPL => Federation::ipl_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::AusDFPF => PointsSystem::SchwartzMalone,
             Federation::AusPF => PointsSystem::Wilks,
