@@ -1,7 +1,7 @@
 Place,Name,Sex,Equipment,Division,BirthDate,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Team
 1,Laimutė Bleizgytė,F,Raw,FR-Sj,,34.7,43,50,-60,-60,50,25,30,-32.5,30,65,70,72.5,72.5,152.5,SBD,Lazdijai
 1,Simona Dėdelytė,F,Raw,FR-Sj,,48.7,52,85,90,93,93,45,47.5,-50,47.5,85,92.5,95,95,235.5,SBD,Fortūna
-2,Evelina Kunigonytė,F,Raw,FR-Sj,,49.7,52,65,70,75,75,27.5,30,-35,30,55,62.5,-67.5,62.5,167.5,SBD,Margiris
+2,Evelina Kunigonytė,F,Raw,FR-Sj,2005-11-18,49.7,52,65,70,75,75,27.5,30,-35,30,55,62.5,-67.5,62.5,167.5,SBD,Margiris
 1,Melita Zalanskaitė,F,Raw,FR-Sj,,67.75,72,80,85,-87.5,85,42.5,-45,-45,42.5,80,90,100,100,227.5,SBD,Geležies lyga
 1,Reda Laurinavičiūtė,F,Raw,FR-Sj,,79.3,84,90,95,100,100,47.5,50,-52.5,50,100,110,120,120,270,SBD,Geležies lyga
 1,Petrovaite Valerija,F,Raw,FR-Sj,,96.8,84+,110,120,130,130,52.5,57.5,62.5,62.5,90,100,105,105,297.5,SBD,Geležies lyga
@@ -13,7 +13,7 @@ Place,Name,Sex,Equipment,Division,BirthDate,BodyweightKg,WeightClassKg,Squat1Kg,
 2,Neda Pabilionytė,F,Raw,FR-Jr,,76.85,84,92.5,100,-105,100,55,60,65,65,105,115,-125,115,280,SBD,Radviliškis
 1,Lukas Gieda,M,Raw,MR-Sj,,52.9,53,50,60,70,70,40,-50,-50,40,70,90,-110,90,200,SBD,Lazdijai
 2,Arnas Borisovas,M,Raw,MR-Sj,,44.55,53,50,55,60,60,30,37.5,-40,37.5,65,80,,80,177.5,SBD,Lazdijai
-1,Klemanas Šiurkus,M,Raw,MR-Sj,,57.15,59,100,112.5,-117.5,112.5,70,77.5,-80,77.5,120,-135,,120,310,SBD,Troja
+1,Klemansas Šiurkus,M,Raw,MR-Sj,,57.15,59,100,112.5,-117.5,112.5,70,77.5,-80,77.5,120,-135,,120,310,SBD,Troja
 2,Paulius Jurgaitis,M,Raw,MR-Sj,,56.2,59,95,105,-110,105,50,57.5,62.5,62.5,-100,100,110,110,277.5,SBD,Varūna
 1,Kornelijus Poškus,M,Raw,MR-Sj,,65.65,66,160,-168,-168,160,135.5,140,,140,165,175,-180,175,475,SBD,Radviliškis
 2,Martynas Šaulys,M,Raw,MR-Sj,,60.2,66,105,115,120,120,65,70,75,75,-145,155,-160,155,350,SBD,Sky Gym
@@ -30,8 +30,8 @@ Place,Name,Sex,Equipment,Division,BirthDate,BodyweightKg,WeightClassKg,Squat1Kg,
 1,Domantas Banys,M,Raw,MR-Sj,,104.5,105,200,210,220,220,120,130,-140,130,210,230,-235,230,580,SBD,Džiugas Gym
 1,Nojus Starasotnikovas,M,Raw,MR-Sj,,127.5,120+,150,165,-170,165,80,85,90,90,175,185,-195,185,440,SBD,Kuršėnai
 1,Egidijus Valčiukas,M,Raw,MR-Jr,,57.6,59,200,215,-230.5,215,117.5,125,-130.5,125,125,,,125,465,SBD,Kuršėnai
-2,Rimas Povilaitis,M,Raw,MR-Jr,,57.35,59,105,115,-125,115,75,80,85,85,150,165,-175,165,365,SBD,Kuršėnai
-1,Edgaras Masiulionis,M,Raw,MR-Jr,,64.1,66,120,135,-142.5,135,120,-130,-135.5,120,-140,140,150,150,405,SBD,KTU
+2,Rimas Povilaitis,M,Raw,MR-Jr,2001-03-16,57.35,59,105,115,-125,115,75,80,85,85,150,165,-175,165,365,SBD,Kuršėnai
+1,Edgaras Masilionis,M,Raw,MR-Jr,1999-12-30,64.1,66,120,135,-142.5,135,120,-130,-135.5,120,-140,140,150,150,405,SBD,KTU
 2,Robertas Laurinaitis,M,Raw,MR-Jr,,63.35,66,100,110,-125,110,95,105,-110,105,-130,130,150,150,365,SBD,Kuršėnai
 1,Laurynas Lukoševičius,M,Raw,MR-Jr,,72.85,74,165,180,190,190,172.5,182.5,-185,182.5,210,227.5,-235,227.5,600,SBD,
 2,Rokas Burba,M,Raw,MR-Jr,,74,74,190,200,-215.5,200,125,132.5,135,135,195,205,210,210,545,SBD,Lazdijai
@@ -43,7 +43,7 @@ Place,Name,Sex,Equipment,Division,BirthDate,BodyweightKg,WeightClassKg,Squat1Kg,
 1,Žydrūnas Dranginis,M,Raw,MR-Jr,,89.6,93,210,220,230,230,137.5,142.5,-147.5,142.5,250,260,270,270,642.5,SBD,KTU
 2,Rytis Teresius,M,Raw,MR-Jr,,86.55,93,120,135,-150,135,115,117.5,-125,117.5,170,180,200,200,452.5,SBD,Kuršėnai
 1,Rytis Veverskis,M,Raw,MR-Jr,,97.75,105,210,220,-225,220,160,170,,170,230,250,270,270,660,SBD,Indv.
-2,Vilius Stragis,M,Raw,MR-Jr,,103.75,105,190,200,205,205,145,150,155,155,-235,240,250,250,610,SBD,Indv.
+2,Vilius Stragis,M,Raw,MR-Jr,1999-04-07,103.75,105,190,200,205,205,145,150,155,155,-235,240,250,250,610,SBD,Indv.
 3,Tautvydas Zykevičius,M,Raw,MR-Jr,,99.2,105,180,200,-210,200,130,145,155,155,200,220,230,230,585,SBD,KTU
 4,Matas Valčiukas,M,Raw,MR-Jr,,100.1,105,160,170,-180,170,130,140,-145,140,200,220,-230,220,530,SBD,KTU
 DQ,Klaidas Škikūnas,M,Raw,MR-Jr,,102.4,105,255,270,-281,270,145,,,145,-265,,,,,SBD,

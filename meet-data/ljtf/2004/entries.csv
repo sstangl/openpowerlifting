@@ -1,5 +1,5 @@
 Place,Equipment,Division,Sex,Name,BirthDate,WeightClassKg,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,Event,Team
-1,Raw,FR-Sj,F,Simona Dėdelytė,,52,49.15,45,47.5,-50,47.5,47.5,B,Fortūna
+1,Raw,FR-Sj,F,Simona Dėdelytė,2002-11-01,52,49.15,45,47.5,-50,47.5,47.5,B,Fortūna
 1,Raw,FR-Sj,F,Gabija Dargytė,,63,58.05,47.5,50,52.5,52.5,52.5,B,Varūna
 2,Raw,FR-Sj,F,Gabija Martinkutė,,63,60.5,35,40,-45,40,40,B,Liga
 1,Raw,FR-Sj,F,Paulina Dobravolskaitė,,72,66.5,35,37.5,-40,37.5,37.5,B,Geležies Lyga
@@ -63,7 +63,7 @@ DQ,Raw,FR-O,F,Karolina Leščevičiūtė,,57,56.9,-60,,,,,B,Fortūna
 1,Raw,MR-Jr,M,Armandas Paulauskas,,59,57.1,100,105,110,110,110,B,Mažeikiai
 2,Raw,MR-Jr,M,Paulius Jurgaitis,,59,58.15,60,65,67.5,67.5,67.5,B,Varūna
 1,Raw,MR-Jr,M,Vykintas Strungys,,66,64.35,70,75,77.5,77.5,77.5,B,Grizlis
-1,Raw,MR-Jr,M,Nojus Konstantinas Čypas,,74,70.25,100,107.5,-112.5,107.5,107.5,B,Grizlis
+1,Raw,MR-Jr,M,Nojus Čypas,,74,70.25,100,107.5,-112.5,107.5,107.5,B,Grizlis
 2,Raw,MR-Jr,M,Mantas Jokubauskas,,74,72.9,95,100,105,105,105,B,Extreeme Gym
 3,Raw,MR-Jr,M,Algirdas Krištopaitis,,74,72.1,90,-100,102.5,102.5,102.5,B,Varūna
 4,Raw,MR-Jr,M,Jokūbas Čypas,,74,72.4,65,70,75,75,75,B,Grizlis
@@ -71,12 +71,12 @@ DQ,Raw,FR-O,F,Karolina Leščevičiūtė,,57,56.9,-60,,,,,B,Fortūna
 2,Raw,MR-Jr,M,Aivaras Kalinauskas,,83,81.1,120,130,142.5,142.5,142.5,B,Grizlis
 3,Raw,MR-Jr,M,Arminas Kondratenko,,83,81.4,115,125,-132.5,125,125,B,KTU
 4,Raw,MR-Jr,M,Justas Danys,,83,74.6,75,80,82.5,82.5,82.5,B,Grizlis
-1,Raw,MR-Jr,M,Augustinas Motejūnas,,93,88.2,160,165,-167.5,165,165,B,Indv.
+1,Raw,MR-Jr,M,Augustinas Motiejūnas,1997-09-27,93,88.2,160,165,-167.5,165,165,B,Indv.
 2,Raw,MR-Jr,M,Margas Dalgunovas,,93,90.9,-160,-160,160,160,160,B,Indv.
 3,Raw,MR-Jr,M,Eimantas Rimša,,93,92.8,152.5,157.5,-160,157.5,157.5,B,Indv.
-1,Raw,MR-Jr,M,Jonas Petrauskas,,105,104.65,-152.5,152.5,160,160,160,B,Partinis Gym
+1,Raw,MR-Jr,M,Jonas Petrauskas,1998-07-21,105,104.65,-152.5,152.5,160,160,160,B,Partinis Gym
 2,Raw,MR-Jr,M,Orestas Stundžia,,105,93.9,115,125,-130,125,125,B,Sky Gym
-1,Raw,MR-Jr,M,Vytas Petrauskas,,120,108.85,152.5,157.5,-162.5,157.5,157.5,B,Partinis Gym
+1,Raw,MR-Jr,M,Vytas Petrauskas,1998-07-21,120,108.85,152.5,157.5,-162.5,157.5,157.5,B,Partinis Gym
 2,Raw,MR-Jr,M,Paulius Ališauskas,,120,114.3,135,140,-145,140,140,B,Varūna
 1,Raw,MR-Jr,M,Arūnas Skrudupis,,120+,153.8,90,100,-110,100,100,B,Varūna
 1,Raw,MR-M1,M,Tomas Urbonas,,74,72.5,115,122.5,130,130,130,B,VDU
@@ -97,7 +97,7 @@ DQ,Raw,FR-O,F,Karolina Leščevičiūtė,,57,56.9,-60,,,,,B,Fortūna
 2,Raw,MR-M2,M,Linijus Navickas,,105,98.4,152.5,-160,-160,152.5,152.5,B,Indv.
 1,Raw,MR-M2,M,Darius Ereksonas,,120,106.7,175,182.5,185,185,185,B,Mažeikiai
 2,Raw,MR-M2,M,Almantas Krivickas,,120,113.5,170,-180,-180,170,170,B,Kuršėnai
-1,Raw,MR-M3,M,Vytautas Kazlaukas,,74,71.4,112.5,115,118,118,118,B,Geležies Lyga
+1,Raw,MR-M3,M,Vytautas Kazlauskas,,74,71.4,112.5,115,118,118,118,B,Geležies Lyga
 2,Raw,MR-M3,M,Antanas Micius,,74,72.55,100,105,110,110,110,B,Mažeikiai
 3,Raw,MR-M3,M,Vytautas Šiurkus,,74,72.5,95,100,-110,100,100,B,Liga
 1,Raw,MR-M3,M,Aleksandras Sikariovas,,93,83.95,100,105,-110,105,105,B,Partinis Gym
