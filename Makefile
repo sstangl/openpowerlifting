@@ -8,7 +8,8 @@ MEETFILE := meets.csv
 MEETFILEJS := meets.js
 
 DATE := $(shell date --iso-8601)
-DATADIR := ${BUILDDIR}/openpowerlifting-${DATE}
+COMMIT := $(shell git rev-parse --short HEAD)
+DATADIR := ${BUILDDIR}/openpowerlifting-${DATE}-${COMMIT}
 
 all: csv server
 
@@ -21,11 +22,11 @@ csv:
 data:
 	cargo run --bin checker -- --compile-onefile
 	mkdir -p "${DATADIR}"
-	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}.csv"
+	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}-${COMMIT}.csv"
 	cp LICENSE-DATA '${DATADIR}/LICENSE.txt'
 	cp docs/data-readme.md '${DATADIR}/README.txt'
 	rm -f "${BUILDDIR}/openpowerlifting-latest.zip"
-	cd "${BUILDDIR}" && zip -r "openpowerlifting-latest.zip" "openpowerlifting-${DATE}"
+	cd "${BUILDDIR}" && zip -r "openpowerlifting-latest.zip" "openpowerlifting-${DATE}-${COMMIT}"
 
 # Optionally build an SQLite3 version of the database.
 sqlite: csv
