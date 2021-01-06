@@ -74,6 +74,8 @@ pub struct ExportRow<'d> {
     pub tested: &'static str,
     #[serde(rename = "Country")]
     pub country: Option<Country>,
+    #[serde(rename = "State")]
+    pub state: Option<String>,
     #[serde(rename = "Federation")]
     pub federation: Federation,
     #[serde(rename = "ParentFederation")]

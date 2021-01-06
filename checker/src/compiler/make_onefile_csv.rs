@@ -52,6 +52,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         ),
         tested: if entry.tested { "Yes" } else { "" },
         country: entry.country,
+        state: entry.state.map(opltypes::states::State::to_state_string),
         federation: meet.federation,
         parent_federation: meet.federation.sanctioning_body(meet.date),
         date: meet.date,
