@@ -209,6 +209,13 @@ Optional. The home country of the lifter, if known.
 
 The full list of valid Country values is defined by [modules/opltypes/src/country.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/country.rs).
 
+### State
+
+Optional. The home state/province/oblast/division/etc of the lifter, if known.
+
+The full list of valid State values is defined by [modules/opltypes/src/states.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/modules/opltypes/src/states.rs).
+Expanded names are given there in comments.
+
 ### Federation
 
 Mandatory. The federation that hosted the meet.
