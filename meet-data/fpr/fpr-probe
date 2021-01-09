@@ -35,6 +35,9 @@ MAIN_URLS = [
 
 SPB_URL = 'http://www.powerliftingfed.spb.ru/protocols'
 
+FPIO_URL = 'http://fpio.org.ru/index.php?menu=7'
+
+
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -132,6 +135,21 @@ def getmeetlist_SPB(html, main_url):
     return urls
 
 
+def getmeetlist_FPIO(html, main_url):
+    base_url = main_url.rsplit('/', 1)[0]
+    soup = BeautifulSoup(html, 'html.parser')
+    divs = soup.find_all('div', {'class', 'list-group'})
+    urls = []
+    for div in divs:
+        for a in div.find_all('a'):
+            url = a['href']
+            url = base_url + "/" + url
+            url = url.replace('.ru//', '.ru/')
+            if url not in urls:
+                urls.append(url)
+    return urls
+
+
 def main():
 
     meetlist = []
@@ -141,6 +159,9 @@ def main():
 
     html_SPB = oplprobe.gethtml(SPB_URL)
     meetlist = meetlist + getmeetlist_SPB(html_SPB, SPB_URL)
+
+    html_FPIO = oplprobe.gethtml(FPIO_URL)
+    meetlist = meetlist + getmeetlist_FPIO(html_FPIO, FPIO_URL)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
