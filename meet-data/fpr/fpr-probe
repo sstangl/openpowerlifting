@@ -138,13 +138,17 @@ def getmeetlist_SPB(html, main_url):
 def getmeetlist_FPIO(html, main_url):
     base_url = main_url.rsplit('/', 1)[0]
     soup = BeautifulSoup(html, 'html.parser')
-    divs = soup.find_all('div', {'class', 'list-group'})
+    divs = soup.find_all('div', {'class', 'doc_block_max'})
     urls = []
     for div in divs:
         for a in div.find_all('a'):
             url = a['href']
             url = base_url + "/" + url
             url = url.replace('.ru//', '.ru/')
+            if 'allpowerlifting' in url:
+                continue
+            elif '.rus.' in url or '-rus-' in url:
+                continue
             if url not in urls:
                 urls.append(url)
     return urls

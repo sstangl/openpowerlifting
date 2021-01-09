@@ -51,7 +51,7 @@ def get_header_linenum(sheet):
 
 
 def is_header(line):
-    if '№' in ''.join(line).lower() or 'место' in ''.join(line).lower():
+    if any(x in ''.join(line).lower() for x in ['№', 'место', 'мес-']):
         return True
     return False
 
@@ -94,10 +94,10 @@ def parse_fieldnames(sheet):
             elif 'фамилия имя' in text:
                 fieldnames.append('CyrillicName')
             elif any(x in text for x in ['год родж', 'год рожд', 'грожд', 'год рож',
-                                         'гр', 'г/р', 'год']):
+                                         'гр', 'г/р', 'год', 'дата рожд']):
                 fieldnames.append('BirthYear')
             elif any(x in text for x in ['разряд', 'вып разр', 'звание',
-                                         'раз ряд', 'дата рожд', 'рд зв',
+                                         'раз ряд', 'рд зв',
                                          'разр']):  # Rank
                 fieldnames.append('IGNORE')
             elif 'регион' in text:  # Region
@@ -128,7 +128,8 @@ def parse_fieldnames(sheet):
             elif text in ['возраст кат', 'категория']:
                 fieldnames.append('Division')
             elif any(x in text for x in ['вуз', 'команда (во / род войск)',
-                                         'спортивная школа', 'команда', 'дсо кфк']):
+                                         'спортивная школа', 'команда', 'дсо кфк',
+                                         'клуб']):
                 fieldnames.append('Team')
             elif text == 'мст':
                 fieldnames.append('IGNORE')
@@ -149,6 +150,15 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(9)]
 
+            elif text in ['жим лежа 1']:  # FPIO
+                assert header[i + 1].lower() in ['2']
+                assert header[i + 2].lower() in ['3']
+                assert header[i + 3].lower() in ['жим итог']
+                fieldnames.append('Bench1Kg')
+                fieldnames.append('Bench2Kg')
+                fieldnames.append('Bench3Kg')
+                fieldnames.append('Best3BenchKg')
+                [next(iterable) for x in range(3)]
             elif text in ['прис', 'пр'] or \
                     any(x in text for x in ['рез-т присед', 'резт присед',
                                             'результат присед', 'прис резт',
@@ -174,7 +184,6 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
 
             else:
-                print(text)
                 die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
     else:  # No header was given, use the default
         fieldnames = ['Place', 'IGNORE', 'CyrillicName']
@@ -275,7 +284,10 @@ def parse_sheet(sheet):
         if 'Deadlift1Kg' in csv.fieldnames or 'Best3DeadliftKg' in csv.fieldnames:
             event += 'D'
 
-    for line in sheet[get_header_linenum(sheet) + 2:]:
+    iterable = iter(range(len(sheet[get_header_linenum(sheet) + 2:])))
+
+    for ii in iterable:
+        line = sheet[ii]
         text = ''.join(line)
 
         # Skip empty lines.
@@ -297,17 +309,31 @@ def parse_sheet(sheet):
             sex = 'F'
             continue
 
+        if 'Sheet' in text:
+            continue
+
         if 'Результаты' in text:
             continue
         elif 'судейская' in text:
             continue
-        elif 'Место' in text:  # Another header
+        elif 'Место' in text or 'Фамилия. Имя' in text:  # Another header
             continue
+        elif 'Абсолютное' in text:  # Skip until we find another header
+            while iterable is not None and not is_header(line):
+                try:
+                    ii = next(iterable)
+                    line = sheet[ii]
+                except StopIteration:
+                    # if StopIteration is raised, break from loop
+                    break
 
+            continue
+   
         # Skip lines without a number, I think that these are always not lifter
         # data
         if line[0].strip() == '':
             continue
+
 
         # Skip lines without a name
         if line[csv.index('CyrillicName')].strip() == '':
