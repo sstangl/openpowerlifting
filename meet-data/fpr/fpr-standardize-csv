@@ -328,12 +328,11 @@ def parse_sheet(sheet):
                     break
 
             continue
-   
+
         # Skip lines without a number, I think that these are always not lifter
         # data
         if line[0].strip() == '':
             continue
-
 
         # Skip lines without a name
         if line[csv.index('CyrillicName')].strip() == '':
