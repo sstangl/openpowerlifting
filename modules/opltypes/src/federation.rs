@@ -1114,6 +1114,7 @@ pub enum Federation {
     WP,
 
     /// World Powerlifting China.
+    #[serde(rename = "WP-China")]
     #[strum(to_string = "WP-China", serialize = "wp-china")]
     WPChina,
 
