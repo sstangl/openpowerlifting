@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     youth_7 = {name = "Youth 7", min = 7, max = 7}

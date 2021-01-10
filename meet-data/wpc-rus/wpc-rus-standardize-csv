@@ -75,7 +75,9 @@ def parse_sheetname(s):
     s = s.replace('1 слой', '1-слой')
     s = s.replace('1 ply', '1-ply')
     s = s.replace('мн.слой', 'мн-слой')
+    s = s.replace('мн. софт', 'софт')
     s = s.replace('софт эк', 'софт')
+    s = s.replace('софт э', 'софт')
     s = s.replace('однослойной эки', 'однослойной-эки')
     s = s.replace('однослойной эк', 'однослойной-эки')
     s = s.replace('многослойной эк', 'многослойной-эк')
@@ -720,6 +722,7 @@ def standardize_division_age(csv):
         elif any(x in row[idx] for x in ['открытая', 'open', 'откртыая', 'оpen']):
             division = 'Open'
         elif row[idx] != '':
+            print(csv.rows[-1])
             die('Fix standardize_division_age(): Unknown division "%s"' %
                 row[idx])
         else:  # Sometimes division is left blank for whatever reason
