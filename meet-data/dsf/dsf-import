@@ -33,15 +33,10 @@ def error(msg):
 
 
 def add_bodyweights(csv, url):
-    soup = BeautifulSoup(gethtml(url), 'html.parser')
-
     points_ext = '&v=p'
-
     points_url = url + points_ext
+
     points_soup = BeautifulSoup(gethtml(points_url), 'html.parser')
-
-    points_dbcontent = points_soup.find_all('div', id='dbcontent')
-
     table = points_soup.find('table')
 
     trs = table.find_all('tr')

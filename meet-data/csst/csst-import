@@ -232,10 +232,10 @@ def getresults(soup, meetcsv):
                     text = text.replace('\xa0', ' ')
                     text = text.replace('*', '')
                     text = text.replace('  ', ' ').replace(',', '.')
-                       
+
                     if (td.has_attr("class") and len(td['class']) > 1
-                        and td['class'][1] == 'invalid'):
-                            text = '-'+text
+                            and td['class'][1] == 'invalid'):
+                        text = '-'+text
                     if td.find('span', {'class': 'record-attempt'}):
                         text = text.replace('R', '')
 
@@ -432,7 +432,7 @@ def main(dirname, url):
         calc_best_lift(entriescsv, 'Best3DeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
-    csv.append_column('BirthDate')
+    entriescsv.append_column('BirthDate')
 
     # Figure out event information.
     markevent(entriescsv)

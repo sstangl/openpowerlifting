@@ -455,7 +455,7 @@ def main(url):
         calc_best_lift(entriescsv, 'Best3DeadliftKg', [
                        'Deadlift1Kg', 'Deadlift2Kg', 'Deadlift3Kg'])
 
-    csv.append_column('BirthDate')
+    entriescsv.append_column('BirthDate')
 
     # Figure out event information.
     markevent(entriescsv)
