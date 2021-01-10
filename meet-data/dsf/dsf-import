@@ -35,21 +35,14 @@ def error(msg):
 def add_bodyweights(csv, url):
     soup = BeautifulSoup(gethtml(url), 'html.parser')
 
-    points_ext = ''
-    for a in soup.find_all('a'):
-        if a.contents and 'Points' in a.contents[0]:
-            points_ext = a['href'][-4:]
-            break
-
-    if not points_ext:
-        return csv
+    points_ext = '&v=p'
 
     points_url = url + points_ext
     points_soup = BeautifulSoup(gethtml(points_url), 'html.parser')
 
     points_dbcontent = points_soup.find_all('div', id='dbcontent')
 
-    table = points_dbcontent[0].find_next('table')
+    table = points_soup.find('table')
 
     trs = table.find_all('tr')
 
