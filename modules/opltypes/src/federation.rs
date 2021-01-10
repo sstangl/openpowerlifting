@@ -327,6 +327,10 @@ pub enum Federation {
     #[strum(to_string = "FBPD", serialize = "fbpd")]
     FBPD,
 
+    /// Fédération Sportive de Force Athlétique, WDFPF.
+    #[strum(to_string = "FSFA", serialize = "fsfa")]
+    FSFA,
+
     /// Fellowship of Christian Athletes, Defunct US based federation.
     #[strum(to_string = "FCA", serialize = "fca")]
     FCA,
@@ -1516,6 +1520,7 @@ impl Federation {
             Federation::FPPR => FULLY_TESTED,
             Federation::FPR => FULLY_TESTED,
             Federation::FRPL => FULLY_TESTED,
+            Federation::FSFA => FULLY_TESTED,
             Federation::GDFPF => FULLY_TESTED,
             Federation::GermanyUA => false,
             Federation::GFP => false,
@@ -1848,6 +1853,7 @@ impl Federation {
             Federation::FPPR => Some(Country::PuertoRico),
             Federation::FPR => Some(Country::Russia),
             Federation::FRPL => Some(Country::Romania),
+            Federation::FSFA => Some(Country::France),
             Federation::GDFPF => Some(Country::Germany),
             Federation::GermanyUA => Some(Country::Germany),
             Federation::GFP => Some(Country::Russia),
@@ -2207,6 +2213,7 @@ impl Federation {
             Federation::FPPR => Some(Federation::IPF),
             Federation::FPR => Some(Federation::IPF),
             Federation::FRPL => Some(Federation::IPF),
+            Federation::FSFA => Some(Federation::WDFPF),
             Federation::GDFPF => Some(Federation::WDFPF),
             Federation::GermanyUA => None,
             Federation::GFP => None,
@@ -2619,6 +2626,7 @@ impl Federation {
             Federation::FPPR => Federation::ipf_rules_on(date),
             Federation::FPR => Federation::ipf_rules_on(date),
             Federation::FRPL => Federation::ipf_rules_on(date),
+            Federation::FSFA => PointsSystem::Wilks,
             Federation::GDFPF => PointsSystem::Wilks,
             Federation::GermanyUA => PointsSystem::Wilks,
             Federation::GFP => PointsSystem::Wilks,
