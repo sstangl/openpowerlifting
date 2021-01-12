@@ -1,4 +1,4 @@
-# Configuration for GUPU, copied from GPC-UKR.
+# Configuration for GPC-GUPU, copied from GPC-UKR.
 
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]

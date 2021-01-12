@@ -437,6 +437,13 @@ pub enum Federation {
     #[strum(to_string = "GPC-GB", serialize = "gpc-gb")]
     GPCGB,
 
+    /// United Powerlifting Congress Global Union Powerlifting Ukraine.
+    ///
+    /// Sister federation to GPC-UKR.
+    #[serde(rename = "GPC-GUPU")]
+    #[strum(to_string = "GPC-GUPU", serialize = "gpc-gupu")]
+    GPCGUPU,
+
     /// Irish branch of the GPC.
     #[serde(rename = "GPC-IRL")]
     #[strum(to_string = "GPC-IRL", serialize = "gpc-irl")]
@@ -493,10 +500,6 @@ pub enum Federation {
     #[serde(rename = "GSF-Belarus")]
     #[strum(to_string = "GSF-Belarus", serialize = "gsf-belarus")]
     GSFBelarus,
-
-    /// Global Union Powerlifting Ukraine, sister federation to GPC-UKR.
-    #[strum(to_string = "GUPU", serialize = "gupu")]
-    GUPU,
 
     /// Defunct stand-alone US federation.
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
@@ -1534,6 +1537,7 @@ impl Federation {
             Federation::GPC => false,
             Federation::GPCAUS => false,
             Federation::GPCGB => false,
+            Federation::GPCGUPU => false,
             Federation::GPCIRL => false,
             Federation::GPCISR => false,
             Federation::GPCLAT => false,
@@ -1546,7 +1550,6 @@ impl Federation {
             Federation::GPU => false,
             Federation::GRAWA => false,
             Federation::GSFBelarus => false,
-            Federation::GUPU => false,
             Federation::Hardcore => false,
             Federation::HERC => false,
             Federation::CroatiaUA => false,
@@ -1869,6 +1872,7 @@ impl Federation {
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCCAN => Some(Country::Canada),
             Federation::GPCGB => Some(Country::UK),
+            Federation::GPCGUPU => Some(Country::Ukraine),
             Federation::GPCIRL => Some(Country::Ireland),
             Federation::GPCISR => Some(Country::Israel),
             Federation::GPCLAT => Some(Country::Latvia),
@@ -1881,7 +1885,6 @@ impl Federation {
             Federation::GPU => Some(Country::Germany),
             Federation::GRAWA => Some(Country::Germany),
             Federation::GSFBelarus => Some(Country::Belarus),
-            Federation::GUPU => Some(Country::Ukraine),
             Federation::Hardcore => Some(Country::USA),
             Federation::HERC => Some(Country::USA),
             Federation::CroatiaUA => Some(Country::Croatia),
@@ -2230,6 +2233,7 @@ impl Federation {
             Federation::GPCAUS => Some(Federation::GPC),
             Federation::GPCCAN => Some(Federation::GPC),
             Federation::GPCGB => Some(Federation::GPC),
+            Federation::GPCGUPU => Some(Federation::GPC),
             Federation::GPCIRL => Some(Federation::GPC),
             Federation::GPCISR => Some(Federation::GPC),
             Federation::GPCLAT => Some(Federation::GPC),
@@ -2242,7 +2246,6 @@ impl Federation {
             Federation::GPU => Some(Federation::WPU),
             Federation::GRAWA => Some(Federation::IRP),
             Federation::GSFBelarus => None,
-            Federation::GUPU => None,
             Federation::Hardcore => None,
             Federation::HERC => None,
             Federation::CroatiaUA => None,
@@ -2644,6 +2647,7 @@ impl Federation {
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCCAN => PointsSystem::Glossbrenner,
             Federation::GPCGB => PointsSystem::Reshel,
+            Federation::GPCGUPU => PointsSystem::Glossbrenner,
             Federation::GPCIRL => PointsSystem::Glossbrenner,
             Federation::GPCISR => PointsSystem::Glossbrenner,
             Federation::GPCLAT => PointsSystem::Glossbrenner,
@@ -2656,7 +2660,6 @@ impl Federation {
             Federation::GPU => PointsSystem::Wilks,
             Federation::GRAWA => PointsSystem::Wilks,
             Federation::GSFBelarus => PointsSystem::Wilks,
-            Federation::GUPU => PointsSystem::Glossbrenner,
             Federation::Hardcore => PointsSystem::Wilks,
             Federation::HERC => PointsSystem::Wilks,
             Federation::CroatiaUA => PointsSystem::Wilks,
