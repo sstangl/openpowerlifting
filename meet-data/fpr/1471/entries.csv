@@ -1,57 +1,138 @@
-Equipment,Place,Name,Division,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Sex,CyrillicName,Event
-Single-ply,1,Ekaterina Volodko,Open,2001,Russia,38.5,67.5,-72.2,72.5,72.5,42.5,45,,45,60,67.5,,67.5,185,47,F,Екатерина Володько,SBD
-Single-ply,1,Aleksandra Bogachuk,Open,1997,Russia,51.8,87.5,-90,-95,87.5,45,50,-52.5,50,75,82.5,87.5,87.5,225,52,F,Александра Богачук,SBD
-Single-ply,2,Tatyana Nadelyaeva,Open,1999,Russia,51.98,77.5,82.5,-85,82.5,45,-47.5,47.5,47.5,75,80,-85,80,210,52,F,Татьяна Наделяева,SBD
-Single-ply,1,Anna Larionova,Open,1994,Russia,53.58,130,135,-140,135,80,-85,-85,80,115,125,-132.5,125,340,57,F,Анна Ларионова,SBD
-Single-ply,1,Olga Adamovich,Open,1991,Russia,62.65,,195,202.5,202.5,-110,110,117.5,117.5,180,187.5,195,195,515,63,F,Ольга Адамович,SBD
-Single-ply,2,Anastasiya Galanova,Open,1992,Russia,62.5,-165,180,187.5,187.5,110,-115,-115,110,162.5,-170,170,170,467.5,63,F,Анастасия Галанова,SBD
-Single-ply,3,Anna Rudomanova,Open,1990,Russia,61.6,130,140,-145,140,65,-67.5,-67.5,65,115,125,,125,330,63,F,Анна Рудоманова,SBD
-Single-ply,4,Natalya Shenaeva,Open,1988,Russia,62.85,105,115,125,125,57.5,65,-70,65,110,122.5,125,125,315,63,F,Наталья Шенаева,SBD
-Single-ply,1,Yuliya Sivakova,Open,1983,Russia,69.9,150,160,170,170,90,-95,95,95,145,155,-165,155,420,72,F,Юлия Сивакова,SBD
-Single-ply,2,Yuliya Eroshenko,Open,1989,Russia,70.3,140,150,-165,150,60,65,70,70,120,125,130,130,350,72,F,Юлия Ерошенко,SBD
-Single-ply,3,Anna Kobeleva,Open,1995,Russia,66.2,80,90,95,95,40,-45,45,45,90,95,100,100,240,72,F,Анна Кобелева,SBD
-Single-ply,1,Oksana Voytekhovskaya,Open,1978,Russia,72.45,120,122.5,130,130,80,85,-90,85,95,105,115,115,330,84,F,Оксана Войтеховская,SBD
-Single-ply,1,Viktor Gulov,Open,1997,Russia,57.76,130,140,155,155,75,85,-90,85,147.5,157.5,175,175,415,59,M,Виктор Гулов,SBD
-Single-ply,2,Bogdan Yumashev,Open,2003,Russia,44.74,85,92.5,95,95,55,57.5,60,60,70,80,90,90,245,59,M,Богдан Юмашев,SBD
-Single-ply,1,Maksim Pogodaev,Open,1997,Russia,66,190,-200,-200,190,-115,115,122.5,122.5,187.5,-197.5,-197.5,187.5,500,66,M,Максим Погодаев,SBD
-Single-ply,2,Stepan Panin,Open,1995,Russia,63.5,175,182.5,192.5,192.5,110,112.5,117.5,117.5,175,182.5,-190,182.5,492.5,66,M,Степан Панин,SBD
-Single-ply,3,Mark Levitskiy,Open,1998,Russia,65.8,150,160,170,170,92.5,97.5,-100,97.5,150,160,-162.5,160,427.5,66,M,Марк Левицкий,SBD
-Single-ply,4,Anton Komarov,Open,1997,Russia,66,125,130,137.5,137.5,65,70,75,75,117.5,125,130,130,342.5,66,M,Антон Комаров,SBD
-Single-ply,1,Aleksandr Kapturov,Open,1995,Russia,74,260,270,280,280,130,135,140,140,220,235,250,250,670,74,M,Александр Каптуров,SBD
-Single-ply,2,Konstantin Shamanskiy,Open,1996,Russia,72.5,230,-235,235,235,120,-130,-130,120,210,220,-225,220,575,74,M,Константин Шаманский,SBD
-Single-ply,3,Dmitriy Melnikov,Open,1996,Russia,72.15,200,210,220,220,120,125,130,130,200,215,-225,215,565,74,M,Дмитрий Мельников,SBD
-Single-ply,4,Aleksandr Seroshtan,Open,1994,Russia,74,190,205,215,215,125,130,135,135,200,210,-217.5,210,560,74,M,Александр Сероштан,SBD
-Single-ply,5,Valeriy Plesovskikh,Open,1996,Russia,74,220,222.5,230,230,105,110,115,115,200,-220,-220,200,545,74,M,Валерий Плесовских,SBD
-Single-ply,6,Sergey Zaytsev,Open,1996,Russia,74,190,-200,200,200,115,-122.5,122.5,122.5,205,215,-225,215,537.5,74,M,Сергей Зайцев,SBD
-Single-ply,7,Aleksey Gordeev,Open,1996,Russia,72.9,175,185,192.5,192.5,100,105,-107.5,105,170,180,190,190,487.5,74,M,Алексей Гордеев,SBD
-Single-ply,8,Artem Domnin,Open,1997,Russia,73.65,150,160,170,170,105,110,120,120,150,167.5,175,175,465,74,M,Артем Домнин,SBD
-Single-ply,9,Arsentiy Chernykh,Open,1999,Russia,67.8,150,160,-170,160,60,72.5,-82.5,72.5,160,180,-182.5,180,412.5,74,M,Арсентий Черных,SBD
-Single-ply,DQ,Igor Golubev #1,Open,1995,Russia,73.9,-210,-220,220,220,130,132.5,135,135,-190,-190,-190,,,74,M,Игорь Голубев,SBD
-Single-ply,1,Maksim Semiryakov,Open,1985,Russia,80.4,260,270,277.5,277.5,-170,170,175,175,235,245,250,250,702.5,83,M,Максим Семиряков,SBD
-Single-ply,2,Anton Petrashov,Open,1989,Russia,78.45,240,250,-260,250,157.5,-165,167.5,167.5,215,220,-222.5,220,637.5,83,M,Антон Петрашов,SBD
-Single-ply,3,Artur Ermak,Open,1990,Russia,82.85,215,225,232.5,232.5,130,135,-142.5,135,230,240,250,250,617.5,83,M,Артур Ермак,SBD
-Single-ply,4,Vladimir Kononenko,Open,1999,Russia,82.6,190,200,215,215,105,112.5,117.5,117.5,175,185,190,190,522.5,83,M,Владимир Кононенко,SBD
-Single-ply,5,Aleksey Boyko,Open,1993,Russia,81.95,170,177.5,182.5,182.5,-125,125,130,130,185,190,-195,190,502.5,83,M,Алексей Бойко,SBD
-Single-ply,6,Danil Dremin,Open,1997,Russia,79.55,140,152.5,165,165,80,-90,90,90,160,175,190,190,445,83,M,Данил Дремин,SBD
-Single-ply,7,Artem Yarygin,Open,1993,Russia,74.7,145,152.5,157.5,157.5,-100,100,-102.5,100,145,-160,-175,145,402.5,83,M,Артем Ярыгин,SBD
-Single-ply,8,Maksim Mogilatov,Open,1983,Russia,77.45,140,-150,,140,90,97.5,-105,97.5,135,150,165,165,402.5,83,M,Максим Могилатов,SBD
-Single-ply,1,Aleksandr Dombrovskiy,Open,1992,Russia,91.5,270,290,305,305,200,210,220,220,250,265,272.5,272.5,797.5,93,M,Александр Домбровский,SBD
-Single-ply,2,Vyacheslav Shimanskiy,Open,1984,Russia,87.9,290,-300,300,300,180,-190,-190,180,245,255,-265,255,735,93,M,Вячеслав Шиманский,SBD
-Single-ply,3,Evgeniy Kubasov,Open,1986,Russia,91.25,250,260,-270,260,190,200,-205,200,260,-277.5,-277.5,260,720,93,M,Евгений Кубасов,SBD
-Single-ply,4,Sergey Lubinets,Open,1992,Russia,91.7,240,250,260,260,150,157.5,162.5,162.5,265,280,-300,280,702.5,93,M,Сергей Лубенец,SBD
-Single-ply,5,Ivan Belomestnykh,Open,1991,Russia,92.3,200,215,222.5,222.5,140,145,150,150,-210,215,220,220,592.5,93,M,Иван Беломестных,SBD
-Single-ply,6,Ilya Chaykin,Open,1990,Russia,84.95,-190,200,210,210,140,-150,150,150,230,-250,-250,230,590,93,M,Илья Чайкин,SBD
-Single-ply,7,Aleksandr Filkin,Open,1995,Russia,86.6,210,225,-232.5,225,150,155,-160,155,190,-200,-200,190,570,93,M,Александр Филькин,SBD
-Single-ply,8,Vyacheslav Gromov,Open,1995,Russia,88.75,150,165,-170,165,115,125,130,130,150,170,180,180,475,93,M,Вячеслав Громов,SBD
-Single-ply,1,Andrey Vergulis,Open,1989,Russia,103.85,330,345,-355,345,195,202.5,205,205,310,-320,-320,310,860,105,M,Андрей Вергулис,SBD
-Single-ply,2,Viktor Kostyrin,Open,1981,Russia,98.3,280,300,307.5,307.5,170,180,182.5,182.5,-270,270,285,285,775,105,M,Виктор Костырин,SBD
-Single-ply,3,Dmitriy Grigoryev #9,Open,1974,Russia,101.15,265,275,285,285,-215,225,230,230,260,-270,,260,775,105,M,Дмитрий Григорьев,SBD
-Single-ply,4,Vladimir Zagaynov,Open,1979,Russia,104.5,-255,275,285,285,-190,190,-200,190,240,255,-270,255,730,105,M,Владимир Загайнов,SBD
-Single-ply,5,Roman Gusevskiy,Open,1983,Russia,103.35,205,215,230,230,162.5,165,,165,200,220,-235,220,615,105,M,Роман Гусевский,SBD
-Single-ply,1,Ivan Zhidkov,Open,1987,Russia,116.7,305,315,325,325,260,272.5,280,280,295,310,,310,915,120,M,Иван Жидков,SBD
-Single-ply,2,Evgeniy Akinin,Open,1980,Russia,109.15,325,-340,340,340,225,-235,-235,225,265,280,-285,280,845,120,M,Евгений Акинин,SBD
-Single-ply,3,Evgeniy Kostromin,Open,1987,Russia,112.1,-280,290,-302.5,290,-180,-185,185,185,250,260,-265,260,735,120,M,Евгений Костромин,SBD
-Single-ply,4,Maksim Kolyadin,Open,1994,Russia,115.75,225,237.5,247.5,247.5,-190,195,200,200,210,225,240,240,687.5,120,M,Максим Колядин,SBD
-Single-ply,1,Maksim Orlichenko,Open,1978,Russia,139,315,330,345,345,235,250,255,255,300,315,322.5,322.5,922.5,120+,M,Максим Орличенко,SBD
-Single-ply,2,Aleksandr Kolchanov,Open,1969,Russia,148.3,300,310,320,320,250,-257.5,-260,250,265,-275,,265,835,120+,M,Александр Колчанов,SBD
-Single-ply,3,Sergey Stepanov,Open,1991,Russia,122.35,255,265,275,275,195,200,205,205,210,220,230,230,710,120+,M,Сергей Степанов,SBD
+Name,CyrillicName,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,WeightClassKg,Event,Equipment,Division,Sex,BirthDate,Place
+Ekaterina Volodko,Екатерина Володько,2001,38.3,Спарта,52.5,35,65,152.5,47,SBD,Raw,Open,F,,1
+Larisa Loktionova,Лариса Локтионова,1997,52,Пять звезд,75,52.5,95,222.5,52,SBD,Raw,Open,F,,1
+Aleksandra Bogachuk,Александра Богачук,1997,52,Спарта,72.5,40,77.5,190,52,SBD,Raw,Open,F,,2
+Tatyana Nadelyaeva,Татьяна Наделяева,1999,50.5,Спарта,60,40,80,180,52,SBD,Raw,Open,F,,3
+Elena Varfolomeeva,Елена Варфоломеева,1983,57,Пять звезд,82.5,52.5,92.5,227.5,57,SBD,Raw,Open,F,,1
+Evgeniya Shvets,Евгения Швец,1986,54.9,Юность,57.5,42.5,85,185,57,SBD,Raw,Open,F,,2
+Anna Alyokhina,Анна Алёхина,1990,55.76,Ореол,70,40,65,175,57,SBD,Raw,Open,F,,3
+Ekaterina Zavyalova,Екатерина Завьялова,1983,63,Олимп,80,45,97.5,222.5,63,SBD,Raw,Open,F,,1
+Alena Bichevina,Алена Бичевина,1996,63,Спарта,77.5,42.5,80,200,63,SBD,Raw,Open,F,,2
+Yuliya Sivakova,Юлия Сивакова,1983,70,Спарта,115,75,150,340,72,SBD,Raw,Open,F,,1
+Luana Ptukha,Луана Птуха,1991,71.8,Пять звезд,92.5,57.5,110,260,72,SBD,Raw,Open,F,,2
+Nadezhda Churkina,Надежда Чуркина,1997,71.3,Спарта,90,65,85,240,72,SBD,Raw,Open,F,,3
+Mariya Kaledina,Мария Каледина,1983,68.9,Ореол,65,35,80,180,72,SBD,Raw,Open,F,,4
+Anna Litvinova,Анна Литвинова,1996,68.3,Спарта,60,40,70,170,72,SBD,Raw,Open,F,,5
+Yuliya Tolstonogova,Юлия Толстоногова,1994,72.3,Спарта,125,75,145,345,84,SBD,Raw,Open,F,,1
+Galina Grinchuk,Галина Гринчук,1985,82.65,Юность,90,65,120,275,84,SBD,Raw,Open,F,,2
+Anastasiya Shirinkina,Анастасия Ширинкина,1992,80,Спарта,70,55,72.5,197.5,84,SBD,Raw,Open,F,,3
+Valeriy Tanygin,Валерий Таныгин,1987,52.3,Ореол,95,70,135,300,59,SBD,Raw,Open,M,,1
+Vladimir Gavrilov,Владимир Гаврилов,1997,52.12,Юность,90,55,110,255,59,SBD,Raw,Open,M,,2
+Denis Shevchenko,Денис Шевченко,1996,57.8,Юность,70,55,120,245,59,SBD,Raw,Open,M,,3
+Sergey Gauch,Сергей Гауч,1998,54.18,Спарта,72.5,60,90,222.5,59,SBD,Raw,Open,M,,4
+Bogdan Yumashev,Богдан Юмашев,2003,44.5,Спарта,65,50,80,195,59,SBD,Raw,Open,M,,5
+Roman Timonin,Роман Тимонин,1992,65.7,Спарта,170,117.5,185,472.5,66,SBD,Raw,Open,M,,1
+Ivan Lyubimov,Иван Любимов,1988,62.85,ДЮСШ,182.5,97.5,180,460,66,SBD,Raw,Open,M,,2
+Maksim Ivanov #22,Максим Иванов,1990,66,Юность,140,100,195,435,66,SBD,Raw,Open,M,,3
+Ivan Yakunin,Иван Якунин,1995,65.65,Юность,130,90,155,375,66,SBD,Raw,Open,M,,4
+Igor Trunov,Игорь Трунов,1997,64,Медведь,117.5,80,160,357.5,66,SBD,Raw,Open,M,,5
+Vyacheslav Malinovskiy,Вячеслав Малиновский,1997,63.35,Мартенсит,117.5,75,150,342.5,66,SBD,Raw,Open,M,,6
+Pavel Solovev,Павел Соловьев,1998,63.7,Спарта,102.5,82.5,125,310,66,SBD,Raw,Open,M,,7
+Anton Komarov,Антон Комаров,1997,65.05,Ореол,97.5,67.5,100,265,66,SBD,Raw,Open,M,,8
+Aleksandr Kapturov,Александр Каптуров,1995,73.9,Спарта,207.5,120,227.5,555,74,SBD,Raw,Open,M,,1
+Vasiliy Sergeev,Василий Сергеев,1987,72.65,,165,130,240,535,74,SBD,Raw,Open,M,,2
+Evgeniy Korinovskiy,Евгений Кориновский,1992,73.1,ДЮСШ,170,120,230,520,74,SBD,Raw,Open,M,,3
+Dmitriy Melnikov,Дмитрий Мельников,1996,71.8,Спарта,170,117.5,195,482.5,74,SBD,Raw,Open,M,,4
+Svyatoslav Nikonov,Святослав Никонов,1994,73.3,Юность,160,125,190,475,74,SBD,Raw,Open,M,,5
+Yuriy Lebedev,Юрий Лебедев,1997,73,Спарта,152.5,105,190,447.5,74,SBD,Raw,Open,M,,6
+Aleksandr Grinchuk,Александр Гринчук,1990,74,Юность,130,110,200,440,74,SBD,Raw,Open,M,,7
+Denis Stupin,Денис Ступин,1993,71.65,,135,100,160,395,74,SBD,Raw,Open,M,,8
+Dmitriy Vstavskiy,Дмитрий Вставский,1997,73.15,Юность,115,87.5,165,367.5,74,SBD,Raw,Open,M,,9
+Roman Amosov,Роман Амосов,1998,72.15,Юность,100,100,165,365,74,SBD,Raw,Open,M,,10
+Kirill Naprienko,Кирилл Наприенко,1994,72.75,,120,105,140,365,74,SBD,Raw,Open,M,,11
+Aleksandr Apanin,Александр Апанин,1997,72.75,Мартенсит,122.5,70,162.5,355,74,SBD,Raw,Open,M,,12
+Mark Rebrushkin,Марк Ребрушкин,1995,72.25,Спарта,130,90,130,350,74,SBD,Raw,Open,M,,13
+Semen Gavrilov,Семен Гаврилов,1997,69.5,Медведь,70,55,120,245,74,SBD,Raw,Open,M,,14
+Semyon Pshenichnikov,Семён Пшеничников,1991,78.45,БЦБК,202.5,155,260,617.5,83,SBD,Raw,Open,M,,1
+Egor Zhdanov,Егор Жданов,1994,82.65,Медведь,200,137.5,245,582.5,83,SBD,Raw,Open,M,,2
+Dmitriy Gusakov,Дмитрий Гусаков,1993,83,Спарта,182.5,110,227.5,520,83,SBD,Raw,Open,M,,3
+Dmitriy Leskov,Дмитрий Лесков,1986,83,Медведь,170,132.5,215,517.5,83,SBD,Raw,Open,M,,4
+Aleksandr Dolotchenko,Александр Долотченко,1988,82,Байкалсерф,185,120,200,505,83,SBD,Raw,Open,M,,5
+Dmitriy Evdokimenko,Дмитрий Евдокименко,1996,81,ФОК-АГТА,150,95,217.5,462.5,83,SBD,Raw,Open,M,,6
+Evgeniy Lukhnyov,Евгений Лухнёв,1996,80.85,Железяка,165,120,175,460,83,SBD,Raw,Open,M,,7
+Oleg Dzvoniskiy,Олег Дзвониский,1993,78.6,Спарта,152.5,110,180,442.5,83,SBD,Raw,Open,M,,8
+Aleksey Nadymov,Алексей Надымов,1993,79.05,,130,105,180,415,83,SBD,Raw,Open,M,,9
+Andrey Sychev,Андрей Сычев,1994,77.25,,130,100,180,410,83,SBD,Raw,Open,M,,10
+Vyacheslav Shoshin,Вячеслав Шошин,1993,80.3,Железяка,140,100,160,400,83,SBD,Raw,Open,M,,11
+Evgeniy Traydakalo,Евгений Трайдакало,1994,81.75,Спарта,120,100,155,375,83,SBD,Raw,Open,M,,12
+Danil Dryomin,Данил Дрёмин,1997,79.1,"ФСК ""Шелехов""",110,90,155,355,83,SBD,Raw,Open,M,,13
+Anton Shipunov,Антон Шипунов,1997,82.4,"ФСК ""Шелехов""",110,77.5,130,317.5,83,SBD,Raw,Open,M,,14
+Aleksandr Gridyakin,Александр Гридякин,1965,92.1,Мартенсит,230,147.5,252.5,630,93,SBD,Raw,Open,M,,1
+Aleksey Mironov,Алексей Миронов,1981,90.5,ДЮСШ,220,170,237.5,627.5,93,SBD,Raw,Open,M,,2
+Sergey Lubenets,Сергей Лубенец,1992,92,Спарта,180,150,255,585,93,SBD,Raw,Open,M,,3
+Anton Zenkov,Антон Зенков,1992,92.35,Рекорд,200,135,250,585,93,SBD,Raw,Open,M,,4
+Albert Smirnov,Альберт Смирнов,1987,91.9,Фиоре,205,140,220,565,93,SBD,Raw,Open,M,,5
+Anatoliy Ergunov,Анатолий Ергунов,1965,82.25,ДЮСШ,170,127.5,210,507.5,83,SBD,Raw,Open,M,,6
+Artur Zheltukhin,Артур Желтухин,1991,90.2,Пять звезд,165,127.5,165,457.5,93,SBD,Raw,Open,M,,7
+Evgeniy Mikhalev,Евгений Михалев,1995,92.65,Носорог,165,110,180,455,93,SBD,Raw,Open,M,,8
+Vladimir Kononenko,Владимир Кононенко,1999,83.9,Спарта,160,107.5,150,417.5,93,SBD,Raw,Open,M,,9
+Andrey Belykh,Андрей Белых,1993,99.9,БЦБК,250,160,315,725,105,SBD,Raw,Open,M,,1
+Roman Timkovich,Роман Тимкович,1978,100.05,Олимпия,230,165,275,670,105,SBD,Raw,Open,M,,2
+Vladimir Mikhaylov,Владимир Михайлов,1961,102.85,ФОК-АГТА,210,145,250,605,105,SBD,Raw,Open,M,,3
+Grigoriy Chenets,Григорий Ченец,1985,104.65,Байкалсерф,210,142.5,250,602.5,105,SBD,Raw,Open,M,,4
+Vladimir Gusev,Владимир Гусев,1958,103.6,,210,157.5,200,567.5,105,SBD,Raw,Open,M,,5
+Igor Krasovskiy,Игорь Красовский,1995,104.7,Спарта,180,155,222.5,557.5,105,SBD,Raw,Open,M,,6
+Evgeniy Savritskiy,Евгений Саврицкий,1997,103.25,,200,130,217.5,547.5,105,SBD,Raw,Open,M,,7
+Anatoliy Osintsev,Анатолий Осинцев,1968,97.65,Арнольд GYM,190,150,185,525,105,SBD,Raw,Open,M,,8
+Dmitriy Kurtin,Дмитрий Куртин,1995,98.1,Макспауэр,140,105,160,405,105,SBD,Raw,Open,M,,9
+Denis Moiseychenkov,Денис Моисейченков,1986,114.7,Байкалсерф,270,180,280,730,120,SBD,Raw,Open,M,,1
+Nikolay Sukhov,Николай Сухов,1973,116.8,,235,185,260,680,120,SBD,Raw,Open,M,,2
+Oleg Zverev,Олег Зверев,1987,113.8,Железяка,242.5,180,250,672.5,120,SBD,Raw,Open,M,,3
+Aleksandr Kolchanov,Александр Колчанов,1969,148.2,Спарта,230,190,260,680,120+,SBD,Raw,Open,M,,1
+Aleksey Popov,Алексей Попов,1978,130,Спарта,215,167.5,230,612.5,120+,SBD,Raw,Open,M,,2
+Ekaterina Volodko,Екатерина Володько,2001,38.5,Спарта,72.5,45,67.5,185,47,SBD,Single-ply,Open,F,,1
+Aleksandra Bogachuk,Александра Богачук,1997,51.8,Спарта,87.5,50,87.5,225,52,SBD,Single-ply,Open,F,,1
+Tatyana Nadelyaeva,Татьяна Наделяева,1999,51.98,Спарта,82.5,47.5,80,210,52,SBD,Single-ply,Open,F,,2
+Anna Larionova,Анна Ларионова,1994,53.58,Мартенсит,135,80,125,340,57,SBD,Single-ply,Open,F,,1
+Olga Adamovich,Ольга Адамович,1991,62.65,Спарта,202.5,117.5,195,515,63,SBD,Single-ply,Open,F,,1
+Anastasiya Galanova,Анастасия Галанова,1992,62.5,Спарта,187.5,110,170,467.5,63,SBD,Single-ply,Open,F,,2
+Anna Rudomanova,Анна Рудоманова,1990,61.6,Железяка,140,65,125,330,63,SBD,Single-ply,Open,F,,3
+Natalya Shenaeva,Наталья Шенаева,1990,62.85,Спарта,125,65,125,315,63,SBD,Single-ply,Open,F,,4
+Yuliya Sivakova,Юлия Сивакова,1983,69.9,Спарта,170,95,155,420,72,SBD,Single-ply,Open,F,,1
+Yulya Eroshenko,Юля Ерошенко,1989,70.3,Центр тяжести,150,70,130,350,72,SBD,Single-ply,Open,F,,2
+Anna Kobeleva,Анна Кобелева,1995,66.2,Спарта,95,45,100,240,72,SBD,Single-ply,Open,F,,3
+Oksana Voytekhovskaya,Оксана Войтеховская,1978,72.45,Спарта,130,85,115,330,84,SBD,Single-ply,Open,F,,1
+Viktor Gulov,Виктор Гулов,1997,57.76,Ореол,155,85,175,415,59,SBD,Single-ply,Open,M,,1
+Bogdan Yumashev,Богдан Юмашев,2003,44.74,Спарта,95,60,90,245,59,SBD,Single-ply,Open,M,,2
+Maksim Pogodaev,Максим Погодаев,1997,66,Рекорд,190,122.5,187.5,500,66,SBD,Single-ply,Open,M,,1
+Stepan Panin,Степан Панин,1995,63.5,Мартенсит,192.5,117.5,182.5,492.5,66,SBD,Single-ply,Open,M,,2
+Mark Levitskiy,Марк Левицкий,1998,65.8,Спарта,170,97.5,160,427.5,66,SBD,Single-ply,Open,M,,3
+Anton Komarov,Антон Комаров,1997,66,Ореол,137.5,75,130,342.5,66,SBD,Single-ply,Open,M,,4
+Aleksandr Kapturov,Александр Каптуров,1995,74,Спарта,280,140,250,670,74,SBD,Single-ply,Open,M,,1
+Konstantin Shamanskiy,Константин Шаманский,1996,72.5,Лесохимик,235,120,220,575,74,SBD,Single-ply,Open,M,,2
+Dmitriy Melnikov,Дмитрий Мельников,1996,72.15,Спарта,220,130,215,565,74,SBD,Single-ply,Open,M,,3
+Aleksandr Seroshtan,Александр Сероштан,1994,74,,215,135,210,560,74,SBD,Single-ply,Open,M,,4
+Valeriy Plesovskikh,Валерий Плесовских,1996,74,Рекорд,230,115,200,545,74,SBD,Single-ply,Open,M,,5
+Sergey Zaytsev,Сергей Зайцев,1996,74,Рекорд,200,122.5,215,537.5,74,SBD,Single-ply,Open,M,,6
+Aleksey Gordeev,Алексей Гордеев,1996,72.9,Спарта,192.5,105,190,487.5,74,SBD,Single-ply,Open,M,,7
+Artem Domnin,Артем Домнин,1997,73.65,Зенит,170,120,175,465,74,SBD,Single-ply,Open,M,,8
+Arsenty Chernykh,Арсентй Черных,1999,67.8,Носорог,160,72.5,180,412.5,74,SBD,Single-ply,Open,M,,9
+Igor Golubev #1,Игорь Голубев,1995,73.9,,220,135,,,74,SBD,Single-ply,Open,M,,DQ
+Maksim Semiryakov,Максим Семиряков,1985,80.4,Спарта,277.5,175,250,702.5,83,SBD,Single-ply,Open,M,,1
+Anton Petrashov,Антон Петрашов,1990,78.45,Спарта,250,167.5,220,637.5,83,SBD,Single-ply,Open,M,,2
+Artur Ermak,Артур Ермак,1990,82.85,Спарта,232.5,135,250,617.5,83,SBD,Single-ply,Open,M,,3
+Vladimir Kononenko,Владимир Кононенко,1999,82.6,Спарта,215,117.5,190,522.5,83,SBD,Single-ply,Open,M,,4
+Aleksey Boyko,Алексей Бойко,1993,81.95,Зенит,182.5,130,190,502.5,83,SBD,Single-ply,Open,M,,5
+Daniil Dremin,Даниил Дремин,1997,79.55,Ореол,165,90,190,445,83,SBD,Single-ply,Open,M,,6
+Artem Yarygin,Артем Ярыгин,1994,74.7,"ФСК ""Шелехов""",157.5,100,145,402.5,83,SBD,Single-ply,Open,M,,7
+Maksim Mogilatov,Максим Могилатов,1983,77.45,Железяка,140,97.5,165,402.5,83,SBD,Single-ply,Open,M,,8
+Aleksandr Dombrovskiy,Александр Домбровский,1992,91.5,Спарта,305,220,272.5,797.5,93,SBD,Single-ply,Open,M,,1
+Vyacheslav Shimanskiy,Вячеслав Шиманский,1984,87.9,Спарта,300,180,255,735,93,SBD,Single-ply,Open,M,,2
+Evgeniy Kubasov,Евгений Кубасов,1986,91.25,ФОК-АГТА,260,200,260,720,93,SBD,Single-ply,Open,M,,3
+Sergey Lubenets,Сергей Лубенец,1992,91.7,Спарта,260,162.5,280,702.5,93,SBD,Single-ply,Open,M,,4
+Ivan Belomestnykh,Иван Беломестных,1991,92.3,Спарта,222.5,150,220,592.5,93,SBD,Single-ply,Open,M,,5
+Ilya Chaykin,Илья Чайкин,1990,84.95,Зенит,210,150,230,590,93,SBD,Single-ply,Open,M,,6
+Aleksandr Filkin,Александр Филькин,1995,86.6,Железяка,225,155,190,570,93,SBD,Single-ply,Open,M,,7
+Vyacheslav Gromov,Вячеслав Громов,1995,88.75,Железяка,165,130,180,475,93,SBD,Single-ply,Open,M,,8
+Andrey Vergules,Андрей Вергулес,1989,103.85,Спарта,345,205,310,860,105,SBD,Single-ply,Open,M,,1
+Viktor Kostyrin,Виктор Костырин,1981,98.3,"ФСК ""Шелехов""",307.5,182.5,285,775,105,SBD,Single-ply,Open,M,,2
+Dmitriy Grigorev,Дмитрий Григорьев,1974,101.15,Спарта,285,230,260,775,105,SBD,Single-ply,Open,M,,3
+Vladimir Zagaynov,Владимир Загайнов,1979,104.5,Железяка,285,190,255,730,105,SBD,Single-ply,Open,M,,4
+Roman Gusevskiy,Роман Гусевский,1983,103.35,Железяка,230,165,220,615,105,SBD,Single-ply,Open,M,,5
+Ivan Zhidkov,Иван Жидков,1987,116.7,Спарта,325,280,310,915,120,SBD,Single-ply,Open,M,,1
+Evgeniy Akinin,Евгений Акинин,1980,109.15,Мартенсит,340,225,280,845,120,SBD,Single-ply,Open,M,,2
+Evgeniy Kostromin,Евгений Костромин,1987,112.1,НИ ИрГТУ,290,185,260,735,120,SBD,Single-ply,Open,M,,3
+Maksim Kolyadin,Максим Колядин,1994,115.75,НИ ИрГТУ,247.5,200,240,687.5,120,SBD,Single-ply,Open,M,,4
+Maksim Orlichenko,Максим Орличенко,1977,139,Спарта,345,255,322.5,922.5,120+,SBD,Single-ply,Open,M,,1
+Aleksandr Kolchanov,Александр Колчанов,1969,148.3,Спарта,320,250,265,835,120+,SBD,Single-ply,Open,M,,2
+Sergey Stepanov,Сергей Степанов,1991,122.35,Железяка,275,205,230,710,120+,SBD,Single-ply,Open,M,,3

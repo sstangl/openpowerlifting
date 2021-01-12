@@ -37,7 +37,8 @@ SPB_URL = 'http://www.powerliftingfed.spb.ru/protocols'
 
 FPIO_URL = 'http://fpio.org.ru/index.php?menu=7'
 
-NSO_URL = 'http://fp-nso.ru/документы/протоколы/'
+NSO_URL = 'http://fp-nso.ru/%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b/'\
+          '%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
