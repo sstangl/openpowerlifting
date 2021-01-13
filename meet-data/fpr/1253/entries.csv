@@ -1,33 +1,151 @@
-Division,Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,WeightClassKg,Sex,CyrillicName,Event,TotalKg,Equipment
-Open,1,Vyacheslav Ignatyev,1992,Russia,52.96,77.5,80,85,85,59,M,Вячеслав Игнатьев,B,85,Raw
-Open,DQ,Vladimir Smyshlyaev,1992,Russia,53.56,-90,-95,-95,,59,M,Владимир Смышляев,B,,Raw
-Open,1,Vladimir Zolotarev,1988,Russia,65.3,115,117.5,120,120,66,M,Владимир Золотарев,B,120,Raw
-Open,2,Vasiliy Pozhidaev,1990,Russia,64.75,112.5,115,-117.5,115,66,M,Василий Пожидаев,B,115,Raw
-Open,3,Aleksandr Shidaev,1989,Russia,63.2,95,97.5,-100,97.5,66,M,Александр Шидаев,B,97.5,Raw
-Open,1,Anton Chudin,1990,Russia,69.7,140,145,150,150,74,M,Антон Чудин,B,150,Raw
-Open,2,Mikhail Spiridonchuk,1988,Russia,71.55,125,130,140,140,74,M,Михаил Спиридончук,B,140,Raw
-Open,3,Alexsey Mankov,1988,Russia,74,-110,110,117.5,117.5,74,M,Алексей Маньков,B,117.5,Raw
-Open,4,Andrey Ponikarovskiy,1990,Russia,72.05,110,-115,115,115,74,M,Андрей Поникаровский,B,115,Raw
-Open,5,Yuriy Sudos,1991,Russia,73.55,-110,110,115,115,74,M,Юрий Судос,B,115,Raw
-Open,6,Artem Rudakovskiy,1993,Russia,73.3,90,-95,-95,90,74,M,Артем Рудаковский,B,90,Raw
-Open,7,Konstantin Zaytsev,1993,Russia,68.2,-70,70,75,75,74,M,Константин Зайцев,B,75,Raw
-Open,DQ,Ivan Pavlov,1992,Russia,71.55,-90,-100,-100,,74,M,Иван Павлов,B,,Raw
-Open,1,Aleksandr Zaikin,1991,Russia,81.55,140,145,155,155,83,M,Александр Заикин,B,155,Raw
-Open,2,Aleksandr Dombrovskiy,1992,Russia,79.9,-142.5,147.5,152.5,152.5,83,M,Александр Домбровский,B,152.5,Raw
-Open,3,Andrey Kruk,1993,Russia,82.35,137.5,145,-157.5,145,83,M,Андрей Крук,B,145,Raw
-Open,4,Andrey Mashukov,1992,Russia,79.15,125,130,135,135,83,M,Андрей Машуков,B,135,Raw
-Open,5,Dmitriy Suslov,1990,Russia,79.75,110,117.5,-127.5,117.5,83,M,Дмитрий Суслов,B,117.5,Raw
-Open,6,Viktor Besprozvannykh,1992,Russia,78,105,115,-120,115,83,M,Виктор Беспрозванных,B,115,Raw
-Open,7,Denis Gerasimov,1991,Russia,81.35,105,110,-115,110,83,M,Денис Герасимов,B,110,Raw
-Open,DQ,Yaroslav Kerov,1991,Russia,81.65,-125,-125,,,83,M,Ярослав Керов,B,,Raw
-Open,1,Innokentiy Sidorenko,1989,Russia,89.2,180,-187.5,190,190,93,M,Иннокентий Сидоренко,B,190,Raw
-Open,2,Vasiliy Noyanov,1989,Russia,87.9,155,162.5,170,170,93,M,Василий Ноянов,B,170,Raw
-Open,3,Valeriy Antipov,1991,Russia,91.5,150,160,-172.5,160,93,M,Валерий Антипов,B,160,Raw
-Open,4,Bashir Fataliev,1990,Russia,89.65,155,-160,-165,155,93,M,Башир Фаталиев,B,155,Raw
-Open,5,Mikhail Agafonov,1988,Russia,89.15,125,130,135,135,93,M,Михаил Агафонов,B,135,Raw
-Open,6,Vladislav Morozov,1992,Russia,90.75,100,105,-110,105,93,M,Владислав Морозов,B,105,Raw
-Open,1,Dmitriy Karpov,1988,Russia,110.35,190,200,205,205,120,M,Дмитрий Карпов,B,205,Raw
-Open,2,Roman Rychkov,1991,Russia,109.2,170,-180,182.5,182.5,120,M,Роман Рычков,B,182.5,Raw
-Open,3,Andrey Vergulis,1989,Russia,104.5,155,162.5,165,165,105,M,Андрей Вергулис,B,165,Raw
-Open,4,Demuri Khelaya,1984,Russia,94.15,150,160,162.5,162.5,105,M,Демури Хелая,B,162.5,Raw
-Open,5,Vladislav Buyanov,1990,Russia,94.1,-142.5,142.5,-145,142.5,105,M,Владислав Буянов,B,142.5,Raw
+Name,CyrillicName,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,WeightClassKg,Event,Equipment,Division,Sex,TotalKg,BirthDate,Place
+Vyacheslav Ignatev,Вячеслав Игнатьев,1992,52.96,НИ ИрГТУ,77.5,80,85,85,59,B,Raw,Students,M,85,,1
+Vladimir Zolotarev,Владимир Золотарев,1988,65.3,НИ ИрГТУ,115,117.5,120,120,66,B,Raw,Students,M,120,,1
+Vasiliy Pozhidaev,Василий Пожидаев,1990,64.75,НИ ИрГТУ,112.5,115,-117.5,115,66,B,Raw,Students,M,115,,2
+Aleksandr Shidaev,Александр Шидаев,1989,63.2,БГУЭП,95,97.5,-100,97.5,66,B,Raw,Students,M,97.5,,3
+Anton Chudin,Антон Чудин,1990,69.7,БГУЭП,140,145,150,150,74,B,Raw,Students,M,150,,1
+Mikhail Spiridonchuk,Михаил Спиридончук,1988,71.55,РГУФКСМиТ,125,130,140,140,74,B,Raw,Students,M,140,,2
+Aleksey Mankov,Алексей Маньков,1988,74,НИ ИрГТУ,-110,110,117.5,117.5,74,B,Raw,Students,M,117.5,,3
+Andrey Ponikarovskiy,Андрей Поникаровский,1990,72.05,ИГМУ,110,-115,115,115,74,B,Raw,Students,M,115,,4
+Yuriy Sudos,Юрий Судос,1991,73.55,ИрГСХА,-110,110,115,115,74,B,Raw,Students,M,115,,5
+Artyom Rudakovskiy,Артём Рудаковский,1993,73.3,РГУФКСМиТ,90,-95,-95,90,74,B,Raw,Students,M,90,,6
+Konstantin Zaytsev,Константин Зайцев,1993,68.2,РГУФКСМиТ,-70,70,75,75,74,B,Raw,Students,M,75,,7
+Aleksandr Zaikin,Александр Заикин,1991,81.55,НИ ИрГТУ,140,145,155,155,83,B,Raw,Students,M,155,,1
+Aleksandr Dombrovskiy,Александр Домбровский,1992,79.9,ИГУ,-142.5,147.5,152.5,152.5,83,B,Raw,Students,M,152.5,,2
+Andrey Kruk,Андрей Крук,1993,82.35,ИрГУПС,137.5,145,-157.5,145,83,B,Raw,Students,M,145,,3
+Andrey Mashukov,Андрей Машуков,1992,79.15,ИрГУПС,125,130,135,135,83,B,Raw,Students,M,135,,4
+Dmitriy Suslov,Дмитрий Суслов,1990,79.75,БрГУ,110,117.5,-127.5,117.5,83,B,Raw,Students,M,117.5,,5
+Viktor Besprozvannykh,Виктор Беспрозванных,1992,78,ИрГСХА,105,115,-120,115,83,B,Raw,Students,M,115,,6
+Denis Gerasimov,Денис Герасимов,1991,81.35,ИрГСХА,105,110,-115,110,83,B,Raw,Students,M,110,,7
+Innokentiy Sidorenko,Иннокентий Сидоренко,1989,89.2,БГУЭП,180,-187.5,190,190,93,B,Raw,Students,M,190,,1
+Vasiliy Noyanov,Василий Ноянов,1989,87.9,НИ ИрГТУ,155,162.5,170,170,93,B,Raw,Students,M,170,,2
+Valeriy Antipov,Валерий Антипов,1991,91.5,ИрГУПС,150,160,-172.5,160,93,B,Raw,Students,M,160,,3
+Bashir Fataliev,Башир Фаталиев,1990,89.65,ИГМУ,155,-160,-165,155,93,B,Raw,Students,M,155,,4
+Mikhail Agafonov,Михаил Агафонов,1990,89.15,ИрГУПС,125,130,135,135,93,B,Raw,Students,M,135,,5
+Vladislav Morozov,Владислав Морозов,1992,90.75,РГУФКСМиТ,100,105,-110,105,93,B,Raw,Students,M,105,,6
+Dmitriy Karpov,Дмитрий Карпов,1988,110.35,НИ ИрГТУ,190,200,205,205,93+,B,Raw,Students,M,205,,1
+Roman Rychkov,Роман Рычков,1991,109.2,ИрГУПС,170,-180,182.5,182.5,93+,B,Raw,Students,M,182.5,,2
+Andrey Vergules,Андрей Вергулес,1988,104.5,НИ ИрГТУ,155,162.5,165,165,93+,B,Raw,Students,M,165,,3
+Demuri Khelaya,Демури Хелая,1990,94.15,ИГМУ,150,160,162.5,162.5,93+,B,Raw,Students,M,162.5,,4
+Vladislav Buyanov,Владислав Буянов,1989,94.1,БГУЭП,-142.5,142.5,-145,142.5,93+,B,Raw,Students,M,142.5,,5
+Nadezhda Ilina,Надежда Ильина,1994,38.7,,27.5,30,32.5,32.5,40,B,Raw,Paralympics,F,32.5,,1
+Natalya Aminova,Наталья Аминова,1991,44,,20,-25,25,25,44,B,Raw,Paralympics,F,25,,1
+Darya Ivanova #7,Дарья Иванова,1989,47.3,,50,55,57.5,57.5,48,B,Raw,Paralympics,F,57.5,,2
+Kseniya Sedakova,Ксения Седакова,1993,45.7,,20,22.5,-25,22.5,48,B,Raw,Paralympics,F,22.5,,4
+Valentina Gutorova,Валентина Гуторова,1971,51.8,Медведь,80,85,-87.5,85,52,B,Raw,Paralympics,F,85,,1
+Irina Mikhaylova,Ирина Михайлова,1991,50.5,,50,52.5,55,55,52,B,Raw,Paralympics,F,55,,2
+Nadezhda Kuznetsova,Надежда Кузнецова,1991,53.5,,27.5,35,37.5,37.5,56,B,Raw,Paralympics,F,37.5,,3
+Irina Mashtakova,Ирина Маштакова,1990,61,,30,-40,40,40,67.5,B,Raw,Paralympics,F,40,,3
+Pavel Kalashnikov,Павел Калашников,1984,42.8,,65,-70,-70,65,48,B,Raw,Paralympics,M,65,,1
+Ivan Svinin,Иван Свинин,1988,40.4,,25,27.5,30,30,48,B,Raw,Paralympics,M,30,,3
+Valeriy Shilov,Валерий Шилов,1992,54.9,СПАРТА,45,47.5,52.5,52.5,56,B,Raw,Paralympics,M,52.5,,1
+Sergey Telegin,Сергей Телегин,1990,56,,35,40,45,45,56,B,Raw,Paralympics,M,45,,2
+Sergey Smolnikov,Сергей Смольников,1993,58.5,,85,-87.5,87.5,87.5,60,B,Raw,Paralympics,M,87.5,,1
+Ivan Gratsinskiy,Иван Грацинский,1989,65.9,,70,-80,80,80,67.5,B,Raw,Paralympics,M,80,,1
+Pavel Ivanov,Павел Иванов,1993,67,СПАРТА,50,55,-60,55,67.5,B,Raw,Paralympics,M,55,,2
+Artur Chuprov,Артур Чупров,1983,74,Инватур,115,120,-122.5,120,75,B,Raw,Paralympics,M,120,,1
+Aleksey Mankov,Алексей Маньков,,74.5,СПАРТА,115,120,-122.5,120,75,B,Raw,Paralympics,M,120,,2
+Aleksandr Trachuk,Александр Трачук,1990,74,Инватур,95,102.5,-107.5,102.5,75,B,Raw,Paralympics,M,102.5,,3
+Sergey Pozynenko,Сергей Позыненко,1961,81.6,Инватур,155,165,-170,165,82.5,B,Raw,Paralympics,M,165,,1
+Viktor Pushkin,Виктор Пушкин,1984,81.2,СПАРТА,150,155,162.5,162.5,82.5,B,Raw,Paralympics,M,162.5,,2
+Oleg Fursov,Олег Фурсов,1970,79.6,Инватур,77.5,80,85,85,82.5,B,Raw,Paralympics,M,85,,3
+Anatoliy Mokin,Анатолий Мокин,1964,85.2,Медведь,145,152.5,-160,152.5,90,B,Raw,Paralympics,M,152.5,,1
+Sergey Belyaevskiy,Сергей Беляевский,1974,90,Инватур,-77.5,77.5,-85,77.5,90,B,Raw,Paralympics,M,77.5,,2
+Aleksandr Belenok,Александр Беленок,1957,98,СПАРТА,80,85,-90,85,100,B,Raw,Paralympics,M,85,,1
+Vladimir Shergin,Владимир Шергин,1985,95.1,Инватур,50,55,-62.5,55,100,B,Raw,Paralympics,M,55,,2
+Ivan Petrik,Иван Петрик,1979,108.2,СПАРТА,120,125,130,130,100+,B,Raw,Paralympics,M,130,,1
+Tatyana Savchenko,Татьяна Савченко,1981,42,ДЮСШ,47.5,52.5,55,55,47,B,Raw,Open,F,55,,1
+Darya Churina,Дарья Чурина,1988,44.6,СПАРТА,50,52.5,55,55,47,B,Raw,Open,F,55,,2
+Kseniya Bukharova,Ксения Бухарова,1998,43.4,ДЮСШ,30,37.5,-40,37.5,47,B,Raw,Open,F,37.5,,3
+Alyona Maltseva,Алёна Мальцева,1984,54.98,Ратибор,75,80,85,85,57,B,Raw,Open,F,85,,1
+Yana Shulikova,Яна Шуликова,1993,57,СПАРТА,50,-52.5,52.5,52.5,57,B,Raw,Open,F,52.5,,2
+Elena Filatova,Елена Филатова,1966,56.45,Космос,30,32.5,35,35,57,B,Raw,Open,F,35,,3
+Irina Orekhova,Ирина Орехова,1971,60.35,СПАРТА,60,62.5,65,65,63,B,Raw,Open,F,65,,1
+Anna Rudomanova,Анна Рудоманова,1990,60.25,Железяка,57.5,-62.5,-62.5,57.5,63,B,Raw,Open,F,57.5,,2
+Kristina Avetisyan,Кристина Аветисян,1993,59.4,СПАРТА,42,50,-55,50,63,B,Raw,Open,F,50,,3
+Elena Kulagina,Елена Кулагина,1977,62.15,Космос,45,50,-52.5,50,63,B,Raw,Open,F,50,,4
+Svetlana Fedorova,Светлана Федорова,1993,58.56,Камил,35,40,-45,40,63,B,Raw,Open,F,40,,5
+Svetlana Simakina,Светлана Симакина,1990,69.7,Камил,40,-47.5,47.5,47.5,72,B,Raw,Open,F,47.5,,1
+Svetlana Vetrova,Светлана Ветрова,1982,65.6,Космос,32.5,37.5,-40,37.5,72,B,Raw,Open,F,37.5,,2
+Oksana Naumova,Оксана Наумова,1981,82.8,СПАРТА,55,60,-65,60,84,B,Raw,Open,F,60,,1
+Andrey Aganin,Андрей Аганин,1995,59.05,ДЮСШ,105,-107.5,107.5,107.5,66,B,Raw,Open,M,107.5,,1
+Saveliy Pavlov,Савелий Павлов,1957,57.54,ИрГТУ,95,100,105,105,59,B,Raw,Open,M,105,,2
+Valeriy Tanygin,Валерий Таныгин,1987,54.34,ФСК Шелехов,75,80,85,85,59,B,Raw,Open,M,85,,3
+Vladimir Aleshkin,Владимир Алешкин,1989,65.25,Носорог,110,115,122.5,122.5,66,B,Raw,Open,M,122.5,,1
+Sergey Rudnev,Сергей Руднев,1985,62.5,Космос,105,115,120,120,66,B,Raw,Open,M,120,,2
+Vyacheslav Moroz,Вячеслав Мороз,1995,64.6,ДЮСШ,-100,100,102.5,102.5,66,B,Raw,Open,M,102.5,,3
+Aleksandr Korolev,Александр Королев,1981,68.8,ИрГТУ,127.5,135,140,140,74,B,Raw,Open,M,140,,1
+Semen Pshenichnikov,Семен Пшеничников,1991,71.95,ЦБК,-135,-135,135,135,74,B,Raw,Open,M,135,,2
+Stanislav Osetrov,Станислав Осетров,1982,72.3,Юность,122.5,127.5,132.5,132.5,74,B,Raw,Open,M,132.5,,3
+Anton Fatkhudinov,Антон Фатхудинов,1983,73.05,Ника,125,130,-135,130,74,B,Raw,Open,M,130,,4
+Aleksey Netepenko,Алексей Нетепенко,1985,71.4,СПАРТА,110,120,-125,120,74,B,Raw,Open,M,120,,5
+Aleksandr Udaltsov,Александр Удальцов,1988,73.2,СПАРТА,120,-125,-125,120,74,B,Raw,Open,M,120,,6
+Aleksandr Tomilin,Александр Томилин,1989,72.8,Сокол,100,105,107.5,107.5,74,B,Raw,Open,M,107.5,,7
+Viktor Gruzdov,Виктор Груздов,1960,74,СПАРТА,90,-95,-95,90,74,B,Raw,Open,M,90,,8
+Sergey Pozynenko,Сергей Позыненко,1961,81.4,Космос,160,167.5,170,170,83,B,Raw,Open,M,170,,1
+Pavel Anisimov,Павел Анисимов,1988,83,Железяка,-145,150,155,155,83,B,Raw,Open,M,155,,2
+Aleksandr Rodik-Knyazev,Александр Родик-Князев,1981,80,Носорог,145,150,152.5,152.5,83,B,Raw,Open,M,152.5,,3
+Maksim Semiryakov,Максим Семиряков,1985,77.4,СПАРТА,135,147.5,-150,147.5,83,B,Raw,Open,M,147.5,,4
+Ivan Adamovskiy,Иван Адамовский,1972,82.55,,140,-145,-147.5,140,83,B,Raw,Open,M,140,,5
+Rinat Abdurashitov,Ринат Абдурашитов,1967,82.5,Железяка,120,127.5,132.5,132.5,83,B,Raw,Open,M,132.5,,6
+Valeriy Volodko,Валерий Володько,1964,91.4,СПАРТА,170,177.5,182.5,182.5,93,B,Raw,Open,M,182.5,,1
+Roman Gilev,Роман Гилев,1987,89.2,GoldGym,165,170,180,180,93,B,Raw,Open,M,180,,2
+Vladimir Koltakov,Владимир Колтаков,1986,90.4,Локомотив,170,-175,175,175,93,B,Raw,Open,M,175,,3
+Pavel Gribolev,Павел Гриболев,1982,86.95,Центр тяжести,170,-177.5,-177.5,170,93,B,Raw,Open,M,170,,4
+Artem Anuprienko,Артем Ануприенко,1985,87.55,Базис,160,165,170,170,93,B,Raw,Open,M,170,,5
+Zorab Parozyan,Зораб Парозян,1988,85,Богатырь,130,-160,160,160,93,B,Raw,Open,M,160,,6
+Andrey Lutoshliv,Андрей Лутошлив,1993,87.3,Ратибор,145,155,157.5,157.5,93,B,Raw,Open,M,157.5,,7
+Pavel Karpov,Павел Карпов,1974,93,Железяка,140,150,-155,150,93,B,Raw,Open,M,150,,8
+Vitaliy Toptalov,Виталий Топталов,1991,85.95,Сибирь,135,140,-145,140,93,B,Raw,Open,M,140,,9
+Egor Pechnikov,Егор Печников,1990,88.7,Железяка,130,137.5,140,140,93,B,Raw,Open,M,140,,10
+Evgeniy Dyachev,Евгений Дьячев,1988,90.9,СПАРТА,130,140,-150,140,93,B,Raw,Open,M,140,,11
+Yuriy Melnikov,Юрий Мельников,1987,89.8,Носорог,120,125,-130,125,93,B,Raw,Open,M,125,,12
+Nikita Maksimenko,Никита Максименко,1988,90.7,5 Звезд,125,-132.5,-132.5,125,93,B,Raw,Open,M,125,,13
+Nofar Dzhafarov,Нофар Джафаров,1989,96.35,Медведь,190,-200,200,200,105,B,Raw,Open,M,200,,1
+Dmitriy Rudnev,Дмитрий Руднев,1979,96.4,Космос,190,-200,-202.5,190,105,B,Raw,Open,M,190,,2
+Vitaliy Efimenko,Виталий Ефименко,1969,100.15,Палестра,180,-192.5,-192.5,180,105,B,Raw,Open,M,180,,3
+Sergey Gavrilov,Сергей Гаврилов,1989,98.9,Лидер,165,175,-180,175,105,B,Raw,Open,M,175,,4
+Pavel Zatsepin,Павел Зацепин,1990,102.7,Лидер,150,-160,-160,150,105,B,Raw,Open,M,150,,5
+Aleksey Klevtsov,Алексей Клевцов,1971,100.85,Центр тяжести,140,145,-147.5,145,105,B,Raw,Open,M,145,,6
+Arkadiy Alekseev,Аркадий Алексеев,1980,105,Сибиряк,-135,135,140,140,105,B,Raw,Open,M,140,,7
+Semyon Bersenev,Семён Берсенев,1991,102.1,5 Звезд,120,125,130,130,105,B,Raw,Open,M,130,,8
+Ivan Zhidkov,Иван Жидков,1987,107.65,СПАРТА,200,-205,-205,200,120,B,Raw,Open,M,200,,1
+Leonid Shevelkov,Леонид Шевельков,1987,106.15,Богатырь,160,-170,177.5,177.5,120,B,Raw,Open,M,177.5,,2
+Stepan Razvozzhaev,Степан Развозжаев,1979,110.55,Медведь,160,175,-180,175,120,B,Raw,Open,M,175,,3
+Yuriy Nevidimov,Юрий Невидимов,1980,106.75,Лидер,170,-175,-175,170,120,B,Raw,Open,M,170,,4
+Aleksandr Skorodumov,Александр Скородумов,1980,109.9,Медведь,170,-180,-180,170,120,B,Raw,Open,M,170,,5
+Stanislav Rasputin,Станислав Распутин,1971,115.45,СК Чемпион,170,-182.5,-182.5,170,120,B,Raw,Open,M,170,,6
+Vasiliy Ermakov,Василий Ермаков,1937,113.6,ИрГТУ,105,110,112.5,112.5,120,B,Raw,Open,M,112.5,,7
+Evgeniy Zheltenko,Евгений Желтенко,1982,126.2,СК Альфа,250,260,-270,260,120+,B,Raw,Open,M,260,,1
+Arkadiy Trifonov,Аркадий Трифонов,1981,130.05,СПАРТА,190,200,210,210,120+,B,Raw,Open,M,210,,2
+Denis Chernigov,Денис Чернигов,1973,124.65,Аква-Стар,170,-190,-190,170,120+,B,Raw,Open,M,170,,3
+Darya Churina,Дарья Чурина,1988,44.3,Иркутск,62.5,-65,-67.5,62.5,47,B,Single-ply,Open,F,62.5,,1
+Anna Larionova,Анна Ларионова,1994,51.85,Черемхово,60,-65,-65,60,52,B,Single-ply,Open,F,60,,1
+Darya Lavrenteva,Дарья Лаврентьева,1991,52,Иркутск,47.5,-50,-52,47.5,52,B,Single-ply,Open,F,47.5,,2
+Iva Zagorodnikova,Ива Загородникова,1996,54.6,Иркутск,60,62.5,65,65,57,B,Single-ply,Open,F,65,,1
+Yana Shulikova,Яна Шуликова,1993,56.48,Иркутск,62.5,65,-67.5,65,57,B,Single-ply,Open,F,65,,2
+Anna Barkhatova,Анна Бархатова,1994,63,Черемхово,70,75,-80,75,63,B,Single-ply,Open,F,75,,1
+Irina Zhernakova,Ирина Жернакова,1991,69,Иркутск,-70,75,80,80,72,B,Single-ply,Open,F,80,,1
+Andrey Aganin,Андрей Аганин,1995,57.98,Усть-Кут,115,122.5,-125,122.5,59,B,Single-ply,Open,M,122.5,,1
+Ivan Suldin,Иван Сульдин,1993,62.4,Черемхово,115,125,130,130,66,B,Single-ply,Open,M,130,,1
+Vyacheslav Moroz,Вячеслав Мороз,1995,64.45,Усть-Кут,-120,120,127.5,127.5,66,B,Single-ply,Open,M,127.5,,2
+Aleksandr Korolev,Александр Королев,1981,69.5,Иркутск,150,157.5,-162.5,157.5,74,B,Single-ply,Open,M,157.5,,1
+Stanislav Osetrov,Станислав Осетров,1982,72.15,Усть-Кут,152.5,-160,-162.5,152.5,74,B,Single-ply,Open,M,152.5,,2
+Semen Pshenichnikov,Семен Пшеничников,1991,71.5,Братск,150,-157.5,-162.5,150,74,B,Single-ply,Open,M,150,,3
+Boris Gamayunov,Борис Гамаюнов,1991,70.65,Иркутск,-135,140,145,145,74,B,Single-ply,Open,M,145,,4
+Aleksandr Dombrovskiy,Александр Домбровский,1992,79.75,Иркутск,170,182.5,190,190,83,B,Single-ply,Open,M,190,,1
+Evgeniy Vrublevskiy,Евгений Врублевский,1981,80.65,Иркутск,-185,185,190,190,83,B,Single-ply,Open,M,190,,2
+Aleksandr Zaikin,Александр Заикин,1991,81.5,Иркутск,-175,175,177.5,177.5,83,B,Single-ply,Open,M,177.5,,3
+Sergey Pozynenko,Сергей Позыненко,1961,82.2,Ангарск,165,172.5,-175,172.5,83,B,Single-ply,Open,M,172.5,,4
+Aleksey Kamshilin,Алексей Камшилин,1987,80.6,Черемхово,-170,170,-175,170,83,B,Single-ply,Open,M,170,,5
+Ivan Adamovskiy,Иван Адамовский,1972,82.65,Братск,150,160,-175,160,83,B,Single-ply,Open,M,160,,6
+Aleksandr Kalanchin,Александр Каланчин,1982,81.6,Иркутск,140,150,-155,150,83,B,Single-ply,Open,M,150,,7
+Vladimir Koltakov,Владимир Колтаков,1986,89.6,Чита,210,-215,,210,93,B,Single-ply,Open,M,210,,1
+Evgeniy Padalkin,Евгений Падалкин,1979,89.05,Иркутск,190,200,205,205,93,B,Single-ply,Open,M,205,,2
+Vyacheslav Shimanskiy,Вячеслав Шиманский,1984,90.35,Иркутск,190,195,-202.5,195,93,B,Single-ply,Open,M,195,,3
+Denis Sivokon,Денис Сивоконь,1980,92.35,Свирск,-175,-175,175,175,93,B,Single-ply,Open,M,175,,4
+Sergey Gavrilov,Сергей Гаврилов,1989,98.9,Байкальск,-195,200,210,210,105,B,Single-ply,Open,M,210,,1
+Demuri Khelaya,Демури Хелая,1984,94.5,Иркутск,175,-185,,175,105,B,Single-ply,Open,M,175,,2
+Leonid Shevelkov,Леонид Шевельков,1987,103,Усолье-Сибирское,170,-175,175,175,105,B,Single-ply,Open,M,175,,3
+Ramil Yakubov,Рамиль Якубов,1983,119,Иркутск,265,272.5,-277.5,272.5,120,B,Single-ply,Open,M,272.5,,1
+Dmitriy Karpov,Дмитрий Карпов,1988,110.25,Иркутск,220,225,,225,120,B,Single-ply,Open,M,225,,2

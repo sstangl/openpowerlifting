@@ -113,15 +113,16 @@ def parse_fieldnames(sheet):
             # Wilks/IPF Points
             elif text in ['очки ipf', 'вилкс', 'абс кооф', 'коэф',
                           'очки абс', 'виллк',
-                          'коэф виллс', 'очки по вилксу', 'wilks']:
+                          'коэф виллс', 'очки по вилксу', 'wilks', 'оч к']:
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
             # Individual points
-            elif text in ['очки', 'оч'] or any(x in text for x in ['оч кт',
-                                                                   'жре бий', 'оч ки',
-                                                                   'вып рд',
-                                                                   'очки ком']):
+            elif text in ['очки', 'оч', 'баллы'] or any(x in text for x in ['оч кт',
+                                                                            'жре бий',
+                                                                            'оч ки',
+                                                                            'вып рд',
+                                                                            'очки ком']):
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
@@ -154,7 +155,7 @@ def parse_fieldnames(sheet):
             elif text in ['жим лежа 1', 'жим 1'] and header[i + 1].lower() in ['2']:
                 assert header[i + 1].lower() in ['2']
                 assert header[i + 2].lower() in ['3']
-                assert header[i + 3].lower() in ['жим итог']
+                assert header[i + 3].lower() in ['жим итог', 'итог']
                 fieldnames.append('Bench1Kg')
                 fieldnames.append('Bench2Kg')
                 fieldnames.append('Bench3Kg')
@@ -164,7 +165,7 @@ def parse_fieldnames(sheet):
                     any(x in text for x in ['рез-т присед', 'резт присед',
                                             'результат присед', 'прис резт',
                                             'присед итог', 'присед', 'прис результат',
-                                            'результат прис']):
+                                            'результат прис', 'при сед']):
                 fieldnames.append('Best3SquatKg')
             elif text in ['жим', 'ж/л'] or \
                     any(x in text for x in ['рез-т жим', 'резт жим', 'жим резт',
@@ -172,12 +173,14 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
             elif text in ['тяга', 'стт'] or \
                     any(x in text for x in ['рез-т тяга', 'резт тяга',
-                                            'тяга резт', 'тяга итог']):
+                                            'тяга резт', 'тяга итог', 'бал итог']):
                 fieldnames.append('Best3DeadliftKg')
 
             elif 'сумма троеб' in text or text == 'сумма':
                 fieldnames.append('TotalKg')
             elif text == 'нмомер':  # Lot
+                fieldnames.append('IGNORE')
+            elif text == 'абс':  # Absolute Place
                 fieldnames.append('IGNORE')
 
             # FPR fills their spreadsheets with lots of merged blank columns

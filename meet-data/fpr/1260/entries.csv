@@ -1,88 +1,161 @@
-Division,Place,Name,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,WeightClassKg,Sex,CyrillicName,Event,TotalKg,Equipment
-Juniors,1,Yana Podymakhina,1998,Russia,42.8,42.5,47.5,-50,47.5,43,F,Яна Подымахина,B,47.5,Single-ply
-Juniors,2,Natalya Stoyanova,2000,Russia,35.3,35,37.5,-40,37.5,43,F,Наталья Стоянова,B,37.5,Single-ply
-Juniors,1,Darya Churina,1988,Russia,45.6,57.5,-60,-60,57.5,47,F,Дарья Чурина,B,57.5,Single-ply
-Juniors,1,Anastasiya Bolshanina,1993,Russia,51.6,85,-90,-90,85,52,F,Анастасия Большанина,B,85,Single-ply
-Juniors,2,Larisa Otteva,1998,Russia,51.7,57.5,60,62.5,62.5,52,F,Лариса Оттева,B,62.5,Single-ply
-Juniors,1,Yuliya Shilina,1989,Russia,57,-120,120,-127.5,120,57,F,Юлия Шилина,B,120,Single-ply
-Juniors,2,Anna Larionova,1994,Russia,54.3,62.5,67.5,-70,67.5,57,F,Анна Ларионова,B,67.5,Single-ply
-Juniors,3,Ekaterina Lisevich,1997,Russia,56.4,-65,67.5,-70,67.5,57,F,Екатерина Лисевич,B,67.5,Single-ply
-Juniors,4,Yuliya Dmitrieva,1989,Russia,57,52.5,60,65,65,57,F,Юлия Дмитриева,B,65,Single-ply
-Juniors,1,Valentina Volkova,1997,Russia,61.1,70,75,77.5,77.5,63,F,Валентина Волкова,B,77.5,Single-ply
-Juniors,1,Evgeniya Stepanenko,1991,Russia,64.3,80,-85,-85,80,72,F,Евгения Степаненко,B,80,Single-ply
-Juniors,DQ,Anna Barkhatova,1994,Russia,66.2,-85,-90,-90,,72,F,Анна Бархатова,B,,Single-ply
-Juniors,2,Anastasiya Balko,1989,Russia,83.4,105,110,-127.5,110,84,F,Анастасия Балко,B,110,Single-ply
-Juniors,3,Anzhelika Koade,1995,Russia,75,70,75,,75,84,F,Анжелика Коадэ,B,75,Single-ply
-Juniors,1,Aleksey Usachev,1996,Russia,52.1,95,100,-102.5,100,53,M,Алексей Усачев,B,100,Single-ply
-Juniors,1,Andrey Aganin,1995,Russia,58.4,115,122.5,-127.5,122.5,59,M,Андрей Аганин,B,122.5,Single-ply
-Juniors,2,Anton Peretolchin,1996,Russia,58.3,85,92.5,95,95,59,M,Антон Перетолчин,B,95,Single-ply
-Juniors,3,Viktor Golubev,1996,Russia,57.1,90,-100,-100,90,59,M,Виктор Голубев,B,90,Single-ply
-Juniors,4,Vladimir Rasputin,1996,Russia,58.6,75,82.5,-85,82.5,59,M,Владимир Распутин,B,82.5,Single-ply
-Juniors,1,Vyacheslav Moroz,1995,Russia,65,130,135,-140,135,66,M,Вячеслав Мороз,B,135,Single-ply
-Juniors,2,Ivan Suldin,1993,Russia,61.5,120,130,-135,130,66,M,Иван Сульдин,B,130,Single-ply
-Juniors,1,Roman Maltsev,1993,Russia,73.6,-157.5,-157.5,157.5,157.5,74,M,Роман Мальцев,B,157.5,Single-ply
-Juniors,2,Aleksandr Kapturov,1995,Russia,73.7,115,-120,120,120,74,M,Александр Каптуров,B,120,Single-ply
-Juniors,1,Mikhail Naumov,1995,Russia,77.9,135,142.5,145,145,83,M,Михаил Наумов,B,145,Single-ply
-Juniors,2,Mikhail Aleksandrov,1993,Russia,77.2,125,-135,135,135,83,M,Михаил Александров,B,135,Single-ply
-Juniors,3,Ilyas Kutliakhmetov,1996,Russia,81.7,80,90,100,100,83,M,Ильяс Кутлиахметов,B,100,Single-ply
-Juniors,1,Aleksandr Zaikin,1991,Russia,90.4,-190,190,195,195,93,M,Александр Заикин,B,195,Single-ply
-Juniors,2,Artemiy Matonin,1994,Russia,87.2,100,110,112.5,112.5,93,M,Артемий Матонин,B,112.5,Single-ply
-Juniors,3,Ruslan Petrachkov,1995,Russia,84,95,-105,-105,95,93,M,Руслан Петрачков,B,95,Single-ply
-Juniors,1,Konstantin Tarasov,1990,Russia,103.3,185,190,-195,190,105,M,Константин Тарасов,B,190,Single-ply
-Juniors,2,Nikita Turlakov,1995,Russia,100,-160,160,-165,160,105,M,Никита Турлаков,B,160,Single-ply
-Juniors,1,Sergey Prilutskiy,1989,Russia,110.5,180,190,,190,120,M,Сергей Прилуцкий,B,190,Single-ply
-Juniors,2,Kirill Usanin,1989,Russia,114,120,130,-140,130,120,M,Кирилл Усанин,B,130,Single-ply
-Open,1,Darya Churina,1988,Russia,45.6,57.5,-60,-60,57.5,47,F,Дарья Чурина,B,57.5,Single-ply
-Open,2,Yana Podymakhina,1998,Russia,42.8,42.5,47.5,-50,47.5,47,F,Яна Подымахина,B,47.5,Single-ply
-Open,3,Natalya Stoyanova,2000,Russia,35.3,35,37.5,-40,37.5,47,F,Наталья Стоянова,B,37.5,Single-ply
-Open,1,Anastasiya Bolshanina,1993,Russia,51.6,85,-90,-90,85,52,F,Анастасия Большанина,B,85,Single-ply
-Open,2,Larisa Otteva,1998,Russia,51.7,57.5,60,62.5,62.5,52,F,Лариса Оттева,B,62.5,Single-ply
-Open,1,Yuliya Shilina,1989,Russia,57,-120,120,-127.5,120,57,F,Юлия Шилина,B,120,Single-ply
-Open,2,Anna Larionova,1994,Russia,54.3,62.5,67.5,-70,67.5,57,F,Анна Ларионова,B,67.5,Single-ply
-Open,3,Ekaterina Lisevich,1997,Russia,56.4,-65,67.5,-70,67.5,57,F,Екатерина Лисевич,B,67.5,Single-ply
-Open,4,Yuliya Dmitrieva,1989,Russia,57,52.5,60,65,65,57,F,Юлия Дмитриева,B,65,Single-ply
-Open,1,Valentina Volkova,1997,Russia,61.1,70,75,77.5,77.5,63,F,Валентина Волкова,B,77.5,Single-ply
-Open,1,Evgeniya Stepanenko,1991,Russia,64.3,80,-85,-85,80,72,F,Евгения Степаненко,B,80,Single-ply
-Open,2,Yuliya Sivakova,1983,Russia,70.1,80,-82.5,-82.5,80,72,F,Юлия Сивакова,B,80,Single-ply
-Open,DQ,Anna Barkhatova,1994,Russia,66.2,-85,-90,-90,,72,F,Анна Бархатова,B,,Single-ply
-Open,1,Oksana Kosheleva,1983,Russia,82.7,120,125,130,130,84,F,Оксана Кошелева,B,130,Single-ply
-Open,2,Anastasiya Balko,1989,Russia,83.4,105,110,-127.5,110,84,F,Анастасия Балко,B,110,Single-ply
-Open,3,Anzhelika Koade,1995,Russia,75,70,75,,75,84,F,Анжелика Коадэ,B,75,Single-ply
-Open,1,Oksana Naumova,1980,Russia,85,85,90,-95,90,84+,F,Оксана Наумова,B,90,Single-ply
-Open,1,Andrey Aganin,1995,Russia,58.4,115,122.5,-127.5,122.5,59,M,Андрей Аганин,B,122.5,Single-ply
-Open,2,Aleksey Usachev,1996,Russia,52.1,95,100,-102.5,100,59,M,Алексей Усачев,B,100,Single-ply
-Open,3,Anton Peretolchin,1996,Russia,58.3,85,92.5,95,95,59,M,Антон Перетолчин,B,95,Single-ply
-Open,4,Viktor Golubev,1996,Russia,57.1,90,-100,-100,90,59,M,Виктор Голубев,B,90,Single-ply
-Open,5,Vladimir Rasputin,1996,Russia,58.6,75,82.5,-85,82.5,59,M,Владимир Распутин,B,82.5,Single-ply
-Open,1,Vyacheslav Moroz,1995,Russia,65,130,135,-140,135,66,M,Вячеслав Мороз,B,135,Single-ply
-Open,2,Ivan Suldin,1993,Russia,61.5,120,130,-135,130,66,M,Иван Сульдин,B,130,Single-ply
-Open,1,Roman Maltsev,1993,Russia,73.6,-157.5,-157.5,157.5,157.5,74,M,Роман Мальцев,B,157.5,Single-ply
-Open,2,Aleksandr Kapturov,1995,Russia,73.7,115,-120,120,120,74,M,Александр Каптуров,B,120,Single-ply
-Open,3,Mikhail Bykovskiy,1994,Russia,74,-105,-105,105,105,74,M,Михаил Быковский,B,105,Single-ply
-Open,1,Evgeniy Padalkin,1979,Russia,78,170,-180,180,180,83,M,Евгений Падалкин,B,180,Single-ply
-Open,2,Mikhail Naumov,1995,Russia,77.9,135,142.5,145,145,83,M,Михаил Наумов,B,145,Single-ply
-Open,3,Mikhail Aleksandrov,1993,Russia,77.2,125,-135,135,135,83,M,Михаил Александров,B,135,Single-ply
-Open,4,Ilyas Kutliakhmetov,1996,Russia,81.7,80,90,100,100,83,M,Ильяс Кутлиахметов,B,100,Single-ply
-Open,1,David Dzugkoev,1985,Russia,93,-220,220,-230,220,93,M,Давид Дзугкоев,B,220,Single-ply
-Open,2,Aleksandr Zaikin,1991,Russia,90.4,-190,190,195,195,93,M,Александр Заикин,B,195,Single-ply
-Open,3,Denis Sivokon,1980,Russia,93,-180,190,-195,190,93,M,Денис Сивоконь,B,190,Single-ply
-Open,4,Aleksandr Lebedev,1966,Russia,89.7,145,-150,-152.5,145,93,M,Александр Лебедев,B,145,Single-ply
-Open,5,Artemiy Matonin,1994,Russia,87.2,100,110,112.5,112.5,93,M,Артемий Матонин,B,112.5,Single-ply
-Open,6,Ruslan Petrachkov,1995,Russia,84,95,-105,-105,95,93,M,Руслан Петрачков,B,95,Single-ply
-Open,1,Vladimir Srabionov,1964,Russia,99.6,220,230,240,240,105,M,Владимир Срабионов,B,240,Single-ply
-Open,2,Dmitriy Grigoryev #9,1974,Russia,99.4,205,-215,215,215,105,M,Дмитрий Григорьев,B,215,Single-ply
-Open,3,Konstantin Tarasov,1990,Russia,103.3,185,190,-195,190,105,M,Константин Тарасов,B,190,Single-ply
-Open,4,Nikita Turlakov,1995,Russia,100,-160,160,-165,160,105,M,Никита Турлаков,B,160,Single-ply
-Open,5,Aleksandr Skafenko,1980,Russia,104.9,145,155,160,160,105,M,Александр Скафенко,B,160,Single-ply
-Open,1,Evgeniy Akinin,1980,Russia,109,-250,250,-260,250,120,M,Евгений Акинин,B,250,Single-ply
-Open,2,Aleksandr Chicherin,1969,Russia,118.3,230,240,245,245,120,M,Александр Чичерин,B,245,Single-ply
-Open,3,Dmitriy Pastukhov,1988,Russia,118.8,230,237.5,242.5,242.5,120,M,Дмитрий Пастухов,B,242.5,Single-ply
-Open,4,Ivan Zhidkov,1987,Russia,110.6,-240,240,-250,240,120,M,Иван Жидков,B,240,Single-ply
-Open,5,Oleg Anokhov,1982,Russia,112,205,212.5,215,215,120,M,Олег Анохов,B,215,Single-ply
-Open,6,Sergey Prilutskiy,1989,Russia,110.5,180,190,,190,120,M,Сергей Прилуцкий,B,190,Single-ply
-Open,7,Kirill Usanin,1989,Russia,114,120,130,-140,130,120,M,Кирилл Усанин,B,130,Single-ply
-Open,DQ,Ramil Yakubov,1983,Russia,119.95,-292.5,-300,-300,,120,M,Рамиль Якубов,B,,Single-ply
-Open,DQ,Vyacheslav Izosimov,1977,Russia,120,-290,-290,-290,,120,M,Вячеслав Изосимов,B,,Single-ply
-Open,1,Vitaliy Morozevich,1966,Russia,184,290,-300,-300,290,120+,M,Виталий Морозевич,B,290,Single-ply
-Open,2,Aleksandr Chetvertnykh,1977,Russia,125.3,230,-235,-235,230,120+,M,Александр Четвертных,B,230,Single-ply
-Open,3,Konstantin Leonov,1991,Russia,123.5,155,165,170,170,120+,M,Константин Леонов,B,170,Single-ply
+Name,CyrillicName,BirthYear,BodyweightKg,Team,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,WeightClassKg,Event,Equipment,Division,Sex,TotalKg,BirthDate,Place
+Darya Churina,Дарья Чурина,1989,46.1,СПАРТА,45,47.5,50,50,47,B,Raw,Open,F,50,,1
+Yana Podymakhina,Яна Подымахина,1998,42.5,,37.5,-42.5,-42.5,37.5,47,B,Raw,Open,F,37.5,,2
+Natalya Stoyanova,Наталья Стоянова,2000,36.3,,27.5,-30,-30,27.5,47,B,Raw,Open,F,27.5,,3
+Valentina Gutorova,Валентина Гуторова,1971,51.6,СПАРТА,75,80,-82.5,80,52,B,Raw,Open,F,80,,1
+Anastasiya Bolshanina,Анастасия Большанина,1993,51.4,,70,-72.5,,70,52,B,Raw,Open,F,70,,2
+Larisa Otteva,Лариса Оттева,1998,51.6,,42.5,45,-47.5,45,52,B,Raw,Open,F,45,,3
+Yuliya Shilina,Юлия Шилина,1989,56,Мартенсит,65,75,-77.5,75,57,B,Raw,Open,F,75,,1
+Ekaterina Lisevich,Екатерина Лисевич,1997,56.6,,52.5,55,57.5,57.5,57,B,Raw,Open,F,57.5,,2
+Anna Larionova,Анна Ларионова,1994,53.9,Мартенсит,45,52.5,-57.5,52.5,57,B,Raw,Open,F,52.5,,3
+Darya Arzaeva,Дарья Арзаева,1988,57.2,"СК""Чемпион""",55,67.5,75,75,63,B,Raw,Open,F,75,,1
+Valentina Volkova,Валентина Волкова,1997,61.7,,50,-55,-55,50,63,B,Raw,Open,F,50,,2
+Yuliya Sivakova,Юлия Сивакова,1983,70.8,Спарта,60,65,-70,65,72,B,Raw,Open,F,65,,1
+Evgeniya Stepanenko,Евгения Степаненко,1991,64.4,,-60,62.5,-65,62.5,72,B,Raw,Open,F,62.5,,2
+Anna Barkhatova,Анна Бархатова,1994,65.9,Мартенсит,50,55,-57.5,55,72,B,Raw,Open,F,55,,3
+Oksana Kosheleva,Оксана Кошелева,1983,83.1,СК Шелехов,97.5,105,107.5,107.5,84,B,Raw,Open,F,107.5,,1
+Anastasiya Balko,Анастасия Балко,1989,82.9,Мартенсит,70,77.5,-80,77.5,84,B,Raw,Open,F,77.5,,2
+Anzhelika Koade,Анжелика Коадэ,1995,73.9,,55,-60,-60,55,84,B,Raw,Open,F,55,,3
+Oksana Naumova,Оксана Наумова,1980,84.4,СПАРТА,65,67.5,-70,67.5,84+,B,Raw,Open,F,67.5,,1
+Andrey Aganin,Андрей Аганин,1995,58.8,,102.5,105,-110,105,59,B,Raw,Open,M,105,,1
+Aleksey Usachev,Алексей Усачев,1996,52.4,,85,90,-92.5,90,59,B,Raw,Open,M,90,,2
+Dmitriy Bondarenko,Дмитрий Бондаренко,1996,59,,-80,85,-87.5,85,59,B,Raw,Open,M,85,,3
+Rustam Iskhakov,Рустам Исхаков,1995,58.3,ДЮСШ,75,82.5,-85,82.5,59,B,Raw,Open,M,82.5,,4
+Viktor Golubev,Виктор Голубев,1996,56.1,Мартенсит,60,70,75,75,59,B,Raw,Open,M,75,,5
+Yuriy Ezhov,Юрий Ежов,1997,59,,70,72.5,75,75,59,B,Raw,Open,M,75,,6
+Aleksey Chupin,Алексей Чупин,1997,57.2,,40,50,55,55,59,B,Raw,Open,M,55,,7
+Sergey Rudnev,Сергей Руднев,1985,61.9,Космос,120,-125,-125,120,66,B,Raw,Open,M,120,,1
+Aleksey Skobelev,Алексей Скобелев,1989,65.2,Палеста,105,110,112.5,112.5,66,B,Raw,Open,M,112.5,,2
+Vyacheslav Moroz,Вячеслав Мороз,1995,64.8,,107.5,110,-112.5,110,66,B,Raw,Open,M,110,,3
+Denis Batrakov,Денис Батраков,1994,65.5,,95,105,110,110,66,B,Raw,Open,M,110,,4
+Ivan Suldin,Иван Сульдин,1993,62,Мартенсит,80,90,95,95,66,B,Raw,Open,M,95,,5
+Vladislav Zubikhin,Владислав Зубихин,1995,61,,75,85,-92.5,85,66,B,Raw,Open,M,85,,6
+Anton Chudin,Антон Чудин,1990,71.7,Центр тяжести,140,145,150,150,74,B,Raw,Open,M,150,,1
+Anton Fatkhudtinov,Антон Фатхудтинов,1980,74,Ника,135,-140,140,140,74,B,Raw,Open,M,140,,2
+Pavel Guzenko,Павел Гузенко,1988,70.1,"СК""Чемпион""",135,-140,-152.5,135,74,B,Raw,Open,M,135,,3
+Sergey Pozynenko,Сергей Позыненко,1961,73.5,Космос,130,135,-137.5,135,74,B,Raw,Open,M,135,,4
+Vasilii Pozhidaev,Василии Пожидаев,1990,68.7,Викинг,125,130,-135,130,74,B,Raw,Open,M,130,,5
+Roman Maltsev,Роман Мальцев,1993,73.7,,120,130,-137.5,130,74,B,Raw,Open,M,130,,6
+Igor Popov,Игорь Попов,1991,74,,120,127.5,-135,127.5,74,B,Raw,Open,M,127.5,,7
+Aleksandr Udaltsov,Александр Удальцов,1988,74,Спарта,120,125,-127.5,125,74,B,Raw,Open,M,125,,8
+Pavel Dzharbinadze,Павел Джарбинадзе,1985,69.7,Космос,117.5,122.5,-127.5,122.5,74,B,Raw,Open,M,122.5,,9
+Aleksey Mankov,Алексей Маньков,1988,73.5,Спарта,110,115,-122.5,115,74,B,Raw,Open,M,115,,10
+Aleksandr Tomilin,Александр Томилин,1989,73.8,Сокол,-110,110,-115,110,74,B,Raw,Open,M,110,,11
+Dmitriy Lavrenev,Дмитрий Лавреньев,1990,74,Спарта,95,-100,100,100,74,B,Raw,Open,M,100,,12
+Mikhail Bykovskiy,Михаил Быковский,1994,73,СК Шелехов,90,97.5,-100,97.5,74,B,Raw,Open,M,97.5,,13
+Denis Kotlyarov,Денис Котляров,1994,72.6,,80,85,-90,85,74,B,Raw,Open,M,85,,14
+Sergey Tikhomirov,Сергей Тихомиров,1996,71.7,,55,65,-70,65,74,B,Raw,Open,M,65,,15
+Sergey Mik,Сергей Мик,1987,82.4,,170,180,190,190,83,B,Raw,Open,M,190,,1
+Roman Ivanov #9,Роман Иванов,1985,81.3,,150,160,165,165,83,B,Raw,Open,M,165,,2
+Evgeniy Padalkin,Евгений Падалкин,1979,78.8,Спарта,150,157.5,162.5,162.5,83,B,Raw,Open,M,162.5,,3
+Aleksey Rodik-Knyazev,Алексей Родик-Князев,1981,81.4,,150,160,-165,160,83,B,Raw,Open,M,160,,4
+Denis Tiunov,Денис Тиунов,1989,81.4,,110,120,-130,120,83,B,Raw,Open,M,120,,5
+Mikhail Naumov,Михаил Наумов,1995,77.6,,105,110,-115,110,83,B,Raw,Open,M,110,,6
+David Dzukoev,Давид Дзукоев,1985,92.9,Ника,180,185,192.5,192.5,93,B,Raw,Open,M,192.5,,1
+Leonid Yanovskiy,Леонид Яновский,1986,89,Локомотив,170,182.5,190,190,93,B,Raw,Open,M,190,,2
+Vladimir Koltakov,Владимир Колтаков,1986,91.6,Локомотив,170,180,190,190,93,B,Raw,Open,M,190,,3
+Zurab Payrozyan,Зураб Пайрозян,1988,87.2,,150,-160,-165,150,93,B,Raw,Open,M,150,,4
+Aleksandr Lebedev,Александр Лебедев,1966,89.7,Спарта,120,-127.5,130,130,93,B,Raw,Open,M,130,,5
+Lev Yakhno,Лев Яхно,1988,86.3,,120,-130,-130,120,93,B,Raw,Open,M,120,,6
+Nafar Dzhafarov,Нафар Джафаров,1986,99,Медведь,190,200,-210,200,105,B,Raw,Open,M,200,,1
+Vladimir Srabionov,Владимир Срабионов,1964,97.1,Ника,190,195,-200,195,105,B,Raw,Open,M,195,,2
+Sergey Kuznetsov #1,Сергей Кузнецов,1990,104,Спарта,175,185,-197.5,185,105,B,Raw,Open,M,185,,3
+Valeriy Samsonov,Валерий Самсонов,1969,102.4,Медведь,-180,180,-190,180,105,B,Raw,Open,M,180,,4
+Vitaliy Efimenko,Виталий Ефименко,1969,103,Медведь,180,-190,-190,180,105,B,Raw,Open,M,180,,5
+Vladimir Gusev,Владимир Гусев,1958,105,,160,165,,165,105,B,Raw,Open,M,165,,6
+Igor Kokorin,Игорь Кокорин,1988,103,Железяка,145,155,160,160,105,B,Raw,Open,M,160,,7
+Dmitriy Zausaev,Дмитрий Заусаев,1977,104.6,,145,150,-152.5,150,105,B,Raw,Open,M,150,,8
+Arkadiy Alekseev,Аркадий Алексеев,1980,105,Сибиряк,150,-155,-155,150,105,B,Raw,Open,M,150,,9
+Vladimir Stepanov,Владимир Степанов,1980,97.4,Железяка,125,135,142.5,142.5,105,B,Raw,Open,M,142.5,,10
+Ramil Yakubov,Рамиль Якубов,1983,120,СПАРТА,195,202.5,-205,202.5,120,B,Raw,Open,M,202.5,,1
+Aleksandr Skorodumov,Александр Скородумов,1980,118.4,Медведь,190,-200,200,200,120,B,Raw,Open,M,200,,2
+Aleksandr Chicherin,Александр Чичерин,1969,117.6,Спарта,185,195,-200,195,120,B,Raw,Open,M,195,,3
+Denis Dryanov,Денис Дрянов,1983,120,,185,195,-197.5,195,120,B,Raw,Open,M,195,,4
+Roman Rychkov,Роман Рычков,1991,109.4,,-190,190,-195,190,120,B,Raw,Open,M,190,,5
+Leonid Shevelkov,Леонид Шевельков,1983,112.3,,180,190,-195,190,120,B,Raw,Open,M,190,,6
+Stepan Razvozzhaev,Степан Развозжаев,1979,114.5,Медведь,160,-175,180,180,120,B,Raw,Open,M,180,,7
+Oleg Zverev,Олег Зверев,1987,111,Железяка,-155,160,170,170,120,B,Raw,Open,M,170,,8
+Vitaliy Morozevich,Виталий Морозевич,1966,184,СПАРТА,215,220,-225,220,120+,B,Raw,Open,M,220,,1
+Darya Churina,Дарья Чурина,1989,45.6,Спарта,57.5,-60,-60,57.5,47,B,Single-ply,Open,F,57.5,,1
+Yana Podymakhina,Яна Подымахина,1998,42.8,Юность России,42.5,47.5,-50,47.5,47,B,Single-ply,Open,F,47.5,,2
+Natalya Stoyanova,Наталья Стоянова,2000,35.3,Юность России,35,37.5,-40,37.5,47,B,Single-ply,Open,F,37.5,,3
+Anastasiya Bolshanina,Анастасия Большанина,1993,51.6,Юность России,85,-90,-90,85,52,B,Single-ply,Open,F,85,,1
+Larisa Otteva,Лариса Оттева,1998,51.7,Юность России,57.5,60,62.5,62.5,52,B,Single-ply,Open,F,62.5,,2
+Yuliya Shilina,Юлия Шилина,1989,57,Мартенсит,-120,120,-127.5,120,57,B,Single-ply,Open,F,120,,1
+Anna Larionova,Анна Ларионова,1994,54.3,Мартенсит,62.5,67.5,-70,67.5,57,B,Single-ply,Open,F,67.5,,2
+Ekaterina Lisevich,Екатерина Лисевич,1997,56.4,Юность России,-65,67.5,-70,67.5,57,B,Single-ply,Open,F,67.5,,3
+Yuliya Dmitreva,Юлия Дмитрьева,1989,57,Мартенсит,52.5,60,65,65,57,B,Single-ply,Open,F,65,,4
+Valentina Volkova,Валентина Волкова,1997,61.1,Юность России,70,75,77.5,77.5,63,B,Single-ply,Open,F,77.5,,1
+Evgeniya Stepanenko,Евгения Степаненко,1991,64.3,Юность России,80,-85,-85,80,72,B,Single-ply,Open,F,80,,1
+Yuliya Sivakova,Юлия Сивакова,1983,70.1,Медведь,80,-82.5,-82.5,80,72,B,Single-ply,Open,F,80,,2
+Oksana Kosheleva,Оксана Кошелева,1983,82.7,СК Шелехов,120,125,130,130,84,B,Single-ply,Open,F,130,,1
+Anastasiya Balko,Анастасия Балко,1989,83.4,Мартенсит,105,110,-127.5,110,84,B,Single-ply,Open,F,110,,2
+Anzhelika Koade,Анжелика Коадэ,1995,75,Юность России,70,75,,75,84,B,Single-ply,Open,F,75,,3
+Oksana Naumova,Оксана Наумова,1980,85,Медведь,85,90,-95,90,84+,B,Single-ply,Open,F,90,,1
+Andrey Aganin,Андрей Аганин,1995,58.4,Юность России,115,122.5,-127.5,122.5,59,B,Single-ply,Open,M,122.5,,1
+Aleksey Usachev,Алексей Усачев,1996,52.1,Юность России,95,100,-102.5,100,59,B,Single-ply,Open,M,100,,2
+Anton Peretolchin,Антон Перетолчин,1996,58.3,СК Шелехов,85,92.5,95,95,59,B,Single-ply,Open,M,95,,3
+Viktor Golubev,Виктор Голубев,1996,57.1,Мартенсит,90,-100,-100,90,59,B,Single-ply,Open,M,90,,4
+Vladimr Rasputin,Владимр Распутин,1996,58.6,ФСК Шелехов,75,82.5,-85,82.5,59,B,Single-ply,Open,M,82.5,,5
+Vyacheslav Moroz,Вячеслав Мороз,1995,65,Юность России,130,135,-140,135,66,B,Single-ply,Open,M,135,,1
+Ivan Suldin,Иван Сульдин,1993,61.5,Мартенсит,120,130,-135,130,66,B,Single-ply,Open,M,130,,2
+Roman Maltsev,Роман Мальцев,1993,73.6,Юность России,-157.5,-157.5,157.5,157.5,74,B,Single-ply,Open,M,157.5,,1
+Aleksandr Kapturov,Александр Каптуров,1995,73.7,Спарта,115,-120,120,120,74,B,Single-ply,Open,M,120,,2
+Mikhail Bykovskiy,Михаил Быковский,1974,74,ФСК Шелехов,-105,-105,105,105,74,B,Single-ply,Open,M,105,,3
+Evgeniy Padalkin,Евгений Падалкин,1979,78,Спарта,170,-180,180,180,83,B,Single-ply,Open,M,180,,1
+Mikhail Naumov,Михаил Наумов,1995,77.9,Мартенсит,135,142.5,145,145,83,B,Single-ply,Open,M,145,,2
+Mikhail Aleksandrov,Михаил Александров,1993,77.2,СК Шелехов,125,-135,135,135,83,B,Single-ply,Open,M,135,,3
+Ilyas Kutliakhmetov,Ильяс Кутлиахметов,1996,81.7,,80,90,100,100,83,B,Single-ply,Open,M,100,,4
+David Dzukoev,Давид Дзукоев,1985,93,Ника,-220,220,-230,220,93,B,Single-ply,Open,M,220,,1
+Aleksandr Zaikin,Александр Заикин,1991,90.4,Спарта,-190,190,195,195,93,B,Single-ply,Open,M,195,,2
+Denis Sivokon,Денис Сивоконь,1980,93,Мартенсит,-180,190,-195,190,93,B,Single-ply,Open,M,190,,3
+Aleksandr Lebedev,Александр Лебедев,1966,89.7,Спарта,145,-150,-152.5,145,93,B,Single-ply,Open,M,145,,4
+Artemiy Matonin,Артемий Матонин,1994,87.2,,100,110,112.5,112.5,93,B,Single-ply,Open,M,112.5,,5
+Ruslan Petrachkov,Руслан Петрачков,1995,84,,95,-105,-105,95,93,B,Single-ply,Open,M,95,,6
+Vladimir Srabionov,Владимир Срабионов,1964,99.6,Ника,220,230,240,240,105,B,Single-ply,Open,M,240,,1
+Dmitriy Grigorev,Дмитрий Григорьев,1974,99.4,СПАРТА,205,-215,215,215,105,B,Single-ply,Open,M,215,,2
+Konstantin Tarasov,Константин Тарасов,1990,103.3,,185,190,-195,190,105,B,Single-ply,Open,M,190,,3
+Nikita Turlakov,Никита Турлаков,1995,100,Спарта,-160,160,-165,160,105,B,Single-ply,Open,M,160,,4
+Aleksandr Skafenko,Александр Скафенко,1980,104.9,СК Шелехов,145,155,160,160,105,B,Single-ply,Open,M,160,,5
+Evgeniy Akinin,Евгений Акинин,1980,109,Мартенсит,-250,250,-260,250,120,B,Single-ply,Open,M,250,,1
+Aleksandr Chicherin,Александр Чичерин,1969,118.3,Медведь,230,240,245,245,120,B,Single-ply,Open,M,245,,2
+Dmitriy Pastukhov,Дмитрий Пастухов,1988,118.8,Железяка,230,237.5,242.5,242.5,120,B,Single-ply,Open,M,242.5,,3
+Ivan Zhidkov,Иван Жидков,1987,110.6,СПАРТА,-240,240,-250,240,120,B,Single-ply,Open,M,240,,4
+Oleg Anokhov,Олег Анохов,1982,112,ФСК Шелехов,205,212.5,215,215,120,B,Single-ply,Open,M,215,,5
+Sergey Prilutskiy,Сергей Прилуцкий,1989,110.5,Железяка,180,190,,190,120,B,Single-ply,Open,M,190,,6
+Kirill Usanin,Кирилл Усанин,1989,114,Железяка,120,130,-140,130,120,B,Single-ply,Open,M,130,,7
+Vitaliy Morozevich,Виталий Морозевич,1966,184,Медведь,290,-300,-300,290,120+,B,Single-ply,Open,M,290,,1
+Aleksandr Chetvertnykh,Александр Четвертных,1977,125.3,,230,-235,-235,230,120+,B,Single-ply,Open,M,230,,2
+Konstantin Leonov,Константин Леонов,1991,123.5,,155,165,170,170,120+,B,Single-ply,Open,M,170,,3
+Yana Podymakhina,Яна Подымахина,1998,42.8,Юность России,42.5,47.5,-50,47.5,43,B,Single-ply,Juniors,F,47.5,,1
+Natalya Stoyanova,Наталья Стоянова,2000,35.3,Юность России,35,37.5,-40,37.5,43,B,Single-ply,Juniors,F,37.5,,2
+Darya Churina,Дарья Чурина,1989,45.6,Спарта,57.5,-60,-60,57.5,47,B,Single-ply,Juniors,F,57.5,,1
+Anastasiya Bolshanina,Анастасия Большанина,1993,51.6,Юность России,85,-90,-90,85,52,B,Single-ply,Juniors,F,85,,1
+Larisa Otteva,Лариса Оттева,1998,51.7,Юность России,57.5,60,62.5,62.5,52,B,Single-ply,Juniors,F,62.5,,2
+Yuliya Shilina,Юлия Шилина,1989,57,Мартенсит,-120,120,-127.5,120,57,B,Single-ply,Juniors,F,120,,1
+Anna Larionova,Анна Ларионова,1994,54.3,Мартенсит,62.5,67.5,-70,67.5,57,B,Single-ply,Juniors,F,67.5,,2
+Ekaterina Lisevich,Екатерина Лисевич,1997,56.4,Юность России,-65,67.5,-70,67.5,57,B,Single-ply,Juniors,F,67.5,,3
+Yuliya Dmitreva,Юлия Дмитрьева,1989,57,Мартенсит,52.5,60,65,65,57,B,Single-ply,Juniors,F,65,,4
+Valentina Volkova,Валентина Волкова,1997,61.1,Юность России,70,75,77.5,77.5,63,B,Single-ply,Juniors,F,77.5,,1
+Evgeniya Stepanenko,Евгения Степаненко,1991,64.3,Юность России,80,-85,-85,80,72,B,Single-ply,Juniors,F,80,,1
+Anastasiya Balko,Анастасия Балко,1989,83.4,Мартенсит,105,110,-127.5,110,84,B,Single-ply,Juniors,F,110,,1
+Anzhelika Koade,Анжелика Коадэ,1995,75,Юность России,70,75,,75,84,B,Single-ply,Juniors,F,75,,2
+Aleksey Usachev,Алексей Усачев,1996,52.1,Юность России,95,100,-102.5,100,53,B,Single-ply,Juniors,M,100,,1
+Andrey Aganin,Андрей Аганин,1995,58.4,Юность России,115,122.5,-127.5,122.5,59,B,Single-ply,Juniors,M,122.5,,1
+Anton Peretolchin,Антон Перетолчин,1996,58.3,СК Шелехов,85,92.5,95,95,59,B,Single-ply,Juniors,M,95,,2
+Viktor Golubev,Виктор Голубев,1996,57.1,Мартенсит,90,-100,-100,90,59,B,Single-ply,Juniors,M,90,,3
+Vladimr Rasputin,Владимр Распутин,1996,58.6,ФСК Шелехов,75,82.5,-85,82.5,59,B,Single-ply,Juniors,M,82.5,,4
+Vyacheslav Moroz,Вячеслав Мороз,1995,65,Юность России,130,135,-140,135,66,B,Single-ply,Juniors,M,135,,1
+Ivan Suldin,Иван Сульдин,1993,61.5,Мартенсит,120,130,-135,130,66,B,Single-ply,Juniors,M,130,,2
+Roman Maltsev,Роман Мальцев,1993,73.6,Юность России,-157.5,-157.5,157.5,157.5,74,B,Single-ply,Juniors,M,157.5,,1
+Aleksandr Kapturov,Александр Каптуров,1995,73.7,Спарта,115,-120,120,120,74,B,Single-ply,Juniors,M,120,,2
+Mikhail Naumov,Михаил Наумов,1995,77.9,Мартенсит,135,142.5,145,145,83,B,Single-ply,Juniors,M,145,,1
+Mikhail Aleksandrov,Михаил Александров,1993,77.2,СК Шелехов,125,-135,135,135,83,B,Single-ply,Juniors,M,135,,2
+Ilyas Kutliakhmetov,Ильяс Кутлиахметов,1996,81.7,,80,90,100,100,83,B,Single-ply,Juniors,M,100,,3
+Aleksandr Zaikin,Александр Заикин,1991,90.4,Спарта,-190,190,195,195,93,B,Single-ply,Juniors,M,195,,1
+Artemiy Matonin,Артемий Матонин,1994,87.2,,100,110,112.5,112.5,93,B,Single-ply,Juniors,M,112.5,,2
+Ruslan Petrachkov,Руслан Петрачков,1995,84,,95,-105,-105,95,93,B,Single-ply,Juniors,M,95,,3
+Konstantin Tarasov,Константин Тарасов,1990,103.3,,185,190,-195,190,105,B,Single-ply,Juniors,M,190,,1
+Nikita Turlakov,Никита Турлаков,1995,100,Спарта,-160,160,-165,160,105,B,Single-ply,Juniors,M,160,,2
+Sergey Prilutskiy,Сергей Прилуцкий,1989,110.5,Железяка,180,190,,190,120,B,Single-ply,Juniors,M,190,,1
+Kirill Usanin,Кирилл Усанин,1989,114,Железяка,120,130,-140,130,120,B,Single-ply,Juniors,M,130,,2
