@@ -1,27 +1,28 @@
-Division,Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Sex,CyrillicName,Event,Equipment
-Juniors,1,Anna Barkhatenko,1994,Russia,40.8,40,42.5,45,45,30,35,-37.5,35,65,70,80,80,160,43,F,Анна Бархатенко,SBD,Single-ply
-Juniors,1,Ekaterina Gavrilenko,1996,Russia,46.6,40,42.5,45,45,20,22.5,25,25,60,65,70,70,140,47,F,Екатерина Гавриленко,SBD,Single-ply
-Juniors,1,Valentina Rodionova,1992,Russia,49.1,125,132.5,137.5,137.5,62.5,65,67.5,67.5,120,127.5,130,130,335,52,F,Валентина Родионова,SBD,Single-ply
-Juniors,2,Darya Polyarzh,1996,Russia,51.1,-40,40,45,45,20,25,27.5,27.5,60,65,75,75,147.5,52,F,Дарья Полярж,SBD,Single-ply
-Juniors,1,Victoria Karlysheva,1993,Russia,54.3,160,170,180,180,72.5,77.5,80,80,140,-152.5,155,155,415,57,F,Виктория Карлышева,SBD,Single-ply
-Juniors,1,Yuliya Shilina,1989,Russia,57.7,-160,170,180,180,100,105,107.5,107.5,145,155,-157.5,155,442.5,63,F,Юлия Шилина,SBD,Single-ply
-Juniors,2,Yana Shulikova,1989,Russia,60.1,80,85,90,90,50,-52.5,-52.5,50,75,80,85,85,225,63,F,Яна Шуликова,SBD,Single-ply
-Juniors,1,Elena Kucherenko,1992,Russia,92.1,175,190,200,200,95,102.5,105,105,-170,175,185,185,490,84+,F,Елена Кучеренко,SBD,Single-ply
-Juniors,2,Anastasiya Balko,1989,Russia,96,-160,170,,170,110,120,130,130,155,165,,165,465,84+,F,Анастасия Балко,SBD,Single-ply
-Juniors,1,Viktor Golubev,1996,Russia,51.5,-140,140,-157.5,140,60,65,70,70,140,-150,-150,140,350,53,M,Виктор Голубев,SBD,Single-ply
-Juniors,1,Ivan Suldin,1993,Russia,58.9,180,190,195,195,107.5,112.5,-117.5,112.5,175,-190,-190,175,482.5,59,M,Иван Сульдин,SBD,Single-ply
-Juniors,1,Evgeniy Korinovskiy,1992,Russia,66,180,195,-200,195,90,95,100,100,187.5,200,202.5,202.5,497.5,66,M,Евгений Кориновский,SBD,Single-ply
-Juniors,2,Sergey Pavlov,1994,Russia,64.1,180,200,207.5,207.5,80,90,95,95,180,192.5,-200,192.5,495,66,M,Сергей Павлов,SBD,Single-ply
-Juniors,1,Roman Reutov,1990,Russia,69.7,190,200,-205,200,130,137.5,142.5,142.5,185,192.5,200,200,542.5,74,M,Роман Реутов,SBD,Single-ply
-Juniors,2,Aleksandr Zaikin,1991,Russia,73.2,180,-190,190,190,140,-147.5,-147.5,140,175,185,-200,185,515,74,M,Александр Заикин,SBD,Single-ply
-Juniors,3,Andrey Mashukov,1992,Russia,72.6,165,175,180,180,100,110,120,120,190,200,205,205,505,74,M,Андрей Машуков,SBD,Single-ply
-Juniors,4,Aleksandr Dvornikov,1993,Russia,73,170,180,190,190,105,-112.5,112.5,112.5,185,195,200,200,502.5,74,M,Александр Дворников,SBD,Single-ply
-Juniors,5,Aleksey Denisov,1993,Russia,70.9,145,165,180,180,-85,90,95,95,145,170,-185,170,445,74,M,Алексей Денисов,SBD,Single-ply
-Juniors,6,Aleksandr Pisklyukov,1988,Russia,70.5,150,160,165,165,100,110,115,115,150,160,,160,440,74,M,Александр Писклюков,SBD,Single-ply
-Juniors,2,Aleksandr Dombrovskiy,1992,Russia,79,200,215,225,225,155,165,,165,200,215,225,225,615,83,M,Александр Домбровский,SBD,Single-ply
-Juniors,3,Nikolay Balko,1993,Russia,79.8,180,200,,200,-105,110,120,120,150,160,180,180,500,83,M,Николай Балко,SBD,Single-ply
-Juniors,1,Vasiliy Noyanov,1989,Russia,88.4,285,295,302.5,302.5,185,192.5,197.5,197.5,270,280,,280,780,93,M,Василий Ноянов,SBD,Single-ply
-Juniors,2,Vladimir Razuvaev,1990,Russia,84.5,230,245,252.5,252.5,160,-167.5,-167.5,160,230,237.5,,237.5,650,93,M,Владимир Разуваев,SBD,Single-ply
-Juniors,3,Konstantin Tarasov,1990,Russia,89.8,-230,240,-250,240,130,-137.5,137.5,137.5,230,-240,,230,607.5,93,M,Константин Тарасов,SBD,Single-ply
-Juniors,4,Artem Kuznetsov,1995,Russia,89.7,130,140,150,150,85,-90,90,90,140,160,175,175,415,93,M,Артем Кузнецов,SBD,Single-ply
-Juniors,1,Sergey Kuznetsov #1,1990,Russia,101.8,-275,275,290,290,180,190,195,195,250,260,-270,260,745,105,M,Сергей Кузнецов,SBD,Single-ply
+Place,Name,CyrillicName,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Division
+1,Anna Barkhatenko,Анна Бархатенко,1994,43,40.8,45,35,80,160,SBD,Single-ply,F,Juniors
+1,Ekaterina Gavrilenko,Екатерина Гавриленко,1996,47,46.6,45,25,70,140,SBD,Single-ply,F,Juniors
+1,Valentina Rodionova,Валентина Родионова,1992,52,49.1,137.5,67.5,130,335,SBD,Single-ply,F,Juniors
+2,Darya Polyarzh,Дарья Полярж,1996,52,51.1,45,27.5,75,147.5,SBD,Single-ply,F,Juniors
+1,Viktoriya Karlysheva,Виктория Карлышева,1993,57,54.3,180,80,155,415,SBD,Single-ply,F,Juniors
+1,Yuliya Shilina,Юлия Шилина,1989,63,57.7,180,107.5,155,442.5,SBD,Single-ply,F,Juniors
+2,Yana Shulikova,Яна Шуликова,1989,63,60.1,90,50,85,225,SBD,Single-ply,F,Juniors
+1,Elena Kucherenko,Елена Кучеренко,1992,84+,92.1,200,105,185,490,SBD,Single-ply,F,Juniors
+2,Anastasiya Balko,Анастасия Балко,1989,84+,96,170,130,165,465,SBD,Single-ply,F,Juniors
+1,Viktor Golubev,Виктор Голубев,1996,53,51.5,140,70,140,350,SBD,Single-ply,M,Juniors
+1,Ivan Suldin,Иван Сульдин,1993,59,58.9,195,112.5,175,482.5,SBD,Single-ply,M,Juniors
+1,Evgeniy Korinovskiy,Евгений Кориновский,1992,66,66,195,100,202.5,497.5,SBD,Single-ply,M,Juniors
+2,Sergey Pavlov,Сергей Павлов,1994,66,64.1,207.5,95,192.5,495,SBD,Single-ply,M,Juniors
+1,Roman Reutov,Роман Реутов,1990,74,69.7,200,142.5,200,542.5,SBD,Single-ply,M,Juniors
+2,Aleksandr Zaikin,Александр Заикин,1991,74,73.2,190,140,185,515,SBD,Single-ply,M,Juniors
+3,Andrey Mashukov,Андрей Машуков,1992,74,72.6,180,120,205,505,SBD,Single-ply,M,Juniors
+4,Aleksandr Dvornikov,Александр Дворников,1993,74,73,190,112.5,200,502.5,SBD,Single-ply,M,Juniors
+5,Aleksey Denisov,Алексей Денисов,1993,74,70.9,180,95,170,445,SBD,Single-ply,M,Juniors
+6,Aleksandr Pisklyukov,Александр Писклюков,1988,74,70.5,165,115,160,440,SBD,Single-ply,M,Juniors
+1,Artem Stupin,Артем Ступин,1992,83,81.2,225,190,235,650,SBD,Single-ply,M,Juniors
+2,Aleksandr Dombrovskiy,Александр Домбровский,1992,83,79,225,165,225,615,SBD,Single-ply,M,Juniors
+3,Nikolay Balko,Николай Балко,1993,83,79.8,200,120,180,500,SBD,Single-ply,M,Juniors
+1,Vasiliy Noyanov,Василий Ноянов,1989,93,88.4,302.5,197.5,280,780,SBD,Single-ply,M,Juniors
+2,Vladimir Razuvaev,Владимир Разуваев,1990,93,84.5,252.5,160,237.5,650,SBD,Single-ply,M,Juniors
+3,Konstantin Tarasov,Константин Тарасов,1990,93,89.8,240,137.5,230,607.5,SBD,Single-ply,M,Juniors
+4,Artem Kuznetsov,Артем Кузнецов,1995,93,89.7,150,90,175,415,SBD,Single-ply,M,Juniors
+1,Sergey Kuznetsov #1,Сергей Кузнецов,1990,105,101.8,290,195,260,745,SBD,Single-ply,M,Juniors

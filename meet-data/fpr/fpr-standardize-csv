@@ -126,7 +126,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif text == 'дсо':  # Something to do with referees?
                 fieldnames.append('IGNORE')
-            elif text in ['возраст кат', 'категория']:
+            elif text in ['возраст кат', 'категория', 'воз кат']:
                 fieldnames.append('Division')
             elif any(x in text for x in ['вуз', 'команда (во / род войск)',
                                          'спортивная школа', 'команда', 'дсо кфк',
