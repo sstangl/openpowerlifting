@@ -207,7 +207,7 @@
     1040 = ["ExemptWeightClassConsistency"] # Fewer weight classes
     1041 = ["ExemptWeightClassConsistency"] # Fewer weight classes
     1042 = ["ExemptWeightClassConsistency"] # Youth Classes
-    1046 = ["ExemptWeightClassConsistency"] # Fewer weight classes
+    1046 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Students, Fewer weight classes
     1052 = ["ExemptWeightClassConsistency"] # No Women's 44, men's 52
     1053 = ["ExemptWeightClassConsistency"] # Fewer weight classes
     1057 = ["ExemptWeightClassConsistency"] # No weightclasses
