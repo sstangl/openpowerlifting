@@ -34,15 +34,16 @@ server:
     - make -C server checkprerequisites
     - cargo test --workspace --locked
 
-# On success, update project documentation on GitLab Pages.
+# On success, publish the latest version of the Book to GitLab Pages.
 pages:
   stage: deploy
   before_script:
     - apt-get update -qq && apt-get install -y cmake
+    - cargo install mdbook
   script:
-    - cargo doc --no-deps  # Builds into target/doc.
-    - mv docs public  # GitLab Pages always deploys from a folder named "public".
-    - mv target/doc public/rust  # Rust documentation.
+    - mdbook build --dest-dir ../public book  # Build book/ into public/.
+    - cargo doc --no-deps  # Builds code documentation into target/doc.
+    - mv target/doc public/code  # Move Rust documentation into code/.
   artifacts:
     paths:
       - public
