@@ -80,4 +80,5 @@
     sex = "M"
 
 [exemptions]
+    0801 = ["ExemptDivision"]
     1401 = ["ExemptDivision"]
