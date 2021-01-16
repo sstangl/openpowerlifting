@@ -37,13 +37,17 @@ server:
 # On success, publish the latest version of the Book to GitLab Pages.
 pages:
   stage: deploy
+  image: rust:alpine
+  variables:
+    CARGO_HOME: $CI_PROJECT_DIR/cargo
+  cache:
+    paths:
+      - $CARGO_HOME/bin
   before_script:
-    - apt-get update -qq && apt-get install -y cmake
-    - cargo install mdbook
+    - export PATH="$PATH:$CARGO_HOME/bin"
+    - mdbook --version || cargo install mdbook
   script:
     - mdbook build --dest-dir ../public book  # Build book/ into public/.
-    - cargo doc --no-deps  # Builds code documentation into target/doc.
-    - mv target/doc public/code  # Move Rust documentation into code/.
   artifacts:
     paths:
       - public
