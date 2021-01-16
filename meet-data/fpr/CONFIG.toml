@@ -155,6 +155,7 @@
     0524 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Extra Teen divisions
     0611 = ["ExemptWeightClassConsistency"] # Youth Classes
     0630 = ["ExemptWeightClassConsistency"] # Youth Classes
+    0631 = ["ExemptWeightClassConsistency"] # No 40kg SJr women
     0723 = ["ExemptWeightClassConsistency"] # 56 Women in 60 class
     0732 = ["ExemptWeightClassConsistency"] # 90+ SJr men
     0733 = ["ExemptWeightClassConsistency"] # 90+ SJr men
@@ -181,6 +182,8 @@
     0936 = ["ExemptWeightClassConsistency"] # 90+ Men
     0937 = ["ExemptWeightClassConsistency"] # Fewer weight classes
     0938 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
+    0941 = ["ExemptWeightClassConsistency"] # No men's 52
+    0944 = ["ExemptWeightClassConsistency"] # No men's 52
     0947 = ["ExemptWeightClassConsistency"] # No weightclasses
     0948 = ["ExemptWeightClassConsistency"] # Youth Classes
     1001 = ["ExemptWeightClassConsistency"]
