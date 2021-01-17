@@ -2,10 +2,10 @@
 
 use coefficients::{dots, goodlift, mcculloch, wilks2020};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
+use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::states::*;
 use opltypes::*;
 
-use std::collections::HashMap;
 use std::path::Path;
 
 use crate::checklib::{Entry, LifterData, LifterDataMap, Meet};
@@ -286,7 +286,7 @@ impl<'md> EntryLifterData<'md> {
 }
 
 /// Map from Username to EntryLifterData.
-type EntryLifterDataMap<'md> = HashMap<&'md str, EntryLifterData<'md>>;
+type EntryLifterDataMap<'md> = FxHashMap<&'md str, EntryLifterData<'md>>;
 
 pub fn make_csv(
     meetdata: &AllMeetData,
@@ -308,7 +308,7 @@ pub fn make_csv(
         .from_path(&buildpath.join("meets.csv"))?;
 
     // For remembering consistent lifter information across multiple Entries.
-    let mut lifter_hash = EntryLifterDataMap::new();
+    let mut lifter_hash = EntryLifterDataMap::with_hasher(FxBuildHasher::default());
     lifter_hash.insert("seanstangl", EntryLifterData::seanstangl());
 
     // Data structures for assigning globally-unique IDs.
