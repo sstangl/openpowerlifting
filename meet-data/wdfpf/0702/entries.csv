@@ -2,7 +2,7 @@ Country,BirthDate,WeightClassKg,Sex,Name,Division,Age,BodyweightKg,Squat1Kg,Squa
 Belgium,1940-09-26,47.5,F,Judy Gedney,F-O,67,44.2,80,85,-87.5,,85,,,,,,,,,,,85,S,Raw,1
 USA,1940-09-26,47.5,F,Judy Gedney,F-M6,67,44.2,80,85,-87.5,,85,,,,,,,,,,,85,S,Raw,1
 Italy,1964-01-10,80,F,Susanna Perrone,F-M1,43,76.2,80,85,90,,90,,,,,,,,,,,90,S,Raw,1
-England,1989-09-21,67.5,M,Hadley Jones,M-T3,18,64.6,120,130,-140,,130,,,,,,,,,,,130,S,Raw,1
+England,1989-09-21,67.5,M,Hadley Jones #1,M-T3,18,64.6,120,130,-140,,130,,,,,,,,,,,130,S,Raw,1
 Italy,1977-01-03,67.5,M,Daniele Morfino,M-O,30,66.5,170,180,-190,190.5,180,,,,,,,,,,,180,S,Raw,1
 Italy,1946-10-09,67.5,M,Antonio Collela,M-M5,61,64.8,165,180,-190,190.5,180,,,,,,,,,,,180,S,Raw,1
 Russia,1941-05-10,67.5,M,Vladimir Lobachev,M-M6,66,66.6,105,115,120,,120,,,,,,,,,,,120,S,Raw,1
@@ -47,7 +47,7 @@ Switzerland,1971-07-29,125,M,Michel Ortega,M-PFM,36,113.9,225,230,-235,,230,,,,,
 USA,1940-09-26,47.5,F,Judy Gedney,F-O,67,44.2,97.5,-102.5,-102.5,,97.5,,,,,,,,,,,97.5,S,Single-ply,1
 USA,1940-09-26,47.5,F,Judy Gedney,F-M6,67,44.2,97.5,-102.5,-102.5,,97.5,,,,,,,,,,,97.5,S,Single-ply,1
 Italy,1965-10-03,80,F,Maria Teresa Borgia,F-M1,42,74.3,90,100,-120,,100,,,,,,,,,,,100,S,Single-ply,1
-England,1989-09-21,67.5,M,Hadley Jones,M-T3,18,64.6,150,160,-170,,160,,,,,,,,,,,160,S,Single-ply,1
+England,1989-09-21,67.5,M,Hadley Jones #1,M-T3,18,64.6,150,160,-170,,160,,,,,,,,,,,160,S,Single-ply,1
 Italy,1964-06-12,67.5,M,Lorenzo Russo,M-M1,43,67.4,180,200,-210,,200,,,,,,,,,,,200,S,Single-ply,1
 Italy,1946-10-09,67.5,M,Antonio Collela,M-M5,61,64.8,175,190,200,,200,,,,,,,,,,,200,S,Single-ply,1
 England,1989-12-29,75,M,Harjinder Mundi,M-T2,17,72.1,110,115,130.5,,130.5,,,,,,,,,,,130.5,S,Single-ply,1
@@ -264,7 +264,7 @@ USA,1940-09-26,44,F,Judy Gedney,F-M6,67,44,,,,,,,,,,,110,115,-117.5,,115,115,D,S
 Scotland,1979-04-01,55.5,F,Ann Thomas,F-O,28,54.9,,,,,,,,,,,125,132.5,-137.5,,132.5,132.5,D,Single-ply,1
 Italy,1965-10-03,80,F,Maria Teresa Borgia,F-M1,42,74.1,,,,,,,,,,,100,115,125,,125,125,D,Single-ply,1
 Slovenia,1992-09-14,67.5,M,Zan Frantar,M-T1,15,66.4,,,,,,,,,,,-140,140,150,152.5,150,150,D,Single-ply,1
-England,1989-09-21,67.5,M,Hadley Jones,M-T3,18,65.2,,,,,,,,,,,170,185.5,-200,,185.5,185.5,D,Single-ply,1
+England,1989-09-21,67.5,M,Hadley Jones #1,M-T3,18,65.2,,,,,,,,,,,170,185.5,-200,,185.5,185.5,D,Single-ply,1
 Italy,1985-01-01,82.5,M,Mauro Serra,M-JR,22,81.8,,,,,,,,,,,210,220,230,,230,230,D,Single-ply,1
 Italy,1968-12-16,82.5,M,Luca Segrer,M-O,38,79.8,,,,,,,,,,,220,230,-235,,230,230,D,Single-ply,1
 Italy,1968-04-05,82.5,M,Carmeluccio Scamporlino,M-O,39,82.5,,,,,,,,,,,200,-222.5,-232.5,,200,200,D,Single-ply,3
@@ -303,7 +303,7 @@ USA,1933-11-22,60,M,Steve Smith,M-O,73,58.1,,,,,,,,,,,110,112.5,115,,115,115,D,R
 USA,1933-11-22,60,M,Steve Smith,M-M7,73,58.1,,,,,,,,,,,110,112.5,115,120,115,115,D,Raw,1
 Slovenia,1992-09-14,67.5,M,Zan Frantar,M-T1,15,66.4,,,,,,,,,,,140,147.5,150,152.5,150,150,D,Raw,1
 England,1990-10-04,67.5,M,Micheal Daldry,M-T2,17,64.5,,,,,,,,,,,170,180.5,-185,,180.5,180.5,D,Raw,1
-England,1989-09-21,67.5,M,Hadley Jones,M-T3,18,65.2,,,,,,,,,,,175,185,-190,,185,185,D,Raw,1
+England,1989-09-21,67.5,M,Hadley Jones #1,M-T3,18,65.2,,,,,,,,,,,175,185,-190,,185,185,D,Raw,1
 Italy,1971-06-03,67.5,M,Emiliano Ceccanti,M-O,36,64.5,,,,,,,,,,,137.5,142.5,150,,150,150,D,Raw,2
 Ireland,1975-10-19,67.5,M,Scott Mc Connnell,M-O,31,64.3,,,,,,,,,,,190,200,-205,,200,200,D,Raw,1
 Russia,1941-05-10,67.5,M,Vladimir Lobachev,M-M6,66,66.3,,,,,,,,,,,145,155,-160,,155,155,D,Raw,1
