@@ -1,6 +1,5 @@
 //! A collection of data types used in the OpenPowerlifting database.
 
-#![feature(const_fn)]
 // Suppress clippy warnings for date literals.
 #![allow(clippy::inconsistent_digit_grouping)]
 #![allow(clippy::zero_prefixed_literal)]
