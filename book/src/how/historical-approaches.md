@@ -37,7 +37,10 @@ This had the dual impact of informing lifters how they're likely to fare nationa
 > ```
 > Published in PowerliftingUSA Vol.3 No.8 Feb/1980, Page 19.
 
-Herb became the "PowerliftingUSA Statistician," which greatly increased his reach.
+Herb became the official "PowerliftingUSA Statistician," which greatly increased his reach.
+He successfully continued with this manual-curation strategy until his retirement from record-keeping.
+Glossbrenner passed ownership of his record books to a new collaborator, Michael Soong, who continued working in a similar manner
+(switching from notebooks to a word processor).
 
 > Sample excerpt from Herb Glossbrenner's *History's All Time Best Bench Pressers 550lbs/249kg or more*.
 > ```
@@ -47,7 +50,20 @@ Herb became the "PowerliftingUSA Statistician," which greatly increased his reac
 > ```
 > Published in Powerlifting USA Vol.5 No.9 Mar/1982, Page 65.
 
-TODO: More information, Michael Soong, lessons learned.
+#### Technology Summary
+
+- **Database**: notebooks, pen-and-paper.
+- **Meet Discovery**: word-of-mouth, newsletters.
+- **Record Distribution**: word-of-mouth, magazines.
+
+#### Take-Away Lessons
+
+Even though this was the first attempt at maintaining records for a nascent sport, the difficulties experienced by Glossbrenner and Soong still yield useful observations:
+
+- Word-of-mouth works surprisingly well for distributing information over a long timeframe.
+- The scope of any one person is inherently limited. A successful project needs *many* collaborators.
+- Stumbling upon published results isn't sufficient for correctness. A more structured approach is needed to guarantee that no results are skipped.
+
 
 ### 2nd Generation: PowerliftingWatch
 
