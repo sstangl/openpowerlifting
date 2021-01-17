@@ -286,7 +286,7 @@ impl WeightClassFilter {
             WeightClassFilter::IpfF63 => make_bounds(57.0, 63.0),
             WeightClassFilter::IpfF69 => make_bounds(63.0, 69.0),
             WeightClassFilter::IpfF76 => make_bounds(69.0, 76.0),
-            WeightClassFilter::IpfF84 => make_bounds(72.0, 84.0),
+            WeightClassFilter::IpfF84 => make_bounds(76.0, 84.0),
             WeightClassFilter::IpfFOver84 => make_bound_over(84.0),
 
             WeightClassFilter::ParaM49 => make_bounds(0.0, 49.0),
