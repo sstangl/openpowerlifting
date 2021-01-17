@@ -70,8 +70,10 @@ def weightclass2kg(s, sex):
         return '109.77'
     if s == '275':
         return '124.74'
+    if s == '308':
+        return '139.71'
     if s == 'SHW':
-        return '124.74+'
+        return '139.71+'
 
     if s == 'UNC':  # Unconfirmed.
         return ''
