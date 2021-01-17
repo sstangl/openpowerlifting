@@ -20,3 +20,7 @@
 
 - [FAQ]()
 	- [For Users]()
+
+- [Project Bylaws](bylaws/introduction.md)
+	- [Brand Guidelines](bylaws/brand-guidelines.md)
+	- [Social Media Guidelines](bylaws/social-media-guidelines.md)

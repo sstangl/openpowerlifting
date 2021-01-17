@@ -1,12 +1,12 @@
-# Brand Guidelines
+## Brand Guidelines
 
 This document describes general guidelines for how to communicate when representing the OpenPowerlifting project in a formal capacity. It is intended primarily for use by staff on social media when posting as the project.
 
 These guidelines are not intended to be prescriptive. Rather, they are intended to showcase the "sprit" of the project.
 
-## How OpenPowerlifting Sees Itself
+### How OpenPowerlifting Sees Itself
 
-### What the OpenPowerlifting Project Is
+#### What the OpenPowerlifting Project Is
 
 OpenPowerlifting is a project to archive powerlifting history and make that information useful as a service to the powerlifting community. The main output of the project is *the database itself*, not just the showcase website.
 
@@ -37,7 +37,7 @@ In addition, the project is *entirely funded by the powerlifting community*:
   2. The project is 100% funded through voluntary contributions to our Patreon account.
   3. *We never mention that there is a Patreon account, and we absolutely never ask anyone to donate!*
 
-### What OpenPowerlifting.org Is
+#### What OpenPowerlifting.org Is
 
 [OpenPowerlifting.org](http://www.openpowerlifting.org) organizes and presents the database to lifters in a way that is useful and informative.
 
@@ -55,7 +55,7 @@ The main page of the website is a ranking of all lifters by Wilks. This is inten
   2. Because of the tremendous number of lifters, you can find someone at roughly your level with whom you can have motivating competition.
 
 
-## How OpenPowerlifting Presents Itself
+### How OpenPowerlifting Presents Itself
 
 This section discusses communication styles when interacting with various groups.
 
@@ -66,7 +66,7 @@ As a brief summary:
   3. We will promote the accomplishments of individual lifters, with respect, selflessly, without expecting any kickback or personal benefit.
 
 
-### How OpenPowerlifting Presents Itself to Federations
+#### How OpenPowerlifting Presents Itself to Federations
 
 OpenPowerlifting aggregates the results of the various powerlifting federations into one place, so lifters who competed in the IPF show up alongside lifters who competed in the USPA. Additionally, it becomes very obvious that many lifters compete in more than one federation.
 
@@ -87,7 +87,7 @@ Federations should be treated extremely well so that they want to support us. Ou
   2. We want federations to stop using PDF for meet results and to switch to formats that don't lose formatting data, such as spreadsheets or HTML. In order to convince them to do this, they have to want to work with us, and we have to be pleasant to work with.
 
 
-### How OpenPowerlifting Presents Itself to Competitors
+#### How OpenPowerlifting Presents Itself to Competitors
 
 This is mostly about PowerliftingWatch.
 
@@ -112,7 +112,7 @@ The following guidelines are suggested for interacting with PowerliftingWatch:
 Lifters will use both our site as well as PowerliftingWatch. We want to be on great terms with them, and we don't want to overwhelm them or make them feel like they have to be defensive. Hopefully, both projects will evolve to complement each other.
 
 
-### How OpenPowerlifting Presents Itself to Lifters
+#### How OpenPowerlifting Presents Itself to Lifters
 
 Our role is to highlight and promote lifters' accomplishments. We do this by using our dataset to cast lifters in the most favorable light. Ideally, we want to *surprise* lifters by pointing out to them how much they've improved along some axis, especially when they might not have realized it themselves. Interactions with OpenPowerlifting should be *informative and motivating*.
 
