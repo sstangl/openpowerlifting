@@ -10,9 +10,9 @@
 		- [Free and Open Source]()
 		- [Technical Choices]()
 
-- [Getting Started](./getting-started/introduction.md)
+- [Getting Started]()
 	- [Easy Changes]()
-		- [Linking an Instagram]()
+		- [Linking an Instagram](./getting-started/linking-an-instagram.md)
 		- [Changing a Misspelled Name]()
 		- [Fixing an Equipment Error]()
 	- [Medium Changes]()
@@ -21,6 +21,6 @@
 - [FAQ]()
 	- [For Users]()
 
-- [Project Bylaws](bylaws/introduction.md)
+- [Project Bylaws]()
 	- [Brand Guidelines](bylaws/brand-guidelines.md)
 	- [Social Media Guidelines](bylaws/social-media-guidelines.md)
