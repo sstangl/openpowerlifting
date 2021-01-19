@@ -181,7 +181,7 @@ def getresults(soup):
                 csv.fieldnames += ['Team']
             elif h in ['Events', 'Event']:
                 csv.fieldnames += ['Event']
-            elif h == 'DivSex':
+            elif h in ['DivSex', 'Div Sex']:
                 csv.fieldnames += ['Sex']
             elif h == 'DivCat':
                 csv.fieldnames += ['IGNORE']
@@ -366,6 +366,7 @@ def main(dirname, url):
     add_sex(entriescsv)
     fix_wc(entriescsv)
     entriescsv = remove_zeros(entriescsv)
+    csv.append_column('BirthDate')
 
     if ('Squat1Kg' in entriescsv.fieldnames and
             'Best3SquatKg' not in entriescsv.fieldnames):
