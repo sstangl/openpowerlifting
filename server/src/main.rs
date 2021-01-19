@@ -349,23 +349,6 @@ fn status(
     })
 }
 
-#[get("/data?<lang>")]
-fn data(
-    lang: Option<String>,
-    langinfo: State<LangInfo>,
-    languages: AcceptLanguage,
-    device: Device,
-    cookies: Cookies,
-) -> Option<Template> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let context = pages::data::Context::new(&locale);
-
-    Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/data", &context),
-        Device::Mobile => Template::render("openpowerlifting/mobile/data", &context),
-    })
-}
-
 #[get("/faq?<lang>")]
 fn faq(
     lang: Option<String>,
@@ -543,11 +526,6 @@ fn old_index() -> Redirect {
     Redirect::permanent("/")
 }
 
-#[get("/data.html")]
-fn old_data() -> Redirect {
-    Redirect::permanent("/data")
-}
-
 #[get("/faq.html")]
 fn old_faq() -> Redirect {
     Redirect::permanent("/faq")
@@ -618,7 +596,6 @@ fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
                 root_favicon,
                 root_apple_touch_icon,
                 status,
-                data,
                 faq,
                 contact,
                 robots_txt,
@@ -641,7 +618,6 @@ fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
                 old_meetlist,
                 old_meet,
                 old_index,
-                old_data,
                 old_faq,
                 old_contact,
             ],
@@ -663,7 +639,6 @@ fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> rocket::Rocket {
                 dist::openipf::meetlist_default,
                 dist::openipf::meet,
                 dist::openipf::status,
-                dist::openipf::data,
                 dist::openipf::faq,
                 dist::openipf::contact,
             ],

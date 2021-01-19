@@ -65,7 +65,6 @@ fn test_pages_load() {
         assert_eq!(get(&client, device, "/m/uspa/0485"), Status::Ok);
         assert_eq!(get(&client, device, "/m/gpc-aus/1827"), Status::Ok);
         assert_eq!(get(&client, device, "/status"), Status::Ok);
-        assert_eq!(get(&client, device, "/data"), Status::Ok);
         assert_eq!(get(&client, device, "/faq"), Status::Ok);
         assert_eq!(get(&client, device, "/contact"), Status::Ok);
 
@@ -104,7 +103,6 @@ fn test_pages_load_for_openipf() {
             Status::Ok
         );
         assert_eq!(get(&client, device, "/dist/openipf/status"), Status::Ok);
-        assert_eq!(get(&client, device, "/dist/openipf/data"), Status::Ok);
         assert_eq!(get(&client, device, "/dist/openipf/faq"), Status::Ok);
         assert_eq!(get(&client, device, "/dist/openipf/contact"), Status::Ok);
 
@@ -202,10 +200,6 @@ fn test_old_redirects() {
     let response = client.get("/meetlist.html").dispatch();
     assert_eq!(response.status(), Status::PermanentRedirect);
     assert_eq!(response.headers().get_one("location").unwrap(), "/mlist");
-
-    let response = client.get("/data.html").dispatch();
-    assert_eq!(response.status(), Status::PermanentRedirect);
-    assert_eq!(response.headers().get_one("location").unwrap(), "/data");
 
     let response = client.get("/faq.html").dispatch();
     assert_eq!(response.status(), Status::PermanentRedirect);

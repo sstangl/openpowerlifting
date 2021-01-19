@@ -469,25 +469,6 @@ pub fn status(
     })
 }
 
-#[get("/data?<lang>")]
-pub fn data(
-    lang: Option<String>,
-    langinfo: State<LangInfo>,
-    languages: AcceptLanguage,
-    host: Host,
-    device: Device,
-    cookies: Cookies,
-) -> Option<Template> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx = pages::data::Context::new(&locale);
-    cx.urlprefix = get_local_prefix(&host);
-
-    Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/data", &cx),
-        Device::Mobile => Template::render("openipf/mobile/data", &cx),
-    })
-}
-
 #[get("/faq?<lang>")]
 pub fn faq(
     lang: Option<String>,
