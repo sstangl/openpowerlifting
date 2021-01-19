@@ -5,7 +5,7 @@
   <a href="{{urlprefix | safe}}mlist" class="nav__link">{{strings.header.meets}}</a>
   <a href="{{urlprefix | safe}}status" class="nav__link">{{strings.header.status}}</a>
   <a href="{{urlprefix | safe}}faq" class="nav__link">{{strings.header.faq}}</a>
-  <a href="{{urlprefix | safe}}data" class="nav__link">{{strings.header.data}}</a>
+  <a href="https://openpowerlifting.gitlab.io/opl-csv/" class="nav__link">{{strings.header.data}}</a>
   <a href="https://www.plsource.org" class="nav__link" rel="noopener" target="_blank">{{strings.header.apps}}</a>
   <a href="https://openpowerlifting.bigcartel.com" class="nav__link" rel="noopener" target="_blank">{{strings.header.shop}}</a>
   <a href="{{urlprefix | safe}}contact" class="nav__link">{{strings.header.contact}}</a>
