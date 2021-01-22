@@ -29,7 +29,7 @@ Place,Name,CyrillicName,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3B
 1,Darya Chetvergova,Дарья Четвергова,2000,84,79.8,175,92.5,150,417.5,SBD,Single-ply,F,Sub-Juniors
 2,Polina Luchina,Полина Лучина,1999,84,80,140,80,127.5,347.5,SBD,Single-ply,F,Sub-Juniors
 3,Galina Polyakova,Галина Полякова,2003,84,72.8,135,77.5,127.5,340,SBD,Single-ply,F,Sub-Juniors
-1,Darya Efimtseva,Дарья Ефимцева,2000,84+,115.5,215,150,180,545,SBD,Single-ply,F,Sub-Juniors
+1,Daria Efimtseva,Дарья Ефимцева,2000,84+,115.5,215,150,180,545,SBD,Single-ply,F,Sub-Juniors
 2,Anna Vozmilova,Анна Возмилова,2001,84+,86.2,160,105,140,405,SBD,Single-ply,F,Sub-Juniors
 3,Evgeniya Ruzaeva,Евгения Рузаева,2000,84+,93.4,145,80,102.5,327.5,SBD,Single-ply,F,Sub-Juniors
 1,Dmitriy Evdokimov,Дмитрий Евдокимов,2000,53,52.1,172.5,87.5,180,440,SBD,Single-ply,M,Sub-Juniors
@@ -84,7 +84,7 @@ Place,Name,CyrillicName,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3B
 5,Aleksandra Romashina,Александра Ромашина,1997,47,45.7,112.5,65,95,272.5,SBD,Single-ply,F,Juniors
 6,Ekaterina Slivka,Екатерина Сливка,1997,47,44.06,45,27.5,50,122.5,SBD,Single-ply,F,Juniors
 1,Elena Ryabova,Елена Рябова,1995,52,50.6,162.5,95,137.5,395,SBD,Single-ply,F,Juniors
-2,Tatyana Smolekho,Татьяна Смолехо,1996,52,51.7,150,105,132.5,387.5,SBD,Single-ply,F,Juniors
+2,Tatiana Smolekho,Татьяна Смолехо,1996,52,51.7,150,105,132.5,387.5,SBD,Single-ply,F,Juniors
 3,Sabina Akhmetova,Сабина Ахметова,1994,52,51.8,152.5,75,135,362.5,SBD,Single-ply,F,Juniors
 1,Kseniya Averchenko,Ксения Аверченко,1997,57,56.8,152.5,82.5,155,390,SBD,Single-ply,F,Juniors
 2,Elena Serdyuk,Елена Сердюк,1997,57,56.8,150,82.5,135,367.5,SBD,Single-ply,F,Juniors
@@ -101,7 +101,7 @@ Place,Name,CyrillicName,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3B
 1,Anastasiya Minaeva,Анастасия Минаева,1998,84,82.2,195,120,170,485,SBD,Single-ply,F,Juniors
 2,Valeriya Nosova,Валерия Носова,1995,84,78.6,150,110,150,410,SBD,Single-ply,F,Juniors
 3,Guzel Galeeva,Гузель Галеева,1994,84,83.7,100,80,90,270,SBD,Single-ply,F,Juniors
-1,Anna Pavlova,Анна Павлова,1996,84+,90,210,170,210,590,SBD,Single-ply,F,Juniors
+1,Anastasia Pavlova,Анастасия Павлова,1996,84+,90,210,170,210,590,SBD,Single-ply,F,Juniors
 2,Tatyana Rakova,Татьяна Ракова,1994,84+,87.8,152.5,90,160,402.5,SBD,Single-ply,F,Juniors
 3,Irina Savchenko,Ирина Савченко,1998,84+,99.7,140,95,140,375,SBD,Single-ply,F,Juniors
 1,Georgiy Klimenko,Георгий Клименко,1995,53,52.9,200,150,175,525,SBD,Single-ply,M,Juniors
@@ -118,7 +118,7 @@ Place,Name,CyrillicName,BirthYear,WeightClassKg,BodyweightKg,Best3SquatKg,Best3B
 3,Dmitriy Filatov,Дмитрий Филатов,1997,74,73.6,200,130,220,550,SBD,Single-ply,M,Juniors
 4,Evgeniy Churin,Евгений Чурин,1997,74,72.1,182.5,127.5,190,500,SBD,Single-ply,M,Juniors
 5,Kirill Monakhov,Кирилл Монахов,1999,74,71.5,150,132.5,155,437.5,SBD,Single-ply,M,Juniors
-6,Aleksey Kuzmin,Алексей Кузьмин,1995,74,73.14,132.5,112.5,145,390,SBD,Single-ply,M,Juniors
+6,Alexey Kuzmin,Алексей Кузьмин,1995,74,73.14,132.5,112.5,145,390,SBD,Single-ply,M,Juniors
 1,Viktor Frolov,Виктор Фролов,1995,83,82.32,270,190,255,715,SBD,Single-ply,M,Juniors
 2,Yaroslav Teryoshkin,Ярослав Терёшкин,1995,83,79.56,260,162.5,250,672.5,SBD,Single-ply,M,Juniors
 3,Evgeniy Sevastyanov,Евгений Севастьянов,1997,83,81.56,250,150,265,665,SBD,Single-ply,M,Juniors
@@ -154,4 +154,4 @@ DQ,Aleksandr Klochikhin,Александр Клочихин,1977,93,90.72,270,-2
 1,Boris Petrov,Борис Петров,1951,74,73.12,135,100,160,395,SBD,Single-ply,M,Masters 3
 1,Vladimir Matyushevskiy,Владимир Матюшевский,1955,105,103.5,105,140,145,390,SBD,Single-ply,M,Masters 3
 2,Sergey Sologub,Сергей Сологуб,1954,105,95,120,120,130,370,SBD,Single-ply,M,Masters 3
-1,Aleksandr Likholay,Александр Лихолай,1940,74,74,85,65,112.5,262.5,SBD,Single-ply,M,Masters 4
+1,Aleksandr Likholai,Александр Лихолай,1940,74,74,85,65,112.5,262.5,SBD,Single-ply,M,Masters 4
