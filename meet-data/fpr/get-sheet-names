@@ -33,6 +33,7 @@ def getSheetName_xls(file_name):
             else:
                 print("")
 
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print(" Usage: %s original.csv > entries.csv" % sys.argv[0])
@@ -41,4 +42,3 @@ if __name__ == '__main__':
         sys.exit(getSheetName_xlsx(sys.argv[1]))
     else:
         sys.exit(getSheetName_xls(sys.argv[1]))
-

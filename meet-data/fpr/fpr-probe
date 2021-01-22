@@ -188,6 +188,7 @@ def getmeetlist_PKFP(html, main_url):
                 urls.append(url)
     return urls
 
+
 def getmeetlist_MPF(html, main_url):
     soup = BeautifulSoup(html, 'html.parser')
     article = soup.find('article', {'id', 'post-7'})

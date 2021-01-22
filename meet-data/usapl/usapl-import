@@ -111,7 +111,9 @@ states = {
 
 # Returns a (division, equipment) tuple of strings.
 def parsedivision(div):
-    if 'Raw' in div or div.startswith('R-') or 'MR-' in div or 'FR-' in div:
+    if 'Wraps' in div:
+        eq = 'Wraps'  # As of 2021, USAPL has Wraps!
+    elif 'Raw' in div or div.startswith('R-') or 'MR-' in div or 'FR-' in div:
         eq = 'Raw'
     else:
         eq = 'Single-ply'
@@ -120,6 +122,7 @@ def parsedivision(div):
     # Sometimes the divisions are just "M1", when they really mean
     # "both M1a and M1b", and it's impossible to distinguish the two.
     s = div
+    s = s.replace('Raw with Wraps ', 'W-')  # As in "Raw with Wraps Junior"
     s = s.replace('Raw ', 'R-')  # As in "Raw Master 1a"
     s = s.replace('Teen and Junior', 'TJ')
     s = s.replace('Master', 'M')  # As in "Master 1a"
@@ -134,7 +137,6 @@ def parsedivision(div):
     s = s.replace('Police and Fire', 'PF')
     s = s.replace('Military Open', 'MO')
     s = s.replace('Military', 'ML')
-    s = s.replace(' ', '')
     s = s.replace('Female-', 'F-')
     s = s.replace('Male-', 'M-')
     s = s.replace('GuestLifter', 'G')
