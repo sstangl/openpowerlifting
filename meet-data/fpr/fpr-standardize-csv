@@ -113,7 +113,8 @@ def parse_fieldnames(sheet):
             # Wilks/IPF Points
             elif text in ['очки ipf', 'вилкс', 'абс кооф', 'коэф',
                           'очки абс', 'виллк',
-                          'коэф виллс', 'очки по вилксу', 'wilks', 'оч к']:
+                          'коэф виллс', 'очки по вилксу', 'wilks', 'оч к', 'очки ipfgl',
+                          'очки ipf gl']:
                 fieldnames.append('IGNORE')
             elif 'тренер' in text:  # Coach
                 fieldnames.append('IGNORE')
