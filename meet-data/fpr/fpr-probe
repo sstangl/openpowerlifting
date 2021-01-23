@@ -45,6 +45,8 @@ PKFP_URL = 'http://ipf-perm.com/'
 MPF_URL = 'http://moscow-sila.ru/protokoly'
 
 
+BPF_URL = 'http://powerbryansk.ru/protokols.shtml'
+
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -200,6 +202,29 @@ def getmeetlist_MPF(html, main_url):
                 urls.append(url)
     return urls
 
+def getmeetlist_BPF(html, main_url):
+    base_url = main_url.rsplit('/', 1)[0]
+    soup = BeautifulSoup(html, 'html.parser')
+    article = soup.find('td', {'class', 'ver8nn_12'})
+    urls = []
+    for a in article.find_all('a'):
+
+        if a.has_attr('href'):
+            url = a['href']
+            if 'http' in url:
+                continue
+            elif 'euro' in url.lower():
+                continue
+            elif 'world' in url.lower():
+                continue
+            elif 'evrowomen' in url.lower():
+                continue
+            url = base_url + "/" + url
+
+            if url not in urls:
+                urls.append(url)
+    return urls
+
 
 def main():
 
@@ -222,6 +247,10 @@ def main():
 
     html_MPF = oplprobe.gethtml(MPF_URL)
     meetlist = meetlist + getmeetlist_MPF(html_MPF, MPF_URL)
+
+    html_BPF = oplprobe.gethtml(BPF_URL)
+    meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
+
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
