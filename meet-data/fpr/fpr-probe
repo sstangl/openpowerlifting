@@ -47,6 +47,8 @@ MPF_URL = 'http://moscow-sila.ru/protokoly'
 
 BPF_URL = 'http://powerbryansk.ru/protokols.shtml'
 
+PFRR_URL = 'https://don-power.ru/%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
+
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -206,9 +208,9 @@ def getmeetlist_MPF(html, main_url):
 def getmeetlist_BPF(html, main_url):
     base_url = main_url.rsplit('/', 1)[0]
     soup = BeautifulSoup(html, 'html.parser')
-    article = soup.find('td', {'class', 'ver8nn_12'})
+    td = soup.find('td', {'class', 'ver8nn_12'})
     urls = []
-    for a in article.find_all('a'):
+    for a in td.find_all('a'):
 
         if a.has_attr('href'):
             url = a['href']
@@ -222,6 +224,18 @@ def getmeetlist_BPF(html, main_url):
                 continue
             url = base_url + "/" + url
 
+            if url not in urls:
+                urls.append(url)
+    return urls
+
+
+def getmeetlist_PFRR(html, main_url):
+    soup = BeautifulSoup(html, 'html.parser')
+    div = soup.find('div', {'class', 'entry-container'})
+    urls = []
+    for a in div.find_all('a'):
+        if a.has_attr('href'):
+            url = a['href']
             if url not in urls:
                 urls.append(url)
     return urls
@@ -251,6 +265,9 @@ def main():
 
     html_BPF = oplprobe.gethtml(BPF_URL)
     meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
+
+    html_PFRR = oplprobe.gethtml(PFRR_URL)
+    meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
