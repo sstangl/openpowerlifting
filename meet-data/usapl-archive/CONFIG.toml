@@ -217,6 +217,12 @@
     msm = {name="M-SM", min=35, max=38.5, sex="M", equipment="Single-ply"}
     fsm = {name="F-SM", min=35, max=38.5, sex="F", equipment="Single-ply"}
 
+    # Grandmasters
+    mrgm = {name="MR-GM", min=35, max=38.5, sex="M", equipment="Raw"}
+    frgm = {name="FR-GM", min=35, max=38.5, sex="F", equipment="Raw"}
+    mgm = {name="M-GM", min=35, max=38.5, sex="M", equipment="Single-ply"}
+    fgm = {name="F-GM", min=35, max=38.5, sex="F", equipment="Single-ply"}
+
     # Novice
     mrnov = {name="MR-Nov", min=0, max=999, sex="M", equipment="Raw"}
     frnov = {name="FR-Nov", min=0, max=999, sex="F", equipment="Raw"}
