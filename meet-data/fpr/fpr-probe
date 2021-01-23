@@ -202,6 +202,7 @@ def getmeetlist_MPF(html, main_url):
                 urls.append(url)
     return urls
 
+
 def getmeetlist_BPF(html, main_url):
     base_url = main_url.rsplit('/', 1)[0]
     soup = BeautifulSoup(html, 'html.parser')
@@ -250,7 +251,6 @@ def main():
 
     html_BPF = oplprobe.gethtml(BPF_URL)
     meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
-
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
