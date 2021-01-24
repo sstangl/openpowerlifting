@@ -1130,12 +1130,19 @@ pub enum Federation {
     WPChina,
 
     /// World Powerlifting Nauru.
+    #[serde(rename = "WP-Nauru")]
     #[strum(to_string = "WP-Nauru", serialize = "wp-nauru")]
     WPNauru,
 
     /// WP-Niue
+    #[serde(rename = "WP-Niue")]
     #[strum(to_string = "WP-Niue", serialize = "wp-niue")]
     WPNiue,
+
+    /// WP-USA, the drug-tested half of the USPC.
+    #[serde(rename = "WP-USA")]
+    #[strum(to_string = "WP-USA", serialize = "wp-usa")]
+    WPUSA,
 
     /// World Powerlifting Alliance.
     #[strum(to_string = "WPA", serialize = "wpa")]
@@ -1710,6 +1717,7 @@ impl Federation {
             Federation::WPChina => FULLY_TESTED,
             Federation::WPNauru => FULLY_TESTED,
             Federation::WPNiue => FULLY_TESTED,
+            Federation::WPUSA => FULLY_TESTED,
             Federation::WPA => false,
             Federation::WPAGEO => false,
             Federation::WPARUS => false,
@@ -2037,6 +2045,7 @@ impl Federation {
             Federation::WPChina => Some(Country::China),
             Federation::WPNauru => Some(Country::Nauru),
             Federation::WPNiue => Some(Country::Niue),
+            Federation::WPUSA => Some(Country::USA),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Country::Georgia),
             Federation::WPARUS => Some(Country::Russia),
@@ -2434,6 +2443,7 @@ impl Federation {
             Federation::WPChina => Some(Federation::WP),
             Federation::WPNauru => Some(Federation::WP),
             Federation::WPNiue => Some(Federation::WP),
+            Federation::WPUSA => Some(Federation::WP),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Federation::WPA),
             Federation::WPARUS => Some(Federation::WPA),
@@ -2853,6 +2863,7 @@ impl Federation {
             Federation::WPChina => Federation::wp_rules_on(date),
             Federation::WPNauru => Federation::wp_rules_on(date),
             Federation::WPNiue => Federation::wp_rules_on(date),
+            Federation::WPUSA => Federation::wp_rules_on(date),
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPAGEO => PointsSystem::Wilks,
             Federation::WPARUS => PointsSystem::Wilks,
