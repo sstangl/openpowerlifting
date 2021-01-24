@@ -137,9 +137,9 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
 
             elif text in ['жим 1', '1'] and header[i + 3].lower() in ['жим 2', '2']:
-                #assert header[i + 3].lower() in ['жим 2', '2']
-                #assert header[i + 6].lower() in ['жим 3', '3']
-                #assert header[i + 9].lower() in ['рез-т жим', 'рез-т']
+                # assert header[i + 3].lower() in ['жим 2', '2']
+                # assert header[i + 6].lower() in ['жим 3', '3']
+                # assert header[i + 9].lower() in ['рез-т жим', 'рез-т']
                 fieldnames.append('Bench1Kg')
                 fieldnames.append('IGNORE')
                 fieldnames.append('IGNORE')
@@ -163,19 +163,19 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(3)]
             # Rostov
-            elif text in ['приседание'] and header[i + 1] =='':
+            elif text in ['приседание'] and header[i + 1] == '':
                 assert header[i + 2] == ''
                 fieldnames.append('Squat1Kg')
                 fieldnames.append('Squat2Kg')
                 fieldnames.append('Squat3Kg')
                 [next(iterable) for x in range(2)]
-            elif text in ['жим лёжа'] and header[i + 1] =='':
+            elif text in ['жим лёжа'] and header[i + 1] == '':
                 assert header[i + 2] == ''
                 fieldnames.append('Bench1Kg')
                 fieldnames.append('Bench2Kg')
                 fieldnames.append('Bench3Kg')
                 [next(iterable) for x in range(2)]
-            elif text in ['становая тяга'] and header[i + 1] =='':
+            elif text in ['становая тяга'] and header[i + 1] == '':
                 assert header[i + 2] == ''
                 fieldnames.append('Deadlift1Kg')
                 fieldnames.append('Deadlift2Kg')
