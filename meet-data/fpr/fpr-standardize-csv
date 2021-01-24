@@ -91,7 +91,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
             elif 'место' in text or 'мес то' in text or text == 'зан м':
                 fieldnames.append('Place')
-            elif 'фамилия имя' in text:
+            elif any(x in text for x in ['фамилия имя', 'участник']):
                 fieldnames.append('CyrillicName')
             elif any(x in text for x in ['год родж', 'год рожд', 'грожд', 'год рож',
                                          'гр', 'г/р', 'год', 'дата рожд']):
@@ -137,9 +137,9 @@ def parse_fieldnames(sheet):
                 fieldnames.append('IGNORE')
 
             elif text in ['жим 1', '1'] and header[i + 3].lower() in ['жим 2', '2']:
-                assert header[i + 3].lower() in ['жим 2', '2']
-                assert header[i + 6].lower() in ['жим 3', '3']
-                assert header[i + 9].lower() in ['рез-т жим', 'рез-т']
+                #assert header[i + 3].lower() in ['жим 2', '2']
+                #assert header[i + 6].lower() in ['жим 3', '3']
+                #assert header[i + 9].lower() in ['рез-т жим', 'рез-т']
                 fieldnames.append('Bench1Kg')
                 fieldnames.append('IGNORE')
                 fieldnames.append('IGNORE')
@@ -162,6 +162,25 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Bench3Kg')
                 fieldnames.append('Best3BenchKg')
                 [next(iterable) for x in range(3)]
+            # Rostov
+            elif text in ['приседание'] and header[i + 1] =='':
+                assert header[i + 2] == ''
+                fieldnames.append('Squat1Kg')
+                fieldnames.append('Squat2Kg')
+                fieldnames.append('Squat3Kg')
+                [next(iterable) for x in range(2)]
+            elif text in ['жим лёжа'] and header[i + 1] =='':
+                assert header[i + 2] == ''
+                fieldnames.append('Bench1Kg')
+                fieldnames.append('Bench2Kg')
+                fieldnames.append('Bench3Kg')
+                [next(iterable) for x in range(2)]
+            elif text in ['становая тяга'] and header[i + 1] =='':
+                assert header[i + 2] == ''
+                fieldnames.append('Deadlift1Kg')
+                fieldnames.append('Deadlift2Kg')
+                fieldnames.append('Deadlift3Kg')
+                [next(iterable) for x in range(2)]
             elif text in ['прис', 'пр'] or \
                     any(x in text for x in ['рез-т присед', 'резт присед',
                                             'результат присед', 'прис резт',
@@ -181,7 +200,7 @@ def parse_fieldnames(sheet):
                 fieldnames.append('TotalKg')
             elif text == 'нмомер':  # Lot
                 fieldnames.append('IGNORE')
-            elif text == 'абс':  # Absolute Place
+            elif text in ['абс', 'абссумма']:  # Absolute Place
                 fieldnames.append('IGNORE')
 
             # FPR fills their spreadsheets with lots of merged blank columns
