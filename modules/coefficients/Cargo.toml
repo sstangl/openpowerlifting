@@ -10,3 +10,10 @@ edition = "2018"
 
 [dependencies]
 opltypes = { version = "0.1", path = "../opltypes/" }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "benchmark"
+harness = false
