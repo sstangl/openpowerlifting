@@ -24,4 +24,9 @@
     sex = "F"
 
 [exemptions]
+    9901 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Extra weightclasses, fewer age divisions
+    0001 = ["ExemptWeightClassConsistency"]
+    0201 = ["ExemptWeightClassConsistency"] # Extra weightclasses
+    0301 = ["ExemptWeightClassConsistency"] # Extra weightclasses
+    0501 = ["ExemptWeightClassConsistency"] # Extra weightclasses
     1501 = ["ExemptWeightClassConsistency"]
