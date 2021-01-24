@@ -48,9 +48,9 @@ pub fn check_bodyweight_one(
         }
     }
 
+    // Entries in the LifterMap are already sorted by date.
     // Sort the entries by date.
-    let mut entries: Vec<&Entry> = indices.iter().map(|i| meetdata.get_entry(*i)).collect();
-    entries.sort_unstable_by_key(|&e| get_date(e));
+    let entries: Vec<&Entry> = indices.iter().map(|i| meetdata.get_entry(*i)).collect();
 
     let mut prev: &Entry = entries[0];
     for entry in entries.iter().skip(1) {
