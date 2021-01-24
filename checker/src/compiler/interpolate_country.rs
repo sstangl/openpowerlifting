@@ -1,4 +1,4 @@
-//! Implementation of Country interpolation.
+//! Implementation of Country (and State) interpolation.
 
 use colored::*;
 use opltypes::{Country, Username};

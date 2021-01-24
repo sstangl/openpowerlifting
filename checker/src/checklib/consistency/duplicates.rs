@@ -24,8 +24,8 @@ pub fn check_duplicates_one(
     }
 
     let date_sort_closure = |ei_a: &EntryIndex, ei_b: &EntryIndex| {
-        let date_a = get_date(meetdata, &meetdata.get_entry(*ei_a));
-        let date_b = get_date(meetdata, &meetdata.get_entry(*ei_b));
+        let date_a = get_date(&meetdata.get_entry(*ei_a));
+        let date_b = get_date(&meetdata.get_entry(*ei_b));
         date_a.cmp(&date_b)
     };
 

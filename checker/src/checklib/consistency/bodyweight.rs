@@ -50,7 +50,7 @@ pub fn check_bodyweight_one(
 
     // Sort the entries by date.
     let mut entries: Vec<&Entry> = indices.iter().map(|i| meetdata.get_entry(*i)).collect();
-    entries.sort_unstable_by_key(|&e| get_date(meetdata, e));
+    entries.sort_unstable_by_key(|&e| get_date(e));
 
     let mut prev: &Entry = entries[0];
     for entry in entries.iter().skip(1) {
@@ -59,8 +59,8 @@ pub fn check_bodyweight_one(
             continue;
         }
 
-        let prev_date = get_date(meetdata, prev);
-        let this_date = get_date(meetdata, entry);
+        let prev_date = get_date(prev);
+        let this_date = get_date(entry);
 
         let average_per_day = calc_average_percentage_change(prev, entry, prev_date, this_date);
 

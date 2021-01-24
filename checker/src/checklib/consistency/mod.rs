@@ -26,14 +26,8 @@ pub enum ConsistencyResult {
 }
 
 /// Helper for getting the date of an [Entry].
-pub fn get_date(meetdata: &AllMeetData, entry: &Entry) -> Date {
-    if let Some(date) = entry.entrydate {
-        date
-    } else {
-        meetdata
-            .get_meet(entry.index.expect("Unassigned EntryIndex"))
-            .date
-    }
+pub fn get_date(entry: &Entry) -> Date {
+    entry.entrydate
 }
 
 /// Whether the lifter should be skipped for consistency checks.

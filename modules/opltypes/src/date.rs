@@ -21,6 +21,12 @@ use crate::Age;
 #[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
 pub struct Date(u32);
 
+impl Default for Date {
+    fn default() -> Self {
+        Date::from_parts(1900, 01, 01)
+    }
+}
+
 impl Date {
     // The day occupies the rightmost 5 bits: ceil(log2(31)) = 5.
     const DAY_SHIFT: usize = 0;

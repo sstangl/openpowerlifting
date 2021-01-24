@@ -140,7 +140,7 @@ pub struct Entry {
     // do not have the ability to look up the meet date.
     pub birthyearclass: BirthYearClass,
     pub birthdate: Option<Date>,
-    pub entrydate: Option<Date>,
+    pub entrydate: Date,
 
     pub weightclasskg: WeightClassKg,
     pub bodyweightkg: WeightKg,
@@ -2002,6 +2002,7 @@ where
             entries: None,
         });
     }
+    let default_date = meet.map_or_else(|| Date::default(), |m| m.date);
 
     let mut entries: Vec<Entry> = Vec::new();
 
@@ -2019,6 +2020,7 @@ where
         }
 
         let mut entry = Entry::default();
+        entry.entrydate = default_date; // Either a default, or sourced from the meet.csv.
 
         // Check mandatory fields.
         if let Some(idx) = headers.get(Header::Name) {
@@ -2146,7 +2148,9 @@ where
             entry.country = check_column_country(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::EntryDate) {
-            entry.entrydate = check_column_entrydate(&record[idx], line, &mut report);
+            if let Some(date) = check_column_entrydate(&record[idx], line, &mut report) {
+                entry.entrydate = date;
+            }
         }
         if let Some(idx) = headers.get(Header::State) {
             let c = entry.country;
