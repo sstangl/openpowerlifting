@@ -9,7 +9,7 @@ pub fn username_benchmarks(c: &mut Criterion) {
     // Tests the all-ASCII fast path (50 ASCII characters).
     let ascii_name = "1234567890".repeat(5);
     group.throughput(Throughput::Elements(ascii_name.len() as u64));
-    group.bench_("ascii", |b| {
+    group.bench_function("ascii", |b| {
         b.iter(|| {
             Username::from_name(black_box(&ascii_name)).unwrap();
         });

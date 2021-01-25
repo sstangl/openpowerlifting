@@ -398,16 +398,16 @@ dependencies = [
 
 [[package]]
 name = "criterion"
-version = "0.3.3"
+version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "70daa7ceec6cf143990669a04c7df13391d55fb27bd4079d252fca774ba244d8"
+checksum = "ab327ed7354547cc2ef43cbe20ef68b988e70b4b593cbd66a2a61733123a3d23"
 dependencies = [
  "atty",
  "cast",
  "clap",
  "criterion-plot",
  "csv",
- "itertools 0.9.0",
+ "itertools 0.10.0",
  "lazy_static",
  "num-traits",
  "oorandom",
@@ -1464,14 +1464,30 @@ checksum = "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184"
 
 [[package]]
 name = "plotters"
-version = "0.2.15"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d1685fbe7beba33de0330629da9d955ac75bd54f33d7b79f9a895590124f6bb"
+checksum = "45ca0ae5f169d0917a7c7f5a9c1a3d3d9598f18f529dd2b8373ed988efea307a"
 dependencies = [
- "js-sys",
  "num-traits",
+ "plotters-backend",
+ "plotters-svg",
  "wasm-bindgen",
  "web-sys",
+]
+
+[[package]]
+name = "plotters-backend"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b07fffcddc1cb3a1de753caa4e4df03b79922ba43cf882acc1bdd7e8df9f4590"
+
+[[package]]
+name = "plotters-svg"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b38a02e23bd9604b842a812063aec4ef702b57989c37b655254bb61c471ad211"
+dependencies = [
+ "plotters-backend",
 ]
 
 [[package]]
@@ -1819,9 +1835,9 @@ checksum = "388a1df253eca08550bef6c72392cfe7c30914bf41df5269b68cbd6ff8f570a3"
 
 [[package]]
 name = "serde"
-version = "1.0.120"
+version = "1.0.121"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "166b2349061381baf54a58e4b13c89369feb0ef2eaa57198899e2312aac30aab"
+checksum = "6159e3c76cab06f6bc466244d43b35e77e9500cd685da87620addadc2a4c40b1"
 dependencies = [
  "serde_derive",
 ]
@@ -1838,9 +1854,9 @@ dependencies = [
 
 [[package]]
 name = "serde_derive"
-version = "1.0.120"
+version = "1.0.121"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0ca2a8cb5805ce9e3b95435e3765b7b553cecc762d938d409434338386cb5775"
+checksum = "f3fcab8778dc651bc65cfab2e4eb64996f3c912b74002fb379c94517e1f27c46"
 dependencies = [
  "proc-macro2 1.0.24",
  "quote 1.0.8",
