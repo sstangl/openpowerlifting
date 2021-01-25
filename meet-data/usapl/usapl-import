@@ -125,7 +125,8 @@ def parsedivision(div):
     s = s.replace('Raw with Wraps ', 'W-')  # As in "Raw with Wraps Junior"
     s = s.replace('Raw ', 'R-')  # As in "Raw Master 1a"
     s = s.replace('Teen and Junior', 'TJ')
-    s = s.replace('Master', 'M')  # As in "Master 1a"
+    s = s.replace('Master ', 'M')  # As in "Master 1a"
+    s = s.replace('Master', 'M')  # As in "Master1a"
     s = s.replace('Teen', 'T')  # As in "Teen 1"
     s = s.replace('High School', 'HS')
     s = s.replace('Collegiate', 'C')
@@ -138,7 +139,9 @@ def parsedivision(div):
     s = s.replace('Military Open', 'MO')
     s = s.replace('Military', 'ML')
     s = s.replace('Female-', 'F-')
+    s = s.replace('Female - ', 'F-')
     s = s.replace('Male-', 'M-')
+    s = s.replace('Male - ', 'M-')
     s = s.replace('GuestLifter', 'G')
     s = s.replace('Varsity', 'V')
 
