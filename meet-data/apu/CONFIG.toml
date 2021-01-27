@@ -16,15 +16,19 @@
     masters3 = {name = "M3",min=59.5,max=68.5}
     masters4 = {name = "M4",min=69.5,max=999}
 
-
 [weightclasses.IPF_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
 [weightclasses.IPF_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.year2020_IPF_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.IPF_juniorM]
