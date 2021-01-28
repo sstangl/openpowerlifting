@@ -226,6 +226,8 @@ def getmeetlist_BPF(html, main_url):
                 continue
             elif 'ChE' in url:
                 continue
+            elif 'mir_' in url.lower():
+                continue
             url = base_url + "/" + url
 
             if url not in urls:
