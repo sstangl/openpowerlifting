@@ -258,6 +258,10 @@
     1162 = ["ExemptWeightClassConsistency"] # SJr men in 48
     1163 = ["ExemptWeightClassConsistency"] # SJr men in 48
     1164 = ["ExemptWeightClassConsistency"] # No weight classes
+    1170 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
+    1171 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Fewer Para Classes
+    1173 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
+    1174 = ["ExemptWeightClassConsistency"] # Youth Classes
     1203 = ["ExemptWeightClassConsistency"]
     1204 = ["ExemptWeightClassConsistency"] # Youth Classes
     1221 = ["ExemptWeightClassConsistency"] # Youth Classes
