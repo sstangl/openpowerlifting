@@ -49,11 +49,11 @@ BPF_URL = 'http://powerbryansk.ru/protokols.shtml'
 
 PFRR_URL = 'https://don-power.ru/%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
 
-FPMO_URLS = ["https://mo-fp.ru/cat/" \
+FPMO_URLS = ["https://mo-fp.ru/cat/"
              "%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b",
-             "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1" \
+             "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1"
              "%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/page/2",
-             "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1" \
+             "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1"
              "%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/page/3"]
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -253,6 +253,7 @@ def getmeetlist_PFRR(html, main_url):
                 urls.append(url)
     return urls
 
+
 def getmeetlist_FPMO(html, main_url):
     soup = BeautifulSoup(html, 'html.parser')
     div = soup.find('div', {'class', 'content-wrapper'})
@@ -298,7 +299,6 @@ def main():
     for url in FPMO_URLS:
         html_FPMO = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist_FPMO(html_FPMO, url)
-
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
