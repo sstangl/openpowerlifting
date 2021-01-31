@@ -389,6 +389,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[ChinaPA as usize].instagram = "gpachina";
     statuses[DSF as usize].instagram = "danskstyrkeloeftforbund";
     statuses[FFForce as usize].instagram = "ffforce__";
+    statuses[FPO as usize].instagram = "fpo.ry";
     statuses[GPCAUS as usize].instagram = "gpcaustralia";
     statuses[GPCGB as usize].instagram = "gpc_gb";
     statuses[GPCIRL as usize].instagram = "gpcireland";
