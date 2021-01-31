@@ -346,7 +346,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             write_report(&mut handle, report);
         }
     }
-    let lifterdata = result.map;
+    let mut lifterdata = result.map;
     maybe_print_elapsed_for("check_lifterdata()", timing);
 
     // Build a list of every directory containing meet results.
@@ -428,7 +428,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Group entries by lifter.
     let timing = get_instant_if(args.debug_timing);
-    let liftermap = meetdata.create_liftermap();
+    let mut liftermap = meetdata.create_liftermap();
     maybe_print_elapsed_for("create_liftermap()", timing);
 
     // Check for consistency errors for individual lifters.
@@ -485,6 +485,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         if !buildpath.exists() {
             fs::create_dir(&buildpath)?;
         }
+
+        // Right before compilation, perform privacy redaction.
+        compiler::redact(&mut meetdata, &mut liftermap, &mut lifterdata);
 
         if args.compile {
             let timing = get_instant_if(args.debug_timing);

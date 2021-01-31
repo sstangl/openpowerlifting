@@ -11,3 +11,6 @@ pub use make_csv::make_csv;
 
 mod make_onefile_csv;
 pub use make_onefile_csv::make_onefile_csv;
+
+mod redact;
+pub use redact::redact;

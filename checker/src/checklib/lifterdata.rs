@@ -69,6 +69,9 @@ pub struct LifterData {
 
     /// True iff bodyweight consistency checks for this username are disabled.
     pub exempt_bodyweight: bool,
+
+    /// True iff the lifter requested that their name be redacted on the website.
+    pub privacy: bool,
 }
 
 /// Helper function to look for common whitespace errors.
@@ -236,6 +239,62 @@ pub fn load_exemptions(report: &mut Report, map: &mut LifterDataMap) -> Result<(
             None => {
                 let data = LifterData {
                     exempt_bodyweight: true,
+                    ..Default::default()
+                };
+                map.insert(username, data);
+            }
+        }
+    }
+
+    Ok(())
+}
+
+/// Specifies lifters who requested name redaction.
+///
+/// The data exists in `lifter-data/privacy.csv`
+#[derive(Deserialize)]
+struct PrivacyRow {
+    #[serde(rename = "Name")]
+    pub name: String,
+}
+
+/// Checks `lifter-data/privacy.csv`, mutating the LifterDataMap.
+fn check_privacy(
+    reader: &csv::ReaderBuilder,
+    report: &mut Report,
+    map: &mut LifterDataMap,
+) -> Result<(), Box<dyn Error>> {
+    if !report.path.exists() {
+        report.error("File does not exist");
+        return Ok(());
+    }
+
+    let mut rdr = reader.from_path(&report.path)?;
+
+    for (rownum, result) in rdr.deserialize().enumerate() {
+        // Text editors are one-indexed, and the header line was skipped.
+        let line = (rownum as u64) + 2;
+
+        let row: PrivacyRow = result?;
+        let username = match Username::from_name(&row.name) {
+            Ok(s) => s,
+            Err(s) => {
+                report.error_on(line, s);
+                continue;
+            }
+        };
+
+        if has_whitespace_errors(username.as_str()) {
+            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
+        }
+
+        match map.get_mut(&username) {
+            Some(data) => {
+                data.privacy = true;
+            }
+            None => {
+                let data = LifterData {
+                    privacy: true,
                     ..Default::default()
                 };
                 map.insert(username, data);
@@ -470,6 +529,18 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
     // Load exemptions from exemptions.toml.
     let mut report = Report::new(lifterdir.join("exemptions.toml"));
     match load_exemptions(&mut report, &mut map) {
+        Ok(()) => (),
+        Err(e) => {
+            report.error(e);
+        }
+    }
+    if report.has_messages() {
+        reports.push(report)
+    }
+
+    // Check privacy.csv.
+    let mut report = Report::new(lifterdir.join("privacy.csv"));
+    match check_privacy(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);

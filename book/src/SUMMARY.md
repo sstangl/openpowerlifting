@@ -15,6 +15,7 @@
 		- [Linking an Instagram](./getting-started/linking-an-instagram.md)
 		- [Changing a Misspelled Name]()
 		- [Fixing an Equipment Error]()
+		- [Redacting for Privacy](./getting-started/redactions.md)
 	- [Medium Changes]()
 		- [Adding a New Meet]()
 
