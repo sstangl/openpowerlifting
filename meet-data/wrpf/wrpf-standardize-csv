@@ -642,7 +642,7 @@ def standardize_division_age(csv):
         elif 'мастера' in row[idx] or 'master' in row[idx]:
             division = 'Masters'
         elif any(div in row[idx] for div in ['открытая', 'open', 'открыая', 'откртыая',
-                                             'отрытая']):
+                                             'отрытая', 'открытый']):
             division = 'Open'
         elif 'юниор' in row[idx] or 'junior' in row[idx] or 'j' in row[idx]:
             division = 'Juniors 20-23'
