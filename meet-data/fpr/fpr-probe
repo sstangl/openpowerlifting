@@ -14,6 +14,7 @@ except ImportError:
     sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
+    import allpowerlifting_probe
 
 
 MAIN_URLS = [
@@ -37,17 +38,11 @@ SPB_URL = 'http://www.powerliftingfed.spb.ru/protocols'
 
 FPIO_URL = 'http://fpio.org.ru/index.php?menu=7'
 
-NSO_URL = 'http://fp-nso.ru/%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b/'\
-          '%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
+FPKK_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPKK/'
+
+FPK_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPK/'
 
 PKFP_URL = 'http://ipf-perm.com/'
-
-MPF_URL = 'http://moscow-sila.ru/protokoly'
-
-
-BPF_URL = 'http://powerbryansk.ru/protokols.shtml'
-
-PFRR_URL = 'https://don-power.ru/%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
 
 FPMO_URLS = ["https://mo-fp.ru/cat/"
              "%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b",
@@ -55,6 +50,17 @@ FPMO_URLS = ["https://mo-fp.ru/cat/"
              "%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/page/2",
              "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1"
              "%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/page/3"]
+
+BPF_URL = 'http://powerbryansk.ru/protokols.shtml'
+
+PFRR_URL = 'https://don-power.ru/%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
+
+MPF_URL = 'http://moscow-sila.ru/protokoly'
+
+FPVO_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPVO/'
+
+NSO_URL = 'http://fp-nso.ru/%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b/'\
+          '%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -281,8 +287,8 @@ def main():
     # html_FPIO = oplprobe.gethtml(FPIO_URL)
     # meetlist = meetlist + getmeetlist_FPIO(html_FPIO, FPIO_URL)
 
-    html_NSO = oplprobe.gethtml(NSO_URL)
-    meetlist = meetlist + getmeetlist_NSO(html_NSO, NSO_URL)
+    # html_NSO = oplprobe.gethtml(NSO_URL)
+    # meetlist = meetlist + getmeetlist_NSO(html_NSO, NSO_URL)
 
     # html_PKFP = oplprobe.gethtml(PKFP_URL)
     # meetlist = meetlist + getmeetlist_PKFP(html_PKFP, PKFP_URL)
@@ -293,12 +299,16 @@ def main():
     # html_BPF = oplprobe.gethtml(BPF_URL)
     # meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
 
-    html_PFRR = oplprobe.gethtml(PFRR_URL)
-    meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
+    # html_PFRR = oplprobe.gethtml(PFRR_URL)
+    # meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
 
-    for url in FPMO_URLS:
-        html_FPMO = oplprobe.gethtml(url)
-        meetlist = meetlist + getmeetlist_FPMO(html_FPMO, url)
+    # for url in FPMO_URLS:
+    #     html_FPMO = oplprobe.gethtml(url)
+    #     meetlist = meetlist + getmeetlist_FPMO(html_FPMO, url)
+
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPKK_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPK_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPVO_URL)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
