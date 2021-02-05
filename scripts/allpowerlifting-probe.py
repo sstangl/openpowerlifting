@@ -24,17 +24,6 @@ def getmeets(html):
 
     return urls
 
-
-def getenteredurls(feddir):
-    urls = set()
-    for dirname, subdirs, files in os.walk(feddir):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    urls.add(k.strip())
-    return urls
-
-
 def probefederation(fed_url):
     # Get all of the results pages
     result_page = fed_url + 'results/'
