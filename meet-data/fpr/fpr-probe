@@ -274,27 +274,27 @@ def getmeetlist_FPMO(html, main_url):
 def main():
 
     meetlist = []
-    # for url in MAIN_URLS:
-    #     html = oplprobe.gethtml(url)
-    #     meetlist = meetlist + getmeetlist(html, url)
+    for url in MAIN_URLS:
+        html = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist(html, url)
 
-    # html_SPB = oplprobe.gethtml(SPB_URL)
-    # meetlist = meetlist + getmeetlist_SPB(html_SPB, SPB_URL)
+    html_SPB = oplprobe.gethtml(SPB_URL)
+    meetlist = meetlist + getmeetlist_SPB(html_SPB, SPB_URL)
 
-    # html_FPIO = oplprobe.gethtml(FPIO_URL)
-    # meetlist = meetlist + getmeetlist_FPIO(html_FPIO, FPIO_URL)
+    html_FPIO = oplprobe.gethtml(FPIO_URL)
+    meetlist = meetlist + getmeetlist_FPIO(html_FPIO, FPIO_URL)
 
-    # html_NSO = oplprobe.gethtml(NSO_URL)
-    # meetlist = meetlist + getmeetlist_NSO(html_NSO, NSO_URL)
+    html_NSO = oplprobe.gethtml(NSO_URL)
+    meetlist = meetlist + getmeetlist_NSO(html_NSO, NSO_URL)
 
     # html_PKFP = oplprobe.gethtml(PKFP_URL)
     # meetlist = meetlist + getmeetlist_PKFP(html_PKFP, PKFP_URL)
 
-    # html_MPF = oplprobe.gethtml(MPF_URL)
-    # meetlist = meetlist + getmeetlist_MPF(html_MPF, MPF_URL)
+    html_MPF = oplprobe.gethtml(MPF_URL)
+    meetlist = meetlist + getmeetlist_MPF(html_MPF, MPF_URL)
 
-    # html_BPF = oplprobe.gethtml(BPF_URL)
-    # meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
+    html_BPF = oplprobe.gethtml(BPF_URL)
+    meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
 
     # html_PFRR = oplprobe.gethtml(PFRR_URL)
     # meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
@@ -307,8 +307,6 @@ def main():
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
-
-    print(unentered)
 
     oplprobe.print_meets(colour('[FPR]'), unentered)
 
