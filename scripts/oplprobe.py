@@ -7,6 +7,7 @@
 import os
 import sys
 import urllib.request
+import urllib.parse
 
 
 class UnexpectedRedirect(Exception):
@@ -51,6 +52,9 @@ def getunenteredurls(meetlist, enteredmeets):
             variants.add(k.replace("%20", " "))
         if " " in k:
             variants.add(k.replace(" ", "%20"))
+
+        # Add the version with unicode characters converted to the %xx version    
+        variants.add(urllib.parse.unquote(k))
 
     enteredmeets = enteredmeets.union(variants)
 
