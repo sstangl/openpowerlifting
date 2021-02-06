@@ -53,7 +53,7 @@ def getunenteredurls(meetlist, enteredmeets):
         if " " in k:
             variants.add(k.replace(" ", "%20"))
 
-        # Add the version with unicode characters converted to the %xx version    
+        # Add the version with unicode characters converted to the %xx version
         variants.add(urllib.parse.unquote(k))
 
     enteredmeets = enteredmeets.union(variants)
