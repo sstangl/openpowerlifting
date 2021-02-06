@@ -3,6 +3,9 @@
 #
 # Probes for new meets from the FPR
 #
+# URLS that need to be updated yearly:
+# Main FPR
+# RSNOPFKR
 
 from bs4 import BeautifulSoup
 import os
@@ -58,6 +61,30 @@ NSO_URL = 'http://fp-nso.ru/%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%
           '%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
 
 FPYNAO_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPYNAO/'
+
+FPSK_URL = 'http://power.lekks.ru/?page_id=70'
+FPSK_URL2 = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPSK/'
+
+RSNOPFKR_URLS = ['http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2020-%D0%B3%D0%BE%D0%B4-2/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE'
+                 '%D0%BB%D1%8B-2019',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/?page_id=2901&preview=true',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2017-%D0%B3%D0%BE%D0%B4/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2016-%D0%B3%D0%BE%D0%B4/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2015-%D0%B3%D0%BE%D0%B4/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2014-%D0%B3%D0%BE%D0%B4/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2013-%D0%B3%D0%BE%D0%B4/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2012-%D0%B3%D0%BE%D0%B4/',
+                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2011-%D0%B3%D0%BE%D0%B4/']
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -257,15 +284,31 @@ def getmeetlist_PFRR(html, main_url):
     return urls
 
 
-def getmeetlist_FPMO(html, main_url):
+def getmeetlist_FPSK(html, main_url):
+    base_url = main_url.rsplit('/', 1)[0]
     soup = BeautifulSoup(html, 'html.parser')
-    div = soup.find('div', {'class', 'content-wrapper'})
+    div = soup.find('div', {'class', 'entry-content'})
     urls = []
     for a in div.find_all('a'):
         if a.has_attr('href'):
             url = a['href']
-            if 'author' in url:
-                continue
+
+            url = base_url + "/" + url
+            if url not in urls:
+                urls.append(url)
+    return urls
+
+
+def getmeetlist_RSNOPFKR(html, main_url):
+    base_url = main_url.rsplit('/', 1)[0]
+    soup = BeautifulSoup(html, 'html.parser')
+    div = soup.find('div', {'class', 'site-content'})
+    urls = []
+    for a in div.find_all('a'):
+        if a.has_attr('href'):
+            url = a['href']
+
+            url = base_url + "/" + url
             if url not in urls:
                 urls.append(url)
     return urls
@@ -296,14 +339,22 @@ def main():
     html_BPF = oplprobe.gethtml(BPF_URL)
     meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
 
-    # html_PFRR = oplprobe.gethtml(PFRR_URL)
-    # meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
+    html_PFRR = oplprobe.gethtml(PFRR_URL)
+    meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
 
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPKK_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPK_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPMO_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPVO_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPYNAO_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPSK_URL2)
+
+    html_FPSK = oplprobe.gethtml(FPSK_URL)
+    meetlist = meetlist + getmeetlist_FPSK(html_FPSK, FPSK_URL)
+
+    for url in RSNOPFKR_URLS:
+        html_RSNOPFKR = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist_RSNOPFKR(html_RSNOPFKR, url)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
