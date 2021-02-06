@@ -44,12 +44,7 @@ FPK_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPK/'
 
 PKFP_URL = 'http://ipf-perm.com/'
 
-FPMO_URLS = ["https://mo-fp.ru/cat/"
-             "%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b",
-             "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1"
-             "%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/page/2",
-             "https://mo-fp.ru/cat/%d0%bf%d1%80%d0%be%d1"
-             "%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/page/3"]
+FPMO_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPMO/'
 
 BPF_URL = 'http://powerbryansk.ru/protokols.shtml'
 
@@ -61,6 +56,8 @@ FPVO_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPVO/'
 
 NSO_URL = 'http://fp-nso.ru/%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b/'\
           '%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
+
+FPYNAO_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPYNAO/'
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -302,16 +299,16 @@ def main():
     # html_PFRR = oplprobe.gethtml(PFRR_URL)
     # meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
 
-    # for url in FPMO_URLS:
-    #     html_FPMO = oplprobe.gethtml(url)
-    #     meetlist = meetlist + getmeetlist_FPMO(html_FPMO, url)
-
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPKK_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPK_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPMO_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPVO_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPYNAO_URL)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    print(unentered)
 
     oplprobe.print_meets(colour('[FPR]'), unentered)
 

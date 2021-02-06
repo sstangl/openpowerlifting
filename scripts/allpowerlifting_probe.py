@@ -4,7 +4,6 @@
 # Library for probing AllPowerlifting
 #
 
-import os
 from bs4 import BeautifulSoup
 import oplprobe
 
@@ -23,6 +22,7 @@ def getmeets(html):
             urls.append(url)
 
     return urls
+
 
 def probefederation(fed_url):
     # Get all of the results pages
