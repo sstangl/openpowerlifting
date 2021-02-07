@@ -86,6 +86,27 @@ RSNOPFKR_URLS = ['http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%8
                  'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
                  '%D0%BA%D0%BE%D0%BB%D1%8B/2011-%D0%B3%D0%BE%D0%B4/']
 
+SFNRP_URLS = ['https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=0',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=40',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=80',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=120',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=160',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=200',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=240',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=280',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=320',
+              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=360']
+
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -300,7 +321,6 @@ def getmeetlist_FPSK(html, main_url):
 
 
 def getmeetlist_RSNOPFKR(html, main_url):
-    base_url = main_url.rsplit('/', 1)[0]
     soup = BeautifulSoup(html, 'html.parser')
     div = soup.find('div', {'class', 'site-content'})
     urls = []
@@ -308,7 +328,21 @@ def getmeetlist_RSNOPFKR(html, main_url):
         if a.has_attr('href'):
             url = a['href']
 
-            url = base_url + "/" + url
+            if url not in urls:
+                urls.append(url)
+    return urls
+
+
+def getmeetlist_SFNRP(html, main_url):
+    base_url = 'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai'
+    soup = BeautifulSoup(html, 'html.parser')
+    div = soup.find('div', {'class', 'grid_10'})
+    urls = []
+    for a in div.find_all('a'):
+        if a.has_attr('href'):
+            url = a['href']
+
+            url = base_url + url
             if url not in urls:
                 urls.append(url)
     return urls
@@ -355,6 +389,10 @@ def main():
     for url in RSNOPFKR_URLS:
         html_RSNOPFKR = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist_RSNOPFKR(html_RSNOPFKR, url)
+
+    for url in SFNRP_URLS:
+        html_SFNRP = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist_SFNRP(html_SFNRP, url)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)

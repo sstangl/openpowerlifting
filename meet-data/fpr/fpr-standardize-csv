@@ -181,6 +181,21 @@ def parse_fieldnames(sheet):
                 fieldnames.append('Deadlift2Kg')
                 fieldnames.append('Deadlift3Kg')
                 [next(iterable) for x in range(2)]
+            elif text in ['тяга 1'] and header[i + 3].lower() in ['тяга 2']:
+                # assert header[i + 3].lower() in ['тяга 2', '2']
+                # assert header[i + 6].lower() in ['тяга 3', '3']
+                # assert header[i + 9].lower() in ['рез-т тяга', 'рез-т']
+                fieldnames.append('Deadlift1Kg')
+                fieldnames.append('IGNORE')
+                fieldnames.append('IGNORE')
+                fieldnames.append('Deadlift2Kg')
+                fieldnames.append('IGNORE')
+                fieldnames.append('IGNORE')
+                fieldnames.append('Deadlift3Kg')
+                fieldnames.append('IGNORE')
+                fieldnames.append('IGNORE')
+                fieldnames.append('Best3DeadliftKg')
+                [next(iterable) for x in range(9)]
             elif text in ['прис', 'пр'] or \
                     any(x in text for x in ['рез-т присед', 'резт присед',
                                             'результат присед', 'прис резт',
