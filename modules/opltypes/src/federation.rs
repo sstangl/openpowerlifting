@@ -464,6 +464,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-NZ", serialize = "gpc-nz")]
     GPCNZ,
 
+    /// Poland branch of the GPC.
+    #[serde(rename = "GPC-POL")]
+    #[strum(to_string = "GPC-POL", serialize = "gpc-pol")]
+    GPCPOL,
+
     /// Ukrainian branch of the GPC.
     #[serde(rename = "GPC-UKR")]
     #[strum(to_string = "GPC-UKR", serialize = "gpc-ukr")]
@@ -1549,6 +1554,7 @@ impl Federation {
             Federation::GPCISR => false,
             Federation::GPCLAT => false,
             Federation::GPCNZ => false,
+            Federation::GPCPOL => false,
             Federation::GPCUKR => false,
             Federation::GPCUSA => false,
             Federation::GPCRUS => false,
@@ -1885,6 +1891,7 @@ impl Federation {
             Federation::GPCISR => Some(Country::Israel),
             Federation::GPCLAT => Some(Country::Latvia),
             Federation::GPCNZ => Some(Country::NewZealand),
+            Federation::GPCPOL => Some(Country::Poland),
             Federation::GPCUKR => Some(Country::Ukraine),
             Federation::GPCUSA => Some(Country::USA),
             Federation::GPCRUS => Some(Country::Russia),
@@ -2247,6 +2254,7 @@ impl Federation {
             Federation::GPCISR => Some(Federation::GPC),
             Federation::GPCLAT => Some(Federation::GPC),
             Federation::GPCNZ => Some(Federation::GPC),
+            Federation::GPCPOL => Some(Federation::GPC),
             Federation::GPCUKR => Some(Federation::GPC),
             Federation::GPCUSA => Some(Federation::GPC),
             Federation::GPCRUS => Some(Federation::GPC),
@@ -2662,6 +2670,7 @@ impl Federation {
             Federation::GPCISR => PointsSystem::Glossbrenner,
             Federation::GPCLAT => PointsSystem::Glossbrenner,
             Federation::GPCNZ => PointsSystem::Glossbrenner,
+            Federation::GPCPOL => PointsSystem::Glossbrenner,
             Federation::GPCUKR => PointsSystem::Glossbrenner,
             Federation::GPCUSA => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
