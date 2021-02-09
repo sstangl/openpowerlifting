@@ -348,6 +348,10 @@ pub enum Federation {
     #[strum(to_string = "FECHIPO", serialize = "fechipo")]
     FECHIPO,
 
+    /// Federación Nacional de Levantamiento de Potencia, Guatemalan IPF affiliate.
+    #[strum(to_string = "Fedepotencia", serialize = "fedepotencia")]
+    Fedepotencia,
+
     /// Federación Mexicana de Powerlifting A.C., IPF.
     #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
@@ -1528,6 +1532,7 @@ impl Federation {
             Federation::FCST => false,
             Federation::FECAPOLIF => FULLY_TESTED,
             Federation::FECHIPO => FULLY_TESTED,
+            Federation::Fedepotencia => FULLY_TESTED,
             Federation::FEMEPO => FULLY_TESTED,
             Federation::FEPOA => false,
             Federation::FESUPO => FULLY_TESTED,
@@ -1864,6 +1869,7 @@ impl Federation {
             Federation::FCST => Some(Country::Czechia),
             Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FECHIPO => Some(Country::Chile),
+            Federation::Fedepotencia => Some(Country::Guatemala),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
@@ -2227,6 +2233,7 @@ impl Federation {
             Federation::FCST => Some(Federation::GPC),
             Federation::FECAPOLIF => Some(Federation::IPF),
             Federation::FECHIPO => Some(Federation::IPF),
+            Federation::Fedepotencia => Some(Federation::IPF),
             Federation::FEMEPO => Some(Federation::IPF),
             Federation::FEPOA => Some(Federation::GPC),
             Federation::FESUPO => Some(Federation::IPF),
@@ -2643,6 +2650,7 @@ impl Federation {
             Federation::FCST => PointsSystem::Wilks,
             Federation::FECAPOLIF => Federation::ipf_rules_on(date),
             Federation::FECHIPO => Federation::ipf_rules_on(date),
+            Federation::Fedepotencia => Federation::ipf_rules_on(date),
             Federation::FEMEPO => Federation::ipf_rules_on(date),
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
