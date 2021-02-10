@@ -317,7 +317,7 @@ def getmeetlist_FPSK(html, main_url):
         if a.has_attr('href'):
             url = a['href']
 
-            url = base_url + "/" + url
+            url = base_url + url
             if url not in urls:
                 urls.append(url)
     return urls
