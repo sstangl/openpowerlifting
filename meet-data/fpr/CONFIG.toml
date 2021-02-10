@@ -308,6 +308,7 @@
     1299 = ["ExemptWeightClassConsistency"] # Extra SJr Classes
     12001 = ["ExemptWeightClassConsistency"] # Extra SJr Classes
     12003 = ["ExemptWeightClassConsistency"] # Women without weightclasses
+    12004 = ["ExemptWeightClassConsistency"] # SJr 48
     1301 = ["ExemptWeightClassConsistency"]
     1302 = ["ExemptWeightClassConsistency"]
     1303 = ["ExemptWeightClassConsistency"]
@@ -457,6 +458,7 @@
     1698 = ["ExemptWeightClassConsistency"] # Para in standard weightclasses
     16001 = ["ExemptWeightClassConsistency"] # Para in standard weightclasses
     16002 = ["ExemptWeightClassConsistency"] # Para in standard weightclasses
+    16003 = ["ExemptWeightClassConsistency"] # Youth weightclasses
     1705 = ["ExemptWeightClassConsistency"]
     1746 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1761 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
@@ -487,6 +489,7 @@
     18013 = ["ExemptWeightClassConsistency"] # Para lifters in standard weightclasses
     18018 = ["ExemptWeightClassConsistency"] # Para lifters in standard weightclasses
     18024 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
+    18026 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1919 = ["ExemptWeightClassConsistency"]
     1920 = ["ExemptWeightClassConsistency"] # Masters have no weight class
     1922 = ["ExemptWeightClassConsistency"]
@@ -501,6 +504,9 @@
     1990 = ["ExemptWeightClassConsistency"] # Youth Classes
     19010 = ["ExemptWeightClassConsistency"] # Missing weight classes
     19011 = ["ExemptWeightClassConsistency"] # Para in regular weight classes
+    19016 = ["ExemptDivision","ExemptWeightClassConsistency"] # Under 14 division
+    19017 = ["ExemptWeightClassConsistency"] # Youth Classes
+    19019 = ["ExemptWeightClassConsistency"] # No SJr 53
     2028 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     2029 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     2030 = ["ExemptWeightClassConsistency"] # Youth Classes
