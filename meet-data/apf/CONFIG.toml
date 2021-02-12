@@ -251,6 +251,7 @@
     myemaapf = {name ="M_YEM_AAPF",min=0,max=12,equipment="Multi-ply",sex="M",tested="Yes"} #Youth
     msoemaapf = {name ="M_SOEM_AAPF",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Special Olympics
     msoraapf = {name ="M_SOR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
+    msmr3aapf = {name ="M_SMR_3_AAPF",min=50,max=54,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
     mpfraapf = {name ="M_PFR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Police/Fire
     mpfcraapf = {name ="M_PFCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"} #Police/Fire
     mpfesaapf = {name ="M_PFES_AAPF",min=0,max=999,equipment="Single-ply",sex="M",tested="Yes"} #Police/Fire
