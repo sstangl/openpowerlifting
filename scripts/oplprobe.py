@@ -55,7 +55,10 @@ def getunenteredurls(meetlist, enteredmeets):
 
         # Add the version with unicode characters converted to the %xx version
         variants.add(urllib.parse.unquote(k))
-        variants.add(k.decode('idna').encode('utf-8'))
+        try:
+            variants.add(k.decode('idna').encode('utf-8'))
+        except:
+            pass
 
     enteredmeets = enteredmeets.union(variants)
 
