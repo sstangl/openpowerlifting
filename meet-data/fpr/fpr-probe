@@ -322,7 +322,7 @@ def getmeetlist_RSNOPFKR(html, main_url):
 
             if 'wp-login.php?redirect_to=' in url:
                 continue
-       
+
             if url not in urls:
                 urls.append(url)
     return urls
@@ -359,8 +359,8 @@ def main():
     html_NSO = oplprobe.gethtml(NSO_URL)
     meetlist = meetlist + getmeetlist_NSO(html_NSO, NSO_URL)
 
-    html_PKFP = oplprobe.gethtml(PKFP_URL)
-    meetlist = meetlist + getmeetlist_PKFP(html_PKFP, PKFP_URL)
+    # html_PKFP = oplprobe.gethtml(PKFP_URL)
+    # meetlist = meetlist + getmeetlist_PKFP(html_PKFP, PKFP_URL)
 
     html_MPF = oplprobe.gethtml(MPF_URL)
     meetlist = meetlist + getmeetlist_MPF(html_MPF, MPF_URL)
