@@ -17,3 +17,10 @@ serde = "1.0"
 serde_derive = "1.0"
 strum = "0.20"
 strum_macros = "0.20"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "loading"
+harness = false
