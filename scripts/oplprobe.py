@@ -43,6 +43,7 @@ def getunenteredurls(meetlist, enteredmeets):
     # Calculate some variants of the entered meets.
     variants = set()
     for k in enteredmeets:
+
         if 'https://' in k:
             variants.add(k.replace("https://", "http://"))
         if 'http://' in k:
@@ -55,10 +56,13 @@ def getunenteredurls(meetlist, enteredmeets):
 
         # Add the version with unicode characters converted to the %xx version
         variants.add(urllib.parse.unquote(k))
-        try:
-            variants.add(k.decode('idna').encode('utf-8'))
-        except:
-            pass
+
+        # Add the version with unicode converted to idna
+        url_parts = list(urllib.parse.urlsplit(k))
+        url_parts[1] = url_parts[1].encode('idna').decode('utf-8')
+        url_idna = urllib.parse.urlunsplit(url_parts)
+        variants.add(url_idna)
+        variants.add(urllib.parse.unquote(url_idna))
 
     enteredmeets = enteredmeets.union(variants)
 
