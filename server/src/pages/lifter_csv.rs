@@ -58,7 +58,7 @@ fn make_export_row<'a>(
         parent_federation: meet.federation.sanctioning_body(meet.date),
         date: meet.date,
         meet_country: meet.country,
-        meet_state: meet.state.clone(),
+        meet_state: meet.state.as_ref().map(|s| s.to_string()),
         meet_town: meet.town.as_deref(),
         meet_name: &meet.name,
     }
