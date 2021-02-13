@@ -2,6 +2,7 @@
 
 use opltypes::states::*;
 use opltypes::*;
+use smartstring::alias::CompactString;
 
 use crate::yesno::deserialize_yes_no;
 
@@ -17,25 +18,25 @@ use crate::yesno::deserialize_yes_no;
 #[derive(Serialize, Deserialize)]
 pub struct Lifter {
     #[serde(rename(deserialize = "Name"))]
-    pub name: String,
+    pub name: CompactString,
     #[serde(rename(deserialize = "CyrillicName"))]
-    pub cyrillic_name: Option<String>,
+    pub cyrillic_name: Option<CompactString>,
     #[serde(rename(deserialize = "GreekName"))]
-    pub greek_name: Option<String>,
+    pub greek_name: Option<CompactString>,
     #[serde(rename(deserialize = "JapaneseName"))]
-    pub japanese_name: Option<String>,
+    pub japanese_name: Option<CompactString>,
     #[serde(rename(deserialize = "KoreanName"))]
-    pub korean_name: Option<String>,
+    pub korean_name: Option<CompactString>,
     #[serde(rename(deserialize = "Username"))]
     pub username: Username,
     #[serde(rename(deserialize = "Instagram"))]
-    pub instagram: Option<String>,
+    pub instagram: Option<CompactString>,
     #[serde(rename(deserialize = "VKontakte"))]
-    pub vkontakte: Option<String>,
+    pub vkontakte: Option<CompactString>,
     #[serde(rename(deserialize = "Color"))]
-    pub color: Option<String>,
+    pub color: Option<CompactString>,
     #[serde(rename(deserialize = "Flair"))]
-    pub flair: Option<String>,
+    pub flair: Option<CompactString>,
 }
 
 /// The definition of a Meet in the database.
@@ -45,7 +46,7 @@ pub struct Lifter {
 #[derive(Serialize, Deserialize)]
 pub struct Meet {
     #[serde(rename(deserialize = "MeetPath"))]
-    pub path: String,
+    pub path: CompactString,
     #[serde(rename(deserialize = "Federation"))]
     pub federation: Federation,
     #[serde(rename(deserialize = "Date"))]
@@ -53,9 +54,9 @@ pub struct Meet {
     #[serde(rename(deserialize = "MeetCountry"))]
     pub country: Country,
     #[serde(rename(deserialize = "MeetState"))]
-    pub state: Option<String>,
+    pub state: Option<CompactString>,
     #[serde(rename(deserialize = "MeetTown"))]
-    pub town: Option<String>,
+    pub town: Option<CompactString>,
     #[serde(rename(deserialize = "MeetName"))]
     pub name: String,
     #[serde(rename(deserialize = "RuleSet"))]
@@ -86,7 +87,7 @@ pub struct Entry {
     #[serde(rename(deserialize = "Age"))]
     pub age: Age,
     #[serde(rename(deserialize = "Division"))]
-    pub division: Option<String>,
+    pub division: Option<CompactString>,
     #[serde(rename(deserialize = "BodyweightKg"))]
     pub bodyweightkg: WeightKg,
     #[serde(rename(deserialize = "WeightClassKg"))]
