@@ -30,7 +30,7 @@ def getwtcls(classtype, sex, bw):
             assert sex == 'F'
             if bw > 84:
                 return '84+'
-            weights = [0, 43, 47, 52, 57, 63, 72, 84]
+            weights = [0, 43, 47, 52, 57, 63, 69, 76, 84]
     elif classtype == 'wp':
         if sex == 'M':
             if bw > 120:

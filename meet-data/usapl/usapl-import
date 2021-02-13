@@ -148,6 +148,7 @@ def parsedivision(div):
     # Fix Some common mistakes that crop up.
     s = s.replace('SJr', 'SJ')
     s = s.replace('-R', 'R')
+    s = s.replace(' ', '')
 
     if len(s) > 6:
         error("Not sure how to parse division: '%s'. Got '%s'." % (div, s))
