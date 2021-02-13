@@ -56,7 +56,7 @@ pub struct OplDb {
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
 fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<dyn Error>> {
-    let mut vec = Vec::with_capacity(250_000);
+    let mut vec = Vec::with_capacity(1_000_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
     for lifter in rdr.deserialize() {
@@ -70,7 +70,7 @@ fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<dyn Error>> {
 
 /// Reads the `meet.csv` file into a Vec<Meet>.
 fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<dyn Error>> {
-    let mut vec = Vec::with_capacity(15_000);
+    let mut vec = Vec::with_capacity(50_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
     for meet in rdr.deserialize() {
@@ -89,7 +89,7 @@ fn import_entries_csv(
     file: &str,
     meets: &mut Vec<Meet>,
 ) -> Result<(Vec<Entry>, MetaFederationCache), Box<dyn Error>> {
-    let mut vec = Vec::with_capacity(700_000);
+    let mut vec = Vec::with_capacity(3_000_000);
 
     let mut rdr = csv::Reader::from_path(file)?;
     for entry in rdr.deserialize() {
