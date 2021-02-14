@@ -322,6 +322,8 @@ def getmeetlist_RSNOPFKR(html, main_url):
 
             if 'wp-login.php?redirect_to=' in url:
                 continue
+            elif 'respond' in url:
+                continue
 
             if url not in urls:
                 urls.append(url)
