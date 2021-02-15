@@ -55,25 +55,7 @@ FPSK_URL = 'http://power.lekks.ru/?page_id=70'
 FPSK_URL2 = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPSK/'
 
 RSNOPFKR_URLS = ['http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2020-%D0%B3%D0%BE%D0%B4-2/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE'
-                 '%D0%BB%D1%8B-2019',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/?page_id=2901&preview=true',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2017-%D0%B3%D0%BE%D0%B4/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2016-%D0%B3%D0%BE%D0%B4/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2015-%D0%B3%D0%BE%D0%B4/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2014-%D0%B3%D0%BE%D0%B4/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2013-%D0%B3%D0%BE%D0%B4/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2012-%D0%B3%D0%BE%D0%B4/',
-                 'http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2011-%D0%B3%D0%BE%D0%B4/']
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2020-%D0%B3%D0%BE%D0%B4-2/']
 
 SFNRP_URLS = ['https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
               '?limitstart=0',
@@ -323,6 +305,10 @@ def getmeetlist_RSNOPFKR(html, main_url):
             if 'wp-login.php?redirect_to=' in url:
                 continue
             elif 'respond' in url:
+                continue
+            elif 'ipf' in url.lower():
+                continue
+            elif 'epf' in url.lower():
                 continue
 
             if url not in urls:
