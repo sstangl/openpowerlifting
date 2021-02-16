@@ -86,7 +86,7 @@
     ft3 = {name="FT3", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
     mtx = {name="MTX", min=13, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
     ftx = {name="FTX", min=13, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mj = {name="MJ", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mj = {name="MJ", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply", "Unlimited"]}
     fj = {name="FJ", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"]}
     mo = {name="MO", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
     fo = {name="FO", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
