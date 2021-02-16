@@ -78,7 +78,10 @@ SFNRP_URLS = ['https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/p
               'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
               '?limitstart=360']
 
+SBRPF_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/SBRPF/'
+
 FPRME_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPRME/'
+
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -365,6 +368,7 @@ def main():
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPVO_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPYNAO_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPSK_URL2)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(SBRPF_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPRME_URL)
 
     html_FPSK = oplprobe.gethtml(FPSK_URL)
