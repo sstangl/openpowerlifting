@@ -83,7 +83,6 @@ SBRPF_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/SBRPF/'
 FPRME_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPRME/'
 
 
-
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
