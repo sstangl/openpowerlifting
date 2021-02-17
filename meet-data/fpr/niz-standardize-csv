@@ -19,28 +19,6 @@ def die(s):
     sys.exit(1)
 
 
-# Given the array of lines, split it up into an array per-sheet.
-def split_by_sheet(lines):
-    # Skip past the overview.
-    for i in range(len(lines)):
-        if 'Sheet' in lines[i][0]:
-            break
-    assert i < len(lines)
-    assert 'Sheet' in lines[i][0]
-
-    sheetlist = []
-    sheet = None
-
-    for line in lines[i:]:
-        # If this line starts a new sheet, generate a new array.
-        if 'Sheet' in line[0]:
-            sheet = []
-            sheetlist.append(sheet)
-        sheet.append(line)
-
-    return sheetlist
-
-
 # Find the line that contains column information (the line below does also).
 def get_header_linenum(sheet):
     for ii in range(len(sheet)):
@@ -289,9 +267,7 @@ def get_initial_sex(sheet):
 
 # Given a list of lines all of which belong to the same sheet, parse that
 # into an OpenPowerlifting-style CSV.
-def parse_sheet(sheet):
-    assert 'Sheet' in sheet[0][0]
-    assert sheet[0][0].count(':') == 1
+def parse_csv(sheet):
 
     csv = oplcsv.Csv()
 
@@ -348,24 +324,7 @@ def parse_sheet(sheet):
             sex = 'F'
             continue
 
-        if 'Sheet' in text:
-            continue
-
-        if 'Результаты' in text:
-            continue
-        elif 'судейская' in text:
-            continue
-        elif 'Место' in text or 'Фамилия. Имя' in text:  # Another header
-            continue
-        elif 'Абсолютное' in text:  # Skip until we find another header
-            while iterable is not None and not is_header(line):
-                try:
-                    ii = next(iterable)
-                    line = sheet[ii]
-                except StopIteration:
-                    # if StopIteration is raised, break from loop
-                    break
-
+        if 'судейская' in text:
             continue
 
         # Skip lines without a number, I think that these are always not lifter
@@ -598,16 +557,7 @@ def main(filename):
     with open(filename) as fd:
         lines = [x.strip().split(',') for x in fd.readlines()]
 
-    # Split the input filename into sheets, each of which is an independent
-    # CSV.
-    sheetlist = split_by_sheet(lines)
-
-    # Parse each sheet independently, then join them all together into a
-    # single CSV.
-    csv = oplcsv.Csv()
-    for sheet in sheetlist:
-        sheetcsv = parse_sheet(sheet)
-        csv.cat(sheetcsv)
+    csv = parse_csv(lines)
 
     for x in ['Squat1Kg', 'Squat2Kg', 'Squat3Kg', 'Squat4Kg', 'Best3SquatKg',
               'Bench1Kg', 'Bench2Kg', 'Bench3Kg', 'Bench4Kg', 'Best3BenchKg',
