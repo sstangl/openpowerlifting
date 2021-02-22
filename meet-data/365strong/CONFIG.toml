@@ -95,6 +95,7 @@
 
     #Teen divisions, men.
     mt1fspt = {name = "M-T1F-SP-T", min=13, max=15, sex="M", equipment="Single-ply", tested="Yes"}
+    mt1frt = {name = "M-T1F-R-T", min=13, max=15, sex="M", equipment="Raw", tested="Yes"}
     mt1fspx = {name = "M-T1F-SP-X", min=13, max=15, sex="M", equipment="Single-ply"}
     mt1brx = {name = "M-T1B-R-X", min=13, max=15, sex="M", equipment="Raw"}
     mt1prt = {name = "M-T1P-R-T", min=13, max=15, sex="M", equipment="Raw", tested="Yes"}
@@ -107,6 +108,7 @@
     mt3frx = {name = "M-T3F-R-X", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
     mt3frt = {name = "M-T3F-R-T", min=18, max=19, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
     mt3frcx = {name = "M-T3F-RC-X", min=18, max=19, sex="M", equipment="Wraps"}
+    mt3frct = {name = "M-T3F-RC-T", min=18, max=19, sex="M", equipment="Wraps", tested="Yes"}
     mt3fspt = {name = "M-T3F-SP-T", min=18, max=19, sex="M", equipment="Single-ply", tested="Yes"}
     mt3fspx = {name = "M-T3F-SP-X", min=18, max=19, sex="M", equipment="Single-ply"}
     mt3prx = {name = "M-T3P-R-X", min=18, max=19, sex="M", equipment="Raw"}
@@ -115,8 +117,12 @@
     mt3brx = {name = "M-T3B-R-X", min=18, max=19, sex="M", equipment="Raw"}
     mt3brt = {name = "M-T3B-R-T", min=18, max=19, sex="M", equipment="Raw", tested="Yes"}
     mt3drt = {name = "M-T3D-R-T", min=18, max=19, sex="M", equipment="Raw", tested="Yes"}
+    mjfrt = {name = "M-JF-R-T", min=20, max=23, sex="M", equipment="Raw", tested="Yes"}
 
     # Masters divisions, men.
+    msmfrt = {name = "M-SMF-R-T", min=35, max=39, sex="M", equipment="Raw", tested="Yes"}
+    msmbru = {name = "M-SMB-R-U", min=35, max=39, sex="M", equipment="Raw"}
+    msmbspt = {name = "M-SMB-SP-T", min=35, max=39, sex="M", equipment="Single-ply", tested="Yes"}
     mm1frx = {name = "M-M1F-R-X", min=40, max=44, sex="M", equipment="Raw"}
     mm1frcx = {name = "M-M1F-RC-X", min=40, max=44, sex="M", equipment="Wraps"}
     mm1frt = {name = "M-M1F-R-T", min=40, max=44, sex="M", equipment="Raw", tested="Yes"}
@@ -129,6 +135,7 @@
     mm2frx = {name = "M-M2F-R-X", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
     mm2fspx = {name = "M-M2F-SP-X", min=45, max=49, sex="M", equipment="Single-ply"}
     mm2frcx = {name = "M-M2F-RC-X", min=45, max=49, sex="M", equipment="Wraps"}
+    mm2frct = {name = "M-M2F-RC-T", min=45, max=49, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
     mm2brx = {name = "M-M2B-R-X", min=45, max=49, sex="M", equipment="Raw"}
     mm2bru = {name = "M-M2B-R-U", min=45, max=49, sex="M", equipment="Raw"}
     mm2bspx = {name = "M-M2B-SP-X", min=45, max=49, sex="M", equipment="Single-ply"}
@@ -137,13 +144,16 @@
     mm2srx = {name = "M-M2S-R-X", min=45, max=49, sex="M", equipment="Raw"}
     mm2sru = {name = "M-M2S-R-U", min=45, max=49, sex="M", equipment="Raw"}
     mm2drx = {name = "M-M2D-R-X", min=45, max=49, sex="M", equipment="Raw"}
+    mm2dru = {name = "M-M2D-R-U", min=45, max=49, sex="M", equipment="Raw"}
     mm3frx = {name = "M-M3F-R-X", min=50, max=54, sex="M", equipment="Raw"}
+    mm3fru = {name = "M-M3F-R-U", min=50, max=54, sex="M", equipment="Raw"}
     mm3frt = {name = "M-M3F-R-T", min=50, max=54, sex="M", equipment="Raw", tested="Yes"}
     mm3srx = {name = "M-M3S-R-T", min=50, max=54, sex="M", equipment="Raw", tested="Yes"}
     mm3drt = {name = "M-M3D-R-T", min=50, max=54, sex="M", equipment="Raw", tested="Yes"}
     mm3frcx = {name = "M-M3F-RC-X", min=50, max=54, sex="M", equipment="Wraps"}
     mm3frct = {name = "M-M3F-RC-T", min=50, max=54, sex="M", equipment="Wraps", tested="Yes"}
     mm2prx = {name = "M-M2P-R-X", min=45, max=49, sex="M", equipment="Raw"}
+    mm2prt = {name = "M-M2P-R-T", min=45, max=49, sex="M", equipment="Raw", tested="Yes"}
     mm3prx = {name = "M-M3P-R-X", min=50, max=54, sex="M", equipment="Raw"}
     mm3brx = {name = "M-M3B-R-X", min=50, max=54, sex="M", equipment="Raw"}
     mm3bru = {name = "M-M3B-R-U", min=50, max=54, sex="M", equipment="Raw"}
@@ -151,12 +161,15 @@
     mm3bspu = {name = "M-M3B-SP-U", min=50, max=54, sex="M", equipment="Single-ply"}
     mm3bmpx = {name = "M-M3B-MP-X", min=50, max=54, sex="M", equipment=["Multi-ply", "Unlimited"]}
     mm3drx = {name = "M-M3D-R-X", min=50, max=54, sex="M", equipment="Raw"}
-    mm4frx = {name = "M-M4F-R-X", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
-    mm4frcx = {name = "M-M4F-RC-X", min=55, max=59, sex="M", equipment="Wraps"}
-    mm4frct = {name = "M-M4F-RC-T", min=55, max=59, sex="M", equipment="Wraps", tested="Yes"}
+    mm4frx = {name = "M-M4F-R-X", min=55, max=59, sex="M", equipment="Raw"}
+    mm4frt = {name = "M-M4F-R-T", min=55, max=59, sex="M", equipment="Raw", tested="Yes"}
+    mm4frcx = {name = "M-M4F-RC-X", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
+    mm4frct = {name = "M-M4F-RC-T", min=55, max=59, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
     mm4fspt = {name = "M-M4F-SP-T", min=55, max=59, sex="M", equipment="Single-ply", tested="Yes"}
+    mm4fspu = {name = "M-M4F-SP-U", min=55, max=59, sex="M", equipment="Single-ply"}
     mm4prx = {name = "M-M4P-R-X", min=55, max=59, sex="M", equipment="Raw"}
     mm4prt = {name = "M-M4P-R-T", min=55, max=59, sex="M", equipment="Raw", tested="Yes"}
+    mm4sspu = {name = "M-M4S-SP-U", min=55, max=59, sex="M", equipment="Single-ply"}
     mm4brx = {name = "M-M4B-R-X", min=55, max=59, sex="M", equipment="Raw"}
     mm4drx = {name = "M-M4D-R-X", min=55, max=59, sex="M", equipment="Raw"}
     mm4bmpx = {name = "M-M4B-MP-X", min=55, max=59, sex="M", equipment=["Multi-ply", "Unlimited"]}
@@ -184,7 +197,9 @@
     #Military/Police/Fire divisions, men
     mmpffrt = {name = "M-MPFF-R-T", min=0, max=999, sex="M", equipment="Raw", tested="Yes"}
     mmpffru = {name = "M-MPFF-R-U", min=0, max=999, sex="M", equipment="Raw"}
+    mmpfdru = {name = "M-MPFD-R-U", min=0, max=999, sex="M", equipment="Raw"}
     mmpffrct = {name = "M-MPFF-RC-T", min=0, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
+    mmpffrcu = {name = "M-MPFF-RC-U", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     mmpffmpt = {name = "M-MPFF-MP-T", min=0, max=999, sex="M", equipment="Multi-ply", tested="Yes"}
     mmpffrx = {name = "M-MPFF-R-X", min=0, max=999, sex="M", equipment="Raw"}
     mmpffspx = {name = "M-MPFF-SP-X", min=0, max=999, sex="M", equipment="Single-ply"}
@@ -210,9 +225,11 @@
     ft1frt = {name = "F-T1F-R-T", min=13, max=15, sex="F", equipment="Raw", tested="Yes"}
     ft2frcx = {name = "F-T2F-RC-T", min=16, max=17, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
     ft2frct = {name = "F-T2F-RC-X", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
+    ft2frt = {name = "F-T2F-R-T", min=16, max=17, sex="F", equipment="Raw", tested="Yes"}
     ft2brt = {name = "F-T2B-R-T", min=16, max=17, sex="F", equipment="Raw", tested="Yes"}
     ft3frt = {name = "F-T3F-R-T", min=18, max=19, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
     ft3drt = {name = "F-T3D-R-T", min=18, max=19, sex="F", equipment="Raw", tested="Yes"}
+    fjfrct = {name = "F-JF-RC-T", min=20, max=23, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
     fsmfrct = {name = "F-SMF-RC-T", min=35, max=39, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
     fm1frx = {name = "F-M1F-R-X", min=40, max=44, sex="F", equipment="Raw"}
     fm1frt = {name = "F-M1F-R-T", min=40, max=44, sex="F", equipment="Raw", tested="Yes"}
