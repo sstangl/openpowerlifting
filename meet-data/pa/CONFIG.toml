@@ -127,3 +127,4 @@
     1638 = ["ExemptWeightClassConsistency"]
     1712 = ["ExemptWeightClassConsistency"]
     1931 = ["ExemptDivision"] # Age-based masters divisions.
+	2101 = ["ExemptWeightClassConsistency", "ExemptDivision"] # The meet occurred in 2021, but was "for 2020", so the age divisions make no sense.
