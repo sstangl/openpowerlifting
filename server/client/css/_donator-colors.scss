@@ -423,6 +423,13 @@
       #b387b7, #b580b1, #b678ab);
 }
 
+.red_to_blue {
+  $red: #FB3640;
+  $blue: #3B72FF;
+  @include gradient-prereqs($red);
+  background-image: linear-gradient(to right, $red, $blue);
+}
+
 .red_to_orange {
   $red: #FB3640;
   $orange: #FFA200;
