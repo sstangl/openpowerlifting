@@ -18,7 +18,7 @@ strum = "0.20"
 strum_macros = "0.20"
 
 [dev-dependencies]
-criterion = "0.3"
+criterion = { version = "0.3", features = ["html_reports"] }
 serde_json = "1.0"
 
 [[bench]]
