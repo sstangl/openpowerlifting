@@ -12,7 +12,7 @@ edition = "2018"
 opltypes = { version = "0.1", path = "../opltypes/" }
 
 [dev-dependencies]
-criterion = "0.3"
+criterion = { version = "0.3", features = ["html_reports"] }
 
 [[bench]]
 name = "benchmark"
