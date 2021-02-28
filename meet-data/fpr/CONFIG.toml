@@ -27,15 +27,14 @@
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
     sex = "F"
 
-[weightclasses.subjunior_M]
-    classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
-    sex = "M"
-    divisions = ["Sub-Juniors","13-18","Teen"]
+[weightclasses.old_F_1]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
 
 # Extra classes for Teen Under 17 & Teen 17-18
 [weightclasses.spb_subjunior_M]
@@ -57,19 +56,20 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors"]
+    divisions = ["Juniors","Sub-Juniors","13-18","Teen"]
 
 [weightclasses.junior_F]
-    classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors"]
+    divisions = ["Juniors", "Sub-Juniors","13-18","Teen"]
 
-[weightclasses.subjunior_F]
+
+[weightclasses.old_junior_F_1]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
-    divisions = ["Sub-Juniors","13-18","Teen"]
+    divisions = ["Juniors", "Sub-Juniors","13-18","Teen"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
@@ -82,7 +82,7 @@
     sex = "M"
     divisions = ["Sub-Juniors"]
 
-[weightclasses.old_F]
+[weightclasses.old_F_2]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
     date_range = ["0000-01-01","2010-12-31"]
     sex = "F"
@@ -249,6 +249,7 @@
     1075 = ["ExemptWeightClassConsistency"] # Men's 48
     1076 = ["ExemptWeightClassConsistency"] # Men's 48
     1077 = ["ExemptWeightClassConsistency"] # Men's 48
+    1080 = ["ExemptWeightClassConsistency"] # No women's classes
     1106 = ["ExemptWeightClassConsistency"]
     1107 = ["ExemptWeightClassConsistency"]
     1114 = ["ExemptWeightClassConsistency"] # Youth Classes
@@ -354,6 +355,11 @@
     1387 = ["ExemptWeightClassConsistency"] # No SJr 53
     1388 = ["ExemptWeightClassConsistency"] # Masters don't have weightclasses
     1391 = ["ExemptWeightClassConsistency"] # Open 53, Womens 63+
+    1392 = ["ExemptWeightClassConsistency"] # SJr 43,48
+    1393 = ["ExemptWeightClassConsistency"] # SJr 43,48, No women's classes
+    1394 = ["ExemptWeightClassConsistency"] # SJr 43
+    1395 = ["ExemptWeightClassConsistency"] # SJr 43
+    1396 = ["ExemptWeightClassConsistency"] # SJr 43
     1403 = ["ExemptWeightClassConsistency"]
     1406 = ["ExemptWeightClassConsistency"]
     1408 = ["ExemptWeightClassConsistency"]
@@ -393,6 +399,7 @@
     14008 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
     14020 = ["ExemptWeightClassConsistency"] # SJr 48
     14021 = ["ExemptWeightClassConsistency"] # Open 53, Womens 63+
+    14023 = ["ExemptWeightClassConsistency"] # SJr 40,43,48
     1505 = ["ExemptWeightClassConsistency"]
     1509 = ["ExemptWeightClassConsistency"]
     1510 = ["ExemptWeightClassConsistency"]
