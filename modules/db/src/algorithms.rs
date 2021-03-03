@@ -92,15 +92,15 @@ pub fn cmp_squat(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .cmp(&b.highest_squatkg())
         .reverse()
         // If equal, sort by Date, earlier first.
-        .then(
+        .then_with(|| {
             meets[a.meet_id as usize]
                 .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
+                .cmp(&meets[b.meet_id as usize].date)
+        })
         // If equal, sort by Bodyweight, lower first.
-        .then(a.bodyweightkg.cmp(&b.bodyweightkg))
+        .then_with(|| a.bodyweightkg.cmp(&b.bodyweightkg))
         // If for the same lifter on the same day, prefer Entry with largest Total.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+        .then_with(|| a.totalkg.cmp(&b.totalkg).reverse())
 }
 
 /// Defines an `Ordering` of Entries by Bench.
@@ -111,15 +111,15 @@ pub fn cmp_bench(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .cmp(&b.highest_benchkg())
         .reverse()
         // If equal, sort by Date, earlier first.
-        .then(
+        .then_with(|| {
             meets[a.meet_id as usize]
                 .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
+                .cmp(&meets[b.meet_id as usize].date)
+        })
         // If equal, sort by Bodyweight, lower first.
-        .then(a.bodyweightkg.cmp(&b.bodyweightkg))
+        .then_with(|| a.bodyweightkg.cmp(&b.bodyweightkg))
         // If for the same lifter on the same day, prefer Entry with largest Total.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+        .then_with(|| a.totalkg.cmp(&b.totalkg).reverse())
 }
 
 /// Defines an `Ordering` of Entries by Deadlift.
@@ -130,15 +130,15 @@ pub fn cmp_deadlift(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .cmp(&b.highest_deadliftkg())
         .reverse()
         // If equal, sort by Date, earlier first.
-        .then(
+        .then_with(|| {
             meets[a.meet_id as usize]
                 .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
+                .cmp(&meets[b.meet_id as usize].date)
+        })
         // If equal, sort by Bodyweight, lower first.
-        .then(a.bodyweightkg.cmp(&b.bodyweightkg))
+        .then_with(|| a.bodyweightkg.cmp(&b.bodyweightkg))
         // If for the same lifter on the same day, prefer Entry with largest Total.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+        .then_with(|| a.totalkg.cmp(&b.totalkg).reverse())
 }
 
 /// Defines an `Ordering` of Entries by Total.
@@ -149,13 +149,13 @@ pub fn cmp_total(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
         .cmp(&b.totalkg)
         .reverse()
         // If equal, sort by Date, earlier first.
-        .then(
+        .then_with(|| {
             meets[a.meet_id as usize]
                 .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
+                .cmp(&meets[b.meet_id as usize].date)
+        })
         // If equal, sort by Bodyweight, lower first.
-        .then(a.bodyweightkg.cmp(&b.bodyweightkg))
+        .then_with(|| a.bodyweightkg.cmp(&b.bodyweightkg))
 }
 
 /// Defines a generic `Ordering` of Entries by some points.
@@ -169,13 +169,13 @@ fn cmp_generic_points(meets: &[Meet], a: &Entry, b: &Entry, system: PointsSystem
         .cmp(&b_points)
         .reverse()
         // If equal, sort by Date, earlier first.
-        .then(
+        .then_with(|| {
             meets[a.meet_id as usize]
                 .date
-                .cmp(&meets[b.meet_id as usize].date),
-        )
+                .cmp(&meets[b.meet_id as usize].date)
+        })
         // If that's equal too, sort by Total, highest first.
-        .then(a.totalkg.cmp(&b.totalkg).reverse())
+        .then_with(|| a.totalkg.cmp(&b.totalkg).reverse())
 }
 
 /// Defines an `Ordering` of Entries by McCulloch points.
