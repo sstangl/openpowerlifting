@@ -186,6 +186,7 @@
     0843 = ["ExemptWeightClassConsistency"] # No women's 44
     0845 = ["ExemptWeightClassConsistency"] # Youth Classes
     0850 = ["ExemptWeightClassConsistency"] # No women's 44
+    0855 = ["ExemptWeightClassConsistency"] # Non-standard weightclasses
     0901 = ["ExemptWeightClassConsistency"]
     0903 = ["ExemptWeightClassConsistency"]
     0910 = ["ExemptWeightClassConsistency"]
@@ -213,6 +214,7 @@
     0962 = ["ExemptWeightClassConsistency"] # Men's 48
     0963 = ["ExemptWeightClassConsistency"] # Men's 48
     0964 = ["ExemptWeightClassConsistency"] # No women's 40kg
+    0965 = ["ExemptWeightClassConsistency"] # Non-standard weightclasses
     1001 = ["ExemptWeightClassConsistency"]
     1002 = ["ExemptWeightClassConsistency"]
     1005 = ["ExemptWeightClassConsistency"] # Fewer weight classes
@@ -473,6 +475,10 @@
     16002 = ["ExemptWeightClassConsistency"] # Para in standard weightclasses
     16003 = ["ExemptWeightClassConsistency"] # Youth weightclasses
     16014 = ["ExemptWeightClassConsistency"] # Youth weightclasses
+    16027 = ["ExemptWeightClassConsistency"] # No women's 57
+    16028 = ["ExemptWeightClassConsistency"] # No weightclasses
+    16032 = ["ExemptWeightClassConsistency"] # No weightclasses
+    16033 = ["ExemptWeightClassConsistency"] # No weightclasses
     1705 = ["ExemptWeightClassConsistency"]
     1746 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1761 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
@@ -493,6 +499,7 @@
     17004 = ["ExemptWeightClassConsistency"] # Para in standard weightclasses
     17007 = ["ExemptWeightClassConsistency"] # Para in standard weightclasses
     17008 = ["ExemptWeightClassConsistency"] # Fewer weight classes,Missing weight classes
+    17034 = ["ExemptWeightClassConsistency"] # No men's 59
     1804 = ["ExemptWeightClassConsistency"]
     1813 = ["ExemptWeightClassConsistency"] # 53s in Open
     1876 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
