@@ -357,13 +357,13 @@ pub struct LogLinearTimeCache {
     /// List of all non-DQ Female entry indices by LifterID.
     pub female: NonSortedNonUnique,
 
+    pub year2021: NonSortedNonUnique,
     pub year2020: NonSortedNonUnique,
     pub year2019: NonSortedNonUnique,
     pub year2018: NonSortedNonUnique,
     pub year2017: NonSortedNonUnique,
     pub year2016: NonSortedNonUnique,
     pub year2015: NonSortedNonUnique,
-    pub year2014: NonSortedNonUnique,
 }
 
 impl LogLinearTimeCache {
@@ -397,6 +397,9 @@ impl LogLinearTimeCache {
             male: Self::filter_entries(entries, |e| e.sex == Sex::M),
             female: Self::filter_entries(entries, |e| e.sex == Sex::F),
 
+            year2021: Self::filter_entries(entries, |e| {
+                meets[e.meet_id as usize].date.year() == 2021
+            }),
             year2020: Self::filter_entries(entries, |e| {
                 meets[e.meet_id as usize].date.year() == 2020
             }),
@@ -415,22 +418,19 @@ impl LogLinearTimeCache {
             year2015: Self::filter_entries(entries, |e| {
                 meets[e.meet_id as usize].date.year() == 2015
             }),
-            year2014: Self::filter_entries(entries, |e| {
-                meets[e.meet_id as usize].date.year() == 2014
-            }),
         }
     }
 
     /// Looks up a year cache by integer.
     pub fn get_year_cache(&self, year: u32) -> Option<&NonSortedNonUnique> {
         match year {
+            2021 => Some(&self.year2021),
             2020 => Some(&self.year2020),
             2019 => Some(&self.year2019),
             2018 => Some(&self.year2018),
             2017 => Some(&self.year2017),
             2016 => Some(&self.year2016),
             2015 => Some(&self.year2015),
-            2014 => Some(&self.year2014),
             _ => None,
         }
     }
