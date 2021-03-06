@@ -48,7 +48,7 @@ the changes back so the entire powerlifting community may benefit.
 Install dependencies:
 
 ```bash
-sudo dnf install make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js cmake
+sudo dnf install make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js
 ```
 
 Install the "nightly" version of the Rust programming language using `rustup`:
@@ -76,7 +76,7 @@ cargo run --release
 Follow the instructions for Fedora, but use this alternate command for installing dependencies:
 
 ```bash
-sudo apt-get install curl make npm python3-bs4 flake8 ansible parallel uglifyjs cmake
+sudo apt-get install curl make npm python3-bs4 flake8 ansible parallel uglifyjs
 ```
 
 
