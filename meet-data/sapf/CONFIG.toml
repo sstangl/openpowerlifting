@@ -28,6 +28,7 @@
 	mm4 = {name="M-M4", min=69.5, max=999, sex="M", equipment="Single-ply"}
 
 	fro = {name="FR-O", min=0, max=999, sex="F", equipment="Raw"}
+	fry = {name="FR-Y", min=0, max=13, sex="F", equipment="Raw"}
 	frsj = {name="FR-SJ", min=0, max=17.5, sex="F", equipment="Raw"}
 	frjr = {name="FR-Jr", min=0, max=22.5, sex="F", equipment="Raw"}
 	frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
