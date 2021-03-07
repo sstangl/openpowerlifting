@@ -11,6 +11,9 @@
     div2 = {name="Div 2", min=0, max=999, sex="F", equipment="Single-ply"}
     div3 = {name="Div 3", min=0, max=999, sex="F", equipment="Single-ply"}
 
+	# Regions (I'm pretty sure these are errors).
+    reg4 = {name="Region 4", min=0, max=999, sex="F", equipment="Single-ply"}
+
     # Sometimes boys are listed in THSWPA for some reason...
     boys = {name="Boys", min=13, max=19, sex="M", equipment="Single-ply"}
 
