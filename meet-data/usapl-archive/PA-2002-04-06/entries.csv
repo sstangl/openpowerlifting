@@ -1,24 +1,24 @@
 Sex,Name,State,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
 F,Nicole Orgal,PA,48,F-T3,62.6,29.94,67.59,160.12,SBD,Single-ply,1
 F,Janel Brown,PA,52,F-O,115.21,64.86,155.13,335.2,SBD,Single-ply,1
-F,Phyllis Racek,PA,56,F-M1,112.49,62.6,122.47,297.56,SBD,Single-ply,1
+F,Phyllis Racek,PA,56,F-M1a,112.49,62.6,122.47,297.56,SBD,Single-ply,1
 F,Theresa Kunsman,PA,67.5,F-O,142.43,97.52,172.37,412.32,SBD,Single-ply,1
 F,Kayla Coan,PA,75,F-T3,92.53,59.87,110.22,262.63,SBD,Single-ply,1
 F,Elizabeth Brown,PA,75,F-O,110.22,52.62,140.16,303,SBD,Single-ply,1
-F,Kim Newman,PA,82.5,F-M1,94.8,57.61,112.49,264.9,SBD,Single-ply,1
+F,Kim Newman,PA,82.5,F-M1a,94.8,57.61,112.49,264.9,SBD,Single-ply,1
 M,Robert Pabon,PA,52,M-T1,87.54,64.86,107.5,259.91,SBD,Single-ply,1
-M,Steve Snyder #1,PA,56,M-M1,167.38,87.54,195.04,449.96,SBD,Single-ply,1
+M,Steve Snyder #1,PA,56,M-M1a,167.38,87.54,195.04,449.96,SBD,Single-ply,1
 M,Steve Snyder #1,PA,56,M-O,167.38,87.54,195.04,449.96,SBD,Single-ply,1
 M,Carl Lutkowski,PA,60,M-T2,145.15,82.55,142.43,370.13,SBD,Single-ply,1
-M,Jim Kavarnos,PA,60,M-M1,102.51,102.51,152.41,357.43,SBD,Single-ply,1
+M,Jim Kavarnos,PA,60,M-M1a,102.51,102.51,152.41,357.43,SBD,Single-ply,1
 M,Gary Teeter,PA,60,M-O,130.18,120.2,140.16,390.54,SBD,Single-ply,2
 M,Eric Kupperstein,MA,60,M-O,239.95,120.2,239.95,600.1,SBD,Single-ply,1
 M,Chris Strohl,PA,60,M-T2,125.19,67.59,145.15,337.93,SBD,Single-ply,2
 M,Loren Mangino,PA,67.5,M-T2,172.37,147.42,215,534.79,SBD,Single-ply,2
 M,Matt Allio,PA,67.5,M-T2,172.37,92.53,182.34,447.24,SBD,Single-ply,4
 M,Joseph Perez,PA,67.5,M-T2,147.42,97.52,150.14,395.08,SBD,Single-ply,5
-M,David Lehman,PA,67.5,M-M1,104.78,112.49,170.1,387.37,SBD,Single-ply,1
-M,Alfred Senfonte,PA,67.5,M-M2,24.95,150.14,24.95,200.03,SBD,Single-ply,1
+M,David Lehman,PA,67.5,M-M1a,104.78,112.49,170.1,387.37,SBD,Single-ply,1
+M,Alfred Senfonte,PA,67.5,M-M1b,24.95,150.14,24.95,200.03,SBD,Single-ply,1
 M,Loren Mangino,PA,67.5,M-O,172.37,147.42,215,534.79,SBD,Single-ply,1
 M,Ralph Caputo,PA,67.5,M-O,182.34,107.5,24.95,314.79,SBD,Single-ply,2
 M,Caleb Williams #1,PA,67.5,M-T2,237.68,117.48,234.96,590.12,SBD,Single-ply,1
@@ -37,8 +37,8 @@ M,James Adams Jr,PA,82.5,M-C,160.12,104.78,162.39,427.28,SBD,Single-ply,1
 M,Serio Lopresti,PA,82.5,M-T2,175.09,130.18,200.03,505.3,SBD,Single-ply,1
 M,Sergio LoPresti,PA,82.5,M-T2,175.09,84.82,170.1,430.01,SBD,Single-ply,2
 M,Jonathan Bartell,PA,82.5,M-Jr,,,,,SBD,Single-ply,DQ
-M,Anthony Scopelliti,PA,82.5,M-M2,99.79,120.2,125.19,345.18,SBD,Single-ply,1
-M,Jeff Fremont,PA,82.5,M-M4,137.44,125.19,137.44,400.07,SBD,Single-ply,1
+M,Anthony Scopelliti,PA,82.5,M-M1b,99.79,120.2,125.19,345.18,SBD,Single-ply,1
+M,Jeff Fremont,PA,82.5,M-M2b,137.44,125.19,137.44,400.07,SBD,Single-ply,1
 M,Robert Wagner,PA,82.5,M-O,340.19,190.06,299.82,830.07,SBD,Single-ply,1
 M,Jim Brown,PA,82.5,M-O,254.92,185.07,242.67,682.66,SBD,Single-ply,2
 M,Terry Dickey,PA,82.5,M-O,215,175.09,227.7,617.79,SBD,Single-ply,4
@@ -51,9 +51,9 @@ M,Adam Williams #6,PA,90,M-T2,102.51,120.2,125.19,347.91,SBD,Single-ply,1
 M,Gleb Epelbaum,PA,90,M-Jr,262.63,157.4,277.6,697.63,SBD,Single-ply,1
 M,Kris Semon,PA,90,M-Jr,242.67,172.37,262.63,677.67,SBD,Single-ply,2
 M,Jonathan Bartell,PA,90,M-Jr,152.41,172.37,180.08,504.85,SBD,Single-ply,3
-M,Jerry Spence,PA,90,M-M2,222.71,155.13,229.97,607.81,SBD,Single-ply,1
-M,Joseph Nealis,PA,90,M-M3,147.42,152.41,227.7,527.53,SBD,Single-ply,1
-M,Claude Welcome,PA,90,M-M3,59.87,59.87,59.87,179.62,SBD,Single-ply,2
+M,Jerry Spence,PA,90,M-M1b,222.71,155.13,229.97,607.81,SBD,Single-ply,1
+M,Joseph Nealis,PA,90,M-M2a,147.42,152.41,227.7,527.53,SBD,Single-ply,1
+M,Claude Welcome,PA,90,M-M2a,59.87,59.87,59.87,179.62,SBD,Single-ply,2
 M,Frank Schuster,PA,90,M-O,170.1,137.44,200.03,507.57,SBD,Single-ply,3
 M,Cliff Dickey,PA,90,M-O,,,,,SBD,Single-ply,DQ
 M,Troy Gibson,NY,90,M-O,277.6,202.3,272.61,752.51,SBD,Single-ply,1
@@ -76,17 +76,17 @@ M,Stephen Boranski,PA,100,M-T2,130.18,172.37,205.02,507.57,SBD,Single-ply,4
 M,Chris Hoover,PA,110,M-T1,227.7,160.12,229.97,617.79,SBD,Single-ply,1
 M,Nate McClaine,PA,110,M-T1,167.38,125.19,197.31,489.88,SBD,Single-ply,3
 M,Travis Smith,PA,110,M-T1,102.51,97.52,152.41,352.44,SBD,Single-ply,4
-M,Rick Davis,PA,110,M-M1,304.81,150.14,309.8,764.76,SBD,Single-ply,1
-M,Bradley Wagner,PA,110,M-M1,259.91,175.09,272.61,707.6,SBD,Single-ply,3
-M,Robert Shay,MA,110,M-M2,237.68,165.11,212.28,615.07,SBD,Single-ply,1
-M,Billy Grippo,PA,110,M-M1,167.38,175.09,195.04,537.51,SBD,Single-ply,5
-M,Victory Holloway,PA,110,M-M3,182.34,190.06,160.12,532.52,SBD,Single-ply,2
-M,David Harris,PA,110,M-M3,150.14,182.34,140.16,472.64,SBD,Single-ply,3
-M,Rick Davis,PA,110,M-M1,304.81,150.14,309.8,764.76,SBD,Single-ply,2
+M,Rick Davis,PA,110,M-M1a,304.81,150.14,309.8,764.76,SBD,Single-ply,1
+M,Bradley Wagner,PA,110,M-M1a,259.91,175.09,272.61,707.6,SBD,Single-ply,3
+M,Robert Shay,MA,110,M-M1b,237.68,165.11,212.28,615.07,SBD,Single-ply,1
+M,Billy Grippo,PA,110,M-M1a,167.38,175.09,195.04,537.51,SBD,Single-ply,5
+M,Victory Holloway,PA,110,M-M2a,182.34,190.06,160.12,532.52,SBD,Single-ply,2
+M,David Harris,PA,110,M-M2a,150.14,182.34,140.16,472.64,SBD,Single-ply,3
+M,Rick Davis,PA,110,M-M1a,304.81,150.14,309.8,764.76,SBD,Single-ply,2
 M,Joe Hirsch,PA,110,M-O,277.6,205.02,269.89,752.51,SBD,Single-ply,1
 M,Tom Skelly,PA,110,M-O,272.61,185.07,254.92,712.59,SBD,Single-ply,2
-M,Bradley Wagner,PA,110,M-M1,259.91,175.09,272.61,707.6,SBD,Single-ply,4
-M,Frank Panaro,NY,110,M-M3,249.93,137.44,274.88,662.24,SBD,Single-ply,1
+M,Bradley Wagner,PA,110,M-M1a,259.91,175.09,272.61,707.6,SBD,Single-ply,4
+M,Frank Panaro,NY,110,M-M2a,249.93,137.44,274.88,662.24,SBD,Single-ply,1
 M,Arte Knute,PA,110,M-T3,232.69,147.42,215,595.11,SBD,Single-ply,1
 M,Kain Martin,NY,110,M-T1,192.32,137.44,192.32,522.08,SBD,Single-ply,2
 M,Steve Balough,PA,125,M-T2,190.06,142.43,205.02,537.51,SBD,Single-ply,3
