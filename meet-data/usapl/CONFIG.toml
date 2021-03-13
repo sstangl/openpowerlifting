@@ -166,26 +166,26 @@
     fwtj = {name="FW-TJ", min=14, max=23, sex="F", equipment="Wraps"}
     fwsj = {name="FW-SJ", min=14, max=19, sex="F", equipment="Wraps"}
     fwjr = {name="FW-Jr", min=20, max=23, sex="F", equipment="Wraps"}
-    fwm1a = {name="FW-F1a", min=39.5, max=43.5, sex="M", equipment="Wraps"}
-    fwm1b = {name="FW-F1b", min=44.5, max=48.5, sex="M", equipment="Wraps"}
-    fwm2a = {name="FW-F2a", min=49.5, max=53.5, sex="M", equipment="Wraps"}
-    fwm2b = {name="FW-F2b", min=54.5, max=58.5, sex="M", equipment="Wraps"}
-    fwm3a = {name="FW-F3a", min=59.5, max=63.5, sex="M", equipment="Wraps"}
-    fwm3b = {name="FW-F3b", min=64.5, max=68.5, sex="M", equipment="Wraps"}
-    fwm4a = {name="FW-F4a", min=69.5, max=73.5, sex="M", equipment="Wraps"}
-    fwm4b = {name="FW-F4b", min=74.5, max=78.5, sex="M", equipment="Wraps"}
-    fwm5a = {name="FW-F5a", min=79.5, max=83.5, sex="M", equipment="Wraps"}
-    fwm5b = {name="FW-F5b", min=84.5, max=88.5, sex="M", equipment="Wraps"}
-    fwm6a = {name="FW-F6a", min=89.5, max=93.5, sex="M", equipment="Wraps"}
-    fwm6b = {name="FW-F6b", min=94.5, max=98.5, sex="M", equipment="Wraps"}
-    fwm = {name="FW-F", min=39.5, max=999, sex="M", equipment="Wraps"}
-    fwm1 = {name="FW-F1", min=39.5, max=48.5, sex="M", equipment="Wraps"}
-    fwm2 = {name="FW-F2", min=49.5, max=58.5, sex="M", equipment="Wraps"}
-    fwm3 = {name="FW-F3", min=59.5, max=68.5, sex="M", equipment="Wraps"}
-    fwm4 = {name="FW-F4", min=69.5, max=78.5, sex="M", equipment="Wraps"}
-    fwm5 = {name="FW-F5", min=79.5, max=88.5, sex="M", equipment="Wraps"}
-    fwm6 = {name="FW-F6", min=89.5, max=98.5, sex="M", equipment="Wraps"}
-    fwm7 = {name="FW-F7", min=99.5, max=999, sex="M", equipment="Wraps"}
+    fwm1a = {name="FW-M1a", min=39.5, max=43.5, sex="F", equipment="Wraps"}
+    fwm1b = {name="FW-M1b", min=44.5, max=48.5, sex="F", equipment="Wraps"}
+    fwm2a = {name="FW-M2a", min=49.5, max=53.5, sex="F", equipment="Wraps"}
+    fwm2b = {name="FW-M2b", min=54.5, max=58.5, sex="F", equipment="Wraps"}
+    fwm3a = {name="FW-M3a", min=59.5, max=63.5, sex="F", equipment="Wraps"}
+    fwm3b = {name="FW-M3b", min=64.5, max=68.5, sex="F", equipment="Wraps"}
+    fwm4a = {name="FW-M4a", min=69.5, max=73.5, sex="F", equipment="Wraps"}
+    fwm4b = {name="FW-M4b", min=74.5, max=78.5, sex="F", equipment="Wraps"}
+    fwm5a = {name="FW-M5a", min=79.5, max=83.5, sex="F", equipment="Wraps"}
+    fwm5b = {name="FW-M5b", min=84.5, max=88.5, sex="F", equipment="Wraps"}
+    fwm6a = {name="FW-M6a", min=89.5, max=93.5, sex="F", equipment="Wraps"}
+    fwm6b = {name="FW-M6b", min=94.5, max=98.5, sex="F", equipment="Wraps"}
+    fwm = {name="FW-M", min=39.5, max=999, sex="F", equipment="Wraps"}
+    fwm1 = {name="FW-M1", min=39.5, max=48.5, sex="F", equipment="Wraps"}
+    fwm2 = {name="FW-M2", min=49.5, max=58.5, sex="F", equipment="Wraps"}
+    fwm3 = {name="FW-M3", min=59.5, max=68.5, sex="F", equipment="Wraps"}
+    fwm4 = {name="FW-M4", min=69.5, max=78.5, sex="F", equipment="Wraps"}
+    fwm5 = {name="FW-M5", min=79.5, max=88.5, sex="F", equipment="Wraps"}
+    fwm6 = {name="FW-M6", min=89.5, max=98.5, sex="F", equipment="Wraps"}
+    fwm7 = {name="FW-M7", min=99.5, max=999, sex="F", equipment="Wraps"}
     fwg = {name="FW-G", min=0, max=999, sex="F", equipment="Wraps", place="G"}
 
     # Unofficial divisions, Wraps Mx. (USAPL hasn't agreed on a code yet.)
