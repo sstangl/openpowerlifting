@@ -243,7 +243,8 @@
 
 [exemptions]
     6401 = ["ExemptWeightClassConsistency"]
-    7801 = ["ExemptWeightClassConsistency"] # Old divisions
+    7801 = ["ExemptWeightClassConsistency"] # Old weight classes
+    7802 = ["ExemptWeightClassConsistency"] # Old weight classes
     0001 = ["ExemptWeightClassConsistency"]
     0206 = ["ExemptWeightClassConsistency"] # T 14-15 in 44 class
     0207 = ["ExemptWeightClassConsistency"] # Junior Olympics
