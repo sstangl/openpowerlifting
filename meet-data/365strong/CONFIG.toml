@@ -120,6 +120,7 @@
     mt3brt = {name = "M-T3B-R-T", min=18, max=19, sex="M", equipment="Raw", tested="Yes"}
     mt3drt = {name = "M-T3D-R-T", min=18, max=19, sex="M", equipment="Raw", tested="Yes"}
     mjfrt = {name = "M-JF-R-T", min=20, max=23, sex="M", equipment="Raw", tested="Yes"}
+    mjbrx = {name = "M-JB-R-X", min=20, max=23, sex="M", equipment="Raw"}
     mjfrcu = {name = "M-JF-RC-U", min=20, max=23, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
     mjprt = {name = "M-JP-R-T", min=20, max=23, sex="M", equipment="Raw", tested="Yes"}
 
@@ -148,7 +149,8 @@
     mm2bspx = {name = "M-M2B-SP-X", min=45, max=49, sex="M", equipment="Single-ply"}
     mm2bspt = {name = "M-M2B-SP-T", min=45, max=49, sex="M", equipment="Single-ply", tested="Yes"}
     mm2bspu = {name = "M-M2B-SP-U", min=45, max=49, sex="M", equipment="Single-ply"}
-    mm2bmpx = {name = "M-M2B-MP-U", min=45, max=49, sex="M", equipment="Multi-ply"}
+    mm2bmpu = {name = "M-M2B-MP-U", min=45, max=49, sex="M", equipment="Multi-ply"}
+    mm2bmpx = {name = "M-M2B-MP-X", min=45, max=49, sex="M", equipment="Multi-ply"}
     mm2srx = {name = "M-M2S-R-X", min=45, max=49, sex="M", equipment="Raw"}
     mm2sru = {name = "M-M2S-R-U", min=45, max=49, sex="M", equipment="Raw"}
     mm2drx = {name = "M-M2D-R-X", min=45, max=49, sex="M", equipment="Raw"}
