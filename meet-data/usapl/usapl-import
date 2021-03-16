@@ -151,8 +151,6 @@ def parsedivision(div):
     s = s.replace('-W', 'W')
     s = s.replace(' ', '')
 
-    if len(s) > 6:
-        error("Not sure how to parse division: '%s'. Got '%s'." % (div, s))
     return (s, eq)
 
 

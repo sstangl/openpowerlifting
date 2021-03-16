@@ -376,6 +376,14 @@
     mso = {name="M-SO", min=0, max=999, sex="M", equipment="Single-ply"}
     fso = {name="F-SO", min=0, max=999, sex="F", equipment="Single-ply"}
 
+	# Adaptive Athletes.
+    mraa = {name="MR-AA", min=0, max=999, sex="M", equipment="Raw"}
+    fraa = {name="FR-AA", min=0, max=999, sex="F", equipment="Raw"}
+    mwaa = {name="MW-AA", min=0, max=999, sex="M", equipment="Wraps"}
+    fwaa = {name="FW-AA", min=0, max=999, sex="F", equipment="Wraps"}
+    maa = {name="M-AA", min=0, max=999, sex="M", equipment="Single-ply"}
+    faa = {name="F-AA", min=0, max=999, sex="F", equipment="Single-ply"}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2015-01-01","9999-01-01"]
