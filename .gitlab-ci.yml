@@ -41,6 +41,7 @@ pages:
   variables:
     CARGO_HOME: $CI_PROJECT_DIR/cargo
   cache:
+    key: mdbook-cache-key
     paths:
       - $CARGO_HOME/bin
   before_script:
