@@ -1,30 +1,30 @@
-Sex,WeightClassKg,Name,Country,Best3BenchKg,TotalKg,BodyweightKg,BirthYear,BirthDate,Event,Equipment,Division,Place
-M,,Ruel Ishaku,Nigeria,155,155,44.96,1967,,B,Raw,Open,8
-M,,Jason Lee Irving,UK,167.5,167.5,58.24,1974,,B,Raw,Open,5
-M,,Darren Gardiner,Australia,227.5,227.5,119.24,1969,,B,Raw,Open,1
-M,,Samson Okuto Abayo,Kenya,155,155,53.34,1979,,B,Raw,Open,9
-M,,Kenneth William Charles Doyle,Canada,185,185,82.16,1977,,B,Raw,Open,3
-M,,Rajinder Singh Rahelu,India,155,155,56.38,1973,,B,Raw,Open,10
-M,,George Taamaru,New Zealand,220,220,138.72,1973,,B,Raw,Open,2
-M,,Chia Chern Koh,Malaysia,140,140,52.4,1969,,B,Raw,Open,13
-M,,Sadun Perera,Sri Lanka,130,130,46.26,1969,,B,Raw,Open,15
-M,,Farman Basha,India,132.5,132.5,48.32,1979,,B,Raw,Open,14
-M,,Anthony Ronald Peddle,UK,130,130,46.58,1971,,B,Raw,Open,16
-M,,Steven Keith Green,Australia,165,165,82.06,1965,,B,Raw,Open,6
-M,,Sachin Chaudhary,India,170,170,87.82,1983,,B,Raw,Open,4
-M,,Ricardo Roberto Fitzpatrick,South Africa,145,145,64.1,1980,,B,Raw,Open,12
-M,,Paul Charles Hyde,Australia,160,160,79.94,1971,,B,Raw,Open,7
-M,,Evgeni Nikolaevich Popov,South Africa,152.5,152.5,73.7,1967,,B,Raw,Open,11
-M,,Denis Omondi Muga,Kenya,130,130,65.58,1975,,B,Raw,Open,17
-M,,Ernest Justin Nyabalale,Tanzania,110,110,50.7,1968,,B,Raw,Open,20
-M,,Joseph Ochieng Otieno,Kenya,130,130,80.64,1967,,B,Raw,Open,18
-M,,Gideon Mark Griffiths,UK,127.5,127.5,82.74,1967,,B,Raw,Open,19
-M,,Seif Ally Chembela,Tanzania,105,105,55.32,1973,,B,Raw,Open,21
-M,,Onwukwe Samuel Ekeoma,Nigeria,,,44.4,1981,,B,Raw,Open,DQ
-M,,Kashimawo Balogun,Nigeria,,,46.92,1983,,B,Raw,Open,DQ
-M,,Tom Tete,Vanuatu,,,58.54,1960,,B,Raw,Open,DQ
-M,,Billy Ssengendo,Uganda,,,58.72,1979,,B,Raw,Open,DQ
-M,,Kupuni Lewa,Papua New Guinea,,,66.18,1978,,B,Raw,Open,DQ
-M,,Perumal Mariappan M,Malaysia,,,66.58,1958,,B,Raw,Open,DQ
-M,,Stephen Thoahlane,Lesotho,,,70.6,1964,,B,Raw,Open,DQ
-M,,Rex Larry,Papua New Guinea,,,87.06,1970,,B,Raw,Open,DQ
+Sex,WeightClassKg,Name,Country,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,TotalKg,BodyweightKg,BirthYear,BirthDate,Event,Equipment,Division,Place
+M,,Ruel Ishaku,Nigeria,-155,155,-157.5,155,155,44.96,1967,,B,Raw,Open,8
+M,,Jason Lee Irving,UK,167.5,-175,-177.5,167.5,167.5,58.24,1974,,B,Raw,Open,5
+M,,Darren Gardiner,Australia,222.5,227.5,-232.5,227.5,227.5,119.24,1969,,B,Raw,Open,1
+M,,Samson Okuto Abayo,Kenya,150,155,-160,155,155,53.34,1979,,B,Raw,Open,9
+M,,Kenneth William Charles Doyle,Canada,185,-192.5,-197.5,185,185,82.16,1977,,B,Raw,Open,3
+M,,Rajinder Singh Rahelu,India,155,-160,-162.5,155,155,56.38,1973,,B,Raw,Open,10
+M,,George Taamaru,New Zealand,220,-227.5,227.5,227.5,227.5,138.72,1973,,B,Raw,Open,2
+M,,Chia Chern Koh,Malaysia,137.5,140,-142.5,140,140,52.4,1969,,B,Raw,Open,13
+M,,Sadun Perera,Sri Lanka,-130,130,-132.5,130,130,46.26,1969,,B,Raw,Open,15
+M,,Farman Basha,India,132.5,-140,-140,132.5,132.5,48.32,1979,,B,Raw,Open,14
+M,,Anthony Ronald Peddle,UK,-130,-130,130,130,130,46.58,1971,,B,Raw,Open,16
+M,,Steven Keith Green,Australia,165,-170,-170,165,165,82.06,1965,,B,Raw,Open,6
+M,,Sachin Chaudhary,India,-170,170,-175,170,170,87.82,1983,,B,Raw,Open,4
+M,,Ricardo Roberto Fitzpatrick,South Africa,145,-155,-155,145,145,64.1,1980,,B,Raw,Open,12
+M,,Paul Charles Hyde,Australia,-160,160,-162.5,160,160,79.94,1971,,B,Raw,Open,7
+M,,Evgeni Nikolaevich Popov,South Africa,145,152.5,-157.5,152.5,152.5,73.7,1967,,B,Raw,Open,11
+M,,Denis Omondi Muga,Kenya,-130,-130,130,130,130,65.58,1975,,B,Raw,Open,17
+M,,Ernest Justin Nyabalale,Tanzania,105,107.5,110,110,110,50.7,1968,,B,Raw,Open,20
+M,,Joseph Ochieng Otieno,Kenya,-130,-130,130,130,130,80.64,1967,,B,Raw,Open,18
+M,,Gideon Mark Griffiths,UK,122.5,127.5,-132.5,127.5,127.5,82.74,1967,,B,Raw,Open,19
+M,,Seif Ally Chembela,Tanzania,105,-107.5,-110,105,105,55.32,1973,,B,Raw,Open,21
+M,,Onwukwe Samuel Ekeoma,Nigeria,-152.5,-152.5,-155,,,44.4,1981,,B,Raw,Open,DQ
+M,,Kashimawo Balogun,Nigeria,-157.5,-157.5,-157.5,,,46.92,1983,,B,Raw,Open,DQ
+M,,Tom Tete,Vanuatu,-60,-60,-60,,,58.54,1960,,B,Raw,Open,DQ
+M,,Billy Ssengendo,Uganda,-157.5,-157.5,-157.5,,,58.72,1979,,B,Raw,Open,DQ
+M,,Kupuni Lewa,Papua New Guinea,-140,-140,-150,,,66.18,1978,,B,Raw,Open,DQ
+M,,Perumal Mariappan M,Malaysia,-177.5,-177.5,-177.5,,,66.58,1958,,B,Raw,Open,DQ
+M,,Stephen Thoahlane,Lesotho,-80,-85,-85,,,70.6,1964,,B,Raw,Open,DQ
+M,,Rex Larry,Papua New Guinea,-140,-145,-145,,,87.06,1970,,B,Raw,Open,DQ
