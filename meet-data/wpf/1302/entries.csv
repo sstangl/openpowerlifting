@@ -1,5 +1,5 @@
 Sex,Name,Country,BirthDate,BodyweightKg,Division,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Equipment,Place,Event,Age
-M,Andreas Müller,Germany,1972-03-21,100,Masters 40-44,100,,,,,,192.5,200,,,200,,,,,,200,Single-ply,1,B,
+M,Andreas Müller,Germany,1972-03-21,100,Masters 40-44,100,,,,,,192.5,200,,,200,,,,,,200,Single-ply,2,B,
 M,Salin Meryem,Germany,1959-03-20,67,Masters 50-54,67.5,,,,,,100,105,-110,,105,,,,,,105,Single-ply,1,B,
 M,Georg Seisenberger,Germany,1958-10-30,95.8,Masters 55-59,100,,,,,,140,-150,-155,,140,,,,,,140,Raw,1,B,
 M,Horst-Dieter Schoch,Germany,1953-01-04,99.2,Masters 60-64,100,,,,,,120,130,-135,,130,,,,,,130,Raw,1,B,
@@ -10,9 +10,9 @@ F,Beatrix Berg,Germany,1963-01-20,75.5,Masters 50-54,82.5,,,,,,60,65,70,-72.5,70
 M,Jork Reiter,Germany,1965-08-08,107.8,Masters 45-49,110,,,,,,210,230,-242.5,,230,,,,,,230,Raw,1,B,
 M,Juri Hochstetter,Germany,1962-02-18,104,Masters 50-54,110,,,,,,220,250,270,,270,,,,,,270,Single-ply,1,B,
 M,Walter Becka,Austria,1962-10-12,104.3,Masters 50-54,110,,,,,,180,200,205,,205,,,,,,205,Single-ply,2,B,
-M,Gerhard Holleiner,Austria,1959-06-20,115.5,Masters 50-54,125,,,,,,120,130,140,,140,,,,,,140,Raw,1,B,
+M,Gerhard Holleiner,Austria,1959-06-20,115.5,Masters 50-54,125,,,,,,120,130,140,,140,,,,,,140,Raw,2,B,
 M,Alexander Geitner,Germany,1978-01-02,107,Open,110,,,,,,275,300,,,300,,,,,,300,Single-ply,1,B,
-M,Sirco Petermann,Germany,1977-03-06,119.4,Open,125,,,,,,100,,,,100,,,,,,100,Raw,1,B,
+M,Sirco Petermann,Germany,1977-03-06,119.4,Open,125,,,,,,100,,,,100,,,,,,100,Raw,2,B,
 M,Philipp Bleilinger,Germany,1995-01-29,118.1,Teen 15-19,125,,,,,,190,205,215,226,215,,,,,,215,Raw,1,B,
 M,Andrey Remmele,Germany,,,Open,110,300,-320,-340,,300,230,-240,,,230,290,310,320,,320,850,Single-ply,1,SBD,27
 M,Harm Kuipers,Netherlands,,,Open,140,130,140,150,,150,100,110,-125,,110,180,195,205,,205,465,Raw,1,SBD,26
@@ -30,3 +30,12 @@ F,Melissa Tank,Germany,1992-11-18,98.7,Juniors 20-23,90+,,,,,,,,,,,,,130,,130,13
 F,Elvira Gerland,Germany,1971-01-16,54.5,Masters 40-44,56,,,,,,,,,,,85,95,105,,105,105,Single-ply,1,D,
 F,Martina Schulz,Germany,1961-06-15,73.5,Masters 50-54,75,,,,,,,,,,,112.5,120,,,120,120,Raw,1,D,
 F,Beatrix Berg,Germany,1963-01-20,75.5,Masters 50-54,82.5,,,,,,,,,,,80,90,100,112.5,100,100,Raw,1,D,
+M,Franko Lämmerhirt,Germany,1959-03-08,73.9,Masters 50-54,75,,,,,,195,200,205,,205,,,,,,205,Single-ply,1,B,
+M,Andreas Müller,Germany,1972-03-21,100,Masters 40-44,100,,,,,,-235,235,-246,,235,,,,,,235,Single-ply,1,B,
+M,Walter Becka,Austria,1962-10-12,104.3,Masters 50-54,110,,,,,,137.5,142.5,-150,,142.5,,,,,,142.5,Single-ply,3,B,
+M,Gerhard Holleiner,Austria,1959-06-20,115.5,Masters 50-54,125,,,,,,120,132.5,142.5,,142.5,,,,,,142.5,Raw,1,B,
+M,Ulrich Vetter,Germany,1952-04-09,109,Masters 60-64,110,,,,,,-170,175,-185,,175,,,,,,175,Single-ply,1,B,
+M,Klaus Lazik,Austria,1953-03-28,109.8,Masters 60-64,110,,,,,,157.5,162.5,-170,,162.5,,,,,,162.5,Raw,1,B,
+M,Vladimir Janke,Germany,1983-01-25,104.3,Open,110,,,,,,220,230,-245,,230,,,,,,230,Single-ply,2,B,
+M,Eugen Pugatschew,Germany,1984-11-17,104.1,Open,110,,,,,,200,210,-220,,210,,,,,,210,Single-ply,3,B,
+M,Sirco Petermann,Germany,1977-05-06,119.4,Open,125,,,,,,192.5,-200,-200,,192.5,,,,,,192.5,Raw,1,B,
