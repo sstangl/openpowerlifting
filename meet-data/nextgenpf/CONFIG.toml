@@ -3,6 +3,7 @@
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     novice = {name = "Novice", min = 0, max = 999}
+    youth = {name = "Youth", min = 0, max = 12}
     teenage_13_15 = {name = "Teenage 13-15", min = 13, max = 15}
     teenage_16_17 = {name = "Teenage 16-17", min = 16, max = 17}
     teenage_18_19 = {name = "Teenage 18-19", min = 18, max = 19}
@@ -18,9 +19,11 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
+    pfm = {name = "Police/Fire/Military", min = 0, max = 999}
+
 
 [weightclasses.default_M]
-    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    classes = ["33","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
     sex = "M"
 
