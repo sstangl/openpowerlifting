@@ -7,6 +7,7 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
     novice = {name ="Novice",min=0,max=999}
+    under18 = {name = "Under 18",min=0,max=17}
     juniors = {name = "Juniors",min=0,max=22.5}
     subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
     masters1 = {name = "Masters 1",min=39.5,max=48.5}
