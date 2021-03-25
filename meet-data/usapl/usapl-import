@@ -521,11 +521,11 @@ def main(url, importdir):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
+    with open(dirname + os.sep + 'entries.csv', 'w', newline='\n') as fd:
         entriescsv.write(fd)
-    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
+    with open(dirname + os.sep + 'meet.csv', 'w', newline='\n') as fd:
         meetcsv.write(fd)
-    with open(dirname + os.sep + 'URL', 'w') as fd:
+    with open(dirname + os.sep + 'URL', 'w', newline='\n') as fd:
         fd.write(url + "\n")
 
     print("Imported into %s." % dirname)
