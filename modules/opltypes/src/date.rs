@@ -276,7 +276,7 @@ impl Serialize for Date {
     where
         S: serde::Serializer,
     {
-        let mut buf = ArrayString::<[_; 10]>::new();
+        let mut buf = ArrayString::<10>::new();
         let (y, m, d) = (self.year(), self.month(), self.day());
         write!(buf, "{:04}-{:02}-{:02}", y, m, d).expect("ArrayString overflow");
 

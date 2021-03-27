@@ -200,7 +200,7 @@ impl Serialize for Event {
         S: serde::Serializer,
     {
         // The greatest possible string is "SBD", 3 characters.
-        let mut buf = ArrayString::<[_; 3]>::new();
+        let mut buf = ArrayString::<3>::new();
         write!(buf, "{}", self).expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)

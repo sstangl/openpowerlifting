@@ -303,7 +303,7 @@ impl Serialize for Age {
         S: serde::Serializer,
     {
         // Largest possible string for a `u8` Age is "256.5", 5 characters.
-        let mut buf = ArrayString::<[_; 5]>::new();
+        let mut buf = ArrayString::<5>::new();
 
         match *self {
             Age::Exact(n) => write!(buf, "{}", n).expect("ArrayString overflow"),
@@ -360,7 +360,7 @@ impl Serialize for PrettyAge {
         S: serde::Serializer,
     {
         // Largest possible string for a `u8` Age is "256~", 4 characters.
-        let mut buf = ArrayString::<[_; 4]>::new();
+        let mut buf = ArrayString::<4>::new();
 
         match self.0 {
             Age::Exact(n) => write!(buf, "{}", n).expect("ArrayString overflow"),

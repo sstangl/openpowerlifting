@@ -49,7 +49,7 @@ impl Serialize for WeightClassKg {
         }
 
         // Maximum length of a serialized WeightKg, plus one for a SHW "+".
-        let mut buf = ArrayString::<[_; 14]>::new();
+        let mut buf = ArrayString::<14>::new();
         write!(buf, "{}", self).expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)
@@ -66,7 +66,7 @@ impl Serialize for WeightClassAny {
         }
 
         // Maximum length of a serialized WeightKg, plus one for a SHW "+".
-        let mut buf = ArrayString::<[_; 14]>::new();
+        let mut buf = ArrayString::<14>::new();
         write!(buf, "{}", self).expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)

@@ -116,7 +116,7 @@ impl Serialize for Points {
     {
         // 10 characters for the non-decimal number (-536870912).
         // 3 characters for the '.' plus 2 fractional digits.
-        let mut buf = ArrayString::<[_; 13]>::new();
+        let mut buf = ArrayString::<13>::new();
         write!(buf, "{}", self).expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)
