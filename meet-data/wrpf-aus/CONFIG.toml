@@ -17,6 +17,7 @@
 
     fr_o = {name = "FR-O", min=0, max=999, equipment = ["Raw","Wraps"], sex="F"}
     fr_t = {name = "FR-T", min=14, max=16, equipment = ["Raw","Wraps"], sex="F"}
+    fr_y = {name = "FR-Y", min=0, max=13, equipment = ["Raw","Wraps"], sex="F"}
     fr_sj = {name = "FR-SJ", min=17, max=19, equipment = ["Raw","Wraps"], sex="F"}
     fr_j = {name = "FR-J", min=20, max=23, equipment = ["Raw","Wraps"], sex="F"}
     fr_m1 = {name = "FR-M1", min=40, max=49, equipment = ["Raw","Wraps"], sex="F"}
