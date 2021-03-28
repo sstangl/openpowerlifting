@@ -55,3 +55,4 @@
 [exemptions]
     1212 = ["ExemptWeightClassConsistency"]
     1427 = ["ExemptWeightClassConsistency"]  # Has unreported weightclasses.
+    2102 = ["ExemptWeightClassConsistency"]  # No weightclasses
