@@ -148,6 +148,7 @@ pub enum WeightClassFilter {
     // Traditional classes.
     T44,
     T48,
+    TUnder52, // Only used for records. Not directly queryable.
     T52,
     T56,
     T60,
@@ -253,6 +254,7 @@ impl WeightClassFilter {
 
             WeightClassFilter::T44 => make_bounds(0.0, 44.0),
             WeightClassFilter::T48 => make_bounds(44.0, 48.0),
+            WeightClassFilter::TUnder52 => make_bounds(0.0, 52.0),
             WeightClassFilter::T52 => make_bounds(48.0, 52.0),
             WeightClassFilter::T56 => make_bounds(52.0, 56.0),
             WeightClassFilter::T60 => make_bounds(56.0, 60.0),
@@ -338,6 +340,7 @@ impl WeightClassFilter {
 
             WeightClassFilter::T44 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(44)),
             WeightClassFilter::T48 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(48)),
+            WeightClassFilter::TUnder52 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
             WeightClassFilter::T52 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
             WeightClassFilter::T56 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(56)),
             WeightClassFilter::T60 => WeightClassKg::UnderOrEqual(WeightKg::from_i32(60)),

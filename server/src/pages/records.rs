@@ -350,7 +350,7 @@ fn make_collectors<'db>(sex: SexFilter, classkind: ClassKind) -> Vec<RecordColle
         ClassKind::Traditional => {
             if sex == SexFilter::Men {
                 vec![
-                    WeightClassFilter::T52,
+                    WeightClassFilter::TUnder52,
                     WeightClassFilter::T56,
                     WeightClassFilter::T60,
                     WeightClassFilter::T67_5,
@@ -383,7 +383,7 @@ fn make_collectors<'db>(sex: SexFilter, classkind: ClassKind) -> Vec<RecordColle
         ClassKind::Expanded => {
             if sex == SexFilter::Men {
                 vec![
-                    WeightClassFilter::T52,
+                    WeightClassFilter::TUnder52,
                     WeightClassFilter::T56,
                     WeightClassFilter::T60,
                     WeightClassFilter::T67_5,
