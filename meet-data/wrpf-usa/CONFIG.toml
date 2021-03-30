@@ -4,48 +4,39 @@
     require_manual_disambiguation = true
 
 [divisions]
-    # WRPF-USA and WRPF-AUS
-    mro = {name = "MR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="M"}
-    mrt = {name = "MR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="M"}
-    mrsubjr = {name = "MR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="M"}
-    mrjr = {name = "MR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="M"}
-    mrsm = {name = "MR-SM", min = 35, max = 39, equipment=["Raw", "Wraps"],sex="M"} 
-    mrm = {name = "MR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="M"}
-    mrm1 = {name = "MR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="M"}
-    mrm2 = {name = "MR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="M"}
-    mrm3 = {name = "MR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="M"}
-    mrm4 = {name = "MR-M4", min = 70, max = 79, equipment=["Raw", "Wraps"],sex="M"}
-    fro = {name = "FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
-    frt = {name = "FR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="F"}
-    frsubjr = {name = "FR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="F"}
-    frjr = {name = "FR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="F"}
-    frm = {name = "FR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="F"}
-    frm1 = {name = "FR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="F"}
-    frm2 = {name = "FR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="F"}
-    frm3 = {name = "FR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="F"}
-    
-    mwo = {name = "MW-O", min = 0, max = 999, equipment="Wraps",sex="M"}
-    mwsubjr = {name = "MW-SubJR", min = 17, max = 19, equipment="Wraps",sex="M"}
-    mwjr = {name = "MW-JR", min = 20, max = 23, equipment="Wraps",sex="M"}
-    mwm1 = {name = "MW-M1", min = 40, max = 49, equipment="Wraps",sex="M"}
-    fwo = {name = "FW-O", min = 0, max = 999, equipment="Wraps",sex="F"}
-    fwt = {name = "FW-T", min = 14, max = 16, equipment="Wraps",sex="F"}
-    fwsubjr = {name = "FW-SubJR", min = 17, max = 19, equipment="Wraps",sex="F"}
-    fwjr = {name = "FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
-    fwm1 = {name = "FW-M1", min = 40, max = 49, equipment="Wraps",sex="F"}
+    open = {name = "Open", min = 0, max = 999}
+    youth = {name = "Youth", min = 5, max = 13}
+    teen_14_16 = {name = "Teen 14-16", min = 14, max = 16}
+    subjunior_17_19 = {name = "Sub-Juniors 17-19", min = 17, max = 19}
+    juniors_20_23 = {name = "Juniors 20-23", min = 20, max = 23}
+    masters_40_49 = {name = "Masters 40-49", min = 40, max = 49}
+    masters_50_59 = {name = "Masters 50-59", min = 50, max = 59}
+    masters_60_69 = {name = "Masters 60-69", min = 60, max = 69}
+    masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
+    masters_80_89 = {name = "Masters 80-89", min = 80, max = 89}
+
+    #Other permutations
+    submasters_35_39 = {name = "Submasters 35-39", min = 35, max = 39}  # WRPF-USA
+    masters_40_44 = {name = "Masters 40-44", min = 40, max = 44}
+    masters_45_49 = {name = "Masters 45-49", min = 45, max = 49}
+    masters_50_54 = {name = "Masters 50-54", min = 50, max = 54}
+    masters_55_59 = {name = "Masters 55-59", min = 55, max = 59}
+    masters_60_64 = {name = "Masters 60-64", min = 60, max = 64}
+    masters_65_69 = {name = "Masters 65-69", min = 65, max = 69}
+    masters_70_74 = {name = "Masters 70-74", min = 70, max = 74}
+    masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
+    masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
+    masters = {name = "Masters", min = 40, max = 999}
+    teen = {name = "Teen", min = 14, max = 19}
+    teen_13_15 = {name = "Teen 13-15", min = 13, max = 15}
+    teen_16_17 = {name = "Teen 16-17", min = 16, max = 17}
+    teen_18_19 = {name = "Teen 18-19", min = 18, max = 19}
     
     pro_mro = {name = "Pro MR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="M"}
     pro_fro = {name = "Pro FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
     pro_mwo = {name = "Pro MW-O", min = 0, max = 999, equipment="Wraps",sex="M"}
     pro_fwo = {name = "Pro FW-O", min = 0, max = 999, equipment="Wraps",sex="F"}
     pro_fwjr = {name = "Pro FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
-
-    meo = {name = "ME-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
-    mem = {name = "ME-M", min = 40, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
-    mesm = {name = "ME-SM", min = 35, max = 39, equipment=["Single-ply","Multi-ply"],sex="M"}
-    mem1 = {name = "ME-M1", min = 40, max = 49, equipment=["Single-ply","Multi-ply"],sex="M"}
-    feo = {name = "FE-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="F"}
-
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -58,3 +49,8 @@
     sex = "F"
 
 [exemptions]
+   1906 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
+   bob3 = ["ExemptDivision"] #BOB does their own thing
+   bob4 = ["ExemptDivision"] #BOB does their own thing
+   bob5 = ["ExemptDivision"] #BOB does their own thing
+   bob6 = ["ExemptDivision"] #BOB does their own thing
