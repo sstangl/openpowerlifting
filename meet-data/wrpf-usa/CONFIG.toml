@@ -1,0 +1,60 @@
+# Configuration for WRPF-USA.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    # WRPF-USA and WRPF-AUS
+    mro = {name = "MR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="M"}
+    mrt = {name = "MR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="M"}
+    mrsubjr = {name = "MR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="M"}
+    mrjr = {name = "MR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="M"}
+    mrsm = {name = "MR-SM", min = 35, max = 39, equipment=["Raw", "Wraps"],sex="M"} 
+    mrm = {name = "MR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="M"}
+    mrm1 = {name = "MR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="M"}
+    mrm2 = {name = "MR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="M"}
+    mrm3 = {name = "MR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="M"}
+    mrm4 = {name = "MR-M4", min = 70, max = 79, equipment=["Raw", "Wraps"],sex="M"}
+    fro = {name = "FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
+    frt = {name = "FR-T", min = 14, max = 19, equipment=["Raw", "Wraps"],sex="F"}
+    frsubjr = {name = "FR-SubJR", min = 17, max = 19, equipment=["Raw", "Wraps"],sex="F"}
+    frjr = {name = "FR-JR", min = 20, max = 23, equipment=["Raw", "Wraps"],sex="F"}
+    frm = {name = "FR-M", min = 40, max = 999, equipment=["Raw", "Wraps"],sex="F"}
+    frm1 = {name = "FR-M1", min = 40, max = 49, equipment=["Raw", "Wraps"],sex="F"}
+    frm2 = {name = "FR-M2", min = 50, max = 59, equipment=["Raw", "Wraps"],sex="F"}
+    frm3 = {name = "FR-M3", min = 60, max = 69, equipment=["Raw", "Wraps"],sex="F"}
+    
+    mwo = {name = "MW-O", min = 0, max = 999, equipment="Wraps",sex="M"}
+    mwsubjr = {name = "MW-SubJR", min = 17, max = 19, equipment="Wraps",sex="M"}
+    mwjr = {name = "MW-JR", min = 20, max = 23, equipment="Wraps",sex="M"}
+    mwm1 = {name = "MW-M1", min = 40, max = 49, equipment="Wraps",sex="M"}
+    fwo = {name = "FW-O", min = 0, max = 999, equipment="Wraps",sex="F"}
+    fwt = {name = "FW-T", min = 14, max = 16, equipment="Wraps",sex="F"}
+    fwsubjr = {name = "FW-SubJR", min = 17, max = 19, equipment="Wraps",sex="F"}
+    fwjr = {name = "FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
+    fwm1 = {name = "FW-M1", min = 40, max = 49, equipment="Wraps",sex="F"}
+    
+    pro_mro = {name = "Pro MR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="M"}
+    pro_fro = {name = "Pro FR-O", min = 0, max = 999, equipment=["Raw", "Wraps"],sex="F"}
+    pro_mwo = {name = "Pro MW-O", min = 0, max = 999, equipment="Wraps",sex="M"}
+    pro_fwo = {name = "Pro FW-O", min = 0, max = 999, equipment="Wraps",sex="F"}
+    pro_fwjr = {name = "Pro FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
+
+    meo = {name = "ME-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
+    mem = {name = "ME-M", min = 40, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
+    mesm = {name = "ME-SM", min = 35, max = 39, equipment=["Single-ply","Multi-ply"],sex="M"}
+    mem1 = {name = "ME-M1", min = 40, max = 49, equipment=["Single-ply","Multi-ply"],sex="M"}
+    feo = {name = "FE-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="F"}
+
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
