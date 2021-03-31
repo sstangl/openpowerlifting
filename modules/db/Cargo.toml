@@ -7,7 +7,7 @@ license = "AGPL-3.0-or-later"
 edition = "2018"
 
 [dependencies]
-arrayvec = "0.6"
+arrayvec = "0.7"
 coefficients = { version = "0.1", path = "../coefficients/" }
 opltypes = { version = "0.1", path = "../opltypes/" }
 csv = "1.1"
