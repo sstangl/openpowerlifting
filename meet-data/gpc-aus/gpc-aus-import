@@ -201,7 +201,7 @@ def getresults(soup):
                 error("Unknown column name: \"%s\"" % h)
 
     for tr in data.find_all('tr'):
-        row = [x.text for x in tr.find_all('td')]
+        row = [x.text if x.text != 'null' else '' for x in tr.find_all('td')]
 
         csv.rows += [row]
 
