@@ -49,7 +49,7 @@ fn assert_execute(query: &str, expected: juniper::Value) {
 #[test]
 fn meet_lookup() {
     let query = r#"query {
-        meet(path: "wrpf/bob4") {
+        meet(path: "wrpf-usa/bob4") {
             name
         }
     }"#;
