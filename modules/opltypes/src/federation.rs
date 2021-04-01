@@ -1284,6 +1284,12 @@ pub enum Federation {
     #[strum(to_string = "WP-NZ", serialize = "wp-nz")]
     WPNZ,
 
+
+    /// World Power Power League, Belarus.
+    #[serde(rename = "WPPL-Belarus")]
+    #[strum(to_string = "WPPL-Belarus", serialize = "wppl-belarus")]
+    WPPLBelarus,
+
     /// World Paralympic Powerlifting (formerly ParaPL).
     #[strum(to_string = "WPPO", serialize = "wppo")]
     WPPO,
@@ -1757,6 +1763,7 @@ impl Federation {
             Federation::WPFRUS => false,
             Federation::WPLeague => false,
             Federation::WPNZ => FULLY_TESTED,
+            Federation::WPPLBelarus => false,
             Federation::WPPO => FULLY_TESTED,
             Federation::WPRO => false,
             Federation::WPSF => false,
@@ -2086,6 +2093,7 @@ impl Federation {
             Federation::WPFRUS => Some(Country::Russia),
             Federation::WPLeague => Some(Country::Ukraine),
             Federation::WPNZ => Some(Country::NewZealand),
+            Federation::WPPLBelarus => Some(Country::Belarus),
             Federation::WPPO => None,
             Federation::WPRO => Some(Country::Ukraine),
             Federation::WPSF => None,
@@ -2486,6 +2494,7 @@ impl Federation {
             Federation::WPFRUS => Some(Federation::WPF),
             Federation::WPLeague => None,
             Federation::WPNZ => Some(Federation::WP),
+            Federation::WPPLBelarus => None,
             Federation::WPPO => None,
             Federation::WPRO => None,
             Federation::WPSF => Some(Federation::WPSF),
@@ -2908,6 +2917,7 @@ impl Federation {
             Federation::WPFRUS => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
             Federation::WPNZ => PointsSystem::Wilks,
+            Federation::WPPLBelarus => PointsSystem::Wilks,
             Federation::WPPO => PointsSystem::AH,
             Federation::WPRO => PointsSystem::Wilks,
             Federation::WPSF => PointsSystem::Wilks,
