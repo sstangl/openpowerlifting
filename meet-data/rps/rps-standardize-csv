@@ -285,6 +285,9 @@ def fixequipment(csv):
         elif s == 'no choice made':
             x = 'Wraps'
 
+        elif s == 'unlimited':
+            x = 'Unlimited'
+
         elif s == '' and i > 0:
             x = csv.rows[i - 1][idx]
 

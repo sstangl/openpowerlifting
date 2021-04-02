@@ -22,7 +22,11 @@
 
     # Youth -- Amateur only.
     ama_youth = {name = "Amateur Youth", min = 5, max = 13, tested="Yes"}
+    ama_youth_8 = {name = "Amateur Youth 8", min = 8, max = 8, tested="Yes"}
+    ama_youth_9 = {name = "Amateur Youth 9", min = 9, max = 9, tested="Yes"}
     ama_youth_10 = {name = "Amateur Youth 10", min = 10, max = 10, tested="Yes"}
+    ama_youth_11 = {name = "Amateur Youth 11", min = 11, max = 11, tested="Yes"}
+    ama_youth_12 = {name = "Amateur Youth 12", min = 12, max = 12, tested="Yes"}
 
     # Teens -- Amateur only.
     ama_teen_14_15 = {name = "Amateur Teen 14-15", min = 14, max = 15, tested="Yes"}
