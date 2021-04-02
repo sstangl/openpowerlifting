@@ -355,6 +355,8 @@
     # Military.
     mrmo = {name="MR-MO", min=0, max=999, sex="M", equipment="Raw"}
     frmo = {name="FR-MO", min=0, max=999, sex="F", equipment="Raw"}
+    mwmo = {name="MW-MO", min=0, max=999, sex="M", equipment="Wraps"}
+    fwmo = {name="FW-MO", min=0, max=999, sex="F", equipment="Wraps"}
     mmo = {name="M-MO", min=0, max=999, sex="M", equipment="Single-ply"}
     fmo = {name="F-MO", min=0, max=999, sex="F", equipment="Single-ply"}
 

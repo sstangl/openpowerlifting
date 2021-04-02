@@ -70,6 +70,10 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2001, 4, 21) {
                     continue;
                 }
+                // usapl/NS-2021-07 and usapl/NS-2021-07-B.
+                if cur_meet.date == opltypes::Date::from_parts(2021, 03, 20) {
+                    continue;
+                }
 
                 let msg = format!(
                     "www.openpowerlifting.org/u/{} on {}: {} and {}",
