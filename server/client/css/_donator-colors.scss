@@ -183,6 +183,12 @@
 }
 
 // Blue, white, and red.
+.france {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #0082CA, #EDF2F4, #ED071E);
+}
+
+// Blue, white, and red.
 .iceland {
   @include gradient-prereqs($default-color);
   background-image: linear-gradient(to right, #005DB5, #EDF2F4, #DD1832);
