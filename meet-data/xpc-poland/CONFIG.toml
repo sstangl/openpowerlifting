@@ -23,6 +23,8 @@
     paralympic = {name = "Paralympic", min = 0, max = 999}
 
 	mpf = {name="MPF", min=0, max=999}
+    mpf_masters_40_49 = {name="MPF Masters 40-49", min=40, max=49}
+    mpf_masters_70p = {name="MPF Masters 70+", min=70, max=999}
     mil_open = {name = "Military Open", min = 0, max = 999}
     mil_masters_40_49 = {name = "Military Masters 40-49", min = 40, max = 49}
 
