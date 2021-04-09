@@ -199,7 +199,7 @@ def parse_sheetname(s):
                 equipment = 'Multi-ply'
         elif 'бинт' in word or word in ['wraps', 'classic', 'класс', 'cl', 'classik',
                                         'кл', 'классический', 'классичесический',
-                                        'клас', 'классик']:
+                                        'клас', 'классик', 'классич']:
             equipment = 'Wraps'
             event = 'SBD'
         elif word in ['безкипировки', 'raw', 'безэкип', 'без', 'безэк', 'бэ']:
