@@ -576,10 +576,10 @@ def fix_sex(csv):
     mens_classes = ['53', '59', '66', '74',
                     '83', '93', '105', '120', '120+']
     # Don't have -52 as this overlaps with an old class
-    womens_classes = ['43', '47', '57', '63', '72', '84', '84+']
+    womens_classes = ['43', '47', '57', '63', '69', '76', '84', '84+']
 
     old_mens_only = ['100', '110', '125', '125+']
-    old_womens_only = ['44', '48', '90+']
+    old_womens_only = ['44', '48', '90+', '72']
 
     all_mens = mens_classes + old_mens_only
     all_womens = womens_classes + old_womens_only

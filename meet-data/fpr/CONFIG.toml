@@ -27,13 +27,8 @@
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","9999-01-01"]
-    sex = "F"
-
-[weightclasses.old_F_1]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2020-12-31"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "F"
 
 # Extra classes for Teen Under 17 & Teen 17-18
@@ -59,15 +54,8 @@
     divisions = ["Juniors","Sub-Juniors","13-18","Teen"]
 
 [weightclasses.junior_F]
-    classes = ["43","47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","9999-01-01"]
-    sex = "F"
-    divisions = ["Juniors", "Sub-Juniors","13-18","Teen"]
-
-
-[weightclasses.old_junior_F_1]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2020-12-31"]
+    date_range=["2011-01-01","9999-01-01"]
     sex = "F"
     divisions = ["Juniors", "Sub-Juniors","13-18","Teen"]
 
@@ -573,3 +561,4 @@
     2041 = ["ExemptWeightClassConsistency"] # Para in regular weight classes
     2043 = ["ExemptWeightClassConsistency"] # Para in regular weight classes
     2055 = ["ExemptWeightClassConsistency"] # 48kg SJr
+    2105 = ["ExemptWeightClassConsistency"] # Youth Classes
