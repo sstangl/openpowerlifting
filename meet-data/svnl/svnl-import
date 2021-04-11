@@ -264,12 +264,10 @@ def getresults(soup, meet_name, url):
 
     # Find where the preamble ends
     start_data = 0
-    for tr in trs:
-        if (tr.find('td') and (tr.find('td').text.count('.') > 0 or
-                               tr.find('td').text.count('/') > 0) and
-                len([True for c in tr.find('td').text if c.isdigit()]) > 2):
+    for ii in range(2, len(trs)):
+        if trs[ii].text.replace('.-', '-').count('.') == 2:
+            start_data = ii
             break
-        start_data += 1
 
     start_data += 1
 
@@ -277,6 +275,10 @@ def getresults(soup, meet_name, url):
     append_sex = False
 
     meet_data = combine_header(trs[start_data:])
+
+    sexstate = ''
+    divstate = ''
+    eqpstate = ''
 
     if 'miehet' in meet_name.lower() or 'miesten' in meet_name.lower():
         sexstate = 'M'
@@ -312,8 +314,8 @@ def getresults(soup, meet_name, url):
 
         # Records are after data
         if (any(break_str in text[0].strip().lower() for break_str in
-                ['ätykset', 'Records', 'Joukkuekilpailu', 'Norbergs Kraftsportförening',
-                 'Rekord:', 'Domare:', 'Tuomarit:', 'se:t'])):
+                ['ätykset', 'records', 'joukkuekilpailu', 'norbergs kraftsportförening',
+                 'rekord:', 'domare:', 'tuomarit:', 'se:t'])):
             break
 
         # Skip record lines, this loses a small amount of division information
@@ -373,7 +375,8 @@ def getresults(soup, meet_name, url):
                            'yht tulos', 'yhteis- tulos', 'yt / kg']:
                     csv.fieldnames += ['TotalKg']
                 elif h in ['wilks', 'wpist', 'pist', 'wpts', 'wilks pist', 'wilks pts',
-                           'ipf pist', 'ipf pts', 'ipf glp', 'ipf gl pist', 'gl pist']:
+                           'ipf pist', 'ipf pts', 'ipf glp', 'ipf gl pist', 'gl pist',
+                           'ipf gl pts']:
                     csv.fieldnames += ['Wilks']
                 elif h == 'jpist' or h == 'j pist':
                     csv.fieldnames += ['Points']
@@ -421,7 +424,7 @@ def getresults(soup, meet_name, url):
 
         elif len(text) == 1:  # Division
             # Extract sex information.
-            div_text = text[0].replace('-', '').lower()
+            div_text = ''.join(text).strip().replace('-', '').lower()
             div_text = div_text.replace('kilpasarja', '')  # Powerlifting
             div_text = div_text.strip()
 
@@ -436,12 +439,20 @@ def getresults(soup, meet_name, url):
                     div_text = div_text.replace(
                         'miehet', '').replace('men', '').strip()
                     divstate = 'Open'
-                elif div_text[0] == 'n':
+                elif div_text == 'n':
                     sexstate = 'F'
                     div_text = div_text[1:]
-                elif div_text[0] == 'm':
+                elif div_text == 'm':
                     sexstate = 'M'
                     div_text = div_text[1:]
+                elif div_text == 'klassinen':
+                    eqpstate = 'Raw'
+                    div_text = div_text.replace('klassinen', '')
+                elif div_text in ['varuste', 'varustevoimanosto', 'utrustat']:
+                    eqpstate = 'Single-ply'
+                    div_text = div_text.replace(
+                        'varustevoimanosto', '').replace('varuste', '')
+                    div_text = div_text.replace('utrustat', '')
 
                 if div_text.strip() != '':
                     # Extract division information.
@@ -513,7 +524,7 @@ def getresults(soup, meet_name, url):
                 lifter_data = lifter_data + [sexstate]
 
             if append_eqp:
-                lifter_data = lifter_data + ['']
+                lifter_data = lifter_data + [eqpstate]
 
             csv.rows += [lifter_data]
 
@@ -542,8 +553,6 @@ def fixplace(csv):
             elif 'näyt' in row[placeidx].lower():
                 row[placeidx] = 'G'
 
-# All Finnish meets are one equipment type
-
 
 def fixequipment(csv, meetcsv):
     meet_name = meetcsv.rows[0][5]
@@ -556,24 +565,38 @@ def fixequipment(csv, meetcsv):
     eqidx = csv.index('Equipment')
 
     for row in csv.rows:
-        if raw_meet:
-            row[eqidx] = 'Raw'
-        else:
-            if 'x' in row[eqidx]:
+        if row[eqidx] == '':
+            if raw_meet:
                 row[eqidx] = 'Raw'
-            elif row[eqidx] == '':
-                row[eqidx] = 'Single-ply'
             else:
-                error("Unknown equipment: \"%s\"" % row[eqidx])
+                if 'x' in row[eqidx]:
+                    row[eqidx] = 'Raw'
+                elif row[eqidx] == '':
+                    row[eqidx] = 'Single-ply'
+                else:
+                    error("Unknown equipment: \"%s\"" % row[eqidx])
 
 # Change M/N  and M/W to M/F
 
 
 def fixsex(csv):
     sexidx = csv.index('Sex')
+    eqpidx = csv.index('Equipment')
     for row in csv.rows:
         if row[sexidx] == 'N' or row[sexidx] == 'W':
             row[sexidx] = 'F'
+        elif row[sexidx] in ['NKP', 'NKV', 'WCB']:
+            row[sexidx] = 'F'
+            row[eqpidx] = 'Raw'
+        elif row[sexidx] in ['MKP', 'MKV', 'MCB']:
+            row[sexidx] = 'M'
+            row[eqpidx] = 'Raw'
+        elif row[sexidx] in ['NVP', 'NVV']:
+            row[sexidx] = 'F'
+            row[eqpidx] = 'Single-ply'
+        elif row[sexidx] in ['MVP', 'MVV', 'MEB']:
+            row[sexidx] = 'M'
+            row[eqpidx] = 'Single-ply'
 
 
 def add_birthyear(csv):
@@ -703,6 +726,7 @@ def get_division(div_text):
 def add_division(csv):
     if 'WeightClassKg' in csv.fieldnames:
         wcidx = csv.index('WeightClassKg')
+
         dividx = csv.index('Division')
         placeidx = csv.index('Place')
         sexidx = csv.index('Sex')
