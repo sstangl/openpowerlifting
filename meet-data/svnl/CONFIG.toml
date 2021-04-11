@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     under14 = {name = "Under 14",min=0,max=14}
@@ -18,8 +21,13 @@
     sex = "M"
 
 [weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.pre2021_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -35,10 +43,16 @@
     divisions = ["Under 18","Under 17","Under 15","Under 14"]
 
 [weightclasses.junior_F]
-    classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Under 23","Under 20","Under 17","Under 15","Under 14"]
+    divisions = ["Under 23","Under 20","Under 17","Under 15","Under 14","Under 18"]
+
+[weightclasses.pre2021junior_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+    divisions = ["Under 23","Under 20","Under 17","Under 15","Under 14","Under 18"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]

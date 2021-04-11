@@ -445,7 +445,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
                 // Common short words that mostly translate to "the".
                 "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di" | "dos"
                 | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "'t" | "te" | "ten" | "v"
-                | "v." | "v.d." | "van" | "von" | "zur" => {
+                | "v." | "v.d." | "van" | "von" | "zur" | "und" | "zu" => {
                     continue;
                 }
 

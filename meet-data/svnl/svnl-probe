@@ -16,10 +16,7 @@ except ImportError:
     import oplprobe
 
 # Local & national results
-URLS = ["https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut",
-        "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=1",
-        "https://suomenvoimanostoliitto.fi/tulokset/kansalliset-kilpailut?page=2",
-        "https://suomenvoimanostoliitto.fi/tulokset/sm-kilpailut/tulosarkisto/2018"]
+URLS = ["https://www.suomenvoimanostoliitto.fi/kilpailut/tulosarkisto/"]
 BASEURL = "https://suomenvoimanostoliitto.fi"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -37,7 +34,7 @@ def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
-    for div in soup.find_all('div', {'class': 'views-field views-field-title'}):
+    for div in soup.find_all('div', {'class': 'w-grid-item-h'}):
         url = div.a['href']
 
         if 'http' not in url:

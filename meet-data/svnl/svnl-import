@@ -96,24 +96,15 @@ def getmeetinfo(soup):
     place = ''
     dotdate = ''
 
-    curr_line = 0
-    # If the first row is blank or just a date start from the second
-    if trs[0].find('td').text.strip() == '' or trs[0].find('td').text.count('.') == 2:
-        curr_line = 1
+    date_line = 0
 
-    # Name is sometimes split across two lines, with first line club name
-    # this is a somewhat hacky way of finding the date-line
-    if ((trs[curr_line+1].find('td').text.count('.') > 0 or
-         trs[curr_line+1].find('td').text.count('/') > 0)
-            and len([True for c in trs[curr_line+1].text if c.isdigit()]) > 2):
-        name = trs[curr_line].find('td').text
-        # Get the place & date.
-        place_date = trs[curr_line+1].find('td').text.strip()
-        curr_line += 2
-    else:
-        name = trs[curr_line+1].find('td').text
-        place_date = trs[curr_line+2].find('td').text.strip()
-        curr_line += 3
+    for ii in range(2, len(trs)):
+        if trs[ii].text.replace('.-', '-').count('.') == 2:
+            date_line = ii
+            break
+
+    name = trs[date_line-1].find('td').text
+    place_date = trs[date_line].find('td').text.strip()
 
     # Strip out time if it's given
     place_date = re.sub(
@@ -148,11 +139,11 @@ def getmeetinfo(soup):
 
     # Old meets have the place below the date
     if place == '':
-        [div, _] = get_division(trs[curr_line].find('td').text)
+        [div, _] = get_division(trs[date_line-1].find('td').text)
         if div == '':  # Then this is probably a place
-            place = trs[curr_line].find('td').text
+            place = trs[date_line-1].find('td').text
             # Set it blank so the script doesn't get confused later
-            trs[curr_line].string = ''
+            trs[date_line-1].string = ''
 
     # The date is formatted as dd.-dd.mm.yyyy.
     assert '.' in dotdate
@@ -172,6 +163,7 @@ def getmeetinfo(soup):
     name = name.replace('\xa0', ' ')
     name = name.replace('  ', ' ')
     name = name.replace('  ', ' ')
+    name = name.replace(' – ', ' - ')
     name = name.strip()
 
     # Clean up the place
@@ -341,7 +333,7 @@ def getresults(soup, meet_name, url):
                 h = text[ii].lower().replace('.', '')
                 if h == 'sij' or h == 'pl' or h == 'place':
                     csv.fieldnames += ['Place']
-                elif h == 'm/w' or h == 'm/n' or h == 'nro':
+                elif h in ['m/w', 'm/n', 'nro', 'm/n *']:
                     csv.fieldnames += ['Sex']
                 elif h == 'sarja' or h == 'cls' or h == 'class':
                     csv.fieldnames += ['WeightClassKg']
@@ -381,7 +373,7 @@ def getresults(soup, meet_name, url):
                            'yht tulos', 'yhteis- tulos', 'yt / kg']:
                     csv.fieldnames += ['TotalKg']
                 elif h in ['wilks', 'wpist', 'pist', 'wpts', 'wilks pist', 'wilks pts',
-                           'ipf pist', 'ipf pts']:
+                           'ipf pist', 'ipf pts', 'ipf glp', 'ipf gl pist', 'gl pist']:
                     csv.fieldnames += ['Wilks']
                 elif h == 'jpist' or h == 'j pist':
                     csv.fieldnames += ['Points']
@@ -481,11 +473,17 @@ def getresults(soup, meet_name, url):
                 col_text = col_text.replace('\t', '')
 
                 col_text = col_text.replace('*', '')
+                col_text = col_text.replace('—–', '')
 
                 # Failed lift.
                 if ((td.s or td.strike or (td.has_attr('style') and
-                                           'background-color: red' in td['style']))
+                                           'background-color: red' in td['style']
+                                           ))
                         and col_text.strip() != ''):
+                    col_text = '-' + col_text.strip()
+                    col_text = col_text.replace('--', '-')
+                elif (td.find('span') and td.span.has_attr('style') and
+                      'text-decoration: line-through' in td.span['style']):
                     col_text = '-' + col_text.strip()
                     col_text = col_text.replace('--', '-')
 
@@ -516,6 +514,7 @@ def getresults(soup, meet_name, url):
 
             if append_eqp:
                 lifter_data = lifter_data + ['']
+
             csv.rows += [lifter_data]
 
     if append_sex:
@@ -869,21 +868,20 @@ def remove_empty_and_ignore_cols(csv):
         csv.remove_column_by_index(idx)
 
 
-def main(url):
+def main(dirname, url):
 
     # Get the results page from the page linked in the lists
-    results_url = getresultsurl(url)
+    # results_url = getresultsurl(url)
 
-    if 'arvokilpailut' in url:
-        error("Script can't handle international meets")
-    elif 'kansalliset-kilpailut' not in url and 'sm-kilpailu' not in url:
-        error('Script expects urls from the results list, not the results themselves')
-    html = gethtml(results_url)
+    # if 'arvokilpailut' in url:
+    #     error("Script can't handle international meets")
+    # elif 'kansalliset-kilpailut' not in url and 'sm-kilpailu' not in url:
+    #     error('Script expects urls from the results list, not the results themselves')
+    html = gethtml(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
     meetcsv = getmeetinfo(soup)
-    dirname = getdirname(url)
     entriescsv = getresults(
         soup, meetcsv.rows[0][meetcsv.index('MeetName')], url)
     if len(entriescsv.rows) == 0:
@@ -895,6 +893,7 @@ def main(url):
     fixsex(entriescsv)
 
     remove_empty_and_ignore_cols(entriescsv)
+    entriescsv.append_column('BirthDate')
 
     # Wilks will be automatically calculated later.
     # Feds get it wrong all the time.
@@ -952,6 +951,6 @@ def main(url):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
-    main(sys.argv[1])
+    if len(sys.argv) != 3:
+        print("Usage: %s dirname url" % sys.argv[0])
+    main(sys.argv[1], sys.argv[2])
