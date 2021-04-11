@@ -503,6 +503,12 @@
     16028 = ["ExemptWeightClassConsistency"] # No weightclasses
     16032 = ["ExemptWeightClassConsistency"] # No weightclasses
     16033 = ["ExemptWeightClassConsistency"] # No weightclasses
+    16034 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
+    16037 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
+    16038 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
+    16040 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
+    16041 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
+    16046 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
     1705 = ["ExemptWeightClassConsistency"]
     1746 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1761 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
@@ -562,3 +568,7 @@
     2043 = ["ExemptWeightClassConsistency"] # Para in regular weight classes
     2055 = ["ExemptWeightClassConsistency"] # 48kg SJr
     2105 = ["ExemptWeightClassConsistency"] # Youth Classes
+    2109 = ["ExemptWeightClassConsistency"] # Uses the new weightclasses
+    2110 = ["ExemptWeightClassConsistency"] # Youth Classes
+    2112 = ["ExemptWeightClassConsistency"] # No 40kg Under 17
+    2113 = ["ExemptWeightClassConsistency"] # No 40kg Under 17
