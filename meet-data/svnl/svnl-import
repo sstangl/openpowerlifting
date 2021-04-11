@@ -311,9 +311,9 @@ def getresults(soup, meet_name, url):
             continue
 
         # Records are after data
-        if (any(break_str in text[0] for break_str in
+        if (any(break_str in text[0].strip().lower() for break_str in
                 ['ätykset', 'Records', 'Joukkuekilpailu', 'Norbergs Kraftsportförening',
-                 'Rekord:', 'Domare:', 'Tuomarit:'])):
+                 'Rekord:', 'Domare:', 'Tuomarit:', 'se:t'])):
             break
 
         # Skip record lines, this loses a small amount of division information
