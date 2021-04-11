@@ -333,9 +333,9 @@ def getresults(soup, meet_name, url):
             # Get column information.
             for ii in iterable:
                 h = text[ii].lower().replace('.', '')
-                if h == 'sij' or h == 'pl' or h == 'place':
+                if h in ['sij', 'pl', 'place', 'paikka']:
                     csv.fieldnames += ['Place']
-                elif h in ['m/w', 'm/n', 'nro', 'm/n *']:
+                elif h in ['m/w', 'm/n', 'nro', 'm/n *', 'n/n']:
                     csv.fieldnames += ['Sex']
                 elif h == 'sarja' or h == 'cls' or h == 'class':
                     csv.fieldnames += ['WeightClassKg']
