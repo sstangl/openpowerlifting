@@ -215,7 +215,7 @@ def makeentriescsv(soup):
                 elif 'Male' in s:
                     state_sex = 'M'
 
-        elif k == 21:
+        elif k == 20:
             # This is a results row.
             assert state_event is not None
             assert state_division is not None
@@ -489,7 +489,7 @@ def getdirname(soup):
 def main(url, importdir):
     html = gethtml(url)
 
-    soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, 'lxml')
 
     entriescsv = makeentriescsv(soup)
     removeemptycolumns(entriescsv)
