@@ -17,6 +17,16 @@
     novice = {name="Novice", min=0, max=999}
 	first_responder = {name="First Responder", min=0, max=999}
 
+	# New-style tested divisions
+    dt_open = {name="DT Open", min=0, max=999, tested="Yes"}
+    dt_teen = {name="DT Teen", min=13, max=19, tested="Yes"}
+    dt_submaster = {name="DT Sub Master", min=33, max=39, tested="Yes"}
+    dt_master1 = {name="DT Master 1", min=40, max=49, tested="Yes"}
+    dt_master2 = {name="DT Master 2", min=50, max=59, tested="Yes"}
+    dt_novice = {name="DT Novice", min=0, max=999, tested="Yes"}
+    dt_int = {name="DT Int", min=0, max=999, tested="Yes"} # Intermediate
+	dt_first_responder = {name="DT First Responder", min=0, max=999, tested="Yes"}
+
     # Old-style divisions.
     teen = {name="Teen", min=13, max=19}
     sm = {name="SM", min=33, max=39}
