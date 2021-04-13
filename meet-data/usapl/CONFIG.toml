@@ -438,8 +438,14 @@
     divisions = ["MR-Y", "MR-Y1", "MR-Y2", "MR-Y3", "M-Y", "M-Y1", "M-Y2", "M-Y3"]
 
 [weightclasses.youth_F]
+    classes = ["30","35","40","43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["FR-Y", "FR-Y1", "FR-Y2", "FR-Y3", "F-Y", "F-Y1", "F-Y2", "F-Y3"]
+
+[weightclasses.year2020_youth_F]
     classes = ["30","35","40","43","47","52","57","63","72","84","84+"]
-    date_range=["2015-01-01","9999-01-01"]
+    date_range=["2015-01-01","2020-12-31"]
     sex = "F"
     divisions = ["FR-Y", "FR-Y1", "FR-Y2", "FR-Y3", "F-Y", "F-Y1", "F-Y2", "F-Y3"]
 
