@@ -176,6 +176,7 @@
     fgemapf = {name ="F_GEM_APF",min=0,max=999,equipment="Multi-ply",sex="F",place="G"} #Guest
     framapf = {name="F_RAM_APF", min=0, max=999, equipment="Multi-ply", sex="F"} # Soft Equipment.
     fhsemapf = {name="F_HSEM_APF", min=13, max=19, equipment="Multi-ply", sex="F"} # High School
+    fpfcrapf = {name ="F_PFCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"} #Police/Fire
 
     # AAPF Divisions.
     moraapf = {name ="M_OR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
