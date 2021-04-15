@@ -205,7 +205,7 @@ def parse_sheetname(s):
         # Booleans.
         elif word in ['люб.', 'любители', 'am']:
             amateur = 'Amateur'
-        elif word == 'pro' or word == 'pro-' or word == 'профессионалы':
+        elif word in ['pro', 'pro-', 'профессионалы', 'проф']:
             assert amateur == 'Pro'
         elif word in ['дк', 'dr test', 'dt', 'д к ', 'dc']:
             tested = 'Yes'
