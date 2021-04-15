@@ -1182,6 +1182,11 @@ pub enum Federation {
     #[strum(to_string = "WPCCP", serialize = "wpccp")]
     WPCCP,
 
+    /// WPC meets hosted in Egypt.
+    #[serde(rename = "WPC-Egypt")]
+    #[strum(to_string = "WPC-Egypt", serialize = "wpc-egypt")]
+    WPCEgypt,
+
     /// WPC meets hosted by METAL gym Finland.
     #[serde(rename = "WPC-Finland")]
     #[strum(to_string = "WPC-Finland", serialize = "wpc-finland")]
@@ -1742,6 +1747,7 @@ impl Federation {
             Federation::WBC => false,
             Federation::WPC => false,
             Federation::WPCCP => false,
+            Federation::WPCEgypt => false,
             Federation::WPCFinland => false,
             Federation::WPCFrance => false,
             Federation::WPCGermany => false,
@@ -2072,6 +2078,7 @@ impl Federation {
             Federation::WPAU => Some(Country::Ukraine),
             Federation::WPC => None,
             Federation::WPCCP => Some(Country::Canada),
+            Federation::WPCEgypt => Some(Country::Egypt),
             Federation::WPCFinland => Some(Country::Finland),
             Federation::WPCFrance => Some(Country::France),
             Federation::WPCGermany => Some(Country::Germany),
@@ -2473,6 +2480,7 @@ impl Federation {
             Federation::WPAU => None,
             Federation::WPC => Some(Federation::WPC),
             Federation::WPCCP => Some(Federation::WPC),
+            Federation::WPCEgypt => Some(Federation::WPC),
             Federation::WPCFinland => Some(Federation::WPC),
             Federation::WPCFrance => Some(Federation::WPC),
             Federation::WPCGermany => Some(Federation::WPC),
@@ -2896,6 +2904,7 @@ impl Federation {
             Federation::WPAU => PointsSystem::Wilks,
             Federation::WPC => PointsSystem::Glossbrenner,
             Federation::WPCCP => PointsSystem::Glossbrenner,
+            Federation::WPCEgypt => PointsSystem::Glossbrenner,
             Federation::WPCFinland => PointsSystem::Glossbrenner,
             Federation::WPCFrance => PointsSystem::Glossbrenner,
             Federation::WPCGermany => PointsSystem::Glossbrenner,
