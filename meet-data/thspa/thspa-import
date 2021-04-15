@@ -149,7 +149,7 @@ def enterdivision(csv, divurl):
         # The optional 11th cell specifies whether it was a state qualifying total.
         # Very few meets actually have that.
         # There is sometimes a "Grade" cell as well
-        assert len(cells) in [10,11,12]
+        assert len(cells) in [10, 11, 12]
 
         # First column is WeightClassLBS, needs conversion to Kg.
         weightclass = weightclass2kg(cells[0].text.strip(), sex)
