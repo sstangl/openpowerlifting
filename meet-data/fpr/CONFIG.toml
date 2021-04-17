@@ -370,6 +370,7 @@
     13010 = ["ExemptWeightClassConsistency"] # Youth classes
     13012 = ["ExemptWeightClassConsistency"] # Youth classes
     13014 = ["ExemptWeightClassConsistency"] # Reduced weightclasses
+    13016 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
     1403 = ["ExemptWeightClassConsistency"]
     1406 = ["ExemptWeightClassConsistency"]
     1408 = ["ExemptWeightClassConsistency"]
@@ -510,6 +511,7 @@
     16040 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
     16041 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
     16046 = ["ExemptWeightClassConsistency"] # Youth classes, missing weight classes
+    16048 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
     1705 = ["ExemptWeightClassConsistency"]
     1746 = ["ExemptWeightClassConsistency"] # Jr/SJr Classes
     1761 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
@@ -555,6 +557,9 @@
     18057 = ["ExemptWeightClassConsistency"] # Youth Classes
     18060 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
     18061 = ["ExemptWeightClassConsistency"] # Fewer weightclasses
+    18064 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
+    18065 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
+    18066 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
     1919 = ["ExemptWeightClassConsistency"]
     1920 = ["ExemptWeightClassConsistency"] # Masters have no weight class
     1922 = ["ExemptWeightClassConsistency"]
