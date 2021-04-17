@@ -19,7 +19,8 @@ URLS = ["http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2015",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2018",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2019",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2020",
-        "https://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2021"]
+        "https://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/"
+        "itogovye-protokoly-2021"]
 BASEURL = "http://russia-powerlifting.ru"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
