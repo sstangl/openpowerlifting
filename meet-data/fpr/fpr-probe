@@ -86,13 +86,10 @@ FPVRN_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPVrn/'
 
 PFMR_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/PFMr/'
 
-COPF_URLS = ['http://torpedo74.ru/palace/469/#content',
-             'http://torpedo74.ru/palace/493/#content',
-             'http://torpedo74.ru/palace/502/#content',
-             'http://torpedo74.ru/palace/504/#content',
-             'http://torpedo74.ru/palace/510/#content',
-             'http://torpedo74.ru/palace/514/#content',
+COPF_URLS = ['http://torpedo74.ru/palace/514/#content',
              'http://torpedo74.ru/palace/522/#content']
+
+KPF_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/KPF/'
 
 FPRME_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPRME/'
 
@@ -401,6 +398,7 @@ def main():
     meetlist = meetlist + allpowerlifting_probe.probefederation(SBRPF_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPVRN_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(PFMR_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(KPF_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPRME_URL)
 
     # html_FPSK = oplprobe.gethtml(FPSK_URL)
