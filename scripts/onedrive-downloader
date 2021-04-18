@@ -47,11 +47,10 @@ def download_file(url, resultsname):
     time.sleep(5)
 
     saveas_button = driver.find_element_by_id(
-        "m_excelWebRenderer_ewaCtl_faSaveAs-Menu32")
+        "FileSaveAsPage")
     saveas_button.click()
 
-    download_button = driver.find_element_by_id(
-        "m_excelWebRenderer_ewaCtl_Jewel.DownloadCopy-Menu48")
+    download_button = driver.find_element_by_css_selector(".ms-Button[data-unique-id='DownloadACopy']")
     download_button.click()
 
     alertbox = driver.find_elements_by_id("errorbuttonarea")
