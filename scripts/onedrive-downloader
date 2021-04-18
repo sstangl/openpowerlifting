@@ -50,7 +50,8 @@ def download_file(url, resultsname):
         "FileSaveAsPage")
     saveas_button.click()
 
-    download_button = driver.find_element_by_css_selector(".ms-Button[data-unique-id='DownloadACopy']")
+    btn_css = ".ms-Button[data-unique-id='DownloadACopy']"
+    download_button = driver.find_element_by_css_selector(btn_css)
     download_button.click()
 
     alertbox = driver.find_elements_by_id("errorbuttonarea")
