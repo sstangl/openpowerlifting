@@ -29,7 +29,7 @@ F,58.5,Mary Brennan,Castlecomer,38,Open,58.4,75,85,-90,,85,,,,,,,,,,,85,S,4,Raw
 F,58.5,Myra Fitzgerald,IRE,34,Open,57,70,75,-80,,75,,,,,,,,,,,75,S,5,Raw
 F,58.5,LaVerne Crowley,IRE,24,Open,58.1,65,75,-82.5,,75,,,,,,,,,,,75,S,6,Raw
 F,58.5,Siobhan Cotter,Cork,23,Juniors 20-24,57.4,70,-80,-80,,70,,,,,,,,,,,70,S,4,Raw
-F,63,Linh Nguyen,Ire,31,Open,60.9,-120,120,-125.5,,120,,,,,,,,,,,120,S,1,Raw
+F,63,Linh Nguyen #1,Ire,31,Open,60.9,-120,120,-125.5,,120,,,,,,,,,,,120,S,1,Raw
 F,63,Amy Nolan,IRE,30,Open,60.8,-82.5,-90,100,,100,,,,,,,,,,,100,S,2,Raw
 F,63,Fiona Somers,IRE,35,Open,62,90,97.5,100,,100,,,,,,,,,,,100,S,3,Raw
 F,63,Deirde Langford,UCC,23,Juniors 20-24,59.2,87.5,92.5,-95,,92.5,,,,,,,,,,,92.5,S,1,Raw
@@ -220,7 +220,7 @@ M,145,Jonah Faulkner,ire,19,Teen 18-19,133.3,175,180,185,,185,,,,,,,,,,,185,S,1,
 M,145,Anthony Clarke,Gorey,32,Open,131.4,160,170,180,,180,,,,,,,,,,,180,S,1,Raw
 M,145,Christopher McBride,IRE,32,Open,143.8,-150,-160,165,,165,,,,,,,,,,,165,S,2,Raw
 F,70,Assumpta Feeney,Target,38,Open,65.1,120.5,130,,,130,,,,,,,,,,,130,S,1,Single-ply
-M,60,Barry Smith,Ardee,27,Open,59,152.5,160.5,165,170,165,,,,,,,,,,,165,S,1,Single-ply
+M,60,Barry Smith #1,Ardee,27,Open,59,152.5,160.5,165,170,165,,,,,,,,,,,165,S,1,Single-ply
 M,67.5,Paul Conlon,IRE,45,Masters 45-49,66.4,80,90,-100,,90,,,,,,,,,,,90,S,1,Single-ply
 M,75,John Donavan,CIT,23,Juniors 20-24,73.3,210,220,-225,,220,,,,,,,,,,,220,S,1,Single-ply
 M,75,Tony Pierce,No,55,Masters 55-59,73.2,165,-170,-170,,165,,,,,,,,,,,165,S,1,Single-ply
@@ -454,7 +454,7 @@ M,100,Joe Davis,IRE,43,Masters 40-44,98.8,,,,,,85,87.5,-90,,87.5,,,,,,87.5,B,2,R
 M,100,Mike Kirby,IRE,19,Teen 18-19,99.7,,,,,,-102.5,-115,,,,,,,,,,B,DQ,Raw
 M,110,Colin Power,IRE,32,Open,105.8,,,,,,155,160,165,,165,,,,,,165,B,1,Raw
 M,110,John McMenamin,Ire,50,Masters 50-54,109.9,,,,,,140,147.5,151,,151,,,,,,151,B,1,Raw
-M,110,Michael Coleman,Ire,39,Open,106.1,,,,,,145,150,-155,,150,,,,,,150,B,2,Raw
+M,110,Michael Coleman #2,Ire,39,Open,106.1,,,,,,145,150,-155,,150,,,,,,150,B,2,Raw
 M,110,John O'Callaghan,IRE,36,Open,109.1,,,,,,130,140,145,,145,,,,,,145,B,3,Raw
 M,110,Ryan Flanagan,Ire,24,Open,108.3,,,,,,132.5,140,-142.5,,140,,,,,,140,B,4,Raw
 M,110,Barry O'Sullivan,Ire,31,Open,108.8,,,,,,140,-155,-155,,140,,,,,,140,B,5,Raw
@@ -478,11 +478,11 @@ M,145,Andre Du Plessis,Ire,50,Masters 50-54,139.8,,,,,,150,160,,,160,,,,,,160,B,
 M,145,Micheal Downey,Ire,22,Juniors 20-24,131.7,,,,,,140,-150,,,140,,,,,,140,B,1,Raw
 M,145,Christopher McBride,IRE,32,Open,144.5,,,,,,127.5,132.5,-140,,132.5,,,,,,132.5,B,1,Raw
 M,145,Anthony Clarke,Gorey,32,Open,133.7,,,,,,105,115,-120,,115,,,,,,115,B,2,Raw
-M,60,Barry Smith,IRE,27,Open,58.8,,,,,,100,107.5,-115,,107.5,,,,,,107.5,B,1,Single-ply
+M,60,Barry Smith #1,IRE,27,Open,58.8,,,,,,100,107.5,-115,,107.5,,,,,,107.5,B,1,Single-ply
 M,82.5,Jamie Sullivan,UCC,21,Juniors 20-24,77,,,,,,120,125,-130.5,,125,,,,,,125,B,1,Single-ply
 M,82.5,Rob Duncan,Ace,32,Open,82.5,,,,,,115,125,-135,,125,,,,,,125,B,1,Single-ply
 M,90,Roy Scott,IRE,52,Masters 50-54,88,,,,,,110,125,-140,,125,,,,,,125,B,1,Single-ply
-M,110,Michael Coleman,Ire,39,Open,106.1,,,,,,-160,160,165,,165,,,,,,165,B,1,Single-ply
+M,110,Michael Coleman #2,Ire,39,Open,106.1,,,,,,-160,160,165,,165,,,,,,165,B,1,Single-ply
 M,110,Barry O'Sullivan,Ire,31,Open,108.8,,,,,,-155,-165,165,,165,,,,,,165,B,2,Single-ply
 M,145,Andre Du Plessis,Ire,50,Masters 50-54,139.8,,,,,,170,180,-190,,180,,,,,,180,B,1,Single-ply
 F,47.5,Rej Makinano,IRE,19,Teen 18-19,46.4,,,,,,,,,,,-70,75,-80,,75,75,D,1,Raw
@@ -743,7 +743,7 @@ M,145,Micheal Downey,Ire,22,Juniors 20-24,131.7,,,,,,,,,,,-250,-250,250,,250,250
 M,145,Jonah Faulkner,ire,19,Teen 18-19,134,,,,,,,,,,,215,225,235,-242.5,235,235,D,1,Raw
 M,145,Christopher McBride,IRE,32,Open,144.5,,,,,,,,,,,195,215,-240,,215,215,D,2,Raw
 M,145,Anthony Clarke,Gorey,32,Open,133.7,,,,,,,,,,,180,-200,200,,200,200,D,3,Raw
-M,60,Barry Smith,IRE,28,Open,58.8,,,,,,,,,,,185,200.5,-202.5,,200.5,200.5,D,1,Single-ply
+M,60,Barry Smith #1,IRE,28,Open,58.8,,,,,,,,,,,185,200.5,-202.5,,200.5,200.5,D,1,Single-ply
 M,67.5,Kelvin Moynihan,CIT,23,Juniors 20-24,66.7,,,,,,,,,,,192.5,200,205,-207.5,205,205,D,1,Single-ply
 M,67.5,Paul Conlon,IRE,45,Masters 45-49,66.1,,,,,,,,,,,110,,,,110,110,D,1,Single-ply
 M,82.5,Rob Duncan,Ace,32,Open,82.5,,,,,,,,,,,210,222.5,-232.5,,222.5,222.5,D,1,Single-ply

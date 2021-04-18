@@ -93,7 +93,11 @@ KPF_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/KPF/'
 
 TPF_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/TPF/'
 
+FPRSYA_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPRSYA/'
+
 FPRME_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPRME/'
+
+PFT_URL = 'http://fpr71.ru/%d0%bf%d1%80%d0%be%d1%82%d0%be%d0%ba%d0%be%d0%bb%d1%8b/'
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -363,6 +367,22 @@ def getmeetlist_COPF(html, main_url):
     return urls
 
 
+def getmeetlist_PFT(html, main_url):
+    soup = BeautifulSoup(html, 'html.parser')
+    div = soup.find('div', {'class', 'smc-postcontent'})
+    urls = []
+    for a in div.find_all('a'):
+        if a.has_attr('href'):
+            url = a['href']
+
+            if 'fpr71' not in url:
+                continue
+
+            if url not in urls:
+                urls.append(url)
+    return urls
+
+
 def main():
 
     meetlist = []
@@ -401,6 +421,8 @@ def main():
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPVRN_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(PFMR_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(KPF_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(TPF_URL)
+    meetlist = meetlist + allpowerlifting_probe.probefederation(FPRSYA_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPRME_URL)
 
     # html_FPSK = oplprobe.gethtml(FPSK_URL)
@@ -416,6 +438,9 @@ def main():
     for url in COPF_URLS:
         html_COPF = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist_COPF(html_COPF, url)
+
+    html_PFT = oplprobe.gethtml(PFT_URL)
+    meetlist = meetlist + getmeetlist_PFT(html_PFT, PFT_URL)
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
