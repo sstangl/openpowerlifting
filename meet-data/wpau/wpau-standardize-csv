@@ -255,7 +255,7 @@ def parse_fieldnames(sheet, obj):
                                                      'mf pts', 'f pts',
                                                      'сумма малоуна', 'formula summ',
                                                      'coef summ', 'formulas',
-                                                     'coef s/m']):  # Wilks
+                                                     'coef s/m', 'coef (open)']): # Wilks
             fieldnames.append('IGNORE')
         elif text in ['виконаний норматив', 'викон норматив',
                       'вик норматив впа україна', 'вик розр',
