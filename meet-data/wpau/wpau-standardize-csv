@@ -250,12 +250,13 @@ def parse_fieldnames(sheet, obj):
         elif any(check_str in text for check_str in ['власна вага', 'вес', 'pw',
                                                      'weight', 'вл вага']):
             fieldnames.append('BodyweightKg')
+        # Wilks
         elif any(check_str in text for check_str in ['сума по коеф', 'абсолют',
                                                      'best', 'absolut', 'gf pts',
                                                      'mf pts', 'f pts',
                                                      'сумма малоуна', 'formula summ',
                                                      'coef summ', 'formulas',
-                                                     'coef s/m', 'coef (open)']): # Wilks
+                                                     'coef s/m', 'coef (open)']):
             fieldnames.append('IGNORE')
         elif text in ['виконаний норматив', 'викон норматив',
                       'вик норматив впа україна', 'вик розр',
