@@ -1,0 +1,115 @@
+Sex,Event,Place,WeightClassKg,Name,Team,Age,Division,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Equipment
+F,B,1,63,Helen Wuyts,GilbertsGym,20,F-JR,59.4,75,-77.5,-77.5,,75,,,,,,75,Raw
+F,B,1,63,Hazel Wuyts,Gilbertsgym,15,F-T1,62.1,30,35,40,,40,,,,,,40,Raw
+F,B,1,80,Nadège Dechamps,Castors,15,F-T1,74,80,-85.5,-85.5,,80,,,,,,80,Raw
+F,B,1,90,Martine Schaefs,Castors,57,F-M4,83.8,40,50,52.5,,52.5,,,,,,52.5,Raw
+F,B,1,90+,Claudia Claes,PlanetFitness,44,F-M1,93.9,70,75,-77.5,,75,,,,,,75,Raw
+M,B,1,56,Sven Vermeulen,IsoGym,20,M-JR,53.9,75,80,85,-88,85,,,,,,85,Raw
+M,B,1,60,Indy Smet,PlanetFiness,18,M-T3,58.8,70,80,88.5,-90,88.5,,,,,,88.5,Raw
+M,B,1,60,Bram Demeyre,KBBC,17,M-T2,57.1,65,70,-75,,70,,,,,,70,Raw
+M,B,1,67.5,Tim Van Den Abbele,GilbertsGym,24,M-O,62.7,110,117.5,-122.5,,117.5,,,,,,117.5,Raw
+M,B,1,67.5,Xander Van Hoof,GilbertsGym,19,M-T3,66.9,100,-110,-110,,100,,,,,,100,Raw
+M,B,1,67.5,Jeremy Jacmart,Castors,20,M-JR,62.2,80,85,-87.5,,85,,,,,,85,Raw
+M,B,2,67.5,Angelo Cuylle,Isogym,18,M-T3,66.6,80,85,-87.5,,85,,,,,,85,Raw
+M,B,3,67.5,Angelo Bruneel,Isogym,18,M-T3,63.4,-70,70,75,,75,,,,,,75,Raw
+M,B,1,75,Indra Sudarminto,PlanetFitness,21,M-JR,74.3,132.5,137.5,-143,,137.5,,,,,,137.5,Raw
+M,B,1,75,Bart Hallewaert,Isogym,43,M-M1,74.7,130,135,-138,,135,,,,,,135,Raw
+M,B,1,75,Kim Houbraken,GilbertsGym,28,M-O,70,115,130,-135,,130,,,,,,130,Raw
+M,B,1,75,Geovanni De Vissher,PowerLebbeke,18,M-T3,70,125,-132.5,-132.5,,125,,,,,,125,Raw
+M,B,1,75,Maikel Van Gucht,Powerlebbeke,16,M-T2,71.4,-110,115.5,120,,120,,,,,,120,Raw
+M,B,2,75,Wauter Wangermez,TeamEffort,21,M-JR,74,105,112.5,117.5,,117.5,,,,,,117.5,Raw
+M,B,2,75,Geoffrey Mignolet,Castors,17,M-T2,72.7,105,110,112.5,,112.5,,,,,,112.5,Raw
+M,B,1,75,Johny Callemeyn,Fit4,58,M-M4,73.9,-100,100,105,,105,,,,,,105,Raw
+M,B,2,75,Eynden Luc Van Den,PattonTeam,55,M-M4,72.5,87.5,92.5,97.5,,97.5,,,,,,97.5,Raw
+M,B,2,75,Antti Hassinen,HouseOf,28,M-O,74.1,-95,95,-100,,95,,,,,,95,Raw
+M,B,3,75,Laurens Eeckhout,PattonTeam,16,M-T2,68.3,80,87.5,-90,,87.5,,,,,,87.5,Raw
+M,B,1,75,Jamal Al Dhyni,KBBC,15,M-T1,68.9,80,85,-90,,85,,,,,,85,Raw
+M,B,1,75,Pierre De Koster,PattonTeam,79,M-M8,70.9,70,77.5,82.5,85,82.5,,,,,,82.5,Raw
+M,B,1,82.5,Geoffroy Servotte,PlanetFitness,31,M-O,82.1,162.5,170.5,-175,,170.5,,,,,,170.5,Raw
+M,B,2,82.5,Caesbroeck Bren Van,GilbertsGym,28,M-O,82.5,120,-135,140,,140,,,,,,140,Raw
+M,B,1,82.5,Alan Peeters,GilbertsGym,18,M-T3,79.4,115,125.5,130,,130,,,,,,130,Raw
+M,B,1,82.5,Gillis Soenens,Isogym,21,M-JR,75.7,112.5,117.5,-120,,117.5,,,,,,117.5,Raw
+M,B,2,82.5,Jonas Lefebvre,KBBC,20,M-JR,79.1,105,110,115,,115,,,,,,115,Raw
+M,B,1,82.5,Thijs Bartels,PowerLebbeke,16,M-T2,80.1,100,110,115,,115,,,,,,115,Raw
+M,B,3,82.5,Elliot Huyse,KBBC,20,M-JR,81.8,110,112.5,-115,,112.5,,,,,,112.5,Raw
+M,B,2,82.5,Bart Van Heesvelde,HouseOf,19,M-T3,80.7,95,107.5,-115,,107.5,,,,,,107.5,Raw
+M,B,1,82.5,Jean-Paul Roegiers,JackysGym,67,M-M6,81.2,100,-105,105,-108,105,,,,,,105,Raw
+M,B,1,82.5,Roger Remy,Castors,58,M-M4,77.7,95,100,102.5,-108,102.5,,,,,,102.5,Raw
+M,B,4,82.5,Jarno Lauveryns,HouseOf,20,M-JR,77.5,100,-110,-110,,100,,,,,,100,Raw
+M,B,1,82.5,Kurt Devos,KBBC,40,M-M1,79.9,85,90,92.5,,92.5,,,,,,92.5,Raw
+M,B,1,82.5,Billy Van Doorne,KBBC,74,M-M7,75.7,82.5,87.5,-90,,87.5,,,,,,87.5,Raw
+M,B,3,82.5,Tycho Martins,HouseOf,19,M-T3,80.4,80,87.5,-95,,87.5,,,,,,87.5,Raw
+M,B,1,90,Philippe Jacobs,Charleroi,40,M-M1,88.1,152.5,160,165,167.5,165,,,,,,165,Raw
+M,B,2,90,Geert Janssen,GilbertsGym,43,M-M1,84.5,125,135,140,,140,,,,,,140,Raw
+M,B,3,90,Rudy Smet,PlanetFitness,43,M-M1,88.2,135,-140,140,,140,,,,,,140,Raw
+M,B,1,90,Thomas Vermandere,Isogym,21,M-JR,88.7,120,-125,-125,,120,,,,,,120,Raw
+M,B,1,90,Jens Boone,Galaxy,17,M-T2,88,-115,117.5,-123,,117.5,,,,,,117.5,Raw
+M,B,1,90,Achiel De Vaere,JackysGym,64,M-M5,88.6,105,-107.5,-107.5,,105,,,,,,105,Raw
+M,B,1,90,Niels Naenen,GilbertsGym,18,M-T3,89.5,100,105,-110,,105,,,,,,105,Raw
+M,B,1,90,Martin Theyssens,PattonTeam,72,M-M7,89.3,95,-102.5,102.5,-108,102.5,,,,,,102.5,Raw
+M,B,1,90,Kevin Dhaene,PlanetFitness,25,M-O,82.8,95,100,-105,,100,,,,,,100,Raw
+M,B,1,90,Eugene de Cock,Apollo,49,M-M2,86.5,90,95,100,,100,,,,,,100,Raw
+M,B,2,90,Indris Ismaelov,PattonTeam,63,M-M5,90,70,80,-90,,80,,,,,,80,Raw
+M,B,2,90,Enzo Petiliion,Isogym,18,M-T3,88.7,77.5,-82.5,-82.5,,77.5,,,,,,77.5,Raw
+M,B,1,100,Vakhid Saltakhanov,KBBC,46,M-M2,98.9,140,160,-165,,160,,,,,,160,Raw
+M,B,1,100,Simon Alsberghe,KBBC,20,M-JR,95.7,150,155,-157.5,,155,,,,,,155,Raw
+M,B,1,100,Dylan Deceuninck,Isogym,19,M-T3,90.9,135,145.5,-150,,145.5,,,,,,145.5,Raw
+M,B,2,100,Jeroen Van Heesvelde,HouseOf,21,M-JR,98,125,135,140,,140,,,,,,140,Raw
+M,B,2,100,Beny Verbeke,Isogym,46,M-M2,90.1,110,115,-117.5,,115,,,,,,115,Raw
+M,B,1,100,René Mertens,PlanetFitness,78,M-M8,99,105,110,,,110,,,,,,110,Raw
+M,B,2,100,Jonas Velghe,Isogym,19,M-T3,90.6,90,-95,95,,95,,,,,,95,Raw
+M,B,DQ,100,Gregoire Egide,HouseOf,27,M-O,95.2,-130,-137.5,-137.5,,,,,,,,,Raw
+M,B,1,110,Jean-Louis Malotteau,Castors,48,M-M2,109.3,165,170,-175,,170,,,,,,170,Raw
+M,B,1,110,Mathias Blomme,IsoGym,26,M-O,101.4,150,157.5,-160,,157.5,,,,,,157.5,Raw
+M,B,2,110,Wouter Vertstraeten,FitFor,34,M-O,100.7,145,-150,-150,,145,,,,,,145,Raw
+M,B,1,110,Yannick Van Roy,PlanetFitness,20,M-JR,109.7,135,137.5,140,,140,,,,,,140,Raw
+M,B,3,110,Jonathan Macca,Charleroi,24,M-O,101.7,122.5,127.5,-130,,127.5,,,,,,127.5,Raw
+M,B,1,125,Michel Dubucq,Castors,54,M-M3,117.1,170,177.5,180,,180,,,,,,180,Raw
+M,B,1,125,David Duflon,KBBC,37,M-O,112.5,125,135,-145,,135,,,,,,135,Raw
+M,B,1,125,Johan Roge,KBBC,62,M-M5,123.5,125,-130,-130,,125,,,,,,125,Raw
+M,B,2,125,Francis Vanwest,KBBC,51,M-M3,116.6,100,105,-107.5,,105,,,,,,105,Raw
+M,B,3,125,Marc Goovaerts,PattonTeam,54,M-M3,115.1,90,95,100,,100,,,,,,100,Raw
+M,B,2,125,Gilbert Van Hove,Castors,61,M-M5,117.5,80,,,,80,,,,,,80,Raw
+M,B,1,145,Jérôme Dechamps,Castors,23,M-JR,126.3,142.5,150,-155,,150,,,,,,150,Raw
+M,B,DQ,145,Sebastien Dechamps,Castors,18,M-T3,135,-142.5,-142.5,-142.5,,,,,,,,,Raw
+F,D,1,63,Helen Wuyts,GilbertsGym,20,F-JR,59.4,,,,,,160,170,180,,180,180,Raw
+F,D,1,80,Nadège Dechamps,Castors,15,F-T1,74,,,,,,130,145,150,155,150,150,Raw
+M,D,1,56,Sven Vermeulen,IsoGym,20,M-JR,53.9,,,,,,110,120,125,130.5,125,125,Raw
+M,D,1,67.5,Angelo Cuylle,Isogym,18,M-T3,66.6,,,,,,175,190.5,-195,,190.5,190.5,Raw
+M,D,1,67.5,Tim Van Den Abbele,GilbertsGym,24,M-O,62.7,,,,,,150,165,172.5,,172.5,172.5,Raw
+M,D,2,67.5,Angelo Bruneel,Isogym,18,M-T3,63.4,,,,,,155,162.5,167.5,,167.5,167.5,Raw
+M,D,1,67.5,Jeremy Jacmart,Castors,20,M-JR,62.2,,,,,,150,157.5,165,,165,165,Raw
+M,D,1,75,Indra Sudarminto,PlanetFitness,21,M-JR,74.3,,,,,,240,250,255,,255,255,Raw
+M,D,1,75,Geoffrey Mignolet,Castors,17,M-T2,72.7,,,,,,220,230,-235,,230,230,Raw
+M,D,1,75,Geovanni De Vissher,PowerLebbeke,18,M-T3,70,,,,,,210,225,-235,,225,225,Raw
+M,D,1,75,Bart Hallewaert,Isogym,43,M-M1,74.7,,,,,,220,-242.5,-242.5,,220,220,Raw
+M,D,1,75,Kim Houbraken,GilbertsGym,28,M-O,70,,,,,,160,-180,190,,190,190,Raw
+M,D,2,75,Antti Hassinen,HouseOf,28,M-O,74.1,,,,,,175,185,190,,190,190,Raw
+M,D,2,75,Maikel Van Gucht,Powerlebbeke,16,M-T2,71.4,,,,,,170,180,185,,185,185,Raw
+M,D,1,75,Johny Callemeyn,Fit4,58,M-M4,73.9,,,,,,172.5,177.5,180,,180,180,Raw
+M,D,2,75,Wauter Wangermez,TeamEffort,21,M-JR,74,,,,,,160,177.5,-192.5,,177.5,177.5,Raw
+M,D,2,75,Eynden Luc Van Den,PattonTeam,55,M-M4,72.5,,,,,,130,145,157.5,,157.5,157.5,Raw
+M,D,1,75,Pierre De Koster,PattonTeam,79,M-M8,70.9,,,,,,80,90,,,90,90,Raw
+M,D,1,82.5,Roger Remy,Castors,58,M-M4,77.7,,,,,,215,230,,,230,230,Raw
+M,D,1,82.5,Alan Peeters,GilbertsGym,18,M-T3,79.4,,,,,,200,210,220,,220,220,Raw
+M,D,1,82.5,Jarno Lauveryns,HouseOf,20,M-JR,77.5,,,,,,180,190,-205,,190,190,Raw
+M,D,2,82.5,Jonas Lefebvre,KBBC,20,M-JR,79.1,,,,,,170,180,190,,190,190,Raw
+M,D,1,82.5,Thijs Bartels,PowerLebbeke,16,M-T2,80.1,,,,,,190,-210,-210,,190,190,Raw
+M,D,2,82.5,Bart Van Heesvelde,HouseOf,19,M-T3,80.7,,,,,,175,190,-205,,190,190,Raw
+M,D,3,82.5,Gillis Soenens,Isogym,21,M-JR,75.7,,,,,,155,165,172.5,,172.5,172.5,Raw
+M,D,3,82.5,Tycho Martins,HouseOf,19,M-T3,80.4,,,,,,140,150,162.5,,162.5,162.5,Raw
+M,D,1,90,Thomas Vermandere,Isogym,21,M-JR,88.7,,,,,,195,202.5,210,-215,210,210,Raw
+M,D,1,90,Geert Janssen,GilbertsGym,43,M-M1,84.5,,,,,,170,180,190,,190,190,Raw
+M,D,1,90,Jens Boone,Galaxy,17,M-T2,88,,,,,,170,175,185,190,185,185,Raw
+M,D,1,90,Martin Theyssens,PattonTeam,72,M-M7,89.3,,,,,,125,135,145,-158,145,145,Raw
+M,D,1,90,Enzo Petiliion,Isogym,18,M-T3,88.7,,,,,,130,-135,-135,,130,130,Raw
+M,D,1,100,Beny Verbeke,Isogym,46,M-M2,90.1,,,,,,272.5,-293,,,272.5,272.5,Raw
+M,D,1,100,Gregoire Egide,HouseOf,27,M-O,95.2,,,,,,225,235,250,,250,250,Raw
+M,D,1,100,Jeroen Van Heesvelde,HouseOf,21,M-JR,98,,,,,,225,240,245.5,-250,245.5,245.5,Raw
+M,D,1,100,Dylan Deceuninck,Isogym,19,M-T3,90.9,,,,,,195,207.5,212.5,220.5,212.5,212.5,Raw
+M,D,2,100,Jonas Velghe,Isogym,19,M-T3,90.6,,,,,,160,-165,165,,165,165,Raw
+M,D,1,110,Yannick Van Roy,PlanetFitness,20,M-JR,109.7,,,,,,240,250,,,250,250,Raw
+M,D,1,125,Gilbert Van Hove,Castors,61,M-M5,117.5,,,,,,160,185,-205.5,,185,185,Raw
+M,D,1,125,David Duflon,KBBC,37,M-O,112.5,,,,,,130,140,155,,155,155,Raw
+M,D,1,145,Jérôme Dechamps,Castors,23,M-JR,126.3,,,,,,250,265,280,-300,280,280,Raw
+M,D,1,145,Sebastien Dechamps,Castors,18,M-T3,135,,,,,,250,265,280,-300,280,280,Raw
