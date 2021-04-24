@@ -16,7 +16,7 @@ S,1,60,Aleksey Markov,,19,M-T3,58.8,130,-145,150,150,,,,,,,,,,,,150,M,Raw
 S,2,60,Vladimir Prepelita,,18,M-T3,59.8,145,150,-153,150,,,,,,,,,,,,150,M,Raw
 S,1,67.5,Vladimir Rojdaichin,,24,M-SR,67.1,150,160,170,170,,,,,,,,,,,,170,M,Raw
 S,2,67.5,Sergey Sherbakov,,30,M-SR,67.3,-170,170,-175,170,,,,,,,,,,,,170,M,Raw
-S,DD,67.5,Amanmuradov Bayrammurad,,25,M-SR,60.6,140,-170,,140,,,,,,,,,,,,140,M,Raw
+S,DD,67.5,Amanmuradov Bayrammurad,,25,M-SR,60.6,140,-170,,140,,,,,,,,,,,,,M,Raw
 S,1,75,Sergiy Scorodumov,,19,M-T3,74.7,175,180,185,185,-190,,,,,,,,,,,185,M,Raw
 S,1,75,Aleksey Lenkin,,22,M-JR,72.6,170,175,,175,,,,,,,,,,,,175,M,Raw
 S,1,75,Tudor Moraru,,15,M-T1,74,150,160,-165,160,,,,,,,,,,,,160,M,Raw
@@ -66,8 +66,8 @@ S,1,47.5,Judy Gedney,,69,F-M6,47,97.5,-103.5,-103.5,97.5,,,,,,,,,,,,97.5,F,Singl
 S,1,58.5,Helen Wuyts,,18,F-T3,58.4,145,152.5,160,160,,,,,,,,,,,,160,F,Single-ply
 S,1,63,Nadezda Talikova,,50,F-M3,60.2,-120,-120,125,125,130,,,,,,,,,,,125,F,Single-ply
 S,1,56,Vepa Nurnazarov,,28,M-SR,52.7,140,-150,150,150,,,,,,,,,,,,150,M,Single-ply
-S,DD,55.5,Veronika Kudisova,,40,F-M1,55.5,85,-95,-100,85,,,,,,,,,,,,85,F,Single-ply
-S,DD,67.5,Amanmuradov Bayrammurad,,25,M-SR,60.6,180,-200,-220,180,,,,,,,,,,,,180,M,Single-ply
+S,DD,55.5,Veronika Kudisova,,40,F-M1,55.5,85,-95,-100,85,,,,,,,,,,,,,F,Single-ply
+S,DD,67.5,Amanmuradov Bayrammurad,,25,M-SR,60.6,180,-200,-220,180,,,,,,,,,,,,,M,Single-ply
 S,1,67.5,Vladimir Rojdaichin,,24,M-SR,67.1,150,180,182.5,182.5,,,,,,,,,,,,182.5,M,Single-ply
 S,1,75,Andrey Marmoza,,50,M-M3,74.3,175,190,200,200,,,,,,,,,,,,200,M,Single-ply
 S,1,75,Christophe Cherel,,42,M-M1,71.4,162.5,172.5,-177.5,172.5,,,,,,,,,,,,172.5,M,Single-ply
@@ -106,7 +106,7 @@ B,1,56,Viktor Ershov,Russia,49,M-M2,54.6,,,,,,90,100,105,105,,,,,,,105,M,Raw
 B,1,56,Dillon Walker,USA,16,M-T2,55.9,,,,,,62.5,70,72.5,72.5,,,,,,,72.5,M,Raw
 B,1,60,Ashot Eganyan,Ukraine,19,M-T3,59.8,,,,,,115,125,130,130,,,,,,,130,M,Raw
 B,1,60,Dmytro Kulyk,Ukraine,17,M-T2,60,,,,,,120,125,130,130,,,,,,,130,M,Raw
-B,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,62.5,,,,,,122.5,130,137.5,137.5,,,,,,,137.5,M,Raw
+B,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,62.5,,,,,,122.5,130,137.5,137.5,,,,,,,,M,Raw
 B,1,67.5,Valeriy Gnutov,Ukraine,29,M-SR,67,,,,,,122.5,127.5,132.5,132.5,,,,,,,132.5,M,Raw
 B,1,67.5,Mathieu Coudriaud,France,23,M-JR,66.8,,,,,,128,132.5,135,135,,,,,,,135,M,Raw
 B,1,67.5,Ilya Kozlov,Russia,18,M-T3,66.9,,,,,,115,122.5,130,130,,,,,,,130,M,Raw
@@ -212,7 +212,7 @@ B,1,58.5,Helen Wuyts,Belarus,18,F-T3,58,,,,,,85,-90,90,90,,,,,,,90,F,Single-ply
 B,1,58.5,Alena Pustovarova,Russia,21,F-JR,57.8,,,,,,65,-67.5,67.5,67.5,70,,,,,,67.5,F,Single-ply
 B,1,70,Evgenia Voschevoz,Russia,24,F-SR,65.2,,,,,,90,92.5,95,95,,,,,,,95,F,Single-ply
 B,1,52,Vepa Nurnazarov,Turkey,28,M-SR,51.4,,,,,,80,87.5,90,90,,,,,,,90,M,Single-ply
-B,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,62.5,,,,,,150,160,170,170,,,,,,,170,M,Single-ply
+B,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,62.5,,,,,,150,160,170,170,,,,,,,,M,Single-ply
 B,1,67.5,Vladimir Rojdaichin,Moldova,24,M-SR,66.8,,,,,,110,,,110,,,,,,,110,M,Single-ply
 B,1,67.5,Mathieu Coudriaud,France,23,M-JR,66.8,,,,,,-150,-150,150,150,,,,,,,150,M,Single-ply
 B,1,75,Pietro Donati,Italy,54,M-M3,70.4,,,,,,105,115,120,120,,,,,,,120,M,Single-ply
@@ -264,7 +264,7 @@ D,1,60,Thierry Rouvinez,Switzerland,31,M-SR,58.2,,,,,,,,,,,170,175,180,180,,180,
 D,1,60,Dmitri Olimpov,Estonia,16,M-T2,59.2,,,,,,,,,,,170,175,180,180,,180,M,Raw
 D,1,60,Aleksey Markov,Russia,19,M-T3,59.5,,,,,,,,,,,165,172.5,180,180,,180,M,Raw
 D,2,60,Vladimir Prepelita,Moldova,18,M-T3,59.9,,,,,,,,,,,165,172.5,180,180,,180,M,Raw
-D,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,63.3,,,,,,,,,,,180,210,235,235,,235,M,Raw
+D,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,63.3,,,,,,,,,,,180,210,235,235,,,M,Raw
 D,1,67.5,Vladimir Rojdaichin,Moldova,24,M-SR,66.6,,,,,,,,,,,182.5,-190,190,190,,190,M,Raw
 D,1,67.5,Azamat Chekirov,Kyrgyzstan,20,M-JR,67,,,,,,,,,,,160,-170,170,170,,170,M,Raw
 D,1,67.5,Igor Poliakov,Estonia,50,M-M3,60.5,,,,,,,,,,,100,115,125,125,,125,M,Raw
@@ -335,7 +335,7 @@ D,1,58.5,Helen Wuyts,Belarus,18,F-T3,57.3,,,,,,,,,,,165,-172.5,172.5,172.5,,172.
 D,1,63,Nadezda Talikova,Russia,50,F-M3,59.9,,,,,,,,,,,142.5,152.5,157.5,157.5,,157.5,F,Single-ply
 D,1,70,Evgenia Voschevoz,Russia,24,F-SR,66,,,,,,,,,,,145,150,,150,,150,F,Single-ply
 D,1,52,Vepa Nurnazarov,Turkey,28,M-SR,51.2,,,,,,,,,,,152.5,162.5,170,170,,170,M,Single-ply
-D,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,63.3,,,,,,,,,,,180,210,220,220,,220,M,Single-ply
+D,DD,67.5,Amanmuradov Bayrammurad,Turkey,25,M-SR,63.3,,,,,,,,,,,180,210,220,220,,,M,Single-ply
 D,1,67.5,Mokhail Smirnov,Russia,19,M-T3,66.3,,,,,,,,,,,190,195,202.5,202.5,,202.5,M,Single-ply
 D,2,67.5,Vladimir Rojdaichin,Moldova,24,M-SR,66.6,,,,,,,,,,,160,180,,180,,180,M,Single-ply
 D,1,75,Andrey Aristarhov,Russia,19,M-T3,74.6,,,,,,,,,,,200,210,215,215,,215,M,Single-ply
