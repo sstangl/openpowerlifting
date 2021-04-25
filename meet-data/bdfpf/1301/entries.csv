@@ -1,0 +1,55 @@
+Sex,Event,Place,WeightClassKg,Name,Team,Age,Division,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Equipment
+F,B,1,44,Hanne Van Casteren,GilbertsGym,14,F-T1,40,35,-37.5,37.5,,37.5,,,,,,37.5,Single-ply
+F,B,1,70,Helen Wuyts,GilbertsGym,21,F-JR,64,60,70.5,87.5,,87.5,,,,,,87.5,Single-ply
+F,B,1,80,Nadège Dechamps,Castors,16,F-T2,77.3,105,112.5,115,-119,115,,,,,,115,Single-ply
+M,B,1,52,Lorenzo Devos,Body2,15,M-T1,45.3,35,40,-42.5,,40,,,,,,40,Single-ply
+M,B,1,56,Luc De Lauw,PlannetFitness,47,M-M2,52.1,90,-95,-95,,90,,,,,,90,Single-ply
+M,B,1,60,Sven Vermeulen,IsoGym,21,M-JR,57.5,-100,105,108,110,108,,,,,,108,Single-ply
+M,B,2,60,Ruben Vanwijnsberghe,Fit4,23,M-JR,59.7,82.5,87.5,-90,,87.5,,,,,,87.5,Single-ply
+M,B,1,67.5,Tim van den Abbeele,GilbertsGym,25,M-O,64.6,135,140,-142.5,,140,,,,,,140,Single-ply
+M,B,1,67.5,Ian Vermeulen,Body2,21,M-JR,62.5,100,-105,-105,,100,,,,,,100,Single-ply
+M,B,2,67.5,Frederik Derycke,Body2,25,M-O,62.9,65,70,-80,,70,,,,,,70,Single-ply
+M,B,DQ,67.5,Emmerik Vanhee,Isogym,22,M-JR,66.6,-125,-125,-130,,,,,,,,,Single-ply
+M,B,1,75,Indra Sudarminto,PlanetFitness,22,M-JR,74.2,160,170,175,,175,,,,,,175,Single-ply
+M,B,1,75,Kim Houbraken,GilbertsGym,29,M-O,69.2,130,-140,-140,,130,,,,,,130,Single-ply
+M,B,2,75,Jeremy Jacmart,Castors,21,M-JR,69.3,115,120,122.5,,122.5,,,,,,122.5,Single-ply
+M,B,1,75,Luc Van den Eynden,PattonTeam,56,M-M4,72.3,100,105,-110,,105,,,,,,105,Single-ply
+M,B,1,75,Kurt Devos,KBBC,41,M-M1,73.8,100,-105,-110,,100,,,,,,100,Single-ply
+M,B,1,82.5,Gillis Soenens,Isogym,22,M-JR,78.7,130,137.5,145,,145,,,,,,145,Single-ply
+M,B,1,82.5,Herve Kerwijn,Body2,68,M-M6,79.8,85,90,95,,95,,,,,,95,Single-ply
+M,B,1,90,Elliot Huyse,KBBC,21,M-JR,84.8,-120,120,130,,130,,,,,,130,Single-ply
+M,B,1,90,Benny Verbeke,Isogym,47,M-M2,87.6,115,125,130,,130,,,,,,130,Single-ply
+M,B,1,90,Martin Theyssens,PattonTeam,73,M-M7,85.8,100,110,-115,,110,,,,,,110,Single-ply
+M,B,1,100,Wouter Verstraeten,Fit4,36,M-O,96.3,145,150,-152.5,,150,,,,,,150,Single-ply
+M,B,1,100,Rudy Smet,PlanetFitness,44,M-M1,93.6,-145,-145,145,,145,,,,,,145,Single-ply
+M,B,2,100,Andy Balcaen,Body2,39,M-O,91.7,-130,140,-155,,140,,,,,,140,Single-ply
+M,B,3,100,Tom Noreilde,Body2,34,M-O,94.5,110,-120,-120,,110,,,,,,110,Single-ply
+M,B,1,110,Gianni Vermote,Isogym,40,M-M1,105.2,160,172.5,180,,180,,,,,,180,Single-ply
+M,B,1,125,Marc Goovaerts,PattonTeam,55,M-M4,116.5,125,130,137.5,,137.5,,,,,,137.5,Single-ply
+M,B,1,145,Wilhelm Backelant,Planetfitness,49,M-M2,141.6,225,235,237.5,246,237.5,,,,,,237.5,Single-ply
+M,B,1,145,Jérôme Dechamps,Castors,24,M-O,129.5,225,230,-235,,230,,,,,,230,Single-ply
+M,B,1,145,Sebastien Dechamps,Castors,19,M-T3,134.1,210,220,225,230,225,,,,,,225,Single-ply
+F,D,1,44,Hanne Van Casteren,GilbertsGym,14,F-T1,40,,,,,,72.5,-80,83,,83,83,Single-ply
+F,D,1,70,Helen Wuyts,GilbertsGym,21,F-JR,64,,,,,,140,160,170,,170,170,Single-ply
+F,D,1,80,Nadège Dechamps,Castors,16,F-T2,77.3,,,,,,150,160,-165,,160,160,Single-ply
+M,D,1,52,Lorenzo Devos,Body2,15,M-T1,45.3,,,,,,35,50,60,,60,60,Single-ply
+M,D,1,56,Luc De Lauw,PlannetFitness,47,M-M2,52.1,,,,,,90,110,-120,,110,110,Single-ply
+M,D,1,60,Sven Vermeulen,IsoGym,21,M-JR,57.5,,,,,,145,155.5,160,165,160,160,Single-ply
+M,D,1,67.5,Emmerik Vanhee,Isogym,22,M-JR,66.6,,,,,,150,160,-170,,160,160,Single-ply
+M,D,1,67.5,Tim van den Abbeele,GilbertsGym,25,M-O,64.6,,,,,,165,170,,,170,170,Single-ply
+M,D,2,67.5,Frederik Derycke,Body2,25,M-O,62.9,,,,,,70,75,90,,90,90,Single-ply
+M,D,1,67.5,Gilbert Hamerlinck,PattonTeam,72,M-M7,66.9,,,,,,105,112.5,120,,120,120,Single-ply
+M,D,1,75,Indra Sudarminto,PlanetFitness,22,M-JR,74.2,,,,,,240,265,-280.5,,265,265,Single-ply
+M,D,2,75,Jeremy Jacmart,Castors,21,M-JR,69.3,,,,,,170,180,-185,,180,180,Single-ply
+M,D,1,75,Kim Houbraken,GilbertsGym,29,M-O,69.2,,,,,,195,-205,205,,205,205,Single-ply
+M,D,1,75,Kurt Devos,KBBC,41,M-M1,73.8,,,,,,120,130,150,,150,150,Single-ply
+M,D,1,75,Luc Van den Eynden,PattonTeam,56,M-M4,72.3,,,,,,155,165,-180,,165,165,Single-ply
+M,D,1,82.5,Gillis Soenens,Isogym,22,M-JR,78.7,,,,,,190,200,215,,215,215,Single-ply
+M,D,1,82.5,Noël Vanglabeke,Fit4,64,M-M5,80.7,,,,,,170,-180.5,-180.5,,170,170,Single-ply
+M,D,1,90,Benny Verbeke,Isogym,47,M-M2,87.6,,,,,,250,265,280,,280,280,Single-ply
+M,D,1,90,Martin Theyssens,PattonTeam,73,M-M7,85.8,,,,,,125,137.5,142.5,,142.5,142.5,Single-ply
+M,D,1,100,Tom Noreilde,Body2,34,M-O,94.5,,,,,,180,190,205,,205,205,Single-ply
+M,D,2,100,Andy Balcaen,Body2,39,M-O,91.7,,,,,,160,175,190,,190,190,Single-ply
+M,D,1,110,Gianni Vermote,Isogym,40,M-M1,105.2,,,,,,240,250.5,-255,,250.5,250.5,Single-ply
+M,D,1,145,Sebastien Dechamps,Castors,19,M-T3,134.1,,,,,,260,280,-300,,280,280,Single-ply
+M,D,1,145,Jérôme Dechamps,Castors,24,M-O,129.5,,,,,,260,280,300,,300,300,Single-ply
