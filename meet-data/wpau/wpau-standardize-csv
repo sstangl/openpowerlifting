@@ -438,7 +438,6 @@ def parse_sheet(sheet):
             break
         else:
             end_line = ii
-
     # Iterate over each line, skipping the two header lines.
     for line in sheet[get_header_linenum(sheet) + 1:end_line]:
         text = ''.join(line).lower()
@@ -467,7 +466,7 @@ def parse_sheet(sheet):
                 division = ''
             continue
         elif any(search_str in text for search_str in ['муж. (', 'men (', 'male',
-                                                       'men.', 'мужчины', 'man']):
+                                                       'men.', 'мужчины']):
             sex = 'M'
             if '(' in text or '\\' in text:
                 division = ''.join(re.findall(
