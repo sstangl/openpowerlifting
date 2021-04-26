@@ -175,7 +175,7 @@ const COUNTRY_MAP = {
     "MEX": "Mexico",
     "MGL": "Mongolia",
     "MHL": "Marshall Islands",
-    "MKD": "Macedonia",
+    "MKD": "North Macedonia",
     "MLI": "Mali",
     "MLT": "Malta",
     "MNE": "Montenegro",

@@ -138,7 +138,6 @@ pub enum Country {
     Libya,
     Lithuania,
     Luxembourg,
-    Macedonia,
     Malaysia,
     Mali,
     Malta,
@@ -176,6 +175,10 @@ pub enum Country {
     #[serde(rename = "N.Ireland")]
     #[strum(to_string = "N.Ireland")]
     NorthernIreland,
+    // Renamed in Feb 2019
+    #[serde(rename = "North Macedonia")]
+    #[strum(to_string = "North Macedonia")]
+    NorthMacedonia,
     Oman,
     Pakistan,
     Palestine,
