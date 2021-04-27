@@ -1,0 +1,57 @@
+Sex,Event,Place,WeightClassKg,Name,Team,Age,Division,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Equipment,Country
+M,B,1,52,Luc De Lauw,PlannetFitness,49,M-M2,51.5,75,-80.5,-80.5,,75,,,,,,75,Raw,
+M,B,1,67.5,Tim van den Abbeele,Sanitas,27,M-O,66.6,105,110,120,,120,,,,,,120,Raw,
+M,B,1,67.5,Darren Boland,Sanitas,40,M-M1,65.6,85,90,-100,,90,,,,,,90,Raw,
+M,B,1,75,Kevin Vandenbosch,PlanetFitness,20,M-JR,73,100,105,107.5,,107.5,,,,,,107.5,Raw,
+M,B,2,75,Liam Dierckx,PlanetFitness,20,M-JR,67.9,95,100,-105,,100,,,,,,100,Raw,
+M,B,1,75,Tom Roels,Sanitas,24,M-O,69,100,107.5,-112.5,,107.5,,,,,,107.5,Raw,
+M,B,2,75,Kenny Van Haverbeke,KBBC,31,M-O,71.4,100,105,107.5,,107.5,,,,,,107.5,Raw,
+M,B,1,75,Tirth Ram,Gym80,42,M-M1,75,150,155.5,160,-165,160,,,,,,160,Raw,
+M,B,1,82.5,Indra Sudarminto,PlanetFitness,24,M-O,78.6,150,160,167.5,-173,167.5,,,,,,167.5,Raw,
+M,B,2,82.5,Gillis Soenens,Isogym,25,M-O,81,137.5,145,150,,150,,,,,,150,Raw,
+M,B,1,90,Gregg Annaert,PlanetFitness,20,M-JR,84,100,105,-110,,105,,,,,,105,Raw,
+M,B,1,90,Alain Laguesse,Carstors,41,M-M1,88.8,160,165,170,172.5,170,,,,,,170,Raw,
+M,B,1,90,Johan van de Casteele,PD,51,M-M3,89,155,162.5,-170.5,,162.5,,,,,,162.5,Raw,
+M,B,2,90,Benny Verbeke,Isogym,50,M-M3,89.2,105,110,-115,,110,,,,,,110,Raw,
+M,B,3,90,Patrick Verblijdt,Healthfactor,52,M-M3,83.3,70,75,80,,80,,,,,,80,Raw,
+M,B,1,90,Achiel De Vaere,JackysGym,67,M-M6,89,110,115,117.5,120.5,117.5,,,,,,117.5,Raw,
+M,B,1,100,Roel Janssens,PlanetFitness,26,M-O,99.7,135,145,150,,150,,,,,,150,Raw,
+M,B,2,100,Dries Goethals,KBBC,30,M-O,95.3,115,125,130,,130,,,,,,130,Raw,
+M,B,3,100,Levi De Bussere,KBBC,24,M-O,92.1,-105,110,-120,,110,,,,,,110,Raw,
+M,B,1,110,Marcel Gheldof,Sanitas,50,M-M3,107.5,145.5,152.5,-160,,152.5,,,,,,152.5,Raw,
+M,B,1,110,Marc Goovaerts,PattonTeam,58,M-M4,106.6,125,130,-135,,130,,,,,,130,Raw,
+M,B,2,110,Oscar Vlaeminck,JackyGym,58,M-M4,105.7,90,100,-105,,100,,,,,,100,Raw,
+M,B,1,110,Jacky Secke,JackysGym,64,M-M5,104.3,140,146,-147.5,,146,,,,,,146,Raw,
+M,B,1,125,Bjorn Dejans,KBBC,29,M-O,121.3,130,140,-150,,140,,,,,,140,Raw,
+M,B,G,125,Dieter Jungmann,,53,M-M3,120.4,150,165,172.5,,172.5,,,,,,172.5,Raw,Germany
+M,B,1,125,Johan Roge,KBBC,66,M-M6,121.6,110,115,120,,120,,,,,,120,Raw,
+M,B,G,67.5,Michael Grünberg,,49,M-M2,62,75,77.5,-80,,77.5,,,,,,77.5,Raw,Germany
+M,B,G,75,Jurgen Luxem,,44,M-M1,74.9,100,-110,-110,,100,,,,,,100,Raw,Germany
+M,B,G,90,Christian Stöbke,,38,M-O,83.1,67.5,70,-75,,70,,,,,,70,Raw,Germany
+M,B,G,90,Frank Schmidtmann,,53,M-M3,89.3,110,117.5,125,,125,,,,,,125,Raw,Germany
+M,B,G,90,Thomas Luxem,,55,M-M4,88.5,105,110,-115,,110,,,,,,110,Raw,Germany
+M,B,G,100,Roger Piron,,54,M-M3,96.9,97.5,102.5,-107.5,,102.5,,,,,,102.5,Raw,Germany
+M,B,G,145,Valery Shapovalov,,35,M-O,129.1,-150,160,170,,170,,,,,,170,Raw,Germany
+M,D,1,67.5,Tim van den Abbeele,Sanitas,27,M-O,66.6,,,,,,180,190,-200,,190,190,Raw,
+M,D,1,67.5,Darren Boland,Sanitas,40,M-M1,65.6,,,,,,180,195,-200,,195,195,Raw,
+M,D,1,75,Kevin Vandenbosch,PlanetFitness,20,M-JR,73,,,,,,190,-195,200,,200,200,Raw,
+M,D,2,75,Liam Dierckx,PlanetFitness,20,M-JR,67.9,,,,,,150,170,182.5,,182.5,182.5,Raw,
+M,D,1,75,Kenny Van Haverbeke,KBBC,31,M-O,71.4,,,,,,145,155,165,,165,165,Raw,
+M,D,2,75,Michael De Paus,PlanetFitness,24,M-O,69.2,,,,,,140,152.5,160,,160,160,Raw,
+M,D,3,75,Tom Roels,Sanitas,24,M-O,69,,,,,,140,150,-160,,150,150,Raw,
+M,D,1,75,Tirth Ram,Gym80,42,M-M1,75,,,,,,240,246,-255.5,,246,246,Raw,
+M,D,1,82.5,Noor Noori,KBBC,17,M-T2,79.9,,,,,,130,140,150,,150,150,Raw,
+M,D,1,82.5,Indra Sudarminto,PlanetFitness,24,M-O,78.6,,,,,,255,265,275,,275,275,Raw,
+M,D,2,82.5,Gillis Soenens,Isogym,25,M-O,81,,,,,,225,235,-245,,235,235,Raw,
+M,D,1,90,Gregg Annaert,PlanetFitness,20,M-JR,84,,,,,,192.5,200,-205,,200,200,Raw,
+M,D,1,90,Benny Verbeke,Isogym,50,M-M3,89.2,,,,,,273,285,295,,295,295,Raw,
+M,D,2,90,Patrick Verblijdt,Healthfactor,52,M-M3,83.3,,,,,,140,150,160,,160,160,Raw,
+M,D,1,100,Dries Goethals,KBBC,30,M-O,95.3,,,,,,150,-175,,,150,150,Raw,
+M,D,1,110,Marcel Gheldof,Sanitas,50,M-M3,107.5,,,,,,185,200,205,,205,205,Raw,
+M,D,1,125,Bjorn Dejans,KBBC,29,M-O,121.3,,,,,,240,250,260,,260,260,Raw,
+F,D,1,70,Jessica Perulli,,40,F-M1,68,,,,,,120,130,138.5,,138.5,138.5,Raw,
+M,D,G,90,Johannes Schädlich,,31,M-O,86.7,,,,,,155,-162.5,-162.5,,155,155,Raw,Germany
+M,D,G,90,Christian Stöbke,,38,M-O,83.1,,,,,,105,110,120,,120,120,Raw,Germany
+M,D,G,90,Frank Schmidtmann,,53,M-M3,89.3,,,,,,200,220,,,220,220,Raw,Germany
+M,D,G,125,Dieter Jungmann,,53,M-M3,120.4,,,,,,200,220,,,220,220,Raw,Germany
+M,D,G,145,Heiner Hansen,,53,M-M3,138.5,,,,,,230,240,250,,250,250,Raw,Germany
