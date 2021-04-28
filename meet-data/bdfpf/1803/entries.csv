@@ -1,0 +1,54 @@
+Sex,Event,Place,WeightClassKg,Name,Team,Age,Division,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Country
+F,S,1,80,Helen Wuyts,,26,F-O,77.9,100,110,120,,120,,,120,Raw,
+F,S,2,80,Kim Mazet,,33,F-O,78,72.5,80,90,,90,,,90,Raw,
+M,S,1,60,Miro Gillon,,16,M-T2,57.2,90,100,110,-115,110,,,110,Raw,
+M,S,1,60,Chesney Goossens,,25,M-O,59.1,90,100,105,,105,,,105,Raw,
+M,S,1,67.5,Daniel Van den Broecke,,21,M-JR,60.3,120,-125,-125,,120,,,120,Raw,
+M,S,1,67.5,Brian Sanders,,19,M-T3,61.8,95,102.5,110,,110,,,110,Raw,
+M,S,1,67.5,Matthias Lormans,,17,M-T2,63.1,97.5,102.5,110,,110,,,110,Raw,
+M,S,1,75,Indra Sudarminto,,27,M-O,74.7,245,255,265,,265,,,265,Raw,
+M,S,1,75,Jayda Masudi,,16,M-T2,71.1,140,-155,175,-180,175,,,175,Raw,
+M,S,1,75,Jens D'Heere,,20,M-JR,72.1,115,122.5,-127.5,,122.5,,,122.5,Raw,
+M,S,2,75,Bodi Csizi Kiss,,16,M-T2,68,75,80,85,,85,,,85,Raw,
+M,S,1,82.5,Nick Brughmans,,25,M-O,79.9,137.5,145,150,,150,,,150,Raw,
+M,S,G,90,David Pütz,,41,M-M1,87.6,-120,120,135,-140,135,,,135,Raw,Germany
+M,S,1,90,Martin Theyssens,,78,M-M8,87.8,-70,70,,,70,,,70,Raw,
+M,S,G,100,Paul Bandula,,22,M-JR,99.4,210,230,250,,250,,,250,Raw,Romania
+M,S,G,100,Emmanuel Mihai,,22,M-JR,99.7,-200,200,-220,,200,,,200,Raw,Romania
+M,S,G,100,Sebastian Lapujan,,20,M-JR,98.9,180,190,-195,,190,,,190,Raw,Romania
+M,S,1,100,Marc Vandewiele,,43,M-M1,98.2,195,210,215,,215,,,215,Raw,
+M,S,1,100,Jonathan De Mey,,31,M-O,99,150,160,165,,165,,,165,Raw,
+M,S,1,100,Ben Dequidt,,23,M-JR,91.1,135,140,147.5,,147.5,,,147.5,Raw,
+M,S,1,100,Benny Verbeke,,52,M-M3,90.5,100,,,,100,,,100,Raw,
+M,S,1,110,Geeraard Peeters,,31,M-O,106,170,180,195,,195,,,195,Raw,
+M,S,2,110,Steve Diericks,,33,M-O,108.7,170,180,190,,190,,,190,Raw,
+M,S,1,110,Dylan Masson,,20,M-JR,101.5,140,147.5,152.5,,152.5,,,152.5,Raw,
+M,S,G,125,Martin Tetzlaff,,46,M-M2,122.4,170,190,,,190,,,190,Raw,Germany
+M,S,1,145,Bjorn Dejans,,32,M-O,126.6,180,190,-205,,190,,,190,Raw,
+M,S,G,145,Volker Kanz,,51,M-M3,127,90,100,105,-110,105,,,105,Raw,Germany
+F,SBD,1,80,Helen Wuyts,,26,F-O,77.9,,,,,120,72.5,167.5,360,Raw,
+M,SBD,1,60,Chesney Goossens,,25,M-O,59.1,,,,,105,115,137.5,357.5,Raw,
+M,SBD,DQ,60,Miro Gillon,,16,M-T2,57.2,,,,,110,,150,,Raw,
+M,SBD,1,67.5,Brian Sanders,,19,M-T3,61.8,,,,,110,97.5,145,352.5,Raw,
+M,SBD,1,67.5,Daniel Van den Broecke,,21,M-JR,60.3,,,,,120,77.5,140,337.5,Raw,
+M,SBD,1,67.5,Matthias Lormans,,17,M-T2,63.1,,,,,110,90,142.5,342.5,Raw,
+M,SBD,1,75,Indra Sudarminto,,27,M-O,74.7,,,,,265,160,280,705,Raw,
+M,SBD,1,75,Jens D'Heere,,20,M-JR,72.1,,,,,122.5,110,160,392.5,Raw,
+M,SBD,1,75,Bodi Csizi Kiss,,16,M-T2,68,,,,,85,70,112.5,267.5,Raw,
+M,SBD,DQ,75,Jayda Masudi,,16,M-T2,71.1,,,,,175,,,,Raw,
+M,SBD,1,82.5,Nick Brughmans,,25,M-O,79.9,,,,,150,82.5,185,417.5,Raw,
+M,SBD,G,90,David Pütz,,41,M-M1,87.6,,,,,135,120,175,430,Raw,Germany
+M,SBD,DQ,90,Martin Theyssens,,78,M-M8,87.8,,,,,70,,110,,Raw,
+M,SBD,G,100,Paul Bandula,,22,M-JR,99.4,,,,,250,170,320,740,Raw,Romania
+M,SBD,G,100,Emmanuel Mihai,,22,M-JR,99.7,,,,,200,150,290,640,Raw,Romania
+M,SBD,1,100,Marc Vandewiele,,43,M-M1,98.2,,,,,215,125,287.5,627.5,Raw,
+M,SBD,G,100,Sebastian Lapujan,,20,M-JR,98.9,,,,,190,147.5,232.5,570,Raw,Romania
+M,SBD,1,100,Ben Dequidt,,23,M-JR,91.1,,,,,147.5,140,227.5,515,Raw,
+M,SBD,1,100,Benny Verbeke,,52,M-M3,90.5,,,,,100,100,275,475,Raw,
+M,SBD,1,100,Jonathan De Mey,,31,M-O,99,,,,,165,132.5,190,487.5,Raw,
+M,SBD,1,110,Geeraard Peeters,,31,M-O,106,,,,,195,112.5,220,527.5,Raw,
+M,SBD,2,110,Steve Diericks,,33,M-O,108.7,,,,,190,110,215,515,Raw,
+M,SBD,1,110,Dylan Masson,,20,M-JR,101.5,,,,,152.5,120,180,452.5,Raw,
+M,SBD,G,125,Martin Tetzlaff,,46,M-M2,122.4,,,,,190,180,180,550,Raw,Germany
+M,SBD,1,145,Bjorn Dejans,,32,M-O,126.6,,,,,190,140,255,585,Raw,
+M,SBD,G,145,Volker Kanz,,51,M-M3,127,,,,,105,105,155,365,Raw,Germany
