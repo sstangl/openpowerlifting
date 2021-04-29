@@ -1,0 +1,45 @@
+Sex,Event,Place,WeightClassKg,Name,Team,Age,Division,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Country
+M,B,1,145,Valeriy Shapovalov,,39,M-O,138.1,,,,,,170,182.5,-185,182.5,,182.5,Raw,
+M,B,1,100,Egor Martiniuc,,35,M-O,99.3,,,,,,165,-175,-175,165,,165,Raw,
+M,B,1,75,Tim Molkens,,26,M-O,73.6,,,,,,120,127.5,135,135,,135,Raw,
+M,B,1,90,Erwin Hemelsoet,,48,M-M2,86.7,,,,,,120,127.5,130,130,,130,Raw,
+M,B,1,110,Elis Karraa,,26,M-O,110,,,,,,140,145,-147.5,145,,145,Raw,
+M,B,1,90,Human Hamidian,,18,M-T3,83.8,,,,,,110,115,-120,115,,115,Raw,
+M,B,1,82.5,Christian Abdullah,,20,M-JR,81.6,,,,,,110,-120,-120,110,,110,Raw,
+F,S,1,70,Isabel Van de Wijngaard,,40,F-M1,64.2,55,62.5,-67.5,,62.5,,,,,,62.5,Raw,
+F,S,1,90,Kim Mazet,,34,F-O,82.5,115,120,125,,125,,,,,,125,Raw,
+M,S,1,67.5,Benoit Arimont,,26,M-O,67.1,140,150,155,,155,,,,,,155,Raw,
+M,S,2,67.5,Liam Dierckx,,24,M-O,66.6,125,132.5,140,,140,,,,,,140,Raw,
+M,S,3,67.5,Chesney Goossens,,27,M-O,65.2,120,130,-135,,130,,,,,,130,Raw,
+M,S,1,75,Tim Molkens,,26,M-O,73.6,145,155,160,,160,,,,,,160,Raw,
+M,S,1,82.5,Toon De Neve,,17,M-T2,80.8,150,165,175,,175,,,,,,175,Raw,
+M,S,1,82.5,Christian Abdullah,,20,M-JR,81.6,160,170,180,,180,,,,,,180,Raw,
+M,S,1,90,Human Hamidian,,18,M-T3,83.8,150,170,-190,,170,,,,,,170,Raw,
+M,S,1,90,Noah Heukemes,,24,M-O,88.9,190,200,210,,210,,,,,,210,Raw,
+M,S,1,90,Erwin Hemelsoet,,48,M-M2,86.7,167.5,175,-180,,175,,,,,,175,Raw,
+M,S,1,100,Egor Martiniuc,,35,M-O,99.3,200,-210,210,,210,,,,,,210,Raw,
+M,S,1,100,Benny Verbeke,,54,M-M3,93.6,130,145,160,,160,,,,,,160,Raw,
+M,S,1,110,Elis Karraa,,26,M-O,110,190,200,-202.5,,200,,,,,,200,Raw,
+M,S,2,110,Tim Michiels,,27,M-O,100.5,150,160,-170,,160,,,,,,160,Raw,
+M,S,2,82.5,Kevin Van Dorsten,,17,M-T2,76.9,132.5,140,147.5,150,147.5,,,,,,147.5,Raw,Netherlands
+M,S,1,90,Uwe Abend,,58,M-M4,87.2,120,-130,130,,130,,,,,,130,Raw,Netherlands
+M,S,1,145,Martin Tetzlaff,,48,M-M2,125.4,190,200,210,,210,,,,,,210,Raw,Germany
+M,S,1,100,Roger Piron,,58,M-M4,99.2,140,150,170,,170,,,,,,170,Raw,Germany
+F,SBD,1,90,Kim Mazet,,34,F-O,82.5,,,,,125,,,,75,162.5,362.5,Raw,
+M,SBD,1,67.5,Benoit Arimont,,26,M-O,67.1,,,,,155,,,,95,210,460,Raw,
+M,SBD,2,67.5,Chesney Goossens,,27,M-O,65.2,,,,,130,,,,151,165,446,Raw,
+M,SBD,3,67.5,Liam Dierckx,,24,M-O,66.6,,,,,140,,,,100,202.5,442.5,Raw,
+M,SBD,1,75,Tim Molkens,,26,M-O,73.6,,,,,160,,,,135,210,505,Raw,
+M,SBD,1,82.5,Christian Abdullah,,20,M-JR,81.6,,,,,180,,,,110,220,510,Raw,
+M,SBD,1,90,Noah Heukemes,,24,M-O,88.9,,,,,210,,,,130,240,580,Raw,
+M,SBD,1,90,Erwin Hemelsoet,,48,M-M2,86.7,,,,,175,,,,132.5,220,527.5,Raw,
+M,SBD,1,100,Egor Martiniuc,,35,M-O,99.3,,,,,210,,,,165,220,595,Raw,
+M,SBD,1,100,Benny Verbeke,,54,M-M3,93.6,,,,,160,,,,105,292.5,557.5,Raw,
+M,SBD,1,110,Elias Karraa,,26,M-O,110,,,,,200,,,,145,240,585,Raw,
+M,SBD,2,110,Tim Michiels,,27,M-O,100.5,,,,,160,,,,117.5,180,457.5,Raw,
+F,SBD,1,70,Isabel Van de Wijngaard,,40,F-M1,64.2,,,,,62.5,,,,45,110,217.5,Raw,Netherlands
+M,SBD,1,82.5,Kevin Van Dorsten,,17,M-T2,76.9,,,,,147.5,,,,93,155,395.5,Raw,Netherlands
+M,SBD,1,90,Uwe Abend,,58,M-M4,87.2,,,,,130,,,,120,168,418,Raw,Netherlands
+F,SBD,G,80,Birgit Kinkel,,55,F-M4,73.4,,,,,20,,,,20,110,150,Raw,Germany
+M,SBD,G,100,Roger Piron,,58,M-M4,99.2,,,,,170,,,,118,212.5,500.5,Raw,Germany
+M,SBD,G,145,Martin Tetzlaff,,48,M-M2,125.4,,,,,210,,,,180,215,605,Raw,Germany
