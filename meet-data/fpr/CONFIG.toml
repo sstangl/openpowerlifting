@@ -564,6 +564,9 @@
     18064 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
     18065 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
     18066 = ["ExemptWeightClassConsistency"] # Lifters without weightclass
+    18068 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Youth Classes, non-standard divisions
+    18069 = ["ExemptWeightClassConsistency"] # Youth Classes
+    18070 = ["ExemptWeightClassConsistency"] # Youth Classes
     1919 = ["ExemptWeightClassConsistency"]
     1920 = ["ExemptWeightClassConsistency"] # Masters have no weight class
     1922 = ["ExemptWeightClassConsistency"]
