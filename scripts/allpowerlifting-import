@@ -144,7 +144,7 @@ def getmeetinfo(soup):
     longdate = daterow.text
     longdate = longdate.replace(" - ", "-")
 
-    if ' ' in longdate:
+    if ' ' in longdate and longdate.strip().count(' ') == 2:
         [day, month, year] = longdate.strip().split(' ')
         year = year.strip()
 
