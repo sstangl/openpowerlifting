@@ -88,6 +88,7 @@
     pro_fwjr = {name = "Pro FW-JR", min = 20, max = 23, equipment="Wraps",sex="F"}
 
     meo = {name = "ME-O", min = 0, max = 999, equipment=["Single-ply","Multi-ply"],sex="M"}
+	juniors_14_23 = {name="Juniors 14-23", min=14, max=23}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
