@@ -156,7 +156,7 @@
     mm2bspx = {name = "M-M2B-SP-X", min=45, max=49, sex="M", equipment="Single-ply"}
     mm2bspt = {name = "M-M2B-SP-T", min=45, max=49, sex="M", equipment="Single-ply", tested="Yes"}
     mm2bspu = {name = "M-M2B-SP-U", min=45, max=49, sex="M", equipment="Single-ply"}
-    mm2bmpu = {name = "M-M2B-MP-U", min=45, max=49, sex="M", equipment="Multi-ply"}
+    mm2bmpu = {name = "M-M2B-MP-U", min=45, max=49, sex="M", equipment= ["Multi-ply", "Unlimited"]}
     mm2bmpt = {name = "M-M2B-MP-T", min=45, max=49, sex="M", equipment="Multi-ply", tested="Yes"}
     mm2bmpx = {name = "M-M2B-MP-X", min=45, max=49, sex="M", equipment="Multi-ply"}
     mm2srx = {name = "M-M2S-R-X", min=45, max=49, sex="M", equipment="Raw"}
