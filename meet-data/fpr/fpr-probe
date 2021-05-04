@@ -399,8 +399,8 @@ def main():
     html_NSO = oplprobe.gethtml(NSO_URL)
     meetlist = meetlist + getmeetlist_NSO(html_NSO, NSO_URL)
 
-    # html_PKFP = oplprobe.gethtml(PKFP_URL)
-    # meetlist = meetlist + getmeetlist_PKFP(html_PKFP, PKFP_URL)
+#    html_PKFP = oplprobe.gethtml(PKFP_URL)
+#    meetlist = meetlist + getmeetlist_PKFP(html_PKFP, PKFP_URL)
 
     html_MPF = oplprobe.gethtml(MPF_URL)
     meetlist = meetlist + getmeetlist_MPF(html_MPF, MPF_URL)
@@ -408,8 +408,8 @@ def main():
     html_BPF = oplprobe.gethtml(BPF_URL)
     meetlist = meetlist + getmeetlist_BPF(html_BPF, BPF_URL)
 
-    # html_PFRR = oplprobe.gethtml(PFRR_URL)
-    # meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
+    html_PFRR = oplprobe.gethtml(PFRR_URL)
+    meetlist = meetlist + getmeetlist_PFRR(html_PFRR, PFRR_URL)
 
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPKK_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPK_URL)
@@ -425,16 +425,16 @@ def main():
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPRSYA_URL)
     meetlist = meetlist + allpowerlifting_probe.probefederation(FPRME_URL)
 
-    # html_FPSK = oplprobe.gethtml(FPSK_URL)
-    # meetlist = meetlist + getmeetlist_FPSK(html_FPSK, FPSK_URL)
+    html_FPSK = oplprobe.gethtml(FPSK_URL)
+    meetlist = meetlist + getmeetlist_FPSK(html_FPSK, FPSK_URL)
 
-    # for url in RSNOPFKR_URLS:
-    #     html_RSNOPFKR = oplprobe.gethtml(url)
-    #     meetlist = meetlist + getmeetlist_RSNOPFKR(html_RSNOPFKR, url)
+    for url in RSNOPFKR_URLS:
+        html_RSNOPFKR = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist_RSNOPFKR(html_RSNOPFKR, url)
 
-    # for url in SFNRP_URLS:
-    #     html_SFNRP = oplprobe.gethtml(url)
-    #     meetlist = meetlist + getmeetlist_SFNRP(html_SFNRP, url)
+    for url in SFNRP_URLS:
+        html_SFNRP = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist_SFNRP(html_SFNRP, url)
     for url in COPF_URLS:
         html_COPF = oplprobe.gethtml(url)
         meetlist = meetlist + getmeetlist_COPF(html_COPF, url)
