@@ -36,7 +36,7 @@ fn wilks2020_coefficient_men(bodyweightkg: f64) -> f64 {
     const E: f64 = 0.00000707665973070743;
     const F: f64 = -0.0000000120804336482315;
 
-    let adjusted = bodyweightkg.max(40.0).min(200.95);
+    let adjusted = bodyweightkg.clamp(40.0, 200.95);
     wilks2020_coefficient(A, B, C, D, E, F, adjusted)
 }
 
@@ -48,7 +48,7 @@ fn wilks2020_coefficient_women(bodyweightkg: f64) -> f64 {
     const E: f64 = 0.00000938773881462799;
     const F: f64 = -0.000000023334613884954;
 
-    let adjusted = bodyweightkg.max(40.0).min(150.95);
+    let adjusted = bodyweightkg.clamp(40.0, 150.95);
     wilks2020_coefficient(A, B, C, D, E, F, adjusted)
 }
 

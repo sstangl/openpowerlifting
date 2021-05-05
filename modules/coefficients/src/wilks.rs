@@ -42,7 +42,7 @@ pub fn wilks_coefficient_men(bodyweightkg: f64) -> f64 {
 
     // Upper bound avoids asymptote.
     // Lower bound avoids children with huge coefficients.
-    let adjusted = bodyweightkg.max(40.0).min(201.9);
+    let adjusted = bodyweightkg.clamp(40.0, 201.9);
 
     wilks_coefficient(A, B, C, D, E, F, adjusted)
 }
@@ -57,7 +57,7 @@ pub fn wilks_coefficient_women(bodyweightkg: f64) -> f64 {
 
     // Upper bound avoids asymptote.
     // Lower bound avoids children with huge coefficients.
-    let adjusted = bodyweightkg.max(26.51).min(154.53);
+    let adjusted = bodyweightkg.clamp(26.51, 154.53);
 
     wilks_coefficient(A, B, C, D, E, F, adjusted)
 }

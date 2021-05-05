@@ -32,7 +32,7 @@ fn reshel_coefficient_men(bodyweightkg: f64) -> f64 {
     const C: f64 = 0.787990994925928;
     const D: f64 = -2.68445158813578;
 
-    let normalized = bodyweightkg.max(50.0).min(174.75);
+    let normalized = bodyweightkg.clamp(50.0, 174.75);
     A * (normalized + B).powf(D) + C
 }
 
@@ -45,7 +45,7 @@ fn reshel_coefficient_women(bodyweightkg: f64) -> f64 {
     const C: f64 = 1.16052601684125;
     const D: f64 = -1.61417872668708;
 
-    let normalized = bodyweightkg.max(40.0).min(118.75);
+    let normalized = bodyweightkg.clamp(40.0, 118.75);
     A * (normalized + B).powf(D) + C
 }
 

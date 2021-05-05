@@ -128,7 +128,10 @@ fn test_small_rankings_pages() {
 #[test]
 fn test_meet_pages_with_explicit_sorts() {
     let client = client();
-    assert_eq!(get(&client, Device::Desktop, "/m/wrpf-usa/bob4"), Status::Ok);
+    assert_eq!(
+        get(&client, Device::Desktop, "/m/wrpf-usa/bob4"),
+        Status::Ok
+    );
     assert_eq!(
         get(&client, Device::Desktop, "/m/wrpf-usa/bob4/by-glossbrenner"),
         Status::Ok

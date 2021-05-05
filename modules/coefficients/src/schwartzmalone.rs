@@ -55,7 +55,7 @@ use opltypes::*;
 /// powerlifts. Then I fitted these data to an artificial curve and picked
 /// off numbers from the curve."
 pub fn schwartz_coefficient(bodyweightkg: f64) -> f64 {
-    let adjusted = bodyweightkg.max(40.0).min(166.0);
+    let adjusted = bodyweightkg.clamp(40.0, 166.0);
 
     if adjusted <= 126.0 {
         let x0 = 0.631926 * 10_f64;

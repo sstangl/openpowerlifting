@@ -36,7 +36,7 @@ pub fn dots_coefficient_men(bodyweightkg: f64) -> f64 {
     const E: f64 = -307.75076;
 
     // Bodyweight bounds are defined; bodyweights out of range match the boundaries.
-    let adjusted = bodyweightkg.max(40.0).min(210.0);
+    let adjusted = bodyweightkg.clamp(40.0, 210.0);
     dots_coefficient(A, B, C, D, E, adjusted)
 }
 
@@ -48,7 +48,7 @@ pub fn dots_coefficient_women(bodyweightkg: f64) -> f64 {
     const E: f64 = -57.96288;
 
     // Bodyweight bounds are defined; bodyweights out of range match the boundaries.
-    let adjusted = bodyweightkg.max(40.0).min(150.0);
+    let adjusted = bodyweightkg.clamp(40.0, 150.0);
     dots_coefficient(A, B, C, D, E, adjusted)
 }
 

@@ -1293,7 +1293,6 @@ pub enum Federation {
     #[strum(to_string = "WP-NZ", serialize = "wp-nz")]
     WPNZ,
 
-
     /// World Power Power League, Belarus.
     #[serde(rename = "WPPL-Belarus")]
     #[strum(to_string = "WPPL-Belarus", serialize = "wppl-belarus")]
