@@ -37,6 +37,7 @@
     moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem1 = {name ="M-EM1", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem2 = {name ="M-EM2", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem3 = {name ="M-EM3", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem6 = {name ="M-EM6", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply"]}
 
 [weightclasses.default_M]
