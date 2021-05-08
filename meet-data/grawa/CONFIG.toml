@@ -13,6 +13,7 @@
     sex = "M"
 
 [exemptions]
+    0701 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
     1101 = ["ExemptWeightClassConsistency"]  # No BW or weightclasses.
     1102 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1103 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
