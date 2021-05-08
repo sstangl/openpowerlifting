@@ -85,18 +85,14 @@ fn get_consistent_country(
                 acc = Some(country);
             }
             (Some(country), Some(acc_country)) => {
-                if country == acc_country {
+                if country == acc_country || country.contains(acc_country) {
                     trace_matched(debug, country, &path);
+                } else if acc_country.contains(country) {
+                    trace_matched(debug, country, &path);
+                    acc = Some(country);
                 } else {
-                    if country.contains(acc_country) {
-                        trace_matched(debug, country, &path);
-                    } else if acc_country.contains(country) {
-                        trace_matched(debug, country, &path);
-                        acc = Some(country);
-                    } else {
-                        trace_conflict(debug, country, &path);
-                        return None;
-                    }
+                    trace_conflict(debug, country, &path);
+                    return None;
                 }
             }
             (None, _) => (),

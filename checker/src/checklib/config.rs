@@ -707,5 +707,5 @@ pub fn check_config(config: PathBuf) -> Result<CheckResult, Box<dyn Error>> {
 
     // Parse the entire string into TOML Value types.
     let root = config_str.parse::<Value>()?;
-    Ok(parse_config(&root, report)?)
+    parse_config(&root, report)
 }

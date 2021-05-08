@@ -40,7 +40,7 @@ impl Default for RecordsQuery {
 
 impl RecordsQuery {
     /// Converts a RecordQuery to a RankingsQuery.
-    pub fn to_full_selection(&self, default: &RankingsQuery) -> RankingsQuery {
+    pub fn to_full_selection(self, default: &RankingsQuery) -> RankingsQuery {
         RankingsQuery {
             filter: EntryFilter {
                 equipment: self.equipment,

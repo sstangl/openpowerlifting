@@ -383,7 +383,7 @@ pub fn check_meet_from_string(
 ) -> Result<MeetCheckResult, Box<dyn Error>> {
     let report = Report::new(PathBuf::from("uploaded/content"));
     let mut rdr = reader.from_reader(meet_csv.as_bytes());
-    Ok(do_check(&mut rdr, None, report, "upload".to_string())?)
+    do_check(&mut rdr, None, report, "upload".to_string())
 }
 
 /// Checks a single meet.csv file by path.
@@ -404,5 +404,5 @@ pub fn check_meet(
     let meetpath = check_meetpath(&mut report).unwrap_or_else(String::new);
 
     let mut rdr = reader.from_path(&report.path)?;
-    Ok(do_check(&mut rdr, config, report, meetpath)?)
+    do_check(&mut rdr, config, report, meetpath)
 }

@@ -2002,7 +2002,7 @@ where
             entries: None,
         });
     }
-    let default_date = meet.map_or_else(|| Date::default(), |m| m.date);
+    let default_date = meet.map_or_else(Date::default, |m| m.date);
 
     let mut entries: Vec<Entry> = Vec::new();
 
@@ -2019,8 +2019,10 @@ where
             }
         }
 
-        let mut entry = Entry::default();
-        entry.entrydate = default_date; // Either a default, or sourced from the meet.csv.
+        let mut entry = Entry {
+            entrydate: default_date, // Either a default, or sourced from the meet.csv.
+            ..Default::default()
+        };
 
         // Check mandatory fields.
         if let Some(idx) = headers.get(Header::Name) {
@@ -2342,7 +2344,7 @@ pub fn check_entries_from_string(
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     let report = Report::new(PathBuf::from("uploaded/content"));
     let mut rdr = reader.from_reader(entries_csv.as_bytes());
-    Ok(do_check(&mut rdr, meet, None, None, report)?)
+    do_check(&mut rdr, meet, None, None, report)
 }
 
 /// Checks a single entries.csv file by path.
@@ -2366,5 +2368,5 @@ pub fn check_entries(
     }
 
     let mut rdr = reader.from_path(&report.path)?;
-    Ok(do_check(&mut rdr, meet, config, lifterdata, report)?)
+    do_check(&mut rdr, meet, config, lifterdata, report)
 }
