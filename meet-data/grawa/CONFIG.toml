@@ -14,6 +14,9 @@
 
 [exemptions]
     0701 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
+    0702 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    0703 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    0704 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1101 = ["ExemptWeightClassConsistency"]  # No BW or weightclasses.
     1102 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1103 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
