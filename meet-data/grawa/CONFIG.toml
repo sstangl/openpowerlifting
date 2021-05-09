@@ -24,6 +24,11 @@
     0805 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     0806 = ["ExemptWeightClassConsistency"]  # Bench didn't use weightclasses.
     0807 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    0903 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
+    0905 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
+    0909 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
+    0901 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
+    0908 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
     1101 = ["ExemptWeightClassConsistency"]  # No BW or weightclasses.
     1102 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1103 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
