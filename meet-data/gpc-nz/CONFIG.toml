@@ -69,3 +69,4 @@
     sex = "M"
 
 [exemptions]
+	2102 = ["ExemptWeightClassConsistency"] # 82.5+ women's class.

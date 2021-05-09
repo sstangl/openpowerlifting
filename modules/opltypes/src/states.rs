@@ -641,12 +641,42 @@ pub enum NetherlandsState {
     ZH,
 }
 
-/// A state in New Zealand.
+/// A region in New Zealand.
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
 pub enum NewZealandState {
-    NTL, AKL, WKO, BOP, GIS, HKB, TKI, MWT, WGN,
-    TAS, NSN, MBH, WTC, CAN, OTA, STL
+    /// Northland.
+    NTL,
+    /// Auckland.
+    AKL,
+    /// Waikato.
+    WKO,
+    /// Bay of Plenty.
+    BOP,
+    /// Gisborne (East Coast).
+    GIS,
+    /// Hawke's Bay.
+    HKB,
+    /// Taranaki.
+    TKI,
+    /// Manawatu-Whanganui.
+    MWT,
+    /// Wellington.
+    WGN,
+    /// Tasman.
+    TAS,
+    /// Nelson.
+    NSN,
+    /// Marlborough.
+    MBH,
+    /// West Coast.
+    WTC,
+    /// Canterbury.
+    CAN,
+    /// Otago.
+    OTA,
+    /// Southland.
+    STL,
 }
 
 /// A county in Romania.
