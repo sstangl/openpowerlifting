@@ -1,5 +1,6 @@
 [divisions]
     aktive = {name ="Aktive",min=0,max=999,equipment="Raw"}
+    jugend = {name = "Jugend",min=0,max=18,equipment="Raw"}
     junioren = {name = "Junioren",min=0,max=23,equipment="Raw"}
     teen = {name = "Teen",min=0,max=18,equipment="Raw"}
     mastersi = {name = "Masters I",min=40,max=49,equipment="Raw"}
@@ -39,6 +40,16 @@
     0908 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
     1101 = ["ExemptWeightClassConsistency"]  # No BW or weightclasses.
     1102 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1104 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1105 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1106 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1107 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1108 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1109 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1110 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1111 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1112 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    1113 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1103 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
     1201 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1202 = ["ExemptWeightClassConsistency"]  # Women don't have a weightclass.
