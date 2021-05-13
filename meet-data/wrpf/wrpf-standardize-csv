@@ -425,7 +425,7 @@ def parse_sheet(sheet):
     elif 'рулетка' in title:  # From the Russian Roulette division haha
         return csv
     elif any(x in title for x in ['много', 'фжд', 'военный', '1 вес', 'жд любители',
-                                  'армейский', 'тяговое', 'военный', 'двоеборье',
+                                  'армейский', 'тяговое', 'военный',
                                   '1_2 веса', 'многоповтор', 'жд']):  # Bench reps
         return csv
     elif 'богатырский' in title:  # Heroic Press ?? Some kind of overhead press maybe
