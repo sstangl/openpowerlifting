@@ -428,6 +428,7 @@
 <optgroup label="{{strings.country.spain}}">
   <option value="all-spain" {% if selection.federation == "AllSpain" %}selected{% endif %}>{{strings.selectors.fed.all_spain}}</option>
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP - Asociación Española de Powerlifting [IPF]</option>
+  <option value="ipl-spain" {% if selection.federation == "IPL-Spain" %}selected{% endif %}>IPL Spain</option>
   <option value="wrpf-spain" {% if selection.federation == "WRPF-Spain" %}selected{% endif %}>WRPF Spain</option>
 </optgroup>
 <optgroup label="{{strings.country.sweden}}">
