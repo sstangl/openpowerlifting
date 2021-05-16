@@ -372,6 +372,11 @@ pub enum Federation {
     #[strum(to_string = "FFForce", serialize = "ffforce")]
     FFForce,
 
+    /// Fédération Française d’Haltérophilie, Musculation, Force Athlétique et Culturisme, IPF.
+    /// FFForce precursor
+    #[strum(to_string = "FFHMFAC", serialize = "ffhmfac")]
+    FFHMFAC,
+
     /// Florida High School Athletics Association.
     #[strum(to_string = "FHSAA", serialize = "fhsaa")]
     FHSAA,
@@ -1557,6 +1562,7 @@ impl Federation {
             Federation::FEPOA => false,
             Federation::FESUPO => FULLY_TESTED,
             Federation::FFForce => FULLY_TESTED,
+            Federation::FFHMFAC => FULLY_TESTED,
             Federation::FHSAA => FULLY_TESTED,
             Federation::FIAP => FULLY_TESTED,
             Federation::FIPL => FULLY_TESTED,
@@ -1898,6 +1904,7 @@ impl Federation {
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
             Federation::FFForce => Some(Country::France),
+            Federation::FFHMFAC => Some(Country::France),
             Federation::FHSAA => Some(Country::USA),
             Federation::FIAP => Some(Country::Italy),
             Federation::FIPL => Some(Country::Italy),
@@ -2266,6 +2273,7 @@ impl Federation {
             Federation::FEPOA => Some(Federation::GPC),
             Federation::FESUPO => Some(Federation::IPF),
             Federation::FFForce => Some(Federation::IPF),
+            Federation::FFHMFAC => Some(Federation::IPF),
             Federation::FHSAA => None,
             Federation::FIAP => None,
             Federation::FIPL => Some(Federation::IPF),
@@ -2687,6 +2695,7 @@ impl Federation {
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
             Federation::FFForce => Federation::ipf_rules_on(date),
+            Federation::FFHMFAC => Federation::ipf_rules_on(date),
             Federation::FHSAA => PointsSystem::Wilks,
             Federation::FIAP => Federation::ipf_rules_on(date),
             Federation::FIPL => Federation::ipf_rules_on(date),
