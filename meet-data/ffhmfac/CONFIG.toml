@@ -1,0 +1,49 @@
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+
+    # The min for age categories is set to 1 lower than expected
+    # because the federation uses birth years but during 
+    # its season, which runs from September 1 to August 31.
+    # So, for instance, a lifter born in 1980 and competing in 
+    # November 2019 would be in the Masters 1 division (1980 to 1971). 
+    # But if the min were set at 39.5, the checker would
+    # consider that lifter too young for that division,
+    # based on birth year.
+
+    open = {name ="Open",min=0,max=999}
+    guest = {name ="Guest",min=0,max=999,place="G"}
+    cadet = {name = "Cadet",min=11.5,max=15.5}
+    juniors = {name = "Juniors",min=0,max=22.5}
+    subjuniors = {name = "Sub-Juniors",min=13.5,max=17.5}
+    masters1 = {name = "Masters 1",min=38.5,max=48.5}
+    masters2 = {name = "Masters 2",min=48.5,max=58.5}
+    masters3 = {name = "Masters 3",min=58.5,max=68.5}
+    masters4 = {name = "Masters 4",min=68.5,max=999}
+    masters = {name = "Masters",min=38.5,max=999}
+    seniors = {name = "Seniors",min=22.5,max=38.5}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[exemptions]
