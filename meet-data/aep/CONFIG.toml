@@ -28,7 +28,7 @@
 
 [weightclasses.pre2021_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2020-12-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -39,7 +39,7 @@
 
 [weightclasses.pre2021_junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2020-12-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
     divisions = ["JUN","SBJ"]
 
