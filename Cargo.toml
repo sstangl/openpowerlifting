@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "api",
+    # "api", Temporarily disabled -- totally broken on latest nightly.
     "checker",
     "modules/coefficients",
     "modules/db",
