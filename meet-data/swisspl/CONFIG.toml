@@ -50,5 +50,7 @@
 
 [exemptions]
     # Limited weightclasses. Juniors and Sub-Juniors combined.
+    0605 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
+    0606 = ["ExemptWeightClassConsistency"]  # Didn't use weightclasses.
     1902 = ["ExemptWeightClassConsistency", "ExemptDivision"]
     1701 = ["ExemptWeightClassConsistency", "ExemptDivision"]
