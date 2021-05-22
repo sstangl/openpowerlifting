@@ -1277,9 +1277,9 @@ checksum = "7d7afeb98c5a10e0bffcc7fc16e105b04d06729fac5fd6384aebf7ff5cb5a67d"
 
 [[package]]
 name = "plotters"
-version = "0.3.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "45ca0ae5f169d0917a7c7f5a9c1a3d3d9598f18f529dd2b8373ed988efea307a"
+checksum = "32a3fd9ec30b9749ce28cd91f255d569591cdf937fe280c312143e3c4bad6f2a"
 dependencies = [
  "num-traits",
  "plotters-backend",
@@ -1478,9 +1478,9 @@ checksum = "f497285884f3fcff424ffc933e56d7cbca511def0c9831a7f9b5f6153e3cc89b"
 
 [[package]]
 name = "rocket"
-version = "0.4.9"
+version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0dc5163d096cfe6136614a3044c705f450fba8dee9a2f0076ea9e754416a19c5"
+checksum = "4a7ab1dfdc75bb8bd2be381f37796b1b300c45a3c9145b34d86715e8dd90bf28"
 dependencies = [
  "atty",
  "base64 0.13.0",
@@ -1499,9 +1499,9 @@ dependencies = [
 
 [[package]]
 name = "rocket_codegen"
-version = "0.4.9"
+version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "33a6a0b9a676c856ed2d68ae579ef28dd17383de3e7da51430d7aed021010b63"
+checksum = "1729e687d6d2cf434d174da84fb948f7fef4fac22d20ce94ca61c28b72dbcf9f"
 dependencies = [
  "devise",
  "glob 0.3.0",
@@ -1514,9 +1514,9 @@ dependencies = [
 
 [[package]]
 name = "rocket_contrib"
-version = "0.4.9"
+version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eef4fc485b5156d05c624af1a1c1198823548e5ed760e8a1dbcefc2e7479ffa1"
+checksum = "6b6303dccab46dce6c7ac26c9b9d8d8cde1b19614b027c3f913be6611bff6d9b"
 dependencies = [
  "glob 0.3.0",
  "log 0.4.14",
@@ -1529,9 +1529,9 @@ dependencies = [
 
 [[package]]
 name = "rocket_http"
-version = "0.4.9"
+version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51317fa44f95876c7aec93e5b3dcbd5297f801b6cc77c09608baf7aca18cdf8e"
+checksum = "6131e6e6d38a9817f4a494ff5da95971451c2eb56a53915579fc9c80f6ef0117"
 dependencies = [
  "cookie",
  "hyper",
