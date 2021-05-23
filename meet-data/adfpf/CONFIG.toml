@@ -17,6 +17,7 @@
     mm8 = {name="M-M8", min=75, max=79, sex="M", equipment="Raw"}
     mpmf = {name="M-PMF", min=0, max=999, sex="M", equipment="Raw"}
     mt = {name="M-T", min=14, max=19, sex="M", equipment="Raw"}
+	mg = {name="M-G", min=0, max=999, sex="M", equipment="Raw", place="G"}
 
     fo = {name="F-O", min=0, max=999, sex="F", equipment="Raw"}
     ft1 = {name="F-T1", min=14, max=15, sex="F", equipment="Raw"}
@@ -33,6 +34,7 @@
     fm8 = {name="F-M8", min=75, max=79, sex="F", equipment="Raw"}
     fpmf = {name="F-PMF", min=0, max=999, sex="F", equipment="Raw"}
     ft = {name="F-T", min=14, max=19, sex="F", equipment="Raw"}
+	fg = {name="F-G", min=0, max=999, sex="F", equipment="Raw", place="G"}
 
     # New-style divisions, Equipped.
     meo = {name="M-EO", min=0, max=999, sex="M", equipment="Single-ply"}
