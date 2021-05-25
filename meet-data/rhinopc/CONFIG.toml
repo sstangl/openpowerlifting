@@ -34,8 +34,8 @@
     fm8 = {name ="F-M8", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
     mm9 = {name ="M-M9", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
     fm9 = {name ="F-M9", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
-    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    meo = {name ="M-EO", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
+    feo = {name ="F-EO", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
     mesm = {name ="M-ESM", min=33, max=39, sex="M", equipment=["Single-ply","Multi-ply"]}
     fesm = {name ="F-ESM", min=33, max=39, sex="F", equipment=["Single-ply","Multi-ply"]}
     met1 = {name ="M-ET1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
