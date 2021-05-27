@@ -1,18 +1,18 @@
 Name,WeightClassKg,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
 G. Papageorgiou,52,Open,M,95,70,142.5,307.5,SBD,Single-ply,1
 J. Lewis,56,Open,M,160,95,177.5,432.5,SBD,Single-ply,1
-D. Aleman,56,Open,M,160,82.5,180,422.5,SBD,Single-ply,2
+Dennis Aleman,56,Open,M,160,82.5,180,422.5,SBD,Single-ply,2
 K. Cauley,56,Open,M,145,100,170,415,SBD,Single-ply,3
 M. Scott #2,56,Open,M,107.5,60,155,322.5,SBD,Single-ply,4
-R. Porter,60,Open,M,175,115,207.5,497.5,SBD,Single-ply,1
-G. Deneault,60,Open,M,172.5,115,180,467.5,SBD,Single-ply,2
+Robby Porter,60,Open,M,175,115,207.5,497.5,SBD,Single-ply,1
+Galen Deneault,60,Open,M,172.5,115,180,467.5,SBD,Single-ply,2
 R. Query,60,Open,M,125,90,172.5,387.5,SBD,Single-ply,3
 J. Barnett,60,Open,M,92.5,60,122.5,275,SBD,Single-ply,5
 P. Starks,60,Open,M,110,67.5,150,327.5,SBD,Single-ply,4
 R. Jones,67.5,Open,M,232.5,142.5,240,615,SBD,Single-ply,1
-M. Breault,67.5,Open,M,195,120,227.5,542.5,SBD,Single-ply,2
+Mark Breault,67.5,Open,M,195,120,227.5,542.5,SBD,Single-ply,2
 Brock Henly,67.5,Open,M,172.5,115,205,492.5,SBD,Single-ply,3
-R. Holden,67.5,Open,M,172.5,105,205,482.5,SBD,Single-ply,4
+Randy Holden,67.5,Open,M,172.5,105,205,482.5,SBD,Single-ply,4
 Scott Galliardt,67.5,Open,M,155,95,210,460,SBD,Single-ply,5
 Brian Boyer #2,67.5,Open,M,165,95,182.5,442.5,SBD,Single-ply,6
 Bezley Ellison,67.5,Open,M,152.5,100,175,427.5,SBD,Single-ply,7
@@ -22,7 +22,7 @@ D. Miller,67.5,Open,M,132.5,92.5,142.5,367.5,SBD,Single-ply,10
 G. Barnes,67.5,Open,M,120,97.5,142.5,360,SBD,Single-ply,11
 R. Daniel,67.5,Open,M,92.5,52.5,125,270,SBD,Single-ply,12
 Gordon Maloney,75,Open,M,250,162.5,260,672.5,SBD,Single-ply,1
-R. Kinnamon,75,Open,M,227.5,145,255,627.5,SBD,Single-ply,2
+Ron Kinnamon,75,Open,M,227.5,145,255,627.5,SBD,Single-ply,2
 Ken Cannon,75,Open,M,195,145,210,550,SBD,Single-ply,3
 A. Carr,75,Open,M,195,127.5,207.5,530,SBD,Single-ply,4
 A. Desroches,75,Open,M,197.5,107.5,217.5,522.5,SBD,Single-ply,5
@@ -45,8 +45,8 @@ D. Morlen,90,Open,M,272.5,180,300,752.5,SBD,Single-ply,3
 Ken Brown,90,Open,M,242.5,142.5,265,650,SBD,Single-ply,4
 B. Geneva,90,Open,M,240,132.5,237.5,610,SBD,Single-ply,5
 Steve Shandy,90,Open,M,197.5,120,225,542.5,SBD,Single-ply,6
-M. Nachtman,90,Open,M,180.5,115,227.5,523,SBD,Single-ply,7
-G. Samqua,90,Open,M,182.5,125,192.5,500,SBD,Single-ply,8
+Mike Nachtman,90,Open,M,180.5,115,227.5,523,SBD,Single-ply,7
+Gary Samqua,90,Open,M,182.5,125,192.5,500,SBD,Single-ply,8
 M. Galliardt,90,Open,M,,,,,SBD,Single-ply,DQ
 D. Joiner,100,Open,M,312.5,190,287.5,790,SBD,Single-ply,1
 Jay Desch,100,Open,M,282.5,172.5,305,760,SBD,Single-ply,2
@@ -58,9 +58,9 @@ T. Thompson,110,Open,M,327.5,227.5,332.5,887.5,SBD,Single-ply,1
 Jim Bell,110,Open,M,330,175,310,815,SBD,Single-ply,2
 G. Funke,110,Open,M,295,155,230,680,SBD,Single-ply,3
 Robert Pierce,110,Open,M,237.5,142.5,272.5,652.5,SBD,Single-ply,4
-T. Wesselowski,110,Open,M,187.5,130,227.5,545,SBD,Single-ply,5
+Tom Wesselowski,110,Open,M,187.5,130,227.5,545,SBD,Single-ply,5
 Carl Marsh,110,Open,M,182.5,117.5,217.5,517.5,SBD,Single-ply,6
-T. Wesselowski,110,Open,M,172.5,115,220,507.5,SBD,Single-ply,7
+Tom Wesselowski,110,Open,M,172.5,115,220,507.5,SBD,Single-ply,7
 R. Smith,125,Open,M,312.5,227.5,322.5,862.5,SBD,Single-ply,1
 Ken Ufford,125,Open,M,287.5,185,312.5,785,SBD,Single-ply,2
 M. Rogerson,125+,Open,M,300,200,280,780,SBD,Single-ply,1
@@ -70,4 +70,4 @@ S. Wilson,48,Open,F,80,42.5,92.5,215,SBD,Single-ply,1
 Sheila Ward,52,Open,F,142.5,72.5,140,355,SBD,Single-ply,1
 Ann Boyer,52,Open,F,80,80,100,260,SBD,Single-ply,2
 Chris Carpenter #1,60,Open,F,132.5,87.5,157.5,377.5,SBD,Single-ply,1
-J. Sperry,60,Open,F,110,52.5,117.5,280,SBD,Single-ply,2
+Jeanie Sperry,60,Open,F,110,52.5,117.5,280,SBD,Single-ply,2
