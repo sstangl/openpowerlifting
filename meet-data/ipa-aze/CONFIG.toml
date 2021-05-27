@@ -97,8 +97,3 @@
     sex = "F"
 
 [exemptions]
-    0803 = ["ExemptWeightClassConsistency"]  # Missing some weightclasses.
-    0810 = ["ExemptWeightClassConsistency"]  # Missing some weightclasses.
-    1301 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
-    1401 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
-    1418 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
