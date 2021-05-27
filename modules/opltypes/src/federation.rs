@@ -587,6 +587,11 @@ pub enum Federation {
     #[strum(to_string = "IPA", serialize = "ipa")]
     IPA,
 
+    /// International Powerlifting Association, Azerbaijan
+    #[serde(rename = "IPA-AZE")]
+    #[strum(to_string = "IPA-AZE", serialize = "ipa-aze")]
+    IPAAZE,
+
     /// Israel Powerlifting Community.
     #[strum(to_string = "IPC", serialize = "ipc")]
     IPC,
@@ -1612,6 +1617,7 @@ impl Federation {
             Federation::ILPA => false,
             Federation::INSA => false,
             Federation::IPA => false,
+            Federation::IPAAZE => false,
             Federation::IPC => false,
             Federation::IPF => FULLY_TESTED,
             Federation::IPL => false,
@@ -1954,6 +1960,7 @@ impl Federation {
             Federation::ILPA => Some(Country::Israel),
             Federation::INSA => Some(Country::USA),
             Federation::IPA => Some(Country::USA),
+            Federation::IPAAZE => Some(Country::Azerbaijan),
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
             Federation::IPL => None,
@@ -2323,6 +2330,7 @@ impl Federation {
             Federation::ILPA => Some(Federation::GPA),
             Federation::INSA => None,
             Federation::IPA => None,
+            Federation::IPAAZE => Some(Federation::IPA),
             Federation::IPC => None,
             Federation::IPF => Some(Federation::IPF),
             Federation::IPL => Some(Federation::IPL),
@@ -2745,6 +2753,7 @@ impl Federation {
             Federation::ILPA => PointsSystem::Wilks,
             Federation::INSA => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
+            Federation::IPAAZE => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPL => Federation::ipl_rules_on(date),

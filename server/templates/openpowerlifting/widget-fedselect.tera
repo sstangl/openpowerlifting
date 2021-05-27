@@ -125,6 +125,10 @@
   <option value="oevk" {% if selection.federation == "OEVK" %}selected{% endif %}>OEVK - Österreichischer Verband für Kraftdreikampf [IPF]</option>
   <option value="wuap-aut" {% if selection.federation == "WUAP-AUT" %}selected{% endif %}>WUAP-AUT - WUAP Austria [WUAP]</option>
 </optgroup>
+<optgroup label="{{strings.country.azerbaijan}}">
+  <option value="all-azerbaijan" {% if selection.federation == "AllAzerbaijan" %}selected{% endif %}>{{strings.selectors.fed.all_azerbaijan}}</option>
+  <option value="ipa-aze" {% if selection.federation == "IPA-AZE" %}selected{% endif %}>IPA-AZE - IPA Azerbaijan [IPA]</option>
+</optgroup>
 <optgroup label="{{strings.country.belarus}}">
   <option value="all-belarus" {% if selection.federation == "AllBelarus" %}selected{% endif %}>{{strings.selectors.fed.all_belarus}}</option>
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF - Belarus Powerlifting Federation [IPF]</option>

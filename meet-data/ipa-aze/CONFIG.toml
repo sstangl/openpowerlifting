@@ -1,0 +1,104 @@
+# Divisions are specified here: https://www.ipapower.com/pdf/2017/IPA%20GENERAL%20RULES%2011_2017.pdf
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    # Note that the Open division is disallowed for lifters under age 20,
+    # but meet directors don't seem to have consistently known that.
+    # Setting that bound passes checks but breaks age inference all over the place.
+
+    # Amateur divisions.
+    ama_teen_13 = {name="Amateur Teen 13", min=0, max=13, tested="Yes"}
+    ama_teen_14_15 = {name="Amateur Teen 14-15", min=14, max=15, tested="Yes"}
+    ama_teen_16_17 = {name="Amateur Teen 16-17", min=16, max=17, tested="Yes"}
+    ama_teen_18_19 = {name="Amateur Teen 18-19", min=18, max=19, tested="Yes"}
+    ama_juniors = {name="Amateur Juniors 20-23", min=20, max=23, tested="Yes"}
+    ama_open = {name="Amateur Open", min=0, max=999, tested="Yes"}
+    ama_submasters = {name="Amateur Submasters 33-39", min=33, max=39, tested="Yes"}
+    ama_masters_40_44 = {name="Amateur Masters 40-44", min=40, max=44, tested="Yes"}
+    ama_masters_45_49 = {name="Amateur Masters 45-49", min=45, max=49, tested="Yes"}
+    ama_masters_50_54 = {name="Amateur Masters 50-54", min=50, max=54, tested="Yes"}
+    ama_masters_55_59 = {name="Amateur Masters 55-59", min=55, max=59, tested="Yes"}
+    ama_masters_60_64 = {name="Amateur Masters 60-64", min=60, max=64, tested="Yes"}
+    ama_masters_65_69 = {name="Amateur Masters 65-69", min=65, max=69, tested="Yes"}
+    ama_masters_70_74 = {name="Amateur Masters 70-74", min=70, max=74, tested="Yes"}
+    ama_masters_75_79 = {name="Amateur Masters 75-79", min=75, max=79, tested="Yes"}
+    ama_masters_80p = {name="Amateur Masters 80+", min=80, max=999, tested="Yes"}
+    ama_police = {name="Amateur Police", min=0, max=999, tested="Yes"}
+
+    # Pro divisions.
+    pro_teen_13 = {name="Pro Teen 13", min=0, max=13}
+    pro_teen_14_15 = {name="Pro Teen 14-15", min=14, max=15}
+    pro_teen_16_17 = {name="Pro Teen 16-17", min=16, max=17}
+    pro_teen_18_19 = {name="Pro Teen 18-19", min=18, max=19}
+    pro_juniors = {name="Pro Juniors 20-23", min=20, max=23}
+    pro_open = {name="Pro Open", min=0, max=999}
+    pro_submasters = {name="Pro Submasters 33-39", min=33, max=39}
+    pro_masters_40_44 = {name="Pro Masters 40-44", min=40, max=44}
+    pro_masters_45_49 = {name="Pro Masters 45-49", min=45, max=49}
+    pro_masters_50_54 = {name="Pro Masters 50-54", min=50, max=54}
+    pro_masters_55_59 = {name="Pro Masters 55-59", min=55, max=59}
+    pro_masters_60_64 = {name="Pro Masters 60-64", min=60, max=64}
+    pro_masters_65_69 = {name="Pro Masters 65-69", min=65, max=69}
+    pro_masters_70_74 = {name="Pro Masters 70-74", min=70, max=74}
+    pro_masters_75_79 = {name="Pro Masters 75-79", min=75, max=79}
+    pro_masters_80p = {name="Pro Masters 80+", min=80, max=999}
+    pro_police = {name="Pro Police", min=0, max=999}
+
+    # Elite Amateur divisions. These aren't in the rulebook but are used occasionally.
+    eama_teen_14_15 = {name="Elite Amateur Teen 14-15", min=14, max=15, tested="Yes"}
+    eama_teen_16_17 = {name="Elite Amateur Teen 16-17", min=16, max=17, tested="Yes"}
+    eama_teen_18_19 = {name="Elite Amateur Teen 18-19", min=18, max=19, tested="Yes"}
+    eama_juniors = {name="Elite Amateur Juniors 20-23", min=20, max=23, tested="Yes"}
+    eama_open = {name="Elite Amateur Open", min=0, max=999, tested="Yes"}
+    eama_submasters = {name="Elite Amateur Submasters 33-39", min=33, max=39, tested="Yes"}
+    eama_masters_45_49 = {name="Elite Amateur Masters 45-49", min=45, max=49, tested="Yes"}
+
+    # Non-standard divisions that make sense to include.
+    ama_guest = {name="Amateur Guest", min=0, max=999, tested="Yes", place="G"}
+    pro_guest = {name="Pro Guest", min=0, max=999, place="G"}
+    ama_military = {name="Amateur Military", min=0, max=999, tested="Yes"}
+    pro_military = {name="Pro Military", min=0, max=999}
+    ama_special = {name="Amateur Special Olympics", min=0, max=999, tested="Yes"}
+    pro_special = {name="Pro Special Olympics", min=0, max=999}
+    ama_teen = {name="Amateur Teen", min=0, max=19, tested="Yes"}
+    pro_teen = {name="Pro Teen", min=0, max=19}
+    ama_masters = {name="Amateur Masters", min=40, max=999, tested="Yes"}
+    pro_masters = {name="Pro Masters", min=40, max=999}
+    ama_teen_13_15 = {name="Amateur Teen 13-15", min=13, max=15, tested="Yes"}
+    pro_teen_13_15 = {name="Pro Teen 13-15", min=13, max=15}
+    ama_novice = {name="Amateur Novice", min=0, max=999, tested="Yes"}
+
+    # Some Russian meets disregarded the rulebook and just used standard divisions.
+    # These contain age information, so we might as well interpret them.
+    ama_masters_40_49 = {name="Amateur Masters 40-49", min=40, max=49, tested="Yes"}
+    ama_masters_50_59 = {name="Amateur Masters 50-59", min=50, max=59, tested="Yes"}
+    ama_masters_60_69 = {name="Amateur Masters 60-69", min=60, max=69, tested="Yes"}
+    ama_masters_70_79 = {name="Amateur Masters 70-79", min=70, max=79, tested="Yes"}
+    pro_masters_40_49 = {name="Pro Masters 40-49", min=40, max=49}
+    pro_masters_50_59 = {name="Pro Masters 50-59", min=50, max=59}
+    pro_masters_60_69 = {name="Pro Masters 60-69", min=60, max=69}
+    pro_masters_70_79 = {name="Pro Masters 70-79", min=70, max=79}
+
+    # Ridiculous classes that nevertheless contain useful age information.
+    ama_open_18p = {name="Amateur Open 18+", min=18, max=999, tested="Yes"}
+    ama_senior_a = {name="Amateur Seniors 30-34", min=30, max=34, tested="Yes"}
+    ama_senior_b = {name="Amateur Seniors 35-39", min=35, max=39, tested="Yes"}
+    ama_masters_70p = {name="Amateur Masters 70+", min=70, max=999, tested="Yes"}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    0803 = ["ExemptWeightClassConsistency"]  # Missing some weightclasses.
+    0810 = ["ExemptWeightClassConsistency"]  # Missing some weightclasses.
+    1301 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
+    1401 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
+    1418 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
