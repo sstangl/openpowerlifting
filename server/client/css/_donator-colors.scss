@@ -482,6 +482,13 @@
   background-image: linear-gradient(to right, $red, $white, $red);
 }
 
+.pink_to_white_to_pink {
+  $pink: #FFB6C1;
+  $white: #EDF2F4;
+  @include gradient-prereqs($pink);
+  background-image: linear-gradient(to right, $pink, $white, $pink);
+}
+
 .all_red_top_down {
   $red: #FB3640;
   $darker_red: #AE252C;
