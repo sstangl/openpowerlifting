@@ -2,11 +2,11 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Probes for new Fédération Française de Force meets.
-# Also checks the results archive.
 
 from bs4 import BeautifulSoup
 import os
 import sys
+import requests
 
 try:
     import oplprobe
@@ -16,7 +16,10 @@ except ImportError:
     import oplprobe
 
 
-RESULTS_URL = "http://www.ffforce.fr/tous-les-resultats/"
+RESULTS_URL = ("https://www.ffforce.fr/fr/nos-disciplines/"
+               "force-athletique-ffforce/competitions-force-athletique/"
+               "archives-des-resultats-force-athletique.html")
+BASEURL = "https://www.ffforce.fr"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -27,13 +30,31 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    main = soup.find_all("div", {"class": "main-content"})
-    assert main, "No <div> element with class `main-content` found."
+    # get the value attributes for the two most recent seasons in the season dropdown
+    # then make POST requests
+    season_selector = soup.find('select')
+    options = season_selector.find_all('option')
+    last_two_seasons = options[1:3]
+    last_two_seasons_values = [season['value'] for season in last_two_seasons]
 
-    links = main[0].find_all("a", {"class": "ligne_xls"})
-    assert links, "No <a> elements with class `ligne_xls` found."
+    output = []
 
-    return set(map(lambda link: link['href'].strip(), links))
+    for season_value in last_two_seasons_values:
+
+        results = requests.post(RESULTS_URL, {'jsArtSelectCategorie': season_value})
+        soup_results = BeautifulSoup(results.text, 'html.parser')
+
+        main = soup_results.find("div", "tableau-classmt")
+        assert main, "No <div> element with class `tableau-classmt` found."
+
+        links = main.find_all("div", "cel-classmt site")
+        assert links, "No <div> element with class `cel-classmt site` found."
+
+        full_links = list(map(lambda link: BASEURL + link.find('a')['href'], links))
+
+        output.extend(full_links)
+
+    return output
 
 
 def main():
