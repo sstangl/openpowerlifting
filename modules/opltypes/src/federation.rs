@@ -710,6 +710,10 @@ pub enum Federation {
     #[strum(to_string = "MM", serialize = "mm")]
     MM,
 
+    /// Metal Militia Australia
+    #[strum(to_string = "MM-AUS", serialize = "mm-aus")]
+    MMAUS,
+
     /// Malaysian Powerlifting Alliance.
     #[strum(to_string = "MPA", serialize = "mpa")]
     MPA,
@@ -1646,6 +1650,7 @@ impl Federation {
             Federation::MHSAA => false,
             Federation::MHSPLA => false,
             Federation::MM => false,
+            Federation::MMAUS => false,
             Federation::MPA => false,
             Federation::NAP => false,
             Federation::NAPF => FULLY_TESTED,
@@ -1989,6 +1994,7 @@ impl Federation {
             Federation::MDFPF => Some(Country::Moldova),
             Federation::MHSPLA => Some(Country::USA),
             Federation::MM => Some(Country::USA),
+            Federation::MMAUS => Some(Country::Australia),
             Federation::MPA => Some(Country::Malaysia),
             Federation::NAP => Some(Country::Russia),
             Federation::NAPF => None,
@@ -2359,6 +2365,7 @@ impl Federation {
             Federation::MHSAA => None,
             Federation::MHSPLA => None,
             Federation::MM => None,
+            Federation::MMAUS => Some(Federation::MM),
             Federation::MPA => None,
             Federation::NAP => Some(Federation::IPA),
             Federation::NAPF => Some(Federation::IPF),
@@ -2795,7 +2802,8 @@ impl Federation {
             Federation::MDFPF => PointsSystem::SchwartzMalone,
             Federation::MHSAA => PointsSystem::Wilks,
             Federation::MHSPLA => PointsSystem::Wilks,
-            Federation::MM => PointsSystem::Wilks,
+            Federation::MM => PointsSystem::SchwartzMalone,
+            Federation::MMAUS => PointsSystem::SchwartzMalone,
             Federation::MPA => PointsSystem::Wilks,
             Federation::NAP => PointsSystem::Wilks,
             Federation::NAPF => Federation::ipf_rules_on(date),

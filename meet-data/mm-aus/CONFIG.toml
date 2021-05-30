@@ -1,0 +1,118 @@
+# Configuration for Metal Militia Australia, copied from parent Metal Militia
+# They're not really configured, but we want "Amateur" to count correctly.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    # Amateur divisions.
+    ama_youth_5_12 = {name="Amateur Youth 5-12", min=5, max=12, tested="Yes"}
+    ama_teen_13_15 = {name="Amateur Teen 13-15", min=13, max=15, tested="Yes"}
+    ama_teen_16_17 = {name="Amateur Teen 16-17", min=16, max=17, tested="Yes"}
+    ama_teen_18_19 = {name="Amateur Teen 18-19", min=18, max=19, tested="Yes"}
+    ama_juniors = {name="Amateur Juniors 20-23", min=20, max=23, tested="Yes"}
+    ama_open = {name="Amateur Open", min=0, max=999, tested="Yes"}
+    ama_submasters_33_39 = {name="Amateur Submasters 33-39", min=33, max=39, tested="Yes"}
+    ama_submasters_35_39 = {name="Amateur Submasters 35-39", min=35, max=39, tested="Yes"}
+    ama_masters_40_44 = {name="Amateur Masters 40-44", min=40, max=44, tested="Yes"}
+    ama_masters_45_49 = {name="Amateur Masters 45-49", min=45, max=49, tested="Yes"}
+    ama_masters_50_54 = {name="Amateur Masters 50-54", min=50, max=54, tested="Yes"}
+    ama_masters_55_59 = {name="Amateur Masters 55-59", min=55, max=59, tested="Yes"}
+    ama_masters_60_64 = {name="Amateur Masters 60-64", min=60, max=64, tested="Yes"}
+    ama_masters_65_69 = {name="Amateur Masters 65-69", min=65, max=69, tested="Yes"}
+    ama_masters_70_74 = {name="Amateur Masters 70-74", min=70, max=74, tested="Yes"}
+    ama_masters_75_79 = {name="Amateur Masters 75-79", min=75, max=79, tested="Yes"}
+    ama_masters_80p = {name="Amateur Masters 80+", min=80, max=999, tested="Yes"}
+    ama_police = {name="Amateur Police", min=0, max=999, tested="Yes"}
+
+    # Pro divisions.
+    pro_teen_13_15 = {name="Pro Teen 13-15", min=13, max=15}
+    pro_teen_16_17 = {name="Pro Teen 16-17", min=16, max=17}
+    pro_teen_18_19 = {name="Pro Teen 18-19", min=18, max=19}
+    pro_juniors = {name="Pro Juniors 20-23", min=20, max=23}
+    pro_open = {name="Pro Open", min=0, max=999}
+    pro_submasters_33_39 = {name="Pro Submasters 33-39", min=33, max=39}
+    pro_submasters_35_39 = {name="Pro Submasters 35-39", min=35, max=39}
+    pro_masters_40_44 = {name="Pro Masters 40-44", min=40, max=44}
+    pro_masters_45_49 = {name="Pro Masters 45-49", min=45, max=49}
+    pro_masters_50_54 = {name="Pro Masters 50-54", min=50, max=54}
+    pro_masters_55_59 = {name="Pro Masters 55-59", min=55, max=59}
+    pro_masters_60_64 = {name="Pro Masters 60-64", min=60, max=64}
+    pro_masters_65_69 = {name="Pro Masters 65-69", min=65, max=69}
+    pro_masters_70_74 = {name="Pro Masters 70-74", min=70, max=74}
+    pro_masters_75_79 = {name="Pro Masters 75-79", min=75, max=79}
+    pro_masters_80p = {name="Pro Masters 80+", min=80, max=999}
+    pro_police = {name="Pro Police", min=0, max=999}
+
+    # Novice divisions.
+    nov_youth_5_12 = {name="Novice Youth 5-12", min=5, max=12}
+    nov_teen_13_15 = {name="Novice Teen 13-15", min=13, max=15}
+    nov_teen_16_17 = {name="Novice Teen 16-17", min=16, max=17}
+    nov_teen_18_19 = {name="Novice Teen 18-19", min=18, max=19}
+    nov_juniors = {name="Novice Juniors 20-23", min=20, max=23}
+    nov_open = {name="Novice Open", min=0, max=999}
+    nov_submasters_33_39 = {name="Novice Submasters 33-39", min=33, max=39}
+    nov_submasters_35_39 = {name="Novice Submasters 35-39", min=35, max=39}
+    nov_masters_40_44 = {name="Novice Masters 40-44", min=40, max=44}
+    nov_masters_45_49 = {name="Novice Masters 45-49", min=45, max=49}
+    nov_masters_50_54 = {name="Novice Masters 50-54", min=50, max=54}
+    nov_masters_55_59 = {name="Novice Masters 55-59", min=55, max=59}
+    nov_masters_60_64 = {name="Novice Masters 60-64", min=60, max=64}
+    nov_masters_65_69 = {name="Novice Masters 65-69", min=65, max=69}
+    nov_masters_70_74 = {name="Novice Masters 70-74", min=70, max=74}
+    nov_masters_75_79 = {name="Novice Masters 75-79", min=75, max=79}
+    nov_masters_80p = {name="Novice Masters 80+", min=80, max=999}
+    nov_police = {name="Novice Police", min=0, max=999}
+
+    # Unlabeled divisions, for when there's no Amateur/Pro split.
+    teen_13_15 = {name="Teen 13-15", min=13, max=15}
+    teen_16_17 = {name="Teen 16-17", min=16, max=17}
+    teen_18_19 = {name="Teen 18-19", min=18, max=19}
+    juniors = {name="Juniors 20-23", min=20, max=23}
+    open = {name="Open", min=0, max=999}
+    submasters_33_39 = {name="Submasters 33-39", min=33, max=39}
+    submasters_35_39 = {name="Submasters 35-39", min=35, max=39}
+    masters_40_44 = {name="Masters 40-44", min=40, max=44}
+    masters_45_49 = {name="Masters 45-49", min=45, max=49}
+    masters_50_54 = {name="Masters 50-54", min=50, max=54}
+    masters_55_59 = {name="Masters 55-59", min=55, max=59}
+    masters_60_64 = {name="Masters 60-64", min=60, max=64}
+    masters_65_69 = {name="Masters 65-69", min=65, max=69}
+    masters_70_74 = {name="Masters 70-74", min=70, max=74}
+    masters_75_79 = {name="Masters 75-79", min=75, max=79}
+    masters_80p = {name="Masters 80+", min=80, max=999}
+    police = {name="Police", min=0, max=999}
+
+    # Non-standard divisions that make sense to include.
+    ama_guest = {name="Amateur Guest", min=0, max=999, tested="Yes", place="G"}
+    pro_guest = {name="Pro Guest", min=0, max=999, place="G"}
+    ama_military = {name="Amateur Military", min=0, max=999, tested="Yes"}
+    pro_military = {name="Pro Military", min=0, max=999}
+    ama_special = {name="Amateur Special Olympics", min=0, max=999, tested="Yes"}
+    pro_special = {name="Pro Special Olympics", min=0, max=999}
+    special = {name="Special Olympics", min=0, max=999}
+    ama_teen = {name="Amateur Teen", min=0, max=19, tested="Yes"}
+    pro_teen = {name="Pro Teen", min=0, max=19}
+    ama_masters = {name="Amateur Masters", min=40, max=999, tested="Yes"}
+    pro_masters = {name="Pro Masters", min=40, max=999}
+
+    ama_masters_40_49 = {name="Amateur Masters 40-49", min=40, max=49, tested="Yes"}
+    ama_masters_50_59 = {name="Amateur Masters 50-59", min=50, max=59, tested="Yes"}
+    ama_masters_60_69 = {name="Amateur Masters 60-69", min=60, max=69, tested="Yes"}
+    ama_masters_70_79 = {name="Amateur Masters 70-79", min=70, max=79, tested="Yes"}
+    pro_masters_40_49 = {name="Pro Masters 40-49", min=40, max=49}
+    pro_masters_50_59 = {name="Pro Masters 50-59", min=50, max=59}
+    pro_masters_60_69 = {name="Pro Masters 60-69", min=60, max=69}
+    pro_masters_70_79 = {name="Pro Masters 70-79", min=70, max=79}
+
+[weightclasses.default_M]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1900-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
