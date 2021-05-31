@@ -46,4 +46,16 @@
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 
+  [weightclasses.cadet_M]
+    classes = ["53", "59", "66", "74", "83", "83+"]
+    date_range = ["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Cadet"]
+
+  [weightclasses.cadet_F]
+    classes = ["47", "52", "57", "63", "63+"]
+    date_range = ["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Cadet"]
+
 [exemptions]
