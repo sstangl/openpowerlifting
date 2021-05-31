@@ -711,6 +711,7 @@ pub enum Federation {
     MM,
 
     /// Metal Militia Australia
+    #[serde(rename = "MM-AUS")]
     #[strum(to_string = "MM-AUS", serialize = "mm-aus")]
     MMAUS,
 
