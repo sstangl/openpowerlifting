@@ -517,6 +517,15 @@
   background-image: linear-gradient(to right, $yellow, $purple);
 }
 
+// The OpenPowerlifting squat-bench-deadlift colors in a gradient.
+.opl_sbd {
+  $squat: #FFAE20;
+  $bench: #00E0D8;
+  $deadlift: #CAA5FF;
+  @include gradient-prereqs($squat);
+  background-image: linear-gradient(to right, $squat, $bench, $deadlift);
+}
+
 // Red, Gray, Black.
 .carlos {
   @include gradient-prereqs(#444444);
