@@ -226,7 +226,6 @@ impl NonSortedNonUnique {
 pub(crate) struct StaticCache {
     // Precalculated data for Rankings.
     pub constant_time: ConstantTimeCache,
-    pub linear_time: LinearTimeCache,
     pub log_linear_time: LogLinearTimeCache,
 
     /// Precalculated map of Lifter Username to Lifter ID.
@@ -244,7 +243,6 @@ impl StaticCache {
 
         StaticCache {
             constant_time: ConstantTimeCache::new(&loglin, meets, entries),
-            linear_time: LinearTimeCache::new(),
             log_linear_time: loglin,
             username_map,
         }
@@ -325,15 +323,6 @@ impl ConstantTimeCache {
             dots: ConstantTimeBy::new(loglin, mv, ev, &cmp_dots, &filter_dots),
             wilks2020: ConstantTimeBy::new(loglin, mv, ev, &cmp_wilks2020, &filter_wilks2020),
         }
-    }
-}
-
-/// Owning structure of all `O(n)` lookup data.
-pub struct LinearTimeCache {}
-
-impl LinearTimeCache {
-    pub fn new() -> LinearTimeCache {
-        LinearTimeCache {}
     }
 }
 

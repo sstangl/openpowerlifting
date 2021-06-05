@@ -14,8 +14,8 @@ arrayvec = "0.7"
 ascii = "1.0"
 serde = "1.0"
 serde_derive = "1.0"
-strum = "0.20"
-strum_macros = "0.20"
+strum = "0.21"
+strum_macros = "0.21"
 
 [dev-dependencies]
 criterion = { version = "0.3", features = ["html_reports"] }
