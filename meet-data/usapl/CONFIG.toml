@@ -386,6 +386,10 @@
     maa = {name="M-AA", min=0, max=999, sex="M", equipment="Single-ply"}
     faa = {name="F-AA", min=0, max=999, sex="F", equipment="Single-ply"}
 
+    # Para Bench.
+    mrpb = {name="MR-PB", min=0, max=999, sex="M", equipment="Raw", event="B"}
+    frpb = {name="FR-PB", min=0, max=999, sex="F", equipment="Raw", event="B"}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2015-01-01","9999-01-01"]
