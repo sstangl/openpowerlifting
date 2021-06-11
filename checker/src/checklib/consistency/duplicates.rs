@@ -69,6 +69,14 @@ pub fn check_duplicates_one(
                 // usapl-archive/MO-2001-04-21-A and usapl-archive/MO-2001-04-21-B.
                 if cur_meet.date == opltypes::Date::from_parts(2001, 4, 21) {
                     continue;
+               }
+                // mags/ip/IP-2002-01-16-C and mags/ip/IP-2002-01-17-A.
+                if cur_meet.date == opltypes::Date::from_parts(2001, 11, 25) {
+                    continue;
+                }
+                // mags/ip/IP-2002-02-16-C and mags/ip/IP-2002-02-16-B.
+                if cur_meet.date == opltypes::Date::from_parts(2002, 02, 10) {
+                    continue;
                 }
                 // usapl/NS-2021-07 and usapl/NS-2021-07-B.
                 if cur_meet.date == opltypes::Date::from_parts(2021, 03, 20) {
