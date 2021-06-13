@@ -5,10 +5,10 @@ Place,WeightClassKg,Name,State,BodyweightKg,Division,Sex,Best3SquatKg,Best3Bench
 1,140,Arron Gonzales,TX,135.44,jr,M,388.5,252.5,296,937,SBD,Single-ply
 DQ,90,Richard Byars,CO,89.4,m1,M,227.5,-225,,,SBD,Single-ply
 1,125,Alan Borden,TX,123.42,m1,M,245,165,220,630,SBD,Single-ply
-1,60,Mark Evans,KY,59.15,m2,M,62.5,100,202.5,365,SBD,Single-ply
+1,60,Mark Evans #3,KY,59.15,m2,M,62.5,100,202.5,365,SBD,Single-ply
 1,110,Bobby Wilson,NC,107.82,m2,M,270,217.5,267.5,755,SBD,Single-ply
 1,75,Eddie White,MO,74.53,m3,M,192.5,132.5,272.5,597.5,SBD,Single-ply
-1,60,Mark Evans,KY,59.15,mp,M,62.5,100,202.5,365,SBD,Single-ply
+1,60,Mark Evans #3,KY,59.15,mp,M,62.5,100,202.5,365,SBD,Single-ply
 1,82.5,Brian Ammerman,NM,79.24,mp,M,230,182.5,217.5,630,SBD,Single-ply
 1,110,Bobby Wilson,NC,107.82,mp,M,270,217.5,267.5,755,SBD,Single-ply
 1,125,Alan Borden,TX,123.42,mp,M,245,165,227.5,637.5,SBD,Single-ply
@@ -26,7 +26,7 @@ DQ,90,Richard Byars,CO,89.4,m1,M,,-225,,,B,Single-ply
 1,90,Marty Einstein,AZ,88.68,m2,M,,210,,210,B,Single-ply
 DQ,90,Joe Parsons,OK,89.68,m3,M,,-170,,,B,Single-ply
 DQ,110,Howard Blackmon,CO,108.86,m3,M,,-190,,,B,Single-ply
-1,60,Mark Evans,KY,59.15,mp,M,,100,,100,B,Single-ply
+1,60,Mark Evans #3,KY,59.15,mp,M,,100,,100,B,Single-ply
 DQ,90,Richard Byars,CO,89.4,pure,M,,-225,,,B,Single-ply
 1,110,John Caruso,TX,101.88,teen,M,,230,,230,B,Single-ply
 1,125,Quinton Thomas,TX,114.8,teen,M,,233.5,,233.5,B,Single-ply
@@ -51,7 +51,7 @@ DQ,90,Richard Byars,CO,89.4,pure,M,,-225,,,B,Single-ply
 1,90,Levi Johnson,AR,83.69,jr,M,187.5,125,250,562.5,SBD,Wraps
 2,90,Joey Seabolt,OK,89.04,jr,M,137.5,92.5,202.5,432.5,SBD,Wraps
 1,75,Mark Woodworth,OH,72.57,m1,M,222.5,125,220,567.5,SBD,Wraps
-1,60,Mark Evans,KY,59.15,m2,M,62.5,100,202.5,365,SBD,Wraps
+1,60,Mark Evans #3,KY,59.15,m2,M,62.5,100,202.5,365,SBD,Wraps
 2,60,Crusher Kennedy,KS,59.06,m2,M,135,95,125,355,SBD,Wraps
 1,82.5,Larry Donahue,OH,80.6,m3,M,130,107.5,147.5,385,SBD,Wraps
 1,90,Fred Millan Jr,AZ,88.54,m3,M,182.5,55,202.5,440,SBD,Wraps
@@ -59,7 +59,7 @@ DQ,90,Richard Byars,CO,89.4,pure,M,,-225,,,B,Single-ply
 1,110,Chase Guthrie,OK,107.96,nov,M,165,155,212.5,532.5,SBD,Wraps
 1,75,Jamie McDougal,AR,74.57,open,M,227.5,180,287.5,695,SBD,Wraps
 1,100,Mark Reynolds,TX,90.9,open,M,212.5,160,275,647.5,SBD,Wraps
-1,60,Mark Evans,KY,59.15,pure,M,62.5,100,202.5,365,SBD,Wraps
+1,60,Mark Evans #3,KY,59.15,pure,M,62.5,100,202.5,365,SBD,Wraps
 1,75,Vashon Perryman,KS,73.71,pure,M,247.5,142.5,290,680,SBD,Wraps
 1,110,Joseph Brooks,OK,103.06,pure,M,250,152.5,295,697.5,SBD,Wraps
 1,67.5,Ethan Burke,OK,65.09,teen,M,155,110,200,465,SBD,Wraps
@@ -97,7 +97,7 @@ DQ,90,Richard Byars,CO,89.4,pure,M,,-225,,,B,Single-ply
 1,75,Bill Anderson,MO,71.67,m1,M,,122.5,185,307.5,BD,Raw
 1,82.5,Larry Marker,NM,80.83,m1,M,,120,182.5,302.5,BD,Raw
 1,125,Dane Harris,TX,114.21,m1,M,,212.5,300,512.5,BD,Raw
-1,60,Mark Evans,KY,59.15,m2,M,,100,202.5,302.5,BD,Raw
+1,60,Mark Evans #3,KY,59.15,m2,M,,100,202.5,302.5,BD,Raw
 1,90,Coby Cardin,OK,88.27,m2,M,,157.5,237.5,395,BD,Raw
 1,125,Ron Harris,TX,122.56,m2,M,,140,180,320,BD,Raw
 1,140+,Mark Mitchell,KS,163.2,m2,M,,192.5,272.5,465,BD,Raw
@@ -106,7 +106,7 @@ DQ,90,Richard Byars,CO,89.4,pure,M,,-225,,,B,Single-ply
 1,75,Bill Anderson,MO,71.67,mp,M,,122.5,185,307.5,BD,Raw
 1,125,Jerry Linder,OK,113.08,mp,M,,122.5,155,277.5,BD,Raw
 1,140,Robert Linder,OK,128.32,mp,M,,162.5,220,382.5,BD,Raw
-1,60,Mark Evans,KY,59.15,open,M,,100,202.5,302.5,BD,Raw
+1,60,Mark Evans #3,KY,59.15,open,M,,100,202.5,302.5,BD,Raw
 1,75,Jamie McDougal,AR,74.57,open,M,,180,287.5,467.5,BD,Raw
 2,75,Vashon Perryman,KS,73.71,open,M,,142.5,290,432.5,BD,Raw
 1,100,Mark Reynolds,TX,90.9,open,M,,155,275,430,BD,Raw
@@ -130,7 +130,7 @@ DQ,90,Richard Byars,CO,89.4,pure,M,,-225,,,B,Single-ply
 1,82.5,Will Woods,OK,79.88,jr,M,,125,215,340,BD,Single-ply
 1,90,Joey Seabolt,OK,89.04,jr,M,,92.5,202.5,295,BD,Single-ply
 DQ,90,Richard Byars,CO,89.4,m1,M,,-225,,,BD,Single-ply
-1,60,Mark Evans,KY,59.15,m2,M,,100,202.5,302.5,BD,Single-ply
+1,60,Mark Evans #3,KY,59.15,m2,M,,100,202.5,302.5,BD,Single-ply
 1,90,Marty Einstein,AZ,88.68,m2,M,,210,205,415,BD,Single-ply
 1,82.5,Gerald Donohue,NM,81.78,m3,M,,95,167.5,262.5,BD,Single-ply
 2,82.5,Larry Donahue,OH,80.6,m3,M,,107.5,147.5,255,BD,Single-ply
