@@ -31,3 +31,6 @@ Because the associations are made in a single file, it is particularly convenien
  9. Click the `Submit Merge Request` button.
 
 The proposed change is now submitted for automatic testing, manual review, and inclusion.
+
+Please note that if your GitLab account is new, it will report that tests have failed.
+That is a safety mechanism, and we will still be able to include your changes.
