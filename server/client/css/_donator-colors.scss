@@ -468,6 +468,14 @@
   background-image: linear-gradient(to right, $red, $yellow, $red);
 }
 
+.red_to_yellow_to_green {
+  $red: #FB3640;
+  $yellow: #FFFC00;
+  $green: #51DA27;
+  @include gradient-prereqs($red);
+  background-image: linear-gradient(to right, $red, $yellow, $green);
+}
+
 .red_to_white {
   $red: #FB3640;
   $white: #EDF2F4;
