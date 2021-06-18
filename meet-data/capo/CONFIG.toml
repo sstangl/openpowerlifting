@@ -44,6 +44,7 @@
     ft3rp  = {name ="FT3-RP",min=18,max=19,sex="F", equipment=["Raw","Wraps"]}
     ft3mp  = {name ="FT3-MP",min=18,max=19,sex="F", equipment="Multi-ply"}
     ftsp   = {name ="FT-SP",min=13,max=19,sex="F", equipment="Single-ply"}
+    ftmp   = {name ="FT-MP",min=13,max=19,sex="F", equipment="Multi-ply"}
     mmr    = {name ="MM-R",min=40,max=999,sex="M", equipment="Raw"}
     mmrp   = {name ="MM-RP",min=40,max=999,sex="M", equipment=["Raw","Wraps"]}
     mmsp   = {name ="MM-SP",min=40,max=999,sex="M", equipment="Single-ply"}
