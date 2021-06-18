@@ -1,0 +1,20 @@
+# Configuration for Uganda Powerlifting Federation (WP).
+
+[divisions]
+	mo = {name="M-O", min=0, max=999, sex="M"}
+	mbl = {name="M-BL", min=0, max=999, sex="M"}
+
+	fo = {name="F-O", min=0, max=999, sex="F"}
+	fbl = {name="F-BL", min=0, max=999, sex="F"}
+
+[weightclasses.default_M]
+    classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["48", "53", "58", "64", "72", "84", "100", "100+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]

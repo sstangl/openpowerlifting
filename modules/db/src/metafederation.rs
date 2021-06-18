@@ -150,6 +150,8 @@ pub enum MetaFederation {
     AllThailand,
     #[strum(to_string = "all-turkey")]
     AllTurkey,
+    #[strum(to_string = "all-uganda")]
+    AllUganda,
     #[strum(to_string = "all-uk")]
     AllUK,
     #[strum(to_string = "all-uk-tested")]
@@ -428,6 +430,10 @@ pub enum MetaFederation {
     #[strum(to_string = "tpssf")]
     TPSSF,
 
+    /// UgandaPF, but with international results also.
+    #[strum(to_string = "ugandapf")]
+    UgandaPF,
+
     /// UkrainePF, but with international results also.
     #[strum(to_string = "ukrainepf")]
     UkrainePF,
@@ -605,6 +611,7 @@ impl MetaFederation {
                                 .map_or(false, |c| c.is_in_uk()))
                 }
             }
+            MetaFederation::AllUganda => is_from(Country::Uganda, entry, meet),
             MetaFederation::AllUKTested => {
                 entry.tested && MetaFederation::AllUK.contains(entry, meets)
             }
@@ -764,6 +771,7 @@ impl MetaFederation {
             MetaFederation::SwissPL => affiliation!(meet, entry, SwissPL, IPF, EPF),
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
+            MetaFederation::UgandaPF => affiliation!(meet, entry, UgandaPF, WP),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
 
             // Only include USA entries for meets directly affiliated with USAPL at any time,

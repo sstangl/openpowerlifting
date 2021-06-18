@@ -1015,6 +1015,10 @@ pub enum Federation {
     #[strum(to_string = "UDFPF", serialize = "udfpf")]
     UDFPF,
 
+    /// Uganda Powerlifting Federation, WP.
+    #[strum(to_string = "UgandaPF", serialize = "ugandapf")]
+    UgandaPF,
+
     /// Ukraine Powerlifting Association.
     #[strum(to_string = "UkrainePA", serialize = "ukrainepa")]
     UkrainePA,
@@ -1731,6 +1735,7 @@ impl Federation {
             Federation::THSWPA => FULLY_TESTED,
             Federation::TPSSF => FULLY_TESTED,
             Federation::UDFPF => FULLY_TESTED,
+            Federation::UgandaPF => FULLY_TESTED,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
             Federation::UnifiedSA => false,
@@ -2068,6 +2073,7 @@ impl Federation {
             Federation::THSWPA => Some(Country::USA),
             Federation::TPSSF => Some(Country::Turkey),
             Federation::UDFPF => Some(Country::Ukraine),
+            Federation::UgandaPF => Some(Country::Uganda),
             Federation::UkrainePA => Some(Country::Ukraine),
             Federation::UkrainePO => Some(Country::Ukraine),
             Federation::UnifiedSA => Some(Country::USA),
@@ -2460,6 +2466,7 @@ impl Federation {
             Federation::THSWPA => None,
             Federation::TPSSF => Some(Federation::IPF),
             Federation::UDFPF => Some(Federation::WDFPF),
+            Federation::UgandaPF => Some(Federation::WP),
             Federation::UkrainePA => None,
             Federation::UkrainePO => None,
             Federation::UnifiedSA => None,
@@ -2898,6 +2905,7 @@ impl Federation {
             Federation::THSWPA => PointsSystem::Wilks,
             Federation::TPSSF => Federation::ipf_rules_on(date),
             Federation::UDFPF => PointsSystem::Wilks,
+            Federation::UgandaPF => Federation::wp_rules_on(date),
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
             Federation::UnifiedSA => PointsSystem::Wilks,
