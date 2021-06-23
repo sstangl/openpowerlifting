@@ -1,6 +1,8 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
     disabled = {name ="Disabled",min=0,max=999}
+    master1 = {name ="Masters 1",min=40,max=49}
+    master2 = {name ="Masters 2",min=50,max=59}
 
 
 [weightclasses.M]
