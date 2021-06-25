@@ -214,14 +214,8 @@ impl<'a> MeetInfo<'a> {
             federation: meet.federation,
             date: format!("{}", &meet.date),
             country: strings.translate_country(meet.country),
-            state: match meet.state {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
-            town: match meet.town {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
+            state: meet.state.as_ref().map(|s| s as _),
+            town: meet.town.as_ref().map(|t| t as _),
             name: &meet.name,
         }
     }
@@ -266,7 +260,7 @@ impl<'a> ResultsRow<'a> {
         ResultsRow {
             place: locale.place(entry.place, entry.sex),
             rank: locale.ordinal(rank, entry.sex),
-            localized_name: get_localized_name(&lifter, locale.language),
+            localized_name: get_localized_name(lifter, locale.language),
             lifter,
             sex: strings.translate_sex(entry.sex),
             age: PrettyAge::from(entry.age),
@@ -350,7 +344,7 @@ fn cmp_by_division(a: Option<&str>, b: Option<&str>) -> cmp::Ordering {
     }
 
     // Finally, just compare alphabetically.
-    a.cmp(&b)
+    a.cmp(b)
 }
 
 /// Helper function for use in `cmp_by_group`.
@@ -515,23 +509,23 @@ fn make_tables_by_division<'db>(
         // This entry isn't part of the old group.
         // Finish the old group.
         tables.push(finish_table(
-            &opldb,
-            &locale,
+            opldb,
+            locale,
             points_system,
             ruleset,
             &mut group,
         ));
 
         // Start a new group.
-        key_entry = &entry;
+        key_entry = entry;
         group.clear();
         group.push(key_entry);
     }
 
     // Wrap up the last batch.
     tables.push(finish_table(
-        &opldb,
-        &locale,
+        opldb,
+        locale,
         points_system,
         ruleset,
         &mut group,
@@ -565,42 +559,42 @@ fn make_tables_by_points<'db>(
 
     match points_system {
         PointsSystem::AH => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_ah(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_ah(meets, a, b));
         }
         PointsSystem::Dots => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_dots(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_dots(meets, a, b));
         }
         PointsSystem::Glossbrenner => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_glossbrenner(meets, a, b));
         }
         PointsSystem::Goodlift => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_goodlift(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_goodlift(meets, a, b));
         }
         PointsSystem::IPFPoints => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_ipfpoints(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_ipfpoints(meets, a, b));
         }
         PointsSystem::McCulloch => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_mcculloch(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_mcculloch(meets, a, b));
         }
         PointsSystem::NASA => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_nasa(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_nasa(meets, a, b));
         }
         PointsSystem::Reshel => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_reshel(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_reshel(meets, a, b));
         }
         PointsSystem::SchwartzMalone => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_schwartzmalone(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_schwartzmalone(meets, a, b));
         }
         PointsSystem::Total => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_total(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_total(meets, a, b));
             let meet = opldb.get_meet(meet_id);
             display_points_system = meet.federation.default_points(meet.date);
         }
         PointsSystem::Wilks => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_wilks(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_wilks(meets, a, b));
         }
         PointsSystem::Wilks2020 => {
-            entries.sort_unstable_by(|a, b| algorithms::cmp_wilks2020(&meets, a, b));
+            entries.sort_unstable_by(|a, b| algorithms::cmp_wilks2020(meets, a, b));
         }
     };
 
@@ -625,11 +619,11 @@ impl<'db> Context<'db> {
 
         let tables: Vec<Table> = match sort {
             MeetSortSelection::ByDivision => {
-                make_tables_by_division(&opldb, &locale, default_points, meet_id, meet.ruleset)
+                make_tables_by_division(opldb, locale, default_points, meet_id, meet.ruleset)
             }
             _ => {
                 let system = sort.as_points_system(default_points);
-                make_tables_by_points(&opldb, &locale, system, meet_id)
+                make_tables_by_points(opldb, locale, system, meet_id)
             }
         };
 
@@ -691,9 +685,9 @@ impl<'db> Context<'db> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            points_column_title: sort.column_title(&locale, default_points),
+            points_column_title: sort.column_title(locale, default_points),
             sortselection: sort.resolve_fed_default(default_points),
-            meet: MeetInfo::from(&meet, locale.strings),
+            meet: MeetInfo::from(meet, locale.strings),
             year: meet.date.year(),
             has_age_data: true, // TODO: Maybe use again?
             tables,

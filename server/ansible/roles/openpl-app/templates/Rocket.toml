@@ -1,10 +1,5 @@
-[development]
-address = "localhost"
-port = 8000
-log = "normal"
-
-[production]
+[global]
 address = "0.0.0.0"
 port = {{ openpl_app_port }}
-log = "off"
+log_level = "critical"
 workers = 16

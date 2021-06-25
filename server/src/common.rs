@@ -1,9 +1,9 @@
 //! Shared Rocket code between main.rs and dist/.
 
-use rocket::http::{Cookies, Status};
+use rocket::http::{CookieJar, Status};
+use rocket::outcome::Outcome;
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{self, content, Responder};
-use rocket::Outcome;
 
 use langpack::{LangInfo, Language, Locale};
 use opltypes::WeightUnits;
@@ -26,10 +26,11 @@ impl Host {
     }
 }
 
-impl<'a, 'r> FromRequest<'a, 'r> for Host {
+#[rocket::async_trait]
+impl<'r> FromRequest<'r> for Host {
     type Error = ();
 
-    fn from_request(request: &'a Request<'r>) -> request::Outcome<Host, ()> {
+    async fn from_request(request: &'r Request<'_>) -> request::Outcome<Self, Self::Error> {
         let keys: Vec<_> = request.headers().get("Host").collect();
         match keys.len() {
             0 => Outcome::Success(Host(None)),
@@ -51,10 +52,11 @@ impl AcceptEncoding {
     }
 }
 
-impl<'a, 'r> FromRequest<'a, 'r> for AcceptEncoding {
+#[rocket::async_trait]
+impl<'r> FromRequest<'r> for AcceptEncoding {
     type Error = ();
 
-    fn from_request(request: &'a Request<'r>) -> request::Outcome<AcceptEncoding, ()> {
+    async fn from_request(request: &'r Request<'_>) -> request::Outcome<Self, Self::Error> {
         let keys: Vec<_> = request.headers().get("Accept-Encoding").collect();
         match keys.len() {
             0 => Outcome::Success(AcceptEncoding(None)),
@@ -74,10 +76,11 @@ pub enum Device {
     Mobile,
 }
 
-impl<'a, 'r> FromRequest<'a, 'r> for Device {
+#[rocket::async_trait]
+impl<'r> FromRequest<'r> for Device {
     type Error = ();
 
-    fn from_request(request: &'a Request<'r>) -> request::Outcome<Device, ()> {
+    async fn from_request(request: &'r Request<'_>) -> request::Outcome<Self, Self::Error> {
         let keys: Vec<_> = request.headers().get("User-Agent").collect();
         match keys.len() {
             1 => {
@@ -95,10 +98,11 @@ impl<'a, 'r> FromRequest<'a, 'r> for Device {
 /// Request guard for reading the "Accept-Language" HTTP header.
 pub struct AcceptLanguage(pub Option<String>);
 
-impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
+#[rocket::async_trait]
+impl<'r> FromRequest<'r> for AcceptLanguage {
     type Error = ();
 
-    fn from_request(request: &'a Request<'r>) -> request::Outcome<AcceptLanguage, ()> {
+    async fn from_request(request: &'r Request<'_>) -> request::Outcome<Self, Self::Error> {
         // Allow an "X-Default-Language" header to override Accept-Language.
         // This allows the "ru" subdomain to always begin serving in Russian.
         let keys: Vec<_> = request
@@ -119,7 +123,7 @@ impl<'a, 'r> FromRequest<'a, 'r> for AcceptLanguage {
     }
 }
 
-pub fn select_display_language(languages: &AcceptLanguage, cookies: &Cookies) -> Language {
+pub fn select_display_language(languages: &AcceptLanguage, cookies: &CookieJar<'_>) -> Language {
     let default = Language::en;
 
     // The user may explicitly override the language choice by using
@@ -137,7 +141,7 @@ pub fn select_display_language(languages: &AcceptLanguage, cookies: &Cookies) ->
             // TODO: It would be better if this vector was static.
             let known_languages: Vec<String> = Language::string_list();
             let borrowed: Vec<&str> = known_languages.iter().map(|s| s.as_ref()).collect();
-            let valid_languages = accept_language::intersection(&s, borrowed);
+            let valid_languages = accept_language::intersection(s, borrowed);
 
             if valid_languages.is_empty() {
                 default
@@ -152,7 +156,7 @@ pub fn select_display_language(languages: &AcceptLanguage, cookies: &Cookies) ->
 pub fn select_weight_units(
     languages: &AcceptLanguage,
     language: Language,
-    cookies: &Cookies,
+    cookies: &CookieJar<'_>,
 ) -> WeightUnits {
     // The user may explicitly override the weight unit choice by using
     // a cookie named "units".
@@ -181,25 +185,25 @@ pub fn make_locale<'db>(
     langinfo: &'db LangInfo,
     lang: Option<String>,
     languages: AcceptLanguage,
-    cookies: &Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Locale<'db> {
     let language = match lang.and_then(|s| s.parse::<Language>().ok()) {
         // Allow an explicit "lang" GET parameter.
         Some(lang) => lang,
         // Otherwise, consult the cookies or defaults.
-        None => select_display_language(&languages, &cookies),
+        None => select_display_language(&languages, cookies),
     };
 
-    let units = select_weight_units(&languages, language, &cookies);
-    Locale::new(&langinfo, language, units)
+    let units = select_weight_units(&languages, language, cookies);
+    Locale::new(langinfo, language, units)
 }
 
 /// Return type for pre-rendered Json strings.
 #[derive(Debug)]
 pub struct JsonString(pub String);
 
-impl Responder<'static> for JsonString {
-    fn respond_to(self, req: &Request) -> response::Result<'static> {
+impl<'r> Responder<'r, 'static> for JsonString {
+    fn respond_to(self, req: &'r Request) -> response::Result<'static> {
         content::Json(self.0).respond_to(req)
     }
 }

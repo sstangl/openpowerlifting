@@ -611,7 +611,7 @@ impl<'db> Table<'db> {
                         date: Some(format!("{}", meet.date)),
                         path: Some(&meet.path),
                         federation: Some(meet.federation),
-                        localized_name: Some(get_localized_name(&lifter, locale.language)),
+                        localized_name: Some(get_localized_name(lifter, locale.language)),
                         lifter: Some(lifter),
                     }
                 }

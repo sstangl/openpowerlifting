@@ -44,7 +44,7 @@ impl<'db> Context<'db> {
             .iter()
             .map(|&lifter_id| {
                 let lifter = opldb.get_lifter(lifter_id);
-                let localized_name = get_localized_name(&lifter, locale.language);
+                let localized_name = get_localized_name(lifter, locale.language);
 
                 // Get a list of the entries for this lifter, oldest entries first.
                 let mut entries = opldb.get_entries_for_lifter(lifter_id);
@@ -82,7 +82,7 @@ impl<'db> Context<'db> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            points_column_title: points_column_title(points_system, &locale, points_system),
+            points_column_title: points_column_title(points_system, locale, points_system),
             variants,
         }
     }

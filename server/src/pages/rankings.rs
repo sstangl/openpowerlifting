@@ -71,7 +71,7 @@ impl<'db, 'a> Context<'db, 'a> {
         use_ipf_equipment: bool,
     ) -> Option<Context<'db, 'a>> {
         // Inline the top 100 to avoid another round-trip.
-        let mut slice = get_slice(&opldb, &locale, &selection, &defaults, 0, 99);
+        let mut slice = get_slice(opldb, locale, selection, defaults, 0, 99);
 
         // If this is for the IPF, use different names for some equipment.
         if use_ipf_equipment {

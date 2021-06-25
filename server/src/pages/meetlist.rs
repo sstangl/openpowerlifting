@@ -110,14 +110,8 @@ impl<'db> MeetInfo<'db> {
             federation: meet.federation,
             date: format!("{}", &meet.date),
             country: strings.translate_country(meet.country),
-            state: match meet.state {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
-            town: match meet.town {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
+            state: meet.state.as_ref().map(|s| s as _),
+            town: meet.town.as_ref().map(|t| t as _),
             name: &meet.name,
             num_lifters: meet.num_unique_lifters,
         }
@@ -210,7 +204,7 @@ impl<'db> Context<'db> {
             meets: meets
                 .into_iter()
                 .take(PAGE_SIZE)
-                .map(|m| MeetInfo::from(m, &locale.strings))
+                .map(|m| MeetInfo::from(m, locale.strings))
                 .collect(),
             theres_more: total_meets > PAGE_SIZE,
         }

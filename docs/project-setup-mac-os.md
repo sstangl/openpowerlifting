@@ -17,14 +17,10 @@ Ensure that you have git installed, and run
   ```bash
   brew install md5sha1sum
   ```
-### 3. Install the "nightly" version of the Rust programming language using `rustup`:
+### 3. Install the the Rust programming language using `rustup`:
 
   ```bash
   curl https://sh.rustup.rs -sSf | sh
-  ```
-  make sure you use nightly version of rust:
-  ```bash
-  rustup default nightly
   ```
 
 ### 4. Add cargo package manager to your PATH

@@ -7,9 +7,7 @@ workflow:
       when: never
     - when: always
 
-# The Nightly version of Rust is required, for the moment, due to server dependencies.
-# The Rocket framework we use requires Nightly features.
-image: rustlang/rust:nightly
+image: rust:slim-buster
 
 # Test the integrity of the data.
 meet-data:
@@ -26,8 +24,9 @@ server:
       - target
       - server/client/node_modules
   before_script:
-    - curl -sL https://deb.nodesource.com/setup_10.x | bash -
-    - apt-get update -qq && apt-get install -y nodejs python3-pip
+    - apt-get update -qq && apt-get install -y curl
+    - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+    - apt-get install -y nodejs python3-pip
     - pip3 install toml
   script:
     - make csv

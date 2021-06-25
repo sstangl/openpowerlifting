@@ -51,15 +51,13 @@ Install dependencies:
 sudo dnf install make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js
 ```
 
-Install the "nightly" version of the Rust programming language using `rustup`:
+Install the Rust programming language using `rustup`:
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-When a menu appears, choose "Customize installation".<br/>
-Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.<br/>
-Continue pressing Enter at the remaining prompts until Rust is installed.
+The default options are OK.
 
 Log out and log back in to allow `~/.cargo/bin` to be part of your default shell `$PATH`.
 
@@ -79,7 +77,6 @@ Follow the instructions for Fedora, but use this alternate command for installin
 sudo apt-get install curl make npm python3-bs4 flake8 ansible parallel uglifyjs
 ```
 
-
 ### Windows 10 (Native)
 
 1. Download and install the [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
@@ -87,9 +84,7 @@ sudo apt-get install curl make npm python3-bs4 flake8 ansible parallel uglifyjs
 
 2. Install the [Rust language for Windows](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe).
 
-    * When a menu appears, choose "Customize installation".
-    * Press the Enter key until it asks `Default toolchain?`. Type `nightly` and press Enter.
-    * Continue pressing Enter at the remaining prompts until Rust is installed.
+    * The default options are OK.
 
 3. To clone this repository locally, [install GitHub Desktop](https://desktop.github.com/). When given the option, select "Clone from URL" and enter `https://gitlab.com/openpowerlifting/opl-data.git` or the address to a personal fork.
 

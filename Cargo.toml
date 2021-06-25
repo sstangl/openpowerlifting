@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    # "api", Temporarily disabled -- totally broken on latest nightly.
+    # "api", Temporarily disabled. Not used for anything, and increases CI time.
     "checker",
     "modules/coefficients",
     "modules/db",

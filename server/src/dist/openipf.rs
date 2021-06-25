@@ -8,11 +8,10 @@ use langpack::{LangInfo, Language, Locale};
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
-use rocket::http::Cookies;
-use rocket::request::Form;
+use rocket::http::CookieJar;
 use rocket::response::Redirect;
 use rocket::State;
-use rocket_contrib::templates::Template;
+use rocket_dyn_templates::Template;
 
 use server::pages;
 
@@ -64,16 +63,16 @@ fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
 #[get("/?<lang>")]
 pub fn index(
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let locale = make_locale(langinfo, lang, languages, cookies);
     let default = default_openipf_rankings_query();
-    let mut cx = pages::rankings::Context::new(&opldb, &locale, &default, &default, true)?;
+    let mut cx = pages::rankings::Context::new(opldb, &locale, &default, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -91,18 +90,18 @@ pub fn index(
 pub fn rankings(
     selections: PathBuf,
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let default = default_openipf_rankings_query();
     let selection =
         opldb::query::direct::RankingsQuery::from_url_path(&selections, &default).ok()?;
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx = pages::rankings::Context::new(&opldb, &locale, &selection, &default, true)?;
+    let locale = make_locale(langinfo, lang, languages, cookies);
+    let mut cx = pages::rankings::Context::new(opldb, &locale, &selection, &default, true)?;
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -115,9 +114,9 @@ pub fn rankings(
 #[get("/api/rankings/<selections..>?<query..>")]
 pub fn rankings_api(
     selections: Option<PathBuf>,
-    query: Form<RankingsApiQuery>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    query: RankingsApiQuery,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
 ) -> Option<JsonString> {
     let default = default_openipf_rankings_query();
     let selection = match selections {
@@ -127,10 +126,10 @@ pub fn rankings_api(
 
     let language = query.lang.parse::<Language>().ok()?;
     let units = query.units.parse::<WeightUnits>().ok()?;
-    let locale = Locale::new(&langinfo, language, units);
+    let locale = Locale::new(langinfo, language, units);
 
     let mut slice = pages::api_rankings::get_slice(
-        &opldb,
+        opldb,
         &locale,
         &selection,
         &default,
@@ -154,9 +153,9 @@ pub fn rankings_api(
 
 #[get("/api/rankings?<query..>")]
 pub fn default_rankings_api(
-    query: Form<RankingsApiQuery>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    query: RankingsApiQuery,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
 ) -> Option<JsonString> {
     rankings_api(None, query, opldb, langinfo)
 }
@@ -165,8 +164,8 @@ pub fn default_rankings_api(
 #[get("/api/search/rankings/<selections..>?<query..>")]
 pub fn search_rankings_api(
     selections: Option<PathBuf>,
-    query: Form<SearchRankingsApiQuery>,
-    opldb: State<ManagedOplDb>,
+    query: SearchRankingsApiQuery,
+    opldb: &State<ManagedOplDb>,
 ) -> Option<JsonString> {
     let default = default_openipf_rankings_query();
     let selection = match selections {
@@ -174,15 +173,15 @@ pub fn search_rankings_api(
         Some(path) => opldb::query::direct::RankingsQuery::from_url_path(&path, &default).ok()?,
     };
 
-    let result = pages::api_search::search_rankings(&opldb, &selection, query.start, &query.q);
+    let result = pages::api_search::search_rankings(opldb, &selection, query.start, &query.q);
 
     Some(JsonString(serde_json::to_string(&result).ok()?))
 }
 
 #[get("/api/search/rankings?<query..>")]
 pub fn default_search_rankings_api(
-    query: Form<SearchRankingsApiQuery>,
-    opldb: State<ManagedOplDb>,
+    query: SearchRankingsApiQuery,
+    opldb: &State<ManagedOplDb>,
 ) -> Option<JsonString> {
     search_rankings_api(None, query, opldb)
 }
@@ -191,12 +190,12 @@ pub fn default_search_rankings_api(
 pub fn records(
     selections: Option<PathBuf>,
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let default_rankings = default_openipf_rankings_query();
     let default = pages::records::RecordsQuery {
@@ -214,9 +213,9 @@ pub fn records(
     } else {
         default
     };
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let locale = make_locale(langinfo, lang, languages, cookies);
     let mut cx = pages::records::Context::new(
-        &opldb,
+        opldb,
         &locale,
         &selection,
         &default_openipf_rankings_query(),
@@ -232,12 +231,12 @@ pub fn records(
 #[get("/records?<lang>")]
 pub fn records_default(
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     records(
         None, lang, opldb, langinfo, languages, host, device, cookies,
@@ -254,14 +253,14 @@ fn ipf_only_filter(opldb: &opldb::OplDb, e: &Entry) -> bool {
 pub fn lifter(
     username: String,
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Result<Template, Redirect>> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let locale = make_locale(langinfo, lang, languages, cookies);
 
     // Disambiguations end with a digit.
     // Some lifters may have failed to be merged with their disambiguated username.
@@ -293,7 +292,7 @@ pub fn lifter(
         // If a specific lifter was referenced, return the lifter's unique page.
         1 => {
             let mut cx = pages::lifter::Context::new(
-                &opldb,
+                opldb,
                 &locale,
                 lifter_ids[0],
                 PointsSystem::from(default_openipf_rankings_query().order_by),
@@ -328,7 +327,7 @@ pub fn lifter(
         // If multiple lifters were referenced, return a disambiguation page.
         _ => {
             let mut cx = pages::disambiguation::Context::new(
-                &opldb,
+                opldb,
                 &locale,
                 PointsSystem::from(default_openipf_rankings_query().order_by),
                 &username,
@@ -345,21 +344,21 @@ pub fn lifter(
 }
 
 #[get("/u/<username>/csv")]
-pub fn lifter_csv(username: String, opldb: State<ManagedOplDb>) -> Option<String> {
+pub fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<String> {
     let lifter_id = opldb.get_lifter_id(&username)?;
-    pages::lifter_csv::export_csv(&opldb, lifter_id, Some(ipf_only_filter)).ok()
+    pages::lifter_csv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()
 }
 
 #[get("/mlist/<mselections..>?<lang>")]
 pub fn meetlist(
     mselections: Option<PathBuf>,
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let openipf_defaults = default_openipf_rankings_query();
     let defaults = pages::meetlist::MeetListQuery {
@@ -371,8 +370,8 @@ pub fn meetlist(
         None => defaults,
         Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx = pages::meetlist::Context::new(&opldb, &locale, &mselection);
+    let locale = make_locale(langinfo, lang, languages, cookies);
+    let mut cx = pages::meetlist::Context::new(opldb, &locale, &mselection);
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -384,12 +383,12 @@ pub fn meetlist(
 #[get("/mlist?<lang>")]
 pub fn meetlist_default(
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     meetlist(
         None, lang, opldb, langinfo, languages, host, device, cookies,
@@ -400,12 +399,12 @@ pub fn meetlist_default(
 pub fn meet(
     meetpath: PathBuf,
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let mut meetpath_str: &str = meetpath.to_str()?;
     let mut sort = pages::meet::MeetSortSelection::ByFederationDefault;
@@ -419,8 +418,8 @@ pub fn meet(
     }
 
     let meet_id = opldb.get_meet_id(meetpath_str)?;
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx = pages::meet::Context::new(&opldb, &locale, meet_id, sort);
+    let locale = make_locale(langinfo, lang, languages, cookies);
+    let mut cx = pages::meet::Context::new(opldb, &locale, meet_id, sort);
     cx.urlprefix = get_local_prefix(&host);
 
     // Change the equipment terminology to be IPF-specific.
@@ -452,15 +451,15 @@ fn ipf_fed_filter(fed: Federation) -> bool {
 #[get("/status?<lang>")]
 pub fn status(
     lang: Option<String>,
-    opldb: State<ManagedOplDb>,
-    langinfo: State<LangInfo>,
+    opldb: &State<ManagedOplDb>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
-    let mut cx = pages::status::Context::new(&opldb, &locale, Some(ipf_fed_filter));
+    let locale = make_locale(langinfo, lang, languages, cookies);
+    let mut cx = pages::status::Context::new(opldb, &locale, Some(ipf_fed_filter));
     cx.urlprefix = get_local_prefix(&host);
 
     Some(match device {
@@ -472,13 +471,13 @@ pub fn status(
 #[get("/faq?<lang>")]
 pub fn faq(
     lang: Option<String>,
-    langinfo: State<LangInfo>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let locale = make_locale(langinfo, lang, languages, cookies);
     let mut cx = pages::faq::Context::new(&locale);
     cx.urlprefix = get_local_prefix(&host);
 
@@ -491,13 +490,13 @@ pub fn faq(
 #[get("/contact?<lang>")]
 pub fn contact(
     lang: Option<String>,
-    langinfo: State<LangInfo>,
+    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
-    cookies: Cookies,
+    cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(&langinfo, lang, languages, &cookies);
+    let locale = make_locale(langinfo, lang, languages, cookies);
     let mut cx = pages::contact::Context::new(&locale);
     cx.urlprefix = get_local_prefix(&host);
 

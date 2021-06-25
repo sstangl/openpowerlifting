@@ -1,5 +1,5 @@
-# Start from a rust:nightly base image
-FROM rustlang/rust:nightly AS builder
+# Start from a stable Debian image
+FROM rust:slim-buster AS builder
 
 # Install our box dependencies in one, easily-cached layer image
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \

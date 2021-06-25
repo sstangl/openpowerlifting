@@ -7,7 +7,7 @@ use langpack::{LangInfo, Language};
 use opldb::OplDb;
 
 use rocket::http::{Cookie, Header, Status};
-use rocket::local::Client;
+use rocket::local::blocking::Client;
 
 use std::sync::Once;
 
@@ -34,7 +34,8 @@ fn db() -> &'static OplDb {
 /// Returns a client's view into the Rocket server, suitable for making
 /// requests.
 fn client() -> Client {
-    Client::new(rocket(db(), LangInfo::default())).expect("valid rocket instance")
+    // Untracked here means that cookie changes from the server need not be remembered.
+    Client::untracked(rocket(db(), LangInfo::default())).expect("valid rocket instance")
 }
 
 /// Simulates a GET request to a url from a specific device.
@@ -241,23 +242,23 @@ fn test_accept_language_header() {
     for language in Language::string_list() {
         let content = format!("<html lang=\"{}\"", &language);
         let client = client();
-        let mut res = client
+        let res = client
             .get("/")
             .header(Header::new("Accept-Language", language))
             .dispatch();
         assert_eq!(res.status(), Status::Ok);
-        assert!(res.body_string().unwrap().contains(&content));
+        assert!(res.into_string().unwrap().contains(&content));
     }
 
     // The "lang" cookie should override Accept-Language.
     let client = client();
-    let mut res = client
+    let res = client
         .get("/")
         .header(Header::new("Accept-Language", "ru"))
         .cookie(Cookie::new("lang", "eo"))
         .dispatch();
     assert_eq!(res.status(), Status::Ok);
-    assert!(res.body_string().unwrap().contains("<html lang=\"eo\""));
+    assert!(res.into_string().unwrap().contains("<html lang=\"eo\""));
 }
 
 /// Setting the "lang" cookie should change the text language,
@@ -266,9 +267,9 @@ fn test_accept_language_header() {
 fn test_language_cookie() {
     let client = client();
     let lang_cookie = Cookie::new("lang", "ru");
-    let mut res = client.get("/").cookie(lang_cookie).dispatch();
+    let res = client.get("/").cookie(lang_cookie).dispatch();
     assert_eq!(res.status(), Status::Ok);
-    assert!(res.body_string().unwrap().contains("<html lang=\"ru\""));
+    assert!(res.into_string().unwrap().contains("<html lang=\"ru\""));
 }
 
 /// A nonsense "lang" cookie value should still render OK (with the English
@@ -277,9 +278,9 @@ fn test_language_cookie() {
 fn test_language_cookie_nonsense() {
     let client = client();
     let lang_cookie = Cookie::new("lang", "fgsfds");
-    let mut res = client.get("/").cookie(lang_cookie).dispatch();
+    let res = client.get("/").cookie(lang_cookie).dispatch();
     assert_eq!(res.status(), Status::Ok);
-    assert!(res.body_string().unwrap().contains("<html lang=\"en\""));
+    assert!(res.into_string().unwrap().contains("<html lang=\"en\""));
 }
 
 /// Passing the "?lang=" GET parameter should override the "lang" cookie.
@@ -287,9 +288,9 @@ fn test_language_cookie_nonsense() {
 fn test_language_getparam_override() {
     let client = client();
     let lang_cookie = Cookie::new("lang", "ru");
-    let mut res = client.get("/?lang=de").cookie(lang_cookie).dispatch();
+    let res = client.get("/?lang=de").cookie(lang_cookie).dispatch();
     assert_eq!(res.status(), Status::Ok);
-    assert!(res.body_string().unwrap().contains("<html lang=\"de\""));
+    assert!(res.into_string().unwrap().contains("<html lang=\"de\""));
 }
 
 /// Passing nonsense to the "?lang=" GET parameter should still use the cookie.
@@ -297,9 +298,9 @@ fn test_language_getparam_override() {
 fn test_language_getparam_nonsense() {
     let client = client();
     let lang_cookie = Cookie::new("lang", "ru");
-    let mut res = client.get("/?lang=fgsfds").cookie(lang_cookie).dispatch();
+    let res = client.get("/?lang=fgsfds").cookie(lang_cookie).dispatch();
     assert_eq!(res.status(), Status::Ok);
-    assert!(res.body_string().unwrap().contains("<html lang=\"ru\""));
+    assert!(res.into_string().unwrap().contains("<html lang=\"ru\""));
 }
 
 /// Test that some nonsensical rankings options don't crash the server.

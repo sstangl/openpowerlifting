@@ -131,16 +131,10 @@ impl<'a> MeetResultsRow<'a> {
             federation: &meet.federation,
             date: format!("{}", meet.date),
             country: strings.translate_country(meet.country),
-            state: match meet.state {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
+            state: meet.state.as_ref().map(|s| s as _),
             meet_name: &meet.name,
             meet_path: &meet.path,
-            division: match entry.division {
-                None => None,
-                Some(ref s) => Some(&s),
-            },
+            division: entry.division.as_ref().map(|d| d as _),
             age: PrettyAge::from(entry.age),
             sex: strings.translate_sex(entry.sex),
             equipment: strings.translate_equipment(entry.equipment),
@@ -338,7 +332,7 @@ fn calculate_bests<'db>(
 
     if raw_squat.is_some() || raw_bench.is_some() || raw_deadlift.is_some() || raw_total.is_some() {
         rows.push(PersonalBestsRow::new(
-            &locale,
+            locale,
             &locale.strings.equipment.raw,
             raw_squat,
             raw_bench,
@@ -350,7 +344,7 @@ fn calculate_bests<'db>(
 
     if wraps_squat.is_some() || wraps_total.is_some() {
         rows.push(PersonalBestsRow::new(
-            &locale,
+            locale,
             &locale.strings.equipment.wraps,
             wraps_squat,
             None,
@@ -366,7 +360,7 @@ fn calculate_bests<'db>(
         || single_total.is_some()
     {
         rows.push(PersonalBestsRow::new(
-            &locale,
+            locale,
             &locale.strings.equipment.single,
             single_squat,
             single_bench,
@@ -382,7 +376,7 @@ fn calculate_bests<'db>(
         || multi_total.is_some()
     {
         rows.push(PersonalBestsRow::new(
-            &locale,
+            locale,
             &locale.strings.equipment.multi,
             multi_squat,
             multi_bench,
@@ -398,7 +392,7 @@ fn calculate_bests<'db>(
         || unlimited_total.is_some()
     {
         rows.push(PersonalBestsRow::new(
-            &locale,
+            locale,
             &locale.strings.equipment.unlimited,
             unlimited_squat,
             unlimited_bench,
@@ -447,7 +441,7 @@ impl<'a> Context<'a> {
             None => "?",
         };
 
-        let bests = calculate_bests(&locale, points_system, &entries);
+        let bests = calculate_bests(locale, points_system, &entries);
 
         // Determine if any of the entries have attempt information.
         // If a federation only reports Bests, we don't want lots of empty columns.
@@ -475,17 +469,17 @@ impl<'a> Context<'a> {
 
         Context {
             urlprefix: "/",
-            page_title: get_localized_name(&lifter, locale.language),
+            page_title: get_localized_name(lifter, locale.language),
             page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            localized_name: get_localized_name(&lifter, locale.language),
+            localized_name: get_localized_name(lifter, locale.language),
             lifter,
             lifter_sex,
             show_sex_column: !consistent_sex,
             show_attempts: has_attempts,
-            points_column_title: points_column_title(points_system, &locale, points_system),
+            points_column_title: points_column_title(points_system, locale, points_system),
             bests,
             meet_results,
         }

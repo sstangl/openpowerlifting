@@ -54,7 +54,7 @@ fn check_meet(
     reader: &csv::ReaderBuilder,
     input: &CheckerInput,
 ) -> Result<MeetCheckResult, Box<dyn Error>> {
-    checker::check_meet_from_string(&reader, &input.meet)
+    checker::check_meet_from_string(reader, &input.meet)
 }
 
 /// Checks an entries.csv encoded as a string.
@@ -67,7 +67,7 @@ fn check_entries(
     let EntriesCheckResult {
         mut report,
         entries,
-    } = checker::check_entries_from_string(&reader, &input.entries, meet.as_ref())?;
+    } = checker::check_entries_from_string(reader, &input.entries, meet.as_ref())?;
 
     match entries {
         Some(entries) => {
