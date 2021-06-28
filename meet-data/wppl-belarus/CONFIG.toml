@@ -1,5 +1,10 @@
 [divisions]
     open = {name ="Open",min=0,max=999}
+	masters40_49 = {name="Masters 40-49", min=40, max=49}
+	masters50_59 = {name="Masters 50-59", min=50, max=59}
+	masters60_69 = {name="Masters 60-69", min=60, max=69}
+	masters70_79 = {name="Masters 70-79", min=70, max=79}
+
     disabled = {name ="Disabled",min=0,max=999}
     master1 = {name ="Masters 1",min=40,max=49}
     master2 = {name ="Masters 2",min=50,max=59}
@@ -16,3 +21,4 @@
     sex = "F"
 
 [exemptions]
+	2102 = ["ExemptWeightClassConsistency"] # Non-standard classes.
