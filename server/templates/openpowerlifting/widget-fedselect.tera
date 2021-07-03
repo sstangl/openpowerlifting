@@ -236,6 +236,7 @@
 <optgroup label="{{strings.country.hongkong}}">
   <option value="all-hongkong" {% if selection.federation == "AllHongKong" %}selected{% endif %}>{{strings.selectors.fed.all_hongkong}}</option>
   <option value="hkwpa" {% if selection.federation == "HKWPA" %}selected{% endif %}>HKWPA - Hong Kong Weightlifting and Powerlifting [IPF]</option>
+  <option value="wp-hongkong" {% if selection.federation == "WP-HongKong" %}selected{% endif %}>WP-HongKong - World Powerlifting Hong Kong</option>
 </optgroup>
 <optgroup label="{{strings.country.hungary}}">
   <option value="all-hungary" {% if selection.federation == "AllHungary" %}selected{% endif %}>{{strings.selectors.fed.all_hungary}}</option>

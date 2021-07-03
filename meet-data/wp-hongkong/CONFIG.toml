@@ -1,0 +1,35 @@
+# Configuration for World Powerlifting.
+# https://cdn.worldpowerlifting.com/wp-content/uploads/2019/07/world-powerlifting-rules.pdf
+
+[divisions]
+    # Over 14 years on the day of competition (assuming they meant >=).
+    open = {name="Open", min=14, max=999}
+
+    # 14 years or more on the day of competition, up to (including) year turning 18.
+    youth = {name="Youth", min=14, max=17.5}
+
+    # 18 years or more, up to (including) year turning 23.
+    juniors = {name="Juniors", min=18, max=22.5}
+
+    # Masters classes are entirely Birth-Year based.
+    masters40_44 = {name="Masters 40-44", min=39.5, max=43.5}
+    masters45_49 = {name="Masters 45-49", min=44.5, max=48.5}
+    masters50_54 = {name="Masters 50-54", min=49.5, max=53.5}
+    masters55_59 = {name="Masters 55-59", min=54.5, max=58.5}
+    masters60_64 = {name="Masters 60-64", min=59.5, max=63.5}
+    masters65_69 = {name="Masters 65-69", min=64.5, max=68.5}
+    masters70_74 = {name="Masters 70-74", min=69.5, max=73.5}
+    masters75_79 = {name="Masters 75-79", min=74.5, max=78.5}
+    masters80s = {name="Masters 80+", min=79.5, max=999}
+
+[weightclasses.default_M]
+    classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["48", "53", "58", "64", "72", "84", "100", "100+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
