@@ -6,6 +6,7 @@
     mocrbpu = {name ="M_OCR_BPU",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mosbpu = {name ="M_OES_BPU",min=0,max=999,equipment="Single-ply",sex="M",tested="No"}
     mombpu = {name ="M_OEM_BPU",min=0,max=999,equipment="Multi-ply",sex="M",tested="No"}
+    moubpu = {name ="M_OEU_BPU",min=0,max=999,equipment="Unlimited",sex="M",tested="No"}
     mm1rbpu = {name ="M_MR_1_BPU",min=40,max=44,equipment="Raw",sex="M",tested="No"}
     mm1crbpu = {name ="M_MCR_1_BPU",min=40,max=44,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm1sbpu = {name ="M_MES_1_BPU",min=40,max=44,equipment="Single-ply",sex="M",tested="No"}
@@ -18,6 +19,7 @@
     mm3crbpu = {name ="M_MCR_3_BPU",min=50,max=54,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm3sbpu = {name ="M_MES_3_BPU",min=50,max=54,equipment="Single-ply",sex="M",tested="No"}
     mm3mbpu = {name ="M_MEM_3_BPU",min=50,max=54,equipment="Multi-ply",sex="M",tested="No"}
+    mm3ubpu = {name ="M_MEU_3_BPU",min=50,max=54,equipment="Unlimited",sex="M",tested="No"}
     mm4rbpu = {name ="M_MR_4_BPU",min=55,max=59,equipment="Raw",sex="M",tested="No"}
     mm4crbpu = {name ="M_MCR_4_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm4sbpu = {name ="M_MES_4_BPU",min=55,max=59,equipment="Single-ply",sex="M",tested="No"}
@@ -26,6 +28,7 @@
     mm5crbpu = {name ="M_MCR_5_BPU",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm5sbpu = {name ="M_MES_5_BPU",min=60,max=64,equipment="Single-ply",sex="M",tested="No"}
     mm5mbpu = {name ="M_MEM_5_BPU",min=60,max=64,equipment="Multi-ply",sex="M",tested="No"}
+    mm5ubpu = {name ="M_MEU_5_BPU",min=60,max=64,equipment="Unlimited",sex="M",tested="No"}
     mm6rbpu = {name ="M_MR_6_BPU",min=65,max=69,equipment="Raw",sex="M",tested="No"}
     mm6crbpu = {name ="M_MCR_6_BPU",min=65,max=69,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm6sbpu = {name ="M_MES_6_BPU",min=65,max=69,equipment="Single-ply",sex="M",tested="No"}
@@ -67,6 +70,7 @@
     focrbpu = {name ="F_OCR_BPU",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="No"}
     fosbpu = {name ="F_OES_BPU",min=0,max=999,equipment="Single-ply",sex="F",tested="No"}
     fombpu = {name ="F_OEM_BPU",min=0,max=999,equipment="Multi-ply",sex="F",tested="No"}
+    foubpu = {name ="F_OEU_BPU",min=0,max=999,equipment="Unlimited",sex="F",tested="No"}
     fm1rbpu = {name ="F_MR_1_BPU",min=40,max=44,equipment="Raw",sex="F",tested="No"}
     fm1crbpu = {name ="F_MCR_1_BPU",min=40,max=44,equipment=["Raw","Wraps"],sex="F",tested="No"}
     fm1sbpu = {name ="F_MES_1_BPU",min=40,max=44,equipment="Single-ply",sex="F",tested="No"}
@@ -79,6 +83,7 @@
     fm3crbpu = {name ="F_MCR_3_BPU",min=50,max=54,equipment=["Raw","Wraps"],sex="F",tested="No"}
     fm3sbpu = {name ="F_MES_3_BPU",min=50,max=54,equipment="Single-ply",sex="F",tested="No"}
     fm3mbpu = {name ="F_MEM_3_BPU",min=50,max=54,equipment="Multi-ply",sex="F",tested="No"}
+    fm3ubpu = {name ="F_MEU_3_BPU",min=50,max=54,equipment="Unlimited",sex="F",tested="No"}
     fm4rbpu = {name ="F_MR_4_BPU",min=55,max=59,equipment="Raw",sex="F",tested="No"}
     fm4crbpu = {name ="F_MCR_4_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="F",tested="No"}
     fm4sbpu = {name ="F_MES_4_BPU",min=55,max=59,equipment="Single-ply",sex="F",tested="No"}
