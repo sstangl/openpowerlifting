@@ -1,7 +1,7 @@
 # Configuration for the NIPF.
 
 [divisions]
-    #Men's divisions
+    #Men's divisions old style
     mcopen = {name ="M-C-Open",min=0,max=999,equipment="Raw"}
     meopen = {name ="M-E-Open",min=0,max=999,equipment="Single-ply"}
     mcu23 = {name ="M-C-U23",min=14,max=22.5,equipment="Raw"}
@@ -18,12 +18,12 @@
     mem2 = {name ="M-E-M2",min=49.5,max=58.5,equipment="Single-ply"}
     mcm3 = {name ="M-C-M3",min=59.5,max=68.5,equipment="Raw"}
     mem3 = {name ="M-E-M3",min=59.5,max=68.5,equipment="Single-ply"}
-    mcm4 = {name ="M-C-M4",min=69.5,max=78.5,equipment="Raw"}
-    mem4 = {name ="M-E-M4",min=69.5,max=78.5,equipment="Single-ply"}
+    mcm4 = {name ="M-C-M4",min=69.5,max=999,equipment="Raw"}
+    mem4 = {name ="M-E-M4",min=69.5,max=999,equipment="Single-ply"}
     mcm5 = {name ="M-C-M5",min=79.5,max=999,equipment="Raw"}
     mem5 = {name ="M-E-M5",min=79.5,max=999,equipment="Single-ply"}
 
-    #Women's divisions
+    #Women's divisions old style
     fcopen = {name ="F-C-Open",min=0,max=999,equipment="Raw"}
     feopen = {name ="F-E-Open",min=0,max=999,equipment="Single-ply"}
     fcu23 = {name ="F-C-U23",min=14,max=22.5,equipment="Raw"}
@@ -45,7 +45,7 @@
     fcm5 = {name ="F-C-M5",min=79.5,max=999,equipment="Raw"}
     fem5 = {name ="F-E-M5",min=79.5,max=999,equipment="Single-ply"}
 
-    #Misc divisions
+    #Misc divisions old style
     mcg = {name ="M-C-G",min=0,max=999,equipment="Raw",place="G"}
     meg = {name ="M-E-G",min=0,max=999,equipment="Single-ply",place="G"}
     fcg = {name ="F-C-G",min=0,max=999,equipment="Raw",place="G"}
@@ -54,14 +54,62 @@
     men = {name ="M-E-N",min=0,max=999,equipment="Single-ply"}
     fcn = {name ="F-C-N",min=0,max=999,equipment="Raw"}
     fen = {name ="F-E-N",min=0,max=999,equipment="Single-ply"}
+
+    #Men's divisions new style
+    mropen = {name ="MR-O",min=0,max=999,equipment="Raw"}
+    mopen = {name ="M-O",min=0,max=999,equipment="Single-ply"}
+    mru23 = {name ="MR-Jr",min=14,max=22.5,equipment="Raw"}
+    mu23 = {name ="M-Jr",min=14,max=22.5,equipment="Single-ply"}
+    mru18 = {name ="MR-Sj",min=14,max=17.5,equipment="Raw"}
+    mu18 = {name ="M-Sj",min=14,max=17.5,equipment="Single-ply"}
+    mrm1 = {name ="MR-M1",min=39.5,max=48.5,equipment="Raw"}
+    mm1 = {name ="M-M1",min=39.5,max=48.5,equipment="Single-ply"}
+    mrm2 = {name ="MR-M2",min=49.5,max=58.5,equipment="Raw"}
+    mm2 = {name ="M-M2",min=49.5,max=58.5,equipment="Single-ply"}
+    mrm3 = {name ="MR-M3",min=59.5,max=68.5,equipment="Raw"}
+    mm3 = {name ="M-M3",min=59.5,max=68.5,equipment="Single-ply"}
+    mrm4 = {name ="MR-M4",min=69.5,max=999,equipment="Raw"}
+    mm4 = {name ="M-M4",min=69.5,max=999,equipment="Single-ply"}
+    mrm5 = {name ="MR-M5",min=79.5,max=999,equipment="Raw"}
+    mm5 = {name ="M-M5",min=79.5,max=999,equipment="Single-ply"}
+
+    #Women's divisions
+    fropen = {name ="FR-O",min=0,max=999,equipment="Raw"}
+    fopen = {name ="F-O",min=0,max=999,equipment="Single-ply"}
+    fru23 = {name ="FR-Jr",min=14,max=22.5,equipment="Raw"}
+    fu23 = {name ="F-Jr",min=14,max=22.5,equipment="Single-ply"}
+    fru18 = {name ="FR-Sj",min=14,max=17.5,equipment="Raw"}
+    fu18 = {name ="F-Sj",min=14,max=17.5,equipment="Single-ply"}
+    frm1 = {name ="FR-M1",min=39.5,max=48.5,equipment="Raw"}
+    fm1 = {name ="F-M1",min=39.5,max=48.5,equipment="Single-ply"}
+    frm2 = {name ="FR-M2",min=49.5,max=58.5,equipment="Raw"}
+    fm2 = {name ="F-M2",min=49.5,max=58.5,equipment="Single-ply"}
+    frm3 = {name ="FR-M3",min=59.5,max=68.5,equipment="Raw"}
+    fm3 = {name ="F-M3",min=59.5,max=68.5,equipment="Single-ply"}
+    frm4 = {name ="FR-M4",min=69.5,max=999,equipment="Raw"}
+    fm4 = {name ="F-M4",min=69.5,max=999,equipment="Single-ply"}
+    frm5 = {name ="FR-M5",min=79.5,max=999,equipment="Raw"}
+    fm5 = {name ="F-M5",min=79.5,max=999,equipment="Single-ply"}
+
+    #Misc divisions
+    mrg = {name ="MR-G",min=0,max=999,equipment="Raw",place="G"}
+    mg = {name ="M-G",min=0,max=999,equipment="Single-ply",place="G"}
+    frg = {name ="FR-G",min=0,max=999,equipment="Raw",place="G"}
+    fg = {name ="F-G",min=0,max=999,equipment="Single-ply",place="G"}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
+[weightclasses.new_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
 [weightclasses.default_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -70,11 +118,17 @@
     sex = "M"
     divisions = ["M-C-U23","M-E-U23","M-C-U20","M-E-U20","M-C-U18","M-E-U18","M-C-U16","M-E-U16"]
 
+[weightclasses.juniornew_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["F-C-U23","F-E-U23","F-C-U20","F-E-U20","F-C-U18","F-E-U18","F-C-U16","F-E-U16","FR-Jr","FR-Sj","F-Jr","F-Sj"]
+
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
-    divisions = ["F-C-U23","F-E-U23","F-C-U20","F-E-U20","F-C-U18","F-E-U18","F-C-U16","F-E-U16"]
+    divisions = ["F-C-U23","F-E-U23","F-C-U20","F-E-U20","F-C-U18","F-E-U18","F-C-U16","F-E-U16","FR-Jr","FR-Sj","F-Jr","F-Sj"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
