@@ -114,7 +114,7 @@ def parse_sheetname(s):
                 equipment = 'Raw'
 
         elif word in ['софт', 'slinghot', 'slingshot', 'soft',
-                      'однопетельная'] and event == 'B':
+                      'однопетельная', 'многопетельная'] and event == 'B':
             equipment = 'Unlimited'
         # Equipment
         elif word in ['однослой', 'однослое', 'односл', 's ply', 'однослойной',
@@ -424,7 +424,7 @@ def parse_sheet(sheet):
         return csv
     elif 'рулетка' in title:  # From the Russian Roulette division haha
         return csv
-    elif any(x in title for x in ['много', 'фжд', 'военный', '1 вес', 'жд любители',
+    elif any(x in title for x in ['фжд', 'военный', '1 вес', 'жд любители',
                                   'армейский', 'тяговое', 'военный',
                                   '1_2 веса', 'многоповтор', 'жд']):  # Bench reps
         return csv
