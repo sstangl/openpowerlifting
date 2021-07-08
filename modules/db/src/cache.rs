@@ -380,7 +380,10 @@ impl LogLinearTimeCache {
             single: Self::filter_entries(entries, |e| e.equipment == Equipment::Single),
             multi: Self::filter_entries(entries, |e| e.equipment == Equipment::Multi),
             unlimited: Self::filter_entries(entries, |e| {
-                e.equipment == Equipment::Multi || e.equipment == Equipment::Unlimited
+                matches!(
+                    e.equipment,
+                    Equipment::Single | Equipment::Multi | Equipment::Unlimited
+                )
             }),
 
             male: Self::filter_entries(entries, |e| e.sex == Sex::M),
