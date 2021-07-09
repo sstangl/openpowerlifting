@@ -231,6 +231,13 @@
   background-image: linear-gradient(110deg, #FFA200 10%, #EDF2F4 20%, #444 25%, #EDF2F4 30%, #FFA200 40%, #FFA200 60%, #EDF2F4 70%, #444 75%, #EDF2F4 80%, #FFA200 90%, #FFA200 100%)
 }
 
+.aqua_to_pink {
+  $aqua: #00FFEF;
+  $pink: #FF69B4;
+  @include gradient-prereqs($aqua);
+  background-image: linear-gradient(to right, $aqua, $pink);
+}
+
 .blue_to_gold {
   $blue: #507CFF;
   $gold: #FFD700;
