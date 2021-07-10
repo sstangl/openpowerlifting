@@ -171,6 +171,10 @@ pub enum Federation {
     #[strum(to_string = "BP", serialize = "bp")]
     BP,
 
+    /// Belize Powerlifting Association, IPF.
+    #[strum(to_string = "BPA", serialize = "bpa")]
+    BPA,
+
     /// Defunct British WPC affiliate.
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
@@ -1546,6 +1550,7 @@ impl Federation {
             Federation::BDFPF => FULLY_TESTED,
             Federation::BelPF => FULLY_TESTED,
             Federation::BP => FULLY_TESTED,
+            Federation::BPA => FULLY_TESTED,
             Federation::BPC => false,
             Federation::BPF => false,
             Federation::BPO => false,
@@ -1894,6 +1899,7 @@ impl Federation {
             Federation::BDFPF => Some(Country::Belgium),
             Federation::BelPF => Some(Country::Belarus),
             Federation::BP => Some(Country::UK),
+            Federation::BPA => Some(Country::Belize),
             Federation::BPC => Some(Country::UK),
             Federation::BPF => Some(Country::UK),
             Federation::BPO => Some(Country::UK),
@@ -2242,6 +2248,7 @@ impl Federation {
             Federation::BDFPF => Some(Federation::WDFPF),
             Federation::BelPF => Some(Federation::IPF),
             Federation::BP => Some(Federation::IPF),
+            Federation::BPA => Some(Federation::IPF),
             Federation::BPC => {
                 // The BPC was WPC-affiliated until 2012.
                 if date.year() >= 2012 {
@@ -2690,6 +2697,7 @@ impl Federation {
             Federation::BDFPF => PointsSystem::Wilks,
             Federation::BelPF => Federation::ipf_rules_on(date),
             Federation::BP => Federation::ipf_rules_on(date),
+            Federation::BPA => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,
             Federation::BPF => PointsSystem::Wilks,
             Federation::BPO => PointsSystem::Wilks,
