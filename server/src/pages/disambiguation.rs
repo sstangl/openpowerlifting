@@ -9,7 +9,7 @@ use opltypes::*;
 use crate::pages::lifter::MeetResultsRow;
 use crate::pages::meet::points_column_title;
 
-/// The context object passed to `templates/disambiguation.tera`
+/// Context object passed to the disambiguations template.
 #[derive(Serialize)]
 pub struct Context<'db> {
     pub urlprefix: &'static str,
