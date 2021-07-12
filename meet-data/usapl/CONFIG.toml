@@ -525,6 +525,7 @@
 	# 2021 exemptions.
 	WI-2021-07 = ["ExemptWeightClassConsistency"] # Used an incorrect women's class.
     VA-2021-05 = ["ExemptDivision"] # Lifter under 14 in the Open division.
+    AL-2021-03 = ["ExemptDivision"] # Lifter under 14 in the Open division.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
