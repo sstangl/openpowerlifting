@@ -532,7 +532,7 @@ pub enum Federation {
     HERC,
 
     /// Hong Kong Powerlifting Federation, WP.
-    #[serde(rename = "Hong Kong Powerlifting Federation")]
+    #[serde(rename = "HKPF")]
     #[strum(to_string = "HKPF", serialize = "hkpf")]
     HKPF,
 
