@@ -2,7 +2,7 @@
 
 # The USAPL is in such a bad state that it makes sense to partially-configure it.
 [options]
-    valid_since = "2017-09-01"
+    valid_since = "2017-07-01"
 	require_manual_disambiguation = true
 
 [divisions]
