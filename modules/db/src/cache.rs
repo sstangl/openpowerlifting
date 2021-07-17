@@ -127,37 +127,44 @@ impl NonSortedNonUnique {
             return NonSortedNonUnique(acc);
         }
 
-        let mut self_index = 0;
-        let mut other_index = 0;
+        let mut self_iter = self.0.iter();
+        let mut other_iter = other.0.iter();
 
-        let mut a = self.0[self_index];
-        let mut b = other.0[other_index];
+        let mut a = self_iter.next().unwrap();
+        let mut b = other_iter.next().unwrap();
 
         loop {
             match a.cmp(&b) {
                 Ordering::Equal => {
-                    acc.push(a);
-                    self_index += 1;
-                    other_index += 1;
-                    if self_index == self.0.len() || other_index == other.0.len() {
-                        break;
-                    }
-                    a = self.0[self_index];
-                    b = other.0[other_index];
+                    acc.push(*a);
+                    a = match self_iter.next() {
+                        Some(a) => a,
+                        None => {
+                            break;
+                        }
+                    };
+                    b = match other_iter.next() {
+                        Some(b) => b,
+                        None => {
+                            break;
+                        }
+                    };
                 }
                 Ordering::Less => {
-                    self_index += 1;
-                    if self_index == self.0.len() {
-                        break;
-                    }
-                    a = self.0[self_index];
+                    a = match self_iter.next() {
+                        Some(a) => a,
+                        None => {
+                            break;
+                        }
+                    };
                 }
                 Ordering::Greater => {
-                    other_index += 1;
-                    if other_index == other.0.len() {
-                        break;
-                    }
-                    b = other.0[other_index];
+                    b = match other_iter.next() {
+                        Some(b) => b,
+                        None => {
+                            break;
+                        }
+                    };
                 }
             }
         }
@@ -223,7 +230,7 @@ impl NonSortedNonUnique {
 }
 
 /// Owning structure of all precomputed data.
-pub(crate) struct StaticCache {
+pub struct StaticCache {
     // Precalculated data for Rankings.
     pub constant_time: ConstantTimeCache,
     pub log_linear_time: LogLinearTimeCache,

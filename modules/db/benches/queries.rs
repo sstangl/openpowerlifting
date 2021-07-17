@@ -1,6 +1,6 @@
 //! Benchmarks loading the database from data files.
 
-use criterion::{criterion_group, criterion_main, Criterion};
+use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughput};
 use opldb::query::direct::*;
 use opldb::{MetaFederation, OplDb};
 
@@ -43,10 +43,26 @@ pub fn query_benchmarks(c: &mut Criterion) {
         };
 
         b.iter(|| {
-            opldb::algorithms::get_full_sorted_uniqued(&query, &db);
+            opldb::algorithms::get_full_sorted_uniqued(&query, black_box(&db));
         });
     });
 }
 
-criterion_group!(benches, query_benchmarks);
+pub fn data_structures(c: &mut Criterion) {
+    let mut group = c.benchmark_group("data_structures");
+    let db = db();
+
+    let cache = db.get_cache_for_benchmarks();
+    let raw_wraps = &cache.log_linear_time.raw_wraps;
+    let male = &cache.log_linear_time.male;
+
+    // Benchmark set intersection on actual data.
+    // TODO(sstangl): The throughput is best characterized 3-dimensionally.
+    group.throughput(Throughput::Elements(raw_wraps.0.len() as u64));
+    group.bench_function("NonSortedNonUnique::intersect()", |b| {
+        b.iter(|| black_box(raw_wraps.intersect(black_box(&male))));
+    });
+}
+
+criterion_group!(benches, query_benchmarks, data_structures);
 criterion_main!(benches);

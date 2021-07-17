@@ -382,4 +382,11 @@ impl OplDb {
             .map(|(lifter_id, _group)| lifter_id)
             .collect()
     }
+
+    /// Returns the StaticCache.
+    ///
+    /// This endpoint is intended only for use in benchmark code, for testing against real data.
+    pub fn get_cache_for_benchmarks(&self) -> &cache::StaticCache {
+        &self.cache
+    }
 }
