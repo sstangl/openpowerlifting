@@ -125,7 +125,7 @@ fn rankings(
 }
 
 #[get("/rankings")]
-fn rankings_redirect() -> Redirect {
+async fn rankings_redirect() -> Redirect {
     Redirect::to("/")
 }
 
@@ -525,22 +525,22 @@ fn old_meet(opldb: &State<ManagedOplDb>, m: String) -> Option<Redirect> {
 }
 
 #[get("/index.html")]
-fn old_index() -> Redirect {
+async fn old_index() -> Redirect {
     Redirect::permanent("/")
 }
 
 #[get("/faq.html")]
-fn old_faq() -> Redirect {
+async fn old_faq() -> Redirect {
     Redirect::permanent("/faq")
 }
 
 #[get("/contact.html")]
-fn old_contact() -> Redirect {
+async fn old_contact() -> Redirect {
     Redirect::permanent("/contact")
 }
 
 #[get("/robots.txt")]
-fn robots_txt() -> &'static str {
+async fn robots_txt() -> &'static str {
     // Allow robots full site access except for JSON endpoints.
     r#"User-agent: *
 Disallow: /api/
@@ -568,12 +568,12 @@ Disallow: /"#
 }
 
 #[catch(404)]
-fn not_found() -> &'static str {
+async fn not_found() -> &'static str {
     "404"
 }
 
 #[catch(500)]
-fn internal_error() -> &'static str {
+async fn internal_error() -> &'static str {
     "500"
 }
 
