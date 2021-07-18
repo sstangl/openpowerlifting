@@ -33,6 +33,7 @@
     mm2r = {name ="M-M2R", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
     mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
     fm2r = {name ="F-M2R", min=45, max=49, sex="F", equipment=["Raw","Wraps"]}
+    fm2e = {name ="F-M2E", min=45, max=49, sex="F", equipment=["Single-ply","Multi-ply"]}
     mm3r = {name ="M-M3R", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
     fm3r = {name ="F-M3R", min=50, max=54, sex="F", equipment=["Raw","Wraps"]}
     mm4r = {name ="M-M4R", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
