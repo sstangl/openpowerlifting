@@ -130,46 +130,44 @@ impl NonSortedNonUnique {
         let mut self_iter = self.0.iter();
         let mut other_iter = other.0.iter();
 
-        let mut a = self_iter.next().unwrap();
-        let mut b = other_iter.next().unwrap();
+        let mut a: u32 = *self_iter.next().unwrap();
+        let mut b: u32 = *other_iter.next().unwrap();
 
         loop {
             match a.cmp(&b) {
                 Ordering::Equal => {
-                    acc.push(*a);
+                    acc.push(a);
                     a = match self_iter.next() {
-                        Some(a) => a,
+                        Some(a) => *a,
                         None => {
-                            break;
+                            return NonSortedNonUnique(acc);
                         }
                     };
                     b = match other_iter.next() {
-                        Some(b) => b,
+                        Some(b) => *b,
                         None => {
-                            break;
+                            return NonSortedNonUnique(acc);
                         }
                     };
                 }
                 Ordering::Less => {
                     a = match self_iter.next() {
-                        Some(a) => a,
+                        Some(a) => *a,
                         None => {
-                            break;
+                            return NonSortedNonUnique(acc);
                         }
                     };
                 }
                 Ordering::Greater => {
                     b = match other_iter.next() {
-                        Some(b) => b,
+                        Some(b) => *b,
                         None => {
-                            break;
+                            return NonSortedNonUnique(acc);
                         }
                     };
                 }
             }
         }
-
-        NonSortedNonUnique(acc)
     }
 
     /// Sorts and uniques the data with reference to a comparator.
