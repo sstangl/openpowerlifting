@@ -150,6 +150,7 @@
     mm1prx = {name = "M-M1P-R-X", min=40, max=44, sex="M", equipment="Raw"}
     mm1pru = {name = "M-M1P-R-U", min=40, max=44, sex="M", equipment="Raw", tested="No"}
     mm1prt = {name = "M-M1P-R-T", min=40, max=44, sex="M", equipment="Raw", tested="Yes"}
+    mm1pmpt = {name = "M-M1P-MP-T", min=40, max=44, sex="M", equipment="Multi-ply", tested="Yes"}
     mm1pmpx = {name = "M-M1P-MP-X", min=40, max=44, sex="M", equipment="Multi-ply"}
     mm2frx = {name = "M-M2F-R-X", min=45, max=49, sex="M", equipment="Raw"}
     mm2frt = {name = "M-M2F-R-T", min=45, max=49, sex="M", equipment="Raw", tested="Yes"}
