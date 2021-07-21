@@ -350,6 +350,13 @@
   background-image: linear-gradient(to right, $orange, $green);
 }
 
+.orange_to_pink_to_orange {
+  $orange: #FF6600;
+  $pink: #FF0099;
+  @include gradient-prereqs($orange);
+  background-image: linear-gradient(to right, $orange, $pink, $orange);
+}
+
 .pink_to_lightblue {
   $pink: #FF69B4;
   $lightblue: #43D1FF;
