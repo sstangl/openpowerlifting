@@ -1,8 +1,14 @@
 [divisions]
     1A2A = {name="1A-2A", min=13, max=19}
-    3A = {name="3A", min=13, max=19}
-    4A = {name="4A", min=13, max=19}
-    5A = {name="5A", min=13, max=19}
+    1A = {name="1A", min=13, max=19, sex="M"}
+    2A = {name="2A", min=13, max=19, sex="M"}
+    3A = {name="3A", min=13, max=19, sex="M"}
+    4A = {name="4A", min=13, max=19, sex="M"}
+    5A = {name="5A", min=13, max=19, sex="M"}
+    6A = {name="6A", min=13, max=19, sex="M"}
+    class1 = {name="Class I", min=13, max=19, sex="F"}
+    class2 = {name="Class II", min=13, max=19, sex="F"}
+    class3 = {name="Class III", min=13, max=19, sex="F"}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
