@@ -279,8 +279,8 @@ def main():
     remote = getunknownmeets(meets, known)
 
     for meet in remote:
-        print(' Fetching %s' % meet.num)
-        downloadpdf(meet)
+        print(' Fetching %s: %s' % (meet.num, meet.name))
+        # downloadpdf(meet)
         writemeetcsv(meet)
 
     if len(remote) == 0:
