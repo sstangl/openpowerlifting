@@ -1,7 +1,7 @@
 Place,Name,Sex,Division,Event,Country,Age,WeightClassKg,Equipment,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BodyweightKg
 1,Beth Grater,F,F-O,SBD,USA,,44,Single-ply,110,52.5,110,272.5,
 1,Tina Michaud #2,F,F-O,SBD,USA,,47.5,Single-ply,107.5,52.5,120,280,
-1,Sue Sullivan,F,F-O,SBD,USA,,50.5,Single-ply,110,65,125,300,
+1,Sue Sullivan,F,F-O,SBD,USA,49,50.5,Single-ply,110,65,125,300,
 1,Jacqueline Davis,F,F-O,SBD,USA,,53,Single-ply,145,77.5,172.5,395,
 1,Diedre Johnson-Cane,F,F-O,SBD,USA,,55.5,Single-ply,137.5,67.5,150,355,
 1,Demesse,F,F-O,SBD,Belgium,,63,Single-ply,140,70,160,370,
@@ -23,7 +23,7 @@ Place,Name,Sex,Division,Event,Country,Age,WeightClassKg,Equipment,Best3SquatKg,B
 3,George Troullis,M,M-O,SBD,Cyprus,35,67.5,Single-ply,200,117.5,260,577.5,
 1,Tonge,M,M-O,SBD,UK,,75,Single-ply,225,132.5,242.5,600,
 2,Lykov,M,M-O,SBD,Russia,,75,Single-ply,215,110,250,575,
-3,Ottolnagui,M,M-O,SBD,UK,,75,Single-ply,225,112.5,220,557.5,
+3,Ottolangui,M,M-O,SBD,UK,,75,Single-ply,225,112.5,220,557.5,
 DQ,Parfitt,M,M-O,SBD,Wales,,75,Single-ply,,,,,
 1,Ray Benemerito,M,M-O,SBD,USA,,82.5,Single-ply,300,162.5,337.5,800,
 2,Cousins,M,M-O,SBD,UK,,82.5,Single-ply,242.5,150,260,652.5,
@@ -48,3 +48,4 @@ DQ,Parfitt,M,M-O,SBD,Wales,,75,Single-ply,,,,,
 1,Beau Moore #1,M,M-O,SBD,,,145,Single-ply,320,250,272.5,842.5,
 1,Mark Henry #1,M,M-O,SBD,,,145+,Wraps,432.5,235,392.5,1060,183.71
 2,Kelly,M,M-O,SBD,,,145+,Single-ply,215,162.5,215,592.5,
+NS,Bob Bridges,M,M-O,SBD,USA,,75,Single-ply,,,,,
