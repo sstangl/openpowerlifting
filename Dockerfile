@@ -2,8 +2,8 @@
 FROM rust:slim-buster AS builder
 
 # Install our box dependencies in one, easily-cached layer image
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
-    apt-get update -qq && \
+RUN apt-get update -qq && apt-get install -y curl && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs python3-pip && \
     pip3 install toml flake8
 
