@@ -527,10 +527,6 @@ pub enum Federation {
     #[strum(to_string = "Hardcore", serialize = "hardcore")]
     Hardcore,
 
-    /// Hercules Gym in Syracuse, NY. Run by Rheta West.
-    #[strum(to_string = "HERC", serialize = "herc")]
-    HERC,
-
     /// Hong Kong Powerlifting Federation, WP.
     #[strum(to_string = "HKPF", serialize = "hkpf")]
     HKPF,
@@ -1501,10 +1497,17 @@ pub enum Federation {
     #[strum(to_string = "XPC", serialize = "xpc")]
     XPC,
 
-    /// Polish version of the XPC
+    /// Polish version of the XPC.
     #[serde(rename = "XPC-Poland")]
     #[strum(to_string = "XPC-Poland", serialize = "xpc-poland")]
     XPCPoland,
+
+    /// Extreme Performance and Strength, formerly known as HERC.
+    ///
+    /// On 2021-07-29, Rheta West requested that the name change from HERC to XPS,
+    /// in order to sanction events outside of the Hercules Gym.
+    #[strum(to_string = "XPS", serialize = "xps")]
+    XPS,
 }
 
 impl Federation {
@@ -1633,7 +1636,6 @@ impl Federation {
             Federation::GRAWA => false,
             Federation::GSFBelarus => false,
             Federation::Hardcore => false,
-            Federation::HERC => false,
             Federation::CroatiaUA => false,
             Federation::HKWPA => FULLY_TESTED,
             Federation::HPC => false,
@@ -1864,6 +1866,7 @@ impl Federation {
             Federation::WUAPUSA => false,
             Federation::XPC => false,
             Federation::XPCPoland => false,
+            Federation::XPS => false,
         }
     }
 
@@ -1984,7 +1987,6 @@ impl Federation {
             Federation::GRAWA => Some(Country::Germany),
             Federation::GSFBelarus => Some(Country::Belarus),
             Federation::Hardcore => Some(Country::USA),
-            Federation::HERC => Some(Country::USA),
             Federation::HKPF => Some(Country::HongKong),
             Federation::CroatiaUA => Some(Country::Croatia),
             Federation::HKWPA => Some(Country::HongKong),
@@ -2207,6 +2209,7 @@ impl Federation {
             Federation::WUAPUSA => Some(Country::USA),
             Federation::XPC => Some(Country::USA),
             Federation::XPCPoland => Some(Country::Poland),
+            Federation::XPS => Some(Country::USA),
         }
     }
 
@@ -2361,7 +2364,6 @@ impl Federation {
             Federation::GRAWA => Some(Federation::IRP),
             Federation::GSFBelarus => None,
             Federation::Hardcore => None,
-            Federation::HERC => None,
             Federation::CroatiaUA => None,
             Federation::HKPF => Some(Federation::WP),
             Federation::HKWPA => Some(Federation::IPF),
@@ -2620,6 +2622,7 @@ impl Federation {
             Federation::WUAPUSA => Some(Federation::WUAP),
             Federation::XPC => Some(Federation::XPC),
             Federation::XPCPoland => Some(Federation::XPC),
+            Federation::XPS => None,
         }
     }
 
@@ -2791,7 +2794,6 @@ impl Federation {
             Federation::GRAWA => PointsSystem::Wilks,
             Federation::GSFBelarus => PointsSystem::Wilks,
             Federation::Hardcore => PointsSystem::Wilks,
-            Federation::HERC => PointsSystem::Wilks,
             Federation::CroatiaUA => PointsSystem::Wilks,
             Federation::HKPF => Federation::wp_rules_on(date),
             Federation::HKWPA => Federation::ipf_rules_on(date),
@@ -3055,6 +3057,7 @@ impl Federation {
             Federation::WUAPUSA => PointsSystem::Wilks,
             Federation::XPC => PointsSystem::Wilks,
             Federation::XPCPoland => PointsSystem::Wilks,
+            Federation::XPS => PointsSystem::Wilks,
         }
     }
 }

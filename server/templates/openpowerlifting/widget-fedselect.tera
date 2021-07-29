@@ -43,7 +43,6 @@
   <option value="apf" {% if selection.federation == "APF" %}selected{% endif %}>APF - American Powerlifting Federation [WPC]</option>
   <option value="fhsaa" {% if selection.federation == "FHSAA" %}selected{% endif %}>FHSAA - Florida High School Athletics Association</option>
   <option value="hardcore" {% if selection.federation == "Hardcore" %}selected{% endif %}>Hardcore - Hardcore Powerlifting</option>
-  <option value="herc" {% if selection.federation == "HERC" %}selected{% endif %}>HERC - Hercules</option>
   <option value="ipa" {% if selection.federation == "IPA" %}selected{% endif %}>IPA - International Powerlifting Association (2014+)</option>
   <option value="mhspla" {% if selection.federation == "MHSPLA" %}selected{% endif %}>MHSPLA - Michigan High School Powerlifting Association</option>
   <option value="mm" {% if selection.federation == "MM" %}selected{% endif %}>MM - Metal Militia</option>
@@ -76,6 +75,7 @@
   <option value="wrpf-usa" {% if selection.federation == "WRPF-USA" %}selected{% endif %}>WRPF USA</option>
   <option value="wuap-usa" {% if selection.federation == "WUAP-USA" %}selected{% endif %}>WUAP USA</option>
   <option value="xpc" {% if selection.federation == "XPC" %}selected{% endif %}>XPC - Xtreme Powerlifting Coalition</option>
+  <option value="xps" {% if selection.federation == "XPS" %}selected{% endif %}>XPS - Extreme Performance and Strength</option>
 </optgroup>
 <optgroup label="{{strings.country.uk}}">
   <option value="all-uk" {% if selection.federation == "AllUK" %}selected{% endif %}>{{strings.selectors.fed.all_uk}}</option>
