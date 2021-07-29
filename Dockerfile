@@ -4,7 +4,7 @@ FROM rust:slim-buster AS builder
 # Install our box dependencies in one, easily-cached layer image
 RUN apt-get update -qq && apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt-get install -y nodejs python3-pip && \
+    apt-get install -y git nodejs python3-pip && \
     pip3 install toml flake8
 
 # Move to our project directory
@@ -31,6 +31,7 @@ COPY Cargo.* ./
 COPY Makefile ./
 
 # project code
+COPY .git .git/
 COPY api api/
 COPY checker checker/
 COPY modules modules/
@@ -56,4 +57,5 @@ FROM debian:buster-slim
 WORKDIR /opt/openpowerlifting/
 COPY --from=builder /opt/openpowerlifting/server/build .
 EXPOSE 8000
+ENV ROCKET_ADDRESS=0.0.0.0
 CMD ["/opt/openpowerlifting/server", "--set-cwd", "data"]
