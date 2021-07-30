@@ -618,6 +618,10 @@ pub enum Federation {
     #[strum(to_string = "IPL-Spain", serialize = "ipl-spain")]
     IPLSpain,
 
+    /// Iran Bodybuilding & Fitness, IPF.
+    #[strum(to_string = "IranBBF", serialize = "iranbbf")]
+    IranBBF,
+
     /// Unaffiliated meets held in Ireland.
     #[serde(rename = "Ireland-UA")]
     #[strum(to_string = "Ireland-UA", serialize = "ireland-ua")]
@@ -1659,6 +1663,7 @@ impl Federation {
             Federation::IPL => false,
             Federation::IPLNZ => false,
             Federation::IPLSpain => false,
+            Federation::IranBBF => FULLY_TESTED,
             Federation::IrelandUA => false,
             Federation::IrishPF => FULLY_TESTED,
             Federation::IrishPO => false,
@@ -2009,6 +2014,7 @@ impl Federation {
             Federation::IPL => None,
             Federation::IPLNZ => Some(Country::NewZealand),
             Federation::IPLSpain => Some(Country::Spain),
+            Federation::IranBBF => Some(Country::Iran),
             Federation::IrelandUA => Some(Country::Ireland),
             Federation::IrishPF => Some(Country::Ireland),
             Federation::IrishPO => Some(Country::Ireland),
@@ -2386,6 +2392,7 @@ impl Federation {
             Federation::IPL => Some(Federation::IPL),
             Federation::IPLNZ => Some(Federation::IPL),
             Federation::IPLSpain => Some(Federation::IPL),
+            Federation::IranBBF => Some(Federation::IPF),
             Federation::IrelandUA => None,
             Federation::IrishPF => Some(Federation::IPF),
             Federation::IrishPO => Some(Federation::IPL),
@@ -2816,6 +2823,7 @@ impl Federation {
             Federation::IPL => Federation::ipl_rules_on(date),
             Federation::IPLNZ => Federation::ipl_rules_on(date),
             Federation::IPLSpain => Federation::ipl_rules_on(date),
+            Federation::IranBBF => Federation::ipf_rules_on(date),
             Federation::IrelandUA => PointsSystem::Wilks,
             Federation::IrishPF => {
                 // On 2020-02-16, IrishPF voted to immediately switch to Dots.
