@@ -262,7 +262,7 @@
 </optgroup>
 <optgroup label="{{strings.country.iran}}">
   <option value="all-iran" {% if selection.federation == "AllIran" %}selected{% endif %}>{{strings.selectors.fed.all_iran}}</option>
-  <option value="iranbbf" {% if selection.federation == "IranBBF" %}selected{% endif %}>IranBBF - Iran Bodybuilding & Fitnes [IPF]</option>
+  <option value="iranbbf" {% if selection.federation == "IranBBF" %}selected{% endif %}>IranBBF - Iran Bodybuilding & Fitness [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.ireland}}">
   <option value="all-ireland" {% if selection.federation == "AllIreland" %}selected{% endif %}>{{strings.selectors.fed.all_ireland}}</option>
