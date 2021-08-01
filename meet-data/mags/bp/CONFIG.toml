@@ -6,4 +6,5 @@
 
 [exemptions]
 
-require_manual_disambiguation = true
+[options]
+    require_manual_disambiguation = true
