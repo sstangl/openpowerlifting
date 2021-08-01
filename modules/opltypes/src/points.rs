@@ -110,15 +110,11 @@ impl FromStr for Points {
 }
 
 impl Serialize for Points {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         // 10 characters for the non-decimal number (-536870912).
         // 3 characters for the '.' plus 2 fractional digits.
         let mut buf = ArrayString::<13>::new();
         write!(buf, "{}", self).expect("ArrayString overflow");
-
         serializer.serialize_str(&buf)
     }
 }
@@ -132,19 +128,13 @@ impl<'de> Visitor<'de> for PointsVisitor {
         formatter.write_str("A floating-point value or the empty string.")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<Points, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<Points, E> {
         Points::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for Points {
-    fn deserialize<D>(deserializer: D) -> Result<Points, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Points, D::Error> {
         deserializer.deserialize_str(PointsVisitor)
     }
 }

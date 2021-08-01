@@ -436,7 +436,7 @@ fn parse_weightclasses(
                     let mut vec = Vec::with_capacity(a.len());
                     for div in a {
                         match div.as_str() {
-                            Some(div) => match divisions.iter().position(|ref r| r.name == div) {
+                            Some(div) => match divisions.iter().position(|r| r.name == div) {
                                 Some(idx) => vec.push(idx),
                                 None => {
                                     report.error(format!(

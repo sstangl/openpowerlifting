@@ -40,10 +40,7 @@ pub enum WeightClassAny {
 }
 
 impl Serialize for WeightClassKg {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         if self.is_none() {
             return serializer.serialize_str("");
         }
@@ -57,10 +54,7 @@ impl Serialize for WeightClassKg {
 }
 
 impl Serialize for WeightClassAny {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         if self.is_none() {
             return serializer.serialize_str("");
         }
@@ -142,13 +136,13 @@ impl Ord for WeightClassKg {
     fn cmp(&self, other: &WeightClassKg) -> Ordering {
         match self {
             WeightClassKg::UnderOrEqual(kg) => match other {
-                WeightClassKg::UnderOrEqual(other_kg) => kg.cmp(&other_kg),
+                WeightClassKg::UnderOrEqual(other_kg) => kg.cmp(other_kg),
                 WeightClassKg::Over(_) => Ordering::Less,
                 WeightClassKg::None => Ordering::Less,
             },
             WeightClassKg::Over(kg) => match other {
                 WeightClassKg::UnderOrEqual(_) => Ordering::Greater,
-                WeightClassKg::Over(other_kg) => kg.cmp(&other_kg),
+                WeightClassKg::Over(other_kg) => kg.cmp(other_kg),
                 WeightClassKg::None => Ordering::Less,
             },
             WeightClassKg::None => match other {
@@ -223,19 +217,13 @@ impl<'de> Visitor<'de> for WeightClassKgVisitor {
         formatter.write_str("A floating-point value optionally ending with '+'")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<WeightClassKg, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<WeightClassKg, E> {
         WeightClassKg::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for WeightClassKg {
-    fn deserialize<D>(deserializer: D) -> Result<WeightClassKg, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Self, D::Error> {
         deserializer.deserialize_str(WeightClassKgVisitor)
     }
 }

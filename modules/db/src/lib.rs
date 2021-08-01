@@ -99,7 +99,7 @@ fn import_entries_csv(
 
     // Initially, the entries CSV is sorted by meet_id.
     // This ordering can be used to efficiently calculate meet metadata.
-    let metafed_cache = MetaFederationCache::make(&meets, &vec);
+    let metafed_cache = MetaFederationCache::make(meets, &vec);
 
     // Calculate num_unique_lifters.
     for (meet_id, meet) in meets.iter_mut().enumerate() {
@@ -216,19 +216,19 @@ impl OplDb {
     /// Borrows the lifters vector.
     #[inline]
     pub fn get_lifters(&self) -> &[Lifter] {
-        &self.lifters.as_slice()
+        self.lifters.as_slice()
     }
 
     /// Borrows the meets vector.
     #[inline]
     pub fn get_meets(&self) -> &[Meet] {
-        &self.meets.as_slice()
+        self.meets.as_slice()
     }
 
     /// Borrows the entries vector.
     #[inline]
     pub fn get_entries(&self) -> &[Entry] {
-        &self.entries.as_slice()
+        self.entries.as_slice()
     }
 
     /// Borrows a `Lifter` by index.

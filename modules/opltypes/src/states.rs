@@ -149,10 +149,7 @@ impl State {
 
 impl Serialize for State {
     /// Serialization for the server. The checker uses from_str_and_country().
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let country = self.to_country().to_string();
         let state = self.to_state_string();
         format!("{}-{}", country, state).serialize(serializer)
@@ -172,19 +169,13 @@ impl<'de> Visitor<'de> for StateVisitor {
         formatter.write_str("A Country-State code like USA-NY")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<State, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<State, E> {
         State::from_full_code(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for State {
-    fn deserialize<D>(deserializer: D) -> Result<State, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<State, D::Error> {
         deserializer.deserialize_str(StateVisitor)
     }
 }

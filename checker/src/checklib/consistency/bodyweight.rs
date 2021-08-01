@@ -36,7 +36,7 @@ pub fn check_bodyweight_one(
     lifterdata: &LifterDataMap,
     report: &mut Report,
 ) -> ConsistencyResult {
-    if consistency::should_skip_lifter(&meetdata.get_entry(indices[0])) {
+    if consistency::should_skip_lifter(meetdata.get_entry(indices[0])) {
         return ConsistencyResult::Skipped;
     }
 
@@ -95,7 +95,7 @@ pub fn check_bodyweight_all(
     let mut report = Report::new("[Bodyweight Consistency]".into());
 
     for lifter_indices in liftermap.values() {
-        check_bodyweight_one(&lifter_indices, meetdata, lifterdata, &mut report);
+        check_bodyweight_one(lifter_indices, meetdata, lifterdata, &mut report);
     }
 
     if report.has_messages() {

@@ -97,7 +97,7 @@ pub fn check_name_all(liftermap: &LifterMap, meetdata: &AllMeetData, reports: &m
     let mut report = Report::new("[Name Consistency]".into());
 
     for lifter_indices in liftermap.values() {
-        check_name_one(&lifter_indices, meetdata, &mut report);
+        check_name_one(lifter_indices, meetdata, &mut report);
     }
 
     if report.has_messages() {

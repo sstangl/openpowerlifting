@@ -78,19 +78,13 @@ impl<'de> Visitor<'de> for PlaceVisitor {
         formatter.write_str("an integer or G, DQ, DD, NS")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<Place, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<Place, E> {
         Place::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for Place {
-    fn deserialize<D>(deserializer: D) -> Result<Place, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Place, D::Error> {
         deserializer.deserialize_str(PlaceVisitor)
     }
 }

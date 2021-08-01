@@ -10,7 +10,7 @@ pub fn check_sex_one(
     lifterdata: &LifterDataMap,
     report: &mut Report,
 ) -> ConsistencyResult {
-    if consistency::should_skip_lifter(&meetdata.get_entry(indices[0])) {
+    if consistency::should_skip_lifter(meetdata.get_entry(indices[0])) {
         return ConsistencyResult::Skipped;
     }
 
@@ -47,7 +47,7 @@ pub fn check_sex_all(
     let mut report = Report::new("[Sex Consistency]".into());
 
     for lifter_indices in liftermap.values() {
-        check_sex_one(&lifter_indices, meetdata, lifterdata, &mut report);
+        check_sex_one(lifter_indices, meetdata, lifterdata, &mut report);
     }
 
     if report.has_messages() {

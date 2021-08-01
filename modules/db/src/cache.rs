@@ -46,7 +46,7 @@ impl<'db> Deref for PossiblyOwnedNonSortedNonUnique<'db> {
     fn deref(&self) -> &NonSortedNonUnique {
         match &self {
             PossiblyOwnedNonSortedNonUnique::Borrowed(x) => x,
-            PossiblyOwnedNonSortedNonUnique::Owned(x) => &x,
+            PossiblyOwnedNonSortedNonUnique::Owned(x) => x,
         }
     }
 }
@@ -64,7 +64,7 @@ impl<'db> Deref for PossiblyOwnedSortedUnique<'db> {
     fn deref(&self) -> &SortedUnique {
         match &self {
             PossiblyOwnedSortedUnique::Borrowed(x) => x,
-            PossiblyOwnedSortedUnique::Owned(x) => &x,
+            PossiblyOwnedSortedUnique::Owned(x) => x,
         }
     }
 }

@@ -195,10 +195,7 @@ impl fmt::Display for Event {
 }
 
 impl Serialize for Event {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         // The greatest possible string is "SBD", 3 characters.
         let mut buf = ArrayString::<3>::new();
         write!(buf, "{}", self).expect("ArrayString overflow");
@@ -253,19 +250,13 @@ impl<'de> Visitor<'de> for EventVisitor {
         formatter.write_str("a string containing only the characters S,B,D")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<Event, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<Event, E> {
         Event::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for Event {
-    fn deserialize<D>(deserializer: D) -> Result<Event, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Event, D::Error> {
         deserializer.deserialize_str(EventVisitor)
     }
 }

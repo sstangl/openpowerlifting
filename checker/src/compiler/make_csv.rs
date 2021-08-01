@@ -262,7 +262,7 @@ impl<'md> EntryLifterData<'md> {
         EntryLifterData {
             id: lifter_id,
             name: &entry.name,
-            username: &entry.username.as_str(),
+            username: entry.username.as_str(),
             cyrillicname: entry.cyrillicname.as_deref(),
             greekname: entry.greekname.as_deref(),
             japanesename: entry.japanesename.as_deref(),
@@ -317,7 +317,7 @@ pub fn make_csv(
     for (meet_id, SingleMeetData { meet, entries }) in meetdata.get_meets().iter().enumerate() {
         // Write out the line for this meet.
         let meet_id = meet_id as u32;
-        meets_wtr.serialize(MeetsRow::from(&meet, meet_id))?;
+        meets_wtr.serialize(MeetsRow::from(meet, meet_id))?;
 
         // Write a line for each entry.
         for entry in entries {
@@ -345,14 +345,14 @@ pub fn make_csv(
                 None => {
                     let lifter_id = next_lifter_id;
                     next_lifter_id += 1;
-                    let data = EntryLifterData::from(&entry, lifter_id);
+                    let data = EntryLifterData::from(entry, lifter_id);
                     lifter_hash.insert(entry.username.as_str(), data);
                     lifter_id
                 }
             };
 
             // Write out to entries.csv.
-            entries_wtr.serialize(EntriesRow::from(&entry, meet_id, lifter_id))?;
+            entries_wtr.serialize(EntriesRow::from(entry, meet_id, lifter_id))?;
         }
     }
 
@@ -365,7 +365,7 @@ pub fn make_csv(
         let data = lifterdata
             .get(&Username::from_name(lifter.username).unwrap())
             .unwrap_or(&default);
-        lifters_wtr.serialize(LiftersRow::from(&lifter, &data))?;
+        lifters_wtr.serialize(LiftersRow::from(lifter, data))?;
     }
 
     Ok(())

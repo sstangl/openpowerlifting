@@ -228,7 +228,7 @@ impl PartialOrd for Age {
     fn partial_cmp(&self, other: &Age) -> Option<Ordering> {
         match self {
             Age::Exact(age) => match other {
-                Age::Exact(other_age) => Some(age.cmp(&other_age)),
+                Age::Exact(other_age) => Some(age.cmp(other_age)),
                 Age::Approximate(other_age) => {
                     if *other_age == u8::max_value() {
                         if *age == u8::max_value() {
@@ -251,10 +251,10 @@ impl PartialOrd for Age {
                             Some(Ordering::Greater)
                         }
                     } else {
-                        Some((age + 1).cmp(&(other_age)))
+                        Some((age + 1).cmp(other_age))
                     }
                 }
-                Age::Approximate(other_age) => Some(age.cmp(&other_age)),
+                Age::Approximate(other_age) => Some(age.cmp(other_age)),
                 Age::None => Some(Ordering::Less),
             },
             Age::None => match other {
@@ -298,10 +298,7 @@ impl FromStr for Age {
 }
 
 impl Serialize for Age {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         // Largest possible string for a `u8` Age is "256.5", 5 characters.
         let mut buf = ArrayString::<5>::new();
 
@@ -323,42 +320,27 @@ impl<'de> Visitor<'de> for AgeVisitor {
         formatter.write_str("an age (23) or approximate age (23.5)")
     }
 
-    fn visit_f64<E>(self, value: f64) -> Result<Age, E>
-    where
-        E: de::Error,
-    {
+    fn visit_f64<E: de::Error>(self, value: f64) -> Result<Age, E> {
         Age::from_f64(value).map_err(E::custom)
     }
 
-    fn visit_i64<E>(self, value: i64) -> Result<Age, E>
-    where
-        E: de::Error,
-    {
+    fn visit_i64<E: de::Error>(self, value: i64) -> Result<Age, E> {
         Age::from_i64(value).map_err(E::custom)
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<Age, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<Age, E> {
         Age::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for Age {
-    fn deserialize<D>(deserializer: D) -> Result<Age, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Age, D::Error> {
         deserializer.deserialize_str(AgeVisitor)
     }
 }
 
 impl Serialize for PrettyAge {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         // Largest possible string for a `u8` Age is "256~", 4 characters.
         let mut buf = ArrayString::<4>::new();
 

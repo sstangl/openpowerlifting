@@ -144,10 +144,7 @@ impl Username {
 }
 
 impl Serialize for Username {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         serializer.serialize_str(self.as_str())
     }
 }
@@ -160,19 +157,13 @@ impl<'de> Visitor<'de> for UsernameVisitor {
         formatter.write_str("an ASCII string")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<Username, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<Username, E> {
         Username::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for Username {
-    fn deserialize<D>(deserializer: D) -> Result<Username, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Self, D::Error> {
         deserializer.deserialize_str(UsernameVisitor)
     }
 }

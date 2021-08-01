@@ -846,7 +846,7 @@ impl MetaFederationCache {
             // Check whether any entries are part of each MetaFederation.
             for entry in meet_entries {
                 for meta in MetaFederation::iter() {
-                    if meta.contains(&entry, &meets) {
+                    if meta.contains(entry, meets) {
                         contains[meta as usize] = true;
                     }
                 }

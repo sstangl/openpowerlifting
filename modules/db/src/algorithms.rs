@@ -534,25 +534,21 @@ pub fn get_full_sorted_uniqued<'db>(
 
     // TODO: Common out sort code with ConstantTimeCache::new()
     PossiblyOwnedSortedUnique::Owned(match query.order_by {
-        OrderBy::Squat => cur.sort_and_unique_by(&entries, &meets, cmp_squat, filter_squat),
-        OrderBy::Bench => cur.sort_and_unique_by(&entries, &meets, cmp_bench, filter_bench),
-        OrderBy::Deadlift => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_deadlift, filter_deadlift)
-        }
-        OrderBy::Total => cur.sort_and_unique_by(&entries, &meets, cmp_total, filter_total),
-        OrderBy::Dots => cur.sort_and_unique_by(&entries, &meets, cmp_dots, filter_dots),
+        OrderBy::Squat => cur.sort_and_unique_by(entries, meets, cmp_squat, filter_squat),
+        OrderBy::Bench => cur.sort_and_unique_by(entries, meets, cmp_bench, filter_bench),
+        OrderBy::Deadlift => cur.sort_and_unique_by(entries, meets, cmp_deadlift, filter_deadlift),
+        OrderBy::Total => cur.sort_and_unique_by(entries, meets, cmp_total, filter_total),
+        OrderBy::Dots => cur.sort_and_unique_by(entries, meets, cmp_dots, filter_dots),
         OrderBy::Glossbrenner => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_glossbrenner, filter_glossbrenner)
+            cur.sort_and_unique_by(entries, meets, cmp_glossbrenner, filter_glossbrenner)
         }
-        OrderBy::Goodlift => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_goodlift, filter_goodlift)
-        }
+        OrderBy::Goodlift => cur.sort_and_unique_by(entries, meets, cmp_goodlift, filter_goodlift),
         OrderBy::McCulloch => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_mcculloch, filter_mcculloch)
+            cur.sort_and_unique_by(entries, meets, cmp_mcculloch, filter_mcculloch)
         }
-        OrderBy::Wilks => cur.sort_and_unique_by(&entries, &meets, cmp_wilks, filter_wilks),
+        OrderBy::Wilks => cur.sort_and_unique_by(entries, meets, cmp_wilks, filter_wilks),
         OrderBy::Wilks2020 => {
-            cur.sort_and_unique_by(&entries, &meets, cmp_wilks2020, filter_wilks2020)
+            cur.sort_and_unique_by(entries, meets, cmp_wilks2020, filter_wilks2020)
         }
     })
 }

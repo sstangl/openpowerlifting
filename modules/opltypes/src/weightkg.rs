@@ -35,10 +35,7 @@ impl Serialize for WeightKg {
     /// Serialize with two decimal places, exactly as in the original.
     ///
     /// This is intended for use by the compiler when writing the entries.csv.
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         // Zero serializes as the empty string.
         if self.0 == 0 {
             return serializer.serialize_str("");
@@ -71,10 +68,7 @@ impl Serialize for WeightAny {
     ///
     /// This is valid since WeightAny is intended only for situations
     /// in which pretty weights should be displayed.
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         if self.0 == 0 {
             return serializer.serialize_str("");
         }
@@ -346,19 +340,13 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
         formatter.write_str("A floating-point value or the empty string.")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<WeightKg, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<WeightKg, E> {
         WeightKg::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for WeightKg {
-    fn deserialize<D>(deserializer: D) -> Result<WeightKg, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<WeightKg, D::Error> {
         deserializer.deserialize_str(WeightKgVisitor)
     }
 }

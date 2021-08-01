@@ -212,8 +212,7 @@ fn find_lcs(subset_vec: &[usize], bd_range_vec: &[BirthDateRange]) -> Option<Vec
         let max_date = bd_range_vec[*range_idx].max.count_days() as f32;
         let days = max_date as usize - min_date as usize + 1;
 
-        let mut curr_test_vals = linspace::<f32>(min_date, max_date, days)
-            .collect();
+        let mut curr_test_vals = linspace::<f32>(min_date, max_date, days).collect();
         test_vals.append(&mut curr_test_vals);
     }
 
@@ -336,19 +335,16 @@ fn group_lifter_data(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: 
         }
 
         // Narrow by Age.
-        if entry.age != Age::None {
-            if range.narrow_by_age(entry.age, mdate) == NarrowResult::Conflict {
-                trace_conflict(debug, &range, mdate, "Age", &entry.age, &path);
-            }
+        if entry.age.is_some() && range.narrow_by_age(entry.age, mdate) == NarrowResult::Conflict {
+            trace_conflict(debug, &range, mdate, "Age", &entry.age, &path);
         }
 
         // Narrow by AgeRange.
-        if entry.agerange.min.is_some() || entry.agerange.max.is_some() {
-            if range.narrow_by_range(entry.agerange.min, entry.agerange.max, mdate)
+        if (entry.agerange.min.is_some() || entry.agerange.max.is_some())
+            && range.narrow_by_range(entry.agerange.min, entry.agerange.max, mdate)
                 == NarrowResult::Conflict
-            {
-                trace_conflict(debug, &range, mdate, "AgeRange", &entry.agerange, &path);
-            }
+        {
+            trace_conflict(debug, &range, mdate, "AgeRange", &entry.agerange, &path);
         }
 
         bd_ranges.push(range);

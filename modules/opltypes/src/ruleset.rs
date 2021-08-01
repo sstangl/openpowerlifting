@@ -78,10 +78,7 @@ impl RuleSet {
 }
 
 impl Serialize for RuleSet {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
+    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         if self.0 == 0 {
             // Output nothing instead of zero to save some space.
             serializer.serialize_str("")
@@ -127,19 +124,13 @@ impl<'de> Visitor<'de> for RuleSetVisitor {
         formatter.write_str("a space-separated list of rules")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<RuleSet, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<RuleSet, E> {
         RuleSet::from_str(value).map_err(E::custom)
     }
 }
 
 impl<'de> Deserialize<'de> for RuleSet {
-    fn deserialize<D>(deserializer: D) -> Result<RuleSet, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<RuleSet, D::Error> {
         deserializer.deserialize_str(RuleSetVisitor)
     }
 }

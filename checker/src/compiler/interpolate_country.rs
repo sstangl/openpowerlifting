@@ -107,7 +107,7 @@ fn interpolate_country_single_lifter(
     indices: &[EntryIndex],
     debug: bool,
 ) {
-    if let Some(country) = get_consistent_country(&meetdata, &indices, debug) {
+    if let Some(country) = get_consistent_country(meetdata, indices, debug) {
         for &index in indices {
             // Get the MeetPath for more helpful debugging output.
             let path: Option<String> = if debug {
