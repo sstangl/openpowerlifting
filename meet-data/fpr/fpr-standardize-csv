@@ -86,7 +86,6 @@ def parse_fieldnames(sheet):
         for i in iterable:
             text = header[i].lower().replace('.', '').replace('-', '')
             text = text.lower()
-            print(header)
 
             if '№' in text or 'номер' in text:
                 fieldnames.append('IGNORE')

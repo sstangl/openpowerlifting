@@ -26,15 +26,14 @@
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
-# Not sure when they switched, it wasn't the start of the year
 [weightclasses.default_F]
     classes = ["47","52","57","63","69","76","84","84+"]
-    date_range=["2021-03-01","9999-01-01"]
+    date_range=["2021-01-01","9999-01-01"]
     sex = "F"
 
 [weightclasses.year2020_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2021-02-31"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 # Extra classes for Teen Under 17 & Teen 17-18
@@ -611,6 +610,8 @@
     2043 = ["ExemptWeightClassConsistency"] # Para in regular weight classes
     2055 = ["ExemptWeightClassConsistency"] # 48kg SJr
     2070 = ["ExemptWeightClassConsistency"] # Youth Classes
+    2101 = ["ExemptWeightClassConsistency"] # Old womens classes
+    2102 = ["ExemptWeightClassConsistency"] # Old womens classes
     2104 = ["ExemptWeightClassConsistency"] # Old womens classes
     2105 = ["ExemptWeightClassConsistency"] # Youth Classes
     2107 = ["ExemptWeightClassConsistency"] # Old womens classes
@@ -619,15 +620,20 @@
     2110 = ["ExemptWeightClassConsistency"] # Youth Classes
     2112 = ["ExemptWeightClassConsistency"] # No 40kg Under 17
     2113 = ["ExemptWeightClassConsistency"] # No 40kg Under 17
+    2114 = ["ExemptWeightClassConsistency"] # Old womens classes
     2115 = ["ExemptWeightClassConsistency"] # Youth Classes
+    2116 = ["ExemptWeightClassConsistency"] # Old womens classes
     2117 = ["ExemptWeightClassConsistency"] # Old womens classes
     2119 = ["ExemptWeightClassConsistency"] # No 43kg SJr
     2123 = ["ExemptWeightClassConsistency"] # Youth Classes
     2124 = ["ExemptWeightClassConsistency"] # Old womens classes
     2125 = ["ExemptWeightClassConsistency"] # Old womens classes
+    2126 = ["ExemptWeightClassConsistency"] # Old womens classes
+    2128 = ["ExemptWeightClassConsistency"] # Old womens classes
     2129 = ["ExemptWeightClassConsistency"] # Youth Classes
     2130 = ["ExemptWeightClassConsistency"] # Old womens classes
-    2128 = ["ExemptWeightClassConsistency"] # Old womens classes
+    2132 = ["ExemptWeightClassConsistency"] # Old womens classes
     2134 = ["ExemptWeightClassConsistency"] # Youth Classes
     2135 = ["ExemptWeightClassConsistency"] # Old womens classes
     2136 = ["ExemptWeightClassConsistency"] # Old womens classes
+    2137 = ["ExemptWeightClassConsistency"] # Old womens classes
