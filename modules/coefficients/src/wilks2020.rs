@@ -21,12 +21,8 @@
 // TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 
+use crate::poly5;
 use opltypes::*;
-
-/// Helper function for the common fifth-degree Wilks2020 polynomial.
-fn wilks2020_coefficient(a: f64, b: f64, c: f64, d: f64, e: f64, f: f64, x: f64) -> f64 {
-    600.0 / (a + b * x + c * x.powi(2) + d * x.powi(3) + e * x.powi(4) + f * x.powi(5))
-}
 
 fn wilks2020_coefficient_men(bodyweightkg: f64) -> f64 {
     const A: f64 = 47.4617885411949;
@@ -37,7 +33,7 @@ fn wilks2020_coefficient_men(bodyweightkg: f64) -> f64 {
     const F: f64 = -0.0000000120804336482315;
 
     let adjusted = bodyweightkg.clamp(40.0, 200.95);
-    wilks2020_coefficient(A, B, C, D, E, F, adjusted)
+    600.0 / poly5(F, E, D, C, B, A, adjusted)
 }
 
 fn wilks2020_coefficient_women(bodyweightkg: f64) -> f64 {
@@ -49,7 +45,7 @@ fn wilks2020_coefficient_women(bodyweightkg: f64) -> f64 {
     const F: f64 = -0.000000023334613884954;
 
     let adjusted = bodyweightkg.clamp(40.0, 150.95);
-    wilks2020_coefficient(A, B, C, D, E, F, adjusted)
+    600.0 / poly5(F, E, D, C, B, A, adjusted)
 }
 
 /// Calculates Wilks2020 points.

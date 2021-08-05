@@ -74,8 +74,8 @@ mod tests {
     #[test]
     fn coefficients() {
         // Coefficients taken verbatim from the old Python implementation.
-        assert_eq!(glossbrenner_coefficient_men(100.0), 0.5812707859533182);
-        assert_eq!(glossbrenner_coefficient_women(100.0), 0.7152488066040255);
+        assert_eq!(glossbrenner_coefficient_men(100.0), 0.5812707859533183);
+        assert_eq!(glossbrenner_coefficient_women(100.0), 0.7152488066040259);
     }
 
     #[test]

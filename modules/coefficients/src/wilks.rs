@@ -21,18 +21,12 @@
 // TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 
+use crate::poly5;
 use opltypes::*;
 
-/// Helper function for the common fifth-degree Wilks polynomial.
-///
-/// Since Points and WeightKg have at most 2 decimal places
-/// and are unlikely to exceed 2000, coefficients must be accurate
-/// to 7 decimal places, requiring the use of `f64`.
-fn wilks_coefficient(a: f64, b: f64, c: f64, d: f64, e: f64, f: f64, x: f64) -> f64 {
-    500.0 / (a + b * x + c * x.powi(2) + d * x.powi(3) + e * x.powi(4) + f * x.powi(5))
-}
-
 pub fn wilks_coefficient_men(bodyweightkg: f64) -> f64 {
+    // Wilks defines its polynomial backwards:
+    // A + Bx + Cx^2 + ...
     const A: f64 = -216.0475144;
     const B: f64 = 16.2606339;
     const C: f64 = -0.002388645;
@@ -44,7 +38,7 @@ pub fn wilks_coefficient_men(bodyweightkg: f64) -> f64 {
     // Lower bound avoids children with huge coefficients.
     let adjusted = bodyweightkg.clamp(40.0, 201.9);
 
-    wilks_coefficient(A, B, C, D, E, F, adjusted)
+    500.0 / poly5(F, E, D, C, B, A, adjusted)
 }
 
 pub fn wilks_coefficient_women(bodyweightkg: f64) -> f64 {
@@ -59,7 +53,7 @@ pub fn wilks_coefficient_women(bodyweightkg: f64) -> f64 {
     // Lower bound avoids children with huge coefficients.
     let adjusted = bodyweightkg.clamp(26.51, 154.53);
 
-    wilks_coefficient(A, B, C, D, E, F, adjusted)
+    500.0 / poly5(F, E, D, C, B, A, adjusted)
 }
 
 /// Calculates Wilks points.
@@ -81,8 +75,8 @@ mod tests {
     #[test]
     fn coefficients() {
         // Coefficients taken verbatim from the old Python implementation.
-        assert_eq!(wilks_coefficient_men(100.0), 0.608589071906651);
-        assert_eq!(wilks_coefficient_women(100.0), 0.8325833167368221);
+        assert_eq!(wilks_coefficient_men(100.0), 0.6085890719066511);
+        assert_eq!(wilks_coefficient_women(100.0), 0.8325833167368228);
     }
 
     #[test]

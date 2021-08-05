@@ -59,3 +59,38 @@ pub use crate::wilks::wilks;
 
 mod wilks2020;
 pub use crate::wilks2020::wilks2020;
+
+/// Multiply and add. On many CPUs, this is a single instruction.
+#[inline(always)]
+fn madd(a: f64, b: f64, c: f64) -> f64 {
+    a * b + c
+}
+
+/// Resolves a 4th-degree polynomial using two-phase Horner's Method.
+///
+/// By splitting the calculation into even/odd degree halves, CPU parallelization is maximized.
+///
+/// # Formula
+/// `ax^4 + bx^3 + cx^2 + dx + e`
+#[inline]
+pub(crate) fn poly4(a: f64, b: f64, c: f64, d: f64, e: f64, x: f64) -> f64 {
+    let x2 = x * x;
+    let mut even = madd(a, x2, c); // Ax^2 + C.
+    let odd = madd(b, x2, d); // Bx^2 + D.
+    even = madd(even, x2, e); // Ax^4 + Cx^2 + E.
+    madd(odd, x, even) // Ax^4 + Bx^3 + Cx^2 + Dx + E.
+}
+
+/// Resolves a 5th-degree polynomial using two-phase Horner's Method.
+///
+/// # Formula
+/// `ax^5 + bx^4 + cx^3 + dx^2 + ex + f`
+#[inline]
+pub(crate) fn poly5(a: f64, b: f64, c: f64, d: f64, e: f64, f: f64, x: f64) -> f64 {
+    let x2 = x * x;
+    let mut odd = madd(a, x2, c); // Ax^2 + C.
+    let mut even = madd(b, x2, d); // Bx^2 + D.
+    odd = madd(odd, x2, e); // Ax^4 + Cx^2 + E.
+    even = madd(even, x2, f); // Bx^4 + Dx^2 + F.
+    madd(odd, x, even) // Ax^5 + Bx^4 + Cx^3 + Dx^2 + Ex + F.
+}
