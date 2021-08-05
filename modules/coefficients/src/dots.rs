@@ -23,9 +23,32 @@
 
 use opltypes::*;
 
-/// Helper function for the common fourth-degree Dots polynomial.
-fn dots_coefficient(a: f64, b: f64, c: f64, d: f64, e: f64, x: f64) -> f64 {
+/// Definition of the fourth-degree Dots polynomial.
+///
+/// This implementation is unused, because we prefer the faster implementation below.
+/// However, this version is easier to read.
+#[allow(dead_code)]
+fn dots_coefficient_poly(a: f64, b: f64, c: f64, d: f64, e: f64, x: f64) -> f64 {
     500.0 / (a * x.powi(4) + b * x.powi(3) + c * x.powi(2) + d * x + e)
+}
+
+/// Multiply and add.
+#[inline(always)]
+fn madd(a: f64, b: f64, c: f64) -> f64 {
+    a * b + c
+}
+
+/// Two-phase Horner's method, by splitting into even/odd degrees.
+///
+/// This results in codegen that is about 5.5% faster than the poly approach.
+/// Compiling with a modern CPU target, it's about 20% faster.
+fn dots_coefficient_horner2(a: f64, b: f64, c: f64, d: f64, e: f64, x: f64) -> f64 {
+    let x2: f64 = x * x;
+    let mut even = madd(a, x2, c); // Ax^2 + C.
+    let odd = madd(b, x2, d); // Bx^2 + D.
+    even = madd(even, x2, e); // Ax^4 + Cx^2 + E.
+    let join = madd(odd, x, even); // Ax^4 + Bx^3 + Cx^2 + Dx + E.
+    500.0 / join
 }
 
 pub fn dots_coefficient_men(bodyweightkg: f64) -> f64 {
@@ -37,7 +60,7 @@ pub fn dots_coefficient_men(bodyweightkg: f64) -> f64 {
 
     // Bodyweight bounds are defined; bodyweights out of range match the boundaries.
     let adjusted = bodyweightkg.clamp(40.0, 210.0);
-    dots_coefficient(A, B, C, D, E, adjusted)
+    dots_coefficient_horner2(A, B, C, D, E, adjusted)
 }
 
 pub fn dots_coefficient_women(bodyweightkg: f64) -> f64 {
@@ -49,7 +72,7 @@ pub fn dots_coefficient_women(bodyweightkg: f64) -> f64 {
 
     // Bodyweight bounds are defined; bodyweights out of range match the boundaries.
     let adjusted = bodyweightkg.clamp(40.0, 150.0);
-    dots_coefficient(A, B, C, D, E, adjusted)
+    dots_coefficient_horner2(A, B, C, D, E, adjusted)
 }
 
 /// Calculates Dots points.
