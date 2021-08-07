@@ -266,7 +266,7 @@ pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str)
 }
 
 /// Gets the default RuleSet for this meet.
-fn get_configured_ruleset(config: Option<&Config>, date: Option<Date>) -> RuleSet {
+fn configured_ruleset(config: Option<&Config>, date: Option<Date>) -> RuleSet {
     // If there is incomplete specification, just use the defaults.
     if config.is_none() || date.is_none() {
         return RuleSet::default();
@@ -345,7 +345,7 @@ where
     let ruleset = if record.len() > REQUIRED_HEADERS.len() {
         check_ruleset(record.get(REQUIRED_HEADERS.len()).unwrap(), &mut report)
     } else {
-        get_configured_ruleset(config, date)
+        configured_ruleset(config, date)
     };
 
     // Attempt to read another row -- but there shouldn't be one.

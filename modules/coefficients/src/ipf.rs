@@ -27,7 +27,7 @@ use opltypes::*;
 type Parameters = (f64, f64, f64, f64);
 
 /// Gets formula parameters from what is effectively a lookup table.
-fn get_parameters(sex: Sex, equipment: Equipment, event: Event) -> Parameters {
+fn parameters(sex: Sex, equipment: Equipment, event: Event) -> Parameters {
     // Since the formula was made for the IPF, it only covers Raw and Single-ply.
     // We do our best and just reuse those for Wraps and Multi-ply, respectively.
     let equipment = match equipment {
@@ -83,7 +83,7 @@ pub fn ipf(
     total: WeightKg,
 ) -> Points {
     // Look up parameters.
-    let (mean1, mean2, dev1, dev2) = get_parameters(sex, equipment, event);
+    let (mean1, mean2, dev1, dev2) = parameters(sex, equipment, event);
 
     // Exit early for undefined cases.
     if mean1 == 0.0 || bodyweight < WeightKg::from_i32(40) || total.is_zero() {

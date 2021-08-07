@@ -39,7 +39,7 @@ pub fn redact(
 
         // Redact from all entries.
         for &index in &indices {
-            let entry = meetdata.get_entry_mut(index);
+            let entry = meetdata.entry_mut(index);
             entry.name = new_name.clone();
             entry.username = new_username.clone();
 

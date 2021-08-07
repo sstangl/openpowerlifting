@@ -193,20 +193,20 @@ fn lifter(
         .map_or(false, |c| c.is_ascii_digit());
 
     let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
-        if let Some(id) = opldb.get_lifter_id(&username) {
+        if let Some(id) = opldb.lifter_id(&username) {
             vec![id]
         } else {
             vec![]
         }
     } else {
-        opldb.get_lifters_under_username(&username)
+        opldb.lifters_under_username(&username)
     };
 
     match lifter_ids.len() {
         // If no LifterID was found, maybe the name just needs to be lowercased.
         0 => {
             let lowercase = username.to_ascii_lowercase();
-            let _guard = opldb.get_lifter_id(&lowercase)?;
+            let _guard = opldb.lifter_id(&lowercase)?;
             Some(Err(Redirect::permanent(format!("/u/{}", lowercase))))
         }
 
@@ -260,7 +260,7 @@ impl<'r> Responder<'r, 'static> for CsvFile {
 /// Exports single-lifter data as a CSV file.
 #[get("/u/<username>/csv")]
 fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
-    let lifter_id = opldb.get_lifter_id(&username)?;
+    let lifter_id = opldb.lifter_id(&username)?;
     let entry_filter = None;
     Some(CsvFile(
         pages::lifter_csv::export_csv(opldb, lifter_id, entry_filter).ok()?,
@@ -324,7 +324,7 @@ fn meet(
         meetpath_str = meetpath.as_path().parent()?.to_str()?;
     }
 
-    let meet_id = opldb.get_meet_id(meetpath_str)?;
+    let meet_id = opldb.meet_id(meetpath_str)?;
     let locale = make_locale(langinfo, lang, languages, cookies);
     let context = pages::meet::Context::new(opldb, &locale, meet_id, sort);
 
@@ -438,7 +438,7 @@ fn rankings_api(
     let units = query.units.parse::<WeightUnits>().ok()?;
     let locale = Locale::new(langinfo, language, units);
 
-    let slice = pages::api_rankings::get_slice(
+    let slice = pages::api_rankings::query_slice(
         opldb,
         &locale,
         &selection,
@@ -507,7 +507,7 @@ fn dev_checker_post(
 #[get("/lifters.html?<q>")]
 fn old_lifters(opldb: &State<ManagedOplDb>, q: String) -> Option<Redirect> {
     let username = Username::from_name(&q).ok()?;
-    opldb.get_lifter_id(username.as_str())?; // Ensure username exists.
+    opldb.lifter_id(username.as_str())?; // Ensure username exists.
     Some(Redirect::permanent(format!("/u/{}", username)))
 }
 
@@ -519,8 +519,8 @@ fn old_meetlist() -> Redirect {
 #[get("/meet.html?<m>")]
 fn old_meet(opldb: &State<ManagedOplDb>, m: String) -> Option<Redirect> {
     let meetpath = &m;
-    let id = opldb.get_meet_id(meetpath)?;
-    let pathstr = &opldb.get_meet(id).path;
+    let id = opldb.meet_id(meetpath)?;
+    let pathstr = &opldb.meet(id).path;
     Some(Redirect::permanent(format!("/m/{}", pathstr)))
 }
 

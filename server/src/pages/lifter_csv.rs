@@ -70,19 +70,19 @@ pub fn export_csv(
     lifter_id: u32,
     entry_filter: Option<fn(&opldb::OplDb, &Entry) -> bool>,
 ) -> Result<String, Box<dyn error::Error>> {
-    let lifter = opldb.get_lifter(lifter_id);
-    let mut entries = opldb.get_entries_for_lifter(lifter_id);
+    let lifter = opldb.lifter(lifter_id);
+    let mut entries = opldb.entries_for_lifter(lifter_id);
 
     // Filter and sort the entries, oldest entries first.
     if let Some(f) = entry_filter {
         entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
     }
-    entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
+    entries.sort_unstable_by_key(|e| &opldb.meet(e.meet_id).date);
 
     // Build the CSV output.
     let mut wtr = csv::Writer::from_writer(vec![]);
     for entry in entries.into_iter().rev() {
-        let meet = opldb.get_meet(entry.meet_id);
+        let meet = opldb.meet(entry.meet_id);
         wtr.serialize(make_export_row(lifter, entry, meet))?;
     }
 

@@ -2,7 +2,7 @@
 
 use opltypes::Date;
 
-use crate::checklib::consistency::{self, get_date, ConsistencyResult};
+use crate::checklib::consistency::{self, date, ConsistencyResult};
 use crate::{AllMeetData, Entry, EntryIndex, LifterDataMap, LifterMap, Report};
 
 /// Get the average change in bodyweight from `a` to `b` as a percentage per
@@ -36,12 +36,12 @@ pub fn check_bodyweight_one(
     lifterdata: &LifterDataMap,
     report: &mut Report,
 ) -> ConsistencyResult {
-    if consistency::should_skip_lifter(meetdata.get_entry(indices[0])) {
+    if consistency::should_skip_lifter(meetdata.entry(indices[0])) {
         return ConsistencyResult::Skipped;
     }
 
     // Allow manually excluding lifters through `lifter-data/bw-exemptions.csv`.
-    let username = &meetdata.get_entry(indices[0]).username;
+    let username = &meetdata.entry(indices[0]).username;
     if let Some(data) = lifterdata.get(username) {
         if data.exempt_bodyweight {
             return ConsistencyResult::Skipped;
@@ -50,7 +50,7 @@ pub fn check_bodyweight_one(
 
     // Entries in the LifterMap are already sorted by date.
     // Sort the entries by date.
-    let entries: Vec<&Entry> = indices.iter().map(|i| meetdata.get_entry(*i)).collect();
+    let entries: Vec<&Entry> = indices.iter().map(|i| meetdata.entry(*i)).collect();
 
     let mut prev: &Entry = entries[0];
     for entry in entries.iter().skip(1) {
@@ -59,8 +59,8 @@ pub fn check_bodyweight_one(
             continue;
         }
 
-        let prev_date = get_date(prev);
-        let this_date = get_date(entry);
+        let prev_date = date(prev);
+        let this_date = date(entry);
 
         let average_per_day = calc_average_percentage_change(prev, entry, prev_date, this_date);
 

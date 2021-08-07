@@ -1,6 +1,6 @@
 //! Checks for duplicate meets.
 
-use crate::checklib::consistency::{self, get_date, ConsistencyResult};
+use crate::checklib::consistency::{self, date, ConsistencyResult};
 use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Meet, Report};
 
 /// Checks for duplicate meets with different MeetPaths for one lifter.
@@ -10,12 +10,12 @@ pub fn check_duplicates_one(
     report: &mut Report,
     scratch: &mut Vec<EntryIndex>,
 ) -> ConsistencyResult {
-    if consistency::should_skip_lifter(meetdata.get_entry(indices[0])) {
+    if consistency::should_skip_lifter(meetdata.entry(indices[0])) {
         return ConsistencyResult::Skipped;
     }
 
     let mut result = ConsistencyResult::Consistent;
-    let username = &meetdata.get_entry(indices[0]).username;
+    let username = &meetdata.entry(indices[0]).username;
 
     let ei_by_date = scratch;
     ei_by_date.clear();
@@ -24,8 +24,8 @@ pub fn check_duplicates_one(
     }
 
     let date_sort_closure = |ei_a: &EntryIndex, ei_b: &EntryIndex| {
-        let date_a = get_date(meetdata.get_entry(*ei_a));
-        let date_b = get_date(meetdata.get_entry(*ei_b));
+        let date_a = date(meetdata.entry(*ei_a));
+        let date_b = date(meetdata.entry(*ei_b));
         date_a.cmp(&date_b)
     };
 
@@ -36,16 +36,16 @@ pub fn check_duplicates_one(
     // The outer iteration excludes the last index since there are no
     // more indices for the inner loop to form a pair.
     for i in 0..ei_by_date.len() - 1 {
-        let cur_entry: &Entry = meetdata.get_entry(ei_by_date[i]);
-        let cur_meet: &Meet = meetdata.get_meet(ei_by_date[i]);
+        let cur_entry: &Entry = meetdata.entry(ei_by_date[i]);
+        let cur_meet: &Meet = meetdata.meet(ei_by_date[i]);
 
         if cur_entry.totalkg.is_zero() {
             continue; // DQs can give false positives.
         }
 
         for &index in ei_by_date.iter().skip(i + 1) {
-            let match_entry: &Entry = meetdata.get_entry(index);
-            let match_meet: &Meet = meetdata.get_meet(index);
+            let match_entry: &Entry = meetdata.entry(index);
+            let match_meet: &Meet = meetdata.meet(index);
 
             if cur_meet.date != match_meet.date {
                 break; // No more pairs on this date with cur_entry.

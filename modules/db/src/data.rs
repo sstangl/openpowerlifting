@@ -174,7 +174,7 @@ impl Entry {
 
     /// Borrows the Division string.
     #[inline]
-    pub fn get_division(&self) -> Option<&str> {
+    pub fn division(&self) -> Option<&str> {
         self.division.as_deref()
     }
 

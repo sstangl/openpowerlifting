@@ -215,54 +215,54 @@ impl OplDb {
 
     /// Borrows the lifters vector.
     #[inline]
-    pub fn get_lifters(&self) -> &[Lifter] {
+    pub fn lifters(&self) -> &[Lifter] {
         self.lifters.as_slice()
     }
 
     /// Borrows the meets vector.
     #[inline]
-    pub fn get_meets(&self) -> &[Meet] {
+    pub fn meets(&self) -> &[Meet] {
         self.meets.as_slice()
     }
 
     /// Borrows the entries vector.
     #[inline]
-    pub fn get_entries(&self) -> &[Entry] {
+    pub fn entries(&self) -> &[Entry] {
         self.entries.as_slice()
     }
 
     /// Borrows a `Lifter` by index.
     #[inline]
-    pub fn get_lifter(&self, n: u32) -> &Lifter {
+    pub fn lifter(&self, n: u32) -> &Lifter {
         &self.lifters[n as usize]
     }
 
     /// Borrows a `Meet` by index.
     #[inline]
-    pub fn get_meet(&self, n: u32) -> &Meet {
+    pub fn meet(&self, n: u32) -> &Meet {
         &self.meets[n as usize]
     }
 
     /// Borrows an `Entry` by index.
     #[inline]
-    pub fn get_entry(&self, n: u32) -> &Entry {
+    pub fn entry(&self, n: u32) -> &Entry {
         &self.entries[n as usize]
     }
 
     /// Borrows the static cache. It's static!
     #[inline]
-    pub(crate) fn get_cache(&self) -> &StaticCache {
+    pub(crate) fn cache(&self) -> &StaticCache {
         &self.cache
     }
 
     /// Borrows the MetaFederationCache.
     #[inline]
-    pub fn get_metafed_cache(&self) -> &MetaFederationCache {
+    pub fn metafed_cache(&self) -> &MetaFederationCache {
         &self.metafed_cache
     }
 
     /// Look up the lifter_id by username.
-    pub fn get_lifter_id(&self, username: &str) -> Option<u32> {
+    pub fn lifter_id(&self, username: &str) -> Option<u32> {
         self.cache.username_map.get(username).cloned()
     }
 
@@ -271,7 +271,7 @@ impl OplDb {
     ///
     /// For example, "johndoe" matches "johndoe" and "johndoe1",
     /// but does not match "johndoenut".
-    pub fn get_lifters_under_username(&self, base: &str) -> Vec<u32> {
+    pub fn lifters_under_username(&self, base: &str) -> Vec<u32> {
         let mut acc = vec![];
         for i in 0..self.lifters.len() {
             let username = &self.lifters[i].username;
@@ -287,8 +287,8 @@ impl OplDb {
         acc
     }
 
-    /// Look up the meet_id by MeetPath.
-    pub fn get_meet_id(&self, meetpath: &str) -> Option<u32> {
+    /// Looks up the meet_id by MeetPath.
+    pub fn meet_id(&self, meetpath: &str) -> Option<u32> {
         for i in 0..self.meets.len() {
             if self.meets[i].path == meetpath {
                 return Some(i as u32);
@@ -303,17 +303,17 @@ impl OplDb {
     /// search followed by a bi-directional linear scan.
     ///
     /// Panics if the lifter_id is not found.
-    pub fn get_entry_ids_for_lifter(&self, lifter_id: u32) -> Vec<u32> {
+    pub fn entry_ids_for_lifter(&self, lifter_id: u32) -> Vec<u32> {
         // Perform a binary search on lifter_id.
         let found_index = self
-            .get_entries()
+            .entries()
             .binary_search_by_key(&lifter_id, |e| e.lifter_id)
             .unwrap();
 
         // All entries for a lifter are contiguous, so scan backwards to find the first.
         let mut first_index = found_index;
         for index in (0..found_index).rev() {
-            if self.get_entry(index as u32).lifter_id == lifter_id {
+            if self.entry(index as u32).lifter_id == lifter_id {
                 first_index = index;
             } else {
                 break;
@@ -322,8 +322,8 @@ impl OplDb {
 
         // Scan forwards to find the last.
         let mut last_index = found_index;
-        for index in (found_index + 1)..self.get_entries().len() {
-            if self.get_entry(index as u32).lifter_id == lifter_id {
+        for index in (found_index + 1)..self.entries().len() {
+            if self.entry(index as u32).lifter_id == lifter_id {
                 last_index = index;
             } else {
                 break;
@@ -341,10 +341,10 @@ impl OplDb {
     /// search followed by a bi-directional linear scan.
     ///
     /// Panics if the lifter_id is not found.
-    pub fn get_entries_for_lifter(&self, lifter_id: u32) -> Vec<&Entry> {
-        self.get_entry_ids_for_lifter(lifter_id)
+    pub fn entries_for_lifter(&self, lifter_id: u32) -> Vec<&Entry> {
+        self.entry_ids_for_lifter(lifter_id)
             .into_iter()
-            .map(|i| self.get_entry(i as u32))
+            .map(|i| self.entry(i as u32))
             .collect()
     }
 
@@ -352,8 +352,8 @@ impl OplDb {
     ///
     /// Those entries could be located anywhere in the entries vector,
     /// so they are found using a linear scan.
-    pub fn get_entries_for_meet(&self, meet_id: u32) -> Vec<&Entry> {
-        self.get_entries()
+    pub fn entries_for_meet(&self, meet_id: u32) -> Vec<&Entry> {
+        self.entries()
             .iter()
             .filter(|&e| e.meet_id == meet_id)
             .collect()
@@ -363,8 +363,8 @@ impl OplDb {
     ///
     /// Those entries could be located anywhere in the entries vector,
     /// so they are found using a linear scan.
-    pub fn get_entry_ids_for_meet(&self, meet_id: u32) -> Vec<u32> {
-        self.get_entries()
+    pub fn entry_ids_for_meet(&self, meet_id: u32) -> Vec<u32> {
+        self.entries()
             .iter()
             .enumerate()
             .filter(|&(_i, e)| e.meet_id == meet_id)
@@ -373,8 +373,8 @@ impl OplDb {
     }
 
     /// Returns all lifter IDs that competed at the given meet_id.
-    pub fn get_lifter_ids_for_meet(&self, meet_id: u32) -> Vec<u32> {
-        self.get_entries()
+    pub fn lifter_ids_for_meet(&self, meet_id: u32) -> Vec<u32> {
+        self.entries()
             .iter()
             .filter(|&e| e.meet_id == meet_id)
             .group_by(|e| e.lifter_id)
@@ -386,7 +386,7 @@ impl OplDb {
     /// Returns the StaticCache.
     ///
     /// This endpoint is intended only for use in benchmark code, for testing against real data.
-    pub fn get_cache_for_benchmarks(&self) -> &cache::StaticCache {
+    pub fn cache_for_benchmarks(&self) -> &cache::StaticCache {
         &self.cache
     }
 }

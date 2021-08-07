@@ -78,7 +78,7 @@ mod weightclasskg;
 pub use self::weightclasskg::{WeightClassAny, WeightClassKg};
 
 mod writing_system;
-pub use self::writing_system::{get_writing_system, infer_writing_system, WritingSystem};
+pub use self::writing_system::{infer_writing_system, writing_system, WritingSystem};
 
 /// Units of weight.
 #[derive(Copy, Clone, Debug, EnumString, Serialize, Deserialize)]

@@ -48,7 +48,7 @@ pub fn search_rankings(
         .join(" ");
 
     // TODO: Use a better algorithm, don't generate everything.
-    let list = algorithms::get_full_sorted_uniqued(rankings, db);
+    let list = algorithms::full_sorted_uniqued(rankings, db);
 
     // Handle out-of-bounds requests.
     if start_row >= list.0.len() {
@@ -57,8 +57,8 @@ pub fn search_rankings(
 
     // TODO: Use a better algorithm; this is really a MVP.
     for i in start_row..list.0.len() {
-        let entry = db.get_entry(list.0[i]);
-        let lifter = db.get_lifter(entry.lifter_id);
+        let entry = db.entry(list.0[i]);
+        let lifter = db.lifter(entry.lifter_id);
 
         // First, check if there's a match based on the username or IG.
         if !normalized_latin.is_empty()

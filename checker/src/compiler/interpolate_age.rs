@@ -285,7 +285,7 @@ pub fn trace_conflict<T>(
 /// `BirthDateRange::default()` is returned.
 ///
 /// Executes in `O(n)` over the indices list.
-fn get_birthdate_range(
+fn birthdate_range(
     meetdata: &mut AllMeetData,
     indices: &[EntryIndex],
     debug: bool,
@@ -295,17 +295,17 @@ fn get_birthdate_range(
     for &index in indices {
         // Extract the MeetDate first. Because of the borrow checker, the Meet and Entry
         // structs cannot be referenced simultaneously.
-        let mdate: Date = meetdata.get_meet(index).date;
+        let mdate: Date = meetdata.meet(index).date;
 
         // Get the MeetPath for more helpful debugging output.
         // Cloning is OK since this is only for a few entries for one lifter.
         let path: Option<String> = if debug {
-            Some(meetdata.get_meet(index).path.clone())
+            Some(meetdata.meet(index).path.clone())
         } else {
             None
         };
 
-        let entry = meetdata.get_entry(index);
+        let entry = meetdata.entry(index);
 
         // Narrow by BirthDate.
         if let Some(birthdate) = entry.birthdate {
@@ -373,7 +373,7 @@ where
 
 /// Given a known BirthDateRange, calculate the lifter's `Age` in each Entry.
 ///
-/// The BirthDateRange was already validated by `get_birthdate_range()`,
+/// The BirthDateRange was already validated by `birthdate_range()`,
 /// so it is guaranteed to be consistent over all the Entries.
 ///
 /// Executes in `O(n)` over the indices list.
@@ -384,8 +384,8 @@ fn infer_from_range(
     debug: bool,
 ) {
     for &index in indices {
-        let mdate: Date = meetdata.get_meet(index).date;
-        let entry = meetdata.get_entry_mut(index);
+        let mdate: Date = meetdata.meet(index).date;
+        let entry = meetdata.entry_mut(index);
 
         let entry_had_exact_age = entry.age.is_exact();
         let age_on_date = range.age_on(mdate);
@@ -444,7 +444,7 @@ fn infer_from_range(
 /// Age interpolation for a single lifter's entries.
 fn interpolate_age_single_lifter(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: bool) {
     // Attempt to determine bounds for a BirthDate. O(indices).
-    let range = get_birthdate_range(meetdata, indices, debug);
+    let range = birthdate_range(meetdata, indices, debug);
 
     // If found, attempt to apply those bounds. O(indices).
     if range != BirthDateRange::default() {

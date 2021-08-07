@@ -48,7 +48,7 @@ fn bd_range_subset_is_consistent(subset_vec: &[usize], bd_range_vec: &[BirthDate
 }
 
 /// Finds the distance of a point from birthdate ranges and returns them in sorted order.
-fn get_sorted_errors(
+fn sorted_errors(
     x: f32,
     subset_vec: &[usize],
     bd_range_vec: &[BirthDateRange],
@@ -76,7 +76,7 @@ fn find_lcs_numeric(
 
     let mut error_vec = Vec::new();
     for val in test_vals {
-        error_vec.push(get_sorted_errors(*val, subset_vec, bd_range_vec));
+        error_vec.push(sorted_errors(*val, subset_vec, bd_range_vec));
     }
     for r in (2..subset_vec.len()).rev() {
         let mut error_min = error_vec[0][0..r].iter().map(|(_a, b)| b).sum();
@@ -108,7 +108,7 @@ fn find_lcs_numeric(
 /// region. The points that must be sampled to find the LCS are therefore the
 /// midpoints of these regions and the boundary points of the regions.
 ///
-fn get_test_points(subset_vec: &[usize], bd_range_vec: &[BirthDateRange]) -> Vec<f32> {
+fn test_points(subset_vec: &[usize], bd_range_vec: &[BirthDateRange]) -> Vec<f32> {
     // Calculate the points where the ordering of the error curves changes.
     let mut test_points = Vec::new();
 
@@ -162,11 +162,11 @@ fn find_lcs_algebraic(subset_vec: &[usize], bd_range_vec: &[BirthDateRange]) -> 
     let mut best_errors;
     let mut _wm = 0.0;
 
-    let test_points = get_test_points(subset_vec, bd_range_vec);
+    let test_points = test_points(subset_vec, bd_range_vec);
 
     let mut error_vec = Vec::new();
     for val in &test_points {
-        error_vec.push(get_sorted_errors(*val, subset_vec, bd_range_vec));
+        error_vec.push(sorted_errors(*val, subset_vec, bd_range_vec));
     }
 
     for r in (2..subset_vec.len()).rev() {
@@ -301,17 +301,17 @@ fn group_lifter_data(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: 
 
         // Extract the MeetDate first. Because of the borrow checker, the Meet and Entry
         // structs cannot be referenced simultaneously.
-        let mdate: Date = meetdata.get_meet(index).date;
+        let mdate: Date = meetdata.meet(index).date;
 
         // Get the MeetPath for more helpful debugging output.
         // Cloning is OK since this is only for a few entries for one lifter.
         let path: Option<String> = if debug {
-            Some(meetdata.get_meet(index).path.clone())
+            Some(meetdata.meet(index).path.clone())
         } else {
             None
         };
 
-        let entry = meetdata.get_entry(index);
+        let entry = meetdata.entry(index);
 
         // Narrow by BirthDate.
         if let Some(birthdate) = entry.birthdate {

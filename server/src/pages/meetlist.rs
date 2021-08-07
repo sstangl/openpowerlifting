@@ -150,7 +150,7 @@ impl<'db> Context<'db> {
         // TODO: Move this selection logic into the opldb.
         let mut meets: Vec<&Meet> = match mselection.federation {
             FederationFilter::AllFederations => opldb
-                .get_meets()
+                .meets()
                 .iter()
                 .filter(|m| match year {
                     Some(year) => m.date.year() == year,
@@ -159,7 +159,7 @@ impl<'db> Context<'db> {
                 .collect(),
             FederationFilter::One(fed) => {
                 opldb
-                    .get_meets()
+                    .meets()
                     .iter()
                     .filter(|m| {
                         // Filter by year.
@@ -174,10 +174,10 @@ impl<'db> Context<'db> {
                     .collect()
             }
             FederationFilter::Meta(meta) => opldb
-                .get_metafed_cache()
-                .get_meet_ids_for(meta)
+                .metafed_cache()
+                .meet_ids_for(meta)
                 .iter()
-                .map(|&i| opldb.get_meet(i))
+                .map(|&i| opldb.meet(i))
                 .filter(|m| match year {
                     Some(year) => m.date.year() == year,
                     None => true,

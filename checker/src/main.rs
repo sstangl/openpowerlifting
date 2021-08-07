@@ -58,8 +58,8 @@ fn is_meetdir(entry: &DirEntry) -> bool {
 }
 
 /// Determines the project root from the binary path.
-fn get_project_root() -> Result<PathBuf, Box<dyn Error>> {
-    const ERR: &str = "get_project_root() ran out of parent directories";
+fn project_root() -> Result<PathBuf, Box<dyn Error>> {
+    const ERR: &str = "project_root() ran out of parent directories";
     Ok(env::current_exe()? // root/target/release/binary
         .parent()
         .ok_or(ERR)? // root/target/release
@@ -134,7 +134,7 @@ type ConfigMap = BTreeMap<String, checker::Config>;
 ///
 /// Returns a map of (path -> Config) on success, or (errors, warnings) on
 /// failure.
-fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
+fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
     let mut configmap = ConfigMap::new();
 
     // Look at federation directories at depth 1, like "meet-data/usapl".
@@ -215,7 +215,7 @@ fn get_configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)
 }
 
 /// If a boolean is true, gathers timing information.
-fn get_instant_if(b: bool) -> Option<time::Instant> {
+fn instant_if(b: bool) -> Option<time::Instant> {
     if b {
         Some(time::Instant::now())
     } else {
@@ -280,10 +280,10 @@ fn main() -> Result<(), Box<dyn Error>> {
         return Ok(());
     }
 
-    let program_start = get_instant_if(args.debug_timing);
+    let program_start = instant_if(args.debug_timing);
 
     // Get handles to various parts of the project.
-    let project_root = get_project_root()?;
+    let project_root = project_root()?;
     let meet_data_root = project_root.join("meet-data");
     if !meet_data_root.exists() {
         panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
@@ -313,15 +313,15 @@ fn main() -> Result<(), Box<dyn Error>> {
         || args.debug_age_group_username.is_some();
     let is_partial: bool = !search_root.ends_with("meet-data");
 
-    let timing = get_instant_if(args.debug_timing);
-    let configmap = match get_configurations(&meet_data_root) {
+    let timing = instant_if(args.debug_timing);
+    let configmap = match configurations(&meet_data_root) {
         Ok(configmap) => configmap,
         Err((errors, warnings)) => {
             print_summary(errors, warnings, &search_root);
             process::exit(1);
         }
     };
-    maybe_print_elapsed_for("get_configurations()", timing);
+    maybe_print_elapsed_for("configurations()", timing);
 
     let error_count = AtomicUsize::new(0);
     let warning_count = AtomicUsize::new(0);
@@ -334,7 +334,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let reader: csv::ReaderBuilder = checker::checklib::compile_csv_reader();
 
     // Check the lifter-data/ files.
-    let timing = get_instant_if(args.debug_timing);
+    let timing = instant_if(args.debug_timing);
     let result = checker::check_lifterdata(&reader, &project_root.join("lifter-data"));
     for report in result.reports {
         let (errors, warnings) = report.count_messages();
@@ -356,7 +356,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     maybe_print_elapsed_for("check_lifterdata()", timing);
 
     // Build a list of every directory containing meet results.
-    let timing = get_instant_if(args.debug_timing);
+    let timing = instant_if(args.debug_timing);
     let meetdirs: Vec<DirEntry> = WalkDir::new(&search_root)
         .into_iter()
         .filter_map(Result::ok)
@@ -433,12 +433,12 @@ fn main() -> Result<(), Box<dyn Error>> {
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
 
     // Group entries by lifter.
-    let timing = get_instant_if(args.debug_timing);
+    let timing = instant_if(args.debug_timing);
     let mut liftermap = meetdata.create_liftermap();
     maybe_print_elapsed_for("create_liftermap()", timing);
 
     // Check for consistency errors for individual lifters.
-    let timing = get_instant_if(args.debug_timing);
+    let timing = instant_if(args.debug_timing);
     for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial) {
         let (errors, warnings) = report.count_messages();
         error_count += errors;
@@ -470,7 +470,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             compiler::interpolate_country_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
-        let timing = get_instant_if(args.debug_timing);
+        let timing = instant_if(args.debug_timing);
         compiler::interpolate_country(&mut meetdata, &liftermap);
         maybe_print_elapsed_for("interpolate_country", timing);
 
@@ -488,7 +488,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
 
-        let timing = get_instant_if(args.debug_timing);
+        let timing = instant_if(args.debug_timing);
         compiler::interpolate_age(&mut meetdata, &liftermap);
         maybe_print_elapsed_for("interpolate_age", timing);
     }
@@ -504,12 +504,12 @@ fn main() -> Result<(), Box<dyn Error>> {
         compiler::redact(&mut meetdata, &mut liftermap, &mut lifterdata);
 
         if args.compile {
-            let timing = get_instant_if(args.debug_timing);
+            let timing = instant_if(args.debug_timing);
             compiler::make_csv(&meetdata, &lifterdata, &buildpath)?;
             maybe_print_elapsed_for("make_csv", timing);
         }
         if args.compile_onefile {
-            let timing = get_instant_if(args.debug_timing);
+            let timing = instant_if(args.debug_timing);
             compiler::make_onefile_csv(&meetdata, &buildpath)?;
             maybe_print_elapsed_for("make_onefile_csv", timing);
         }

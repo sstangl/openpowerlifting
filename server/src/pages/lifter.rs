@@ -1,6 +1,6 @@
 //! Logic for each lifter's personal page.
 
-use langpack::{get_localized_name, Language, Locale, LocalizeNumber};
+use langpack::{localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, Entry};
 use opltypes::*;
 
@@ -120,7 +120,7 @@ impl<'a> MeetResultsRow<'a> {
         points_system: PointsSystem,
         entry: &'a opldb::Entry,
     ) -> MeetResultsRow<'a> {
-        let meet: &'a opldb::Meet = opldb.get_meet(entry.meet_id);
+        let meet: &'a opldb::Meet = opldb.meet(entry.meet_id);
 
         let strings = locale.strings;
         let number_format = locale.number_format;
@@ -415,8 +415,8 @@ impl<'a> Context<'a> {
                                                                         * distributions.
                                                                         */
     ) -> Context<'a> {
-        let lifter = opldb.get_lifter(lifter_id);
-        let mut entries = opldb.get_entries_for_lifter(lifter_id);
+        let lifter = opldb.lifter(lifter_id);
+        let mut entries = opldb.entries_for_lifter(lifter_id);
 
         // Do all the entries have the same Sex?
         // If not, we want to show a "Sex" column for debugging.
@@ -433,7 +433,7 @@ impl<'a> Context<'a> {
         if let Some(f) = entry_filter {
             entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
         }
-        entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
+        entries.sort_unstable_by_key(|e| &opldb.meet(e.meet_id).date);
 
         // Display sex information from the most recent meet.
         let lifter_sex = match entries.last() {
@@ -469,12 +469,12 @@ impl<'a> Context<'a> {
 
         Context {
             urlprefix: "/",
-            page_title: get_localized_name(lifter, locale.language),
+            page_title: localized_name(lifter, locale.language),
             page_description: &locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
-            localized_name: get_localized_name(lifter, locale.language),
+            localized_name: localized_name(lifter, locale.language),
             lifter,
             lifter_sex,
             show_sex_column: !consistent_sex,

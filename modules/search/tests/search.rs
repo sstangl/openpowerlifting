@@ -34,8 +34,8 @@ fn basic_rankings_search() {
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::get_full_sorted_uniqued(&rankings, &db);
-    let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
+    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
 
@@ -50,8 +50,8 @@ fn backwards_name_search() {
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::get_full_sorted_uniqued(&rankings, &db);
-    let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
+    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
 
@@ -66,8 +66,8 @@ fn instagram_search() {
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::get_full_sorted_uniqued(&rankings, &db);
-    let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
+    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
 
@@ -82,7 +82,7 @@ fn cyrillic_search() {
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::get_full_sorted_uniqued(&rankings, &db);
-    let lifter = db.get_lifter(db.get_entry(list.0[row]).lifter_id);
+    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }

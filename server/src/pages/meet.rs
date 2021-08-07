@@ -1,6 +1,6 @@
 //! Logic for each meet's individual results page.
 
-use langpack::{get_localized_name, Language, Locale, LocalizeNumber};
+use langpack::{localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, algorithms, Entry};
 use opltypes::*;
 
@@ -251,7 +251,7 @@ impl<'a> ResultsRow<'a> {
         entry: &'a opldb::Entry,
         rank: u32,
     ) -> ResultsRow<'a> {
-        let lifter: &'a opldb::Lifter = opldb.get_lifter(entry.lifter_id);
+        let lifter: &'a opldb::Lifter = opldb.lifter(entry.lifter_id);
 
         let strings = locale.strings;
         let number_format = locale.number_format;
@@ -260,7 +260,7 @@ impl<'a> ResultsRow<'a> {
         ResultsRow {
             place: locale.place(entry.place, entry.sex),
             rank: locale.ordinal(rank, entry.sex),
-            localized_name: get_localized_name(lifter, locale.language),
+            localized_name: localized_name(lifter, locale.language),
             lifter,
             sex: strings.translate_sex(entry.sex),
             age: PrettyAge::from(entry.age),
@@ -406,8 +406,8 @@ fn cmp_by_group(ruleset: RuleSet, a: &Entry, b: &Entry) -> cmp::Ordering {
     }
 
     // Next, sort by Division.
-    let a_div = a.get_division();
-    let b_div = b.get_division();
+    let a_div = a.division();
+    let b_div = b.division();
     if a_div != b_div {
         return cmp_by_division(a_div, b_div);
     }
@@ -482,7 +482,7 @@ fn make_tables_by_division<'db>(
     meet_id: u32,
     ruleset: RuleSet,
 ) -> Vec<Table<'db>> {
-    let mut entries = opldb.get_entries_for_meet(meet_id);
+    let mut entries = opldb.entries_for_meet(meet_id);
     if entries.is_empty() {
         return vec![Table {
             title: None,
@@ -539,11 +539,11 @@ fn make_tables_by_points<'db>(
     points_system: PointsSystem,
     meet_id: u32,
 ) -> Vec<Table<'db>> {
-    let meets = opldb.get_meets();
+    let meets = opldb.meets();
 
     // Display at most one entry for each lifter.
     let groups = opldb
-        .get_entries_for_meet(meet_id)
+        .entries_for_meet(meet_id)
         .into_iter()
         .group_by(|e| e.lifter_id);
 
@@ -587,7 +587,7 @@ fn make_tables_by_points<'db>(
         }
         PointsSystem::Total => {
             entries.sort_unstable_by(|a, b| algorithms::cmp_total(meets, a, b));
-            let meet = opldb.get_meet(meet_id);
+            let meet = opldb.meet(meet_id);
             display_points_system = meet.federation.default_points(meet.date);
         }
         PointsSystem::Wilks => {
@@ -614,7 +614,7 @@ impl<'db> Context<'db> {
         meet_id: u32,
         sort: MeetSortSelection,
     ) -> Context<'db> {
-        let meet = opldb.get_meet(meet_id);
+        let meet = opldb.meet(meet_id);
         let default_points: PointsSystem = meet.federation.default_points(meet.date);
 
         let tables: Vec<Table> = match sort {

@@ -62,7 +62,7 @@ fn trace_inferred(debug: bool, country: Country, path: &Option<String>) {
 }
 
 /// Returns a single Country that is consistent for all the Entries.
-fn get_consistent_country(
+fn consistent_country(
     meetdata: &AllMeetData,
     indices: &[EntryIndex],
     debug: bool,
@@ -72,12 +72,12 @@ fn get_consistent_country(
     for &index in indices {
         // Get the MeetPath for more helpful debugging output.
         let path: Option<String> = if debug {
-            Some(meetdata.get_meet(index).path.clone())
+            Some(meetdata.meet(index).path.clone())
         } else {
             None
         };
 
-        let entry = meetdata.get_entry(index);
+        let entry = meetdata.entry(index);
 
         match (entry.country, acc) {
             (Some(country), None) => {
@@ -107,17 +107,17 @@ fn interpolate_country_single_lifter(
     indices: &[EntryIndex],
     debug: bool,
 ) {
-    if let Some(country) = get_consistent_country(meetdata, indices, debug) {
+    if let Some(country) = consistent_country(meetdata, indices, debug) {
         for &index in indices {
             // Get the MeetPath for more helpful debugging output.
             let path: Option<String> = if debug {
-                Some(meetdata.get_meet(index).path.clone())
+                Some(meetdata.meet(index).path.clone())
             } else {
                 None
             };
 
             trace_inferred(debug, country, &path);
-            meetdata.get_entry_mut(index).country = Some(country);
+            meetdata.entry_mut(index).country = Some(country);
         }
     }
 }
@@ -166,8 +166,8 @@ mod tests {
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
-        assert_eq!(meetdata.get_entry_at(0, 0).country, None);
-        assert_eq!(meetdata.get_entry_at(0, 1).country, None);
+        assert_eq!(meetdata.entry_at(0, 0).country, None);
+        assert_eq!(meetdata.entry_at(0, 1).country, None);
     }
 
     /// If only one entry has a set Country, propagate that Country.
@@ -182,9 +182,9 @@ mod tests {
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
-        assert_eq!(meetdata.get_entry_at(0, 0).country, Some(Country::USA));
-        assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::USA));
-        assert_eq!(meetdata.get_entry_at(0, 2).country, Some(Country::USA));
+        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::USA));
+        assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::USA));
+        assert_eq!(meetdata.entry_at(0, 2).country, Some(Country::USA));
     }
 
     /// If two entries conflict, don't propagate a Country.
@@ -203,10 +203,10 @@ mod tests {
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
-        assert_eq!(meetdata.get_entry_at(0, 0).country, None);
-        assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::USA));
-        assert_eq!(meetdata.get_entry_at(0, 2).country, None);
-        assert_eq!(meetdata.get_entry_at(0, 3).country, Some(Country::Russia));
+        assert_eq!(meetdata.entry_at(0, 0).country, None);
+        assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::USA));
+        assert_eq!(meetdata.entry_at(0, 2).country, None);
+        assert_eq!(meetdata.entry_at(0, 3).country, Some(Country::Russia));
     }
 
     /// Countries within the UK are compatible with Country:UK.
@@ -226,9 +226,9 @@ mod tests {
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
-        assert_eq!(meetdata.get_entry_at(0, 0).country, Some(Country::Scotland));
-        assert_eq!(meetdata.get_entry_at(0, 1).country, Some(Country::Scotland));
-        assert_eq!(meetdata.get_entry_at(0, 2).country, Some(Country::Scotland));
-        assert_eq!(meetdata.get_entry_at(0, 3).country, Some(Country::Scotland));
+        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::Scotland));
+        assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::Scotland));
+        assert_eq!(meetdata.entry_at(0, 2).country, Some(Country::Scotland));
+        assert_eq!(meetdata.entry_at(0, 3).country, Some(Country::Scotland));
     }
 }

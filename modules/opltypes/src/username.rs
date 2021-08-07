@@ -98,16 +98,16 @@ impl Username {
     /// ```
     /// # use opltypes::Username;
     /// let u = Username::from_name("John Doe").unwrap();
-    /// let (base, variant) = u.get_parts();
+    /// let (base, variant) = u.to_parts();
     /// assert_eq!(base.as_str(), "johndoe");
     /// assert_eq!(variant, 0);
     ///
     /// let u = Username::from_name("John Doe #1").unwrap();
-    /// let (base, variant) = u.get_parts();
+    /// let (base, variant) = u.to_parts();
     /// assert_eq!(base.as_str(), "johndoe");
     /// assert_eq!(variant, 1);
     /// ```
-    pub fn get_parts(&self) -> (&AsciiStr, u32) {
+    pub fn to_parts(&self) -> (&AsciiStr, u32) {
         // Common case first: if no digit at end, it's not a variant.
         if let Some(ascii_char) = self.0.last() {
             if !ascii_char.is_ascii_digit() {

@@ -69,7 +69,7 @@ pub fn make_onefile_csv(meetdata: &AllMeetData, buildpath: &Path) -> Result<(), 
         .terminator(Terminator::Any(b'\n'))
         .from_path(&buildpath.join("openpowerlifting.csv"))?;
 
-    for SingleMeetData { meet, entries } in meetdata.get_meets() {
+    for SingleMeetData { meet, entries } in meetdata.meets() {
         for entry in entries {
             csv.serialize(make_export_row(entry, meet))?;
         }

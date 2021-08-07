@@ -245,11 +245,11 @@ pub fn cmp_ah(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 }
 
 /// Gets a list of all entry indices matching the given selection.
-pub fn get_entry_indices_for<'db>(
+pub fn entry_indices_for<'db>(
     selection: &EntryFilter,
     opldb: &'db OplDb,
 ) -> PossiblyOwnedNonSortedNonUnique<'db> {
-    let cache = opldb.get_cache();
+    let cache = opldb.cache();
 
     // Use the NonSortedNonUnique cached data.
     let equipment: &NonSortedNonUnique = match selection.equipment {
@@ -277,7 +277,7 @@ pub fn get_entry_indices_for<'db>(
     cur = match selection.year {
         YearFilter::AllYears => cur,
         YearFilter::OneYear(year) => {
-            if let Some(year_cache) = cache.log_linear_time.get_year_cache(year as u32) {
+            if let Some(year_cache) = cache.log_linear_time.year_cache(year as u32) {
                 PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(year_cache))
             } else {
                 let year = year as u32;
@@ -285,7 +285,7 @@ pub fn get_entry_indices_for<'db>(
                     cur.0
                         .iter()
                         .filter_map(|&i| {
-                            match opldb.get_meet(opldb.get_entry(i).meet_id).date.year() == year {
+                            match opldb.meet(opldb.entry(i).meet_id).date.year() == year {
                                 true => Some(i),
                                 false => None,
                             }
@@ -302,12 +302,10 @@ pub fn get_entry_indices_for<'db>(
         let filter = NonSortedNonUnique(
             cur.0
                 .iter()
-                .filter_map(
-                    |&i| match opldb.get_entry(i).lifter_state == selection.state {
-                        true => Some(i),
-                        false => None,
-                    },
-                )
+                .filter_map(|&i| match opldb.entry(i).lifter_state == selection.state {
+                    true => Some(i),
+                    false => None,
+                })
                 .collect(),
         );
         cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
@@ -319,21 +317,21 @@ pub fn get_entry_indices_for<'db>(
             let filter = NonSortedNonUnique(
                 cur.0
                     .iter()
-                    .filter_map(|&i| {
-                        match opldb.get_meet(opldb.get_entry(i).meet_id).federation == fed {
+                    .filter_map(
+                        |&i| match opldb.meet(opldb.entry(i).meet_id).federation == fed {
                             true => Some(i),
                             false => None,
-                        }
-                    })
+                        },
+                    )
                     .collect(),
             );
             cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
         } else if let FederationFilter::Meta(metafed) = selection.federation {
-            let meets = opldb.get_meets();
+            let meets = opldb.meets();
             let filter = NonSortedNonUnique(
                 cur.0
                     .iter()
-                    .filter_map(|&i| match metafed.contains(opldb.get_entry(i), meets) {
+                    .filter_map(|&i| match metafed.contains(opldb.entry(i), meets) {
                         true => Some(i),
                         false => None,
                     })
@@ -352,8 +350,8 @@ pub fn get_entry_indices_for<'db>(
                     use AgeClass::*;
                     use AgeClassFilter::*;
 
-                    let class = opldb.get_entry(i).ageclass;
-                    let byclass = opldb.get_entry(i).birthyearclass;
+                    let class = opldb.entry(i).ageclass;
+                    let byclass = opldb.entry(i).birthyearclass;
 
                     let matches: bool = match selection.ageclass {
                         AllAges => true,
@@ -407,7 +405,7 @@ pub fn get_entry_indices_for<'db>(
             cur.0
                 .iter()
                 .filter_map(|&i| {
-                    let ev = opldb.get_entry(i).event;
+                    let ev = opldb.entry(i).event;
                     let matches: bool = match selection.event {
                         EventFilter::AllEvents => true,
                         EventFilter::FullPower => ev.is_full_power(),
@@ -436,7 +434,7 @@ pub fn get_entry_indices_for<'db>(
             cur.0
                 .iter()
                 .filter_map(|&i| {
-                    let e = opldb.get_entry(i);
+                    let e = opldb.entry(i);
 
                     // Handle cases with explicit bodyweight.
                     if e.bodyweightkg > lower && e.bodyweightkg <= upper {
@@ -467,11 +465,11 @@ pub fn get_entry_indices_for<'db>(
 ///
 /// In almost every case it's not necessary to generate the full list,
 /// but doing so can be useful for debugging.
-pub fn get_full_sorted_uniqued<'db>(
+pub fn full_sorted_uniqued<'db>(
     query: &RankingsQuery,
     opldb: &'db OplDb,
 ) -> PossiblyOwnedSortedUnique<'db> {
-    let cache = opldb.get_cache();
+    let cache = opldb.cache();
 
     // First, try to use the constant-time cache.
     if query.filter.federation == FederationFilter::AllFederations
@@ -511,7 +509,7 @@ pub fn get_full_sorted_uniqued<'db>(
                     .0
                     .iter()
                     .filter_map(|&n| {
-                        let sex = opldb.get_entry(n).sex;
+                        let sex = opldb.entry(n).sex;
                         match (query.filter.sex == SexFilter::Men && sex == Sex::M)
                             || (query.filter.sex == SexFilter::Women && sex == Sex::F)
                         {
@@ -527,10 +525,10 @@ pub fn get_full_sorted_uniqued<'db>(
     }
 
     // If the ConstantTime cache fails, use the NonSortedNonUnique cache data.
-    let cur = get_entry_indices_for(&query.filter, opldb);
+    let cur = entry_indices_for(&query.filter, opldb);
 
-    let entries = opldb.get_entries();
-    let meets = opldb.get_meets();
+    let entries = opldb.entries();
+    let meets = opldb.meets();
 
     // TODO: Common out sort code with ConstantTimeCache::new()
     PossiblyOwnedSortedUnique::Owned(match query.order_by {

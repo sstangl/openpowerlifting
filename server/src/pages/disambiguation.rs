@@ -3,7 +3,7 @@
 //! This happens for "/u/johndoe", when there exist "/u/johndoe1" and
 //! "/u/johndoe2".
 
-use langpack::{get_localized_name, Language, Locale};
+use langpack::{localized_name, Language, Locale};
 use opltypes::*;
 
 use crate::pages::lifter::MeetResultsRow;
@@ -43,12 +43,12 @@ impl<'db> Context<'db> {
         let mut variants: Vec<LifterResults<'db>> = lifter_ids
             .iter()
             .map(|&lifter_id| {
-                let lifter = opldb.get_lifter(lifter_id);
-                let localized_name = get_localized_name(lifter, locale.language);
+                let lifter = opldb.lifter(lifter_id);
+                let localized_name = localized_name(lifter, locale.language);
 
                 // Get a list of the entries for this lifter, oldest entries first.
-                let mut entries = opldb.get_entries_for_lifter(lifter_id);
-                entries.sort_unstable_by_key(|e| &opldb.get_meet(e.meet_id).date);
+                let mut entries = opldb.entries_for_lifter(lifter_id);
+                entries.sort_unstable_by_key(|e| &opldb.meet(e.meet_id).date);
 
                 let lifter_sex = locale.strings.translate_sex(entries[0].sex);
 

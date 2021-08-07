@@ -815,7 +815,7 @@ pub struct MetaFederationCache {
 }
 
 impl MetaFederationCache {
-    pub fn get_meet_ids_for(&self, meta: MetaFederation) -> &[u32] {
+    pub fn meet_ids_for(&self, meta: MetaFederation) -> &[u32] {
         &self.cache[meta as usize]
     }
 

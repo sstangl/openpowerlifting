@@ -10,12 +10,12 @@ pub fn check_sex_one(
     lifterdata: &LifterDataMap,
     report: &mut Report,
 ) -> ConsistencyResult {
-    if consistency::should_skip_lifter(meetdata.get_entry(indices[0])) {
+    if consistency::should_skip_lifter(meetdata.entry(indices[0])) {
         return ConsistencyResult::Skipped;
     }
 
     // Allow manually excluding lifters through `lifter-data/sex-exemptions.csv`.
-    let username = &meetdata.get_entry(indices[0]).username;
+    let username = &meetdata.entry(indices[0]).username;
     if let Some(data) = lifterdata.get(username) {
         if data.exempt_sex {
             return ConsistencyResult::Skipped;
@@ -23,11 +23,11 @@ pub fn check_sex_one(
     }
 
     // Check that all the Sex values are identical.
-    let expected_sex = meetdata.get_entry(indices[0]).sex;
+    let expected_sex = meetdata.entry(indices[0]).sex;
     for index in indices.iter().skip(1) {
-        if meetdata.get_entry(*index).sex != expected_sex {
+        if meetdata.entry(*index).sex != expected_sex {
             let url = format!("www.openpowerlifting.org/u/{}", username);
-            let name = &meetdata.get_entry(*index).name;
+            let name = &meetdata.entry(*index).name;
             let msg = format!("Sex conflict for '{}' - {}", name, url);
             report.error(msg);
             return ConsistencyResult::Inconsistent;

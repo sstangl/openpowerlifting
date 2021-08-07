@@ -43,7 +43,7 @@ pub fn query_benchmarks(c: &mut Criterion) {
         };
 
         b.iter(|| {
-            opldb::algorithms::get_full_sorted_uniqued(&query, black_box(&db));
+            opldb::algorithms::full_sorted_uniqued(&query, black_box(&db));
         });
     });
 }
@@ -52,7 +52,7 @@ pub fn data_structures(c: &mut Criterion) {
     let mut group = c.benchmark_group("data_structures");
     let db = db();
 
-    let cache = db.get_cache_for_benchmarks();
+    let cache = db.cache_for_benchmarks();
     let raw_wraps = &cache.log_linear_time.raw_wraps;
     let male = &cache.log_linear_time.male;
 

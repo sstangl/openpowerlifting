@@ -1,6 +1,6 @@
 //! Types for raw data interchange from Rust to JS.
 
-use langpack::{get_localized_name, Locale, LocalizeNumber};
+use langpack::{localized_name, Locale, LocalizeNumber};
 use opldb::{Entry, OplDb};
 use opltypes::*;
 use serde::ser::{Serialize, SerializeSeq, Serializer};
@@ -91,8 +91,8 @@ impl<'db> JsEntryRow<'db> {
         sorted_index: u32,
         points_system: PointsSystem,
     ) -> JsEntryRow<'db> {
-        let meet = opldb.get_meet(entry.meet_id);
-        let lifter = opldb.get_lifter(entry.lifter_id);
+        let meet = opldb.meet(entry.meet_id);
+        let lifter = opldb.lifter(entry.lifter_id);
 
         let strings = locale.strings;
         let number_format = locale.number_format;
@@ -103,7 +103,7 @@ impl<'db> JsEntryRow<'db> {
 
             rank: locale.ordinal(sorted_index + 1, entry.sex),
 
-            name: get_localized_name(lifter, locale.language),
+            name: localized_name(lifter, locale.language),
             username: lifter.username.as_str(),
             instagram: lifter.instagram.as_deref(),
             vkontakte: lifter.vkontakte.as_deref(),

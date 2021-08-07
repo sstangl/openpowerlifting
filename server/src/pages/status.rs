@@ -447,7 +447,7 @@ impl<'a> Context<'a> {
         let mut statuses: Vec<FederationStatus> =
             Federation::iter().map(FederationStatus::new).collect();
 
-        for meet in opldb.get_meets() {
+        for meet in opldb.meets() {
             let idx = meet.federation as usize;
             statuses[idx].meet_count += 1;
         }
@@ -469,9 +469,9 @@ impl<'a> Context<'a> {
             strings: locale.strings,
             units: locale.units,
             fed_statuses: statuses,
-            num_entries: opldb.get_entries().len() as u32,
-            num_meets: opldb.get_meets().len() as u32,
-            num_lifters: opldb.get_lifters().len() as u32,
+            num_entries: opldb.entries().len() as u32,
+            num_meets: opldb.meets().len() as u32,
+            num_lifters: opldb.lifters().len() as u32,
         }
     }
 }

@@ -19,7 +19,7 @@ impl Default for WritingSystem {
 /// Get the WritingSystem for the current character.
 ///
 /// Returns `Latin` if unknown.
-pub fn get_writing_system(c: char) -> WritingSystem {
+pub fn writing_system(c: char) -> WritingSystem {
     match c as u32 {
         // ASCII. Checking the common case first improves performance.
         0x0..=0x7F => WritingSystem::Latin,
@@ -72,7 +72,7 @@ pub fn get_writing_system(c: char) -> WritingSystem {
 /// The first non-Latin character encountered is considered representative.
 pub fn infer_writing_system(s: &str) -> WritingSystem {
     s.chars()
-        .find_map(|c| match get_writing_system(c) {
+        .find_map(|c| match writing_system(c) {
             WritingSystem::Latin => None,
             other => Some(other),
         })

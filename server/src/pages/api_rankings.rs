@@ -16,7 +16,7 @@ pub struct RankingsSlice<'db> {
     pub rows: Vec<JsEntryRow<'db>>,
 }
 
-pub fn get_slice<'db>(
+pub fn query_slice<'db>(
     opldb: &'db OplDb,
     locale: &'db Locale,
     selection: &RankingsQuery,
@@ -28,7 +28,7 @@ pub fn get_slice<'db>(
     let mut end_row = end_row;
 
     // TODO: Use a better algorithm, don't generate everything.
-    let list = algorithms::get_full_sorted_uniqued(selection, opldb);
+    let list = algorithms::full_sorted_uniqued(selection, opldb);
     let total_length = list.0.len();
 
     // Limit the request size to something sane.
@@ -63,7 +63,7 @@ pub fn get_slice<'db>(
     let rows: Vec<JsEntryRow> = list.0[start_row..=end_row]
         .iter()
         .zip(start_row..)
-        .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.get_entry(n), i as u32, points_system))
+        .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.entry(n), i as u32, points_system))
         .collect();
 
     RankingsSlice { total_length, rows }

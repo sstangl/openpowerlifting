@@ -4,7 +4,7 @@ use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Report};
 
 /// Checks that Name fields are consistent for this lifter.
 fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut Report) {
-    let first_entry: &Entry = meetdata.get_entry(indices[0]);
+    let first_entry: &Entry = meetdata.entry(indices[0]);
 
     let name = &first_entry.name;
     let mut cyrillicname = &first_entry.cyrillicname;
@@ -13,7 +13,7 @@ fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut R
     let mut koreanname = &first_entry.koreanname;
 
     for index in indices.iter().skip(1) {
-        let entry = &meetdata.get_entry(*index);
+        let entry = &meetdata.entry(*index);
 
         // The Name field must exactly match for the same username.
         if name != &entry.name {

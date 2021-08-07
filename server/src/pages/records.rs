@@ -1,6 +1,6 @@
 //! Logic for the display of the records page, like a rankings summary.
 
-use langpack::{get_localized_name, Language, Locale, LocalizeNumber};
+use langpack::{localized_name, Language, Locale, LocalizeNumber};
 use opldb::query::direct::*;
 use opldb::{algorithms, Entry, Lifter, Meet, OplDb};
 
@@ -528,15 +528,15 @@ fn find_records<'db>(
     };
 
     // Get a list of all entries corresponding to the selection.
-    let indices = algorithms::get_entry_indices_for(&sel.to_full_selection(&default).filter, opldb);
+    let indices = algorithms::entry_indices_for(&sel.to_full_selection(&default).filter, opldb);
 
     // Build a vector of structs that can remember records.
     let mut collectors = make_collectors(sel.sex, sel.classkind);
-    let meets = opldb.get_meets();
+    let meets = opldb.meets();
 
     // Mapping indices to entries, run the collectors over each Entry.
     for &index in &indices.0 {
-        let entry = opldb.get_entry(index);
+        let entry = opldb.entry(index);
         if entry.place.is_dq() {
             continue;
         }
@@ -597,8 +597,8 @@ impl<'db> Table<'db> {
                     lifter: None,
                 },
                 Some(entry) => {
-                    let meet = opldb.get_meet(entry.meet_id);
-                    let lifter = opldb.get_lifter(entry.lifter_id);
+                    let meet = opldb.meet(entry.meet_id);
+                    let lifter = opldb.lifter(entry.lifter_id);
 
                     RecordsRow {
                         rank: locale.ordinal(rank, entry.sex),
@@ -611,7 +611,7 @@ impl<'db> Table<'db> {
                         date: Some(format!("{}", meet.date)),
                         path: Some(&meet.path),
                         federation: Some(meet.federation),
-                        localized_name: Some(get_localized_name(lifter, locale.language)),
+                        localized_name: Some(localized_name(lifter, locale.language)),
                         lifter: Some(lifter),
                     }
                 }

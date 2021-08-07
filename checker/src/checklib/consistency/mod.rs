@@ -26,7 +26,7 @@ pub enum ConsistencyResult {
 }
 
 /// Helper for getting the date of an [Entry].
-pub fn get_date(entry: &Entry) -> Date {
+pub fn date(entry: &Entry) -> Date {
     entry.entrydate
 }
 
