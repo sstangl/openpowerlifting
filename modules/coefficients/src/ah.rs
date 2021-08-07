@@ -63,7 +63,7 @@ pub fn ah_coefficient_women(bodyweightkg: f64) -> f64 {
 
 /// Calculates AH points, used by WPPO for bench-only competitions.
 ///
-/// https://www.paralympic.org/sites/default/files/document/130801141325417_Appendix_2_AH_Haleczko_Formula.pdf
+/// <https://www.paralympic.org/sites/default/files/document/130801141325417_Appendix_2_AH_Haleczko_Formula.pdf>
 pub fn ah(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
     if bodyweight.is_zero() || total.is_zero() {
         return Points::from_i32(0);

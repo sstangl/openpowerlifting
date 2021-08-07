@@ -11,14 +11,13 @@ use std::path::Path;
 
 use crate::Report;
 
-/// Sex consistency exemptions, in the [sex] table of exemptions.toml.
+/// Sex consistency exemptions, in the `[sex]` table of `exemptions.toml`.
 #[derive(Deserialize)]
 pub struct SexExemptions {
     usernames: Vec<Username>,
 }
 
-/// Bodyweight consistency exemptions, in the [bodyweight] table of
-/// exemptions.toml.
+/// Bodyweight consistency exemptions, in the `[bodyweight]` table of `exemptions.toml`.
 #[derive(Deserialize)]
 pub struct BodyweightExemptions {
     usernames: Vec<Username>,

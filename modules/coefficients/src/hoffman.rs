@@ -25,26 +25,24 @@ use opltypes::*;
 
 /// Calculates Hoffman points.
 ///
-/// TODO: This is probably inaccurate. We're going off a description from Schwarz,
-/// and a single datapoint that someone quoted Hoffman as saying.
-/// TODO: Find out more about the formula. Maybe a coefficient table, at least!
+/// Lyle Schwartz [described the Hoffman formula][1] thusly:
 ///
-/// Lyle Schwartz described the Hoffman formula thusly (in Reference 1):
-///
-///   Imagine two balloons in the shape of a lifter, one larger than the other.
-///   If we can match the big one by blowing air into the smaller, all dimensions
-///   growing in the same proportion, then the original two balloons can be said
-///   to be similar. Body weight in similar objects increases as the cube of any
-///   length (for example height), while strength presumably depends on how big
-///   the muscles are and that increases as the square of a linear dimension.
+/// > Imagine two balloons in the shape of a lifter, one larger than the other.
+/// > If we can match the big one by blowing air into the smaller, all dimensions
+/// > growing in the same proportion, then the original two balloons can be said
+/// > to be similar. Body weight in similar objects increases as the cube of any
+/// > length (for example height), while strength presumably depends on how big
+/// > the muscles are and that increases as the square of a linear dimension.
 ///
 /// The Hoffman formula seems to have been created around 1958. It was used primarily
 /// in Olympic weightlifting, but was also used for powerlifting competitions
 /// as they started around the 1960s.
 ///
-/// # References
+/// - TODO: This is probably inaccurate. We're going off a description from Schwarz
+///   and a single datapoint that someone quoted Hoffman as saying.
+/// - TODO: Find out more about the formula. Maybe a coefficient table, at least!
 ///
-/// 1. https://web.archive.org/web/20190408071226/https://www.starkcenter.org/igh/igh-v8/igh-v8-n4/igh0804g.pdf
+/// [1]: <https://web.archive.org/web/20190408071226/https://www.starkcenter.org/igh/igh-v8/igh-v8-n4/igh0804g.pdf>
 pub fn hoffman(bodyweight: WeightKg, total: WeightKg) -> Points {
     if bodyweight.is_zero() || total.is_zero() {
         Points::from_i32(0)

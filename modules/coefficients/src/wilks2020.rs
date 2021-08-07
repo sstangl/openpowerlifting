@@ -72,8 +72,8 @@ fn wilks2020_coefficient_women(bodyweightkg: f64) -> f64 {
 /// meet results requires us to calculate the formula in use *at that time for that meet*.
 /// If we updated this formula, we would be incorrect for historical results.
 ///
-/// The official coefficients are published at:
-///   https://powerliftingaustralia.com/wilks-formula/
+/// The official coefficients are published at
+/// <https://powerliftingaustralia.com/wilks-formula/>.
 ///
 /// The formula comes via York Stanham, who converted it from a PA/WP spreadsheet.
 pub fn wilks2020(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {

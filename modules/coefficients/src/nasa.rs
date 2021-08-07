@@ -26,7 +26,9 @@ use opltypes::*;
 /// Calculates NASA points.
 ///
 /// NASA points are the bodyweight multiple times a coefficient.
-/// They're defined by a coefficient table: http://nasa-sports.com/coefficient-system/
+/// They're defined [by a coefficient table][1].
+///
+/// [1]: <http://nasa-sports.com/coefficient-system/>
 pub fn nasa(bodyweight: WeightKg, total: WeightKg) -> Points {
     // Arbitrary lower bound, and avoid division by zero.
     if bodyweight < WeightKg::from_i32(30) || total.is_zero() {

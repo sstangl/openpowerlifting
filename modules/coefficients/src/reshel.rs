@@ -51,8 +51,10 @@ fn reshel_coefficient_women(bodyweightkg: f64) -> f64 {
 
 /// Calculates Reshel points.
 ///
-/// Reshel points are published only as heavily-rounded coefficient tables,
-/// separately for men and women: http://www.irondawg.com/reshel_formula.htm.
+/// Reshel points are published only as [heavily-rounded coefficient tables][1],
+/// separately for men and women.
+///
+/// [1]: <http://www.irondawg.com/reshel_formula.htm>
 pub fn reshel(sex: Sex, bodyweight: WeightKg, total: WeightKg) -> Points {
     if bodyweight.is_zero() || total.is_zero() {
         return Points::from_i32(0);

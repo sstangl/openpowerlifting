@@ -583,7 +583,8 @@ pub enum Federation {
     ILPA,
 
     /// International Nova Strength Association, tiny Texas "fed".
-    /// https://web.archive.org/web/20040807073200/http://www.novafitness.com/insa_fronts/index.htm
+    ///
+    /// <https://web.archive.org/web/20040807073200/http://www.novafitness.com/insa_fronts/index.htm>
     #[strum(to_string = "INSA", serialize = "insa")]
     INSA,
 

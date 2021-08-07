@@ -59,7 +59,7 @@ fn parameters(sex: Sex, equipment: Equipment, event: Event) -> Parameters {
     }
 }
 
-/// Calculates GOODLIFT Points.
+/// Calculates IPF GOODLIFT Points.
 pub fn goodlift(
     sex: Sex,
     equipment: Equipment,
