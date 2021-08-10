@@ -71,6 +71,7 @@ def parse_sheetname(s):
         '_', ' ').replace('(', ' ').replace(')', ' ').replace('-', '')
     s = s.replace(' & ', '&')
     s = s.replace('д к', 'дк')  # Drug tested
+    s = s.replace('многопетельнаядк', 'многопетельная дк')
 
     for word in s.split():
         # Federations
