@@ -45,6 +45,7 @@ def getmeetlist(html):
         url = a['href']
         if 'http' not in url:
             url = BASEURL + url
+
         if url not in urls:
             urls.append(url)
 
