@@ -22,11 +22,14 @@ except ImportError:
 # Map of substitutions.
 DIVISION_MAP = {
     "Under11": "Youth",
+    "Under 11": "Youth",
     "12-13": "Teen 12-13",
+    "12*13": "Teen 12-13",
     "14-15": "Teen 14-15",
     "16-17": "Teen 16-17",
     "18-19": "Teen 18-19",
     "20-24": "Juniors 20-24",
+    "30-34": "Seniors 30-34",
     "35-39": "Submasters 35-39",
     "40-44": "Masters 40-44",
     "45-49": "Masters 45-49",
