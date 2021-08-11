@@ -247,12 +247,19 @@ fn lifter(
 }
 
 /// Wrapper for a CSV file as a String, to give it a Responder impl.
-struct CsvFile(String);
+struct CsvFile {
+    pub filename: String,
+    pub content: String,
+}
 
 impl<'r> Responder<'r, 'static> for CsvFile {
     fn respond_to(self, req: &'r Request) -> Result<Response<'static>, Status> {
-        let mut r = self.0.respond_to(req)?;
+        let mut r = self.content.respond_to(req)?;
         r.set_header(ContentType::CSV);
+
+        // The filename is controlled by the "Content-Disposition" header.
+        let disp = format!(r#"attachment; filename="{}""#, self.filename);
+        r.set_raw_header("Content-Disposition", disp);
         Ok(r)
     }
 }
@@ -261,10 +268,9 @@ impl<'r> Responder<'r, 'static> for CsvFile {
 #[get("/u/<username>/csv")]
 fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(&username)?;
-    let entry_filter = None;
-    Some(CsvFile(
-        pages::lifter_csv::export_csv(opldb, lifter_id, entry_filter).ok()?,
-    ))
+    let content = pages::lifter_csv::export_csv(opldb, lifter_id, None).ok()?;
+    let filename = format!("{}.csv", username);
+    Some(CsvFile { filename, content })
 }
 
 #[get("/mlist/<mselections..>?<lang>")]
