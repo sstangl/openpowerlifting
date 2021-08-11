@@ -24,6 +24,10 @@ book/book/
 perf.data
 perf.data.old
 
+# Accidental output, just to be safe in the future.
+/package.json
+/package-lock.json
+
 # Temporary files.
 /server/probebot/*.tmp
 *.lnk
@@ -39,4 +43,3 @@ geckodriver.log
 .gitkeep
 *.exe
 *.stackdump
-*.json
