@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+# Lowercase Instagram profile names in "lifter-data/social-instagram.csv".
+#
+# Example use:
+# $ ./lowercase-instagram-profiles "../lifter-data/social-instagram.csv"
+
+set -e
+
+if ! [ -f "$1" ]; then
+    echo "Error: Missing file $1"
+    exit 1
+fi
+
+head -n1 "$1" > "$1.lowercased"
+tail -n+2 "$1" | awk -F"," 'BEGIN{OFS=","} {$2 = tolower($2); print}' >> "$1.lowercased"
+cat "$1.lowercased" > "$1"
+rm "$1.lowercased"

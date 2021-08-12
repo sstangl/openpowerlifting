@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+# Sort CSV files based on their first column and omit duplicates.
+#
+# Example use:
+# $ ./sort-csv "../lifter-data/name-disambiguation.csv"
+# $ ./sort-csv "../lifter-data/social-instagram.csv"
+# $ ./sort-csv "../lifter-data/social-vkontakte.csv"
+
+set -e
+
+if ! [ -f "$1" ]; then
+    echo "Error: Missing file $1"
+    exit 1
+fi
+
+head -n1 "$1" > "$1.sorted"
+tail -n+2 "$1" | LC_ALL=C sort --unique >> "$1.sorted"
+cat "$1.sorted" > "$1"
+rm "$1.sorted"
