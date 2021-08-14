@@ -19,6 +19,9 @@
 // Implementation of navigation and control event handlers for use on mobile pages.
 // Mobile pages have a footer with pop-ups for controls, due to limited space.
 
+// Mobile base.tera files supply an IS_MOBILE global.
+declare const IS_MOBILE: boolean | undefined;
+
 // Called when the filters button is pressed. Not every page has one.
 let mobileMenu: HTMLDivElement;
 let controlsMenu: HTMLDivElement;
@@ -180,9 +183,11 @@ function initMobileFooter(): void {
 }
 
 // Determines whether the template is a mobile template, instead of a desktop template.
-// Mobile templates all share the same navigational footer.
 function isMobile(): boolean {
-    return !!document.getElementById("mobile-footer");
+    if (typeof IS_MOBILE === "boolean") {
+        return IS_MOBILE === true;
+    }
+    return false;
 }
 
 export {

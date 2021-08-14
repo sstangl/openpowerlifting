@@ -47,12 +47,14 @@ function main() {
         initMobileFooter();
     }
 
-    switch (PAGE_KIND) {
-        case PageKind.Meet: initMeet(); break;
-        case PageKind.MeetList: initMeetList(); break;
-        case PageKind.Rankings: initRankings(); break;
-        case PageKind.Records: initRecords(); break;
-        default: break; // Some pages (like the FAQ) have no scripts attached.
+    if (typeof PAGE_KIND === "string") { // Necessary to handle the undefined case.
+        switch (PAGE_KIND) {
+            case PageKind.Meet: initMeet(); break;
+            case PageKind.MeetList: initMeetList(); break;
+            case PageKind.Rankings: initRankings(); break;
+            case PageKind.Records: initRecords(); break;
+            default: break; // Some pages (like the FAQ) have no scripts attached.
+        }
     }
 }
 

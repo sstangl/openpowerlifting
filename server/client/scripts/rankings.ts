@@ -479,17 +479,15 @@ function makeRemoteCache(path: string, use_initial_data: boolean) {
 // Mobile devices use a different grid ordering for different kinds of selections.
 // For simplicity, when the selectors are changed, the Grid is just re-rendered.
 function renderGridTable(): void {
-    const mobile: boolean = isMobile();
-
     // Check templates/rankings.html.tera.
     const nameWidth = 200;
-    const rowHeight = mobile ? 26 : 23;
+    const rowHeight = isMobile() ? 26 : 23;
     const rankWidth = 45; // five digit numbers should be fully visible
     const shortWidth = 40;
-    const dateWidth = mobile ? 80 : 70;
+    const dateWidth = isMobile() ? 80 : 70;
     const numberWidth = 55;
 
-    const fillerWidth = mobile ? 10 : 20;
+    const fillerWidth = isMobile() ? 10 : 20;
 
     // Helper function to provide a by-value URL formatter, needed by the grid.
     function urlformatter(row, cell, value, columnDef, dataContext) {
@@ -524,7 +522,7 @@ function renderGridTable(): void {
     // Mobile screens are tiny.
     // To make this usable, we intend to place the information most relevant
     // to the current selection as left as possible (to the Name).
-    if (mobile) {
+    if (isMobile()) {
         // The first three columns are fixed.
         const acc: Array<any> = [];
         acc.push(col("filler"), col("rank"), col("name"));
@@ -570,7 +568,7 @@ function renderGridTable(): void {
 
         // On mobile, columns need their full width for visibility.
         // The user can scroll horizontally.
-        forceFitColumns: (mobile ? false : true)
+        forceFitColumns: (isMobile() ? false : true)
     }
 
     global_grid = new Slick.Grid("#theGrid", makeDataProvider() as any, columns, options);

@@ -23,13 +23,14 @@
   <link rel="preload" as="image" href="/static/images/close_icon.png">
   <meta name="apple-mobile-web-app-title" content="OpenPowerlifting">
 
+  {# Used by scripts to distinguish between OpenPowerlifting, OpenIPF, etc. #}
+  <script type="text/javascript">
+    const DISTRIBUTION="OPENPOWERLIFTING";
+    const IS_MOBILE=true;
+  </script>
+
   {% block includes %}
   {% endblock includes %}
-
-  {# Communicates to the JS code that this is the mobile version. #}
-  <script type="text/javascript">
-    const IS_MOBILE = true;
-  </script>
 
   {# Main script, capable of initializing every kind of page. #}
   {# The kind of page is passed by templates in JS, by setting the global PAGE_KIND. #}
