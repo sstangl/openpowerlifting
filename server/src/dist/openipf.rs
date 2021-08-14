@@ -407,7 +407,7 @@ pub fn meet(
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let mut meetpath_str: &str = meetpath.to_str()?;
-    let mut sort = pages::meet::MeetSortSelection::ByFederationDefault;
+    let mut sort = pages::meet::MeetSortSelection::ByDivision;
 
     // The meetpath may contain an optional sorting directive.
     // If present, detect and remove that component from the path.
