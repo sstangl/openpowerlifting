@@ -21,6 +21,7 @@
     const translation_column_federation = "{{strings.columns.federation}}";
     const translation_column_date = "{{strings.columns.date}}";
     const translation_column_location = "{{strings.columns.location}}";
+    const translation_column_home = "{{strings.columns.home}}";
     const translation_column_division = "{{strings.columns.division}}";
     const translation_column_sex = "{{strings.columns.sex}}";
     const translation_column_age = "{{strings.columns.age}}";

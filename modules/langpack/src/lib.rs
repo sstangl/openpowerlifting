@@ -431,6 +431,7 @@ pub struct ColumnTranslations {
     pub federation: String,
     pub date: String,
     pub location: String,
+    pub home: String,
     pub meetname: String,
     pub division: String,
     pub sex: String,

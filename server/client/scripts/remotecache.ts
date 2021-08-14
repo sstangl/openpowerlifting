@@ -28,8 +28,8 @@
 declare const urlprefix: string;
 
 // Column mapping for the server rankings JSON.
-// This should match with the serialization of the JsEntryRow
-// in the Rust server source.
+//
+// This must match the serialization of the JsEntryRow in the Rust server source.
 export const enum Column {
     SortedIndex,
     Rank,
@@ -39,10 +39,12 @@ export const enum Column {
     Vkontakte,
     Color,
     Flair,
+    LifterCountry,
+    LifterState,
     Federation,
     Date,
-    Country,
-    State,
+    MeetCountry,
+    MeetState,
     Path,
     Sex,
     Equipment,

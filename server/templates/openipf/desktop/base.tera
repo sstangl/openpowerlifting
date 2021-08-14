@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-title" content="OpenIPF">
 
   {# Used by scripts to distinguish between OpenPowerlifting, OpenIPF, etc. #}
-  <script type="text/javascript">const DISTRIBUTION="OPENIPF"<script>
+  <script type="text/javascript">const DISTRIBUTION="OPENIPF"</script>
 
   {% block includes %}
   {% endblock includes %}
