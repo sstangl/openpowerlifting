@@ -419,7 +419,8 @@ pub fn meet(
 
     let meet_id = opldb.meet_id(meetpath_str)?;
     let locale = make_locale(langinfo, lang, languages, cookies);
-    let mut cx = pages::meet::Context::new(opldb, &locale, meet_id, sort);
+    let use_ipf_equipment = true;
+    let mut cx = pages::meet::Context::new(opldb, &locale, meet_id, sort, use_ipf_equipment);
     cx.urlprefix = local_prefix(&host);
 
     // Change the equipment terminology to be IPF-specific.

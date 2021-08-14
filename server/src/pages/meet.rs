@@ -422,6 +422,7 @@ fn finish_table<'db>(
     points_system: PointsSystem,
     ruleset: RuleSet,
     entries: &mut Vec<&'db Entry>,
+    use_ipf_equipment: bool,
 ) -> Table<'db> {
     entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
 
@@ -445,7 +446,15 @@ fn finish_table<'db>(
     {
         locale.strings.translate_equipment(Equipment::Multi)
     } else {
-        locale.strings.translate_equipment(entries[0].equipment)
+        if use_ipf_equipment {
+            match entries[0].equipment {
+                Equipment::Raw => &locale.strings.equipment.classic,
+                Equipment::Single => &locale.strings.equipment.equipped,
+                _ => locale.strings.translate_equipment(entries[0].equipment),
+            }
+        } else {
+            locale.strings.translate_equipment(entries[0].equipment)
+        }
     };
 
     let class = entries[0].weightclasskg.as_type(units).in_format(format);
@@ -481,6 +490,7 @@ fn make_tables_by_division<'db>(
     points_system: PointsSystem,
     meet_id: u32,
     ruleset: RuleSet,
+    use_ipf_equipment: bool,
 ) -> Vec<Table<'db>> {
     let mut entries = opldb.entries_for_meet(meet_id);
     if entries.is_empty() {
@@ -514,6 +524,7 @@ fn make_tables_by_division<'db>(
             points_system,
             ruleset,
             &mut group,
+            use_ipf_equipment,
         ));
 
         // Start a new group.
@@ -529,6 +540,7 @@ fn make_tables_by_division<'db>(
         points_system,
         ruleset,
         &mut group,
+        use_ipf_equipment,
     ));
     tables
 }
@@ -613,14 +625,20 @@ impl<'db> Context<'db> {
         locale: &'db Locale,
         meet_id: u32,
         sort: MeetSortSelection,
+        use_ipf_equipment: bool,
     ) -> Context<'db> {
         let meet = opldb.meet(meet_id);
         let default_points: PointsSystem = meet.federation.default_points(meet.date);
 
         let tables: Vec<Table> = match sort {
-            MeetSortSelection::ByDivision => {
-                make_tables_by_division(opldb, locale, default_points, meet_id, meet.ruleset)
-            }
+            MeetSortSelection::ByDivision => make_tables_by_division(
+                opldb,
+                locale,
+                default_points,
+                meet_id,
+                meet.ruleset,
+                use_ipf_equipment,
+            ),
             _ => {
                 let system = sort.as_points_system(default_points);
                 make_tables_by_points(opldb, locale, system, meet_id)
