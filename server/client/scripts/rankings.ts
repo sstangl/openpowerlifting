@@ -480,6 +480,7 @@ function makeRemoteCache(path: string, use_initial_data: boolean) {
 // For simplicity, when the selectors are changed, the Grid is just re-rendered.
 function renderGridTable(): void {
     const mobile: boolean = isMobile();
+
     // Check templates/rankings.html.tera.
     const nameWidth = 200;
     const rowHeight = mobile ? 26 : 23;
@@ -488,12 +489,17 @@ function renderGridTable(): void {
     const dateWidth = mobile ? 80 : 70;
     const numberWidth = 55;
 
+    const fillerWidth = mobile ? 10 : 20;
+
+    // Helper function to provide a by-value URL formatter, needed by the grid.
     function urlformatter(row, cell, value, columnDef, dataContext) {
         return value;
     }
 
-
-    const fillerWidth = mobile ? 10 : 20;
+    // Helper function to select a column by "id" property.
+    function col(id: string): Object {
+        return columns.find(c => c.id === id) || columns[0];
+    }
 
     let columns = [
         {id: "filler", width: fillerWidth, minWidth: fillerWidth, focusable: false,
@@ -519,11 +525,6 @@ function renderGridTable(): void {
     // To make this usable, we intend to place the information most relevant
     // to the current selection as left as possible (to the Name).
     if (mobile) {
-        // Helper function to select a column by "id" property.
-        function col(id: string): Object {
-            return columns.find(c => c.id === id) || columns[0];
-        }
-
         // The first three columns are fixed.
         const acc: Array<any> = [];
         acc.push(col("filler"), col("rank"), col("name"));

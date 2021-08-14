@@ -2,7 +2,7 @@
 
 {% block includes %}
   <script type="text/javascript">
-    const PAGE_KIND = "meetlist";
+    const PAGE_KIND = "MEETLIST";
     const urlprefix = "{{urlprefix | safe}}";
     const default_fed = "ipf-and-affiliates";
     const default_year = "all";
