@@ -625,6 +625,7 @@ impl<'db> Context<'db> {
         locale: &'db Locale,
         meet_id: u32,
         sort: MeetSortSelection,
+        default_sort: MeetSortSelection,
         use_ipf_equipment: bool,
     ) -> Context<'db> {
         let meet = opldb.meet(meet_id);
@@ -646,53 +647,92 @@ impl<'db> Context<'db> {
         };
 
         // Paths do not include the urlprefix, which defaults to "/".
-        let path_if_by_ah = match default_points {
-            PointsSystem::AH => format!("m/{}", meet.path),
+        let path_if_by_ah = match (default_sort, default_points) {
+            (MeetSortSelection::ByAH, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::AH) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-ah", meet.path),
         };
-        let path_if_by_division = format!("m/{}/by-division", meet.path);
-        let path_if_by_dots = match default_points {
-            PointsSystem::Dots => format!("m/{}", meet.path),
+        let path_if_by_division = match default_sort {
+            MeetSortSelection::ByDivision => format!("m/{}", meet.path),
+            _ => format!("m/{}/by-division", meet.path),
+        };
+        let path_if_by_dots = match (default_sort, default_points) {
+            (MeetSortSelection::ByDots, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::Dots) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-dots", meet.path),
         };
-        let path_if_by_glossbrenner = match default_points {
-            PointsSystem::Glossbrenner => format!("m/{}", meet.path),
+        let path_if_by_glossbrenner = match (default_sort, default_points) {
+            (MeetSortSelection::ByGlossbrenner, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::Glossbrenner) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-glossbrenner", meet.path),
         };
-        let path_if_by_goodlift = match default_points {
-            PointsSystem::Goodlift => format!("m/{}", meet.path),
+        let path_if_by_goodlift = match (default_sort, default_points) {
+            (MeetSortSelection::ByGoodlift, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::Goodlift) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-goodlift", meet.path),
         };
-        let path_if_by_ipfpoints = match default_points {
-            PointsSystem::IPFPoints => format!("m/{}", meet.path),
+        let path_if_by_ipfpoints = match (default_sort, default_points) {
+            (MeetSortSelection::ByIPFPoints, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::IPFPoints) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-ipf-points", meet.path),
         };
-        let path_if_by_mcculloch = match default_points {
-            PointsSystem::McCulloch => format!("m/{}", meet.path),
+        let path_if_by_mcculloch = match (default_sort, default_points) {
+            (MeetSortSelection::ByMcCulloch, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::McCulloch) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-mcculloch", meet.path),
         };
-        let path_if_by_nasa = match default_points {
-            PointsSystem::NASA => format!("m/{}", meet.path),
+        let path_if_by_nasa = match (default_sort, default_points) {
+            (MeetSortSelection::ByNASA, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::NASA) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-nasa", meet.path),
         };
-        let path_if_by_reshel = match default_points {
-            PointsSystem::Reshel => format!("m/{}", meet.path),
+        let path_if_by_reshel = match (default_sort, default_points) {
+            (MeetSortSelection::ByReshel, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::Reshel) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-reshel", meet.path),
         };
-        let path_if_by_schwartzmalone = match default_points {
-            PointsSystem::SchwartzMalone => format!("m/{}", meet.path),
+        let path_if_by_schwartzmalone = match (default_sort, default_points) {
+            (MeetSortSelection::BySchwartzMalone, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::SchwartzMalone) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-schwartz-malone", meet.path),
         };
-        let path_if_by_total = match default_points {
-            PointsSystem::NASA => format!("m/{}", meet.path),
+        let path_if_by_total = match (default_sort, default_points) {
+            (MeetSortSelection::ByNASA, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::NASA) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-total", meet.path),
         };
-        let path_if_by_wilks = match default_points {
-            PointsSystem::Wilks => format!("m/{}", meet.path),
+        let path_if_by_wilks = match (default_sort, default_points) {
+            (MeetSortSelection::ByWilks, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::Wilks) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-wilks", meet.path),
         };
-        let path_if_by_wilks2020 = match default_points {
-            PointsSystem::Wilks2020 => format!("m/{}", meet.path),
+        let path_if_by_wilks2020 = match (default_sort, default_points) {
+            (MeetSortSelection::ByWilks2020, _)
+            | (MeetSortSelection::ByFederationDefault, PointsSystem::Wilks2020) => {
+                format!("m/{}", meet.path)
+            }
             _ => format!("m/{}/by-wilks2020", meet.path),
         };
 

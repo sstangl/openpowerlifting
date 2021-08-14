@@ -320,7 +320,8 @@ fn meet(
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let mut meetpath_str: &str = meetpath.to_str()?;
-    let mut sort = pages::meet::MeetSortSelection::ByFederationDefault;
+    let default_sort = pages::meet::MeetSortSelection::ByFederationDefault;
+    let mut sort = default_sort;
 
     // The meetpath may contain an optional sorting directive.
     // If present, detect and remove that component from the path.
@@ -333,7 +334,14 @@ fn meet(
     let meet_id = opldb.meet_id(meetpath_str)?;
     let locale = make_locale(langinfo, lang, languages, cookies);
     let use_ipf_equipment = false;
-    let context = pages::meet::Context::new(opldb, &locale, meet_id, sort, use_ipf_equipment);
+    let context = pages::meet::Context::new(
+        opldb,
+        &locale,
+        meet_id,
+        sort,
+        default_sort,
+        use_ipf_equipment,
+    );
 
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/meet", &context),
