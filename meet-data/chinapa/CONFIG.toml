@@ -1,5 +1,5 @@
 [divisions]
-     o = {name ="O",min=0,max=999}
+    o = {name ="O",min=0,max=999}
     j = {name ="J",min=20,max=23}
     t = {name ="T",min=13,max=19}
     t1 = {name ="T1",min=13,max=15}
@@ -16,6 +16,15 @@
     m8 = {name ="M8",min=75,max=79}
     m9 = {name ="M9",min=80,max=999}
     sm = {name ="SM",min=33,max=39}
+
+    # Larger masters classes were used, and these names are more helpful.
+    t13_15 = {name = "T13-15", min=13, max=15}
+    t16_17 = {name = "T16-17", min=16, max=17}
+    t18_19 = {name = "T18-19", min=18, max=19}
+    m40_49 = {name = "M40-49", min=40, max=49}
+    m50_59 = {name = "M50-59", min=50, max=59}
+    m60_69 = {name = "M60-69", min=60, max=69}
+    m70_79 = {name = "M70-79", min=70, max=79}
 
     c = {name ="C",min=40,max=999} # ??
 
