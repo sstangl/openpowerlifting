@@ -29,7 +29,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 52,K. Eisenhower Jr,Open,M,74.84,45.36,108.86,229.06,SBD,Single-ply,10
 52,Tammy Smalling,Open,F,83.91,36.29,86.18,206.38,SBD,Single-ply,11
 52,Amy Brown,Open,F,54.43,31.75,95.25,181.44,SBD,Single-ply,12
-56,Mike Boyer,Open,M,151.95,111.13,174.63,437.72,SBD,Single-ply,1
+56,Mike Boyer #1,Open,M,151.95,111.13,174.63,437.72,SBD,Single-ply,1
 56,Gary Hickey,Open,M,165.56,92.99,174.63,433.18,SBD,Single-ply,2
 56,John Theimer,Open,M,120.2,83.91,151.95,356.07,SBD,Single-ply,3
 56,Damion Briggs,Open,M,124.74,68.04,158.76,351.53,SBD,Single-ply,4
@@ -37,7 +37,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 56,Isobel Kaminsky,Open,F,81.65,43.09,104.33,229.06,SBD,Single-ply,6
 56,Julie Asble,Open,F,72.57,31.75,97.52,201.85,SBD,Single-ply,7
 60,Joe Lusk,Open,M,183.7,115.67,213.19,512.56,SBD,Single-ply,1
-60,Steve Snyder,Open,M,181.44,97.52,204.12,483.08,SBD,Single-ply,2
+60,Steve Snyder #1,Open,M,181.44,97.52,204.12,483.08,SBD,Single-ply,2
 60,Charlie Biele,Open,M,172.37,102.06,181.44,455.86,SBD,Single-ply,3
 60,Scott Zerbe,Open,M,163.29,102.06,163.29,428.64,SBD,Single-ply,4
 60,Russ Granto,Open,M,124.74,122.47,154.22,401.43,SBD,Single-ply,5
@@ -46,7 +46,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 60,Nancy Bell,Open,F,77.11,49.9,127.01,254.01,SBD,Single-ply,8
 60,B. Anderson,Open,F,56.7,36.29,90.72,183.7,SBD,Single-ply,9
 67.5,Mike Zorbaugh,Open,M,213.19,131.54,213.19,557.92,SBD,Single-ply,1
-67.5,Mike Thompson,Open,M,204.12,108.86,231.33,544.31,SBD,Single-ply,2
+67.5,Mike Thompson #1,Open,M,204.12,108.86,231.33,544.31,SBD,Single-ply,2
 67.5,Russ Adkins,Open,M,215.46,136.08,190.51,542.04,SBD,Single-ply,3
 67.5,Claiborne Gee Jr,Open,M,174.63,136.08,226.8,537.51,SBD,Single-ply,4
 67.5,Keith Kohler,Open,M,197.31,122.47,204.12,523.9,SBD,Single-ply,5
@@ -99,7 +99,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 82.5,Steve Condore,Open,M,197.31,145.15,249.48,591.94,SBD,Single-ply,11
 82.5,Howard Joyner,Open,M,195.04,170.1,222.26,587.4,SBD,Single-ply,12
 82.5,Russ Kolle,Open,M,201.85,133.81,242.67,578.33,SBD,Single-ply,13
-82.5,Robert Barr,Open,M,210.92,149.69,208.65,569.26,SBD,Single-ply,14
+82.5,Robert Barr #3,Open,M,210.92,149.69,208.65,569.26,SBD,Single-ply,14
 82.5,David Smith,Open,M,183.7,136.08,238.14,557.92,SBD,Single-ply,15
 82.5,Joe Harper,Open,M,199.58,138.35,217.72,555.65,SBD,Single-ply,16
 82.5,Mike Boswell,Open,M,197.31,120.2,235.87,553.38,SBD,Single-ply,17
@@ -118,7 +118,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 82.5,Burt Rosenfield,Open,M,140.61,115.67,181.44,437.72,SBD,Single-ply,30
 82.5,Ricardo Vargas,Open,M,133.81,117.93,181.44,433.18,SBD,Single-ply,31
 82.5,Kreg Kinney,Open,M,145.15,92.99,179.17,417.3,SBD,Single-ply,32
-82.5,Francis Barrett,Open,M,136.08,99.79,158.76,394.63,SBD,Single-ply,33
+82.5,Francis Barrett #1,Open,M,136.08,99.79,158.76,394.63,SBD,Single-ply,33
 82.5,C. Tatum,Open,M,120.2,83.91,188.24,392.36,SBD,Single-ply,34
 90,Marshall Peck,Open,M,319.78,210.92,294.84,825.54,SBD,Single-ply,1
 90,Chas Simmons,Open,M,306.17,219.99,272.16,798.32,SBD,Single-ply,2
@@ -197,7 +197,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 125,Buck Harris,Open,M,172.37,122.47,210.92,505.76,SBD,Single-ply,9
 125+,George Hechter,Open,M,430.91,249.48,362.87,1043.26,SBD,Single-ply,1
 125+,Joe Polvinale,Open,M,333.39,161.03,317.51,811.93,SBD,Single-ply,2
-125+,Robert Newcomb,Open,M,283.5,195.04,265.35,743.89,SBD,Single-ply,3
+125+,Robert Newcomb #1,Open,M,283.5,195.04,265.35,743.89,SBD,Single-ply,3
 125+,George Richards,Open,M,256.28,181.44,244.94,682.66,SBD,Single-ply,4
 125+,William Brauner,Open,M,231.33,156.49,215.46,603.28,SBD,Single-ply,5
 125+,Alphonso Smith,Open,M,210.92,120.2,210.92,542.04,SBD,Single-ply,6
@@ -226,7 +226,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 ,Frank Peters,Masters 50-54 LWT,M,142.88,79.38,174.63,396.89,SBD,Single-ply,4
 75,Gwen Patillo,Masters 50-54 LWT,F,92.99,58.97,138.35,290.3,SBD,Single-ply,5
 110,William Maraugha,Masters 50-54 HWT,M,226.8,147.42,240.4,614.62,SBD,Single-ply,1
-82.5,Francis Barrett,Masters 55+ LWT,M,136.08,99.79,158.76,394.63,SBD,Single-ply,1
+82.5,Francis Barrett #1,Masters 55+ LWT,M,136.08,99.79,158.76,394.63,SBD,Single-ply,1
 90,Larry McCauley,Masters 55+ LWT,M,208.65,163.29,265.35,637.3,SBD,Single-ply,1
 125,Buck Harris,Masters 55+ LWT,M,172.37,122.47,210.92,505.76,SBD,Single-ply,2
 90,Rex Monahan,Masters 55+ LWT,M,120.2,79.38,172.37,371.95,SBD,Single-ply,3
@@ -268,7 +268,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 82.5,Ruben Cimbron,Under Class II,M,217.72,154.22,231.33,603.28,SBD,Single-ply,3
 82.5,Jack Eastlak Jr,Under Class II,M,233.6,138.35,219.99,591.94,SBD,Single-ply,4
 82.5,Howard Joyner,Under Class II,M,195.04,170.1,222.26,587.4,SBD,Single-ply,5
-82.5,Robert Barr,Under Class II,M,210.92,149.69,208.65,569.26,SBD,Single-ply,6
+82.5,Robert Barr #3,Under Class II,M,210.92,149.69,208.65,569.26,SBD,Single-ply,6
 82.5,Joe Harper,Under Class II,M,199.58,138.35,217.72,555.65,SBD,Single-ply,7
 82.5,Mike Boswell,Under Class II,M,197.31,120.2,235.87,553.38,SBD,Single-ply,8
 82.5,Cal Tucker,Under Class II,M,204.12,131.54,210.92,546.58,SBD,Single-ply,9
@@ -310,7 +310,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 125,George Alexander,Under Class II,M,217.72,185.97,242.67,646.37,SBD,Single-ply,3
 125,Rich Morgan,Under Class II,M,231.33,165.56,244.94,641.83,SBD,Single-ply,4
 125,Dan Thomasco,Under Class II,M,183.7,158.76,188.24,530.7,SBD,Single-ply,5
-125+,Robert Newcomb,Under Class II,M,283.5,195.04,265.35,743.89,SBD,Single-ply,1
+125+,Robert Newcomb #1,Under Class II,M,283.5,195.04,265.35,743.89,SBD,Single-ply,1
 125+,George Richards,Under Class II,M,256.28,181.44,244.94,682.66,SBD,Single-ply,2
 125+,William Brauner,Under Class II,M,231.33,156.49,215.46,603.28,SBD,Single-ply,3
 125+,Alphonso Smith,Under Class II,M,210.92,120.2,210.92,542.04,SBD,Single-ply,4
