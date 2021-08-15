@@ -38,6 +38,32 @@ const getCategory = (csv: Csv, row: ReadonlyArray<string>): string => {
 };
 
 
+// Helper function that returns whether a string is a positive integer.
+//
+// This function is derived from OpenLifter's validatePositiveInteger().
+const isPositiveInteger = (s?: string): boolean => {
+  if (typeof s !== "string") return false;
+  if (s === "") return false;
+
+  // Ensure that the string only contains numbers, because the Number() constructor
+  // will ignore whitespace.
+  const onlyNumbers = /^[0-9]+$/;
+  if (!s.match(onlyNumbers)) return false;
+
+  // The number shouldn't start with an unnecessary zero.
+  if (s.startsWith("0")) return false;
+
+  const n = Number(s);
+
+  // Ensure the number is a positive integer.
+  if (isNaN(n)) return false;
+  if (!Number.isInteger(n)) return false;
+  if (n <= 0) return false;
+
+  return true;
+};
+
+
 // Creates a new Csv file with the Place recalculated.
 //
 // The algorithm used is O(n), using a hashmap.
@@ -58,8 +84,10 @@ export const csvCalcPlace = (source: Csv): Csv | string => {
   if (csv.index("Place") >= 0) {
     const idx = csv.index("Place");
     for (let i = 0; i < csv.rows.length; ++i) {
-      // But, preserve Guest if manually specified.
-      if (csv.rows[i][idx] !== "G") {
+      // Clear any normal place data, like numbers and DQ.
+      // Special values like G and DD are left intact, and preserved by future passes.
+      const v = csv.rows[i][idx];
+      if (isPositiveInteger(v) || v === "DQ") {
         csv.rows[i][idx] = "";
       }
     }
@@ -79,8 +107,8 @@ export const csvCalcPlace = (source: Csv): Csv | string => {
   // Group rows in a Map by their category.
   let categories = new Map();
   for (let i = 0; i < csv.rows.length; ++i) {
-    // Skip guests: leave them in-place.
-    if (csv.rows[i][placeIndex] === "G") {
+    // Skip any cell that still has content after the clearing pass above.
+    if (csv.rows[i][placeIndex]) {
       continue;
     }
 
