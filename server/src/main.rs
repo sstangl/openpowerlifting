@@ -247,7 +247,7 @@ fn lifter(
 }
 
 /// Wrapper for a CSV file as a String, to give it a Responder impl.
-struct CsvFile {
+pub struct CsvFile {
     pub filename: String,
     pub content: String,
 }

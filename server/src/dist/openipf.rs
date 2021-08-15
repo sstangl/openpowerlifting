@@ -18,6 +18,7 @@ use server::pages;
 use std::path::PathBuf;
 
 use crate::common::*;
+use crate::CsvFile;
 
 /// URL prefix used when accessing OpenIPF through OpenPowerlifting.org or
 /// localhost.
@@ -344,9 +345,11 @@ pub fn lifter(
 }
 
 #[get("/u/<username>/csv")]
-pub fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<String> {
+pub fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(&username)?;
-    pages::lifter_csv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()
+    let content = pages::lifter_csv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()?;
+    let filename = format!("{}.csv", username);
+    Some(CsvFile { filename, content })
 }
 
 #[get("/mlist/<mselections..>?<lang>")]
