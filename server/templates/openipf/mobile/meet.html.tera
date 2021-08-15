@@ -31,7 +31,7 @@
         <option value="by-dots" {% if sortselection == "ByDots" %}selected{% endif %}>{{strings.selectors.sort.by_dots}}</option>
         <option value="by-goodlift" {% if sortselection == "ByGoodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
         <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
-		<option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
+        <option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
         <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
       </optgroup>
     </select>
@@ -56,6 +56,7 @@
         <th>{{strings.columns.liftername}}</th>
         <th>{{strings.columns.total}}</th>
         <th>{{points_column_title}}</th>
+        <th>{{strings.columns.home}}</th>
         <th class="meet-list-sex-header">{{strings.columns.sex}}</th>
         <th>{{strings.columns.equipment}}</th>
         {% if has_age_data %}
@@ -84,6 +85,13 @@
           </td>
           <td>{{this.total}}</td>
           <td>{{this.points}}</td>
+          <td>
+            {% if this.lifter_state %}
+              {{this.lifter_state}}
+            {% else %}
+              {{this.lifter_country}}
+            {% endif %}
+          </td>
           <td>{{this.sex}}</td>
           <td>{{this.equipment}}</td>
           {% if has_age_data %}

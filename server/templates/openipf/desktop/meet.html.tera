@@ -31,7 +31,7 @@
           <option value="by-dots" {% if sortselection == "ByDots" %}selected{% endif %}>{{strings.selectors.sort.by_dots}}</option>
           <option value="by-goodlift" {% if sortselection == "ByGoodlift" %}selected{% endif %}>{{strings.selectors.sort.by_goodlift}}</option>
           <option value="by-ipf-points" {% if sortselection == "ByIPFPoints" %}selected{% endif %}>{{strings.selectors.sort.by_ipfpoints}}</option>
-		  <option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
+          <option value="by-schwartz-malone" {% if sortselection == "BySchwartzMalone" %}selected{% endif %}>{{strings.selectors.sort.by_schwartzmalone}}</option>
           <option value="by-wilks" {% if sortselection == "ByWilks" %}selected{% endif %}>{{strings.selectors.sort.by_wilks}}</option>
         </optgroup>
       </select>
@@ -55,6 +55,7 @@
           <th>{{strings.columns.place}}</th>
         {% endif %}
         <th>{{strings.columns.liftername}}</th>
+        <th>{{strings.columns.home}}</th>
         <th>{{strings.columns.sex}}</th>
         {% if has_age_data %}
           <th>{{strings.columns.age}}</th>
@@ -82,6 +83,13 @@
           {% endif %}
           <td>
             <a class="{{this.lifter.color}}" href="{{urlprefix | safe}}u/{{this.lifter.username}}">{{this.localized_name}}</a>{% if this.lifter.instagram %}<a href="https://www.instagram.com/{{this.lifter.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="iglogo"></i></a>{% endif %}{% if this.lifter.vkontakte %}<a href="https://vk.com/{{this.lifter.vkontakte}}" class="instagram" rel="noopener" target="_blank"><i class="vklogo"></i></a>{% endif %}
+          </td>
+          <td>
+            {% if this.lifter_state %}
+              {{this.lifter_state}}
+            {% else %}
+              {{this.lifter_country}}
+            {% endif %}
           </td>
           <td>{{this.sex}}</td>
           {% if has_age_data %}

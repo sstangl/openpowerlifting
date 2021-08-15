@@ -2,6 +2,7 @@
 
 use langpack::{localized_name, Language, Locale, LocalizeNumber};
 use opldb::{self, algorithms, Entry};
+use opltypes::states::State;
 use opltypes::*;
 
 use itertools::Itertools;
@@ -236,6 +237,9 @@ pub struct ResultsRow<'a> {
     pub weightclass: langpack::LocalizedWeightClassAny,
     pub bodyweight: langpack::LocalizedWeightAny,
 
+    pub lifter_country: Option<&'a str>,
+    pub lifter_state: Option<State>,
+
     pub squat: langpack::LocalizedWeightAny,
     pub bench: langpack::LocalizedWeightAny,
     pub deadlift: langpack::LocalizedWeightAny,
@@ -267,6 +271,9 @@ impl<'a> ResultsRow<'a> {
             equipment: strings.translate_equipment(entry.equipment),
             weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
             bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
+
+            lifter_country: entry.lifter_country.map(|c| strings.translate_country(c)),
+            lifter_state: entry.lifter_state,
 
             squat: entry
                 .highest_squatkg()
