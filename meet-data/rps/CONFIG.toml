@@ -151,7 +151,8 @@
 [exemptions]
     1304 = ["ExemptWeightClassConsistency"]
     1515 = ["ExemptWeightClassConsistency"]
+    1558 = ["ExemptWeightClassConsistency"] # Ernie Lilliebridge's bw was listed as 400lbs as a hilarious joke
     1636 = ["ExemptWeightClassConsistency"]
     1927 = ["ExemptDivision"] # Not really an RPS meet (GPC-USA).
-    1558 = ["ExemptWeightClassConsistency"] #Ernie Lilliebridge's bw was listed as 400lbs as a hilarious joke
     1973 = ["ExemptDivision"] # New divs using OpenLifter; not sure whether to keep.
+    2127 = ["ExemptWeightClassConsistency"] # Lifter missing any weight info.
