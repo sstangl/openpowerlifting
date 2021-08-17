@@ -16,7 +16,7 @@ use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
 
 /// List of all plausible weightclasses, for non-configured federations.
-const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 49] = [
+const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 51] = [
     // IPF Men.
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(53)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(59)),
@@ -33,7 +33,9 @@ const DEFAULT_WEIGHTCLASSES: [WeightClassKg; 49] = [
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(52)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(57)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(63)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(69)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(72)),
+    WeightClassKg::UnderOrEqual(WeightKg::from_i32(76)),
     WeightClassKg::UnderOrEqual(WeightKg::from_i32(84)),
     WeightClassKg::Over(WeightKg::from_i32(84)),
     // Traditional and extra classes.
