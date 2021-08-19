@@ -619,7 +619,6 @@ impl MetaFederation {
             MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
             MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
             MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
-            //MetaFederation::ABPU => entry.tested && MetaFederation::BPU.contains(entry, meets),
             MetaFederation::ABPU => {
                 entry.tested && (meet.federation ==  Federation::BPU
                     || (meet.federation == Federation::WPC
