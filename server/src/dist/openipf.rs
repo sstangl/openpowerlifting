@@ -63,7 +63,7 @@ fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
 /// IPF.
 #[get("/?<lang>")]
 pub fn index(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -90,7 +90,7 @@ pub fn index(
 #[get("/rankings/<selections..>?<lang>")]
 pub fn rankings(
     selections: PathBuf,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -190,7 +190,7 @@ pub fn default_search_rankings_api(
 #[get("/records/<selections..>?<lang>")]
 pub fn records(
     selections: Option<PathBuf>,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -231,7 +231,7 @@ pub fn records(
 
 #[get("/records?<lang>")]
 pub fn records_default(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -252,8 +252,8 @@ fn ipf_only_filter(opldb: &opldb::OplDb, e: &Entry) -> bool {
 
 #[get("/u/<username>?<lang>")]
 pub fn lifter(
-    username: String,
-    lang: Option<String>,
+    username: &str,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -273,13 +273,13 @@ pub fn lifter(
         .map_or(false, |c| c.is_ascii_digit());
 
     let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
-        if let Some(id) = opldb.lifter_id(&username) {
+        if let Some(id) = opldb.lifter_id(username) {
             vec![id]
         } else {
             vec![]
         }
     } else {
-        opldb.lifters_under_username(&username)
+        opldb.lifters_under_username(username)
     };
 
     match lifter_ids.len() {
@@ -331,7 +331,7 @@ pub fn lifter(
                 opldb,
                 &locale,
                 PointsSystem::from(default_openipf_rankings_query().order_by),
-                &username,
+                username,
                 &lifter_ids,
             );
             cx.urlprefix = local_prefix(&host);
@@ -345,8 +345,8 @@ pub fn lifter(
 }
 
 #[get("/u/<username>/csv")]
-pub fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
-    let lifter_id = opldb.lifter_id(&username)?;
+pub fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
+    let lifter_id = opldb.lifter_id(username)?;
     let content = pages::lifter_csv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()?;
     let filename = format!("{}.csv", username);
     Some(CsvFile { filename, content })
@@ -355,7 +355,7 @@ pub fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFi
 #[get("/mlist/<mselections..>?<lang>")]
 pub fn meetlist(
     mselections: Option<PathBuf>,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -385,7 +385,7 @@ pub fn meetlist(
 
 #[get("/mlist?<lang>")]
 pub fn meetlist_default(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -401,7 +401,7 @@ pub fn meetlist_default(
 #[get("/m/<meetpath..>?<lang>")]
 pub fn meet(
     meetpath: PathBuf,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -462,7 +462,7 @@ fn ipf_fed_filter(fed: Federation) -> bool {
 
 #[get("/status?<lang>")]
 pub fn status(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -482,7 +482,7 @@ pub fn status(
 
 #[get("/faq?<lang>")]
 pub fn faq(
-    lang: Option<String>,
+    lang: Option<&str>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
@@ -501,7 +501,7 @@ pub fn faq(
 
 #[get("/contact?<lang>")]
 pub fn contact(
-    lang: Option<String>,
+    lang: Option<&str>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,

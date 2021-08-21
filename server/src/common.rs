@@ -183,7 +183,7 @@ pub fn select_weight_units(
 
 pub fn make_locale<'db>(
     langinfo: &'db LangInfo,
-    lang: Option<String>,
+    lang: Option<&str>,
     languages: AcceptLanguage,
     cookies: &CookieJar<'_>,
 ) -> Locale<'db> {

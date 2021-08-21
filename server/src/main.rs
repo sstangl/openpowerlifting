@@ -105,7 +105,7 @@ async fn root_apple_touch_icon(encoding: AcceptEncoding) -> Option<StaticFile> {
 #[get("/rankings/<selections..>?<lang>")]
 fn rankings(
     selections: PathBuf,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -132,7 +132,7 @@ async fn rankings_redirect() -> Redirect {
 #[get("/records/<selections..>?<lang>")]
 fn records(
     selections: Option<PathBuf>,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -161,7 +161,7 @@ fn records(
 
 #[get("/records?<lang>")]
 fn records_default(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -173,8 +173,8 @@ fn records_default(
 
 #[get("/u/<username>?<lang>")]
 fn lifter(
-    username: String,
-    lang: Option<String>,
+    username: &str,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -193,13 +193,13 @@ fn lifter(
         .map_or(false, |c| c.is_ascii_digit());
 
     let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
-        if let Some(id) = opldb.lifter_id(&username) {
+        if let Some(id) = opldb.lifter_id(username) {
             vec![id]
         } else {
             vec![]
         }
     } else {
-        opldb.lifters_under_username(&username)
+        opldb.lifters_under_username(username)
     };
 
     match lifter_ids.len() {
@@ -235,7 +235,7 @@ fn lifter(
                 opltypes::PointsSystem::from(
                     opldb::query::direct::RankingsQuery::default().order_by,
                 ),
-                &username,
+                username,
                 &lifter_ids,
             );
             Some(Ok(match device {
@@ -266,8 +266,8 @@ impl<'r> Responder<'r, 'static> for CsvFile {
 
 /// Exports single-lifter data as a CSV file.
 #[get("/u/<username>/csv")]
-fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
-    let lifter_id = opldb.lifter_id(&username)?;
+fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
+    let lifter_id = opldb.lifter_id(username)?;
     let content = pages::lifter_csv::export_csv(opldb, lifter_id, None).ok()?;
     let filename = format!("{}.csv", username);
     Some(CsvFile { filename, content })
@@ -276,7 +276,7 @@ fn lifter_csv(username: String, opldb: &State<ManagedOplDb>) -> Option<CsvFile> 
 #[get("/mlist/<mselections..>?<lang>")]
 fn meetlist(
     mselections: Option<PathBuf>,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -299,7 +299,7 @@ fn meetlist(
 
 #[get("/mlist?<lang>")]
 fn meetlist_default(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -312,7 +312,7 @@ fn meetlist_default(
 #[get("/m/<meetpath..>?<lang>")]
 fn meet(
     meetpath: PathBuf,
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -351,7 +351,7 @@ fn meet(
 
 #[get("/status?<lang>")]
 fn status(
-    lang: Option<String>,
+    lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -369,7 +369,7 @@ fn status(
 
 #[get("/faq?<lang>")]
 fn faq(
-    lang: Option<String>,
+    lang: Option<&str>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
@@ -386,7 +386,7 @@ fn faq(
 
 #[get("/contact?<lang>")]
 fn contact(
-    lang: Option<String>,
+    lang: Option<&str>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
@@ -409,8 +409,8 @@ enum IndexReturn {
 
 #[get("/?<lang>&<fed>")]
 fn index(
-    lang: Option<String>,
-    fed: Option<String>, // For handling old-style URLs.
+    lang: Option<&str>,
+    fed: Option<&str>, // For handling old-style URLs.
     opldb: &State<ManagedOplDb>,
     langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
@@ -520,8 +520,8 @@ fn dev_checker_post(
 }
 
 #[get("/lifters.html?<q>")]
-fn old_lifters(opldb: &State<ManagedOplDb>, q: String) -> Option<Redirect> {
-    let username = Username::from_name(&q).ok()?;
+fn old_lifters(opldb: &State<ManagedOplDb>, q: &str) -> Option<Redirect> {
+    let username = Username::from_name(q).ok()?;
     opldb.lifter_id(username.as_str())?; // Ensure username exists.
     Some(Redirect::permanent(format!("/u/{}", username)))
 }
@@ -532,9 +532,8 @@ fn old_meetlist() -> Redirect {
 }
 
 #[get("/meet.html?<m>")]
-fn old_meet(opldb: &State<ManagedOplDb>, m: String) -> Option<Redirect> {
-    let meetpath = &m;
-    let id = opldb.meet_id(meetpath)?;
+fn old_meet(opldb: &State<ManagedOplDb>, m: &str) -> Option<Redirect> {
+    let id = opldb.meet_id(m)?;
     let pathstr = &opldb.meet(id).path;
     Some(Redirect::permanent(format!("/m/{}", pathstr)))
 }
