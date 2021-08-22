@@ -1,2 +1,34 @@
-Event,Sex,Name,State,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,F,Lynn Wardle,ON,62.9,63,Open,137.5,90.0,130.0,357.5,Single-ply,1
+Event,Sex,Name,Team,BodyweightKg,WeightClassKg,Division,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Place
+SBD,F,Lynn Wardle,Iron,62.9,63,Open,-130,-137.5,137.5,137.5,82.5,-90,90,90,117.5,130,-135,130,357.5,Single-ply,1
+SBD,F,Lynn Lister,Titan,66.5,72,Open,50,55,60,60,50,55,60,60,90,97.5,-100,97.5,217.5,Single-ply,1
+SBD,F,Lisa Nigh,Defining,72.3,84,Open,125,-143,147.5,147.5,80,87.5,92.5,92.5,137.5,150,-158,150,390,Single-ply,1
+SBD,F,Joanne Swing,Defining,79.9,84,Open,50,55,65,65,47.5,50,-55,50,92.5,100,-123,100,215,Single-ply,2
+SBD,F,Mimi McRae,Niagara,97,84+,Open,80,90,100,100,47.5,55,-60,55,125,137.5,145,145,300,Single-ply,1
+SBD,F,Simone Upham,Defining,118.4,84+,Open,87.5,-97.5,105,105,50,57.5,-62.5,57.5,100,112.5,120,120,282.5,Single-ply,2
+SBD,M,Jeremy Crocker,,58.8,59,Open,85,95,100,100,65,-70,70,70,130,140,-146,140,310,Single-ply,1
+SBD,M,Joel Kenney,PP,65.3,66,Open,145,160,162.5,162.5,97.5,105,107.5,107.5,150,170,177.5,177.5,447.5,Single-ply,1
+SBD,M,Tyler Crawford,Niagara,72.1,74,Open,140,152.5,-158,152.5,97.5,105,110,110,185,192.5,200,200,462.5,Single-ply,1
+SBD,M,Dustin Court,,67.2,74,Open,107.5,115,122.5,122.5,72.5,77.5,,77.5,147.5,155,160,160,360,Single-ply,2
+SBD,M,Steve Spilak,,82.1,83,Open,200,210,220,220,155,170,175,175,192.5,205,-210,205,600,Single-ply,1
+SBD,M,Emilio Suing,Western,82.5,83,Open,185,195,-200,195,92.5,-102.5,-102.5,92.5,185,190,-198,190,477.5,Single-ply,2
+SBD,M,Frank Mayer,,92.5,93,Open,215,225,-235,225,-182.5,182.5,-190,182.5,-215,220,-250,220,627.5,Single-ply,1
+SBD,M,David Oliver,Barbarian,92.2,93,Open,185,200,205,205,130,135,137.5,137.5,185,190,195,195,537.5,Single-ply,2
+SBD,M,Grant Fortowsky,PP,85.3,93,Open,165,182.5,192.5,192.5,102.5,110,-115,110,202.5,-220,-228,202.5,505,Single-ply,3
+SBD,M,Sam Halbouni,,91.2,93,Open,100,142.5,-160,142.5,100,-145,145,145,142.5,190,202.5,202.5,490,Single-ply,4
+SBD,M,Matt Shelvock,Western,97,105,Open,-272.5,-272.5,272.5,272.5,142.5,152.5,-160,152.5,205,230,235,235,660,Single-ply,1
+SBD,M,Johnathan Bailey,,97.9,105,Open,242.5,-258,,242.5,137.5,145,150,150,225,245,255,255,647.5,Single-ply,2
+SBD,M,Justin Alfante,,101.1,105,Open,205,220,235,235,120,130,-137.5,130,255,-275,,255,620,Single-ply,3
+SBD,M,Matthew Jacobs #3,,98.4,105,Open,235,-250,-250,235,152.5,165,172.5,172.5,185,200,210,210,617.5,Single-ply,4
+SBD,M,Colin Littlle,London,95.7,105,Open,-170,170,-173,170,82.5,-90,-90,82.5,185,190,200,200,452.5,Single-ply,5
+SBD,M,Sheldon Duncan,PP,110.2,120,Open,230,242.5,255,255,140,150,157.5,157.5,270,-287.5,287.5,287.5,700,Single-ply,1
+SBD,M,Andrew Innes,Western,119.7,120,Open,185,205,-215,205,107.5,112.5,115,115,225,-235,235,235,555,Single-ply,2
+SBD,M,Michael Knott,London,142,120+,Open,-220,-220,220,220,185,-202.5,-202.5,185,177.5,182.5,-198,182.5,587.5,Single-ply,1
+BD,F,Cheryl Howey,KW G,56.7,57,Open,,,,,27.5,-32.5,-35,27.5,65,80,97.5,97.5,125,Single-ply,1
+BD,F,Jackie Johnson,KW G,106.1,84+,Open,,,,,40,47.5,52.5,52.5,70,87.5,100,100,152.5,Single-ply,1
+BD,M,Robert Greig,KW G,80,83,Open,,,,,50,55,62.5,62.5,80,100,120,120,182.5,Single-ply,1
+BD,M,Larry Chappelle,KW G,104.8,105,Open,,,,,50,55,-62.5,55,110,125,145,145,200,Single-ply,1
+B,M,Frank Mayer,,92.5,93,Open,,,,,-185,-185,185,185,,,,,185,Single-ply,1
+B,M,Mike Mistruzzi,PP,85.9,93,Open,,,,,115,122.5,-127.5,122.5,,,,,122.5,Single-ply,2
+B,M,Zachary Ghazoli,,88.6,93,Open,,,,,20,-42.5,47.5,47.5,,,,,47.5,Single-ply,3
+B,M,Jason Knott,PP,104,105,Open,,,,,160,170,-177.5,170,,,,,170,Single-ply,1
+B,M,Dan Gibson,KW G,93.6,105,Open,,,,,70,75,87.5,87.5,,,,,87.5,Single-ply,2
