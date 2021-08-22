@@ -5,6 +5,20 @@
 
 
 [divisions]
+    # USAPL-style divisions, 2021+.
+    mro = {name="MR-O", sex="M", min=0, max=999, equipment="Raw"}
+    mrsjr = {name="MR-SJr", sex="M", min=0, max=17.5, equipment="Raw"}
+    mrjr = {name="MR-Jr", sex="M", min=0, max=22.5, equipment="Raw"}
+
+    fro = {name="FR-O", sex="F", min=0, max=999, equipment="Raw"}
+    frsjr = {name="FR-SJr", sex="F", min=0, max=17.5, equipment="Raw"}
+    frjr = {name="FR-Jr", sex="F", min=0, max=22.5, equipment="Raw"}
+
+    mo = {name="M-O", sex="M", min=0, max=999, equipment="Single-ply"}
+    msjr = {name="M-SJr", sex="M", min=0, max=17.5, equipment="Single-ply"}
+    mjr = {name="M-Jr", sex="M", min=0, max=22.5, equipment="Single-ply"}
+
+    # Old-style divisions, prior to 2021.
     open = {name ="Open",min=0,max=999}
     special_olympics = {name ="Special Olympics",min=0,max=999}
     paralympics = {name ="Paralympics",min=0,max=999}
