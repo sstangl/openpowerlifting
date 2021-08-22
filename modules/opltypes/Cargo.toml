@@ -1,11 +1,8 @@
 [package]
 name = "opltypes"
 version = "0.1.0"
-authors = ["Sean Stangl <sean.stangl@gmail.com>",
-           "Matt Pearce <matt@openpowerlifting.org>"]
-description = """
-Datatypes for the OpenPowerlifting database format.
-"""
+authors = ["Sean Stangl <sean.stangl@gmail.com>", "Matt Pearce <matt@openpowerlifting.org>"]
+description = "Datatypes for the OpenPowerlifting database format."
 license = "AGPL-3.0-or-later"
 edition = "2018"
 
