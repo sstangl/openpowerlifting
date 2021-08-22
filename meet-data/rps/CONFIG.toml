@@ -29,6 +29,7 @@
     ama_youth_12 = {name = "Amateur Youth 12", min = 12, max = 12, tested="Yes"}
 
     # Teens -- Amateur only.
+    ama_teen_14p = {name = "Amateur Teen 14+", min = 14, max = 19, tested="Yes"}
     ama_teen_14_15 = {name = "Amateur Teen 14-15", min = 14, max = 15, tested="Yes"}
     ama_teen_16_17 = {name = "Amateur Teen 16-17", min = 16, max = 17, tested="Yes"}
     ama_teen_18_19 = {name = "Amateur Teen 18-19", min = 18, max = 19, tested="Yes"}
@@ -78,6 +79,7 @@
 
     # Less specific divisions that have been used in meets
     pro_master = {name = "Pro Masters", min = 40, max = 999}
+    pro_master_40 = {name = "Pro Masters 40+", min = 40, max = 999}
     pro_master_50 = {name = "Pro Masters 50+", min = 50, max = 999}
     ama_master = {name = "Amateur Masters", min = 40, max = 999, tested="Yes"}
     ama_master_50 = {name = "Amateur Masters 50+", min = 50, max = 999, tested="Yes"}
