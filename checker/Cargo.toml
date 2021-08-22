@@ -7,8 +7,8 @@ edition = "2018"
 license = "AGPL-3.0-or-later"
 
 [dependencies]
-coefficients = { version = "0.1", path = "../modules/coefficients/" }
-opltypes = { version = "0.1", path = "../modules/opltypes/" }
+coefficients = { path = "../modules/coefficients/" }
+opltypes = { path = "../modules/opltypes/" }
 chrono = "0.4"
 colored = "2.0"
 csv = "1.1"

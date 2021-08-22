@@ -9,7 +9,7 @@ license = "MIT"
 edition = "2018"
 
 [dependencies]
-opltypes = { version = "0.1", path = "../opltypes/" }
+opltypes = { path = "../opltypes/" }
 
 [dev-dependencies]
 criterion = { version = "0.3", features = ["html_reports"] }

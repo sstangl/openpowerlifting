@@ -6,6 +6,7 @@ use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
+use std::convert::TryFrom;
 use std::f32;
 use std::fmt::{self, Write};
 use std::num;
@@ -133,7 +134,7 @@ impl WeightKg {
 
     #[inline]
     pub const fn from_i32(i: i32) -> WeightKg {
-        WeightKg(i * 100)
+        WeightKg(i.saturating_mul(100))
     }
 
     // This only exists because from_f32() can't be const fn at the moment.
@@ -144,6 +145,15 @@ impl WeightKg {
 
     #[inline]
     pub fn from_f32(f: f32) -> WeightKg {
+        if f.is_finite() {
+            WeightKg((f * 100.0).round() as i32)
+        } else {
+            WeightKg(0)
+        }
+    }
+
+    #[inline]
+    pub fn from_f64(f: f64) -> WeightKg {
         if f.is_finite() {
             WeightKg((f * 100.0).round() as i32)
         } else {
@@ -337,17 +347,35 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
     type Value = WeightKg;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-        formatter.write_str("A floating-point value or the empty string.")
+        formatter.write_str("a number or numeric string")
     }
 
-    fn visit_str<E: de::Error>(self, value: &str) -> Result<WeightKg, E> {
-        WeightKg::from_str(value).map_err(E::custom)
+    fn visit_i64<E: de::Error>(self, i: i64) -> Result<WeightKg, E> {
+        let v = i32::try_from(i).map_err(E::custom)?;
+        Ok(WeightKg::from_i32(v))
+    }
+
+    fn visit_u64<E: de::Error>(self, u: u64) -> Result<WeightKg, E> {
+        let v = i32::try_from(u).map_err(E::custom)?;
+        Ok(WeightKg::from_i32(v))
+    }
+
+    fn visit_f64<E: de::Error>(self, v: f64) -> Result<WeightKg, E> {
+        Ok(WeightKg::from_f64(v))
+    }
+
+    fn visit_borrowed_str<E: de::Error>(self, v: &str) -> Result<WeightKg, E> {
+        WeightKg::from_str(v).map_err(E::custom)
+    }
+
+    fn visit_str<E: de::Error>(self, v: &str) -> Result<WeightKg, E> {
+        self.visit_borrowed_str(v)
     }
 }
 
 impl<'de> Deserialize<'de> for WeightKg {
     fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<WeightKg, D::Error> {
-        deserializer.deserialize_str(WeightKgVisitor)
+        deserializer.deserialize_any(WeightKgVisitor)
     }
 }
 

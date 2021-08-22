@@ -7,6 +7,6 @@ edition = "2018"
 license = "AGPL-3.0-or-later"
 
 [dependencies]
-opldb = { version = "0.1", path = "../db/" }
-opltypes = { version = "0.1", path = "../opltypes/" }
+opldb = { path = "../db/" }
+opltypes = { path = "../opltypes/" }
 rustyline = "8.0"

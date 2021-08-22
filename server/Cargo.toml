@@ -7,11 +7,11 @@ edition = "2018"
 license = "AGPL-3.0-or-later"
 
 [dependencies]
-checker = { version = "0.1", path = "../checker" }
-coefficients = { version = "0.1", path = "../modules/coefficients/" }
-langpack = { version = "0.1", path = "../modules/langpack/" }
-opldb = { version = "0.1", path = "../modules/db/" }
-opltypes = { version = "0.1", path = "../modules/opltypes/" }
+checker = { path = "../checker" }
+coefficients = { path = "../modules/coefficients/" }
+langpack = { path = "../modules/langpack/" }
+opldb = { path = "../modules/db/" }
+opltypes = { path = "../modules/opltypes/" }
 accept-language = "2.0"
 csv = "1.1"
 dotenv = "0.15"
