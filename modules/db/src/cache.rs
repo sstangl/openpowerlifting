@@ -21,7 +21,7 @@ use crate::{Entry, Lifter, Meet};
 /// Because it's non-sorted, that also means that there doesn't
 /// need to be a version of the data stored for each way in
 /// which the data can be sorted, so there's memory savings.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct NonSortedNonUnique(pub Vec<u32>);
 
 /// List of indices into the opldb.entries vector,
@@ -30,6 +30,7 @@ pub struct NonSortedNonUnique(pub Vec<u32>);
 ///
 /// This is useful to get `O(1)` lookup, since it stores
 /// the filter/sort/unique algorithm in its final output.
+#[derive(Debug, Serialize, Deserialize)]
 pub struct SortedUnique(pub Vec<u32>);
 
 // TODO: Can we templatize these PossiblyOwned types?
@@ -228,6 +229,7 @@ impl NonSortedNonUnique {
 }
 
 /// Owning structure of all precomputed data.
+#[derive(Debug, Serialize, Deserialize)]
 pub struct StaticCache {
     // Precalculated data for Rankings.
     pub constant_time: ConstantTimeCache,
@@ -255,6 +257,7 @@ impl StaticCache {
 }
 
 /// Stores all sorts for a given equipment type.
+#[derive(Debug, Serialize, Deserialize)]
 pub struct ConstantTimeBy {
     pub raw: SortedUnique,
     pub wraps: SortedUnique,
@@ -292,6 +295,7 @@ impl ConstantTimeBy {
 }
 
 /// Owning structure of all `O(1)` lookup data.
+#[derive(Debug, Serialize, Deserialize)]
 pub struct ConstantTimeCache {
     // Weight comparisons.
     pub squat: ConstantTimeBy,
@@ -332,6 +336,7 @@ impl ConstantTimeCache {
 }
 
 /// Owning structure of all `O(n log n)` lookup data.
+#[derive(Debug, Serialize, Deserialize)]
 pub struct LogLinearTimeCache {
     /// List of all non-DQ Raw entry indices by LifterID.
     pub raw: NonSortedNonUnique,

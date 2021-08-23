@@ -814,6 +814,7 @@ impl MetaFederation {
 ///
 /// A meet is part of the MetaFederation if it contains
 /// at least one entry such that `MetaFederation::contains(entry)`.
+#[derive(Debug, Serialize, Deserialize)]
 pub struct MetaFederationCache {
     /// Uses (MetaFederation as usize) as index to a list of meet_ids
     /// for that MetaFederation.

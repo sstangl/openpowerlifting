@@ -15,7 +15,7 @@ use crate::yesno::deserialize_yes_no;
 ///
 /// Lifters are stored in a `Vec<Lifter>`.
 /// The LifterID is the index of the struct in the vector.
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Lifter {
     #[serde(rename(deserialize = "Name"))]
     pub name: CompactString,
@@ -43,7 +43,7 @@ pub struct Lifter {
 ///
 /// Meets are stored in a `Vec<Meet>`.
 /// The MeetID is the index of the struct in the vector.
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Meet {
     #[serde(rename(deserialize = "MeetPath"))]
     pub path: CompactString,
@@ -72,7 +72,7 @@ pub struct Meet {
 ///
 /// Entries are stored in a `Vec<Entry>` such that all entries for a given `lifter_id`
 /// are contiguous. This allows for very quickly determining a lifter's best Entry.
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Entry {
     #[serde(rename(deserialize = "MeetID"))]
     pub meet_id: u32,
