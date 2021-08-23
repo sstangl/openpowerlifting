@@ -266,7 +266,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_event_basic() {
+    fn basic() {
         let event = "SBD".parse::<Event>().unwrap();
         assert!(event.has_push_pull());
         assert!(event.has_squat());
@@ -323,7 +323,7 @@ mod tests {
     }
 
     #[test]
-    fn test_event_errors() {
+    fn errors() {
         assert!("".parse::<Event>().is_err());
         assert!(" ".parse::<Event>().is_err());
         assert!("ABC".parse::<Event>().is_err());
@@ -331,14 +331,14 @@ mod tests {
     }
 
     #[test]
-    fn test_event_repeats() {
+    fn repeats() {
         assert!("BBBBBBBB".parse::<Event>().is_err());
         assert!("BSS".parse::<Event>().is_err());
         assert!("SSSBBBDDDDDD".parse::<Event>().is_err());
     }
 
     #[test]
-    fn test_event_display() {
+    fn display() {
         let event = "SBD".parse::<Event>().unwrap();
         assert_eq!(format!("{}", event), "SBD");
 

@@ -233,7 +233,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_weightclasskg_display() {
+    fn display() {
         let w = "140+".parse::<WeightClassKg>().unwrap();
         assert_eq!(format!("{}", w), "140+");
 
@@ -250,7 +250,7 @@ mod tests {
     }
 
     #[test]
-    fn test_lbs_rounding() {
+    fn as_lbs_rounding() {
         // Traditional classes.
         assert_kg_to_lbs("44", "97");
         assert_kg_to_lbs("48", "105");

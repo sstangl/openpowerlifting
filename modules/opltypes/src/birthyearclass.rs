@@ -121,7 +121,7 @@ mod tests {
     /// OpenIPF selectors use 40+, 50+, 60+, and 70+ for Masters.
     /// This is implemented using ordered comparison, asserted here.
     #[test]
-    fn test_openipf_class_ranges() {
+    fn openipf_class_ranges() {
         assert!(None < ClassY14Y18);
         assert!(ClassY14Y18 < ClassY19Y23);
         assert!(ClassY19Y23 < ClassY24Y39);

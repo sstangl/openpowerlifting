@@ -358,7 +358,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_age_display() {
+    fn display() {
         let a = "29".parse::<Age>().unwrap();
         assert_eq!(format!("{}", a), "29");
 
@@ -370,7 +370,7 @@ mod tests {
     }
 
     #[test]
-    fn test_is_definitely_less_than() {
+    fn is_definitely_less_than() {
         let approx_17 = Age::Approximate(17); // "17 or 18"
         let approx_18 = Age::Approximate(18); // "18 or 19"
         let approx_19 = Age::Approximate(19); // "19 or 20"
@@ -410,7 +410,7 @@ mod tests {
     }
 
     #[test]
-    fn test_is_definitely_greater_than() {
+    fn is_definitely_greater_than() {
         let approx_17 = Age::Approximate(17); // "17 or 18"
         let approx_18 = Age::Approximate(18); // "18 or 19"
         let approx_19 = Age::Approximate(19); // "19 or 20"

@@ -384,7 +384,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_weightkg_basic() {
+    fn basic() {
         let w = "".parse::<WeightKg>().unwrap();
         assert!(w.0 == 0);
 
@@ -399,7 +399,7 @@ mod tests {
     }
 
     #[test]
-    fn test_weightkg_f32_edgecases() {
+    fn f32_edgecases() {
         // Test some special f32 values.
         let w = "-0".parse::<WeightKg>().unwrap();
         assert!(w.0 == 0);
@@ -417,7 +417,7 @@ mod tests {
     }
 
     #[test]
-    fn test_weightkg_rounding() {
+    fn rounding() {
         // If extra decimal numbers are reported, round appropriately.
         let w = "123.456".parse::<WeightKg>().unwrap();
         assert!(w.0 == 12346);
@@ -428,7 +428,7 @@ mod tests {
     /// Some results that are initially reported in LBS wind
     /// up giving slightly-under Kg values.
     #[test]
-    fn test_weightkg_as_lbs_rounding() {
+    fn as_lbs_rounding() {
         // 1709.99 lbs (reported by federation as 1710).
         let w = "775.64".parse::<WeightKg>().unwrap();
         assert_eq!(w.as_lbs().0, 1710_00);
@@ -458,7 +458,7 @@ mod tests {
     }
 
     #[test]
-    fn test_weightkg_errors() {
+    fn errors() {
         assert!("..".parse::<WeightKg>().is_err());
         assert!("123.45.6".parse::<WeightKg>().is_err());
         assert!("notafloat".parse::<WeightKg>().is_err());
@@ -466,7 +466,7 @@ mod tests {
     }
 
     #[test]
-    fn test_weightkg_display() {
+    fn display() {
         let w = "123.456".parse::<WeightKg>().unwrap();
         assert_eq!(format!("{}", w), "123.4");
 
@@ -487,10 +487,8 @@ mod tests {
     }
 
     /// Ensures that WeightKg serialization matches the original to 2 decimal places.
-    ///
-    /// Serialization is performed by the compiler.
     #[test]
-    fn test_weightkg_serialize() {
+    fn serialize() {
         let w = "0.00".parse::<WeightKg>().unwrap();
         assert_eq!(w.0, 0_00);
         assert_eq!(json!(w), "");
@@ -509,7 +507,7 @@ mod tests {
     }
 
     #[test]
-    fn test_weightkg_ordering() {
+    fn ordering() {
         let w1 = "100".parse::<WeightKg>().unwrap();
         let w2 = "200".parse::<WeightKg>().unwrap();
         assert!(w1 < w2);

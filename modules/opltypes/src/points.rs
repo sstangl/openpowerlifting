@@ -144,7 +144,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_points_basic() {
+    fn basic() {
         let w = "".parse::<Points>().unwrap();
         assert!(w.0 == 0);
 
@@ -159,7 +159,7 @@ mod tests {
     }
 
     #[test]
-    fn test_points_f32_edgecases() {
+    fn f32_edgecases() {
         // Test some special f32 values.
         let w = "-0".parse::<Points>().unwrap();
         assert!(w.0 == 0);
@@ -175,7 +175,7 @@ mod tests {
     }
 
     #[test]
-    fn test_points_rounding() {
+    fn rounding() {
         // If extra decimal numbers are reported, round appropriately.
         let w = "123.456".parse::<Points>().unwrap();
         assert!(w.0 == 12346);
@@ -184,7 +184,7 @@ mod tests {
     }
 
     #[test]
-    fn test_points_errors() {
+    fn errors() {
         assert!("..".parse::<Points>().is_err());
         assert!("123.45.6".parse::<Points>().is_err());
         assert!("notafloat".parse::<Points>().is_err());
@@ -192,7 +192,7 @@ mod tests {
     }
 
     #[test]
-    fn test_points_display() {
+    fn display() {
         let w = "123.456".parse::<Points>().unwrap();
         assert_eq!(format!("{}", w), "123.46");
 
@@ -213,7 +213,7 @@ mod tests {
     }
 
     #[test]
-    fn test_points_ordering() {
+    fn ordering() {
         let w1 = "100".parse::<Points>().unwrap();
         let w2 = "200".parse::<Points>().unwrap();
         assert!(w1 < w2);

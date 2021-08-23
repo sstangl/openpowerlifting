@@ -98,7 +98,7 @@ mod tests {
     }
 
     #[test]
-    fn test_place_basic() {
+    fn basic() {
         assert_eq!("1".parse::<Place>().unwrap(), num_place(1));
         assert_eq!("2".parse::<Place>().unwrap(), num_place(2));
         assert_eq!("3".parse::<Place>().unwrap(), num_place(3));
@@ -111,7 +111,7 @@ mod tests {
     }
 
     #[test]
-    fn test_place_errors() {
+    fn errors() {
         assert!("0".parse::<Place>().is_err());
         assert!("-1".parse::<Place>().is_err());
         assert!("-G".parse::<Place>().is_err());
@@ -121,7 +121,7 @@ mod tests {
     }
 
     #[test]
-    fn test_place_display() {
+    fn display() {
         let place = "5".parse::<Place>().unwrap();
         assert_eq!(format!("{}", place), "5");
 

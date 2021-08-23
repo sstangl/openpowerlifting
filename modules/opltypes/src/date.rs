@@ -348,7 +348,7 @@ mod test {
     use super::*;
 
     #[test]
-    fn test_date_basic() {
+    fn basic() {
         let date = "2017-03-04".parse::<Date>().unwrap();
         assert_eq!(date.year(), 2017);
         assert_eq!(date.month(), 3);
@@ -356,7 +356,7 @@ mod test {
     }
 
     #[test]
-    fn test_date_errors() {
+    fn errors() {
         // Malformed dates.
         assert!("2017-03-04-05".parse::<Date>().is_err());
         assert!("2017-03-004".parse::<Date>().is_err());
@@ -375,7 +375,7 @@ mod test {
     }
 
     #[test]
-    fn test_date_ordering() {
+    fn ordering() {
         let d1 = "2017-01-12".parse::<Date>().unwrap();
         let d2 = "2016-01-12".parse::<Date>().unwrap();
         let d3 = "2017-01-13".parse::<Date>().unwrap();
@@ -401,13 +401,13 @@ mod test {
     }
 
     #[test]
-    fn test_date_display() {
+    fn display() {
         let date = "2017-03-04".parse::<Date>().unwrap();
         assert_eq!(format!("{}", date), "2017-03-04");
     }
 
     #[test]
-    fn test_age_on() {
+    fn age_on() {
         // The reference birthdate used in all the tests below.
         let birthdate = "1988-02-16".parse::<Date>().unwrap();
 
@@ -449,7 +449,7 @@ mod test {
     }
 
     #[test]
-    fn test_count_days() {
+    fn count_days() {
         // 1 leap and 3 non-leap years: 366+(3*365) days.
         let date = "0004-12-31".parse::<Date>().unwrap();
         assert_eq!(date.count_days(), 366 + (3 * 365));

@@ -140,7 +140,7 @@ mod test {
     use super::*;
 
     #[test]
-    fn test_rule_basic() {
+    fn rule_basic() {
         let rule = "CombineRawAndWraps".parse::<Rule>().unwrap();
         assert_eq!(rule, Rule::CombineRawAndWraps);
         let rule = "CombineSingleAndMulti".parse::<Rule>().unwrap();
@@ -148,7 +148,7 @@ mod test {
     }
 
     #[test]
-    fn test_ruleset_basic() {
+    fn basic() {
         let ruleset = "CombineRawAndWraps".parse::<RuleSet>().unwrap();
         assert_eq!(ruleset.contains(Rule::CombineRawAndWraps), true);
         assert_eq!(ruleset.contains(Rule::CombineSingleAndMulti), false);
@@ -165,14 +165,14 @@ mod test {
 
     /// This test hardcodes the ordering of the Rule enum, so it may break.
     #[test]
-    fn test_ruleset_u32() {
+    fn parses_from_u32() {
         let ruleset = "2".parse::<RuleSet>().unwrap();
         assert_eq!(ruleset.contains(Rule::CombineRawAndWraps), false);
         assert_eq!(ruleset.contains(Rule::CombineSingleAndMulti), true);
     }
 
     #[test]
-    fn test_ruleset_errors() {
+    fn errors() {
         let s = "CombineFloobAndBleeb";
         assert!(s.parse::<RuleSet>().is_err());
 

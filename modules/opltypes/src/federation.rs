@@ -3076,7 +3076,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_url_strings() {
+    fn url_strings() {
         // The lowercase form should parse.
         assert_eq!("wrpf".parse::<Federation>().unwrap(), Federation::WRPF);
 
