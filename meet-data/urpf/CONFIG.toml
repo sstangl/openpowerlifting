@@ -1,0 +1,30 @@
+# Configuration for the URPF.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    #Official WRPF divisions
+    open = {name = "Open", min = 0, max = 999}
+    youth = {name = "Youth", min = 5, max = 13}
+    teen_14_16 = {name = "Teen 14-16", min = 14, max = 16}
+    subjunior_17_19 = {name = "Sub-Juniors 17-19", min = 17, max = 19}
+    juniors_20_23 = {name = "Juniors 20-23", min = 20, max = 23}
+    masters_40_49 = {name = "Masters 40-49", min = 40, max = 49}
+    masters_50_59 = {name = "Masters 50-59", min = 50, max = 59}
+    masters_60_69 = {name = "Masters 60-69", min = 60, max = 69}
+    masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
+    masters_80_89 = {name = "Masters 80-89", min = 80, max = 89}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+  
