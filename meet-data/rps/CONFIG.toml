@@ -91,6 +91,7 @@
     # Except some meet directors ignore that and use all the Masters divisions.
     ama_police_open = {name = "Police Amateur Open", min = 0, max = 999, tested="Yes"}
     pro_police_open = {name = "Police Pro Open", min = 0, max = 999}
+    ama_police_20_23 = {name = "Police Amateur Juniors 20-23", min = 20, max = 23, tested="Yes"}
     ama_police_33_39 = {name = "Police Amateur Submasters 33-39", min = 33, max = 39, tested="Yes"}
     pro_police_33_39 = {name = "Police Pro Submasters 33-39", min = 33, max = 39}
     ama_police_40_44 = {name = "Police Amateur Masters 40-44", min = 40, max = 44, tested="Yes"}
