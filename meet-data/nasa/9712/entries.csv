@@ -10,9 +10,9 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 85,wbpsm1,F,1,Kimm McMillion,VA,79.92,,77.5,,77.5,B,Raw
 143,dlint,M,1,John Wood,VA,132.68,,,245,245,D,Raw
 113.5,dlnat,M,1,Stephen Cutts,VA,111.22,,,257.5,257.5,D,Raw
-70,dlpure,M,1,Larry Johnson,DC,67.95,,,215,215,D,Raw
+70,dlpure,M,1,Larry Johnson #5,DC,67.95,,,215,215,D,Raw
 113.5,dlpure,M,1,Stephen Cutts,VA,111.22,,,257.5,257.5,D,Raw
-70,dlsm,M,1,Larry Johnson,DC,67.95,,,215,215,D,Raw
+70,dlsm,M,1,Larry Johnson #5,DC,67.95,,,215,215,D,Raw
 113.5,dlsm,M,1,Stephen Cutts,VA,111.22,,,257.5,257.5,D,Raw
 63,wdlhs,F,1,Carrie Cole,VA,61.01,,,70,70,D,Raw
 85,int,M,1,Kevin Barstow,VA,84.23,,120,197.5,317.5,BD,Raw
@@ -46,7 +46,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 85,mp,M,1,Robert Nevins,VA,83.96,200,145,215,560,SBD,Single-ply
 113.5,mp,M,1,Marvin Durrett,VA,105.73,265,172.5,255,692.5,SBD,Single-ply
 113.5,mp,M,2,Larry Bucchioni,VA,107.32,212.5,132.5,252.5,597.5,SBD,Single-ply
-70,nat,M,1,Larry Johnson,DC,67.95,165,115,215,495,SBD,Single-ply
+70,nat,M,1,Larry Johnson #5,DC,67.95,165,115,215,495,SBD,Single-ply
 93,nat,M,1,Robert Mello,VA,92.26,307.5,177.5,272.5,757.5,SBD,Single-ply
 93,nat,M,2,Kirk Hubbard,VA,92.62,210,127.5,255,592.5,SBD,Single-ply
 113.5,nat,M,1,John Leonard #2,VA,112.04,300,202.5,330,832.5,SBD,Single-ply
@@ -55,7 +55,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 54,wsm1,F,1,Demetria Harvin,VA,52.53,135,77,130,342,SBD,Single-ply
 54,wnov,F,1,Emily Garbee,VA,53.75,60,40,92.5,192.5,SBD,Single-ply
 54,whs,F,1,Emily Garbee,VA,53.75,60,40,92.5,192.5,SBD,Single-ply
-70,pure,M,1,Larry Johnson,DC,67.95,165,115,215,495,SBD,Single-ply
+70,pure,M,1,Larry Johnson #5,DC,67.95,165,115,215,495,SBD,Single-ply
 85,pure,M,1,Sonny Johnson,VA,82.1,235,155,237.5,627.5,SBD,Single-ply
 85,pure,M,2,Doug Wagner,VA,83.23,227.5,157.5,227.5,612.5,SBD,Single-ply
 77.5,pure,M,3,Gregory Hypes,VA,74.93,172.5,125,212.5,510,SBD,Single-ply
@@ -74,7 +74,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 103,pn,M,1,Mark DeAngekis,VA,98.25,245,170,255,670,SBD,Single-ply
 103,pn,M,2,Jay Allen,VA,100.7,215,142.5,210,567.5,SBD,Single-ply
 127,pn,M,1,Stuart Snead,VA,118.66,215,142.5,227.5,585,SBD,Single-ply
-70,sm1,M,1,Larry Johnson,DC,67.95,165,115,215,495,SBD,Single-ply
+70,sm1,M,1,Larry Johnson #5,DC,67.95,165,115,215,495,SBD,Single-ply
 77.5,sm1,M,1,Rob Bernhard,VA,73.21,187.5,162.5,177.5,527.5,SBD,Single-ply
 93,sm1,M,1,Kirk Hubbard,VA,92.62,210,127.5,255,592.5,SBD,Single-ply
 93,sm1,M,2,Russ Manuel,VA,91.08,207.5,137.5,227.5,572.5,SBD,Single-ply
@@ -101,9 +101,9 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 77.5,mp,M,1,Tagg Shiley,VA,75.84,,140,,140,B,Single-ply
 85,mp,M,2,Clay Kimrey,VA,79.24,,150,,150,B,Single-ply
 113.5,mp,M,1,Larry Bucchioni,VA,107.32,,132.5,,132.5,B,Single-ply
-70,nat,M,1,Larry Johnson,DC,67.95,,115,,115,B,Single-ply
+70,nat,M,1,Larry Johnson #5,DC,67.95,,115,,115,B,Single-ply
 93,nat,M,1,Richard Cash,VA,88.68,,147.5,,147.5,B,Single-ply
-70,pure,M,1,Larry Johnson,DC,67.95,,115,,115,B,Single-ply
+70,pure,M,1,Larry Johnson #5,DC,67.95,,115,,115,B,Single-ply
 85,pure,M,1,Chris Stallings,NC,83.46,,155,,155,B,Single-ply
 85,pure,M,2,Chuck Brooks,VA,83.23,,137.5,,137.5,B,Single-ply
 93,pure,M,1,Lee Short Jr,NC,91.72,,150,,150,B,Single-ply
@@ -114,7 +114,7 @@ WeightClassKg,Division,Sex,Place,Name,State,BodyweightKg,Best3SquatKg,Best3Bench
 93,pn,M,1,Lee Short Jr,NC,91.72,,150,,150,B,Single-ply
 103,pn,M,1,Mark DeAngekis,VA,98.25,,170,,170,B,Single-ply
 103,pn,M,2,Jay Allen,VA,100.7,,142.5,,142.5,B,Single-ply
-70,sm1,M,1,Larry Johnson,DC,67.95,,115,,115,B,Single-ply
+70,sm1,M,1,Larry Johnson #5,DC,67.95,,115,,115,B,Single-ply
 77.5,sm1,M,1,Rob Bernhard,VA,73.21,,162.5,,162.5,B,Single-ply
 93,sm1,M,1,Richard Cash,VA,88.68,,147.5,,147.5,B,Single-ply
 85,sm2,M,1,Chuck Brooks,VA,83.23,,137.5,,137.5,B,Single-ply
