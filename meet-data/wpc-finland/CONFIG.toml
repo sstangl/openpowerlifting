@@ -10,293 +10,293 @@
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
     mocrwpc = {name ="M_OCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
     moswpc = {name ="M_OES_WPC",min=0,max=999,equipment="Single-ply",sex="M"}
-    momwpc = {name ="M_OEM_WPC",min=0,max=999,equipment="Multi-ply",sex="M"}
+    momwpc = {name ="M_OEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr1wpc = {name ="M_MR_1_WPC",min=40,max=44,equipment="Raw",sex="M"}
     mmcr1wpc = {name ="M_MCR_1_WPC",min=40,max=44,equipment=["Raw","Wraps"],sex="M"}
     mms1wpc = {name ="M_MES_1_WPC",min=40,max=44,equipment="Single-ply",sex="M"}
-    mmm1wpc = {name ="M_MEM_1_WPC",min=40,max=44,equipment="Multi-ply",sex="M"}
+    mmm1wpc = {name ="M_MEM_1_WPC",min=40,max=44,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr2wpc = {name ="M_MR_2_WPC",min=45,max=49,equipment="Raw",sex="M"}
     mmcr2wpc = {name ="M_MCR_2_WPC",min=45,max=49,equipment=["Raw","Wraps"],sex="M"}
     mms2wpc = {name ="M_MES_2_WPC",min=45,max=49,equipment="Single-ply",sex="M"}
-    mmm2wpc = {name ="M_MEM_2_WPC",min=45,max=49,equipment="Multi-ply",sex="M"}
+    mmm2wpc = {name ="M_MEM_2_WPC",min=45,max=49,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr3wpc = {name ="M_MR_3_WPC",min=50,max=54,equipment="Raw",sex="M"}
     mmcr3wpc = {name ="M_MCR_3_WPC",min=50,max=54,equipment=["Raw","Wraps"],sex="M"}
     mms3wpc = {name ="M_MES_3_WPC",min=50,max=54,equipment="Single-ply",sex="M"}
-    mmm3wpc = {name ="M_MEM_3_WPC",min=50,max=54,equipment="Multi-ply",sex="M"}
+    mmm3wpc = {name ="M_MEM_3_WPC",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr4wpc = {name ="M_MR_4_WPC",min=55,max=59,equipment="Raw",sex="M"}
     mmcr4wpc = {name ="M_MCR_4_WPC",min=55,max=59,equipment=["Raw","Wraps"],sex="M"}
     mms4wpc = {name ="M_MES_4_WPC",min=55,max=59,equipment="Single-ply",sex="M"}
-    mmm4wpc = {name ="M_MEM_4_WPC",min=55,max=59,equipment="Multi-ply",sex="M"}
+    mmm4wpc = {name ="M_MEM_4_WPC",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr5wpc = {name ="M_MR_5_WPC",min=60,max=64,equipment="Raw",sex="M"}
     mmcr5wpc = {name ="M_MCR_5_WPC",min=60,max=64,equipment=["Raw","Wraps"],sex="M"}
     mms5wpc = {name ="M_MES_5_WPC",min=60,max=64,equipment="Single-ply",sex="M"}
-    mmm5wpc = {name ="M_MEM_5_WPC",min=60,max=64,equipment="Multi-ply",sex="M"}
+    mmm5wpc = {name ="M_MEM_5_WPC",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr6wpc = {name ="M_MR_6_WPC",min=65,max=69,equipment="Raw",sex="M"}
     mmcr6wpc = {name ="M_MCR_6_WPC",min=65,max=69,equipment=["Raw","Wraps"],sex="M"}
     mms6wpc = {name ="M_MES_6_WPC",min=65,max=69,equipment="Single-ply",sex="M"}
-    mmm6wpc = {name ="M_MEM_6_WPC",min=65,max=69,equipment="Multi-ply",sex="M"}
+    mmm6wpc = {name ="M_MEM_6_WPC",min=65,max=69,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr7wpc = {name ="M_MR_7_WPC",min=70,max=74,equipment="Raw",sex="M"}
     mmcr7wpc = {name ="M_MCR_7_WPC",min=70,max=74,equipment=["Raw","Wraps"],sex="M"}
     mms7wpc = {name ="M_MES_7_WPC",min=70,max=74,equipment="Single-ply",sex="M"}
-    mmm7wpc = {name ="M_MEM_7_WPC",min=70,max=74,equipment="Multi-ply",sex="M"}
+    mmm7wpc = {name ="M_MEM_7_WPC",min=70,max=74,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr8wpc = {name ="M_MR_8_WPC",min=75,max=79,equipment="Raw",sex="M"}
     mmcr8wpc = {name ="M_MCR_8_WPC",min=75,max=79,equipment=["Raw","Wraps"],sex="M"}
     mms8wpc = {name ="M_MES_8_WPC",min=75,max=79,equipment="Single-ply",sex="M"}
-    mmm8wpc = {name ="M_MEM_8_WPC",min=75,max=79,equipment="Multi-ply",sex="M"}
+    mmm8wpc = {name ="M_MEM_8_WPC",min=75,max=79,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr9wpc = {name ="M_MR_9_WPC",min=80,max=999,equipment="Raw",sex="M"}
     mmcr9wpc = {name ="M_MCR_9_WPC",min=80,max=999,equipment=["Raw","Wraps"],sex="M"}
     mms9wpc = {name ="M_MES_9_WPC",min=80,max=999,equipment="Single-ply",sex="M"}
-    mmm9wpc = {name ="M_MEM_9_WPC",min=80,max=999,equipment="Multi-ply",sex="M"}
+    mmm9wpc = {name ="M_MEM_9_WPC",min=80,max=999,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmrxwpc = {name ="M_MR_X_WPC",min=40,max=999,equipment="Raw",sex="M"}
     mmcrxwpc = {name ="M_MCR_X_WPC",min=40,max=999,equipment=["Raw","Wraps"],sex="M"}
     mmsxwpc = {name ="M_MES_X_WPC",min=40,max=999,equipment="Single-ply",sex="M"}
-    mmmxwpc = {name ="M_MEM_X_WPC",min=40,max=999,equipment="Multi-ply",sex="M"}
+    mmmxwpc = {name ="M_MEM_X_WPC",min=40,max=999,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmtr1wpc = {name ="M_TR_1_WPC",min=13,max=15,equipment="Raw",sex="M"}
     mmtcr1wpc = {name ="M_TCR_1_WPC",min=13,max=15,equipment=["Raw","Wraps"],sex="M"}
     mmts1wpc = {name ="M_TES_1_WPC",min=13,max=15,equipment="Single-ply",sex="M"}
-    mmtm1wpc = {name ="M_TEM_1_WPC",min=13,max=15,equipment="Multi-ply",sex="M"}
+    mmtm1wpc = {name ="M_TEM_1_WPC",min=13,max=15,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmtr2wpc = {name ="M_TR_2_WPC",min=16,max=17,equipment="Raw",sex="M"}
     mmtcr2wpc = {name ="M_TCR_2_WPC",min=16,max=17,equipment=["Raw","Wraps"],sex="M"}
     mmts2wpc = {name ="M_TES_2_WPC",min=16,max=17,equipment="Single-ply",sex="M"}
-    mmtm2wpc = {name ="M_TEM_2_WPC",min=16,max=17,equipment="Multi-ply",sex="M"}
+    mmtm2wpc = {name ="M_TEM_2_WPC",min=16,max=17,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmtr3wpc = {name ="M_TR_3_WPC",min=18,max=19,equipment="Raw",sex="M"}
     mmtcr3wpc = {name ="M_TCR_3_WPC",min=18,max=19,equipment=["Raw","Wraps"],sex="M"}
     mmts3wpc = {name ="M_TES_3_WPC",min=18,max=19,equipment="Single-ply",sex="M"}
-    mmtm3wpc = {name ="M_TEM_3_WPC",min=18,max=19,equipment="Multi-ply",sex="M"}
+    mmtm3wpc = {name ="M_TEM_3_WPC",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmtrxwpc = {name ="M_TR_X_WPC",min=13,max=19,equipment="Raw",sex="M"}
     mmtcrxwpc = {name ="M_TCR_X_WPC",min=13,max=19,equipment=["Raw","Wraps"],sex="M"}
     mmtsxwpc = {name ="M_TES_X_WPC",min=13,max=19,equipment="Single-ply",sex="M"}
-    mmtmxwpc = {name ="M_TEM_X_WPC",min=13,max=19,equipment="Multi-ply",sex="M"}
+    mmtmxwpc = {name ="M_TEM_X_WPC",min=13,max=19,equipment=["Multi-ply","Unlimited"],sex="M"}
     mjrwpc = {name ="M_JR_WPC",min=20,max=23,equipment="Raw",sex="M"}
     mjcrwpc = {name ="M_JCR_WPC",min=20,max=23,equipment=["Raw","Wraps"],sex="M"}
     mjswpc = {name ="M_JES_WPC",min=20,max=23,equipment="Single-ply",sex="M"}
-    mjmwpc = {name ="M_JEM_WPC",min=20,max=23,equipment="Multi-ply",sex="M"}
+    mjmwpc = {name ="M_JEM_WPC",min=20,max=23,equipment=["Multi-ply","Unlimited"],sex="M"}
     msrwpc = {name ="M_SR_WPC",min=33,max=39,equipment="Raw",sex="M"}
     mscrwpc = {name ="M_SCR_WPC",min=33,max=39,equipment=["Raw","Wraps"],sex="M"}
     msswpc = {name ="M_SES_WPC",min=33,max=39,equipment="Single-ply",sex="M"}
-    msmwpc = {name ="M_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="M"}
+    msmwpc = {name ="M_SEM_WPC",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="M"}
     myrwpc = {name ="M_YR_WPC",min=0,max=12,equipment="Raw",sex="M"} #Youth
     mycrwpc = {name ="M_YCR_WPC",min=0,max=12,equipment="Wraps",sex="M"} #Youth
     myeswpc = {name ="M_YES_WPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
-    myemwpc = {name ="M_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="M"} #Youth
+    myemwpc = {name ="M_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M"} #Youth
     mpfrwpc = {name ="M_PFR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
     msorwpc = {name ="M_SOR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
 
     forwpc = {name ="F_OR_WPC",min=0,max=999,equipment="Raw",sex="F"}
     focrwpc = {name ="F_OCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
     foswpc = {name ="F_OES_WPC",min=0,max=999,equipment="Single-ply",sex="F"}
-    fomwpc = {name ="F_OEM_WPC",min=0,max=999,equipment="Multi-ply",sex="F"}
+    fomwpc = {name ="F_OEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr1wpc = {name ="F_MR_1_WPC",min=40,max=44,equipment="Raw",sex="F"}
     fmcr1wpc = {name ="F_MCR_1_WPC",min=40,max=44,equipment=["Raw","Wraps"],sex="F"}
     fms1wpc = {name ="F_MES_1_WPC",min=40,max=44,equipment="Single-ply",sex="F"}
-    fmm1wpc = {name ="F_MEM_1_WPC",min=40,max=44,equipment="Multi-ply",sex="F"}
+    fmm1wpc = {name ="F_MEM_1_WPC",min=40,max=44,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr2wpc = {name ="F_MR_2_WPC",min=45,max=49,equipment="Raw",sex="F"}
     fmcr2wpc = {name ="F_MCR_2_WPC",min=45,max=49,equipment=["Raw","Wraps"],sex="F"}
     fms2wpc = {name ="F_MES_2_WPC",min=45,max=49,equipment="Single-ply",sex="F"}
-    fmm2wpc = {name ="F_MEM_2_WPC",min=45,max=49,equipment="Multi-ply",sex="F"}
+    fmm2wpc = {name ="F_MEM_2_WPC",min=45,max=49,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr3wpc = {name ="F_MR_3_WPC",min=50,max=54,equipment="Raw",sex="F"}
     fmcr3wpc = {name ="F_MCR_3_WPC",min=50,max=54,equipment=["Raw","Wraps"],sex="F"}
     fms3wpc = {name ="F_MES_3_WPC",min=50,max=54,equipment="Single-ply",sex="F"}
-    fmm3wpc = {name ="F_MEM_3_WPC",min=50,max=54,equipment="Multi-ply",sex="F"}
+    fmm3wpc = {name ="F_MEM_3_WPC",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr4wpc = {name ="F_MR_4_WPC",min=55,max=59,equipment="Raw",sex="F"}
     fmcr4wpc = {name ="F_MCR_4_WPC",min=55,max=59,equipment=["Raw","Wraps"],sex="F"}
     fms4wpc = {name ="F_MES_4_WPC",min=55,max=59,equipment="Single-ply",sex="F"}
-    fmm4wpc = {name ="F_MEM_4_WPC",min=55,max=59,equipment="Multi-ply",sex="F"}
+    fmm4wpc = {name ="F_MEM_4_WPC",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr5wpc = {name ="F_MR_5_WPC",min=60,max=64,equipment="Raw",sex="F"}
     fmcr5wpc = {name ="F_MCR_5_WPC",min=60,max=64,equipment=["Raw","Wraps"],sex="F"}
     fms5wpc = {name ="F_MES_5_WPC",min=60,max=64,equipment="Single-ply",sex="F"}
-    fmm5wpc = {name ="F_MEM_5_WPC",min=60,max=64,equipment="Multi-ply",sex="F"}
+    fmm5wpc = {name ="F_MEM_5_WPC",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr6wpc = {name ="F_MR_6_WPC",min=65,max=69,equipment="Raw",sex="F"}
     fmcr6wpc = {name ="F_MCR_6_WPC",min=65,max=69,equipment=["Raw","Wraps"],sex="F"}
     fms6wpc = {name ="F_MES_6_WPC",min=65,max=69,equipment="Single-ply",sex="F"}
-    fmm6wpc = {name ="F_MEM_6_WPC",min=65,max=69,equipment="Multi-ply",sex="F"}
+    fmm6wpc = {name ="F_MEM_6_WPC",min=65,max=69,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr7wpc = {name ="F_MR_7_WPC",min=70,max=74,equipment="Raw",sex="F"}
     fmcr7wpc = {name ="F_MCR_7_WPC",min=70,max=74,equipment=["Raw","Wraps"],sex="F"}
     fms7wpc = {name ="F_MES_7_WPC",min=70,max=74,equipment="Single-ply",sex="F"}
-    fmm7wpc = {name ="F_MEM_7_WPC",min=70,max=74,equipment="Multi-ply",sex="F"}
+    fmm7wpc = {name ="F_MEM_7_WPC",min=70,max=74,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr8wpc = {name ="F_MR_8_WPC",min=75,max=79,equipment="Raw",sex="F"}
     fmcr8wpc = {name ="F_MCR_8_WPC",min=75,max=79,equipment=["Raw","Wraps"],sex="F"}
     fms8wpc = {name ="F_MES_8_WPC",min=75,max=79,equipment="Single-ply",sex="F"}
-    fmm8wpc = {name ="F_MEM_8_WPC",min=75,max=79,equipment="Multi-ply",sex="F"}
+    fmm8wpc = {name ="F_MEM_8_WPC",min=75,max=79,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr9wpc = {name ="F_MR_9_WPC",min=80,max=999,equipment="Raw",sex="F"}
     fmcr9wpc = {name ="F_MCR_9_WPC",min=80,max=999,equipment=["Raw","Wraps"],sex="F"}
     fms9wpc = {name ="F_MES_9_WPC",min=80,max=999,equipment="Single-ply",sex="F"}
-    fmm9wpc = {name ="F_MEM_9_WPC",min=80,max=999,equipment="Multi-ply",sex="F"}
+    fmm9wpc = {name ="F_MEM_9_WPC",min=80,max=999,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmrxwpc = {name ="F_MR_X_WPC",min=40,max=999,equipment="Raw",sex="F"}
     fmcrxwpc = {name ="F_MCR_X_WPC",min=40,max=999,equipment=["Raw","Wraps"],sex="F"}
     fmsxwpc = {name ="F_MES_X_WPC",min=40,max=999,equipment="Single-ply",sex="F"}
-    fmmxwpc = {name ="F_MEM_X_WPC",min=40,max=999,equipment="Multi-ply",sex="F"}
+    fmmxwpc = {name ="F_MEM_X_WPC",min=40,max=999,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmtr1wpc = {name ="F_TR_1_WPC",min=13,max=15,equipment="Raw",sex="F"}
     fmtcr1wpc = {name ="F_TCR_1_WPC",min=13,max=15,equipment=["Raw","Wraps"],sex="F"}
     fmts1wpc = {name ="F_TES_1_WPC",min=13,max=15,equipment="Single-ply",sex="F"}
-    fmtm1wpc = {name ="F_TEM_1_WPC",min=13,max=15,equipment="Multi-ply",sex="F"}
+    fmtm1wpc = {name ="F_TEM_1_WPC",min=13,max=15,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmtr2wpc = {name ="F_TR_2_WPC",min=16,max=17,equipment="Raw",sex="F"}
     fmtcr2wpc = {name ="F_TCR_2_WPC",min=16,max=17,equipment=["Raw","Wraps"],sex="F"}
     fmts2wpc = {name ="F_TES_2_WPC",min=16,max=17,equipment="Single-ply",sex="F"}
-    fmtm2wpc = {name ="F_TEM_2_WPC",min=16,max=17,equipment="Multi-ply",sex="F"}
+    fmtm2wpc = {name ="F_TEM_2_WPC",min=16,max=17,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmtr3wpc = {name ="F_TR_3_WPC",min=18,max=19,equipment="Raw",sex="F"}
     fmtcr3wpc = {name ="F_TCR_3_WPC",min=18,max=19,equipment=["Raw","Wraps"],sex="F"}
     fmts3wpc = {name ="F_TES_3_WPC",min=18,max=19,equipment="Single-ply",sex="F"}
-    fmtm3wpc = {name ="F_TEM_3_WPC",min=18,max=19,equipment="Multi-ply",sex="F"}
+    fmtm3wpc = {name ="F_TEM_3_WPC",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmtrxwpc = {name ="F_TR_X_WPC",min=13,max=19,equipment="Raw",sex="F"}
     fmtcrxwpc = {name ="F_TCR_X_WPC",min=13,max=19,equipment=["Raw","Wraps"],sex="F"}
     fmtsxwpc = {name ="F_TES_X_WPC",min=13,max=19,equipment="Single-ply",sex="F"}
-    fmtmxwpc = {name ="F_TEM_X_WPC",min=13,max=19,equipment="Multi-ply",sex="F"}
+    fmtmxwpc = {name ="F_TEM_X_WPC",min=13,max=19,equipment=["Multi-ply","Unlimited"],sex="F"}
     fjrwpc = {name ="F_JR_WPC",min=20,max=23,equipment="Raw",sex="F"}
     fjcrwpc = {name ="F_JCR_WPC",min=20,max=23,equipment=["Raw","Wraps"],sex="F"}
     fjswpc = {name ="F_JES_WPC",min=20,max=23,equipment="Single-ply",sex="F"}
-    fjmwpc = {name ="F_JEM_WPC",min=20,max=23,equipment="Multi-ply",sex="F"}
+    fjmwpc = {name ="F_JEM_WPC",min=20,max=23,equipment=["Multi-ply","Unlimited"],sex="F"}
     fsrwpc = {name ="F_SR_WPC",min=33,max=39,equipment="Raw",sex="F"}
     fscrwpc = {name ="F_SCR_WPC",min=33,max=39,equipment=["Raw","Wraps"],sex="F"}
     fsswpc = {name ="F_SES_WPC",min=33,max=39,equipment="Single-ply",sex="F"}
-    fsmwpc = {name ="F_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="F"}
+    fsmwpc = {name ="F_SEM_WPC",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="F"}
     fyrwpc = {name ="F_YR_WPC",min=0,max=12,equipment="Raw",sex="F"} #Youth
     fyeswpc = {name ="F_YES_WPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
-    fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
+    fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="F"} #Youth
 
     # AWPC Divisions.
     morawpc = {name ="M_OR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
     mocrawpc = {name ="M_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mosawpc = {name ="M_OES_AWPC",min=0,max=999,equipment="Single-ply",sex="M",tested="Yes"}
-    momawpc = {name ="M_OEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"}
+    momawpc = {name ="M_OEM_AWPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr1awpc = {name ="M_MR_1_AWPC",min=40,max=44,equipment="Raw",sex="M",tested="Yes"}
     mmcr1awpc = {name ="M_MCR_1_AWPC",min=40,max=44,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms1awpc = {name ="M_MES_1_AWPC",min=40,max=44,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm1awpc = {name ="M_MEM_1_AWPC",min=40,max=44,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm1awpc = {name ="M_MEM_1_AWPC",min=40,max=44,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr2awpc = {name ="M_MR_2_AWPC",min=45,max=49,equipment="Raw",sex="M",tested="Yes"}
     mmcr2awpc = {name ="M_MCR_2_AWPC",min=45,max=49,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms2awpc = {name ="M_MES_2_AWPC",min=45,max=49,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm2awpc = {name ="M_MEM_2_AWPC",min=45,max=49,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm2awpc = {name ="M_MEM_2_AWPC",min=45,max=49,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr3awpc = {name ="M_MR_3_AWPC",min=50,max=54,equipment="Raw",sex="M",tested="Yes"}
     mmcr3awpc = {name ="M_MCR_3_AWPC",min=50,max=54,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms3awpc = {name ="M_MES_3_AWPC",min=50,max=54,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm3awpc = {name ="M_MEM_3_AWPC",min=50,max=54,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm3awpc = {name ="M_MEM_3_AWPC",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr4awpc = {name ="M_MR_4_AWPC",min=55,max=59,equipment="Raw",sex="M",tested="Yes"}
     mmcr4awpc = {name ="M_MCR_4_AWPC",min=55,max=59,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms4awpc = {name ="M_MES_4_AWPC",min=55,max=59,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm4awpc = {name ="M_MEM_4_AWPC",min=55,max=59,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm4awpc = {name ="M_MEM_4_AWPC",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr5awpc = {name ="M_MR_5_AWPC",min=60,max=64,equipment="Raw",sex="M",tested="Yes"}
     mmcr5awpc = {name ="M_MCR_5_AWPC",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms5awpc = {name ="M_MES_5_AWPC",min=60,max=64,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm5awpc = {name ="M_MEM_5_AWPC",min=60,max=64,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm5awpc = {name ="M_MEM_5_AWPC",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr6awpc = {name ="M_MR_6_AWPC",min=65,max=69,equipment="Raw",sex="M",tested="Yes"}
     mmcr6awpc = {name ="M_MCR_6_AWPC",min=65,max=69,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms6awpc = {name ="M_MES_6_AWPC",min=65,max=69,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm6awpc = {name ="M_MEM_6_AWPC",min=65,max=69,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm6awpc = {name ="M_MEM_6_AWPC",min=65,max=69,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr7awpc = {name ="M_MR_7_AWPC",min=70,max=74,equipment="Raw",sex="M",tested="Yes"}
     mmcr7awpc = {name ="M_MCR_7_AWPC",min=70,max=74,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms7awpc = {name ="M_MES_7_AWPC",min=70,max=74,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm7awpc = {name ="M_MEM_7_AWPC",min=70,max=74,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm7awpc = {name ="M_MEM_7_AWPC",min=70,max=74,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr8awpc = {name ="M_MR_8_AWPC",min=75,max=79,equipment="Raw",sex="M",tested="Yes"}
     mmcr8awpc = {name ="M_MCR_8_AWPC",min=75,max=79,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms8awpc = {name ="M_MES_8_AWPC",min=75,max=79,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm8awpc = {name ="M_MEM_8_AWPC",min=75,max=79,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm8awpc = {name ="M_MEM_8_AWPC",min=75,max=79,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr9awpc = {name ="M_MR_9_AWPC",min=80,max=999,equipment="Raw",sex="M",tested="Yes"}
     mmcr9awpc = {name ="M_MCR_9_AWPC",min=80,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms9awpc = {name ="M_MES_9_AWPC",min=80,max=999,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm9awpc = {name ="M_MEM_9_AWPC",min=80,max=999,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm9awpc = {name ="M_MEM_9_AWPC",min=80,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmrxawpc = {name ="M_MR_X_AWPC",min=40,max=999,equipment="Raw",sex="M",tested="Yes"}
     mmcrxawpc = {name ="M_MCR_X_AWPC",min=40,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmsxawpc = {name ="M_MES_X_AWPC",min=40,max=999,equipment="Single-ply",sex="M",tested="Yes"}
-    mmmxawpc = {name ="M_MEM_X_AWPC",min=40,max=999,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmmxawpc = {name ="M_MEM_X_AWPC",min=40,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmtr1awpc = {name ="M_TR_1_AWPC",min=13,max=15,equipment="Raw",sex="M",tested="Yes"}
     mmtcr1awpc = {name ="M_TCR_1_AWPC",min=13,max=15,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmts1awpc = {name ="M_TES_1_AWPC",min=13,max=15,equipment="Single-ply",sex="M",tested="Yes"}
-    mmtm1awpc = {name ="M_TEM_1_AWPC",min=13,max=15,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmtm1awpc = {name ="M_TEM_1_AWPC",min=13,max=15,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmtr2awpc = {name ="M_TR_2_AWPC",min=16,max=17,equipment="Raw",sex="M",tested="Yes"}
     mmtcr2awpc = {name ="M_TCR_2_AWPC",min=16,max=17,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmts2awpc = {name ="M_TES_2_AWPC",min=16,max=17,equipment="Single-ply",sex="M",tested="Yes"}
-    mmtm2awpc = {name ="M_TEM_2_AWPC",min=16,max=17,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmtm2awpc = {name ="M_TEM_2_AWPC",min=16,max=17,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmtr3awpc = {name ="M_TR_3_AWPC",min=18,max=19,equipment="Raw",sex="M",tested="Yes"}
     mmtcr3awpc = {name ="M_TCR_3_AWPC",min=18,max=19,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmts3awpc = {name ="M_TES_3_AWPC",min=18,max=19,equipment="Single-ply",sex="M",tested="Yes"}
-    mmtm3awpc = {name ="M_TEM_3_AWPC",min=18,max=19,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmtm3awpc = {name ="M_TEM_3_AWPC",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmtrxawpc = {name ="M_TR_X_AWPC",min=13,max=19,equipment="Raw",sex="M",tested="Yes"}
     mmtcrxawpc = {name ="M_TCR_X_AWPC",min=13,max=19,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmtsxawpc = {name ="M_TES_X_AWPC",min=13,max=19,equipment="Single-ply",sex="M",tested="Yes"}
-    mmtmxawpc = {name ="M_TEM_X_AWPC",min=13,max=19,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmtmxawpc = {name ="M_TEM_X_AWPC",min=13,max=19,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mjrawpc = {name ="M_JR_AWPC",min=20,max=23,equipment="Raw",sex="M",tested="Yes"}
     mjcrawpc = {name ="M_JCR_AWPC",min=20,max=23,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mjsawpc = {name ="M_JES_AWPC",min=20,max=23,equipment="Single-ply",sex="M",tested="Yes"}
-    mjmawpc = {name ="M_JEM_AWPC",min=20,max=23,equipment="Multi-ply",sex="M",tested="Yes"}
+    mjmawpc = {name ="M_JEM_AWPC",min=20,max=23,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     msrawpc = {name ="M_SR_AWPC",min=33,max=39,equipment="Raw",sex="M",tested="Yes"}
     mscrawpc = {name ="M_SCR_AWPC",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mssawpc = {name ="M_SES_AWPC",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
-    msmawpc = {name ="M_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="M",tested="Yes"}
+    msmawpc = {name ="M_SEM_AWPC",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     myrawpc = {name ="M_YR_AWPC",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
     mycrawpc = {name ="M_YCR_AWPC",min=0,max=12,equipment="Wraps",sex="M",tested="Yes"} #Youth
     myesawpc = {name ="M_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
-    myemawpc = {name ="M_YEM_AWPC",min=0,max=12,equipment="Multi-ply",sex="M",tested="Yes"} #Youth
-    mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="M",tested="Yes"} #Police/Fire
+    myemawpc = {name ="M_YEM_AWPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Youth
+    mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Police/Fire
 
     forawpc = {name ="F_OR_AWPC",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrawpc = {name ="F_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fosawpc = {name ="F_OES_AWPC",min=0,max=999,equipment="Single-ply",sex="F",tested="Yes"}
-    fomawpc = {name ="F_OEM_AWPC",min=0,max=999,equipment="Multi-ply",sex="F",tested="Yes"}
+    fomawpc = {name ="F_OEM_AWPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr1awpc = {name ="F_MR_1_AWPC",min=40,max=44,equipment="Raw",sex="F",tested="Yes"}
     fmcr1awpc = {name ="F_MCR_1_AWPC",min=40,max=44,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms1awpc = {name ="F_MES_1_AWPC",min=40,max=44,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm1awpc = {name ="F_MEM_1_AWPC",min=40,max=44,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm1awpc = {name ="F_MEM_1_AWPC",min=40,max=44,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr2awpc = {name ="F_MR_2_AWPC",min=45,max=49,equipment="Raw",sex="F",tested="Yes"}
     fmcr2awpc = {name ="F_MCR_2_AWPC",min=45,max=49,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms2awpc = {name ="F_MES_2_AWPC",min=45,max=49,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm2awpc = {name ="F_MEM_2_AWPC",min=45,max=49,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm2awpc = {name ="F_MEM_2_AWPC",min=45,max=49,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr3awpc = {name ="F_MR_3_AWPC",min=50,max=54,equipment="Raw",sex="F",tested="Yes"}
     fmcr3awpc = {name ="F_MCR_3_AWPC",min=50,max=54,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms3awpc = {name ="F_MES_3_AWPC",min=50,max=54,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm3awpc = {name ="F_MEM_3_AWPC",min=50,max=54,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm3awpc = {name ="F_MEM_3_AWPC",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr4awpc = {name ="F_MR_4_AWPC",min=55,max=59,equipment="Raw",sex="F",tested="Yes"}
     fmcr4awpc = {name ="F_MCR_4_AWPC",min=55,max=59,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms4awpc = {name ="F_MES_4_AWPC",min=55,max=59,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm4awpc = {name ="F_MEM_4_AWPC",min=55,max=59,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm4awpc = {name ="F_MEM_4_AWPC",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr5awpc = {name ="F_MR_5_AWPC",min=60,max=64,equipment="Raw",sex="F",tested="Yes"}
     fmcr5awpc = {name ="F_MCR_5_AWPC",min=60,max=64,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms5awpc = {name ="F_MES_5_AWPC",min=60,max=64,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm5awpc = {name ="F_MEM_5_AWPC",min=60,max=64,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm5awpc = {name ="F_MEM_5_AWPC",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr6awpc = {name ="F_MR_6_AWPC",min=65,max=69,equipment="Raw",sex="F",tested="Yes"}
     fmcr6awpc = {name ="F_MCR_6_AWPC",min=65,max=69,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms6awpc = {name ="F_MES_6_AWPC",min=65,max=69,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm6awpc = {name ="F_MEM_6_AWPC",min=65,max=69,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm6awpc = {name ="F_MEM_6_AWPC",min=65,max=69,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr7awpc = {name ="F_MR_7_AWPC",min=70,max=74,equipment="Raw",sex="F",tested="Yes"}
     fmcr7awpc = {name ="F_MCR_7_AWPC",min=70,max=74,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms7awpc = {name ="F_MES_7_AWPC",min=70,max=74,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm7awpc = {name ="F_MEM_7_AWPC",min=70,max=74,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm7awpc = {name ="F_MEM_7_AWPC",min=70,max=74,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr8awpc = {name ="F_MR_8_AWPC",min=75,max=79,equipment="Raw",sex="F",tested="Yes"}
     fmcr8awpc = {name ="F_MCR_8_AWPC",min=75,max=79,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms8awpc = {name ="F_MES_8_AWPC",min=75,max=79,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm8awpc = {name ="F_MEM_8_AWPC",min=75,max=79,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm8awpc = {name ="F_MEM_8_AWPC",min=75,max=79,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmr9awpc = {name ="F_MR_9_AWPC",min=80,max=999,equipment="Raw",sex="F",tested="Yes"}
     fmcr9awpc = {name ="F_MCR_9_AWPC",min=80,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fms9awpc = {name ="F_MES_9_AWPC",min=80,max=999,equipment="Single-ply",sex="F",tested="Yes"}
-    fmm9awpc = {name ="F_MEM_9_AWPC",min=80,max=999,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmm9awpc = {name ="F_MEM_9_AWPC",min=80,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmrxawpc = {name ="F_MR_X_AWPC",min=40,max=999,equipment="Raw",sex="F",tested="Yes"}
     fmcrxawpc = {name ="F_MCR_X_AWPC",min=40,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmsxawpc = {name ="F_MES_X_AWPC",min=40,max=999,equipment="Single-ply",sex="F",tested="Yes"}
-    fmmxawpc = {name ="F_MEM_X_AWPC",min=40,max=999,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmmxawpc = {name ="F_MEM_X_AWPC",min=40,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmtr1awpc = {name ="F_TR_1_AWPC",min=13,max=15,equipment="Raw",sex="F",tested="Yes"}
     fmtcr1awpc = {name ="F_TCR_1_AWPC",min=13,max=15,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmts1awpc = {name ="F_TES_1_AWPC",min=13,max=15,equipment="Single-ply",sex="F",tested="Yes"}
-    fmtm1awpc = {name ="F_TEM_1_AWPC",min=13,max=15,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmtm1awpc = {name ="F_TEM_1_AWPC",min=13,max=15,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmtr2awpc = {name ="F_TR_2_AWPC",min=16,max=17,equipment="Raw",sex="F",tested="Yes"}
     fmtcr2awpc = {name ="F_TCR_2_AWPC",min=16,max=17,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmts2awpc = {name ="F_TES_2_AWPC",min=16,max=17,equipment="Single-ply",sex="F",tested="Yes"}
-    fmtm2awpc = {name ="F_TEM_2_AWPC",min=16,max=17,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmtm2awpc = {name ="F_TEM_2_AWPC",min=16,max=17,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmtr3awpc = {name ="F_TR_3_AWPC",min=18,max=19,equipment="Raw",sex="F",tested="Yes"}
     fmtcr3awpc = {name ="F_TCR_3_AWPC",min=18,max=19,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmts3awpc = {name ="F_TES_3_AWPC",min=18,max=19,equipment="Single-ply",sex="F",tested="Yes"}
-    fmtm3awpc = {name ="F_TEM_3_AWPC",min=18,max=19,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmtm3awpc = {name ="F_TEM_3_AWPC",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fmtrxawpc = {name ="F_TR_X_AWPC",min=13,max=19,equipment="Raw",sex="F",tested="Yes"}
     fmtcrxawpc = {name ="F_TCR_X_AWPC",min=13,max=19,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fmtsxawpc = {name ="F_TES_X_AWPC",min=13,max=19,equipment="Single-ply",sex="F",tested="Yes"}
-    fmtmxawpc = {name ="F_TEM_X_AWPC",min=13,max=19,equipment="Multi-ply",sex="F",tested="Yes"}
+    fmtmxawpc = {name ="F_TEM_X_AWPC",min=13,max=19,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fjrawpc = {name ="F_JR_AWPC",min=20,max=23,equipment="Raw",sex="F",tested="Yes"}
     fjcrawpc = {name ="F_JCR_AWPC",min=20,max=23,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fjsawpc = {name ="F_JES_AWPC",min=20,max=23,equipment="Single-ply",sex="F",tested="Yes"}
-    fjmawpc = {name ="F_JEM_AWPC",min=20,max=23,equipment="Multi-ply",sex="F",tested="Yes"}
+    fjmawpc = {name ="F_JEM_AWPC",min=20,max=23,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fsrawpc = {name ="F_SR_AWPC",min=33,max=39,equipment="Raw",sex="F",tested="Yes"}
     fscrawpc = {name ="F_SCR_AWPC",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssawpc = {name ="F_SES_AWPC",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
-    fsmawpc = {name ="F_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
+    fsmawpc = {name ="F_SEM_AWPC",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
     fyrawpc = {name ="F_YR_AWPC",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
     fyesawpc = {name ="F_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
 
