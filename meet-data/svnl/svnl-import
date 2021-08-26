@@ -445,14 +445,16 @@ def getresults(soup, meet_name, url):
                 elif div_text == 'm':
                     sexstate = 'M'
                     div_text = div_text[1:]
-                elif div_text == 'klassinen':
+                elif div_text in ['klassinen', 'klassiskt']:
                     eqpstate = 'Raw'
                     div_text = div_text.replace('klassinen', '')
-                elif div_text in ['varuste', 'varustevoimanosto', 'utrustat']:
+                    div_text = div_text.replace('klassiskt', '')
+                elif div_text in ['varuste', 'varustevoimanosto', 'utrustat', 'utrustning']:
                     eqpstate = 'Single-ply'
                     div_text = div_text.replace(
                         'varustevoimanosto', '').replace('varuste', '')
                     div_text = div_text.replace('utrustat', '')
+                    div_text = div_text.replace('utrustning', '')
 
                 if div_text.strip() != '':
                     # Extract division information.
@@ -463,7 +465,6 @@ def getresults(soup, meet_name, url):
 
         elif (len(text) > 3 and 'Joukkueen tulos' not in text
                 and 'Joukk. tulos' not in text):  # Lifter data
-            assert (sexstate or 'Sex' in csv.fieldnames)
 
             # Accumulate the row, but we need to look at the class of each td
             # to figure out whether lifts were good or bad.
@@ -555,6 +556,9 @@ def fixplace(csv):
 
 
 def fixequipment(csv, meetcsv):
+    if 'Equipment' not in csv.fieldnames:
+        return
+
     meet_name = meetcsv.rows[0][5]
 
     raw_meet = False
