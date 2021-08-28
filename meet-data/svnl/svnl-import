@@ -449,7 +449,8 @@ def getresults(soup, meet_name, url):
                     eqpstate = 'Raw'
                     div_text = div_text.replace('klassinen', '')
                     div_text = div_text.replace('klassiskt', '')
-                elif div_text in ['varuste', 'varustevoimanosto', 'utrustat', 'utrustning']:
+                elif div_text in ['varuste', 'varustevoimanosto', 'utrustat',
+                                  'utrustning']:
                     eqpstate = 'Single-ply'
                     div_text = div_text.replace(
                         'varustevoimanosto', '').replace('varuste', '')
