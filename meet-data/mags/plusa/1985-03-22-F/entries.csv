@@ -1,47 +1,47 @@
-WeightClassKg,BodyweightKg,Name,Age,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-67.5,63.05,Cathy Spellman,,Women,F,,81.65,,81.65,B,Raw,1
-67.5,63.5,Westwood,,Women,F,,65.77,,65.77,B,Raw,2
-56,52.62,K. Miller,,Women,F,,54.43,,54.43,B,Raw,3
-67.5,61.23,T. Geiger,,Women,F,,56.7,,56.7,B,Raw,4
-110,109.09,Tim Kanavy,,Masters,M,,176.9,,176.9,B,Raw,1
-125,119.07,C. Ziegler,,Masters,M,,172.37,,172.37,B,Raw,2
-110,100.47,J. Bower,,Masters,M,,163.29,,163.29,B,Raw,3
-75,70.76,J. Marko,,Masters,M,,127.01,,127.01,B,Raw,4
-82.5,80.06,R. Ludwig,,Masters,M,,136.08,,136.08,B,Raw,5
-75,73.94,B. Bendel,58,Masters,M,,106.59,,106.59,B,Raw,6
-52,,Bill Bower,11,Open,M,,52.16,,52.16,B,Raw,1
-56,,Craig Marko,,Open,M,,,,,B,Raw,DQ
-60,,Mike Boyer #1,,Open,M,,113.4,,113.4,B,Raw,1
-67.5,,Ron Dermo,,Open,M,,154.22,,154.22,B,Raw,1
-67.5,,J. Schwambach,,Open,M,,124.74,,124.74,B,Raw,2
-67.5,,Mark McCarthy,,Open,M,,122.47,,122.47,B,Raw,3
-67.5,,Bobby Evans,,Wheelchair,M,,102.06,,102.06,B,Raw,1
-75,,Tony Mattiuz,,Open,M,,145.15,,145.15,B,Raw,1
-75,,Troy Hafer,,Open,M,,142.88,,142.88,B,Raw,2
-75,,Ed Kleinman,,Open,M,,138.35,,138.35,B,Raw,3
-75,,Russ Baver,,Open,M,,124.74,,124.74,B,Raw,4
-75,,Mitch Baver,,Open,M,,124.74,,124.74,B,Raw,5
-75,,Mike Rowley,,Open,M,,120.2,,120.2,B,Raw,6
-75,,Bob Bendel,,Open,M,,106.59,,106.59,B,Raw,7
-75,,Mark Minot,,Open,M,,104.33,,104.33,B,Raw,8
-82.5,,Doug Haines,,Open,M,,192.78,,192.78,B,Raw,1
-82.5,78.47,Adam Earnest,,Open,M,,188.24,,188.24,B,Raw,2
-82.5,,M. Armpriester,,Open,M,,161.03,,161.03,B,Raw,3
-82.5,,Rodney Walters,,Open,M,,158.76,,158.76,B,Raw,4
-82.5,,Tom Hess,,Open,M,,145.15,,145.15,B,Raw,5
-82.5,,Mark Miller #10,,Open,M,,142.88,,142.88,B,Raw,6
-82.5,,Jeff Knoll,,Open,M,,133.81,,133.81,B,Raw,7
-90,,Paul Mower,,Open,M,,176.9,,176.9,B,Raw,1
-90,,Brian Hoffman,,Open,M,,174.63,,174.63,B,Raw,2
-90,,Herb Foreman,,Open,M,,124.74,,124.74,B,Raw,3
-100,,Ray Granger,,Open,M,,192.78,,192.78,B,Raw,1
-100,,Jim Bry,,Open,M,,183.7,,183.7,B,Raw,2
-100,,Steve Seyfert,,Open,M,,167.83,,167.83,B,Raw,3
-100,,Jeff Neiman,,Open,M,,136.08,,136.08,B,Raw,4
-110,103.42,John Schaeffer,,Open,M,,226.8,,226.8,B,Raw,1
-110,,Bob McClintock,,Open,M,,215.46,,215.46,B,Raw,2
-110,,Jerry Yetzer,,Open,M,,188.24,,188.24,B,Raw,3
-110,,Bob D'Antonio,,Open,M,,176.9,,176.9,B,Raw,4
-110,,Charlie Ziegler,,Open,M,,172.37,,172.37,B,Raw,5
-110,,Dan Thomasco,,Open,M,,142.88,,142.88,B,Raw,6
-125,120.66,Butch Heckman,,Open,M,,226.8,,226.8,B,Raw,1
+WeightClassKg,BodyweightKg,Name,Age,Division,AgeRange,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
+67.5,63.05,Cathy Spellman,,Women,,F,,81.65,,81.65,B,Raw,1
+67.5,63.5,Westwood,,Women,,F,,65.77,,65.77,B,Raw,2
+56,52.62,K. Miller,,Women,,F,,54.43,,54.43,B,Raw,3
+67.5,61.23,T. Geiger,,Women,,F,,56.7,,56.7,B,Raw,4
+110,109.09,Tim Kanavy,,Masters,40-999,M,,176.9,,176.9,B,Raw,1
+125,119.07,Charles Ziegler,,Masters,40-999,M,,172.37,,172.37,B,Raw,2
+110,100.47,John Bower,,Masters,40-999,M,,163.29,,163.29,B,Raw,3
+75,70.76,J. Marko,,Masters,40-999,M,,127.01,,127.01,B,Raw,4
+82.5,80.06,R. Ludwig,,Masters,40-999,M,,136.08,,136.08,B,Raw,5
+75,73.94,Bob Bendel,58,Masters,40-999,M,,106.59,,106.59,B,Raw,6
+52,,Bill Bower,11,Open,,M,,52.16,,52.16,B,Raw,1
+56,,Craig Marko,,Open,,M,,,,,B,Raw,DQ
+60,,Mike Boyer #1,,Open,,M,,113.4,,113.4,B,Raw,1
+67.5,,Ron Dermo,,Open,,M,,154.22,,154.22,B,Raw,1
+67.5,,J. Schwambach,,Open,,M,,124.74,,124.74,B,Raw,2
+67.5,,Mark McCarthy,,Open,,M,,122.47,,122.47,B,Raw,3
+67.5,,Bobby Evans,,Wheelchair,,M,,102.06,,102.06,B,Raw,1
+75,,Tony Mattiuz,,Open,,M,,145.15,,145.15,B,Raw,1
+75,,Troy Hafer,,Open,,M,,142.88,,142.88,B,Raw,2
+75,,Ed Kleinman,,Open,,M,,138.35,,138.35,B,Raw,3
+75,,Russ Baver,,Open,,M,,124.74,,124.74,B,Raw,4
+75,,Mitch Baver,,Open,,M,,124.74,,124.74,B,Raw,5
+75,,Mike Rowley,,Open,,M,,120.2,,120.2,B,Raw,6
+75,,Bob Bendel,,Open,,M,,106.59,,106.59,B,Raw,7
+75,,Mark Minot,,Open,,M,,104.33,,104.33,B,Raw,8
+82.5,,Doug Haines,,Open,,M,,192.78,,192.78,B,Raw,1
+82.5,78.47,Adam Earnest,,Open,,M,,188.24,,188.24,B,Raw,2
+82.5,,M. Armpriester,,Open,,M,,161.03,,161.03,B,Raw,3
+82.5,,Rodney Walters,,Open,,M,,158.76,,158.76,B,Raw,4
+82.5,,Tom Hess,,Open,,M,,145.15,,145.15,B,Raw,5
+82.5,,Mark Miller #10,,Open,,M,,142.88,,142.88,B,Raw,6
+82.5,,Jeff Knoll,,Open,,M,,133.81,,133.81,B,Raw,7
+90,,Paul Mower,,Open,,M,,176.9,,176.9,B,Raw,1
+90,,Brian Hoffman,,Open,,M,,174.63,,174.63,B,Raw,2
+90,,Herb Foreman,,Open,,M,,124.74,,124.74,B,Raw,3
+100,,Ray Granger,,Open,,M,,192.78,,192.78,B,Raw,1
+100,,Jim Bry,,Open,,M,,183.7,,183.7,B,Raw,2
+100,,Steve Seyfert,,Open,,M,,167.83,,167.83,B,Raw,3
+100,,Jeff Neiman,,Open,,M,,136.08,,136.08,B,Raw,4
+110,103.42,John Schaeffer,,Open,,M,,226.8,,226.8,B,Raw,1
+110,,Bob McClintock,,Open,,M,,215.46,,215.46,B,Raw,2
+110,,Jerry Yetzer,,Open,,M,,188.24,,188.24,B,Raw,3
+110,,Robert D'Antonio,,Open,,M,,176.9,,176.9,B,Raw,4
+110,,Charles Ziegler,,Open,,M,,172.37,,172.37,B,Raw,5
+110,,Dan Thomasco,,Open,,M,,142.88,,142.88,B,Raw,6
+125,120.66,Butch Heckman,,Open,,M,,226.8,,226.8,B,Raw,1
