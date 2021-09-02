@@ -298,6 +298,10 @@ pub enum Federation {
     #[strum(to_string = "DFPFNL", serialize = "dfpfnl")]
     DFPFNL,
 
+    /// Dutch Powerlifting League.
+    #[strum(to_string = "DPL", serialize = "dpl")]
+    DPL,
+
     /// Danish IPF affiliate.
     #[strum(to_string = "DSF", serialize = "dsf")]
     DSF,
@@ -1593,6 +1597,7 @@ impl Federation {
             Federation::CSST => FULLY_TESTED,
             Federation::DBKV => false,
             Federation::DFPFNL => FULLY_TESTED,
+            Federation::DPL => false,
             Federation::CzechiaUA => false,
             Federation::DSF => FULLY_TESTED,
             Federation::EJTL => FULLY_TESTED,
@@ -1945,6 +1950,7 @@ impl Federation {
             Federation::CSST => Some(Country::Czechia),
             Federation::DBKV => Some(Country::Germany),
             Federation::DFPFNL => Some(Country::Netherlands),
+            Federation::DPL => Some(Country::Netherlands),
             Federation::CzechiaUA => Some(Country::Czechia),
             Federation::DSF => Some(Country::Denmark),
             Federation::EJTL => Some(Country::Estonia),
@@ -2318,6 +2324,7 @@ impl Federation {
             Federation::CzechiaUA => None,
             Federation::DBKV => None,
             Federation::DFPFNL => Some(Federation::WDFPF),
+            Federation::DPL => Some(Federation::IPL),
             Federation::DSF => Some(Federation::IPF),
             Federation::EJTL => Some(Federation::IPF),
             Federation::EPC => {
@@ -2756,6 +2763,7 @@ impl Federation {
             Federation::CSST => PointsSystem::Wilks,
             Federation::DBKV => PointsSystem::Wilks,
             Federation::DFPFNL => PointsSystem::Wilks,
+            Federation::DPL => PointsSystem::Dots,
             Federation::CzechiaUA => PointsSystem::Wilks,
             Federation::DSF => Federation::ipf_rules_on(date),
             Federation::EJTL => Federation::ipf_rules_on(date),
