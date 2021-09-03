@@ -144,11 +144,13 @@
     sex = "F"
 
 [exemptions]
+    0201 = ["ExemptWeightClassConsistency"]
     0604 = ["ExemptDivision"]
     0605 = ["ExemptDivision"]
     0606 = ["ExemptDivision"]
+    0808 = ["ExemptWeightClassConsistency"]
     1215 = ["ExemptDivision"]
     1753 = ["ExemptDivision"] # One joker wore sleeves in the Equipped division.
     1930 = ["ExemptWeightClassConsistency"] #53Kg in open
     1958 = ["ExemptDivision"] # Lifters in equipped divisions competed raw.
-	1966 = ["ExemptDivision"] # 24 year old in Juniors.
+    1966 = ["ExemptDivision"] # 24 year old in Juniors.
