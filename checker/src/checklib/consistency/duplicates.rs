@@ -82,6 +82,10 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2021, 03, 20) {
                     continue;
                 }
+                // bawla/0814 and epa/0808.
+                if cur_meet.date == opltypes::Date::from_parts(2008, 11, 22) {
+                    continue;
+                }
                 // uspc/2118 and wp-usa/2103.
                 if cur_meet.date == opltypes::Date::from_parts(2021, 06, 26) {
                     continue;
