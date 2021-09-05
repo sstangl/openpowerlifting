@@ -1491,6 +1491,11 @@ pub enum Federation {
     #[strum(to_string = "WUAP-AUT", serialize = "wuap-aut")]
     WUAPAUT,
 
+    /// Czechian WUAP affiliate.
+    #[serde(rename = "WUAP-CZ")]
+    #[strum(to_string = "WUAP-CZ", serialize = "wuap-cz")]
+    WUAPCZ,
+
     /// Russian WUAP affiliate.
     #[serde(rename = "WUAP-RUS")]
     #[strum(to_string = "WUAP-RUS", serialize = "wuap-rus")]
@@ -1877,6 +1882,7 @@ impl Federation {
             Federation::WSHSPL => false,
             Federation::WUAP => false,
             Federation::WUAPAUT => false,
+            Federation::WUAPCZ => false,
             Federation::WUAPRUS => false,
             Federation::WUAPSVK => false,
             Federation::WUAPUSA => false,
@@ -2223,6 +2229,7 @@ impl Federation {
             Federation::WSHSPL => Some(Country::USA),
             Federation::WUAP => None,
             Federation::WUAPAUT => Some(Country::Austria),
+            Federation::WUAPCZ => Some(Country::Czechia),
             Federation::WUAPRUS => Some(Country::Russia),
             Federation::WUAPSVK => Some(Country::Slovakia),
             Federation::WUAPUSA => Some(Country::USA),
@@ -2639,6 +2646,7 @@ impl Federation {
             Federation::WSHSPL => None,
             Federation::WUAP => Some(Federation::WUAP),
             Federation::WUAPAUT => Some(Federation::WUAP),
+            Federation::WUAPCZ => Some(Federation::WUAP),
             Federation::WUAPRUS => Some(Federation::WUAP),
             Federation::WUAPSVK => Some(Federation::WUAP),
             Federation::WUAPUSA => Some(Federation::WUAP),
@@ -3077,6 +3085,7 @@ impl Federation {
             Federation::WSHSPL => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,
             Federation::WUAPAUT => PointsSystem::Wilks,
+            Federation::WUAPCZ => PointsSystem::Wilks,
             Federation::WUAPRUS => PointsSystem::Wilks,
             Federation::WUAPSVK => PointsSystem::Wilks,
             Federation::WUAPUSA => PointsSystem::Wilks,
