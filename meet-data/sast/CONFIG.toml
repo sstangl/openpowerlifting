@@ -7,6 +7,7 @@
 [divisions]
     or = {name ="O",min=0,max=999}
     j = {name ="J",min=20,max=23}
+    j20_23 = {name ="J20-23",min=20,max=23}
     t13_16 = {name ="T13-16",min=13,max=16}
     t17_19 = {name ="T17-19",min=17,max=19}
     m40_49 = {name ="M40-49",min=40,max=49}
@@ -26,6 +27,10 @@
     m70_74 = {name ="M70-74",min=70,max=74}
     m75_79 = {name ="M75-79",min=74,max=79}
 
+	# Special divisions for special competitions.
+	dorast = {name="Dorast",min=0,max=19}  # Sub-Juniors, effectively.
+	m40_54 = {name="M40-54",min=40,max=54}
+	m55p = {name="M55+",min=55,max=999}
 
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
@@ -48,3 +53,4 @@
     sex = "M"
 
 [exemptions]
+    2101 = ["ExemptWeightClassConsistency"] # 90/90+
