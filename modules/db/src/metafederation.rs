@@ -470,6 +470,11 @@ pub enum MetaFederation {
     #[strum(to_string = "wrpf-usa")]
     #[serde(rename = "WRPF-USA")]
     WRPFUSA,
+
+    /// WRPF-USA, but only for Tested entries.
+    #[strum(to_string = "wrpf-usa-tested")]
+    #[serde(rename = "WRPF-USA-Tested")]
+    WRPFUSATested,
 }
 
 /// Helper function for MetaFederation::contains() for AllCountry meta-feds.
@@ -806,6 +811,9 @@ impl MetaFederation {
                 },
                 _ => false,
             },
+            MetaFederation::WRPFUSATested => {
+                entry.tested && MetaFederation::WRPFUSA.contains(entry, meets)
+            }
         }
     }
 }

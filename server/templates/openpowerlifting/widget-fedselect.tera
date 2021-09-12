@@ -73,6 +73,7 @@
   <option value="wnpf" {% if selection.federation == "WNPF" %}selected{% endif %}>WNPF - World Natural Powerlifting Federation</option>
   <option value="wp-usa" {% if selection.federation == "WP-USA" %}selected{% endif %}>WP-USA - World Powerlifting USA</option>
   <option value="wrpf-usa" {% if selection.federation == "WRPF-USA" %}selected{% endif %}>WRPF USA</option>
+  <option value="wrpf-usa-tested" {% if selection.federation == "WRPF-USA-Tested" %}selected{% endif %}>WRPF USA Tested</option>
   <option value="wuap-usa" {% if selection.federation == "WUAP-USA" %}selected{% endif %}>WUAP USA</option>
   <option value="xpc" {% if selection.federation == "XPC" %}selected{% endif %}>XPC - Xtreme Powerlifting Coalition</option>
   <option value="xps" {% if selection.federation == "XPS" %}selected{% endif %}>XPS - Extreme Performance and Strength</option>
