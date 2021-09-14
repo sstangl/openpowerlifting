@@ -1,13 +1,15 @@
 [divisions]
-    open = {name ="Open",min=0,max=999}
-    juniors = {name = "Juniors",min=0,max=22.5}
-    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
-    masters1 = {name = "Masters 1",min=39.5,max=48.5}
-    masters2 = {name = "Masters 2",min=49.5,max=58.5}
-    masters3 = {name = "Masters 3",min=59.5,max=68.5}
-    masters4 = {name = "Masters 4",min=69.5,max=999}
+    open = {name ="O",min=0,max=999}
+    J = {name = "J",min=0,max=22.5}
+    subJ = {name = "SJ",min=0,max=17.5}
+    masters1 = {name = "M1",min=39.5,max=48.5}
+    masters2 = {name = "M2",min=49.5,max=58.5}
+    masters3 = {name = "M3",min=59.5,max=68.5}
+    masters4 = {name = "M4",min=69.5,max=999}
 
-    masters1_special = {name = "Masters 1 Special Olympics",min=39.5,max=48.5}
+    masters1_osi = {name = "M1OSI",min=39.5,max=48.5}
+    masters2_osi = {name = "M2OSI",min=49.5,max=58.5}
+    masters3_osi = {name = "M3OSI",min=59.5,max=68.5}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -28,19 +30,19 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["J","SJ"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["J","SJ"]
 
 [weightclasses.year2020_junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","2020-12-31"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["J","SJ"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]

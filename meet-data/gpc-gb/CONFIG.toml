@@ -1,5 +1,8 @@
 # Configuration for GPC-GB.
 
+[options]
+    require_manual_disambiguation = true
+
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
     date_range = ["0000-01-01", "9999-01-01"]
