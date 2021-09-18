@@ -1496,6 +1496,11 @@ pub enum Federation {
     #[strum(to_string = "WUAP-CZ", serialize = "wuap-cz")]
     WUAPCZ,
 
+    /// German WUAP affiliate.
+    #[serde(rename = "WUAP-Germany")]
+    #[strum(to_string = "WUAP-Germany", serialize = "wuap-germany")]
+    WUAPGermany,
+
     /// Russian WUAP affiliate.
     #[serde(rename = "WUAP-RUS")]
     #[strum(to_string = "WUAP-RUS", serialize = "wuap-rus")]
@@ -1883,6 +1888,7 @@ impl Federation {
             Federation::WUAP => false,
             Federation::WUAPAUT => false,
             Federation::WUAPCZ => false,
+            Federation::WUAPGermany => false,
             Federation::WUAPRUS => false,
             Federation::WUAPSVK => false,
             Federation::WUAPUSA => false,
@@ -2230,6 +2236,7 @@ impl Federation {
             Federation::WUAP => None,
             Federation::WUAPAUT => Some(Country::Austria),
             Federation::WUAPCZ => Some(Country::Czechia),
+            Federation::WUAPGermany => Some(Country::Germany),
             Federation::WUAPRUS => Some(Country::Russia),
             Federation::WUAPSVK => Some(Country::Slovakia),
             Federation::WUAPUSA => Some(Country::USA),
@@ -2647,6 +2654,7 @@ impl Federation {
             Federation::WUAP => Some(Federation::WUAP),
             Federation::WUAPAUT => Some(Federation::WUAP),
             Federation::WUAPCZ => Some(Federation::WUAP),
+            Federation::WUAPGermany => Some(Federation::WUAP),
             Federation::WUAPRUS => Some(Federation::WUAP),
             Federation::WUAPSVK => Some(Federation::WUAP),
             Federation::WUAPUSA => Some(Federation::WUAP),
@@ -3086,6 +3094,7 @@ impl Federation {
             Federation::WUAP => PointsSystem::Wilks,
             Federation::WUAPAUT => PointsSystem::Wilks,
             Federation::WUAPCZ => PointsSystem::Wilks,
+            Federation::WUAPGermany => PointsSystem::Wilks,
             Federation::WUAPRUS => PointsSystem::Wilks,
             Federation::WUAPSVK => PointsSystem::Wilks,
             Federation::WUAPUSA => PointsSystem::Wilks,

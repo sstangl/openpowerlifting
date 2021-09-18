@@ -228,6 +228,7 @@
   <option value="grawa" {% if selection.federation == "GRAWA" %}selected{% endif %}>GRAWA - German RAW Association [IRP]</option>
   <option value="pagermany" {% if selection.federation == "PAGermany" %}selected{% endif %}>PAGermany - Powerlifting Association Germany eV [WPF]</option>
   <option value="upc-germany" {% if selection.federation == "UPC-Germany" %}selected{% endif %}>UPC-Germany - United Powerlifting Congress [WPC/GPC/WUAP]</option>
+  <option value="wuap-germany" {% if selection.federation == "WUAP-Germany" %}selected{% endif %}>WUAP Germany</option>
   <option value="wpc-germany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC Germany</option>
 </optgroup>
 <optgroup label="{{strings.country.greece}}">
