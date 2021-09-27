@@ -64,6 +64,7 @@ def getmeetlist(html):
 
     urls = []
     for a in soup.find_all("a"):
+
         url = a['href']
         if 'contest-results' not in url:
             continue
@@ -96,8 +97,8 @@ def main():
 
     # Scans from new meets from the homepage, which displays the five most
     # recent results, sorted by date. This skips old results.
-    html = oplprobe.gethtml(FEDURL)
-    meetlist = meetlist + getmeetlist(html)
+   # html = oplprobe.gethtml(FEDURL)
+   #  meetlist = meetlist + getmeetlist(html)
 
     for url in PROVINCE_URLS:
         html = oplprobe.gethtml(url)
