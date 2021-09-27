@@ -8,6 +8,7 @@
     T2 = {name = "T2", min = 16, max = 17}
     T3 = {name = "T3", min = 18, max = 19}
     juniors = {name = "Juniors", min = 20, max = 23}
+    submasters = {name = "SM", min=35, max=39}
     M1 = {name = "M1", min = 40, max = 44}
     M2 = {name = "M2", min = 45, max = 49}
     M3 = {name = "M3", min = 50, max = 54}
