@@ -53,6 +53,10 @@ def getunenteredurls(meetlist, enteredmeets):
         curr_variants.update([v.replace("%20", " ") for v in curr_variants])
         curr_variants.update([v.replace(" ", "%20") for v in curr_variants])
 
+        # Check with and without www.
+        curr_variants.update([v.replace("://www.", "://") for v in curr_variants])
+        curr_variants.update([v.replace("://", "://www.") for v in curr_variants])
+
         # Add the version with unicode characters converted to the %xx version
         curr_variants.update([urllib.parse.unquote(v) for v in curr_variants])
 
