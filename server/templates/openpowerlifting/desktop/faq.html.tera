@@ -94,6 +94,10 @@
 
 <p>You will notice that there are no advertisements on this site: entities have asked to place banner ads, but we have stubbornly refused. This is because advertisements would cause us to optimize for metrics that harm you as a user: time-on-site, cost-per-click, etc. Sites with ads are incentivized to become time-sucking black holes. We'd rather just be inclined to treat you well.</p>
 
+<h2>Why does my age have a ~ next to it?</h2>
+
+<p>This is an approximate age. These occur due to federations only providing birth years, rather than birth dates. So we do not know if a lifter has had their birthday yet that year. One way to think about is that 23~ means that the lifter turns 24 that year.</p>
+
   </div>
 </center>
 {% endblock body %}
