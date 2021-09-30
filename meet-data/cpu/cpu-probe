@@ -98,8 +98,8 @@ def main():
 
     # Scans from new meets from the homepage, which displays the five most
     # recent results, sorted by date. This skips old results.
-   # html = oplprobe.gethtml(FEDURL)
-   #  meetlist = meetlist + getmeetlist(html)
+    # html = oplprobe.gethtml(FEDURL)
+    # meetlist = meetlist + getmeetlist(html)
 
     for url in PROVINCE_URLS:
         html = oplprobe.gethtml(url)
