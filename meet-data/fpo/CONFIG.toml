@@ -1,6 +1,7 @@
 # Configuration for FPO.
 
 [divisions]
+    # Un-abbreviated divisions.
     open = {name ="Open",min=0,max=999}
     juniors = {name ="Juniors 20-23",min=20,max=23}
     youth = {name = "Youth", min=4, max=12}
@@ -24,6 +25,26 @@
     masters8084 = {name ="Masters 80-84",min=80,max=84}
     masters80p = {name ="Masters 80+",min=80,max=999}
     submasters3339 = {name ="Submasters 33-39",min=33,max=39}
+
+    # OpenLifter-style abbreviated divisions.
+    t1315 = {name="T13-15",min=13,max=15}
+    t1617 = {name="T16-17",min=16,max=17}
+    t1819 = {name="T18-19",min=18,max=19}
+    j2023 = {name="J20-23",min=20,max=23}
+    m4044 = {name="M40-44",min=40,max=44}
+    m4549 = {name="M45-49",min=45,max=49}
+    m4049 = {name="M40-49",min=40,max=49}
+    m5054 = {name="M50-54",min=50,max=54}
+    m5559 = {name="M55-59",min=55,max=59}
+    m5059 = {name="M50-59",min=50,max=59}
+    m6064 = {name="M60-64",min=60,max=64}
+    m6569 = {name="M65-69",min=65,max=69}
+    m6069 = {name="M60-69",min=60,max=69}
+    m7074 = {name="M70-74",min=70,max=74}
+    m7579 = {name="M75-79",min=75,max=79}
+    m7079 = {name="M70-79",min=70,max=79}
+    m8084 = {name="M80-84",min=80,max=84}
+    m80p = {name="M80+",min=80,max=999}
 
     novice = {name ="Novice",min=0,max=999}
     pro = {name ="Pro",min=0,max=999}

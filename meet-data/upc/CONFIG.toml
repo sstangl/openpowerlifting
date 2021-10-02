@@ -132,3 +132,4 @@
     2005 = ["ExemptWeightClassConsistency"] # Fewer womens classes
     2006 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
     2010 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
+    2101 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Non standard weightclasses

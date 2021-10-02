@@ -1,13 +1,13 @@
 Place,Sex,WeightClassKg,Division,Name,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Event
 1,F,52,F-Jr,Alayna Caffery,,,,,65,72.5,-77.5,72.5,,,,,72.5,Single-ply,B
 1,F,60,F-T1,Serry Mayberry,110,122.5,127.5,127.5,-55,-55,55,55,125,137.5,145,145,327.5,Single-ply,SBD
-1,F,82.5,F-M1,Malinda Baum,127.5,-132.5,,127.5,97.5,102.5,105,105,125,145,160,160,392.5,Single-ply,SBD
+1,F,82.5,F-M1a,Malinda Baum,127.5,-132.5,,127.5,97.5,102.5,105,105,125,145,160,160,392.5,Single-ply,SBD
 2,F,90,F-T1,Karrisa Foster,100,110,-130,110,52.5,62.5,-72.5,62.5,105,127.5,-145,127.5,300,Single-ply,SBD
 1,F,90,F-T1,Brandy Stewart,,,,,42.5,47.5,-92.5,47.5,122.5,132.5,140,140,187.5,Single-ply,BD
 1,F,90,F-T1,Ashton Linehan,-115,122.5,137.5,137.5,62.5,67.5,72.5,72.5,127.5,137.5,-142.5,137.5,347.5,Single-ply,SBD
 1,M,52,M-T1,Caleb Messimer,95,-107.5,-110,95,55,-60,60,60,90,-112.5,115,115,270,Single-ply,SBD
 DQ,M,52,M-T1,Jacob Mayo,,,,,-35,-35,-40,,,,,,,Single-ply,SBD
-1,M,60,M-M1,Bentley Murray,90,100,-120,100,80,-95,-95,80,100,112.5,-127.5,112.5,292.5,Single-ply,SBD
+1,M,60,M-M1a,Bentley Murray,90,100,-120,100,80,-95,-95,80,100,112.5,-127.5,112.5,292.5,Single-ply,SBD
 1,M,67.5,M-T2,Jared Wilson,145,157.5,162.5,162.5,87.5,97.5,-102.5,97.5,150,160,172.5,172.5,432.5,Single-ply,SBD
 1,M,67.5,M-T3,Jacob Sills,170,-182.5,182.5,182.5,-130,-142.5,142.5,142.5,160,-172.5,172.5,172.5,497.5,Single-ply,SBD
 1,M,67.5,M-O,Rudy Perry,-215,-215,215,215,102.5,112.5,-130,112.5,175,185,195,195,522.5,Single-ply,SBD
@@ -19,28 +19,28 @@ G,M,75,M-G,Kory Jones,227.5,-247.5,-247.5,227.5,115,122.5,-132.5,122.5,227.5,237
 3,M,75,M-T3,Eric Messinger,105,117.5,127.5,127.5,102.5,110,115,115,140,155,165,165,407.5,Single-ply,SBD
 1,M,75,M-C,Ray Skidmore,155,165,-177.5,165,87.5,92.5,-97.5,92.5,172.5,187.5,-200,187.5,445,Single-ply,SBD
 2,M,75,M-T3,Levi Howard,137.5,147.5,157.5,157.5,82.5,-90,90,90,142.5,-152.5,165,165,412.5,Single-ply,SBD
-1,M,75,M-M3,Art Menton,200,217.5,-222.5,217.5,-120,120,132.5,132.5,200,220,-230,220,570,Single-ply,SBD
+1,M,75,M-M2b,Art Menton,200,217.5,-222.5,217.5,-120,120,132.5,132.5,200,220,-230,220,570,Single-ply,SBD
 1,M,75,M-O,Johnny Vasquez,242.5,,,242.5,-165,165,177.5,177.5,222.5,227.5,235,235,655,Single-ply,SBD
 2,M,75,M-O,Huaiya Tan,215,227.5,-232.5,227.5,147.5,160,165,165,220,-230,-230,220,612.5,Single-ply,SBD
 DQ,M,75,M-O,Patrick Durbin,,,,,-112.5,-115,-145,,,,,,,Single-ply,B
 2,M,82.5,M-T3,Nathan Saltemier,142.5,-152.5,152.5,152.5,92.5,105,-110,105,150,170,-205,170,427.5,Single-ply,SBD
 DQ,M,82.5,M-O,Amando Garcia Jr,-205,-205,205,205,-165,-165,-165,,,,,,,Single-ply,SBD
-1,M,82.5,M-M3,Roberto Contreras,182.5,197.5,205,205,132.5,147.5,152.5,152.5,222.5,237.5,-245,237.5,595,Single-ply,SBD
+1,M,82.5,M-M2a,Roberto Contreras,182.5,197.5,205,205,132.5,147.5,152.5,152.5,222.5,237.5,-245,237.5,595,Single-ply,SBD
 2,M,82.5,M-O,Jason Shurley,220,-230,230,230,137.5,142.5,-152.5,142.5,250,260,-265,260,632.5,Single-ply,SBD
 1,M,82.5,M-O,Trenton Wade,272.5,-290,,272.5,-150,150,-197.5,150,265,-277.5,285,285,707.5,Single-ply,SBD
 1,M,82.5,M-T3,Greg Stein,-142.5,-142.5,142.5,142.5,-107.5,107.5,-117.5,107.5,-157.5,175,190,190,440,Single-ply,SBD
-2,M,90,M-M1,Steve Atkins,215,222.5,-230,222.5,-162.5,167.5,-172.5,167.5,220,-230,230,230,620,Single-ply,SBD
-1,M,90,M-M1,Gary Kaiser,-250,250,,250,160,170,177.5,177.5,250,262.5,,262.5,690,Single-ply,SBD
-DQ,M,90,M-M2,Terry Caffery,155,165,180,180,-145,-145,-145,,,,,,,Single-ply,SBD
-1,M,90,M-M4,Jim Snodgrass,,,,,-125,125,-152,125,,,,,125,Single-ply,B
+2,M,90,M-M1a,Steve Atkins,215,222.5,-230,222.5,-162.5,167.5,-172.5,167.5,220,-230,230,230,620,Single-ply,SBD
+1,M,90,M-M1a,Gary Kaiser,-250,250,,250,160,170,177.5,177.5,250,262.5,,262.5,690,Single-ply,SBD
+DQ,M,90,M-M1b,Terry Caffery,155,165,180,180,-145,-145,-145,,,,,,,Single-ply,SBD
+1,M,90,M-M2b,Jim Snodgrass,,,,,-125,125,-152,125,,,,,125,Single-ply,B
 1,M,90,M-T3,Stephen Martin #3,,,,,82.5,92.5,107.5,107.5,,,,,107.5,Single-ply,B
 1,M,100,M-T2,Dennis Markin,,,,,140,-152.5,-155,140,220,-230,237.5,237.5,377.5,Single-ply,BD
 1,M,100,M-T3,Cody Wallace,227.5,230.5,245,245,-137.5,137.5,150,150,230,245,260,260,655,Single-ply,SBD
-DQ,M,100,M-M1,Tracy Glawe,270,282.5,-287.5,282.5,-195,-195,-195,,,,,,,Single-ply,SBD
-DQ,M,100,M-M2,Rick Garcia,215,222.5,,222.5,-162.5,-162.5,-162.5,,,,,,,Single-ply,SBD
-1,M,100,M-M2,Scott Brockelman,-230,230,-265,230,-127.5,137.5,-142.5,137.5,-220,237.5,-245,237.5,605,Single-ply,SBD
-2,M,100,M-M2,Spiro Karigan,-205,205,-220,205,-155,155,-167.5,155,207,220,235,235,595,Single-ply,SBD
-3,M,100,M-M2,Art Martin,200,-220,220,220,92.5,100,,100,200,-220,-220,200,520,Single-ply,SBD
+DQ,M,100,M-M1a,Tracy Glawe,270,282.5,-287.5,282.5,-195,-195,-195,,,,,,,Single-ply,SBD
+DQ,M,100,M-M1b,Rick Garcia,215,222.5,,222.5,-162.5,-162.5,-162.5,,,,,,,Single-ply,SBD
+1,M,100,M-M1b,Scott Brockelman,-230,230,-265,230,-127.5,137.5,-142.5,137.5,-220,237.5,-245,237.5,605,Single-ply,SBD
+2,M,100,M-M1b,Spiro Karigan,-205,205,-220,205,-155,155,-167.5,155,207,220,235,235,595,Single-ply,SBD
+3,M,100,M-M1b,Art Martin,200,-220,220,220,92.5,100,,100,200,-220,-220,200,520,Single-ply,SBD
 2,M,100,M-Jr,Dustin Widman,105,125,-150,125,112.5,120,-122.5,120,165,177.5,185,185,430,Single-ply,SBD
 1,M,100,M-Jr,Aaron Ramos,185,205,-227.5,205,130,140,142.5,142.5,195,220,-227.5,220,567.5,Single-ply,SBD
 DQ,M,100,M-O,Felton Stevens,142.5,150,,150,-120,-127.5,-127.5,,,,,,,Single-ply,SBD
@@ -48,15 +48,15 @@ DQ,M,100,M-O,Joe Guerra,-287.5,287.5,-320,287.5,-250,-265,-265,,,,,,,Single-ply,
 1,M,110,M-T2,William Mueller-Allen,177.5,-190,192.5,192.5,92.5,100,-105,100,172.5,187.5,195,195,487.5,Single-ply,SBD
 1,M,110,M-T2,Tim Godby,,,,,-147.5,147.5,-162.5,147.5,,,,,147.5,Single-ply,B
 1,M,110,M-O,Jason Jackson #7,,,,,-295,-307.5,307.5,307.5,,,,,307.5,Single-ply,B
-1,M,110,M-M2,Gary Pamplin,272.5,297.5,-317.5,297.5,227.5,240,-245,240,232.5,-250,250,250,787.5,Single-ply,SBD
-1,M,110,M-M2,Gary Pamplin,,,,,227.5,240,-245,240,,,,,240,Single-ply,B
+1,M,110,M-M1b,Gary Pamplin,272.5,297.5,-317.5,297.5,227.5,240,-245,240,232.5,-250,250,250,787.5,Single-ply,SBD
+1,M,110,M-M1b,Gary Pamplin,,,,,227.5,240,-245,240,,,,,240,Single-ply,B
 1,M,110,M-Jr,Steven Greenlee,227.5,250,260,260,155,167.5,-180,167.5,-205,205,227.5,227.5,655,Single-ply,SBD
 1,M,110,M-O,John King,272.5,285,290,290,185,195,-202.5,195,272.5,282.5,,282.5,767.5,Single-ply,SBD
-1,M,125,M-M1,Michael Ringer Sr,300,317.5,-325,317.5,167.5,-180,-180,167.5,295,-310,,295,780,Single-ply,SBD
-1,M,125,M-M1,John Stewart,,,,,-295,295,-317.5,295,,,,,295,Single-ply,B
+1,M,125,M-M1a,Michael Ringer Sr,300,317.5,-325,317.5,167.5,-180,-180,167.5,295,-310,,295,780,Single-ply,SBD
+1,M,125,M-M1a,John Stewart,,,,,-295,295,-317.5,295,,,,,295,Single-ply,B
 1,M,125,M-O,Bennie Foreman Jr,272.5,290,-317.5,290,150,160,-175,160,330,-345,345,345,795,Single-ply,SBD
-DQ,M,125,M-M3,Ric Duncan,,,,,-180,-180,-180,,,,,,,Single-ply,B
-1,M,125,M-M3,Sean Finnegan,,,,,227.5,272.5,-290,272.5,,,,,272.5,Single-ply,B
+DQ,M,125,M-M2a,Ric Duncan,,,,,-180,-180,-180,,,,,,,Single-ply,B
+1,M,125,M-M2a,Sean Finnegan,,,,,227.5,272.5,-290,272.5,,,,,272.5,Single-ply,B
 1,M,125,M-O,Wade Wakefield,,,,,225,-230,-230,225,,,,,225,Single-ply,B
 1,M,125,M-T3,Josh Lovern,227.5,250,,250,115,,,115,160,,,160,525,Single-ply,SBD
 DQ,M,125,M-O,Neil Lehman,-310,-310,-310,,,,,,,,,,,Single-ply,SBD

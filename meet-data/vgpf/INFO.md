@@ -17,7 +17,7 @@ Regional competitions are seperate.
 Same as IPF:
 - Men: up to 53 kg (Sub-Junior/Junior), 59 kg, 66 kg, 74 kg, 83 kg, 93 kg, 105 kg, 120 kg, 120 kg+
 
-- Women: up to 43 kg (Sub-Junior/Junior), 47 kg, 52 kg, 57 kg, 63 kg, 72 kg, 84 kg, 84 kg+
+- Women: up to 43 kg (Sub-Junior/Junior), 47 kg, 52 kg, 57 kg, 63 kg, 69 kg, 76 kg, 84 kg, 84 kg+
 
 ### Age classes
 

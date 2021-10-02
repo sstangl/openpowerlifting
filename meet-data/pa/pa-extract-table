@@ -16,7 +16,7 @@ def error(msg):
 
 
 def main(filename):
-    with open(filename, 'r') as fd:
+    with open(filename, 'r', encoding = 'windows-1252') as fd:
         html = fd.read()
 
     soup = BeautifulSoup(html, 'html.parser')
