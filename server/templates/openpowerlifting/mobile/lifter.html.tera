@@ -103,15 +103,15 @@
           <td>{{this.weightclass}}</td>
           <td>{{this.bodyweight}}</td>
           {% if show_attempts %}
-            <td class="squat">{% if this.squat1 %}{{this.squat1}}{% else %}{{this.best3squat}}{% endif %}</td>
+            <td class="squat">{% if this.squat1 or this.squat2 or this.squat3 %}{{this.squat1}}{% else %}{{this.best3squat}}{% endif %}</td>
             <td class="squat">{{this.squat2}}</td>
             <td class="squat">{{this.squat3}}</td>
             <td class="squat">{{this.squat4}}</td>
-            <td class="bench">{% if this.bench1 %}{{this.bench1}}{% else %}{{this.best3bench}}{% endif %}</td>
+            <td class="bench">{% if this.bench1 or this.bench2 or this.bench3 %}{{this.bench1}}{% else %}{{this.best3bench}}{% endif %}</td>
             <td class="bench">{{this.bench2}}</td>
             <td class="bench">{{this.bench3}}</td>
             <td class="bench">{{this.bench4}}</td>
-            <td class="deadlift">{% if this.deadlift1 %}{{this.deadlift1}}{% else %}{{this.best3deadlift}}{% endif %}</td>
+            <td class="deadlift">{% if this.deadlift1 or this.deadlift2 or this.deadlift3 %}{{this.deadlift1}}{% else %}{{this.best3deadlift}}{% endif %}</td>
             <td class="deadlift">{{this.deadlift2}}</td>
             <td class="deadlift">{{this.deadlift3}}</td>
             <td class="deadlift">{{this.deadlift4}}</td>
