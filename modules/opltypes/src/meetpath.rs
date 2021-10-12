@@ -6,7 +6,7 @@ use std::path::Path;
 const MEETDATADIR: &str = "meet-data";
 
 /// Possible failures when constructing a MeetPath.
-#[derive(Debug, Eq, PartialEq, ToString)]
+#[derive(Debug, Display, Eq, PartialEq)]
 pub enum MeetPathError {
     /// The MeetPath contained non-ASCII characters.
     ///

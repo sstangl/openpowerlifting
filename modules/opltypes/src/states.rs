@@ -181,7 +181,7 @@ impl<'de> Deserialize<'de> for State {
 }
 
 /// A state in Argentina.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum ArgentinaState {
     /// Ciudad Autónoma de Buenos Aires.
     CA,
@@ -234,7 +234,7 @@ pub enum ArgentinaState {
 }
 
 /// A state in Australia.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum AustraliaState {
     /// Australian Capital Territory.
     ACT,
@@ -257,7 +257,7 @@ pub enum AustraliaState {
 }
 
 /// A state in Brazil.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum BrazilState {
     /// Acre.
     AC,
@@ -317,14 +317,14 @@ pub enum BrazilState {
 
 /// A state in Canada.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
 }
 
 /// A province in China.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum ChinaState {
     /// Anhui Province (安徽省, Ānhuī Shěng).
     AH,
@@ -400,7 +400,7 @@ pub enum ChinaState {
 ///
 /// This omits other divisions not in England: Scotland, N.Ireland, and Wales.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum EnglandState {
     /// East Midlands.
     EM,
@@ -423,7 +423,7 @@ pub enum EnglandState {
 }
 
 /// A state in Germany.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum GermanyState {
     /// Baden-Württemberg.
     BW,
@@ -460,7 +460,7 @@ pub enum GermanyState {
 }
 
 /// A state in India.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum IndiaState {
     /// Andaman and Nicobar Islands.
     AN,
@@ -535,7 +535,7 @@ pub enum IndiaState {
 }
 
 /// A state in Mexico.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum MexicoState {
     /// Aguascalientes.
     AG,
@@ -604,7 +604,7 @@ pub enum MexicoState {
 }
 
 /// A state in the Netherlands.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum NetherlandsState {
     /// Drenthe.
     DR,
@@ -634,7 +634,7 @@ pub enum NetherlandsState {
 
 /// A region in New Zealand.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum NewZealandState {
     /// Northland.
     NTL,
@@ -671,7 +671,7 @@ pub enum NewZealandState {
 }
 
 /// A county in Romania.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum RomaniaState {
     /// Alba.
     AB,
@@ -761,7 +761,7 @@ pub enum RomaniaState {
 
 /// An oblast in Russia.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum RussiaState {
     AD, AL, BA, BU, CE, CU, DA, IN, KB, KL, KC, KR, KK, KO, ME, MO, SA,
     SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRI, STA, ZAB, AMU, ARK,
@@ -772,7 +772,7 @@ pub enum RussiaState {
 }
 
 /// A province in South Africa, using conventional acronyms (non-ISO).
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum SouthAfricaState {
     /// Eastern Cape.
     EC,
@@ -796,7 +796,7 @@ pub enum SouthAfricaState {
 
 /// A state in the USA.
 #[rustfmt::skip]
-#[derive(Copy, Clone, Debug, EnumString, PartialEq, Serialize, ToString)]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum USAState {
     AL, AK, AZ, AR, CA, CO, CT, DE, DC, FL, GA, HI, ID, IL, IN, IA, KS,
     KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC,
