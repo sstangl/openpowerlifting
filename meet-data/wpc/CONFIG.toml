@@ -153,6 +153,8 @@
     fyrwpc = {name ="F_YR_WPC",min=0,max=12,equipment="Raw",sex="F"} #Youth
     fyeswpc = {name ="F_YES_WPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
     fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
+    fsorwpc = {name ="F_SOR_WPC",min=0,max=999,equipment="Raw",sex="F"} #Special Olympics
+    fsocrwpc = {name ="F_SOCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"} #Special Olympics
 
     # AWPC Divisions.
     morawpc = {name ="M_OR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
@@ -299,11 +301,14 @@
     fsmawpc = {name ="F_SEM_AWPC",min=33,max=39,equipment="Multi-ply",sex="F",tested="Yes"}
     fyrawpc = {name ="F_YR_AWPC",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
     fyesawpc = {name ="F_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
+    fsorawpc = {name ="F_SOR_AWPC",min=0,max=999,equipment="Raw",sex="F"} #Special Olympics
+    fsocrawpc = {name ="F_SOCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"} #Special Olympics
 
     # Miscellaneous divisions.
     msoawpc = {name="M_SO_AWPC", min=0, max=999, tested="Yes"} # Special Olympics
     morawpcdis = {name ="M_OR_AWPC_Disabled",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
     mmr2awpcdis = {name ="M_MR_2_AWPC_Disabled",min=45,max=49,equipment="Raw",sex="M",tested="Yes"}
+
 
     # Russian style divisions.
     open = {name="Open", min=0, max=999}
