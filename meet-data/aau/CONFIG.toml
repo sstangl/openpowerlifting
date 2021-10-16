@@ -182,7 +182,7 @@
     rdisabled = {name ="R Disabled",min=0,max=999,equipment="Raw"}
     rdisabled_18_19 = {name ="R Disabled 18-19",min=18,max=19,equipment="Raw"}
     rdisabled_sub = {name ="R Disabled Sub",min=35,max=39,equipment="Raw"}
-    rdisabled_40_4s4 = {name ="R Disabled 40-44",min=40,max=44,equipment="Raw"}
+    rdisabled_40_44 = {name ="R Disabled 40-44",min=40,max=44,equipment="Raw"}
     rdisabled_50_54 = {name ="R Disabled 50-54",min=50,max=54,equipment="Raw"}
 
 
@@ -200,6 +200,17 @@
     ry4_5 = {name ="RY 4-5",min=4,max=5,equipment="Raw"}
 
     ry9_10 = {name ="RY 9-10",min=9,max=10,equipment="Raw"}
+
+
+    # Adaptive, I think this is just their disabled divisions renamed
+    adaptive = {name ="Adaptive Open",min=0,max=999,equipment="Raw"}
+    adaptive_14_15 = {name ="Adaptive 14-15",min=14,max=15,equipment="Raw"}
+    adaptive_16_17 = {name ="Adaptive 16-17",min=16,max=17,equipment="Raw"}
+    adaptive_18_19 = {name ="Adaptive 18-19",min=18,max=19,equipment="Raw"}
+    adaptive_JR = {name ="Adaptive JR",min=20,max=23,equipment="Raw"}
+    adaptive_sub = {name ="Adaptive Sub",min=35,max=39,equipment="Raw"}
+    adaptive_40_44 = {name ="Adaptive 40-44",min=40,max=44,equipment="Raw"}
+    adaptive_50_54 = {name ="Adaptive 50-54",min=50,max=54,equipment="Raw"}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
