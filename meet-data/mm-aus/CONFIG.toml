@@ -65,6 +65,7 @@
     nov_police = {name="Novice Police", min=0, max=999}
 
     # Unlabeled divisions, for when there's no Amateur/Pro split.
+    youth_5_12 = {name="Youth 5-12", min=5, max=12}
     teen_13_15 = {name="Teen 13-15", min=13, max=15}
     teen_16_17 = {name="Teen 16-17", min=16, max=17}
     teen_18_19 = {name="Teen 18-19", min=18, max=19}

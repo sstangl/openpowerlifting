@@ -137,6 +137,321 @@
     paralympic = {name = "Paralympic", min = 0, max = 999}
     adaptive = {name = "Adaptive", min = 0, max = 999}
 
+    ## OpenLifter-style divisions (preserving equipment).
+    ## We should prefer this style going forward, because it doesn't forget equipment.
+
+	# Raw Classic (Bare), Amateur.
+    rc_y_a = {name="RC-Y-A", equipment="Raw", tested="Yes", min=5, max=13}
+    rc_t14_a = {name="RC-T14-A", equipment="Raw", tested="Yes", min=14, max=15}
+    rc_t16_a = {name="RC-T16-A", equipment="Raw", tested="Yes", min=16, max=17}
+    rc_t18_a = {name="RC-T18-A", equipment="Raw", tested="Yes", min=18, max=19}
+    rc_j20_a = {name="RC-J20-A", equipment="Raw", tested="Yes", min=20, max=23}
+    rc_o_a = {name="RC-O-A", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_s33_a = {name="RC-S33-A", equipment="Raw", tested="Yes", min=33, max=39}
+    rc_m40_a = {name="RC-M40-A", equipment="Raw", tested="Yes", min=40, max=44}
+    rc_m45_a = {name="RC-M45-A", equipment="Raw", tested="Yes", min=45, max=49}
+    rc_m50_a = {name="RC-M50-A", equipment="Raw", tested="Yes", min=50, max=54}
+    rc_m55_a = {name="RC-M55-A", equipment="Raw", tested="Yes", min=55, max=59}
+    rc_m60_a = {name="RC-M60-A", equipment="Raw", tested="Yes", min=60, max=64}
+    rc_m65_a = {name="RC-M65-A", equipment="Raw", tested="Yes", min=65, max=69}
+    rc_m70_a = {name="RC-M70-A", equipment="Raw", tested="Yes", min=70, max=74}
+    rc_m75_a = {name="RC-M75-A", equipment="Raw", tested="Yes", min=75, max=79}
+    rc_m80_a = {name="RC-M80-A", equipment="Raw", tested="Yes", min=80, max=84}
+    rc_m85_a = {name="RC-M85-A", equipment="Raw", tested="Yes", min=85, max=89}
+    rc_m90_a = {name="RC-M90-A", equipment="Raw", tested="Yes", min=90, max=94}
+    rc_m95_a = {name="RC-M95-A", equipment="Raw", tested="Yes", min=95, max=99}
+    rc_m100_a = {name="RC-M100-A", equipment="Raw", tested="Yes", min=100, max=999}
+    rc_pf_a = {name="RC-PF-A", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_mil_a = {name="RC-MIL-A", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_cf_a = {name="RC-CF-A", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_aa_a = {name="RC-AA-A", equipment="Raw", tested="Yes", min=0, max=999}
+
+    # Raw Classic (Bare), Pro.
+    rc_y_p = {name="RC-Y-P", equipment="Raw", min=5, max=13}
+    rc_t14_p = {name="RC-T14-P", equipment="Raw", min=14, max=15}
+    rc_t16_p = {name="RC-T16-P", equipment="Raw", min=16, max=17}
+    rc_t18_p = {name="RC-T18-P", equipment="Raw", min=18, max=19}
+    rc_j20_p = {name="RC-J20-P", equipment="Raw", min=20, max=23}
+    rc_o_p = {name="RC-O-P", equipment="Raw", min=0, max=999}
+    rc_s33_p = {name="RC-S33-P", equipment="Raw", min=33, max=39}
+    rc_m40_p = {name="RC-M40-P", equipment="Raw", min=40, max=44}
+    rc_m45_p = {name="RC-M45-P", equipment="Raw", min=45, max=49}
+    rc_m50_p = {name="RC-M50-P", equipment="Raw", min=50, max=54}
+    rc_m55_p = {name="RC-M55-P", equipment="Raw", min=55, max=59}
+    rc_m60_p = {name="RC-M60-P", equipment="Raw", min=60, max=64}
+    rc_m65_p = {name="RC-M65-P", equipment="Raw", min=65, max=69}
+    rc_m70_p = {name="RC-M70-P", equipment="Raw", min=70, max=74}
+    rc_m75_p = {name="RC-M75-P", equipment="Raw", min=75, max=79}
+    rc_m80_p = {name="RC-M80-P", equipment="Raw", min=80, max=84}
+    rc_m85_p = {name="RC-M85-P", equipment="Raw", min=85, max=89}
+    rc_m90_p = {name="RC-M90-P", equipment="Raw", min=90, max=94}
+    rc_m95_p = {name="RC-M95-P", equipment="Raw", min=95, max=99}
+    rc_m100_p = {name="RC-M100-P", equipment="Raw", min=100, max=999}
+    rc_pf_p = {name="RC-PF-P", equipment="Raw", min=0, max=999}
+    rc_mil_p = {name="RC-MIL-P", equipment="Raw", min=0, max=999}
+    rc_cf_p = {name="RC-CF-P", equipment="Raw", min=0, max=999}
+    rc_aa_p = {name="RC-AA-P", equipment="Raw", min=0, max=999}
+
+    # Raw Classic (Bare), Elite.
+    rc_y_e = {name="RC-Y-E", equipment="Raw", tested="Yes", min=5, max=13}
+    rc_t14_e = {name="RC-T14-E", equipment="Raw", tested="Yes", min=14, max=15}
+    rc_t16_e = {name="RC-T16-E", equipment="Raw", tested="Yes", min=16, max=17}
+    rc_t18_e = {name="RC-T18-E", equipment="Raw", tested="Yes", min=18, max=19}
+    rc_j20_e = {name="RC-J20-E", equipment="Raw", tested="Yes", min=20, max=23}
+    rc_o_e = {name="RC-O-E", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_s33_e = {name="RC-S33-E", equipment="Raw", tested="Yes", min=33, max=39}
+    rc_m40_e = {name="RC-M40-E", equipment="Raw", tested="Yes", min=40, max=44}
+    rc_m45_e = {name="RC-M45-E", equipment="Raw", tested="Yes", min=45, max=49}
+    rc_m50_e = {name="RC-M50-E", equipment="Raw", tested="Yes", min=50, max=54}
+    rc_m55_e = {name="RC-M55-E", equipment="Raw", tested="Yes", min=55, max=59}
+    rc_m60_e = {name="RC-M60-E", equipment="Raw", tested="Yes", min=60, max=64}
+    rc_m65_e = {name="RC-M65-E", equipment="Raw", tested="Yes", min=65, max=69}
+    rc_m70_e = {name="RC-M70-E", equipment="Raw", tested="Yes", min=70, max=74}
+    rc_m75_e = {name="RC-M75-E", equipment="Raw", tested="Yes", min=75, max=79}
+    rc_m80_e = {name="RC-M80-E", equipment="Raw", tested="Yes", min=80, max=84}
+    rc_m85_e = {name="RC-M85-E", equipment="Raw", tested="Yes", min=85, max=89}
+    rc_m90_e = {name="RC-M90-E", equipment="Raw", tested="Yes", min=90, max=94}
+    rc_m95_e = {name="RC-M95-E", equipment="Raw", tested="Yes", min=95, max=99}
+    rc_m100_e = {name="RC-M100-E", equipment="Raw", tested="Yes", min=100, max=999}
+    rc_pf_e = {name="RC-PF-E", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_mil_e = {name="RC-MIL-E", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_cf_e = {name="RC-CF-E", equipment="Raw", tested="Yes", min=0, max=999}
+    rc_aa_e = {name="RC-AA-E", equipment="Raw", tested="Yes", min=0, max=999}
+
+    # Raw Modern (Sleeves + Wraps), Amateur.
+    rm_y_a = {name="RM-Y-A", equipment=["Raw","Wraps"], tested="Yes", min=5, max=13}
+    rm_t14_a = {name="RM-T14-A", equipment=["Raw","Wraps"], tested="Yes", min=14, max=15}
+    rm_t16_a = {name="RM-T16-A", equipment=["Raw","Wraps"], tested="Yes", min=16, max=17}
+    rm_t18_a = {name="RM-T18-A", equipment=["Raw","Wraps"], tested="Yes", min=18, max=19}
+    rm_j20_a = {name="RM-J20-A", equipment=["Raw","Wraps"], tested="Yes", min=20, max=23}
+    rm_o_a = {name="RM-O-A", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_s33_a = {name="RM-S33-A", equipment=["Raw","Wraps"], tested="Yes", min=33, max=39}
+    rm_m40_a = {name="RM-M40-A", equipment=["Raw","Wraps"], tested="Yes", min=40, max=44}
+    rm_m45_a = {name="RM-M45-A", equipment=["Raw","Wraps"], tested="Yes", min=45, max=49}
+    rm_m50_a = {name="RM-M50-A", equipment=["Raw","Wraps"], tested="Yes", min=50, max=54}
+    rm_m55_a = {name="RM-M55-A", equipment=["Raw","Wraps"], tested="Yes", min=55, max=59}
+    rm_m60_a = {name="RM-M60-A", equipment=["Raw","Wraps"], tested="Yes", min=60, max=64}
+    rm_m65_a = {name="RM-M65-A", equipment=["Raw","Wraps"], tested="Yes", min=65, max=69}
+    rm_m70_a = {name="RM-M70-A", equipment=["Raw","Wraps"], tested="Yes", min=70, max=74}
+    rm_m75_a = {name="RM-M75-A", equipment=["Raw","Wraps"], tested="Yes", min=75, max=79}
+    rm_m80_a = {name="RM-M80-A", equipment=["Raw","Wraps"], tested="Yes", min=80, max=84}
+    rm_m85_a = {name="RM-M85-A", equipment=["Raw","Wraps"], tested="Yes", min=85, max=89}
+    rm_m90_a = {name="RM-M90-A", equipment=["Raw","Wraps"], tested="Yes", min=90, max=94}
+    rm_m95_a = {name="RM-M95-A", equipment=["Raw","Wraps"], tested="Yes", min=95, max=99}
+    rm_m100_a = {name="RM-M100-A", equipment=["Raw","Wraps"], tested="Yes", min=100, max=999}
+    rm_pf_a = {name="RM-PF-A", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_mil_a = {name="RM-MIL-A", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_cf_a = {name="RM-CF-A", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_aa_a = {name="RM-AA-A", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+
+    # Raw Modern (Sleeves + Wraps), Pro.
+    rm_y_p = {name="RM-Y-P", equipment=["Raw","Wraps"], min=5, max=13}
+    rm_t14_p = {name="RM-T14-P", equipment=["Raw","Wraps"], min=14, max=15}
+    rm_t16_p = {name="RM-T16-P", equipment=["Raw","Wraps"], min=16, max=17}
+    rm_t18_p = {name="RM-T18-P", equipment=["Raw","Wraps"], min=18, max=19}
+    rm_j20_p = {name="RM-J20-P", equipment=["Raw","Wraps"], min=20, max=23}
+    rm_o_p = {name="RM-O-P", equipment=["Raw","Wraps"], min=0, max=999}
+    rm_s33_p = {name="RM-S33-P", equipment=["Raw","Wraps"], min=33, max=39}
+    rm_m40_p = {name="RM-M40-P", equipment=["Raw","Wraps"], min=40, max=44}
+    rm_m45_p = {name="RM-M45-P", equipment=["Raw","Wraps"], min=45, max=49}
+    rm_m50_p = {name="RM-M50-P", equipment=["Raw","Wraps"], min=50, max=54}
+    rm_m55_p = {name="RM-M55-P", equipment=["Raw","Wraps"], min=55, max=59}
+    rm_m60_p = {name="RM-M60-P", equipment=["Raw","Wraps"], min=60, max=64}
+    rm_m65_p = {name="RM-M65-P", equipment=["Raw","Wraps"], min=65, max=69}
+    rm_m70_p = {name="RM-M70-P", equipment=["Raw","Wraps"], min=70, max=74}
+    rm_m75_p = {name="RM-M75-P", equipment=["Raw","Wraps"], min=75, max=79}
+    rm_m80_p = {name="RM-M80-P", equipment=["Raw","Wraps"], min=80, max=84}
+    rm_m85_p = {name="RM-M85-P", equipment=["Raw","Wraps"], min=85, max=89}
+    rm_m90_p = {name="RM-M90-P", equipment=["Raw","Wraps"], min=90, max=94}
+    rm_m95_p = {name="RM-M95-P", equipment=["Raw","Wraps"], min=95, max=99}
+    rm_m100_p = {name="RM-M100-P", equipment=["Raw","Wraps"], min=100, max=999}
+    rm_pf_p = {name="RM-PF-P", equipment=["Raw","Wraps"], min=0, max=999}
+    rm_mil_p = {name="RM-MIL-P", equipment=["Raw","Wraps"], min=0, max=999}
+    rm_cf_p = {name="RM-CF-P", equipment=["Raw","Wraps"], min=0, max=999}
+    rm_aa_p = {name="RM-AA-P", equipment=["Raw","Wraps"], min=0, max=999}
+
+    # Raw Modern (Sleeves + Wraps), Elite.
+    rm_y_e = {name="RM-Y-E", equipment=["Raw","Wraps"], tested="Yes", min=5, max=13}
+    rm_t14_e = {name="RM-T14-E", equipment=["Raw","Wraps"], tested="Yes", min=14, max=15}
+    rm_t16_e = {name="RM-T16-E", equipment=["Raw","Wraps"], tested="Yes", min=16, max=17}
+    rm_t18_e = {name="RM-T18-E", equipment=["Raw","Wraps"], tested="Yes", min=18, max=19}
+    rm_j20_e = {name="RM-J20-E", equipment=["Raw","Wraps"], tested="Yes", min=20, max=23}
+    rm_o_e = {name="RM-O-E", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_s33_e = {name="RM-S33-E", equipment=["Raw","Wraps"], tested="Yes", min=33, max=39}
+    rm_m40_e = {name="RM-M40-E", equipment=["Raw","Wraps"], tested="Yes", min=40, max=44}
+    rm_m45_e = {name="RM-M45-E", equipment=["Raw","Wraps"], tested="Yes", min=45, max=49}
+    rm_m50_e = {name="RM-M50-E", equipment=["Raw","Wraps"], tested="Yes", min=50, max=54}
+    rm_m55_e = {name="RM-M55-E", equipment=["Raw","Wraps"], tested="Yes", min=55, max=59}
+    rm_m60_e = {name="RM-M60-E", equipment=["Raw","Wraps"], tested="Yes", min=60, max=64}
+    rm_m65_e = {name="RM-M65-E", equipment=["Raw","Wraps"], tested="Yes", min=65, max=69}
+    rm_m70_e = {name="RM-M70-E", equipment=["Raw","Wraps"], tested="Yes", min=70, max=74}
+    rm_m75_e = {name="RM-M75-E", equipment=["Raw","Wraps"], tested="Yes", min=75, max=79}
+    rm_m80_e = {name="RM-M80-E", equipment=["Raw","Wraps"], tested="Yes", min=80, max=84}
+    rm_m85_e = {name="RM-M85-E", equipment=["Raw","Wraps"], tested="Yes", min=85, max=89}
+    rm_m90_e = {name="RM-M90-E", equipment=["Raw","Wraps"], tested="Yes", min=90, max=94}
+    rm_m95_e = {name="RM-M95-E", equipment=["Raw","Wraps"], tested="Yes", min=95, max=99}
+    rm_m100_e = {name="RM-M100-E", equipment=["Raw","Wraps"], tested="Yes", min=100, max=999}
+    rm_pf_e = {name="RM-PF-E", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_mil_e = {name="RM-MIL-E", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_cf_e = {name="RM-CF-E", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+    rm_aa_e = {name="RM-AA-E", equipment=["Raw","Wraps"], tested="Yes", min=0, max=999}
+
+    # Single-ply, Amateur.
+    sp_y_a = {name="SP-Y-A", equipment="Single-ply", tested="Yes", min=5, max=13}
+    sp_t14_a = {name="SP-T14-A", equipment="Single-ply", tested="Yes", min=14, max=15}
+    sp_t16_a = {name="SP-T16-A", equipment="Single-ply", tested="Yes", min=16, max=17}
+    sp_t18_a = {name="SP-T18-A", equipment="Single-ply", tested="Yes", min=18, max=19}
+    sp_j20_a = {name="SP-J20-A", equipment="Single-ply", tested="Yes", min=20, max=23}
+    sp_o_a = {name="SP-O-A", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_s33_a = {name="SP-S33-A", equipment="Single-ply", tested="Yes", min=33, max=39}
+    sp_m40_a = {name="SP-M40-A", equipment="Single-ply", tested="Yes", min=40, max=44}
+    sp_m45_a = {name="SP-M45-A", equipment="Single-ply", tested="Yes", min=45, max=49}
+    sp_m50_a = {name="SP-M50-A", equipment="Single-ply", tested="Yes", min=50, max=54}
+    sp_m55_a = {name="SP-M55-A", equipment="Single-ply", tested="Yes", min=55, max=59}
+    sp_m60_a = {name="SP-M60-A", equipment="Single-ply", tested="Yes", min=60, max=64}
+    sp_m65_a = {name="SP-M65-A", equipment="Single-ply", tested="Yes", min=65, max=69}
+    sp_m70_a = {name="SP-M70-A", equipment="Single-ply", tested="Yes", min=70, max=74}
+    sp_m75_a = {name="SP-M75-A", equipment="Single-ply", tested="Yes", min=75, max=79}
+    sp_m80_a = {name="SP-M80-A", equipment="Single-ply", tested="Yes", min=80, max=84}
+    sp_m85_a = {name="SP-M85-A", equipment="Single-ply", tested="Yes", min=85, max=89}
+    sp_m90_a = {name="SP-M90-A", equipment="Single-ply", tested="Yes", min=90, max=94}
+    sp_m95_a = {name="SP-M95-A", equipment="Single-ply", tested="Yes", min=95, max=99}
+    sp_m100_a = {name="SP-M100-A", equipment="Single-ply", tested="Yes", min=100, max=999}
+    sp_pf_a = {name="SP-PF-A", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_mil_a = {name="SP-MIL-A", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_cf_a = {name="SP-CF-A", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_aa_a = {name="SP-AA-A", equipment="Single-ply", tested="Yes", min=0, max=999}
+
+    # Single-ply, Pro.
+    sp_y_p = {name="SP-Y-P", equipment="Single-ply", min=5, max=13}
+    sp_t14_p = {name="SP-T14-P", equipment="Single-ply", min=14, max=15}
+    sp_t16_p = {name="SP-T16-P", equipment="Single-ply", min=16, max=17}
+    sp_t18_p = {name="SP-T18-P", equipment="Single-ply", min=18, max=19}
+    sp_j20_p = {name="SP-J20-P", equipment="Single-ply", min=20, max=23}
+    sp_o_p = {name="SP-O-P", equipment="Single-ply", min=0, max=999}
+    sp_s33_p = {name="SP-S33-P", equipment="Single-ply", min=33, max=39}
+    sp_m40_p = {name="SP-M40-P", equipment="Single-ply", min=40, max=44}
+    sp_m45_p = {name="SP-M45-P", equipment="Single-ply", min=45, max=49}
+    sp_m50_p = {name="SP-M50-P", equipment="Single-ply", min=50, max=54}
+    sp_m55_p = {name="SP-M55-P", equipment="Single-ply", min=55, max=59}
+    sp_m60_p = {name="SP-M60-P", equipment="Single-ply", min=60, max=64}
+    sp_m65_p = {name="SP-M65-P", equipment="Single-ply", min=65, max=69}
+    sp_m70_p = {name="SP-M70-P", equipment="Single-ply", min=70, max=74}
+    sp_m75_p = {name="SP-M75-P", equipment="Single-ply", min=75, max=79}
+    sp_m80_p = {name="SP-M80-P", equipment="Single-ply", min=80, max=84}
+    sp_m85_p = {name="SP-M85-P", equipment="Single-ply", min=85, max=89}
+    sp_m90_p = {name="SP-M90-P", equipment="Single-ply", min=90, max=94}
+    sp_m95_p = {name="SP-M95-P", equipment="Single-ply", min=95, max=99}
+    sp_m100_p = {name="SP-M100-P", equipment="Single-ply", min=100, max=999}
+    sp_pf_p = {name="SP-PF-P", equipment="Single-ply", min=0, max=999}
+    sp_mil_p = {name="SP-MIL-P", equipment="Single-ply", min=0, max=999}
+    sp_cf_p = {name="SP-CF-P", equipment="Single-ply", min=0, max=999}
+    sp_aa_p = {name="SP-AA-P", equipment="Single-ply", min=0, max=999}
+
+    # Single-ply, Elite.
+    sp_y_e = {name="SP-Y-E", equipment="Single-ply", tested="Yes", min=5, max=13}
+    sp_t14_e = {name="SP-T14-E", equipment="Single-ply", tested="Yes", min=14, max=15}
+    sp_t16_e = {name="SP-T16-E", equipment="Single-ply", tested="Yes", min=16, max=17}
+    sp_t18_e = {name="SP-T18-E", equipment="Single-ply", tested="Yes", min=18, max=19}
+    sp_j20_e = {name="SP-J20-E", equipment="Single-ply", tested="Yes", min=20, max=23}
+    sp_o_e = {name="SP-O-E", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_s33_e = {name="SP-S33-E", equipment="Single-ply", tested="Yes", min=33, max=39}
+    sp_m40_e = {name="SP-M40-E", equipment="Single-ply", tested="Yes", min=40, max=44}
+    sp_m45_e = {name="SP-M45-E", equipment="Single-ply", tested="Yes", min=45, max=49}
+    sp_m50_e = {name="SP-M50-E", equipment="Single-ply", tested="Yes", min=50, max=54}
+    sp_m55_e = {name="SP-M55-E", equipment="Single-ply", tested="Yes", min=55, max=59}
+    sp_m60_e = {name="SP-M60-E", equipment="Single-ply", tested="Yes", min=60, max=64}
+    sp_m65_e = {name="SP-M65-E", equipment="Single-ply", tested="Yes", min=65, max=69}
+    sp_m70_e = {name="SP-M70-E", equipment="Single-ply", tested="Yes", min=70, max=74}
+    sp_m75_e = {name="SP-M75-E", equipment="Single-ply", tested="Yes", min=75, max=79}
+    sp_m80_e = {name="SP-M80-E", equipment="Single-ply", tested="Yes", min=80, max=84}
+    sp_m85_e = {name="SP-M85-E", equipment="Single-ply", tested="Yes", min=85, max=89}
+    sp_m90_e = {name="SP-M90-E", equipment="Single-ply", tested="Yes", min=90, max=94}
+    sp_m95_e = {name="SP-M95-E", equipment="Single-ply", tested="Yes", min=95, max=99}
+    sp_m100_e = {name="SP-M100-E", equipment="Single-ply", tested="Yes", min=100, max=999}
+    sp_pf_e = {name="SP-PF-E", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_mil_e = {name="SP-MIL-E", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_cf_e = {name="SP-CF-E", equipment="Single-ply", tested="Yes", min=0, max=999}
+    sp_aa_e = {name="SP-AA-E", equipment="Single-ply", tested="Yes", min=0, max=999}
+
+    # Multi-ply, Amateur.
+    mp_y_a = {name="MP-Y-A", equipment="Multi-ply", tested="Yes", min=5, max=13}
+    mp_t14_a = {name="MP-T14-A", equipment="Multi-ply", tested="Yes", min=14, max=15}
+    mp_t16_a = {name="MP-T16-A", equipment="Multi-ply", tested="Yes", min=16, max=17}
+    mp_t18_a = {name="MP-T18-A", equipment="Multi-ply", tested="Yes", min=18, max=19}
+    mp_j20_a = {name="MP-J20-A", equipment="Multi-ply", tested="Yes", min=20, max=23}
+    mp_o_a = {name="MP-O-A", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_s33_a = {name="MP-S33-A", equipment="Multi-ply", tested="Yes", min=33, max=39}
+    mp_m40_a = {name="MP-M40-A", equipment="Multi-ply", tested="Yes", min=40, max=44}
+    mp_m45_a = {name="MP-M45-A", equipment="Multi-ply", tested="Yes", min=45, max=49}
+    mp_m50_a = {name="MP-M50-A", equipment="Multi-ply", tested="Yes", min=50, max=54}
+    mp_m55_a = {name="MP-M55-A", equipment="Multi-ply", tested="Yes", min=55, max=59}
+    mp_m60_a = {name="MP-M60-A", equipment="Multi-ply", tested="Yes", min=60, max=64}
+    mp_m65_a = {name="MP-M65-A", equipment="Multi-ply", tested="Yes", min=65, max=69}
+    mp_m70_a = {name="MP-M70-A", equipment="Multi-ply", tested="Yes", min=70, max=74}
+    mp_m75_a = {name="MP-M75-A", equipment="Multi-ply", tested="Yes", min=75, max=79}
+    mp_m80_a = {name="MP-M80-A", equipment="Multi-ply", tested="Yes", min=80, max=84}
+    mp_m85_a = {name="MP-M85-A", equipment="Multi-ply", tested="Yes", min=85, max=89}
+    mp_m90_a = {name="MP-M90-A", equipment="Multi-ply", tested="Yes", min=90, max=94}
+    mp_m95_a = {name="MP-M95-A", equipment="Multi-ply", tested="Yes", min=95, max=99}
+    mp_m100_a = {name="MP-M100-A", equipment="Multi-ply", tested="Yes", min=100, max=999}
+    mp_pf_a = {name="MP-PF-A", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_mil_a = {name="MP-MIL-A", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_cf_a = {name="MP-CF-A", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_aa_a = {name="MP-AA-A", equipment="Multi-ply", tested="Yes", min=0, max=999}
+
+    # Multi-ply, Pro.
+    mp_y_p = {name="MP-Y-P", equipment="Multi-ply", min=5, max=13}
+    mp_t14_p = {name="MP-T14-P", equipment="Multi-ply", min=14, max=15}
+    mp_t16_p = {name="MP-T16-P", equipment="Multi-ply", min=16, max=17}
+    mp_t18_p = {name="MP-T18-P", equipment="Multi-ply", min=18, max=19}
+    mp_j20_p = {name="MP-J20-P", equipment="Multi-ply", min=20, max=23}
+    mp_o_p = {name="MP-O-P", equipment="Multi-ply", min=0, max=999}
+    mp_s33_p = {name="MP-S33-P", equipment="Multi-ply", min=33, max=39}
+    mp_m40_p = {name="MP-M40-P", equipment="Multi-ply", min=40, max=44}
+    mp_m45_p = {name="MP-M45-P", equipment="Multi-ply", min=45, max=49}
+    mp_m50_p = {name="MP-M50-P", equipment="Multi-ply", min=50, max=54}
+    mp_m55_p = {name="MP-M55-P", equipment="Multi-ply", min=55, max=59}
+    mp_m60_p = {name="MP-M60-P", equipment="Multi-ply", min=60, max=64}
+    mp_m65_p = {name="MP-M65-P", equipment="Multi-ply", min=65, max=69}
+    mp_m70_p = {name="MP-M70-P", equipment="Multi-ply", min=70, max=74}
+    mp_m75_p = {name="MP-M75-P", equipment="Multi-ply", min=75, max=79}
+    mp_m80_p = {name="MP-M80-P", equipment="Multi-ply", min=80, max=84}
+    mp_m85_p = {name="MP-M85-P", equipment="Multi-ply", min=85, max=89}
+    mp_m90_p = {name="MP-M90-P", equipment="Multi-ply", min=90, max=94}
+    mp_m95_p = {name="MP-M95-P", equipment="Multi-ply", min=95, max=99}
+    mp_m100_p = {name="MP-M100-P", equipment="Multi-ply", min=100, max=999}
+    mp_pf_p = {name="MP-PF-P", equipment="Multi-ply", min=0, max=999}
+    mp_mil_p = {name="MP-MIL-P", equipment="Multi-ply", min=0, max=999}
+    mp_cf_p = {name="MP-CF-P", equipment="Multi-ply", min=0, max=999}
+    mp_aa_p = {name="MP-AA-P", equipment="Multi-ply", min=0, max=999}
+
+    # Multi-ply, Elite.
+    mp_y_e = {name="MP-Y-E", equipment="Multi-ply", tested="Yes", min=5, max=13}
+    mp_t14_e = {name="MP-T14-E", equipment="Multi-ply", tested="Yes", min=14, max=15}
+    mp_t16_e = {name="MP-T16-E", equipment="Multi-ply", tested="Yes", min=16, max=17}
+    mp_t18_e = {name="MP-T18-E", equipment="Multi-ply", tested="Yes", min=18, max=19}
+    mp_j20_e = {name="MP-J20-E", equipment="Multi-ply", tested="Yes", min=20, max=23}
+    mp_o_e = {name="MP-O-E", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_s33_e = {name="MP-S33-E", equipment="Multi-ply", tested="Yes", min=33, max=39}
+    mp_m40_e = {name="MP-M40-E", equipment="Multi-ply", tested="Yes", min=40, max=44}
+    mp_m45_e = {name="MP-M45-E", equipment="Multi-ply", tested="Yes", min=45, max=49}
+    mp_m50_e = {name="MP-M50-E", equipment="Multi-ply", tested="Yes", min=50, max=54}
+    mp_m55_e = {name="MP-M55-E", equipment="Multi-ply", tested="Yes", min=55, max=59}
+    mp_m60_e = {name="MP-M60-E", equipment="Multi-ply", tested="Yes", min=60, max=64}
+    mp_m65_e = {name="MP-M65-E", equipment="Multi-ply", tested="Yes", min=65, max=69}
+    mp_m70_e = {name="MP-M70-E", equipment="Multi-ply", tested="Yes", min=70, max=74}
+    mp_m75_e = {name="MP-M75-E", equipment="Multi-ply", tested="Yes", min=75, max=79}
+    mp_m80_e = {name="MP-M80-E", equipment="Multi-ply", tested="Yes", min=80, max=84}
+    mp_m85_e = {name="MP-M85-E", equipment="Multi-ply", tested="Yes", min=85, max=89}
+    mp_m90_e = {name="MP-M90-E", equipment="Multi-ply", tested="Yes", min=90, max=94}
+    mp_m95_e = {name="MP-M95-E", equipment="Multi-ply", tested="Yes", min=95, max=99}
+    mp_m100_e = {name="MP-M100-E", equipment="Multi-ply", tested="Yes", min=100, max=999}
+    mp_pf_e = {name="MP-PF-E", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_mil_e = {name="MP-MIL-E", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_cf_e = {name="MP-CF-E", equipment="Multi-ply", tested="Yes", min=0, max=999}
+    mp_aa_e = {name="MP-AA-E", equipment="Multi-ply", tested="Yes", min=0, max=999}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
