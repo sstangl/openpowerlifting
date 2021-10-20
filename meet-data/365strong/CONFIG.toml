@@ -16,10 +16,45 @@
     M5 = {name = "M5", min = 60, max = 64}
     M6 = {name = "M6", min = 65, max = 69}
     M7 = {name = "M7", min = 70, max = 74}
-    M8 = {name = "M8", min = 75, max = 89}
+    M8 = {name = "M8", min = 75, max = 79}
     M9 = {name = "M9", min = 80, max = 999}
     mpf = {name = "MPF", min = 0, max = 999}
     novice = {name = "Novice", min = 0, max = 999}
+
+    # OpenLifter-style divisions.
+    j_t = {name="J-T", min=20, max=23, tested="Yes"}
+    j_u = {name="J-U",  min=20, max=23}
+    m1_t = {name="M1-T", min=40, max=44, tested="Yes"}
+    m1_u = {name="M1-U", min=40, max=44}
+    m2_t = {name="M2-T", min=45, max=49, tested="Yes"}
+    m2_u = {name="M2-U", min=45, max=49}
+    m3_t = {name="M3-T", min=50, max=54, tested="Yes"}
+    m3_u = {name="M3-U", min=50, max=54}
+    m4_t = {name="M4-T", min=55, max=59, tested="Yes"}
+    m4_u = {name="M4-U", min=55, max=59}
+    m5_t = {name="M5-T", min=60, max=64, tested="Yes"}
+    m5_u = {name="M5-U", min=60, max=64}
+    m6_t = {name="M6-T", min=65, max=69, tested="Yes"}
+    m6_u = {name="M6-U", min=65, max=69}
+    m7_t = {name="M7-T", min=70, max=74, tested="Yes"}
+    m7_u = {name="M7-U", min=70, max=74}
+    m8_t = {name="M8-T", min=75, max=79, tested="Yes"}
+    m8_u = {name="M8-U",  min=75, max=79}
+    m9_t = {name="M9-T", min=80, max=999, tested="Yes"}
+    m9_u = {name="M9-U",  min=80, max=999}
+    mpf_t = {name="MPF-T", min=0, max=999, tested="Yes"}
+    mpf_u = {name="MPF-U", min=0, max=999}
+    n_x = {name="N-X", min=0, max=999}
+    o_t = {name="O-T", min=0, max=999, tested="Yes"}
+    o_u = {name="O-U", min=0, max=999}
+    s_t = {name="S-T", min=35, max=39, tested="Yes"}
+    s_u = {name="S-U", min=35, max=39}
+    t1_x = {name="T1-X", min=13, max=15}
+    t2_x = {name="T2-X", min=16, max=17}
+    t3_x = {name="T3-X", min=18, max=19}
+    y_t = {name="Y-T", min=5, max=12, tested="Yes"}
+    y_x = {name="Y-X", min=5, max=12}
+    k_x = {name="K-X", min=5, max=12} # Kids' Club
 
     # Open divisions, men: $Sex-$Div$Event-$Equipment-Tested.
     # For Event: F = "SBD", P = "BD", B = "B".
@@ -273,8 +308,9 @@
     fnfrcx = {name = "F-NF-RC-X", min=0, max=999, sex="F", equipment="Wraps"}
     fnfrct = {name = "F-NF-RC-T", min=0, max=999, sex="F", equipment="Wraps", tested="Yes"}
 
-	# Kids' Club.
-	mkcdrt = {name = "M-KCD-R-T", min=0, max=12, sex="M", equipment="Raw", tested="Yes"}
+    # Kids' Club.
+    mkcdrt = {name = "M-KCD-R-T", min=0, max=12, sex="M", equipment="Raw", tested="Yes"}
+    fkcdrt = {name = "F-KCD-R-T", min=0, max=12, sex="F", equipment="Raw", tested="Yes"}
 
     # Miscellaneous divisions that haven't been fully expanded yet.
     mplbru = {name = "M-PLB-R-U", min=0, max=999, sex="M", equipment="Raw"}
