@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 description = "The OpenPowerlifting in-memory database."
 license = "AGPL-3.0-or-later"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 arrayvec = "0.7"

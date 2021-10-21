@@ -3,7 +3,7 @@ name = "api"
 version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 description = "The OpenPowerlifting Data API Server"
-edition = "2018"
+edition = "2021"
 license = "AGPL-3.0-or-later"
 
 [dependencies]

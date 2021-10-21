@@ -6,7 +6,6 @@ use arrayvec::ArrayString;
 use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
-use std::convert::TryFrom;
 use std::f32;
 use std::fmt::{self, Write};
 use std::num;
