@@ -21,33 +21,34 @@
     fm4r = {name ="FM4", min=70, max=79, sex="F", equipment=["Raw","Wraps"]}
     mm5r = {name ="MM5", min=80, max=89, sex="M", equipment=["Raw","Wraps"]}
 
-    moe = {name ="MOE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mje = {name ="MJE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
-    met = {name ="MET", min=13, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
-    met1 = {name ="MET1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
-    met2 = {name ="MET2", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply"]}
-    met3 = {name ="MET3", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mem1 = {name ="MEM1", min=40, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mem2 = {name ="MEM2", min=50, max=59, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mem3 = {name ="MEM3", min=60, max=69, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mem4 = {name ="MEM4", min=70, max=79, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mem5 = {name ="MEM5", min=80, max=89, sex="M", equipment=["Single-ply","Multi-ply"]}
+    moe = {name ="MOE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mje = {name ="MJE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    met = {name ="MET", min=13, max=19, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    met1 = {name ="MET1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    met2 = {name ="MET2", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    met3 = {name ="MET3", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mem1 = {name ="MEM1", min=40, max=49, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mem2 = {name ="MEM2", min=50, max=59, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mem3 = {name ="MEM3", min=60, max=69, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mem4 = {name ="MEM4", min=70, max=79, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mem5 = {name ="MEM5", min=80, max=89, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
  
-    foe = {name ="FOE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fje = {name ="FJE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fet1 = {name ="FET1", min=13, max=15, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fet2 = {name ="FET2", min=16, max=17, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fet3 = {name ="FET3", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fem1 = {name ="FEM1", min=40, max=49, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fem2 = {name ="FEM2", min=50, max=59, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fem3 = {name ="FEM3", min=60, max=69, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fem4 = {name ="FEM4", min=70, max=79, sex="F", equipment=["Single-ply","Multi-ply"]}
-    fem5 = {name ="FEM5", min=80, max=89, sex="F", equipment=["Single-ply","Multi-ply"]}
+    foe = {name ="FOE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fje = {name ="FJE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fet1 = {name ="FET1", min=13, max=15, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fet2 = {name ="FET2", min=16, max=17, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fet3 = {name ="FET3", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fem1 = {name ="FEM1", min=40, max=49, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fem2 = {name ="FEM2", min=50, max=59, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fem3 = {name ="FEM3", min=60, max=69, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fem4 = {name ="FEM4", min=70, max=79, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fem5 = {name ="FEM5", min=80, max=89, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
 
     # Disabled bench
     momozg = {name ="MO-MOZG", min=0, max=999, sex="M", equipment="Raw"}
     mm1mozg = {name ="MM1-MOZG", min=40, max=49, sex="M", equipment="Raw"}
     mt2mozg = {name ="MT2-MOZG", min=16, max=17, sex="M", equipment="Raw"}    
+    mjmozg = {name ="MJ-MOZG", min=20, max=23, sex="M", equipment="Raw"}    
 
     # Elite
     melite = {name ="MElite", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
