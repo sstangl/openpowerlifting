@@ -1,4 +1,6 @@
 # Configuration for GPC.
+[options]
+    require_manual_disambiguation = true
 
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
