@@ -28,8 +28,11 @@
 
     msp_o = {name = "MSP-O", min=0, max=999, equipment = "Single-ply", sex = "M"}
     me_o = {name = "ME-O", min=0, max=999, equipment = ["Single-ply","Multi-ply"], sex="M"}
-    fe_o = {name = "FE-O", min=0, max=999, equipment = ["Single-ply","Multi-ply"], sex="F"}
+    me_m1 = {name = "ME-M1", min=40, max=49, equipment = ["Single-ply","Multi-ply"], sex="M"}
     me_m = {name = "ME-M", min=40, max=999, equipment = ["Single-ply","Multi-ply"], sex="M"}
+    fe_o = {name = "FE-O", min=0, max=999, equipment = ["Single-ply","Multi-ply"], sex="F"}
+    fe_t = {name = "FE-T", min=14, max=16, equipment = ["Single-ply","Multi-ply"], sex="F"}
+    fe_m1 = {name = "FE-M1", min=40, max=49, equipment = ["Single-ply","Multi-ply"], sex="F"}
 
 
 [weightclasses.M]
