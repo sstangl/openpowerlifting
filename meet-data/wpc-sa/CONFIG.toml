@@ -8,6 +8,7 @@
     mem3 = {name ="MEM3", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem4 = {name ="MEM4", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem5 = {name ="MEM5", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
+    fem4 = {name ="FEM4", min=55, max=59, sex="F", equipment=["Single-ply","Multi-ply"]}
     for = {name ="FO", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     mt1r = {name ="MT1", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
     mt2r = {name ="MT2", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
