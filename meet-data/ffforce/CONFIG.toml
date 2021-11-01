@@ -40,8 +40,13 @@
     sex = "M"
 
 [weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-09-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.year2020_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2015-01-01","2021-08-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -83,6 +88,7 @@
     1802 = ["ExemptWeightClassConsistency"] #83+ class
     1703 = ["ExemptWeightClassConsistency"] #83+ class
     2034 = ["ExemptWeightClassConsistency"] # A -43 kg junior lifter competed in the Open division
+    2148 = ["ExemptWeightClassConsistency"] # This meet was for the 2020-2021 season
 
     # Challenge Villenave (no weight classes)
     1808 = ["ExemptWeightClassConsistency"]
