@@ -21,10 +21,11 @@ ${SCRIPTDIR}/rps-standardize-csv original.csv > entries.csv
 ${REPOSCRIPTDIR}/csv-tokg entries.csv
 ${REPOSCRIPTDIR}/fix-weightclasses entries.csv
 
-# Show any warnings.
-${REPOTESTSDIR}/check
-
 # Copy the template to the current directory for filling in.
 cp ${SCRIPTDIR}/../meet.template meet.csv
+echo "RPS,,USA,,," >> meet.csv
+
+# Show any warnings.
+${REPOTESTSDIR}/check
 
 echo "Done! Don't forget about meet.csv!"

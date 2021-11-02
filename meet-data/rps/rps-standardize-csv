@@ -435,6 +435,10 @@ def fixdivision(csv):
     for i, row in enumerate(csv.rows):
         if i > 0 and row[nameidx] and not row[idx]:
             row[idx] = csv.rows[i - 1][idx]
+        # Use plural Masters/Submasters
+        row[idx] = row[idx].replace('aster ', 'asters ')
+        row[idx] = row[idx].replace(
+            'Junior ', 'Juniors ')  # Use plural Juniors
 
 
 def isnumber(s):
@@ -559,6 +563,8 @@ def main(filename):
 
     if 'Place' in csv.fieldnames:
         fixplace(csv)
+
+    csv.append_column('BirthDate')
 
     csv.write(sys.stdout)
 

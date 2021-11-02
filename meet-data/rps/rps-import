@@ -2,20 +2,27 @@
 
 set -e
 
-if [ $# -ne 1 ]; then
-	echo " Usage: $0 http://url/to/results/page"
+
+if [ $# -ne 2 ]; then
+	echo " Usage: $0 dirname http://url/to/results/page"
 	exit 1
 fi
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 
+mkdir "$1"
+cd "$1"
+
+
+
+
 # Download the website to original.html.
-wget --output-document=original.html "$1"
+wget --output-document=original.html "$2"
 
 # Save the website URL for future use, since it's pretty hard to tell
 # what meets on the site are tracked and which aren't.
-echo "$1" > URL
+echo "$2" > URL
 
 # Extract just the original table from original.html.
 # Save it as original.xls so that libreoffice can convert to csv.
@@ -36,4 +43,4 @@ fi
 
 # Commands after this point were extracted into a separate file
 # since they had to be re-run by hand in case of error.
-${SCRIPTDIR}/rps-parse-post
+${SCRIPTDIR}/rps-import-post
