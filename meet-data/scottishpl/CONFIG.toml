@@ -1,5 +1,8 @@
 # Configuration for ScottishPL
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     #Men's divisions old style
     mcopen = {name ="M-C-Open",min=0,max=999,equipment="Raw"}
