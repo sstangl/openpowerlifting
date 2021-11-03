@@ -1,5 +1,8 @@
 # Configuration for the IrishPF.
 
+[options]
+    require_manual_disambiguation = true
+    
 [divisions]
     # Men's Raw.
     mo = {name="M-O", min=0, max=999, equipment="Raw", sex="M"}
