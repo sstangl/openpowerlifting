@@ -119,7 +119,7 @@ def parsehtml(html):
             # This happens with the meet information rows, which are malformed.
             continue
 
-        elif num_cells == 16:
+        elif num_cells == 17:
             # Skip the NAME row.
             if cells[0].text == "NAME":
                 continue
@@ -156,24 +156,26 @@ def parsehtml(html):
 
             name = cells[0].text.strip().replace('  ', ' ')
             state = cells[1].text.strip()
-            division = cells[2].text.strip()
-            bodyweightkg = canonicalize_number(cells[3].text.strip())
-            weightclasskg = cells[4].text.strip()
-            squat1kg = canonicalize_number(cells[5].text.strip())
-            squat2kg = canonicalize_number(cells[6].text.strip())
-            squat3kg = canonicalize_number(cells[7].text.strip())
-            bench1kg = canonicalize_number(cells[8].text.strip())
-            bench2kg = canonicalize_number(cells[9].text.strip())
-            bench3kg = canonicalize_number(cells[10].text.strip())
-            deadlift1kg = canonicalize_number(cells[11].text.strip())
-            deadlift2kg = canonicalize_number(cells[12].text.strip())
-            deadlift3kg = canonicalize_number(cells[13].text.strip())
-            totalkg = canonicalize_number(cells[14].text.strip())
-            # Ignore column 15: IPF points.
+            sex = cells[2].text.strip()
+            division = cells[3].text.strip()
+            bodyweightkg = canonicalize_number(cells[4].text.strip())
+            weightclasskg = cells[5].text.strip()
+            squat1kg = canonicalize_number(cells[6].text.strip())
+            squat2kg = canonicalize_number(cells[7].text.strip())
+            squat3kg = canonicalize_number(cells[8].text.strip())
+            bench1kg = canonicalize_number(cells[9].text.strip())
+            bench2kg = canonicalize_number(cells[10].text.strip())
+            bench3kg = canonicalize_number(cells[11].text.strip())
+            deadlift1kg = canonicalize_number(cells[12].text.strip())
+            deadlift2kg = canonicalize_number(cells[13].text.strip())
+            deadlift3kg = canonicalize_number(cells[14].text.strip())
+            totalkg = canonicalize_number(cells[15].text.strip())
+            # Ignore column 16: IPF points.
 
             entry = ['' for x in entriescsv.fieldnames]
             entry[entriescsv.index('Name')] = name
             entry[entriescsv.index('State')] = state
+            entry[entriescsv.index('Sex')] = sex
             entry[entriescsv.index('Division')] = division
             entry[entriescsv.index('BodyweightKg')] = bodyweightkg
             entry[entriescsv.index('WeightClassKg')] = weightclasskg
@@ -347,7 +349,8 @@ def main(url):
 
     remove_empty_lift_columns(entriescsv)
     make_best_columns(entriescsv)
-    infer_sex_from_weightclass(entriescsv)
+    # No longer needed: CPU added an explicit sex column.
+    # infer_sex_from_weightclass(entriescsv)
     canonicalize_divisions(entriescsv)
     canonicalize_state(entriescsv)
 
