@@ -72,4 +72,4 @@ done
 
 # Commands after this point were extracted into a separate file
 # since they had to be re-run in case of error.
-${SCRIPTDIR}/ipf-parse-post
+${SCRIPTDIR}/ipf-import-post
