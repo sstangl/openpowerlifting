@@ -414,6 +414,7 @@
 </optgroup>
 <optgroup label="{{strings.country.singapore}}">
   <option value="all-singapore" {% if selection.federation == "AllSingapore" %}selected{% endif %}>{{strings.selectors.fed.all_singapore}}</option>
+  <option value="ps" {% if selection.federation == "PS" %}selected{% endif %}>PS - Powerlifting Singapore [IPF]</option>
   <option value="spa" {% if selection.federation == "SPA" %}selected{% endif %}>SPA - Singapore Powerlifting Alliance [GPA]</option>
 </optgroup>
 <optgroup label="{{strings.country.slovakia}}">
