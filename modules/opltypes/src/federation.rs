@@ -1086,7 +1086,9 @@ pub enum Federation {
     #[strum(to_string = "USA-UA", serialize = "usa-ua")]
     USAUA,
 
-    /// USA Powerlifting, IPF.
+    /// USA Powerlifting, IPF from 1997-2021, currently unaffiliated.
+    ///
+    /// - On 2021-11-07, the IPF voted to remove USAPL, effective immediately.
     #[strum(to_string = "USAPL", serialize = "usapl")]
     USAPL,
 
@@ -2558,7 +2560,14 @@ impl Federation {
             Federation::USABA => Some(Federation::IBSA),
             Federation::USABPA => None,
             Federation::USAUA => None,
-            Federation::USAPL => Some(Federation::IPF),
+            Federation::USAPL => {
+                // The USAPL was removed from the IPF by vote on 2021-11-07, effective immediately.
+                if date > Date::from_parts(2021, 11, 07) {
+                    None
+                } else {
+                    Some(Federation::IPF)
+                }
+            }
             Federation::USARawBP => None,
             Federation::USMilAbroad => None,
             Federation::USPS => None,
