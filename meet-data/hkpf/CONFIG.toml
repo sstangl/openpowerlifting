@@ -22,6 +22,8 @@
     masters75_79 = {name="Masters 75-79", min=74.5, max=78.5}
     masters80s = {name="Masters 80+", min=79.5, max=999}
 
+    masters = {name="Masters", min=39.5, max=999} # Masters, but unknown category.
+
 [weightclasses.default_M]
     classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]
     date_range = ["2018-08-01", "9999-01-01"]
