@@ -529,6 +529,7 @@
     NJ-2021-02 = ["ExemptDivision"] # Lifter under 14 in the Open division.
     WI-2021-04 = ["ExemptDivision"] # Lifter under 14 in the Open division.
     SC-2021-04 = ["ExemptDivision"] # Lifter under 14 in the Open division.
+    MI-2021-09 = ["ExemptWeightClassConsistency"] # Body weight error for Brandon Orzame
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
