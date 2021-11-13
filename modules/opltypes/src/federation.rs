@@ -1355,6 +1355,11 @@ pub enum Federation {
     #[strum(to_string = "WPPL-Mexico", serialize = "wppl-mexico")]
     WPPLMexico,
 
+    /// World Power Power League, Russia.
+    #[serde(rename = "WPPL-Russia")]
+    #[strum(to_string = "WPPL-Russia", serialize = "wppl-russia")]
+    WPPLRussia,
+
     /// World Power Power League, Ukraine.
     #[serde(rename = "WPPL-Ukraine")]
     #[strum(to_string = "WPPL-Ukraine", serialize = "wppl-ukraine")]
@@ -1865,6 +1870,7 @@ impl Federation {
             Federation::WPNZ => FULLY_TESTED,
             Federation::WPPLBelarus => false,
             Federation::WPPLMexico => false,
+            Federation::WPPLRussia => false,
             Federation::WPPLUkraine => false,
             Federation::WPPO => FULLY_TESTED,
             Federation::WPRO => false,
@@ -2213,6 +2219,7 @@ impl Federation {
             Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPPLBelarus => Some(Country::Belarus),
             Federation::WPPLMexico => Some(Country::Mexico),
+            Federation::WPPLRussia => Some(Country::Russia),
             Federation::WPPLUkraine => Some(Country::Ukraine),
             Federation::WPPO => None,
             Federation::WPRO => Some(Country::Ukraine),
@@ -2639,6 +2646,7 @@ impl Federation {
             Federation::WPNZ => Some(Federation::WP),
             Federation::WPPLBelarus => None,
             Federation::WPPLMexico => None,
+            Federation::WPPLRussia => None,
             Federation::WPPLUkraine => None,
             Federation::WPPO => None,
             Federation::WPRO => None,
@@ -3080,6 +3088,7 @@ impl Federation {
             Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPPLBelarus => PointsSystem::Wilks,
             Federation::WPPLMexico => PointsSystem::Wilks,
+            Federation::WPPLRussia => PointsSystem::Wilks,
             Federation::WPPLUkraine => PointsSystem::Wilks,
             Federation::WPPO => PointsSystem::AH,
             Federation::WPRO => PointsSystem::Wilks,
