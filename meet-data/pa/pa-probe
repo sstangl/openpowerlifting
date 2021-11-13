@@ -42,7 +42,7 @@ def getmeetlist(html):
             continue
 
         # All PA results are in /wp-content/uploads/results/.
-        if '/wp-content/uploads/results/' not in url:
+        if 'wp-content' not in url or 'results' not in url:
             continue
 
         if 'http' not in url:
