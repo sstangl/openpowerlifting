@@ -16,8 +16,8 @@ itertools = "0.10"
 serde = "1.0"
 serde_derive = "1.0"
 smartstring = { version = "0.2", features = ["serde"] }
-strum = "0.22"
-strum_macros = "0.22"
+strum = "0.23"
+strum_macros = "0.23"
 
 [dev-dependencies]
 criterion = { version = "0.3", features = ["html_reports"] }
