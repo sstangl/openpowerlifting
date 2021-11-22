@@ -54,6 +54,12 @@
     paralympic = {name ="Paralympic",min=0,max=999}
     masters = {name ="Masters",min=40,max=999}
 
+    # OpenLifter-style divisions, for WPA-Uganda.
+    j20_23 = {name="J20-23", min=20, max=23}
+    s35-39 = {name="S35-39", min=35, max=39}
+    paralymic_j20_23 = {name="Paralympic J20-23", min=20, max=23}
+    paralympic_m40p = {name="Paralympic M40+", min=40, max=999}
+
     # Disabled divisions (specifically noted as "amputee or no use of legs".
     # Used by WPA-Africa.
     disabled_open = {name="Disabled Open", min=0, max=999}
