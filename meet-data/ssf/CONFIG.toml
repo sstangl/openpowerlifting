@@ -1,5 +1,7 @@
 # Configuration for the SSF.
-
+[options]
+    require_manual_disambiguation = true
+    
 [divisions]
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=22.5}
