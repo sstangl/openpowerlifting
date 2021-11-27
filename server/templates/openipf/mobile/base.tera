@@ -52,7 +52,7 @@
         <a href="https://openpowerlifting.bigcartel.com" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.shop}}</a>
         <a href="{{urlprefix | safe}}contact" class="nav__link_mobile">{{strings.header.contact}}</a>
         <a href="https://www.patreon.com/join/openpowerlifting" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.supportus}}</a>
-        <a href="https://instagram.com/openipf" class="nav__link_mobile" rel="noopener" target="_blank"><i class="iglogo"></i></a>
+        <a href="https://instagram.com/openipf/" class="nav__link_mobile" rel="noopener" target="_blank"><i class="iglogo"></i></a>
 
         <div id="footer-mobile-menu-selectors">
           {% include "widget-weightunits" %}

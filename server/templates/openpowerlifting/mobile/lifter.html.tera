@@ -18,7 +18,7 @@
     <span class="{{lifter.color}}">{{localized_name}} ({{lifter_sex}})</span>
     <span class="lifter-social-media">
     {% if lifter.instagram %}
-      <a href="https://instagram.com/{{lifter.instagram}}" class="instagram" rel="noopener" target="_blank">
+      <a href="https://instagram.com/{{lifter.instagram}}/" class="instagram" rel="noopener" target="_blank">
         <i class="iglogo"></i>
       </a>
     {% endif %}

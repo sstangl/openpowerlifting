@@ -31,7 +31,7 @@
       <tbody>
       {% for this in fed_statuses %}
         <tr>
-          <td>{{this.fed}}{% if this.instagram %}<a href="https://instagram.com/{{this.instagram}}" class="instagram" rel="noopener" target="_blank"><i class="iglogo"></i></a>{% endif %}</td>
+          <td>{{this.fed}}{% if this.instagram %}<a href="https://instagram.com/{{this.instagram}}/" class="instagram" rel="noopener" target="_blank"><i class="iglogo"></i></a>{% endif %}</td>
           <td>{{this.meet_count}}</td>
           <td>{{this.status}}</td>
 	  <td>{{this.has_probe}}</td>

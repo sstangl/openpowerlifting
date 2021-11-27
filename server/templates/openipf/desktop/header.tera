@@ -11,7 +11,7 @@
   <a href="https://openpowerlifting.bigcartel.com" class="nav__link" rel="noopener" target="_blank">{{strings.header.shop}}</a>
   <a href="{{urlprefix | safe}}contact" class="nav__link">{{strings.header.contact}}</a>
   <a href="https://www.patreon.com/join/openpowerlifting" class="nav__link" rel="noopener" target="_blank">{{strings.header.supportus}}</a>
-  <a href="https://instagram.com/openipf" class="nav__link" rel="noopener" target="_blank"><i class="iglogo-alt"></i></a>
+  <a href="https://instagram.com/openipf/" class="nav__link" rel="noopener" target="_blank"><i class="iglogo-alt"></i></a>
   <a href="javascript:void(0)" class="nav__link header-hamburger" onClick="document.getElementById('header').classList.toggle('responsive')">&#9776;</a>
   <div id="header-right">
     {% include "widget-weightunits" %}

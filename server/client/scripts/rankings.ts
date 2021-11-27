@@ -120,7 +120,7 @@ function makeDataProvider() {
 
             if (entry[Column.Instagram]) {
                 name += '<a href="https://www.instagram.com/' + entry[Column.Instagram] +
-                        '" class="instagram" rel="noopener" target="_blank">' +
+                        '/" class="instagram" rel="noopener" target="_blank">' +
                         '<i class="iglogo"></i></a>';
             }
 
