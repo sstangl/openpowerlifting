@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     mo = {name ="MO",min=0,max=999,sex="M"}
     mj = {name ="MJ",min=20,max=23,sex="M"}
