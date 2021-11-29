@@ -54,6 +54,7 @@
   <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF / {{strings.country.latvia}}</option>
   <option value="naurupf" {% if selection.federation == "NauruPF" %}selected{% endif %}>NauruPF / {{strings.country.nauru}}</option>
   <option value="nipf" {% if selection.federation == "NIPF" %}selected{% endif %}>NIPF / {{strings.country.northernireland}}</option>
+  <option value="npaj" {% if selection.federation == "NPAJ" %}selected{% endif %}>NPAJ / {{strings.country.jamaica}}</option>
   <option value="nsf" {% if selection.federation == "NSF" %}selected{% endif %}>NSF / {{strings.country.norway}}</option>
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF / {{strings.country.newzealand}}</option>
   <option value="oevk" {% if selection.federation == "OEVK" %}selected{% endif %}>OEVK / {{strings.country.austria}}</option>

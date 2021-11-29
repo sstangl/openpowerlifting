@@ -292,6 +292,9 @@
   <option value="wpc-italy" {% if selection.federation == "WPC-Italy" %}selected{% endif %}>WPC Italy</option>
   <option value="wrpf-italy" {% if selection.federation == "WRPF-Italy" %}selected{% endif %}>WRPF Italy</option>
 </optgroup>
+<optgroup label="{{strings.country.jamaica}}">
+  <option value="npaj" {% if selection.federation == "NPAJ" %}selected{% endif %}>NPAJ - National Powerlifting Association of Jamaica [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.japan}}">
   <option value="all-japan" {% if selection.federation == "AllJapan" %}selected{% endif %}>{{strings.selectors.fed.all_japan}}</option>
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA - Japan Powerlifting Federation [IPF]</option>
