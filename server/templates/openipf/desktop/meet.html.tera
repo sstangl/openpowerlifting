@@ -37,7 +37,6 @@
       </select>
     </div>
     <div id="controls-right">
-      <button onclick="location.href='https://gitlab.com/openpowerlifting/opl-data/tree/main/meet-data/{{meet.path}}'" type="button">Edit Meet</button>
     </div>
   </div>
 {% endblock controls %}
