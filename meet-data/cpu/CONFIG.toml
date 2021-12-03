@@ -5,7 +5,7 @@
 
 [divisions]
     open = {name ="Open",min=0,max=999}
-    junior = {name = "Juniors",min=0,max=22.5}
+    junior = {name = "Juniors",min=18.5,max=22.5}
     subjunior = {name = "Sub-Juniors",min=0,max=17.5}
     master1 = {name = "Masters 1",min=39.5,max=48.5}
     master2 = {name = "Masters 2",min=49.5,max=58.5}
