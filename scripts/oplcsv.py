@@ -25,6 +25,14 @@ class Csv:
     def index(self, name):
         return self.fieldnames.index(name)
 
+    def ensure_column(self, name):
+        if name not in self.fieldnames:
+            self.append_column(name)
+
+    def ensure_columns(self, namelist):
+        missing = [name for name in namelist if name not in self.fieldnames]
+        self.append_columns(missing)
+
     def append_column(self, name):
         self.fieldnames.append(name)
         for row in self.rows:

@@ -9,6 +9,7 @@
 	youth_6_7 = {name="Youth 6-7", min=6, max=7, equipment="Raw"}
 	youth_8_9 = {name="Youth 8-9", min=8, max=9, equipment="Raw"}
 	youth_10_11 = {name="Youth 10-11", min=10, max=11, equipment="Raw"}
+	youth_11 = {name="Youth 11 & Under", min=0, max=11, equipment="Raw"}
 
     # Age in 100% RAW is determined by exact age on date of meet.
     open = {name = "Open", min = 0, max = 999, equipment="Raw"}
@@ -28,6 +29,7 @@
     master_70 = {name = "Masters 70-74", min = 70, max = 74, equipment="Raw"}
     master_75 = {name = "Masters 75-79", min = 75, max = 79, equipment="Raw"}
     master_80 = {name = "Masters 80+", min = 80, max = 999, equipment="Raw"}
+    master_90 = {name = "Masters 90+", min = 90, max = 999, equipment="Raw"}
     lfm = {name = "Law/Fire/Military", min = 0, max = 999, equipment="Raw"}
     special = {name = "Special Olympics", min = 0, max = 999, equipment="Raw"}
     handicapped = {name = "Handicapped", min = 0, max = 999, equipment="Raw"}
