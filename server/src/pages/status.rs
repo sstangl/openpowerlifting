@@ -403,7 +403,7 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[NPB as usize].instagram = "powerliften";
     statuses[NIPF as usize].instagram = "nipowerlifting";
     statuses[NZPF as usize].instagram = "newzealandpowerlifting";
-    statuses[Power League as usize].instagram = "power.league";
+    statuses[PowerLeague as usize].instagram = "power.league";
     statuses[ProRaw as usize].instagram = "prorawpowerlifting";
     statuses[RawIronPL as usize].instagram = "rawironpowerliftingleague";
     statuses[RAWUKR as usize].instagram = "raw100power";
