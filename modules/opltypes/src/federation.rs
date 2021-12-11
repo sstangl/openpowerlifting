@@ -859,7 +859,7 @@ pub enum Federation {
     PoliceAL,
 
     /// Power League, an Argentina invitational.
-    #[strum(to_string = "PowerLeague", serialize = "powerleague")]
+    #[strum(to_string = "Power League", serialize = "power league")]
     PowerLeague,
 
     /// A defunct stand-alone US federation.
