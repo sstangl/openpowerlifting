@@ -4,8 +4,8 @@
   "description": "The OpenPowerlifting website frontend.",
   "private": true,
   "scripts": {
-    "sass": "node-sass --output-style compressed css/style.scss build/css/style.css",
-    "sass-openipf": "node-sass --output-style compressed css/openipf.scss build/css/openipf.css",
+    "sass": "sass --style=compressed css/style.scss build/css/style.css",
+    "sass-openipf": "sass --style=compressed css/openipf.scss build/css/openipf.css",
     "webpack": "webpack --stats-error-details --optimization-minimize"
   },
   "repository": {
@@ -26,7 +26,7 @@
     "@babel/preset-env": "^7.14.7",
     "@types/slickgrid": "^2.1.31",
     "babel-loader": "^8.2.2",
-    "node-sass": "^5.0.0",
+    "sass": "^1.45.0",
     "ts-loader": "^8.3.0",
     "typescript": "^4.3.5",
     "webpack": "^5.44.0",
