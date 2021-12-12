@@ -1,33 +1,23 @@
-Place,Name,Sex,BirthYear,Age,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,BirthDate
-1,Sailor Hubbard,F,2003,18,CO,Raw,Teen 18-19,71.2,75,92.5,97.5,102.5,102.5,42.5,45,47.5,47.5,115,120,125,125,275,SBD,
-1,Brianna Mitchell,F,1999,22,CO,Raw,Juniors 20-23,53.8,56,60,-70,70,70,30,35,-37.5,35,85,100,112.5,112.5,217.5,SBD,
-DQ,Gabriella Jagoras,F,2000,21,CO,Raw,Juniors 20-23,60.9,67.5,72.5,-85,-85,72.5,-50,-50,-50,,115,130,137.5,137.5,,SBD,
-1,Stormy Beck,F,1975,46,CO,Raw,Masters 45-49,59.4,60,112.5,122.5,-130,122.5,47.5,52.5,55,55,135,147.5,155,155,332.5,SBD,
-1,Brandi Herring,F,1963,58,CO,Raw,Masters 55-59,81.4,82.5,92.5,95.5,97.5,97.5,-80,80,-82.5,80,102.5,107.5,110,110,287.5,SBD,
-1,Dani LaMartina,F,1987,33,CO,Raw,Open,59.7,60,162.5,172.5,177.5,177.5,100,102.5,105,105,187.5,200,207.5,207.5,490,SBD,
-1,Laura Huber,F,1986,35,CO,Raw,Open,72.6,75,82.5,-90,95,95,55,-65,-65,55,85,95,105,105,255,SBD,
-DQ,Mercede Hackencamp,F,1994,27,CO,Raw,Open,72.4,75,85,87.5,-100,87.5,-55,-57.5,-57.5,,95,102.5,107.5,107.5,,SBD,
-1,Jodi Veal,F,1968,52,CO,Raw,Masters 50-54,73.1,75,,,,,,,,,147.5,157.5,160,160,160,D,
-1,Nick Gradinski,M,1981,40,CO,Wraps,Masters 40-44,82,82.5,185,-207.5,-220,185,115,122.5,127.5,127.5,195,205,215,215,527.5,SBD,
-1,Charles Dunkelman,M,1994,26,CO,Wraps,Open,92.1,100,-340,340,352.5,352.5,200,210,-217.5,210,290,-305,-305,290,852.5,SBD,
-1,Wacey Coleman,M,1987,34,CO,Wraps,Open,123.3,125,320,350,-365,350,187.5,207.5,-217.5,207.5,350,365,375,375,932.5,SBD,
-1,Dustin Nelson,M,1986,35,CO,Wraps,Submasters 35-39,120.7,125,277.5,300,-317.5,300,205,212.5,-220,212.5,272.5,287.5,-295,287.5,800,SBD,
-1,Nathan Greenwood,M,2006,15,CO,Raw,Teen 13-15,96,100,110,117.5,-127.5,117.5,60,72.5,85,85,170,-182.5,-182.5,170,372.5,SBD,
-1,Vincent Cole,M,2004,17,CO,Raw,Teen 16-17,147.5,140+,-225,225,230,230,135,142.5,-152.5,142.5,-220,-220,220,220,592.5,SBD,
-1,Kellan Quadhamer,M,1997,,CO,Raw,Juniors 20-23,74.8,75,-142.5,-145,145,145,-75,77.5,-82.5,77.5,185,195,200,200,422.5,SBD,
-1,Antonio Burgos,M,1999,22,CO,Raw,Juniors 20-23,78.5,82.5,160,175,182.5,182.5,125,-132.5,-132.5,125,195.5,-200,-205,195.5,503,SBD,
-1,Jalen Foster,M,1998,23,CO,Raw,Juniors 20-23,87,90,120,125,132.5,132.5,107.5,112.5,-117.5,112.5,150,157.5,165,165,410,SBD,
-1,Jon Hartman,M,1967,54,CO,Raw,Masters 50-54,75,75,-85,-85,85,85,65,70,-75,70,125,135,142.5,142.5,297.5,SBD,
-1,John Morton,M,1993,28,CO,Raw,Open,82,82.5,150,160,167.5,167.5,105,115,-122.5,115,185,210,-220,210,492.5,SBD,
-DQ,Armando Carrillo,M,1996,25,CO,Raw,Open,89.1,90,-157.5,165,172.5,172.5,115,120,-122.5,120,-220,-220,-220,,,SBD,
-1,Lucian York,M,1992,29,CO,Raw,Open,96.9,100,297.5,320,-325,320,175,190,-192.5,190,307.5,337.5,-345,337.5,847.5,SBD,
-2,Jacob DeHaai,M,1998,23,CO,Raw,Open,98.2,100,190,205,-212.5,205,100,110,-120,110,240,255,-272.5,255,570,SBD,
-3,Liam Duncan,M,1991,30,CO,Raw,Open,100,100,100,115,-120,115,-80,80,-97.5,80,145,150,160,160,355,SBD,
-1,Jake Huebner,M,1994,27,CO,Raw,Open,109,110,237.5,-250,-257.5,237.5,160,170,-175,170,270,280,292.5,292.5,700,SBD,
-1,James Huntley,M,1990,31,CO,Raw,Open,115,125,190,195,205,205,140,152.5,-160,152.5,240,255,265,265,622.5,SBD,
-1,Alex Kelley,M,1992,29,CO,Raw,Open,176.4,140+,300,320,-327.5,320,210,-227.5,,210,300,310,-332.5,310,840,SBD,
-2,Jeremey Everding,M,1982,39,CO,Raw,Open,147,140+,197.5,207.5,215.5,215.5,135,137.5,-142.5,137.5,267.5,272.5,-275,272.5,625.5,SBD,
-1,Matthew Fritz,M,1986,35,CO,Raw,Submasters 35-39,109.2,110,170,180,190,190,-135,145,150,150,245,255,265,265,605,SBD,
-1,Jared Burton,M,1971,50,CO,Raw,Masters 50-54,109,110,,,,,230,240,-250,240,,,,,240,B,
-1,Reece James,M,1991,30,CO,Raw,Open,133.7,140,,,,,222.5,235,-245,235,,,,,235,B,
-1,Jose Rios,M,1989,32,CO,Raw,Open,109.5,110,,,,,165,170,-177.5,170,265,275,282.5,282.5,452.5,BD,
+Place,Sex,Name,CyrillicName,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,TotalKg,WeightClassKg,Event,Equipment,Tested,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,Division,Age,BirthDate
+1,F,Galina Kuznetsova,Галина Кузнецова,74.3,75,80,82.5,82.5,,82.5,75,B,Raw,Yes,,,,,,Amateur Open,38,1982-06-22
+1,M,Nail Tairov,Наиль Таиров,65.5,107.5,112.5,115,115,,115,67.5,B,Raw,Yes,,,,,,Amateur Open,35,1985-06-05
+2,M,Anvar Abdullaev,Анвар Абдуллаев,64.5,87.5,97.5,-102.5,97.5,,97.5,67.5,B,Raw,Yes,,,,,,Amateur Open,19,2002-04-17
+1,M,Dmitriy Andreev,Дмитрий Андреев,80.6,145,147.5,150,150,,150,82.5,B,Raw,Yes,,,,,,Amateur Open,40,1980-11-16
+2,M,Vadim Grachev,Вадим Грачев,81.4,120,-127.5,130,130,,130,82.5,B,Raw,Yes,,,,,,Amateur Open,28,1993-05-04
+3,M,Aleksandr Loshenkov,Александр Лошеньков,82,110,120,127.5,127.5,,127.5,82.5,B,Raw,Yes,,,,,,Amateur Open,26,1995-04-21
+1,M,Dmitriy Andreev,Дмитрий Андреев,80.6,145,147.5,150,150,,150,82.5,B,Raw,Yes,,,,,,Amateur Masters 40-49,40,1980-11-16
+1,M,Sergey Zadkov,Сергей Задков,86.1,-152.5,152.5,157.5,157.5,,157.5,90,B,Raw,Yes,,,,,,Amateur Open,33,1987-11-19
+2,M,Anton Sivtsov,Антон Сивцов,86.4,125,-127.5,-127.5,125,,125,90,B,Raw,Yes,,,,,,Amateur Open,32,1988-06-01
+1,M,Igor Bryukhanov,Игорь Брюханов,95.5,165,-170,172.5,172.5,,172.5,100,B,Raw,Yes,,,,,,Amateur Masters 50-59,51,1969-06-17
+1,M,Vladimir Ivasik,Владимир Ивасик,104.5,130,137.5,140,140,,140,110,B,Raw,Yes,,,,,,Amateur Masters 40-49,45,1975-06-30
+1,M,Zaur Nagoev,Заур Нагоев,80.5,120,-122.5,-122.5,120,,120,82.5,B,Raw,No,,,,,,Pro Open,32,1988-08-14
+1,M,Shamil Askerov,Шамиль Аскеров,90,155,-160,-160,155,,155,90,B,Raw,No,,,,,,Pro Open,32,1989-04-01
+1,M,Ivan Yanushkevich,Иван Янушкевич,99.6,120,130,150,150,,150,100,B,Raw,No,,,,,,Pro Open,35,1986-04-17
+1,M,Sergey Lisitsyn,Сергей Лисицын,108.6,197.5,202.5,207.5,207.5,,207.5,110,B,Raw,No,,,,,,Pro Open,50,1970-10-26
+2,M,Aleksandr Pozdnyakov,Александр Поздняков,101.7,180,190,200,200,,200,110,B,Raw,No,,,,,,Pro Open,39,1982-04-22
+DQ,M,Erik Mynka,Эрик Мынка,118.1,-215,-225,-225,,,,125,B,Raw,No,,,,,,Pro Open,24,1996-07-14
+1,M,Aleksey Masolbasov,Алексей Масолбасов,66.7,,,,,,160,67.5,D,Raw,Yes,160,-170,-170,160,,Amateur Open,19,2002-03-29
+1,M,Ruslan Chupov,Руслан Чупов,72.9,,,,,,190,75,D,Raw,Yes,182.5,190,-200,190,,Amateur Open,29,1991-11-14
+2,M,Andrey Chaptykov,Андрей Чаптыков,73.4,,,,,,180,75,D,Raw,Yes,180,-207.5,-207.5,180,,Amateur Open,25,1995-11-29
+1,M,Roman Fursov,Роман Фурсов,87.3,,,,,,177.5,90,D,Raw,Yes,162.5,170,177.5,177.5,,Amateur Open,30,1991-03-14
+1,F,Mariya Achilova,Мария Ачилова,58.5,,,,,,65,60,D,Raw,No,55,-65,65,65,,Pro Open,24,1996-05-24
