@@ -763,12 +763,190 @@ pub enum RomaniaState {
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
 pub enum RussiaState {
-    AD, AL, BA, BU, CE, CU, DA, IN, KB, KL, KC, KR, KK, KO, ME, MO, SA,
-    SE, TA, TY, UD, ALT, KAM, KHA, KDA, KYA, PER, PRI, STA, ZAB, AMU, ARK,
-    AST, BEL, BRY, CHE, IRK, IVA, KGD, KLU, KEM, KIR, KOS, KGN, KRS, LEN,
-    LIP, MAG, MOS, MUR, NIZ, NGR, NVS, OMS, ORE, ORL, PNZ, PSK, ROS, RYA, 
-    SAK, SAM, SAR, SMO, SVE, TAM, TOM, TUL, TVE, TYE, TYU, ULY, VLA, VGG,
-    VLG, VOR, YAR, MOW, SPE, YEV, CHU, KHM, NEN, YAN
+    // Republics.
+    /// Adygea.
+    AD,
+    /// Altai Republic.
+    AL,
+    /// Bashkortostan.
+    BA,
+    /// Buryatia.
+    BU,
+    /// Chechnya.
+    CE,
+    /// Chuvashia.
+    CU,
+    /// Dagestan.
+    DA,
+    /// Ingushetia.
+    IN,
+    /// Kabardino-Balkaria.
+    KB,
+    /// Khakassia.
+    KK,
+    /// Kalmykia.
+    KL,
+    /// Karachay-Cherkessia.
+    KC,
+    /// Karelia.
+    KR,
+    /// Komi.
+    KO,
+    /// Mari El.
+    ME,
+    /// Mordovia.
+    MO,
+    /// Sakha o Yakutia.
+    SA,
+    /// North Ossetia-Alania.
+    SE,
+    /// Tatarstan.
+    TA,
+    /// Tyva.
+    TY,
+    /// Udmurtia.
+    UD,
+
+    // Krais.
+    /// Altai Krai.
+    ALT,
+    /// Kamchatka.
+    KAM,
+    /// Khabarovsk.
+    KHA,
+    /// Krasnodar.
+    KDA,
+    /// Krasnoyarsk.
+    KYA,
+    /// Perm.
+    PER,
+    /// Primorsky.
+    PRI,
+    /// Stavropol.
+    STA,
+    /// Zabaykalsky Krai.
+    ZAB,
+
+    // Oblasts.
+    /// Amur.
+    AMU,
+    /// Arkhangelsk.
+    ARK,
+    /// Astrakhan.
+    AST,
+    /// Belgorod.
+    BEL,
+    /// Bryansk.
+    BRY,
+    /// Chelyabinsk.
+    CHE,
+    /// Chita (defunct since 2008).
+    ///
+    /// In 2008, Chita Oblast merged with Agin-Buryat Autonomous Okrug, becoming Zabaykalsky Krai.
+    CHI,
+    /// Irkutsk.
+    IRK,
+    /// Ivanovo.
+    IVA,
+    /// Kaliningrad.
+    KGD,
+    /// Kaluga.
+    KLU,
+    /// Kemerovo.
+    KEM,
+    /// Kirov.
+    KIR,
+    /// Kostroma.
+    KOS,
+    /// Kurgan.
+    KGN,
+    /// Kursk.
+    KRS,
+    /// Leningrad.
+    LEN,
+    /// Lipetsk.
+    LIP,
+    /// Magadan.
+    MAG,
+    /// Moscow (oblast).
+    MOS,
+    /// Murmansk.
+    MUR,
+    /// Nizhny Novgorod.
+    NIZ,
+    /// Novgorod.
+    NGR,
+    /// Novosibirsk.
+    NVS,
+    /// Omsk.
+    OMS,
+    /// Orenburg.
+    ORE,
+    /// Oryol.
+    ORL,
+    /// Penza.
+    PNZ,
+    /// Pskov.
+    PSK,
+    /// Rostov.
+    ROS,
+    /// Ryazan.
+    RYA, 
+    /// Sakhalin.
+    SAK,
+    /// Samara.
+    SAM,
+    /// Saratov.
+    SAR,
+    /// Smolensk.
+    SMO,
+    /// Sverdlovsk.
+    SVE,
+    /// Tambov.
+    TAM,
+    /// Tomsk.
+    TOM,
+    /// Tula.
+    TUL,
+    /// Tver.
+    TVE,
+    /// Tyumen.
+    TYU,
+    /// Ulyanovsk.
+    ULY,
+    /// Vladimir.
+    VLA,
+    /// Volgograd.
+    VGG,
+    /// Vologda.
+    VLG,
+    /// Voronezh.
+    VOR,
+    /// Yaroslavl.
+    YAR,
+
+    // Okrugs.
+    /// Aga Buryatia.
+    AGB,
+    /// Nenetsia,
+    NEN,
+    /// Ust-Orda Buryatia.
+    UOB,
+    /// Khantia-Mansia.
+    KHM,
+    /// Chukotka.
+    CHU,
+    /// Yamalia.
+    YAN,
+
+    // Federal cities.
+    /// St. Petersburg.
+    SPE,
+    /// Moscow (city).
+    MOW,
+
+    /// Autonomous Jewish Province.
+    YEV,
 }
 
 /// A province in South Africa, using conventional acronyms (non-ISO).
