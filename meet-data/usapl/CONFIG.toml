@@ -531,6 +531,7 @@
     SC-2021-04 = ["ExemptDivision"] # Lifter under 14 in the Open division.
     MI-2021-09 = ["ExemptWeightClassConsistency"] # Body weight error for Brandon Orzame
     VA-2021-09 = ["ExemptWeightClassConsistency"] # No weight classes used.
+    LA-2021-10 = ["ExemptWeightClassConsistency"] # No weight classes used.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
