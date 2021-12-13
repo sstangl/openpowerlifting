@@ -10,15 +10,25 @@ book/book/
 
 # Avoid committing binary meet data files.
 /meet-data/**/*.pdf
+/meet-data/**/*.PDF
 /meet-data/**/*.xls
+/meet-data/**/*.XLS
 /meet-data/**/*.xlsx
+/meet-data/**/*.XLSX
 /meet-data/**/*.xlsm
+/meet-data/**/*.XLSM
 /meet-data/**/*.doc
+/meet-data/**/*.DOC
 /meet-data/**/*.docx
+/meet-data/**/*.DOCX
 /meet-data/**/*.odt
+/meet-data/**/*.ODT
 /meet-data/**/*.ods
+/meet-data/**/*.ODS
 /meet-data/**/*.xml
+/meet-data/**/*.XML
 /meet-data/**/*.rtf
+/meet-data/**/*.RTF
 
 # Tool output.
 perf.data
