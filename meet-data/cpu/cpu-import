@@ -119,7 +119,7 @@ def parsehtml(html):
             # This happens with the meet information rows, which are malformed.
             continue
 
-        elif num_cells == 16:
+        elif num_cells == 17:
             # Skip the NAME row.
             if cells[0].text == "NAME":
                 continue
