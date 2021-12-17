@@ -535,6 +535,7 @@
     MA-2021-13 = ["ExemptWeightClassConsistency"] # No weight classes reported.
     WI-2021-18 = ["ExemptWeightClassConsistency"] # No weight classes reported.
     FL-2021-14 = ["ExemptWeightClassConsistency"] # No weight classes reported.
+    SC-2021-06 = ["ExemptWeightClassConsistency"] # Missing body weight for Travis Stern
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
