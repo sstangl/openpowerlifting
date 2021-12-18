@@ -22,3 +22,16 @@ pub mod api_search;
 
 // Development pages (mounted under /dev).
 pub mod checker;
+
+/// Error type for `from_path()` impls.
+#[derive(Debug)]
+pub enum FromPathError {
+    /// Utf8 parsing failed.
+    NotUtf8,
+    /// Some part of the path contained no information.
+    EmptyComponent,
+    /// Some component kind occurred more than once.
+    ConflictingComponent,
+    /// Some component could not be parsed into any type.
+    UnknownComponent,
+}

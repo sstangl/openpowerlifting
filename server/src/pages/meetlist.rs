@@ -8,6 +8,8 @@ use opltypes::*;
 use std::ffi::OsStr;
 use std::path;
 
+use super::FromPathError;
+
 /// Query selection descriptor, corresponding to HTML widgets.
 ///
 /// For code reuse, this is a subset of the Query struct
@@ -29,17 +31,17 @@ impl Default for MeetListQuery {
 }
 
 impl MeetListQuery {
-    pub fn from_path(p: &path::Path, defaults: MeetListQuery) -> Result<Self, ()> {
+    pub fn from_path(p: &path::Path, defaults: MeetListQuery) -> Result<Self, FromPathError> {
         let mut ret = defaults;
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {
             if s.contains("//") {
-                return Err(());
+                return Err(FromPathError::EmptyComponent);
             }
         } else {
             // Failed parsing UTF-8.
-            return Err(());
+            return Err(FromPathError::NotUtf8);
         }
 
         // Prevent fields from being overwritten or redundant.
@@ -57,7 +59,7 @@ impl MeetListQuery {
                 FederationFilter::from_str_preferring(segment, FedPreference::PreferFederation)
             {
                 if parsed_federation {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
 
                 // Even though we requested PreferFederation, in the case of
@@ -76,13 +78,13 @@ impl MeetListQuery {
             // Check whether this is year information.
             } else if let Ok(y) = segment.parse::<YearFilter>() {
                 if parsed_year {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.year = y;
                 parsed_year = true;
             // Unknown string, therefore malformed URL.
             } else {
-                return Err(());
+                return Err(FromPathError::UnknownComponent);
             }
         }
 

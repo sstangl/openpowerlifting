@@ -12,6 +12,8 @@ use std::ffi::OsStr;
 use std::path;
 use std::str::FromStr;
 
+use super::FromPathError;
+
 /// Query selection descriptor, corresponding to HTML widgets.
 #[derive(Copy, Clone, PartialEq, Serialize)]
 pub struct RecordsQuery {
@@ -56,17 +58,17 @@ impl RecordsQuery {
     }
 
     /// Translates a URL path to a RecordQuery.
-    pub fn from_path(p: &path::Path, default: &RecordsQuery) -> Result<Self, ()> {
+    pub fn from_path(p: &path::Path, default: &RecordsQuery) -> Result<Self, FromPathError> {
         let mut ret = *default;
 
         // Disallow empty path components.
         if let Some(s) = p.to_str() {
             if s.contains("//") {
-                return Err(());
+                return Err(FromPathError::EmptyComponent);
             }
         } else {
             // Failed parsing UTF-8.
-            return Err(());
+            return Err(FromPathError::NotUtf8);
         }
 
         // Prevent fields from being overwritten or redundant.
@@ -87,7 +89,7 @@ impl RecordsQuery {
             // Check whether this is equipment information.
             if let Ok(e) = segment.parse::<EquipmentFilter>() {
                 if parsed_equipment {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.equipment = e;
                 parsed_equipment = true;
@@ -96,47 +98,47 @@ impl RecordsQuery {
                 FederationFilter::from_str_preferring(segment, FedPreference::PreferMetaFederation)
             {
                 if parsed_federation {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.federation = f;
                 parsed_federation = true;
             // Check whether this is sex information.
             } else if let Ok(s) = segment.parse::<SexFilter>() {
                 if parsed_sex {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.sex = s;
                 parsed_sex = true;
             // Check whether this is class kind information.
             } else if let Ok(k) = segment.parse::<ClassKind>() {
                 if parsed_classkind {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.classkind = k;
                 parsed_classkind = true;
             // Check whether this is age class information.
             } else if let Ok(c) = segment.parse::<AgeClassFilter>() {
                 if parsed_ageclass {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.ageclass = c;
                 parsed_ageclass = true;
             // Check whether this is year information.
             } else if let Ok(y) = segment.parse::<YearFilter>() {
                 if parsed_year {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.year = y;
                 parsed_year = true;
             } else if let Ok(s) = State::from_full_code(segment) {
                 if parsed_state {
-                    return Err(());
+                    return Err(FromPathError::ConflictingComponent);
                 }
                 ret.state = Some(s);
                 parsed_state = true;
             // Unknown string, therefore malformed URL.
             } else {
-                return Err(());
+                return Err(FromPathError::UnknownComponent);
             }
         }
 
@@ -195,17 +197,10 @@ pub struct Context<'db> {
 ///
 /// Since this is owned by a RecordCollector, it collects a single record
 /// in a single weightclass.
+#[derive(Default)]
 pub struct SingleRecordCollector<'db> {
     /// Remembers the top Entries during iteration.
     pub accumulator: [Option<&'db Entry>; 3],
-}
-
-impl<'db> Default for SingleRecordCollector<'db> {
-    fn default() -> SingleRecordCollector<'db> {
-        SingleRecordCollector {
-            accumulator: [None; 3],
-        }
-    }
 }
 
 impl<'db> SingleRecordCollector<'db> {

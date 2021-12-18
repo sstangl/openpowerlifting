@@ -452,16 +452,14 @@ fn finish_table<'db>(
         && (entries[0].equipment == Equipment::Single || entries[0].equipment == Equipment::Multi)
     {
         locale.strings.translate_equipment(Equipment::Multi)
-    } else {
-        if use_ipf_equipment {
-            match entries[0].equipment {
-                Equipment::Raw => &locale.strings.equipment.classic,
-                Equipment::Single => &locale.strings.equipment.equipped,
-                _ => locale.strings.translate_equipment(entries[0].equipment),
-            }
-        } else {
-            locale.strings.translate_equipment(entries[0].equipment)
+    } else if use_ipf_equipment {
+        match entries[0].equipment {
+            Equipment::Raw => &locale.strings.equipment.classic,
+            Equipment::Single => &locale.strings.equipment.equipped,
+            _ => locale.strings.translate_equipment(entries[0].equipment),
         }
+    } else {
+        locale.strings.translate_equipment(entries[0].equipment)
     };
 
     let class = entries[0].weightclasskg.as_type(units).in_format(format);

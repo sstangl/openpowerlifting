@@ -100,8 +100,10 @@ pub enum FedPreference {
     PreferFederation,
 }
 
+pub struct FromStrError;
+
 impl FederationFilter {
-    pub fn from_str_preferring(s: &str, preference: FedPreference) -> Result<Self, ()> {
+    pub fn from_str_preferring(s: &str, preference: FedPreference) -> Result<Self, FromStrError> {
         match preference {
             FedPreference::PreferMetaFederation => {
                 if let Ok(meta) = s.parse::<MetaFederation>() {
@@ -110,7 +112,7 @@ impl FederationFilter {
                 if let Ok(fed) = s.parse::<Federation>() {
                     return Ok(FederationFilter::One(fed));
                 }
-                Err(())
+                Err(FromStrError)
             }
             FedPreference::PreferFederation => {
                 if let Ok(fed) = s.parse::<Federation>() {
@@ -119,7 +121,7 @@ impl FederationFilter {
                 if let Ok(meta) = s.parse::<MetaFederation>() {
                     return Ok(FederationFilter::Meta(meta));
                 }
-                Err(())
+                Err(FromStrError)
             }
         }
     }

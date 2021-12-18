@@ -360,7 +360,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let meetdirs: Vec<DirEntry> = WalkDir::new(&search_root)
         .into_iter()
         .filter_map(Result::ok)
-        .filter(|entry| is_meetdir(entry))
+        .filter(is_meetdir)
         .collect();
 
     // Iterate in parallel over each meet directory and apply checks.
