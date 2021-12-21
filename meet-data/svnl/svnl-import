@@ -872,6 +872,7 @@ def markevent(csv):
                 break
         row[evtidx] = evt
 
+
 def is_sex_empty(csv):
     byidx = csv.index('Sex')
     for row in csv.rows:
@@ -880,6 +881,7 @@ def is_sex_empty(csv):
         else:
             print('Sex column is empty')
             return True
+
 
 def remove_empty_and_ignore_cols(csv):
     def iscolempty(csv, i):
@@ -904,18 +906,21 @@ def remove_empty_and_ignore_cols(csv):
             return
         csv.remove_column_by_index(idx)
 
+
 def sex_from_weightclass(csv):
-    female_classes = ['52','57','63','69','76', '84','84+']
+    female_classes = ['52', '57', '63', '69', '76', '84', '84+']
     male_classes = ['59', '66', '74', '83', '93', '105', '120', '120+']
     sexidx = csv.index('Sex')
     weightclassidx = csv.index('WeightClassKg')
     for row in csv.rows:
-         if row[weightclassidx] in female_classes:
-             row[sexidx] = 'F'
-         elif row[weightclassidx] in male_classes:
-             row[sexidx] = 'M'
-         else:
-             pass #Probably shouldn't get here unless rules change
+        if row[weightclassidx] in female_classes:
+            row[sexidx] = 'F'
+        elif row[weightclassidx] in male_classes:
+            row[sexidx] = 'M'
+        else:
+            pass
+            # Probably shouldn't get here unless rules change
+
 
 def main(dirname, url):
 
