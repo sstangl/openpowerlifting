@@ -369,6 +369,8 @@
     # Police, Fire, and Military.
     mrpfm = {name="MR-PFM", min=0, max=999, sex="M", equipment="Raw"}
     frpfm = {name="FR-PFM", min=0, max=999, sex="F", equipment="Raw"}
+    mwfm = {name="MW-PFM", min=0, max=999, sex="M", equipment="Wraps"}
+    fwfm = {name="FW-PFM", min=0, max=999, sex="F", equipment="Wraps"}
     mpfm = {name="M-PFM", min=0, max=999, sex="M", equipment="Single-ply"}
     fpfm = {name="F-PFM", min=0, max=999, sex="F", equipment="Single-ply"}
 
