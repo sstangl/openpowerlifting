@@ -61,7 +61,7 @@
   <option value="thspa" {% if selection.federation == "THSPA" %}selected{% endif %}>THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>
   <option value="thswpa" {% if selection.federation == "THSWPA" %}selected{% endif %}>THSWPA - Texas High School Women's Powerlifting Assocation (Single-ply)</option>
   <option value="upa" {% if selection.federation == "UPA" %}selected{% endif %}>UPA - United Powerlifting Association</option>
-  <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL - USA Powerlifting [IPF] (2014+)</option>
+  <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL - USA Powerlifting (2014+)</option>
   <option value="uspa" {% if selection.federation == "USPA" %}selected{% endif %}>USPA - United States Powerlifting Association [IPL]</option>
   <option value="uspa-tested" {% if selection.federation == "USPATested" %}selected{% endif %}>USPA Tested - United States Powerlifting Association Tested [IPL]</option>
   <option value="uspc" {% if selection.federation == "USPC" %}selected{% endif %}>USPC - United States Powerlifting Coalition</option>
