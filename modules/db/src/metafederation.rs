@@ -557,7 +557,8 @@ impl MetaFederation {
             // and for > 1997-12-5 this is the USAPL
             MetaFederation::AllIPFUSA => {
                 is_from(Country::USA, entry, meet)
-                    && ((meet.federation == Federation::USAPL
+                    && (((meet.federation == Federation::USAPL
+                        && meet.date <= Date::from_parts(2021, 11, 7))
                         || meet.federation == NAPF
                         || meet.federation == IPF)
                         || (meet.federation == USPF && meet.date < Date::from_parts(1997, 12, 5)))
