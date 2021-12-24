@@ -4,6 +4,7 @@
     require_manual_disambiguation = true
 
 [divisions]
+#old style divisions
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=23}
     subjuniors = {name = "Sub-Juniors",min=0,max=18}
@@ -12,27 +13,94 @@
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
 
+#new style men's divisions (nextlifter)
+    mropen = {name ="M-O-U",min=0,max=999,equipment="Raw"}
+    meopen = {name ="M-O",min=0,max=999,equipment="Single-ply"}
+    mrjr = {name ="M-J-U",min=14,max=22.5,equipment="Raw"}
+    mejr = {name ="M-J",min=14,max=22.5,equipment="Single-ply"}
+    mrsj = {name ="M-SJ-U",min=14,max=17.5,equipment="Raw"}
+    mesj = {name ="M-SJ",min=14,max=17.5,equipment="Single-ply"}
+    mcm1 = {name ="M-M1-U",min=39.5,max=48.5,equipment="Raw"}
+    mem1 = {name ="M-M1",min=39.5,max=48.5,equipment="Single-ply"}
+    mcm2 = {name ="M-M2-U",min=49.5,max=58.5,equipment="Raw"}
+    mem2 = {name ="M-M2",min=49.5,max=58.5,equipment="Single-ply"}
+    mcm3 = {name ="M-M3-U",min=59.5,max=68.5,equipment="Raw"}
+    mem3 = {name ="M-M3",min=59.5,max=68.5,equipment="Single-ply"}
+    mcm4 = {name ="M-M4-U",min=69.5,max=999,equipment="Raw"}
+    mem4 = {name ="M-M4",min=69.5,max=999,equipment="Single-ply"}
+    mcm5 = {name ="M-M5-U",min=79.5,max=999,equipment="Raw"}
+    mem5 = {name ="M-M5",min=79.5,max=999,equipment="Single-ply"}
+
+#new style women's divisions (nextlifter)
+    fropen = {name ="F-O-U",min=0,max=999,equipment="Raw"}
+    feopen = {name ="F-O",min=0,max=999,equipment="Single-ply"}
+    frjr = {name ="F-J-U",min=14,max=22.5,equipment="Raw"}
+    fejr = {name ="F-J",min=14,max=22.5,equipment="Single-ply"}
+    frsj = {name ="F-SJ-U",min=14,max=17.5,equipment="Raw"}
+    fesj = {name ="F-SJ",min=14,max=17.5,equipment="Single-ply"}
+    fcm1 = {name ="F-M1-U",min=39.5,max=48.5,equipment="Raw"}
+    fem1 = {name ="F-M1",min=39.5,max=48.5,equipment="Single-ply"}
+    fcm2 = {name ="F-M2-U",min=49.5,max=58.5,equipment="Raw"}
+    fem2 = {name ="F-M2",min=49.5,max=58.5,equipment="Single-ply"}
+    fcm3 = {name ="F-M3-U",min=59.5,max=68.5,equipment="Raw"}
+    fem3 = {name ="F-M3",min=59.5,max=68.5,equipment="Single-ply"}
+    fcm4 = {name ="F-M4-U",min=69.5,max=999,equipment="Raw"}
+    fem4 = {name ="F-M4",min=69.5,max=999,equipment="Single-ply"}
+    fcm5 = {name ="F-M5-U",min=79.5,max=999,equipment="Raw"}
+    fem5 = {name ="F-M5",min=79.5,max=999,equipment="Single-ply"}
+
+#arnold women's classes
+    frlw = {name ="F-LW-U",min=0,max=999,equipment="Raw"}
+    felw = {name ="F-LW",min=0,max=999,equipment="Single-ply"}
+    frmw = {name ="F-MW-U",min=0,max=999,equipment="Raw"}
+    femw = {name ="F-MW",min=0,max=999,equipment="Single-ply"}
+    frhw = {name ="F-HW-U",min=0,max=999,equipment="Raw"}
+    fehw = {name ="F-HW",min=0,max=999,equipment="Single-ply"}
+    frshw = {name ="F-SHW-U",min=0,max=999,equipment="Raw"}
+    feshw = {name ="F-SHW",min=0,max=999,equipment="Single-ply"}
+
+#arnold men's classes
+    mrlw = {name ="M-LW-U",min=0,max=999,equipment="Raw"}
+    melw = {name ="M-LW",min=0,max=999,equipment="Single-ply"}
+    mrmw = {name ="M-MW-U",min=0,max=999,equipment="Raw"}
+    memw = {name ="M-MW",min=0,max=999,equipment="Single-ply"}
+    mrhw = {name ="M-HW-U",min=0,max=999,equipment="Raw"}
+    mehw = {name ="M-HW",min=0,max=999,equipment="Single-ply"}
+    mrshw = {name ="M-SHW-U",min=0,max=999,equipment="Raw"}
+    meshw = {name ="M-SHW",min=0,max=999,equipment="Single-ply"}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
+[weightclasses.new_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
 [weightclasses.default_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","M-J-U","M-J","M-SJ-U","M-SJ"]
+
+[weightclasses.juniornew_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors","F-J-U","F-J","F-SJ-U","F-SJ"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","F-J-U","F-J","F-SJ-U","F-SJ"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
