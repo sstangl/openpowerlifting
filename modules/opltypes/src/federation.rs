@@ -522,6 +522,10 @@ pub enum Federation {
     #[strum(to_string = "GRAWA", serialize = "grawa")]
     GRAWA,
 
+    /// Greek Powerlifting League.
+    #[strum(to_string = "GPL", serialize = "gpl")]
+    GPL,
+
     /// GSF-Belarus.
     #[serde(rename = "GSF-Belarus")]
     #[strum(to_string = "GSF-Belarus", serialize = "gsf-belarus")]
@@ -1671,6 +1675,7 @@ impl Federation {
             Federation::GPCRUS => false,
             Federation::GPCWUAPCRO => false,
             Federation::GPF => false,
+            Federation::GPL => false,
             Federation::GPU => false,
             Federation::GRAWA => false,
             Federation::GSFBelarus => false,
@@ -2030,6 +2035,7 @@ impl Federation {
             Federation::GPCRUS => Some(Country::Russia),
             Federation::GPCWUAPCRO => Some(Country::Croatia),
             Federation::GPF => None,
+            Federation::GPL => Some(Country::Greece),
             Federation::GPU => Some(Country::Germany),
             Federation::GRAWA => Some(Country::Germany),
             Federation::GSFBelarus => Some(Country::Belarus),
@@ -2415,6 +2421,7 @@ impl Federation {
             Federation::GPCRUS => Some(Federation::GPC),
             Federation::GPCWUAPCRO => Some(Federation::GPC),
             Federation::GPF => None,
+            Federation::GPL => Some(Federation::IPL),
             Federation::GPU => Some(Federation::WPU),
             Federation::GRAWA => Some(Federation::IRP),
             Federation::GSFBelarus => None,
@@ -2860,6 +2867,7 @@ impl Federation {
             Federation::GPCRUS => PointsSystem::Glossbrenner,
             Federation::GPCWUAPCRO => PointsSystem::Wilks,
             Federation::GPF => PointsSystem::Wilks,
+            Federation::GPL => PointsSystem::Dots,
             Federation::GPU => PointsSystem::Wilks,
             Federation::GRAWA => PointsSystem::Wilks,
             Federation::GSFBelarus => PointsSystem::Wilks,
