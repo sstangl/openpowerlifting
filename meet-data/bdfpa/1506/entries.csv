@@ -1,7 +1,7 @@
 Name,Sex,BodyweightKg,WeightClassKg,Division,Equipment,Event,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Team,Country
 Lisa Tobias,F,46.5,47.5,F-O,Raw,S,-75,85,92.5,95.5,92.5,,,,,,,,,,,92.5,1,,Scotland
 Lyndsey Hallam,F,47.1,47.5,F-O,Raw,S,77.5,-82.5,-87.5,,77.5,,,,,,,,,,,77.5,2,SE,
-Georgie Hodson,F,49.2,50.5,F-O,Raw,S,65,75,-85,,75,,,,,,,,,,,75,1,WM,
+Georgina Hodson,F,49.2,50.5,F-O,Raw,S,65,75,-85,,75,,,,,,,,,,,75,1,WM,
 Louise Brookwell,F,52.3,53,F-O,Raw,S,82.5,87.5,-90,,87.5,,,,,,,,,,,87.5,1,,Wales
 Wendy Evans,F,53.4,55.5,F-M2,Raw,S,90,-95,95,,95,,,,,,,,,,,95,1,,Wales
 Debbie MacDonald,F,53.7,55.5,F-M1,Raw,S,75,80,-85,,80,,,,,,,,,,,80,1,WM,
@@ -61,7 +61,7 @@ Yiannis Verenakis,M,100.7,110,M-JR,Raw,S,202.5,210,-217.5,,210,,,,,,,,,,,210,1,N
 Phil Jones,M,104.8,110,M-M2,Raw,S,180,,,,180,,,,,,,,,,,180,2,EC,
 Ron Burden,M,104.5,110,M-M6,Raw,S,145,155,-160,,155,,,,,,,,,,,155,1,EC,
 Darren Wood,M,112.2,125,M-M1,Raw,S,240,255,270,,270,,,,,,,,,,,270,1,WM,
-Les Pilling,M,122.5,125,M-M5,Raw,S,160,180.5,190,,190,,,,,,,,,,,190,1,NW,
+Leslie Pilling,M,122.5,125,M-M5,Raw,S,160,180.5,190,,190,,,,,,,,,,,190,1,NW,
 Rob Bridges,M,133,145,M-JR,Raw,S,200,-220,-220,,200,,,,,,,,,,,200,1,WM,
 Paul Waites,M,129.8,145,M-M3,Raw,S,190,-202.5,-202.5,,190,,,,,,,,,,,190,1,EC,
 Neil Abery,M,82.3,82.5,M-O,Single-ply,S,250,-283.5,283.5,,283.5,,,,,,,,,,,283.5,1,EM,
@@ -192,7 +192,7 @@ Jed Barnett,M,122.5,125,M-O,Raw,B,,,,,,142.5,145,147.5,,147.5,,,,,,147.5,4,WM,
 John Fisher,M,122.7,125,M-O,Raw,B,,,,,,135,140,145,,145,,,,,,145,5,EM,
 Adam Harrigan,M,112.8,125,M-JR,Raw,B,,,,,,-142.5,142.5,-145,,142.5,,,,,,142.5,1,WM,
 Lewis Moore,M,121.5,125,M-JR,Raw,B,,,,,,125,132.5,-137.5,,132.5,,,,,,132.5,2,EC,
-Les Pilling,M,122.5,125,M-M5,Raw,B,,,,,,100,110,-115,,110,,,,,,110,1,NW,
+Leslie Pilling,M,122.5,125,M-M5,Raw,B,,,,,,100,110,-115,,110,,,,,,110,1,NW,
 Darren Beddall,M,135.8,145,M-O,Raw,B,,,,,,165,175,-180,,175,,,,,,175,1,NM,
 Laine Snook,M,133.1,145,M-M2,Raw,B,,,,,,135,,,,135,,,,,,135,1,WM,
 Gerard Matthews,M,148.4,145+,M-O,Raw,B,,,,,,180,190,200,,200,,,,,,200,1,,Wales
@@ -209,7 +209,7 @@ Ian Hawkins,M,119.5,125,M-O,Single-ply,B,,,,,,240,255,-261,,255,,,,,,255,1,,Scot
 Steve Webb,M,122.5,125,M-M3,Single-ply,B,,,,,,150,,,,150,,,,,,150,1,EM,
 Lisa Tobias,F,46.5,47.5,F-O,Raw,D,,,,,,,,,,,110,130,142.5,150,142.5,142.5,1,,Scotland
 Laura Moran,F,49.6,50.5,F-O,Raw,D,,,,,,,,,,,120,127.5,-132.5,,127.5,127.5,1,,Scotland
-Georgie Hodson,F,49.2,50.5,F-O,Raw,D,,,,,,,,,,,80,90,97.5,,97.5,97.5,2,WM,
+Georgina Hodson,F,49.2,50.5,F-O,Raw,D,,,,,,,,,,,80,90,97.5,,97.5,97.5,2,WM,
 Sue Bethall,F,52.7,53,F-M3,Raw,D,,,,,,,,,,,135,-147.5,147.5,,147.5,147.5,1,,Wales
 Louise Brookwell,F,52.3,53,F-O,Raw,D,,,,,,,,,,,100,-107.5,,,100,100,1,,Wales
 Pat Reeves,F,51.7,53,F-M6,Raw,D,,,,,,,,,,,85,90,95,,95,95,1,WM,
@@ -336,7 +336,7 @@ Daniel Lindsell,M,122.1,125,M-O,Raw,D,,,,,,,,,,,270,290,-300,,290,290,5,EM,
 Darren Wood,M,112.2,125,M-M1,Raw,D,,,,,,,,,,,240,260,280,,280,280,1,WM,
 Lewis Moore,M,121.5,125,M-JR,Raw,D,,,,,,,,,,,242.5,252.5,262.5,,262.5,262.5,1,EC,
 Jon Broadhead,M,123.2,125,M-O,Raw,D,,,,,,,,,,,230,255,-265,,255,255,6,SE,
-Les Pilling,M,122.5,125,M-M5,Raw,D,,,,,,,,,,,200,,,,200,200,1,NW,
+Leslie Pilling,M,122.5,125,M-M5,Raw,D,,,,,,,,,,,200,,,,200,200,1,NW,
 James Wright,M,119.8,125,M-T1,Raw,D,,,,,,,,,,,180,-185,185,,185,185,1,,Wales
 Roy Olsen,M,117,125,M-M7,Raw,D,,,,,,,,,,,-180,,,,,,DQ,NM,
 Ryan Hough,M,139.8,145,M-O,Raw,D,,,,,,,,,,,290,305,-310,,305,305,1,SW,
