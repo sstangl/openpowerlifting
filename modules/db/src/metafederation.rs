@@ -181,6 +181,10 @@ pub enum MetaFederation {
     #[strum(to_string = "aep")]
     AEP,
 
+    /// IPO, but only tested entries.
+    #[strum(to_string = "airishpo")]
+    AIrishPO,
+
     /// AIWBPA, but with international results also.
     #[strum(to_string = "aiwbpa")]
     AIWBPA,
@@ -636,6 +640,12 @@ impl MetaFederation {
                 meet.federation == Federation::IrelandUA && meet.name.starts_with("ABS")
             }
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
+            MetaFederation::AIrishPO => {
+                entry.tested
+                    && (meet.federation == Federation::IPO
+                        || (meet.federation == Federation::WPC
+                            && entry.lifter_country.map_or(false, |c| c.is_in_ireland())
+            }
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
             MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
 
