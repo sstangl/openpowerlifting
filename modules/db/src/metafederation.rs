@@ -642,9 +642,9 @@ impl MetaFederation {
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
             MetaFederation::AIrishPO => {
                 entry.tested
-                    && (meet.federation == Federation::IPO
+                    && (meet.federation == Federation::IrishPO
                         || (meet.federation == Federation::WPC
-                            && entry.lifter_country.map_or(false, |c| c.is_in_ireland())
+                            && entry.lifter_country == Some(Country::Ireland)))
             }
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
             MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
