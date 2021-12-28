@@ -201,6 +201,8 @@ def parse_sheetname(s):
             pass
         elif word in ['сотрудники', 'сотрудн', 'клиенты']:  # Employees/Members
             pass
+        elif word in ['шоу']: # Show
+            pass
         else:
             die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
     assert event
@@ -308,7 +310,7 @@ def parse_fieldnames(sheet):
             fieldnames.append('IGNORE')
         elif text == 'команда' or text == 'coach':  # Coach
             fieldnames.append('IGNORE')
-        elif text in ['сountry/city/state', 'страна/город/область']:
+        elif text in ['сountry/city/state', 'страна/город/область','страна/город']:
             fieldnames.append('Country/City/State')
         elif text in ['country/town', 'город/страна']:
             fieldnames.append('Country/City/State')
