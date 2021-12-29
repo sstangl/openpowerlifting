@@ -2,19 +2,19 @@ Place,Name,Sex,BirthDate,Equipment,Division,BodyweightKg,WeightClassKg,Best3Squa
 1,Aaron Hatfield,M,,Raw,Submasters,172.09,140+,,237,,237,B
 1,Aaron Hatfield,M,,Wraps,Submasters,172.09,140+,339.29,236.78,294.38,870.44,SBD
 1,Michael Tyler #1,M,,Raw,Open,106.14,110,,206.84,,206.84,B
-1,Kent Johnson,M,,Raw,Masters 50-54,,48,,111.13,,111.13,B
-1,Kent Johnson,M,,Raw,Masters 50-54,,48,,111.13,133.81,244.94,BD
+1,Kent Johnson,M,,Raw,Masters 50-54,,,,111.13,,111.13,B
+1,Kent Johnson,M,,Raw,Masters 50-54,,,,111.13,133.81,244.94,BD
 2,Jared Watson,M,,Raw,Open,95.44,100,,176.9,192.78,369.68,BD
-1,George Johnson,M,,Wraps,Juniors,,48,235.87,124.74,215.46,576.06,SBD
-1,Trevor Miller #3,M,,Single-ply,Teenage 13-15,,48,204.12,102.06,170.1,476.27,SBD
-1,Keirstyn Williams,F,,Raw,Teenage 13-15,,48,,,72.57,72.57,D
+1,George Johnson,M,,Wraps,Juniors,,,235.87,124.74,215.46,576.06,SBD
+1,Trevor Miller #3,M,,Single-ply,Teenage 13-15,,,204.12,102.06,170.1,476.27,SBD
+1,Keirstyn Williams,F,,Raw,Teenage 13-15,,,,,72.57,72.57,D
 1,Keelee Evans,F,,Raw,Juniors,67.36,67.5,,,147.42,147.42,D
 1,Anna Stamets,F,,Wraps,Masters 45-49,107.77,110,102.06,83.91,170.1,356.07,SBD
-1,Jeff Wilson,M,,Wraps,Masters 50-54,,48,181.44,115.67,181.44,478.54,SBD
+1,Jeff Wilson,M,,Wraps,Masters 50-54,,,181.44,115.67,181.44,478.54,SBD
 1,Tathia Johnson,F,,Wraps,Masters 50-54,96.16,100,120.2,52.16,136.08,308.44,SBD
-1,Garrett Moore,M,,Raw,Juniors,,48,172.37,122.47,217.72,512.56,SBD
+1,Garrett Moore,M,,Raw,Juniors,,,172.37,122.47,217.72,512.56,SBD
 1,Jerry Travelstead,M,,Raw,Masters 40-44,88.09,90,,170.1,,170.1,B
-1,Steven Jones #1,M,,Wraps,Masters 45-49,,48,294.84,165.56,288.03,748.43,SBD
+1,Steven Jones #1,M,,Wraps,Masters 45-49,,,294.84,165.56,288.03,748.43,SBD
 1,Megan Thompson,F,,Wraps,Open,76.43,82.5,147.42,79.38,170.1,396.89,SBD
 2,Bethany Fletcher,F,,Wraps,Open,72.62,75,99.79,61.23,120.2,281.23,SBD
 1,Kaden Salzman,M,,Raw,Teenage 16-17,69.35,75,,90.72,,90.72,B
@@ -45,7 +45,7 @@ Place,Name,Sex,BirthDate,Equipment,Division,BodyweightKg,WeightClassKg,Best3Squa
 1,Darrus Thompson,M,,Wraps,Open,95.53,100,231.33,129.27,181.44,542.04,SBD
 3,Ethan Barton,M,,Raw,Juniors,97.16,100,219.99,138.35,201.85,560.19,SBD
 1,Josh Jeffries,M,,Wraps,Submasters,110.95,118,199.58,102.06,222.26,523.9,SBD
-2,Jonathan Cutrell,M,,Raw,Open,,48,195.04,111.13,215.46,521.63,SBD
+2,Jonathan Cutrell,M,,Raw,Open,,,195.04,111.13,215.46,521.63,SBD
 1,Lonnie Watson,M,,Wraps,Open,105.78,110,215.46,149.69,229.06,594.21,SBD
 2,Jesse Parrish,M,,Raw,Juniors,99.61,100,195.04,140.61,231.33,566.99,SBD
 2,Hayden Cowden,M,,Raw,Juniors,89.54,90,197.31,124.74,231.33,553.38,SBD
@@ -55,7 +55,7 @@ Place,Name,Sex,BirthDate,Equipment,Division,BodyweightKg,WeightClassKg,Best3Squa
 1,Trenton Owle,M,,Wraps,Open,124.83,125,235.87,136.08,256.28,628.23,SBD
 1,Austin Nunley,M,,Raw,Juniors,97.7,100,229.06,158.76,276.69,664.51,SBD
 1,Austin Nunley,M,,Raw,Open,97.7,100,229.06,158.76,276.69,664.51,SBD
-1,Kyle Arrasmith,M,,Raw,Open,,48,278.96,195.04,290.3,764.3,SBD
+1,Kyle Arrasmith,M,,Raw,Open,,140+,278.96,195.04,290.3,764.3,SBD
 1,Brian Barger,M,,Wraps,Masters 50-54,97.16,100,292.57,192.78,317.51,802.86,SBD
 1,Brandon Lefeva,M,,Raw,Teenage 13-15,47.63,48,,,120.2,120.2,D
 1,Mike Cross #1,M,,Raw,Masters 70-74,60.24,67.5,,,136.08,136.08,D
@@ -76,5 +76,5 @@ DQ,Jamel Marsh,M,,Raw,Open,129.55,140,,,,,D
 1,Cicely Miller,F,,Raw,Open,136.98,90+,,74.84,120.2,195.04,BD
 1,Brett Robinson,M,,Raw,Open,108.05,110,,151.95,249.48,401.43,BD
 1,JR Clay,M,,Raw,Open,94.71,100,,165.56,260.82,426.38,BD
-1,Ethan Wilson,M,,Raw,Open,,48,,172.37,294.84,467.2,BD
+1,Ethan Wilson,M,,Raw,Open,,,,172.37,294.84,467.2,BD
 1,Brian Criddle,M,,Raw,Teenage 18-19,73.84,75,,124.74,,124.74,B
