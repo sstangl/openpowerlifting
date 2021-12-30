@@ -8,6 +8,7 @@
 #  2. Event.
 #
 # For a sample database dump file, use the attachment on GitLab issue #9172.
+# But use LibreOffice to process it into a CSV file, not XLS.
 
 import sys
 import os
