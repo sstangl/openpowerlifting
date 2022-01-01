@@ -99,6 +99,7 @@
     0803 = ["ExemptWeightClassConsistency"]  # No 44.5 class
     1203 = ["ExemptAge","ExemptWeightClassConsistency"] # Lifter of age 4, 44 used for youth.
     1207 = ["ExemptWeightClassConsistency"]  # No 44.5 class
+    1425 = ["ExemptAge"] # Lifter of age 4.
     1501 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
     1503 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.
     1605 = ["ExemptWeightClassConsistency"]  # Used old classes for youth.

@@ -21,6 +21,7 @@ except ImportError:
     import oplcsv
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
+RAWUKRDIR = os.path.join(os.path.dirname(FEDDIR), "raw-ukr")
 
 
 def make_iso8601_dates(csv):
@@ -228,15 +229,18 @@ def build_lifterdateset():
        This set is then used to filter out meets that have already been entered.
        We don't use the MeetName, because it's unreliable."""
     lifterdateset = set()
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'entries.csv' in files and 'meet.csv' in files:
-            meetcsv = oplcsv.Csv(dirname + os.sep + 'meet.csv')
-            entriescsv = oplcsv.Csv(dirname + os.sep + 'entries.csv')
 
-            date = meetcsv.rows[0][meetcsv.index('Date')]
-            for row in entriescsv.rows:
-                name = row[entriescsv.index('Name')]
-                lifterdateset.add((name, date))
+    # Also process RAW-UKR data, since the DB includes foreign results too.
+    for toplevel in [FEDDIR, RAWUKRDIR]:
+        for dirname, subdirs, files in os.walk(toplevel):
+            if 'entries.csv' in files and 'meet.csv' in files:
+                meetcsv = oplcsv.Csv(dirname + os.sep + 'meet.csv')
+                entriescsv = oplcsv.Csv(dirname + os.sep + 'entries.csv')
+
+                date = meetcsv.rows[0][meetcsv.index('Date')]
+                for row in entriescsv.rows:
+                    name = row[entriescsv.index('Name')]
+                    lifterdateset.add((name, date))
 
     return lifterdateset
 
@@ -403,7 +407,8 @@ def main(csv_filename, outdir):
     os.makedirs(outdir, exist_ok=True)  # Guarantee the outdir exists.
     for (i, csv) in enumerate(csvs):
         write_entries_meet_csvs(csv, i, outdir)
-        break  # Just do the first one for now.
+        if i == 9:
+            break  # Just do the first one for now.
     print("ok")
 
 
