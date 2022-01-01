@@ -167,7 +167,7 @@ pub enum MetaFederation {
 
     /// WPC, but only Tested entries.
     #[strum(to_string = "awpc")]
-    AWPC,    
+    AWPC,
 
     /// APF, but only Tested entries.
     #[strum(to_string = "aapf")]
@@ -658,12 +658,7 @@ impl MetaFederation {
             MetaFederation::APU => {
                 affiliation!(meet, entry, APU, IPF, ORPF) && meet.date.year() >= 2018
             }
-
-            MetaFederation::AWPC => {
-                entry.tested
-                    || (meet.federation == Federation::WPC
-            }
-
+            MetaFederation::AWPC => meet.federation == Federation::WPC && entry.tested,
             MetaFederation::BelPF => affiliation!(meet, entry, BelPF, IPF, EPF),
             MetaFederation::BP => {
                 meet.federation == Federation::BAWLA
