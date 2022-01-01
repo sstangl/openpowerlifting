@@ -165,6 +165,10 @@ pub enum MetaFederation {
     #[strum(to_string = "all-usvirginislands")]
     AllUSVirginIslands,
 
+    /// WPC, but only Tested entries.
+    #[strum(to_string = "awpc")]
+    AWPC,    
+
     /// APF, but only Tested entries.
     #[strum(to_string = "aapf")]
     AAPF,
@@ -653,6 +657,11 @@ impl MetaFederation {
             //date we also get PA, AusPF, and AAPLF lifters in IPF/ORPF comps
             MetaFederation::APU => {
                 affiliation!(meet, entry, APU, IPF, ORPF) && meet.date.year() >= 2018
+            }
+
+            MetaFederation::AWPC => {
+                entry.tested
+                    || (meet.federation == Federation::WPC
             }
 
             MetaFederation::BelPF => affiliation!(meet, entry, BelPF, IPF, EPF),
