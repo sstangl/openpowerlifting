@@ -55,7 +55,7 @@ def getmeetinfo(soup):
     fed = fed[fed.find("(")+1:fed.find(")")]
 
     # Correct fed names to the form that we use
-    if fed in ['RPF', 'SPPF', 'MPF', 'FPVO', 'FPIO', 'FPYNAO']:
+    if fed in ['RPF', 'SPPF', 'MPF', 'FPVO', 'FPIO', 'FPYNAO', 'FPKK', 'FPVrn', 'PFMr', 'TPF', 'FPRME']:
         fed = 'FPR'
     elif fed in ['UPF']:
         fed = 'UkrainePF'
@@ -86,7 +86,8 @@ def getmeetinfo(soup):
                   'Beryozovsky': 'SVE', 'Togliatti': 'SAM', 'Engels': 'SAR',
                   'Rzhev': 'TVE', 'Omsk': 'OMS', 'Anapa': 'KDA', 'Gurievsk': 'KGD',
                   'Tomsk': 'TOM', 'Lipetsk': 'LIP', 'Tyumen': 'TYU', 'Gulkevichi': 'KDA',
-                  'Penza': 'PNZ', 'Zabaykalsk': 'ZAB', 'Tambov': 'TAM', 'Nalchik': 'KB'}
+                  'Penza': 'PNZ', 'Zabaykalsk': 'ZAB', 'Tambov': 'TAM', 'Nalchik': 'KB',
+                  'Murmansk': 'MUR'}
 
     town_aliases = {'Hanti-Mansiysk': 'Khanty-Mansiysk',
                     'Saint Petersburg': 'St. Petersburg',
@@ -108,7 +109,7 @@ def getmeetinfo(soup):
                     'Череповец': 'Cherepovets', 'Белгород': 'Belgorod',
                     'Нижний Новгород': 'Nizhny Novgorod', 'Волгоград': 'Volgograd',
                     'Новосибирск': 'Novosibirsk', 'Togliatty': 'Togliatti',
-                    'Blagoveschensk': 'Blagoveshchensk'}
+                    'Blagoveschensk': 'Blagoveshchensk', 'Мурманск': 'Murmansk'}
 
     country_aliases = {'Россия': 'Russia', 'Slovak Republic': 'Slovakia',
                        'Czech Republic': 'Czechia', 'Tadjikistan': 'Tajikistan',
