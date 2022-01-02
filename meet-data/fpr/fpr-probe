@@ -22,8 +22,8 @@ except ImportError:
 
 
 MAIN_URLS = [
+    'http://fpr-info.ru/protokol.htm',
     'http://fpr-info.ru/___protokoly/prot_2021/prot_2021.htm',
-    'http://fpr-info.ru/___protokoly/prot_2020/prot_2020.htm',
     'http://fpr-info.ru/___protokoly/prot_2019/prot_2019.htm',
     'http://fpr-info.ru/___protokoly/prot_2015/prot_2015.htm',
 ]
