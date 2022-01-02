@@ -55,7 +55,8 @@ def getmeetinfo(soup):
     fed = fed[fed.find("(")+1:fed.find(")")]
 
     # Correct fed names to the form that we use
-    if fed in ['RPF', 'SPPF', 'MPF', 'FPVO', 'FPIO', 'FPYNAO', 'FPKK', 'FPVrn', 'PFMr', 'TPF', 'FPRME']:
+    if fed in ['RPF', 'SPPF', 'MPF', 'FPVO', 'FPIO', 'FPYNAO', 'FPKK', 'FPVrn', 'PFMr',
+               'TPF', 'FPRME']:
         fed = 'FPR'
     elif fed in ['UPF']:
         fed = 'UkrainePF'
