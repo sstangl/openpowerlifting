@@ -14,7 +14,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 75,R. Morris,Open,M,192.5,112.5,210,515,SBD,Single-ply,4
 82.5,Eddie Mooney,Open,M,300,200,300,800,SBD,Single-ply,1
 82.5,H. Aston,Open,M,282.5,215,245,742.5,SBD,Single-ply,2
-82.5,B. Oliver,Open,M,237.5,175,257.5,670,SBD,Single-ply,3
+82.5,Billy Oliver,Open,M,237.5,175,257.5,670,SBD,Single-ply,3
 82.5,J. Billman,Open,M,205,125,227.5,557.5,SBD,Single-ply,4
 82.5,J. Marko,Open,M,205,135,197.5,537.5,SBD,Single-ply,5
 82.5,D. Reynolds,Open,M,170,135,195,500,SBD,Single-ply,6
@@ -24,12 +24,12 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 90,E. White,Open,M,272.5,142.5,285,700,SBD,Single-ply,4
 90,R. Roy,Open,M,250,182.5,262.5,695,SBD,Single-ply,5
 90,S. Kelley,Open,M,237.5,165,280,682.5,SBD,Single-ply,6
-90,W. Moore,Open,M,280,150,222.5,652.5,SBD,Single-ply,7
+90,Wendell Moore,Open,M,280,150,222.5,652.5,SBD,Single-ply,7
 100,John Roberts #4,Open,M,345,227.5,312.5,885,SBD,Single-ply,1
 100,R. Osburn,Open,M,292.5,182.5,315,790,SBD,Single-ply,2
 100,M. Northcutt,Open,M,292.5,207.5,287.5,787.5,SBD,Single-ply,3
 100,D. Tallbert,Open,M,287.5,182.5,290,760,SBD,Single-ply,4
-110,G. Fields,Open,M,345,185,310,840,SBD,Single-ply,1
+110,Greg Fields #1,Open,M,345,190,310,845,SBD,Single-ply,1
 110,B. Allen,Open,M,327.5,170,275,772.5,SBD,Single-ply,2
 110,R. Wright,Open,M,292.5,197.5,265,755,SBD,Single-ply,3
 110,C. Sanders,Open,M,262.5,200,262.5,725,SBD,Single-ply,4
@@ -53,7 +53,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 82.5,L. Shoals,Novice,M,252.5,132.5,265,650,SBD,Single-ply,1
 82.5,T. Springer,Novice,M,240,172.5,227.5,640,SBD,Single-ply,2
 82.5,D. Reed,Novice,M,227.5,165,207.5,600,SBD,Single-ply,3
-82.5,K. Pierce,Novice,M,227.5,115,210,552.5,SBD,Single-ply,4
+82.5,Ken Pierce,Novice,M,227.5,115,210,552.5,SBD,Single-ply,4
 82.5,J. Marko,Novice,M,205,135,187.5,527.5,SBD,Single-ply,5
 82.5,D. Reynolds,Novice,M,170,135,195,500,SBD,Single-ply,6
 90,E. White,Novice,M,272.5,142.5,285,700,SBD,Single-ply,1
@@ -62,7 +62,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 90,S. Kelley,Novice,M,237.5,165,280,682.5,SBD,Single-ply,4
 90,J. Hendrix,Novice,M,237.5,165,267.5,670,SBD,Single-ply,5
 90,M. Hall,Novice,M,242.5,150,250,642.5,SBD,Single-ply,7
-90,W. Moore,Novice,M,280,150,222.5,652.5,SBD,Single-ply,6
+90,Wendell Moore,Novice,M,280,150,222.5,652.5,SBD,Single-ply,6
 90,J. Velasco,Novice,M,227.5,147.5,227.5,602.5,SBD,Single-ply,8
 90,M. Ramsey,Novice,M,205,160,227.5,592.5,SBD,Single-ply,9
 90,J. Moreno,Novice,M,182.5,137.5,227.5,547.5,SBD,Single-ply,10
@@ -78,7 +78,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 100,J. Phillips,Novice,M,222.5,147.5,237.5,607.5,SBD,Single-ply,9
 100,B. Kilmer,Novice,M,227.5,142.5,227.5,597.5,SBD,Single-ply,10
 100,R. Bell,Novice,M,220,135,227.5,582.5,SBD,Single-ply,11
-110,G. Fields,Novice,M,345,190,310,845,SBD,Single-ply,1
+110,Greg Fields #1,Novice,M,345,190,310,845,SBD,Single-ply,1
 110,R. Wright,Novice,M,292.5,197.5,265,755,SBD,Single-ply,2
 110,K. Koladetsky,Novice,M,275,195,272.5,742.5,SBD,Single-ply,3
 110,R. Schamberger,Novice,M,272.5,182.5,282.5,737.5,SBD,Single-ply,4
@@ -87,9 +87,9 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 110,G. Edwards,Novice,M,250,160,267.5,677.5,SBD,Single-ply,7
 110,S. Stoughton,Novice,M,242.5,162.5,272.5,677.5,SBD,Single-ply,8
 110,J. Snow,Novice,M,235,137.5,277.5,650,SBD,Single-ply,9
-110,G. Boenker,Novice,M,232.5,160,250,642.5,SBD,Single-ply,10
+110,Greg Boenker,Novice,M,232.5,160,250,642.5,SBD,Single-ply,10
 125,J. Turner,Novice,M,250,220,330,800,SBD,Single-ply,1
-125,C. McConnell,Novice,M,310,195,287.5,792.5,SBD,Single-ply,2
+125,Chuck McConnell,Novice,M,310,195,287.5,792.5,SBD,Single-ply,2
 125,C. Weaver,Novice,M,310,197.5,277.5,785,SBD,Single-ply,3
 125,R. Blackmon,Novice,M,245,137.5,285,667.5,SBD,Single-ply,4
 125+,J. Morgan,Novice,M,290,205,322.5,817.5,SBD,Single-ply,1
