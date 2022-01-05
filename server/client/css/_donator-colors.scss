@@ -226,7 +226,13 @@
 // Red, black, white and green.
 .palestine {
   @include gradient-prereqs($default-color);
-  background-image: linear-gradient(to right, #CE1126, #000000, #FFFFFF, #007A3D);
+  background-image: linear-gradient(to right, #CE1126 25%, #000000 25% 50%, #FFFFFF 50% 75%, #007A3D 75%);
+}
+
+// Red, green, white, and black.
+.emirates {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #CE1126 25%, #007A3D 25% 50%, #FFFFFF 50% 75%, #000000 75%);
 }
 
 // A combination of orange, white, and black.
