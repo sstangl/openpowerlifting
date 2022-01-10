@@ -347,6 +347,10 @@ pub enum Federation {
     #[strum(to_string = "FCA", serialize = "fca")]
     FCA,
 
+    ///Federacao De Culturismo Epowerlifting De Portugal, Portuguese IPF Affiliate
+    #[strum(to_string = "FCP", serialize = "fcp")]
+    FCP,
+
     /// Federace českého silového trojboje, GPC.
     #[strum(to_string = "FCST", serialize = "fcst")]
     FCST,
@@ -1638,6 +1642,7 @@ impl Federation {
             Federation::FALPO => FULLY_TESTED,
             Federation::FBPD => false,
             Federation::FCA => false,
+            Federation::FCP => FULLY_TESTED,
             Federation::FCST => false,
             Federation::FECAPOLIF => FULLY_TESTED,
             Federation::FECHIPO => FULLY_TESTED,
@@ -1997,6 +2002,7 @@ impl Federation {
             Federation::FALPO => Some(Country::Argentina),
             Federation::FBPD => Some(Country::Russia),
             Federation::FCA => Some(Country::USA),
+            Federation::FCP => Some(Country::Portugal),
             Federation::FCST => Some(Country::Czechia),
             Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FECHIPO => Some(Country::Chile),
@@ -2383,6 +2389,7 @@ impl Federation {
             Federation::FALPO => Some(Federation::IPF),
             Federation::FBPD => None,
             Federation::FCA => None,
+            Federation::FCP => Some(Federation::IPF),
             Federation::FCST => Some(Federation::GPC),
             Federation::FECAPOLIF => Some(Federation::IPF),
             Federation::FECHIPO => Some(Federation::IPF),
@@ -2829,6 +2836,7 @@ impl Federation {
             Federation::FALPO => Federation::ipf_rules_on(date),
             Federation::FBPD => PointsSystem::Wilks,
             Federation::FCA => PointsSystem::Wilks,
+            Federation::FCP => Federation::ipf_rules_on(date),
             Federation::FCST => PointsSystem::Wilks,
             Federation::FECAPOLIF => Federation::ipf_rules_on(date),
             Federation::FECHIPO => Federation::ipf_rules_on(date),

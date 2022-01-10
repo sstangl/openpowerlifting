@@ -30,6 +30,7 @@
   <option value="ejtl" {% if selection.federation == "EJTL" %}selected{% endif %}>EJTL / {{strings.country.estonia}}</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA / {{strings.country.england}}</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO / {{strings.country.argentina}}</option>
+  <option value="fcp" {% if selection.federation == "FCP" %}selected{% endif %}>FCP / {{strings.country.portugal}}</option>
   <option value="fecapolif" {% if selection.federation == "FECAPOLIF" %}selected{% endif %}>FECAPOLIF / {{strings.country.cameroon}}</option>
   <option value="fechipo" {% if selection.federation == "FECHIPO" %}selected{% endif %}>FECHIPO / {{strings.country.chile}}</option>
   <option value="fedepotencia" {% if selection.federation == "Fedepotencia" %}selected{% endif %}>Fedepotencia / {{strings.country.guatemala}}</option>
