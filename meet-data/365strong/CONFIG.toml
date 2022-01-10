@@ -23,6 +23,7 @@
     M9 = {name = "M9", min = 80, max = 999}
     mpf = {name = "MPF", min = 0, max = 999}
     novice = {name = "Novice", min = 0, max = 999}
+    para = {name = "Para", min = 0, max = 999}
 
     # OpenLifter-style divisions.
     j_t = {name="J-T", min=20, max=23, tested="Yes"}
