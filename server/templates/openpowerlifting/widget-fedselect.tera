@@ -45,6 +45,7 @@
   <option value="fhsaa" {% if selection.federation == "FHSAA" %}selected{% endif %}>FHSAA - Florida High School Athletics Association</option>
   <option value="hardcore" {% if selection.federation == "Hardcore" %}selected{% endif %}>Hardcore - Hardcore Powerlifting</option>
   <option value="ipa" {% if selection.federation == "IPA" %}selected{% endif %}>IPA - International Powerlifting Association (2014+)</option>
+  <option value="lhspla" {% if selection.federation == "LHSPLA" %}selected{% endif %}>LHSPLA - Louisiana High School Powerlifting Association</option>
   <option value="mhspla" {% if selection.federation == "MHSPLA" %}selected{% endif %}>MHSPLA - Michigan High School Powerlifting Association</option>
   <option value="mm" {% if selection.federation == "MM" %}selected{% endif %}>MM - Metal Militia</option>
   <option value="pride" {% if selection.federation == "PRIDE" %}selected{% endif %}>PRIDE - Pride Powerlifting</option>
