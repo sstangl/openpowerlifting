@@ -15,7 +15,7 @@ except ImportError:
     import oplprobe
 
 
-URLS = ["http://powerlifting.org.au/results/"]
+URLS = ["https://www.powerlifting.org.au/apu-competition-results"]
 BASEURL = "http://powerlifting.org.au"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
