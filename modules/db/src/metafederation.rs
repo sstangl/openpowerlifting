@@ -254,6 +254,10 @@ pub enum MetaFederation {
     #[strum(to_string = "falpo")]
     FALPO,
 
+    /// FCP, but with international results also
+    #[strum(to_string = "fcp")]
+    FCP,
+
     /// FECAPOLIF, but with international results also.
     #[strum(to_string = "fecapolif")]
     FECAPOLIF,
@@ -706,6 +710,7 @@ impl MetaFederation {
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
+            MetaFederation::FCP => affiliation!(meet, entry, FCP, IPF, EPF),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
