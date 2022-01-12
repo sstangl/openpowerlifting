@@ -3049,7 +3049,14 @@ impl Federation {
             Federation::USABA => PointsSystem::Wilks,
             Federation::USABPA => PointsSystem::Wilks,
             Federation::USAUA => PointsSystem::Wilks,
-            Federation::USAPL => Federation::ipf_rules_on(date),
+            Federation::USAPL => {
+                // The USAPL started using Dots in 2022.
+                if date.year() >= 2022 {
+                    PointsSystem::Dots
+                } else {
+                    Federation::ipf_rules_on(date)
+                }
+            }
             Federation::USARawBP => PointsSystem::Wilks,
             Federation::USMilAbroad => PointsSystem::Wilks,
             Federation::USPS => PointsSystem::Wilks,
