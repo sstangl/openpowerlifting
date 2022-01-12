@@ -56,7 +56,7 @@ impl Date {
     /// assert_eq!(date.month(), 2);
     /// assert_eq!(date.day(), 16);
     /// ```
-    #[inline]
+    #[inline(always)]
     pub const fn from_parts(year: u32, month: u32, day: u32) -> Date {
         Date(year << Self::YEAR_SHIFT | month << Self::MONTH_SHIFT | day << Self::DAY_SHIFT)
     }
@@ -70,7 +70,7 @@ impl Date {
     /// let date = "1988-02-16".parse::<Date>().unwrap();
     /// assert_eq!(date.year(), 1988);
     /// ```
-    #[inline]
+    #[inline(always)]
     pub const fn year(self) -> u32 {
         (self.0 >> Self::YEAR_SHIFT) & Self::YEAR_MASK
     }
@@ -84,7 +84,7 @@ impl Date {
     /// let date = "1988-02-16".parse::<Date>().unwrap();
     /// assert_eq!(date.month(), 2);
     /// ```
-    #[inline]
+    #[inline(always)]
     pub const fn month(self) -> u32 {
         (self.0 >> Self::MONTH_SHIFT) & Self::MONTH_MASK
     }
@@ -98,7 +98,7 @@ impl Date {
     /// let date = "1988-02-16".parse::<Date>().unwrap();
     /// assert_eq!(date.day(), 16);
     /// ```
-    #[inline]
+    #[inline(always)]
     pub const fn day(self) -> u32 {
         (self.0 >> Self::DAY_SHIFT) & Self::DAY_MASK
     }
@@ -341,6 +341,31 @@ impl<'de> Deserialize<'de> for Date {
     fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<Date, D::Error> {
         deserializer.deserialize_str(DateVisitor)
     }
+}
+
+/// Shorthand for constructing a [Date].
+///
+/// # Example
+/// ```
+/// # use opltypes::date;
+/// let date: Date = date!(2017-03-04);
+/// assert_eq!(date.year(), 2017);
+/// assert_eq!(date.month(), 3);
+/// assert_eq!(date.day(), 4);
+/// ```
+///
+/// # Safety
+/// The date is not checked for validity at construction time.
+///
+/// # Formatting
+///
+/// To prevent rustfmt from reformatting the date to look like subtraction,
+/// use `#[rustfmt::skip::macros(date)]`.
+#[macro_export]
+macro_rules! date {
+    ($year:literal - $month:literal - $day:literal) => {
+        $crate::Date::from_parts($year, $month, $day)
+    };
 }
 
 #[cfg(test)]

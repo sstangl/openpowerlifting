@@ -1556,6 +1556,7 @@ pub enum Federation {
     XPS,
 }
 
+#[rustfmt::skip::macros(date)]
 impl Federation {
     /// True iff every division in the federation is drug-tested.
     pub fn is_fully_tested(self, date: Date) -> bool {
@@ -1776,7 +1777,7 @@ impl Federation {
             Federation::RAWIceland => false,
             Federation::RawIronPL => {
                 // RawIronPL switched to untested in 2020.
-                if date >= Date::from_parts(2020, 06, 20) {
+                if date >= date!(2020-06-20) {
                     false
                 } else {
                     FULLY_TESTED
@@ -2291,7 +2292,7 @@ impl Federation {
             Federation::ADAU => None,
             Federation::ADFPA => {
                 // The ADFPA replaced the USPF as IPF affiliate in late 1997.
-                if date >= Date::from_parts(1997, 12, 05) {
+                if date >= date!(1997-12-05) {
                     Some(Federation::IPF)
                 } else {
                     None
@@ -2358,7 +2359,7 @@ impl Federation {
             Federation::CPA => Some(Federation::WPA),
             Federation::CPC => Some(Federation::WPC),
             Federation::CPF => {
-                if date >= Date::from_parts(2020, 06, 17) {
+                if date >= date!(2020-06-17) {
                     None
                 } else {
                     Some(Federation::WPC)
@@ -2590,7 +2591,7 @@ impl Federation {
             Federation::USAUA => None,
             Federation::USAPL => {
                 // The USAPL was removed from the IPF by vote on 2021-11-07, effective immediately.
-                if date > Date::from_parts(2021, 11, 07) {
+                if date > date!(2020-11-07) {
                     None
                 } else {
                     Some(Federation::IPF)
@@ -2601,7 +2602,7 @@ impl Federation {
             Federation::USPS => None,
             Federation::USPF => {
                 // The USPF was an IPF affiliate until late 1997, replaced by ADFPA.
-                if date >= Date::from_parts(1997, 12, 05) {
+                if date >= date!(1997-12-05) {
                     None
                 } else {
                     Some(Federation::IPF)
@@ -2613,9 +2614,9 @@ impl Federation {
             Federation::USSports => None,
             Federation::USVIPF => Some(Federation::IPF),
             Federation::VDFPA => {
-                if date < Date::from_parts(2015, 01, 01) {
+                if date < date!(2015-01-01) {
                     Some(Federation::WDFPF)
-                } else if date < Date::from_parts(2017, 03, 05) {
+                } else if date < date!(2017-03-05) {
                     None
                 } else {
                     Some(Federation::RAW)
@@ -2712,7 +2713,7 @@ impl Federation {
     /// Helper function for specifying the PointsSystem of federations under IPF rules.
     #[inline]
     fn ipf_rules_on(date: Date) -> PointsSystem {
-        if date >= Date::from_parts(2020, 05, 01) {
+        if date >= date!(2020-05-01) {
             // The IPF switched to Goodlift Points from 2020-05-01 onward.
             PointsSystem::Goodlift
         } else if date.year() >= 2019 {
@@ -2729,11 +2730,11 @@ impl Federation {
     /// Helper function for specifying the PointsSystem of federations under IPL rules.
     #[inline]
     fn ipl_rules_on(date: Date) -> PointsSystem {
-        if date >= Date::from_parts(2020, 11, 11) {
+        if date >= date!(2020-11-11) {
             // The IPL changed from Wilks2020 to Dots, presumably because Robert Wilks
             // brought on the USPC (which forked from the USPA) as a WP affiliate.
             PointsSystem::Dots
-        } else if date >= Date::from_parts(2020, 03, 04) {
+        } else if date >= date!(2020-03-04) {
             // The IPL silently switched from Wilks to Wilks2020 on 2020-03-04.
             // The change was implemented only by notifying their meet directors
             // and requiring use of an upgraded version of  their IronComp meet software.
@@ -2906,7 +2907,7 @@ impl Federation {
             Federation::IrelandUA => PointsSystem::Wilks,
             Federation::IrishPF => {
                 // On 2020-02-16, IrishPF voted to immediately switch to Dots.
-                if date > Date::from_parts(2020, 02, 16) {
+                if date > date!(2020-02-16) {
                     PointsSystem::Dots
                 } else {
                     Federation::ipf_rules_on(date)
@@ -2921,7 +2922,7 @@ impl Federation {
             Federation::KPF => Federation::ipf_rules_on(date),
             Federation::KRAFT => {
                 // On 2020-03-04, KRAFT announced that they voted for Dots since 02-29.
-                if date >= Date::from_parts(2020, 02, 29) {
+                if date >= date!(2020-02-29) {
                     PointsSystem::Dots
                 } else {
                     Federation::ipf_rules_on(date)
@@ -2991,7 +2992,7 @@ impl Federation {
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,
             Federation::RawIronPL => {
-                if date >= Date::from_parts(2020, 12, 1) {
+                if date >= date!(2020-12-01) {
                     PointsSystem::Dots
                 } else {
                     PointsSystem::Wilks
@@ -3063,7 +3064,7 @@ impl Federation {
             Federation::USPF => PointsSystem::Wilks,
             Federation::USPA => Federation::ipl_rules_on(date),
             Federation::USPC => {
-                if date >= Date::from_parts(2020, 11, 01) {
+                if date >= date!(2020-11-01) {
                     PointsSystem::Wilks2020
                 } else {
                     PointsSystem::Dots

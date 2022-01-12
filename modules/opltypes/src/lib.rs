@@ -36,6 +36,7 @@ pub use self::birthyearrange::BirthYearRange;
 mod country;
 pub use self::country::Country;
 
+#[macro_use]
 mod date;
 pub use self::date::Date;
 
