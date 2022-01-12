@@ -347,7 +347,7 @@ impl<'de> Deserialize<'de> for Date {
 ///
 /// # Example
 /// ```
-/// # use opltypes::date;
+/// # use opltypes::{date, Date};
 /// let date: Date = date!(2017-03-04);
 /// assert_eq!(date.year(), 2017);
 /// assert_eq!(date.month(), 3);
@@ -358,7 +358,6 @@ impl<'de> Deserialize<'de> for Date {
 /// The date is not checked for validity at construction time.
 ///
 /// # Formatting
-///
 /// To prevent rustfmt from reformatting the date to look like subtraction,
 /// use `#[rustfmt::skip::macros(date)]`.
 #[macro_export]
