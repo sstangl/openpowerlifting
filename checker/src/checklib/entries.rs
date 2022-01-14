@@ -844,7 +844,7 @@ fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut
             event
         }
         Err(e) => {
-            report.error_on(line, format!("Invalid Event '{}': {}", s, e.to_string()));
+            report.error_on(line, format!("Invalid Event '{}': {}", s, e));
             Event::default()
         }
     }
