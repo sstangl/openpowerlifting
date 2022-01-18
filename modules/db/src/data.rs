@@ -19,6 +19,8 @@ use crate::yesno::deserialize_yes_no;
 pub struct Lifter {
     #[serde(rename(deserialize = "Name"))]
     pub name: CompactString,
+    #[serde(rename(deserialize = "ChineseName"))]
+    pub chinese_name: Option<CompactString>,
     #[serde(rename(deserialize = "CyrillicName"))]
     pub cyrillic_name: Option<CompactString>,
     #[serde(rename(deserialize = "GreekName"))]

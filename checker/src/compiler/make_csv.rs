@@ -210,6 +210,8 @@ struct LiftersRow<'md, 'ld> {
     name: &'md str,
     #[serde(rename = "CyrillicName")]
     cyrillicname: Option<&'md str>,
+    #[serde(rename = "ChineseName")]
+    chinesename: Option<&'md str>,
     #[serde(rename = "GreekName")]
     greekname: Option<&'md str>,
     #[serde(rename = "JapaneseName")]
@@ -234,6 +236,7 @@ impl<'md, 'ld> LiftersRow<'md, 'ld> {
             id: entrydata.id,
             name: entrydata.name,
             cyrillicname: entrydata.cyrillicname,
+            chinesename: entrydata.chinesename,
             greekname: entrydata.greekname,
             japanesename: entrydata.japanesename,
             koreanname: entrydata.koreanname,
@@ -252,6 +255,7 @@ struct EntryLifterData<'md> {
     name: &'md str,
     username: &'md str, // Stored again for simplicity of iteration.
     cyrillicname: Option<&'md str>,
+    chinesename: Option<&'md str>,
     greekname: Option<&'md str>,
     japanesename: Option<&'md str>,
     koreanname: Option<&'md str>,
@@ -264,6 +268,7 @@ impl<'md> EntryLifterData<'md> {
             name: &entry.name,
             username: entry.username.as_str(),
             cyrillicname: entry.cyrillicname.as_deref(),
+            chinesename: entry.chinesename.as_deref(),
             greekname: entry.greekname.as_deref(),
             japanesename: entry.japanesename.as_deref(),
             koreanname: entry.koreanname.as_deref(),
@@ -277,7 +282,8 @@ impl<'md> EntryLifterData<'md> {
             id: 0,
             name: "Sean Stangl",
             username: "seanstangl",
-            cyrillicname: Some("Шон Стангл"),
+            cyrillicname: Some("肖恩·斯坦格尔 "),
+            chinesename: Some("ショーン・スタングル"),
             greekname: Some("Σόν Στένγλ"),
             japanesename: Some("ショーン・スタングル"),
             koreanname: Some("숀 스탄글"),
@@ -330,6 +336,9 @@ pub fn make_csv(
                     // has more information that could be attributed.
                     if data.cyrillicname.is_none() && entry.cyrillicname.is_some() {
                         data.cyrillicname = entry.cyrillicname.as_deref();
+                    }
+                    if data.chinesename.is_none() && entry.chinesename.is_some() {
+                        data.chinesename = entry.chinesename.as_deref();
                     }
                     if data.greekname.is_none() && entry.greekname.is_some() {
                         data.greekname = entry.greekname.as_deref();

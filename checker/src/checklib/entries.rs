@@ -119,6 +119,7 @@ fn canonicalize_name_utf8(s: &str) -> String {
 pub struct Entry {
     pub name: String,
     pub username: Username,
+    pub chinesename: Option<String>,
     pub cyrillicname: Option<String>,
     pub greekname: Option<String>,
     pub japanesename: Option<String>,
@@ -244,10 +245,10 @@ impl Entry {
 #[derive(Copy, Clone, Debug, Display, EnumIter, Eq, PartialEq, EnumString)]
 enum Header {
     Name,
+    ChineseName,
     CyrillicName,
     JapaneseName,
     KoreanName,
-    ChineseName,
     GreekName,
     Sex,
     Age,
@@ -514,6 +515,24 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
     canonicalize_name_utf8(name)
 }
 
+fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
+    if s.is_empty() {
+        None
+    } else {
+        for c in s.chars() {
+            if writing_system(c) != WritingSystem::CJK && c != ' ' && c!= '·' {
+                let msg = format!(
+                    "ChineseName '{}' contains non-CJK character '{}'",
+                    s, c
+                );
+                report.error_on(line, msg);
+                return None;
+            }
+        }
+        Some(canonicalize_name_utf8(s))
+    }
+}
+
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
         None
@@ -537,7 +556,7 @@ fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<
         None
     } else {
         for c in s.chars() {
-            if writing_system(c) != WritingSystem::Japanese && c != ' ' {
+            if writing_system(c) != WritingSystem::Japanese && writing_system(c) != WritingSystem::CJK && c != ' ' {
                 let msg = format!(
                     "JapaneseName '{}' contains non-Japanese character '{}'",
                     s, c
@@ -570,7 +589,7 @@ fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<St
         None
     } else {
         for c in s.chars() {
-            if writing_system(c) != WritingSystem::Korean && !"-' .".contains(c) {
+            if writing_system(c) != WritingSystem::Korean && writing_system(c) != WritingSystem::Japanese && !"-' .".contains(c) {
                 let msg = format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;
@@ -2172,6 +2191,9 @@ where
             if let Some(tested) = check_column_tested(&record[idx], line, &mut report) {
                 entry.tested = tested;
             }
+        }
+        if let Some(idx) = headers.get(Header::ChineseName) {
+            entry.chinesename = check_column_chinesename(&record[idx], line, &mut report);
         }
         if let Some(idx) = headers.get(Header::CyrillicName) {
             entry.cyrillicname = check_column_cyrillicname(&record[idx], line, &mut report);

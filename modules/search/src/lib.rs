@@ -74,6 +74,9 @@ pub fn search_rankings(
 
         // Otherwise, check based on the writing system.
         let localized_name: Option<&str> = match system {
+            WritingSystem::CJK if lifter.japanese_name.is_some() => lifter.japanese_name.as_deref(),
+            WritingSystem::CJK if lifter.korean_name.is_some() => lifter.korean_name.as_deref(),
+            WritingSystem::CJK => lifter.chinese_name.as_deref(),
             WritingSystem::Cyrillic => lifter.cyrillic_name.as_deref(),
             WritingSystem::Greek => lifter.greek_name.as_deref(),
             WritingSystem::Japanese => lifter.japanese_name.as_deref(),

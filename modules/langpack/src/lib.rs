@@ -1221,6 +1221,7 @@ pub fn localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
         Language::ja => lifter.japanese_name.as_ref().unwrap_or(&lifter.name),
         Language::ko => lifter.korean_name.as_ref().unwrap_or(&lifter.name),
         Language::ru | Language::uk => lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name),
+        Language::zh_hans | Language::zh_hant => lifter.chinese_name.as_ref().unwrap_or(&lifter.name),
 
         _ => &lifter.name,
     }
