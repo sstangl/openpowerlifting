@@ -2591,7 +2591,7 @@ impl Federation {
             Federation::USAUA => None,
             Federation::USAPL => {
                 // The USAPL was removed from the IPF by vote on 2021-11-07, effective immediately.
-                if date > date!(2020-11-07) {
+                if date > date!(2021-11-07) {
                     None
                 } else {
                     Some(Federation::IPF)
