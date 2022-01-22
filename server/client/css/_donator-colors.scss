@@ -753,3 +753,6 @@
   letter-spacing: 2px;
 }
 
+.cyan {
+  @include name-color(#00FFFF);
+}
