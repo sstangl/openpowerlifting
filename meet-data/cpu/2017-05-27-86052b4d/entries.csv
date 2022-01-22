@@ -1,8 +1,18 @@
-Event,Sex,Name,Country,BodyweightKg,WeightClassKg,Division,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Place
-SBD,M,Matthew Treherne,USA,92.4,93,Open,287.5,165,307.5,760,Raw,2
-SBD,M,Marcus Bell,USA,89,93,Open,245,162.5,275,682.5,Raw,3
-SBD,M,LS McClain,USA,92.7,93,Open,290,220,317.5,827.5,Raw,1
-SBD,M,Kareem Browne,,73.7,74,Open,222.5,130,285,637.5,Raw,1
-SBD,M,Keith McHoney,USA,65.3,66,Open,242.5,152.5,270,665,Raw,1
-SBD,M,Jamal Browner,USA,104.6,105,Open,275,182.5,352.5,,Raw,DD
-B,M,Steve Mann,USA,119.8,120,Open,,290,,290,Single-ply,1
+Event,Sex,Name,Country,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place
+SBD,F,Maria Taccone,Canada,Raw,Open,64.1,72,145,152.5,160,160,67.5,75,82.5,82.5,160,172.5,-182.5,172.5,415,1
+SBD,F,Joanna Rieber,Canada,Raw,Open,51,52,130,-135,-135,130,,,,,,,,,,DQ
+SBD,M,Jeff Butt,Canada,Single-ply,Open,95.2,105,-275,275,-287.5,275,205,212.5,217.5,217.5,-275,275,297.5,297.5,790,1
+SBD,M,Steve Mann,USA,Single-ply,Open,117.8,120,-382.5,-382.5,382.5,382.5,-295,-295,-295,,,,,,,DQ
+SBD,M,Keith McHoney,USA,Raw,Open,65.3,66,227.5,-242.5,242.5,242.5,137.5,150,152.5,152.5,257.5,270,-277.5,270,665,1
+SBD,M,LS McClain,USA,Raw,Open,92.7,93,-265,280,290,290,212.5,220,-227.5,220,287.5,307.5,317.5,317.5,827.5,2
+SBD,M,Daniel Remulla,Canada,Raw,Open,65.6,66,205,217.5,-225,217.5,147.5,157.5,162.5,162.5,230,245,-255,245,625,3
+SBD,M,Walter Cariazo,Canada,Raw,Open,92.2,93,-240,250,260,260,165,172.5,177.5,177.5,-315,315,335,335,772.5,4
+SBD,M,Jamal Browner,USA,Raw,Open,104.6,105,-275,275,-290,275,175,182.5,-187.5,182.5,333.5,352.5,-365,352.5,,DD
+SBD,M,Michael Previdsa,Canada,Raw,Open,82.5,83,232.5,245,253.5,253.5,147.5,152.5,-155,152.5,290,310,-323,310,716,5
+SBD,M,Erik Willis,Canada,Raw,Open,120.7,120+,280,295,-305,295,195,-210,210,210,275,310,330,330,835,6
+SBD,M,Matthew Treherne,USA,Raw,Open,92.4,93,270,287.5,-292.5,287.5,157.5,165,-170,165,287.5,307.5,-317.5,307.5,760,7
+SBD,M,Jesse Moores,Canada,Raw,Open,69.9,74,207.5,220,225,225,140,145,-147.5,145,245,257.5,265,265,635,8
+SBD,M,Kareem Browne,Trinidad and Tobago,Raw,Open,73.7,74,205,-215,222.5,222.5,125,130,-137.5,130,257.5,270,285,285,637.5,9
+SBD,M,Taylor Shadgett,Canada,Raw,Open,104.6,105,275,290,300,300,152.5,-160,160,160,270,290,302.5,302.5,762.5,10
+SBD,M,Marcus Bell,USA,Raw,Open,89,93,-227.5,237.5,245,245,155,162.5,-170,162.5,245,262.5,275,275,682.5,11
+SBD,M,Leon Brown,Canada,Raw,Open,100.5,105,-272.5,286,290.5,290.5,207.5,-217.5,-217.5,207.5,-272.5,-272.5,-272.5,,,DQ
