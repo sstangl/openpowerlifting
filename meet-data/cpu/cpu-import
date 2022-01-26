@@ -119,12 +119,11 @@ def parsehtml(html):
             # This happens with the meet information rows, which are malformed.
             continue
 
-        elif num_cells in [16,17]:
+        elif num_cells in [16, 17]:
             # Skip the NAME row.
             if cells[0].text == "NAME":
                 continue
 
-           
             if num_cells == 17:
                 name = cells[0].text.strip().replace('  ', ' ')
                 state = cells[1].text.strip()
@@ -191,7 +190,6 @@ def parsehtml(html):
             # Assert that we've seen a control row.
             assert current_equipment
             assert current_event
-
 
             entry = ['' for x in entriescsv.fieldnames]
             entry[entriescsv.index('Name')] = name
