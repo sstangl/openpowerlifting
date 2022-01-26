@@ -377,8 +377,13 @@
     sex = "M"
 
 [weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","110+"]
+    date_range = ["2022-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.old_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-01-01","9999-01-01"]
+    date_range = ["0000-01-01","2021-12-31"]
     sex = "F"
 
 [weightclasses.default_Mx]
@@ -396,3 +401,4 @@
     1812 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Not really a BPU meet.
     1908 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Not really a BPU meet.
     2112 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Not really a BPU meet.
+    2201 = ["ExemptWeightClassConsistency"]  # Some NS lifters missing weight info.
