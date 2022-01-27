@@ -99,6 +99,7 @@ pub enum Country {
     Ghana,
     Gibraltar,
     Greece,
+    Grenada,
     Guatemala,
     Guinea,
     #[serde(rename = "Guinea-Bissau")]
