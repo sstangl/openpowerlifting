@@ -267,6 +267,7 @@ pub struct CountryTranslations {
     pub ghana: String,
     pub gibraltar: String,
     pub greece: String,
+    pub grenada: String,
     pub guatemala: String,
     pub guinea: String,
     pub guineabissau: String,
@@ -878,6 +879,7 @@ impl Translations {
             Country::Ghana => &self.country.ghana,
             Country::Gibraltar => &self.country.gibraltar,
             Country::Greece => &self.country.greece,
+            Country::Grenada => &self.country.grenada,
             Country::Guatemala => &self.country.guatemala,
             Country::Guinea => &self.country.guinea,
             Country::GuineaBissau => &self.country.guineabissau,
@@ -1222,7 +1224,9 @@ pub fn localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
         Language::ja => lifter.japanese_name.as_ref().unwrap_or(&lifter.name),
         Language::ko => lifter.korean_name.as_ref().unwrap_or(&lifter.name),
         Language::ru | Language::uk => lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name),
-        Language::zh_hans | Language::zh_hant => lifter.chinese_name.as_ref().unwrap_or(&lifter.name),
+        Language::zh_hans | Language::zh_hant => {
+            lifter.chinese_name.as_ref().unwrap_or(&lifter.name)
+        }
 
         _ => &lifter.name,
     }
