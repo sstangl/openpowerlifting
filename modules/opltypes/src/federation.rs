@@ -48,6 +48,10 @@ pub enum Federation {
     #[strum(to_string = "AAU", serialize = "aau")]
     AAU,
 
+    /// Alianza Boliviana Powerlifting, GPA/IPO.
+    #[strum(to_string = "ABP", serialize = "abp")]
+    ABP,
+
     /// Alianza Chilena Powerlifting, GPA/IPO.
     #[strum(to_string = "ACHIPO", serialize = "achipo")]
     ACHIPO,
@@ -1580,6 +1584,7 @@ impl Federation {
                     false
                 }
             }
+            Federation::ABP => false,
             Federation::ACHIPO => false,
             Federation::ACPA => false,
             Federation::ADAU => FULLY_TESTED,
@@ -1941,6 +1946,7 @@ impl Federation {
             Federation::AAP => Some(Country::Argentina),
             Federation::AAPLF => Some(Country::Australia),
             Federation::AAU => Some(Country::USA),
+            Federation::ABP => Some(Country::Bolivia),
             Federation::ACHIPO => Some(Country::Chile),
             Federation::ACPA => None,
             Federation::ADAU => Some(Country::USA),
@@ -2295,6 +2301,7 @@ impl Federation {
             Federation::AAP => Some(Federation::GPA),
             Federation::AAPLF => Some(Federation::IPF),
             Federation::AAU => None,
+            Federation::ABP => Some(Federation::GPA),
             Federation::ACHIPO => Some(Federation::GPA),
             Federation::ACPA => Some(Federation::WPA),
             Federation::ADAU => None,
@@ -2770,6 +2777,7 @@ impl Federation {
             Federation::AAP => PointsSystem::Wilks,
             Federation::AAPLF => PointsSystem::SchwartzMalone,
             Federation::AAU => PointsSystem::Wilks,
+            Federation::ABP => PointsSystem::Wilks,
             Federation::ACHIPO => PointsSystem::Wilks,
             Federation::ACPA => PointsSystem::Wilks,
             Federation::ADAU => PointsSystem::Wilks,
