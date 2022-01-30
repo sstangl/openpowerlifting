@@ -19,6 +19,7 @@
 <optgroup label="{{strings.selectors.fed.countries}}">
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP / {{strings.country.spain}}</option>
   <option value="aiwbpa" {% if selection.federation == "AIWBPA" %}selected{% endif %}>AIWBPA / {{strings.country.indonesia}}</option>
+  <option value="amp" {% if selection.federation == "AMP" %}selected{% endif %}>AMP / {{strings.country.usa}}</option>
   <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU / {{strings.country.australia}}</option>
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF / {{strings.country.belarus}}</option>
   <option value="bp" {% if selection.federation == "BP" %}selected{% endif %}>BP / {{strings.country.uk}}</option>
@@ -74,7 +75,6 @@
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF / {{strings.country.thailand}}</option>
   <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF / {{strings.country.turkey}}</option>
   <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>UkrainePF / {{strings.country.ukraine}}</option>
-  <option value="amp" {% if selection.federation == "AMP" %}selected{% endif %}>AMP / {{strings.country.usa}}</option>
   <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF / {{strings.country.usvirginislands}}</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF / {{strings.country.belgium}}</option>
   <option value="vpf" {% if selection.federation == "VPF" %}selected{% endif %}>VPF / {{strings.country.vietnam}}</option>
