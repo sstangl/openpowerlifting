@@ -195,6 +195,10 @@ pub enum MetaFederation {
     #[strum(to_string = "aiwbpa")]
     AIWBPA,
 
+    /// AMP, but with international results also.
+    #[strum(to_string = "amp")]
+    AMP,
+
     /// APP, but with international results also.
     #[strum(to_string = "app")]
     APP,
@@ -568,12 +572,12 @@ impl MetaFederation {
             MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
             MetaFederation::AllIndia => is_from(Country::India, entry, meet),
             MetaFederation::AllIndonesia => is_from(Country::Indonesia, entry, meet),
-            // Results for US lifters in the IPF affiliate at the time, for <= 1997-12-5 this is the USPF
-            // and for > 1997-12-5 this is the USAPL
+            // Results for USA lifters in the IPF affiliate at the given time.
             MetaFederation::AllIPFUSA => {
                 is_from(Country::USA, entry, meet)
                     && (((meet.federation == Federation::USAPL
                         && meet.date <= Date::from_parts(2021, 11, 7))
+                        || meet.federation == AMP
                         || meet.federation == NAPF
                         || meet.federation == IPF)
                         || (meet.federation == USPF && meet.date < Date::from_parts(1997, 12, 5)))
@@ -658,6 +662,9 @@ impl MetaFederation {
                             && entry.lifter_country == Some(Country::Ireland)))
             }
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
+            MetaFederation::AMP => {
+                affiliation!(meet, entry, AMP, IPF, NAPF) && meet.date.year() >= 2022
+            }
             MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
 
             //APU only formed 2018 and became IPF/ORPF affiliate at this time, without checking

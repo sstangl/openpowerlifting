@@ -520,11 +520,8 @@ fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<S
         None
     } else {
         for c in s.chars() {
-            if writing_system(c) != WritingSystem::CJK && c != ' ' && c!= '·' {
-                let msg = format!(
-                    "ChineseName '{}' contains non-CJK character '{}'",
-                    s, c
-                );
+            if writing_system(c) != WritingSystem::CJK && c != ' ' && c != '·' {
+                let msg = format!("ChineseName '{}' contains non-CJK character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;
             }
@@ -556,7 +553,10 @@ fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<
         None
     } else {
         for c in s.chars() {
-            if writing_system(c) != WritingSystem::Japanese && writing_system(c) != WritingSystem::CJK && c != ' ' {
+            if writing_system(c) != WritingSystem::Japanese
+                && writing_system(c) != WritingSystem::CJK
+                && c != ' '
+            {
                 let msg = format!(
                     "JapaneseName '{}' contains non-Japanese character '{}'",
                     s, c
@@ -589,7 +589,10 @@ fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<St
         None
     } else {
         for c in s.chars() {
-            if writing_system(c) != WritingSystem::Korean && writing_system(c) != WritingSystem::Japanese && !"-' .".contains(c) {
+            if writing_system(c) != WritingSystem::Korean
+                && writing_system(c) != WritingSystem::Japanese
+                && !"-' .".contains(c)
+            {
                 let msg = format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
                 report.error_on(line, msg);
                 return None;

@@ -74,7 +74,7 @@
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF / {{strings.country.thailand}}</option>
   <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF / {{strings.country.turkey}}</option>
   <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>UkrainePF / {{strings.country.ukraine}}</option>
-  <option value="all-ipf-usa" {% if selection.federation == "AllIPFUSA" %}selected{% endif %}>USAPL / {{strings.country.usa}}</option>
+  <option value="amp" {% if selection.federation == "AMP" %}selected{% endif %}>AMP / {{strings.country.usa}}</option>
   <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF / {{strings.country.usvirginislands}}</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF / {{strings.country.belgium}}</option>
   <option value="vpf" {% if selection.federation == "VPF" %}selected{% endif %}>VPF / {{strings.country.vietnam}}</option>

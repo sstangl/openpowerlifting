@@ -29,15 +29,14 @@ pub fn writing_system(c: char) -> WritingSystem {
         // Cyrillic.
         0x400..=0x4FF => WritingSystem::Cyrillic,
 
-       
         // Some valid punctuation symbols.
         0x3005..=0x3006 => WritingSystem::Japanese,
         // Hiragana.
         0x3040..=0x309F => WritingSystem::Japanese,
         // Katakana.
         0x30A0..=0x30FF => WritingSystem::Japanese,
-        
-         // CJK Radicals Supplement.
+
+        // CJK Radicals Supplement.
         0x2E80..=0x2EFF => WritingSystem::CJK,
         // CJK Unified Ideographs Extension A.
         0x3400..=0x4DBF => WritingSystem::CJK,

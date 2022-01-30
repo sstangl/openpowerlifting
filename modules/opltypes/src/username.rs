@@ -69,7 +69,9 @@ impl Username {
     pub fn from_name(name: &str) -> Result<Self, String> {
         if name.is_empty() {
             Ok(Username::default())
-        } else if infer_writing_system(name) == WritingSystem::Japanese || infer_writing_system(name) == WritingSystem::CJK {
+        } else if infer_writing_system(name) == WritingSystem::Japanese
+            || infer_writing_system(name) == WritingSystem::CJK
+        {
             let ea_id: String = name
                 .chars()
                 .filter(|c| !c.is_whitespace())
