@@ -1,12 +1,15 @@
-Place,Name,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,WeightClassKg,Equipment,BirthDate,Event
-1,Arna Ösp Gunnarsdóttir,1995,64.25,137.5,142.5,147.5,147.5,82.5,87.5,-90.0,87.5,172.5,182.5,-185.0,182.5,417.5,Open,F,69,Single-ply,,SBD
-1,Elsa Pálsdóttir,1960,73.95,-125.0,125.0,137.5,137.5,55.0,60.0,62.5,62.5,140.0,157.5,162.5,162.5,362.5,Open,F,76,Single-ply,,SBD
-1,Matthildur Óskarsdóttir,1999,82.70,135.0,142.5,150.0,150.0,115.0,120.0,122.5,122.5,145.0,155.0,165.0,165.0,437.5,Open,F,84,Single-ply,,SBD
-2,Sylvia Ósk Rodriquez,1987,81.15,130.0,140.0,150.0,150.0,75.0,80.0,-85.0,80.0,150.0,162.5,-170.0,162.5,392.5,Open,F,84,Single-ply,,SBD
-1,Þorbjörg Matthíasdóttir,1990,125.75,165.0,172.5,180.0,180.0,82.5,87.5,-92.5,87.5,170.0,180.0,-185.0,180.0,447.5,Open,F,84+,Single-ply,,SBD
-1,Hilmar Símonarson,1994,65.60,175.0,185.0,192.5,192.5,125.0,130.0,-132.5,130.0,210.0,217.5,-220.0,217.5,540.0,Open,M,66,Single-ply,,SBD
-1,Helgi Arnar Jónsson,1998,76.50,215.0,230.0,-235.0,230.0,122.5,-130.0,-130.0,122.5,255.0,270.0,-280.0,270.0,622.5,Open,M,83,Single-ply,,SBD
-1,Alexander Örn Kárason,1998,92.30,240.0,257.5,267.5,267.5,170.0,177.5,182.5,182.5,270.0,287.5,-302.5,287.5,737.5,Open,M,93,Single-ply,,SBD
-1,Viktor Samúelsson,1993,103.60,272.5,280.0,-282.5,280.0,180.0,187.5,-192.5,187.5,300.0,315.0,327.5,327.5,795.0,Open,M,105,Single-ply,,SBD
-1,Aron Friðrik Georgsson,1989,119.05,280.0,292.5,305.0,305.0,180.0,190.0,-200.0,190.0,275.0,285.0,-290.0,285.0,780.0,Open,M,120,Single-ply,,SBD
-2,Einar Örn Guðnason,1991,112.95,250.0,270.0,287.5,287.5,-170.0,180.0,-185.0,180.0,250.0,270.0,282.5,282.5,750.0,Open,M,120,Single-ply,,SBD
+Place,Name,Country,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,WeightClassKg,Equipment,BirthDate,Event
+1,Kimberly Walford,US Virgin Islands,1978,73,182.5,187.5,192.5,192.5,107.5,112.5,-115,112.5,232.5,242.5,-248,242.5,547.5,Open,F,76,Raw,,SBD
+2,Arna Ösp Gunnarsdóttir,Iceland,1995,64.25,137.5,142.5,147.5,147.5,82.5,87.5,-90,87.5,172.5,182.5,-185,182.5,417.5,Open,F,69,Raw,,SBD
+3,Danielle Todman,US Virgin Islands,1984,72.9,137.5,142.5,147.5,147.5,-90,90,95,95,182.5,187.5,197.5,197.5,440,Open,F,76,Raw,,SBD
+4,Matthildur Óskarsdóttir,Iceland,1999,82.7,135,142.5,150,150,115,120,122.5,122.5,145,155,165,165,437.5,Open,F,84,Raw,,SBD
+5,Þorbjörg Matthíasdóttir,Iceland,1990,125.75,165,172.5,180,180,82.5,87.5,-92.5,87.5,170,180,-185,180,447.5,Open,F,84+,Raw,,SBD
+6,Sylvia Ósk Rodriquez,Iceland,1987,81.15,130,140,150,150,75,80,-85,80,150,162.5,-170,162.5,392.5,Open,F,84,Raw,,SBD
+7,Elsa Pálsdóttir,Iceland,1960,73.95,-125,125,137.5,137.5,55,60,62.5,62.5,140,157.5,162.5,162.5,362.5,Open,F,76,Raw,,SBD
+1,Tony Cliffe,England,1984,119.3,310,-330,-330,310,227.5,235,-243,235,330,355,-372.5,355,900,Open,M,120,Raw,,SBD
+2,Viktor Samúelsson,Iceland,1993,103.6,272.5,280,-282.5,280,180,187.5,-192.5,187.5,300,315,327.5,327.5,795,Open,M,105,Raw,,SBD
+3,Alexander Örn Kárason,Iceland,1998,92.3,240,257.5,267.5,267.5,170,177.5,182.5,182.5,270,287.5,-302.5,287.5,737.5,Open,M,93,Raw,,SBD
+4,Aron Friðrik Georgsson,Iceland,1989,119.05,280,292.5,305,305,180,190,-200,190,275,285,-290,285,780,Open,M,120,Raw,,SBD
+5,Helgi Arnar Jónsson,Iceland,1998,76.5,215,230,-235,230,122.5,-130,-130,122.5,255,270,-280,270,622.5,Open,M,83,Raw,,SBD
+6,Einar Örn Guðnason,Iceland,1991,112.95,250,270,287.5,287.5,-170,180,-185,180,250,270,282.5,282.5,750,Open,M,120,Raw,,SBD
+7,Hilmar Símonarson,Iceland,1994,65.6,175,185,192.5,192.5,125,130,-132.5,130,210,217.5,-220,217.5,540,Open,M,66,Raw,,SBD
