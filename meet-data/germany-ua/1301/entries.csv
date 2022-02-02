@@ -1,78 +1,115 @@
-Place,Name,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Sex,BirthYear,Division,Event,Equipment
-1,Sascha Stendebach,87.1,205,220,227.5,227.5,160,172.5,177.5,177.5,280,290,-300,290,695,90,M,1991,Juniors,SBD,Raw
-2,Eren Kayadan,69.1,130,142.5,152.5,152.5,110,122.5,130,130,180,195,200,200,482.5,90,M,1996,Juniors,SBD,Raw
-3,Tobias Ommer,81.2,180,-190,190,190,110,-112.5,112.5,112.5,220,230,232.5,232.5,535,90,M,1992,Juniors,SBD,Raw
-4,Marius Schneider,80.2,160,170,-180,170,110,120,130,130,200,220,230,230,530,90,M,1996,Juniors,SBD,Raw
-5,Pascal Beck,88.8,150,160,170,170,100,-105,-105,100,210,220,230,230,500,90,M,1994,Juniors,SBD,Raw
-6,Lucas Jaron,88.8,155,165,170,170,95,105,107.5,107.5,190,210,220,220,497.5,90,M,1995,Juniors,SBD,Raw
-7,Marc James,82.2,140,155,165,165,100,-105,-105,100,170,190,205,205,470,90,M,1993,Juniors,SBD,Raw
-8,Alexander Schäfer,89.5,150,-160,-160,150,125,-135,-135,125,200,210,-230,210,485,90,M,1991,Juniors,SBD,Raw
-9,Florian Vogl,84.8,150,162.5,170,170,70,85,95,95,190,200,205,205,470,90,M,1994,Juniors,SBD,Raw
-10,Dirk Lyzwa,80.2,135,145,152.5,152.5,105,115,-120,115,165,175,180,180,447.5,90,M,1991,Juniors,SBD,Raw
-11,Alexander Stellrecht,76.2,142.5,147.5,152.5,152.5,87.5,92.5,-95,92.5,160,165,-170,165,410,90,M,1996,Juniors,SBD,Raw
-12,Christian Bongers,82.2,130,140,-150,140,80,87.5,90,90,140,150,160,160,390,90,M,1991,Juniors,SBD,Raw
-13,Marius Jacob,87.7,125,135,147.5,147.5,75,80,-85,80,150,165,172.5,172.5,400,90,M,1995,Juniors,SBD,Raw
-14,Yannick Schwarz,71.8,105,115,120,120,65,70,-72.5,70,145,160,-165,160,350,90,M,,Juniors,SBD,Raw
-15,Paul Schäfer,76.9,100,105,110,110,67.5,72.5,-77.5,72.5,127.5,135,140,140,322.5,90,M,1996,Juniors,SBD,Raw
-16,Michael Meyer,83.9,95,-102.5,-102.5,95,70,77.5,-82.5,77.5,135,-142.5,150,150,322.5,90,M,1993,Juniors,SBD,Raw
-1,Moritz Kröner,90.1,195,-205,205,205,160,165,167.5,167.5,220,230,240,240,612.5,90+,M,1990,Juniors,SBD,Raw
-2,Dennis Pusikow,102.3,200,215,222.5,222.5,150,160,162.5,162.5,250,260,-270,260,645,90+,M,1992,Juniors,SBD,Raw
-3,Marvin Rippe,95.8,165,180,190,190,125,135,140,140,215,240,-275,240,570,90+,M,1990,Juniors,SBD,Raw
-4,Markus Stolorz,93.8,170,-180,180,180,125,130,-135,130,210,-222,,210,520,90+,M,1992,Juniors,SBD,Raw
-5,Paul Witas,95.2,130,140,-150,140,135,145,-150,145,190,200,220,220,505,90+,M,1990,Juniors,SBD,Raw
-6,Lukas Schnettler,103.8,140,150,160,160,130,140,-145,140,-200,220,-235,220,520,90+,M,1992,Juniors,SBD,Raw
-7,Sebastian Ott,96,140,155,170,170,100,110,-120,110,180,205,215,215,495,90+,M,1993,Juniors,SBD,Raw
-1,Christian Poppe,132.3,290,310,322.5,322.5,190,200,-210,200,320,-340,-340,320,842.5,100+,M,1979,Open,SBD,Raw
-2,Marc Graser,103.4,230,250,265,265,160,175,180,180,270,305,,305,750,100+,M,1974,Open,SBD,Raw
-3,Philipp Gramlich,127.4,260,272.5,282.5,282.5,170,180,-182.5,180,272.5,300,305,305,767.5,100+,M,1987,Open,SBD,Raw
-4,Elvis Dörner Andy,145.6,300,310,320,320,180,-187.5,-187.5,180,275,282.5,-290,282.5,782.5,100+,M,1976,Open,SBD,Raw
-5,Gregor Lossen,106.5,227.5,240,-245,240,155,165,170,170,270,290,305,305,715,100+,M,1986,Open,SBD,Raw
-6,Tino Czeranowski,118.2,220,250,270,270,140,160,170,170,210,250,280,280,720,100+,M,1971,Open,SBD,Raw
-7,Jürgen Wilflingseder,106.4,220,235,250,250,140,155,162.5,162.5,280,-290,-290,280,692.5,100+,M,1981,Open,SBD,Raw
-8,Hans Müller,117,240,260,270,270,150,155,-160,155,260,-280,-280,260,685,100+,M,,Open,SBD,Raw
-9,Sirko Petermann,118.5,200,220,232.5,232.5,180,190,195,195,220,235,250,250,677.5,100+,M,1977,Open,SBD,Raw
-10,Friedrich Mockenhaupt,105.9,212.5,230,-235,230,152.5,157.5,160,160,237.5,257.5,265,265,655,100+,M,1989,Open,SBD,Raw
-11,Sebastian Nübel,108.5,125,,,125,192.5,-205,,192.5,265,282.5,,282.5,600,100+,M,1987,Open,SBD,Raw
-12,Cliff Andrae,100.4,200,215,-225,215,140,147.5,-150,147.5,190,205,-215,205,567.5,100+,M,1975,Open,SBD,Raw
-13,Niklas Einheuser,105.7,200,-210,-210,200,145,-152.5,,145,200,210,220,220,565,100+,M,1992,Open,SBD,Raw
-14,Sascha Krause,104.9,175,195,205,205,110,120,130,130,175,205,225,225,560,100+,M,1990,Open,SBD,Raw
-15,Max Hegen,111.1,200,-210,-210,200,135,145,-150,145,220,225,-235,225,570,100+,M,1978,Open,SBD,Raw
-16,Jörg Schmelzer,118,140,160,170,170,120,135,145,145,230,240,255,255,570,100+,M,1968,Open,SBD,Raw
-17,Nikolai Meurer,101,-170,170,180,180,-140,140,-145,140,200,220,-240,220,540,100+,M,,Open,SBD,Raw
-18,Oliver Schwarz,133,170,180,,180,165,170,-175,170,220,-240,,220,570,100+,M,1968,Open,SBD,Raw
-19,Sascha Bantow,100.2,180,190,-195,190,-110,110,-115,110,180,205,225,225,525,100+,M,1989,Open,SBD,Raw
-20,Christoph Frankreiter,114.8,-180,180,190,190,110,120,125,125,-200,200,215,215,530,100+,M,1989,Open,SBD,Raw
-21,Florian Meisner,125.3,170,180,185,185,90,100,105,105,210,225,240,240,530,100+,M,1983,Open,SBD,Raw
-22,Simon Benzler,122.4,140,160,,160,100,,,100,200,240,250,250,510,100+,M,1973,Open,SBD,Raw
-23,Fabian Grede,104,125,130,-135,130,97.5,102.5,110,110,150,160,170,170,410,100+,M,1991,Open,SBD,Raw
-DQ,Florian Forster,127.2,-220,,,,170,-180,180,180,,,,,,100+,M,1980,Open,SBD,Raw
-1,Claudia Forster,76.5,130,142.5,152.5,152.5,70,82.5,90,90,180,192.5,202.5,202.5,445,,F,1986,Open,SBD,Raw
-2,Tamara Thomsen,66.8,140,150,157.5,157.5,75,80,-82.5,80,150,160,-170,160,397.5,,F,1982,Open,SBD,Raw
-3,Linnea Maier,79,90,95,100,100,35,40,-42.5,40,105,112.5,117.5,117.5,257.5,,F,1998,Open,SBD,Raw
-4,Avan Wahab,62.4,60,65,75,75,30,-40,-40,30,75,85,100,100,205,,F,1987,Open,SBD,Raw
-7,Lolita Zankl,64.5,,,,,95,100,105,105,,,,,105,,F,1959,Open,B,Raw
-8,Julia Dietz,75.5,,,,,105,110,-112.5,110,,,,,110,,F,1982,Open,B,Raw
-26,Alexandra Bossnak,65.5,,,,,50,-55,55,55,,,,,55,,F,1969,Open,B,Raw
-1,Christian Wackernell,169,,,,,262.5,-272.5,272.5,272.5,,,,,272.5,,M,1980,Open,B,Raw
-2,Christian Raidel,119.8,,,,,235,242.5,-250,242.5,,,,,242.5,,M,1982,Open,B,Raw
-4,Martin Pfannstiel,106.8,,,,,200,210,-215,210,,,,,210,,M,1984,Open,B,Raw
-5,Georg Mairinger,92.4,,,,,175,185,-192.5,185,,,,,185,,M,1981,Open,B,Raw
-6,Patric Kaltenbacher,91.7,,,,,160,170,177.5,177.5,,,,,177.5,,M,1978,Open,B,Raw
-9,Sven Saiko,121.7,,,,,170,-180,180,180,,,,,180,,M,1991,Open,B,Raw
-10,Ricky Bauroth,84,,,,,135,145,150,150,,,,,150,,M,1977,Open,B,Raw
-11,Ronny Berndt,95.9,,,,,150,160,-165,160,,,,,160,,M,1979,Open,B,Raw
-13,Myrco Griesch,68.3,,,,,115,120,-122.5,120,,,,,120,,M,1980,Open,B,Raw
-14,Alwin Schneider,86.7,,,,,120,140,-145,140,,,,,140,,M,1960,Open,B,Raw
-15,Stefan Fehrer,94.3,,,,,130,135,140,140,,,,,140,,M,1978,Open,B,Raw
-16,Benjamin Spahn,93,,,,,130,-135,137.5,137.5,,,,,137.5,,M,1984,Open,B,Raw
-17,Michael Mair,122.6,,,,,140,150,-155,150,,,,,150,,M,1970,Open,B,Raw
-18,Daniel Hofer,99,,,,,130,140,-145,140,,,,,140,,M,1981,Open,B,Raw
-19,Florian Forster,109.8,,,,,130,135,-140,135,,,,,135,,M,1980,Open,B,Raw
-20,Janis Unrath,76.75,,,,,110,-120,-120,110,,,,,110,,M,1989,Open,B,Raw
-21,Andrej Sakmann,85.8,,,,,-110,110,115,115,,,,,115,,M,1989,Open,B,Raw
-22,Jens Romer,93.4,,,,,110,120,-130,120,,,,,120,,M,1991,Open,B,Raw
-23,Philipp Hoffmann,98.4,,,,,122.5,-132.5,-132.5,122.5,,,,,122.5,,M,1988,Open,B,Raw
-24,Marco Schwarz,89.6,,,,,100,110,-120,110,,,,,110,,M,1995,Open,B,Raw
-25,Leon Kramer,42.9,,,,,45,47.5,,47.5,,,,,47.5,,M,2000,Open,B,Raw
-3,Peter Hulin,119.1,,,,,205,215,225,225,,,,,225,,M,1980,Open,B,Raw
-12,Martin Kowald,94.1,,,,,145,152.5,-160,152.5,,,,,152.5,,M,1983,Open,B,Raw
+Place,Name,Team,BirthDate,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Division,WeightClassKg
+1,Claudia Forster,Gallier (KSV Höllhöhe),1986-07-05,76.5,130,142.5,152.5,152.5,70,82.5,90,90,180,192.5,202.5,202.5,445,SBD,Raw,F,Open,
+2,Tamara Thomsen,FSV Sarstedt,1982-09-24,66.8,140,150,157.5,157.5,75,80,-82.5,80,150,160,-170,160,397.5,SBD,Raw,F,Open,
+3,Linnéa Maier,KSV Mannheim,1998-07-06,79,90,95,100,100,35,40,-42.5,40,105,112.5,117.5,117.5,257.5,SBD,Raw,F,Open,
+4,Avan Wahab,AV Vorwärts 05 Groß-Zimmern,1987-09-02,62.4,60,65,75,75,30,-40,-40,30,75,85,100,100,205,SBD,Raw,F,Open,
+1,Sascha Stendebach,KSV Mainz 08,1991-06-11,87.1,205,220,227.5,227.5,160,172.5,177.5,177.5,280,290,-300,290,695,SBD,Raw,M,Junioren,90
+2,Eren Kayadan,KSV 1959 Langen e V.,1996-05-03,69.1,130,142.5,152.5,152.5,110,122.5,130,130,180,195,200,200,482.5,SBD,Raw,M,Junioren,90
+3,Tobias Ommer,KSO Silberrücken Dortmund,1992-03-05,81.2,180,-190,190,190,110,-112.5,112.5,112.5,220,230,232.5,232.5,535,SBD,Raw,M,Junioren,90
+4,Marius Schneider,Aktiv Sport Trier,1996-01-24,80.2,160,170,-180,170,110,120,130,130,200,220,230,230,530,SBD,Raw,M,Junioren,90
+5,Pascal Beck,FSV Sarstedt,1994-08-22,88.8,150,160,170,170,100,-105,-105,100,210,220,230,230,500,SBD,Raw,M,Junioren,90
+6,Lucas Jaron,Sportcenter Egelsbach,1995-01-27,88.8,155,165,170,170,95,105,107.5,107.5,190,210,220,220,497.5,SBD,Raw,M,Junioren,90
+7,Marc James,AC Siegfried Darmstadt,1993-12-29,82.2,140,155,165,165,100,-105,-105,100,170,190,205,205,470,SBD,Raw,M,Junioren,90
+8,Alexander Schäfer,Aktiv Sport Trier,1991-01-14,89.5,150,-160,-160,150,125,-135,-135,125,200,210,-230,210,485,SBD,Raw,M,Junioren,90
+9,Florian Vogl,Gallier (KSV Höllhöhe),1994-08-24,84.8,150,162.5,170,170,70,85,95,95,190,200,205,205,470,SBD,Raw,M,Junioren,90
+10,Dirk Luzwa,AV Vorwärts 05 Groß-Zimmern,1991-10-13,80.2,135,145,152.5,152.5,105,115,-120,115,165,175,180,180,447.5,SBD,Raw,M,Junioren,90
+11,Alexander Stellrecht,AC 92 Weinheim,1996-06-19,76.2,142.5,147.5,152.5,152.5,87.5,92.5,-95,92.5,160,165,-170,165,410,SBD,Raw,M,Junioren,90
+12,Christian Bongers,KSV Hostenbach,1991-08-01,82.2,130,140,-150,140,80,87.5,90,90,140,150,160,160,390,SBD,Raw,M,Junioren,90
+13,Marius Jacob,,1995-10-06,87.7,125,135,147.5,147.5,75,80,-85,80,150,165,172.5,172.5,400,SBD,Raw,M,Junioren,90
+14,Yannick Schwarz,KSV Höllhöhe,1998-05-10,71.8,105,115,120,120,65,70,-72.5,70,145,160,-165,160,350,SBD,Raw,M,Junioren,90
+15,Paul Schäfer,AC 92 Weinheim,1996-09-17,76.9,100,105,110,110,67.5,72.5,-77.5,72.5,127.5,135,140,140,322.5,SBD,Raw,M,Junioren,90
+16,Michael Meyer,,1993-06-20,83.9,95,-102.5,-102.5,95,70,77.5,-82.5,77.5,135,-142.5,150,150,322.5,SBD,Raw,M,Junioren,90
+1,Moritz Kröner,AC Siegfried Darmstadt,1990-01-30,90.1,195,-205,205,205,160,165,167.5,167.5,220,230,240,240,612.5,SBD,Raw,M,Junioren,90+
+2,Dennis Pusikow,Fit+Fun Gotha,1992-07-14,102.3,200,215,222.5,222.5,150,160,162.5,162.5,250,260,-270,260,645,SBD,Raw,M,Junioren,90+
+3,Marvin Rippe,AC Siegfried Darmstadt,1990-10-05,95.8,165,180,190,190,125,135,140,140,215,240,-275,240,570,SBD,Raw,M,Junioren,90+
+4,Markus Stolorz,ASC Zeilsheim,1992-05-02,93.8,170,-180,180,180,125,130,-135,130,210,-222.5,,210,520,SBD,Raw,M,Junioren,90+
+5,Paul Witas,Body Squat,1990-12-14,95.2,130,140,-150,140,135,145,-150,145,190,200,220,220,505,SBD,Raw,M,Junioren,90+
+6,Lukas Schnettler,Strength First,1992-06-04,103.8,140,150,160,160,130,140,-145,140,-200,220,-235,220,520,SBD,Raw,M,Junioren,90+
+7,Sebastian Ott,Sportstudio Bendel,1993-07-29,96,140,155,170,170,100,110,-120,110,180,205,215,215,495,SBD,Raw,M,Junioren,90+
+1,Andrej Mostovenko,SV Fellbach,1990-04-26,82.1,240,260,270,270,165,172.5,177.5,177.5,280,290,300,300,747.5,SBD,Raw,M,Open,100
+2,Stefan Oesterle,Powerlifting Esslingen,1982-08-17,87.5,210,230,240,240,180,195,-205,195,270,290,-300,290,725,SBD,Raw,M,Open,100
+3,Andreas Jandorek,Kellerkinder Kennelbach,1985-04-22,92.7,245,260,-270,260,180,187.5,-192.5,187.5,267.5,282.5,290,290,737.5,SBD,Raw,M,Open,100
+4,Jeffrey Podszuweit,Leipzig,1977-07-12,81.8,205,225,232.5,232.5,172.5,182.5,-187.5,182.5,225,250,255,255,670,SBD,Raw,M,Open,100
+5,Oliver Türk,Aktiv Sport Trier,1969-02-11,99.1,220,240,-250,240,160,-170,-170,160,240,260,270,270,670,SBD,Raw,M,Open,100
+6,Peter Schorr,,1978-04-13,76.8,180,192.5,200,200,120,125,130,130,225,240,250,250,580,SBD,Raw,M,Open,100
+7,Chris Eberhöfer,Kellerkinder Kennelbach,1980-02-13,70.6,180,190,195,195,127.5,135,140,140,200,207.5,-212.5,207.5,542.5,SBD,Raw,M,Open,100
+8,Krzysztof Rodzik,,1976-08-01,86.5,180,-200,200,200,150,155,-160,155,240,250,260,260,615,SBD,Raw,M,Open,100
+9,Markus Hinz,AC Siegfried Darmstadt,,98.2,210,225,235,235,180,190,-195,190,200,220,-230,220,645,SBD,Raw,M,Open,100
+10,Peter Knuth,KSV 1884 Mannheim,1984-06-13,93.5,180,190,200,200,160,-170,170,170,215,230,-240,230,600,SBD,Raw,M,Open,100
+11,Matthias Siegle,SV Fellbach,1963-07-11,83.7,185,200,,200,127.5,132.5,-137.5,132.5,217.5,227.5,-235,227.5,560,SBD,Raw,M,Open,100
+12,Manuel Körner,Gallier (KSV Höllhöhe),1983-10-13,84.3,190,207.5,-212.5,207.5,100,110,117.5,117.5,225,235,-245,235,560,SBD,Raw,M,Open,100
+13,Marco Schwarz,AV Vorwärts 05 Groß-Zimmern,1971-12-13,73.3,165,172.5,-175,172.5,162.5,-167.5,-167.5,162.5,165,172.5,-180,172.5,507.5,SBD,Raw,M,Open,100
+14,Christopher Tropea,AV Vorwärts 05 Groß-Zimmern,1985-01-23,83.5,160,167.5,175,175,130,137.5,140,140,210,227.5,-240,227.5,542.5,SBD,Raw,M,Open,100
+15,Patrick Zunidza,MS Barbell,1989-01-22,88.7,165,170,180,180,125,132.5,-140,132.5,235,-245,-245,235,547.5,SBD,Raw,M,Open,100
+16,Milan Bogner,AC Germania-Schweinheim,1988-07-05,93.8,165,172.5,180,180,132.5,140,147.5,147.5,215,225,235,235,562.5,SBD,Raw,M,Open,100
+17,Dominik Gaurilavas,AC Germania-Schweinheim,1978-03-09,77.3,150,160,170,170,120,125,-127.5,125,170,180,190,190,485,SBD,Raw,M,Open,100
+18,Nino Kuhn,,1992-05-14,81.5,150,165,180,180,100,110,-120,110,170,185,200,200,490,SBD,Raw,M,Open,100
+19,Leo Läßle,Aktiv Sport Trier,1988-01-26,98.3,170,190,-200,190,105,-115,-115,105,220,240,-250,240,535,SBD,Raw,M,Open,100
+20,Dominik Egel,Kellerkinder Kennelbach,1982-10-31,94.7,160,170,175,175,120,125,-127.5,125,200,217.5,222.5,222.5,522.5,SBD,Raw,M,Open,100
+21,Jürgen Pfohl,AC Köln,1978-12-01,90,-145,145,155,155,130,135,-140,135,205,210,217.5,217.5,507.5,SBD,Raw,M,Open,100
+22,Johannes Vietze,KSV Mannheim,1989-08-16,84.5,145,160,-165,160,100,110,-115,110,185,200,-210,200,470,SBD,Raw,M,Open,100
+23,Bernd-Alexander Birkle,KSV Renchtal,1982-02-09,86.4,150,160,170,170,100,105,-110,105,-180,180,200,200,475,SBD,Raw,M,Open,100
+24,Sascha Zelzer,,1980-08-11,77.2,150,155,-160,155,100,105,-110,105,175,182.5,-190,182.5,442.5,SBD,Raw,M,Open,100
+25,Claudio Egel,Kellerkinder Kennelbach,,86.4,160,170,-175,170,100,-107.5,107.5,107.5,180,190,-195,190,467.5,SBD,Raw,M,Open,100
+26,Michael Zündel,Kellerkinder Kennelbach,1991-06-20,46,80,85,-90,85,52.5,57.5,60,60,115,125,-130,125,270,SBD,Raw,M,Open,100
+27,André Kampfmann,AC Germania-Schweinheim,1988-01-04,89.2,125,135,140,140,110,115,120,120,190,200,210,210,470,SBD,Raw,M,Open,100
+28,Nikolas Gliebe,Kellerkinder Kennelbach,1997-08-07,63.7,135,-140,-140,135,80,-85,-85,80,140,150,-165,150,365,SBD,Raw,M,Open,100
+29,Adrian Vollmer,,1985-01-12,97.1,-150,150,157.5,157.5,100,-105,105,105,195,205,215,215,477.5,SBD,Raw,M,Open,100
+30,David Wegner,Köthener SV 09,1978-06-27,99.1,140,-155,155,155,115,120,-122.5,120,180,195,200,200,475,SBD,Raw,M,Open,100
+31,Michael Heinze,,1981-12-05,82.2,140,150,-155,150,120,125,-130,125,125,150,,150,425,SBD,Raw,M,Open,100
+32,Arnold Danna,Kellerkinder Kennelbach,1993-03-30,80.7,140,150,160,160,77.5,85,-90,85,150,160,170,170,415,SBD,Raw,M,Open,100
+33,Sven Thomsen,FSV Sarstedt,1976-11-07,86.4,140,-150,-150,140,100,105,-107.5,105,180,-190,-190,180,425,SBD,Raw,M,Open,100
+34,Bossk,bossktraining,1978-09-29,75.5,125,-130,-130,125,90,100,-105,100,145,155,165,165,390,SBD,Raw,M,Open,100
+35,Kilian Bolter,Kellerkinder Kennelbach,1998-07-15,67.3,117.5,125,130,130,65,72.5,-75,72.5,135,145,155,155,357.5,SBD,Raw,M,Open,100
+36,Leonard Roth,,1994-08-26,83,135,145,-150,145,95,-100,100,100,-145,160,-170,160,405,SBD,Raw,M,Open,100
+DQ,Christian Kuhn,,1987-08-03,91,140,150,-160,150,,,,,,,,,,SBD,Raw,M,Open,100
+1,Christian Poppe,Gallier (KSV Höllhöhe),,132.3,290,310,322.5,322.5,190,200,-210,200,320,-340,-340,320,842.5,SBD,Raw,M,Open,100+
+2,Marc Graser,Powerlifting Esslingen,1974-08-13,103.4,230,250,265,265,160,175,180,180,270,305,,305,750,SBD,Raw,M,Open,100+
+3,Philipp Gramlich,AV Vorwärts 05 Groß-Zimmern,1987-10-06,127.4,260,272.5,282.5,282.5,170,180,-182.5,180,272.5,300,305,305,767.5,SBD,Raw,M,Open,100+
+4,Andy-Elvis Dörner,AC Siegfried Darmstadt,1976-10-20,145.6,300,310,320,320,180,-187.5,-187.5,180,275,282.5,-290,282.5,782.5,SBD,Raw,M,Open,100+
+5,Gregor Loosen,KSV 1884 Mannheim,1986-06-06,106.5,227.5,240,-245,240,155,165,170,170,270,290,305,305,715,SBD,Raw,M,Open,100+
+6,Tino Czeranowski,Powerlifting Esslingen,1971-01-29,118.2,220,250,270,270,140,160,170,170,210,250,280,280,720,SBD,Raw,M,Open,100+
+7,Jürgen Wilflingseder,,1981-05-29,106.4,220,235,250,250,140,155,162.5,162.5,280,-290,-290,280,692.5,SBD,Raw,M,Open,100+
+8,Hans Müller,AC Siegfried Darmstadt,,117,240,260,270,270,150,155,-160,155,260,-280,-280,260,685,SBD,Raw,M,Open,100+
+9,Sirko Petermann,EKV Jöhstadt,1977-05-06,118.5,200,220,232.5,232.5,180,190,195,195,220,235,250,250,677.5,SBD,Raw,M,Open,100+
+10,Friedrich Mockenhaupt,AV Vorwärts 05 Groß-Zimmern,1989-06-06,105.9,212.5,230,-235,230,152.5,157.5,160,160,237.5,257.5,265,265,655,SBD,Raw,M,Open,100+
+11,Sebastian Nübel,Body Squat,1987-05-08,108.5,125,,,125,192.5,-205,,192.5,265,282.5,,282.5,600,SBD,Raw,M,Open,100+
+12,Cliff Andrae,Outback Gym Mainz,1975-04-08,100.4,200,215,-225,215,140,147.5,-150,147.5,190,205,-215,205,567.5,SBD,Raw,M,Open,100+
+13,Niklas Einheuser,Seven,1992-05-26,105.7,200,-210,-210,200,145,-152.5,,145,200,210,220,220,565,SBD,Raw,M,Open,100+
+14,Sascha Krause,Herrnburger AV 77,1990-06-22,104.9,175,195,205,205,110,120,130,130,175,205,225,225,560,SBD,Raw,M,Open,100+
+15,Max Hegen,McFit Mannheim,1978-02-04,111.1,200,-210,-210,200,135,145,-150,145,220,225,-235,225,570,SBD,Raw,M,Open,100+
+16,Jörg Schmelzer,Gallier,1968-06-13,118,140,160,170,170,120,135,145,145,230,240,255,255,570,SBD,Raw,M,Open,100+
+17,Nikolai Meurer,Pure Fitness,,101,-170,170,180,180,-140,140,-145,140,200,220,-240,220,540,SBD,Raw,M,Open,100+
+18,Oliver Schwarz,Gallier (KSV Höllhöhe),1968-10-28,133,170,180,,180,165,170,-175,170,220,-240,,220,570,SBD,Raw,M,Open,100+
+19,Sascha Bantow,Herrnburger AV 77,1989-09-01,100.2,180,190,-195,190,-110,110,-115,110,180,205,225,225,525,SBD,Raw,M,Open,100+
+20,Christoph Frankreiter,Aktiv Sport Trier,1989-06-27,114.8,-180,180,190,190,110,120,125,125,-200,200,215,215,530,SBD,Raw,M,Open,100+
+21,Florian Meißner,Gallier (KSV Höllhöhe),1983-09-23,125.3,170,180,185,185,90,100,105,105,210,225,240,240,530,SBD,Raw,M,Open,100+
+22,Simon Benzler,Powerlifting Esslingen,1983-10-30,122.4,140,160,,160,100,,,100,200,240,250,250,510,SBD,Raw,M,Open,100+
+23,Fabian Grede,,1991-05-26,104,125,130,-135,130,97.5,102.5,110,110,150,160,170,170,410,SBD,Raw,M,Open,100+
+DQ,Florian Förster,Gallier (KSV Höllhöhe),1980-07-28,127.2,-220,,,,170,-180,180,180,,,,,,SBD,Raw,M,Open,100+
+1,Christian Wackernell,Österreich,1980-04-09,169,,,,,262.5,-272.5,272.5,272.5,,,,,272.5,B,Raw,M,Open,
+2,Christian Raidel,,1982-03-21,119.8,,,,,235,242.5,-250,242.5,,,,,242.5,B,Raw,M,Open,
+3,Peter Hulin,Fit+Fun Gotha,1981-08-02,119.1,,,,,205,215,225,225,,,,,225,B,Raw,M,Open,
+4,Martin Pfannstiel,TSV Roßdorf 08,1984-05-14,106.8,,,,,200,210,-215,210,,,,,210,B,Raw,M,Open,
+5,Georg Mairinger,Austria,1981-07-04,92.4,,,,,175,185,-192.5,185,,,,,185,B,Raw,M,Open,
+6,Patric Kaltenbacher,Freiburg / California,1978-05-27,91.7,,,,,160,170,177.5,177.5,,,,,177.5,B,Raw,M,Open,
+7,Lolita Zankel,,1959-05-26,64.5,,,,,95,100,105,105,,,,,105,B,Raw,M,Open,
+8,Julia Dietz,FCRM Rüsselsheim,1982-05-06,75.5,,,,,105,110,-112.5,110,,,,,110,B,Raw,F,Open,
+9,Sven Saiko,Profi-Gym Darmstadt,1991-12-16,121.7,,,,,170,-180,180,180,,,,,180,B,Raw,M,Open,
+10,Ricky Bauroth,Leipzig,1977-09-11,84,,,,,135,145,150,150,,,,,150,B,Raw,M,Open,
+11,Ronny Berndt,KSV Renchtal,1979-03-23,95.9,,,,,150,160,-165,160,,,,,160,B,Raw,M,Open,
+12,Martin Kowald,Austria,,94.1,,,,,145,152.5,-160,152.5,,,,,152.5,B,Raw,M,Open,
+13,Myrco Griesch,CrossFit Rodgau,1980-08-14,68.3,,,,,115,120,-122.5,120,,,,,120,B,Raw,M,Open,
+14,Alwin Schneider,Aktiv Sport Trier,1960-07-23,86.7,,,,,120,140,-145,140,,,,,140,B,Raw,M,Open,
+15,Stefan Fehrer,,1978-10-01,94.3,,,,,130,135,140,140,,,,,140,B,Raw,M,Open,
+16,Benjamin Spahn,CrossFit Rodgau,1984-07-29,93,,,,,130,-135,137.5,137.5,,,,,137.5,B,Raw,M,Open,
+17,Michael Mair,KSV Krambach,1970-10-09,122.6,,,,,140,150,-155,150,,,,,150,B,Raw,M,Open,
+18,Daniel Hofer,Doppelzentner Hohenlohe,1981-11-20,99,,,,,130,140,-145,140,,,,,140,B,Raw,M,Open,
+19,Florian Förster,,1988-05-14,109.8,,,,,130,135,-140,135,,,,,135,B,Raw,M,Open,
+20,Janis Unrath,Doppelzentner Hohenlohe,1989-06-12,76.75,,,,,110,-120,-120,110,,,,,110,B,Raw,M,Open,
+21,Andrej Sakmann,,1989-04-01,85.8,,,,,-110,110,115,115,,,,,115,B,Raw,M,Open,
+22,Jens Römer,Doppelzentner Hohenlohe,1991-11-01,93.4,,,,,110,120,-130,120,,,,,120,B,Raw,M,Open,
+23,Philipp Hoffmann,AV Vorwärts Groß-Zimmern,1988-08-30,98.4,,,,,122.5,-132.5,-132.5,122.5,,,,,122.5,B,Raw,M,Open,
+24,Marco Schwarz,Gallier (KSV Höllhöhe),1995-04-28,89.6,,,,,100,110,-120,110,,,,,110,B,Raw,M,Open,
+25,Leon Krämer,AC Siegfried Darmstadt,2000-08-10,42.9,,,,,45,47.5,,47.5,,,,,47.5,B,Raw,M,Open,
+26,Alexandra Bossnak,AC Oppenau,1969-09-06,65.5,,,,,50,-55,55,55,,,,,55,B,Raw,M,Open,
