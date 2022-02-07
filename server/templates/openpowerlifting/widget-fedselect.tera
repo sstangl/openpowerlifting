@@ -90,7 +90,7 @@
   <option value="bdfpa" {% if selection.federation == "BDFPA" %}selected{% endif %}>BDFPA - British Drug-Free Powerlifting Association</option>
   <option value="bp" {% if selection.federation == "BP" %}selected{% endif %}>BP - British Powerlifting [IPF]</option>
   <option value="bpc" {% if selection.federation == "BPC" %}selected{% endif %}>BPC - British Powerlifting Congress [WPC]</option>
-  <option value="bpf" {% if selection.federation == "BPF" %}selected{% endif %}>BPF - British Powerlifting Federation [WPU/WRPF]</option>
+  <option value="bpf" {% if selection.federation == "BPF" %}selected{% endif %}>BPF - British Powerlifting Federation [IPL]</option>
   <option value="bpo" {% if selection.federation == "BPO" %}selected{% endif %}>BPO - British Powerlifting Organisation [WPF]</option>
   <option value="bpu" {% if selection.federation == "BPU" %}selected{% endif %}>BPU - British Powerlifting Union [WPC]</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA - English Powerlifting Association [IPF]</option>

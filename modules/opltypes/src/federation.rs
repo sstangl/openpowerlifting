@@ -187,7 +187,7 @@ pub enum Federation {
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
 
-    /// British Powerlifting Federation, WPU/WRPF.
+    /// British Powerlifting Federation, IPL, formerly WPU/WRPF.
     #[strum(to_string = "BPF", serialize = "bpf")]
     BPF,
 
@@ -2360,7 +2360,13 @@ impl Federation {
                     Some(Federation::WPC)
                 }
             }
-            Federation::BPF => Some(Federation::WRPF),
+            Federation::BPF => {
+                if date.year() >= 2022 {
+                    Some(Federation::IPL)
+                } else {
+                    Some(Federation::WRPF)
+                }
+            }
             Federation::BPO => Some(Federation::WPF),
             Federation::BPU => {
                 // The BPU has been WPC-affiliated since 2013.
@@ -2824,7 +2830,13 @@ impl Federation {
             Federation::BP => Federation::ipf_rules_on(date),
             Federation::BPA => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,
-            Federation::BPF => PointsSystem::Wilks,
+            Federation::BPF => {
+                if date.year() >= 2022 {
+                    Federation::ipl_rules_on(date)
+                } else {
+                    PointsSystem::Wilks
+                }
+            }
             Federation::BPO => PointsSystem::Wilks,
             Federation::BPU => PointsSystem::Glossbrenner,
             Federation::BVDG => PointsSystem::Wilks,
