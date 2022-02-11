@@ -18,18 +18,6 @@
     mrtj = {name="MR-TJ", min=14, max=23, sex="M", equipment="Raw"}
     mrsj = {name="MR-SJ", min=14, max=19, sex="M", equipment="Raw"}
     mrjr = {name="MR-Jr", min=20, max=23, sex="M", equipment="Raw"}
-    mrm1a = {name="MR-M1a", min=39.5, max=43.5, sex="M", equipment="Raw"}
-    mrm1b = {name="MR-M1b", min=44.5, max=48.5, sex="M", equipment="Raw"}
-    mrm2a = {name="MR-M2a", min=49.5, max=53.5, sex="M", equipment="Raw"}
-    mrm2b = {name="MR-M2b", min=54.5, max=58.5, sex="M", equipment="Raw"}
-    mrm3a = {name="MR-M3a", min=59.5, max=63.5, sex="M", equipment="Raw"}
-    mrm3b = {name="MR-M3b", min=64.5, max=68.5, sex="M", equipment="Raw"}
-    mrm4a = {name="MR-M4a", min=69.5, max=73.5, sex="M", equipment="Raw"}
-    mrm4b = {name="MR-M4b", min=74.5, max=78.5, sex="M", equipment="Raw"}
-    mrm5a = {name="MR-M5a", min=79.5, max=83.5, sex="M", equipment="Raw"}
-    mrm5b = {name="MR-M5b", min=84.5, max=88.5, sex="M", equipment="Raw"}
-    mrm6a = {name="MR-M6a", min=89.5, max=93.5, sex="M", equipment="Raw"}
-    mrm6b = {name="MR-M6b", min=94.5, max=98.5, sex="M", equipment="Raw"}
     mrm = {name="MR-M", min=39.5, max=999, sex="M", equipment="Raw"}
     mrm1 = {name="MR-M1", min=39.5, max=48.5, sex="M", equipment="Raw"}
     mrm2 = {name="MR-M2", min=49.5, max=58.5, sex="M", equipment="Raw"}
@@ -52,18 +40,6 @@
     frtj = {name="FR-TJ", min=14, max=23, sex="F", equipment="Raw"}
     frsj = {name="FR-SJ", min=14, max=19, sex="F", equipment="Raw"}
     frjr = {name="FR-Jr", min=20, max=23, sex="F", equipment="Raw"}
-    frm1a = {name="FR-M1a", min=39.5, max=43.5, sex="F", equipment="Raw"}
-    frm1b = {name="FR-M1b", min=44.5, max=48.5, sex="F", equipment="Raw"}
-    frm2a = {name="FR-M2a", min=49.5, max=53.5, sex="F", equipment="Raw"}
-    frm2b = {name="FR-M2b", min=54.5, max=59.5, sex="F", equipment="Raw"}
-    frm3a = {name="FR-M3a", min=59.5, max=63.5, sex="F", equipment="Raw"}
-    frm3b = {name="FR-M3b", min=64.5, max=68.5, sex="F", equipment="Raw"}
-    frm4a = {name="FR-M4a", min=69.5, max=73.5, sex="F", equipment="Raw"}
-    frm4b = {name="FR-M4b", min=74.5, max=78.5, sex="F", equipment="Raw"}
-    frm5a = {name="FR-M5a", min=79.5, max=83.5, sex="F", equipment="Raw"}
-    frm5b = {name="FR-M5b", min=84.5, max=88.5, sex="F", equipment="Raw"}
-    frm6a = {name="FR-M6a", min=89.5, max=93.5, sex="F", equipment="Raw"}
-    frm6b = {name="FR-M6b", min=94.5, max=98.5, sex="F", equipment="Raw"}
     frm = {name="FR-M", min=39.5, max=999, sex="F", equipment="Raw"}
     frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
     frm2 = {name="FR-M2", min=49.5, max=58.5, sex="F", equipment="Raw"}
@@ -77,6 +53,10 @@
     mo = {name="M-O", sex="M", min=0, max=999, equipment="Single-ply"}
     msjr = {name="M-SJr", sex="M", min=0, max=17.5, equipment="Single-ply"}
     mjr = {name="M-Jr", sex="M", min=0, max=22.5, equipment="Single-ply"}
+    mm1 = {name="M-M1", sex="M", min=39.5, max=48.5, equipment="Single-ply"}
+    mm2 = {name="M-M2", sex="M", min=49.5, max=58.5, equipment="Single-ply"}
+    mm3 = {name="M-M3", sex="M", min=59.5, max=68.5, equipment="Single-ply"}
+    mm4 = {name="M-M4", sex="M", min=69.5, max=78.5, equipment="Single-ply"}
 
     fm1 = {name="F-M1", sex="F", min=39.5, max=48.5, equipment="Single-ply"}
 
