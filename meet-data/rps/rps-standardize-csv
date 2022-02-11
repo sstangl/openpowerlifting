@@ -360,7 +360,7 @@ def fixclass(csv):
             x = 'Elite'
         elif s == 'military am' or s == 'military' or s == 'am military':
             x = 'Military Amateur'
-        elif s == 'mil am':
+        elif s == 'mil am' or s == 'military amateur':
             x = 'Military Amateur'
         elif s == 'police am' or s == 'pol am' or s == 'police':
             x = 'Police Amateur'
