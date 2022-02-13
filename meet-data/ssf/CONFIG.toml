@@ -20,6 +20,7 @@
     # Absolutely no idea what this is.
     # Google Translate suggests that it means "Poor Boy".
     knatte = {name="Knatte pojke", min=0, max=999}
+    specialolympics = {name="Special Olympics", min=0, max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
