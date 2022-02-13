@@ -376,7 +376,7 @@ def getresults(soup, meet_name, url):
                     csv.fieldnames += ['TotalKg']
                 elif h in ['wilks', 'wpist', 'pist', 'wpts', 'wilks pist', 'wilks pts',
                            'ipf pist', 'ipf pts', 'ipf glp', 'ipf gl pist', 'gl pist',
-                           'ipf gl pts']:
+                           'ipf gl pts', 'ipfgl']:
                     csv.fieldnames += ['Wilks']
                 elif h == 'jpist' or h == 'j pist':
                     csv.fieldnames += ['Points']
