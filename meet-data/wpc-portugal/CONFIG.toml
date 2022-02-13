@@ -2,7 +2,7 @@
 
 [divisions]
     open = {name="Open", min=0, max=999}
-    t10-11 = {name="T 10-11", min=10, max=11}
+    t10-12 = {name="T 10-12", min=10, max=12}
     t13_15 = {name="T 13-15", min=13, max=15}
     t16_17 = {name="T 16-17", min=16, max=17}
     t18_19 = {name="T 18-19", min=18, max=19}
