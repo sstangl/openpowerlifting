@@ -79,7 +79,10 @@ def getresults(soup, meetcsv):
         hasAbsoluteRankings = True
 
     descriptors = results_table.find_all('div', {'class': 'table-title'})
+
     for ii in range(0, len(subtables)):
+        if ii >= len(descriptors):
+            break
         curr_table = subtables[ii]
         curr_descriptor = descriptors[ii]
 
@@ -102,7 +105,7 @@ def getresults(soup, meetcsv):
                     csv.fieldnames += ['IGNORE']
                 elif h.lower() == 'jméno':
                     csv.fieldnames += ['Name']
-                elif h == 'Nar/St.č/TH':
+                elif h in ['Nar/St.č/TH', 'Nar/TH']:
                     csv.fieldnames += ['BirthYear', 'Lot', 'BodyweightKg']
                 elif h == 'Oddíl':
                     csv.fieldnames += ['Team']
