@@ -1,6 +1,7 @@
 [divisions]
     class1a = {name ="Class 1A",min=13,max=19}
     class2a = {name ="Class 2A",min=13,max=19}
+    class3a = {name ="Class 3A",min=13,max=19}
 
 [weightclasses.default_F]
     classes = ["45.81","49.9","53.98","58.51","63.05","69.85","76.66","83.01","90.26","90.26+"]
