@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     class1a = {name ="Class 1A",min=13,max=19}
     class2a = {name ="Class 2A",min=13,max=19}
