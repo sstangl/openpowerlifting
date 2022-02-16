@@ -15,6 +15,7 @@ pub enum State {
     InAustralia(AustraliaState),
     InBrazil(BrazilState),
     InCanada(CanadaState),
+    InChile(ChileState),
     InChina(ChinaState),
     InEngland(EnglandState),
     InGermany(GermanyState),
@@ -47,6 +48,7 @@ impl State {
             Country::Australia => Ok(State::InAustralia(s.parse::<AustraliaState>()?)),
             Country::Brazil => Ok(State::InBrazil(s.parse::<BrazilState>()?)),
             Country::Canada => Ok(State::InCanada(s.parse::<CanadaState>()?)),
+            Country::Chile => Ok(State::InChile(s.parse::<ChileState>()?)),
             Country::China => Ok(State::InChina(s.parse::<ChinaState>()?)),
             Country::England => Ok(State::InEngland(s.parse::<EnglandState>()?)),
             Country::Germany => Ok(State::InGermany(s.parse::<GermanyState>()?)),
@@ -102,6 +104,7 @@ impl State {
             State::InAustralia(_) => Country::Australia,
             State::InBrazil(_) => Country::Brazil,
             State::InCanada(_) => Country::Canada,
+            State::InChile(_) => Country::Chile,
             State::InChina(_) => Country::China,
             State::InEngland(_) => Country::England,
             State::InGermany(_) => Country::Germany,
@@ -132,6 +135,7 @@ impl State {
             State::InAustralia(s) => s.to_string(),
             State::InBrazil(s) => s.to_string(),
             State::InCanada(s) => s.to_string(),
+            State::InChile(s) => s.to_string(),
             State::InChina(s) => s.to_string(),
             State::InEngland(s) => s.to_string(),
             State::InGermany(s) => s.to_string(),
@@ -321,6 +325,14 @@ pub enum BrazilState {
 pub enum CanadaState {
     AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
 }
+
+/// A state in Chile.
+#[rustfmt::skip]
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
+pub enum ChileState {
+    AI, AN, AP, AT, BI, CO, AR, LI, LL, LR, MA, ML, NB, RM, TA, VS
+}
+
 
 /// A province in China.
 #[rustfmt::skip]

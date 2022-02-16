@@ -1,5 +1,22 @@
 [divisions]
-    open = {name ="Open",min=0,max=999}
+    #IPL Divisions
+    ipl_open = {name ="Open",min=0,max=999}
+    ipl_jun = {name ="Junior 20-23",min=20,max=23}
+    ipl_m4044 = {name ="Master 40-44",min=40,max=44} 
+    ipl_m4549 = {name ="Master 45-49",min=45,max=49}
+    ipl_m5054 = {name ="Master 50-54",min=50,max=54}
+    ipl_m5559 = {name ="Master 55-59",min=55,max=59}  
+    ipl_m6064 = {name ="Master 60-64",min=60,max=64}
+    ipl_m6569 = {name ="Master 65-69",min=65,max=69}   
+    ipl_m7074 = {name ="Master 70-74",min=70,max=74} 
+    ipl_m7579 = {name ="Master 75-79",min=75,max=79}         
+    ipl_tn1519 = {name ="Junior 15-19",min=15,max=19}
+    ipl_subm = {name ="Submaster 33-39",min=33,max=39} 
+    
+    youth = {name ="Youth",min=0,max=14} #Not a real division, just defined for lifters < 15
+
+
+    # Old divisions
     jun = {name ="Junior",min=20,max=23}
     m4049 = {name ="M 40-49",min=40,max=49} 
     m5059 = {name ="M 50-59",min=50,max=59} 
