@@ -83,6 +83,7 @@
     fm3rp  = {name ="FM3-RP",min=50,max=54,sex="F", equipment=["Raw","Wraps"]}
     fm3mp  = {name ="FM3-MP",min=50,max=54,sex="F", equipment="Multi-ply"}
     fm4r   = {name ="FM4-R",min=55,max=59,sex="F", equipment="Raw"}
+    fm5r   = {name ="FM5-R",min=60,max=64,sex="F", equipment="Raw"}
     fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
     fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
     msmr   = {name ="MSM-R",min=33,max=39,sex="M", equipment="Raw"}
