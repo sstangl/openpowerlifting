@@ -215,7 +215,7 @@ def makeentriescsv(soup):
                 elif 'Male' in s:
                     state_sex = 'M'
 
-        elif k == 21:
+        elif k == 22:
             # This is a results row.
             assert state_event is not None
             assert state_division is not None
