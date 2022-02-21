@@ -85,3 +85,4 @@
    bob5 = ["ExemptDivision"] #BOB does their own thing
    bob6 = ["ExemptDivision"] #BOB does their own thing
    2133 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Pro division, LW/HW classes.
+   2204 = ["ExemptWeightClassConsistency"] # Used old F weightclasses.
