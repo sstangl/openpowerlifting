@@ -333,7 +333,6 @@ pub enum ChileState {
     AI, AN, AP, AT, BI, CO, AR, LI, LL, LR, MA, ML, NB, RM, TA, VS
 }
 
-
 /// A province in China.
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]

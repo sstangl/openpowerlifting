@@ -15,9 +15,9 @@ fxhash = "0.2.1"
 itertools = "0.10"
 serde = "1.0"
 serde_derive = "1.0"
-smartstring = { version = "0.2", features = ["serde"] }
-strum = "0.23"
-strum_macros = "0.23"
+smartstring = { version = "1.0", features = ["serde"] }
+strum = "0.24"
+strum_macros = "0.24"
 
 [dev-dependencies]
 criterion = { version = "0.3", features = ["html_reports"] }
