@@ -51,13 +51,14 @@
     frg = {name="FR-G", min=0, max=999, sex="F", equipment="Raw", place="G"}
 
     mo = {name="M-O", sex="M", min=0, max=999, equipment="Single-ply"}
-    msjr = {name="M-SJr", sex="M", min=0, max=17.5, equipment="Single-ply"}
+    msjr = {name="M-SJ", sex="M", min=0, max=17.5, equipment="Single-ply"}
     mjr = {name="M-Jr", sex="M", min=0, max=22.5, equipment="Single-ply"}
     mm1 = {name="M-M1", sex="M", min=39.5, max=48.5, equipment="Single-ply"}
     mm2 = {name="M-M2", sex="M", min=49.5, max=58.5, equipment="Single-ply"}
     mm3 = {name="M-M3", sex="M", min=59.5, max=68.5, equipment="Single-ply"}
     mm4 = {name="M-M4", sex="M", min=69.5, max=78.5, equipment="Single-ply"}
 
+    fo = {name="F-O", sex="F", min=0, max=999, equipment="Single-ply"}
     fm1 = {name="F-M1", sex="F", min=39.5, max=48.5, equipment="Single-ply"}
 
 
