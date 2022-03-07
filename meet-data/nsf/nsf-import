@@ -152,6 +152,8 @@ def getresults(soup):
                 divstate = 'Open'
             elif 'veteran' in text:
                 divstate = text.replace('veteran', 'Masters')
+            elif 'rekrutt' in text:
+                divstate = text
             else:
                 error("Unknown state: \"%s\"" % row[0])
 
