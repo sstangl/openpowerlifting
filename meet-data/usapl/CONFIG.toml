@@ -584,6 +584,7 @@
     WI-2022-15 = ["ExemptDivision"] # Lifter under 14 in the Open division.
     NS-2022-01 = ["ExemptWeightClassConsistency"] # No weight classes used.
     NS-2022-01-B = ["ExemptWeightClassConsistency"] # No weight classes used.
+    NS-2022-01-C = ["ExemptWeightClassConsistency"] # No weight classes used.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
