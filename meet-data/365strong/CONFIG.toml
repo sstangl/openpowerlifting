@@ -369,6 +369,9 @@
     fodrt = {name="F-OD-R-T", min=0, max=999, sex="F", equipment="Raw", tested="Yes"}
     fosrt = {name="F-OS-R-T", min=0, max=999, sex="F", equipment="Raw", tested="Yes"}
 
+    # No idea what these are.
+    kcx = {name="KC-X", min=0, max=999}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
