@@ -589,6 +589,7 @@
     NS-2022-01-E = ["ExemptWeightClassConsistency"] # No weight classes used.
     NS-2022-01-F = ["ExemptWeightClassConsistency"] # No weight classes used.
     NS-2022-01-H = ["ExemptWeightClassConsistency", "ExemptDivision"] # No weight classes used + several Raw lifters in Single-ply
+    MN-2022-01 = ["ExemptWeightClassConsistency"] # No weight classes used for Open lifters.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
