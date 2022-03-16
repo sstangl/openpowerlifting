@@ -124,12 +124,6 @@ function makeDataProvider() {
                         '<i class="iglogo"></i></a>';
             }
 
-            if (entry[Column.Vkontakte]) {
-                name += '<a href="https://vk.com/' + entry[Column.Vkontakte] +
-                        '" class="instagram" rel="noopener" target="_blank">' +
-                        '<i class="vklogo"></i></a>';
-            }
-
             const date = '<a href="' + urlprefix + 'm/' + entry[Column.Path] + '">' +
                 entry[Column.Date] + '</a>';
 

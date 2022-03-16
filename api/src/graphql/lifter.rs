@@ -46,11 +46,6 @@ impl Lifter {
         db.0.get_lifter(self.0).instagram.as_deref()
     }
 
-    /// The lifter's VKontakte account.
-    fn vkontakte(&self, db: &ManagedOplDb) -> Option<&str> {
-        db.0.get_lifter(self.0).vkontakte.as_deref()
-    }
-
     /// Colorization information.
     fn color(&self, db: &ManagedOplDb) -> Option<&str> {
         db.0.get_lifter(self.0).color.as_deref()

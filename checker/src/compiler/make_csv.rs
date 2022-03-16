@@ -222,8 +222,6 @@ struct LiftersRow<'md, 'ld> {
     username: &'md str,
     #[serde(rename = "Instagram")]
     instagram: Option<&'ld str>,
-    #[serde(rename = "VKontakte")]
-    vkontakte: Option<&'ld str>,
     #[serde(rename = "Color")]
     color: Option<&'ld str>,
     #[serde(rename = "Flair")]
@@ -242,7 +240,6 @@ impl<'md, 'ld> LiftersRow<'md, 'ld> {
             koreanname: entrydata.koreanname,
             username: entrydata.username,
             instagram: lifterdata.instagram.as_deref(),
-            vkontakte: lifterdata.vkontakte.as_deref(),
             color: lifterdata.color.as_deref(),
             flair: lifterdata.flair.as_deref(),
         }

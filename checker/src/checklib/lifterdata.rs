@@ -54,9 +54,6 @@ pub struct LifterData {
     /// The lifter's Instagram.
     pub instagram: Option<String>,
 
-    /// The lifter's VKontakte name (a Russian clone of Facebook).
-    pub vkontakte: Option<String>,
-
     /// Number of known lifters sharing the same username.
     pub disambiguation_count: u32,
 
@@ -365,68 +362,6 @@ fn check_social_instagram(
     Ok(())
 }
 
-/// Specifices a lifter's VKontakte public account name.
-///
-/// VKontakte is a social networking site for Russia, like Facebook.
-/// The data exists in `lifter-data/social-instagram.csv`.
-#[derive(Deserialize)]
-struct VKontakteRow {
-    #[serde(rename = "Name")]
-    pub name: String,
-    #[serde(rename = "Userpage")]
-    pub userpage: String,
-}
-
-/// Checks `lifter-data/social-vkontakte.csv`, mutating the LifterDataMap.
-fn check_social_vkontakte(
-    reader: &csv::ReaderBuilder,
-    report: &mut Report,
-    map: &mut LifterDataMap,
-) -> Result<(), Box<dyn Error>> {
-    if !report.path.exists() {
-        report.error("File does not exist");
-        return Ok(());
-    }
-
-    let mut rdr = reader.from_path(&report.path)?;
-
-    for (rownum, result) in rdr.deserialize().enumerate() {
-        // Text editors are one-indexed, and the header line was skipped.
-        let line = (rownum as u64) + 2;
-
-        let row: VKontakteRow = result?;
-        let username = match Username::from_name(&row.name) {
-            Ok(s) => s,
-            Err(s) => {
-                report.error_on(line, s);
-                continue;
-            }
-        };
-
-        if has_whitespace_errors(username.as_str()) {
-            report.error_on(line, format!("Whitesace error in '{}'", username.as_str()));
-        }
-        if has_whitespace_errors(&row.userpage) {
-            report.error_on(line, format!("Whitespace error in '{}'", &row.userpage));
-        }
-
-        match map.get_mut(&username) {
-            Some(data) => {
-                data.vkontakte = Some(row.userpage);
-            }
-            None => {
-                let data = LifterData {
-                    vkontakte: Some(row.userpage),
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        }
-    }
-
-    Ok(())
-}
-
 /// Map from `Username` to a count of disambiguations for that username.
 pub type DisambiguationMap = FxHashMap<String, u32>;
 
@@ -552,18 +487,6 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
     // Check social-instagram.csv.
     let mut report = Report::new(lifterdir.join("social-instagram.csv"));
     match check_social_instagram(reader, &mut report, &mut map) {
-        Ok(()) => (),
-        Err(e) => {
-            report.error(e);
-        }
-    }
-    if report.has_messages() {
-        reports.push(report)
-    }
-
-    // Check social-vkontakte.csv.
-    let mut report = Report::new(lifterdir.join("social-vkontakte.csv"));
-    match check_social_vkontakte(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);

@@ -5,7 +5,6 @@
 # Example use:
 # $ ./sort-csv "../lifter-data/name-disambiguation.csv"
 # $ ./sort-csv "../lifter-data/social-instagram.csv"
-# $ ./sort-csv "../lifter-data/social-vkontakte.csv"
 
 set -e
 

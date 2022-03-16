@@ -38,7 +38,6 @@ CREATE TABLE opl_lifters (
 	korean_name VARCHAR,
 	username VARCHAR NOT NULL,
 	instagram VARCHAR,
-	vkontakte VARCHAR,
 	color VARCHAR,
 	flair VARCHAR
 );

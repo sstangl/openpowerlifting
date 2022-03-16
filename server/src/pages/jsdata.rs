@@ -17,7 +17,6 @@ pub struct JsEntryRow<'db> {
     pub name: &'db str,
     pub username: &'db str,
     pub instagram: Option<&'db str>,
-    pub vkontakte: Option<&'db str>,
     pub color: Option<&'db str>,
     pub flair: Option<&'db str>,
 
@@ -58,7 +57,6 @@ impl<'db> Serialize for JsEntryRow<'db> {
         seq.serialize_element(&self.name)?;
         seq.serialize_element(&self.username)?;
         seq.serialize_element(&self.instagram)?;
-        seq.serialize_element(&self.vkontakte)?;
         seq.serialize_element(&self.color)?;
         seq.serialize_element(&self.flair)?;
 
@@ -110,7 +108,6 @@ impl<'db> JsEntryRow<'db> {
             name: localized_name(lifter, locale.language),
             username: lifter.username.as_str(),
             instagram: lifter.instagram.as_deref(),
-            vkontakte: lifter.vkontakte.as_deref(),
             color: lifter.color.as_deref(),
             flair: lifter.flair.as_deref(),
 

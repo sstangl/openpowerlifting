@@ -33,8 +33,6 @@ pub struct Lifter {
     pub username: Username,
     #[serde(rename(deserialize = "Instagram"))]
     pub instagram: Option<CompactString>,
-    #[serde(rename(deserialize = "VKontakte"))]
-    pub vkontakte: Option<CompactString>,
     #[serde(rename(deserialize = "Color"))]
     pub color: Option<CompactString>,
     #[serde(rename(deserialize = "Flair"))]
