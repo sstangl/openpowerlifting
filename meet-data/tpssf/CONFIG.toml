@@ -249,3 +249,4 @@
 
 [exemptions]
 	2001 = ["ExemptWeightClassConsistency"] # No female weightclasses.
+	2201 = ["ExemptDivision"] # Apparent sub-juniors in the juniors category.
