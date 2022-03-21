@@ -21,7 +21,7 @@ use common::*;
 #[cfg(test)]
 mod tests;
 
-use langpack::{LangInfo, Language, Locale};
+use langpack::{Language, Locale};
 use opltypes::Username;
 
 use rocket::fs::NamedFile;
@@ -107,7 +107,6 @@ fn rankings(
     selections: PathBuf,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
@@ -115,7 +114,7 @@ fn rankings(
     let defaults = opldb::query::direct::RankingsQuery::default();
     let selection =
         opldb::query::direct::RankingsQuery::from_url_path(&selections, &defaults).ok()?;
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let cx = pages::rankings::Context::new(opldb, &locale, &selection, &defaults, false)?;
 
     Some(match device {
@@ -134,7 +133,6 @@ fn records(
     selections: Option<PathBuf>,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
@@ -145,7 +143,7 @@ fn records(
     } else {
         default
     };
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let context = pages::records::Context::new(
         opldb,
         &locale,
@@ -163,12 +161,11 @@ fn records(
 fn records_default(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    records(None, lang, opldb, langinfo, languages, device, cookies)
+    records(None, lang, opldb, languages, device, cookies)
 }
 
 #[get("/u/<username>?<lang>")]
@@ -176,12 +173,11 @@ fn lifter(
     username: &str,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Result<Template, Redirect>> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
 
     // Disambiguations end with a digit.
     // Some lifters may have failed to be merged with their disambiguated username.
@@ -278,7 +274,6 @@ fn meetlist(
     mselections: Option<PathBuf>,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
@@ -288,7 +283,7 @@ fn meetlist(
         None => defaults,
         Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let cx = pages::meetlist::Context::new(opldb, &locale, &mselection);
 
     Some(match device {
@@ -301,12 +296,11 @@ fn meetlist(
 fn meetlist_default(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    meetlist(None, lang, opldb, langinfo, languages, device, cookies)
+    meetlist(None, lang, opldb, languages, device, cookies)
 }
 
 #[get("/m/<meetpath..>?<lang>")]
@@ -314,7 +308,6 @@ fn meet(
     meetpath: PathBuf,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
@@ -332,7 +325,7 @@ fn meet(
     }
 
     let meet_id = opldb.meet_id(meetpath_str)?;
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let use_ipf_equipment = false;
     let context = pages::meet::Context::new(
         opldb,
@@ -353,12 +346,11 @@ fn meet(
 fn status(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let context = pages::status::Context::new(opldb, &locale, None);
 
     Some(match device {
@@ -370,12 +362,11 @@ fn status(
 #[get("/faq?<lang>")]
 fn faq(
     lang: Option<&str>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let context = pages::faq::Context::new(&locale);
 
     Some(match device {
@@ -387,12 +378,11 @@ fn faq(
 #[get("/contact?<lang>")]
 fn contact(
     lang: Option<&str>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let context = pages::contact::Context::new(&locale);
 
     Some(match device {
@@ -412,7 +402,6 @@ fn index(
     lang: Option<&str>,
     fed: Option<&str>, // For handling old-style URLs.
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     device: Device,
     cookies: &CookieJar<'_>,
@@ -426,7 +415,7 @@ fn index(
 
     // Otherwise, render the main rankings template.
     let defaults = opldb::query::direct::RankingsQuery::default();
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let cx = pages::rankings::Context::new(opldb, &locale, &defaults, &defaults, false);
 
     Some(IndexReturn::Template(match device {
@@ -441,7 +430,6 @@ fn rankings_api(
     selections: Option<PathBuf>,
     query: RankingsApiQuery,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
 ) -> Option<JsonString> {
     let defaults = opldb::query::direct::RankingsQuery::default();
     let selection = match selections {
@@ -451,7 +439,7 @@ fn rankings_api(
 
     let language = query.lang.parse::<Language>().ok()?;
     let units = query.units.parse::<WeightUnits>().ok()?;
-    let locale = Locale::new(langinfo, language, units);
+    let locale = Locale::new(language, units);
 
     let slice = pages::api_rankings::query_slice(
         opldb,
@@ -471,9 +459,8 @@ fn rankings_api(
 fn default_rankings_api(
     query: RankingsApiQuery,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
 ) -> Option<JsonString> {
-    rankings_api(None, query, opldb, langinfo)
+    rankings_api(None, query, opldb)
 }
 
 /// API endpoint for rankings search.
@@ -591,10 +578,9 @@ async fn internal_error() -> &'static str {
     "500"
 }
 
-fn rocket(opldb: ManagedOplDb, langinfo: LangInfo) -> Rocket<Build> {
+fn rocket(opldb: ManagedOplDb) -> Rocket<Build> {
     rocket::build()
         .manage(opldb)
-        .manage(langinfo)
         .mount(
             "/",
             routes![
@@ -701,7 +687,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     );
 
     #[cfg(not(test))]
-    let _ = rocket(opldb, LangInfo::default()).launch().await;
+    let _ = rocket(opldb).launch().await;
 
     Ok(())
 }

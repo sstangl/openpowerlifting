@@ -99,7 +99,7 @@ impl FromStr for RuleSet {
 
         // If specifed as a number, import the number directly.
         if let Ok(n) = s.parse::<u32>() {
-            return Ok(RuleSet { 0: n });
+            return Ok(RuleSet(n));
         }
 
         // Otherwise assume it's a space-delimited string.

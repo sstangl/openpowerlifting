@@ -401,7 +401,7 @@ pub fn check_meet(
         return Ok(MeetCheckResult { report, meet: None });
     }
 
-    let meetpath = check_meetpath(&mut report).unwrap_or_else(String::new);
+    let meetpath = check_meetpath(&mut report).unwrap_or_default();
 
     let mut rdr = reader.from_path(&report.path)?;
     do_check(&mut rdr, config, report, meetpath)

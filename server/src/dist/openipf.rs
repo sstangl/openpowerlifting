@@ -4,7 +4,7 @@
 //! The openipf.org site works by using the same server as openpowerlifting.org,
 //! with Nginx rewriting URLs based on domain.
 
-use langpack::{LangInfo, Language, Locale};
+use langpack::{Language, Locale};
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
@@ -65,13 +65,12 @@ fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
 pub fn index(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let default = default_openipf_rankings_query();
     let mut cx = pages::rankings::Context::new(opldb, &locale, &default, &default, true)?;
     cx.urlprefix = local_prefix(&host);
@@ -92,7 +91,6 @@ pub fn rankings(
     selections: PathBuf,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -101,7 +99,7 @@ pub fn rankings(
     let default = default_openipf_rankings_query();
     let selection =
         opldb::query::direct::RankingsQuery::from_url_path(&selections, &default).ok()?;
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let mut cx = pages::rankings::Context::new(opldb, &locale, &selection, &default, true)?;
     cx.urlprefix = local_prefix(&host);
 
@@ -117,7 +115,6 @@ pub fn rankings_api(
     selections: Option<PathBuf>,
     query: RankingsApiQuery,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
 ) -> Option<JsonString> {
     let default = default_openipf_rankings_query();
     let selection = match selections {
@@ -127,7 +124,7 @@ pub fn rankings_api(
 
     let language = query.lang.parse::<Language>().ok()?;
     let units = query.units.parse::<WeightUnits>().ok()?;
-    let locale = Locale::new(langinfo, language, units);
+    let locale = Locale::new(language, units);
 
     let mut slice = pages::api_rankings::query_slice(
         opldb,
@@ -156,9 +153,8 @@ pub fn rankings_api(
 pub fn default_rankings_api(
     query: RankingsApiQuery,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
 ) -> Option<JsonString> {
-    rankings_api(None, query, opldb, langinfo)
+    rankings_api(None, query, opldb)
 }
 
 /// API endpoint for rankings search.
@@ -192,7 +188,6 @@ pub fn records(
     selections: Option<PathBuf>,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -214,7 +209,7 @@ pub fn records(
     } else {
         default
     };
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let mut cx = pages::records::Context::new(
         opldb,
         &locale,
@@ -233,15 +228,12 @@ pub fn records(
 pub fn records_default(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    records(
-        None, lang, opldb, langinfo, languages, host, device, cookies,
-    )
+    records(None, lang, opldb, languages, host, device, cookies)
 }
 
 /// Used to show only IPF-sanctioned meets.
@@ -255,13 +247,12 @@ pub fn lifter(
     username: &str,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Result<Template, Redirect>> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
 
     // Disambiguations end with a digit.
     // Some lifters may have failed to be merged with their disambiguated username.
@@ -357,7 +348,6 @@ pub fn meetlist(
     mselections: Option<PathBuf>,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -373,7 +363,7 @@ pub fn meetlist(
         None => defaults,
         Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let mut cx = pages::meetlist::Context::new(opldb, &locale, &mselection);
     cx.urlprefix = local_prefix(&host);
 
@@ -387,15 +377,12 @@ pub fn meetlist(
 pub fn meetlist_default(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    meetlist(
-        None, lang, opldb, langinfo, languages, host, device, cookies,
-    )
+    meetlist(None, lang, opldb, languages, host, device, cookies)
 }
 
 #[get("/m/<meetpath..>?<lang>")]
@@ -403,7 +390,6 @@ pub fn meet(
     meetpath: PathBuf,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
@@ -422,7 +408,7 @@ pub fn meet(
     }
 
     let meet_id = opldb.meet_id(meetpath_str)?;
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let use_ipf_equipment = true;
     let mut cx = pages::meet::Context::new(
         opldb,
@@ -464,13 +450,12 @@ fn ipf_fed_filter(fed: Federation) -> bool {
 pub fn status(
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let mut cx = pages::status::Context::new(opldb, &locale, Some(ipf_fed_filter));
     cx.urlprefix = local_prefix(&host);
 
@@ -483,13 +468,12 @@ pub fn status(
 #[get("/faq?<lang>")]
 pub fn faq(
     lang: Option<&str>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let mut cx = pages::faq::Context::new(&locale);
     cx.urlprefix = local_prefix(&host);
 
@@ -502,13 +486,12 @@ pub fn faq(
 #[get("/contact?<lang>")]
 pub fn contact(
     lang: Option<&str>,
-    langinfo: &State<LangInfo>,
     languages: AcceptLanguage,
     host: Host,
     device: Device,
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
-    let locale = make_locale(langinfo, lang, languages, cookies);
+    let locale = make_locale(lang, languages, cookies);
     let mut cx = pages::contact::Context::new(&locale);
     cx.urlprefix = local_prefix(&host);
 

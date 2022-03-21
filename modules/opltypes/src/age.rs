@@ -36,7 +36,7 @@ pub struct PrettyAge(Age);
 
 impl From<Age> for PrettyAge {
     fn from(a: Age) -> PrettyAge {
-        PrettyAge { 0: a }
+        PrettyAge(a)
     }
 }
 

@@ -65,7 +65,7 @@ pub struct Context<'db, 'a> {
 impl<'db, 'a> Context<'db, 'a> {
     pub fn new(
         opldb: &'db opldb::OplDb,
-        locale: &'db langpack::Locale<'a>,
+        locale: &'db langpack::Locale,
         selection: &'a RankingsQuery,
         defaults: &'a RankingsQuery,
         use_ipf_equipment: bool,

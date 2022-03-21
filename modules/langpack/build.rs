@@ -80,7 +80,7 @@ fn process_obj(parent: Option<&str>, object: &Map<String, Value>) -> String {
         } else {
             let identifier = struct_identifier(parent, key);
             let inner_object = value.as_object().unwrap();
-            let inner_object_body = process_obj(Some(&key), inner_object);
+            let inner_object_body = process_obj(Some(key), inner_object);
             let defn = format!("{key}: {identifier} {inner_object_body}, ");
             acc.push_str(&defn);
         }

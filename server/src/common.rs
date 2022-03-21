@@ -5,7 +5,7 @@ use rocket::outcome::Outcome;
 use rocket::request::{self, FromRequest, Request};
 use rocket::response::{self, content, Responder};
 
-use langpack::{LangInfo, Language, Locale};
+use langpack::{Language, Locale};
 use opltypes::WeightUnits;
 
 // Use a single static database when testing.
@@ -181,12 +181,11 @@ pub fn select_weight_units(
     language.default_units()
 }
 
-pub fn make_locale<'db>(
-    langinfo: &'db LangInfo,
+pub fn make_locale(
     lang: Option<&str>,
     languages: AcceptLanguage,
     cookies: &CookieJar<'_>,
-) -> Locale<'db> {
+) -> Locale {
     let language = match lang.and_then(|s| s.parse::<Language>().ok()) {
         // Allow an explicit "lang" GET parameter.
         Some(lang) => lang,
@@ -195,7 +194,7 @@ pub fn make_locale<'db>(
     };
 
     let units = select_weight_units(&languages, language, cookies);
-    Locale::new(langinfo, language, units)
+    Locale::new(language, units)
 }
 
 /// Return type for pre-rendered Json strings.

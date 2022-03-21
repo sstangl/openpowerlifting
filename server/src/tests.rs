@@ -1,15 +1,14 @@
 //! Tests for the Rocket code in main.rs.
 
-use super::rocket;
-use super::Device;
-
-use langpack::{LangInfo, Language};
+use langpack::Language;
 use opldb::OplDb;
-
 use rocket::http::{Cookie, Header, Status};
 use rocket::local::blocking::Client;
 
 use std::sync::Once;
+
+use super::rocket;
+use super::Device;
 
 static mut OPLDB_GLOBAL: Option<OplDb> = None;
 static OPLDB_INIT: Once = Once::new();
@@ -35,7 +34,7 @@ fn db() -> &'static OplDb {
 /// requests.
 fn client() -> Client {
     // Untracked here means that cookie changes from the server need not be remembered.
-    Client::untracked(rocket(db(), LangInfo::default())).expect("valid rocket instance")
+    Client::untracked(rocket(db())).expect("valid rocket instance")
 }
 
 /// Simulates a GET request to a url from a specific device.
