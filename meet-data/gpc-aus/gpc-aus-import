@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
 import errno
 import os
 import sys
@@ -38,15 +39,15 @@ def get_pages(url):
 
     time.sleep(2)
 
-    dropdowns = driver.find_elements_by_tag_name('select')
+    dropdowns = driver.find_elements(by=By.TAG_NAME,value='select')
     Select(dropdowns[0]).select_by_visible_text('100')
 
     source = driver.page_source
     pages += [source]
 
-    buttons = driver.find_element_by_class_name(
-        'wpb_tabs_nav.ui-tabs-nav.clearfix')
-    buttons = buttons.find_elements_by_tag_name('li')
+    buttons = driver.find_element(by=By.CLASS_NAME,
+        value='wpb_tabs_nav.ui-tabs-nav.clearfix')
+    buttons = buttons.find_elements(by=By.TAG_NAME,value='li')
 
     ii = 1
     for button in buttons[1:]:
