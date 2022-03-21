@@ -730,13 +730,17 @@ impl MetaFederation {
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
             MetaFederation::FFForce => {
-                meet.federation == Federation::FFForce
-                    // The FFHMFAC is the precursor to the FFForce.
-                    || meet.federation == Federation::FFHMFAC
-                    // French lifters expect their international results included.
-                    || is_from(Country::France, entry, meet) &&
-                        (meet.federation == Federation::IPF
-                         || meet.federation == Federation::EPF)
+                (
+                    meet.federation == Federation::FFForce
+                    && (entry.lifter_country == None || entry.lifter_country == Some(Country::France))
+                )
+                // The FFHMFAC is the precursor to the FFForce.
+                || meet.federation == Federation::FFHMFAC
+                // French lifters expect their international results included.
+                || (
+                        is_from(Country::France, entry, meet)
+                        && (meet.federation == Federation::IPF || meet.federation == Federation::EPF)
+                    )
             }
             MetaFederation::FIPL => affiliation!(meet, entry, FIPL, IPF, EPF),
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
