@@ -2,7 +2,7 @@
 
 ## Enumerating the federation
 
-The federation must be added to the `pub enum Federation` in `opl-data/modules/opltypes/src/federation.rs`.  This 
+The federation must be added to the `pub enum Federation` in `opl-data/crates/opltypes/src/federation.rs`.  This 
 contains valid values for the `Federation` column in the `meets` table of the database.
 
 For example:

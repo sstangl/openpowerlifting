@@ -34,7 +34,7 @@ COPY Makefile ./
 COPY .git .git/
 COPY api api/
 COPY checker checker/
-COPY modules modules/
+COPY crates crates/
 COPY server server/
 
 # Build it

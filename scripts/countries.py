@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # Helper script that transforms countries in various non-standard forms
-# into the full names used by modules/opltypes/src/countries.rs.
+# into the full names used by crates/opltypes/src/countries.rs.
 #
 # When run as a script, it fixes the "Country" columns.
 #

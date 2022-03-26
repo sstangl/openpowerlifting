@@ -117,7 +117,7 @@ pub fn check_federation(s: &str, report: &mut Report) -> Option<Federation> {
         Err(_) => {
             report.error(format!(
                 "Unknown federation '{}'. \
-                 Add to modules/opltypes/src/federation.rs?",
+                 Add to crates/opltypes/src/federation.rs?",
                 s
             ));
             None
@@ -167,7 +167,7 @@ pub fn check_meetcountry(s: &str, report: &mut Report) -> Option<Country> {
         Err(_) => {
             report.error(format!(
                 "Unknown country '{}'. \
-                 Add to modules/opltypes/src/country.rs?",
+                 Add to crates/opltypes/src/country.rs?",
                 s
             ));
 

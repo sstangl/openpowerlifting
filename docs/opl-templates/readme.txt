@@ -39,7 +39,7 @@ The order of the columns is fixed, and should follow the template exactly.
 Federation
 Mandatory. The federation that hosted the meet.
 Note that this may be different than the international federation that provided sanction to the meet. For example, USPA meets are sanctioned by the IPL, but we record USPA meets as USPA.
-The full list of valid Federation values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/modules/opltypes/src/federation.rs.
+The full list of valid Federation values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/crates/opltypes/src/federation.rs.
 
 Comments in that file help explain what each federation value means.
 
@@ -51,11 +51,11 @@ If a meet spans many days, you can optionally use an "EntryDate" column in the e
 
 MeetCountry
 Mandatory. The country in which the meet was held.
-The full list of valid Country values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/modules/opltypes/src/country.rs.
+The full list of valid Country values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/crates/opltypes/src/country.rs.
 
 MeetState
 Optional. The state, province, or region in which the meet was held.
-The full list of valid State values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/modules/opltypes/src/states.rs.
+The full list of valid State values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/crates/opltypes/src/states.rs.
 
 MeetName
 Mandatory. The name of the meet.
@@ -85,7 +85,7 @@ Other such columns exist too: ChineseName, KoreanName, JapaneseName, etc.
 Sex
 Mandatory. The sex category in which the lifter competed, M, F, or Mx.
 Mx (pronounced Muks) is a gender-neutral title — like Mr and Ms — originating from the UK. It is a catch-all sex category that is particularly appropriate for non-binary lifters.
-The Sex column is defined by modules/opltypes/src/sex.rs.
+The Sex column is defined by crates/opltypes/src/sex.rs.
 
 Event
 Mandatory. The type of competition that the lifter entered.
@@ -179,11 +179,11 @@ Federations typically do not report which lifters, if any, were subject to drug 
 
 Country
 Optional. The home country of the lifter, if known, like "USA".
-The full list of valid Country values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/modules/opltypes/src/country.rs
+The full list of valid Country values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/crates/opltypes/src/country.rs
 
 State
 Optional. The home state/province/oblast/division/etc of the lifter, if known, like "CA".
-The full list of valid State values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/modules/opltypes/src/states.rs
+The full list of valid State values is defined by https://gitlab.com/openpowerlifting/opl-data/-/blob/main/crates/opltypes/src/states.rs
 Expanded names are given there in comments.
 
 Team

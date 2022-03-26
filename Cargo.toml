@@ -2,11 +2,11 @@
 members = [
     # "api", Temporarily disabled. Not used for anything, and increases CI time.
     "checker",
-    "modules/coefficients",
-    "modules/db",
-    "modules/langpack",
-    "modules/opltypes",
-    "modules/search",
+    "crates/coefficients",
+    "crates/db",
+    "crates/langpack",
+    "crates/opltypes",
+    "crates/search",
     "server",
 ]
 

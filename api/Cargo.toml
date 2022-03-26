@@ -7,10 +7,10 @@ edition = "2021"
 license = "AGPL-3.0-or-later"
 
 [dependencies]
-coefficients = {version = "0.1", path = "../modules/coefficients/" }
-langpack = {version = "0.1", path = "../modules/langpack/" }
-opldb = { version = "0.1", path = "../modules/db/" }
-opltypes = { version = "0.1", path = "../modules/opltypes/" }
+coefficients = {version = "0.1", path = "../crates/coefficients/" }
+langpack = {version = "0.1", path = "../crates/langpack/" }
+opldb = { version = "0.1", path = "../crates/db/" }
+opltypes = { version = "0.1", path = "../crates/opltypes/" }
 dotenv = "0.15"
 juniper = "0.15"
 juniper_rocket = "0.6"
