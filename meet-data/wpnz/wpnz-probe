@@ -9,9 +9,7 @@
 # International WP events are also linked to, which we ignore,
 # and can be identified by URL.
 
-# Results lists are split into pages by year: /Results-1/Results-YYYY-1
-# and the PDFs themselves, linked from those pages, are at:
-# /asset/downloadasset?id=$ID.
+
 
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -26,7 +24,10 @@ except ImportError:
     import oplprobe
 
 
-START_YEAR = 2019
+URLS = ['https://www.sporty.co.nz/worldpowerliftingnz/Results-1/Historic-results',
+        'https://www.sporty.co.nz/worldpowerliftingnz/Results-1/Results-2021',
+        'https://www.sporty.co.nz/worldpowerliftingnz/Results-1/Results-1']
+
 BASEURL = "https://www.sporty.co.nz/worldpowerliftingnz/Results-1"
 NZURLPREFIX = "https://www.sporty.co.nz/asset/downloadasset?id="
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -73,26 +74,15 @@ def getmeetlist(html):
 def main():
     meetlist = []
 
-    # loop over each results page from the first year til the current
-    # year.  Even though we can request a results page before there
-    # are any results for that year, we just get 302ed to the main
-    # page
-    dt_now = datetime.now()
-    cur_year = dt_now.year
-
-    for year in range(START_YEAR, cur_year + 1):
-        year_results_url = "{}/Results-{}-1".format(BASEURL, year)
+    for url in URLS:
 
         try:
-            html = oplprobe.gethtml(year_results_url, raise_on_redirect=True)
+            html = oplprobe.gethtml(url, raise_on_redirect=True)
             meetlist = meetlist + getmeetlist(html)
 
         except oplprobe.UnexpectedRedirect:
             pass
 
-    with open(FEDDIR + os.sep + 'URLLIST') as fd:
-        for k in fd.readlines():
-            meetlist.append(k.strip())
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
