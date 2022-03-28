@@ -10,9 +10,7 @@
 # and can be identified by URL.
 
 
-
 from bs4 import BeautifulSoup
-from datetime import datetime
 import os
 import sys
 
@@ -82,7 +80,6 @@ def main():
 
         except oplprobe.UnexpectedRedirect:
             pass
-
 
     entered = oplprobe.getenteredurls(FEDDIR)
     unentered = oplprobe.getunenteredurls(meetlist, entered)
