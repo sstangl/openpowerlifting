@@ -46,7 +46,7 @@ def getmeetlist(html):
         if 'http' not in url:
             url = BASEURL + url
 
-        url = url.replace('//', '/')
+        url = url.replace('europowerlifting.org//', 'europowerlifting.org/')
 
         if url not in urls:
             urls.append(url)
