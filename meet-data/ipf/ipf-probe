@@ -18,7 +18,7 @@ except ImportError:
 
 
 URLS = ["https://www.powerlifting.sport/championships/results"]
-BASEURL = "http://www.powerlifting-ipf.com/"
+BASEURL = "https://www.powerlifting.sport/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
