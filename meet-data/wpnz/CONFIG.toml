@@ -23,7 +23,7 @@
     sex = "M"
 
 [weightclasses.youth_M]
-    classes = ["62", "69", "77", "85", "94", "105", "105+"]
+    classes = ["56","62","69","77","85","94","105","105+"]
     date_range = ["2018-08-01", "9999-01-01"]
     sex = "M"
     divisions = ["Youth"]
