@@ -60,6 +60,10 @@ def getunenteredurls(meetlist, enteredmeets):
         # Add the version with unicode characters converted to the %xx version
         curr_variants.update([urllib.parse.unquote(v) for v in curr_variants])
 
+        # Check with and without .html
+        curr_variants.update([v.replace(".html", "") for v in curr_variants])
+        curr_variants.update([v+".html" for v in curr_variants if ".html" not in v])
+
         # Add the version with unicode converted to idna
         idna_variants = set()
         for v in curr_variants:
