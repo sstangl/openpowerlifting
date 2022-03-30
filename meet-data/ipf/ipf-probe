@@ -74,6 +74,14 @@ def getmeetlist(html):
                 url = BASEURL + url
                 url = url.replace('.com//', '/')
             if url not in urls:
+                if 'wilks' in url:
+                    continue
+                elif 'team_point' in url:
+                    continue
+                elif 'statistics' in url:
+                    continue
+                elif 'teampoints' in url:
+                    continue
                 urls.append(url)
 
     return urls
@@ -86,6 +94,7 @@ def main():
         meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
+    entered.update([v.replace("powerlifting-ipf.com", "powerlifting.sport") for v in entered])
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[IPF]'), unentered)
