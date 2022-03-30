@@ -33,7 +33,7 @@ def getenteredurls(feddir):
     urls = set()
     for dirname, subdirs, files in os.walk(feddir):
         if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
+            with open(dirname + os.sep + 'URL', 'r', encoding='utf-8') as fd:
                 for k in fd.readlines():
                     urls.add(k.strip())
     return urls
