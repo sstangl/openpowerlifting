@@ -337,7 +337,8 @@
 </optgroup>
 <optgroup label="{{strings.country.malaysia}}">
   <option value="all-malaysia" {% if selection.federation == "AllMalaysia" %}selected{% endif %}>{{strings.selectors.fed.all_malaysia}}</option>
-  <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MPA - Malaysian Powerlifting Alliance [GPA]</option>
+  <option value="map" {% if selection.federation == "MAP" %}selected{% endif %}>MAP - Malaysian Powerlifting Alliance [GPA]</option>
+  <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MPA - Malaysian Association for Powerlifting [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.mexico}}">
   <option value="all-mexico" {% if selection.federation == "AllMexico" %}selected{% endif %}>{{strings.selectors.fed.all_mexico}}</option>

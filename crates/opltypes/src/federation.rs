@@ -753,6 +753,10 @@ pub enum Federation {
     #[strum(to_string = "MM-AUS", serialize = "mm-aus")]
     MMAUS,
 
+    /// Malaysian Association for Powerlifting, IPF.
+    #[strum(to_string = "MAP", serialize = "map")]
+    MAP,
+
     /// Malaysian Powerlifting Alliance.
     #[strum(to_string = "MPA", serialize = "mpa")]
     MPA,
@@ -1749,6 +1753,7 @@ impl Federation {
             Federation::LMP => false,
             Federation::LPF => FULLY_TESTED,
             Federation::MalaysiaUA => false,
+            Federation::MAP => FULLY_TESTED,
             Federation::MDFPA => FULLY_TESTED,
             Federation::MDFPF => FULLY_TESTED,
             Federation::MHSAA => false,
@@ -2113,6 +2118,7 @@ impl Federation {
             Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
             Federation::MalaysiaUA => Some(Country::Malaysia),
+            Federation::MAP => Some(Country::Malaysia),
             Federation::MHSAA => Some(Country::USA),
             Federation::MDFPA => Some(Country::Malta),
             Federation::MDFPF => Some(Country::Moldova),
@@ -2510,6 +2516,7 @@ impl Federation {
             Federation::LMP => Some(Federation::IPL),
             Federation::LPF => Some(Federation::IPF),
             Federation::MalaysiaUA => None,
+            Federation::MAP => Some(Federation::IPF),
             Federation::MDFPA => Some(Federation::WDFPF),
             Federation::MDFPF => Some(Federation::WDFPF),
             Federation::MHSAA => None,
@@ -2981,6 +2988,7 @@ impl Federation {
             Federation::LMP => Federation::ipl_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MalaysiaUA => PointsSystem::Wilks,
+            Federation::MAP => Federation::ipf_rules_on(date),
             Federation::MDFPA => PointsSystem::SchwartzMalone,
             Federation::MDFPF => PointsSystem::SchwartzMalone,
             Federation::MHSAA => PointsSystem::Wilks,
