@@ -13,7 +13,8 @@ from os.path import join, realpath, dirname
 try:
     import oplprobe
 except ImportError:
-    sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+    sys.path.append(
+        join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
     import oplprobe
 
 
@@ -94,7 +95,8 @@ def main():
         meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
-    entered.update([v.replace("powerlifting-ipf.com", "powerlifting.sport") for v in entered])
+    entered.update(
+        [v.replace("powerlifting-ipf.com", "powerlifting.sport") for v in entered])
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[IPF]'), unentered)
