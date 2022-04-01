@@ -111,7 +111,7 @@
     fmr3apf = {name ="F_MR_3_APF",min=50,max=54,equipment="Raw",sex="F"}
     fmcr3apf = {name ="F_MCR_3_APF",min=50,max=54,equipment=["Raw","Wraps"],sex="F"}
     fms3apf = {name ="F_MES_3_APF",min=50,max=54,equipment="Single-ply",sex="F"}
-    fmm3apf = {name ="F_MEM_3_APF",min=50,max=54,equipment="Multi-ply",sex="F"}
+    fmm3apf = {name ="F_MEM_3_APF",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr4apf = {name ="F_MR_4_APF",min=55,max=59,equipment="Raw",sex="F"}
     fmcr4apf = {name ="F_MCR_4_APF",min=55,max=59,equipment=["Raw","Wraps"],sex="F"}
     fms4apf = {name ="F_MES_4_APF",min=55,max=59,equipment="Single-ply",sex="F"}
