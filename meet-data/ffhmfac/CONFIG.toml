@@ -16,6 +16,7 @@
     guest = {name ="Guest",min=0,max=999,place="G"}
     cadet = {name = "Cadet",min=11.5,max=15.5}
     juniors = {name = "Juniors",min=0,max=22.5}
+    espoirs = {name = "Espoirs",min=17.5,max=22.5}
     subjuniors = {name = "Sub-Juniors",min=13.5,max=17.5}
     masters1 = {name = "Masters 1",min=38.5,max=48.5}
     masters2 = {name = "Masters 2",min=48.5,max=58.5}
@@ -38,13 +39,13 @@
     classes = ["53","59","66","74","83","93","105","120","105+","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","Espoirs"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","Espoirs"]
 
   [weightclasses.cadet_M]
     classes = ["53", "59", "66", "74", "83", "83+"]
