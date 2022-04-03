@@ -36,7 +36,7 @@ def getmeetlist(html):
     leagues = options[1:]
     league_values = [league['value'] for league in leagues]
 
-    output = []
+    urls = []
 
     for league_value in league_values:
 
@@ -49,14 +49,24 @@ def getmeetlist(html):
         links = main.find_all("div", "cel-classmt site")
         assert links, "No <div> element with class `cel-classmt site` found."
 
-        # The FFForce has combined its calendar and results pages
-        # so some meets don't have a results link yet
-        full_links = list(map(lambda link: BASEURL + link.find('a')['href'],
-                          filter(lambda link: link.find('a') is not None, links)))
+        for link in links:
 
-        output.extend(full_links)
+            a = link.find('a')
 
-    return output
+            # The FFForce has combined its calendar and results pages
+            # so some meets don't have a results link yet
+            if a is None:
+                continue
+
+            # Exclude the recap file that the federation periodically updates
+            elif 'organisees dans les ligues' in a['href']:
+                continue
+
+            url = BASEURL + a['href']
+
+            urls.append(url)
+
+    return urls
 
 
 def main():
