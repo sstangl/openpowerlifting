@@ -524,6 +524,7 @@ macro_rules! affiliation {
     };
 }
 
+#[rustfmt::skip::macros(date)]
 impl MetaFederation {
     /// Defines whether a given `Entry` is part of the MetaFederation.
     ///
@@ -580,12 +581,11 @@ impl MetaFederation {
             // Results for USA lifters in the IPF affiliate at the given time.
             MetaFederation::AllIPFUSA => {
                 is_from(Country::USA, entry, meet)
-                    && (((meet.federation == Federation::USAPL
-                        && meet.date <= Date::from_parts(2021, 11, 7))
+                    && (((meet.federation == Federation::USAPL && meet.date <= date!(2021-11-07))
                         || meet.federation == AMP
                         || meet.federation == NAPF
                         || meet.federation == IPF)
-                        || (meet.federation == USPF && meet.date < Date::from_parts(1997, 12, 5)))
+                        || (meet.federation == USPF && meet.date < date!(1997-12-05)))
             }
             MetaFederation::AllIran => is_from(Country::Iran, entry, meet),
             MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
@@ -830,8 +830,9 @@ impl MetaFederation {
                 is_from(Country::USA, entry, meet)
                     && (meet.federation == Federation::USAPL
                         || ((meet.federation == NAPF || meet.federation == IPF)
-                            && meet.date >= Date::from_parts(1997, 12, 5))
-                        || (meet.federation == ADFPA && meet.date < Date::from_parts(1997, 12, 5)))
+                            && meet.date >= date!(1997-12-05)
+                            && meet.date <= date!(2021-11-07))
+                        || (meet.federation == ADFPA && meet.date < date!(1997-12-05)))
             }
 
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
