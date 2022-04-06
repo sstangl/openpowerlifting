@@ -8,14 +8,6 @@
     # USAPL-style divisions, 2021+.
     mro = {name="MR-O", min=14, max=999, sex="M", equipment="Raw"}
     mry = {name="MR-Y", min=8, max=13, sex="M", equipment="Raw"}
-    mry1 = {name="MR-Y1", min=8, max=9, sex="M", equipment="Raw"}
-    mry2 = {name="MR-Y2", min=10, max=11, sex="M", equipment="Raw"}
-    mry3 = {name="MR-Y3", min=12, max=13, sex="M", equipment="Raw"}
-    mrt = {name="MR-T", min=14, max=19, sex="M", equipment="Raw"}
-    mrt1 = {name="MR-T1", min=14, max=15, sex="M", equipment="Raw"}
-    mrt2 = {name="MR-T2", min=16, max=17, sex="M", equipment="Raw"}
-    mrt3 = {name="MR-T3", min=18, max=19, sex="M", equipment="Raw"}
-    mrtj = {name="MR-TJ", min=14, max=23, sex="M", equipment="Raw"}
     mrsj = {name="MR-SJ", min=14, max=19, sex="M", equipment="Raw"}
     mrjr = {name="MR-Jr", min=20, max=23, sex="M", equipment="Raw"}
     mrm = {name="MR-M", min=39.5, max=999, sex="M", equipment="Raw"}
@@ -27,14 +19,6 @@
 
     fro = {name="FR-O", min=14, max=999, sex="F", equipment="Raw"}
     fry = {name="FR-Y", min=8, max=13, sex="F", equipment="Raw"}
-    fry1 = {name="FR-Y1", min=8, max=9, sex="F", equipment="Raw"}
-    fry2 = {name="FR-Y2", min=10, max=11, sex="F", equipment="Raw"}
-    fry3 = {name="FR-Y3", min=12, max=13, sex="F", equipment="Raw"}
-    frt = {name="FR-T", min=14, max=19, sex="F", equipment="Raw"}
-    frt1 = {name="FR-T1", min=14, max=15, sex="F", equipment="Raw"}
-    frt2 = {name="FR-T2", min=16, max=17, sex="F", equipment="Raw"}
-    frt3 = {name="FR-T3", min=18, max=19, sex="F", equipment="Raw"}
-    frtj = {name="FR-TJ", min=14, max=23, sex="F", equipment="Raw"}
     frsj = {name="FR-SJ", min=14, max=19, sex="F", equipment="Raw"}
     frjr = {name="FR-Jr", min=20, max=23, sex="F", equipment="Raw"}
     frm = {name="FR-M", min=39.5, max=999, sex="F", equipment="Raw"}
@@ -87,7 +71,7 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors","Special Olympics (Juniors)"]
+    divisions = ["Juniors","Sub-Juniors","Special Olympics (Juniors)","MR-Y"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
