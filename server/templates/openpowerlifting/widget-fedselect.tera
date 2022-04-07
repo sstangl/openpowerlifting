@@ -210,6 +210,9 @@
   <option value="all-denmark" {% if selection.federation == "AllDenmark" %}selected{% endif %}>{{strings.selectors.fed.all_denmark}}</option>
   <option value="dsf" {% if selection.federation == "DSF" %}selected{% endif %}>DSF - Dansk Styrkeløft Forbund [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.dominicanrepublic}}">
+  <option value="plrd" {% if selection.federation == "PLRD" %}selected{% endif %}>PLRD - Powerlifting Republica Dominicana [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.estonia}}">
   <option value="all-estonia" {% if selection.federation == "AllEstonia" %}selected{% endif %}>{{strings.selectors.fed.all_estonia}}</option>
   <option value="ejtl" {% if selection.federation == "EJTL" %}selected{% endif %}>EJTL - Eesti jõutõsteliit [IPF]</option>

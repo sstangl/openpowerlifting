@@ -866,6 +866,10 @@ pub enum Federation {
     #[strum(to_string = "PLH", serialize = "plh")]
     PLH,
 
+    /// Powerlifting Republica Dominicana, IPF.
+    #[strum(to_string = "PLRD", serialize = "plrd")]
+    PLRD,
+
     /// Power Lifting Savez Srbije, IPF.
     #[strum(to_string = "PLSS", serialize = "plss")]
     PLSS,
@@ -1789,6 +1793,7 @@ impl Federation {
             Federation::PHPL => false,
             Federation::PI => FULLY_TESTED,
             Federation::PLH => false,
+            Federation::PLRD => FULLY_TESTED,
             Federation::PLSS => FULLY_TESTED,
             Federation::PLZS => FULLY_TESTED,
             Federation::PNGPF => FULLY_TESTED,
@@ -2154,6 +2159,7 @@ impl Federation {
             Federation::PHPL => Some(Country::Philippines),
             Federation::PI => Some(Country::India),
             Federation::PLH => Some(Country::Netherlands),
+            Federation::PLRD => Some(Country::DominicanRepublic),
             Federation::PLSS => Some(Country::Serbia),
             Federation::PLZS => Some(Country::Slovenia),
             Federation::PNGPF => Some(Country::PapuaNewGuinea),
@@ -2564,6 +2570,7 @@ impl Federation {
             Federation::PHPL => Some(Federation::GPA),
             Federation::PI => Some(Federation::IPF),
             Federation::PLH => Some(Federation::WPF),
+            Federation::PLRD => Some(Federation::IPF),
             Federation::PLSS => Some(Federation::IPF),
             Federation::PLZS => Some(Federation::IPF),
             Federation::PNGPF => Some(Federation::IPF),
@@ -3032,6 +3039,7 @@ impl Federation {
             Federation::PHPL => PointsSystem::Reshel,
             Federation::PI => Federation::ipf_rules_on(date),
             Federation::PLH => PointsSystem::Reshel,
+            Federation::PLRD => Federation::ipf_rules_on(date),
             Federation::PLSS => Federation::ipf_rules_on(date),
             Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PNGPF => Federation::ipf_rules_on(date),
