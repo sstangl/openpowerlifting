@@ -25,6 +25,9 @@
     masters = {name = "Masters",min=38.5,max=999}
     seniors = {name = "Seniors",min=22.5,max=38.5}
 
+    # Challenge Villenave
+    jeunes = {name = "Jeunes", min=0, max=22.5}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -60,3 +63,6 @@
     divisions = ["Cadet"]
 
 [exemptions]
+
+    # Challenge Villenave (no weight classes)
+    1503 = ["ExemptWeightClassConsistency"]
