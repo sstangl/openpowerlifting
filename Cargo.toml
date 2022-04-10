@@ -10,14 +10,20 @@ members = [
     "server",
 ]
 
-# Give profiles higher optimization levels to avoid extreme CSV load times.
-[profile.dev]
+# Give CSV-using crates higher optimization levels to avoid extreme CSV load times.
+[profile.dev.package.csv]
 opt-level = 2
-
-[profile.test]
+[profile.test.package.csv]
+opt-level = 2
+[profile.dev.package.opldb]
+opt-level = 2
+[profile.test.package.opldb]
+opt-level = 2
+[profile.dev.package.opltypes]
+opt-level = 2
+[profile.test.package.opltypes]
 opt-level = 2
 
 [profile.release]
-opt-level = 3
-lto = 'fat'
+lto = "fat"
 codegen-units = 1
