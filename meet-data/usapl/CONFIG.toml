@@ -591,6 +591,7 @@
     NS-2022-01-H = ["ExemptWeightClassConsistency", "ExemptDivision"] # No weight classes used + several Raw lifters in Single-ply
     MN-2022-01 = ["ExemptWeightClassConsistency"] # No weight classes used for Open lifters.
     LA-2022-04 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Weight classes were combined and scored by formula
+    WI-2022-04 = ["ExemptWeightClassConsistency"] # No weight classes used.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
