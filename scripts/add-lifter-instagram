@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+# vim: set ts=8 sts=4 et sw=4 tw=99:
+
+"""
+Basic script to add an entry to `lifter-data/social-instagram.csv`
+so that it remains ordered.
+
+Usage:
+    ./scripts/add-lifter-instagram --name "<name>" --instagram "<handle>"
+"""
+
+import os
+import argparse
+import unicodedata
+
+from typing import List
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "-n",
+        "--name",
+        type=str,
+        required=True,
+        help="Name of the lifter"
+    )
+
+    parser.add_argument(
+        "-i",
+        "--instagram",
+        type=str,
+        required=True,
+        help="Instagram handle for the athlete"
+    )
+
+    return parser.parse_args()
+
+
+def strip_accents(value: str) -> str:
+    normalised = unicodedata.normalize('NFD', value)
+    encoded = normalised.encode('ascii', 'ignore')
+    decoded = encoded.decode("utf-8")
+    return str(decoded)
+
+
+def insert_instagram_entry(current_contents: List[str], name: str, instagram: str):
+    line_entry = f"{name},{instagram}\n"
+
+    # Ignoring the header
+    for index, entry in enumerate(current_contents[1:]):
+        # Find the index of the comma to avoid copying strings
+        comma_index = entry.index(",")
+
+        if strip_accents(entry[:comma_index]) > name:
+            # Mutating while iterating, Rust would have a fit
+            current_contents.insert(index + 1, line_entry)
+            return
+
+    # No index was smaller, so just append
+    current_contents.append(line_entry)
+
+
+def main():
+    # Parse the arguments for the script
+    args = parse_args()
+
+    # Locate where this script is
+    script_location = os.path.abspath(os.path.dirname(__file__))
+
+    # Get the directory of `social-instagram.csv`
+    social_instagram_path = os.path.join(
+        script_location,
+        "..",
+        "lifter-data",
+        "social-instagram.csv"
+    )
+
+    # Read the file into memory and make adjustments
+    with open(social_instagram_path, "r") as f:
+        contents = f.readlines()
+
+    insert_instagram_entry(contents, args.name, args.instagram)
+
+    # Write everything back to the correct path
+    with open(social_instagram_path, "w") as f:
+        f.writelines(contents)
+
+
+if __name__ == "__main__":
+    main()
