@@ -2128,7 +2128,7 @@ impl Federation {
             Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
             Federation::MalaysiaUA => Some(Country::Malaysia),
-            Federation::ManxPL => Some(Country::IsleofMan),
+            Federation::ManxPL => Some(Country::IsleOfMan),
             Federation::MAP => Some(Country::Malaysia),
             Federation::MHSAA => Some(Country::USA),
             Federation::MDFPA => Some(Country::Malta),

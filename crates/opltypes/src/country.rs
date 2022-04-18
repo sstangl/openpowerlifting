@@ -116,7 +116,9 @@ pub enum Country {
     India,
     Indonesia,
     Ireland,
-    IsleofMan,
+    #[serde(rename = "Isle of Man")]
+    #[strum(to_string = "Isle of Man")]
+    IsleOfMan,
     Israel,
     Italy,
     Iran,
