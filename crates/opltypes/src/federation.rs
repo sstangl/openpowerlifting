@@ -728,6 +728,10 @@ pub enum Federation {
     #[strum(to_string = "Malaysia-UA", serialize = "malaysia-ua")]
     MalaysiaUA,
 
+    /// Manx Powerlifting, IPF.
+    #[strum(to_string = "ManxPL", serialize = "manxpl")]
+    ManxPL,
+
     /// Malta Drug Free Powerlifting Association.
     #[strum(to_string = "MDFPA", serialize = "mdfpa")]
     MDFPA,
@@ -1757,6 +1761,7 @@ impl Federation {
             Federation::LMP => false,
             Federation::LPF => FULLY_TESTED,
             Federation::MalaysiaUA => false,
+            Federation::ManxPL => FULLY_TESTED,
             Federation::MAP => FULLY_TESTED,
             Federation::MDFPA => FULLY_TESTED,
             Federation::MDFPF => FULLY_TESTED,
@@ -2123,6 +2128,7 @@ impl Federation {
             Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
             Federation::MalaysiaUA => Some(Country::Malaysia),
+            Federation::ManxPL => Some(Country::IsleofMan),
             Federation::MAP => Some(Country::Malaysia),
             Federation::MHSAA => Some(Country::USA),
             Federation::MDFPA => Some(Country::Malta),
@@ -2522,6 +2528,7 @@ impl Federation {
             Federation::LMP => Some(Federation::IPL),
             Federation::LPF => Some(Federation::IPF),
             Federation::MalaysiaUA => None,
+            Federation::ManxPL => Some(Federation::IPF),
             Federation::MAP => Some(Federation::IPF),
             Federation::MDFPA => Some(Federation::WDFPF),
             Federation::MDFPF => Some(Federation::WDFPF),
@@ -2995,6 +3002,7 @@ impl Federation {
             Federation::LMP => Federation::ipl_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MalaysiaUA => PointsSystem::Wilks,
+            Federation::ManxPL => Federation::ipf_rules_on(date),
             Federation::MAP => Federation::ipf_rules_on(date),
             Federation::MDFPA => PointsSystem::SchwartzMalone,
             Federation::MDFPF => PointsSystem::SchwartzMalone,

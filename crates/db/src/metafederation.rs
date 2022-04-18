@@ -374,6 +374,10 @@ pub enum MetaFederation {
     #[strum(to_string = "lpf")]
     LPF,
 
+    /// ManxPL, but with BP and international results also.
+    #[strum(to_string = "manxpl")]
+    MANXPL,
+
     /// NauruPF, but with international results also.
     #[strum(to_string = "naurupf")]
     NauruPF,
@@ -686,6 +690,7 @@ impl MetaFederation {
                     || meet.federation == Federation::NIPF
                     || meet.federation == Federation::ScottishPL
                     || meet.federation == Federation::WelshPA
+                    || meet.federation == Federation::ManxPL
 
                     // British lifters expect their international results included.
                     || (entry.lifter_country.map_or(false, |c| c.is_in_uk()) &&
