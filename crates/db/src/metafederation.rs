@@ -798,7 +798,7 @@ impl MetaFederation {
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
-            MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP),
+            MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
             MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
