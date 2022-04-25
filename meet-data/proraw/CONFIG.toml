@@ -34,6 +34,7 @@
     009 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
     010 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
     011 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
+    012-sleeves-single = ["ExemptWeightClassConsistency"] # Sleeves and non-SBD uses traditional weightclasses.
 
     # For early BigDogs meets, lifters were assumed to weight 140+ instead of 125+,
     # so that their records would count for the 140+ class.
