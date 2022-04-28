@@ -345,6 +345,8 @@
     frhs = {name="FR-HS", min=0, max=999, sex="F", equipment="Raw"}
     mhs = {name="M-HS", min=0, max=999, sex="M", equipment="Single-ply"}
     fhs = {name="F-HS", min=0, max=999, sex="F", equipment="Single-ply"}
+    mwhs = {name="MW-HS", min=0, max=999, sex="M", equipment="Wraps"}
+    fwhs = {name="FW-HS", min=0, max=999, sex="F", equipment="Wraps"}
 
     # Collegiate.
     mrc = {name="MR-C", min=0, max=999, sex="M", equipment="Raw"}
