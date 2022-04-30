@@ -42,6 +42,7 @@
     ft1mp  = {name ="FT1-MP",min=13,max=15,sex="F", equipment="Multi-ply"}
     ft2r   = {name ="FT2-R",min=16,max=17,sex="F", equipment="Raw"}
     ft2rp  = {name ="FT2-RP",min=16,max=17,sex="F", equipment=["Raw","Wraps"]}
+    ft2sp  = {name ="FT2-SP",min=16,max=17,sex="F", equipment="Single-ply"}
     ft3r   = {name ="FT3-R",min=18,max=19,sex="F", equipment="Raw"}
     ft3rp  = {name ="FT3-RP",min=18,max=19,sex="F", equipment=["Raw","Wraps"]}
     ft3mp  = {name ="FT3-MP",min=18,max=19,sex="F", equipment="Multi-ply"}
@@ -58,6 +59,7 @@
     mm2r   = {name ="MM2-R",min=45,max=49,sex="M", equipment="Raw"}
     mm2rp  = {name ="MM2-RP",min=45,max=49,sex="M", equipment=["Raw","Wraps"]}
     mm2mp  = {name ="MM2-MP",min=45,max=49,sex="M", equipment="Multi-ply"}
+    mm2sp  = {name ="MM2-SP",min=45,max=49,sex="M", equipment="Single-ply"}
     mm3r   = {name ="MM3-R",min=50,max=54,sex="M", equipment="Raw"}
     mm3rp  = {name ="MM3-RP",min=50,max=54,sex="M", equipment=["Raw","Wraps"]}
     mm3mp  = {name ="MM3-MP",min=50,max=54,sex="M", equipment="Multi-ply"}
@@ -81,11 +83,14 @@
     fm1mp  = {name ="FM1-MP",min=40,max=44,sex="F", equipment="Multi-ply"}
     fm2r   = {name ="FM2-R",min=45,max=49,sex="F", equipment="Raw"}
     fm2rp  = {name ="FM2-RP",min=45,max=49,sex="F", equipment=["Raw","Wraps"]}
+    fm2sp  = {name ="FM2-SP",min=45,max=49,sex="F", equipment="Single-ply"}
     fm3r   = {name ="FM3-R",min=50,max=54,sex="F", equipment="Raw"}
     fm3rp  = {name ="FM3-RP",min=50,max=54,sex="F", equipment=["Raw","Wraps"]}
     fm3mp  = {name ="FM3-MP",min=50,max=54,sex="F", equipment="Multi-ply"}
     fm4r   = {name ="FM4-R",min=55,max=59,sex="F", equipment="Raw"}
     fm5r   = {name ="FM5-R",min=60,max=64,sex="F", equipment="Raw"}
+    fm6r   = {name ="FM6-R",min=65,max=69,sex="F", equipment="Raw"}
+    fm8r   = {name ="FM8-R",min=75,max=79,sex="F", equipment="Raw"}
     fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
     fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
     msmr   = {name ="MSM-R",min=33,max=39,sex="M", equipment="Raw"}
