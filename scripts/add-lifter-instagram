@@ -78,13 +78,13 @@ def main():
     )
 
     # Read the file into memory and make adjustments
-    with open(social_instagram_path, "r") as f:
+    with open(social_instagram_path, "r", encoding="utf-8") as f:
         contents = f.readlines()
 
     insert_instagram_entry(contents, args.name, args.instagram)
 
     # Write everything back to the correct path
-    with open(social_instagram_path, "w") as f:
+    with open(social_instagram_path, "w", encoding="utf-8", newline="\n") as f:
         f.writelines(contents)
 
 
