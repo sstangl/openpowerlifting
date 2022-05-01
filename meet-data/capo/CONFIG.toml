@@ -99,6 +99,7 @@
     msmmp  = {name ="MSM-MP",min=33,max=39,sex="M", equipment="Multi-ply"}
     fsmr   = {name ="FSM-R",min=33,max=39,sex="F", equipment="Raw"}
     fsmrp  = {name ="FSM-RP",min=33,max=39,sex="F", equipment=["Raw","Wraps"]}
+    fsmsp  = {name ="FSM-SP",min=33,max=39,sex="F", equipment="Single-ply"}
     fsmmp  = {name ="FSM-MP",min=33,max=39,sex="F", equipment="Multi-ply"}
     mgr    = {name ="MG-R",min=0,max=999,sex="M", equipment="Raw", place="G"}
     fgr    = {name ="FG-R",min=0,max=999,sex="F", equipment="Raw", place="G"}
