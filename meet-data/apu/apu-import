@@ -84,7 +84,6 @@ def get_division(div_text):
 
 
 def getresults(soup):
-    csv = Csv()
 
     # Get the results table.
     results_table = soup.find('tbody')
