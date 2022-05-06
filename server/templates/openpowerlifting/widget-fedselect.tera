@@ -95,6 +95,7 @@
   <option value="bpu" {% if selection.federation == "BPU" %}selected{% endif %}>BPU - British Powerlifting Union [WPC]</option>
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA - English Powerlifting Association [IPF]</option>
   <option value="gpc-gb" {% if selection.federation == "GPC-GB" %}selected{% endif %}>GPC-GB - GPC Great Britain [GPC]</option>
+  <option value="gpc-scotland" {% if selection.federation == "GPC-SCOTLAND" %}selected{% endif %}>GPC-SCOTLAND - GPC Scotland [GPC]</option>
   <option value="manxpl" {% if selection.federation == "ManxPL" %}selected{% endif %}>ManxPL - Manx Powerlifting [IPF]</option>
   <option value="nipf" {% if selection.federation == "NIPF" %}selected{% endif %}>NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL - Scottish Powerlifting [IPF]</option>
