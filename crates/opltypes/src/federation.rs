@@ -3246,7 +3246,7 @@ impl Federation {
             Federation::XPS => PointsSystem::Wilks,
         }
     }
-
+}
 #[cfg(test)]
 mod tests {
     use super::*;
