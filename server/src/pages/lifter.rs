@@ -333,7 +333,7 @@ fn calculate_bests<'db>(
     if raw_squat.is_some() || raw_bench.is_some() || raw_deadlift.is_some() || raw_total.is_some() {
         rows.push(PersonalBestsRow::new(
             locale,
-            &locale.strings.equipment.raw,
+            locale.strings.equipment.raw,
             raw_squat,
             raw_bench,
             raw_deadlift,
@@ -345,7 +345,7 @@ fn calculate_bests<'db>(
     if wraps_squat.is_some() || wraps_total.is_some() {
         rows.push(PersonalBestsRow::new(
             locale,
-            &locale.strings.equipment.wraps,
+            locale.strings.equipment.wraps,
             wraps_squat,
             None,
             None,
@@ -361,7 +361,7 @@ fn calculate_bests<'db>(
     {
         rows.push(PersonalBestsRow::new(
             locale,
-            &locale.strings.equipment.single,
+            locale.strings.equipment.single,
             single_squat,
             single_bench,
             single_deadlift,
@@ -377,7 +377,7 @@ fn calculate_bests<'db>(
     {
         rows.push(PersonalBestsRow::new(
             locale,
-            &locale.strings.equipment.multi,
+            locale.strings.equipment.multi,
             multi_squat,
             multi_bench,
             multi_deadlift,
@@ -393,7 +393,7 @@ fn calculate_bests<'db>(
     {
         rows.push(PersonalBestsRow::new(
             locale,
-            &locale.strings.equipment.unlimited,
+            locale.strings.equipment.unlimited,
             unlimited_squat,
             unlimited_bench,
             unlimited_deadlift,
@@ -470,7 +470,7 @@ impl<'a> Context<'a> {
         Context {
             urlprefix: "/",
             page_title: localized_name(lifter, locale.language),
-            page_description: &locale.strings.html_header.description,
+            page_description: locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

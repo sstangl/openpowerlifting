@@ -4,21 +4,21 @@ use langpack::Locale;
 
 /// The context object passed to `templates/contact.html.tera`
 #[derive(Serialize)]
-pub struct Context<'a> {
+pub struct Context {
     pub urlprefix: &'static str,
-    pub page_title: &'a str,
-    pub page_description: &'a str,
+    pub page_title: &'static str,
+    pub page_description: &'static str,
     pub language: langpack::Language,
-    pub strings: &'a langpack::Translations,
+    pub strings: &'static langpack::Translations,
     pub units: opltypes::WeightUnits,
 }
 
-impl<'a> Context<'a> {
-    pub fn new(locale: &'a Locale) -> Context<'a> {
+impl Context {
+    pub fn new(locale: &Locale) -> Context {
         Context {
             urlprefix: "/",
-            page_title: &locale.strings.header.contact,
-            page_description: &locale.strings.html_header.description,
+            page_title: locale.strings.header.contact,
+            page_description: locale.strings.html_header.description,
             strings: locale.strings,
             language: locale.language,
             units: locale.units,

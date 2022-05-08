@@ -1,5 +1,7 @@
 //! MetaFederation definitions and calculations.
 
+#![allow(clippy::zero_prefixed_literal)] // For dates.
+
 use itertools::Itertools;
 use opltypes::*;
 use strum::IntoEnumIterator;

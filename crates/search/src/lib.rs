@@ -17,7 +17,7 @@ pub fn search_rankings(
     // in the query string. The client code makes that replacement in order
     // to ensure that the URL is valid, since this is accessed via a GET parameter.
     // We could do something craftier, like base-64 encode it.
-    let query = query.replace("_", "");
+    let query = query.replace('_', "");
 
     let system = infer_writing_system(&query);
 

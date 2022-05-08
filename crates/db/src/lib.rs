@@ -88,7 +88,7 @@ fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<dyn Error>> {
 /// Also fills in metadata about each Meet.
 fn import_entries_csv(
     file: &str,
-    meets: &mut Vec<Meet>,
+    meets: &mut [Meet],
 ) -> Result<(Vec<Entry>, MetaFederationCache), Box<dyn Error>> {
     let mut vec = Vec::with_capacity(3_000_000);
 

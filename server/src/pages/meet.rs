@@ -123,30 +123,30 @@ impl From<PointsSystem> for MeetSortSelection {
 }
 
 /// Gets the title of a column displaying a certain points system.
-pub fn points_column_title<'db>(
+pub fn points_column_title(
     system: PointsSystem,
-    locale: &'db Locale,
+    locale: &Locale,
     default_points: PointsSystem,
-) -> &'db str {
+) -> &str {
     match system {
         PointsSystem::AH => "AH",
-        PointsSystem::Dots => &locale.strings.columns.dots,
-        PointsSystem::Glossbrenner => &locale.strings.columns.glossbrenner,
-        PointsSystem::Goodlift => &locale.strings.columns.goodlift,
-        PointsSystem::IPFPoints => &locale.strings.columns.ipfpoints,
-        PointsSystem::McCulloch => &locale.strings.columns.mcculloch,
+        PointsSystem::Dots => locale.strings.columns.dots,
+        PointsSystem::Glossbrenner => locale.strings.columns.glossbrenner,
+        PointsSystem::Goodlift => locale.strings.columns.goodlift,
+        PointsSystem::IPFPoints => locale.strings.columns.ipfpoints,
+        PointsSystem::McCulloch => locale.strings.columns.mcculloch,
         PointsSystem::NASA => "NASA",
         PointsSystem::Reshel => "Reshel",
         PointsSystem::SchwartzMalone => "S/Malone",
-        PointsSystem::Wilks => &locale.strings.columns.wilks,
-        PointsSystem::Wilks2020 => &locale.strings.columns.wilks2020,
+        PointsSystem::Wilks => locale.strings.columns.wilks,
+        PointsSystem::Wilks2020 => locale.strings.columns.wilks2020,
 
         // This occurs if the federation default is ByTotal.
         PointsSystem::Total => {
             if default_points != PointsSystem::Total {
                 points_column_title(default_points, locale, default_points)
             } else {
-                &locale.strings.columns.total
+                locale.strings.columns.total
             }
         }
     }
@@ -179,7 +179,7 @@ impl MeetSortSelection {
     }
 
     /// Gets the title of the column to show for the given selection.
-    pub fn column_title<'db>(self, locale: &'db Locale, default_points: PointsSystem) -> &'db str {
+    pub fn column_title(self, locale: &Locale, default_points: PointsSystem) -> &str {
         let system = self.as_points_system(default_points);
         points_column_title(system, locale, default_points)
     }
@@ -428,7 +428,7 @@ fn finish_table<'db>(
     locale: &'db Locale,
     points_system: PointsSystem,
     ruleset: RuleSet,
-    entries: &mut Vec<&'db Entry>,
+    entries: &mut [&'db Entry],
     use_ipf_equipment: bool,
 ) -> Table<'db> {
     entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
@@ -437,8 +437,8 @@ fn finish_table<'db>(
     let format = locale.number_format;
 
     let sex: &str = match entries[0].sex {
-        Sex::M => &locale.strings.selectors.sex.m,
-        Sex::F => &locale.strings.selectors.sex.f,
+        Sex::M => locale.strings.selectors.sex.m,
+        Sex::F => locale.strings.selectors.sex.f,
         Sex::Mx => "Mx",
     };
 
@@ -454,8 +454,8 @@ fn finish_table<'db>(
         locale.strings.translate_equipment(Equipment::Multi)
     } else if use_ipf_equipment {
         match entries[0].equipment {
-            Equipment::Raw => &locale.strings.equipment.classic,
-            Equipment::Single => &locale.strings.equipment.equipped,
+            Equipment::Raw => locale.strings.equipment.classic,
+            Equipment::Single => locale.strings.equipment.equipped,
             _ => locale.strings.translate_equipment(entries[0].equipment),
         }
     } else {
@@ -744,7 +744,7 @@ impl<'db> Context<'db> {
         Context {
             urlprefix: "/",
             page_title: format!("{} {} {}", meet.date.year(), meet.federation, meet.name),
-            page_description: &locale.strings.html_header.description,
+            page_description: locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

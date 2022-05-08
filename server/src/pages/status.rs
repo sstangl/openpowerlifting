@@ -7,12 +7,12 @@ use strum::IntoEnumIterator;
 
 /// The context object passed to `templates/status.html.tera`
 #[derive(Serialize)]
-pub struct Context<'a> {
+pub struct Context {
     pub urlprefix: &'static str,
-    pub page_title: &'a str,
-    pub page_description: &'a str,
+    pub page_title: &'static str,
+    pub page_description: &'static str,
     pub language: Language,
-    pub strings: &'a langpack::Translations,
+    pub strings: &'static langpack::Translations,
     pub units: WeightUnits,
     pub fed_statuses: Vec<FederationStatus>,
     pub num_entries: u32,
@@ -60,7 +60,7 @@ impl FederationStatus {
     }
 }
 
-fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
+fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     use Federation::*;
 
     // Completeness.
@@ -438,12 +438,12 @@ fn set_hardcoded_strings(statuses: &mut Vec<FederationStatus>) {
     statuses[WUAPUSA as usize].instagram = "wuapusa";
 }
 
-impl<'a> Context<'a> {
+impl Context {
     pub fn new(
-        opldb: &'a opldb::OplDb,
-        locale: &'a Locale,
+        opldb: &opldb::OplDb,
+        locale: &Locale,
         fed_filter: Option<fn(Federation) -> bool>,
-    ) -> Context<'a> {
+    ) -> Context {
         let mut statuses: Vec<FederationStatus> =
             Federation::iter().map(FederationStatus::new).collect();
 
@@ -463,8 +463,8 @@ impl<'a> Context<'a> {
 
         Context {
             urlprefix: "/",
-            page_title: &locale.strings.header.status,
-            page_description: &locale.strings.html_header.description,
+            page_title: locale.strings.header.status,
+            page_description: locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,

@@ -137,10 +137,10 @@ pub fn rankings_api(
 
     for row in &mut slice.rows {
         if row.equipment == locale.strings.equipment.raw {
-            row.equipment = &locale.strings.equipment.classic;
+            row.equipment = locale.strings.equipment.classic;
         }
         if row.equipment == locale.strings.equipment.single {
-            row.equipment = &locale.strings.equipment.equipped;
+            row.equipment = locale.strings.equipment.equipped;
         }
     }
 
@@ -295,18 +295,18 @@ pub fn lifter(
             // Change the equipment terminology to be IPF-specific.
             for best in &mut cx.bests {
                 if best.equipment == locale.strings.equipment.raw {
-                    best.equipment = &locale.strings.equipment.classic;
+                    best.equipment = locale.strings.equipment.classic;
                 }
                 if best.equipment == locale.strings.equipment.single {
-                    best.equipment = &locale.strings.equipment.equipped;
+                    best.equipment = locale.strings.equipment.equipped;
                 }
             }
             for result in &mut cx.meet_results {
                 if result.equipment == locale.strings.equipment.raw {
-                    result.equipment = &locale.strings.equipment.classic;
+                    result.equipment = locale.strings.equipment.classic;
                 }
                 if result.equipment == locale.strings.equipment.single {
-                    result.equipment = &locale.strings.equipment.equipped;
+                    result.equipment = locale.strings.equipment.equipped;
                 }
             }
 
@@ -424,10 +424,10 @@ pub fn meet(
     for table in &mut cx.tables {
         for row in &mut table.rows {
             if row.equipment == locale.strings.equipment.raw {
-                row.equipment = &locale.strings.equipment.classic;
+                row.equipment = locale.strings.equipment.classic;
             }
             if row.equipment == locale.strings.equipment.single {
-                row.equipment = &locale.strings.equipment.equipped;
+                row.equipment = locale.strings.equipment.equipped;
             }
         }
     }

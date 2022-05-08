@@ -77,18 +77,18 @@ impl<'db, 'a> Context<'db, 'a> {
         if use_ipf_equipment {
             for row in &mut slice.rows {
                 if row.equipment == locale.strings.equipment.raw {
-                    row.equipment = &locale.strings.equipment.classic;
+                    row.equipment = locale.strings.equipment.classic;
                 }
                 if row.equipment == locale.strings.equipment.single {
-                    row.equipment = &locale.strings.equipment.equipped;
+                    row.equipment = locale.strings.equipment.equipped;
                 }
             }
         }
 
         Some(Context {
             urlprefix: "/",
-            page_title: &locale.strings.page_titles.rankings,
-            page_description: &locale.strings.html_header.description,
+            page_title: locale.strings.page_titles.rankings,
+            page_description: locale.strings.html_header.description,
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
