@@ -203,7 +203,7 @@ pub struct JsonString(pub String);
 
 impl<'r> Responder<'r, 'static> for JsonString {
     fn respond_to(self, req: &'r Request) -> response::Result<'static> {
-        content::Json(self.0).respond_to(req)
+        content::RawJson(self.0).respond_to(req)
     }
 }
 
