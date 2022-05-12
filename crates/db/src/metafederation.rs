@@ -175,7 +175,7 @@ pub enum MetaFederation {
     #[strum(to_string = "awpc")]
     AWPC,
 
-    /// APF, but only Tested entries.
+    /// APF, but only Tested entries, and with international results.
     #[strum(to_string = "aapf")]
     AAPF,
 
@@ -202,6 +202,10 @@ pub enum MetaFederation {
     /// AMP, but with international results also.
     #[strum(to_string = "amp")]
     AMP,
+
+    /// APF, buf with international results.
+    #[strum(to_string = "apf")]
+    APF,
 
     /// APP, but with international results also.
     #[strum(to_string = "app")]
@@ -654,7 +658,7 @@ impl MetaFederation {
             MetaFederation::AllUkraine => is_from(Country::Ukraine, entry, meet),
             MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
             MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
-            MetaFederation::AAPF => meet.federation == Federation::APF && entry.tested,
+            MetaFederation::AAPF => entry.tested && affiliation!(meet, entry, APF, WPC),
             MetaFederation::ABPU => {
                 entry.tested
                     && (meet.federation == Federation::BPU
@@ -676,6 +680,7 @@ impl MetaFederation {
             MetaFederation::AMP => {
                 affiliation!(meet, entry, AMP, IPF, NAPF) && meet.date.year() >= 2022
             }
+            MetaFederation::APF => affiliation!(meet, entry, APF, WPC),
             MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
 
             //APU only formed 2018 and became IPF/ORPF affiliate at this time, without checking
