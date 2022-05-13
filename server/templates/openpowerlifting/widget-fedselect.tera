@@ -248,6 +248,7 @@
 <optgroup label="{{strings.country.greece}}">
   <option value="all-greece" {% if selection.federation == "AllGreece" %}selected{% endif %}>{{strings.selectors.fed.all_greece}}</option>
   <option value="esdt" {% if selection.federation == "ESDT" %}selected{% endif %}>ESDT - Hellenic Powerlifting Club</option>
+  <option value="gpl" {% if selection.federation == "GPL" %}selected{% endif %}>GPL - Greek Powerlifting League [IPL]</option>
 </optgroup>
 <optgroup label="{{strings.country.hongkong}}">
   <option value="all-hongkong" {% if selection.federation == "AllHongKong" %}selected{% endif %}>{{strings.selectors.fed.all_hongkong}}</option>
