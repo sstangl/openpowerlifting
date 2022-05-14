@@ -598,6 +598,7 @@
     WI-2022-10 = ["ExemptDivision"] # Lifter under 14 in the Open division.
     WI-2022-10-B = ["ExemptDivision"] # Lifter under 14 in the Open division.
     LA-2022-07 = ["ExemptWeightClassConsistency"] # No weight classes used.
+    LA-2022-06 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Some weight classes were combined and scored by formula
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
