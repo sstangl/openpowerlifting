@@ -72,6 +72,7 @@
     mm5sp  = {name ="MM5-SP",min=60,max=64,sex="M", equipment="Single-ply"}
     mm5mp  = {name ="MM5-MP",min=60,max=64,sex="M", equipment="Multi-ply"}
     mm6r   = {name ="MM6-R",min=65,max=69,sex="M", equipment="Raw"}
+    mm6rp   = {name ="MM6-RP",min=65,max=69,sex="M", equipment=["Raw","Wraps"]}
     mm6mp   = {name ="MM6-MP",min=65,max=69,sex="M", equipment="Multi-ply"}
     mm7r   = {name ="MM7-R",min=70,max=74,sex="M", equipment="Raw"}
     mm8r   = {name ="MM8-R",min=75,max=79,sex="M", equipment="Raw"}
@@ -88,8 +89,11 @@
     fm3rp  = {name ="FM3-RP",min=50,max=54,sex="F", equipment=["Raw","Wraps"]}
     fm3mp  = {name ="FM3-MP",min=50,max=54,sex="F", equipment="Multi-ply"}
     fm4r   = {name ="FM4-R",min=55,max=59,sex="F", equipment="Raw"}
+    fm4rp   = {name ="FM4-RP",min=55,max=59,sex="F", equipment=["Raw","Wraps"]}
     fm5r   = {name ="FM5-R",min=60,max=64,sex="F", equipment="Raw"}
     fm6r   = {name ="FM6-R",min=65,max=69,sex="F", equipment="Raw"}
+    fm7r   = {name ="FM7-R",min=70,max=74,sex="F", equipment="Raw"}
+    fm7rp   = {name ="FM7-RP",min=70,max=74,sex="F", equipment=["Raw","Wraps"]}
     fm8r   = {name ="FM8-R",min=75,max=79,sex="F", equipment="Raw"}
     fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
     fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
