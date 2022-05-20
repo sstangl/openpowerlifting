@@ -1,25 +1,25 @@
-Name,WeightClassKg,Division,AgeRange,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-Natalie Sines,60,F_SEM_APF,33-39,F,,102.06,,102.06,B,Multi-ply,1
-Tim Hensley,90,M_OEM_APF,,M,,317.52,,317.52,B,Multi-ply,1
-Jeff Johnston #1,100,M_OEM_APF,,M,,306.18,,306.18,B,Multi-ply,1
-Dan Stebbins,100,M_OEM_APF,,M,,,,,B,Multi-ply,DQ
-J. Wagoner,110,M_OEM_APF,,M,,,,,B,Multi-ply,DQ
-J. Don,125,M_OEM_APF,,M,,254.01,,254.01,B,Multi-ply,1
-Jamie Shell,140,M_OEM_APF,,M,,,,,B,Multi-ply,DQ
-Joe Smolinski,125,M_MEM_3_APF,50-54,M,,,,,B,Multi-ply,DQ
-Jeremy Thomas,100,M_OEM_APF,,M,,,281.23,281.23,D,Multi-ply,1
-M. Phillips,125,M_OEM_APF,,M,,,260.82,260.82,D,Multi-ply,1
-J. Lee,60,F_OEM_APF,,F,79.38,54.43,102.06,235.87,SBD,Multi-ply,1
-K. Doddy,75,F_TEM_3_APF,18-19,F,147.42,149.69,161.03,458.13,SBD,Multi-ply,1
-Wes McLormic,60,M_OEM_APF,,M,204.12,140.61,192.78,537.51,SBD,Multi-ply,1
-T. Lee,75,M_OEM_APF,,M,142.88,102.06,179.17,424.11,SBD,Multi-ply,1
-J. Taylor,82.5,M_OEM_APF,,M,170.1,154.22,181.44,505.76,SBD,Multi-ply,1
-Taylor Jakubczak,90,M_OEM_APF,,M,301.64,165.56,249.48,716.68,SBD,Multi-ply,1
-Jesse Soule,100,M_OEM_APF,,M,367.41,294.84,294.84,957.08,SBD,Multi-ply,1
-Kurt Kroczaleski,110,M_OEM_APF,,M,340.19,244.94,362.87,948.01,SBD,Multi-ply,1
-Mike Hamilton,110,M_OEM_APF,,M,306.18,213.19,292.57,811.93,SBD,Multi-ply,2
-Dain Soppelsa,140,M_OEM_APF,,M,,285.76,,285.76,B,Multi-ply,1
-TJ Watkins,140+,M_OEM_APF,,M,385.55,265.35,303.91,954.81,SBD,Multi-ply,1
-A. Wilson #8,82.5,M_JEM_APF,20-23,M,136.08,113.4,174.63,424.11,SBD,Multi-ply,1
-Taylor Jakubczak,90,M_TEM_3_APF,18-19,M,301.64,165.56,249.48,716.68,SBD,Multi-ply,1
-Z. Marsh,100,M_TEM_3_APF,18-19,M,185.97,138.35,206.38,530.7,SBD,Multi-ply,1
+Name,WeightClassKg,Division,AgeRange,Sex,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
+Natalie Sines,60,F_SEM_APF,33-39,F,,,,,102.06,,102.06,B,Multi-ply,1
+Tim Hensley,90,M_OEM_APF,,M,,,,,317.52,,317.52,B,Multi-ply,1
+Jeff Johnston #1,100,M_OEM_APF,,M,,,,,306.18,,306.18,B,Multi-ply,1
+Dan Stebbins,100,M_OEM_APF,,M,,,,,,,,B,Multi-ply,DQ
+John Wagner,110,M_OEM_APF,,M,,,-256.28,-256.28,,,,B,Multi-ply,DQ
+J. Don,125,M_OEM_APF,,M,,,,,254.01,,254.01,B,Multi-ply,1
+Jamie Shell,140,M_OEM_APF,,M,,,,,,,,B,Multi-ply,DQ
+Joe Smolinski,125,M_MEM_3_APF,50-54,M,,,,,,,,B,Multi-ply,DQ
+Jeremy Thomas,100,M_OEM_APF,,M,,,,,,281.23,281.23,D,Multi-ply,1
+M. Phillips,125,M_OEM_APF,,M,,,,,,260.82,260.82,D,Multi-ply,1
+J. Lee,60,F_OEM_APF,,F,79.38,,,,54.43,102.06,235.87,SBD,Multi-ply,1
+K. Doddy,75,F_TEM_3_APF,18-19,F,147.42,,,,149.69,161.03,458.13,SBD,Multi-ply,1
+Wes McLormic,60,M_OEM_APF,,M,204.12,,,,140.61,192.78,537.51,SBD,Multi-ply,1
+T. Lee,75,M_OEM_APF,,M,142.88,,,,102.06,179.17,424.11,SBD,Multi-ply,1
+J. Taylor,82.5,M_OEM_APF,,M,170.1,,,,154.22,181.44,505.76,SBD,Multi-ply,1
+Taylor Jakubczak,90,M_OEM_APF,,M,301.64,,,,165.56,249.48,716.68,SBD,Multi-ply,1
+Jesse Soule,100,M_OEM_APF,,M,367.41,,,,294.84,294.84,957.08,SBD,Multi-ply,1
+Kurt Kroczaleski,110,M_OEM_APF,,M,340.19,,,,244.94,362.87,948.01,SBD,Multi-ply,1
+Mike Hamilton,110,M_OEM_APF,,M,306.18,,,,213.19,292.57,811.93,SBD,Multi-ply,2
+Dain Soppelsa,140,M_OEM_APF,,M,,,,,285.76,,285.76,B,Multi-ply,1
+TJ Watkins,140+,M_OEM_APF,,M,385.55,,,,265.35,303.91,954.81,SBD,Multi-ply,1
+A. Wilson #8,82.5,M_JEM_APF,20-23,M,136.08,,,,113.4,174.63,424.11,SBD,Multi-ply,1
+Taylor Jakubczak,90,M_TEM_3_APF,18-19,M,301.64,,,,165.56,249.48,716.68,SBD,Multi-ply,1
+Z. Marsh,100,M_TEM_3_APF,18-19,M,185.97,,,,138.35,206.38,530.7,SBD,Multi-ply,1
