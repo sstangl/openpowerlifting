@@ -19,6 +19,7 @@ pub enum State {
     InChina(ChinaState),
     InEngland(EnglandState),
     InGermany(GermanyState),
+    InGreece(GreeceState),
     InIndia(IndiaState),
     InMexico(MexicoState),
     InNetherlands(NetherlandsState),
@@ -52,6 +53,7 @@ impl State {
             Country::China => Ok(State::InChina(s.parse::<ChinaState>()?)),
             Country::England => Ok(State::InEngland(s.parse::<EnglandState>()?)),
             Country::Germany => Ok(State::InGermany(s.parse::<GermanyState>()?)),
+            Country::Greece => Ok(State::InGreece(s.parse::<GreeceState>()?)),
             Country::India => Ok(State::InIndia(s.parse::<IndiaState>()?)),
             Country::Mexico => Ok(State::InMexico(s.parse::<MexicoState>()?)),
             Country::Netherlands => Ok(State::InNetherlands(s.parse::<NetherlandsState>()?)),
@@ -108,6 +110,7 @@ impl State {
             State::InChina(_) => Country::China,
             State::InEngland(_) => Country::England,
             State::InGermany(_) => Country::Germany,
+            State::InGreece(_) => Country::Greece,
             State::InIndia(_) => Country::India,
             State::InMexico(_) => Country::Mexico,
             State::InNetherlands(_) => Country::Netherlands,
@@ -139,6 +142,7 @@ impl State {
             State::InChina(s) => s.to_string(),
             State::InEngland(s) => s.to_string(),
             State::InGermany(s) => s.to_string(),
+            State::InGreece(s) => s.to_string(),
             State::InIndia(s) => s.to_string(),
             State::InMexico(s) => s.to_string(),
             State::InNetherlands(s) => s.to_string(),
@@ -468,6 +472,39 @@ pub enum GermanyState {
     ST,
     /// Thuringia.
     TH,
+}
+
+/// A state in Greece.
+#[derive(Copy, Clone, Debug, Display, EnumString, PartialEq, Serialize)]
+pub enum GreeceState {
+    /// Attica.
+    ATT,
+    /// Central Greece
+    CG,
+    /// Central Macedonia
+    CM,
+    /// Crete
+    CRE,
+    /// Eastern Macedonia and Thrace
+    EMT,
+    /// Epirus
+    EPI,
+    /// Ionian Islands
+    ION,
+    /// North Aegean
+    NA,
+    /// Peloponnese
+    PEL,
+    /// South Aegean
+    SA,
+    /// Thessaly
+    THE,
+    /// Western Greece
+    WG,
+    /// Western Macedonia
+    WM,
+    /// Mount Athos
+    MA,
 }
 
 /// A state in India.
