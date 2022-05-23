@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# Import data from the Kraft.is website.
-# Their data format is actually standardised!
+# Import data from the APU website.
 
 
 from bs4 import BeautifulSoup
@@ -113,21 +112,21 @@ def getresults(soup):
             curr_csv.fieldnames += ['Name']
         elif h == 'born':
             curr_csv.fieldnames += ['BirthYear']
-        elif any(x in h for x in ['age']):
+        elif any(x in h for x in ['age', 'division', 'div']):
             curr_csv.fieldnames += ['Division']
         elif h == 'team':
             curr_csv.fieldnames += ['Team']
-        elif any(x in h for x in ['bwt']):
+        elif any(x in h for x in ['bwt', 'bodyweightkg']):
             curr_csv.fieldnames += ['BodyweightKg']
         elif any(x in h for x in ['cls', 'class']):
             curr_csv.fieldnames += ['WeightClassKg']
-        elif any(x in h for x in ['sq-1']):
+        elif any(x in h for x in ['sq-1', 'squat1kg']):
             curr_csv.fieldnames += ['Squat1Kg', 'Squat2Kg', 'Squat3Kg']
             [next(iterable) for x in range(2)]
-        elif any(x in h for x in ['bp-1']):
+        elif any(x in h for x in ['bp-1', 'bench1kg']):
             curr_csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
             [next(iterable) for x in range(2)]
-        elif any(x in h for x in ['dl-1']):
+        elif any(x in h for x in ['dl-1', 'deadlift1kg']):
             curr_csv.fieldnames += ['Deadlift1Kg',
                                     'Deadlift2Kg', 'Deadlift3Kg']
             [next(iterable) for x in range(2)]
@@ -137,6 +136,12 @@ def getresults(soup):
             curr_csv.fieldnames += ['Wilks']
         elif h == 'place':
             curr_csv.fieldnames += ['Place']
+        elif h == 'sex':
+            curr_csv.fieldnames += ['Sex']
+        elif any(x in h for x in ['equipment', 'ipf pts code']):
+            curr_csv.fieldnames += ['Equipment']
+        elif h == 'event':
+            curr_csv.fieldnames += ['Event']
         elif h == '':
             curr_csv.fieldnames += ['IGNORE']
         else:
@@ -149,11 +154,16 @@ def getresults(soup):
         if len(tr.find_all(['td'])) < 3:
             continue
 
+        if 'Referees:' in ''.join([td.text for td in tr.find_all(['td'])]):
+            break
+
+
         for td in tr.find_all(['td']):
             text = td.text.strip().replace('\r\n', '')
             text = text.replace(',', '.')
 
             row.append(text.replace('  ', ' '))
+
         curr_csv.rows += [row]
 
     return curr_csv
@@ -216,7 +226,8 @@ def calc_best_lift(csv, col, attemptlist):
 
 
 def markevent(csv):
-    assert 'Event' not in csv.fieldnames
+    if 'Event' in csv.fieldnames:
+        return
     csv.append_column('Event')
 
     evtidx = csv.index('Event')
