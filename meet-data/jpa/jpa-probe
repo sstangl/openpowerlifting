@@ -42,16 +42,19 @@ def getmeetlist(html):
             if not tds[5].find('a'):
                 continue
 
-            url = tds[5].a['href']
+            a_list = tds[5].find_all('a')
 
-            if 'international' in url:
-                continue
+            for a in a_list:
+                url = a['href']
 
-            if 'http' not in url:
-                url = BASEURL + url
-                url = url.replace('../', '')
-            if url not in urls:
-                urls.append(url)
+                if 'international' in url:
+                    continue
+
+                if 'http' not in url:
+                    url = BASEURL + url
+                    url = url.replace('../', '')
+                if url not in urls:
+                    urls.append(url)
 
     return urls
 
