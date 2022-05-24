@@ -904,10 +904,6 @@ pub enum Federation {
     #[strum(to_string = "PoliceAL", serialize = "policeal")]
     PoliceAL,
 
-    /// Power League, an Argentina invitational.
-    #[strum(to_string = "Power League", serialize = "power league")]
-    PowerLeague,
-
     /// A defunct stand-alone US federation.
     #[strum(to_string = "PRIDE", serialize = "pride")]
     PRIDE,
@@ -1449,6 +1445,13 @@ pub enum Federation {
     #[strum(to_string = "WRPF", serialize = "wrpf")]
     WRPF,
 
+    /// Argentinian WRPF affiliate.
+    ///
+    /// Previously Power League, an Argentina invitational.
+    #[serde(rename = "WRPF-Argentina")]
+    #[strum(to_string = "WRPF-Argentina", serialize = "wrpf-argentina")]
+    WRPFArgentina,
+
     /// Australian WRPF affiliate.
     #[serde(rename = "WRPF-AUS")]
     #[strum(to_string = "WRPF-AUS", serialize = "wrpf-aus")]
@@ -1803,7 +1806,6 @@ impl Federation {
             Federation::OEVK => FULLY_TESTED,
             Federation::PA => FULLY_TESTED,
             Federation::PoliceAL => false,
-            Federation::PowerLeague => false,
             Federation::PAGermany => false,
             Federation::PAP => FULLY_TESTED,
             Federation::PHPL => false,
@@ -1942,6 +1944,7 @@ impl Federation {
             Federation::WPU => false,
             Federation::WPUF => false,
             Federation::WRPF => false,
+            Federation::WRPFArgentina => false,
             Federation::WRPFAUS => false,
             Federation::WRPFBelarus => false,
             Federation::WRPFBrazil => false,
@@ -2172,7 +2175,6 @@ impl Federation {
             Federation::OEVK => Some(Country::Austria),
             Federation::PA => Some(Country::Australia),
             Federation::PoliceAL => Some(Country::USA),
-            Federation::PowerLeague => Some(Country::Argentina),
             Federation::PAGermany => Some(Country::Germany),
             Federation::PAP => Some(Country::Philippines),
             Federation::PHPL => Some(Country::Philippines),
@@ -2304,6 +2306,7 @@ impl Federation {
             Federation::WPUF => Some(Country::Ukraine),
             Federation::WNPF => Some(Country::USA),
             Federation::WRPF => Some(Country::Russia),
+            Federation::WRPFArgentina => Some(Country::Argentina),
             Federation::WRPFAUS => Some(Country::Australia),
             Federation::WRPFBelarus => Some(Country::Belarus),
             Federation::WRPFBrazil => Some(Country::Brazil),
@@ -2598,7 +2601,6 @@ impl Federation {
             Federation::PNGPF => Some(Federation::IPF),
             Federation::PolandUA => None,
             Federation::PoliceAL => None,
-            Federation::PowerLeague => None,
             Federation::PRIDE => None,
             Federation::ProRaw => None,
             Federation::PRPA => None,
@@ -2749,6 +2751,7 @@ impl Federation {
             Federation::WPUF => None,
             Federation::WNPF => None,
             Federation::WRPF => Some(Federation::WRPF),
+            Federation::WRPFArgentina => Some(Federation::WRPF),
             Federation::WRPFAUS => Some(Federation::WRPF),
             Federation::WRPFBelarus => Some(Federation::WRPF),
             Federation::WRPFBrazil => Some(Federation::WRPF),
@@ -3059,7 +3062,6 @@ impl Federation {
             }
             Federation::PAGermany => PointsSystem::Wilks,
             Federation::PoliceAL => PointsSystem::Wilks,
-            Federation::PowerLeague => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
             Federation::PI => Federation::ipf_rules_on(date),
@@ -3216,6 +3218,7 @@ impl Federation {
             Federation::WPUF => PointsSystem::Wilks,
             Federation::WNPF => PointsSystem::Wilks,
             Federation::WRPF => PointsSystem::Wilks,
+            Federation::WRPFArgentina => PointsSystem::Wilks,
             Federation::WRPFAUS => PointsSystem::Wilks,
             Federation::WRPFBelarus => PointsSystem::Wilks,
             Federation::WRPFBrazil => PointsSystem::Wilks,
