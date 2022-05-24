@@ -157,7 +157,6 @@ def getresults(soup):
         if 'Referees:' in ''.join([td.text for td in tr.find_all(['td'])]):
             break
 
-
         for td in tr.find_all(['td']):
             text = td.text.strip().replace('\r\n', '')
             text = text.replace(',', '.')
