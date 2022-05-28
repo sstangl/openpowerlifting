@@ -1,6 +1,5 @@
 [workspace]
 members = [
-    # "api", Temporarily disabled. Not used for anything, and increases CI time.
     "checker",
     "crates/coefficients",
     "crates/db",
