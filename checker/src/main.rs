@@ -1,11 +1,5 @@
 //! Checks CSV data files for validity.
 
-extern crate checker; // The "src/lib.rs" module.
-extern crate colored; // Allows outputting pretty terminal colors.
-extern crate opltypes; // Used for determining MeetPath for CONFIG.toml files.
-extern crate rayon; // A work-stealing auto-parallelism library.
-extern crate walkdir; // Allows walking through a directory, looking at files.
-
 use checker::{compiler, disambiguator, AllMeetData, SingleMeetData};
 use colored::*;
 use opltypes::Username;
@@ -21,7 +15,7 @@ use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process;
 use std::sync::atomic::{AtomicUsize, Ordering};
-use std::time;
+use std::time::Instant;
 
 /// Stores user-specified arguments from the command line.
 struct Args {
@@ -215,16 +209,16 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
 }
 
 /// If a boolean is true, gathers timing information.
-fn instant_if(b: bool) -> Option<time::Instant> {
+fn instant_if(b: bool) -> Option<Instant> {
     if b {
-        Some(time::Instant::now())
+        Some(Instant::now())
     } else {
         None
     }
 }
 
 /// Prints the elapsed time with the given prefix, if available.
-fn maybe_print_elapsed_for(pass: &str, instant: Option<time::Instant>) {
+fn maybe_print_elapsed_for(pass: &str, instant: Option<Instant>) {
     if let Some(instant) = instant {
         println!(" {}: {:?}", pass.bold().cyan(), instant.elapsed());
     }
