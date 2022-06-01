@@ -142,6 +142,8 @@ def getresults(soup):
             curr_csv.fieldnames += ['Equipment']
         elif h == 'event':
             curr_csv.fieldnames += ['Event']
+        elif h == 'state':
+            curr_csv.fieldnames += ['State']
         elif h == '':
             curr_csv.fieldnames += ['IGNORE']
         else:
