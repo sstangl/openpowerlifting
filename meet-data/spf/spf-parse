@@ -140,7 +140,7 @@ def fixequipment(csv):
             row[eqidx] = "Multi-ply"
         elif eq == "Single-Ply":
             row[eqidx] = "Single-ply"
-        elif eq in ["Slingshot","Unlimited"]:
+        elif eq in ["Slingshot", "Unlimited"]:
             row[eqidx] = "Unlimited"
         elif eq == "Straps":
             row[eqidx] = "Straps"
