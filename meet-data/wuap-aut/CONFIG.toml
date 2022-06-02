@@ -29,3 +29,4 @@
 
 [exemptions]
     2101 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Janky divisions
+    2201 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Janky divisions
