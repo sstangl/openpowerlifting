@@ -106,7 +106,7 @@ def getresults(soup):
 
     for ii in iterable:
         h = headers[ii].lower()
-        h= h.replace('(', '').replace(')', '').replace('  ', ' ')
+        h = h.replace('(', '').replace(')', '').replace('  ', ' ')
         if h == '#':
             curr_csv.fieldnames += ['Place']
         elif h == 'name':
