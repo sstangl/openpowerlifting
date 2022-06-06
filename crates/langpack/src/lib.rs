@@ -16,7 +16,7 @@ use std::fmt;
 #[derive(Clone, Copy, Debug, EnumIter, EnumString, PartialEq, Serialize, Deserialize)]
 pub enum Language {
     /// Czech.
-    cz,
+    cs,
     /// German, without regional variance.
     de,
     /// Greek.
@@ -78,7 +78,7 @@ pub enum Language {
 impl fmt::Display for Language {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let s = match self {
-            Language::cz => "cz",
+            Language::cs => "cs",
             Language::de => "de",
             Language::el => "el",
             Language::en => "en",
@@ -687,7 +687,7 @@ pub struct Translations {
 
 /// Owner struct of all translation state.
 pub struct LangInfo {
-    cz: Translations,
+    cs: Translations,
     de: Translations,
     el: Translations,
     en: Translations,
@@ -717,7 +717,7 @@ pub struct LangInfo {
 }
 
 static LANGPACK: LangInfo = LangInfo {
-    cz: include!(concat!(env!("OUT_DIR"), "/cz.rs")),
+    cs: include!(concat!(env!("OUT_DIR"), "/cs.rs")),
     de: include!(concat!(env!("OUT_DIR"), "/de.rs")),
     el: include!(concat!(env!("OUT_DIR"), "/el.rs")),
     en: include!(concat!(env!("OUT_DIR"), "/en.rs")),
@@ -754,7 +754,7 @@ impl LangInfo {
 
     pub fn translations(&self, language: Language) -> &Translations {
         match language {
-            Language::cz => &self.cz,
+            Language::cs => &self.cs,
             Language::de => &self.de,
             Language::el => &self.el,
             Language::en => &self.en,
@@ -1022,7 +1022,7 @@ impl Language {
         // Taken from the following list:
         // https://en.wikipedia.org/wiki/Decimal_separator
         match self {
-            Language::cz => NumberFormat::ArabicComma,
+            Language::cs => NumberFormat::ArabicComma,
             Language::de => NumberFormat::ArabicComma,
             Language::el => NumberFormat::ArabicComma,
             Language::en => NumberFormat::ArabicPeriod,
