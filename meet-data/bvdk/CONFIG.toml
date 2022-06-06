@@ -21,6 +21,16 @@
 
     masters = {name = "Masters", min=39.5, max=999}
 
+
+
+# German forms of divisions
+    junioren = {name = "Junioren", min=0, max=22.5}
+    ajugend = {name = "A-Jugend", min=0, max=17.5}
+    ak1 = {name = "AK I", min=39.5, max=48.5}
+    ak2 = {name = "AK II", min=49.5, max=58.5}
+    ak3 = {name = "AK III", min=59.5, max=68.5}
+    ak4 = {name = "AK IV", min=69.5, max=999}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
