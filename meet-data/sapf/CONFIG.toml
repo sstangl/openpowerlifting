@@ -10,6 +10,9 @@
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
 
+    student = {name ="Student",min=0,max=999}
+    youth = {name = "Youth",min=0,max=13}
+
 	# USAPL-style divisions.
 	mro = {name="MR-O", min=0, max=999, sex="M", equipment="Raw"}
 	mrsj = {name="MR-SJ", min=0, max=17.5, sex="M", equipment="Raw"}
@@ -104,4 +107,4 @@
     sex = "F"
 
 [exemptions]
-  
+  2202 = ["ExemptWeightClassConsistency"] # Youth and student lifters have reduced classes
