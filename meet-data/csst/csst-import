@@ -109,6 +109,8 @@ def getresults(soup, meetcsv):
                     csv.fieldnames += ['BirthYear', 'Lot', 'BodyweightKg']
                 elif h == 'Oddíl':
                     csv.fieldnames += ['Team']
+                elif h == 'Univerzita':
+                    csv.fieldnames += ["College/University"]
                 elif h == 'DŘ1':
                     csv.fieldnames += ['Squat1Kg']
                 elif h == 'DŘ2':
@@ -460,4 +462,5 @@ def main(dirname, url):
 if __name__ == '__main__':
     if len(sys.argv) != 3:
         print("Usage: %s dirname url" % sys.argv[0])
+        sys.exit(1)
     main(sys.argv[1], sys.argv[2])
