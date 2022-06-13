@@ -144,4 +144,5 @@
     sex = "F"
 
 [exemptions]
+    2201 = ["ExemptWeightClassConsistency"] # 53kg lifter too young for SJ
    

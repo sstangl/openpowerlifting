@@ -150,6 +150,10 @@
   <option value="lfph" {% if selection.federation == "LFPH" %}selected{% endif %}>LFPH - Ligue Francophone des Poids & Haltères [IPF]</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF - Vlaamse Gewichtheffers en Powerlifting Federatie [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.belize}}">
+  <option value="all-belize" {% if selection.federation == "AllBelize" %}selected{% endif %}>{{strings.selectors.fed.all_belize}}</option>
+  <option value="bpa" {% if selection.federation == "BPA" %}selected{% endif %}>BPA - Belize Powerlifting Association [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.bolivia}}">
   <option value="all-bolivia" {% if selection.federation == "AllBolivia" %}selected{% endif %}>{{strings.selectors.fed.all_bolivia}}</option>
   <option value="abp" {% if selection.federation == "ABP" %}selected{% endif %}>ABP - Alianza Boliviana Powerlifting [GPA/IPO]</option>
