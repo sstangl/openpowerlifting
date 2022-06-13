@@ -23,7 +23,8 @@
     sex = "F"
 
 [exemptions]
-    # Juniors and Masters ranked by DOTS across weight classes
+    # Smaller meets often rank only on DOTS and don't use weight classes
     2001 = ["ExemptWeightClassConsistency"]
     2103 = ["ExemptWeightClassConsistency"]
     2201 = ["ExemptWeightClassConsistency"]
+    2203 = ["ExemptWeightClassConsistency"]
