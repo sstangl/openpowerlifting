@@ -1,6 +1,7 @@
 [divisions]
     open = {name="Open", min=0, max=999}
     teens = {name="Teen", min=13, max=19}
+    youth = {name="Youth", min=5, max=13}
     teens1416 = {name="Teen 14-16", min=14, max=16}
     teens1719 = {name="Sub-Juniors 17-19", min=17, max=19}
     juniors = {name="Juniors 20-23", min=20, max=23}
@@ -28,3 +29,4 @@
     1905 = ["ExemptWeightClassConsistency"] # Strange classes.
     2001 = ["ExemptWeightClassConsistency"] # Strange classes.
     2002 = ["ExemptWeightClassConsistency"] # Strange classes.
+    2201 = ["ExemptWeightClassConsistency"] # Strange classes.
