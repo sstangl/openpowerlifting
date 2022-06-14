@@ -49,9 +49,74 @@
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
+[weightclasses.2022_junior_M]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["MR-Jr", "M-Jr", "Junior"]
+
+[weightclasses.2022_subjunior_M]
+    classes = ["53","59","66","74","83","93","105","105+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["MR-Sj", "M-Sj", "Sub-Junior"]
+
+[weightclasses.2022_masterI_M]
+   classes = ["74","83","93","105","120","120+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Master I"]
+
+[weightclasses.2022_masterII_M]
+   classes = ["74","83","93","105","105+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Master II"]
+
+[weightclasses.2022_masterIII_M]
+   classes = ["83","83+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Master III"]
+
+[weightclasses.2022_masterIV_M]
+   classes = ["+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Master IV"]
+
+[weightclasses.2022_F]
+    classes = ["52","57","63","69","76","76+"]
+    date_range=["2022-01-01","9999-12-31"]
+    sex = "F"
+
+[weightclasses.2022_junior_F]
+    classes = ["52","57","63","69","76","76+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["FR-Jr", "F-Jr", "Junior"]
+
+[weightclasses.2022_subjunior_F]
+    classes = ["52","57","63","63+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["FR-Sj", "F-Sj", "Sub-Junior"]
+
+[weightclasses.2022_masterI_F]
+    classes = ["63","63+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Master I"]
+
+[weightclasses.2022_masterII_III_IV_F]
+    classes = ["+"]
+    date_range=["2022-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Master II", "Master III", "Master IV"]
+
 [weightclasses.new_F]
     classes = ["47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","9999-12-31"]
+    date_range=["2021-01-01","2021-12-31"]
     sex = "F"
 
 [weightclasses.default_F]
@@ -61,13 +126,13 @@
 
 [weightclasses.junior_M]
     classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2021-12-31"]
     sex = "M"
     divisions = ["MR-Sj", "MR-Jr", "M-Sj", "M-Jr", "Junior", "Sub-Junior"]
 
 [weightclasses.juniornew_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","9999-01-01"]
+    date_range=["2021-01-01","2021-12-31"]
     sex = "F"
     divisions = ["FR-Sj", "FR-Jr", "F-Sj", "F-Jr", "Junior", "Sub-Junior"]
 
