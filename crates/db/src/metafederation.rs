@@ -256,6 +256,10 @@ pub enum MetaFederation {
     #[strum(to_string = "csst")]
     CSST,
 
+    /// CyprusPF, but with international results also.
+    #[strum(to_string = "cypruspf")]
+    CyprusPF,
+
     /// DSF, but with international results also.
     #[strum(to_string = "dsf")]
     DSF,
