@@ -206,6 +206,10 @@
   <option value="hpls-ua" {% if selection.federation == "HPLS-UA" %}selected{% endif %}>HPLS-UA - Hrvatski Powerlifting Savez [Unaffiliated]</option>
   <option value="hpo" {% if selection.federation == "HPO" %}selected{% endif %}>HPO - Hrvatska Powerlifting Organizacija [Inactive]</option>
 </optgroup>
+<optgroup label="{{strings.country.cyprus}}">
+  <option value="all-cyprus" {% if selection.federation == "AllCyprus" %}selected{% endif %}>{{strings.selectors.fed.all_cyprus}}</option>
+  <option value="cypruspf" {% if selection.federation == "CyprusPF" %}selected{% endif %}>CyprusPF - Cyprus Powerlifting Federation [IPF]</option>>
+</optgroup>
 <optgroup label="{{strings.country.czechia}}">
   <option value="all-czechia" {% if selection.federation == "AllCzechia" %}selected{% endif %}>{{strings.selectors.fed.all_czechia}}</option>
   <option value="cast" {% if selection.federation == "CAST" %}selected{% endif %}>CAST - Česká Asociace Silového Trojboje [GPC/WPC]</option>
