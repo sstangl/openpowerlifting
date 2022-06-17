@@ -1239,6 +1239,11 @@ pub enum Federation {
     #[strum(to_string = "WP-China", serialize = "wp-china")]
     WPChina,
 
+    /// World Powerlifting Greece.
+    #[serde(rename = "WP-Greece")]
+    #[strum(to_string = "WP-Greece", serialize = "wp-greece")]
+    WPGreece,
+
     /// World Powerlifting Nauru.
     #[serde(rename = "WP-Nauru")]
     #[strum(to_string = "WP-Nauru", serialize = "wp-nauru")]
@@ -1910,6 +1915,7 @@ impl Federation {
             Federation::WNPF => FULLY_TESTED,
             Federation::WP => FULLY_TESTED,
             Federation::WPChina => FULLY_TESTED,
+            Federation::WPGreece => FULLY_TESTED,
             Federation::WPNauru => FULLY_TESTED,
             Federation::WPNiue => FULLY_TESTED,
             Federation::WPUSA => FULLY_TESTED,
@@ -2274,6 +2280,7 @@ impl Federation {
             Federation::WelshPA => Some(Country::Wales),
             Federation::WP => None,
             Federation::WPChina => Some(Country::China),
+            Federation::WPGreece => Some(Country::Greece),
             Federation::WPNauru => Some(Country::Nauru),
             Federation::WPNiue => Some(Country::Niue),
             Federation::WPUSA => Some(Country::USA),
@@ -2721,6 +2728,7 @@ impl Federation {
             Federation::WelshPA => Some(Federation::IPF),
             Federation::WP => Some(Federation::WP),
             Federation::WPChina => Some(Federation::WP),
+            Federation::WPGreece => Some(Federation::WP),
             Federation::WPNauru => Some(Federation::WP),
             Federation::WPNiue => Some(Federation::WP),
             Federation::WPUSA => Some(Federation::WP),
@@ -3190,6 +3198,7 @@ impl Federation {
             Federation::WelshPA => Federation::ipf_rules_on(date),
             Federation::WP => Federation::wp_rules_on(date),
             Federation::WPChina => Federation::wp_rules_on(date),
+            Federation::WPGreece => Federation::wp_rules_on(date),
             Federation::WPNauru => Federation::wp_rules_on(date),
             Federation::WPNiue => Federation::wp_rules_on(date),
             Federation::WPUSA => Federation::wp_rules_on(date),
