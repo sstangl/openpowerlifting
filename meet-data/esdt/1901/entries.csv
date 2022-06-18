@@ -54,9 +54,9 @@ HPC,S,Wraps,M,110,Juniors,Aygoystos Gkesker,108.7,,-190,-190,-190,,,,,,,,,,,,,DQ
 HPC,S,Raw,M,110,Open,Georgios Konstantopoylos,107,190,180,-190,190,,,,,,,,,,,,190,1
 HPC,S,Wraps,M,110,Masters,Petros Arkoydeas,109.8,255,245,255,-262.5,,,,,,,,,,,,255,1
 HPC,S,Raw,M,125,Teen,Dimitrios Mpalaxtaris,118,175,165,170,175,,,,,,,,,,,,175,1
-HPC,S,Wraps,M,125,Juniors,Eleytherios Xanas,114.7,200,200,,,,,,,,,,,,,,200,1
-HPC,S,Multi-ply,M,140,Open,Emmanoyhl Marizas,138,,-300,,-300,,,,,,,,,,,,,DQ
-HPC,S,Single-ply,M,140,Open,Emmanoyil Marizas,138,280,-280,280,,,,,,,,,,,,,280,1
+HPC,S,Wraps,M,125,Juniors,Eleftherios Xanas,114.7,200,200,,,,,,,,,,,,,,200,1
+HPC,S,Multi-ply,M,140,Open,Manolis Marizas,138,,-300,,-300,,,,,,,,,,,,,DQ
+HPC,S,Single-ply,M,140,Open,Manolis Marizas,138,280,-280,280,,,,,,,,,,,,,280,1
 HPC,S,Wraps,M,140+,Open,Georgios Antonakopoylos,155.2,210,180,195,210,,,,,,,,,,,,210,1
 EPF,S,Wraps,F,56,Masters,Mairi Tsimpi,56,160,135,150,160,,,,,,,,,,,,160,1
 EPF,S,Wraps,F,60,Juniors,Maria Royssoy,60,85,-85,85,-90,,,,,,,,,,,,85,1
@@ -67,8 +67,8 @@ EPF,S,Wraps,M,82.5,Masters,Kyriakos Grigoropoulos,82,180,165,180,-200,,,,,,,,,,,
 EPF,S,Raw,M,90,Juniors,Anastasios Sigalas,86.5,205,185,195,205,,,,,,,,,,,,205,1
 EPF,S,Wraps,M,100,Open,Xristos Xiarxos,99.8,210,195,-205,210,,,,,,,,,,,,210,1
 EPF,S,Wraps,M,110,Juniors,Aygoystos Gkesker,108.7,,-190,-190,-190,,,,,,,,,,,,,DQ
-EPF,S,Multi-ply,M,140,Open,Emmanoyhl Marizas,138,,-300,,-300,,,,,,,,,,,,,DQ
-EPF,S,Single-ply,M,140,Open,Emmanoyil Marizas,138,280,-280,280,,,,,,,,,,,,,280,1
+EPF,S,Multi-ply,M,140,Open,Manolis Marizas,138,,-300,,-300,,,,,,,,,,,,,DQ
+EPF,S,Single-ply,M,140,Open,Manolis Marizas,138,280,-280,280,,,,,,,,,,,,,280,1
 HPC,B,Raw,F,48,Open,Konstantina Proskefala,47,,,,,,47.5,45,47.5,-50,,,,,,,47.5,1
 HPC,B,Raw,F,56,Teen,Aimilia Alexopoyloy,55.8,,,,,,42.5,35,40,42.5,,,,,,,42.5,1
 HPC,B,Raw,F,56,Open,Stamatina Tambaki,55.8,,,,,,,-45,,,,,,,,,,DQ
@@ -131,7 +131,7 @@ HPC,B,Raw,M,110,Open,Dimitrios Koyprizas,108,,,,,,157.5,155,157.5,,,,,,,,157.5,1
 HPC,B,Raw,M,110,Open,Georgios Konstantopoylos,107,,,,,,135,130,135,,,,,,,,135,2
 HPC,B,Raw,M,110,Masters,Konstantinos Ziogas,106,,,,,,160,160,-165,-165,,,,,,,160,1
 HPC,B,Raw,M,125,Teen,Dimitrios Mpalaxtaris,118,,,,,,100,100,-105,-110,,,,,,,100,1
-HPC,B,Raw,M,125,Juniors,Eleytherios Xanas,114.7,,,,,,100,100,,,,,,,,,100,1
+HPC,B,Raw,M,125,Juniors,Eleftherios Xanas,114.7,,,,,,100,100,,,,,,,,,100,1
 HPC,B,Raw,M,125,Open,Andreas Kolettis,125,,,,,,175,165,175,,,,,,,,175,1
 HPC,B,Raw,M,140+,Open,Georgios Antonakopoylos,155.2,,,,,,90,-70,80,90,,,,,,,90,1
 HPC,B,Raw,M,140+,Masters,Emmanoyil Pafilias,167,,,,,,167.5,160,-165,167.5,,,,,,,167.5,1
@@ -210,7 +210,7 @@ HPC,D,Raw,M,110,Open,Georgios Konstantopoylos,107,,,,,,,,,,,260,250,260,-270,,26
 HPC,D,Raw,M,110,Open,Dimitrios Koyprizas,108,,,,,,,,,,,260,250,260,-262.5,,260,2
 HPC,D,Raw,M,110,Masters,Petros Arkoydeas,109.8,,,,,,,,,,,240,235,240,-247.5,,240,1
 HPC,D,Raw,M,125,Teen,Dimitrios Mpalaxtaris,118,,,,,,,,,,,220,195,210,220,,220,1
-HPC,D,Raw,M,125,Juniors,Eleytherios Xanas,114.7,,,,,,,,,,,190,190,,,,190,1
+HPC,D,Raw,M,125,Juniors,Eleftherios Xanas,114.7,,,,,,,,,,,190,190,,,,190,1
 HPC,D,Raw,M,140+,Open,Georgios Antonakopoylos,155.2,,,,,,,,,,,230,230,-235,,,230,1
 EPF,D,Raw,F,56,Masters,Mairi Tsimpi,56,,,,,,,,,,,150,135,145,150,,150,1
 EPF,D,Raw,F,60,Juniors,Maria Royssoy,60,,,,,,,,,,,105,95,97.5,105,,105,1
@@ -272,7 +272,7 @@ HPC,BD,Raw,M,110,Juniors,Ioannis Pantazis,103.1,,,,,,135,130,-135,135,,260,245,2
 HPC,BD,Raw,M,110,Juniors,Georgios-Romanos Dramoyntanis,109,,,,,,165,,,,,,,,,,,DQ
 HPC,BD,Raw,M,110,Open,Dimitrios Koyprizas,108,,,,,,157.5,155,157.5,,,260,250,260,-262.5,,417.5,1
 HPC,BD,Raw,M,110,Open,Georgios Konstantopoylos,107,,,,,,135,130,135,,,260,250,260,-270,,395,2
-HPC,BD,Raw,M,125,Juniors,Eleytherios Xanas,114.7,,,,,,100,100,,,,190,190,,,,290,1
+HPC,BD,Raw,M,125,Juniors,Eleftherios Xanas,114.7,,,,,,100,100,,,,190,190,,,,290,1
 HPC,BD,Raw,M,140+,Open,Georgios Antonakopoylos,155.2,,,,,,90,-70,80,90,,230,230,-235,,,320,1
 EPF,BD,Raw,F,56,Masters,Mairi Tsimpi,56,,,,,,90,77.5,85,90,,150,135,145,150,,240,1
 EPF,BD,Raw,F,60,Juniors,Maria Royssoy,60,,,,,,42.5,-37.5,37.5,42.5,,105,95,97.5,105,,147.5,1
@@ -362,7 +362,7 @@ HP,SBD,Raw,M,100,Open,Xaridimos Xaralampakis,100,242.5,227.5,235,242.5,,152.5,-1
 HP,SBD,Raw,M,100,Open,Xristos Xiarxos,99.8,210,195,-205,210,,135,130,135,-142.5,,240,230,240,-252.5,,585,2
 HP,SBD,Raw,M,100,Open,Dimitrios Dabris,98.4,150,-150,-150,150,,135,110,125,135,,235,225,235,-250,,520,3
 HP,SBD,Raw,M,100,Open,Dimitrios Krikelis,96,,-210,,,,,-120,,,,,-210,,,,,DQ
-HP,SBD,Wraps,M,100,Open,Nikolaos Kakaletris,93,195,180,187.5,195,,140,135,140,-145,,250,230,240,250,,585,1
+HP,SBD,Wraps,M,100,Open,Nikos Kakaletris,93,195,180,187.5,195,,140,135,140,-145,,250,230,240,250,,585,1
 HP,SBD,Wraps,M,100,Open,Paraskeyas Glitzos,96.7,220,220,-227.5,-232.5,,120,120,-127.5,-130,,220,220,-227.5,,,560,2
 HP,SBD,Wraps,M,100,Open,Mixalis Bazaios,93.7,185,170,185,-195,,,-135,-135,,,200,185,200,-215,,,DQ
 HP,SBD,Raw,M,100,Masters,Ippokratis Mildakos,99.8,235,210,225,235,,162.5,150,157.5,162.5,,242.5,220,235,242.5,,640,1
@@ -379,9 +379,9 @@ HP,SBD,Wraps,M,110,Open,Georgios Konstantopoylos,107,190,180,-190,190,,135,130,1
 HP,SBD,Wraps,M,110,Open,Stayros Poniris,110,205,180,-195,205,,137.5,130,-137.5,137.5,,220,200,220,-235,,562.5,2
 HP,SBD,Raw,M,110,Masters,Petros Arkoydeas,109.8,255,245,255,-262.5,,125,120,125,-130,,240,235,240,-247.5,,620,1
 HP,SBD,Wraps,M,125,Teen,Dimitrios Mpalaxtaris,118,175,165,170,175,,100,100,-105,-110,,220,195,210,220,,495,1
-HP,SBD,Raw,M,125,Juniors,Eleytherios Xanas,114.7,200,,,200,,100,,100,,,190,,,190,,490,1
+HP,SBD,Raw,M,125,Juniors,Eleftherios Xanas,114.7,200,,,200,,100,,100,,,190,,,190,,490,1
 HP,SBD,Single-ply,M,125,Open,Athanasios Liouras,120,350,350,-370,,,220,210,220,,,350,330,350,-370,,920,1
-HP,SBD,Raw,M,125,Open,Eleytherios Xanas,114.7,200,170,185,200,,100,95,100,,,190,160,177.5,190,,490,1
+HP,SBD,Raw,M,125,Open,Eleftherios Xanas,114.7,200,170,185,200,,100,95,100,,,190,160,177.5,190,,490,1
 HP,SBD,Wraps,M,125,Open,Georgios Koystenis,121,,-155,-155,-160,,125,105,115,125,,195,185,195,-210,,,DQ
 HP,SBD,Raw,M,140+,Open,Georgios Antonakopoylos,155.2,210,180,195,210,,90,-70,80,90,,230,230,-235,,,530,2
 EPF,SBD,Raw,F,56,Masters,Mairi Tsimpi,56,160,135,150,160,,90,77.5,85,90,,150,135,145,150,,400,1
