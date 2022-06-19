@@ -182,13 +182,7 @@ fn test_old_redirects() {
         "/m/rps/1617"
     );
 
-    let response = client.get("/?fed=USPA").dispatch();
-    assert_eq!(response.status(), Status::PermanentRedirect);
-    assert_eq!(
-        response.headers().get_one("location").unwrap(),
-        "/rankings/uspa"
-    );
-
+    // 365Strong is the last federation using this link style.
     let response = client.get("/?fed=365Strong").dispatch();
     assert_eq!(response.status(), Status::PermanentRedirect);
     assert_eq!(
