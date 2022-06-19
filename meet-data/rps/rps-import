@@ -35,6 +35,9 @@ sed -i -e 's/,//g' original.xls
 # This creates original.csv.
 libreoffice --headless --convert-to csv original.xls
 
+# Remove NBSP
+sed -i -e 's/\xa0//g' original.csv
+
 # If CSV conversion completed successfully, remove the intermediary
 # files early to benefit terminal autocompletion.
 if [ -f original.csv ]; then
