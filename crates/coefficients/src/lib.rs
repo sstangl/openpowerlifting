@@ -25,40 +25,40 @@
 extern crate opltypes;
 
 mod ah;
-pub use crate::ah::ah;
+pub use ah::ah;
 
 mod dots;
-pub use crate::dots::dots;
+pub use dots::dots;
 
 mod glossbrenner;
-pub use crate::glossbrenner::glossbrenner;
+pub use glossbrenner::glossbrenner;
 
 mod goodlift;
-pub use crate::goodlift::goodlift;
+pub use goodlift::goodlift;
 
 mod hoffman;
-pub use crate::hoffman::hoffman;
+pub use hoffman::hoffman;
 
 mod ipf;
-pub use crate::ipf::ipf;
+pub use ipf::ipf;
 
 mod mcculloch;
-pub use crate::mcculloch::mcculloch;
+pub use mcculloch::mcculloch;
 
 mod nasa;
-pub use crate::nasa::nasa;
+pub use nasa::nasa;
 
 mod reshel;
-pub use crate::reshel::reshel;
+pub use reshel::reshel;
 
 mod schwartzmalone;
-pub use crate::schwartzmalone::schwartzmalone;
+pub use schwartzmalone::schwartzmalone;
 
 mod wilks;
-pub use crate::wilks::wilks;
+pub use wilks::wilks;
 
 mod wilks2020;
-pub use crate::wilks2020::wilks2020;
+pub use wilks2020::wilks2020;
 
 /// Multiply and add. On many CPUs, this is a single instruction.
 #[inline(always)]
