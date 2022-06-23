@@ -111,7 +111,7 @@ def getresults(soup):
             curr_csv.fieldnames += ['Place']
         elif h == 'name':
             curr_csv.fieldnames += ['Name']
-        elif h in ['born', 'year of birth']:
+        elif h in ['born', 'year of birth', 'birth year']:
             curr_csv.fieldnames += ['BirthYear']
         elif any(x in h for x in ['age', 'division', 'div', 'cat']):
             curr_csv.fieldnames += ['Division']
