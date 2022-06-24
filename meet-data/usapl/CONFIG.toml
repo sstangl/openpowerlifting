@@ -394,6 +394,10 @@
     mrpb = {name="MR-PB", min=0, max=999, sex="M", equipment="Raw", event="B"}
     frpb = {name="FR-PB", min=0, max=999, sex="F", equipment="Raw", event="B"}
 
+    # Pro.
+    mrpro = {name="MR-PRO", min=0, max=999, sex="M", equipment="Raw"}
+    frpro = {name="FR-PRO", min=0, max=999, sex="F", equipment="Raw"}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range=["2022-01-01","9999-01-01"]
