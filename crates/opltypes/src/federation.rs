@@ -380,6 +380,10 @@ pub enum Federation {
     #[strum(to_string = "Fedepotencia", serialize = "fedepotencia")]
     Fedepotencia,
 
+    /// Federación de Lifterspower de México A.C., WP.
+    #[strum(to_string = "FELIPOME", serialize = "felipome")]
+    FELIPOME,
+
     /// Federación Mexicana de Powerlifting A.C., IPF.
     #[strum(to_string = "FEMEPO", serialize = "femepo")]
     FEMEPO,
@@ -1239,6 +1243,11 @@ pub enum Federation {
     #[strum(to_string = "WP-China", serialize = "wp-china")]
     WPChina,
 
+    /// World Powerlifting India.
+    #[serde(rename = "WP-India")]
+    #[strum(to_string = "WP-India", serialize = "wp-india")]
+    WPIndia,
+
     /// World Powerlifting Nauru.
     #[serde(rename = "WP-Nauru")]
     #[strum(to_string = "WP-Nauru", serialize = "wp-nauru")]
@@ -1701,6 +1710,7 @@ impl Federation {
             Federation::FECAPOLIF => FULLY_TESTED,
             Federation::FECHIPO => FULLY_TESTED,
             Federation::Fedepotencia => FULLY_TESTED,
+            Federation::FELIPOME => FULLY_TESTED,
             Federation::FEMEPO => FULLY_TESTED,
             Federation::FEPOA => false,
             Federation::FESUPO => FULLY_TESTED,
@@ -1910,6 +1920,7 @@ impl Federation {
             Federation::WNPF => FULLY_TESTED,
             Federation::WP => FULLY_TESTED,
             Federation::WPChina => FULLY_TESTED,
+            Federation::WPIndia => FULLY_TESTED,
             Federation::WPNauru => FULLY_TESTED,
             Federation::WPNiue => FULLY_TESTED,
             Federation::WPUSA => FULLY_TESTED,
@@ -2072,6 +2083,7 @@ impl Federation {
             Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FECHIPO => Some(Country::Chile),
             Federation::Fedepotencia => Some(Country::Guatemala),
+            Federation::FELIPOME => Some(Country::Mexico),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
@@ -2274,6 +2286,7 @@ impl Federation {
             Federation::WelshPA => Some(Country::Wales),
             Federation::WP => None,
             Federation::WPChina => Some(Country::China),
+            Federation::WPIndia => Some(Country::India),
             Federation::WPNauru => Some(Country::Nauru),
             Federation::WPNiue => Some(Country::Niue),
             Federation::WPUSA => Some(Country::USA),
@@ -2476,6 +2489,7 @@ impl Federation {
             Federation::FECAPOLIF => Some(Federation::IPF),
             Federation::FECHIPO => Some(Federation::IPF),
             Federation::Fedepotencia => Some(Federation::IPF),
+            Federation::FELIPOME => Some(Federation::WP),
             Federation::FEMEPO => Some(Federation::IPF),
             Federation::FEPOA => Some(Federation::GPC),
             Federation::FESUPO => Some(Federation::IPF),
@@ -2721,6 +2735,7 @@ impl Federation {
             Federation::WelshPA => Some(Federation::IPF),
             Federation::WP => Some(Federation::WP),
             Federation::WPChina => Some(Federation::WP),
+            Federation::WPIndia => Some(Federation::WP),
             Federation::WPNauru => Some(Federation::WP),
             Federation::WPNiue => Some(Federation::WP),
             Federation::WPUSA => Some(Federation::WP),
@@ -2940,6 +2955,7 @@ impl Federation {
             Federation::FECAPOLIF => Federation::ipf_rules_on(date),
             Federation::FECHIPO => Federation::ipf_rules_on(date),
             Federation::Fedepotencia => Federation::ipf_rules_on(date),
+            Federation::FELIPOME => Federation::wp_rules_on(date),
             Federation::FEMEPO => Federation::ipf_rules_on(date),
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
@@ -3190,6 +3206,7 @@ impl Federation {
             Federation::WelshPA => Federation::ipf_rules_on(date),
             Federation::WP => Federation::wp_rules_on(date),
             Federation::WPChina => Federation::wp_rules_on(date),
+            Federation::WPIndia => Federation::wp_rules_on(date),
             Federation::WPNauru => Federation::wp_rules_on(date),
             Federation::WPNiue => Federation::wp_rules_on(date),
             Federation::WPUSA => Federation::wp_rules_on(date),

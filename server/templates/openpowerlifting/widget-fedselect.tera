@@ -74,7 +74,7 @@
   <option value="wabdl" {% if selection.federation == "WABDL" %}selected{% endif %}>WABDL - World Association of Bench Pressers and Deadlifters</option>
   <option value="warriorplf" {% if selection.federation == "WarriorPLF" %}selected{% endif %}>WarriorPLF - Warriors Powerlifting Federation</option>
   <option value="wnpf" {% if selection.federation == "WNPF" %}selected{% endif %}>WNPF - World Natural Powerlifting Federation</option>
-  <option value="wp-usa" {% if selection.federation == "WP-USA" %}selected{% endif %}>WP-USA - World Powerlifting USA</option>
+  <option value="wp-usa" {% if selection.federation == "WP-USA" %}selected{% endif %}>WP-USA - World Powerlifting USA [WP]</option>
   <option value="wrpf-usa" {% if selection.federation == "WRPF-USA" %}selected{% endif %}>WRPF USA</option>
   <option value="wrpf-usa-tested" {% if selection.federation == "WRPF-USA-Tested" %}selected{% endif %}>WRPF USA Tested</option>
   <option value="wuap-usa" {% if selection.federation == "WUAP-USA" %}selected{% endif %}>WUAP USA</option>
@@ -191,7 +191,7 @@
   <option value="chinapa" {% if selection.federation == "ChinaPA" %}selected{% endif %}>ChinaPA - Chinese Powerlifting Association [GPA/IPO]</option>
   <option value="htpl" {% if selection.federation == "HTPL" %}selected{% endif %}>HTPL - Hantang Powerlifting</option>
   <option value="ipl-china" {% if selection.federation == "IPL-China" %}selected{% endif %}>IPL-China - IPL China</option>
-  <option value="wp-china" {% if selection.federation == "WP-China" %}selected{% endif %}>WP-China - World Powerlifting China</option>
+  <option value="wp-china" {% if selection.federation == "WP-China" %}selected{% endif %}>WP-China - World Powerlifting China [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.colombia}}">
   <option value="all-colombia" {% if selection.federation == "AllColombia" %}selected{% endif %}>{{strings.selectors.fed.all_colombia}}</option>
@@ -281,6 +281,7 @@
 <optgroup label="{{strings.country.india}}">
   <option value="all-india" {% if selection.federation == "AllIndia" %}selected{% endif %}>{{strings.selectors.fed.all_india}}</option>
   <option value="pi" {% if selection.federation == "PI" %}selected{% endif %}>PI - Powerlifting India [IPF]</option>
+  <option value="wp-india" {% if selection.federation == "WP-India" %}selected{% endif %}>World Powerlifitng India [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.indonesia}}">
   <option value="all-indonesia" {% if selection.federation == "AllIndonesia" %}selected{% endif %}>{{strings.selectors.fed.all_indonesia}}</option>
@@ -359,6 +360,7 @@
   <option value="all-mexico" {% if selection.federation == "AllMexico" %}selected{% endif %}>{{strings.selectors.fed.all_mexico}}</option>
   <option value="femepo" {% if selection.federation == "FEMEPO" %}selected{% endif %}>FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF]</option>
   <option value="lmp" {% if selection.federation == "LMP" %}selected{% endif %}>LMP - Liga Mexicana de Powerlifting [IPL]</option>
+  <option value="felipome" {% if selection.federation == "FELIPOME" %}selected{% endif %}>Federación de Lifterspower de México [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.moldova}}">
   <option value="all-moldova" {% if selection.federation == "AllMoldova" %}selected{% endif %}>{{strings.selectors.fed.all_moldova}}</option>
@@ -380,11 +382,11 @@
   <option value="gpc-nz" {% if selection.federation == "GPC-NZ" %}selected{% endif %}>GPC-NZ - GPC New Zealand [GPC]</option>
   <option value="ipl-nz" {% if selection.federation == "IPL-NZ" %}selected{% endif %}>IPL-NZ - IPL New Zealand [IPL]</option>
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF - New Zealand Powerlifting Federation [IPF]</option>
-  <option value="wp-nz" {% if selection.federation == "WP-NZ" %}selected{% endif %}>WP-NZ - World Powerlifting NZ</option>
+  <option value="wp-nz" {% if selection.federation == "WP-NZ" %}selected{% endif %}>WP-NZ - World Powerlifting NZ [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.niue}}">
   <option value="all-niue" {% if selection.federation == "AllNiue" %}selected{% endif %}>{{strings.selectors.fed.all_niue}}</option>
-  <option value="wp-niue" {% if selection.federation == "WP-Niue" %}selected{% endif %}>WP-Niue - World Powerlifting Niue</option>
+  <option value="wp-niue" {% if selection.federation == "WP-Niue" %}selected{% endif %}>WP-Niue - World Powerlifting Niue [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.norway}}">
   <option value="all-norway" {% if selection.federation == "AllNorway" %}selected{% endif %}>{{strings.selectors.fed.all_norway}}</option>
