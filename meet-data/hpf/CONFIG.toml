@@ -56,3 +56,4 @@
     sex = "F"
 
 [exemptions]
+    1001 = ["ExemptWeightClassConsistency"] # Nonstandard women's weight classes
