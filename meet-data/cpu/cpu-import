@@ -19,6 +19,8 @@ except ImportError:
 
 
 def gethtml(url):
+    url = urllib.parse.urlparse(url)
+    url = url.scheme + "://" + url.netloc + urllib.parse.quote(url.path)
     with urllib.request.urlopen(url) as r:
         return r.read()
 

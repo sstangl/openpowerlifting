@@ -7,7 +7,7 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import os
 import sys
 import time
@@ -36,11 +36,11 @@ def color(s):
 
 
 def getpages(url, pagerange):
-    LOGGER.setLevel(logging.WARNING)
-    profile = webdriver.FirefoxProfile()
-    foptions = Options()
-    foptions.headless = True
-    driver = webdriver.Firefox(profile, options=foptions)
+    LOGGER.setLevel(logging.ERROR)
+    options = FirefoxOptions()
+    options.add_argument("--headless")
+
+    driver = webdriver.Firefox(options=options)
     driver.get(url)
 
     pages = []

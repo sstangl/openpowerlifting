@@ -12,9 +12,15 @@
 
 
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.common.by import By
 import sys
 import os
+import logging
+import time
 from os.path import join, realpath, dirname
+from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
     import oplprobe
@@ -30,19 +36,18 @@ FEDURL = "http://www.powerlifting.ca"
 # The CPU website annoyingly posts results on per-province pages,
 # so we have to scan them all individually.
 #
-# List from http://www.powerlifting.ca/cpu/index.php/contests/provincial-results
-# Without "www." to appease the Python style checker due to long strings.
+# List from http://www.powerlifting.ca/provincial-results
 PROVINCE_URLS = [
-    "http://powerlifting.ca/cpu/index.php/alberta",
-    "http://powerlifting.ca/cpu/index.php/british-columbia",
-    "http://powerlifting.ca/cpu/index.php/manitoba",
-    "http://powerlifting.ca/cpu/index.php/newfoundland",
-    "http://powerlifting.ca/cpu/index.php/new-brunswick",
-    "http://powerlifting.ca/cpu/index.php/nova-scotia",
-    "http://powerlifting.ca/cpu/index.php/ontario",
-    "http://powerlifting.ca/cpu/index.php/prince-edward-island",
-    "http://powerlifting.ca/cpu/index.php/quebec",
-    "http://powerlifting.ca/cpu/index.php/saskatchewan",
+    "https://www.canadianpowerliftingunion.com/alberta-results",
+    "https://www.canadianpowerliftingunion.com/british-columbia-results",
+    "https://www.canadianpowerliftingunion.com/manitoba-results",
+    "https://www.canadianpowerliftingunion.com/newfoundland-results",
+    "https://www.canadianpowerliftingunion.com/new-brunswick-results",
+    "https://www.canadianpowerliftingunion.com/nova-scotia-results",
+    "https://www.canadianpowerliftingunion.com/ontario-results",
+    "https://www.canadianpowerliftingunion.com/prince-edward-island-results",
+    "https://www.canadianpowerliftingunion.com/quebec-results",
+    "https://www.canadianpowerliftingunion.com/saskatchewan-results",
     "https://www.canadianpowerliftingunion.com/national-results",
     "https://www.canadianpowerliftingunion.com/regional-results",
 ]
@@ -57,14 +62,32 @@ def color(s):
     return "\033[1;31m" + s + "\033[0;m"
 
 
-def getmeetlist(html):
+def getmeetlist(meetlist_url):
+    LOGGER.setLevel(logging.ERROR)
+    options = FirefoxOptions()
+    options.add_argument("--headless")
+
+    driver = webdriver.Firefox(options=options)
+
+    driver.get(meetlist_url)
+    time.sleep(2)
+
+    iframe = driver.find_element(By.NAME, 'htmlComp-iframe')
+
+    driver.switch_to.frame(iframe)
+    time.sleep(2)
+
+    html = driver.page_source
+
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
+
     for a in soup.find_all("a"):
 
         url = a['href']
-        if 'contest-results' not in url:
+
+        if 'contest_results' not in url:
             continue
 
         # This happens for national results, like Central Canadians.
@@ -78,12 +101,12 @@ def getmeetlist(html):
             url = url.replace('/joomla30/', '/cpu/')
 
         # Some URLs are unfortunately relative to an index.php.
-        if url.startswith("contest-results?"):
-            url = "http://powerlifting.ca/cpu/index.php/" + url
+        if url.startswith("contest_results?"):
+            url = "https://www.powerlifting.ca/lifter_database/external/" + url
 
         if url.startswith("../../contest-results?"):
             url = url.replace(
-                "../../", "http://powerlifting.ca/cpu/index.php/")
+                "../../", "https://www.powerlifting.ca/lifter_database/external/")
 
         if url not in urls:
             urls.append(url)
@@ -100,8 +123,7 @@ def main():
     # meetlist = meetlist + getmeetlist(html)
 
     for url in PROVINCE_URLS:
-        html = oplprobe.gethtml(url)
-        meetlist = meetlist + getmeetlist(html)
+        meetlist = meetlist + getmeetlist(url)
 
     entered = oplprobe.getenteredurls(FEDDIR)
 
@@ -109,7 +131,17 @@ def main():
     for m in list(entered):
         if "/lifter_database/contest_results.php?" in m:
             url_from = "/lifter_database/contest_results.php?"
-            url_to = "/cpu/index.php/contest-results?"
+            url_to = "/contest-results?"
+            entered.add(m.replace(url_from, url_to))
+
+        if "/cpu/index.php/contest-results?" in m:
+            url_from = "/cpu/index.php/contest-results?"
+            url_to = "/lifter_database/external/contest_results.php?"
+            entered.add(m.replace(url_from, url_to))
+
+        if "/lifter_database/contest_results.php?" in m:
+            url_from = "/lifter_database/contest_results.php?"
+            url_to = "/lifter_database/external/contest_results.php?"
             entered.add(m.replace(url_from, url_to))
 
     unentered = oplprobe.getunenteredurls(meetlist, entered)
