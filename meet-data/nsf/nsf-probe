@@ -17,9 +17,8 @@ except ImportError:
     import oplprobe
 
 
-URLS = ["http://styrkeloft.no/stevner/?page=protokoller"
-        "https://styrkeloft.no/stevner/?page=protokoller&aar=2014"]
-BASEURL = "http://styrkeloft.no/"
+URLS = ["https://styrkeloft.no/stevner/?page=protokoller"]
+BASEURL = "https://styrkeloft.no/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -38,6 +37,7 @@ def getmeetlist(html):
     urls = []
     for a in soup.find_all('a'):
         url = a['href']
+
 
         # Result visualization.
         if 'page=protokoll_vis' not in url:
