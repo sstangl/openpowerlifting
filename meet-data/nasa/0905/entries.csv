@@ -14,7 +14,7 @@ Place,WeightClassKg,Name,State,Age,BodyweightKg,Best3BenchKg,Best3DeadliftKg,Tot
 6,110,Joe Rocker,TX,41,104.78,197.5,,197.5,B,Raw,M,bpopen
 7,140,Joseph Behari,OH,40,127.37,213.5,,213.5,B,Raw,M,bpopen
 8,100,Mike Bishop,TN,35,92.17,182.5,,182.5,B,Raw,M,bpopen
-9,125,Jason Smith,AR,30,110.5,198.5,,198.5,B,Raw,M,bpopen
+9,125,Jason Smith #6,AR,30,110.5,198.5,,198.5,B,Raw,M,bpopen
 10,140,Desmond Phillips,OH,42,132.4,205,,205,B,Raw,M,bpopen
 11,140,Chris Spirrison,TX,43,133.99,195,,195,B,Raw,M,bpopen
 12,100,Neil Eddins,TX,46,99.61,167.5,,167.5,B,Raw,M,bpopen
@@ -24,7 +24,7 @@ Place,WeightClassKg,Name,State,Age,BodyweightKg,Best3BenchKg,Best3DeadliftKg,Tot
 16,90,Ted Carder,KS,39,87.91,147.5,,147.5,B,Raw,M,bpopen
 17,125,Jeremy Foos,KS,33,114.44,165,,165,B,Raw,M,bpopen
 18,75,Doug Holland,LA,49,68.54,92.5,,92.5,B,Raw,M,bpopen
-1,125,Jason Smith,AR,30,110.5,,320,320,D,Raw,M,dlopen
+1,125,Jason Smith #6,AR,30,110.5,,320,320,D,Raw,M,dlopen
 2,100,Mike Bishop,TN,35,92.17,,290,290,D,Raw,M,dlopen
 3,140,Desmond Phillips,OH,42,132.4,,337.5,337.5,D,Raw,M,dlopen
 4,110,Tyson Meyers,KS,30,106.59,,302.5,302.5,D,Raw,M,dlopen
@@ -38,7 +38,7 @@ Place,WeightClassKg,Name,State,Age,BodyweightKg,Best3BenchKg,Best3DeadliftKg,Tot
 12,125,Jeremy Foos,KS,33,114.44,,250,250,D,Raw,M,dlopen
 13,75,Doug Holland,LA,49,68.54,,182.5,182.5,D,Raw,M,dlopen
 1,100,Mike Bishop,TN,35,92.17,182.5,290,472.5,BD,Raw,M,open
-2,125,Jason Smith,AR,30,110.5,198.5,320,518.5,BD,Raw,M,open
+2,125,Jason Smith #6,AR,30,110.5,198.5,320,518.5,BD,Raw,M,open
 3,110,Cyrus Ford,CO,32,100.43,210,270,480,BD,Raw,M,open
 4,110,Tyson Meyers,KS,30,106.59,202.5,302.5,505,BD,Raw,M,open
 5,125,Dane Harris,TX,43,114.99,211,292.5,503.5,BD,Raw,M,open
