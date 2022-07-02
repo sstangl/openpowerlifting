@@ -17,7 +17,7 @@ REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 if [ "$1" != "original.xls" ]; then
 	cp -f "$1" original.xls
 fi
-libreoffice --headless --convert-to csv original.xls
+LANG=en_US.UTF-8 libreoffice --headless --convert-to csv original.xls
 rm -f original.txt
 
 # Parse the CSV to our entries.csv format.
