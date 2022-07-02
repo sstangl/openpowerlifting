@@ -38,7 +38,6 @@ def getmeetlist(html):
     for a in soup.find_all('a'):
         url = a['href']
 
-
         # Result visualization.
         if 'page=protokoll_vis' not in url:
             continue
