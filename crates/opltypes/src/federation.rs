@@ -1372,6 +1372,11 @@ pub enum Federation {
     #[strum(to_string = "WPC-SA", serialize = "wpc-sa")]
     WPCSA,
 
+    /// Slovakian WPC affiliate.
+    #[serde(rename = "WPC-SVK")]
+    #[strum(to_string = "WPC-SVK", serialize = "wpc-svk")]
+    WPCSVK,
+
     /// Ukrainian WPC affiliate.
     #[serde(rename = "WPC-UKR")]
     #[strum(to_string = "WPC-UKR", serialize = "wpc-ukr")]
@@ -1947,6 +1952,7 @@ impl Federation {
             Federation::WPCPoland => false,
             Federation::WPCRUS => false,
             Federation::WPCSA => false,
+            Federation::WPCSVK => false,
             Federation::WPCUKR => false,
             Federation::WPF => false,
             Federation::WPFG => false,
@@ -2312,6 +2318,7 @@ impl Federation {
             Federation::WPCPoland => Some(Country::Poland),
             Federation::WPCRUS => Some(Country::Russia),
             Federation::WPCSA => Some(Country::SouthAfrica),
+            Federation::WPCSVK => Some(Country::Slovakia),
             Federation::WPCUKR => Some(Country::Ukraine),
             Federation::WPF => None,
             Federation::WPFG => None,
@@ -2761,6 +2768,7 @@ impl Federation {
             Federation::WPCPoland => Some(Federation::WPC),
             Federation::WPCRUS => Some(Federation::WPC),
             Federation::WPCSA => Some(Federation::WPC),
+            Federation::WPCSVK => Some(Federation::WPC),
             Federation::WPCUKR => Some(Federation::WPC),
             Federation::WPF => None,
             Federation::WPFG => None,
@@ -3232,6 +3240,7 @@ impl Federation {
             Federation::WPCPoland => PointsSystem::Glossbrenner,
             Federation::WPCRUS => PointsSystem::Glossbrenner,
             Federation::WPCSA => PointsSystem::Glossbrenner,
+            Federation::WPCSVK => PointsSystem::Glossbrenner,
             Federation::WPCUKR => PointsSystem::Glossbrenner,
             Federation::WPF => PointsSystem::Wilks,
             Federation::WPFG => PointsSystem::Wilks,
