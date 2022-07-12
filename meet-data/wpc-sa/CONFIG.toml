@@ -38,6 +38,9 @@
     mm9r = {name ="MM9", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
     fm9r = {name ="FM9", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
 
+    ms = {name ="MS", min=33, max=39, sex="M", equipment=["Raw","Wraps"]}
+    fs = {name ="FS", min=33, max=39, sex="F", equipment=["Raw","Wraps"]}
+
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","125+","140+"]
     date_range = ["2016-01-01","9999-01-01"]
