@@ -108,6 +108,9 @@ fn process_json(json_file: PathBuf) -> String {
 }
 
 fn main() {
+    // Rerun the build.rs script only if translations change, not if src/ changes.
+    println!("cargo:rerun-if-changed=translations/");
+
     let out_dir = env::var_os("OUT_DIR").unwrap();
 
     // Cargo always sets the current directory to the crate root.
