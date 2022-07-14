@@ -1,19 +1,33 @@
 # Configuration for PZKFiTS.
 
 [divisions]
-    open = {name = "Seniorki",min=0,max=999}
-    juniors16 = {name = "Juniorki do lat 16",min=0,max=15.5}
-    juniors18 = {name = "Juniorki do lat 18",min=0,max=27.5}
-    juniors20 = {name = "Juniorki do lat 20",min=0,max=19.5}
-    juniors23 = {name = "Juniorki do lat 23",min=0,max=22.5}
-    masters4049 = {name = "Weteranki 40-49 lat",min=39.5,max=48.5}
-    masters5059 = {name = "Weteranki 50-59 lat",min=49.5,max=58.5}
-    masters6069 = {name = "Weteranki 60-69 lat",min=59.5,max=68.5}
-    masters70p = {name = "Weteranki +70 lat",min=69.5,max=999}
+    open_f = {name = "Seniorki",min=0,max=999,sex='F'}
+    juniors16_f = {name = "Juniorki do lat 16",min=0,max=15.5,sex='F'}
+    juniors18_f = {name = "Juniorki do lat 18",min=0,max=27.5,sex='F'}
+    juniors20_f = {name = "Juniorki do lat 20",min=0,max=19.5,sex='F'}
+    juniors23_f = {name = "Juniorki do lat 23",min=0,max=22.5,sex='F'}
+    masters4049_f = {name = "Weteranki 40-49 lat",min=39.5,max=48.5,sex='F'}
+    masters5059_f = {name = "Weteranki 50-59 lat",min=49.5,max=58.5,sex='F'}
+    masters6069_f = {name = "Weteranki 60-69 lat",min=59.5,max=68.5,sex='F'}
+    masters70p_f = {name = "Weteranki +70 lat",min=69.5,max=999,sex='F'}
 
-    masters40p = {name = "Weteranki +40 lat",min=39.5,max=999}
-    masters50p = {name = "Weteranki +50 lat",min=49.5,max=999}
-    masters = {name = "Weteranki",min=39.5,max=999}
+    masters40p_f = {name = "Weteranki +40 lat",min=39.5,max=999,sex='F'}
+    masters50p_f = {name = "Weteranki +50 lat",min=49.5,max=999,sex='F'}
+    masters_f = {name = "Weteranki",min=39.5,max=999,sex='F'}
+
+    open_m = {name = "Seniorzy",min=0,max=999,sex='M'}
+    juniors16_m = {name = "Juniorzy do lat 16",min=0,max=15.5,sex='M'}
+    juniors18_m = {name = "Juniorzy do lat 18",min=0,max=27.5,sex='M'}
+    juniors20_m = {name = "Juniorzy do lat 20",min=0,max=19.5,sex='M'}
+    juniors23_m = {name = "Juniorzy do lat 23",min=0,max=22.5,sex='M'}
+    masters4049_m = {name = "Weterani 40-49 lat",min=39.5,max=48.5,sex='M'}
+    masters5059_m = {name = "Weterani 50-59 lat",min=49.5,max=58.5,sex='M'}
+    masters6069_m = {name = "Weterani 60-69 lat",min=59.5,max=68.5,sex='M'}
+    masters70p_m = {name = "Weterani +70 lat",min=69.5,max=999,sex='M'}
+
+    masters40p_m = {name = "Weterani +40 lat",min=39.5,max=999,sex='M'}
+    masters50p_m = {name = "Weterani +50 lat",min=49.5,max=999,sex='M'}
+    masters = {name = "Weterani",min=39.5,max=999}
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -33,7 +47,7 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniorki do lat 23","Juniorki do lat 20","Juniorki do lat 18","Juniorki do lat 16"]
+    divisions = ["Juniorzy do lat 23","Juniorzy do lat 20","Juniorzy do lat 18","Juniorzy do lat 16"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
