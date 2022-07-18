@@ -19,8 +19,6 @@ except ImportError:
 
 
 def gethtml(url):
-    url = urllib.parse.urlparse(url)
-    url = url.scheme + "://" + url.netloc + urllib.parse.quote(url.path)
     with urllib.request.urlopen(url) as r:
         return r.read()
 
@@ -47,6 +45,10 @@ def parsehtml(html):
     # The HTML is malformed. We do some spot corrections first.
     html = html.replace("<font size='2'>", "")
     html = html.replace("NAME</td>", "NAME")
+
+    html = html.replace('">\n</div>', '"\\>\n</div>')
+
+    html = html.replace('</table></font>', '</table>')
 
     soup = BeautifulSoup(html, 'html.parser')
     table = soup.find('table', {'id': 'customers'})
