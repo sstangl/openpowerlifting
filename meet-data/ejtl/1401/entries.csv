@@ -1,66 +1,102 @@
-Place,Name,BirthYear,Team,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Division
-1,Mark Piirits,1995,Tartu,59,58.15,110,55,130,295,SBD,Single-ply,M,Open
-2,Cristian Sepp,1995,Märjamaa,59,57.5,80,55,115,250,SBD,Single-ply,M,Open
-1,Peep Päll,1970,TÜ ASK,66,65.75,200,135,235,570,SBD,Single-ply,M,Open
-2,Karl Michael Valk,1994,Reval,66,65.4,140,115,192.5,447.5,SBD,Single-ply,M,Open
-3,Karl Teesalu,1996,Tartu,66,65.1,120,122.5,140,382.5,SBD,Single-ply,M,Open
-4,Janar Unt,1994,Tartu,66,63.35,135,75,152.5,362.5,SBD,Single-ply,M,Open
-5,Kristo Kaljumaa,1999,Märjamaa,66,64.2,115,97.5,140,352.5,SBD,Single-ply,M,Open
-6,Karl-Gustav Muhuste,1996,Märjamaa,66,63.1,90,60,120,270,SBD,Single-ply,M,Open
-7,Andreas Lanno,1997,Reval,66,64.3,92.5,62.5,95,250,SBD,Single-ply,M,Open
-1,Gunnar Kuusnõmm,1986,Sparta,74,73.6,240,210,225,675,SBD,Single-ply,M,Open
-2,Harri Olak,1992,TÜ ASK,74,73.9,200,170,275,645,SBD,Single-ply,M,Open
-3,Allan Nikopensius,1987,TÜ ASK,74,72.95,170,140,242.5,552.5,SBD,Single-ply,M,Open
-4,Jürgen Leesmann,1993,Reval,74,73.55,165,125,180,470,SBD,Single-ply,M,Open
-5,Marko Lind,1995,Tartu,74,71.8,170,105,192.5,467.5,SBD,Single-ply,M,Open
-6,Aleksander Gertsjak,1995,Märjamaa,74,74,170,115,182.5,467.5,SBD,Single-ply,M,Open
-7,Ahti Prits,1964,Sparta,74,73.4,160,107.5,182.5,450,SBD,Single-ply,M,Open
-8,Lauri Paat,1995,TÜ ASK,74,73.95,140,107.5,180,427.5,SBD,Single-ply,M,Open
-9,Mart Lodi,1998,TÜ ASK,74,69.3,140,90,170,400,SBD,Single-ply,M,Open
-10,Toomas Lindjärv,1996,Märjamaa,74,72.9,85,77.5,137.5,300,SBD,Single-ply,M,Open
-1,Rait Veski,1983,Sõmerpalu,83,81.85,230,175,290.5,695.5,SBD,Single-ply,M,Open
-2,Aimar Kuusnömm,1990,Sparta,83,81.5,245,180,270,695,SBD,Single-ply,M,Open
-3,Tiit Saarma,1990,Sparta,83,80.7,225,160,280,665,SBD,Single-ply,M,Open
-4,Andri Eric Külaviir,1998,Reval,83,82,220,122.5,225,567.5,SBD,Single-ply,M,Open
-5,Rauno Kõlu,1993,Rakke,83,82.05,217.5,127.5,215,560,SBD,Single-ply,M,Open
-6,Aleksander Volmers,1995,Märjamaa,83,81.7,180,140,230,550,SBD,Single-ply,M,Open
-7,Agris Reppo,1996,TÜ ASK,83,81.65,175,137.5,195,507.5,SBD,Single-ply,M,Open
-8,Erkki Kuusk,1984,Sparta,83,78,142.5,90,180,412.5,SBD,Single-ply,M,Open
-9,Oskar Kobar,1997,TÜ ASK,83,74.45,140,85,170,395,SBD,Single-ply,M,Open
-10,Rainer Sauendi,1997,Tartu,83,77.15,115,70,125,310,SBD,Single-ply,M,Open
-DQ,Joonas Tamm,1993,Sparta,83,79.85,,150,215,,SBD,Single-ply,M,Open
-1,Siim Raja,1991,TÜ ASK,93,91.85,280,190,295.5,765.5,SBD,Single-ply,M,Open
-2,Siim Sammalkivi,1987,TÜ ASK,93,90.75,285,192.5,275,752.5,SBD,Single-ply,M,Open
-3,Reimo Roopärg,1993,Sparta,93,91.3,265,180,255,700,SBD,Single-ply,M,Open
-4,Tönis Holmberg,1995,Märjamaa,93,89.8,240,140,260,640,SBD,Single-ply,M,Open
-5,Siim Salin,1995,Kärdla,93,89,185,110,217.5,512.5,SBD,Single-ply,M,Open
-6,Raimond Pääru,1996,Reval,93,91.2,175,145,190,510,SBD,Single-ply,M,Open
-7,Kristjan Ilves,1991,TÜ ASK,93,89,170,120,190,480,SBD,Single-ply,M,Open
-8,Ermo Helliste,1995,Märjamaa,93,85.55,130,120,170,420,SBD,Single-ply,M,Open
-1,Alex-Edward Raus,1992,TÜ ASK,105,103.95,387.5,257.5,345,990,SBD,Single-ply,M,Open
-2,Rait Sagor,1990,Sparta,105,105,355,255,360,970,SBD,Single-ply,M,Open
-3,Erkki Hirsnik,1982,TÜ ASK,105,101.8,320,210,340,870,SBD,Single-ply,M,Open
-4,Marko Mumm,1988,TÜ ASK,105,101.45,227.5,227.5,270,725,SBD,Single-ply,M,Open
-5,Andres Külaviir,1973,Reval,105,98.75,242.5,192.5,255,690,SBD,Single-ply,M,Open
-6,Jevgeni Jablokov,1988,Reval,105,100.75,245,190,250,685,SBD,Single-ply,M,Open
-7,Risto Sappinen,1976,Sparta,105,103.6,210,170,255,635,SBD,Single-ply,M,Open
-8,Urmo Paju,1996,Tartu,105,98,160,82.5,180,422.5,SBD,Single-ply,M,Open
-9,Kaspar Sale,1997,Märjamaa,105,95.4,100,80,150,330,SBD,Single-ply,M,Open
-DQ,Märten Osijärv,1984,Tartu,105,94,,130,222.5,,SBD,Single-ply,M,Open
-DQ,Margus Silbaum,1976,Sparta,105,94.7,345,,350,,SBD,Single-ply,M,Open
-1,Elar Kraav,1987,TÜ ASK,120,115.75,350.5,225,360.5,936,SBD,Single-ply,M,Open
-2,Argo Erit,1986,Sparta,120,105.3,240,200,320,760,SBD,Single-ply,M,Open
-3,Martin Vahtramäe,1993,Reval,120,119.55,240,205,250,695,SBD,Single-ply,M,Open
-4,Robin Sulg,1996,Reval,120,114.1,175,127.5,215,517.5,SBD,Single-ply,M,Open
-1,Siim Rast,1988,Reval,120+,179.85,375,285,325,985,SBD,Single-ply,M,Open
-2,Kaur-Mikk Pehme,1988,TÜ ASK,120+,126.6,265,210,260,735,SBD,Single-ply,M,Open
-3,Henry Piralli,1992,Reval,120+,122.95,225,180,260,665,SBD,Single-ply,M,Open
-DQ,Günter Koovit,1976,Reval,120+,127.75,270,,,,SBD,Single-ply,M,Open
-1,Monika Aus,1971,Sparta,47,46.25,106,55,141,302,SBD,Single-ply,F,Open
-1,Eva Kallas,1988,Sparta,52,51.7,60,42.5,95,197.5,SBD,Single-ply,F,Open
-1,Marianna Bogdanova,1983,TÜ ASK,57,55.3,150,75,170,395,SBD,Single-ply,F,Open
-1,Siret Sügis,1972,TÜ ASK,63,62.1,120,70,162.5,352.5,SBD,Single-ply,F,Open
-1,Laura Laan,1987,Reval,72,71.5,177.5,101,172.5,451,SBD,Single-ply,F,Open
-2,Elise Luik,1996,Tartu,72,70.8,100,47.5,102.5,250,SBD,Single-ply,F,Open
-3,Viktoria Zubkova,1989,Tallinn,72,69.7,75,45,95,215,SBD,Single-ply,F,Open
-1,Johanna Lepp,1989,TÜ ASK,84,75.15,125,102.5,165,392.5,SBD,Single-ply,F,Open
+Name,BirthYear,Team,WeightClassKg,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Division,Place
+Mark Piirits,1995,Tartu,59,58.15,110,55,130,295,SBD,Single-ply,M,Open,1
+Cristian Sepp,1995,Märjamaa,59,57.5,80,55,115,250,SBD,Single-ply,M,Open,2
+Peep Päll,1970,TÜ ASK,66,65.75,200,135,235,570,SBD,Single-ply,M,Open,1
+Karl Michael Valk,1994,Reval,66,65.4,140,115,192.5,447.5,SBD,Single-ply,M,Open,2
+Karl Teesalu,1996,Tartu,66,65.1,120,122.5,140,382.5,SBD,Single-ply,M,Open,3
+Janar Unt,1994,Tartu,66,63.35,135,75,152.5,362.5,SBD,Single-ply,M,Open,4
+Kristo Kaljumaa,1999,Märjamaa,66,64.2,115,97.5,140,352.5,SBD,Single-ply,M,Open,5
+Karl-Gustav Muhuste,1996,Märjamaa,66,63.1,90,60,120,270,SBD,Single-ply,M,Open,6
+Andreas Lanno,1997,Reval,66,64.3,92.5,62.5,95,250,SBD,Single-ply,M,Open,7
+Gunnar Kuusnõmm,1986,Sparta,74,73.6,240,210,225,675,SBD,Single-ply,M,Open,1
+Harri Olak,1992,TÜ ASK,74,73.9,200,170,275,645,SBD,Single-ply,M,Open,2
+Allan Nikopensius,1987,TÜ ASK,74,72.95,170,140,242.5,552.5,SBD,Single-ply,M,Open,3
+Jürgen Leesmann,1993,Reval,74,73.55,165,125,180,470,SBD,Single-ply,M,Open,4
+Marko Lind,1995,Tartu,74,71.8,170,105,192.5,467.5,SBD,Single-ply,M,Open,5
+Aleksander Gertsjak,1995,Märjamaa,74,74,170,115,182.5,467.5,SBD,Single-ply,M,Open,6
+Ahti Prits,1964,Sparta,74,73.4,160,107.5,182.5,450,SBD,Single-ply,M,Open,7
+Lauri Paat,1995,TÜ ASK,74,73.95,140,107.5,180,427.5,SBD,Single-ply,M,Open,8
+Mart Lodi,1998,TÜ ASK,74,69.3,140,90,170,400,SBD,Single-ply,M,Open,9
+Toomas Lindjärv,1996,Märjamaa,74,72.9,85,77.5,137.5,300,SBD,Single-ply,M,Open,10
+Rait Veski,1983,Sõmerpalu,83,81.85,230,175,290.5,695.5,SBD,Single-ply,M,Open,1
+Aimar Kuusnömm,1990,Sparta,83,81.5,245,180,270,695,SBD,Single-ply,M,Open,2
+Tiit Saarma,1990,Sparta,83,80.7,225,160,280,665,SBD,Single-ply,M,Open,3
+Andri Eric Külaviir,1998,Reval,83,82,220,122.5,225,567.5,SBD,Single-ply,M,Open,4
+Rauno Kõlu,1993,Rakke,83,82.05,217.5,127.5,215,560,SBD,Single-ply,M,Open,5
+Aleksander Volmers,1995,Märjamaa,83,81.7,180,140,230,550,SBD,Single-ply,M,Open,6
+Agris Reppo,1996,TÜ ASK,83,81.65,175,137.5,195,507.5,SBD,Single-ply,M,Open,7
+Erkki Kuusk,1984,Sparta,83,78,142.5,90,180,412.5,SBD,Single-ply,M,Open,8
+Oskar Kobar,1997,TÜ ASK,83,74.45,140,85,170,395,SBD,Single-ply,M,Open,9
+Rainer Sauendi,1997,Tartu,83,77.15,115,70,125,310,SBD,Single-ply,M,Open,10
+Joonas Tamm,1993,Sparta,83,79.85,,150,215,,SBD,Single-ply,M,Open,DQ
+Siim Raja,1991,TÜ ASK,93,91.85,280,190,295.5,765.5,SBD,Single-ply,M,Open,1
+Siim Sammalkivi,1987,TÜ ASK,93,90.75,285,192.5,275,752.5,SBD,Single-ply,M,Open,2
+Reimo Roopärg,1993,Sparta,93,91.3,265,180,255,700,SBD,Single-ply,M,Open,3
+Tönis Holmberg,1995,Märjamaa,93,89.8,240,140,260,640,SBD,Single-ply,M,Open,4
+Siim Salin,1995,Kärdla,93,89,185,110,217.5,512.5,SBD,Single-ply,M,Open,5
+Raimond Pääru,1996,Reval,93,91.2,175,145,190,510,SBD,Single-ply,M,Open,6
+Kristjan Ilves,1991,TÜ ASK,93,89,170,120,190,480,SBD,Single-ply,M,Open,7
+Ermo Helliste,1995,Märjamaa,93,85.55,130,120,170,420,SBD,Single-ply,M,Open,8
+Alex-Edward Raus,1992,TÜ ASK,105,103.95,387.5,257.5,345,990,SBD,Single-ply,M,Open,1
+Rait Sagor,1990,Sparta,105,105,355,255,360,970,SBD,Single-ply,M,Open,2
+Erkki Hirsnik,1982,TÜ ASK,105,101.8,320,210,340,870,SBD,Single-ply,M,Open,3
+Marko Mumm,1988,TÜ ASK,105,101.45,227.5,227.5,270,725,SBD,Single-ply,M,Open,4
+Andres Külaviir,1973,Reval,105,98.75,242.5,192.5,255,690,SBD,Single-ply,M,Open,5
+Jevgeni Jablokov,1988,Reval,105,100.75,245,190,250,685,SBD,Single-ply,M,Open,6
+Risto Sappinen,1976,Sparta,105,103.6,210,170,255,635,SBD,Single-ply,M,Open,7
+Urmo Paju,1996,Tartu,105,98,160,82.5,180,422.5,SBD,Single-ply,M,Open,8
+Kaspar Sale,1997,Märjamaa,105,95.4,100,80,150,330,SBD,Single-ply,M,Open,9
+Märten Osijärv,1984,Tartu,105,94,,130,222.5,,SBD,Single-ply,M,Open,DQ
+Margus Silbaum,1976,Sparta,105,94.7,345,,350,,SBD,Single-ply,M,Open,DQ
+Elar Kraav,1987,TÜ ASK,120,115.75,350.5,225,360.5,936,SBD,Single-ply,M,Open,1
+Argo Erit,1986,Sparta,120,105.3,240,200,320,760,SBD,Single-ply,M,Open,2
+Martin Vahtramäe,1993,Reval,120,119.55,240,205,250,695,SBD,Single-ply,M,Open,3
+Robin Sulg,1996,Reval,120,114.1,175,127.5,215,517.5,SBD,Single-ply,M,Open,4
+Siim Rast,1988,Reval,120+,179.85,375,285,325,985,SBD,Single-ply,M,Open,1
+Kaur-Mikk Pehme,1988,TÜ ASK,120+,126.6,265,210,260,735,SBD,Single-ply,M,Open,2
+Henry Piralli,1992,Reval,120+,122.95,225,180,260,665,SBD,Single-ply,M,Open,3
+Günter Koovit,1976,Reval,120+,127.75,270,,,,SBD,Single-ply,M,Open,DQ
+Monika Aus,1971,Sparta,47,46.25,106,55,141,302,SBD,Single-ply,F,Open,1
+Eva Kallas,1988,Sparta,52,51.7,60,42.5,95,197.5,SBD,Single-ply,F,Open,1
+Marianna Bogdanova,1983,TÜ ASK,57,55.3,150,75,170,395,SBD,Single-ply,F,Open,1
+Siret Sügis,1972,TÜ ASK,63,62.1,120,70,162.5,352.5,SBD,Single-ply,F,Open,1
+Laura Laan,1987,Reval,72,71.5,177.5,101,172.5,451,SBD,Single-ply,F,Open,1
+Elise Luik,1996,Tartu,72,70.8,100,47.5,102.5,250,SBD,Single-ply,F,Open,2
+Viktoria Zubkova,1989,Tallinn,72,69.7,75,45,95,215,SBD,Single-ply,F,Open,3
+Johanna Lepp,1989,TÜ ASK,84,75.15,125,102.5,165,392.5,SBD,Single-ply,F,Open,1
+Karl Teesalu,1996,Tartu,66,65.1,120,122.5,140,382.5,SBD,Single-ply,M,Sub-Juniors,1
+Kristo Kaljumaa,1999,Märjamaa,66,64.2,115,97.5,140,352.5,SBD,Single-ply,M,Sub-Juniors,2
+Karl-Gustav Muhuste,1996,Märjamaa,66,63.1,90,60,120,270,SBD,Single-ply,M,Sub-Juniors,3
+Andreas Lanno,1997,Reval,66,64.3,92.5,62.5,95,250,SBD,Single-ply,M,Sub-Juniors,4
+Lauri Paat,1995,TÜ ASK,74,73.95,140,107.5,180,427.5,SBD,Single-ply,M,Sub-Juniors,1
+Mart Lodi,1998,TÜ ASK,74,69.3,140,90,170,400,SBD,Single-ply,M,Sub-Juniors,2
+Toomas Lindjärv,1996,Märjamaa,74,72.9,85,77.5,137.5,300,SBD,Single-ply,M,Sub-Juniors,3
+Andri Eric Külaviir,1998,Reval,83,82,220,122.5,225,567.5,SBD,Single-ply,M,Sub-Juniors,1
+Agris Reppo,1996,TÜ ASK,83,81.65,175,137.5,195,507.5,SBD,Single-ply,M,Sub-Juniors,2
+Oskar Kobar,1997,TÜ ASK,83,74.45,140,85,170,395,SBD,Single-ply,M,Sub-Juniors,3
+Rainer Sauendi,1997,Tartu,83,77.15,115,70,125,310,SBD,Single-ply,M,Sub-Juniors,4
+Raimond Pääru,1996,Reval,93,91.2,175,145,190,510,SBD,Single-ply,M,Sub-Juniors,1
+Urmo Paju,1996,Tartu,105,98,160,82.5,180,422.5,SBD,Single-ply,M,Sub-Juniors,1
+Kaspar Sale,1997,Märjamaa,105,95.4,100,80,150,330,SBD,Single-ply,M,Sub-Juniors,2
+Robin Sulg,1996,Reval,120,114.1,175,127.5,215,517.5,SBD,Single-ply,M,Sub-Juniors,1
+Elise Luik,1996,Tartu,72,70.8,100,47.5,102.5,250,SBD,Single-ply,F,Sub-Juniors,1
+Mark Piirits,1995,Tartu,59,58.15,110,55,130,295,SBD,Single-ply,M,Juniors,1
+Cristian Sepp,1995,Märjamaa,59,57.5,80,55,115,250,SBD,Single-ply,M,Juniors,2
+Karl Michael Valk,1994,Reval,66,65.4,140,115,192.5,447.5,SBD,Single-ply,M,Juniors,1
+Janar Unt,1994,Tartu,66,63.35,135,75,152.5,362.5,SBD,Single-ply,M,Juniors,2
+Harri Olak,1992,TÜ ASK,74,73.9,200,170,275,645,SBD,Single-ply,M,Juniors,1
+Jürgen Leesmann,1993,Reval,74,73.55,165,125,180,470,SBD,Single-ply,M,Juniors,2
+Marko Lind,1995,Tartu,74,71.8,170,105,192.5,467.5,SBD,Single-ply,M,Juniors,3
+Aleksander Gertsjak,1995,Märjamaa,74,74,170,115,182.5,467.5,SBD,Single-ply,M,Juniors,4
+Rauno Kõlu,1993,Rakke,83,82.05,217.5,127.5,215,560,SBD,Single-ply,M,Juniors,1
+Aleksander Volmers,1995,Märjamaa,83,81.7,180,140,230,550,SBD,Single-ply,M,Juniors,2
+Joonas Tamm,1993,Sparta,83,79.85,,150,215,,SBD,Single-ply,M,Juniors,DQ
+Siim Raja,1991,TÜ ASK,93,91.85,280,190,295.5,765.5,SBD,Single-ply,M,Juniors,1
+Reimo Roopärg,1993,Sparta,93,91.3,265,180,255,700,SBD,Single-ply,M,Juniors,2
+Tönis Holmberg,1995,Märjamaa,93,89.8,240,140,260,640,SBD,Single-ply,M,Juniors,3
+Siim Salin,1995,Kärdla,93,89,185,110,217.5,512.5,SBD,Single-ply,M,Juniors,4
+Kristjan Ilves,1991,TÜ ASK,93,89,170,120,190,480,SBD,Single-ply,M,Juniors,5
+Ermo Helliste,1995,Märjamaa,93,85.55,130,120,170,420,SBD,Single-ply,M,Juniors,6
+Alex-Edward Raus,1992,TÜ ASK,105,103.95,387.5,257.5,345,990,SBD,Single-ply,M,Juniors,1
+Martin Vahtramäe,1993,Reval,120,119.55,240,205,250,695,SBD,Single-ply,M,Juniors,1
+Henry Piralli,1992,Reval,120+,122.95,225,180,260,665,SBD,Single-ply,M,Juniors,1
