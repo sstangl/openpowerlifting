@@ -33,7 +33,7 @@ sed -i -e 's/,//g' original.xls
 
 # Use LibreOffice to automatically convert the <table> to a csv file.
 # This creates original.csv.
-libreoffice --headless --convert-to csv original.xls
+LANG=C libreoffice --headless --convert-to csv original.xls
 
 # Remove NBSP
 sed -i -e 's/\xa0//g' original.csv
