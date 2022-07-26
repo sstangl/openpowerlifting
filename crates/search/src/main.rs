@@ -12,7 +12,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let _db = opldb::OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV)?;
 
-    let mut rl = Editor::<()>::new();
+    let mut rl = Editor::<()>::new().unwrap();
     loop {
         match rl.readline(READLINE_PROMPT) {
             Ok(line) => {
