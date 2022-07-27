@@ -19,8 +19,13 @@
     sex = "M"
 
 [weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.year2020_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -30,8 +35,14 @@
     divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.junior_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.year2020_junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
 
@@ -75,8 +86,10 @@
     1704 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
     1802 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
     1803 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
+    1804 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
     1901 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
     1902 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
     1903 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
+    1904 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
     2003 = ["ExemptWeightClassConsistency"] # Masters & Juniors have no weightclasses
     2101 = ["ExemptWeightClassConsistency"] # Masters have no weightclasses
