@@ -31,7 +31,7 @@ def download_file(url, resultsname):
     driver = webdriver.Firefox(profile, options=foptions)
     driver.get(url)
     time.sleep(5)
-    iframe = driver.find_element(by=By.ID,value='sdx_ow_iframe')
+    iframe = driver.find_element(by=By.ID, value='sdx_ow_iframe')
     driver.switch_to.frame(iframe)
     # Wait until we can click the download button
     WebDriverWait(driver, 10).until(
@@ -39,22 +39,21 @@ def download_file(url, resultsname):
             (By.XPATH, "//button[@data-unique-id='FileMenu']"))
     )
 
-    file_button = driver.find_element(by=By.XPATH,value=
-        "//button[@data-unique-id='FileMenu']")
+    file_button = driver.find_element(
+        by=By.XPATH, value="//button[@data-unique-id='FileMenu']")
     time.sleep(5)
     file_button.click()
 
     time.sleep(5)
 
-    saveas_button = driver.find_element(by=By.ID,value=
-        "FileSaveAsPage")
+    saveas_button = driver.find_element(by=By.ID, value="FileSaveAsPage")
     saveas_button.click()
 
-    download_button = driver.find_element(by=By.XPATH,value=
-        "//button[@data-unique-id='DownloadACopy']")
+    download_button = driver.find_element(
+        by=By.XPATH, value="//button[@data-unique-id='DownloadACopy']")
     download_button.click()
 
-    alertbox = driver.find_elements(by=By.ID,value="errorbuttonarea")
+    alertbox = driver.find_elements(by=By.ID, value="errorbuttonarea")
     if len(alertbox) != 0:
         yes_button = alertbox[0].find_element_by_class_name("ewa-dlg-button")
         yes_button.click()
