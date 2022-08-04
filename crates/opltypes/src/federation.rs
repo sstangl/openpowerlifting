@@ -818,6 +818,10 @@ pub enum Federation {
     #[strum(to_string = "NordicPF", serialize = "nordicpf")]
     NordicPF,
 
+    /// Northern Virginia Raw Powerlifting.
+    #[strum(to_string = "NOVA", serialize = "nova")]
+    NOVA,
+
     /// National Powerlifting Association of Israel.
     #[strum(to_string = "NPA", serialize = "npa")]
     NPA,
@@ -1818,6 +1822,7 @@ impl Federation {
             Federation::NIPF => FULLY_TESTED,
             Federation::NORCAL => FULLY_TESTED,
             Federation::NordicPF => FULLY_TESTED,
+            Federation::NOVA => false,
             Federation::NPA => false,
             Federation::NPAJ => FULLY_TESTED,
             Federation::NPB => FULLY_TESTED,
@@ -2192,6 +2197,7 @@ impl Federation {
             Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
             Federation::NordicPF => None,
+            Federation::NOVA => Some(Country::USA),
             Federation::NPA => Some(Country::Israel),
             Federation::NPAJ => Some(Country::Jamaica),
             Federation::NPB => Some(Country::Netherlands),
@@ -2599,6 +2605,7 @@ impl Federation {
             Federation::NIPF => Some(Federation::IPF),
             Federation::NORCAL => None,
             Federation::NordicPF => Some(Federation::IPF),
+            Federation::NOVA => None,
             Federation::NPA => None,
             Federation::NPAJ => Some(Federation::IPF),
             Federation::NPB => Some(Federation::IPF),
@@ -3080,6 +3087,7 @@ impl Federation {
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),
             Federation::NordicPF => Federation::ipf_rules_on(date),
+            Federation::NOVA => PointsSystem::Wilks,
             Federation::NPA => PointsSystem::Wilks,
             Federation::NPAJ => Federation::ipf_rules_on(date),
             Federation::NPB => Federation::ipf_rules_on(date),
