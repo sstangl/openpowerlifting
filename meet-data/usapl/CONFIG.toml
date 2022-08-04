@@ -610,6 +610,7 @@
     MA-2022-04 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Some weight classes were combined and scored by formula
     LA-2022-09 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Some weight classes were combined and scored by formula
     NH-2022-03 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Some weight classes were combined and scored by formula
+    PA-2022-19 = ["ExemptDivision"] # Out-of-state (guest) lifters competed for placing.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
