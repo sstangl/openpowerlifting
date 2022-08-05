@@ -1,24 +1,24 @@
-Name,Country,State,Division,Tested,BodyweightKg,WeightClassKg,BirthDate,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Event,Sex,Equipment
-Rachel Morrone,USA,CT,Open,Yes,75.02,82.5,,113.4,120.2,-127,120.2,-59,63.5,-68,63.5,136.1,145.1,149.7,,149.7,333.4,1,SBD,F,Raw
-Robert Wood,USA,RI,Juniors 20-23,Yes,80.6,82.5,,124.7,136.1,145.1,145.1,-102.1,-102.1,102.1,102.1,161,170.1,-186,,170.1,417.3,1,SBD,M,Raw
-Fabian Vargas,USA,RI,Juniors 20-23,Yes,83.2,90,,149.7,154.2,158.8,158.8,113.4,120.2,124.7,124.7,186,204.1,-210.9,,204.1,487.6,1,SBD,M,Raw
-William Seay,USA,CT,Juniors 20-23,Yes,157.9,140+,,319.8,342.5,-362.9,342.5,149.7,158.8,-165.6,158.8,249.5,272.2,283.5,,283.5,784.7,1,SBD,M,Raw
-John Kleckner,USA,CT,Masters 40-44,No,96.9,100,,206.4,226.8,-238.1,226.8,142.9,152,156.5,156.5,251.7,274.4,283.5,,283.5,666.8,1,SBD,M,Raw
-Robert Hamelin,USA,CT,Masters 45-49,Yes,138.7,140,,183.7,192.8,,192.8,165.6,174.6,-183.7,174.6,183.7,192.8,,,192.8,560.2,1,SBD,M,Raw
-Allan Greenson,USA,MA,Masters 50-54,No,,,,,,,,,,,,,,,,,,NS,SBD,M,Raw
-Terry Harcleroad,USA,NY,Masters 55-59,Yes,152.9,140+,,204.1,231.3,233.6,233.6,158.8,172.4,176.9,176.9,204.1,235.9,238.1,,238.1,648.6,1,SBD,M,Raw
-Robert Jackson,USA,CT,Masters 65-69,Yes,88.3,90,,136.1,147.4,158.8,158.8,102.1,111.1,113.4,113.4,-147.4,147.4,158.8,,158.8,430.9,1,SBD,M,Raw
-Mike Burch,USA,NY,Masters 70-74,Yes,89.8,90,,29.5,,,29.5,24.9,,,24.9,190.5,199.6,222.3,,222.3,276.7,1,SBD,M,Raw
-Brayden Rubbo,USA,CT,Open,Yes,40.8,44,,52.2,56.7,74.8,74.8,43.1,56.7,61.2,61.2,70.3,83.9,95.3,99.8,95.3,231.3,1,SBD,M,Raw
-William Dwinells,USA,CT,Open,Yes,135,140,,-183.7,206.4,229.1,229.1,120.2,129.3,-142.9,129.3,192.8,220,233.6,,233.6,591.9,1,SBD,M,Raw
-Terry Harcleroad,USA,NY,Open,Yes,152.9,140+,,204.1,231.3,233.6,233.6,158.8,172.4,176.9,176.9,204.1,235.9,238.1,,238.1,648.6,1,SBD,M,Raw
-Aaron Smiley,USA,VT,Submasters 33-39,Yes,99.5,100,,158.8,174.6,188.2,188.2,102.1,106.6,108.9,108.9,192.8,215.5,226.8,,226.8,523.9,1,SBD,M,Raw
-Anders Castaneda,USA,RI,Teen 18-19,Yes,84.1,90,,111.1,124.7,136.1,136.1,83.9,90.7,-102.1,90.7,161,174.6,192.8,,192.8,419.6,1,SBD,M,Raw
-Dominic Emery,USA,MA,Open,Yes,64.7,67.5,,,,,,111.1,120.2,129.3,129.3,183.7,204.1,,,204.1,333.4,1,BD,M,Raw
-Alex Osowski,USA,MA,Open,Yes,92.8,100,,,,,,111.1,-120.2,124.7,124.7,124.7,142.9,158.8,,158.8,283.5,1,BD,M,Raw
-Michael Staggers,USA,WV,Open,Yes,135.4,140,,,,,,176.9,181.4,-186,181.4,,,,,,181.4,1,B,M,Raw
-Michael Staggers,USA,WV,Submasters 33-39,Yes,135.4,140,,,,,,176.9,181.4,-186,181.4,,,,,,181.4,1,B,M,Raw
-James Bourgault,USA,RI,Masters 60-64,No,123.3,125,,,,,,215.5,-226.8,,215.5,,,,,,215.5,1,B,M,Single-ply
-James Bourgault,USA,RI,Open,Yes,123.3,125,,,,,,215.5,-226.8,,215.5,,,,,,215.5,1,B,M,Single-ply
-Jerry Moynihan,USA,NY,Masters 65-69,Yes,91.4,100,,,,,,,,,,172.4,192.8,210.9,,210.9,210.9,1,D,M,Multi-ply
-Jerry Moynihan,USA,NY,Open,Yes,91.4,100,,,,,,,,,,172.4,192.8,210.9,,210.9,210.9,1,D,M,Multi-ply
+Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,Tested,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Event
+1,Rachel Morrone,F,,31,USA,CT,Raw,Open,Yes,75.02,82.5,113.4,120.2,-127.01,120.2,-58.97,63.5,-68.04,63.5,136.08,145.15,149.69,,149.69,333.39,SBD
+1,Robert Wood,M,,22,USA,RI,Raw,J20-23,Yes,80.65,82.5,124.74,136.08,145.15,145.15,-102.06,-102.06,102.06,102.06,161.03,170.1,-185.97,,170.1,417.3,SBD
+1,Fabian Vargas,M,,21,USA,RI,Raw,J20-23,Yes,83.19,90,149.69,154.22,158.76,158.76,113.4,120.2,124.74,124.74,185.97,204.12,-210.92,,204.12,487.61,SBD
+1,William Seay,M,,20,USA,CT,Raw,J20-23,Yes,157.85,140+,319.78,342.46,-362.87,342.46,149.69,158.76,-165.56,158.76,249.48,272.16,283.5,,283.5,784.71,SBD
+1,John Kleckner,M,,44,USA,CT,Raw,Masters 40-44,No,96.89,100,206.38,226.8,-238.14,226.8,142.88,151.95,156.49,156.49,251.74,274.42,283.5,,283.5,666.78,SBD
+1,Robert Hamelin,M,,45,USA,CT,Raw,Masters 45-49,Yes,138.71,140,183.7,192.78,,192.78,165.56,174.63,-183.7,174.63,183.7,192.78,,,192.78,560.19,SBD
+NS,Allan Greenson,M,,54,USA,MA,Raw,Masters 50-54,No,,,,,,,,,,,,,,,,,SBD
+1,Terry Harcleroad,M,,57,USA,NY,Raw,Masters 55-59,Yes,152.86,140+,204.12,231.33,233.6,233.6,158.76,172.37,176.9,176.9,204.12,235.87,238.14,,238.14,648.64,SBD
+1,Robert Jackson,M,,68,USA,CT,Raw,Masters 65-69,Yes,88.27,90,136.08,147.42,158.76,158.76,102.06,111.13,113.4,113.4,-147.42,147.42,158.76,,158.76,430.91,SBD
+1,Mike Burch,M,,72,USA,NY,Raw,Masters 70-74,Yes,89.81,90,29.48,,,29.48,24.95,,,24.95,190.51,199.58,222.26,,222.26,276.69,SBD
+1,Brayden Rubbo,M,,10,USA,CT,Raw,Open,Yes,40.82,44,52.16,56.7,74.84,74.84,43.09,56.7,61.23,61.23,70.31,83.91,95.25,99.79,95.25,231.33,SBD
+1,William Dwinells,M,,29,USA,CT,Raw,Open,Yes,134.99,140,-183.7,206.38,229.06,229.06,120.2,129.27,-142.88,129.27,192.78,219.99,233.6,,233.6,591.94,SBD
+1,Terry Harcleroad,M,,57,USA,NY,Raw,Open,Yes,152.86,140+,204.12,231.33,233.6,233.6,158.76,172.37,176.9,176.9,204.12,235.87,238.14,,238.14,648.64,SBD
+1,Aaron Smiley,M,,33,USA,VT,Raw,Submasters 33-39,Yes,99.52,100,158.76,174.63,188.24,188.24,102.06,106.59,108.86,108.86,192.78,215.46,226.8,,226.8,523.9,SBD
+1,Anders Castaneda,M,,18,USA,RI,Raw,Teen 18-19,Yes,84.1,90,111.13,124.74,136.08,136.08,83.91,90.72,-102.06,90.72,161.03,174.63,192.78,,192.78,419.57,SBD
+1,Dominic Emery,M,,27,USA,MA,Raw,Open,Yes,64.68,67.5,,,,,111.13,120.2,129.27,129.27,183.7,204.12,,,204.12,333.39,BD
+1,Alex Osowski,M,,26,USA,MA,Raw,Open,Yes,92.8,100,,,,,111.13,-120.2,124.74,124.74,124.74,142.88,158.76,,158.76,283.5,BD
+1,Michael Staggers,M,,35,USA,WV,Raw,Open,Yes,135.35,140,,,,,176.9,181.44,-185.97,181.44,,,,,,181.44,B
+1,Michael Staggers,M,,35,USA,WV,Raw,Submasters 33-39,Yes,135.35,140,,,,,176.9,181.44,-185.97,181.44,,,,,,181.44,B
+1,James Bourgault,M,,60,USA,RI,Single-ply,Masters 60-64,No,123.29,125,,,,,215.46,-226.8,,215.46,,,,,,215.46,B
+1,James Bourgault,M,,60,USA,RI,Single-ply,Open,Yes,123.29,125,,,,,215.46,-226.8,,215.46,,,,,,215.46,B
+1,Jerry Moynihan,M,,,USA,NY,Multi-ply,Masters 65-69,Yes,91.44,100,,,,,,,,,172.37,192.78,210.92,,210.92,210.92,D
+1,Jerry Moynihan,M,,,USA,NY,Multi-ply,Open,Yes,91.44,100,,,,,,,,,172.37,192.78,210.92,,210.92,210.92,D
