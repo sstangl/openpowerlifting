@@ -83,7 +83,7 @@ def gethtml(url):
         pages += [driver.page_source]
 
     driver.quit()
-    return([main_source, pages])
+    return [main_source, pages]
 
 
 def error(msg):

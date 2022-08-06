@@ -91,7 +91,7 @@ def find_closest_range(r, ranges):
             bestMatch = distance
             bestIndex = i
 
-    assert(bestIndex != -1)
+    assert bestIndex != -1
     return bestIndex
 
 
@@ -206,7 +206,7 @@ def USPA_add_lifter_row(csv, columnRanges, line):
 
         # If this assert fires, the input file must be manually fixed to
         # align columns reasonably. Debug output helpfully provided above.
-        assert(not row[index])
+        assert not row[index]
         row[index] = withoutName[r[0]: r[1] + 1]
 
     csv.append(row)
@@ -218,7 +218,7 @@ def USPA_add_4ths_row(csv, columnRanges, line):
     for word in words:
         if '4th-' not in word and '4TH-' not in word:
             print("Error on line: %s" % line)
-        assert('4th-' in word or '4TH-' in word)
+        assert '4th-' in word or '4TH-' in word
 
     # Construct the row, using columnRanges for placement.
     row = [''] * len(columnRanges)
@@ -227,14 +227,14 @@ def USPA_add_4ths_row(csv, columnRanges, line):
     ranges = find_word_ranges(line.replace(
         '4th-', '    ').replace('4TH-', '    '))
     fullranges = find_word_ranges(line)
-    assert(len(ranges) == len(fullranges))
+    assert len(ranges) == len(fullranges)
 
     # For each 4th attempt, look up what column it most closely matches.
     for i in range(0, len(ranges)):
 
         index = find_closest_range(ranges[i], columnRanges)
 
-        assert(not row[index])
+        assert not row[index]
         row[index] = line[fullranges[i][0]: fullranges[i][1] + 1]
 
     csv.append(row)
@@ -318,7 +318,7 @@ def csv_remove_divisions(csv):
 # which we inserted for stateful division tracking.
 def csv_integrate_divisions(csv):
     # The first line is for column headers and can be skipped.
-    assert(csv[0][0] == 'Name')
+    assert csv[0][0] == 'Name'
 
     # Arbitrary choice where we're inserting a column for the division.
     divcolumn = 1
@@ -359,7 +359,7 @@ def csv_integrate_divisions(csv):
 
 def csv_integrate_4ths(csv):
     # The first line is for column headers and can be skipped.
-    assert(csv[0][0] == 'Name')
+    assert csv[0][0] == 'Name'
 
     # First, we need to figure out what columns contain 4th attempts.
     # We need to know all of them at once, since we need to insert
@@ -413,7 +413,7 @@ def csv_integrate_4ths(csv):
 # The name field looks like "1 Maggie Haywood". Put that 1 into its own field.
 def csv_extract_place_from_name(csv):
     # The first line is for column headers and can be skipped.
-    assert(csv[0][0] == 'Name')
+    assert csv[0][0] == 'Name'
 
     csv[0].insert(1, 'Place')
 
@@ -439,11 +439,11 @@ def csv_extract_place_from_name(csv):
 # Extract that into separate fields for easier parsing.
 def csv_extract_sex_and_equipment(csv):
     # The first line is for column headers and can be skipped.
-    assert(csv[0][0] == 'Name')
+    assert csv[0][0] == 'Name'
 
     # After all the previous csv_ functions, the Division field moved.
     divcol = 2
-    assert(csv[0][divcol] == 'Division')
+    assert csv[0][divcol] == 'Division'
 
     csv[0].insert(divcol + 1, 'Sex')
     csv[0].insert(divcol + 2, 'Equipment')

@@ -58,7 +58,7 @@ def get_pages(url):
         ii += 1
 
     driver.quit()
-    return(pages)
+    return pages
 
 
 def error(msg):
