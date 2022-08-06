@@ -497,6 +497,7 @@
 </optgroup>
 <optgroup label="{{strings.country.uganda}}">
   <option value="all-uganda" {% if selection.federation == "AllUganda" %}selected{% endif %}>{{strings.selectors.fed.all_uganda}}</option>
+  <option value="ugandapa" {% if selection.federation == "UgandaPA" %}selected{% endif %}>Uganda Powerlifting Association [WPA]</option>
   <option value="ugandapf" {% if selection.federation == "UgandaPF" %}selected{% endif %}>Uganda Powerlifting Federation [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.ukraine}}">

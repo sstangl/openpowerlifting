@@ -1090,6 +1090,10 @@ pub enum Federation {
     #[strum(to_string = "UDFPF", serialize = "udfpf")]
     UDFPF,
 
+    /// Uganda Powerlifting Association, WPA.
+    #[strum(to_string = "UgandaPA", serialize = "ugandapa")]
+    UgandaPA,
+
     /// Uganda Powerlifting Federation, WP.
     #[strum(to_string = "UgandaPF", serialize = "ugandapf")]
     UgandaPF,
@@ -1894,6 +1898,7 @@ impl Federation {
             Federation::THSWPA => FULLY_TESTED,
             Federation::TPSSF => FULLY_TESTED,
             Federation::UDFPF => FULLY_TESTED,
+            Federation::UgandaPA => false,
             Federation::UgandaPF => FULLY_TESTED,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
@@ -2262,6 +2267,7 @@ impl Federation {
             Federation::THSWPA => Some(Country::USA),
             Federation::TPSSF => Some(Country::Turkey),
             Federation::UDFPF => Some(Country::Ukraine),
+            Federation::UgandaPA => Some(Country::Uganda),
             Federation::UgandaPF => Some(Country::Uganda),
             Federation::UkrainePA => Some(Country::Ukraine),
             Federation::UkrainePO => Some(Country::Ukraine),
@@ -2691,6 +2697,7 @@ impl Federation {
             Federation::THSWPA => None,
             Federation::TPSSF => Some(Federation::IPF),
             Federation::UDFPF => Some(Federation::WDFPF),
+            Federation::UgandaPA => Some(Federation::WPA),
             Federation::UgandaPF => Some(Federation::WP),
             Federation::UkrainePA => None,
             Federation::UkrainePO => None,
@@ -3173,6 +3180,7 @@ impl Federation {
             Federation::THSWPA => PointsSystem::Wilks,
             Federation::TPSSF => Federation::ipf_rules_on(date),
             Federation::UDFPF => PointsSystem::Wilks,
+            Federation::UgandaPA => PointsSystem::Wilks,
             Federation::UgandaPF => Federation::wp_rules_on(date),
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
