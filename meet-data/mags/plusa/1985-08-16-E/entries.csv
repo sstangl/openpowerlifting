@@ -3,7 +3,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 56,Brian Foddrill,Open,M,192.78,104.33,195.04,492.15,SBD,Single-ply,1
 56,Mark Finney,Open,M,113.4,79.38,124.74,317.51,SBD,Single-ply,2
 60,Pat Payne,Open,M,192.78,102.06,210.92,505.76,SBD,Single-ply,1
-60,Rich Delgallo,Open,M,185.97,113.4,190.51,489.88,SBD,Single-ply,2
+60,Richard DelGallo,Open,M,185.97,113.4,190.51,489.88,SBD,Single-ply,2
 60,Joe Slaven,Open,M,147.42,104.33,158.76,410.5,SBD,Single-ply,3
 67.5,Stan Shroyer,Open,M,204.12,136.08,204.12,544.31,SBD,Single-ply,1
 67.5,Larry Boynton,Open,M,190.51,108.86,229.06,528.44,SBD,Single-ply,2
@@ -11,11 +11,11 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 67.5,Mike Wider,Open,M,192.78,102.06,219.99,514.83,SBD,Single-ply,4
 67.5,Barry Boren,Open,M,201.85,86.18,213.19,501.22,SBD,Single-ply,5
 67.5,Dennis Hawkins,Open,M,161.03,133.81,181.44,476.27,SBD,Single-ply,6
-67.5,F. Arrendondo,Open,M,136.08,90.72,204.12,430.91,SBD,Single-ply,7
+67.5,Frank Arredondo,Open,M,136.08,90.72,204.12,430.91,SBD,Single-ply,7
 75,Jon Smoker,Open,M,260.82,133.81,254.01,648.64,SBD,Single-ply,1
-75,Tim Smith,Open,M,263.08,149.69,233.6,646.37,SBD,Single-ply,2
+75,Tim Smith #11,Open,M,263.08,149.69,233.6,646.37,SBD,Single-ply,2
 75,Jeff Reynolds,Open,M,199.58,140.61,229.06,569.26,SBD,Single-ply,3
-75,Dave Wedding,Open,M,195.04,108.86,226.8,530.7,SBD,Single-ply,4
+75,David Wedding,Open,M,195.04,108.86,226.8,530.7,SBD,Single-ply,4
 75,Jeff Brammer,Open,M,208.65,113.4,204.12,526.17,SBD,Single-ply,5
 75,Denny Double,Open,M,192.78,106.59,215.46,514.83,SBD,Single-ply,6
 75,Phil Murdock,Open,M,204.12,,,,SBD,Single-ply,DQ
@@ -29,7 +29,7 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 90,Rex Freeman,Open,M,265.35,174.63,265.35,705.34,SBD,Single-ply,3
 90,Larry King,Open,M,258.55,172.37,272.16,703.07,SBD,Single-ply,4
 90,Mike Huddleston,Open,M,235.87,158.76,294.84,689.46,SBD,Single-ply,5
-90,Pet Tyring,Open,M,272.16,127.01,285.76,684.92,SBD,Single-ply,6
+90,Pat Tyring,Open,M,272.16,127.01,285.76,684.92,SBD,Single-ply,6
 90,Don McDaniel,Open,M,254.01,172.37,254.01,680.39,SBD,Single-ply,7
 90,Jeff Ploss,Open,M,215.46,181.44,260.82,657.71,SBD,Single-ply,8
 90,John Sanders,Open,M,249.48,136.08,254.01,639.57,SBD,Single-ply,9
@@ -37,10 +37,10 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 100,Jamie Logston,Open,M,351.53,167.83,344.73,864.09,SBD,Single-ply,1
 100,Ron Everett,Open,M,333.39,204.12,299.37,836.88,SBD,Single-ply,2
 100,John Hoover,Open,M,290.3,181.44,256.28,728.02,SBD,Single-ply,3
-100,Cliff Nestlroad,Open,M,281.23,163.29,272.16,716.68,SBD,Single-ply,4
+100,Cliff Nestleroad,Open,M,281.23,163.29,272.16,716.68,SBD,Single-ply,4
 100,Craig Lennon,Open,M,226.8,181.44,285.76,694,SBD,Single-ply,5
 100,Jeff Sellers,Open,M,260.82,158.76,235.87,655.44,SBD,Single-ply,6
-100,Norm Bajda,Open,M,235.87,145.15,265.35,646.37,SBD,Single-ply,7
+100,Norman Bajda,Open,M,235.87,145.15,265.35,646.37,SBD,Single-ply,7
 110,Aaron Rawlings,Open,M,281.23,213.19,331.12,825.54,SBD,Single-ply,1
 110,Paul White,Open,M,326.59,181.44,317.51,825.54,SBD,Single-ply,2
 110,Jim Dawson,Open,M,290.3,185.97,308.44,784.71,SBD,Single-ply,3
@@ -55,5 +55,5 @@ WeightClassKg,Name,Division,Sex,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalK
 125+,Rick Kessler,Open,M,326.59,167.83,317.51,811.93,SBD,Single-ply,1
 125+,Marty Ross,Open,M,281.23,210.92,294.84,786.98,SBD,Single-ply,2
 125+,Bill Lahanis,Open,M,226.8,145.15,231.33,603.28,SBD,Single-ply,3
-125+,Art Larson,Open,M,351.53,219.99,,,SBD,Single-ply,DQ
-125+,Mark Stamper,Open,M,106.59,208.65,,,SBD,Single-ply,DQ
+125+,Arte Larson,Open,M,351.53,219.99,,,SBD,Single-ply,DQ
+125+,Mark Stamper #1,Open,M,106.59,208.65,,,SBD,Single-ply,DQ
