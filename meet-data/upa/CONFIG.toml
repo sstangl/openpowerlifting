@@ -76,6 +76,7 @@
     fm9rad = {name="FM9R-AD", min=80, max=999, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
     mmxrad = {name="MMXR-AD", min=40, max=999, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
     fmxrad = {name="FMXR-AD", min=40, max=999, sex="F", equipment=["Raw","Wraps"], tested="Yes"}
+    mm10rad = {name="MM10R-AD", min=85, max=89, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
 
     # Untested equipped divisions.
     mt1 = {name="MT1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply", "Unlimited"]}
