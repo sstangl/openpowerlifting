@@ -127,7 +127,8 @@ def getresults(soup):
         elif any(x in h for x in ['bp-1', 'bench1kg', 'bench 1 kg', 'bp 1']):
             curr_csv.fieldnames += ['Bench1Kg', 'Bench2Kg', 'Bench3Kg']
             [next(iterable) for x in range(2)]
-        elif any(x in h for x in ['dl-1', 'deadlift1kg', 'deadlift 1 kg', 'dl 1', 'deadlift 1']):
+        elif any(x in h for x in ['dl-1', 'deadlift1kg', 'deadlift 1 kg', 'dl 1',
+        	                      'deadlift 1']):
             curr_csv.fieldnames += ['Deadlift1Kg',
                                     'Deadlift2Kg', 'Deadlift3Kg']
             [next(iterable) for x in range(2)]
