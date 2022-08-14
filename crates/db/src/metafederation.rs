@@ -351,6 +351,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ipf-internationals")]
     IPFInternationals,
 
+    /// IPF-China, but with international results also.
+    #[strum(to_string = "ipf-china")]
+    IPFChina,
+
     /// IrishPF, but with international results also.
     #[strum(to_string = "irishpf")]
     IrishPF,
@@ -807,6 +811,7 @@ impl MetaFederation {
                     | Federation::ORPF
                     | Federation::CommonwealthPF
             ),
+            MetaFederation::IPFChina => affiliation!(meet, entry, IPFChina, IPF, AsianPF),
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
             MetaFederation::JPA => affiliation!(meet, entry, JPA, IPF, AsianPF),
