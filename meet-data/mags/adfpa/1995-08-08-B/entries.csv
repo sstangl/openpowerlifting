@@ -1,7 +1,7 @@
 Name,BodyweightKg,WeightClassKg,Sex,Division,AgeRange,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Event,Place
 K. Ryman,46.72,48,F,F-O,,106.59,52.16,115.67,274.42,Single-ply,SBD,1
 D. Tyree,51.71,52,F,F-O,,108.86,58.97,124.74,292.57,Single-ply,SBD,1
-S. Abrams,53.52,56,F,F-M,,90.72,45.36,120.2,256.28,Single-ply,SBD,2
+S. Abrams,53.52,56,F,F-M,40-999,90.72,45.36,120.2,256.28,Single-ply,SBD,2
 S. Helmick,53.52,56,F,F-O,,90.72,43.09,99.79,233.6,Single-ply,SBD,3
 S. Morris,52.62,56,F,F-O,,72.57,34.02,88.45,195.04,Single-ply,SBD,4
 B. Hart,74.39,75,F,F-O,,136.08,77.11,158.76,371.95,Single-ply,SBD,1
@@ -10,26 +10,26 @@ V. Chandler,63.96,67.5,F,F-O,,113.4,77.11,127.01,317.51,Single-ply,SBD,1
 M. Lange,54.43,56,F,F-O,,95.25,49.9,122.47,267.62,Single-ply,SBD,1
 T. Sine,56.7,60,F,F-O,,97.52,49.9,102.06,249.48,Single-ply,SBD,2
 L. Keck,59.87,60,F,F-O,,83.91,47.63,104.33,235.87,Single-ply,SBD,3
-P. Johnson,80.74,82.5,M,M-M,,80.74,138.35,219.99,439.08,Single-ply,SBD,4
-C. Donald,73.48,75,M,M-M,,190.51,136.08,226.8,553.38,Single-ply,SBD,2
-D. Hicks,82.1,82.5,M,M-M,,229.06,149.69,215.46,594.21,Single-ply,SBD,1
-E. Burt,74.39,75,M,M-M,,217.72,120.2,226.8,564.72,Single-ply,SBD,1
-R. Cagle,79.38,82.5,M,M-M,,197.31,104.33,190.51,492.15,Single-ply,SBD,2
-T. Wojcieki,81.65,82.5,M,M-M,,158.76,102.06,215.46,476.27,Single-ply,SBD,3
-M. Abrams,53.52,56,M,M-M,,90.72,49.9,120.2,260.82,Single-ply,SBD,1
-M. Lange,54.43,56,F,F-M,,95.25,49.9,122.47,267.62,Single-ply,SBD,1
-S. Morris,52.62,56,F,F-M,,72.57,34.02,88.45,195.04,Single-ply,SBD,2
-D. Minton,,56,M,M-G,,192.78,142.88,238.14,573.79,Single-ply,SBD,1
-R. Rood,101.6,110,M,M-M,,272.16,174.63,265.35,712.14,Single-ply,SBD,1
-F. Lange,88.9,90,M,M-M,,179.17,111.13,192.78,483.08,Single-ply,SBD,3
-F. Simmonds,83.01,90,M,M-M,,151.95,83.91,199.58,435.45,Single-ply,SBD,4
-B. Lindsey,92.53,100,M,M-M,,238.14,158.76,226.8,623.69,Single-ply,SBD,2
-Joe Valchine,88.9,90,M,M-M,,240.4,154.22,267.62,662.24,Single-ply,SBD,1
-Paul Sutphin,92.08,100,M,M-M,,256.28,161.03,258.55,675.85,Single-ply,SBD,1
-K. Cassell,88.9,90,M,M-M,,244.94,149.69,249.48,644.1,Single-ply,SBD,2
-W. Morris,113.4,125,M,M-M,,204.12,170.1,204.12,578.33,Single-ply,SBD,1
-J. Allen,97.07,100,M,M-M,,213.19,127.01,213.19,553.38,Single-ply,SBD,3
-P. Moyer,107.5,110,M,M-M,,170.1,111.13,181.44,462.66,Single-ply,SBD,2
+P. Johnson,80.74,82.5,M,M-M,40-999,80.74,138.35,219.99,439.08,Single-ply,SBD,4
+C. Donald,73.48,75,M,M-M,40-999,190.51,136.08,226.8,553.38,Single-ply,SBD,2
+D. Hicks,82.1,82.5,M,M-M,40-999,229.06,149.69,215.46,594.21,Single-ply,SBD,1
+E. Burt,74.39,75,M,M-M,40-999,217.72,120.2,226.8,564.72,Single-ply,SBD,1
+R. Cagle,79.38,82.5,M,M-M,40-999,197.31,104.33,190.51,492.15,Single-ply,SBD,2
+T. Wojcieki,81.65,82.5,M,M-M,40-999,158.76,102.06,215.46,476.27,Single-ply,SBD,3
+M. Abrams,53.52,56,M,M-M,40-999,90.72,49.9,120.2,260.82,Single-ply,SBD,1
+M. Lange,54.43,56,F,F-M,40-999,95.25,49.9,122.47,267.62,Single-ply,SBD,1
+S. Morris,52.62,56,F,F-M,40-999,72.57,34.02,88.45,195.04,Single-ply,SBD,2
+D. Minton,,56,M,M-G,,192.78,142.88,238.14,573.79,Single-ply,SBD,G
+R. Rood,101.6,110,M,M-M,40-999,272.16,174.63,265.35,712.14,Single-ply,SBD,1
+F. Lange,88.9,90,M,M-M,40-999,179.17,111.13,192.78,483.08,Single-ply,SBD,3
+F. Simmonds,83.01,90,M,M-M,40-999,151.95,83.91,199.58,435.45,Single-ply,SBD,4
+Bill Lindsey,92.53,100,M,M-M,40-999,238.14,158.76,226.8,623.69,Single-ply,SBD,2
+Joe Valchine,88.9,90,M,M-M,40-999,240.4,154.22,267.62,662.24,Single-ply,SBD,1
+Paul Sutphin,92.08,100,M,M-M,40-999,256.28,161.03,258.55,675.85,Single-ply,SBD,1
+K. Cassell,88.9,90,M,M-M,40-999,244.94,149.69,249.48,644.1,Single-ply,SBD,2
+W. Morris,113.4,125,M,M-M,40-999,204.12,170.1,204.12,578.33,Single-ply,SBD,1
+J. Allen,97.07,100,M,M-M,40-999,213.19,127.01,213.19,553.38,Single-ply,SBD,3
+P. Moyer,107.5,110,M,M-M,40-999,170.1,111.13,181.44,462.66,Single-ply,SBD,2
 W. George,51.71,52,M,M-Class II,,95.25,68.04,124.74,288.03,Single-ply,SBD,1
 S. Morris,52.62,56,F,F-Class II,,72.57,34.02,88.45,195.04,Single-ply,SBD,1
 L. Keck,59.87,60,F,F-Class II,,83.91,47.63,104.33,235.87,Single-ply,SBD,1
@@ -113,7 +113,7 @@ M. Sheehan,,125,M,M-O,,258.55,163.29,242.67,664.51,Single-ply,SBD,4
 M. Czamota,,125,M,M-O,,238.14,145.15,260.82,644.1,Single-ply,SBD,5
 J. Freeman,,125,M,M-O,,226.8,158.76,229.06,614.62,Single-ply,SBD,6
 J. Goodnough,,125,M,M-O,,226.8,172.37,208.65,607.81,Single-ply,SBD,7
-B. Shrum,,125,M,M-G,,158.76,113.4,181.44,453.59,Single-ply,SBD,1
+B. Shrum,,125,M,M-G,,158.76,113.4,181.44,453.59,Single-ply,SBD,G
 B. Powell,,140+,M,M-O,,301.64,208.65,294.84,805.13,Single-ply,SBD,1
 G. Hart,,140+,M,M-O,,263.08,174.63,229.06,666.78,Single-ply,SBD,2
 T. Tsouroutis,,140+,M,M-O,,238.14,181.44,226.8,646.37,Single-ply,SBD,3
