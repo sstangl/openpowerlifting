@@ -6,7 +6,9 @@ use crate::BirthYearRange;
 /// it is based off the BirthYear. This is primarily used by IPF federations.
 ///
 /// The order of the definitions matters: OpenIPF uses >= comparisons for class matching.
-#[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq, PartialOrd)]
+#[derive(
+    Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq, Eq, PartialOrd, Ord,
+)]
 pub enum BirthYearClass {
     /// No assignable BirthYearClass.
     #[serde(rename = "")]

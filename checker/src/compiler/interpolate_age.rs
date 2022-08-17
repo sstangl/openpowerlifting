@@ -15,7 +15,7 @@ use std::fmt;
 /// month has exactly 31 days. This is valid because we are only concerned with
 /// whether a given MeetDate is less than or greater than a (possibly
 /// nonexistent) Date.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct BirthDateRange {
     pub min: Date,
     pub max: Date,
@@ -50,7 +50,7 @@ impl fmt::Display for BirthDateRange {
 }
 
 /// Named return enum from the BirthDateRange narrow functions, for clarity.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum NarrowResult {
     /// Returned if the new range information was successfully integrated.
     Integrated,

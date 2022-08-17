@@ -19,7 +19,7 @@ use std::str::FromStr;
 pub struct Points(i32);
 
 /// Enum of known powerlifting points systems, like Wilks and Glossbrenner.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum PointsSystem {
     AH,
     Dots,

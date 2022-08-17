@@ -7,7 +7,7 @@ use crate::Age;
 /// The AgeRange used by the checker for interpreting age data.
 ///
 /// The ages in an AgeRange are always `Age::Exact` or `Age::None`.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub struct AgeRange {
     pub min: Age,
     pub max: Age,

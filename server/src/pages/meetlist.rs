@@ -15,7 +15,7 @@ use super::FromPathError;
 /// For code reuse, this is a subset of the Query struct
 /// used by the rankings page. It needs to serialize to a structure
 /// that has the same fields, so the templates can share code.
-#[derive(Copy, Clone, PartialEq, Serialize)]
+#[derive(Copy, Clone, PartialEq, Eq, Serialize)]
 pub struct MeetListQuery {
     pub federation: FederationFilter,
     pub year: YearFilter,

@@ -88,7 +88,7 @@ pub struct RuleSetConfig {
 }
 
 /// Used to exempt a specific meet from some of the checks.
-#[derive(Copy, Clone, Debug, EnumString, PartialEq)]
+#[derive(Copy, Clone, Debug, EnumString, PartialEq, Eq)]
 pub enum Exemption {
     /// Exempts the meet from having only known divisions.
     ExemptDivision,

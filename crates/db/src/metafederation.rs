@@ -15,7 +15,9 @@ use crate::{Entry, Meet};
 ///
 /// A MetaFederation may override handling of a Federation by sharing its
 /// to_string.
-#[derive(Copy, Clone, Debug, Deserialize, Display, PartialEq, Serialize, EnumIter, EnumString)]
+#[derive(
+    Copy, Clone, Debug, Deserialize, Display, PartialEq, Eq, Serialize, EnumIter, EnumString,
+)]
 pub enum MetaFederation {
     /// Federations that are exclusively (non-optionally) tested.
     #[strum(to_string = "fully-tested")]

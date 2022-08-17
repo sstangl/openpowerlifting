@@ -60,7 +60,7 @@ pub struct Table<'db> {
 }
 
 /// A sort selection widget just for the meet page.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum MeetSortSelection {
     ByAH,
     ByDivision,

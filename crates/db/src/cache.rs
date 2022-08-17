@@ -21,7 +21,7 @@ use crate::{Entry, Lifter, Meet};
 /// Because it's non-sorted, that also means that there doesn't
 /// need to be a version of the data stored for each way in
 /// which the data can be sorted, so there's memory savings.
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub struct NonSortedNonUnique(pub Vec<u32>);
 
 /// List of indices into the opldb.entries vector,

@@ -3,7 +3,7 @@
 use crate::{Age, AgeRange};
 
 /// The AgeClass used by the server for partitioning into age categories.
-#[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq)]
+#[derive(Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq, Eq)]
 pub enum AgeClass {
     #[serde(rename = "5-12")]
     #[strum(serialize = "5-12")]

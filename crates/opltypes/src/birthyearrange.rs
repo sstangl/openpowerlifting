@@ -8,7 +8,7 @@ use std::fmt;
 ///
 /// Because AgeRange uses Age::Exact(), BirthYear-based divisions lose information
 /// when translated to exact age ranges.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub struct BirthYearRange {
     pub min_year: u16,
     pub max_year: u16,

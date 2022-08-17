@@ -15,7 +15,7 @@ use std::str::FromStr;
 use super::FromPathError;
 
 /// Query selection descriptor, corresponding to HTML widgets.
-#[derive(Copy, Clone, PartialEq, Serialize)]
+#[derive(Copy, Clone, PartialEq, Eq, Serialize)]
 pub struct RecordsQuery {
     pub equipment: EquipmentFilter,
     pub federation: FederationFilter,
@@ -148,7 +148,7 @@ impl RecordsQuery {
 
 /// Selects what kind of weight classes to use, as opposed to which specific
 /// class.
-#[derive(Copy, Clone, PartialEq, Serialize)]
+#[derive(Copy, Clone, PartialEq, Eq, Serialize)]
 pub enum ClassKind {
     Traditional,
     Expanded,

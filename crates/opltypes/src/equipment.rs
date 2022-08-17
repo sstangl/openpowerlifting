@@ -3,7 +3,7 @@
 use std::fmt;
 
 /// The Equipment field.
-#[derive(Clone, Copy, Debug, Deserialize, EnumString, PartialEq, Serialize, PartialOrd)]
+#[derive(Clone, Copy, Debug, Deserialize, EnumString, PartialEq, Eq, Serialize, PartialOrd)]
 pub enum Equipment {
     /// No supportive material (sleeves allowed).
     Raw,

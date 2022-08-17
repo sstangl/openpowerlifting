@@ -1,7 +1,7 @@
 //! Implements writing system detection.
 
 /// Writing systems for characters, for categorization.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum WritingSystem {
     CJK,
     Cyrillic,

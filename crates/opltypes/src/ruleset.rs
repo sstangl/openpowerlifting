@@ -9,7 +9,7 @@ use std::str::FromStr;
 /// A rule of competition.
 ///
 /// By default, all equipment divisions are assumed to be separate.
-#[derive(Copy, Clone, Debug, Deserialize, Display, EnumString, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, Deserialize, Display, EnumString, PartialEq, Eq, Serialize)]
 pub enum Rule {
     /// Lifters in "Raw" and "Wraps" compete in the same category.
     CombineRawAndWraps,
@@ -38,10 +38,10 @@ pub enum Rule {
 ///
 /// It's expected that the human-consumable openpowerlifting.csv will not include
 /// the RuleSet of each meet, and therefore it's safe to serialize to a number.
-#[derive(Copy, Clone, Debug, Default, PartialEq)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 pub struct RuleSet(u32);
 
-#[derive(Copy, Clone, Debug, Display, PartialEq)]
+#[derive(Copy, Clone, Debug, Display, PartialEq, Eq)]
 pub enum RuleSetParseError {
     UnknownRule,
 }

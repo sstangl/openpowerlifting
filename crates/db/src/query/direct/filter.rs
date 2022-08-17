@@ -11,7 +11,7 @@ use std::str::FromStr;
 use crate::MetaFederation;
 
 /// Query selection descriptor, corresponding to HTML widgets.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub struct EntryFilter {
     pub equipment: EquipmentFilter,
     pub federation: FederationFilter,
@@ -39,7 +39,7 @@ impl Default for EntryFilter {
 }
 
 /// Limits a query to specific equipment.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum EquipmentFilter {
     Raw,
     Wraps,
@@ -71,7 +71,7 @@ impl FromStr for EquipmentFilter {
     }
 }
 
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum FederationFilter {
     AllFederations,
     One(Federation),
@@ -94,7 +94,7 @@ pub enum FederationFilter {
 /// 2. When showing the meet list, we want the Federation::USPA. Otherwise, it
 /// gets cluttered with international events. This is particularly bad for
 /// IPF affiliates.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum FedPreference {
     PreferMetaFederation,
     PreferFederation,
@@ -143,7 +143,7 @@ impl Serialize for FederationFilter {
 }
 
 /// The weight class selector widget.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum WeightClassFilter {
     AllClasses,
 
@@ -511,7 +511,7 @@ impl FromStr for WeightClassFilter {
 }
 
 /// The sex selector widget.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum SexFilter {
     AllSexes,
     Men,
@@ -532,7 +532,7 @@ impl FromStr for SexFilter {
 }
 
 /// The AgeClass selector widget.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum AgeClassFilter {
     AllAges,
     Youth512,
@@ -613,7 +613,7 @@ impl FromStr for AgeClassFilter {
 }
 
 /// The year selector widget.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum YearFilter {
     AllYears,
     OneYear(u16),
@@ -653,7 +653,7 @@ impl Serialize for YearFilter {
     }
 }
 
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum EventFilter {
     /// Any event.
     AllEvents,
@@ -686,7 +686,7 @@ impl FromStr for EventFilter {
 }
 
 /// The sort selector widget.
-#[derive(Copy, Clone, Debug, PartialEq, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
 pub enum OrderBy {
     Squat,
     Bench,
