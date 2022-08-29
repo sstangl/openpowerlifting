@@ -613,6 +613,7 @@
     PA-2022-19 = ["ExemptDivision"] # Out-of-state (guest) lifters competed for placing.
     MO-2022-07 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Weight classes were combined and scored by formula
     WI-2022-16 = ["ExemptWeightClassConsistency"] # No weight classes used.
+    NE-2022-06 = ["ExemptWeightClassConsistency"] # No weight classes used.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
