@@ -58,7 +58,11 @@
 {% block body %}
   <div class="mixed-content-with-controls">
     <h1 id="meet">{{year}} {{meet.federation}} {{meet.name}}</h1>
-    <p>{{meet.date}}, {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}</p>
+    <p>{{meet.date}}, {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}
+      <a href="/api/meetcsv/{{meet.path}}" style="float: right; margin-right: 20px;">
+        <button style="width: 120px">{{strings.buttons.download_as_csv}}</button>
+      </a>
+    </p>
 
     <table>
       <thead><tr>

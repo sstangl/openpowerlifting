@@ -272,7 +272,8 @@
 	    "zimbabwe": "Zimbabwe"
 	},
 	"buttons": {
-		"search": "Pretraga"
+		"search": "Pretraga",
+		"download_as_csv": "Download as CSV"
 	},
 	"labels": {
 		"sort": "Sortiraj",
@@ -455,7 +456,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Lični rekordi",
-		"competition_results": "Rezultati takmičenja",
-		"download_as_csv": "Download as CSV"
+		"competition_results": "Rezultati takmičenja"
 	}
 }

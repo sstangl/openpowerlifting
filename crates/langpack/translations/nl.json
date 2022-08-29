@@ -272,7 +272,8 @@
         "zimbabwe": "Zimbabwe"
     },
     "buttons": {
-        "search": "Zoeken"
+        "search": "Zoeken",
+		"download_as_csv": "Download as CSV"
     },
     "labels": {
         "sort": "Sort",
@@ -455,7 +456,6 @@
     },
     "lifter_page": {
         "personal_bests": "Persoonlijke records",
-        "competition_results": "Wedstrijd resultaten",
-		"download_as_csv": "Download as CSV"
+        "competition_results": "Wedstrijd resultaten"
     }
 }

@@ -272,7 +272,8 @@
 	    "zimbabwe": "Zimbabwe"
 	},
 	"buttons": {
-		"search": "検索"
+		"search": "検索",
+		"download_as_csv": "Download as CSV"
 	},
 	"labels": {
 		"sort": "Sort",
@@ -455,7 +456,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "自己ベスト",
-		"competition_results": "大会結果",
-		"download_as_csv": "Download as CSV"
+		"competition_results": "大会結果"
 	}
 }

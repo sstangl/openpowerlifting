@@ -273,7 +273,8 @@
 	    "zimbabwe": "Ζιμπάμπουε"
 	},
 	"buttons": {
-		"search": "Εύρεση"
+		"search": "Εύρεση",
+		"download_as_csv": "Download as CSV"
 	},
 	"labels": {
 		"sort": "Sort",
@@ -456,7 +457,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Προσωπικά Ρεκόρ",
-		"competition_results": "Αποτελέσματα Αγώνων",
-		"download_as_csv": "Download as CSV"
+		"competition_results": "Αποτελέσματα Αγώνων"
 	}
 }

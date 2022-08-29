@@ -272,7 +272,8 @@
 	    "zimbabwe": "Zimbabvo"
 	},
 	"buttons": {
-		"search": "Serĉi"
+		"search": "Serĉi",
+		"download_as_csv": "Elŝuti CSV"
 	},
 	"labels": {
 		"sort": "Ordo",
@@ -455,7 +456,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Propraj Rekordoj",
-		"competition_results": "Konkurso-Rezultoj",
-		"download_as_csv": "Elŝuti CSV"
+		"competition_results": "Konkurso-Rezultoj"
 	}
 }

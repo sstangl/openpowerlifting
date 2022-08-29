@@ -269,7 +269,8 @@
         "bangladesh": "孟加拉国"
     },
     "buttons": {
-        "search": "搜索"
+        "search": "搜索",
+		"download_as_csv": "Download as CSV"
     },
     "labels": {
         "sort": "Sort",
@@ -452,8 +453,7 @@
     },
     "lifter_page": {
         "personal_bests": "个人记录",
-        "competition_results": "竞赛结果",
-		"download_as_csv": "Download as CSV"
+        "competition_results": "竞赛结果"
     },
     "html_header": {
         "description": "OpenPowerlifting 项目期望创造一个永久、精确、便捷、易使用的开源数据库，存放世界上所有力量举比赛的数据。"

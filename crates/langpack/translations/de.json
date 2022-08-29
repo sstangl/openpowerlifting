@@ -264,7 +264,8 @@
         "yemen": "Jemen"
     },
     "buttons": {
-        "search": "Suche"
+        "search": "Suche",
+        "download_as_csv": "Als CSV herunterladen"
     },
     "selectors": {
         "equipment": {
@@ -443,8 +444,7 @@
     },
     "lifter_page": {
         "personal_bests": "Persönliche Bestleistung",
-        "competition_results": "Wettkampfsergebnisse",
-        "download_as_csv": "Als CSV herunterladen"
+        "competition_results": "Wettkampfsergebnisse"
     },
     "html_header": {
         "description": "Das Ziel des OpenPowerlifting Projekt ist es ein nachhaltiges, korrektes, bequemes, leicht zugängliches und offenes Archiv von Kraftdreikampf Daten aus aller Welt zu schaffen."

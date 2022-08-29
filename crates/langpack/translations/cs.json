@@ -272,7 +272,8 @@
 	    "zimbabwe": "Zimbabwe"
 	},
 	"buttons": {
-		"search": "Vyhledat"
+		"search": "Vyhledat",
+		"download_as_csv": "Stáhnout jako CSV"
 	},
 	"labels": {
 		"sort": "Sort",
@@ -455,7 +456,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Osobní rekordy",
-		"competition_results": "Výsledky soutěží",
-		"download_as_csv": "Stáhnout jako CSV"
+		"competition_results": "Výsledky soutěží"
 	}
 }

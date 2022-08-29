@@ -269,7 +269,8 @@
         "oceania": "오세아니아"
     },
     "buttons": {
-        "search": "검색"
+        "search": "검색",
+		"download_as_csv": "Download as CSV"
     },
     "selectors": {
         "equipment": {
@@ -448,8 +449,7 @@
     },
     "lifter_page": {
         "personal_bests": "개인최고기록",
-        "competition_results": "대회기록",
-		"download_as_csv": "Download as CSV"
+        "competition_results": "대회기록"
     },
     "html_header": {
         "description": "OpenPowerlifting 프로젝트는 전 세계의 파워리프팅 데이터를 공개적으로 지속적이고 정확하며 편리한 접근이 가능하게 보관하는 것을 목표로 합니다."

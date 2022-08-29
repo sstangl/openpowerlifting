@@ -273,7 +273,8 @@
 	    "zimbabwe": "Zimbabwe"
 	},
 	"buttons": {
-		"search": "Keresés"
+		"search": "Keresés",
+		"download_as_csv": "Download as CSV"
 	},
 	"labels": {
 		"sort": "Sort",
@@ -456,7 +457,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Egyéni legjobbak",
-		"competition_results": "Versenyeredmények",
-		"download_as_csv": "Download as CSV"
+		"competition_results": "Versenyeredmények"
 	}
 }

@@ -269,7 +269,8 @@
         "yemen": "Jemen"
     },
     "buttons": {
-        "search": "Vyhľadať"
+        "search": "Vyhľadať",
+		"download_as_csv": "Download as CSV"
     },
     "selectors": {
         "equipment": {
@@ -448,8 +449,7 @@
     },
     "lifter_page": {
         "personal_bests": "Osobné rekordy",
-        "competition_results": "Výsledky súťaže",
-		"download_as_csv": "Download as CSV"
+        "competition_results": "Výsledky súťaže"
     },
     "html_header": {
         "description": "Cieľom projektu OpenPowerlifting je vytvoriť trvalý, presný, pohodlný, prístupný a otvorený archív svetových údajov o silovom trojboji."

@@ -269,6 +269,16 @@ fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     Some(CsvFile { filename, content })
 }
 
+/// Exports single-meet data as a CSV file.
+#[get("/api/meetcsv/<meetpath..>")]
+fn meet_csv(meetpath: PathBuf, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
+    let meet_path_str = meetpath.to_str()?;
+    let meet_id = opldb.meet_id(meet_path_str)?;
+    let content = pages::meet_csv::export_csv(opldb, meet_id, None).ok()?;
+    let filename = format!("{}.csv", meet_path_str);
+    Some(CsvFile { filename, content })
+}
+
 #[get("/mlist/<mselections..>?<lang>")]
 fn meetlist(
     mselections: Option<PathBuf>,
@@ -597,6 +607,7 @@ fn rocket(opldb: ManagedOplDb) -> Rocket<Build> {
                 meetlist,
                 meetlist_default,
                 meet,
+                meet_csv,
                 statics,
                 root_favicon,
                 root_apple_touch_icon,
@@ -622,6 +633,7 @@ fn rocket(opldb: ManagedOplDb) -> Rocket<Build> {
                 dist::openipf::meetlist,
                 dist::openipf::meetlist_default,
                 dist::openipf::meet,
+                dist::openipf::meet_csv,
                 dist::openipf::status,
                 dist::openipf::faq,
                 dist::openipf::contact,

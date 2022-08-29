@@ -272,7 +272,8 @@
         "bangladesh": "Bangladesh"
     },
     "buttons": {
-        "search": "Paieška"
+        "search": "Paieška",
+		"download_as_csv": "Download as CSV"
     },
     "labels": {
         "sort": "Sort",
@@ -455,7 +456,6 @@
     },
     "lifter_page": {
         "personal_bests": "Geriausi Asmeniniai",
-        "competition_results": "Varžybų Rezultatai",
-		"download_as_csv": "Download as CSV"
+        "competition_results": "Varžybų Rezultatai"
     }
 }

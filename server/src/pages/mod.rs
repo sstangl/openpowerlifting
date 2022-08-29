@@ -11,6 +11,7 @@ pub mod faq;
 pub mod lifter;
 pub mod lifter_csv;
 pub mod meet;
+pub mod meet_csv;
 pub mod meetlist;
 pub mod rankings;
 pub mod records;

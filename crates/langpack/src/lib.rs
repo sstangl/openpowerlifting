@@ -429,6 +429,7 @@ pub struct ColumnTranslations {
 #[derive(Serialize)]
 pub struct ButtonTranslations {
     pub search: &'static str,
+    pub download_as_csv: &'static str,
 }
 
 #[derive(Serialize)]
@@ -642,7 +643,6 @@ pub struct AgeClassSelectorTranslations {
 pub struct LifterPageTranslations {
     pub personal_bests: &'static str,
     pub competition_results: &'static str,
-    pub download_as_csv: &'static str,
 }
 
 #[derive(Serialize)]

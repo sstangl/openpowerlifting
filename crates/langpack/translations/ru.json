@@ -272,7 +272,8 @@
 	    "zimbabwe": "Зимбабве"
 	},
 	"buttons": {
-		"search": "Поиск"
+		"search": "Поиск",
+		"download_as_csv": "Download as CSV"
 	},
 	"labels": {
 		"sort": "Сортировать",
@@ -455,7 +456,6 @@
 	},
 	"lifter_page": {
 		"personal_bests": "Личные Рекорды",
-		"competition_results": "Результаты Соревнований",
-		"download_as_csv": "Download as CSV"
+		"competition_results": "Результаты Соревнований"
 	}
 }

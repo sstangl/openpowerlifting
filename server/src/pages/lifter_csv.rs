@@ -5,7 +5,7 @@ use opltypes::*;
 
 use std::error;
 
-fn make_export_row<'a>(
+pub fn make_export_row<'a>(
     lifter: &'a Lifter,
     entry: &'a Entry,
     meet: &'a Meet,

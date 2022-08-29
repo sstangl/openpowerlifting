@@ -343,6 +343,16 @@ pub fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile
     Some(CsvFile { filename, content })
 }
 
+/// Exports single-meet data as a CSV file.
+#[get("/api/meetcsv/<meetpath..>")]
+pub fn meet_csv(meetpath: PathBuf, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
+    let meet_path_str = meetpath.to_str()?;
+    let meet_id = opldb.meet_id(meet_path_str)?;
+    let content = pages::meet_csv::export_csv(opldb, meet_id, Some(ipf_only_filter)).ok()?;
+    let filename = format!("{}.csv", meet_path_str);
+    Some(CsvFile { filename, content })
+}
+
 #[get("/mlist/<mselections..>?<lang>")]
 pub fn meetlist(
     mselections: Option<PathBuf>,
