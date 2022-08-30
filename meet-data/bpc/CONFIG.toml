@@ -1,5 +1,6 @@
 [divisions]
     open = {name = "Open", min = 0, max = 999}
+    novice = {name = "Novice", min = 0, max =999}
     teen_13_15 = {name = "T 13-15", min = 13, max = 15}
     teen_16_17 = {name = "T 16-17", min = 16, max = 17}
     teen_18_19 = {name = "T 18-19", min = 18, max = 19}
