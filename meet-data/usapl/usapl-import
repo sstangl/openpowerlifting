@@ -114,6 +114,7 @@ countries = [
     'South Korea'
 ]
 
+
 # Returns a (division, equipment) tuple of strings.
 def parsedivision(div):
     if 'Wraps' in div:
