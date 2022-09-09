@@ -49,6 +49,8 @@ pub enum MetaFederation {
     AllBosniaAndHerzegovina,
     #[strum(to_string = "all-brazil")]
     AllBrazil,
+    #[strum(to_string = "all-brunei")]
+    AllBrunei,
     #[strum(to_string = "all-canada")]
     AllCanada,
     #[strum(to_string = "all-chile")]
@@ -426,6 +428,10 @@ pub enum MetaFederation {
     #[strum(to_string = "pap")]
     PAP,
 
+    /// PFBD, but with international results also
+    #[strum(to_string = "pfbd")]
+    PFBD,
+
     /// PI, but with international results also.
     #[strum(to_string = "pi")]
     PI,
@@ -580,6 +586,7 @@ impl MetaFederation {
                 is_from(Country::BosniaAndHerzegovina, entry, meet)
             }
             MetaFederation::AllBrazil => is_from(Country::Brazil, entry, meet),
+            MetaFederation::AllBrunei => is_from(Country::Brunei, entry, meet),
             MetaFederation::AllCanada => {
                 entry.lifter_country == Some(Country::Canada)
                     || (entry.lifter_country == None
@@ -840,6 +847,7 @@ impl MetaFederation {
             MetaFederation::OEVK => affiliation!(meet, entry, OEVK, IPF, EPF),
             MetaFederation::PA => affiliation!(meet, entry, PA, WP),
             MetaFederation::PAP => affiliation!(meet, entry, PAP, IPF, AsianPF),
+            MetaFederation::PFBD => affiliation!(meet, entry, PFBD, IPF, AsianPF),
             MetaFederation::PI => affiliation!(meet, entry, PI, IPF, AsianPF),
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
