@@ -42,7 +42,8 @@ CREATE TABLE meets (
   MeetCountry TEXT NOT NULL,
   MeetState TEXT,
   MeetTown TEXT,
-  MeetName TEXT NOT NULL
+  MeetName TEXT NOT NULL,
+  RuleSet TEXT
 );
 "
 
@@ -51,11 +52,12 @@ CREATE TABLE entries (
   id INTEGER PRIMARY KEY NOT NULL,
   MeetID INTEGER NOT NULL,
   LifterID INTEGER NOT NULL,
-  Sex BOOLEAN NOT NULL,
+  Sex INTEGER NOT NULL,
   Event CHAR(3),
   Equipment INTEGER NOT NULL,
   Age FLOAT,
   AgeClass TEXT,
+  BirthYearClass TEXT,
   Division TEXT,
   BodyweightKg FLOAT,
   WeightClassKg FLOAT,
@@ -78,6 +80,13 @@ CREATE TABLE entries (
   Place TEXT,
   Wilks FLOAT,
   McCulloch FLOAT,
+  Glossbrenner FLOAT,
+  Goodlift FLOAT,
+  Wilks2020 FLOAT,
+  Dots FLOAT,
+  Tested TEXT,
+  Country TEXT,
+  State TEXT,
 
   FOREIGN KEY(MeetID) REFERENCES meets(MeetID),
   FOREIGN KEY(LifterID) REFERENCES lifters(LifterID)
@@ -88,8 +97,15 @@ CREATELIFTERSTABLE="
 CREATE TABLE lifters (
   LifterID INTEGER PRIMARY KEY NOT NULL,
   Name TEXT NOT NULL,
+  CyrillicName TEXT,
+  ChineseName TEXT,
+  GreekName TEXT,
+  JapaneseName TEXT,
+  KoreanName TEXT,
   Username TEXT UNIQUE NOT NULL,
-  Instagram TEXT
+  Instagram TEXT,
+  Color TEXT,
+  Flair TEXT
 );
 "
 
@@ -120,17 +136,17 @@ UPDATE entries SET squat1kg = NULL WHERE squat1kg = '';
 UPDATE entries SET squat2kg = NULL WHERE squat2kg = '';
 UPDATE entries SET squat3kg = NULL WHERE squat3kg = '';
 UPDATE entries SET squat4kg = NULL WHERE squat4kg = '';
-UPDATE entries SET bestsquatkg = NULL WHERE bestsquatkg = '';
+UPDATE entries SET best3squatkg = NULL WHERE best3squatkg = '';
 UPDATE entries SET bench1kg = NULL WHERE bench1kg = '';
 UPDATE entries SET bench2kg = NULL WHERE bench2kg = '';
 UPDATE entries SET bench3kg = NULL WHERE bench3kg = '';
 UPDATE entries SET bench4kg = NULL WHERE bench4kg = '';
-UPDATE entries SET bestbenchkg = NULL WHERE bestbenchkg = '';
+UPDATE entries SET best3benchkg = NULL WHERE best3benchkg = '';
 UPDATE entries SET deadlift1kg = NULL WHERE deadlift1kg = '';
 UPDATE entries SET deadlift2kg = NULL WHERE deadlift2kg = '';
 UPDATE entries SET deadlift3kg = NULL WHERE deadlift3kg = '';
 UPDATE entries SET deadlift4kg = NULL WHERE deadlift4kg = '';
-UPDATE entries SET bestdeadliftkg = NULL WHERE bestdeadliftkg = '';
+UPDATE entries SET best3deadliftkg = NULL WHERE best3deadliftkg = '';
 UPDATE entries SET totalkg = NULL WHERE totalkg = '';
 UPDATE entries SET place = NULL WHERE place = '';
 UPDATE entries SET wilks = NULL WHERE wilks = '';
