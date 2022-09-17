@@ -1,6 +1,9 @@
 # Skip CI if the commit message contains "WIP:", "[nobuild]", or "[noci]".
+# Disable CI on main for the moment, but allow in MRs: we're running out of minutes.
 workflow:
   rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: never
     - if: $CI_COMMIT_MESSAGE =~ /(WIP:|\[nobuild\]|\[noci\])/
       when: never
     - if: $CI_MERGE_REQUEST_TITLE =~ /(WIP:|\[nobuild\]|\[noci\])/
