@@ -1217,12 +1217,12 @@ impl fmt::Display for LocalizedWeightClassAny {
 /// Gets the lifter's name localized into the target language.
 pub fn localized_name(lifter: &opldb::Lifter, language: Language) -> &str {
     match language {
-        Language::el => lifter.greek_name.as_ref().unwrap_or(&lifter.name),
-        Language::ja => lifter.japanese_name.as_ref().unwrap_or(&lifter.name),
-        Language::ko => lifter.korean_name.as_ref().unwrap_or(&lifter.name),
-        Language::ru | Language::uk => lifter.cyrillic_name.as_ref().unwrap_or(&lifter.name),
+        Language::el => lifter.greek_name.as_deref().unwrap_or(&lifter.name),
+        Language::ja => lifter.japanese_name.as_deref().unwrap_or(&lifter.name),
+        Language::ko => lifter.korean_name.as_deref().unwrap_or(&lifter.name),
+        Language::ru | Language::uk => lifter.cyrillic_name.as_deref().unwrap_or(&lifter.name),
         Language::zh_hans | Language::zh_hant => {
-            lifter.chinese_name.as_ref().unwrap_or(&lifter.name)
+            lifter.chinese_name.as_deref().unwrap_or(&lifter.name)
         }
 
         _ => &lifter.name,

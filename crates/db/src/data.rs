@@ -21,14 +21,18 @@ pub struct Lifter {
     pub name: CompactString,
     pub username: Username,
 
-    pub chinese_name: Option<CompactString>,
-    pub cyrillic_name: Option<CompactString>,
-    pub greek_name: Option<CompactString>,
-    pub japanese_name: Option<CompactString>,
-    pub korean_name: Option<CompactString>,
+    // These fields intentionally do not use CompactString.
+    //
+    // Because they are almost always None in the current dataset, it's more beneficial
+    // to take the Option<String> None optimization than the CompactString optimization.
+    pub chinese_name: Option<String>,
+    pub cyrillic_name: Option<String>,
+    pub greek_name: Option<String>,
+    pub japanese_name: Option<String>,
+    pub korean_name: Option<String>,
 
-    pub instagram: Option<CompactString>,
-    pub color: Option<CompactString>,
+    pub instagram: Option<String>,
+    pub color: Option<String>,
 }
 
 /// The definition of a Meet in the database.
