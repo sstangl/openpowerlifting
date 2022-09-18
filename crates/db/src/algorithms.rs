@@ -1,11 +1,11 @@
 //! Shared algorithms that operate on StaticCache data.
 
 use opltypes::*;
+
+use std::borrow::Cow;
 use std::cmp;
 
 use crate::cache::NonSortedNonUnique;
-use crate::cache::PossiblyOwnedNonSortedNonUnique;
-use crate::cache::PossiblyOwnedSortedUnique;
 use crate::cache::SortedUnique;
 use crate::query::direct::*;
 use crate::{Entry, Meet, OplDb};
@@ -248,7 +248,7 @@ pub fn cmp_ah(meets: &[Meet], a: &Entry, b: &Entry) -> cmp::Ordering {
 pub fn entry_indices_for<'db>(
     selection: &EntryFilter,
     opldb: &'db OplDb,
-) -> PossiblyOwnedNonSortedNonUnique<'db> {
+) -> Cow<'db, NonSortedNonUnique> {
     let cache = opldb.cache();
 
     // Use the NonSortedNonUnique cached data.
@@ -260,17 +260,13 @@ pub fn entry_indices_for<'db>(
         EquipmentFilter::Multi => &cache.log_linear_time.multi,
         EquipmentFilter::Unlimited => &cache.log_linear_time.unlimited,
     };
-    let mut cur = PossiblyOwnedNonSortedNonUnique::Borrowed(equipment);
+    let mut cur = Cow::Borrowed(equipment);
 
     // Apply the Sex filter.
     cur = match selection.sex {
         SexFilter::AllSexes => cur,
-        SexFilter::Men => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.male))
-        }
-        SexFilter::Women => {
-            PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(&cache.log_linear_time.female))
-        }
+        SexFilter::Men => Cow::Owned(cur.intersect(&cache.log_linear_time.male)),
+        SexFilter::Women => Cow::Owned(cur.intersect(&cache.log_linear_time.female)),
     };
 
     // Apply the Year filter.
@@ -278,7 +274,7 @@ pub fn entry_indices_for<'db>(
         YearFilter::AllYears => cur,
         YearFilter::OneYear(year) => {
             if let Some(year_cache) = cache.log_linear_time.year_cache(year as u32) {
-                PossiblyOwnedNonSortedNonUnique::Owned(cur.intersect(year_cache))
+                Cow::Owned(cur.intersect(year_cache))
             } else {
                 let year = year as u32;
                 let filter = NonSortedNonUnique(
@@ -292,7 +288,7 @@ pub fn entry_indices_for<'db>(
                         })
                         .collect(),
                 );
-                PossiblyOwnedNonSortedNonUnique::Owned(filter)
+                Cow::Owned(filter)
             }
         }
     };
@@ -308,7 +304,7 @@ pub fn entry_indices_for<'db>(
                 })
                 .collect(),
         );
-        cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+        cur = Cow::Owned(filter);
     }
 
     // Filter by federation manually.
@@ -325,7 +321,7 @@ pub fn entry_indices_for<'db>(
                     )
                     .collect(),
             );
-            cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+            cur = Cow::Owned(filter);
         } else if let FederationFilter::Meta(metafed) = selection.federation {
             let meets = opldb.meets();
             let filter = NonSortedNonUnique(
@@ -337,7 +333,7 @@ pub fn entry_indices_for<'db>(
                     })
                     .collect(),
             );
-            cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+            cur = Cow::Owned(filter);
         }
     }
 
@@ -395,8 +391,7 @@ pub fn entry_indices_for<'db>(
                 })
                 .collect(),
         );
-
-        cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+        cur = Cow::Owned(filter);
     }
 
     // Filter by event manually.
@@ -422,8 +417,7 @@ pub fn entry_indices_for<'db>(
                 })
                 .collect(),
         );
-
-        cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+        cur = Cow::Owned(filter);
     }
 
     // Filter by weight class manually.
@@ -454,8 +448,7 @@ pub fn entry_indices_for<'db>(
                 })
                 .collect(),
         );
-
-        cur = PossiblyOwnedNonSortedNonUnique::Owned(filter);
+        cur = Cow::Owned(filter);
     }
 
     cur
@@ -468,7 +461,7 @@ pub fn entry_indices_for<'db>(
 pub fn full_sorted_uniqued<'db>(
     query: &RankingsQuery,
     opldb: &'db OplDb,
-) -> PossiblyOwnedSortedUnique<'db> {
+) -> Cow<'db, SortedUnique> {
     let cache = opldb.cache();
 
     // First, try to use the constant-time cache.
@@ -504,7 +497,7 @@ pub fn full_sorted_uniqued<'db>(
         // Since each lifter is only one sex, sex selections
         // can just be an O(n) filter.
         if query.filter.sex != SexFilter::AllSexes {
-            return PossiblyOwnedSortedUnique::Owned(SortedUnique(
+            return Cow::Owned(SortedUnique(
                 sorted_uniqued
                     .0
                     .iter()
@@ -521,7 +514,7 @@ pub fn full_sorted_uniqued<'db>(
             ));
         }
 
-        return PossiblyOwnedSortedUnique::Borrowed(sorted_uniqued);
+        return Cow::Borrowed(sorted_uniqued);
     }
 
     // If the ConstantTime cache fails, use the NonSortedNonUnique cache data.
@@ -531,7 +524,7 @@ pub fn full_sorted_uniqued<'db>(
     let meets = opldb.meets();
 
     // TODO: Common out sort code with ConstantTimeCache::new()
-    PossiblyOwnedSortedUnique::Owned(match query.order_by {
+    Cow::Owned(match query.order_by {
         OrderBy::Squat => cur.sort_and_unique_by(entries, meets, cmp_squat, filter_squat),
         OrderBy::Bench => cur.sort_and_unique_by(entries, meets, cmp_bench, filter_bench),
         OrderBy::Deadlift => cur.sort_and_unique_by(entries, meets, cmp_deadlift, filter_deadlift),

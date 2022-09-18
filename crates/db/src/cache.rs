@@ -5,7 +5,6 @@ use itertools::Itertools;
 use opltypes::*;
 
 use std::cmp::Ordering;
-use std::ops::Deref;
 
 use crate::algorithms::*;
 use crate::{Entry, Lifter, Meet};
@@ -30,45 +29,8 @@ pub struct NonSortedNonUnique(pub Vec<u32>);
 ///
 /// This is useful to get `O(1)` lookup, since it stores
 /// the filter/sort/unique algorithm in its final output.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct SortedUnique(pub Vec<u32>);
-
-// TODO: Can we templatize these PossiblyOwned types?
-/// Allows remembering whether or not a returned SortedUnique is to be
-/// deallocated.
-pub enum PossiblyOwnedNonSortedNonUnique<'db> {
-    Borrowed(&'db NonSortedNonUnique),
-    Owned(NonSortedNonUnique),
-}
-
-impl<'db> Deref for PossiblyOwnedNonSortedNonUnique<'db> {
-    type Target = NonSortedNonUnique;
-
-    fn deref(&self) -> &NonSortedNonUnique {
-        match &self {
-            PossiblyOwnedNonSortedNonUnique::Borrowed(x) => x,
-            PossiblyOwnedNonSortedNonUnique::Owned(x) => x,
-        }
-    }
-}
-
-/// Allows remembering whether or not a returned SortedUnique is to be
-/// deallocated.
-pub enum PossiblyOwnedSortedUnique<'db> {
-    Borrowed(&'db SortedUnique),
-    Owned(SortedUnique),
-}
-
-impl<'db> Deref for PossiblyOwnedSortedUnique<'db> {
-    type Target = SortedUnique;
-
-    fn deref(&self) -> &SortedUnique {
-        match &self {
-            PossiblyOwnedSortedUnique::Borrowed(x) => x,
-            PossiblyOwnedSortedUnique::Owned(x) => x,
-        }
-    }
-}
 
 impl NonSortedNonUnique {
     /// Unions the indices from both source inputs.

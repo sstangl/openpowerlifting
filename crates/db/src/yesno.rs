@@ -14,10 +14,7 @@ impl<'de> Visitor<'de> for YesNo {
         formatter.write_str("'Yes' or 'No'")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<bool, E>
-    where
-        E: de::Error,
-    {
+    fn visit_str<E: de::Error>(self, value: &str) -> Result<bool, E> {
         match value {
             "Yes" => Ok(true),
             "No" | "" => Ok(false),
@@ -27,9 +24,6 @@ impl<'de> Visitor<'de> for YesNo {
 }
 
 /// Deserialization helper, converting "Yes" and "No" to a boolean.
-pub fn deserialize_yes_no<'de, D>(de: D) -> Result<bool, D::Error>
-where
-    D: serde::Deserializer<'de>,
-{
+pub fn deserialize_yes_no<'de, D: serde::Deserializer<'de>>(de: D) -> Result<bool, D::Error> {
     de.deserialize_str(YesNo)
 }
