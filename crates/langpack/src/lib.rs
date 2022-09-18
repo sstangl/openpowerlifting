@@ -13,7 +13,9 @@ use std::fmt;
 
 /// List of languages accepted by the project, in ISO 639-1 code.
 #[allow(non_camel_case_types)]
-#[derive(Clone, Copy, Debug, EnumIter, EnumString, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(
+    Clone, Copy, Debug, EnumIter, EnumString, IntoStaticStr, PartialEq, Eq, Serialize, Deserialize,
+)]
 pub enum Language {
     /// Czech.
     cs,
@@ -77,36 +79,8 @@ pub enum Language {
 
 impl fmt::Display for Language {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        let s = match self {
-            Language::cs => "cs",
-            Language::de => "de",
-            Language::el => "el",
-            Language::en => "en",
-            Language::eo => "eo",
-            Language::es => "es",
-            Language::fi => "fi",
-            Language::fr => "fr",
-            Language::hr => "hr",
-            Language::hu => "hu",
-            Language::it => "it",
-            Language::ja => "ja",
-            Language::ko => "ko",
-            Language::lt => "lt",
-            Language::nl => "nl",
-            Language::pl => "pl",
-            Language::pt => "pt",
-            Language::sk => "sk",
-            Language::sl => "sl",
-            Language::sr => "sr",
-            Language::sv => "sv",
-            Language::ru => "ru",
-            Language::tr => "tr",
-            Language::uk => "uk",
-            Language::vi => "vi",
-            Language::zh_hant => "zh-Hant",
-            Language::zh_hans => "zh-Hans",
-        };
-        write!(f, "{}", s)
+        let as_str: &'static str = self.into();
+        write!(f, "{as_str}")
     }
 }
 
@@ -118,8 +92,8 @@ impl Language {
     }
 
     /// Returns a list of available languages as strings.
-    pub fn string_list() -> Vec<String> {
-        Language::iter().map(|lang| lang.to_string()).collect()
+    pub fn string_list() -> Vec<&'static str> {
+        Language::iter().map(|lang| lang.into()).collect()
     }
 }
 

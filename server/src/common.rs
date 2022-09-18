@@ -124,7 +124,7 @@ impl<'r> FromRequest<'r> for AcceptLanguage {
 }
 
 pub fn select_display_language(languages: &AcceptLanguage, cookies: &CookieJar<'_>) -> Language {
-    let default = Language::en;
+    const DEFAULT_LANGUAGE: Language = Language::en;
 
     // The user may explicitly override the language choice by using
     // a cookie named "lang".
@@ -137,19 +137,11 @@ pub fn select_display_language(languages: &AcceptLanguage, cookies: &CookieJar<'
     // If a language was not explicitly selected, the Accept-Language HTTP
     // header is consulted, defaulting to English.
     match &languages.0 {
-        Some(s) => {
-            // TODO: It would be better if this vector was static.
-            let known_languages: Vec<String> = Language::string_list();
-            let borrowed: Vec<&str> = known_languages.iter().map(|s| s.as_ref()).collect();
-            let valid_languages = accept_language::intersection(s, borrowed);
-
-            if valid_languages.is_empty() {
-                default
-            } else {
-                valid_languages[0].parse::<Language>().unwrap_or(default)
-            }
-        }
-        None => default,
+        Some(userlist) => accept_language::intersection(userlist, Language::string_list())
+            .first()
+            .and_then(|lang| lang.parse::<Language>().ok())
+            .unwrap_or(DEFAULT_LANGUAGE),
+        None => DEFAULT_LANGUAGE,
     }
 }
 
