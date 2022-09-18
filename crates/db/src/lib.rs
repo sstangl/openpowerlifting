@@ -13,6 +13,7 @@ use itertools::Itertools;
 
 use std::error::Error;
 use std::mem;
+use std::path::Path;
 
 use crate::cache::*;
 
@@ -56,7 +57,7 @@ pub struct OplDb {
 }
 
 /// Reads the `lifters.csv` file into a Vec<Lifter>.
-fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<dyn Error>> {
+fn import_lifters_csv(file: &Path) -> Result<Vec<Lifter>, Box<dyn Error>> {
     let mut vec = Vec::with_capacity(1_000_000);
 
     let mut rdr = csv::ReaderBuilder::new().quoting(false).from_path(file)?;
@@ -70,7 +71,7 @@ fn import_lifters_csv(file: &str) -> Result<Vec<Lifter>, Box<dyn Error>> {
 }
 
 /// Reads the `meet.csv` file into a Vec<Meet>.
-fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<dyn Error>> {
+fn import_meets_csv(file: &Path) -> Result<Vec<Meet>, Box<dyn Error>> {
     let mut vec = Vec::with_capacity(50_000);
 
     let mut rdr = csv::ReaderBuilder::new().quoting(false).from_path(file)?;
@@ -87,7 +88,7 @@ fn import_meets_csv(file: &str) -> Result<Vec<Meet>, Box<dyn Error>> {
 ///
 /// Also fills in metadata about each Meet.
 fn import_entries_csv(
-    file: &str,
+    file: &Path,
     meets: &mut [Meet],
 ) -> Result<(Vec<Entry>, MetaFederationCache), Box<dyn Error>> {
     let mut vec = Vec::with_capacity(3_000_000);
@@ -159,9 +160,9 @@ impl OplDb {
     /// Constructs the `OplDb` from CSV files produced by the project
     /// build script.
     pub fn from_csv(
-        lifters_csv: &str,
-        meets_csv: &str,
-        entries_csv: &str,
+        lifters_csv: &Path,
+        meets_csv: &Path,
+        entries_csv: &Path,
     ) -> Result<OplDb, Box<dyn Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
         let mut meets = import_meets_csv(meets_csv)?;

@@ -5,6 +5,7 @@ use opldb::OplDb;
 use rocket::http::{Cookie, Header, Status};
 use rocket::local::blocking::Client;
 
+use std::path::Path;
 use std::sync::Once;
 
 use super::rocket;
@@ -23,7 +24,14 @@ fn db() -> &'static OplDb {
             // This isn't really the place for it, but preload the environment.
             dotenv::from_filename("server.env").unwrap();
 
-            OPLDB_GLOBAL = Some(OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV).unwrap());
+            OPLDB_GLOBAL = Some(
+                OplDb::from_csv(
+                    Path::new(LIFTERS_CSV),
+                    Path::new(MEETS_CSV),
+                    Path::new(ENTRIES_CSV),
+                )
+                .unwrap(),
+            );
         });
 
         OPLDB_GLOBAL.as_ref().unwrap()

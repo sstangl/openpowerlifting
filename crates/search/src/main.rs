@@ -3,6 +3,8 @@
 use rustyline::error::ReadlineError;
 use rustyline::Editor;
 
+use std::path::Path;
+
 const READLINE_PROMPT: &str = ">>> ";
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -10,7 +12,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     const MEETS_CSV: &str = "../../build/meets.csv";
     const ENTRIES_CSV: &str = "../../build/entries.csv";
 
-    let _db = opldb::OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV)?;
+    let _db = opldb::OplDb::from_csv(
+        Path::new(LIFTERS_CSV),
+        Path::new(MEETS_CSV),
+        Path::new(ENTRIES_CSV),
+    )?;
 
     let mut rl = Editor::<()>::new().unwrap();
     loop {
