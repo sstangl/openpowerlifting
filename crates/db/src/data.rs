@@ -16,26 +16,19 @@ use crate::yesno::deserialize_yes_no;
 /// Lifters are stored in a `Vec<Lifter>`.
 /// The LifterID is the index of the struct in the vector.
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all(deserialize = "PascalCase"))]
 pub struct Lifter {
-    #[serde(rename(deserialize = "Name"))]
     pub name: CompactString,
-    #[serde(rename(deserialize = "ChineseName"))]
-    pub chinese_name: Option<CompactString>,
-    #[serde(rename(deserialize = "CyrillicName"))]
-    pub cyrillic_name: Option<CompactString>,
-    #[serde(rename(deserialize = "GreekName"))]
-    pub greek_name: Option<CompactString>,
-    #[serde(rename(deserialize = "JapaneseName"))]
-    pub japanese_name: Option<CompactString>,
-    #[serde(rename(deserialize = "KoreanName"))]
-    pub korean_name: Option<CompactString>,
-    #[serde(rename(deserialize = "Username"))]
     pub username: Username,
-    #[serde(rename(deserialize = "Instagram"))]
+
+    pub chinese_name: Option<CompactString>,
+    pub cyrillic_name: Option<CompactString>,
+    pub greek_name: Option<CompactString>,
+    pub japanese_name: Option<CompactString>,
+    pub korean_name: Option<CompactString>,
+
     pub instagram: Option<CompactString>,
-    #[serde(rename(deserialize = "Color"))]
     pub color: Option<CompactString>,
-    #[serde(rename(deserialize = "Flair"))]
     pub flair: Option<CompactString>,
 }
 
