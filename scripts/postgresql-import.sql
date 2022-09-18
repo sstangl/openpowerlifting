@@ -38,8 +38,7 @@ CREATE TABLE opl_lifters (
 	korean_name VARCHAR,
 	username VARCHAR NOT NULL,
 	instagram VARCHAR,
-	color VARCHAR,
-	flair VARCHAR
+	color VARCHAR
 );
 \copy opl_lifters FROM 'build/lifters.csv' DELIMITER ',' CSV HEADER
 

@@ -37,7 +37,6 @@ export const enum Column {
     Username,
     Instagram,
     Color,
-    Flair,
     LifterCountry,
     LifterState,
     Federation,

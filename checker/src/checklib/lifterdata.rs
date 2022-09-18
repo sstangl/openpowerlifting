@@ -45,12 +45,6 @@ pub struct LifterData {
     /// CSS class, for lifters who donate to the project.
     pub color: Option<String>,
 
-    /// Extra metadata for showing symbols next to a lifter's name.
-    ///
-    /// This was added as a promotion for Boss of Bosses, showing the BBBC logo
-    /// next to lifters' names for a year. It is currently unused.
-    pub flair: Option<String>,
-
     /// The lifter's Instagram.
     pub instagram: Option<String>,
 
@@ -126,67 +120,6 @@ fn check_donator_colors(
             None => {
                 let data = LifterData {
                     color: Some(row.color),
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        }
-    }
-
-    Ok(())
-}
-
-/// Specifies a special flair to the right of the lifter's Name.
-///
-/// The data exists in `lifter-data/flair.csv`.
-#[derive(Deserialize)]
-struct FlairRow {
-    #[serde(rename = "Name")]
-    pub name: String,
-    #[serde(rename = "Flair")]
-    pub flair: String,
-}
-
-/// Checks `lifter-data/flair.csv`, mutating the LifterDataMap.
-fn check_flair(
-    reader: &csv::ReaderBuilder,
-    report: &mut Report,
-    map: &mut LifterDataMap,
-) -> Result<(), Box<dyn Error>> {
-    if !report.path.exists() {
-        report.error("File does not exist");
-        return Ok(());
-    }
-
-    let mut rdr = reader.from_path(&report.path)?;
-
-    for (rownum, result) in rdr.deserialize().enumerate() {
-        // Text editors are one-indexed, and the header line was skipped.
-        let line = (rownum as u64) + 2;
-
-        let row: FlairRow = result?;
-        let username = match Username::from_name(&row.name) {
-            Ok(s) => s,
-            Err(s) => {
-                report.error_on(line, s);
-                continue;
-            }
-        };
-
-        if has_whitespace_errors(username.as_str()) {
-            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
-        }
-        if has_whitespace_errors(&row.flair) {
-            report.error_on(line, format!("Whitespace error in '{}'", &row.flair));
-        }
-
-        match map.get_mut(&username) {
-            Some(data) => {
-                data.flair = Some(row.flair);
-            }
-            None => {
-                let data = LifterData {
-                    flair: Some(row.flair),
                     ..Default::default()
                 };
                 map.insert(username, data);
@@ -439,18 +372,6 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
     // Always create the report in order to catch internal errors.
     let mut report = Report::new(lifterdir.join("donator-colors.csv"));
     match check_donator_colors(reader, &mut report, &mut map) {
-        Ok(()) => (),
-        Err(e) => {
-            report.error(e);
-        }
-    }
-    if report.has_messages() {
-        reports.push(report)
-    }
-
-    // Check flair.csv.
-    let mut report = Report::new(lifterdir.join("flair.csv"));
-    match check_flair(reader, &mut report, &mut map) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);

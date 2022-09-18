@@ -29,7 +29,6 @@ pub struct Lifter {
 
     pub instagram: Option<CompactString>,
     pub color: Option<CompactString>,
-    pub flair: Option<CompactString>,
 }
 
 /// The definition of a Meet in the database.

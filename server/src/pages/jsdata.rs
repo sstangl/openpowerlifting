@@ -18,7 +18,6 @@ pub struct JsEntryRow<'db> {
     pub username: &'db str,
     pub instagram: Option<&'db str>,
     pub color: Option<&'db str>,
-    pub flair: Option<&'db str>,
 
     pub lifter_country: Option<&'db str>,
     pub lifter_state: Option<State>,
@@ -58,7 +57,6 @@ impl<'db> Serialize for JsEntryRow<'db> {
         seq.serialize_element(&self.username)?;
         seq.serialize_element(&self.instagram)?;
         seq.serialize_element(&self.color)?;
-        seq.serialize_element(&self.flair)?;
 
         seq.serialize_element(&self.lifter_country)?;
         seq.serialize_element(&self.lifter_state)?;
@@ -109,7 +107,6 @@ impl<'db> JsEntryRow<'db> {
             username: lifter.username.as_str(),
             instagram: lifter.instagram.as_deref(),
             color: lifter.color.as_deref(),
-            flair: lifter.flair.as_deref(),
 
             lifter_country: entry.lifter_country.map(|c| strings.translate_country(c)),
             lifter_state: entry.lifter_state,

@@ -66,10 +66,10 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2020, 11, 7) {
                     continue;
                 }
-                 // IrishPF/2204 and NIPF/2202.
-                 if cur_meet.date == opltypes::Date::from_parts(2022, 06,11) {
+                // IrishPF/2204 and NIPF/2202.
+                if cur_meet.date == opltypes::Date::from_parts(2022, 06, 11) {
                     continue;
-                } 
+                }
                 // usapl-archive/MO-2001-04-21-A and usapl-archive/MO-2001-04-21-B.
                 if cur_meet.date == opltypes::Date::from_parts(2001, 4, 21) {
                     continue;
