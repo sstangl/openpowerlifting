@@ -25,32 +25,15 @@ pub fn query_slice<'db>(
     end_row: usize,   // Inclusive. Can be out-of-bounds.
 ) -> RankingsSlice<'db> {
     const ROW_LIMIT: usize = 100;
-    let mut end_row = end_row;
 
     // TODO: Use a better algorithm, don't generate everything.
     let list = algorithms::full_sorted_uniqued(selection, opldb);
     let total_length = list.0.len();
 
-    // Limit the request size to something sane.
-    // Arithmetic can't overflow since it's already been compared to total_length.
-    if end_row - start_row + 1 > ROW_LIMIT {
-        end_row = start_row + (ROW_LIMIT - 1);
-    }
-
-    // The request must be in-bounds.
-    if end_row >= total_length {
-        if total_length > 0 {
-            end_row = total_length - 1;
-        } else {
-            end_row = 0;
-        }
-    }
-    if (start_row > end_row) || (start_row >= total_length) {
-        return RankingsSlice {
-            total_length,
-            rows: vec![],
-        };
-    }
+    let req_length = usize::min(
+        end_row.saturating_sub(start_row).saturating_add(1),
+        ROW_LIMIT,
+    );
 
     // Figure out the points system to be used.
     let points_system = if selection.order_by.is_by_points() {
@@ -60,8 +43,8 @@ pub fn query_slice<'db>(
         PointsSystem::from(defaults.order_by)
     };
 
-    let rows: Vec<JsEntryRow> = list.0[start_row..=end_row]
-        .iter()
+    let slice_iter = list.0.iter().skip(start_row).take(req_length);
+    let rows: Vec<JsEntryRow> = slice_iter
         .zip(start_row..)
         .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.entry(n), i as u32, points_system))
         .collect();
