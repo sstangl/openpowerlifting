@@ -43,10 +43,9 @@ pub fn query_slice<'db>(
         PointsSystem::from(defaults.order_by)
     };
 
-    let slice_iter = list.0.iter().skip(start_row).take(req_length);
+    let slice_iter = list.0.iter().enumerate().skip(start_row).take(req_length);
     let rows: Vec<JsEntryRow> = slice_iter
-        .zip(start_row..)
-        .map(|(&n, i)| JsEntryRow::from(opldb, locale, opldb.entry(n), i as u32, points_system))
+        .map(|(i, n)| JsEntryRow::from(opldb, locale, opldb.entry(*n), i as u32, points_system))
         .collect();
 
     RankingsSlice { total_length, rows }
