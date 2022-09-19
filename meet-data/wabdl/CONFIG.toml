@@ -1,6 +1,6 @@
 # From http://wabdl.org/documents/2018/08/wabdl-rule-book-as-of-892018.pdf
 [options]
-    require_manual_disambiguation = true
+#    require_manual_disambiguation = true
 
 [divisions]
     class1 = {name="Class 1", min=14, max=999}
