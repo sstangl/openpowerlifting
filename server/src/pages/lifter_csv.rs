@@ -75,7 +75,7 @@ pub fn export_csv(
 
     // Filter and sort the entries, oldest entries first.
     if let Some(f) = entry_filter {
-        entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
+        entries.retain(|e| f(opldb, *e))
     }
     entries.sort_unstable_by_key(|e| &opldb.meet(e.meet_id).date);
 

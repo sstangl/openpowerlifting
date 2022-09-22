@@ -459,7 +459,7 @@ impl Context {
         // This changes the indices of each vector, so `federation as usize` logic
         // is invalid after this point.
         if let Some(f) = fed_filter {
-            statuses = statuses.into_iter().filter(|s| f(s.fed)).collect();
+            statuses.retain(|s| f(s.fed))
         }
 
         Context {
