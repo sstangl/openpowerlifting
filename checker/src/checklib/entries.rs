@@ -1977,16 +1977,13 @@ fn should_ignore_config(meet: Option<&Meet>, config: Option<&Config>) -> bool {
 ///
 /// Extracting this out into a `Reader`-specific function is useful
 /// for creating tests that do not have a backing CSV file.
-pub fn do_check<R>(
+pub fn do_check<R: io::Read>(
     rdr: &mut csv::Reader<R>,
     meet: Option<&Meet>,
     config: Option<&Config>,
     lifterdata: Option<&LifterDataMap>,
     mut report: Report,
-) -> Result<EntriesCheckResult, Box<dyn Error>>
-where
-    R: io::Read,
-{
+) -> Result<EntriesCheckResult, Box<dyn Error>> {
     // If the federation is only partially configured and this meet doesn't fall in
     // the valid range, ignore the config by reassigning it.
     let config = if should_ignore_config(meet, config) {
