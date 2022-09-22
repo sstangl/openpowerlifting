@@ -1,7 +1,7 @@
 # Configuration for RPS.
 
 [options]
-	require_manual_disambiguation = true
+#	require_manual_disambiguation = true
 
 # Divisions are specified here: https://www.revolutionpowerlifting.com/rules/?page_id=10
 [divisions]
@@ -477,3 +477,5 @@
     1927 = ["ExemptDivision"] # Not really an RPS meet (GPC-USA).
     1973 = ["ExemptDivision"] # New divs using OpenLifter; not sure whether to keep.
     2127 = ["ExemptWeightClassConsistency"] # Lifter missing any weight info.
+    2237 = ["ExemptDivision"] # Divisions need simplifying 
+    2238 = ["ExemptDivision"] # Divisions need simplifying 
