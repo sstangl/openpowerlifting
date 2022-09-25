@@ -616,6 +616,7 @@
     NE-2022-06 = ["ExemptWeightClassConsistency"] # No weight classes used.
     MN-2022-12 = ["ExemptWeightClassConsistency"] # No weight classes used.
     PA-2022-12 = ["ExemptWeightClassConsistency"] # No weight classes used.
+    IL-2022-05 = ["ExemptDivision"] # Lifter under 14 in the Open division.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
