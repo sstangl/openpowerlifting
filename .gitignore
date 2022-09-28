@@ -33,6 +33,7 @@ book/book/
 # Tool output.
 perf.data
 perf.data.old
+proptest-regressions/
 
 # Accidental output, just to be safe in the future.
 /package.json
