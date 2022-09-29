@@ -90,3 +90,4 @@
     sex = "M"
 
 [exemptions]
+    2206 = ["ExemptWeightClassConsistency"] # Reduced weight classes.
