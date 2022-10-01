@@ -35,6 +35,7 @@
  
     foe = {name ="FOE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fje = {name ="FJE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    fet = {name ="FET", min=13, max=19, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fet1 = {name ="FET1", min=13, max=15, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fet2 = {name ="FET2", min=16, max=17, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fet3 = {name ="FET3", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
