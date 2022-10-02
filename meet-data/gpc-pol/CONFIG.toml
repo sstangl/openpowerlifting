@@ -12,8 +12,8 @@
     for = {name ="F-OR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     mgr = {name ="M-GR", min=0, max=999, sex="M", equipment=["Raw","Wraps"], place="G"}
     fgr = {name ="F-GR", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
-    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
+    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mtr = {name ="M-TR", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
     mte = {name ="M-TE", min=13, max=19, sex="M", equipment=["Single-ply", "Multi-ply"]}
     mt1r = {name ="M-T1R", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
