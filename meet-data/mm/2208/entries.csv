@@ -1,23 +1,23 @@
-Name,Sex,BirthYear,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,BirthDate,Place
-Gio Imuzzi,M,2000,22,Unlimited,Pro Juniors 20-23,99.64,100,,,,,,,,,272.5,295,-317.5,295,295,D,,1
-Gio Imuzzi,M,2000,22,Unlimited,Pro Open,99.64,100,,,,,,,,,272.5,295,-317.5,295,295,D,,1
-Gilberto Salinas,M,1972,50,Unlimited,Pro Masters 50-54,135.65,140,,,,,,,,,-250,250,260,260,260,D,,1
-Gilberto Salinas,M,1972,50,Unlimited,Pro Open,135.65,140,,,,,,,,,-250,250,260,260,260,D,,1
-Moses McPherson,M,1981,41,Raw,Pro Open,99.82,100,227.5,245,255,255,182.5,192.5,,192.5,267.5,280,287.5,287.5,735,SBD,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,420,-455,455,455,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,1150,SBD,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,,,,,365,372.5,-380,372.5,,,,,372.5,B,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,,,,,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,695,BD,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,,,,,,,,,287.5,307.5,322.5,322.5,322.5,D,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,420,-455,455,455,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,1150,SBD,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,,,,,365,372.5,-380,372.5,,,,,372.5,B,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,,,,,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,695,BD,,1
-Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,,,,,,,,,287.5,307.5,322.5,322.5,322.5,D,,1
-Tyler Dennison,M,1992,29,Raw,Pro Open,123.27,125,275,295,307.5,307.5,200,217.5,227.5,227.5,-320,320,-330,320,855,SBD,,1
-Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,227.5,245,260,260,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,622.5,SBD,,1
-Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,,,,,-142.5,-155,155,155,,,,,155,B,,1
-Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,,,,,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,362.5,BD,,1
-Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,,,,,,,,,197.5,207.5,-217.5,207.5,207.5,D,,1
-Sophie Tran,F,,41,Unlimited,Pro Open,75,75,227.5,245,260,260,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,622.5,SBD,,1
-Sophie Tran,F,,41,Unlimited,Pro Open,75,75,,,,,-142.5,-155,155,155,,,,,155,B,,1
-Sophie Tran,F,,41,Unlimited,Pro Open,75,75,,,,,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,362.5,BD,,1
-Sophie Tran,F,,41,Unlimited,Pro Open,75,75,,,,,,,,,197.5,207.5,-217.5,207.5,207.5,D,,1
+Name,Sex,BirthYear,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,BirthDate,Place
+Gio Imuzzi,M,2000,22,Unlimited,Pro Juniors 20-23,99.64,100,,,,,,,,,272.5,295,-317.5,295,,295,D,,1
+Gio Imuzzi,M,2000,22,Unlimited,Pro Open,99.64,100,,,,,,,,,272.5,295,-317.5,295,,295,D,,1
+Gilberto Salinas,M,1972,50,Unlimited,Pro Masters 50-54,135.65,140,,,,,,,,,-250,250,260,260,272.5,260,D,,1
+Gilberto Salinas,M,1972,50,Unlimited,Pro Open,135.65,140,,,,,,,,,-250,250,260,260,272.5,260,D,,1
+Moses McPherson,M,1981,41,Raw,Pro Open,99.82,100,227.5,245,255,255,182.5,192.5,,192.5,267.5,280,287.5,287.5,,735,SBD,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,420,-455,455,455,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,,1150,SBD,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,,,,,365,372.5,-380,372.5,,,,,,372.5,B,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,,,,,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,,695,BD,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Juniors 20-23,98.73,100,,,,,,,,,287.5,307.5,322.5,322.5,,322.5,D,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,420,-455,455,455,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,,1150,SBD,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,,,,,365,372.5,-380,372.5,,,,,,372.5,B,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,,,,,365,372.5,-380,372.5,287.5,307.5,322.5,322.5,,695,BD,,1
+Ryan Leal,M,2000,22,Unlimited,Pro Open,98.73,100,,,,,,,,,287.5,307.5,322.5,322.5,,322.5,D,,1
+Tyler Dennison,M,1992,29,Raw,Pro Open,123.27,125,275,295,307.5,307.5,200,217.5,227.5,227.5,-320,320,-330,320,,855,SBD,,1
+Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,227.5,245,260,260,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,,622.5,SBD,,1
+Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,,,,,-142.5,-155,155,155,,,,,,155,B,,1
+Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,,,,,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,,362.5,BD,,1
+Sophie Tran,F,,41,Unlimited,Pro Masters 40-44,75,75,,,,,,,,,197.5,207.5,-217.5,207.5,,207.5,D,,1
+Sophie Tran,F,,41,Unlimited,Pro Open,75,75,227.5,245,260,260,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,,622.5,SBD,,1
+Sophie Tran,F,,41,Unlimited,Pro Open,75,75,,,,,-142.5,-155,155,155,,,,,,155,B,,1
+Sophie Tran,F,,41,Unlimited,Pro Open,75,75,,,,,-142.5,-155,155,155,197.5,207.5,-217.5,207.5,,362.5,BD,,1
+Sophie Tran,F,,41,Unlimited,Pro Open,75,75,,,,,,,,,197.5,207.5,-217.5,207.5,,207.5,D,,1
