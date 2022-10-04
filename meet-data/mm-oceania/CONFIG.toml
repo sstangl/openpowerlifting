@@ -119,3 +119,4 @@
 [exemptions]
     2204 = ["ExemptWeightClassConsistency"]
     2205 = ["ExemptWeightClassConsistency"]
+    2206 = ["ExemptWeightClassConsistency","ExemptDivision"] # OpenLifter-style divisions: we could support them
