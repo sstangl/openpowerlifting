@@ -59,6 +59,7 @@
     fm7r = {name ="F-M7", min=70, max=74, sex="F", equipment=["Raw","Wraps"]}
     fm7e = {name ="F-M7-E", min=70, max=74, sex="F", equipment=["Single-ply","Multi-ply"]}
     mm8r = {name ="M-M8", min=75, max=79, sex="M", equipment=["Raw","Wraps"]}
+    mm8e = {name ="M-M8-E", min=75, max=79, sex="M", equipment=["Single-ply","Multi-ply"]}
     fm8r = {name ="F-M8", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
     mm9r = {name ="M-M9", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
     fm9r = {name ="F-M9", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
