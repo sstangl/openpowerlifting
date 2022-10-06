@@ -72,6 +72,15 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
         return;
     }
 
+    // Quickly check for Windows line endings, producing a more helpful error message.
+    if let Some(last_header) = headers.get(headers.len() - 1) {
+        // The CSV Reader already stripped the '\n' in "\r\n".
+        if last_header.ends_with('\r') {
+            report.error("Windows line endings detected: run `dos2unix` to convert");
+            return;
+        }
+    }
+
     // Check required headers.
     for (i, header) in headers.iter().take(REQUIRED_HEADERS.len()).enumerate() {
         if header != REQUIRED_HEADERS[i] {
