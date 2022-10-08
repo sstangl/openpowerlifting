@@ -19,30 +19,24 @@ pub fn redact(
     liftermap: &mut LifterMap,
     lifterdata: &mut LifterDataMap,
 ) {
-    // First, iterate over the LifterData, modifying the AllMeetData and LifterMap.
+    // Accumulator for (Old, New) username pairs for redacted lifters.
     let mut redacted_usernames: Vec<(Username, Username)> = vec![];
-    for (username, data) in lifterdata.iter() {
-        // Processing only needed for lifters who requested privacy.
-        if !data.privacy {
-            continue;
-        }
 
+    // Iterate over all lifters who have `data.privacy` set to true.
+    for (old_username, _data) in lifterdata.iter().filter(|(_, data)| data.privacy) {
         // Create a new Name and Username.
         let disambiguation_id = redacted_usernames.len() + 1;
-        let new_name = format!("Redacted Lifter #{}", disambiguation_id);
+        let new_name = format!("Redacted Lifter #{disambiguation_id}");
         let new_username = Username::from_name(&new_name).unwrap();
 
-        // Mark this username as redacted in our accumulator.
-        redacted_usernames.push((username.clone(), new_username.clone()));
-
-        let indices = liftermap.remove(username).unwrap();
-
         // Redact from all entries.
+        let indices = liftermap.remove(old_username).unwrap();
         for &index in &indices {
             let entry = meetdata.entry_mut(index);
             entry.name = new_name.clone();
             entry.username = new_username.clone();
 
+            entry.chinesename = None;
             entry.cyrillicname = None;
             entry.greekname = None;
             entry.japanesename = None;
@@ -50,7 +44,10 @@ pub fn redact(
         }
 
         // Re-insert into the LifterMap with the new redacted username.
-        liftermap.insert(new_username, indices);
+        liftermap.insert(new_username.clone(), indices);
+
+        // Mark this username as redacted in our accumulator.
+        redacted_usernames.push((old_username.clone(), new_username));
     }
 
     // Re-key the LifterDataMap to match the new, redacted usernames.

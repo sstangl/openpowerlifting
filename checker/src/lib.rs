@@ -62,7 +62,7 @@ impl Report {
 
     /// Reports an error on a specific line.
     pub fn error_on(&mut self, line: u64, message: impl ToString) {
-        let msg = format!(" Line {}: {}", line, message.to_string());
+        let msg = format!(" Line {line}: {}", message.to_string());
         self.messages.push(Message::Error(msg));
     }
 
@@ -73,7 +73,7 @@ impl Report {
 
     /// Reports a warning on a specific line.
     pub fn warning_on(&mut self, line: u64, message: impl ToString) {
-        let msg = format!(" Line {}: {}", line, message.to_string());
+        let msg = format!(" Line {line}: {}", message.to_string());
         self.messages.push(Message::Warning(msg));
     }
 

@@ -38,7 +38,7 @@ pub fn date(entry: &Entry) -> Date {
 ///  2. Lifters with only a surname.
 pub fn should_skip_lifter(entry: &Entry) -> bool {
     // Skip lifters with initialized first names.
-    if entry.name.chars().skip(1).take(1).collect::<Vec<char>>() == ['.'] {
+    if entry.name.chars().nth(1) == Some('.') {
         return true;
     }
 

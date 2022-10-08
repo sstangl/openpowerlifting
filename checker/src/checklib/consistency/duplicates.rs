@@ -96,8 +96,8 @@ pub fn check_duplicates_one(
                 }
 
                 let msg = format!(
-                    "www.openpowerlifting.org/u/{} on {}: {} and {}",
-                    username, cur_meet.date, cur_meet.path, match_meet.path,
+                    "www.openpowerlifting.org/u/{username} on {}: {} and {}",
+                    cur_meet.date, cur_meet.path, match_meet.path,
                 );
                 report.error(msg);
                 result = ConsistencyResult::Inconsistent;

@@ -87,13 +87,11 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
 /// Outputs a final summary line.
 fn print_summary(error_count: usize, warning_count: usize, search_root: &Path) {
     let error_str = format!(
-        "{} error{}",
-        error_count,
+        "{error_count} error{}",
         if error_count == 1 { "" } else { "s" }
     );
     let warning_str = format!(
-        "{} warning{}",
-        warning_count,
+        "{warning_count} warning{}",
         if warning_count == 1 { "" } else { "s" }
     );
 
@@ -210,11 +208,7 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
 
 /// If a boolean is true, gathers timing information.
 fn instant_if(b: bool) -> Option<Instant> {
-    if b {
-        Some(Instant::now())
-    } else {
-        None
-    }
+    b.then(Instant::now)
 }
 
 /// Prints the elapsed time with the given prefix, if available.
@@ -294,7 +288,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             Ok(p) => p,
             Err(e) => {
                 let msg = full_path.to_str().unwrap();
-                println!("{}: {}", msg, e);
+                println!("{msg}: {e}");
                 process::exit(1);
             }
         }
