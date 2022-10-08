@@ -26,9 +26,9 @@ pub fn check_sex_one(
     let expected_sex = meetdata.entry(indices[0]).sex;
     for index in indices.iter().skip(1) {
         if meetdata.entry(*index).sex != expected_sex {
-            let url = format!("www.openpowerlifting.org/u/{}", username);
             let name = &meetdata.entry(*index).name;
-            let msg = format!("Sex conflict for '{}' - {}", name, url);
+            let url = format!("www.openpowerlifting.org/u/{username}");
+            let msg = format!("Sex conflict for '{name}' - {url}");
             report.error(msg);
             return ConsistencyResult::Inconsistent;
         }
