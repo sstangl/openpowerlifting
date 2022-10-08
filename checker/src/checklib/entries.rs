@@ -324,11 +324,11 @@ fn check_headers(
             Ok(known) => {
                 // Error on duplicate headers.
                 if header_index_vec[known as usize].is_some() {
-                    report.error(format!("Duplicate header '{}'", header));
+                    report.error(format!("Duplicate header '{header}'"));
                 }
                 header_index_vec[known as usize] = Some(i)
             }
-            Err(_) => report.error(format!("Unknown header '{}'", header)),
+            Err(_) => report.error(format!("Unknown header '{header}'")),
         }
 
         has_squat = has_squat || header.contains("Squat");
@@ -405,22 +405,19 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
     if let Some(i) = s.find('#') {
         // The '#' must be preceded by a space.
         if i > 0 && s.get(i - 1..i) != Some(" ") {
-            report.error_on(line, format!("Name '{}' must have a space before '#'", s));
+            report.error_on(line, format!("Name '{s}' must have a space before '#'"));
         }
 
         // Everything after the '#' must be an integer.
         if let Some(number) = s.get(i + 1..) {
             for c in number.chars() {
                 if !c.is_ascii_digit() {
-                    report.error_on(
-                        line,
-                        format!("Name '{}' can only have numbers after '#'", s),
-                    );
+                    report.error_on(line, format!("Name '{s}' can only have numbers after '#'"));
                     break;
                 }
             }
         } else {
-            report.error_on(line, format!("Name '{}' must have a number after '#'", s));
+            report.error_on(line, format!("Name '{s}' must have a number after '#'"));
         }
 
         // For the purposes of the checks below, ignore the disambiguation.
@@ -429,13 +426,13 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
 
     // Standardize on suffices without periods. Also just in general.
     if s.ends_with('.') {
-        report.error_on(line, format!("Name '{}' cannot end with a period", name));
+        report.error_on(line, format!("Name '{name}' cannot end with a period"));
     }
 
     // All characters must be alphabetical or one of some few exceptions.
     for c in s.chars() {
         if !c.is_alphabetic() && c != ' ' && c != '\'' && c != '.' && c != '-' {
-            report.error_on(line, format!("Name '{}' contains illegal characters", name));
+            report.error_on(line, format!("Name '{name}' contains illegal characters"));
             break;
         }
     }
@@ -454,7 +451,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
 
                 // Standardize Dutch names on "v.d.".
                 "vd" | "v.d" | "vd." | "V.D." => {
-                    report.error_on(line, format!("Name '{}' should use 'v.d.'", name));
+                    report.error_on(line, format!("Name '{name}' should use 'v.d.'"));
                     continue;
                 }
                 _ => (),
@@ -470,13 +467,13 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
         // Disallow nicknames. They're usually written as "Tom 'Tommy' Thompson".
         // Allow 't, the abbreviation for the dutch word het.
         if word.starts_with('\'') {
-            report.error_on(line, format!("Name '{}' cannot contain nicknames", name));
+            report.error_on(line, format!("Name '{name}' cannot contain nicknames"));
             continue;
         }
 
         // Punctuation should never be a separate word.
         if word == "-" || word == "." || word == "'" {
-            report.error_on(line, format!("Name '{}' has separable punctuation", name));
+            report.error_on(line, format!("Name '{name}' has separable punctuation"));
             continue;
         }
 
@@ -485,7 +482,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
             if !c.is_uppercase() {
                 report.error_on(
                     line,
-                    format!("Name '{}' must have '{}' capitalized", name, word),
+                    format!("Name '{name}' must have '{word}' capitalized"),
                 );
             }
         }
@@ -493,22 +490,19 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
 
     // Complain about meet data that got left over.
     if s.ends_with("DT") || s.ends_with("SP") || s.ends_with("MP") {
-        report.error_on(
-            line,
-            format!("Name '{}' contains lifting information", name),
-        );
+        report.error_on(line, format!("Name '{name}' contains lifting information"));
     }
 
     // Complain about Junior/Senior at the start of the name. USAPL does this.
     if s.starts_with("Jr ") || s.starts_with("Sr ") {
-        report.error_on(line, format!("Name '{}' needs Jr/Sr moved to end", name));
+        report.error_on(line, format!("Name '{name}' needs Jr/Sr moved to end"));
     }
 
     // Suffices that must be fully-capitalized.
     if s.ends_with("Ii") || s.ends_with("Iii") {
         report.error_on(
             line,
-            format!("Name '{}' must have suffix fully-capitalized", name),
+            format!("Name '{name}' must have suffix fully-capitalized"),
         );
     }
 
@@ -521,7 +515,7 @@ fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<S
     } else {
         for c in s.chars() {
             if writing_system(c) != WritingSystem::CJK && c != ' ' && c != '·' {
-                let msg = format!("ChineseName '{}' contains non-CJK character '{}'", s, c);
+                let msg = format!("ChineseName '{s}' contains non-CJK character '{c}'");
                 report.error_on(line, msg);
                 return None;
             }
@@ -536,10 +530,7 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<
     } else {
         for c in s.chars() {
             if writing_system(c) != WritingSystem::Cyrillic && !"-' .".contains(c) {
-                let msg = format!(
-                    "CyrillicName '{}' contains non-Cyrillic character '{}'",
-                    s, c
-                );
+                let msg = format!("CyrillicName '{s}' contains non-Cyrillic character '{c}'");
                 report.error_on(line, msg);
                 return None;
             }
@@ -557,10 +548,7 @@ fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<
                 && writing_system(c) != WritingSystem::CJK
                 && c != ' '
             {
-                let msg = format!(
-                    "JapaneseName '{}' contains non-Japanese character '{}'",
-                    s, c
-                );
+                let msg = format!("JapaneseName '{s}' contains non-Japanese character '{c}'");
                 report.error_on(line, msg);
                 return None;
             }
@@ -575,7 +563,7 @@ fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<Str
     } else {
         for c in s.chars() {
             if writing_system(c) != WritingSystem::Greek && !"-' .".contains(c) {
-                let msg = format!("GreekName '{}' contains non-Greek character '{}'", s, c);
+                let msg = format!("GreekName '{s}' contains non-Greek character '{c}'");
                 report.error_on(line, msg);
                 return None;
             }
@@ -593,7 +581,7 @@ fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<St
                 && writing_system(c) != WritingSystem::Japanese
                 && !"-' .".contains(c)
             {
-                let msg = format!("KoreanName '{}' contains non-Korean character '{}'", s, c);
+                let msg = format!("KoreanName '{s}' contains non-Korean character '{c}'");
                 report.error_on(line, msg);
                 return None;
             }
@@ -615,13 +603,14 @@ fn check_column_birthyear(
     match s.parse::<u32>() {
         Ok(year) => {
             if !(1000..=9999).contains(&year) {
-                report.error_on(line, format!("BirthYear '{}' must have 4 digits", year));
+                report.error_on(line, format!("BirthYear '{year}' must have 4 digits"));
             }
 
             // Compare the BirthYear to the meet date for some basic sanity checks.
             if let Some(m) = meet {
-                if year > m.date.year() - 4 || m.date.year() - year > 98 {
-                    report.error_on(line, format!("BirthYear '{}' looks implausible", year));
+                if year > m.date.year().saturating_sub(4) || m.date.year().saturating_sub(year) > 98
+                {
+                    report.error_on(line, format!("BirthYear '{year}' looks implausible"));
                     return None;
                 }
             }
@@ -629,7 +618,7 @@ fn check_column_birthyear(
             Some(year)
         }
         Err(_) => {
-            report.error_on(line, format!("BirthYear '{}' must be a number", s));
+            report.error_on(line, format!("BirthYear '{s}' must be a number"));
             None
         }
     }
@@ -650,26 +639,26 @@ fn check_column_birthdate(
             // Compare the BirthDate to the meet date for some basic sanity checks.
             if let Some(m) = meet {
                 if bd.year() >= m.date.year() - 4 || m.date.year() - bd.year() > 98 {
-                    report.error_on(line, format!("BirthDate '{}' looks implausible", s));
+                    report.error_on(line, format!("BirthDate '{s}' looks implausible"));
                     return None;
                 }
 
                 if let Err(e) = bd.age_on(m.date) {
-                    report.error_on(line, format!("BirthDate '{}' error: {}", s, e));
+                    report.error_on(line, format!("BirthDate '{s}' error: {e}"));
                     return None;
                 }
             }
 
             // Ensure that the BirthDate exists in the Gregorian calendar.
             if !bd.is_valid() {
-                let msg = format!("BirthDate '{}' does not exist in the Gregorian calendar", s);
+                let msg = format!("BirthDate '{s}' does not exist in the Gregorian calendar");
                 report.error_on(line, msg);
             }
 
             Some(bd)
         }
         Err(e) => {
-            report.error_on(line, format!("Invalid BirthDate '{}': '{}'", s, e));
+            report.error_on(line, format!("Invalid BirthDate '{s}': '{e}'"));
             None
         }
     }
@@ -679,7 +668,7 @@ fn check_column_sex(s: &str, line: u64, report: &mut Report) -> Sex {
     match s.parse::<Sex>() {
         Ok(s) => s,
         Err(_) => {
-            report.error_on(line, format!("Invalid Sex '{}'", s));
+            report.error_on(line, format!("Invalid Sex '{s}'"));
             Sex::default()
         }
     }
@@ -689,7 +678,7 @@ fn check_column_equipment(s: &str, line: u64, report: &mut Report) -> Equipment 
     match s.parse::<Equipment>() {
         Ok(eq) => eq,
         Err(_) => {
-            report.error_on(line, format!("Invalid Equipment '{}'", s));
+            report.error_on(line, format!("Invalid Equipment '{s}'"));
             Equipment::Multi
         }
     }
@@ -707,7 +696,7 @@ fn check_column_squatequipment(s: &str, line: u64, report: &mut Report) -> Optio
             Some(eq)
         }
         Err(_) => {
-            report.error_on(line, format!("Invalid SquatEquipment '{}'", s));
+            report.error_on(line, format!("Invalid SquatEquipment '{s}'"));
             None
         }
     }
@@ -719,15 +708,13 @@ fn check_column_benchequipment(s: &str, line: u64, report: &mut Report) -> Optio
     }
     match s.parse::<Equipment>() {
         Ok(eq) => {
-            if eq == Equipment::Wraps {
-                report.error_on(line, "BenchEquipment can't be 'Wraps'");
-            } else if eq == Equipment::Straps {
-                report.error_on(line, "BenchEquipment can't be 'Straps'");
+            if eq == Equipment::Wraps || eq == Equipment::Straps {
+                report.error_on(line, "BenchEquipment can't be '{s}'");
             }
             Some(eq)
         }
         Err(_) => {
-            report.error_on(line, format!("Invalid BenchEquipment '{}'", s));
+            report.error_on(line, format!("Invalid BenchEquipment '{s}'"));
             None
         }
     }
@@ -746,7 +733,7 @@ fn check_column_deadliftequipment(s: &str, line: u64, report: &mut Report) -> Op
             Some(eq)
         }
         Err(_) => {
-            report.error_on(line, format!("Invalid DeadliftEquipment '{}'", s));
+            report.error_on(line, format!("Invalid DeadliftEquipment '{s}'"));
             None
         }
     }
@@ -759,7 +746,7 @@ fn check_column_place(s: &str, line: u64, report: &mut Report) -> Place {
             if s.is_empty() {
                 report.error_on(line, "Invalid Place '': should it be 'DQ'?");
             } else {
-                report.error_on(line, format!("Invalid Place '{}'", s));
+                report.error_on(line, format!("Invalid Place '{s}'"));
             }
             Place::default()
         }
@@ -777,16 +764,15 @@ fn check_column_age(s: &str, exempt_age: bool, line: u64, report: &mut Report) -
                 };
 
                 if num < 5 {
-                    report.error_on(line, format!("Age '{}' unexpectedly low", s));
+                    report.error_on(line, format!("Age '{s}' unexpectedly low"));
                 } else if num > 100 {
-                    report.error_on(line, format!("Age '{}' unexpectedly high", s));
+                    report.error_on(line, format!("Age '{s}' unexpectedly high"));
                 }
             }
-
             age
         }
         Err(_) => {
-            report.error_on(line, format!("Invalid Age '{}'", s));
+            report.error_on(line, format!("Invalid Age '{s}'"));
             Age::default()
         }
     }
@@ -804,10 +790,7 @@ fn check_column_agerange(
 
     // Ensure that there is a dash, or the split below can panic.
     if s.chars().filter(|c| *c == '-').count() != 1 {
-        report.error_on(
-            line,
-            format!("AgeRange '{}' must be a range of two Ages", s),
-        );
+        report.error_on(line, format!("AgeRange '{s}' must be a range of two Ages"));
         return inferred_agerange;
     }
 
@@ -819,16 +802,10 @@ fn check_column_agerange(
     let lower: Age = left.parse::<Age>().unwrap_or(Age::None);
     let upper: Age = right.parse::<Age>().unwrap_or(Age::None);
     if lower.is_none() {
-        report.error_on(
-            line,
-            format!("Lower bound of AgeRange '{}' looks invalid", s),
-        );
+        report.error_on(line, format!("Lower bound of AgeRange '{s}' looks invalid"));
     }
     if upper.is_none() {
-        report.error_on(
-            line,
-            format!("Upper bound of AgeRange '{}' looks invalid", s),
-        );
+        report.error_on(line, format!("Upper bound of AgeRange '{s}' looks invalid"));
     }
     let explicit_agerange = AgeRange::from((lower, upper));
 
@@ -866,7 +843,7 @@ fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut
             event
         }
         Err(e) => {
-            report.error_on(line, format!("Invalid Event '{}': {}", s, e));
+            report.error_on(line, format!("Invalid Event '{s}': {e}"));
             Event::default()
         }
     }
@@ -876,9 +853,9 @@ fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut
 fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
     // Disallow zeros.
     if s == "0" {
-        report.error_on(line, format!("{} cannot be zero", header));
+        report.error_on(line, format!("{header} cannot be zero"));
     } else if s.starts_with('0') {
-        report.error_on(line, format!("{} cannot start with 0 in '{}'", header, s));
+        report.error_on(line, format!("{header} cannot start with 0 in '{s}'"));
     }
 
     match s.parse::<WeightKg>() {
@@ -890,13 +867,13 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
             {
                 report.error_on(
                     line,
-                    format!("{} '{}' exceeds maximum expected weight", header, s),
+                    format!("{header} '{s}' exceeds maximum expected weight"),
                 )
             }
             w
         }
         Err(_) => {
-            report.error_on(line, format!("Invalid {} '{}'", header, s));
+            report.error_on(line, format!("Invalid {header} '{s}'"));
             WeightKg::default()
         }
     }
@@ -904,7 +881,7 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
 
 fn check_nonnegative_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
     if s.starts_with('-') {
-        report.error_on(line, format!("{} '{}' cannot be negative", header, s))
+        report.error_on(line, format!("{header} '{s}' cannot be negative"))
     }
     check_weight(s, line, header, report)
 }
@@ -1729,9 +1706,7 @@ fn check_division_age_consistency(
     // If no divisions are configured, there's nothing left to do.
     let config = match config {
         Some(config) => config,
-        None => {
-            return (Age::None, Age::None);
-        }
+        None => return (Age::None, Age::None),
     };
 
     // Configuration files covering directories with results from
@@ -1744,9 +1719,7 @@ fn check_division_age_consistency(
     // Division string errors are already handled by check_column_division().
     let (min_age, max_age) = match config.divisions.iter().find(|d| d.name == entry.division) {
         Some(div) => (div.min, div.max),
-        None => {
-            return (Age::None, Age::None);
-        }
+        None => return (Age::None, Age::None),
     };
 
     // Use the various age-related columns to calculate a representative Age value.
