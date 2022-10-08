@@ -520,6 +520,10 @@ pub enum MetaFederation {
     #[strum(to_string = "wp-usa")]
     WPUSA,
 
+    /// WRPF including all affiliates, local and regional.
+    #[strum(to_string = "wrpf-and-affiliates")]
+    WRPFAndAffiliates,
+
     /// WRPF-USA.
     #[strum(to_string = "wrpf-usa")]
     #[serde(rename = "WRPF-USA")]
@@ -887,6 +891,9 @@ impl MetaFederation {
             MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
             MetaFederation::WPNauru => affiliation!(meet, entry, WPNauru, WP),
             MetaFederation::WPUSA => affiliation!(meet, entry, WPUSA, WP),
+            MetaFederation::WRPFAndAffiliates => {
+                meet.federation.sanctioning_body(meet.date) == Some(Federation::WRPF)
+            }
             MetaFederation::WRPFUSA => match meet.federation {
                 Federation::WRPF => match entry.lifter_country {
                     Some(Country::USA) => true,

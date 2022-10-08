@@ -18,6 +18,7 @@
   <option value="wpf" {% if selection.federation == "WPF" %}selected{% endif %}>WPF - World Powerlifting Federation (Incomplete)</option>
   <option value="wppo" {% if selection.federation == "WPPO" %}selected{% endif %}>WPPO - World Para Powerlifting</option>
   <option value="wuap" {% if selection.federation == "WUAP" %}selected{% endif %}>WUAP - World United Amateur Powerlifting</option>
+  <option value="wrpf-and-affiliates" {% if selection.federation == "WRPFAndAffiliates" %}selected{% endif %}>WRPF - World Raw Powerlifting Federation</option>
 </optgroup>
 <optgroup label="{{strings.selectors.fed.regional}}">
   <option value="africanpf" {% if selection.federation == "AfricanPF" %}selected{% endif %}>AfricanPF - African Powerlifting Federation [IPF]</option>
