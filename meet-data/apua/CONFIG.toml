@@ -3,7 +3,26 @@
     require_manual_disambiguation = true
 
 [divisions]
-    open = {name="OP", min=16, max=999}
+    # OpenLifter-style divisions.
+    open = {name="Open", min=0, max=999}
+    t12_13 = {name="T12-13", min=12, max=13}
+    t14_15 = {name="T14-15", min=14, max=15}
+    t16_17 = {name="T16-17", min=16, max=17}
+    t18_19 = {name="T18-19", min=18, max=19}
+    j20_25 = {name="J20-25", min=20, max=25}
+    s33_39 = {name="S33-39", min=33, max=39}
+    m40_46 = {name="M40-46", min=40, max=46}
+    m47_53 = {name="M47-53", min=47, max=53}
+    m54_60 = {name="M54-60", min=54, max=60}
+    m61_67 = {name="M61-67", min=61, max=67}
+    m68_74 = {name="M68-74", min=68, max=74}
+    m75_79 = {name="M75-79", min=75, max=79}
+    m80_84 = {name="M80-84", min=80, max=84}
+    m85_89 = {name="M85-89", min=85, max=89}
+    m90p = {name="M90+", min=90, max=999}
+
+    # Pre-OpenLifter divisions.
+    op = {name="OP", min=16, max=999}
     teen1213 = {name="T1", min=12, max=13}
     teen1415 = {name="T2", min=14, max=15}
     teen1617 = {name="T3", min=16, max=17}
