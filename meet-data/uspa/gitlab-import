@@ -73,8 +73,10 @@ paragraphs = body.replace("\n\n\n", "\n\n").replace("\n\nHi ", "\nHi").split("\n
 info = ' '.join(paragraphs[1].split('\n')).strip()  # Compress into one line.
 
 # Extract out from "... meet held on October 2, 2022 in Fargo, ND is attached ..."
-info = info.split('meet held on')[1].strip()
+# Sometimes the "m" in "meet" is capitalized, so we just ignore that character.
+info = info.split('eet held on')[1].strip()
 info = info.split('is attached')[0].strip()  # "October 2, 2022 in Fargo, ND"
+info = info.replace('  ', ' ')  # Dates are typed by hand.
 
 (human_date, location) = info.split(" in ")
 (meettown, meetstate) = location.split(",")
