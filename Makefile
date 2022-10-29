@@ -15,12 +15,12 @@ all: csv server
 
 # Cram all the data into huge CSV files. New hotness.
 csv:
-	cargo run --bin checker -- --compile
+	tests/check --compile
 
 # Build the CSV file hosted on the Data page for use by humans.
 # The intention is to make it easy to use for people on Windows.
 data:
-	cargo run --bin checker -- --compile-onefile
+	tests/check --compile-onefile
 	mkdir -p "${DATADIR}"
 	mv "${BUILDDIR}/openpowerlifting.csv" "${DATADIR}/openpowerlifting-${DATE}-${COMMIT}.csv"
 	cp LICENSE-DATA '${DATADIR}/LICENSE.txt'
@@ -38,7 +38,7 @@ server: csv
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check-data:
-	cargo run --bin checker
+	tests/check
 	tests/check-lifter-data
 
 check: check-data
