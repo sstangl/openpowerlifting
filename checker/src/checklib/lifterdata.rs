@@ -256,6 +256,11 @@ fn check_social_instagram(
         return Ok(());
     }
 
+    /// Checks that a character is valid in an Instagram handle.
+    fn is_valid_ig_char(c: char) -> bool {
+        c.is_ascii_alphanumeric() || c == '_' || c == '.'
+    }
+
     let mut rdr = reader.from_path(&report.path)?;
 
     for (rownum, result) in rdr.deserialize().enumerate() {
@@ -263,7 +268,10 @@ fn check_social_instagram(
         let line = (rownum as u64) + 2;
 
         let row: InstagramRow = result?;
-        let username = match Username::from_name(&row.name) {
+        let name = &row.name;
+        let ig = &row.instagram;
+
+        let username = match Username::from_name(name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -272,14 +280,21 @@ fn check_social_instagram(
         };
 
         if has_whitespace_errors(username.as_str()) {
-            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
+            report.error_on(line, format!("Whitespace error in '{name}'"));
         }
-        if has_whitespace_errors(&row.instagram) {
-            report.error_on(line, format!("Whitespace error in '{}'", &row.instagram));
+
+        if ig.is_empty() {
+            report.error_on(line, "Instagram column is empty");
+        }
+        if !ig.chars().all(is_valid_ig_char) {
+            report.error_on(line, format!("'{ig}' has invalid characters"));
         }
 
         match map.get_mut(&username) {
             Some(data) => {
+                if data.instagram.is_some() {
+                    report.error_on(line, format!("Lifter '{name}' has multiple Instagrams."));
+                }
                 data.instagram = Some(row.instagram);
             }
             None => {
