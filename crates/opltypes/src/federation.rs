@@ -699,6 +699,10 @@ pub enum Federation {
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
 
+    /// Koninklijk Belgisch Gewichtheffers Verbond, Belgian IPF affiliate.
+    #[strum(to_string = "KBGV", serialize = "kbgv")]
+    KBGV,
+
     /// Swiss Powerlifting Federation, IPF affiliate, Switzerland.
     #[strum(to_string = "KDKS", serialize = "kdks")]
     KDKS,
@@ -1806,6 +1810,7 @@ impl Federation {
             Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
             Federation::JPA => FULLY_TESTED,
+            Federation::KBGV => FULLY_TESTED,
             Federation::KDKS => FULLY_TESTED,
             Federation::KNKFSP => FULLY_TESTED,
             Federation::KPF => FULLY_TESTED,
@@ -2184,6 +2189,7 @@ impl Federation {
             Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
             Federation::JPA => Some(Country::Japan),
+            Federation::KBGV => Some(Country::Belgium),
             Federation::KDKS => Some(Country::Switzerland),
             Federation::KNKFSP => Some(Country::Netherlands),
             Federation::KPF => Some(Country::Kazakhstan),
@@ -2595,6 +2601,7 @@ impl Federation {
             Federation::IronBoy => None,
             Federation::IRP => None,
             Federation::JPA => Some(Federation::IPF),
+            Federation::KBGV => Some(Federation::IPF),
             Federation::KDKS => Some(Federation::IPF),
             Federation::KNKFSP => Some(Federation::IPF),
             Federation::KPF => Some(Federation::IPF),
@@ -3073,6 +3080,7 @@ impl Federation {
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
+            Federation::KBGV => Federation::ipf_rules_on(date),
             Federation::KDKS => PointsSystem::Dots,
             Federation::KNKFSP => Federation::ipf_rules_on(date),
             Federation::KPF => Federation::ipf_rules_on(date),

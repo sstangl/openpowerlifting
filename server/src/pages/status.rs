@@ -339,6 +339,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[IPLNZ as usize].maintainers = email_matt;
     statuses[IrelandUA as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
+    statuses[KBGV as usize].maintainers = email_stefanie;
     statuses[KNKFSP as usize].maintainers = email_mbeelen;
     statuses[LFPH as usize].maintainers = email_stefanie;
     statuses[LGBT as usize].maintainers = email_gem;

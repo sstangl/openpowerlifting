@@ -51,6 +51,7 @@
   <option value="iranbbf" {% if selection.federation == "IranBBF" %}selected{% endif %}>IranBBF / {{strings.country.iran}}</option>
   <option value="irishpf" {% if selection.federation == "IrishPF" %}selected{% endif %}>IrishPF / {{strings.country.ireland}}</option>
   <option value="jpa" {% if selection.federation == "JPA" %}selected{% endif %}>JPA / {{strings.country.japan}}</option>
+  <option value="kbgv" {% if selection.federation == "KBGV" %}selected{% endif %}>KBGV / {{strings.country.belgium}}</option>
   <option value="kdks" {% if selection.federation == "KDKS" %}selected{% endif %}>KDKS / {{strings.country.switzerland}}</option>
   <option value="knkf-sp" {% if selection.federation == "KNKF-SP" %}selected{% endif %}>KNKF-SP / {{strings.country.netherlands}}</option>
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF / {{strings.country.kazakhstan}}</option>

@@ -1,17 +1,24 @@
 ### General info
 
-Country: Belgium (Walloon regional, see VGPF for Flemish regional and KBGV for national)
-Full name: Ligue Francophone des Poids & Haltères
-Abbreviation: LFPH
+Country: Belgium (National, see LFPH for Walloon and see VGPF for Flemish)
+Full name: Koninklijk Belgisch Gewichtheffers Verbond - Federation Royale Belge Des Poids Et Halteres
+Abbreviation: KBGV / FRBPH
 
-Website: https://www.lfph.be/ ([results page](https://lfph.be/resultats/), [records page](https://lfph.be/records/))
-Facebook: https://www.facebook.com/LigueFPH/
+Website: 
+- https://www.lfph.be/ ([results page](https://lfph.be/resultats/), [records page](https://lfph.be/records/))
+- http://www.vgpf.be/ ([results page](http://www.vgpf.be/VGPF/Powerlifting.html), [records page](http://www.vgpf.be/VGPF/Records.html))
+Facebook: 
+- https://www.facebook.com/VGPF0/
+- https://www.facebook.com/LigueFPH/
 
 Quick Note: Belgium has two IPF recognized federations: VGPF (Flemish) and LFPH (Walloon).
 When competing internationally, athletes compete under the national federation KBGV instead.
 National competitions are helt jointly by the VGPF and LFPH, alternatingly hosted by one or the other each year.
 These national competitions are listed under the KBGV as a parent federation, though they are technically organized by the regional federations.
 Regional competitions are seperate.
+
+Records: Athletes can break national records in meets hosted by both the regional and national federation, as well as international federations.
+Regional records can be broken by athletes registered under the specified region in regional, national and international federation competitions.
 
 ### Weight classes
 
