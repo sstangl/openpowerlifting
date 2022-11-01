@@ -33,6 +33,10 @@
 	m75_79 = {name="M75-79", min=75, max=79}
 	m80p = {name="M80+", min=80, max=999}
 
+	# Extra divisions that keep popping up since 2022.
+	j16_17 = {name="J16-17", min=16, max=17}
+	j18_19 = {name="J18-19", min=18, max=19}
+
     # WRPF-USA 2021 and on
 	juniors_8_9 = {name="Juniors 8-9", min=8, max=9}
 	juniors_10_11 = {name="Juniors 10-11", min=10, max=11}
