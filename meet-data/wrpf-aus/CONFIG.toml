@@ -10,7 +10,9 @@
 	j10_11 = {name="J10-11", min=10, max=11}
 	j12_13 = {name="J12-13", min=12, max=13}
 	j14_16 = {name="J14-16", min=14, max=16}
+	t14_16 = {name="T14-16", min=14, max=16}
 	j17_19 = {name="J17-19", min=17, max=19}
+	s17_19 = {name="S17-19", min=17, max=19}
 	j20_23 = {name="J20-23", min=20, max=23}
 	s35_39 = {name="S35-39", min=35, max=39}
 	m40_49 = {name="M40-49", min=40, max=49}
