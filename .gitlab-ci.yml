@@ -21,20 +21,21 @@ meet-data:
     - make check
 
 # Build the data file and run server tests with the current data.
-server:
-  cache:
-    paths:
-      - target
-      - server/client/node_modules
-  before_script:
-    - apt-get update -qq && apt-get install -y curl
-    - curl -sL https://deb.nodesource.com/setup_14.x | bash -
-    - apt-get install -y nodejs python3-pip
-    - pip3 install toml
-  script:
-    - make csv
-    - make -C server checkprerequisites
-    - cargo test --workspace --locked
+# Disabled in CI as of 2022-11-01: trying to cut down on minutes.
+#server:
+#  cache:
+#    paths:
+#      - target
+#      - server/client/node_modules
+#  before_script:
+#    - apt-get update -qq && apt-get install -y curl
+#    - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+#    - apt-get install -y nodejs python3-pip
+#    - pip3 install toml
+#  script:
+#    - make csv
+#    - make -C server checkprerequisites
+#    - cargo test --workspace --locked
 
 # On success, publish the latest version of the Book to GitLab Pages.
 pages:
