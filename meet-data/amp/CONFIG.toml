@@ -9,8 +9,9 @@
     mopen = {name="M-O", min=0, max=999, sex="M", equipment="Single-ply"}
     mru23 = {name="MR-Jr", min=11, max=22.5, sex="M", equipment="Raw"}
     mu23 = {name="M-Jr", min=11, max=22.5, sex="M", equipment="Single-ply"}
-    mru18 = {name="MR-Sj", min=11, max=17.5, sex="M", equipment="Raw"}
-    mu18 = {name="M-Sj", min=11, max=17.5, sex="M", equipment="Single-ply"}
+    mru18 = {name="MR-Sj", min=14, max=17.5, sex="M", equipment="Raw"}
+    mu18 = {name="M-Sj", min=14, max=17.5, sex="M", equipment="Single-ply"}
+    mu14 = {name="MR-Pre-Sub-Jr", min=8, max=14, sex="M", equipment="Raw"}
     mrm1 = {name="MR-M1", min=39.5, max=48.5, sex="M", equipment="Raw"}
     mry = {name="MR-Y", min=8, max=13, sex="M", equipment="Raw"}
     my = {name="M-Y", min=8, max=13, sex="M", equipment="Single-ply"}
@@ -64,7 +65,7 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2022-01-01","9999-12-31"]
     sex = "M"
-    divisions = ["MR-Jr", "M-Jr", "MR-Sj", "M-Sj"]
+    divisions = ["MR-Jr", "M-Jr", "MR-Sj", "M-Sj", "MR-Pre-Sub-Jr"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
