@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+
+from oplcsv import Csv
+
+
+def separate_original(
+    input_path='original.csv',
+    meet_output_path='meet.csv',
+    entries_output_path='entries.csv'
+):
+
+    # when we write output lines, strip the existing newline
+    # and explicitly write with LF
+    with open(input_path, 'rt') as input_f:
+
+        # OPL header
+        _ = input_f.readline()
+
+        # blank line, then meet.csv content
+        _ = input_f.readline()
+
+        with open(meet_output_path, 'wt') as meet_output_f:
+            meet_header = input_f.readline().strip()
+            meet_output_f.write(f"{meet_header}\n")
+
+            meet_data = input_f.readline().strip()
+            meet_output_f.write(f"{meet_data}\n")
+
+        # blank line, then entries.csv content
+        _ = input_f.readline()
+
+        with open(entries_output_path, 'wt') as entries_output_f:
+            entries_header = input_f.readline().strip()
+            entries_output_f.write(f"{entries_header}\n")
+
+            for entries_data_line in input_f:
+                entries_data_line = entries_data_line.strip()
+                entries_output_f.write(f"{entries_data_line}\n")
+
+
+def clear_quotes(s):
+    return s.replace("'", "")
+
+
+def mut_meet(meet_output_path='meet.csv'):
+
+    meet_csv_obj = Csv(meet_output_path)
+
+    # remove Formula and RuleSet
+    meet_csv_obj.remove_column_by_name('Formula')
+    meet_csv_obj.remove_column_by_name('RuleSet')
+
+    # fix stray leading quote on Date
+    meet_csv_obj.transform_column_values_by_name('Date', clear_quotes)
+
+    meet_csv_obj.write_filename(meet_output_path)
+
+
+def mut_entries(entries_output_path='entries.csv'):
+
+    entries_csv_obj = Csv(entries_output_path)
+
+    # add BirthDate if missing
+    entries_csv_obj.ensure_column('BirthDate')
+
+    # fix stray leading quote on BirthDate
+    entries_csv_obj.transform_column_values_by_name('BirthDate', clear_quotes)
+
+    # remove Points if present
+    entries_csv_obj.remove_column_by_name('Points')
+
+    # change Wraps to Raw for non-squatting entries
+    eq_i = entries_csv_obj.index('Equipment')
+    event_i = entries_csv_obj.index('Event')
+    for row in entries_csv_obj.rows:
+        if row[eq_i] == 'Wraps' and 'S' not in row[event_i]:
+            row[eq_i] = 'Raw'
+
+    entries_csv_obj.write_filename(entries_output_path)
+
+
+if __name__ == '__main__':
+
+    separate_original()
+    mut_meet()
+    mut_entries()

@@ -72,6 +72,15 @@ class Csv:
                 self.remove_empty_columns()
                 return
 
+    def transform_column_values_by_index(self, idx, callable):
+        for row in self.rows:
+            row[idx] = callable(row[idx])
+
+    def transform_column_values_by_name(self, name, callable):
+        for i, header in enumerate(self.fieldnames):
+            if header == name:
+                self.transform_column_values_by_index(i, callable)
+
     # Integrate another Csv object into the current one.
     def cat(self, other):
         for header in other.fieldnames:
