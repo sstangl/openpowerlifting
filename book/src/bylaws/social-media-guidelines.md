@@ -1,4 +1,4 @@
-﻿## Social Media Guidelines
+## Social Media Guidelines
 
 This document specifies policies for self-governance agreed to by the Social Media Team.
 
