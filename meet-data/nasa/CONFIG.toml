@@ -60,6 +60,8 @@
     wso = {name="wso", min=0, max=999, sex='F'} # Special olympics
 
     # Bench
+
+    bpfs = {name="bpfs", min=13, max=19, sex='M'}
     bpopen = {name="bpopen", min=0, max=999, sex='M'}
     bpyouth = {name="bpyouth", min=5, max=12, sex='M'}
     bphs = {name="bphs", min=13, max=19, sex='M'}
@@ -104,6 +106,7 @@
     wbpmp = {name="wbpmp", min=40, max=999, sex='F'} # Masters Pure?
 
     # Deadlift
+    dlfs = {name="dlfs", min=13, max=19, sex='M'}
     dlopen = {name="dlopen", min=0, max=999, sex='M'}
     dlyouth = {name="dlyouth", min=5, max=12, sex='M'}
     dlhs = {name="dlhs", min=13, max=19, sex='M'}
