@@ -27,7 +27,7 @@ Place,Name,Sex,State,Country,BirthDate,Equipment,Division,BodyweightKg,WeightCla
 1,Natalie Caughey,F,UT,,,Single-ply,Class 1,,90,,,,,,,,,,,,,,,152.41,152.41,D
 2,Catherine Mc Allister,F,CA,,,Raw,Class 1,,90,,,,,,,,,,,,,,,110,110,D
 1,Crystal Luiz-Jones,F,CA,,,Raw,Class 1,,100,,,,,,,,,,,,,,,132.45,132.45,D
-1,Steve Pena,M,CA,,,Raw,Disabled 1 40-59,,110,,,,,,,,,,,,,,,194.91,194.91,D
+1,Steve Peña #1,M,CA,,,Raw,Disabled 1 40-59,,110,,,,,,,,,,,,,,,194.91,194.91,D
 1,Roberto Rios,M,TX,,,Raw,Disabled 2 20-39,,82.5,,,,,,,,,,,,,,87.41,82.42,82.42,D
 1,Daniel Randall III,M,IL,,,Raw,Disabled 2 20-39,,100,,,,,,,,,,,,,,129.95,124.96,124.96,D
 1,Michael Clason,M,OR,,,Raw,Disabled 2 60,,110,,,,,,,,,,,,,,182.43,169.96,169.96,D
@@ -51,7 +51,7 @@ DQ,Jordan Rogers,M,OK,,,Raw,Juniors 20-25,,75,,,,,,,,,,,,,,,,,D
 1,Micah Coleman,M,IL,,,Raw,Law-Fire 40-47,,140,,,,,,,,,,,,,,212.37,209.88,209.88,D
 1,Jamie Field,F,CA,,,Single-ply,Law-Fire 40-47,,56,,,,,,,,,,,,,,,144.92,144.92,D
 1,Tricia Downing,F,AZ,,,Raw,Law-Fire 40-47,,67.5,,,,,,,,,,,,,,,152.41,152.41,D
-1,Jason Smith,M,OK,,,Raw,Law-Fire 48-55,,90,,,,,,,,,,,,,,,252.42,252.42,D
+1,Jason Smith #1,M,OK,,,Raw,Law-Fire 48-55,,90,,,,,,,,,,,,,,,252.42,252.42,D
 1,Lance Davis,M,UT,,,Raw,Law-Fire 48-55,,100,,,,,,,,,,,,,,,204.89,204.89,D
 1,Duke Gumpfer,M,HI,,,Multi-ply,Law-Fire 48-55,,117.5,,,,,,,,,,,,,,,244.94,244.94,D
 1,Bill Splawn,M,WA,,,Raw,Law-Fire 48-55,,117.5,,,,,,,,,,,,,,,192.41,192.41,D
@@ -82,7 +82,7 @@ DQ,Jordan Rogers,M,OK,,,Raw,Juniors 20-25,,75,,,,,,,,,,,,,,,,,D
 1,Oscar Martinez,M,WA,,,Raw,Masters 47-53,,67.5,,,,,,,,,,,,,,222.49,220.99,220.99,D
 1,Marchand Flemming,M,OK,,,Raw,Masters 47-53,,82.5,,,,,,,,,,,,,,,227.48,227.48,D
 2,Mike Stanchfield,M,MN,,,Raw,Masters 47-53,,82.5,,,,,,,,,,,,,,,217.5,217.5,D
-1,Jason Smith,M,OK,,,Raw,Masters 47-53,,90,,,,,,,,,,,,,,,252.42,252.42,D
+1,Jason Smith #1,M,OK,,,Raw,Masters 47-53,,90,,,,,,,,,,,,,,,252.42,252.42,D
 2,Shaun Smith,M,GA,,,Raw,Masters 47-53,,90,,,,,,,,,,,,,,,232.47,232.47,D
 1,Darwin Cavanaugh,M,OK,,,Raw,Masters 47-53,,100,,,,,,,,,,,,,,,147.42,147.42,D
 1,Mike Desrosiers,M,AZ,,,Raw,Masters 47-53,,110,,,,,,,,,,,,,,,244.94,244.94,D
@@ -126,13 +126,13 @@ DQ,James Noblit,M,OR,,,Multi-ply,Masters 54-60,,100,,,,,,,,,,,,,,,,,D
 DQ,James Mersberg,M,HI,,,Multi-ply,Masters 61-67,,140+,,,,,,,,,,,,,,,,,D
 1,Joe Mickelson,M,WA,,,Raw,Masters 61-67,,140+,,,,,,,,,,,,,,,227.98,227.98,D
 1,Frank Principati,M,AZ,,,Single-ply,Masters 68-74,,56,,,,,,,,,,,,,,,119.98,119.98,D
-1,John Clay,M,CO,,,Multi-ply,Masters 68-74,,75,,,,,,,,,,,,,,,174.95,174.95,D
+1,John Clay #2,M,CO,,,Multi-ply,Masters 68-74,,75,,,,,,,,,,,,,,,174.95,174.95,D
 1,Gary Panttila Sr,M,AZ,,,Raw,Masters 68-74,,90,,,,,,,,,,,,,,,137.44,137.44,D
 1,Tom Gonnering,M,AL,,,Raw,Masters 68-74,,110,,,,,,,,,,,,,,,29.94,29.94,D
-1,Eddie Morgan,M,AR,,,Single-ply,Masters 68-74,,110,,,,,,,,,,,,,,,257.41,257.41,D
+1,Eddie Morgan #1,M,AR,,,Single-ply,Masters 68-74,,110,,,,,,,,,,,,,,,257.41,257.41,D
 1,Peter Murphy,M,CA,,,Multi-ply,Masters 68-74,,110,,,,,,,,,,,,,,,219.99,219.99,D
 1,Thomas Matlock,M,AZ,,,Raw,Masters 68-74,,117.5,,,,,,,,,,,,,,,164.97,164.97,D
-1,James Christian,M,TX,,,Single-ply,Masters 75-79,,75,,,,,,,,,,,,,,,154.9,154.9,D
+1,James Christian #1,M,TX,,,Single-ply,Masters 75-79,,75,,,,,,,,,,,,,,,154.9,154.9,D
 1,Robert Batko,M,MI,,,Raw,Masters 75-79,,82.5,,,,,,,,,,,,,,,189.92,189.92,D
 1,Gary Flood,M,OK,,,Raw,Masters 75-79,,100,,,,,,,,,,,,,,147.42,144.92,144.92,D
 2,Jerry Guiliano,M,CA,,,Raw,Masters 75-79,,100,,,,,,,,,,,,,,145.42,137.44,137.44,D
@@ -257,7 +257,7 @@ DQ,Willard Crossen Jr,M,WA,,,Single-ply,Open,,117.5,,,,,,,,,,,,,,,,,D
 1,Kilihune Kanda,M,HI,,,Raw,Teen 16-17,,140,,,,,,,,,,,,,,,234.96,234.96,D
 1,Nicholas Furman,M,CA,,,Raw,Teen 18-19,,75,,,,,,,,,,,,,,,107.37,107.37,D
 1,David Soboyejo,M,AZ,,,Raw,Teen 18-19,,90,,,,,,,,,,,,,,,249.93,249.93,D
-1,Nicholas Anderson,M,AZ,,,Raw,Teen 18-19,,117.5,,,,,,,,,,,,,,,187.42,187.42,D
+1,Nicholas Anderson #7,M,AZ,,,Raw,Teen 18-19,,117.5,,,,,,,,,,,,,,,187.42,187.42,D
 1,Joe Veith,M,MI,,,Raw,Teen 18-19,,140+,,,,,,,,,,,,,,254.92,244.94,244.94,D
 1,Carys Urasaki,F,HI,,,Raw,Teen 14-15,,52,,,,,,,,,,,,,,,99.88,99.88,D
 1,Laila Jackson,F,TX,,,Single-ply,Teen 14-15,,56,,,,,,,,,,,,,,,110,110,D
@@ -294,7 +294,7 @@ DQ,Lyndell Corn,M,TN,,,Single-ply,Class 1,,100,,,,,,,,,,,,,,,,,B
 2,Catherine Mc Allister,F,CA,,,Raw,Class 1,,90,,,,,,,,,,44.91,,,,,,44.91,B
 1,Tamara Perry,F,HI,,,Raw,Class 1,,100,,,,,,,,,,74.93,,,,,,74.93,B
 1,Scott Rickford,M,MN,,,Raw,Disabled 1 40-59,,82.5,,,,,,,,,,127.46,,,,,,127.46,B
-1,Steve Pena,M,CA,,,Raw,Disabled 1 40-59,,110,,,,,,,,,,129.95,,,,,,129.95,B
+1,Steve Peña #1,M,CA,,,Raw,Disabled 1 40-59,,110,,,,,,,,,,129.95,,,,,,129.95,B
 1,Nin Beseda,M,WA,,,Raw,Disabled 1 60,,90,,,,,,,,,,114.99,,,,,,114.99,B
 1,Ed Marshall,M,AZ,,,Raw,Disabled 1 60,,82.5,,,,,,,,,69.94,64.95,,,,,,64.95,B
 1,Mac McClatchey,M,WI,,,Raw,Disabled 1 60,,117.5,,,,,,,,,,70.44,,,,,,70.44,B
@@ -329,7 +329,7 @@ DQ,Micah Coleman,M,IL,,,Raw,Law-Fire 40-47,,140,,,,,,,,,,,,,,,,,B
 1,Joelle McQuay,F,UT,,,Raw,Law-Fire 40-47,,60,,,,,,,,,,44.91,,,,,,44.91,B
 1,Tricia Downing,F,AZ,,,Raw,Law-Fire 40-47,,67.5,,,,,,,,,,84.91,,,,,,84.91,B
 1,Dana Crosby,F,IL,,,Raw,Law-Fire 40-47,,100,,,,,,,,,,77.93,,,,,,77.93,B
-1,Jason Smith,M,OK,,,Raw,Law-Fire 48-55,,90,,,,,,,,,,159.89,,,,,,159.89,B
+1,Jason Smith #1,M,OK,,,Raw,Law-Fire 48-55,,90,,,,,,,,,,159.89,,,,,,159.89,B
 DQ,Bill Splawn,M,WA,,,Raw,Law-Fire 48-55,,117.5,,,,,,,,,,,,,,,,,B
 2,Monica Hagen,F,CA,,,Raw,Law-Fire 48-55,,82.5,,,,,,,,,,64.95,,,,,,64.95,B
 1,Artemira Sobrinho,F,,Brazil,,Raw,Law-Fire 48-55,,82.5,,,,,,,,,,84.91,,,,,,84.91,B
@@ -360,7 +360,7 @@ DQ,Hiram Kaikaina III,M,HI,,,Single-ply,Masters 40-46,,140+,,,,,,,,,,,,,,,,,B
 2,Mike Stanchfield,M,MN,,,Raw,Masters 47-53,,82.5,,,,,,,,,,147.42,,,,,,147.42,B
 3,Marchand Flemming,M,OK,,,Raw,Masters 47-53,,82.5,,,,,,,,,,124.96,,,,,,124.96,B
 1,Joey Murphy,M,GA,,,Single-ply,Masters 47-53,,90,,,,,,,,,,194.91,,,,,,194.91,B
-1,Jason Smith,M,OK,,,Raw,Masters 47-53,,90,,,,,,,,,,159.89,,,,,,159.89,B
+1,Jason Smith #1,M,OK,,,Raw,Masters 47-53,,90,,,,,,,,,,159.89,,,,,,159.89,B
 1,Darwin Cavanaugh,M,OK,,,Single-ply,Masters 47-53,,100,,,,,,,,,,129.95,,,,,,129.95,B
 1,Nick Massey,M,CA,,,Multi-ply,Masters 47-53,,117.5,,,,,,,,,,230.47,,,,,,230.47,B
 1,Deron Agaran,M,HI,,,Raw,Masters 54-60,,67.5,,,,,,,,,147.42,142.93,,,,,,142.93,B
@@ -527,7 +527,7 @@ DQ,Wyatt Cavanaugh,M,OK,,,Raw,Teen 16-17,,82.5,,,,,,,,,,,,,,,,,B
 1,Justin Ralston,M,AZ,,,Raw,Teen 16-17,,125,,,,,,,,,,110,,,,,,110,B
 1,Kilihune Kanda,M,HI,,,Raw,Teen 16-17,,140,,,,,,,,,,129.95,,,,,,129.95,B
 DQ,David Soboyejo,M,AZ,,,Raw,Teen 18-19,,90,,,,,,,,,,,,,,,,,B
-1,Nicholas Anderson,M,AZ,,,Raw,Teen 18-19,,117.5,,,,,,,,,,87.41,,,,,,87.41,B
+1,Nicholas Anderson #7,M,AZ,,,Raw,Teen 18-19,,117.5,,,,,,,,,,87.41,,,,,,87.41,B
 1,Joe Veith,M,MI,,,Raw,Teen 18-19,,140+,,,,,,,,,,149.91,,,,,,149.91,B
 1,Piper Maddox,F,TX,,,Raw,Teen 14-15,,82.5,,,,,,,,,54.98,52.39,,,,,,52.39,B
 1,Trulayna Ballo-Saladino,F,HI,,,Raw,Teen 16-17,,52,,,,,,,,,,49.9,,,,,,49.9,B
@@ -549,7 +549,7 @@ DQ,Wyatt Cavanaugh,M,OK,,,Raw,Class 1,,82.5,,,,,,,,,,,,,,,,,BD
 1,Makaiwa Kanui,F,HI,,,Raw,Class 1,,82.5,,,,,,,,,,,,,,,,240.4,BD
 1,Mesha Blackwell,F,IL,,,Raw,Class 1,,90,,,,,,,,,,,,,,,,229.84,BD
 1,Natalie Caughey,F,UT,,,Single-ply,Class 1,,90,,,,,,,,,,,,,,,,232.33,BD
-1,Steve Pena,M,CA,,,Raw,Disabled 1 40-59,,110,,,,,,,,,,,,,,,,324.86,BD
+1,Steve Peña #1,M,CA,,,Raw,Disabled 1 40-59,,110,,,,,,,,,,,,,,,,324.86,BD
 1,Daniel Randall III,M,IL,,,Raw,Disabled 2 20-39,,100,,,,,,,,,,,,,,,,194.91,BD
 1,Michael Clason,M,OR,,,Raw,Disabled 2 60,,110,,,,,,,,,,,,,,,,259.86,BD
 1,Marlene Wexler,F,MN,,,Raw,Disabled 2 60,,90,,,,,,,,,,,,,,,,164.88,BD
@@ -565,7 +565,7 @@ DQ,Wyatt Cavanaugh,M,OK,,,Raw,Class 1,,82.5,,,,,,,,,,,,,,,,,BD
 1,Freddy Crosby,M,IL,,,Single-ply,Law-Fire 40-47,,110,,,,,,,,,,,,,,,,577.38,BD
 1,Robert Schleder,M,AZ,,,Raw,Law-Fire 40-47,,117.5,,,,,,,,,,,,,,,,454.91,BD
 1,Jamie Field,F,CA,,,Single-ply,Law-Fire 40-47,,56,,,,,,,,,,,,,,,,244.8,BD
-1,Jason Smith,M,OK,,,Raw,Law-Fire 48-55,,90,,,,,,,,,,,,,,,,412.32,BD
+1,Jason Smith #1,M,OK,,,Raw,Law-Fire 48-55,,90,,,,,,,,,,,,,,,,412.32,BD
 1,Charles Farmer,M,MT,,,Multi-ply,Law-Fire 48-55,,100,,,,,,,,,,,,,,,,527.39,BD
 DQ,Bill Splawn,M,WA,,,Raw,Law-Fire 48-55,,117.5,,,,,,,,,,,,,,,,,BD
 2,Monica Hagen,F,CA,,,Raw,Law-Fire 48-55,,82.5,,,,,,,,,,,,,,,,197.4,BD
@@ -589,7 +589,7 @@ DQ,Alisha Howard,F,WA,,,Single-ply,Law-Fire Open,,90,,,,,,,,,,,,,,,,,BD
 1,Chris Balanga,M,CA,,,Single-ply,Masters 47-53,,75,,,,,,,,,,,,,,,,412.41,BD
 2,Marchand Flemming,M,OK,,,Raw,Masters 47-53,,82.5,,,,,,,,,,,,,,,,352.44,BD
 1,Mike Stanchfield,M,MN,,,Raw,Masters 47-53,,82.5,,,,,,,,,,,,,,,,364.92,BD
-1,Jason Smith,M,OK,,,Raw,Masters 47-53,,90,,,,,,,,,,,,,,,,412.09,BD
+1,Jason Smith #1,M,OK,,,Raw,Masters 47-53,,90,,,,,,,,,,,,,,,,412.09,BD
 1,Charles Farmer,M,MT,,,Multi-ply,Masters 47-53,,100,,,,,,,,,,,,,,,,527.39,BD
 1,Mike Desrosiers,M,AZ,,,Raw,Masters 47-53,,110,,,,,,,,,,,,,,,,397.35,BD
 1,Edwardo Elgart,M,,Argentina,,Multi-ply,Masters 47-53,,110,,,,,,,,,,,,,,,,504.85,BD
@@ -692,7 +692,7 @@ DQ,Willard Crossen Jr,M,WA,,,Single-ply,Open,,117.5,,,,,,,,,,,,,,,,,BD
 1,April Hamon,F,TX,,,Single-ply,Submasters 33-39,,56,,,,,,,,,,,,,,,,212.37,BD
 2,Amber Salvador,F,HI,,,Raw,Submasters 33-39,,67.5,,,,,,,,,,,,,,,,189.83,BD
 1,Marisa Boyns,F,CA,,,Single-ply,Submasters 33-39,,75,,,,,,,,,,,,,,,,257.37,BD
-1,Jamie Farmer,F,MT,,,Raw,Submasters 33-39,,75,,,,,,,,,,,,,,,,224.94,BD
+1,Jamie Farmer #1,F,MT,,,Raw,Submasters 33-39,,75,,,,,,,,,,,,,,,,224.94,BD
 2,Elisabeth Fruits,F,IN,,,Raw,Submasters 33-39,,75,,,,,,,,,,,,,,,,209.88,BD
 1,Teresa Thompson,F,ID,,,Raw,Submasters 33-39,,90,,,,,,,,,,,,,,,,244.89,BD
 1,Caylen Gapusan,F,WA,,,Multi-ply,Submasters 33-39,,100,,,,,,,,,,,,,,,,239.81,BD
@@ -711,7 +711,7 @@ DQ,Wyatt Cavanaugh,M,OK,,,Raw,Teen 16-17,,82.5,,,,,,,,,,,,,,,,,BD
 1,Kilihune Kanda,M,HI,,,Raw,Teen 16-17,,140,,,,,,,,,,,,,,,,364.92,BD
 1,Creed Shellenberger,M,AZ,,,Raw,Teen 18-19,,82.5,,,,,,,,,,,,,,,,219.86,BD
 DQ,David Soboyejo,M,AZ,,,Raw,Teen 18-19,,90,,,,,,,,,,,,,,,,,BD
-1,Nicholas Anderson,M,AZ,,,Raw,Teen 18-19,,117.5,,,,,,,,,,,,,,,,274.83,BD
+1,Nicholas Anderson #7,M,AZ,,,Raw,Teen 18-19,,117.5,,,,,,,,,,,,,,,,274.83,BD
 1,Joe Veith,M,MI,,,Raw,Teen 18-19,,140+,,,,,,,,,,,,,,,,394.85,BD
 1,Piper Maddox,F,TX,,,Raw,Teen 14-15,,82.5,,,,,,,,,,,,,,,,158.76,BD
 1,Trulayna Ballo-Saladino,F,HI,,,Raw,Teen 16-17,,52,,,,,,,,,,,,,,,,174.86,BD
