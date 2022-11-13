@@ -1099,6 +1099,12 @@ pub enum Federation {
     #[strum(to_string = "TPSSF", serialize = "tpssf")]
     TPSSF,
 
+    /// United Arab Emirates Powerlifting Association, IPF.
+    ///
+    /// Also called the United Arab Emirates Powerlifting Committee.
+    #[strum(to_string = "UAEPA", serialize = "uaepa")]
+    UAEPA,
+
     /// Ukrainian Drug-Free Powerlifting Federation
     #[strum(to_string = "UDFPF", serialize = "udfpf")]
     UDFPF,
@@ -1114,6 +1120,10 @@ pub enum Federation {
     /// Ukraine Powerlifting Association.
     #[strum(to_string = "UkrainePA", serialize = "ukrainepa")]
     UkrainePA,
+
+    /// Ukrainian Powerlifting Federation, IPF.
+    #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
+    UkrainePF,
 
     /// Ukraine Powerlifting Organisation.
     #[strum(to_string = "UkrainePO", serialize = "ukrainepo")]
@@ -1135,10 +1145,6 @@ pub enum Federation {
     #[serde(rename = "UPC-Germany")]
     #[strum(to_string = "UPC-Germany", serialize = "upc-germany")]
     UPCGermany,
-
-    /// Ukrainian Powerlifting Federation, IPF.
-    #[strum(to_string = "UkrainePF", serialize = "ukrainepf")]
-    UkrainePF,
 
     /// Ukrainian Powerlifting League, IPL.
     #[strum(to_string = "UPL", serialize = "upl")]
@@ -1913,6 +1919,7 @@ impl Federation {
             Federation::THSPA => FULLY_TESTED,
             Federation::THSWPA => FULLY_TESTED,
             Federation::TPSSF => FULLY_TESTED,
+            Federation::UAEPA => FULLY_TESTED,
             Federation::UDFPF => FULLY_TESTED,
             Federation::UgandaPA => false,
             Federation::UgandaPF => FULLY_TESTED,
@@ -2285,6 +2292,7 @@ impl Federation {
             Federation::THSPA => Some(Country::USA),
             Federation::THSWPA => Some(Country::USA),
             Federation::TPSSF => Some(Country::Turkey),
+            Federation::UAEPA => Some(Country::UAE),
             Federation::UDFPF => Some(Country::Ukraine),
             Federation::UgandaPA => Some(Country::Uganda),
             Federation::UgandaPF => Some(Country::Uganda),
@@ -2718,6 +2726,7 @@ impl Federation {
             Federation::THSPA => None,
             Federation::THSWPA => None,
             Federation::TPSSF => Some(Federation::IPF),
+            Federation::UAEPA => Some(Federation::IPF),
             Federation::UDFPF => Some(Federation::WDFPF),
             Federation::UgandaPA => Some(Federation::WPA),
             Federation::UgandaPF => Some(Federation::WP),
@@ -3204,6 +3213,7 @@ impl Federation {
             Federation::THSPA => PointsSystem::Wilks,
             Federation::THSWPA => PointsSystem::Wilks,
             Federation::TPSSF => Federation::ipf_rules_on(date),
+            Federation::UAEPA => Federation::ipf_rules_on(date),
             Federation::UDFPF => PointsSystem::Wilks,
             Federation::UgandaPA => PointsSystem::Wilks,
             Federation::UgandaPF => Federation::wp_rules_on(date),
