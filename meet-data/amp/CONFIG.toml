@@ -32,6 +32,7 @@
     fu23 = {name="F-Jr", min=11, max=22.5, sex="F", equipment="Single-ply"}
     fru18 = {name="FR-Sj", min=11, max=17.5, sex="F", equipment="Raw"}
     fu18 = {name="F-Sj", min=11, max=17.5, sex="F", equipment="Single-ply"}
+    fu14 = {name="FR-Pre-Sub-Jr", min=8, max=14, sex="F", equipment="Raw"}
     fry = {name="FR-Y", min=8, max=13, sex="F", equipment="Raw"}
     fy = {name="F-Y", min=8, max=13, sex="F", equipment="Single-ply"}
     frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
