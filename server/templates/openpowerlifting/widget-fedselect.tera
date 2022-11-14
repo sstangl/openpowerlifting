@@ -380,6 +380,7 @@
 </optgroup>
 <optgroup label="{{strings.country.netherlands}}">
   <option value="all-netherlands" {% if selection.federation == "AllNetherlands" %}selected{% endif %}>{{strings.selectors.fed.all_netherlands}}</option>
+  <option value="dpl" {% if selection.federation == "DPL" %}selected{% endif %}>DPL - Dutch Powerlifting League [IPL]</option>
   <option value="knkf-sp" {% if selection.federation == "KNKF-SP" %}selected{% endif %}>KNKF-SP - Sectie Powerliften [IPF]</option>
   <option value="plh" {% if selection.federation == "PLH" %}selected{% endif %}>PLH - Powerlifting Holland [WPF]</option>
 </optgroup>

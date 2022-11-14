@@ -264,6 +264,10 @@ pub enum MetaFederation {
     #[strum(to_string = "cypruspf")]
     CyprusPF,
 
+    /// DPL, but with international results also.
+    #[strum(to_string = "dpl")]
+    DPL,
+
     /// DSF, but with international results also.
     #[strum(to_string = "dsf")]
     DSF,
@@ -773,6 +777,7 @@ impl MetaFederation {
             MetaFederation::CPU => affiliation!(meet, entry, CPU, IPF, NAPF, CommonwealthPF),
             MetaFederation::CSST => affiliation!(meet, entry, CSST, IPF, EPF),
             MetaFederation::CyprusPF => affiliation!(meet, entry, CyprusPF, IPF, EPF),
+            MetaFederation::DPL => affiliation!(meet, entry, DPL, IPL),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
