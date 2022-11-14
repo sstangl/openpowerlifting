@@ -1,4 +1,5 @@
 [divisions]
+    open = {name ="Open",min=0,max=999}
     seniores = {name ="Seniores",min=0,max=999}
     juniores = {name = "Juniores",min=0,max=22.5}
     cadette = {name = "Cadette",min=0,max=17.5}
@@ -13,8 +14,13 @@
     sex = "M"
 
 [weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
+[weightclasses.year2020_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -23,10 +29,18 @@
     sex = "M"
     divisions = ["Juniores","Cadette"]
 
-[weightclasses.junior_F]
+[weightclasses.year2020_junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+    divisions = ["Juniores","Cadette"]
+
+[weightclasses.junior_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
     sex = "F"
     divisions = ["Juniores","Cadette"]
 
 [exemptions]
+    2201 = ["ExemptWeightClassConsistency"] # Used old weightclasses.
+    2202 = ["ExemptWeightClassConsistency"] # 0+ for Single-ply.
