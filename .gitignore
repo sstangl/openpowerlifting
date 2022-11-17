@@ -38,6 +38,7 @@ proptest-regressions/
 # Accidental output, just to be safe in the future.
 /package.json
 /package-lock.json
+install.Unix.sh
 
 # Temporary files.
 /server/probebot/*.tmp
