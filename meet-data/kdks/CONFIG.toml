@@ -23,8 +23,9 @@
     sex = "F"
 
 [exemptions]
-    # Smaller meets often rank only on DOTS and don't use weight classes
+    # Smaller meets often rank only on DOTS and group weight classes
     2001 = ["ExemptWeightClassConsistency"]
     2103 = ["ExemptWeightClassConsistency"]
     2201 = ["ExemptWeightClassConsistency"]
     2203 = ["ExemptWeightClassConsistency"]
+    2206 = ["ExemptWeightClassConsistency"]
