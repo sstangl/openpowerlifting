@@ -234,6 +234,7 @@ dependencies = [
  "rayon",
  "serde",
  "serde_derive",
+ "smartstring",
  "strum",
  "strum_macros",
  "toml",

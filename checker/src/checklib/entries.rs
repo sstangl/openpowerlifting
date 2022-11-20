@@ -3,6 +3,7 @@
 use coefficients::{glossbrenner, wilks};
 use opltypes::states::*;
 use opltypes::*;
+use smartstring::alias::CompactString;
 use strum::IntoEnumIterator;
 use unicode_normalization::UnicodeNormalization;
 
@@ -127,7 +128,7 @@ pub struct Entry {
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
-    pub division: String,
+    pub division: CompactString,
     pub equipment: Equipment,
     pub squat_equipment: Option<Equipment>,
     pub bench_equipment: Option<Equipment>,
@@ -2133,7 +2134,7 @@ pub fn do_check<R: io::Read>(
         // Check optional fields.
         if let Some(idx) = headers.get(Header::Division) {
             check_column_division(&record[idx], config, exempt_division, line, &mut report);
-            entry.division = record[idx].to_string();
+            entry.division = CompactString::from(&record[idx]);
         }
 
         // Assign the Tested column if it's configured for the Division.
