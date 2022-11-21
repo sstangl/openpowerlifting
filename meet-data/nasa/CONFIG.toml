@@ -76,6 +76,7 @@
     bpm2 = {name="bpm2", min=50, max=59, sex='M'}
     bpm3 = {name="bpm3", min=60, max=69, sex='M'}
     bpm4 = {name="bpm4", min=70, max=999, sex='M'}
+    bpm5 = {name="bpm5", min=80, max=999, sex='M'}
     bpnov = {name="bpnov", min=0, max=999, sex='M'}
     bppf = {name="bpp+f", min=0, max=999, sex='M'}
     bppure = {name="bppure", min=0, max=999, sex='M'}
@@ -202,6 +203,7 @@
     retrom2 = {name="retrom2", min=50, max=59, sex='M', equipment='Raw'}
     retrom3 = {name="retrom3", min=60, max=69, sex='M', equipment='Raw'}
     retrom4 = {name="retrom4", min=70, max=999, sex='M', equipment='Raw'}
+    retrom5 = {name="retrom5", min=80, max=999, sex='M', equipment='Raw'}
     retronov = {name="retronov", min=0, max=999, sex='M', equipment='Raw'}
     retropf = {name="retrop+f", min=0, max=999, sex='M', equipment='Raw'}
     retropure = {name="retropure", min=0, max=999, sex='M', equipment='Raw'}
