@@ -625,6 +625,7 @@
     NH-2022-04 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Weight classes were combined and scored by formula
     MN-2022-09 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
     PA-2022-14 = ["ExemptWeightClassConsistency"] # Meet results sorted by formula.
+    GER-2021-01 = ["ExemptWeightClassConsistency"] # No weight classes used.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
