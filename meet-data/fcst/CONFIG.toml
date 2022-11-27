@@ -2,17 +2,13 @@
 
 
 [divisions]
-    mo = {name ="Open", min=0, max=999}
-    t1316 = {name ="T13-16", min=13, max=16}
-    t1719 = {name ="T17-19", min=17, max=19}
+    open = {name ="Open", min=0, max=999}
     t1315 = {name ="T13-15", min=13, max=15}
     t1617 = {name ="T16-17", min=16, max=17}
     t1819 = {name ="T18-19", min=18, max=19}
-    juniors = {name ="Juniors", min=20, max=23}
-    m4049 = {name ="M40-49", min=40, max=49}
+    j2023 = {name ="J20-23", min=20, max=23}
     m4044 = {name ="M40-44", min=40, max=44}
     m4549 = {name ="M45-49", min=45, max=49}
-    m5059 = {name ="M50-59", min=50, max=59}
     m5054 = {name ="M50-54", min=50, max=54}
     m5559 = {name ="M55-59", min=55, max=59}
     m6069 = {name ="M60-69", min=60, max=69}
@@ -21,6 +17,13 @@
     m7079 = {name ="M70-79", min=70, max=79}
     m7074 = {name ="M70-74", min=70, max=74}
     m7579 = {name ="M75-79", min=75, max=79}
+
+    # Reduced classes.
+    t1316 = {name ="T13-16", min=13, max=16}
+    t1719 = {name ="T17-19", min=17, max=19}
+    m4049 = {name ="M40-49", min=40, max=49}
+    m5059 = {name ="M50-59", min=50, max=59}
+    juniors = {name ="Juniors", min=20, max=23}
 
 
 [weightclasses.default_M]
