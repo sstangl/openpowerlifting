@@ -175,75 +175,6 @@ def check_name_corrections(names):
     fd.close()
 
 
-def check_name_disambiguation(names):
-    filename = 'name-disambiguation.csv'
-    csv = oplcsv.Csv('lifter-data' + os.sep + filename)
-
-    usernames = [get_username(lifter_name) for lifter_name in names]
-
-    # Names seen in the file so far.
-    # Stored as a map of Name => Count for use further below.
-    seenset = {}
-
-    if ','.join(csv.fieldnames) != "Name,Count":
-        perror("%s: CSV column names are wrong." % filename)
-        return
-
-    # Names with variants in the disambiguation file should occur in meet
-    # files.
-    for (name, count) in csv.rows:
-        # Each name can only occur once.
-        if name in seenset:
-            perror("%s: Name '%s' occurs more than once." % (filename, name))
-
-        # That name cannot have a '#' in it.
-        if '#' in name:
-            perror("%s: Name '%s' cannot contain the character '#'." %
-                   (filename, name))
-
-        # Count must be a number.
-        if not count.isdigit():
-            perror("%s: Count must be an integer." % filename)
-            continue
-
-        # That number must be >= 2.
-        if not int(count) >= 2:
-            perror("%s: Count must be >= 2." % filename)
-            continue
-
-        # The un-specified name should not occur without a number.
-        if get_username(name) in usernames:
-            # Just use a warning, to avoid making meets really annoying to
-            # enter.
-            pwarning("Lifter '%s' needs disambiguation in some meet data." % name)
-            print(" https://www.openpowerlifting.org/u/%s" % get_username(name))
-
-        # All the variants of that name should be accounted for.
-        for k in range(1, int(count) + 1):
-            variant = "%s #%u" % (name, k)
-
-            if not get_username(variant) in usernames:
-                perror("%s: No lifter named '%s' in any meets." %
-                       (filename, variant))
-
-        seenset[get_username(name)] = int(count)
-
-    # Names with variants in meet files should be valid by the disambiguation
-    # file.
-    for name in filter(lambda x: '#' in x, names):
-        (part, index) = name.split('#')
-        part = part.rstrip()  # Remove the space before the '#'.
-
-        if not get_username(part) in seenset:
-            perror("%s: Name '%s' occurs in some meet, "
-                   "but isn't marked for disambiguation." % (filename, name))
-        else:
-            count = seenset[get_username(part)]
-            if int(index) > int(count):
-                perror("%s: Name '%s' occurs in a meet,"
-                       " but only %s variants are known." % (filename, name, count))
-
-
 def main():
     global hitError
 
@@ -252,7 +183,6 @@ def main():
 
     check_social_media(names)
     check_name_corrections(names)
-    check_name_disambiguation(names)
 
     if hitError:
         return 1

@@ -346,7 +346,10 @@ fn check_name_disambiguation(
         let line = (rownum as u64) + 2;
 
         let row: NameDisambiguationRow = result?;
-        let username = match Username::from_name(&row.name) {
+        let name = &row.name;
+        let count = row.count;
+
+        let username = match Username::from_name(&name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -354,8 +357,14 @@ fn check_name_disambiguation(
             }
         };
 
-        if has_whitespace_errors(username.as_str()) {
-            report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
+        if has_whitespace_errors(name) {
+            report.error_on(line, format!("Whitespace error in '{name}'"));
+        }
+        if name.contains('#') {
+            report.error_on(line, format!("Name '{name}' cannot contain '#'"));
+        }
+        if count < 2 {
+            report.error_on(line, format!("Count must be >= 2"));
         }
 
         match map.get_mut(&username) {
