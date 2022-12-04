@@ -743,3 +743,4 @@
     2108 = ["ExemptWeightClassConsistency", "ExemptDivision"]
     2140 = ["ExemptDivision"] # WPO, no divisions.
     2206 = ["ExemptWeightClassConsistency"] # Missing weightclasses
+    2246 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass info
