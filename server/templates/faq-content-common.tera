@@ -16,10 +16,6 @@
 <h2>What do colored names mean?</h2>
 <p>This site has no ads or paywalls -- we are generously funded by donations from the powerlifting community <a href="https://www.patreon.com/join/openpowerlifting">through Patreon</a>. As a way of saying thanks, donators have the option of choosing a custom color for their name.</p>
 
-<h2>Why are WRPF totals lower than reported? (Why isn't Yury #1?)</h2>
-<p>The WRPF allows up to 5 attempts for small, "professional" powerlifting meets, with all lifts counting toward the total. We recalculate WRPF totals and Wilks such that only the first three attempts count toward the total.</p>
-<p>Lifts after the first three are still good for the single-lift records and rankings -- just not for the total.</p>
-
 <h2>I competed Raw, why am I marked as Wraps?</h2>
 <p>You competed in a federation that doesn't distinguish between sleeves and wraps.</p>
 <p>If you send us video proof that your squats were not wrapped, we'll change it.</p>
@@ -39,7 +35,7 @@
 
 <h2>How many people are behind this site?</h2>
 <p>We are currently a team of about eight powerlifters.</p>
-<p>If you think you might like to help out, please send an e-mail for an invitation to the team chat.</p>
+<p>The success of the project relies on contributions from powerlifters around the world. If you would like to get involved and help support the project, you can join <a href="https://openpl.zulipchat.com" rel="noopener" target="_blank">our team chat on Zulip</a> to learn more about how you can contribute. There are many ways to get involved, such as by submitting results from powerlifting meets or volunteering your time to help respond to special requests. You can also support us by sharing information about the project with your friends. That helps a ton.</p>
 
 <h2>Why is this site free? (With the subtext of: What's the ruse here?)</h2>
 <p>We're powerlifters, and powerlifting badly needed someone to organize its results. It's our hope that by giving away all our data for free, you will be more motivated to support the project by sending in corrections and telling other lifters about us. We want as many people actively using our data as possible, so that they can send in corrections of their own, which will cause us to have extremely accurate historical data. We want you to really feel that we're working for your benefit.</p>
@@ -52,4 +48,5 @@
 <p>You will notice that there are no advertisements on this site: entities have asked to place banner ads, but we have stubbornly refused. This is because advertisements would cause us to optimize for metrics that harm you as a user: time-on-site, cost-per-click, etc. Sites with ads are incentivized to become time-sucking black holes. We'd rather just be inclined to treat you well.</p>
 
 <h2>Why does my age have a ~ next to it?</h2>
-<p>This is an approximate age. These occur due to federations only providing birth years, rather than birth dates. So we do not know if a lifter has had their birthday yet that year. One way to think about is that 23~ means that the lifter turns 24 that year.</p>
+<p>It means that your age is approximate. This can happen if the federation that organized the meet did not provide enough information for us to determine an exact age. When that happens, an approximated age can sometimes be displayed based on other available information.</p>
+<p>If your displayed age is incorrect, you can contact the OpenPowerlifting team through <a href="https://gitlab.com/openpowerlifting/opl-data/-/issues" rel="noopener" target="_blank">our issue tracker</a> and request that it be corrected. We will do our best to update the database with the correct information as soon as possible.</p>
