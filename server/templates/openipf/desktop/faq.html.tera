@@ -9,92 +9,22 @@
 
 {% block body %}
 <center>
-  <div class="text-content">
+<div class="text-content">
 
 <h1>Frequently Asked Questions</h1>
 
 <h2>What is this site? How does it relate to OpenPowerlifting?</h2>
-
 <p>This site is an IPF-specific frontend for the OpenPowerlifting database. The backend is exactly the same as OpenPowerlifting.</p>
 
 <h2>What's this site's relationship with the IPF?</h2>
-
 <p>OpenIPF is an official collaboration between OpenPowerlifting and the IPF.</p>
-
 <p>OpenPowerlifting is responsible for the content of this website, not the IPF. Although this site is IPF approved, we are not IPF officials and cannot speak on their behalf. The choices we make while developing this website do not imply that each choice carries IPF endorsement. We have pinky-sworn to not do silly things.</p>
 
 <h2>Why did you make an IPF-specific frontend?</h2>
-
 <p>The main OpenPowerlifting website is difficult to use for IPF lifters due to different rules. Because of that difficulty, not many IPF lifters interacted with our database. That is a problem for us, because we can't be accurate unless lifters are interacting with the database and reporting errors and omissions.</p>
-
 <p>This site is set up so the defaults are what IPF lifters expect. We hope that by doing this, IPF lifters engage more with the data, and IPF affiliates get more motivated to work with us on archiving their results.</p>
 
-<h2>How do I send in my meet results?</h2>
-
-<p>Wait for the federation to post the official results on their website, and then send us an e-mail with a link. Alternatively, if you are a meet director, have the original spreadsheets, and have reason to believe that the federation will sit on the data for a long time or lose data along the way, you can e-mail us the spreadsheets.</p>
-
-<p>We strongly prefer that results be posted on the federation website, so that they can be crawled by the <a href="https://www.archive.org">Internet Archive</a>.</p>
-
-<p>We operate differently from other record-keeping sites: we only track full competitions, not individual records. We do not include personal records independently of the context in which they occurred. The major benefit of doing it this way is that we archive the competition results of everyone who competed, not just the record-holders.</p>
-
-<h2>I had a meet last weekend, why is it not on the site?</h2>
-      
-<p>Most likely, we're waiting on the federation to post results.</p>
-
-<p>If the federation posted results and they're still not on the site for a while, please send an e-mail. We enter in meets in rough "order of volunteer enthusiasm," but if someone sends us a message that a particular meet is important to them, we'll prioritize that one. Otherwise, we're working through an endless backlog.</p>
-
-<h2>How do I add a link to my Instagram?</h2>
-
-<p>Find your name and click on it to see your full meet history. Check for errors, missing competitions, competitions that are not yours, etc.</p>
-
-<p>Then, either message @openpowerlifting on Instagram with your full name, date of birth (YYYY-MM-DD), best meet total (and the federation that total was achieved in), and identify any errors you found in your meet history. You can also send this information in an e-mail to issues@openpowerlifting.org.</p>
-
-<p>If you know what GitLab is, you can actually tag your Instagram yourself, without asking us at all. Documentation for how to do that <a href="https://book.openpowerlifting.org/getting-started/linking-an-instagram.html">is hosted here</a>.</p>
-
-<h2>What do colored names mean?</h2>
-
-<p>This site has no ads or paywalls -- we are generously funded by donations from the powerlifting community <a href="https://www.patreon.com/join/openpowerlifting">through Patreon</a>. As a way of saying thanks, donators have the option of choosing a custom color for their name.</p>
-
-<h2>How does this site work? Do you just download results from the federations?</h2>
-
-<p>Federations post results in random formats, so unfortunately the process remains manual and can only be partially automated at best. Each meet on the site was manually added by a human contributor and passed review by a project maintainer.</p>
-
-<p>At least for the IPF, the situation is getting better: many affiliates now use real databases for reporting their own results. Unfortunately, the data <i>within</i> those databases tends to contain significant errors, and the Web UIs present incomplete information.
-
-<p>The hardest formats for us to deal with are images and PDFs.</p>
-
-<p>Images typically occur when a federation prefers a Facebook page over having their own website. Facebook then massively blurs the pictures, so OCR technology cannot automatically decipher it. These federations require retyping all the results. A single meet in this format typically takes around an hour and a half to add. That is too long, and we can't commit to that work. We strongly encourage federations to not use images for official results.</p>
-
-<p>The one cool thing we do have is automated <i>detection</i> of meets -- for many federations, we've written Web scrapers that automatically let us know when new results are available. Although we still have to enter them by hand, at least we don't have to go looking for them.</p>
-
-<h2>How many people are behind this site?</h2>
-
-<p>We are currently a team of about eight powerlifters.</p>
-
-<p>If you think you might like to help out, please send an e-mail for an invitation to the team chat.</p>
-
-<p>Our goal is to have one maintainer for each federation. Ideally, that person would be a lifter or official in that federation, so that they can provide context for the data. Current maintainers are listed on the <a href="{{urlprefix | safe}}status">status page</a>.</p>
-
-<h2>Why is this site free? (With the subtext of: What's the ruse here?)</h2>
-
-<p>We're powerlifters, and powerlifting badly needed someone to organize its results. It's our hope that by giving away all our data for free, you will be more motivated to support the project by sending in corrections and telling other lifters about us. We want as many people actively using our data as possible, so that they can send in corrections of their own, which will cause us to have extremely accurate historical data. We want you to really feel that we're working for your benefit.</p>
-
-<p>To make sure that this site remains free, we release all of our data into the public domain, and all of our code under the AGPLv3+ license. You can download our entire database right now from the <a href="https://openpowerlifting.gitlab.io/opl-csv/">Data page</a> -- in fact, you really should! That prevents us from ever making the data private, because if we did so, you could easily create a new, free website with better data. It's our hope that this model keeps powerlifting data in the public domain forever.</p>
-
-<p>Basically, we're Powerlifting librarians and archivists, and don't charge for this site for the same reason that librarians don't charge you to read one of their books.</p>
-
-<h2>Don't you need money to operate a website?</h2>
-
-<p>Yes. We are fortunate enough to be able to operate solely off of donations. We use Patreon because the monthly model allows us to have predictable income for monthly expenses, and because it allows our full financial situation to be public.</p>
-
-<p>This project does not operate at a loss -- your donations are all that we have to work with.</p>
-
-<p>You will notice that there are no advertisements on this site: entities have asked to place banner ads, but we have stubbornly refused. This is because advertisements would cause us to optimize for metrics that harm you as a user: time-on-site, cost-per-click, etc. Sites with ads are incentivized to become time-sucking black holes. We'd rather just be inclined to treat you well.</p>
-
-<h2>Why does my age have a ~ next to it?</h2>
-
-<p>This is an approximate age. These occur due to federations only providing birth years, rather than birth dates. So we do not know if a lifter has had their birthday yet that year. One way to think about is that 23~ means that the lifter turns 24 that year.</p>
-
-  </div>
+{% include "faq-content-common" %}
+</div>
 </center>
 {% endblock body %}
