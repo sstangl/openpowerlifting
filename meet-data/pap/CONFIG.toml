@@ -1,5 +1,6 @@
 [divisions]
-    o = {name ="O",min=14,max=999}
+    # Short names.
+    o = {name = "O",min=14,max=999}
     j = {name = "J",min=14,max=22.5}
     d = {name = "D",min=0,max=13}
     sj = {name = "SJ",min=14,max=17.5}
@@ -10,6 +11,13 @@
     hs = {name = "HS",min=0,max=999}
     c = {name = "C",min=0,max=999}
     g = {name = "G",min=0,max=999}
+
+    # Long names.
+    open = {name = "Open",min=14,max=999}
+    junior = {name = "Junior",min=14,max=22.5}
+    subjunior = {name = "Sub-Junior",min=14,max=17.5}
+    novice = {name = "Novice",min=14,max=999}
+    developmental = {name = "Developmental",min=0,max=13}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -42,7 +50,7 @@
     classes = ["33","38","43","48","53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-12-31"]
     sex = "M"
-    divisions = ["D"]
+    divisions = ["D", "Developmental"]
 
 
 
