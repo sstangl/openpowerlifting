@@ -149,7 +149,11 @@ pub fn check_date(s: &str, report: &mut Report) -> Option<Date> {
     }
 
     // This is sufficiently fast to call that caching is of no practical benefit.
-    let now = chrono::Local::now();
+    //
+    // Tomorrow's date is used as the "now" cutoff. This solves a timezone issue
+    // where contributors in Australia might add meets "in the future" relative
+    // to someone living in the USA.
+    let now = chrono::Local::now() + chrono::naive::Days::new(1);
 
     // The date should not be in the future.
     let (y, m, d) = (now.year() as u32, now.month() as u32, now.day() as u32);
