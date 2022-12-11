@@ -17,6 +17,7 @@
     junior = {name = "Junior",min=14,max=22.5}
     subjunior = {name = "Sub-Junior",min=14,max=17.5}
     novice = {name = "Novice",min=14,max=999}
+    master = {name = "Master",min=39.5,max=999} # Underspecified.
     developmental = {name = "Developmental",min=0,max=13}
 
 [weightclasses.default_M]
