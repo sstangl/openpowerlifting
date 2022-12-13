@@ -882,7 +882,7 @@ impl MetaFederation {
             MetaFederation::SwissPL => affiliation!(meet, entry, SwissPL, IPF, EPF),
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
-            MetaFederation::UAEPA => affiliation!(meet, entry, UAEPA, IPF),
+            MetaFederation::UAEPA => affiliation!(meet, entry, UAEPA, IPF, AsianPF),
             MetaFederation::UgandaPF => affiliation!(meet, entry, UgandaPF, WP),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
 
