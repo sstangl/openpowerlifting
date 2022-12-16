@@ -1512,6 +1512,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Brazil", serialize = "wrpf-brazil")]
     WRPFBrazil,
 
+    /// Bulgarian WRPF affiliate.
+    #[serde(rename = "WRPF-Bulgaria")]
+    #[strum(to_string = "WRPF-Bulgaria", serialize = "wrpf-bulgaria")]
+    WRPFBulgaria,
+
     /// Canadian WRPF affiliate.
     #[serde(rename = "WRPF-CAN")]
     #[strum(to_string = "WRPF-CAN", serialize = "wrpf-can")]
@@ -2008,6 +2013,7 @@ impl Federation {
             Federation::WRPFAUS => false,
             Federation::WRPFBelarus => false,
             Federation::WRPFBrazil => false,
+            Federation::WRPFBulgaria => false,
             Federation::WRPFCAN => false,
             Federation::WRPFEIRE => false,
             Federation::WRPFHUN => false,
@@ -2381,6 +2387,7 @@ impl Federation {
             Federation::WRPFAUS => Some(Country::Australia),
             Federation::WRPFBelarus => Some(Country::Belarus),
             Federation::WRPFBrazil => Some(Country::Brazil),
+            Federation::WRPFBulgaria => Some(Country::Bulgaria),
             Federation::WRPFCAN => Some(Country::Canada),
             Federation::WRPFEIRE => Some(Country::Ireland),
             Federation::WRPFHUN => Some(Country::Hungary),
@@ -2837,6 +2844,7 @@ impl Federation {
             Federation::WRPFAUS => Some(Federation::WRPF),
             Federation::WRPFBelarus => Some(Federation::WRPF),
             Federation::WRPFBrazil => Some(Federation::WRPF),
+            Federation::WRPFBulgaria => Some(Federation::WRPF),
             Federation::WRPFCAN => Some(Federation::WRPF),
             Federation::WRPFEIRE => Some(Federation::WRPF),
             Federation::WRPFHUN => Some(Federation::WRPF),
@@ -3315,6 +3323,7 @@ impl Federation {
             Federation::WRPFAUS => PointsSystem::Wilks,
             Federation::WRPFBelarus => PointsSystem::Wilks,
             Federation::WRPFBrazil => PointsSystem::Wilks,
+            Federation::WRPFBulgaria => PointsSystem::Wilks,
             Federation::WRPFCAN => PointsSystem::Wilks,
             Federation::WRPFEIRE => PointsSystem::Wilks,
             Federation::WRPFHUN => PointsSystem::Wilks,

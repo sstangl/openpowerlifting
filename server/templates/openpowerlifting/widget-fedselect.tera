@@ -172,6 +172,9 @@
 <optgroup label="{{strings.country.brunei}}">
   <option value="pfbd" {% if selection.federation == "PFBD" %}selected{% endif %}>PFBD - Powerlifting Federation Brunei Darussalam [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.bulgaria}}">
+  <option value="wrpf-bulgaria" {% if selection.federation == "WRPF-Bulgaria" %}selected{% endif %}>WRPF Bulgaria</option>
+</optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
   <option value="cpa" {% if selection.federation == "CPA" %}selected{% endif %}>CPA - Canadian Powerlifting Association [WPA]</option>
