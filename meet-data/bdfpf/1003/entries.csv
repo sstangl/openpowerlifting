@@ -1,7 +1,7 @@
 Sex,Event,Place,WeightClassKg,Name,Team,Age,Division,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Equipment
 F,SBD,1,70,Viviane Lerot,Castors,51,F-M3,65.2,,,,100,,,,,52.5,,117.5,,270,Raw
 F,SBD,1,80,Nadège Dechamps,Castors,14,F-T1,71.8,,,,150,155,,,,92.5,,150,152.5,392.5,Raw
-M,SBD,1,60,Geovanni De Vissher,Powersport,16,M-T2,59.8,,,,125,,,,,80,,162.5,170,367.5,Raw
+M,SBD,1,60,Geovanni De Visscher,Powersport,16,M-T2,59.8,,,,125,,,,,80,,162.5,170,367.5,Raw
 M,SBD,1,75,Laurens Eeckhout,Francos,15,M-T1,68.5,,,,152.5,,,,,100,,167.5,,420,Raw
 M,SBD,1,75,Johny Callemeyn,Fit 4 fun,57,M-M4,72.5,,,,160,,,,,122.5,,172.5,,455,Raw
 M,SBD,1,75,Danny Verret,Planet fitness,35,M-O,71.2,,,,130,,,,,132.5,,135,,397.5,Raw
@@ -15,7 +15,7 @@ M,SBD,1,125,Wim Jammaer,Planet Fitness,27,M-O,115.6,,,,205,,,,,155,,255,,615,Raw
 M,SBD,1,145,Marc Goovaerts,Franco,53,M-M3,125.5,,,,100,,,,,155,,250,,505,Raw
 F,S,1,70,Viviane Lerot,Castors,51,F-M3,65.2,85,95,100,100,,,,,,,,,100,Single-ply
 F,S,1,80,Nadège Dechamps,Castors,14,F-T1,71.8,125,140,150,150,155,,,,,,,,150,Single-ply
-M,S,1,60,Geovanni De Vissher,Power Lebbeke,16,M-T2,59.8,110,-125,125,125,,,,,,,,,125,Single-ply
+M,S,1,60,Geovanni De Visscher,Power Lebbeke,16,M-T2,59.8,110,-125,125,125,,,,,,,,,125,Single-ply
 M,S,1,75,Laurens Eeckhout,Elite Gym Gent,15,M-T1,68.5,140,147.5,152.5,152.5,,,,,,,,,152.5,Single-ply
 M,S,1,75,Danny Verret,Planet Fitness,35,M-O,71.2,115,120,130,130,,,,,,,,,130,Single-ply
 M,S,1,75,Johny Callemeyn,Fit 4 fun,57,M-M4,72.5,155,160,-165,160,,,,,,,,,160,Single-ply
@@ -27,7 +27,7 @@ M,S,1,125,Sebastien Dechamps,Castors,17,M-T2,125,300,-320,-320,300,,,,,,,,,300,S
 M,S,1,125,Jérôme Dechamps,Castors,22,M-JR,122.6,290,305,-312.5,305,,,,,,,,,305,Single-ply
 M,S,1,125,Wim Jammaer,Planet Fitness,27,M-O,115.6,190,205,,205,,,,,,,,,205,Single-ply
 M,S,1,145,Marc Goovaerts,Elite Gym Gent,53,M-M3,125.5,100,,,100,,,,,,,,,100,Single-ply
-M,B,1,145+,Wilhelm Backelan,Planetfitness,47,M-M2,145.3,,,,,,230,240,250,250,-260.5,,,250,Single-ply
+M,B,1,145+,Wilhelm Backelant,Planetfitness,47,M-M2,145.3,,,,,,230,240,250,250,-260.5,,,250,Single-ply
 M,B,1,90,Geoffroy Servotte,PlanetFitness,30,M-O,90,,,,,,197.5,203,205,205,,,,205,Single-ply
 M,B,2,75,Danny Verret,PlanetFitness,35,M-O,71.2,,,,,,125,130,132.5,132.5,,,,132.5,Single-ply
 M,B,1,100,Rudy Smet,PlanetFitness,42,M-M1,93.7,,,,,,150,160,-165,160,,,,160,Single-ply
@@ -42,7 +42,7 @@ M,B,1,145,Marc Goovaerts,Elite Gym Gent,53,M-M3,125.5,,,,,,145,150,155,155,-160.
 M,B,1,90,Martin Theyssens,Elite Gym Gent,70,M-M7,88.3,,,,,,115,123,127.5,127.5,,,,127.5,Single-ply
 M,B,1,75,Laurens Eeckhout,Elite Gym Gent,15,M-T1,68.5,,,,,,90,97.5,100,100,,,,100,Single-ply
 M,B,1,82.5,Benny De Reuze,Power Lebbeke,24,M-O,78.2,,,,,,120,-127.5,127.5,127.5,,,,127.5,Single-ply
-M,B,1,60,Geovanni De Vissher,Power Lebbeke,16,M-T2,59.8,,,,,,80,-87.5,-87.5,80,,,,80,Single-ply
+M,B,1,60,Geovanni De Visscher,Power Lebbeke,16,M-T2,59.8,,,,,,80,-87.5,-87.5,80,,,,80,Single-ply
 M,B,1,82.5,Jamy Famaey,Power Lebbeke,20,M-JR,78.7,,,,,,80,90,-100,90,,,,90,Single-ply
 F,B,1,80,Nadège Dechamps,Castors,14,F-T1,71.8,,,,,,85,92.5,-100.5,92.5,,,,92.5,Single-ply
 F,B,1,80,Francoise Kumps,Castors,37,F-O,73.4,,,,,,65,-70,-70,65,,,,65,Single-ply

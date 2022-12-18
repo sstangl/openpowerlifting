@@ -9,13 +9,13 @@ M,SBD,1,67.5,Tim van den Abeele,GilbertsGym,24,M-O,62.8,175,,,,,140,,,,,115,,430
 M,SBD,1,75,Geovanni De Visscher,PowersportLebbeke,18,M-T3,69.4,210,,,,,180,,,,,130,,520,Raw
 M,SBD,1,75,Indra Sudarminto,PlanetFitness,21,M-JR,73.7,255,,,,,225,230,,,,135,,615,Raw
 M,SBD,2,75,Kim Houbracken,GilbertsGym,28,M-O,69.8,205,,,,,162.5,,,,,130,,497.5,Raw
-M,SBD,1,75,Ram Thirth,DynamicGym,39,M-O,73.8,220,,,,,155,,,,,140,,515,Raw
+M,SBD,1,75,Tirth Ram,DynamicGym,39,M-O,73.8,220,,,,,155,,,,,140,,515,Raw
 M,SBD,3,75,Bogaert Van Den,TonyPatton,33,M-O,74.1,180,,,,,140,,,,,80,,400,Raw
 M,SBD,1,75,Bart Hallewaert,Isogym,43,M-M1,73.9,242.5,,,,,185,,,,,135,,562.5,Raw
 M,SBD,1,75,Johny Callemeyn,Fit4,58,M-M4,73.5,172.5,180.5,,,,140,,,,,112.5,,425,Raw
 M,SBD,1,82.5,Alan Peeters,GilbertsGym,18,M-T3,78.8,220,,,,,170,,,,,132.5,,522.5,Raw
 M,SBD,1,82.5,Jarno Lauweryns,Houseof,20,M-JR,75.6,185,,,,,155,,,,,105,,445,Raw
-M,SBD,2,82.5,Gillis Soenes,Isogym,21,M-JR,75.1,170,,,,,140,,,,,122.5,,432.5,Raw
+M,SBD,2,82.5,Gillis Soenens,Isogym,21,M-JR,75.1,170,,,,,140,,,,,122.5,,432.5,Raw
 M,SBD,1,90,Geoffroy Servotte,PlanetFitness,31,M-O,82.8,230,,,,,213,,,,,172.5,,615.5,Raw
 M,SBD,1,90,Bart Van Heesvelde,HouseOf,19,M-T3,83.1,200,,,,,150,,,,,105,,455,Raw
 M,SBD,2,90,Jonas Velghe,Isogym,19,M-T3,89.2,175,,,,,167.5,,,,,90,,432.5,Raw
@@ -34,10 +34,10 @@ M,S,1,67.5,Angelo Cuylle,Isogym,18,M-T3,66.7,,,125,132.5,-140,132.5,,,,,,,132.5,
 M,S,2,67.5,Angelo Bruneel,Isogym,18,M-T3,63.4,,,110,120,125,125,,,,,,,125,Raw
 M,S,1,67.5,Jeremy Jacmart,Castors,20,M-JR,61.7,,,120,-130,130,130,,,,,,,130,Raw
 M,S,1,67.5,Tim van den Abeele,GilbertsGym,24,M-O,62.8,,,140,-147.5,-147.5,140,,,,,,,140,Raw
-M,S,1,75,Geovanni De Vissher,PowerLebbeke,18,M-T3,69.4,,,160,175,180,180,,,,,,,180,Raw
+M,S,1,75,Geovanni De Visscher,PowerLebbeke,18,M-T3,69.4,,,160,175,180,180,,,,,,,180,Raw
 M,S,1,75,Indra Sudarminto,PlanetFitness,21,M-JR,73.7,,,210,220,225,225,230,,,,,,225,Raw
-M,S,1,75,Kim Houbraken,GilbertsGym,28,M-O,69.8,,,150,162.5,,162.5,,,,,,,162.5,Raw
-M,S,2,75,Ram Tirth,DynamicGym,39,M-O,73.8,,,155,-165,,155,,,,,,,155,Raw
+M,S,1,75,Kim Houbracken,GilbertsGym,28,M-O,69.8,,,150,162.5,,162.5,,,,,,,162.5,Raw
+M,S,2,75,Tirth Ram,DynamicGym,39,M-O,73.8,,,155,-165,,155,,,,,,,155,Raw
 M,S,3,75,Tony Van den Bogaert,PattonTeam,33,M-O,74.1,,,120,130,140,140,,,,,,,140,Raw
 M,S,1,75,Bart Hallewaert,Isogym,43,M-M1,73.9,,,172.5,180,185,185,,,,,,,185,Raw
 M,S,1,75,Johny Callemeyn,Fit4,58,M-M4,73.5,,,140,-150,-150,140,,,,,,,140,Raw
@@ -59,7 +59,7 @@ M,B,1,82.5,Geoffroy Servotte,PlanetFitness,31,M-O,82.2,,,,,,,,162.5,171,172.5,17
 M,B,1,75,Indra Sudarminto,PlanetFitness,21,M-JR,73.7,,,,,,,,130,135,-138,135,,135,Raw
 M,B,1,110,Yannick Van Roy,PlanetFitness,20,M-JR,108.2,,,,,,,,130,-140,-140,130,,130,Raw
 M,B,1,60,Indy Smet,PlanetFiness,18,M-T3,58.5,,,,,,,,70,80,-89,80,,80,Raw
-M,B,2,75,Kim Houbraken,GilbertsGym,28,M-O,69.8,,,,,,,,120,130,-135,130,,130,Raw
+M,B,2,75,Kim Houbracken,GilbertsGym,28,M-O,69.8,,,,,,,,120,130,-135,130,,130,Raw
 M,B,1,67.5,Tim van den Abeele,GilbertsGym,24,M-O,62.8,,,,,,,,105,115,-120,115,,115,Raw
 M,B,1,82.5,Alan Peeters,GilbertsGym,18,M-T3,78.8,,,,,,,,115,125,132.5,132.5,,132.5,Raw
 F,B,1,63,Helen Wuyts,GilbertsGym,20,F-JR,59.3,,,,,,,,70,75,-77.5,75,,75,Raw
@@ -96,7 +96,7 @@ M,B,2,90,Eugene de Cock,KBBC,49,M-M2,86.3,,,,,,,,95,100,105,105,,105,Raw
 M,B,1,82.5,Kurt Devos,KBBC,41,M-M1,79.4,,,,,,,,90,95,-97.5,95,,95,Raw
 M,B,1,82.5,Jean-Paul Roegiers,JackysGym,67,M-M6,81.4,,,,,,,,102.5,105,107.5,107.5,-108,107.5,Raw
 M,B,1,90,Achiel De Vaere,JackysGym,64,M-M5,89.1,,,,,,,,107.5,110,-112.5,110,,110,Raw
-M,B,1,75,Ram Tirth,DynamicGym,39,M-O,73.8,,,,,,,,135,140,-145,140,,140,Raw
-M,B,1,75,Geovanni De Vissher,PowerLebbeke,18,M-T3,69.4,,,,,,,,-120,125,130,130,,130,Raw
+M,B,1,75,Tirth Ram,DynamicGym,39,M-O,73.8,,,,,,,,135,140,-145,140,,140,Raw
+M,B,1,75,Geovanni De Visscher,PowerLebbeke,18,M-T3,69.4,,,,,,,,-120,125,130,130,,130,Raw
 F,B,1,90+,Claudia Claes,PlanetFitness,45,F-M2,92.7,,,,,,,,70,75.5,77.5,77.5,,77.5,Raw
 M,B,DQ,110,Geeraard Peeters,PattonTeam,25,M-O,101.1,,,,,,,,-102.5,-102.5,-102.5,,,,Raw
