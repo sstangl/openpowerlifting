@@ -2553,7 +2553,7 @@ impl Federation {
             Federation::FIPL => Some(Federation::IPF),
             Federation::FPO => Some(Federation::IPA),
             Federation::FPPR => Some(Federation::IPF),
-            Federation::FPR =>{
+            Federation::FPR => {
                 // FPR was suspended by the IPF 2022-03-01, effective immediately.
                 if date > date!(2022-03-01) {
                     None
