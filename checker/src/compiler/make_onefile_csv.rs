@@ -67,7 +67,7 @@ pub fn make_onefile_csv(meetdata: &AllMeetData, buildpath: &Path) -> Result<(), 
     let mut csv = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
         .terminator(Terminator::Any(b'\n'))
-        .from_path(&buildpath.join("openpowerlifting.csv"))?;
+        .from_path(buildpath.join("openpowerlifting.csv"))?;
 
     for SingleMeetData { meet, entries } in meetdata.meets() {
         for entry in entries {

@@ -349,7 +349,7 @@ fn check_name_disambiguation(
         let name = &row.name;
         let count = row.count;
 
-        let username = match Username::from_name(&name) {
+        let username = match Username::from_name(name) {
             Ok(s) => s,
             Err(s) => {
                 report.error_on(line, s);
@@ -364,7 +364,7 @@ fn check_name_disambiguation(
             report.error_on(line, format!("Name '{name}' cannot contain '#'"));
         }
         if count < 2 {
-            report.error_on(line, format!("Count must be >= 2"));
+            report.error_on(line, "Count must be >= 2");
         }
 
         match map.get_mut(&username) {

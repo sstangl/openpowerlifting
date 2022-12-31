@@ -392,6 +392,7 @@ fn contact(
 }
 
 #[derive(Responder)]
+#[allow(clippy::large_enum_variant)] // The Redirect type is 339 bytes; Template is zero.
 enum IndexReturn {
     Redirect(Redirect),
     Template(Template),
@@ -661,7 +662,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();
     if args.len() == 3 && args[1] == "--set-cwd" {
         let fileroot = Path::new(&args[2]);
-        env::set_current_dir(&fileroot).expect("Invalid --set-cwd argument");
+        env::set_current_dir(fileroot).expect("Invalid --set-cwd argument");
     }
 
     // Populate std::env with the contents of any .env file.

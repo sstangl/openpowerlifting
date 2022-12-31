@@ -297,15 +297,15 @@ pub fn make_csv(
     let mut entries_wtr = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
         .terminator(Terminator::Any(b'\n'))
-        .from_path(&buildpath.join("entries.csv"))?;
+        .from_path(buildpath.join("entries.csv"))?;
     let mut lifters_wtr = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
         .terminator(Terminator::Any(b'\n'))
-        .from_path(&buildpath.join("lifters.csv"))?;
+        .from_path(buildpath.join("lifters.csv"))?;
     let mut meets_wtr = WriterBuilder::new()
         .quote_style(QuoteStyle::Never)
         .terminator(Terminator::Any(b'\n'))
-        .from_path(&buildpath.join("meets.csv"))?;
+        .from_path(buildpath.join("meets.csv"))?;
 
     // For remembering consistent lifter information across multiple Entries.
     let mut lifter_hash = EntryLifterDataMap::with_hasher(FxBuildHasher::default());

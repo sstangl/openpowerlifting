@@ -346,7 +346,7 @@ impl OplDb {
     pub fn entries_for_lifter(&self, lifter_id: u32) -> Vec<&Entry> {
         self.entry_ids_for_lifter(lifter_id)
             .into_iter()
-            .map(|i| self.entry(i as u32))
+            .map(|i| self.entry(i))
             .collect()
     }
 

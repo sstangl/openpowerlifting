@@ -65,10 +65,10 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     let maxheaders = REQUIRED_HEADERS.len() + OPTIONAL_HEADERS.len();
 
     if headers.len() < minheaders {
-        report.error(format!("There must be at least {} columns", minheaders));
+        report.error(format!("There must be at least {minheaders} columns"));
         return;
     } else if headers.len() > maxheaders {
-        report.error(format!("There can be at most {} columns", maxheaders));
+        report.error(format!("There can be at most {maxheaders} columns"));
         return;
     }
 
@@ -84,7 +84,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     // Check required headers.
     for (i, header) in headers.iter().take(REQUIRED_HEADERS.len()).enumerate() {
         if header != REQUIRED_HEADERS[i] {
-            report.error(format!("Column {} must be '{}'", i, REQUIRED_HEADERS[i]));
+            report.error(format!("Column {i} must be '{}'", REQUIRED_HEADERS[i]));
         }
     }
 
@@ -125,9 +125,8 @@ pub fn check_federation(s: &str, report: &mut Report) -> Option<Federation> {
         Ok(f) => Some(f),
         Err(_) => {
             report.error(format!(
-                "Unknown federation '{}'. \
+                "Unknown federation '{s}'. \
                  Add to crates/opltypes/src/federation.rs?",
-                s
             ));
             None
         }
@@ -138,14 +137,14 @@ pub fn check_federation(s: &str, report: &mut Report) -> Option<Federation> {
 pub fn check_date(s: &str, report: &mut Report) -> Option<Date> {
     let date = s.parse::<Date>();
     if date.is_err() {
-        report.error(format!("Invalid date '{}'. Must be YYYY-MM-DD", s));
+        report.error(format!("Invalid date '{s}'. Must be YYYY-MM-DD"));
         return None;
     }
     let date = date.unwrap();
 
     // The date should not be implausibly long ago.
     if date.year() < 1945 {
-        report.error(format!("Implausible year in '{}'", s));
+        report.error(format!("Implausible year in '{s}'"));
     }
 
     // This is sufficiently fast to call that caching is of no practical benefit.
@@ -156,17 +155,17 @@ pub fn check_date(s: &str, report: &mut Report) -> Option<Date> {
     let now = chrono::Local::now() + chrono::naive::Days::new(1);
 
     // The date should not be in the future.
-    let (y, m, d) = (now.year() as u32, now.month() as u32, now.day() as u32);
+    let (y, m, d) = (now.year() as u32, now.month(), now.day());
     if (date.year() > y)
         || (date.year() == y && date.month() > m)
         || (date.year() == y && date.month() == m && date.day() > d)
     {
-        report.error(format!("Meet occurs in the future in '{}'", s));
+        report.error(format!("Meet occurs in the future in '{s}'"));
     }
 
     // The date should exist in the Gregorian calendar.
     if !date.is_valid() {
-        let msg = format!("Date '{}' does not exist in the Gregorian calendar", s);
+        let msg = format!("Date '{s}' does not exist in the Gregorian calendar");
         report.error(msg);
     }
 
@@ -179,14 +178,13 @@ pub fn check_meetcountry(s: &str, report: &mut Report) -> Option<Country> {
         Ok(c) => Some(c),
         Err(_) => {
             report.error(format!(
-                "Unknown country '{}'. \
-                 Add to crates/opltypes/src/country.rs?",
-                s
+                "Unknown country '{s}'. \
+                 Add to crates/opltypes/src/country.rs?"
             ));
 
             // Emit some helpful warnings.
             if s.contains("Chin") {
-                report.warning(format!("Should '{}' be 'Taiwan'?", s));
+                report.warning(format!("Should '{s}' be 'Taiwan'?"));
             }
 
             None
@@ -202,8 +200,7 @@ pub fn check_meetstate(s: &str, report: &mut Report, country: Option<Country>) -
 
     if country.is_none() {
         report.warning(format!(
-            "Couldn't check MeetState '{}' due to invalid MeetCountry",
-            s
+            "Couldn't check MeetState '{s}' due to invalid MeetCountry"
         ));
         return None;
     }
@@ -213,7 +210,7 @@ pub fn check_meetstate(s: &str, report: &mut Report, country: Option<Country>) -
         Ok(s) => Some(s),
         Err(_) => {
             let cstr = country.to_string();
-            report.error(format!("Unknown state '{}' for country '{}'", s, cstr));
+            report.error(format!("Unknown state '{s}' for country '{cstr}'"));
             None
         }
     }
@@ -225,14 +222,14 @@ pub fn check_meettown(s: &str, report: &mut Report) -> Option<String> {
     for c in s.chars() {
         // Non-ASCII characters are allowed.
         if !c.is_alphabetic() && !" -.'".contains(c) {
-            report.error(format!("Illegal character in MeetTown '{}'", s));
+            report.error(format!("Illegal character in MeetTown '{s}'"));
             break;
         }
     }
 
     // Check for excessive spacing.
     if s.contains("  ") || s.starts_with(' ') || s.ends_with(' ') {
-        report.error(format!("Excessive whitespace in MeetTown '{}'", s));
+        report.error(format!("Excessive whitespace in MeetTown '{s}'"));
     }
 
     if s.is_empty() {
@@ -252,26 +249,26 @@ pub fn check_meetname(s: &str, report: &mut Report, fedstr: &str, datestr: &str)
     for c in s.chars() {
         // Non-ASCII characters are allowed.
         if !c.is_alphanumeric() && !" -&.'/°%:".contains(c) {
-            report.error(format!("Illegal character in MeetName '{}'", s));
+            report.error(format!("Illegal character in MeetName '{s}'"));
             break;
         }
     }
 
     // Check for excessive spacing.
     if s.contains("  ") || s.starts_with(' ') || s.ends_with(' ') {
-        report.error(format!("Excessive whitespace in MeetName '{}'", s));
+        report.error(format!("Excessive whitespace in MeetName '{s}'"));
     }
 
     // The federation shouldn't be part of the name.
     if !fedstr.is_empty() && s.contains(fedstr) {
-        report.error(format!("MeetName '{}' must not contain the federation", s));
+        report.error(format!("MeetName '{s}' must not contain the federation"));
     }
 
     // The year shouldn't be part of the name.
     if let Some(idx) = datestr.find('-') {
         let year = &datestr[0..idx];
         if s.contains(year) {
-            report.error(format!("MeetName '{}' must not contain the year", s));
+            report.error(format!("MeetName '{s}' must not contain the year"));
         }
     }
 
@@ -304,7 +301,7 @@ fn check_ruleset(s: &str, report: &mut Report) -> RuleSet {
     match s.parse::<RuleSet>() {
         Ok(ruleset) => ruleset,
         Err(_) => {
-            report.error(format!("Failed parsing RuleSet '{}'", s));
+            report.error(format!("Failed parsing RuleSet '{s}'"));
             RuleSet::default()
         }
     }

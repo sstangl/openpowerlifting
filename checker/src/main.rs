@@ -130,7 +130,7 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
     let mut configmap = ConfigMap::new();
 
     // Look at federation directories at depth 1, like "meet-data/usapl".
-    let fed_iter = WalkDir::new(&meet_data_root)
+    let fed_iter = WalkDir::new(meet_data_root)
         .min_depth(1)
         .max_depth(1)
         .into_iter();
@@ -138,7 +138,7 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
     // Look at meet-data/mags specially, allowing CONFIG.toml files in
     // subdirectories.
     let mags_data_root = meet_data_root.join("mags");
-    let mags_iter = WalkDir::new(&mags_data_root)
+    let mags_iter = WalkDir::new(mags_data_root)
         .min_depth(1)
         .max_depth(1)
         .into_iter();

@@ -61,7 +61,7 @@ fn sorted_errors(
             (ii - 1, calc_error(&bd_range_vec[*bd_idx], x))
         })
         .collect();
-    errors.sort_by(|a, b| (*a).1.partial_cmp(&(*b).1).unwrap());
+    errors.sort_by(|a, b| a.1.partial_cmp(&b.1).unwrap());
     errors
 }
 
@@ -246,9 +246,9 @@ pub fn group_by_age(bd_range_vec: &[BirthDateRange], _acceptable_delta: u32) -> 
     for (idx, range) in bd_range_vec.iter().enumerate() {
         // If this is a blank range bin it seperately
         if range.min == BDR_DEFAULT_MIN && range.max == BDR_DEFAULT_MAX {
-            blank_vec.push(idx as usize);
+            blank_vec.push(idx);
         } else {
-            ungrouped_vec.push(idx as usize);
+            ungrouped_vec.push(idx);
         }
     }
 

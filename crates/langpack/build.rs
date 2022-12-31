@@ -126,7 +126,7 @@ fn main() {
 
         // Write as "{locale}.rs" in the approved OUT_DIR.
         // The lib.rs can `include!` these files directly as expressions.
-        let dest_path = Path::new(&out_dir).join(&rust_filename);
-        fs::write(&dest_path, as_struct).unwrap();
+        let dest_path = Path::new(&out_dir).join(rust_filename);
+        fs::write(dest_path, as_struct).unwrap();
     }
 }

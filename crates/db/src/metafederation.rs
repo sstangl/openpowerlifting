@@ -551,7 +551,7 @@ pub enum MetaFederation {
 #[inline]
 fn is_from(country: Country, entry: &Entry, meet: &Meet) -> bool {
     entry.lifter_country == Some(country)
-        || (entry.lifter_country == None && meet.federation.home_country() == Some(country))
+        || (entry.lifter_country.is_none() && meet.federation.home_country() == Some(country))
 }
 
 /// Helper macro for specifying a country-based federation that allows lifters
@@ -609,7 +609,7 @@ impl MetaFederation {
             MetaFederation::AllBrunei => is_from(Country::Brunei, entry, meet),
             MetaFederation::AllCanada => {
                 entry.lifter_country == Some(Country::Canada)
-                    || (entry.lifter_country == None
+                    || (entry.lifter_country.is_none()
                         && (meet.federation.home_country() == Some(Country::Canada)
                             || MetaFederation::IPACAN.contains(entry, meets)))
             }
@@ -687,7 +687,7 @@ impl MetaFederation {
                     false
                 } else {
                     entry.lifter_country.map_or(false, |c| c.is_in_uk())
-                        || (entry.lifter_country == None
+                        || (entry.lifter_country.is_none()
                             && meet
                                 .federation
                                 .home_country()
@@ -768,7 +768,7 @@ impl MetaFederation {
             MetaFederation::BVDK => match meet.federation {
                 // BVDG is the precursor to the BVDK.
                 Federation::BVDG | Federation::BVDK => {
-                    entry.lifter_country == None || entry.lifter_country == Some(Country::Germany)
+                    entry.lifter_country.is_none() || entry.lifter_country == Some(Country::Germany)
                 }
                 Federation::IPF | Federation::EPF => entry.lifter_country == Some(Country::Germany),
                 _ => false,
@@ -789,7 +789,7 @@ impl MetaFederation {
             MetaFederation::FFForce => {
                 (
                     meet.federation == Federation::FFForce
-                    && (entry.lifter_country == None || entry.lifter_country == Some(Country::France))
+                    && (entry.lifter_country.is_none() || entry.lifter_country == Some(Country::France))
                 )
                 // The FFHMFAC is the precursor to the FFForce.
                 || meet.federation == Federation::FFHMFAC
@@ -818,7 +818,7 @@ impl MetaFederation {
             },
             MetaFederation::GPCWUAPCRO => {
                 (meet.federation == Federation::GPCWUAPCRO || meet.federation == Federation::HPO)
-                    && (entry.lifter_country == None
+                    && (entry.lifter_country.is_none()
                         || entry.lifter_country == Some(Country::Croatia))
             }
             MetaFederation::HKWPA => affiliation!(meet, entry, HKWPA, IPF, AsianPF),
