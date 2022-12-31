@@ -21,7 +21,9 @@ pub enum Message {
 /// Accumulates messages that should be reported as a single batch.
 #[derive(Debug, Serialize)]
 pub struct Report {
+    /// Each report represents errors/warnings from a single file. This is its path.
     pub path: PathBuf,
+    /// Any errors or warnings generated while reading that file.
     pub messages: Vec<Message>,
 }
 

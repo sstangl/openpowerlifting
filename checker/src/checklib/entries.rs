@@ -1007,14 +1007,14 @@ fn check_column_state(
             let state = State::from_str_and_country(s, country).ok();
             if state.is_none() {
                 let c = country.to_string();
-                let msg = format!("Unknown State '{}' for Country '{}'", s, c);
+                let msg = format!("Unknown State '{s}' for Country '{c}'");
                 report.error_on(line, msg);
             }
             state
         }
         None => {
             // This can only happen if the MeetCountry is missing.
-            let msg = format!("Unknown State '{}': no available Country", s);
+            let msg = format!("Unknown State '{s}': no available Country");
             report.error_on(line, msg);
             None
         }
@@ -1030,21 +1030,21 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
 
     // Check that lift data isn't present outside of the specified Event.
     if has_squat_data && !event.has_squat() {
-        report.error_on(line, format!("Event '{}' cannot have squat data", event));
+        report.error_on(line, format!("Event '{event}' cannot have squat data"));
     }
     if has_bench_data && !event.has_bench() {
-        report.error_on(line, format!("Event '{}' cannot have bench data", event));
+        report.error_on(line, format!("Event '{event}' cannot have bench data"));
     }
     if has_deadlift_data && !event.has_deadlift() {
-        report.error_on(line, format!("Event '{}' cannot have deadlift data", event));
+        report.error_on(line, format!("Event '{event}' cannot have deadlift data"));
     }
 
     // Check that the Equipment makes sense for the given Event.
     if equipment == Equipment::Wraps && !event.has_squat() {
-        report.error_on(line, format!("Event '{}' doesn't use Wraps", event));
+        report.error_on(line, format!("Event '{event}' doesn't use Wraps"));
     }
     if equipment == Equipment::Straps && !event.has_deadlift() {
-        report.error_on(line, format!("Event '{}' doesn't use Straps", event));
+        report.error_on(line, format!("Event '{event}' doesn't use Straps"));
     }
 
     // Check that the SquatEquipment makes sense.
@@ -1053,9 +1053,8 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             report.error_on(
                 line,
                 format!(
-                    "SquatEquipment '{}' can't be more supportive \
-                     than the Equipment '{}'",
-                    squat_eq, equipment
+                    "SquatEquipment '{squat_eq}' can't be more supportive \
+                     than the Equipment '{equipment}'"
                 ),
             );
         }
@@ -1067,9 +1066,8 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             report.error_on(
                 line,
                 format!(
-                    "BenchEquipment '{}' can't be more supportive \
-                     than the Equipment '{}'",
-                    bench_eq, equipment
+                    "BenchEquipment '{bench_eq}' can't be more supportive \
+                     than the Equipment '{equipment}'"
                 ),
             );
         }
@@ -1081,9 +1079,8 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
             report.error_on(
                 line,
                 format!(
-                    "DeadliftEquipment '{}' can't be more supportive \
-                     than the Equipment '{}'",
-                    deadlift_eq, equipment
+                    "DeadliftEquipment '{deadlift_eq}' can't be more supportive \
+                     than the Equipment '{equipment}'"
                 ),
             );
         }
@@ -1094,15 +1091,15 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
         // Allow entries that only have a Total but no lift data.
         if has_squat_data || has_bench_data || has_deadlift_data {
             if !has_squat_data && event.has_squat() {
-                let s = format!("Non-DQ Event '{}' requires squat data", event);
+                let s = format!("Non-DQ Event '{event}' requires squat data");
                 report.error_on(line, s);
             }
             if !has_bench_data && event.has_bench() {
-                let s = format!("Non-DQ Event '{}' requires bench data", event);
+                let s = format!("Non-DQ Event '{event}' requires bench data");
                 report.error_on(line, s);
             }
             if !has_deadlift_data && event.has_deadlift() {
-                let s = format!("Non-DQ Event '{}' requires deadlift data", event);
+                let s = format!("Non-DQ Event '{event}' requires deadlift data");
                 report.error_on(line, s);
             }
         }
@@ -1142,8 +1139,8 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
 
         if (calculated - entry.totalkg).abs() > WeightKg::from_f32(0.5) {
             let s = format!(
-                "Calculated TotalKg '{}', but meet recorded '{}'",
-                calculated, entry.totalkg
+                "Calculated TotalKg '{calculated}', but meet recorded '{}'",
+                entry.totalkg
             );
             report.error_on(line, s)
         }
@@ -1188,10 +1185,7 @@ fn process_attempt_pair(
     if !exempt_lift_order && attempt.abs() < maxweight.abs() {
         report.error_on(
             line,
-            format!(
-                "{}{}Kg '{}' lowered weight from '{}'",
-                lift, attempt_num, attempt, maxweight
-            ),
+            format!("{lift}{attempt_num}Kg '{attempt}' lowered weight from '{maxweight}'"),
         );
     }
 
@@ -1199,10 +1193,7 @@ fn process_attempt_pair(
     if !maxweight.is_failed() && attempt.abs() == maxweight {
         report.error_on(
             line,
-            format!(
-                "{}{}Kg '{}' repeated a successful attempt",
-                lift, attempt_num, attempt
-            ),
+            format!("{lift}{attempt_num}Kg '{attempt}' repeated a successful attempt"),
         );
     }
 
@@ -1371,10 +1362,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
     {
         report.error_on(
             line,
-            format!(
-                "Bench shirts weren't invented until {}",
-                bench_shirt_invention_year
-            ),
+            format!("Bench shirts weren't invented until {bench_shirt_invention_year}"),
         );
     }
 
@@ -1386,10 +1374,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
     {
         report.error_on(
             line,
-            format!(
-                "Deadlift suits weren't invented until {}",
-                deadlift_suit_invention_year
-            ),
+            format!("Deadlift suits weren't invented until {deadlift_suit_invention_year}"),
         );
     }
 }
