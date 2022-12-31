@@ -311,15 +311,12 @@ fn check_ruleset(s: &str, report: &mut Report) -> RuleSet {
 ///
 /// Extracting this out into a `Reader`-specific function is useful
 /// for creating tests that do not have a backing CSV file.
-pub fn do_check<R>(
+pub fn do_check<R: io::Read>(
     rdr: &mut csv::Reader<R>,
     config: Option<&Config>,
     mut report: Report,
     meetpath: String,
-) -> Result<MeetCheckResult, Box<dyn Error>>
-where
-    R: io::Read,
-{
+) -> Result<MeetCheckResult, Box<dyn Error>> {
     // Remember the number of errors at the start.
     // If the number increased during checking, don't return a parsed Meet struct.
     let initial_errors = report.count_errors();
@@ -338,17 +335,12 @@ where
     }
 
     // Check the required columns.
-    let federation = check_federation(record.get(0).unwrap(), &mut report);
-    let date = check_date(record.get(1).unwrap(), &mut report);
-    let country = check_meetcountry(record.get(2).unwrap(), &mut report);
-    let state = check_meetstate(record.get(3).unwrap(), &mut report, country);
-    let town = check_meettown(record.get(4).unwrap(), &mut report);
-    let name = check_meetname(
-        record.get(5).unwrap(),
-        &mut report,
-        record.get(0).unwrap(),
-        record.get(1).unwrap(),
-    );
+    let federation = check_federation(&record[0], &mut report);
+    let date = check_date(&record[1], &mut report);
+    let country = check_meetcountry(&record[2], &mut report);
+    let state = check_meetstate(&record[3], &mut report, country);
+    let town = check_meettown(&record[4], &mut report);
+    let name = check_meetname(&record[5], &mut report, &record[0], &record[1]);
 
     // Check the optional columns.
     // The RuleSet is set to the federation default, unless it's overridden.
