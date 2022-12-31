@@ -942,9 +942,7 @@ fn check_column_division(
 
     let config = match config {
         Some(config) => config,
-        None => {
-            return;
-        }
+        None => return,
     };
 
     // Configuration files covering directories with results from
@@ -1339,9 +1337,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
     // Inelegant unwrapping.
     let date = match meet.map(|m| &m.date) {
         Some(d) => d,
-        None => {
-            return;
-        }
+        None => return,
     };
     let event = entry.event;
 
@@ -1799,22 +1795,16 @@ fn check_division_sex_consistency(
 
     let config = match config {
         Some(c) => c,
-        None => {
-            return;
-        }
+        None => return,
     };
 
     // Get the configured sex for the division, or return if not specified.
     let sex = match config.divisions.iter().find(|d| d.name == entry.division) {
         Some(div) => match div.sex {
             Some(sex) => sex,
-            None => {
-                return;
-            }
+            None => return,
         },
-        None => {
-            return;
-        }
+        None => return,
     };
 
     if sex != entry.sex {
@@ -1841,22 +1831,16 @@ fn check_division_place_consistency(
 
     let config = match config {
         Some(c) => c,
-        None => {
-            return;
-        }
+        None => return,
     };
 
     // Get the configured place for the division, or return if not specified.
     let place = match config.divisions.iter().find(|d| d.name == entry.division) {
         Some(div) => match div.place {
             Some(place) => place,
-            None => {
-                return;
-            }
+            None => return,
         },
-        None => {
-            return;
-        }
+        None => return,
     };
 
     // Only perform checks if the entry was non-DQ'd.
@@ -1887,22 +1871,16 @@ fn check_division_equipment_consistency(
     let equipment = entry.equipment;
     let config = match config {
         Some(c) => c,
-        None => {
-            return;
-        }
+        None => return,
     };
 
     // Get the configured sex for the division, or return if not specified.
     let eqlist = match config.divisions.iter().find(|d| d.name == entry.division) {
         Some(div) => match &div.equipment {
             Some(vec) => vec,
-            None => {
-                return;
-            }
+            None => return,
         },
-        None => {
-            return;
-        }
+        None => return,
     };
 
     if !eqlist.contains(&equipment) {
