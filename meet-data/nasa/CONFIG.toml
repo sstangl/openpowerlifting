@@ -280,3 +280,4 @@
 [exemptions]
     0904 = ["ExemptDivision"]  # Non-standard divisions.
     1005 = ["ExemptDivision"]  # LW, HW
+    1813 = ["ExemptWeightClassConsistency"]  # old Youth weightclass used
