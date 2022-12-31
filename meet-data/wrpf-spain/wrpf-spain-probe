@@ -15,7 +15,7 @@ except ImportError:
     import oplprobe
 
 
-URL = "http://wrpfspain.tk/resultados/"
+URL = "http://wrpfspain.es/resultados/"
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
