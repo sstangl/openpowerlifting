@@ -436,7 +436,7 @@ pub fn entry_indices_for<'db>(
                     }
 
                     // Handle SHW classes with unspecified bodyweight.
-                    if upper == WeightKg::max_value() {
+                    if upper == WeightKg::MAX {
                         if let WeightClassKg::Over(over) = e.weightclasskg {
                             if over >= lower {
                                 return Some(i);

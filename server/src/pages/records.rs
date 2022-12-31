@@ -300,7 +300,7 @@ impl<'db> RecordCollector<'db> {
         }
 
         // Otherwise, check for a SHW category with no recorded bodyweight.
-        if self.class_max_inclusive == WeightKg::max_value() {
+        if self.class_max_inclusive == WeightKg::MAX {
             // Does the minimum weight of the SHW category fit here?
             if let WeightClassKg::Over(w) = entry.weightclasskg {
                 return w >= self.class_min_exclusive;

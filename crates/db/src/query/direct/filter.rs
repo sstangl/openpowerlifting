@@ -242,7 +242,7 @@ fn make_bounds(lower: f32, upper: f32) -> (WeightKg, WeightKg) {
 
 /// Helper function for SHW classes.
 fn make_bound_over(lower: f32) -> (WeightKg, WeightKg) {
-    (WeightKg::from_f32(lower), WeightKg::max_value())
+    (WeightKg::from_f32(lower), WeightKg::MAX)
 }
 
 impl WeightClassFilter {

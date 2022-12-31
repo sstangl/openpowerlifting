@@ -126,10 +126,8 @@ impl From<WeightAny> for Option<f64> {
 }
 
 impl WeightKg {
-    #[inline]
-    pub fn max_value() -> WeightKg {
-        WeightKg(<i32>::max_value())
-    }
+    /// The highest representable value a `WeightKg` can have.
+    pub const MAX: WeightKg = WeightKg(i32::MAX);
 
     #[inline]
     pub const fn from_i32(i: i32) -> WeightKg {
