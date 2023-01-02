@@ -552,6 +552,12 @@ Disallow: /dev/
 User-agent: AhrefsBot
 Disallow: /
 
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
 User-agent: MJ12bot
 Disallow: /
 
