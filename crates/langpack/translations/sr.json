@@ -28,7 +28,7 @@
 	},
 	"header": {
 		"rankings": "Rang lista",
-		"records": "Records",
+		"records": "Rekordi",
 		"meets": "Takmičenja",
 		"data": "Podaci",
 		"apps": "Apps",
@@ -275,8 +275,8 @@
 		"search": "Pretraga"
 	},
 	"labels": {
-		"sort": "Sort",
-		"category": "Category"
+		"sort": "Sortiraj",
+		"category": "Kategorja"
 	},
 	"selectors": {
 		"equipment": {
@@ -290,7 +290,7 @@
 		"weightclass": {
 			"all": "Sve kategorije",
 			"traditional": "Tradicionalne",
-			"expanded": "Expanded",
+			"expanded": "Proširene",
 			"ipfmen": "IPF Muškarci",
 			"ipfwomen": "IPF Žene",
 			"para_men": "Para Men",
@@ -341,8 +341,8 @@
 			"all_tested": "All Tested Lifters",
 			"international": "Međunarodno",
 			"regional": "Regionalno",
-			"continents": "Continents",
-			"countries": "Countries",
+			"continents": "Kontinentalno",
+			"countries": "Države",
 			"all_usa": "Svi američki takmičari",
 			"all_argentina": "Svi argentinski takmičari",
 			"all_australia": "Svi australski takmičari",
@@ -420,7 +420,7 @@
 			"all_internationals": "All Internationals"
 		},
 		"ageclass": {
-			"all": "All Ages",
+			"all": "Sve starostne kategorije",
 			"youth5_12": "Youth 5-12",
 			"teen13_15": "Teen 13-15",
 			"teen16_17": "Teen 16-17",
