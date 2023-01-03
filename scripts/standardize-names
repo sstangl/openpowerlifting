@@ -13,6 +13,9 @@
 #      contained within that subdirectory. This is because recursing through
 #      a directory is *extremely* slow on Windows Subsystem for Linux.
 #
+#
+# NEW! Now handles GreekName.
+#
 
 import oplcsv
 import os
@@ -38,7 +41,7 @@ def load_names(datafilepath):
     return h
 
 
-def correct_names(namehash, cyrhash, entriespath):
+def correct_names(namehash, cyrhash, greekhash, entriespath):
     csv = oplcsv.Csv(entriespath)
     if 'Name' not in csv.fieldnames:
         print(entriespath)
@@ -47,6 +50,8 @@ def correct_names(namehash, cyrhash, entriespath):
     nameidx = csv.index('Name')
     cyridx = csv.index(
         'CyrillicName') if 'CyrillicName' in csv.fieldnames else None
+    greekidx = csv.index(
+        'GreekName') if 'GreekName' in csv.fieldnames else None
 
     changed = False
     for row in csv.rows:
@@ -56,7 +61,9 @@ def correct_names(namehash, cyrhash, entriespath):
         if cyridx is not None and row[cyridx] in cyrhash:
             changed = True
             row[cyridx] = cyrhash[row[cyridx]]
-
+        if greekidx is not None and row[greekidx] in greekhash:
+            changed = True
+            row[greekidx] = greekhash[row[greekidx]]
     if changed:
         with open(entriespath, 'w', encoding='utf-8', newline='\n') as fd:
             csv.write(fd)
@@ -69,6 +76,7 @@ def main():
 
     namehash = load_names(liftersdir + os.sep + "name-corrections.dat")
     cyrhash = load_names(liftersdir + os.sep + "cyrillic-name-corrections.dat")
+    greekhash = load_names(liftersdir + os.sep + "greek-name-corrections.dat")
 
     # Standardize names only for files under the current subtree.
     #
@@ -81,7 +89,7 @@ def main():
             subdirs[:] = ['meet-data']
         if 'entries.csv' in files:
             entriespath = dirname + os.sep + 'entries.csv'
-            correct_names(namehash, cyrhash, entriespath)
+            correct_names(namehash, cyrhash, greekhash, entriespath)
 
 
 if __name__ == '__main__':
