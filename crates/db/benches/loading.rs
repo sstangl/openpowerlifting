@@ -3,6 +3,8 @@
 use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 use opldb::OplDb;
 
+use std::path::Path;
+
 const LIFTERS_CSV: &str = "../../build/lifters.csv";
 const MEETS_CSV: &str = "../../build/meets.csv";
 const ENTRIES_CSV: &str = "../../build/entries.csv";
@@ -26,7 +28,12 @@ pub fn loading_benchmarks(c: &mut Criterion) {
     group.throughput(Throughput::Elements(num_entries as u64));
     group.bench_function("csv", |b| {
         b.iter(|| {
-            OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV).unwrap();
+            OplDb::from_csv(
+                Path::new(LIFTERS_CSV),
+                Path::new(MEETS_CSV),
+                Path::new(ENTRIES_CSV),
+            )
+            .unwrap();
         });
     });
 }

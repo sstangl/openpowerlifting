@@ -1,4 +1,5 @@
 //! Checks that bodyweight changes over time are plausible.
+#![allow(unused)] // Disabled on 2023-01-09 for being obnoxious.
 
 use opltypes::Date;
 

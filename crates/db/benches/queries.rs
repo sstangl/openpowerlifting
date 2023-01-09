@@ -4,6 +4,7 @@ use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughpu
 use opldb::query::direct::*;
 use opldb::{MetaFederation, OplDb};
 
+use std::path::Path;
 use std::sync::Once;
 
 static mut OPLDB_GLOBAL: Option<OplDb> = None;
@@ -16,7 +17,14 @@ const ENTRIES_CSV: &str = "../../build/entries.csv";
 fn db() -> &'static OplDb {
     unsafe {
         OPLDB_INIT.call_once(|| {
-            OPLDB_GLOBAL = Some(OplDb::from_csv(LIFTERS_CSV, MEETS_CSV, ENTRIES_CSV).unwrap());
+            OPLDB_GLOBAL = Some(
+                OplDb::from_csv(
+                    Path::new(LIFTERS_CSV),
+                    Path::new(MEETS_CSV),
+                    Path::new(ENTRIES_CSV),
+                )
+                .unwrap(),
+            );
         });
         OPLDB_GLOBAL.as_ref().unwrap()
     }

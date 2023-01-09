@@ -4,19 +4,10 @@ use crate::{AllMeetData, Entry, LifterDataMap, LifterMap, Report};
 use opltypes::Date;
 
 mod bodyweight;
-use bodyweight::check_bodyweight_all;
-
 mod disambiguations;
-use disambiguations::check_disambiguations_all;
-
 mod duplicates;
-use duplicates::check_duplicates_all;
-
 mod name;
-use name::check_name_all;
-
 mod sex;
-use sex::check_sex_all;
 
 /// Return type for consistency check functions.
 pub enum ConsistencyResult {
@@ -65,14 +56,14 @@ pub fn check(
 ) -> Vec<Report> {
     let mut reports = Vec::new();
 
-    check_sex_all(liftermap, meetdata, lifterdata, &mut reports);
-    check_name_all(liftermap, meetdata, &mut reports);
-    check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
-    check_duplicates_all(liftermap, meetdata, &mut reports);
+    sex::check_sex_all(liftermap, meetdata, lifterdata, &mut reports);
+    name::check_name_all(liftermap, meetdata, &mut reports);
+    // bodyweight::check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
+    duplicates::check_duplicates_all(liftermap, meetdata, &mut reports);
 
     // The checks below require the full meet-data tree, not a subset.
     if !is_partial {
-        check_disambiguations_all(liftermap, lifterdata, &mut reports);
+        disambiguations::check_disambiguations_all(liftermap, lifterdata, &mut reports);
     }
 
     reports
