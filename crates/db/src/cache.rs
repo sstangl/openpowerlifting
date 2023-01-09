@@ -320,6 +320,7 @@ pub struct LogLinearTimeCache {
     /// List of all non-DQ Female entry indices by LifterID.
     pub female: NonSortedNonUnique,
 
+    pub year2023: NonSortedNonUnique,
     pub year2022: NonSortedNonUnique,
     pub year2021: NonSortedNonUnique,
     pub year2020: NonSortedNonUnique,
@@ -364,6 +365,9 @@ impl LogLinearTimeCache {
             male: Self::filter_entries(entries, |e| e.sex == Sex::M),
             female: Self::filter_entries(entries, |e| e.sex == Sex::F),
 
+            year2023: Self::filter_entries(entries, |e| {
+                meets[e.meet_id as usize].date.year() == 2023
+            }),
             year2022: Self::filter_entries(entries, |e| {
                 meets[e.meet_id as usize].date.year() == 2022
             }),
@@ -394,6 +398,7 @@ impl LogLinearTimeCache {
     /// Looks up a year cache by integer.
     pub fn year_cache(&self, year: u32) -> Option<&NonSortedNonUnique> {
         match year {
+            2023 => Some(&self.year2023),
             2022 => Some(&self.year2022),
             2021 => Some(&self.year2021),
             2020 => Some(&self.year2020),
