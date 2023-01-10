@@ -3258,7 +3258,9 @@ impl Federation {
             Federation::USPF => PointsSystem::Wilks,
             Federation::USPA => Federation::ipl_rules_on(date),
             Federation::USPC => {
-                if date >= date!(2020-11-01) {
+                if date >= date!(2023-01-01) {
+                    PointsSystem::Dots
+                } else if date >= date!(2020-11-01) {
                     PointsSystem::Wilks2020
                 } else {
                     PointsSystem::Dots
