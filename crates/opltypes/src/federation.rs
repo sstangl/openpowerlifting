@@ -510,6 +510,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-POL", serialize = "gpc-pol")]
     GPCPOL,
 
+    /// Portugese branch of the GPC.
+    #[serde(rename = "GPC-Portugal")]
+    #[strum(to_string = "GPC-Portugal", serialize = "gpc-portugal")]
+    GPCPortugal,
+
     /// Scotland branch of the GPC.
     #[serde(rename = "GPC-Scotland")]
     #[strum(to_string = "GPC-Scotland", serialize = "gpc-scotland")]
@@ -1776,6 +1781,7 @@ impl Federation {
             Federation::GPCLAT => false,
             Federation::GPCNZ => false,
             Federation::GPCPOL => false,
+            Federation::GPCPortugal => false,
             Federation::GPCScotland => false,
             Federation::GPCUKR => false,
             Federation::GPCUSA => false,
@@ -2158,6 +2164,7 @@ impl Federation {
             Federation::GPCLAT => Some(Country::Latvia),
             Federation::GPCNZ => Some(Country::NewZealand),
             Federation::GPCPOL => Some(Country::Poland),
+            Federation::GPCPortugal => Some(Country::Portugal),
             Federation::GPCScotland => Some(Country::Scotland),
             Federation::GPCUKR => Some(Country::Ukraine),
             Federation::GPCUSA => Some(Country::USA),
@@ -2579,6 +2586,7 @@ impl Federation {
             Federation::GPCLAT => Some(Federation::GPC),
             Federation::GPCNZ => Some(Federation::GPC),
             Federation::GPCPOL => Some(Federation::GPC),
+            Federation::GPCPortugal => Some(Federation::GPC),
             Federation::GPCScotland => Some(Federation::GPC),
             Federation::GPCUKR => Some(Federation::GPC),
             Federation::GPCUSA => Some(Federation::GPC),
@@ -3053,6 +3061,7 @@ impl Federation {
             Federation::GPCLAT => PointsSystem::Glossbrenner,
             Federation::GPCNZ => PointsSystem::Glossbrenner,
             Federation::GPCPOL => PointsSystem::Glossbrenner,
+            Federation::GPCPortugal => PointsSystem::Reshel,
             Federation::GPCScotland => PointsSystem::Reshel,
             Federation::GPCUKR => PointsSystem::Glossbrenner,
             Federation::GPCUSA => PointsSystem::Glossbrenner,
