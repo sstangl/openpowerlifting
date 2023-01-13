@@ -385,7 +385,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[ARPL as usize].instagram = "powerlifting.apl";
     statuses[AsianPF as usize].instagram = "asian.powerlifting.federation";
     statuses[AusPL as usize].instagram = "aplpowerlifting";
-    statuses[BVDK as usize].instagram = "derkraftdreikaempfer";
+    statuses[BVDK as usize].instagram = "german_powerlifting";
     statuses[BPU as usize].instagram = "british_powerlifting_union";
     statuses[CAPO as usize].instagram = "capopowerlifting";
     statuses[ChinaPA as usize].instagram = "gpachina";
