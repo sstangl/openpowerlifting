@@ -69,6 +69,7 @@
   <option value="uspa" {% if selection.federation == "USPA" %}selected{% endif %}>USPA - United States Powerlifting Association [IPL]</option>
   <option value="uspa-tested" {% if selection.federation == "USPATested" %}selected{% endif %}>USPA Tested - United States Powerlifting Association Tested [IPL]</option>
   <option value="uspc" {% if selection.federation == "USPC" %}selected{% endif %}>USPC - United States Powerlifting Coalition</option>
+  <option value="uspc-tested" {% if selection.federation == "USPCTested" %}selected{% endif %}>USPC Tested - United States Powerlifting Coalition Tested</option>
   <option value="uspf" {% if selection.federation == "USPF" %}selected{% endif %}>USPF - United States Powerlifting Federation</option>
   <option value="ussf" {% if selection.federation == "USSF" %}selected{% endif %}>USSF - United States Strengthlifting Federation</option>
   <option value="ussports" {% if selection.federation == "USSports" %}selected{% endif %}>USSports - Unified Strength Sports Federation</option>

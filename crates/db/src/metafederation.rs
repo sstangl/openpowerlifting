@@ -512,6 +512,10 @@ pub enum MetaFederation {
     #[strum(to_string = "uspa-tested")]
     USPATested,
 
+    /// USPC MetaFederation, but only for Tested entries.
+    #[strum(to_string = "uspc-tested")]
+    USPCTested,
+
     /// VGPF, but with international results also.
     #[strum(to_string = "vgpf")]
     VGPF,
@@ -901,6 +905,7 @@ impl MetaFederation {
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
             }
+            MetaFederation::USPCTested => meet.federation == Federation::USPC && entry.tested,
             MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF, KBGV),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
             MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
