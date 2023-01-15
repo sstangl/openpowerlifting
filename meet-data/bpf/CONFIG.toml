@@ -22,6 +22,7 @@
     f_t2_raw = {name = "FT-2-Ra", min = 16, max = 17,sex='F',equipment='Raw'}
     f_t3_raw = {name = "FT-3-Ra", min = 18, max = 19,sex='F',equipment='Raw'}
     f_jun_raw = {name = "FJun-Ra", min = 20, max = 23,sex='F',equipment='Raw'}
+    f_sub_raw = {name = "FSub-Ra", min = 35, max = 39,sex='F',equipment='Raw'}
     f_m1_raw = {name = "FM-1-Ra", min = 40, max = 44,sex='F',equipment='Raw'}
     f_m2_raw = {name = "FM-2-Ra", min = 45, max = 49,sex='F',equipment='Raw'}
     f_m3_raw = {name = "FM-3-Ra", min = 50, max = 54,sex='F',equipment='Raw'}
