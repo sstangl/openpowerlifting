@@ -18,7 +18,7 @@ except ImportError:
 # URL for the 2021-2022 season
 RESULTS_URL = ("https://www.ffforce.fr/fr/nos-disciplines/"
                "force-athletique-ffforce/competitions-force-athletique/"
-               "calendrier-et-resultats-saison-2021-2022-force-athletique.html")
+               "saison-2023.html")
 BASEURL = "https://www.ffforce.fr"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -47,7 +47,6 @@ def getmeetlist(html):
         assert main, "No <div> element with class `tableau-classmt` found."
 
         links = main.find_all("div", "cel-classmt site")
-        assert links, "No <div> element with class `cel-classmt site` found."
 
         for link in links:
 
