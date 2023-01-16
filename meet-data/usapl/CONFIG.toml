@@ -628,6 +628,7 @@
 
     # 2023 exemptions.
     NY-2023-07 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
+    LA-2023-01 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Weight classes were combined and scored by formula
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
