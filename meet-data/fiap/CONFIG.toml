@@ -44,3 +44,4 @@
 [exemptions]
     2201 = ["ExemptWeightClassConsistency"] # Used old weightclasses.
     2202 = ["ExemptWeightClassConsistency"] # 0+ for Single-ply.
+    2301 = ["ExemptWeightClassConsistency"] # Limited categories.
