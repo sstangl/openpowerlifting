@@ -372,6 +372,7 @@
 
     # No idea what these are.
     kcx = {name="KC-X", min=0, max=999}
+    pt = {name="P-T", min=0, max=999, tested="Yes"}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
