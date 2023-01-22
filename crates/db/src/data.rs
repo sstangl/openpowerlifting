@@ -130,8 +130,6 @@ pub struct Entry {
     pub glossbrenner: Points,
     #[serde(rename(deserialize = "Goodlift"))]
     pub goodlift: Points,
-    #[serde(rename(deserialize = "Wilks2020"))]
-    pub wilks2020: Points,
     #[serde(rename(deserialize = "Dots"))]
     pub dots: Points,
     #[serde(
@@ -195,7 +193,7 @@ impl Entry {
             PointsSystem::SchwartzMalone => coefficients::schwartzmalone(sex, bw, total),
             PointsSystem::Total => self.totalkg.as_type(units).as_points(),
             PointsSystem::Wilks => self.wilks,
-            PointsSystem::Wilks2020 => self.wilks2020,
+            PointsSystem::Wilks2020 => coefficients::wilks2020(sex, bw, total),
         }
     }
 }

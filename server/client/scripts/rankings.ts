@@ -58,7 +58,6 @@ declare const translation_column_mcculloch: string;
 declare const translation_column_glossbrenner: string;
 declare const translation_column_goodlift: string;
 declare const translation_column_dots: string;
-declare const translation_column_wilks2020: string;
 declare const translation_default_sort: string;
 
 let global_grid: any;  // The SlickGrid.
@@ -199,7 +198,6 @@ function selection_to_points_title(): string {
         case "by-goodlift": return translation_column_goodlift;
         case "by-mcculloch": return translation_column_mcculloch;
         case "by-wilks": return translation_column_wilks;
-        case "by-wilks-2020": return translation_column_wilks2020;
         default: return translation_default_sort;
     }
 }

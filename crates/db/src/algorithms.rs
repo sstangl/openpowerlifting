@@ -482,7 +482,6 @@ pub fn full_sorted_uniqued<'db>(
             OrderBy::Goodlift => &cache.constant_time.goodlift,
             OrderBy::McCulloch => &cache.constant_time.mcculloch,
             OrderBy::Wilks => &cache.constant_time.wilks,
-            OrderBy::Wilks2020 => &cache.constant_time.wilks2020,
         };
 
         let sorted_uniqued = match query.filter.equipment {
@@ -538,8 +537,5 @@ pub fn full_sorted_uniqued<'db>(
             cur.sort_and_unique_by(entries, meets, cmp_mcculloch, filter_mcculloch)
         }
         OrderBy::Wilks => cur.sort_and_unique_by(entries, meets, cmp_wilks, filter_wilks),
-        OrderBy::Wilks2020 => {
-            cur.sort_and_unique_by(entries, meets, cmp_wilks2020, filter_wilks2020)
-        }
     })
 }

@@ -697,7 +697,6 @@ pub enum OrderBy {
     Goodlift,
     McCulloch,
     Wilks,
-    Wilks2020,
 }
 
 impl Default for OrderBy {
@@ -720,7 +719,6 @@ impl FromStr for OrderBy {
             "by-goodlift" => Ok(OrderBy::Goodlift),
             "by-mcculloch" => Ok(OrderBy::McCulloch),
             "by-wilks" => Ok(OrderBy::Wilks),
-            "by-wilks-2020" => Ok(OrderBy::Wilks2020),
             _ => Err(()),
         }
     }
@@ -741,7 +739,6 @@ impl From<OrderBy> for PointsSystem {
             OrderBy::Goodlift => PointsSystem::Goodlift,
             OrderBy::McCulloch => PointsSystem::McCulloch,
             OrderBy::Wilks => PointsSystem::Wilks,
-            OrderBy::Wilks2020 => PointsSystem::Wilks2020,
         }
     }
 }
@@ -762,7 +759,6 @@ impl OrderBy {
             OrderBy::Goodlift => true,
             OrderBy::McCulloch => true,
             OrderBy::Wilks => true,
-            OrderBy::Wilks2020 => true,
         }
     }
 }
