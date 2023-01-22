@@ -272,6 +272,10 @@ pub enum Federation {
     #[strum(to_string = "CPF", serialize = "cpf")]
     CPF,
 
+    /// Confederación de Powerlifting Ibérica.
+    #[strum(to_string = "CPI", serialize = "cpi")]
+    CPI,
+
     /// Canadian Powerlifting League, IPL.
     #[strum(to_string = "CPL", serialize = "cpl")]
     CPL,
@@ -1728,6 +1732,7 @@ impl Federation {
             Federation::CPA => false,
             Federation::CPC => false,
             Federation::CPF => false,
+            Federation::CPI => false,
             Federation::CPL => false,
             Federation::CPO => false,
             Federation::CPU => FULLY_TESTED,
@@ -2110,6 +2115,7 @@ impl Federation {
             Federation::CPA => Some(Country::Canada),
             Federation::CPC => Some(Country::Canada),
             Federation::CPF => Some(Country::Canada),
+            Federation::CPI => Some(Country::Spain),
             Federation::CPL => Some(Country::Canada),
             Federation::CPO => Some(Country::Canada),
             Federation::CPU => Some(Country::Canada),
@@ -2518,6 +2524,7 @@ impl Federation {
                     Some(Federation::WPC)
                 }
             }
+            Federation::CPI => None,
             Federation::CPL => Some(Federation::IPL),
             Federation::CPO => Some(Federation::WPC),
             Federation::CPU => Some(Federation::IPF),
@@ -3007,6 +3014,7 @@ impl Federation {
             Federation::CPA => PointsSystem::Wilks,
             Federation::CPC => PointsSystem::Wilks,
             Federation::CPF => PointsSystem::Wilks,
+            Federation::CPI => PointsSystem::Dots,
             Federation::CPL => Federation::ipl_rules_on(date),
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => Federation::ipf_rules_on(date),
