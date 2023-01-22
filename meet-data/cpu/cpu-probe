@@ -12,15 +12,11 @@
 
 
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from selenium.webdriver.common.by import By
 import sys
 import os
 import logging
 import time
 from os.path import join, realpath, dirname
-from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
     import oplprobe
@@ -36,20 +32,20 @@ FEDURL = "http://www.powerlifting.ca"
 # The CPU website annoyingly posts results on per-province pages,
 # so we have to scan them all individually.
 #
-# List from http://www.powerlifting.ca/provincial-results
+# List from manually going though Events -> *Results.
 PROVINCE_URLS = [
-    "https://www.canadianpowerliftingunion.com/alberta-results",
-    "https://www.canadianpowerliftingunion.com/british-columbia-results",
-    "https://www.canadianpowerliftingunion.com/manitoba-results",
-    "https://www.canadianpowerliftingunion.com/newfoundland-results",
-    "https://www.canadianpowerliftingunion.com/new-brunswick-results",
-    "https://www.canadianpowerliftingunion.com/nova-scotia-results",
-    "https://www.canadianpowerliftingunion.com/ontario-results",
-    "https://www.canadianpowerliftingunion.com/prince-edward-island-results",
-    "https://www.canadianpowerliftingunion.com/quebec-results",
-    "https://www.canadianpowerliftingunion.com/saskatchewan-results",
-    "https://www.canadianpowerliftingunion.com/national-results",
-    "https://www.canadianpowerliftingunion.com/regional-results",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_ab.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_bc.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_mb.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_nl.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_nb.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_ns.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_on.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_pe.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_qc.php",
+    "https://www.powerlifting.ca/lifter_database/external/prov_res_sk.php",
+    "https://www.powerlifting.ca/lifter_database/external/nats_res.php",
+    "https://www.powerlifting.ca/lifter_database/external/reg_res.php",
 ]
 
 
@@ -62,23 +58,7 @@ def color(s):
     return "\033[1;31m" + s + "\033[0;m"
 
 
-def getmeetlist(meetlist_url):
-    LOGGER.setLevel(logging.ERROR)
-    options = FirefoxOptions()
-    options.add_argument("--headless")
-
-    driver = webdriver.Firefox(options=options)
-
-    driver.get(meetlist_url)
-    time.sleep(2)
-
-    iframe = driver.find_element(By.NAME, 'htmlComp-iframe')
-
-    driver.switch_to.frame(iframe)
-    time.sleep(2)
-
-    html = driver.page_source
-
+def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
     urls = []
@@ -123,7 +103,8 @@ def main():
     # meetlist = meetlist + getmeetlist(html)
 
     for url in PROVINCE_URLS:
-        meetlist = meetlist + getmeetlist(url)
+        html = oplprobe.gethtml(url)
+        meetlist = meetlist + getmeetlist(html)
 
     entered = oplprobe.getenteredurls(FEDDIR)
 
