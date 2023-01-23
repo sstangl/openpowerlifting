@@ -14,8 +14,6 @@
 from bs4 import BeautifulSoup
 import sys
 import os
-import logging
-import time
 from os.path import join, realpath, dirname
 
 try:
