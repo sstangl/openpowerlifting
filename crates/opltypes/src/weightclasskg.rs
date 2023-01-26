@@ -47,7 +47,7 @@ impl Serialize for WeightClassKg {
 
         // Maximum length of a serialized WeightKg, plus one for a SHW "+".
         let mut buf = ArrayString::<14>::new();
-        write!(buf, "{}", self).expect("ArrayString overflow");
+        write!(buf, "{self}").expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)
     }
@@ -61,7 +61,7 @@ impl Serialize for WeightClassAny {
 
         // Maximum length of a serialized WeightKg, plus one for a SHW "+".
         let mut buf = ArrayString::<14>::new();
-        write!(buf, "{}", self).expect("ArrayString overflow");
+        write!(buf, "{self}").expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)
     }
@@ -235,13 +235,13 @@ mod tests {
     #[test]
     fn display() {
         let w = "140+".parse::<WeightClassKg>().unwrap();
-        assert_eq!(format!("{}", w), "140+");
+        assert_eq!(format!("{w}"), "140+");
 
         let w = "82.5".parse::<WeightClassKg>().unwrap();
-        assert_eq!(format!("{}", w), "82.5");
+        assert_eq!(format!("{w}"), "82.5");
 
         let w = "".parse::<WeightClassKg>().unwrap();
-        assert_eq!(format!("{}", w), "");
+        assert_eq!(format!("{w}"), "");
     }
 
     fn assert_kg_to_lbs(kg: &str, lbs: &str) {

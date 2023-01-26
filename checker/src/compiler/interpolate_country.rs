@@ -130,7 +130,7 @@ pub fn interpolate_country_debug_for(
 ) {
     match liftermap.get(username) {
         Some(indices) => interpolate_country_single_lifter(meetdata, indices, true),
-        None => println!("Username '{}' not found", username),
+        None => println!("Username '{username}' not found"),
     }
 }
 

@@ -19,7 +19,7 @@ fn sorts_only_include_valid_entries() {
     let mut query = RankingsQuery::default();
     query.filter.federation = FederationFilter::One(Federation::RPS);
     query.order_by = OrderBy::Squat;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.highest_squatkg() > WeightKg::from_i32(0));
@@ -29,7 +29,7 @@ fn sorts_only_include_valid_entries() {
     query = RankingsQuery::default();
     query.filter.federation = FederationFilter::One(Federation::RPS);
     query.order_by = OrderBy::Bench;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.highest_benchkg() > WeightKg::from_i32(0));
@@ -39,7 +39,7 @@ fn sorts_only_include_valid_entries() {
     query = RankingsQuery::default();
     query.filter.federation = FederationFilter::One(Federation::RPS);
     query.order_by = OrderBy::Deadlift;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.highest_deadliftkg() > WeightKg::from_i32(0));
@@ -49,7 +49,7 @@ fn sorts_only_include_valid_entries() {
     query = RankingsQuery::default();
     query.filter.federation = FederationFilter::One(Federation::RPS);
     query.order_by = OrderBy::Total;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.totalkg > WeightKg::from_i32(0));
@@ -59,7 +59,7 @@ fn sorts_only_include_valid_entries() {
     query = RankingsQuery::default();
     query.filter.federation = FederationFilter::One(Federation::RPS);
     query.order_by = OrderBy::Wilks;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.wilks > Points::from_i32(0));
@@ -69,7 +69,7 @@ fn sorts_only_include_valid_entries() {
     // Also test the fully-statically-cached variants.
     query = RankingsQuery::default();
     query.order_by = OrderBy::Wilks;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.wilks > Points::from_i32(0));
@@ -78,7 +78,7 @@ fn sorts_only_include_valid_entries() {
 
     query = RankingsQuery::default();
     query.order_by = OrderBy::Squat;
-    let rankings = algorithms::full_sorted_uniqued(&query, &db);
+    let rankings = algorithms::full_sorted_uniqued(&query, db);
     for idx in rankings.0.iter() {
         let entry = db.entry(*idx);
         assert!(entry.highest_squatkg() > WeightKg::from_i32(0));

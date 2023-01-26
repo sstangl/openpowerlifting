@@ -203,7 +203,7 @@ fn lifter(
         0 => {
             let lowercase = username.to_ascii_lowercase();
             let _guard = opldb.lifter_id(&lowercase)?;
-            Some(Err(Redirect::permanent(format!("/u/{}", lowercase))))
+            Some(Err(Redirect::permanent(format!("/u/{lowercase}"))))
         }
 
         // If a specific lifter was referenced, return the lifter's unique page.
@@ -265,7 +265,7 @@ impl<'r> Responder<'r, 'static> for CsvFile {
 fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(username)?;
     let content = pages::lifter_csv::export_csv(opldb, lifter_id, None).ok()?;
-    let filename = format!("{}.csv", username);
+    let filename = format!("{username}.csv");
     Some(CsvFile { filename, content })
 }
 
@@ -275,7 +275,7 @@ fn meet_csv(meetpath: PathBuf, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let meet_path_str = meetpath.to_str()?;
     let meet_id = opldb.meet_id(meet_path_str)?;
     let content = pages::meet_csv::export_csv(opldb, meet_id, None).ok()?;
-    let filename = format!("{}.csv", meet_path_str);
+    let filename = format!("{meet_path_str}.csv");
     Some(CsvFile { filename, content })
 }
 
@@ -521,7 +521,7 @@ fn dev_checker_post(
 fn old_lifters(opldb: &State<ManagedOplDb>, q: &str) -> Option<Redirect> {
     let username = Username::from_name(q).ok()?;
     opldb.lifter_id(username.as_str())?; // Ensure username exists.
-    Some(Redirect::permanent(format!("/u/{}", username)))
+    Some(Redirect::permanent(format!("/u/{username}")))
 }
 
 #[get("/meetlist.html")]
@@ -533,7 +533,7 @@ fn old_meetlist() -> Redirect {
 fn old_meet(opldb: &State<ManagedOplDb>, m: &str) -> Option<Redirect> {
     let id = opldb.meet_id(m)?;
     let pathstr = &opldb.meet(id).path;
-    Some(Redirect::permanent(format!("/m/{}", pathstr)))
+    Some(Redirect::permanent(format!("/m/{pathstr}")))
 }
 
 #[get("/index.html")]

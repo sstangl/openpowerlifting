@@ -479,7 +479,7 @@ fn finish_table<'db>(
         ""
     };
 
-    let title = Some(format!("{} {} {} {}{}", sex, equip, class, div, event));
+    let title = Some(format!("{sex} {equip} {class} {div}{event}"));
 
     let rows: Vec<ResultsRow> = entries
         .iter()

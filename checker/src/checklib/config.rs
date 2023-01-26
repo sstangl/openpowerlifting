@@ -192,7 +192,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
         let name: &str = match division.get("name").and_then(Value::as_str) {
             Some(s) => s,
             None => {
-                report.error(format!("Value '{}.name' must be a String", key));
+                report.error(format!("Value '{key}.name' must be a String"));
                 continue;
             }
         };
@@ -200,7 +200,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
         // Ensure that the Division name is unique.
         for already_seen in &acc {
             if already_seen.name == name {
-                report.error(format!("Division name '{}' must be unique", name));
+                report.error(format!("Division name '{name}' must be unique"));
                 break;
             }
         }
@@ -210,12 +210,12 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             Some(v) => match v.clone().try_into::<Age>() {
                 Ok(age) => age,
                 Err(e) => {
-                    report.error(format!("Failed parsing {}.min: {}", key, e));
+                    report.error(format!("Failed parsing {key}.min: {e}"));
                     continue;
                 }
             },
             None => {
-                report.error(format!("Division '{}' is missing the property 'min'", key));
+                report.error(format!("Division '{key}' is missing the property 'min'"));
                 continue;
             }
         };
@@ -225,12 +225,12 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             Some(v) => match v.clone().try_into::<Age>() {
                 Ok(age) => age,
                 Err(e) => {
-                    report.error(format!("Failed parsing {}.max: {}", key, e));
+                    report.error(format!("Failed parsing {key}.max: {e}"));
                     continue;
                 }
             },
             None => {
-                report.error(format!("Division '{}' is missing the property 'max'", key));
+                report.error(format!("Division '{key}' is missing the property 'max'"));
                 continue;
             }
         };
@@ -252,8 +252,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             && !valid_approximate_ages
         {
             report.error(format!(
-                "Division '{}' has an invalid age range '{}-{}'",
-                key, min_age, max_age
+                "Division '{key}' has an invalid age range '{min_age}-{max_age}'"
             ));
             continue;
         }
@@ -263,7 +262,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             Some(v) => match v.clone().try_into::<Sex>() {
                 Ok(sex) => Some(sex),
                 Err(e) => {
-                    report.error(format!("Failed parsing {}.sex: {}", key, e));
+                    report.error(format!("Failed parsing {key}.sex: {e}"));
                     None
                 }
             },
@@ -275,7 +274,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             Some(v) => {
                 if let Some(array) = v.as_array() {
                     if array.is_empty() {
-                        report.error(format!("{}.equipment cannot be empty", key));
+                        report.error(format!("{key}.equipment cannot be empty"));
                     }
 
                     let mut vec = Vec::with_capacity(array.len());
@@ -285,7 +284,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
                                 vec.push(equipment);
                             }
                             Err(e) => {
-                                report.error(format!("Error in {}.equipment: {}", key, e));
+                                report.error(format!("Error in {key}.equipment: {e}"));
                             }
                         }
                     }
@@ -294,12 +293,12 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
                     match s.parse::<Equipment>() {
                         Ok(equipment) => Some(vec![equipment]),
                         Err(e) => {
-                            report.error(format!("Error in {}.equipment: {}", key, e));
+                            report.error(format!("Error in {key}.equipment: {e}"));
                             None
                         }
                     }
                 } else {
-                    report.error(format!("{}.equipment must be a sting or array", key));
+                    report.error(format!("{key}.equipment must be a sting or array"));
                     None
                 }
             }
@@ -312,7 +311,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
                 "Yes" => Some(true),
                 "No" => Some(false),
                 _ => {
-                    report.error(format!("Failed parsing {}.tested: invalid '{}'", key, v));
+                    report.error(format!("Failed parsing {key}.tested: invalid '{v}'"));
                     None
                 }
             },
@@ -325,7 +324,7 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
             Some(s) => match s.parse::<Place>() {
                 Ok(p) => Some(p),
                 Err(e) => {
-                    report.error(format!("Failed parsing {}.place: {}", key, e));
+                    report.error(format!("Failed parsing {key}.place: {e}"));
                     None
                 }
             },
@@ -372,14 +371,14 @@ fn parse_weightclasses(
                             vec.push(class);
                         }
                         Err(e) => {
-                            report.error(format!("Error in '{}.classes': {}", key, e));
+                            report.error(format!("Error in '{key}.classes': {e}"));
                         }
                     }
                 }
                 vec
             }
             None => {
-                report.error(format!("Value '{}.classes' must be an Array", key));
+                report.error(format!("Value '{key}.classes' must be an Array"));
                 continue;
             }
         };
@@ -388,28 +387,28 @@ fn parse_weightclasses(
         let date_range = match weightclass.get("date_range").and_then(Value::as_array) {
             Some(array) => {
                 if array.len() != 2 {
-                    report.error(format!("Array '{}.date_range' must have 2 items", key));
+                    report.error(format!("Array '{key}.date_range' must have 2 items"));
                     continue;
                 }
                 // TODO: These clone() calls can be removed by using Value::as_str().
                 let date_min = match array[0].clone().try_into::<Date>() {
                     Ok(date) => date,
                     Err(e) => {
-                        report.error(format!("Error in '{}.date_range': {}", key, e));
+                        report.error(format!("Error in '{key}.date_range': {e}"));
                         continue;
                     }
                 };
                 let date_max = match array[1].clone().try_into::<Date>() {
                     Ok(date) => date,
                     Err(e) => {
-                        report.error(format!("Error in '{}.date_range': {}", key, e));
+                        report.error(format!("Error in '{key}.date_range': {e}"));
                         continue;
                     }
                 };
                 (date_min, date_max)
             }
             None => {
-                report.error(format!("Value '{}.date_range' must be an Array", key));
+                report.error(format!("Value '{key}.date_range' must be an Array"));
                 continue;
             }
         };
@@ -419,12 +418,12 @@ fn parse_weightclasses(
             Some(s) => match s.parse::<Sex>() {
                 Ok(sex) => sex,
                 Err(e) => {
-                    report.error(format!("Error in '{}.sex': {}", key, e));
+                    report.error(format!("Error in '{key}.sex': {e}"));
                     continue;
                 }
             },
             None => {
-                report.error(format!("Value '{}.sex' must be a String", key));
+                report.error(format!("Value '{key}.sex' must be a String"));
                 continue;
             }
         };
@@ -440,16 +439,14 @@ fn parse_weightclasses(
                                 Some(idx) => vec.push(idx),
                                 None => {
                                     report.error(format!(
-                                        "Invalid division '{}' in {}.divisions",
-                                        div, key
+                                        "Invalid division '{div}' in {key}.divisions"
                                     ));
                                     continue;
                                 }
                             },
                             None => {
                                 report.error(format!(
-                                    "Array '{}.divisions' may only contain Strings",
-                                    key
+                                    "Array '{key}.divisions' may only contain Strings"
                                 ));
                                 continue;
                             }
@@ -458,7 +455,7 @@ fn parse_weightclasses(
                     Some(vec)
                 }
                 None => {
-                    report.error(format!("Value '{}.divisions' must be an Array", key));
+                    report.error(format!("Value '{key}.divisions' must be an Array"));
                     continue;
                 }
             },
@@ -513,14 +510,14 @@ fn parse_rulesets(value: &Value, report: &mut Report) -> Vec<RuleSetConfig> {
                             ruleset.add(rule);
                         }
                         Err(e) => {
-                            report.error(format!("Error in '{}.ruleset': {}", key, e));
+                            report.error(format!("Error in '{key}.ruleset': {e}"));
                         }
                     }
                 }
                 ruleset
             }
             None => {
-                report.error(format!("Value '{}.ruleset' must be an Array", key));
+                report.error(format!("Value '{key}.ruleset' must be an Array"));
                 continue;
             }
         };
@@ -529,28 +526,28 @@ fn parse_rulesets(value: &Value, report: &mut Report) -> Vec<RuleSetConfig> {
         let date_range = match section.get("date_range").and_then(Value::as_array) {
             Some(array) => {
                 if array.len() != 2 {
-                    report.error(format!("Array '{}.date_range' must have 2 items", key));
+                    report.error(format!("Array '{key}.date_range' must have 2 items"));
                     continue;
                 }
                 // TODO: These clone() calls can be removed by using Value::as_str().
                 let date_min = match array[0].clone().try_into::<Date>() {
                     Ok(date) => date,
                     Err(e) => {
-                        report.error(format!("Error in '{}.date_range': {}", key, e));
+                        report.error(format!("Error in '{key}.date_range': {e}"));
                         continue;
                     }
                 };
                 let date_max = match array[1].clone().try_into::<Date>() {
                     Ok(date) => date,
                     Err(e) => {
-                        report.error(format!("Error in '{}.date_range': {}", key, e));
+                        report.error(format!("Error in '{key}.date_range': {e}"));
                         continue;
                     }
                 };
                 (date_min, date_max)
             }
             None => {
-                report.error(format!("Value '{}.date_range' must be an Array", key));
+                report.error(format!("Value '{key}.date_range' must be an Array"));
                 continue;
             }
         };
@@ -580,7 +577,7 @@ fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> 
         let exemptions = match exemptions.as_array() {
             Some(a) => a,
             None => {
-                report.error(format!("exemptions.{} must be an Array", key));
+                report.error(format!("exemptions.{key} must be an Array"));
                 continue;
             }
         };
@@ -590,7 +587,7 @@ fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> 
             let s = match exemption.as_str() {
                 Some(s) => s,
                 None => {
-                    report.error(format!("exemptions.{} must contain Strings", key));
+                    report.error(format!("exemptions.{key} must contain Strings"));
                     continue;
                 }
             };
@@ -600,7 +597,7 @@ fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> 
                     vec.push(exemption);
                 }
                 Err(e) => {
-                    report.error(format!("Error in exemptions.{}: {}", key, e));
+                    report.error(format!("Error in exemptions.{key}: {e}"));
                     continue;
                 }
             }
@@ -680,7 +677,7 @@ fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<dyn
         match key.as_str() {
             "options" | "divisions" | "exemptions" | "rulesets" | "weightclasses" => (),
             _ => {
-                report.error(format!("Unknown section '{}'", key));
+                report.error(format!("Unknown section '{key}'"));
             }
         }
     }

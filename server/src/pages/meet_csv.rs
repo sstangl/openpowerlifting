@@ -14,16 +14,16 @@ pub fn export_csv(
     let mut entries = opldb.entries_for_meet(meet_id);
 
     if let Some(f) = entry_filter {
-        entries = entries.into_iter().filter(|e| f(opldb, *e)).collect();
+        entries.retain(|e| f(opldb, e));
     }
 
     // Build the CSV output.
     let mut wtr = csv::Writer::from_writer(vec![]);
     for entry in entries.into_iter().rev() {
         let lifter = opldb.lifter(entry.lifter_id);
-        wtr.serialize(
-            crate::pages::lifter_csv::make_export_row(lifter, entry, meet)
-        )?;
+        wtr.serialize(crate::pages::lifter_csv::make_export_row(
+            lifter, entry, meet,
+        ))?;
     }
 
     Ok(String::from_utf8(wtr.into_inner()?)?)

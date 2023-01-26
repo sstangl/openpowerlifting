@@ -258,7 +258,7 @@ pub fn trace_conflict<T>(
     if debug {
         let age_on: Option<String> = match range.age_on(meetdate) {
             Age::None => None,
-            age => Some(format!("{:?}", age)),
+            age => Some(format!("{age:?}")),
         };
 
         println!(
@@ -460,7 +460,7 @@ pub fn interpolate_age_debug_for(
 ) {
     match liftermap.get(username) {
         Some(indices) => interpolate_age_single_lifter(meetdata, indices, true),
-        None => println!("Username '{}' not found", username),
+        None => println!("Username '{username}' not found"),
     }
 }
 

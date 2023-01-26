@@ -160,7 +160,7 @@ impl Serialize for State {
     fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let country = self.to_country().to_string();
         let state = self.to_state_string();
-        format!("{}-{}", country, state).serialize(serializer)
+        format!("{country}-{state}").serialize(serializer)
     }
 }
 

@@ -646,7 +646,7 @@ impl Serialize for YearFilter {
             YearFilter::AllYears => serializer.serialize_str("AllYears"),
             YearFilter::OneYear(y) => {
                 let mut buf = ArrayString::<32>::new();
-                write!(buf, "Year{}", y).expect("ArrayString overflow");
+                write!(buf, "Year{y}").expect("ArrayString overflow");
                 serializer.serialize_str(&buf)
             }
         }

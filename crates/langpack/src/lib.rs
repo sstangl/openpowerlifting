@@ -1108,11 +1108,11 @@ impl Serialize for LocalizedOrdinal {
         match *self {
             Self::NumberOnly(n) => serializer.serialize_u32(n),
             Self::RomanceMasculine(n) => {
-                let s = format!("{}º", n);
+                let s = format!("{n}º");
                 serializer.serialize_str(&s)
             }
             Self::RomanceFeminine(n) => {
-                let s = format!("{}ª", n);
+                let s = format!("{n}ª");
                 serializer.serialize_str(&s)
             }
         }

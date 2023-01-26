@@ -821,7 +821,7 @@ fn check_column_agerange(
             if intersection.is_none() {
                 report.error_on(
                     line,
-                    format!("AgeRange value '{}' doesn't agree with AgeRange '{}' inferred from other age data", explicit_agerange, inferred_agerange)
+                    format!("AgeRange value '{explicit_agerange}' doesn't agree with AgeRange '{inferred_agerange}' inferred from other age data")
                 );
             }
             intersection
@@ -892,7 +892,7 @@ fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightK
     if weight != WeightKg::from_i32(0)
         && (weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300))
     {
-        report.error_on(line, format!("Implausible BodyweightKg '{}'", s));
+        report.error_on(line, format!("Implausible BodyweightKg '{s}'"));
     }
     weight
 }
@@ -902,16 +902,13 @@ fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Weight
     if s == "0" {
         report.error_on(line, "WeightClassKg cannot be zero");
     } else if s.starts_with('0') && s != "0+" {
-        report.error_on(
-            line,
-            format!("WeightClassKg cannot start with 0 in '{}'", s),
-        );
+        report.error_on(line, format!("WeightClassKg cannot start with 0 in '{s}'"));
     }
 
     match s.parse::<WeightClassKg>() {
         Ok(w) => w,
         Err(e) => {
-            report.error_on(line, format!("Invalid WeightClassKg '{}': {}", s, e));
+            report.error_on(line, format!("Invalid WeightClassKg '{s}': {e}"));
             WeightClassKg::default()
         }
     }
@@ -923,7 +920,7 @@ fn check_column_tested(s: &str, line: u64, report: &mut Report) -> Option<bool> 
         "No" => Some(false),
         "" => None,
         _ => {
-            report.error_on(line, format!("Unknown Tested value '{}'", s));
+            report.error_on(line, format!("Unknown Tested value '{s}'"));
             None
         }
     }
@@ -954,7 +951,7 @@ fn check_column_division(
 
     // The division must appear in the configuration file.
     if !config.divisions.iter().any(|d| d.name == s) {
-        report.error_on(line, format!("Unknown division '{}'", s));
+        report.error_on(line, format!("Unknown division '{s}'"));
     }
 }
 
@@ -966,7 +963,7 @@ fn check_column_country(s: &str, line: u64, report: &mut Report) -> Option<Count
     match s.parse::<Country>() {
         Ok(c) => Some(c),
         Err(_) => {
-            report.error_on(line, format!("Unknown Country '{}'", s));
+            report.error_on(line, format!("Unknown Country '{s}'"));
             None
         }
     }
@@ -980,7 +977,7 @@ fn check_column_entrydate(s: &str, line: u64, report: &mut Report) -> Option<Dat
     match s.parse::<Date>() {
         Ok(d) => Some(d),
         Err(_) => {
-            report.error_on(line, format!("Invalid EntryDate '{}'", s));
+            report.error_on(line, format!("Invalid EntryDate '{s}'"));
             None
         }
     }
@@ -1248,19 +1245,13 @@ fn check_attempt_consistency_helper(
     if best > WeightKg::from_i32(0) && best != best3lift {
         report.error_on(
             line,
-            format!(
-                "Best3{}Kg '{}' does not match best attempt '{}'",
-                lift, best3lift, best
-            ),
+            format!("Best3{lift}Kg '{best3lift}' does not match best attempt '{best}'"),
         );
     }
 
     // If the best attempt was a failure, the least failure can be in the Best3Lift.
     if best < WeightKg::from_i32(0) && best3lift != WeightKg::from_i32(0) && best != best3lift {
-        let s = format!(
-            "Best3{}Kg '{}' does not match least failed attempt '{}'",
-            lift, best3lift, best
-        );
+        let s = format!("Best3{lift}Kg '{best3lift}' does not match least failed attempt '{best}'");
         report.error_on(line, s);
     }
 }
@@ -1347,10 +1338,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
     {
         report.error_on(
             line,
-            format!(
-                "Squat equipment wasn't invented until {}",
-                squat_suit_invention_year
-            ),
+            format!("Squat equipment wasn't invented until {squat_suit_invention_year}"),
         );
     }
 
@@ -1640,10 +1628,7 @@ fn check_division_age_consistency(
             if birthdate.year() != birthyear {
                 report.error_on(
                     line,
-                    format!(
-                        "BirthDate '{}' doesn't match BirthYear '{}'",
-                        birthdate, birthyear
-                    ),
+                    format!("BirthDate '{birthdate}' doesn't match BirthYear '{birthyear}'"),
                 );
             }
         }
@@ -1972,7 +1957,7 @@ pub fn do_check<R: io::Read>(
         // Check each field for whitespace errors.
         for field in &record {
             if field.contains("  ") || field.starts_with(' ') || field.ends_with(' ') {
-                let msg = format!("Field '{}' contains extraneous spacing", field);
+                let msg = format!("Field '{field}' contains extraneous spacing");
                 report.error_on(line, msg);
             }
         }
@@ -2270,7 +2255,7 @@ pub fn do_check<R: io::Read>(
         if !entry.name.is_empty() {
             match Username::from_name(&entry.name) {
                 Ok(username) => entry.username = username,
-                Err(msg) => report.error_on(line, format!("Username error: {}", msg)),
+                Err(msg) => report.error_on(line, format!("Username error: {msg}")),
             }
         }
 

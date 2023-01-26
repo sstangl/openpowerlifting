@@ -78,7 +78,7 @@ impl Username {
                 .map(hira_to_kata_char)
                 .map(|c| (c as u32).to_string())
                 .collect();
-            let s = format!("ea-{}", ea_id);
+            let s = format!("ea-{ea_id}");
             Ok(Username(s.into_ascii_string().unwrap()))
         } else {
             convert_to_ascii(name)
@@ -265,7 +265,7 @@ fn hira_to_kata_char(c: char) -> char {
 /// Currently only used for testing.
 #[cfg(test)]
 fn hira_to_kata(name: &str) -> String {
-    name.chars().map(|c| hira_to_kata_char(c)).collect()
+    name.chars().map(hira_to_kata_char).collect()
 }
 
 #[cfg(test)]

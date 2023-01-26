@@ -51,7 +51,7 @@ pub fn query_benchmarks(c: &mut Criterion) {
         };
 
         b.iter(|| {
-            opldb::algorithms::full_sorted_uniqued(&query, black_box(&db));
+            opldb::algorithms::full_sorted_uniqued(&query, black_box(db));
         });
     });
 }
@@ -68,7 +68,7 @@ pub fn data_structures(c: &mut Criterion) {
     // TODO(sstangl): The throughput is best characterized 3-dimensionally.
     group.throughput(Throughput::Elements(raw_wraps.0.len() as u64));
     group.bench_function("NonSortedNonUnique::intersect()", |b| {
-        b.iter(|| black_box(raw_wraps.intersect(black_box(&male))));
+        b.iter(|| black_box(raw_wraps.intersect(black_box(male))));
     });
 }
 

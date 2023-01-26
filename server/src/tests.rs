@@ -63,7 +63,7 @@ fn test_pages_load() {
 
     // Ensure that pages load on every kind of supported device.
     // Internally, these share contexts, but have different templates.
-    for device in vec![Device::Desktop, Device::Mobile] {
+    for &device in &[Device::Desktop, Device::Mobile] {
         assert_eq!(get(&client, device, "/"), Status::Ok);
         assert_eq!(get(&client, device, "/rankings/uspa"), Status::Ok);
         assert_eq!(get(&client, device, "/records"), Status::Ok);
@@ -90,7 +90,7 @@ fn test_pages_load_for_openipf() {
 
     // Ensure that pages load on every kind of supported device.
     // Internally, these share contexts, but have different templates.
-    for device in vec![Device::Desktop, Device::Mobile] {
+    for &device in &[Device::Desktop, Device::Mobile] {
         assert_eq!(get(&client, device, "/dist/openipf/"), Status::Ok);
         assert_eq!(
             get(&client, device, "/dist/openipf/rankings/uspa"),

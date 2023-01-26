@@ -116,7 +116,7 @@ fn print_summary(error_count: usize, warning_count: usize, search_root: &Path) {
         String::new()
     };
 
-    println!("Summary: {}, {}{}", error_str, warning_str, partial_str);
+    println!("Summary: {error_str}, {warning_str}{partial_str}");
 }
 
 /// Map of federation folder, e.g., "ipf", to Config.

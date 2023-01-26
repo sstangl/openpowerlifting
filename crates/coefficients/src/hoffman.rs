@@ -72,7 +72,7 @@ mod tests {
     /// 1. https://web.archive.org/web/20150702230626/http://ditillo2.blogspot.com/2010/11/art-of-press-bob-hoffman.html
     #[test]
     fn example() {
-        const KG_FACTOR: f32 = 2.20462262;
+        const KG_FACTOR: f32 = 2.204_622_5;
 
         let bw = WeightKg::from_f32(200.0 / KG_FACTOR);
         let total = WeightKg::from_f32(322.0 / KG_FACTOR);

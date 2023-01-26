@@ -24,14 +24,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             Ok(line) => {
                 if !line.is_empty() {
                     rl.add_history_entry(line.as_str());
-                    println!("{}", line);
+                    println!("{line}");
                 }
             }
             Err(ReadlineError::Interrupted) | Err(ReadlineError::Eof) => {
                 break;
             }
             Err(err) => {
-                println!("Error: {:?}", err);
+                println!("Error: {err:?}");
                 break;
             }
         }

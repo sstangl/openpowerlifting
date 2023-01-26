@@ -38,11 +38,11 @@ fn basic_rankings_search() {
     let rankings = RankingsQuery::default();
 
     // Perform the search.
-    let res = search_rankings(&db, &rankings, 0, "Sean Stangl");
+    let res = search_rankings(db, &rankings, 0, "Sean Stangl");
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let list = algorithms::full_sorted_uniqued(&rankings, db);
     let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
@@ -54,11 +54,11 @@ fn backwards_name_search() {
     let rankings = RankingsQuery::default();
 
     // Perform the search.
-    let res = search_rankings(&db, &rankings, 0, "stangl sean");
+    let res = search_rankings(db, &rankings, 0, "stangl sean");
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let list = algorithms::full_sorted_uniqued(&rankings, db);
     let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
@@ -70,11 +70,11 @@ fn instagram_search() {
     let rankings = RankingsQuery::default();
 
     // Perform the search.
-    let res = search_rankings(&db, &rankings, 0, "Ferruix");
+    let res = search_rankings(db, &rankings, 0, "Ferruix");
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let list = algorithms::full_sorted_uniqued(&rankings, db);
     let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }
@@ -86,11 +86,11 @@ fn cyrillic_search() {
     let rankings = RankingsQuery::default();
 
     // Perform the search.
-    let res = search_rankings(&db, &rankings, 0, "Шон Стангл");
+    let res = search_rankings(db, &rankings, 0, "Шон Стангл");
     let row = res.unwrap();
 
     // Check that the result is for the specified lifter.
-    let list = algorithms::full_sorted_uniqued(&rankings, &db);
+    let list = algorithms::full_sorted_uniqued(&rankings, db);
     let lifter = db.lifter(db.entry(list.0[row]).lifter_id);
     assert_eq!(lifter.name, "Sean Stangl");
 }

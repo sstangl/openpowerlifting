@@ -280,7 +280,7 @@ pub fn group_by_age(bd_range_vec: &[BirthDateRange], _acceptable_delta: u32) -> 
 pub fn print_groups(bd_groups: &[Vec<usize>], bd_range_vec: &[BirthDateRange], date_vec: &[Date]) {
     println!("Groupings are:");
     for (ii, group) in bd_groups.iter().enumerate() {
-        println!("{}: ", ii);
+        println!("{ii}: ");
         for range_idx in group {
             println!(
                 "({},{}): {} ",
@@ -362,7 +362,7 @@ fn group_lifter_data(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: 
 pub fn group_age_debug_for(meetdata: &mut AllMeetData, liftermap: &LifterMap, username: &Username) {
     match liftermap.get(username) {
         Some(indices) => group_lifter_data(meetdata, indices, true),
-        None => println!("Username '{}' not found", username),
+        None => println!("Username '{username}' not found"),
     }
 }
 

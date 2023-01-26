@@ -198,7 +198,7 @@ impl Serialize for Event {
     fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         // The greatest possible string is "SBD", 3 characters.
         let mut buf = ArrayString::<3>::new();
-        write!(buf, "{}", self).expect("ArrayString overflow");
+        write!(buf, "{self}").expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)
     }
@@ -340,9 +340,9 @@ mod tests {
     #[test]
     fn display() {
         let event = "SBD".parse::<Event>().unwrap();
-        assert_eq!(format!("{}", event), "SBD");
+        assert_eq!(format!("{event}"), "SBD");
 
         let event = "B".parse::<Event>().unwrap();
-        assert_eq!(format!("{}", event), "B");
+        assert_eq!(format!("{event}"), "B");
     }
 }

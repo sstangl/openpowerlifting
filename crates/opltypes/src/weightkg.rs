@@ -48,14 +48,14 @@ impl Serialize for WeightKg {
         let integer = self.0 / 100;
         let fraction = self.0.abs() % 100;
 
-        write!(buf, "{}", integer).expect("ArrayString overflow");
+        write!(buf, "{integer}").expect("ArrayString overflow");
         if fraction != 0 {
             if fraction % 10 == 0 {
                 // Serialize "50" as ".5".
                 write!(buf, ".{}", fraction / 10).expect("ArrayString overflow");
             } else {
                 // Serialize "5" as ".05".
-                write!(buf, ".{:0>2}", fraction).expect("ArrayString overflow");
+                write!(buf, ".{fraction:0>2}").expect("ArrayString overflow");
             }
         }
 
@@ -75,7 +75,7 @@ impl Serialize for WeightAny {
 
         // Over-estimate of space required, just to future-proof it.
         let mut buf = ArrayString::<13>::new();
-        write!(buf, "{}", self).expect("ArrayString overflow");
+        write!(buf, "{self}").expect("ArrayString overflow");
 
         serializer.serialize_str(&buf)
     }
@@ -292,9 +292,9 @@ impl WeightAny {
 
             // If the decimal can be avoided, don't write it.
             if decimal != 0 {
-                format!("{},{}", integer, decimal)
+                format!("{integer},{decimal}")
             } else {
-                format!("{}", integer)
+                format!("{integer}")
             }
         }
     }
@@ -318,9 +318,9 @@ impl fmt::Display for WeightAny {
 
             // If the decimal can be avoided, don't write it.
             if decimal != 0 {
-                write!(f, "{}.{}", integer, decimal)
+                write!(f, "{integer}.{decimal}")
             } else {
-                write!(f, "{}", integer)
+                write!(f, "{integer}")
             }
         }
     }
@@ -465,22 +465,22 @@ mod tests {
     #[test]
     fn display() {
         let w = "123.456".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "123.4");
+        assert_eq!(format!("{w}"), "123.4");
 
         let w = "100.456".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "100.4");
+        assert_eq!(format!("{w}"), "100.4");
 
         let w = "100.056".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "100");
+        assert_eq!(format!("{w}"), "100");
 
         let w = "-123.456".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "-123.4");
+        assert_eq!(format!("{w}"), "-123.4");
 
         let w = "-123.000".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "-123");
+        assert_eq!(format!("{w}"), "-123");
 
         let w = "-0.000".parse::<WeightKg>().unwrap();
-        assert_eq!(format!("{}", w), "");
+        assert_eq!(format!("{w}"), "");
     }
 
     /// Ensures that WeightKg serialization matches the original to 2 decimal places.

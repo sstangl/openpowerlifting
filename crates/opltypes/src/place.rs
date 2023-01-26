@@ -43,7 +43,7 @@ impl Place {
 impl fmt::Display for Place {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            Place::P(p) => write!(f, "{}", p),
+            Place::P(p) => write!(f, "{p}"),
             Place::G => write!(f, "G"),
             Place::DQ => write!(f, "DQ"),
             Place::DD => write!(f, "DD"),
@@ -123,21 +123,21 @@ mod tests {
     #[test]
     fn display() {
         let place = "5".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "5");
+        assert_eq!(format!("{place}"), "5");
 
         let place = "100".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "100");
+        assert_eq!(format!("{place}"), "100");
 
         let place = "G".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "G");
+        assert_eq!(format!("{place}"), "G");
 
         let place = "DQ".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "DQ");
+        assert_eq!(format!("{place}"), "DQ");
 
         let place = "DD".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "DD");
+        assert_eq!(format!("{place}"), "DD");
 
         let place = "NS".parse::<Place>().unwrap();
-        assert_eq!(format!("{}", place), "NS");
+        assert_eq!(format!("{place}"), "NS");
     }
 }

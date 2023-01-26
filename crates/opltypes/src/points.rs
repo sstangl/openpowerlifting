@@ -78,7 +78,7 @@ impl Points {
             // Displaying points always shows two decimal places.
             let integer = self.0 / 100;
             let decimal = self.0.abs() % 100;
-            format!("{},{:02}", integer, decimal)
+            format!("{integer},{decimal:02}")
         }
     }
 }
@@ -92,7 +92,7 @@ impl fmt::Display for Points {
             // Displaying points always shows two decimal places.
             let integer = self.0 / 100;
             let decimal = self.0.abs() % 100;
-            write!(f, "{}.{:02}", integer, decimal)
+            write!(f, "{integer}.{decimal:02}")
         }
     }
 }
@@ -114,7 +114,7 @@ impl Serialize for Points {
         // 10 characters for the non-decimal number (-536870912).
         // 3 characters for the '.' plus 2 fractional digits.
         let mut buf = ArrayString::<13>::new();
-        write!(buf, "{}", self).expect("ArrayString overflow");
+        write!(buf, "{self}").expect("ArrayString overflow");
         serializer.serialize_str(&buf)
     }
 }
@@ -194,22 +194,22 @@ mod tests {
     #[test]
     fn display() {
         let w = "123.456".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "123.46");
+        assert_eq!(format!("{w}"), "123.46");
 
         let w = "100.456".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "100.46");
+        assert_eq!(format!("{w}"), "100.46");
 
         let w = "100.056".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "100.06");
+        assert_eq!(format!("{w}"), "100.06");
 
         let w = "-123.456".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "-123.46");
+        assert_eq!(format!("{w}"), "-123.46");
 
         let w = "-123.000".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "-123.00");
+        assert_eq!(format!("{w}"), "-123.00");
 
         let w = "-0.000".parse::<Points>().unwrap();
-        assert_eq!(format!("{}", w), "");
+        assert_eq!(format!("{w}"), "");
     }
 
     #[test]

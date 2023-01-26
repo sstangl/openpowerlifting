@@ -72,7 +72,7 @@ impl Age {
     pub fn from_f64(f: f64) -> Result<Self, num::ParseIntError> {
         // Just use the from_str() implementation.
         // This function is not called often, so it's OK to be slow.
-        let s = format!("{}", f);
+        let s = format!("{f}");
         s.parse::<Age>()
     }
 
@@ -268,8 +268,8 @@ impl PartialOrd for Age {
 impl fmt::Display for Age {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            Age::Exact(n) => write!(f, "{}", n),
-            Age::Approximate(n) => write!(f, "{}~", n),
+            Age::Exact(n) => write!(f, "{n}"),
+            Age::Approximate(n) => write!(f, "{n}~"),
             Age::None => Ok(()),
         }
     }
@@ -303,8 +303,8 @@ impl Serialize for Age {
         let mut buf = ArrayString::<5>::new();
 
         match *self {
-            Age::Exact(n) => write!(buf, "{}", n).expect("ArrayString overflow"),
-            Age::Approximate(n) => write!(buf, "{}.5", n).expect("ArrayString overflow"),
+            Age::Exact(n) => write!(buf, "{n}").expect("ArrayString overflow"),
+            Age::Approximate(n) => write!(buf, "{n}.5").expect("ArrayString overflow"),
             Age::None => (),
         };
         serializer.serialize_str(&buf)
@@ -345,8 +345,8 @@ impl Serialize for PrettyAge {
         let mut buf = ArrayString::<4>::new();
 
         match self.0 {
-            Age::Exact(n) => write!(buf, "{}", n).expect("ArrayString overflow"),
-            Age::Approximate(n) => write!(buf, "{}~", n).expect("ArrayString overflow"),
+            Age::Exact(n) => write!(buf, "{n}").expect("ArrayString overflow"),
+            Age::Approximate(n) => write!(buf, "{n}~").expect("ArrayString overflow"),
             Age::None => (),
         };
         serializer.serialize_str(&buf)
@@ -360,13 +360,13 @@ mod tests {
     #[test]
     fn display() {
         let a = "29".parse::<Age>().unwrap();
-        assert_eq!(format!("{}", a), "29");
+        assert_eq!(format!("{a}"), "29");
 
         let a = "29.5".parse::<Age>().unwrap();
-        assert_eq!(format!("{}", a), "29~");
+        assert_eq!(format!("{a}"), "29~");
 
         let a = "".parse::<Age>().unwrap();
-        assert_eq!(format!("{}", a), "");
+        assert_eq!(format!("{a}"), "");
     }
 
     #[test]

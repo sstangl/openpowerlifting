@@ -259,7 +259,7 @@ impl Date {
 impl fmt::Display for Date {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let (y, m, d) = (self.year(), self.month(), self.day());
-        write!(f, "{:04}-{:02}-{:02}", y, m, d)
+        write!(f, "{y:04}-{m:02}-{d:02}")
     }
 }
 
@@ -275,7 +275,7 @@ impl Serialize for Date {
     fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let mut buf = ArrayString::<10>::new();
         let (y, m, d) = (self.year(), self.month(), self.day());
-        write!(buf, "{:04}-{:02}-{:02}", y, m, d).expect("ArrayString overflow");
+        write!(buf, "{y:04}-{m:02}-{d:02}").expect("ArrayString overflow");
         serializer.serialize_str(&buf)
     }
 }
@@ -427,7 +427,7 @@ mod test {
     #[test]
     fn display() {
         let date = "2017-03-04".parse::<Date>().unwrap();
-        assert_eq!(format!("{}", date), "2017-03-04");
+        assert_eq!(format!("{date}"), "2017-03-04");
     }
 
     #[test]

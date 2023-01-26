@@ -278,7 +278,7 @@ pub fn lifter(
         0 => {
             let lowercase = username.to_ascii_lowercase();
             let _guard = opldb.lifter_id(&lowercase)?;
-            Some(Err(Redirect::permanent(format!("/u/{}", lowercase))))
+            Some(Err(Redirect::permanent(format!("/u/{lowercase}"))))
         }
 
         // If a specific lifter was referenced, return the lifter's unique page.
@@ -339,7 +339,7 @@ pub fn lifter(
 pub fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(username)?;
     let content = pages::lifter_csv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()?;
-    let filename = format!("{}.csv", username);
+    let filename = format!("{username}.csv");
     Some(CsvFile { filename, content })
 }
 
@@ -349,7 +349,7 @@ pub fn meet_csv(meetpath: PathBuf, opldb: &State<ManagedOplDb>) -> Option<CsvFil
     let meet_path_str = meetpath.to_str()?;
     let meet_id = opldb.meet_id(meet_path_str)?;
     let content = pages::meet_csv::export_csv(opldb, meet_id, Some(ipf_only_filter)).ok()?;
-    let filename = format!("{}.csv", meet_path_str);
+    let filename = format!("{meet_path_str}.csv");
     Some(CsvFile { filename, content })
 }
 
