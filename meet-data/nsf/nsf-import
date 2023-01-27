@@ -71,6 +71,10 @@ def getmeetinfo(soup):
     if len(h2s) != 1:
         error("Need a better way to figure out the competition name.")
     name = h2s[0].text
+    # Get the organising club name
+    organiser = tbody.find('td', text='Arrangør')
+    org = organiser.find_next('td').text
+    name = org + ' ' + name
 
     fed = 'NSF'
     country = 'Norway'
