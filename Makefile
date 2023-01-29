@@ -7,7 +7,7 @@ PLFILE := entries.csv
 MEETFILE := meets.csv
 MEETFILEJS := meets.js
 
-DATE := $(shell date --iso-8601)
+DATE := $(shell date '+%Y-%m-%d') # Updated to work on macOS.
 COMMIT := $(shell git rev-parse --short HEAD)
 DATADIR := ${BUILDDIR}/openpowerlifting-${DATE}-${COMMIT}
 
