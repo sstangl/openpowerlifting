@@ -87,7 +87,7 @@ For meets that are in pounds:
 1. Change anything `Kg` to `LBS`.
 2. Once completed with step two of part two open Ubuntu and go to the directory you just added
 - Go to the federation's directory for which you are trying to add a meet.
-  - Type: `cd openpowerlifting`
+  - Type: `cd opl-data`
   - Type: `cd meet-data`
   - Type: `cd ${FEDNAME}`
 - Go to the directory you just added. 
@@ -107,7 +107,7 @@ Tips
 ### Step 4: Creating the `original.txt` file (in Ubuntu)
 This step requires that you have the URL of the `.pdf` file of the meet results.
 1. Install poppler `sudo apt-get install poppler-utils`.
-2. Go to the federation's directory for which you are trying to add the meet. Type `cd openpowerlifting/meet-data/${FEDNAME}` (where `${FEDNAME}` is the name of the federation you are uploading to).
+2. Go to the federation's directory for which you are trying to add the meet. Type `cd opl-data/meet-data/${FEDNAME}` (where `${FEDNAME}` is the name of the federation you are uploading to).
 3. At this point, you can go ahead and create a new directory for the meet. Type `mkdir ${DIRNAME}` (where `${DIRNAME}` is the name of the directory you will create). Name the directory starting with the last two digits of the year of the meet (1999 the last two digits would be 81) and ending with the number meet it was for that year (`9901` is the first meet of 1999 from the federation and  `1524` is the twenty-fourth meet of 2015 from the federation.).
 4. Go to the directory you just added. Type `cd ${DIRNAME}` (where `${DIRNAME}` is the name of the directory you created).
 5. Download the `.pdf` file of the meet results. Type `wget ${URL}` (where `${URL}` is the URL of the `.pdf` file) to .
@@ -120,11 +120,11 @@ You are now ready to upload the `entries.csv`, `original.csv`, and `URL` files c
 ## Part 2: Uploading meet 
 
 ### Step 1:  Add to directory (In Ubuntu)
-1. Go to the directory you just added, you are probably already there (you can check where you are by typing `pwd`). If so omit this step. Type `cd openpowerlifting/meet-data/${FEDNAME}/${DIRNAME}` (where `${FEDNAME}` is the name of the federation you are uploading to and `${DIRNAME}` is the directory you just added).
+1. Go to the directory you just added, you are probably already there (you can check where you are by typing `pwd`). If so omit this step. Type `cd opl-data/meet-data/${FEDNAME}/${DIRNAME}` (where `${FEDNAME}` is the name of the federation you are uploading to and `${DIRNAME}` is the directory you just added).
 2. Upload the folder where you stored `meet.csv`, `entries.csv`, and `URL`. Type `cp /mnt/${FILEPATH}* ./`(where ${FILEPATH} is the file path to the folder where you stored `meet.csv`, `entries.csv`, and `URL`). *Note*: if your folder has a space use a backslash (e.g. `/Documents/open\ pl/USPF/1701/* ./`)
 
 ### Step 2: Check your work (In Ubuntu)
-1. You need to return to the main project directory so type `cd openpowerlifting`.
+1. You need to return to the main project directory so type `cd opl-data`.
 2. Check your work. Type `make check`. You will see any errors that you have made in the data. If you have errors fix them and repeat the previous step *and this step* before continuing. If you have no errors you may continue.
 
 ### Step 3: Tell `git` about changes (In Ubuntu)
@@ -152,5 +152,5 @@ Now you have successfully uploaded a meet!
 1. Typing `ls` will give you a list of all things under the directory that you are currently under.
 2. Typing `pwd` will tell you where you are at.
 3. Typing `cd` will return you to your home directory.
-4. Hitting the tab key will autocomplete what you are typing. For example: hitting the tab key after `cd open` will auto complete to `cd openpowerlifting`.
+4. Hitting the tab key will autocomplete what you are typing. For example: hitting the tab key after `cd op` will auto complete to `cd opl-data`.
 5. `.` means the current directory and `..` means the parent directory

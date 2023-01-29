@@ -8,7 +8,7 @@ git clone https://gitlab.com/openpowerlifting/opl-data.git
 ```
 
 ## Running the Makefile
-In the `openpowerlifting/` base directory, run
+In the `opl-data/` base directory, run
 
 ```make``` 
 
