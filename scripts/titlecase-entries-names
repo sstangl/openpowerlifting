@@ -10,7 +10,7 @@ from oplcsv import Csv
 def transform_name(name):
 
     ret_name_tokens = list()
-    
+
     # McFoobar shouldn't normally become Mcfoobar
     name_tokens = name.title().split(' ')
     for name_token in name_tokens:
