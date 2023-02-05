@@ -142,3 +142,4 @@
 
 [exemptions]
     2103 = ["ExemptWeightClassConsistency"] #One lifter without weight or weightclass
+    2205 = ["ExemptDivision"] # Guest lifter competed in wraps.
