@@ -610,6 +610,13 @@
   background-image: linear-gradient(to bottom, $lightblue 50%, $yellow 50%);
 }
 
+.tamara {
+  $hotpink: #F442B0;
+  $purple: #AE76FF  ;
+  @include gradient-prereqs($purple);
+  background-image: linear-gradient(to bottom, $hotpink 50%, $purple 50%);
+}
+
 // Designed by Jetter Lewis.
 .jetter_lewis {
   color: #FB3640; // Red
