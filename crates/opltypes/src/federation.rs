@@ -292,7 +292,11 @@ pub enum Federation {
     #[serde(rename = "Croatia-UA")]
     #[strum(to_string = "Croatia-UA", serialize = "croatia-ua")]
     CroatiaUA,
-
+	
+    /// Costa Rica Powerlifting, not federated internationally
+    #[strum(to_string = "CRPL", serialize = "crpl")]
+    CRPL,
+	
     /// Český svaz silového trojboje, Czech IPF affiliate.
     #[strum(to_string = "CSST", serialize = "csst")]
     CSST,
@@ -1736,6 +1740,7 @@ impl Federation {
             Federation::CPL => false,
             Federation::CPO => false,
             Federation::CPU => FULLY_TESTED,
+            Federation::CRPL => false,			
             Federation::CSST => FULLY_TESTED,
             Federation::DBKV => false,
             Federation::DFPFNL => FULLY_TESTED,
@@ -2119,6 +2124,7 @@ impl Federation {
             Federation::CPL => Some(Country::Canada),
             Federation::CPO => Some(Country::Canada),
             Federation::CPU => Some(Country::Canada),
+			Federation::CRPL => Some(Country::CostaRica),
             Federation::CSST => Some(Country::Czechia),
             Federation::DBKV => Some(Country::Germany),
             Federation::DFPFNL => Some(Country::Netherlands),
@@ -2528,6 +2534,7 @@ impl Federation {
             Federation::CPL => Some(Federation::IPL),
             Federation::CPO => Some(Federation::WPC),
             Federation::CPU => Some(Federation::IPF),
+			Federation::CRPL => None,
             Federation::CSST => Some(Federation::IPF),
             Federation::CyprusPF => Some(Federation::IPF),
             Federation::CzechiaUA => None,
@@ -3018,6 +3025,7 @@ impl Federation {
             Federation::CPL => Federation::ipl_rules_on(date),
             Federation::CPO => PointsSystem::Wilks,
             Federation::CPU => Federation::ipf_rules_on(date),
+			Federation::CRPL => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
             Federation::DBKV => PointsSystem::Wilks,
             Federation::DFPFNL => PointsSystem::Wilks,
