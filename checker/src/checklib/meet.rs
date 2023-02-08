@@ -198,19 +198,29 @@ pub fn check_meetstate(s: &str, report: &mut Report, country: Option<Country>) -
         return None;
     }
 
-    if country.is_none() {
-        report.warning(format!(
-            "Couldn't check MeetState '{s}' due to invalid MeetCountry"
-        ));
-        return None;
-    }
-    let country = country.unwrap();
+    let country = match country {
+        Some(value) => value,
+        None => {
+            report.warning(format!(
+                "Couldn't check MeetState '{s}' due to invalid MeetCountry"
+            ));
+
+            return None;
+        }
+    };
 
     match State::from_str_and_country(s, country) {
         Ok(s) => Some(s),
         Err(_) => {
             let cstr = country.to_string();
-            report.error(format!("Unknown state '{s}' for country '{cstr}'"));
+            let mut error = format!("Unknown state '{s}' for country '{cstr}'");
+
+            if let Some(available) = State::get_available_for_country(country) {
+                let concat = available.join(", ");
+                error += &format!(", available values: [{concat}]");
+            }
+
+            report.error(error);
             None
         }
     }
