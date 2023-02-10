@@ -213,3 +213,35 @@ pub struct SearchRankingsApiQuery {
     pub q: String,
     pub start: usize,
 }
+
+/// Generates a templated email link for Instagram / birth date queries.
+pub fn get_instagram_dob_email_template() -> String {
+    let subject = "Instagram or Date of Birth update";
+
+    let lines = [
+        "OpenPowerlifting profile link: ",
+        "Instagram handle: ",
+        "Date of birth (YYYY-MM-DD): ",
+    ];
+
+    generate_email_template_link(subject, &lines)
+}
+
+/// Generates a templated email link for name correction queries.
+pub fn get_name_correction_email_template() -> String {
+    let subject = "Name correction";
+    let lines = ["OpenPowerlifting profile link: ", "Corrected name: "];
+
+    generate_email_template_link(subject, &lines)
+}
+
+/// Generates a templated email link from a given subject and lines that should be in the body.
+fn generate_email_template_link<const N: usize>(subject: &str, body_lines: &[&str; N]) -> String {
+    let address = "issues@openpowerlifting.org";
+    let subject = urlencoding::encode(subject);
+
+    let body = body_lines.join("\n");
+    let body = urlencoding::encode(&body);
+
+    format!("mailto:{address}?subject={subject}&body={body}")
+}

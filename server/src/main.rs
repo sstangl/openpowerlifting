@@ -393,7 +393,14 @@ fn contact(
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let locale = make_locale(lang, languages, cookies);
-    let context = pages::contact::Context::new(&locale);
+    let instagram_dob_email_template = common::get_instagram_dob_email_template();
+    let name_correction_email_template = common::get_name_correction_email_template();
+
+    let context = pages::contact::Context::new(
+        &locale,
+        instagram_dob_email_template,
+        name_correction_email_template,
+    );
 
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/contact", &context),

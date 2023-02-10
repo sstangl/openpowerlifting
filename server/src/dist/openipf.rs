@@ -502,7 +502,14 @@ pub fn contact(
     cookies: &CookieJar<'_>,
 ) -> Option<Template> {
     let locale = make_locale(lang, languages, cookies);
-    let mut cx = pages::contact::Context::new(&locale);
+    let instagram_dob_email_template = get_instagram_dob_email_template();
+    let name_correction_email_template = get_name_correction_email_template();
+
+    let mut cx = pages::contact::Context::new(
+        &locale,
+        instagram_dob_email_template,
+        name_correction_email_template,
+    );
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {

@@ -9,7 +9,15 @@
 
 <p>This is explicitly appropriate for reporting data corrections and requests to add new meets, but it is never incorrect to file an issue on the tracker. If you want to send us spreadsheets, please do so through an issue so that your request can be tracked.</p>
 
-<p>For your convenience, you can also file an issue by sending an e-mail to <a href="mailto:issues@openpowerlifting.org">issues@openpowerlifting.org</a>.</p>
+<h3>Common Issues</h3>
+
+<p>If you'd like to update your Instagram handle or date of birth, you can use <a href="{{ instagram_dob_email_template }}">this email template</a>.</p>
+
+<p>If your name is spelled incorrectly, you can use <a href="{{ name_correction_email_template }}">this email template</a>.</p>
+
+<h3>Other Issues</h3>
+
+<p>For anything not covered by the above, you can also file an issue by sending an e-mail to <a href="mailto:issues@openpowerlifting.org">issues@openpowerlifting.org</a>.</p>
 
 <p>For corrections to data, please include a link to the corrections, preferably from a federation-linked source. Video evidence is also acceptable in the case of federation error or omission.</p>
 
