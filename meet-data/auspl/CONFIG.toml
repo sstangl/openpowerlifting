@@ -8,10 +8,16 @@
     # IPL-style divisions (2019+)
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
-    teen_13_19 = {name = "Teen 13-19", min = 13, max = 19} # Seldom used.
-    juniors_13_15 = {name = "Juniors 13-15", min = 13, max = 15}
+
+    # Seldom used.   Per IPL rules, minimum age is 15, but it happens
+    teen_13_19 = {name = "Teen 13-19", min = 13, max = 19}
+    juniors_13_15 = {name = "Juniors 13-15", min = 13, max = 15} 
+
+    # IPL rules as of 2022 specify 15-19, these are depreciated
     juniors_16_17 = {name = "Juniors 16-17", min = 16, max = 17}
     juniors_18_19 = {name = "Juniors 18-19", min = 18, max = 19}
+
+    juniors_15_19 = {name = "Juniors 15-19", min = 15, max = 19}
     juniors_20_23 = {name = "Juniors 20-23", min = 20, max = 23}
     submasters = {name = "Submasters 35-39", min = 35, max = 39}
     masters_40_44 = {name = "Masters 40-44", min = 40, max = 44}
