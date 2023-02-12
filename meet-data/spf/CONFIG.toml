@@ -42,6 +42,7 @@
     m75_79 = {name = "M75-79", min=75, max=79}
     m80_84 = {name = "M80-84", min=80, max=84}
     m80p = {name = "M80+", min=80, max=999}
+    fpm = {name = "FPM", min=0, max=999} # Fire Police Military
 
 	adaptive = {name="Adaptive", min=0, max=999}
     police_fire = {name = "Police and Fire", min = 0, max = 999}
