@@ -117,6 +117,7 @@
     xrm6 = {name="XR-M6", min=89.5, max=98.5, sex="Mx", equipment="Raw"}
     xrm7 = {name="XR-M7", min=99.5, max=999, sex="Mx", equipment="Raw"}
     xrg = {name="XR-G", min=0, max=999, sex="Mx", equipment="Raw", place="G"}
+    xrjv = {name="XR-JV", min=0, max=999, sex="Mx", equipment="Raw"}
 
     # Unofficial divisions, Wraps Men. (USAPL hasn't agreed on a code yet.)
     mwo = {name="MW-O", min=14, max=999, sex="M", equipment="Wraps"}
