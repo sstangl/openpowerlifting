@@ -4,6 +4,8 @@ use opldb::{self, Entry};
 
 use std::error;
 
+use crate::pages::api_liftercsv;
+
 /// Export single-meet data as a CSV file.
 pub fn export_csv(
     opldb: &opldb::OplDb,
@@ -21,9 +23,7 @@ pub fn export_csv(
     let mut wtr = csv::Writer::from_writer(vec![]);
     for entry in entries.into_iter().rev() {
         let lifter = opldb.lifter(entry.lifter_id);
-        wtr.serialize(crate::pages::lifter_csv::make_export_row(
-            lifter, entry, meet,
-        ))?;
+        wtr.serialize(api_liftercsv::make_export_row(lifter, entry, meet))?;
     }
 
     Ok(String::from_utf8(wtr.into_inner()?)?)
