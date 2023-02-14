@@ -261,7 +261,7 @@ impl<'r> Responder<'r, 'static> for CsvFile {
 }
 
 /// Exports single-lifter data as a CSV file.
-#[get("/u/<username>/csv")]
+#[get("/api/liftercsv/<username>")]
 fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(username)?;
     let content = pages::api_liftercsv::export_csv(opldb, lifter_id, None).ok()?;

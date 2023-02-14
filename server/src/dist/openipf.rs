@@ -335,7 +335,7 @@ pub fn lifter(
     }
 }
 
-#[get("/u/<username>/csv")]
+#[get("/api/liftercsv/<username>")]
 pub fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(username)?;
     let content = pages::api_liftercsv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()?;
