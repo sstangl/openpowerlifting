@@ -14,7 +14,7 @@ Everyone contributes differently.  Some people never interact with the more tech
 
 If you are a bit more technically minded, you might want to try using a windows client to interact with git.  See guide ["Instructions for windows"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/instructions-for-windows%20-%20needs%20updating.docx.pdf).  You will have to learn one or two git commands but nothing too challenging once you are set up and understand key concepts.  This will give you a good platform to add meets, disambiguate names and make other corrections.
 
-There is a web IDE that some prefer and there are some instructional videos on this method in "instructional videos".
+There is a web IDE that some prefer and there are some instructional videos on this method in ["instructional videos"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/instructional%20videos.md).
 
 For those who already have a good grasp of git, you should get stuck right in with ["project-setup"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/project-setup.md) and ["how to add a meet"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/how-to-add-a-meet.md).
 
