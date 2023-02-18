@@ -12,6 +12,7 @@
     master2 = {name = "Master 2",min=49.5,max=58.5}
     master3 = {name = "Master 3",min=59.5,max=69.5}
     master4 = {name = "Master 4",min=69.5,max=999}
+	guest =  {name = "Guest",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
