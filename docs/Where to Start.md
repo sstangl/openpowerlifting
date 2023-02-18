@@ -12,11 +12,11 @@ These guides are still in their infancy and, in some cases, are badly in need of
 
 Everyone contributes differently.  Some people never interact with the more technical elements of the project.  They might convert meet results to our format and email them in.  Or make simple changes as per the ["Simple changes easy method" guide](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/Simple-changes-easy-method.pdf).
 
-If you are a bit more technically minded, you might want to try using a windows client to interact with git.  See guide "Instructions for windows".  You will have to learn one or two git commands but nothing too challenging once you are set up and understand key concepts.  This will give you a good platform to add meets, disambiguate names and make other corrections.
+If you are a bit more technically minded, you might want to try using a windows client to interact with git.  See guide ["Instructions for windows"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/instructions-for-windows%20-%20needs%20updating.docx.pdf).  You will have to learn one or two git commands but nothing too challenging once you are set up and understand key concepts.  This will give you a good platform to add meets, disambiguate names and make other corrections.
 
 There is a web IDE that some prefer and there are some instructional videos on this method in "instructional videos".
 
-For those who already have a good grasp of git, you should get stuck right in with "project-setup" and "how to add a meet".
+For those who already have a good grasp of git, you should get stuck right in with ["project-setup"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/project-setup.md) and ["how to add a meet"](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/how-to-add-a-meet.md).
 
 ## A few notes
 
