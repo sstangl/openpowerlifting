@@ -8,7 +8,7 @@ There are many ways to contribute.  Most of them involve interacting with git in
 
 These guides are still in their infancy and, in some cases, are badly in need of an update.  Please do feel free to submit corrections or improvements to the guides as you work through them.  This will be incredibly valuable to those who come after you.
 
-##Contribution Styles
+## Contribution Styles
 
 Everyone contributes differently.  Some people never interact with the more technical elements of the project.  They might convert meet results to our format and email them in.  Or make simple changes as per the "Simple changes easy method" guide.
 
@@ -18,7 +18,7 @@ There is a web IDE that some prefer and there are some instructional videos on t
 
 For those who already have a good grasp of git, you should get stuck right in with "project-setup" and "how to add a meet".
 
-##A few notes
+## A few notes
 
 There is a steep learning curve here and getting your first merge request over the line is a real achievement.  Don't be discouraged if it takes a while to get the hang of it - a lot of us needed a lot of help to get started.  Ask for help if you are stuck.
 
