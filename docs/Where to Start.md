@@ -10,7 +10,7 @@ These guides are still in their infancy and, in some cases, are badly in need of
 
 ## Contribution Styles
 
-Everyone contributes differently.  Some people never interact with the more technical elements of the project.  They might convert meet results to our format and email them in.  Or make simple changes as per the "Simple changes easy method" guide.
+Everyone contributes differently.  Some people never interact with the more technical elements of the project.  They might convert meet results to our format and email them in.  Or make simple changes as per the ["Simple changes easy method" guide](https://gitlab.com/openpowerlifting/opl-data/-/blob/main/docs/Simple-changes-easy-method.pdf).
 
 If you are a bit more technically minded, you might want to try using a windows client to interact with git.  See guide "Instructions for windows".  You will have to learn one or two git commands but nothing too challenging once you are set up and understand key concepts.  This will give you a good platform to add meets, disambiguate names and make other corrections.
 
