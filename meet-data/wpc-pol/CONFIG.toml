@@ -12,11 +12,13 @@
     s33_39 = {name="S33-39", min=33, max=39}
     m40_44 = {name="M40-44", min=40, max=44} # M1
     m45_49 = {name="M45-49", min=45, max=49} # M2
+    m45p   = {name="M45+",   min=45, max=999} # M2+
     m50_54 = {name="M50-54", min=50, max=54} # M3
     m55_59 = {name="M55-59", min=55, max=59} # M4
     m60_64 = {name="M60-64", min=60, max=64} # M5
     m65_69 = {name="M65-69", min=65, max=69} # M6
     m70_74 = {name="M70-74", min=70, max=74} # M7
+    m75_79 = {name="M75-79", min=75, max=79} # M8
 
 
     # Expanded names (don't prefer these).
@@ -54,3 +56,4 @@
     2101 = ["ExemptWeightClassConsistency", "ExemptDivision"] #Divisions and weightclasses are all over the show
     2102 = ["ExemptWeightClassConsistency", "ExemptDivision"] #Divisions and weightclasses are all over the show
     2103 = ["ExemptWeightClassConsistency", "ExemptDivision"] #Divisions and weightclasses are all over the show
+    2202 = ["ExemptWeightClassConsistency"] # Lots of 0+ to score this properly.
