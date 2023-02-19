@@ -2,7 +2,6 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Probes for new FPO meets from the official calendar.
-# TODO: Future meets show up as false positives.
 
 from bs4 import BeautifulSoup
 import os
@@ -35,6 +34,8 @@ def getmeetlist(html):
 
     for table in tables:
         for a in table.find_all('a'):
+            if "tulokset" not in a.text.lower():  # ignore future and intl meets.
+                continue
             url = a['href']
             if 'http' not in url:
                 url = BASEURL + '/' + url
