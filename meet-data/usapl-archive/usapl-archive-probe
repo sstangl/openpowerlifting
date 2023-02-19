@@ -7,14 +7,17 @@
 
 import sys
 import os
+from os.path import join, realpath, dirname
+
+try:
+    import oplprobe
+except ImportError:
+    sys.path.append(
+        join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+    import oplprobe
 
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
-
-
-def error(msg):
-    print(msg, file=sys.stderr)
-    sys.exit(1)
 
 
 def color(s):
@@ -30,38 +33,11 @@ def getmeetlist():
     return meetlist
 
 
-def getenteredurls():
-    urls = []
-    for dirname, subdirs, files in os.walk(FEDDIR):
-        if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
-                    k = k.strip()
-                    if k not in urls:
-                        urls.append(k)
-    return urls
-
-
 def main():
-    summarize = False
-    if len(sys.argv) == 2 and sys.argv[1] == '--quick':
-        summarize = True
-
     meetlist = getmeetlist()
-    known = getenteredurls()
-
-    count = 0
-    for m in meetlist:
-        if m not in known:
-            count += 1
-            if not summarize:
-                try:
-                    print(color('[USAPL Archive] ') + m)
-                except BrokenPipeError:
-                    return
-
-    if count > 0:
-        print(color('[USAPL Archive] ') + "%d meets remaining." % count)
+    entered = oplprobe.getenteredurls(FEDDIR)
+    unentered = oplprobe.getunenteredurls(meetlist, entered)
+    oplprobe.print_meets(color('[USAPL Archive]'), unentered)
 
 
 if __name__ == '__main__':
