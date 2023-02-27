@@ -189,6 +189,7 @@
   <option value="raw-can" {% if selection.federation == "RAW-CAN" %}selected{% endif %}>RAW-CAN - 100% RAW Powerlifting Federation Canada</option>
   <option value="wpccp" {% if selection.federation == "WPCCP" %}selected{% endif %}>WPCCP - WPC Canada Powerlifting [WPC]</option>
   <option value="wrpf-can" {% if selection.federation == "WRPF-CAN" %}selected{% endif %}>WRPF-CAN - WRPF Canada [WRPF]</option>
+  <option value="wrpf-can-tested" {% if selection.federation == "WRPF-CAN-Tested" %}selected{% endif %}>WRPF-CAN Tested - WRPF Canada Tested [WRPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.chile}}">
   <option value="all-chile" {% if selection.federation == "AllChile" %}selected{% endif %}>{{strings.selectors.fed.all_chile}}</option>
