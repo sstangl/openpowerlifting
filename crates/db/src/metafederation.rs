@@ -41,6 +41,9 @@ pub enum MetaFederation {
     AllBelarus,
     #[strum(to_string = "all-belgium")]
     AllBelgium,
+    /// Results for all Belgian IPF Affiliates.
+    #[strum(to_string = "all-ipf-belgium")]
+    AllIPFBelgium,
     #[strum(to_string = "all-belize")]
     AllBelize,
     #[strum(to_string = "all-bolivia")]
@@ -621,6 +624,14 @@ impl MetaFederation {
             MetaFederation::AllAzerbaijan => is_from(Country::Azerbaijan, entry, meet),
             MetaFederation::AllBelarus => is_from(Country::Belarus, entry, meet),
             MetaFederation::AllBelgium => is_from(Country::Belgium, entry, meet),
+            MetaFederation::AllIPFBelgium => {
+                is_from(Country::Belgium, entry, meet)
+                    && (meet.federation == Federation::KBGV
+                        || meet.federation == Federation::LFPH
+                        || meet.federation == Federation::VGPF
+                        || meet.federation == Federation::IPF
+                        || meet.federation == Federation::EPF)
+            }
             MetaFederation::AllBelize => is_from(Country::Belize, entry, meet),
             MetaFederation::AllBolivia => is_from(Country::Bolivia, entry, meet),
             MetaFederation::AllBosniaAndHerzegovina => {

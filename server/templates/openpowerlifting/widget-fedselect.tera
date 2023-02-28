@@ -149,6 +149,7 @@
 </optgroup>
 <optgroup label="{{strings.country.belgium}}">
   <option value="all-belgium" {% if selection.federation == "AllBelgium" %}selected{% endif %}>{{strings.selectors.fed.all_belgium}}</option>
+  <option value="all-ipf-belgium" {% if selection.federation == "AllIPFBelgium" %}selected{% endif %}>{{strings.selectors.fed.all_ipf_belgium}}</option>
   <option value="lfph" {% if selection.federation == "LFPH" %}selected{% endif %}>LFPH - Ligue Francophone des Poids & Haltères [IPF]</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF - Vlaamse Gewichtheffers en Powerlifting Federatie [IPF]</option>
   <option value="kbgv" {% if selection.federation == "KBGV" %}selected{% endif %}>KBGV - Koninklijk Belgisch Gewichtheffers Verbond [IPF]</option>
