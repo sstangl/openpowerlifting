@@ -10,7 +10,7 @@ Facebook: https://www.facebook.com/VGPF0/
 
 Quick Note: Belgium has two IPF recognized federations: VGPF (Flemish) and LFPH (Walloon).
 When competing internationally, athletes compete under the national federation KBGV instead.
-National competitions are helt jointly by the VGPF and LFPH, alternatingly hosted by one or the other each year.
+National competitions are held jointly by the VGPF and LFPH, alternatingly hosted by one or the other each year.
 These national competitions are listed under the KBGV as a parent federation, though they are technically organized by the regional federations.
 Regional competitions are seperate.
 
