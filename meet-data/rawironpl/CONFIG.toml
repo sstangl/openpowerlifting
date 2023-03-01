@@ -40,6 +40,7 @@
     nov = {name="Nov", min=0, max=999} # Novice
     int = {name="Int", min=0, max=999} # Intermediate
     fr = {name="FR", min=0, max=999} # First Responders (Police/Fire/EMS)
+    adt = {name="ADT", min=0, max=999} # No idea
 
 
 [weightclasses.default_M]
