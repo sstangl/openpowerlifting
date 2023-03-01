@@ -366,6 +366,9 @@
   <option value="ljtf" {% if selection.federation == "LJTF" %}selected{% endif %}>LJTF - Lietuvos Jėgos Trikovės Federacija [IPF]</option>
   <option value="wrpf-lithuania" {% if selection.federation == "WRPF-Lithuania" %}selected{% endif %}>WRPF Lithuania</option>
 </optgroup>
+<optgroup label="{{strings.country.luxembourg}}">
+  <option value="pwfl" {% if selection.federation == "PWFL" %}selected{% endif %}>PWFL - Powerlifting and Weightlifting Federation Luxembourg [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.malaysia}}">
   <option value="all-malaysia" {% if selection.federation == "AllMalaysia" %}selected{% endif %}>{{strings.selectors.fed.all_malaysia}}</option>
   <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MAP - Malaysian Powerlifting Alliance [GPA]</option>
