@@ -706,6 +706,24 @@
   animation: scroll_gradient 3s ease infinite;
 }
 
+// Infinite left-to-right looping scroll [gradient].
+// Designed by Johan Frisk.
+// Override animation speed or timing function as necessary.
+// Also add a class with background-image: repeating-linear-gradient to set the colors.
+@keyframes infinite_loop {
+  0% { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+}
+.infinite_loop {
+  width: 100%;
+  height: 100%;
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: infinite_loop 8s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
 // Switches from red to gold.
 @keyframes redgold {
   0% {
@@ -777,4 +795,20 @@
 
 .mattdomney {
  @include name-color(#129b6c);  
+}
+
+// Animation for Tirsa St. Fort.
+// Designed by Johan Frisk.
+.tirsa_st_fort {
+  $white: #cfcfcf;
+  $gold: #d5af2e;
+  @include gradient-prereqs($white);
+  background-image: repeating-linear-gradient(
+    to right,
+    $white 0%,
+    $white 49%,
+    $gold 50%,
+    $gold 99%,
+    $white 100%
+  );
 }
