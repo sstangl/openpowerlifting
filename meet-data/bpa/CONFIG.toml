@@ -63,8 +63,8 @@
     mopen = {name ="M-O",min=0,max=999,equipment="Single-ply"}
     mru23 = {name ="MR-Jr",min=14,max=22.5,equipment="Raw"}
     mu23 = {name ="M-Jr",min=14,max=22.5,equipment="Single-ply"}
-    mru18 = {name ="MR-Sj",min=14,max=17.5,equipment="Raw"}
-    mu18 = {name ="M-Sj",min=14,max=17.5,equipment="Single-ply"}
+    mru18 = {name ="MR-Sj",min=10,max=17.5,equipment="Raw"}
+    mu18 = {name ="M-Sj",min=10,max=17.5,equipment="Single-ply"}
     mrm1 = {name ="MR-M1",min=39.5,max=48.5,equipment="Raw"}
     mm1 = {name ="M-M1",min=39.5,max=48.5,equipment="Single-ply"}
     mrm2 = {name ="MR-M2",min=49.5,max=58.5,equipment="Raw"}
