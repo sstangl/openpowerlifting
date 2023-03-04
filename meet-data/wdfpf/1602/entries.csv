@@ -1,6 +1,6 @@
 Equipment,Place,WeightClassKg,Name,Sex,Country,Age,Division,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Event
 Raw,1,44,Olena Iaskiv,F,Ukraine,40,F-M1,42.7,57.5,60,,,60,,,,,,,,,,,60,S
-Raw,1,50.5,Hanne Casteren,F,Belarus,18,F-T3,48.1,70,75,80,85,80,,,,,,,,,,,80,S
+Raw,1,50.5,Hanne Casteren,F,Belgium,18,F-T3,48.1,70,75,80,85,80,,,,,,,,,,,80,S
 Raw,1,53,Diana Caţap,F,Moldova,17,F-T2,51.5,65,75,,,75,,,,,,,,,,,75,S
 Raw,1,58.5,Catherine Walter,F,UK,69,F-M6,57.3,85,-95,-95,,85,,,,,,,,,,,85,S
 Raw,1,63,Geina McGrath,F,Ireland,26,F-O,61.3,92.5,97.5,102.5,,102.5,,,,,,,,,,,102.5,S
@@ -13,7 +13,7 @@ Raw,1,60,Sinan Achmet,M,Germany,22,M-JR,59.3,115,122.5,-128,,122.5,,,,,,,,,,,122
 Raw,1,67.5,Sergey Teliucov,M,Moldova,30,M-O,67,160,-175,-175,,160,,,,,,,,,,,160,S
 Raw,1,75,Gheorghe Dolința,M,Moldova,22,M-JR,74.2,170,-182.5,-182.5,,170,,,,,,,,,,,170,S
 Raw,1,75,Cristian Pînzari,M,Moldova,18,M-T3,73.8,130,140,-145,,140,,,,,,,,,,,140,S
-Raw,1,75,Kenny Van Haverbeke,M,Belarus,32,M-O,74.6,115,120,125,,125,,,,,,,,,,,125,S
+Raw,1,75,Kenny Van Haverbeke,M,Belgium,32,M-O,74.6,115,120,125,,125,,,,,,,,,,,125,S
 Raw,1,82.5,Stefan Schultheis,M,Germany,21,M-JR,80.6,-190,190,-202.5,,190,,,,,,,,,,,190,S
 Raw,1,82.5,Lorenzo Dore,M,Italy,50,M-M3,81.6,162.5,-175,175,,175,,,,,,,,,,,175,S
 Raw,2,82.5,Stephen Charters,M,UK,54,M-M3,79.6,160,170,172.5,,172.5,,,,,,,,,,,172.5,S
@@ -22,7 +22,7 @@ Raw,1,90,Daniel Ebert,M,Germany,28,M-O,89.3,202.5,212.5,-220,,212.5,,,,,,,,,,,21
 Raw,2,90,Markus Eberl,M,Germany,33,M-O,85.5,190,-202.5,205,,205,,,,,,,,,,,205,S
 Raw,3,90,Frank Foner,M,Germany,33,M-O,86.4,180,190,200,,200,,,,,,,,,,,200,S
 Raw,1,90,Sergio Bianchi,M,Italy,56,M-M4,85,160,170,175,,175,,,,,,,,,,,175,S
-Raw,4,90,Kenneth Clercq,M,Belarus,25,M-O,88.2,155,167.5,-175,,167.5,,,,,,,,,,,167.5,S
+Raw,4,90,Kenneth Clercq,M,Belgium,25,M-O,88.2,155,167.5,-175,,167.5,,,,,,,,,,,167.5,S
 Raw,2,90,Paolo Stephanello,M,Italy,56,M-M4,89.9,160,167.5,-172.5,,167.5,,,,,,,,,,,167.5,S
 Raw,1,100,Francis Durier,M,France,30,M-O,95.9,205,215,220,,220,,,,,,,,,,,220,S
 Raw,2,100,Sebastian Schultheis,M,Germany,25,M-O,94.8,170,-180,-180,,170,,,,,,,,,,,170,S
@@ -32,12 +32,12 @@ Raw,1,110,James Collins,M,Ireland,46,M-M2,104.3,150,160,170,,170,,,,,,,,,,,170,S
 Raw,1,125,Carlo Cerignano,M,Italy,49,M-M2,124.1,250,267.5,-275.5,,267.5,,,,,,,,,,,267.5,S
 Raw,1,125,Ion Catana,M,Moldova,31,M-O,115.2,230,237.5,245,,245,,,,,,,,,,,245,S
 Raw,2,125,Tomas Cuddihy,M,Ireland,46,M-M2,111.4,180,200,-212.5,,200,,,,,,,,,,,200,S
-Raw,2,125,Bjorn Dejans,M,Belarus,30,M-O,120,170,190,200,,200,,,,,,,,,,,200,S
+Raw,2,125,Bjorn Dejans,M,Belgium,30,M-O,120,170,190,200,,200,,,,,,,,,,,200,S
 Raw,1,145+,Yaşar Küçük,M,Germany,43,M-M1,149.6,250,260,-270,,260,,,,,,,,,,,260,S
-Single-ply,1,50.5,Hanne Casteren,F,Belarus,18,F-T3,48.1,85,90,97.5,-102.5,97.5,,,,,,,,,,,97.5,S
+Single-ply,1,50.5,Hanne Casteren,F,Belgium,18,F-T3,48.1,85,90,97.5,-102.5,97.5,,,,,,,,,,,97.5,S
 Single-ply,1,60,Guido Marangoni,M,Italy,48,M-M2,59.2,110,125,-135,,125,,,,,,,,,,,125,S
 Single-ply,1,67.5,Serghei Teliucov,M,Moldova,30,M-O,67,-172.5,-175,185,,185,,,,,,,,,,,185,S
-Single-ply,2,67.5,Tim Abbeele,M,Belarus,28,M-O,65.2,-170,175,-182.5,,175,,,,,,,,,,,175,S
+Single-ply,2,67.5,Tim Van den Abbeele,M,Belgium,28,M-O,65.2,-170,175,-182.5,,175,,,,,,,,,,,175,S
 Single-ply,1,75,Christophe Cherel,M,France,49,M-M2,73.6,190,-197.5,197.5,-200.5,197.5,,,,,,,,,,,197.5,S
 Single-ply,1,75,Théo Guillauteau,M,France,15,M-T1,70.4,155,162.5,167.5,170,167.5,,,,,,,,,,,167.5,S
 Single-ply,1,90,Sergio Bianchi,M,Italy,56,M-M4,85,200,220,-230,,220,,,,,,,,,,,220,S
@@ -46,10 +46,10 @@ Single-ply,1,110,Salvatore Putrino,M,Italy,60,M-M5,101.7,235,250,262.5,,262.5,,,
 Single-ply,1,110,Barry Sullivan,M,Ireland,33,M-O,108.3,-235,240,-250,,240,,,,,,,,,,,240,S
 Single-ply,1,125,Francesco Pellizzoni,M,Italy,39,M-O,119.8,280,300,320,,320,,,,,,,,,,,320,S
 Single-ply,1,125,Tomas Cuddihy,M,Ireland,46,M-M2,111.4,180,200,212.5,,212.5,,,,,,,,,,,212.5,S
-Single-ply,1,125,Kadir Kartal,M,Belarus,19,M-T3,122.1,155,-165,170,,170,,,,,,,,,,,170,S
+Single-ply,1,125,Kadir Kartal,M,Belgium,19,M-T3,122.1,155,-165,170,,170,,,,,,,,,,,170,S
 Single-ply,1,145,Andre Du Plessis,M,Ireland,51,M-M3,144.2,240,250.5,260,,260,,,,,,,,,,,260,S
 Raw,1,44,Olena Iaskiv,F,Ukraine,40,F-M1,43,,,,,,37.5,-40,-40,,37.5,,,,,,37.5,B
-Raw,1,50.5,Hanne Casteren,F,Belarus,18,F-T3,48.5,,,,,,42.5,45,47.5,,47.5,,,,,,47.5,B
+Raw,1,50.5,Hanne Casteren,F,Belgium,18,F-T3,48.5,,,,,,42.5,45,47.5,,47.5,,,,,,47.5,B
 Raw,1,53,Tatiana Davidenko,F,Ukraine,26,F-O,52.8,,,,,,65,70,75,-83,75,,,,,,75,B
 Raw,1,53,Diana Caţap,F,Moldova,17,F-T2,51.9,,,,,,25,30,-35,,30,,,,,,30,B
 Raw,1,58.5,Alice Gibbons,F,UK,26,F-O,57.3,,,,,,62.5,67.5,70,,70,,,,,,70,B
@@ -65,7 +65,7 @@ Raw,1,70,Stéphanie Lagrange,F,France,40,F-M1,64.2,,,,,,77.5,82.5,85,,85,,,,,,85
 Raw,2,70,Angela Taylor #1,F,UK,44,F-M1,69.7,,,,,,80,-85,85,,85,,,,,,85,B
 Raw,1,70,Tetyana Shavidze,F,Ukraine,38,F-O,66.5,,,,,,75,-77.5,-77.5,,75,,,,,,75,B
 Raw,1,70,Sara Gianello,F,Italy,19,F-T3,69.1,,,,,,57.5,60.5,-63,,60.5,,,,,,60.5,B
-Raw,1,90+,Froukje Koeckhoven,F,Belarus,46,F-M2,92.4,,,,,,80,85.5,-87.5,,85.5,,,,,,85.5,B
+Raw,1,90+,Froukje Koeckhoven,F,Belgium,46,F-M2,92.4,,,,,,80,85.5,-87.5,,85.5,,,,,,85.5,B
 Raw,1,52,Marco Feggi,M,Italy,40,M-M1,51.9,,,,,,77.5,82.5,85,-87.5,85,,,,,,85,B
 Raw,1,56,Livio Calabrò,M,Italy,21,M-JR,54.9,,,,,,95,100,-105,,100,,,,,,100,B
 Raw,1,56,Dumitru Chiochiu,M,Moldova,17,M-T2,55.5,,,,,,-80,85,90,,90,,,,,,90,B
@@ -77,7 +77,7 @@ Raw,1,60,Sinan Achmet,M,Germany,22,M-JR,59.6,,,,,,70,-77.5,-77.5,,70,,,,,,70,B
 Raw,1,67.5,Jean-François Charrieres,M,Switzerland,31,M-O,66.5,,,,,,140,145,-150,,145,,,,,,145,B
 Raw,1,67.5,Michel Trévisan,M,Switzerland,47,M-M2,67.3,,,,,,125,130,132.5,,132.5,,,,,,132.5,B
 Raw,2,67.5,Christian Faidherbe,M,France,33,M-O,66.1,,,,,,120,125,-127.5,,125,,,,,,125,B
-Raw,3,67.5,Tim Abbeele,M,Belarus,28,M-O,64.9,,,,,,105,110,115,,115,,,,,,115,B
+Raw,3,67.5,Tim Van den Abbeele,M,Belgium,28,M-O,64.9,,,,,,105,110,115,,115,,,,,,115,B
 Raw,1,67.5,Andrii Honcharenko,M,Ukraine,42,M-M1,67,,,,,,105,115,-120,,115,,,,,,115,B
 Raw,1,67.5,Cristian Verejan,M,Moldova,17,M-T2,65.7,,,,,,100,105,110,,110,,,,,,110,B
 Raw,1,67.5,Rémi Duchenne,M,France,23,M-JR,64.4,,,,,,100,105,-107.5,,105,,,,,,105,B
@@ -89,7 +89,7 @@ Raw,2,75,Michael Applegate,M,UK,31,M-O,73.8,,,,,,135,140,-145,,140,,,,,,140,B
 Raw,3,75,Rosario Russo,M,Italy,35,M-O,74.4,,,,,,140,-145,-145,,140,,,,,,140,B
 Raw,1,75,Gheorghe Dolința,M,Moldova,22,M-JR,74.4,,,,,,135,-142.5,-142.5,,135,,,,,,135,B
 Raw,1,75,Pascal Costa,M,France,49,M-M2,74.4,,,,,,115,117.5,120,,120,,,,,,120,B
-Raw,4,75,Kenny Van Haverbeke,M,Belarus,32,M-O,74.1,,,,,,100,105,107.5,,107.5,,,,,,107.5,B
+Raw,4,75,Kenny Van Haverbeke,M,Belgium,32,M-O,74.1,,,,,,100,105,107.5,,107.5,,,,,,107.5,B
 Raw,1,75,Cristian Pînzari,M,Moldova,18,M-T3,73.9,,,,,,100,105,-110,,105,,,,,,105,B
 Raw,1,75,Billy Mooney,M,Ireland,57,M-M4,74.9,,,,,,87.5,-90,92.5,,92.5,,,,,,92.5,B
 Raw,1,82.5,Marc Blumenrath,M,Germany,35,M-O,80.7,,,,,,160,165,-170,,165,,,,,,165,B
@@ -140,44 +140,44 @@ Raw,1,125,Carlo Cerignano,M,Italy,49,M-M2,122.7,,,,,,175,-180,180,,180,,,,,,180,
 Raw,G,125,Bradley Lovejoy,M,USA,58,M-M4,121.7,,,,,,150,155,-160,,155,,,,,,155,B
 Raw,2,125,Cyrill Gosteli,M,Switzerland,50,M-M3,118.4,,,,,,140,147.5,-150,,147.5,,,,,,147.5,B
 Raw,3,125,Richard Siebels,M,Germany,35,M-O,121.3,,,,,,142.5,-147.5,-147.5,,142.5,,,,,,142.5,B
-Raw,4,125,Bjorn Dejans,M,Belarus,30,M-O,120.8,,,,,,120,130,140,,140,,,,,,140,B
+Raw,4,125,Bjorn Dejans,M,Belgium,30,M-O,120.8,,,,,,120,130,140,,140,,,,,,140,B
 Raw,1,125,Ivan Yureskul,M,Ukraine,62,M-M5,124,,,,,,120,125,-130,,125,,,,,,125,B
 Raw,1,145,David Hernandez,M,France,35,M-O,136.5,,,,,,212.5,220,-225,,220,,,,,,220,B
 Raw,1,145,Martin Tetzlaff,M,Germany,45,M-M2,128.1,,,,,,180,-190,-190,,180,,,,,,180,B
 Raw,1,145,Andre Du Plessis,M,Ireland,51,M-M3,144.4,,,,,,155,162.5,-165,,162.5,,,,,,162.5,B
 Raw,1,145+,Yaşar Küçük,M,Germany,43,M-M1,150.2,,,,,,190,200,-210,,200,,,,,,200,B
-Single-ply,1,50.5,Hanne Casteren,F,Belarus,18,F-T3,48.5,,,,,,45,50,-55,,50,,,,,,50,B
+Single-ply,1,50.5,Hanne Casteren,F,Belgium,18,F-T3,48.5,,,,,,45,50,-55,,50,,,,,,50,B
 Single-ply,1,70,Stéphanie Lagrange,F,France,40,F-M1,64.2,,,,,,90,95,100,105,100,,,,,,100,B
 Single-ply,1,70,Sara Gianello,F,Italy,19,F-T3,69.1,,,,,,57.5,60.5,62.5,,62.5,,,,,,62.5,B
-Single-ply,1,56,Luc Lauw,M,Belarus,50,M-M3,55.2,,,,,,80,85,90,95,90,,,,,,90,B
+Single-ply,1,56,Luc Lauw,M,Belgium,50,M-M3,55.2,,,,,,80,85,90,95,90,,,,,,90,B
 Single-ply,1,60,Serra Gianpaolo,M,Italy,68,M-M6,58.1,,,,,,-100,100,-106.5,,100,,,,,,100,B
-Single-ply,1,67.5,Tim Abbeele,M,Belarus,28,M-O,64.9,,,,,,140,-145,-145,,140,,,,,,140,B
+Single-ply,1,67.5,Tim Van den Abbeele,M,Belgium,28,M-O,64.9,,,,,,140,-145,-145,,140,,,,,,140,B
 Single-ply,1,67.5,Roberto Gianello,M,Italy,61,M-M5,66.6,,,,,,72.5,77.5,80,,80,,,,,,80,B
 Single-ply,1,75,Mathieu Coudriaud,M,France,30,M-O,73.8,,,,,,170,-180,180,,180,,,,,,180,B
 Single-ply,1,75,Pascal Costa,M,France,49,M-M2,74.4,,,,,,155,-165,-165,,155,,,,,,155,B
 Single-ply,1,75,Patrick Tellier,M,France,61,M-M5,74.8,,,,,,105,112.5,-117.5,,112.5,,,,,,112.5,B
 Single-ply,1,82.5,Phillip Tempest,M,UK,45,M-M2,79.8,,,,,,173,-185.5,185.5,-192.5,185.5,,,,,,185.5,B
 Single-ply,1,82.5,Michel Sorenzo,M,France,58,M-M4,81.8,,,,,,130,135,140,,140,,,,,,140,B
-Single-ply,1,82.5,Herve Kerwyn,M,Belarus,72,M-M7,80.6,,,,,,105,110,115,,115,,,,,,115,B
+Single-ply,1,82.5,Herve Kerwyn,M,Belgium,72,M-M7,80.6,,,,,,105,110,115,,115,,,,,,115,B
 Single-ply,1,82.5,Antonello Dessalvi,M,Italy,63,M-M5,75.6,,,,,,100,,,,100,,,,,,100,B
 Single-ply,1,90,Massimo Bionda,M,Italy,60,M-M5,88.6,,,,,,100,110,-112.5,,110,,,,,,110,B
 Single-ply,1,100,Russel Martin,M,UK,34,M-O,99.9,,,,,,185,-192.5,-192.5,,185,,,,,,185,B
 Single-ply,1,100,Vladimir Li,M,Russia,64,M-M5,100,,,,,,130,135,-140,,135,,,,,,135,B
 Single-ply,1,110,Loren Schäfer,M,Germany,22,M-JR,109.1,,,,,,188,-196,196,,196,,,,,,196,B
-Single-ply,1,110,Marcel Gheldof,M,Belarus,51,M-M3,108.9,,,,,,182.5,-193.5,193.5,195,193.5,,,,,,193.5,B
+Single-ply,1,110,Marcel Gheldof,M,Belgium,51,M-M3,108.9,,,,,,182.5,-193.5,193.5,195,193.5,,,,,,193.5,B
 Single-ply,DQ,110,Barry Sullivan,M,Ireland,33,M-O,107.5,,,,,,-185,-185,-185,,,,,,,,,B
 Single-ply,1,125,Ouahem Boudjadja,M,France,44,M-M1,117.7,,,,,,200,210,-230,,210,,,,,,210,B
 Single-ply,1,125,Francesco Pellizzoni,M,Italy,39,M-O,119.9,,,,,,190,-200,200,,200,,,,,,200,B
 Single-ply,1,125,Cyrill Gosteli,M,Switzerland,50,M-M3,118.4,,,,,,185,192.5,195.5,200,195.5,,,,,,195.5,B
 Single-ply,2,125,Pavel Perov,M,Russia,50,M-M3,116.7,,,,,,185,190,192.5,,192.5,,,,,,192.5,B
-Single-ply,2,125,Orson Harms,M,Belarus,41,M-M1,114,,,,,,175,180,185,,185,,,,,,185,B
+Single-ply,2,125,Orson Harms,M,Belgium,41,M-M1,114,,,,,,175,180,185,,185,,,,,,185,B
 Single-ply,G,125,Bradley Lovejoy,M,USA,58,M-M4,121.7,,,,,,-175,175,,,175,,,,,,175,B
-Single-ply,1,125,Johan Roge,M,Belarus,67,M-M6,117.6,,,,,,125,130,135,-137.5,135,,,,,,135,B
+Single-ply,1,125,Johan Roge,M,Belgium,67,M-M6,117.6,,,,,,125,130,135,-137.5,135,,,,,,135,B
 Single-ply,1,145,Andre Du Plessis,M,Ireland,51,M-M3,144.4,,,,,,192.5,200,202.5,,202.5,,,,,,202.5,B
 Single-ply,1,145,Martin Tetzlaff,M,Germany,45,M-M2,128.1,,,,,,160,182.5,,,182.5,,,,,,182.5,B
 Raw,1,44,Olena Iaskiv,F,Ukraine,40,F-M1,43.3,,,,,,,,,,,80,95,100,-110,100,100,D
 Raw,1,50.5,Georgina Hodson,F,UK,30,F-O,49,,,,,,,,,,,100,110,120,,120,120,D
-Raw,1,50.5,Hanne Casteren,F,Belarus,18,F-T3,48.8,,,,,,,,,,,80,90,97.5,100,97.5,97.5,D
+Raw,1,50.5,Hanne Casteren,F,Belgium,18,F-T3,48.8,,,,,,,,,,,80,90,97.5,100,97.5,97.5,D
 Raw,1,53,Sue Bethell,F,UK,56,F-M4,51.3,,,,,,,,,,,135,145,-150,,145,145,D
 Raw,1,53,Joy Blondeau,F,Netherlands,16,F-T2,51.5,,,,,,,,,,,85,92.5,96,101,96,96,D
 Raw,2,53,Diana Caţap,F,Moldova,17,F-T2,52.4,,,,,,,,,,,80,90,95.5,-100.5,95.5,95.5,D
@@ -190,14 +190,14 @@ Raw,1,63,Nicola Elding,F,UK,48,F-M2,62.8,,,,,,,,,,,90,102.5,117.5,,117.5,117.5,D
 Raw,3,63,Christiane Schmidt,F,Germany,33,F-O,62.4,,,,,,,,,,,110,112.5,-115,,112.5,112.5,D
 Raw,DD,63,Nina Mazurova,F,Ukraine,28,F-O,62.8,,,,,,,,,,,110,120,125,,125,,D
 Raw,1,80,Carly Spencer,F,UK,27,F-O,80,,,,,,,,,,,142.5,147.5,152.5,,152.5,152.5,D
-Raw,1,90+,Froukje Koeckhoven,F,Belarus,46,F-M2,93.1,,,,,,,,,,,120,130,-143,,130,130,D
+Raw,1,90+,Froukje Koeckhoven,F,Belgium,46,F-M2,93.1,,,,,,,,,,,120,130,-143,,130,130,D
 Raw,1,90+,Lorna Byrne,F,Ireland,22,F-JR,100.6,,,,,,,,,,,90,100,-105,,100,100,D
 Raw,1,60,Sinan Achmet,M,Germany,22,M-JR,59.6,,,,,,,,,,,170,177.5,185,190.5,185,185,D
 Raw,1,60,Andrian Strechi,M,Moldova,17,M-T2,58.8,,,,,,,,,,,160,170,175,-181,175,175,D
 Raw,1,60,James Caithness,M,UK,26,M-O,58.3,,,,,,,,,,,145,155,165,,165,165,D
 Raw,2,60,Liam Cremin,M,Ireland,16,M-T2,58.3,,,,,,,,,,,140,160,-175,,160,160,D
 Raw,1,60,Michael Grünberg,M,Germany,50,M-M3,59.5,,,,,,,,,,,120,135,140,-145,140,140,D
-Raw,1,67.5,Tim Abbeele,M,Belarus,28,M-O,65.8,,,,,,,,,,,180,190,-202.5,,190,190,D
+Raw,1,67.5,Tim Van den Abbeele,M,Belgium,28,M-O,65.8,,,,,,,,,,,180,190,-202.5,,190,190,D
 Raw,1,67.5,Thomas Stanzel,M,Germany,47,M-M2,66.2,,,,,,,,,,,155,180,-190,,180,180,D
 Raw,2,67.5,Dany Petremont,M,France,49,M-M2,62.2,,,,,,,,,,,160,170,-180,,170,170,D
 Raw,1,67.5,Roberto Gianello,M,Italy,61,M-M5,66.8,,,,,,,,,,,165,-170,170,,170,170,D
@@ -207,7 +207,7 @@ Raw,1,75,Lewis Blackwood,M,UK,22,M-JR,73.8,,,,,,,,,,,215,245,-252.5,,245,245,D
 Raw,1,75,David Hodson,M,UK,31,M-O,73.7,,,,,,,,,,,195,210,215,,215,215,D
 Raw,2,75,Gheorghe Dolința,M,Moldova,22,M-JR,74,,,,,,,,,,,200,205,-212.5,,205,205,D
 Raw,1,75,Cristian Pînzari,M,Moldova,18,M-T3,73.4,,,,,,,,,,,170,180,190,,190,190,D
-Raw,2,75,Kenny Van Haverbeke,M,Belarus,32,M-O,74.3,,,,,,,,,,,165,175,190,,190,190,D
+Raw,2,75,Kenny Van Haverbeke,M,Belgium,32,M-O,74.3,,,,,,,,,,,165,175,190,,190,190,D
 Raw,1,82.5,Gavin Meenan,M,Ireland,31,M-O,78.6,,,,,,,,,,,250,260,-265,,260,260,D
 Raw,1,82.5,Martin Mcgrane,M,Ireland,18,M-T3,80.7,,,,,,,,,,,225,235,240,,240,240,D
 Raw,1,82.5,Stefan Schultheiß,M,Germany,21,M-JR,81.9,,,,,,,,,,,230,-250,-250,,230,230,D
@@ -222,7 +222,7 @@ Raw,2,90,Daniel Ebert,M,Germany,28,M-O,89.1,,,,,,,,,,,250,265,-277.5,,265,265,D
 Raw,3,90,Markus Eberl,M,Germany,33,M-O,84.6,,,,,,,,,,,220,225,235,,235,235,D
 Raw,1,90,Alex Ingram #1,M,UK,20,M-JR,87.5,,,,,,,,,,,225,240,-245,,240,240,D
 Raw,1,90,Cyrille Petain,M,France,43,M-M1,88.5,,,,,,,,,,,230,-250,-250,,230,230,D
-Raw,4,90,Kenneth Clercq,M,Belarus,25,M-O,89.8,,,,,,,,,,,180,190,-202.5,,190,190,D
+Raw,4,90,Kenneth Clercq,M,Belgium,25,M-O,89.8,,,,,,,,,,,180,190,-202.5,,190,190,D
 Raw,1,90,John Watson,M,Ireland,45,M-M2,89.6,,,,,,,,,,,172.5,-182.5,-182.5,,172.5,172.5,D
 Raw,1,90,René Ulrich,M,Switzerland,76,M-M8,85,,,,,,,,,,,160,170,-180.5,,170,170,D
 Raw,1,100,André Muth,M,Germany,24,M-O,98.7,,,,,,,,,,,260,280,-285,,280,280,D
@@ -238,19 +238,19 @@ Raw,1,110,James Collins,M,Ireland,46,M-M2,108.9,,,,,,,,,,,190,200,210,,210,210,D
 Raw,1,110,John Walker #6,M,UK,76,M-M8,101.3,,,,,,,,,,,150,162.5,170,,170,170,D
 Raw,1,125,Jerome Boitelle,M,Germany,38,M-O,122.3,,,,,,,,,,,280,302.5,310,,310,310,D
 Raw,2,125,Richard Bremner,M,UK,30,M-O,119.8,,,,,,,,,,,270,282.5,-287.5,,282.5,282.5,D
-Raw,3,125,Bjorn Dejans,M,Belarus,30,M-O,121,,,,,,,,,,,240,260,270,,270,270,D
+Raw,3,125,Bjorn Dejans,M,Belgium,30,M-O,121,,,,,,,,,,,240,260,270,,270,270,D
 Raw,1,125,Niko Schmidt,M,Germany,42,M-M1,111.8,,,,,,,,,,,230,245,250,,250,250,D
 Raw,4,125,Ion Catana,M,Moldova,31,M-O,116.1,,,,,,,,,,,240,250,-257.5,,250,250,D
 Raw,1,125,Marco Magliano,M,Italy,45,M-M2,112.3,,,,,,,,,,,200,210,-212.5,,210,210,D
-Raw,1,125,Kadir Kartal,M,Belarus,19,M-T3,121,,,,,,,,,,,200,207.5,-212.5,,207.5,207.5,D
+Raw,1,125,Kadir Kartal,M,Belgium,19,M-T3,121,,,,,,,,,,,200,207.5,-212.5,,207.5,207.5,D
 Raw,1,125,Volker Kanz,M,Germany,50,M-M3,120.8,,,,,,,,,,,125,130,140,,140,140,D
 Raw,1,145,Carlo Cerignano,M,Italy,49,M-M2,126.3,,,,,,,,,,,260,270,275.5,280,275.5,275.5,D
 Raw,1,145,Andre Du Plessis,M,Ireland,51,M-M3,143.1,,,,,,,,,,,260,275,-280,,275,275,D
 Raw,1,145+,Yaşar Küçük,M,Germany,43,M-M1,150.1,,,,,,,,,,,250,260,-280,,260,260,D
-Single-ply,1,50.5,Hanne Casteren,F,Belarus,18,F-T3,48.8,,,,,,,,,,,100,107.5,110,112.5,110,110,D
+Single-ply,1,50.5,Hanne Casteren,F,Belgium,18,F-T3,48.8,,,,,,,,,,,100,107.5,110,112.5,110,110,D
 Single-ply,1,58.5,Ann Thomas,F,UK,37,F-O,57.4,,,,,,,,,,,140,150,-160,,150,150,D
 Single-ply,1,60,Guido Marangoni,M,Italy,48,M-M2,59.2,,,,,,,,,,,155,167.5,175,180,175,175,D
-Single-ply,1,67.5,Tim Abbeele,M,Belarus,28,M-O,65.8,,,,,,,,,,,180,190,200,,200,200,D
+Single-ply,1,67.5,Tim Van den Abbeele,M,Belgium,28,M-O,65.8,,,,,,,,,,,180,190,200,,200,200,D
 Single-ply,1,67.5,Roberto Gianello,M,Italy,61,M-M5,66.8,,,,,,,,,,,180,185,188,-191.5,188,188,D
 Single-ply,1,75,Christophe Cherel,M,France,49,M-M2,73.8,,,,,,,,,,,205,217.5,-225,,217.5,217.5,D
 Single-ply,1,75,David Hodson,M,UK,31,M-O,73.7,,,,,,,,,,,195,212.5,-227.5,,212.5,212.5,D
@@ -258,8 +258,8 @@ Single-ply,1,82.5,Gerry Cronnolly,M,Ireland,45,M-M2,79.3,,,,,,,,,,,212.5,222.5,2
 Single-ply,1,82.5,Michael Phillips,M,Scotland,61,M-M5,80.8,,,,,,,,,,,210,225,,,225,225,D
 Single-ply,1,82.5,Sebastian Füser,M,Germany,17,M-T2,79.1,,,,,,,,,,,180,195,197.5,202.5,197.5,197.5,D
 Single-ply,1,82.5,François Chazelle,M,France,78,M-M8,81.3,,,,,,,,,,,175,185,-190,,185,185,D
-Single-ply,2,82.5,Thibault Rasschaert,M,Belarus,17,M-T2,76.7,,,,,,,,,,,170,-180,-180,,170,170,D
-Single-ply,1,90,Benny Verbeke,M,Belarus,51,M-M3,89.6,,,,,,,,,,,265,285,-295,,285,285,D
+Single-ply,2,82.5,Thibault Rasschaert,M,Belgium,17,M-T2,76.7,,,,,,,,,,,170,-180,-180,,170,170,D
+Single-ply,1,90,Benny Verbeke,M,Belgium,51,M-M3,89.6,,,,,,,,,,,265,285,-295,,285,285,D
 Single-ply,1,90,Johannes Schädlich,M,Germany,32,M-O,86.4,,,,,,,,,,,170,177.5,182.5,,182.5,182.5,D
 Single-ply,1,100,Russel Martin,M,UK,34,M-O,99.7,,,,,,,,,,,252.5,267.5,-272.5,,267.5,267.5,D
 Single-ply,1,100,Roger Piron,M,Germany,55,M-M4,97.5,,,,,,,,,,,195,200,-205,,200,200,D

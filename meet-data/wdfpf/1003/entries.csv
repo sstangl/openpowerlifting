@@ -1,6 +1,6 @@
 Event,Place,WeightClassKg,Name,Sex,Country,Age,Division,BodyweightKg,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Equipment
 S,1,55.5,Janet Scott,F,UK,49,F-M2,54.5,62.5,,,,,,62.5,Raw
-S,1,63,Helen Wuyts,F,Belarus,19,F-T3,59.4,122.5,,,,,,122.5,Raw
+S,1,63,Helen Wuyts,F,Belgium,19,F-T3,59.4,122.5,,,,,,122.5,Raw
 S,1,63,Angela Sturla,F,Italy,14,F-T1,59.6,52.5,,,,,,52.5,Raw
 S,DQ,70,Manon Bradley,F,UK,43,F-M1,69,,,,,,,,Raw
 S,1,80,Susanna Peronne,F,Italy,46,F-M2,76.8,105,107.5,,,,,105,Raw
@@ -20,7 +20,7 @@ S,1,110,Alexey Kashirin,M,Russia,36,M-SR,105.6,270,,,,,,270,Raw
 S,1,110,Marvin Cilia,M,Malta,23,M-JR,105.1,227.5,,,,,,227.5,Raw
 S,1,125,Leslie Pilling,M,UK,55,M-M4,115.2,220,,,,,,220,Raw
 S,1,145,Georges Mizov,M,Switzerland,27,M-SR,125.7,235,,,,,,235,Raw
-S,1,63,Helen Wuyts,F,Belarus,19,F-T3,59.4,161,,,,,,161,Single-ply
+S,1,63,Helen Wuyts,F,Belgium,19,F-T3,59.4,161,,,,,,161,Single-ply
 S,1,75,Christophe Cherel,M,France,43,M-M1,72,180,,,,,,180,Single-ply
 S,1,82.5,Rick Meldon,M,UK,46,M-M2,82.2,280,,,,,,280,Single-ply
 S,1,90,Neil Abery,M,UK,32,M-SR,86.8,300,,,,,,300,Single-ply
@@ -28,7 +28,7 @@ S,1,125,Leslie Pilling,M,UK,55,M-M4,115.2,225,,,,,,225,Single-ply
 B,1,53,Danielle Pannier,F,France,55,F-M4,52.7,,,47.5,,,,47.5,Raw
 B,1,55.5,Janet Scott,F,UK,49,F-M2,54.1,,,50,,,,50,Raw
 B,1,55.5,Patricia Perrone,F,Italy,28,F-SR,54.8,,,45,,,,45,Raw
-B,1,63,Helen Wuyts,F,Belarus,19,F-T3,59.2,,,72.5,,,,72.5,Raw
+B,1,63,Helen Wuyts,F,Belgium,19,F-T3,59.2,,,72.5,,,,72.5,Raw
 B,1,63,Véronique Bourdon,F,France,52,F-M3,61.1,,,72.5,,,,72.5,Raw
 B,1,63,Nathalie Ridel,F,France,40,F-M1,59.5,,,62.5,,,,62.5,Raw
 B,2,63,Nicola Elding,F,UK,42,F-M1,61.8,,,60,,,,60,Raw
@@ -43,7 +43,7 @@ B,1,52,Andrea De Marco,M,Italy,24,M-SR,44.5,,,60,,,,60,Raw
 B,1,56,Alessio Buffa,M,Italy,16,M-T2,55.6,,,57.5,,,,57.5,Raw
 B,1,60,Giampaolo Serra,M,Italy,62,M-M5,58.5,,,95,,,,95,Raw
 B,1,60,Mirko Calisai,M,Italy,30,M-SR,57.9,,,87.5,,,,87.5,Raw
-B,1,60,Indy Smet,M,Belarus,16,M-T2,56.9,,,80,,,,80,Raw
+B,1,60,Indy Smet,M,Belgium,16,M-T2,56.9,,,80,,,,80,Raw
 B,2,60,Gaspare Corso,M,Italy,16,M-T2,58,,,62.5,,,,62.5,Raw
 B,1,67.5,Nicolas Pailleron,M,France,34,M-SR,66.8,,,145,,,,145,Raw
 B,2,67.5,Luigi Orlando,M,Italy,31,M-SR,65.4,,,140,,,,140,Raw
@@ -85,7 +85,7 @@ B,1,82.5,Pierre Laving,M,France,75,M-M8,81.7,,,106,,,,106,Raw
 B,1,82.5,Davide Ambrosino,M,Italy,15,M-T1,77.6,,,87.5,,,,87.5,Raw
 B,1,82.5,Gren Elmore,M,UK,84,M-M9,77.7,,,75,,,,75,Raw
 B,1,90,Igor Ivanchenko,M,Ukraine,35,M-SR,89.2,,,187.5,,,,187.5,Raw
-B,2,90,Geoffroy Servotte,M,Belarus,30,M-SR,89,,,182.5,,,,182.5,Raw
+B,2,90,Geoffroy Servotte,M,Belgium,30,M-SR,89,,,182.5,,,,182.5,Raw
 B,1,90,Nicola Mulin,M,Russia,46,M-M2,88.1,,,175,,,,175,Raw
 B,1,90,Cosimo Orlando,M,Italy,54,M-M3,89.2,,,165,,,,165,Raw
 B,3,90,Wilfried Couchy,M,France,30,M-SR,87.4,,,160,,,,160,Raw
@@ -113,7 +113,7 @@ B,2,100,Sergey Danielyan #1,M,Russia,52,M-M3,99.3,,,155,,,,155,Raw
 B,3,100,Martin Flett,M,Scotland,54,M-M3,99.8,,,152.5,,,,152.5,Raw
 B,4,100,Thomas Wholer,M,Germany,50,M-M3,96.7,,,140,,,,140,Raw
 B,1,100,Jean-Louis Alain,M,France,66,M-M6,97,,,140,,,,140,Raw
-B,1,100,Rudy Smet,M,Belarus,42,M-M1,94.5,,,135,,,,135,Raw
+B,1,100,Rudy Smet,M,Belgium,42,M-M1,94.5,,,135,,,,135,Raw
 B,1,100,Pierre Vallais,M,France,63,M-M5,96.1,,,132.5,,,,132.5,Raw
 B,5,100,Franchesco Grimaldi,M,Italy,24,M-SR,90.3,,,115,,,,115,Raw
 B,2,100,Evgeniy Tverdovskiy,M,Russia,61,M-M5,90.4,,,85,,,,85,Raw
@@ -142,9 +142,9 @@ B,2,125,Leslie Pilling,M,UK,55,M-M4,115.7,,,130,,,,130,Raw
 B,2,125,Antonnio Intile,M,Italy,42,M-M1,119.1,,,120,,,,120,Raw
 B,1,145+,Graham Mellor,M,UK,16,M-T2,175,,,130,132.5,,,130,Raw
 B,1,63,Stéphanie Lagrange,F,France,34,F-SR,63,,,103,,,,103,Single-ply
-B,1,63,Helen Wuyts,F,Belarus,19,F-T3,59.2,,,87.5,,,,87.5,Single-ply
+B,1,63,Helen Wuyts,F,Belgium,19,F-T3,59.2,,,87.5,,,,87.5,Single-ply
 B,1,60,Aaron Gideon,M,UK,30,M-SR,58.8,,,147.5,,,,147.5,Single-ply
-B,1,60,Indy Smet,M,Belarus,16,M-T2,56.9,,,75,,,,75,Single-ply
+B,1,60,Indy Smet,M,Belgium,16,M-T2,56.9,,,75,,,,75,Single-ply
 B,1,67.5,Luigi Orlando,M,Italy,31,M-SR,65.4,,,150,,,,150,Single-ply
 B,1,82.5,Emmanuel Chatelain,M,France,40,M-M1,82.1,,,180,-183.5,,,180,Single-ply
 B,1,82.5,Giuseppe Barbera,M,Italy,30,M-SR,78.2,,,175,,,,175,Single-ply
@@ -152,7 +152,7 @@ B,1,82.5,Andrey Kogan,M,Russia,48,M-M2,79.2,,,172.5,,,,172.5,Single-ply
 B,2,82.5,Phillip Tempest,M,UK,39,M-SR,79.9,,,170.5,,,,170.5,Single-ply
 B,1,82.5,Marc Huchet,M,France,72,M-M7,80.9,,,126,,,,126,Single-ply
 B,2,82.5,Pascal Chabeau,M,France,74,M-M7,79,,,110,,,,110,Single-ply
-B,1,90,Geoffroy Servotte,M,Belarus,30,M-SR,89,,,202.5,,,,202.5,Single-ply
+B,1,90,Geoffroy Servotte,M,Belgium,30,M-SR,89,,,202.5,,,,202.5,Single-ply
 B,2,90,Igor Ivanchenko,M,Ukraine,35,M-SR,89.2,,,200,,,,200,Single-ply
 B,3,90,Jan Maksymczuk,M,UK,38,M-SR,87.4,,,175,,,,175,Single-ply
 B,1,90,Patrick Valfrey,M,France,45,M-M2,87.8,,,175,,,,175,Single-ply
@@ -171,10 +171,10 @@ B,DD,110,Aleksiy Tsynda,M,Ukraine,31,M-SR,104.1,,,150,,,,,Single-ply
 B,1,125,Mark Sidney,M,UK,47,M-M2,116.4,,,202.5,,,,202.5,Single-ply
 B,1,125,Christophe Thery,M,France,29,M-SR,114.9,,,190,,,,190,Single-ply
 B,1,125,Leslie Pilling,M,UK,55,M-M4,115.7,,,160,,,,160,Single-ply
-B,1,145+,Wim Backelant,M,Belarus,47,M-M2,146.2,,,230,,,,230,Single-ply
+B,1,145+,Wim Backelant,M,Belgium,47,M-M2,146.2,,,230,,,,230,Single-ply
 D,1,53,Irene Di Bartolomeo,F,Italy,36,F-SR,51.2,,,,,157.5,161,157.5,Raw
 D,1,55.5,Janet Scott,F,UK,49,F-M2,54.7,,,,,110,,110,Raw
-D,1,63,Helen Wuyts,F,Belarus,19,F-T3,59.3,,,,,170,,170,Raw
+D,1,63,Helen Wuyts,F,Belgium,19,F-T3,59.3,,,,,170,,170,Raw
 D,1,63,Véronique Bourdon,F,France,52,F-M3,60.8,,,,,130,,130,Raw
 D,1,63,Ann Thomas,F,Scotland,31,F-SR,63,,,,,130,,130,Raw
 D,1,63,Nathalie Ridel,F,France,40,F-M1,59.9,,,,,120,,120,Raw
@@ -215,12 +215,12 @@ D,1,125,Steve Stanislaus,M,UK,46,M-M2,112.4,,,,,260,,260,Raw
 D,1,125,Leslie Pilling,M,UK,55,M-M4,116.7,,,,,240,,240,Raw
 D,1,125,Antonnio Intile,M,Italy,42,M-M1,120.4,,,,,175,,175,Raw
 D,1,145+,Graham Mellor,M,UK,16,M-T2,160,,,,,170,,170,Raw
-D,1,63,Helen Wuyts,F,Belarus,19,F-T3,59.3,,,,,172.5,,172.5,Single-ply
+D,1,63,Helen Wuyts,F,Belgium,19,F-T3,59.3,,,,,172.5,,172.5,Single-ply
 D,1,63,Ann Thomas,F,Scotland,31,F-SR,63,,,,,130,,130,Single-ply
 D,1,67.5,Ted Byrne,M,UK,59,M-M4,65.9,,,,,181.5,,181.5,Single-ply
 D,1,67.5,Roger Little,M,UK,68,M-M6,67,,,,,135,,135,Single-ply
 D,1,75,Jean-Claude D'Heilly,M,France,52,M-M3,74.2,,,,,200.5,,200.5,Single-ply
-D,1,82.5,Benny Verbeke,M,Belarus,45,M-M2,82.1,,,,,275.5,,275.5,Single-ply
+D,1,82.5,Benny Verbeke,M,Belgium,45,M-M2,82.1,,,,,275.5,,275.5,Single-ply
 D,1,82.5,Thomas Cusack,M,Ireland,36,M-SR,81.4,,,,,240,,240,Single-ply
 D,1,90,Derek Daly,M,Ireland,33,M-SR,88.6,,,,,265,,265,Single-ply
 D,2,90,Chris Morgan #1,M,UK,37,M-SR,84.3,,,,,240,,240,Single-ply
