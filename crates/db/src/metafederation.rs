@@ -167,6 +167,8 @@ pub enum MetaFederation {
     AllThailand,
     #[strum(to_string = "all-turkey")]
     AllTurkey,
+    #[strum(to_string = "all-uae")]
+    AllUAE,
     #[strum(to_string = "all-uganda")]
     AllUganda,
     #[strum(to_string = "all-uk")]
@@ -726,6 +728,7 @@ impl MetaFederation {
                                 .map_or(false, |c| c.is_in_uk()))
                 }
             }
+            MetaFederation::AllUAE => is_from(Country::UAE, entry, meet),
             MetaFederation::AllUganda => is_from(Country::Uganda, entry, meet),
             MetaFederation::AllUKTested => {
                 entry.tested && MetaFederation::AllUK.contains(entry, meets)
