@@ -112,7 +112,8 @@ states = {
 countries = [
     'Australia',
     'South Korea',
-    'Hong Kong'
+    'Hong Kong',
+    'China'
 ]
 
 
@@ -535,7 +536,7 @@ def main(url, importdir):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'entries.csv', 'w', newline='\n') as fd:
+    with open(dirname + os.sep + 'entries.csv', 'w', newline='\n', encoding='utf-8') as fd:
         entriescsv.write(fd)
     with open(dirname + os.sep + 'meet.csv', 'w', newline='\n') as fd:
         meetcsv.write(fd)
