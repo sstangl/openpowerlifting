@@ -925,6 +925,10 @@ pub enum Federation {
     #[strum(to_string = "PLSS", serialize = "plss")]
     PLSS,
 
+    /// Polska Liga Trójboju RAW, unaffiliated.
+    #[strum(to_string = "PLTRAW", serialize = "pltraw")]
+    PLTRAW,
+
     /// Powerlifting zveza Slovenije, IPF.
     #[strum(to_string = "PLZS", serialize = "plzs")]
     PLZS,
@@ -1894,6 +1898,7 @@ impl Federation {
             Federation::PLH => false,
             Federation::PLRD => FULLY_TESTED,
             Federation::PLSS => FULLY_TESTED,
+            Federation::PLTRAW => false,
             Federation::PLZS => FULLY_TESTED,
             Federation::PNGPF => FULLY_TESTED,
             Federation::PolandUA => false,
@@ -2279,6 +2284,7 @@ impl Federation {
             Federation::PLH => Some(Country::Netherlands),
             Federation::PLRD => Some(Country::DominicanRepublic),
             Federation::PLSS => Some(Country::Serbia),
+            Federation::PLTRAW => Some(Country::Poland),
             Federation::PLZS => Some(Country::Slovenia),
             Federation::PNGPF => Some(Country::PapuaNewGuinea),
             Federation::PolandUA => Some(Country::Poland),
@@ -2724,6 +2730,7 @@ impl Federation {
             Federation::PLH => Some(Federation::WPF),
             Federation::PLRD => Some(Federation::IPF),
             Federation::PLSS => Some(Federation::IPF),
+            Federation::PLTRAW => None,
             Federation::PLZS => Some(Federation::IPF),
             Federation::PNGPF => Some(Federation::IPF),
             Federation::PolandUA => None,
@@ -3211,6 +3218,7 @@ impl Federation {
             Federation::PLH => PointsSystem::Reshel,
             Federation::PLRD => Federation::ipf_rules_on(date),
             Federation::PLSS => Federation::ipf_rules_on(date),
+            Federation::PLTRAW => PointsSystem::Dots,
             Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PNGPF => Federation::ipf_rules_on(date),
             Federation::PolandUA => PointsSystem::Wilks,

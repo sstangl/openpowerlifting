@@ -428,6 +428,7 @@
 <optgroup label="{{strings.country.poland}}">
   <option value="all-poland" {% if selection.federation == "AllPoland" %}selected{% endif %}>{{strings.selectors.fed.all_poland}}</option>
   <option value="gpc-pol" {% if selection.federation == "GPC-POL" %}selected{% endif %}>GPC Poland</option>
+  <option value="pltraw" {% if selection.federation == "PLTRAW" %}selected{% endif %}>PLTRAW - Polska Liga Trójboju RAW</option>
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS - Polski Związek Kulturystyki Fitness [IPF]</option>
   <option value="wpc-poland" {% if selection.federation == "WPC-Poland" %}selected{% endif %}>WPC Poland</option>
   <option value="wrpf-pol" {% if selection.federation == "WRPF-POL" %}selected{% endif %}>WRPF-POL - WRPF Poland</option>
