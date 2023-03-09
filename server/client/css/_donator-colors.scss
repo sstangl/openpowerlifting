@@ -236,7 +236,7 @@
 // Red, green, white, and black.
 .emirates {
   @include gradient-prereqs($default-color);
-  background-image: linear-gradient(to right, #CE1126 25%, #007A3D 25% 50%, #FFFFFF 50% 75%, #000000 75%);
+  background-image: linear-gradient(to right, #C8102E, #00843D, #FFFFFF, #000000);
 }
 
 // A combination of orange, white, and black.
