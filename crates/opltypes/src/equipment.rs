@@ -3,7 +3,9 @@
 use std::fmt;
 
 /// The Equipment field.
-#[derive(Clone, Copy, Debug, Deserialize, EnumString, PartialEq, Eq, Serialize, PartialOrd)]
+#[derive(
+    Clone, Copy, Debug, Default, Deserialize, EnumString, PartialEq, Eq, Serialize, PartialOrd,
+)]
 pub enum Equipment {
     /// No supportive material (sleeves allowed).
     Raw,
@@ -22,16 +24,11 @@ pub enum Equipment {
     Multi,
 
     /// Equipment more supportive than Multi-ply.
+    #[default]
     Unlimited,
 
     /// Wrist straps for deadlifts.
     Straps,
-}
-
-impl Default for Equipment {
-    fn default() -> Equipment {
-        Equipment::Unlimited
-    }
 }
 
 impl fmt::Display for Equipment {

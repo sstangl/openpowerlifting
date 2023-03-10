@@ -7,12 +7,13 @@ use crate::BirthYearRange;
 ///
 /// The order of the definitions matters: OpenIPF uses >= comparisons for class matching.
 #[derive(
-    Copy, Clone, Debug, Deserialize, EnumString, Serialize, PartialEq, Eq, PartialOrd, Ord,
+    Copy, Clone, Debug, Default, Deserialize, EnumString, Serialize, PartialEq, Eq, PartialOrd, Ord,
 )]
 pub enum BirthYearClass {
     /// No assignable BirthYearClass.
     #[serde(rename = "")]
     #[strum(serialize = "")]
+    #[default]
     None,
 
     /// From the year the lifter turns 14 and throughout the year the lifter turns 18.
@@ -56,12 +57,6 @@ pub enum BirthYearClass {
     #[serde(rename = "70-999")]
     #[strum(serialize = "70-999")]
     ClassY70Y999,
-}
-
-impl Default for BirthYearClass {
-    fn default() -> BirthYearClass {
-        BirthYearClass::None
-    }
 }
 
 impl BirthYearClass {

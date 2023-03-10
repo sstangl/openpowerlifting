@@ -13,7 +13,7 @@ use crate::Date;
 
 /// The reported age of the lifter at a given meet.
 /// In the CSV file, approximate ages are reported with '.5' added.
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 pub enum Age {
     /// The exact age of the lifter.
     Exact(u8),
@@ -27,6 +27,7 @@ pub enum Age {
     Approximate(u8),
 
     /// No age specified.
+    #[default]
     None,
 }
 
@@ -215,12 +216,6 @@ impl Age {
     /// Whether the given Age is not an Age::None.
     pub fn is_some(self) -> bool {
         self != Age::None
-    }
-}
-
-impl Default for Age {
-    fn default() -> Age {
-        Age::None
     }
 }
 

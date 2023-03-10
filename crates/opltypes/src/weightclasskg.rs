@@ -12,20 +12,15 @@ use std::str::FromStr;
 use crate::{WeightAny, WeightKg, WeightUnits};
 
 /// The definition of the "WeightClassKg" column.
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 pub enum WeightClassKg {
     /// A class defined as being under or equal to a maximum weight.
     UnderOrEqual(WeightKg),
     /// A class defined as being over a minimum weight, for superheavies.
     Over(WeightKg),
     /// No weight class information supplied.
+    #[default]
     None,
-}
-
-impl Default for WeightClassKg {
-    fn default() -> WeightClassKg {
-        WeightClassKg::None
-    }
 }
 
 /// Displayable, unit-less variant of WeightClassKg.

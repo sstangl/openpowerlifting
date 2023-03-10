@@ -1,20 +1,15 @@
 //! Implements writing system detection.
 
 /// Writing systems for characters, for categorization.
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 pub enum WritingSystem {
     CJK,
     Cyrillic,
     Greek,
     Japanese,
     Korean,
+    #[default]
     Latin,
-}
-
-impl Default for WritingSystem {
-    fn default() -> WritingSystem {
-        WritingSystem::Latin
-    }
 }
 
 /// Get the WritingSystem for the current character.
