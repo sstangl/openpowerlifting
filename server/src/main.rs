@@ -44,6 +44,14 @@ use server::pages;
 #[global_allocator]
 static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
 
+/// Kubernetes-style readiness check handler.
+///
+/// A machine that returns `200 OK` signifies that it is ready to take on more traffic.
+#[get("/readyz")]
+async fn readyz() -> Status {
+    Status::Ok
+}
+
 /// A file served from /static.
 enum StaticFile {
     /// PathBuf is the path to the non-gz version of the file.
@@ -604,6 +612,7 @@ fn rocket(opldb: ManagedOplDb) -> Rocket<Build> {
         .mount(
             "/",
             routes![
+                readyz,
                 index,
                 rankings,
                 rankings_redirect,
