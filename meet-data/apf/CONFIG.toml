@@ -98,6 +98,7 @@
     mgmem2apf = {name ="M_GMEM_2_APF",min=45,max=49,equipment=["Multi-ply","Unlimited"],sex="M",place="G"} #Guest
     mramapf = {name="M_RAM_APF", min=0, max=999, equipment=["Multi-ply","Unlimited"], sex="M"} # Soft Equipment.
     mmilemapf = {name="M_MILEM_APF", min=0, max=999, equipment=["Multi-ply","Unlimited"], sex="M"} # Military
+    forlfmapf = {name="F_OR_LFM_APF", min=0, max=999, equipment="Raw", sex="F"} # Military
     mhsemapf = {name="M_HSEM_APF", min=13, max=19, equipment=["Multi-ply","Unlimited"], sex="M"} # High School
     mpfcrapf = {name ="M_PFCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="M"} #Police/Fire
 
@@ -349,6 +350,7 @@
     fpfraapf = {name ="F_PFR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Police/Fire
     fsotr1aapf = {name ="F_SOTR_1_AAPF",min=13,max=15,equipment="Raw",sex="F"} #Special Olympics
     fsoemaapf = {name ="F_SOEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"} #Special Olympics
+    fsojrapf = {name ="F_SOJR_APF",min=20,max=23,equipment="Raw",sex="F"} #Special Olympics
 
  # WPC Divisions.
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
@@ -751,3 +753,4 @@
     2140 = ["ExemptDivision"] # WPO, no divisions.
     2206 = ["ExemptWeightClassConsistency"] # Missing weightclasses
     2246 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass info
+    2310 = ["ExemptWeightClassConsistency"] # Two youth lifters missing bodyweight info
