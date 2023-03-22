@@ -17,10 +17,18 @@
     date_range = ["2011-01-01","9999-01-01"]
     sex = "M"
 
-[weightclasses.default_F]
+[weightclasses.pre_13_F]
     classes = ["60","75","75+"]
-    date_range = ["2011-01-01","9999-01-01"]
+    date_range = ["2011-01-01","2023-01-01"]
     sex = "F"
+
+# ProRaw 13 added women's 90kg
+[weightclasses.default_F]
+    classes = ["60","75","90","90+"]
+    date_range = ["2023-01-01","9999-01-01"]
+    sex = "F"
+
+
 
 [exemptions]
     001 = ["ExemptWeightClassConsistency"] # Women had no weightclasses.
@@ -35,6 +43,7 @@
     010 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
     011 = ["ExemptWeightClassConsistency"] # Non-SBD uses traditional weightclasses.
     012-sleeves-single = ["ExemptWeightClassConsistency"] # Sleeves and non-SBD uses traditional weightclasses.
+    013-sleeves = ["ExemptWeightClassConsistency"] # Sleeves uses traditional weightclasses. 
 
     # For early BigDogs meets, lifters were assumed to weight 140+ instead of 125+,
     # so that their records would count for the 140+ class.
