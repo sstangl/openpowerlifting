@@ -56,6 +56,9 @@
     t1_x = {name="T1-X", min=13, max=15}
     t2_x = {name="T2-X", min=16, max=17}
     t3_x = {name="T3-X", min=18, max=19}
+    t1_t = {name="T1-T", min=13, max=15, tested="Yes"}
+    t2_t = {name="T2-T", min=16, max=17, tested="Yes"}
+    t3_t = {name="T3-T", min=18, max=19, tested="Yes"}
     y_t = {name="Y-T", min=5, max=12, tested="Yes"}
     y_x = {name="Y-X", min=5, max=12}
     k_x = {name="K-X", min=5, max=12} # Kids' Club
