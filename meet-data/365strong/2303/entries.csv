@@ -11,14 +11,14 @@ Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,Weigh
 1,Kristen Smith #6,F,1997-11-15,25,USA,NC,Wraps,O-U,84.8,90,147.5,152.5,157.5,,157.5,65,70,72.5,,72.5,137.5,145,160,,160,390,SBD,Nebobarbell
 1,Anika Harper,F,1980-04-03,42,USA,NC,Single-ply,M1-U,95.8,100,,,,,,110,115,117.5,,117.5,137.5,155,167.5,,167.5,285,BD,Nebobarbell
 1,Anika Harper,F,1980-04-03,42,USA,NC,Single-ply,O-U,95.8,100,,,,,,110,115,117.5,,117.5,137.5,155,167.5,,167.5,285,BD,Nebobarbell
-1,Shelley Yates,F,1975-07-19,47,USA,NC,Multi-ply,M2-U,91.9,100,,,,,,172.5,182.5,190,,190,177.5,190,-207.5,,190,380,BD,Nebobarbell
-1,Shelley Yates,F,1975-07-19,47,USA,NC,Multi-ply,O-U,91.9,100,,,,,,172.5,182.5,190,,190,177.5,190,-207.5,,190,380,BD,Nebobarbell
+1,Shelley Yates,F,1975-07-19,47,USA,NC,Unlimited,M2-U,91.9,100,,,,,,172.5,182.5,190,,190,177.5,190,-207.5,,190,380,BD,Nebobarbell
+1,Shelley Yates,F,1975-07-19,47,USA,NC,Unlimited,O-U,91.9,100,,,,,,172.5,182.5,190,,190,177.5,190,-207.5,,190,380,BD,Nebobarbell
 1,Linsey Eudy,F,1986-06-27,36,USA,NC,Raw,O-U,88.6,90,,,,,,87.5,97.5,-100,,97.5,,,,,,97.5,B,
 1,Linsey Eudy,F,1986-06-27,36,USA,NC,Raw,S-U,88.6,90,,,,,,87.5,97.5,-100,,97.5,,,,,,97.5,B,
 1,Anika Harper,F,1980-04-03,42,USA,NC,Single-ply,M1-U,95.8,100,,,,,,110,115,117.5,,117.5,,,,,,117.5,B,Nebobarbell
 1,Anika Harper,F,1980-04-03,42,USA,NC,Single-ply,O-U,95.8,100,,,,,,110,115,117.5,,117.5,,,,,,117.5,B,Nebobarbell
-1,Melissa Smith #1,F,1974-08-28,48,USA,NC,Multi-ply,M2-U,64.3,67.5,,,,,,102.5,127.5,137.5,,137.5,,,,,,137.5,B,Nebobarbell
-1,Melissa Smith #1,F,1974-08-28,48,USA,NC,Multi-ply,O-U,64.3,67.5,,,,,,102.5,127.5,137.5,,137.5,,,,,,137.5,B,Nebobarbell
+1,Melissa Smith #1,F,1974-08-28,48,USA,NC,Unlimited,M2-U,64.3,67.5,,,,,,102.5,127.5,137.5,,137.5,,,,,,137.5,B,Nebobarbell
+1,Melissa Smith #1,F,1974-08-28,48,USA,NC,Unlimited,O-U,64.3,67.5,,,,,,102.5,127.5,137.5,,137.5,,,,,,137.5,B,Nebobarbell
 1,Anika Harper,F,1980-04-03,42,USA,NC,Single-ply,M1-U,95.8,100,,,,,,,,,,,137.5,155,167.5,,167.5,167.5,D,Nebobarbell
 1,Anika Harper,F,1980-04-03,42,USA,NC,Single-ply,O-U,95.8,100,,,,,,,,,,,137.5,155,167.5,,167.5,167.5,D,Nebobarbell
 1,Garrett Ratliff,M,2002-11-25,20,USA,NC,Raw,J-T,85.9,90,150,165,170,,170,95,-100,100,,100,192.5,212.5,227.5,,227.5,497.5,SBD,ESP
@@ -41,9 +41,9 @@ Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,Weigh
 1,Zechariah Smith,M,1999-12-11,23,USA,NC,Wraps,MPF-U,89.1,90,272.5,-282.5,-282.5,,272.5,177.5,182.5,187.5,,187.5,235,242.5,247.5,,247.5,707.5,SBD,Nebobarbell
 1,Tim Boyce,M,1975-10-01,47,USA,NC,Wraps,O-U,73.2,75,145,147.5,-150,,147.5,97.5,102.5,,,102.5,142.5,147.5,155,,155,405,SBD,Nebobarbell
 1,Zechariah Smith,M,1999-12-11,23,USA,NC,Wraps,O-U,89.1,90,272.5,-282.5,-282.5,,272.5,177.5,182.5,187.5,,187.5,235,242.5,247.5,,247.5,707.5,SBD,Nebobarbell
-DQ,Roger Pardue,M,1961-10-23,61,USA,SC,Multi-ply,M5-U,94.9,100,-310,317.5,,,317.5,-200,,,,,,,,,,,SBD,Pardue's Iron Club
+DQ,Roger Pardue,M,1961-10-23,61,USA,SC,Unlimited,M5-U,94.9,100,-310,317.5,,,317.5,-200,,,,,,,,,,,SBD,Pardue's Iron Club
 1,Kent Wall,M,1981-11-28,41,USA,NC,Raw,M1-T,122.3,125,,,,,,165,175,-185,,175,245,265,-285,,265,440,BD,The Pit
-1,Roger Pardue,M,1961-10-23,61,USA,SC,Multi-ply,M5-U,94.9,100,-310,317.5,,,317.5,,,,,,,,,,,317.5,S,Pardue's Iron Club
+1,Roger Pardue,M,1961-10-23,61,USA,SC,Unlimited,M5-U,94.9,100,-310,317.5,,,317.5,,,,,,,,,,,317.5,S,Pardue's Iron Club
 1,Robert Cummings,M,1981-11-29,41,USA,NC,Raw,M1-T,93.7,100,,,,,,110,125,-132.5,,125,,,,,,125,B,Iron Atic
 NS,Kenny Blackmon,M,1970-07-05,52,USA,SC,Raw,M3-T,,,,,,,,,,,,,,,,,,,B,Team Lancaster
 1,Bryan Davis,M,1966-03-20,56,USA,NC,Raw,M4-U,73.1,75,,,,,,105,110,117.5,122.5,117.5,,,,,,117.5,B,
@@ -53,10 +53,10 @@ NS,Kenny Blackmon,M,1970-07-05,52,USA,SC,Raw,M3-T,,,,,,,,,,,,,,,,,,,B,Team Lanca
 1,Dawell Robinson,M,1987-11-16,35,USA,NC,Raw,S-U,107.1,110,,,,,,167.5,177.5,182.5,,182.5,,,,,,182.5,B,
 1,Zechariah Smith,M,1999-12-11,23,USA,NC,Raw,MPF-U,89.1,90,,,,,,177.5,182.5,187.5,,187.5,,,,,,187.5,B,Nebo Barbell
 1,Jeff Guller,M,1941-08-04,81,USA,NC,Single-ply,M9-T,83.46,90,,,,,,92.5,95,97.5,,97.5,,,,,,97.5,B,ESP Power
-1,Brandon Kee,M,1981-01-31,42,USA,SC,Multi-ply,M1-T,134.5,140,,,,,,237.5,-247.5,247.5,,247.5,,,,,,247.5,B,Pardue's Iron Club
+1,Brandon Kee,M,1981-01-31,42,USA,SC,Unlimited,M1-T,134.5,140,,,,,,237.5,-247.5,247.5,,247.5,,,,,,247.5,B,Pardue's Iron Club
 1,Chad Church,M,1977-06-13,45,USA,NC,Multi-ply,M2-U,89.5,90,,,,,,227.5,247.5,-260,,247.5,,,,,,247.5,B,
 DQ,David Crater,M,1973-05-04,49,USA,NC,Multi-ply,M2-U,126,140,,,,,,-440,-440,-440,,,,,,,,,B,ESP Power
-1,Zack Viers,M,1997-03-06,25,USA,NC,Multi-ply,O-U,81.8,82.5,,,,,,332.5,-350.5,-350.5,,332.5,,,,,,332.5,B,ESP Power
+1,Zack Viers,M,1997-03-06,25,USA,NC,Unlimited,O-U,81.8,82.5,,,,,,332.5,-350.5,-350.5,,332.5,,,,,,332.5,B,ESP Power
 1,Chad Church,M,1977-06-13,45,USA,NC,Multi-ply,O-U,89.5,90,,,,,,227.5,247.5,-260,,247.5,,,,,,247.5,B,
 DQ,Stephen Lane #1,M,1988-02-25,35,USA,SC,Multi-ply,O-U,124.2,125,,,,,,-420,-420,-432.5,,,,,,,,,B,ESP Power
 DQ,Stephen Lane #1,M,1988-02-25,35,USA,SC,Multi-ply,S-U,124.2,125,,,,,,-420,-420,-432.5,,,,,,,,,B,ESP Power
