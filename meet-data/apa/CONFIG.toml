@@ -10,6 +10,7 @@
 
 [divisions]
     open = {name ="Open",min=0,max=999}
+    open_nt = {name ="Open NT",min=0,max=999,tested="No"}
     military = {name ="Military",min=0,max=999}
     veterans = {name ="Veterans",min=0,max=999}
     handicapped = {name ="Handicapped",min=0,max=999}
