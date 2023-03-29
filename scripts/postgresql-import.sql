@@ -33,6 +33,7 @@ CREATE TABLE opl_lifters (
 	id INTEGER PRIMARY KEY NOT NULL,
 	name VARCHAR NOT NULL,
 	cyrillic_name VARCHAR,
+	chinese_name VARCHAR,
 	greek_name VARCHAR,
 	japanese_name VARCHAR,
 	korean_name VARCHAR,
