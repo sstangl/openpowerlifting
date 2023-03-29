@@ -16,7 +16,7 @@ CREATE SCHEMA opldb;
 CREATE TYPE opldb.equipment AS ENUM ('Raw', 'Wraps', 'Single-ply', 'Multi-ply', 'Unlimited', 'Straps');
 
 -- Structure of meets.csv.
-CREATE TABLE opl_meets (
+CREATE TABLE opldb.opl_meets (
 	id INTEGER PRIMARY KEY NOT NULL,
 	path VARCHAR NOT NULL,
 	federation VARCHAR NOT NULL,
@@ -27,9 +27,9 @@ CREATE TABLE opl_meets (
 	name VARCHAR NOT NULL,
 	ruleset VARCHAR
 );
-\copy opl_meets FROM 'build/meets.csv' DELIMITER ',' CSV HEADER
+\copy opldb.opl_meets FROM 'build/meets.csv' DELIMITER ',' CSV HEADER
 
-CREATE TABLE opl_lifters (
+CREATE TABLE opldb.opl_lifters (
 	id INTEGER PRIMARY KEY NOT NULL,
 	name VARCHAR NOT NULL,
 	cyrillic_name VARCHAR,
@@ -41,11 +41,11 @@ CREATE TABLE opl_lifters (
 	instagram VARCHAR,
 	color VARCHAR
 );
-\copy opl_lifters FROM 'build/lifters.csv' DELIMITER ',' CSV HEADER
+\copy opldb.opl_lifters FROM 'build/lifters.csv' DELIMITER ',' CSV HEADER
 
-CREATE TABLE opl_entries (
-	meet_id INTEGER REFERENCES opl_meets(id) ON DELETE CASCADE,
-	lifter_id INTEGER REFERENCES opl_lifters(id) ON DELETE CASCADE,
+CREATE TABLE opldb.opl_entries (
+	meet_id INTEGER REFERENCES opldb.opl_meets(id) ON DELETE CASCADE,
+	lifter_id INTEGER REFERENCES opldb.opl_lifters(id) ON DELETE CASCADE,
 	sex CHAR(2) NOT NULL,
 	event CHAR(3) NOT NULL,
 	equipment opldb.equipment NOT NULL,
@@ -82,4 +82,4 @@ CREATE TABLE opl_entries (
 	lifter_country VARCHAR,
 	lifter_state VARCHAR
 );
-\copy opl_entries FROM 'build/entries.csv' DELIMITER ',' CSV HEADER
+\copy opldb.opl_entries FROM 'build/entries.csv' DELIMITER ',' CSV HEADER
