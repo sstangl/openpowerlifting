@@ -74,9 +74,9 @@ impl State {
     ///
     /// ```
     /// # use opltypes::Country;
-    /// # use opltypes::states::EnglandState;
+    /// # use opltypes::states::State;
     /// let available = State::get_available_for_country(Country::England).unwrap();
-    /// assert!(state.contains("GL"));
+    /// assert!(available.contains(&"GL".to_string()));
     /// ```
     pub fn get_available_for_country(country: Country) -> Option<Vec<String>> {
         fn inner<T>() -> Option<Vec<String>>
