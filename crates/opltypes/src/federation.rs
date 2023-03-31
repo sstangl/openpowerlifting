@@ -3375,7 +3375,13 @@ impl Federation {
             Federation::WPU => PointsSystem::Wilks,
             Federation::WPUF => PointsSystem::Wilks,
             Federation::WNPF => PointsSystem::Wilks,
-            Federation::WRPF => PointsSystem::Wilks,
+            Federation::WRPF => {
+                if date.year() >= 2020 {
+                    PointsSystem::Dots
+                } else {
+                    PointsSystem::Wilks
+                }
+            }
             Federation::WRPFArgentina => PointsSystem::Wilks,
             Federation::WRPFAUS => PointsSystem::Wilks,
             Federation::WRPFBelarus => PointsSystem::Wilks,
