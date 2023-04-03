@@ -219,9 +219,14 @@ pub fn get_instagram_dob_email_template() -> String {
     let subject = "Instagram or Date of Birth update";
 
     let lines = [
+        "Hi OpenPowerlifting team,",
+        "",
+        "Could you make these changes for me please?"
         "OpenPowerlifting profile link: ",
         "Instagram handle: ",
-        "Date of birth (YYYY-MM-DD): ",
+        "Date of birth (optional, YYYY-MM-DD): ",
+        "",
+        "Thanks, "
     ];
 
     generate_email_template_link(subject, &lines)
