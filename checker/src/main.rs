@@ -309,7 +309,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             process::exit(1);
         }
     };
-    maybe_print_elapsed_for("configurations()", timing);
+    maybe_print_elapsed_for("Loaded configurations for federations", timing);
 
     let error_count = AtomicUsize::new(0);
     let warning_count = AtomicUsize::new(0);
@@ -341,7 +341,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
     let mut lifterdata = result.map;
-    maybe_print_elapsed_for("check_lifterdata()", timing);
+    maybe_print_elapsed_for("Validated the state of `lifter-data`", timing);
 
     // Build a list of every directory containing meet results.
     let timing = instant_if(args.debug_timing);
@@ -410,7 +410,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         })
         .collect();
-    maybe_print_elapsed_for("csv checking", timing);
+    maybe_print_elapsed_for("Validated all meet CSV files", timing);
 
     // Give ownership to the permanent data store.
     let mut meetdata = AllMeetData::from(singlemeets);
@@ -423,7 +423,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Group entries by lifter.
     let timing = instant_if(args.debug_timing);
     let mut liftermap = meetdata.create_liftermap();
-    maybe_print_elapsed_for("create_liftermap()", timing);
+    maybe_print_elapsed_for("Created the map of lifters", timing);
 
     // Check for consistency errors for individual lifters.
     let timing = instant_if(args.debug_timing);
@@ -438,7 +438,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             write_report(&mut handle, report);
         }
     }
-    maybe_print_elapsed_for("consistency", timing);
+    maybe_print_elapsed_for("Checked the data for consistency issues", timing);
 
     // The default mode without arguments just performs data checks.
     print_summary(
@@ -503,7 +503,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
 
-    maybe_print_elapsed_for("total", program_start);
+    maybe_print_elapsed_for("Total time spent overall", program_start);
 
     // Skip dropping owned allocations: takes too long.
     process::exit(0);
