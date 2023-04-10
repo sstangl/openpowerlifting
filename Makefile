@@ -38,7 +38,7 @@ server: csv
 
 # Make sure that all the fields in the CSV files are in expected formats.
 check-data:
-	tests/check
+	tests/check --timing
 	tests/check-lifter-data
 
 check: check-data
