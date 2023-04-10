@@ -512,6 +512,7 @@
 <optgroup label="{{strings.country.thailand}}">
   <option value="all-thailand" {% if selection.federation == "AllThailand" %}selected{% endif %}>{{strings.selectors.fed.all_thailand}}</option>
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
+  <option value="taap" {% if selection.federation == "TAAP" %}selected{% endif %}>TAAP [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.turkey}}">
   <option value="all-turkey" {% if selection.federation == "AllTurkey" %}selected{% endif %}>{{strings.selectors.fed.all_turkey}}</option>

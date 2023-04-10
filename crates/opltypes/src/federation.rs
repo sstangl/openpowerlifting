@@ -1103,7 +1103,12 @@ pub enum Federation {
     #[strum(to_string = "SwissPL", serialize = "swisspl")]
     SwissPL,
 
-    /// Thai IPF affiliate.
+    /// Thai Amateur Association of Powerlifting
+    /// New IPF affiliate for Thailand as of 2023
+    #[strum(to_string = "TAAP", serialize = "taap")]
+    TAAP,
+
+    /// Ex-Thai IPF affiliate.
     #[strum(to_string = "ThaiPF", serialize = "thaipf")]
     ThaiPF,
 
@@ -1675,7 +1680,7 @@ pub enum Federation {
 
 #[rustfmt::skip::macros(date)]
 impl Federation {
-    /// True iff every division in the federation is drug-tested.
+    /// True if every division in the federation is drug-tested.
     pub fn is_fully_tested(self, date: Date) -> bool {
         const FULLY_TESTED: bool = true;
 
@@ -1946,6 +1951,7 @@ impl Federation {
             Federation::SSF => FULLY_TESTED,
             Federation::SVNL => FULLY_TESTED,
             Federation::SwissPL => false,
+            Federation::TAAP => FULLY_TESTED,
             Federation::ThaiPF => FULLY_TESTED,
             Federation::THSPA => FULLY_TESTED,
             Federation::THSWPA => FULLY_TESTED,
@@ -2325,6 +2331,7 @@ impl Federation {
             Federation::SSF => Some(Country::Sweden),
             Federation::SVNL => Some(Country::Finland),
             Federation::SwissPL => Some(Country::Switzerland),
+            Federation::TAAP => Some(Country::Thailand),
             Federation::ThaiPF => Some(Country::Thailand),
             Federation::THSPA => Some(Country::USA),
             Federation::THSWPA => Some(Country::USA),
@@ -2779,6 +2786,7 @@ impl Federation {
                     None
                 }
             }
+            Federation::TAAP => Some(Federation::IPF),
             Federation::ThaiPF => Some(Federation::IPF),
             Federation::THSPA => None,
             Federation::THSWPA => None,
@@ -3272,6 +3280,7 @@ impl Federation {
                     Federation::ipf_rules_on(date)
                 }
             }
+            Federation::TAAP => Federation::ipf_rules_on(date),
             Federation::ThaiPF => Federation::ipf_rules_on(date),
             Federation::THSPA => PointsSystem::Wilks,
             Federation::THSWPA => PointsSystem::Wilks,
