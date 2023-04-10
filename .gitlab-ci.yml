@@ -18,7 +18,7 @@ meet-data:
     - apt-get update -qq && apt-get install -y python3-pip
     - pip3 install flake8
   script:
-    - make check
+    - make check-all
 
 # Build the data file and run server tests with the current data.
 # Disabled in CI as of 2022-11-01: trying to cut down on minutes.

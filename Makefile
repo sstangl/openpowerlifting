@@ -37,11 +37,12 @@ server: csv
 	$(MAKE) -C server
 
 # Make sure that all the fields in the CSV files are in expected formats.
-check-data:
+check:
 	tests/check --timing
 	tests/check-lifter-data
 
-check: check-data
+# Check all the CSV files, but additionally validate the Python scripts too
+check-all: check
 	tests/check-python-style
 
 # Run all probes in a quick mode that only shows a few pending meets.
