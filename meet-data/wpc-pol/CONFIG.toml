@@ -24,6 +24,7 @@
     # Expanded names (don't prefer these).
     seniors24_32 = {name="Seniors 24-32", min=24, max=32}
     submasters33_39 = {name="Submasters 33-39", min=33, max=39}
+    teen13_19 = {name="Teen 13-19", min=13, max=19}
     teen13_15 = {name="Teen 13-15", min=13, max=15}
     teen16_17 = {name="Teen 16-17", min=16, max=17}
     teen18_19 = {name="Teen 18-19", min=18, max=19}
@@ -58,3 +59,4 @@
     2103 = ["ExemptWeightClassConsistency", "ExemptDivision"] #Divisions and weightclasses are all over the show
     2202 = ["ExemptWeightClassConsistency"] # Lots of 0+ to score this properly
     2203 = ["ExemptWeightClassConsistency"] # 75+ used for Women's
+    2204 = ["ExemptWeightClassConsistency"] # 67.5+ used for Women's
