@@ -6,6 +6,7 @@
     m_t2_raw = {name = "MT-2-Ra", min = 16, max = 17,sex='M',equipment='Raw'}
     m_t3_raw = {name = "MT-3-Ra", min = 18, max = 19,sex='M',equipment='Raw'}
     m_jun_raw = {name = "MJun-Ra", min = 20, max = 23,sex='M',equipment='Raw'}
+    m_sub_raw = {name = "MSub-Ra", min = 35, max = 39,sex='M',equipment='Raw'}
     m_m1_raw = {name = "MM-1-Ra", min = 40, max = 44,sex='M',equipment='Raw'}
     m_m2_raw = {name = "MM-2-Ra", min = 45, max = 49,sex='M',equipment='Raw'}
     m_m3_raw = {name = "MM-3-Ra", min = 50, max = 54,sex='M',equipment='Raw'}
@@ -57,6 +58,7 @@
     f_t2_wraps = {name = "FT-2-CR", min = 16, max = 17,sex='F',equipment='Wraps'}
     f_t3_wraps = {name = "FT-3-CR", min = 18, max = 19,sex='F',equipment='Wraps'}
     f_jun_wraps = {name = "FJun-CR", min = 20, max = 23,sex='F',equipment='Wraps'}
+    f_sub_wraos = {name = "FSub-CR", min = 35, max = 39,sex='F',equipment='Wraps'}
     f_m1_wraps = {name = "FM-1-CR", min = 40, max = 44,sex='F',equipment='Wraps'}
     f_m2_wraps = {name = "FM-2-CR", min = 45, max = 49,sex='F',equipment='Wraps'}
     f_m3_wraps = {name = "FM-3-CR", min = 50, max = 54,sex='F',equipment='Wraps'}
