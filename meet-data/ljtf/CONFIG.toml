@@ -54,6 +54,11 @@
     date_range=["2011-01-01","2020-12-31"]
     sex = "F"
 
+[weightclasses.new_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
 [weightclasses.junior_M]
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","2021-12-31"]
@@ -62,7 +67,7 @@
 
 [weightclasses.juniornew_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","2021-12-31"]
+    date_range=["2021-01-01","9999-12-31"]
     sex = "F"
     divisions = ["FR-Sj", "FR-Jr", "F-Sj", "F-Jr", "Junior", "Sub-Junior"]
 
