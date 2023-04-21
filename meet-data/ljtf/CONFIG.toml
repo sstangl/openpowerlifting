@@ -44,19 +44,70 @@
     masters3 = {name = "Master III",min=59.5,max=68.5}
     masters4 = {name = "Master IV",min=69.5,max=999}
 
+
+	
+[weightclasses.new_F]
+    classes = ["52","57","63","69","76","76+"] # in LJTF there is no "47", "84","84+"
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
+[weightclasses.subjuniornew_F]
+    classes = ["52","57","63","63+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+    divisions = ["FR-Sj", "F-Sj", "Sub-Junior"]
+
+[weightclasses.masterI_new_F]
+    classes = ["63","63+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+    divisions = ["FR-M1", "F-M1", "Master I"]
+
+	
+	
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
-    sex = "M"
+    sex = "M"	
 
+[weightclasses.subjuniornew_M]
+    classes = ["53","59","66","74","83","93","105","105+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-Sj", "M-Sj", "Sub-Junior"]
+
+[weightclasses.juniornew_M]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-Jr", "M-Jr", "Junior"]
+	
+[weightclasses.masterI_new_M]
+    classes = ["74","83","93","105","120","120+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-M1", "M-M1", "Master I"]	
+	
+[weightclasses.masterII_new_M]
+    classes = ["74","83","93","105","105+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-M2", "M-M2", "Master II"]	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 [weightclasses.default_F]
     classes = ["47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","2020-12-31"]
-    sex = "F"
-
-[weightclasses.new_F]
-    classes = ["47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","9999-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -65,11 +116,7 @@
     sex = "M"
     divisions = ["MR-Sj", "MR-Jr", "M-Sj", "M-Jr", "Junior", "Sub-Junior"]
 
-[weightclasses.juniornew_F]
-    classes = ["43","47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","9999-12-31"]
-    sex = "F"
-    divisions = ["FR-Sj", "FR-Jr", "F-Sj", "F-Jr", "Junior", "Sub-Junior"]
+
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
