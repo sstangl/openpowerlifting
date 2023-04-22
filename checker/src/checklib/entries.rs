@@ -109,6 +109,11 @@ pub struct EntriesCheckResult {
 /// display the same as full width characters on the site, as should font
 /// variants.
 fn canonicalize_name_utf8(s: &str) -> String {
+    // Fast-path: the majority of names are ASCII.
+    if s.is_ascii() {
+        return s.to_string();
+    }
+
     s.nfkc().collect::<String>()
 }
 
@@ -350,27 +355,18 @@ fn check_headers(
         report.error("Deadlift data requires a 'Best3DeadliftKg' column");
     }
 
-    // Test for mandatory columns.
-    if !header_map.has(Header::Name) {
-        report.error("There must be a 'Name' column");
-    }
-    if !header_map.has(Header::WeightClassKg) && !header_map.has(Header::BodyweightKg) {
-        report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column");
-    }
-    if !header_map.has(Header::Sex) {
-        report.error("There must be a 'Sex' column");
-    }
-    if !header_map.has(Header::Equipment) {
-        report.error("There must be an 'Equipment' column");
-    }
-    if !header_map.has(Header::TotalKg) {
-        report.error("There must be a 'TotalKg' column");
-    }
-    if !header_map.has(Header::Place) {
-        report.error("There must be a 'Place' column");
-    }
-    if !header_map.has(Header::Event) {
-        report.error("There must be an 'Event' column");
+    // Require mandatory columns.
+    {
+        use Header::*;
+        const MANDATORY_COLUMNS: [Header; 6] = [Name, Sex, Equipment, TotalKg, Place, Event];
+        for column in &MANDATORY_COLUMNS {
+            if !header_map.has(*column) {
+                report.error("There must be a '{column}' column");
+            }
+        }
+        if !header_map.has(Header::WeightClassKg) && !header_map.has(Header::BodyweightKg) {
+            report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column");
+        }
     }
 
     // Configured federations must have standardized divisions,
