@@ -42,6 +42,7 @@
     fje = {name ="FJE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply"]}
     mte1 = {name ="MT-E1", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
     mte2 = {name ="MT-E2", min=16, max=17, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mte3 = {name ="MT-E3", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply"]}
     mem1 = {name ="M-E1", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
     fem1 = {name ="F-E1", min=40, max=44, sex="F", equipment=["Single-ply","Multi-ply"]}
     mem2 = {name ="M-E2", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
