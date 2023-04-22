@@ -67,11 +67,14 @@ impl Username {
     /// assert_eq!(username.as_str(), "edcoan");
     /// ```
     pub fn from_name(name: &str) -> Result<Self, String> {
+        // Empty names should be invalid, but can occur from user input.
         if name.is_empty() {
-            Ok(Username::default())
-        } else if infer_writing_system(name) == WritingSystem::Japanese
-            || infer_writing_system(name) == WritingSystem::CJK
-        {
+            return Ok(Username::default());
+        }
+
+        // CJK characters have no canonical ASCII representation, so we use a number.
+        let writing_system = infer_writing_system(name);
+        if matches!(writing_system, WritingSystem::Japanese | WritingSystem::CJK) {
             let ea_id: String = name
                 .chars()
                 .filter(|c| !c.is_whitespace())
@@ -79,10 +82,11 @@ impl Username {
                 .map(|c| (c as u32).to_string())
                 .collect();
             let s = format!("ea-{ea_id}");
-            Ok(Username(s.into_ascii_string().unwrap()))
-        } else {
-            convert_to_ascii(name)
+            return Ok(Username(s.into_ascii_string().unwrap()));
         }
+
+        // Otherwise, the name only has characters that can be converted to ASCII.
+        convert_to_ascii(name)
     }
 
     /// Interprets a [&str] as a [Username]. Used in deserialization.
@@ -220,9 +224,7 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
             '\u{307}' => "", // A Turkish critical mark.
             _ => {
                 return Err(format!(
-                    "Unknown character '{}' ({:?}) in '{}'",
-                    letter,
-                    letter,
+                    "Unknown character '{letter}' ({letter:?}) in '{}'",
                     name.to_lowercase()
                 ));
             }
