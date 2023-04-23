@@ -969,6 +969,12 @@ pub enum Federation {
     /// Polish IPF affiliate.
     #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
     PZKFiTS,
+	
+    /// Unaffiliated meets held in Qatar.
+    #[serde(rename = "Qatar-UA")]
+    #[strum(to_string = "Qatar-UA", serialize = "qatar-ua")]
+    QatarUA,
+
 
     /// 100% RAW Federation, backronym of Redeemed Among the World.
     #[strum(to_string = "RAW", serialize = "100raw")]
@@ -1918,6 +1924,7 @@ impl Federation {
             Federation::PS => FULLY_TESTED,
             Federation::PWFL => FULLY_TESTED,
             Federation::PZKFiTS => FULLY_TESTED,
+			Federation::QatarUA => false,
             Federation::RAW => FULLY_TESTED,
             Federation::RAWCAN => FULLY_TESTED,
             Federation::RAWIceland => false,
@@ -2306,6 +2313,7 @@ impl Federation {
             Federation::PS => Some(Country::Singapore),
             Federation::PWFL => Some(Country::Luxembourg),
             Federation::PZKFiTS => Some(Country::Poland),
+			Federation::QatarUA => Some(Country::Qatar),
             Federation::RAW => Some(Country::USA),
             Federation::RAWCAN => Some(Country::Canada),
             Federation::RAWIceland => Some(Country::Iceland),
@@ -2755,6 +2763,7 @@ impl Federation {
             Federation::PS => Some(Federation::IPF),
             Federation::PWFL => Some(Federation::IPF),
             Federation::PZKFiTS => Some(Federation::IPF),
+			Federation::QatarUA => None,
             Federation::RAW => None,
             Federation::RAWCAN => None,
             Federation::RAWIceland => None,
@@ -3244,6 +3253,7 @@ impl Federation {
             Federation::PS => Federation::ipf_rules_on(date),
             Federation::PWFL => Federation::ipf_rules_on(date),
             Federation::PZKFiTS => Federation::ipf_rules_on(date),
+			Federation::QatarUA => Federation::ipf_rules_on(date),
             Federation::RAW => PointsSystem::SchwartzMalone,
             Federation::RAWCAN => PointsSystem::Wilks,
             Federation::RAWIceland => PointsSystem::Wilks,

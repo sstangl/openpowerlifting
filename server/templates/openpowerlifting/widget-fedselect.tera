@@ -441,7 +441,11 @@
   <option value="gpc-portugal" {% if selection.federation == "GPC-Portugal" %}selected{% endif %}>GPC Portugal</option>
   <option value="wpc-portugal" {% if selection.federation == "WPC-Portugal" %}selected{% endif %}>WPC Portugal</option>
   <option value="wrpf-portugal" {% if selection.federation == "WRPF-Portugal" %}selected{% endif %}>WRPF Portugal</option>
+
 </optgroup>
+<optgroup label="{{strings.country.qatar}}">
+  <option value="qatar-ua" {% if selection.federation == "QATAR-UA" %}selected{% endif %}>QATAR-UA</option></optgroup>
+
 <optgroup label="{{strings.country.romania}}">
   <option value="all-romania" {% if selection.federation == "AllRomania" %}selected{% endif %}>{{strings.selectors.fed.all_romania}}</option>
   <option value="frpl" {% if selection.federation == "FRPL" %}selected{% endif %}>FRPL - Federatia Romana de Powerlifting [IPF]</option>
