@@ -24,7 +24,7 @@
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF / {{strings.country.belarus}}</option>
   <option value="bp" {% if selection.federation == "BP" %}selected{% endif %}>BP / {{strings.country.uk}}</option>
   <option value="bpa" {% if selection.federation == "BPA" %}selected{% endif %}>BPA / {{strings.country.belize}}</option>
-  <option value="bvdk" {% if selection.federation == "BulgarianPF" %}selected{% endif %}>BulgarianPF / {{strings.country.bulgaria}}</option>
+  <option value="bulgarianpf" {% if selection.federation == "BulgarianPF" %}selected{% endif %}>BulgarianPF / {{strings.country.bulgaria}}</option>
   <option value="bvdk" {% if selection.federation == "BVDK" %}selected{% endif %}>BVDK / {{strings.country.germany}}</option>
   <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB / {{strings.country.brazil}}</option>
   <option value="cpu" {% if selection.federation == "CPU" %}selected{% endif %}>CPU / {{strings.country.canada}}</option>
