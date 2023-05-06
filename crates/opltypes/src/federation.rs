@@ -199,6 +199,10 @@ pub enum Federation {
     #[strum(to_string = "BPU", serialize = "bpu")]
     BPU,
 
+    /// Bulgarian Powerlifting Federation, IPF.
+    #[strum(to_string = "BulgarianPF", serialize = "bulgarianpf")]
+    BulgarianPF,
+
     /// Bundesverbandes Deutscher Gewichtheber, pre-BVDK.
     #[strum(to_string = "BVDG", serialize = "bvdg")]
     BVDG,
@@ -1744,6 +1748,7 @@ impl Federation {
             Federation::BPF => false,
             Federation::BPO => false,
             Federation::BPU => false,
+            Federation::BulgarianPF => FULLY_TESTED,
             Federation::BVDG => FULLY_TESTED,
             Federation::BVDK => FULLY_TESTED,
             Federation::CanadaUA => false,
@@ -2133,6 +2138,7 @@ impl Federation {
             Federation::BPF => Some(Country::UK),
             Federation::BPO => Some(Country::UK),
             Federation::BPU => Some(Country::UK),
+            Federation::BulgarianPF => Some(Country::Bulgaria),
             Federation::BVDG => Some(Country::Germany),
             Federation::BVDK => Some(Country::Germany),
             Federation::CanadaUA => Some(Country::Canada),
@@ -2549,6 +2555,7 @@ impl Federation {
                     None
                 }
             }
+            Federation::BulgarianPF => Some(Federation::IPF),
             Federation::BVDG => Some(Federation::IPF),
             Federation::BVDK => Some(Federation::IPF),
             Federation::CanadaUA => None,
@@ -3044,6 +3051,7 @@ impl Federation {
             }
             Federation::BPO => PointsSystem::Wilks,
             Federation::BPU => PointsSystem::Glossbrenner,
+            Federation::BulgarianPF => PointsSystem::Wilks,
             Federation::BVDG => PointsSystem::Wilks,
             Federation::BVDK => {
                 // Federation voted in Nov 2019 to switch to Dots in 2020.
