@@ -16,6 +16,7 @@
     m_70_74 = {name = "Masters 70-74", min = 70, max = 74}
     m_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     m_80p = {name = "Masters 80+", min = 80, max = 999}
+    guest = {name = "Guest", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -31,3 +32,4 @@
     2101 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Janky divisions
     2201 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Janky divisions
     2202 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Janky divisions
+    2301 = ["ExemptWeightClassConsistency"] # Janky weight classes
