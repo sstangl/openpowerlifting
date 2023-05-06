@@ -177,7 +177,7 @@
 <optgroup label="{{strings.country.bulgaria}}">
 <option value="all-bulgaria" {% if selection.federation == "AllBulgaria" %}selected{% endif %}>{{strings.selectors.fed.all_bulgaria}}</option>
   <option value="wrpf-bulgaria" {% if selection.federation == "WRPF-Bulgaria" %}selected{% endif %}>WRPF Bulgaria</option>
-  <option value="bulgarianpf" {% if selection.federation == "BulgarianPF" %}selected{% endif %}>BulgarianPF</option>
+  <option value="bulgarianpf" {% if selection.federation == "BulgarianPF" %}selected{% endif %}>BulgarianPF [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
@@ -276,6 +276,10 @@
   <option value="esdt" {% if selection.federation == "ESDT" %}selected{% endif %}>ESDT - Hellenic Powerlifting Club [WP]</option>
   <option value="gpl" {% if selection.federation == "GPL" %}selected{% endif %}>GPL - Greek Powerlifting League [IPL]</option>
   <option value="hpf" {% if selection.federation == "HPF" %}selected{% endif %}>HPF - Hellas Powerlifitng Federation [IPF]</option>
+  </optgroup>
+<optgroup label="{{strings.country.guatemala}}">
+  <option value="all-guatemala" {% if selection.federation == "AllGuatemala" %}selected{% endif %}>{{strings.selectors.fed.all_guatemala}}</option>
+  <option value="fedepotencia" {% if selection.federation == "Fedepotencia" %}selected{% endif %}>Fedepotencia - Guatemalan Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.hongkong}}">
   <option value="all-hongkong" {% if selection.federation == "AllHongKong" %}selected{% endif %}>{{strings.selectors.fed.all_hongkong}}</option>
