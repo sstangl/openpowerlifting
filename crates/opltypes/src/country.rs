@@ -140,7 +140,6 @@ pub enum Country {
     Lesotho,
     Liberia,
     Libya,
-    Liechtenstein,
     Lithuania,
     Luxembourg,
     Malaysia,
