@@ -6,6 +6,7 @@ use smartstring::alias::CompactString;
 use strum::IntoEnumIterator;
 use unicode_normalization::UnicodeNormalization;
 
+use std::borrow::Cow;
 use std::error::Error;
 use std::io;
 use std::path::PathBuf;
@@ -90,7 +91,7 @@ pub struct EntriesCheckResult {
     pub entries: Option<Vec<Entry>>,
 }
 
-/// Returns s as a String in Unicode NFKC form.
+/// Returns s as a string in Unicode NFKC form.
 ///
 /// Unicode decompositions take 2 forms, canonical equivalence and
 /// compatibility.
@@ -107,13 +108,12 @@ pub struct EntriesCheckResult {
 /// canonical equivalence. We want NFKC form as half-width characters should
 /// display the same as full width characters on the site, as should font
 /// variants.
-fn canonicalize_name_utf8(s: &str) -> String {
+fn canonicalize_name_utf8(s: &str) -> Cow<'_, str> {
     // Fast-path: the majority of names are ASCII.
     if s.is_ascii() {
-        return s.to_string();
+        return Cow::Borrowed(s);
     }
-
-    s.nfkc().collect::<String>()
+    Cow::from(s.nfkc().collect::<String>())
 }
 
 /// Stores parsed data for a single row.
@@ -122,13 +122,17 @@ fn canonicalize_name_utf8(s: &str) -> String {
 /// which further processing can use the standard datatype.
 #[derive(Default)]
 pub struct Entry {
-    pub name: String,
+    /// A measurement shows that 99.27% of names benefit from `CompactString`.
+    pub name: CompactString,
     pub username: Username,
+
+    // These should not be made `CompactString`: that massively *increases* memory.
     pub chinesename: Option<String>,
     pub cyrillicname: Option<String>,
     pub greekname: Option<String>,
     pub japanesename: Option<String>,
     pub koreanname: Option<String>,
+
     pub sex: Sex,
     pub place: Place,
     pub event: Event,
@@ -138,8 +142,9 @@ pub struct Entry {
     pub bench_equipment: Option<Equipment>,
     pub deadlift_equipment: Option<Equipment>,
 
-    // Optional age information.
+    /// The recorded age of the lifter at the time of competition.
     pub age: Age,
+
     /// May be explicitly specified, or inferred by other age information.
     /// Division age ranges are carried here (possibly after further narrowing).
     pub agerange: AgeRange,
@@ -171,7 +176,9 @@ pub struct Entry {
     pub deadlift3kg: WeightKg,
     pub deadlift4kg: WeightKg,
 
+    /// Whether the entry counts as tested. Does not imply testing actually occurred.
     pub tested: bool,
+
     pub country: Option<Country>,
     pub state: Option<State>,
 
@@ -384,7 +391,7 @@ fn check_headers(
     header_map
 }
 
-fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
+fn check_column_name(name: &str, line: u64, report: &mut Report) -> CompactString {
     // Allow discarding disambiguation (everything after optional '#').
     let mut s = name;
 
@@ -494,88 +501,88 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> String {
         );
     }
 
-    canonicalize_name_utf8(name)
+    canonicalize_name_utf8(name).into()
 }
 
 fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
-        None
-    } else {
-        for c in s.chars() {
-            if writing_system(c) != WritingSystem::CJK && c != ' ' && c != '·' {
-                let msg = format!("ChineseName '{s}' contains non-CJK character '{c}'");
-                report.error_on(line, msg);
-                return None;
-            }
-        }
-        Some(canonicalize_name_utf8(s))
+        return None;
     }
+
+    for c in s.chars() {
+        if writing_system(c) != WritingSystem::CJK && c != ' ' && c != '·' {
+            let msg = format!("ChineseName '{s}' contains non-CJK character '{c}'");
+            report.error_on(line, msg);
+            return None;
+        }
+    }
+    Some(canonicalize_name_utf8(s).into())
 }
 
 fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
-        None
-    } else {
-        for c in s.chars() {
-            if writing_system(c) != WritingSystem::Cyrillic && !"-' .".contains(c) {
-                let msg = format!("CyrillicName '{s}' contains non-Cyrillic character '{c}'");
-                report.error_on(line, msg);
-                return None;
-            }
-        }
-        Some(canonicalize_name_utf8(s))
+        return None;
     }
+
+    for c in s.chars() {
+        if writing_system(c) != WritingSystem::Cyrillic && !"-' .".contains(c) {
+            let msg = format!("CyrillicName '{s}' contains non-Cyrillic character '{c}'");
+            report.error_on(line, msg);
+            return None;
+        }
+    }
+    Some(canonicalize_name_utf8(s).into())
 }
 
 fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
-        None
-    } else {
-        for c in s.chars() {
-            if writing_system(c) != WritingSystem::Japanese
-                && writing_system(c) != WritingSystem::CJK
-                && c != ' '
-            {
-                let msg = format!("JapaneseName '{s}' contains non-Japanese character '{c}'");
-                report.error_on(line, msg);
-                return None;
-            }
-        }
-        Some(canonicalize_name_utf8(s))
+        return None;
     }
+
+    for c in s.chars() {
+        if writing_system(c) != WritingSystem::Japanese
+            && writing_system(c) != WritingSystem::CJK
+            && c != ' '
+        {
+            let msg = format!("JapaneseName '{s}' contains non-Japanese character '{c}'");
+            report.error_on(line, msg);
+            return None;
+        }
+    }
+    Some(canonicalize_name_utf8(s).into())
 }
 
 fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
-        None
-    } else {
-        for c in s.chars() {
-            if writing_system(c) != WritingSystem::Greek && !"-' .".contains(c) {
-                let msg = format!("GreekName '{s}' contains non-Greek character '{c}'");
-                report.error_on(line, msg);
-                return None;
-            }
-        }
-        Some(canonicalize_name_utf8(s))
+        return None;
     }
+
+    for c in s.chars() {
+        if writing_system(c) != WritingSystem::Greek && !"-' .".contains(c) {
+            let msg = format!("GreekName '{s}' contains non-Greek character '{c}'");
+            report.error_on(line, msg);
+            return None;
+        }
+    }
+    Some(canonicalize_name_utf8(s).into())
 }
 
 fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<String> {
     if s.is_empty() {
-        None
-    } else {
-        for c in s.chars() {
-            if writing_system(c) != WritingSystem::Korean
-                && writing_system(c) != WritingSystem::Japanese
-                && !"-' .".contains(c)
-            {
-                let msg = format!("KoreanName '{s}' contains non-Korean character '{c}'");
-                report.error_on(line, msg);
-                return None;
-            }
-        }
-        Some(canonicalize_name_utf8(s))
+        return None;
     }
+
+    for c in s.chars() {
+        if writing_system(c) != WritingSystem::Korean
+            && writing_system(c) != WritingSystem::Japanese
+            && !"-' .".contains(c)
+        {
+            let msg = format!("KoreanName '{s}' contains non-Korean character '{c}'");
+            report.error_on(line, msg);
+            return None;
+        }
+    }
+    Some(canonicalize_name_utf8(s).into())
 }
 
 fn check_column_birthyear(
@@ -588,28 +595,28 @@ fn check_column_birthyear(
         return None;
     }
 
-    match s.parse::<u32>() {
-        Ok(year) => {
-            if !(1000..=9999).contains(&year) {
-                report.error_on(line, format!("BirthYear '{year}' must have 4 digits"));
-            }
-
-            // Compare the BirthYear to the meet date for some basic sanity checks.
-            if let Some(m) = meet {
-                if year > m.date.year().saturating_sub(4) || m.date.year().saturating_sub(year) > 98
-                {
-                    report.error_on(line, format!("BirthYear '{year}' looks implausible"));
-                    return None;
-                }
-            }
-
-            Some(year)
-        }
+    let year = match s.parse::<u32>() {
+        Ok(year) => year,
         Err(_) => {
             report.error_on(line, format!("BirthYear '{s}' must be a number"));
-            None
+            return None;
+        }
+    };
+
+    // A year must have four digits.
+    if !(1000..=9999).contains(&year) {
+        report.error_on(line, format!("BirthYear '{year}' must have 4 digits"));
+        return None;
+    }
+
+    // Compare the BirthYear to the meet date for some basic sanity checks.
+    if let Some(m) = meet {
+        if year > m.date.year().saturating_sub(4) || m.date.year().saturating_sub(year) > 98 {
+            report.error_on(line, format!("BirthYear '{year}' looks implausible"));
+            return None;
         }
     }
+    Some(year)
 }
 
 fn check_column_birthdate(
@@ -2219,17 +2226,17 @@ pub fn do_check<R: io::Read>(
         // just use the international name.
         if entry.name.is_empty() {
             if let Some(idx) = headers.get(Header::JapaneseName) {
-                entry.name = record[idx].to_string();
+                entry.name = record[idx].into();
             }
         }
         if entry.name.is_empty() {
             if let Some(idx) = headers.get(Header::ChineseName) {
-                entry.name = record[idx].to_string();
+                entry.name = record[idx].into();
             }
         }
         if entry.name.is_empty() {
             if let Some(idx) = headers.get(Header::KoreanName) {
-                entry.name = record[idx].to_string();
+                entry.name = record[idx].into();
             }
         }
 

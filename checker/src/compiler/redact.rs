@@ -33,7 +33,7 @@ pub fn redact(
         let indices = liftermap.remove(old_username).unwrap();
         for &index in &indices {
             let entry = meetdata.entry_mut(index);
-            entry.name = new_name.clone();
+            entry.name = new_name.clone().into();
             entry.username = new_username.clone();
 
             entry.chinesename = None;
