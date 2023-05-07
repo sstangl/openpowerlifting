@@ -22,15 +22,14 @@ pub use crate::checklib::meet::{check_meet, check_meet_from_string, Meet, MeetCh
 pub use crate::checklib::CheckResult;
 
 pub mod compiler;
+pub mod disambiguator;
 
 mod meetdata;
 use meetdata::EntryIndex;
 pub use meetdata::{AllMeetData, LifterMap, SingleMeetData};
 
-pub mod disambiguator;
-
 mod report;
-pub use report::*;
+pub use report::{Message, Report};
 
 use std::error::Error;
 use std::path::Path;

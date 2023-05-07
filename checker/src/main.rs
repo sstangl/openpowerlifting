@@ -513,6 +513,47 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     maybe_print_elapsed_for("Total time spent overall", program_start);
 
+    // Output a cheap memory profile on process exit if jemalloc is used.
+    #[cfg(feature = "jemalloc")]
+    if args.debug_timing {
+        /// Takes a reading of jemalloc's internal "active bytes" counter.
+        fn measure_bytes() -> usize {
+            let epoch_handle = jemalloc_ctl::epoch::mib().unwrap();
+            let active_handle = jemalloc_ctl::stats::active::mib().unwrap();
+
+            // Advancing the epoch updates statistics.
+            epoch_handle.advance().unwrap();
+            active_handle.read().unwrap()
+        }
+
+        /// Measures the memory footprint of a data structure without depending on
+        /// accurate internal accounting.
+        ///
+        /// This works by taking a measurement, dropping the data structure, and taking
+        /// a new measurement afterward. The delta between the two is the memory footprint
+        /// of that data structure.
+        fn measure_bytes_by_consuming<T: 'static>(t: T) -> usize {
+            let initial_bytes = measure_bytes();
+            drop(t);
+            initial_bytes - measure_bytes()
+        }
+
+        let initial_bytes = measure_bytes();
+        println!(" Allocations at exit: {}MiB", initial_bytes / 1024 / 1024);
+
+        let meetdata_bytes = measure_bytes_by_consuming(meetdata);
+        println!(" meetdata: {}MiB", meetdata_bytes / 1024 / 1024);
+
+        let lifterdata_bytes = measure_bytes_by_consuming(lifterdata);
+        println!(" lifterdata: {}MiB", lifterdata_bytes / 1024 / 1024);
+
+        let liftermap_bytes = measure_bytes_by_consuming(liftermap);
+        println!(" liftermap: {}MiB", liftermap_bytes / 1024 / 1024);
+
+        let unaccounted_bytes = measure_bytes();
+        println!(" unaccounted: {}MiB", unaccounted_bytes / 1024 / 1024);
+    }
+
     // Skip dropping owned allocations: takes too long.
     process::exit(0);
 }
