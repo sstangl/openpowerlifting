@@ -17,6 +17,10 @@ use std::process;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::time::Instant;
 
+#[cfg(feature = "jemalloc")]
+#[global_allocator]
+static GLOBAL: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 /// Stores user-specified arguments from the command line.
 struct Args {
     /// Whether the usage information should be printed.

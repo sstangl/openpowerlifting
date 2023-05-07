@@ -6,6 +6,12 @@ description = "The OpenPowerlifting data format checker."
 edition = "2021"
 license = "AGPL-3.0-or-later"
 
+[features]
+default = []
+
+# Uses jemalloc as the global allocator instead of the system allocator.
+jemalloc = ["jemallocator", "jemalloc-ctl"]
+
 [dependencies]
 coefficients = { path = "../crates/coefficients/" }
 opltypes = { path = "../crates/opltypes/" }
@@ -15,6 +21,8 @@ csv = "1.1"
 fxhash = "0.2"
 itertools = "0.10"
 itertools-num = "0.1"
+jemallocator = { version = "0.5", optional = true }
+jemalloc-ctl = { version = "0.5", optional = true }
 pico-args = "0.5"
 rayon = "1.0"
 serde = "1.0"
