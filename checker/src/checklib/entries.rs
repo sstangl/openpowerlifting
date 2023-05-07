@@ -1,6 +1,5 @@
 //! Checks for entries.csv files.
 
-use coefficients::{glossbrenner, wilks};
 use opltypes::states::*;
 use opltypes::*;
 use smartstring::alias::CompactString;
@@ -175,14 +174,6 @@ pub struct Entry {
     pub tested: bool,
     pub country: Option<Country>,
     pub state: Option<State>,
-
-    // Points are always recalculated, never taken from the data.
-    //
-    // McCulloch points are not calculated here, because they are Age-dependent.
-    // Because the Age may be inferred by the compiler from surrounding data,
-    // McCulloch calculation is left to a later phase.
-    pub wilks: Points,
-    pub glossbrenner: Points,
 
     /// The index of this `Entry` in the `AllMeetData`.
     ///
@@ -2223,11 +2214,6 @@ pub fn do_check<R: io::Read>(
             entry.birthyearclass =
                 BirthYearClass::from_range(entry.birthyearrange, meet.date.year());
         }
-
-        // Calculate points (except for McCulloch, which is Age-dependent).
-        let bw = entry.bodyweightkg;
-        entry.wilks = wilks(entry.sex, bw, entry.totalkg);
-        entry.glossbrenner = glossbrenner(entry.sex, bw, entry.totalkg);
 
         // If the Name isn't provided, but there is an international name,
         // just use the international name.

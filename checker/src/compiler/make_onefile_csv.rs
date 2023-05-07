@@ -2,7 +2,7 @@
 //! offered on the website's Data page. Unlike the other CSV files, which are
 //! intended for use by the server, this variant is intended for use by humans.
 
-use coefficients::{dots, goodlift};
+use coefficients::{dots, glossbrenner, goodlift, wilks};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
 use opltypes::*;
 
@@ -41,8 +41,8 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         totalkg: entry.totalkg,
         place: entry.place,
         dots: dots(entry.sex, entry.bodyweightkg, entry.totalkg),
-        wilks: entry.wilks,
-        glossbrenner: entry.glossbrenner,
+        wilks: wilks(entry.sex, entry.bodyweightkg, entry.totalkg),
+        glossbrenner: glossbrenner(entry.sex, entry.bodyweightkg, entry.totalkg),
         goodlift: goodlift(
             entry.sex,
             entry.equipment,

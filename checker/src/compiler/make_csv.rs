@@ -1,6 +1,6 @@
 //! Transforms `AllMeetData` into the final CSV files.
 
-use coefficients::{dots, goodlift, mcculloch, wilks2020};
+use coefficients::{dots, glossbrenner, goodlift, mcculloch, wilks, wilks2020};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
 use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::states::*;
@@ -179,9 +179,9 @@ impl<'d> EntriesRow<'d> {
             best3deadliftkg: entry.best3deadliftkg,
             totalkg: entry.totalkg,
             place: entry.place,
-            wilks: entry.wilks,
+            wilks: wilks(entry.sex, entry.bodyweightkg, entry.totalkg),
             mcculloch,
-            glossbrenner: entry.glossbrenner,
+            glossbrenner: glossbrenner(entry.sex, entry.bodyweightkg, entry.totalkg),
             goodlift: goodlift(
                 entry.sex,
                 entry.equipment,
