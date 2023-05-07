@@ -218,7 +218,11 @@ fn instant_if(b: bool) -> Option<Instant> {
 /// Prints the elapsed time with the given prefix, if available.
 fn maybe_print_elapsed_for(pass: &str, instant: Option<Instant>) {
     if let Some(instant) = instant {
-        println!(" {}: {:?}", pass.bold().cyan(), instant.elapsed());
+        let pass = pass.bold().cyan();
+        let elapsed_millis = instant.elapsed().as_millis();
+        let whole_seconds = elapsed_millis / 1000;
+        let fractional_millis = elapsed_millis % 1000;
+        println!(" {pass}: {whole_seconds}.{fractional_millis:03}s");
     }
 }
 
