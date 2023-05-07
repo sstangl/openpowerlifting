@@ -20,9 +20,16 @@ else
 	CHECKER_ARGUMENTS=$@
 fi
 
+# If the system has jemalloc installed, prefer it over the default allocator.
+if [ -f "/usr/lib64/libjemalloc.so.2" ]; then
+	FEATURES="--features=jemalloc"
+else
+	FEATURES=""
+fi
+
 # Run the checker.
 (
 	REPODIR="$( dirname "${TESTSDIR}" )"
 	cd ${REPODIR}
-	cargo run --release --bin checker -- $CHECKER_ARGUMENTS
+	cargo run --release $FEATURES --bin checker -- $CHECKER_ARGUMENTS
 )
