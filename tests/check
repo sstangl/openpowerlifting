@@ -3,7 +3,7 @@
 # Helpful interface to the checker.
 #
 
-set -e
+set -e 
 
 TESTSDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
