@@ -388,6 +388,10 @@ pub enum MetaFederation {
     #[strum(to_string = "kbgv")]
     KBGV,
 
+    /// KDKS, but with international results also.
+    #[strum(to_string = "kdks")]
+    KDKS,
+
     /// KNKFSP, but with international results also.
     #[strum(to_string = "knkf-sp")]
     #[serde(rename = "KNKF-SP")]
@@ -891,6 +895,9 @@ impl MetaFederation {
             MetaFederation::LFPH => affiliation!(meet, entry, LFPH, IPF, EPF, KBGV),
             MetaFederation::LJTF => affiliation!(meet, entry, LJTF, IPF, EPF),
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
+            MetaFederation::KDKS => {
+                affiliation!(meet, entry, KDKS, IPF, EPF) && meet.date.year >= 2020
+            }
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
             MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA),
@@ -923,7 +930,9 @@ impl MetaFederation {
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
-            MetaFederation::SwissPL => affiliation!(meet, entry, SwissPL, IPF, EPF),
+            MetaFederation::SwissPL => {
+                affiliation!(meet, entry, SwissPL, IPF, EPF) && meet.date.year < 2020
+            }
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
             MetaFederation::UAEPA => affiliation!(meet, entry, UAEPA, IPF, AsianPF, OceaniaPF),
