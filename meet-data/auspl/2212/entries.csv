@@ -1,14 +1,14 @@
-Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
-1,Kaylene Jones,F,1974-06-13,48,Australia,,Raw,Masters 45-49,67.7,75,85,92.5,,92.5,57.5,62.5,-65,62.5,110,117.5,122.5,122.5,277.5,SBD
-1,Rosie Mandala,F,1992-05-08,30,Australia,NSW,Raw,Open,59.75,60,95,105,110,110,57.5,-62.5,62.5,62.5,130,140,145,145,317.5,SBD
-1,Kaylene Jones,F,1974-06-13,48,Australia,,Raw,Open,67.7,75,85,92.5,,92.5,57.5,62.5,-65,62.5,110,117.5,122.5,122.5,277.5,SBD
-1,Alex Lara,M,2006-03-07,16,Australia,NSW,Raw,Juniors 16-17,89.1,90,165,180,-190,180,107.5,-112.5,112.5,112.5,195,207.5,-212.5,207.5,500,SBD
-1,Tim McGill,M,2001-10-16,20,Australia,NSW,Raw,Juniors 20-23,88.5,90,195,207.5,215,215,122.5,127.5,130,130,215,225,-235,225,570,SBD
-1,Jagdish Chauhan,M,1969-08-12,53,Australia,NSW,Wraps,Masters 50-54,65,67.5,140,150,160,160,75,82.5,-87.5,82.5,175,185,195,195,437.5,SBD
-1,Jagdish Chauhan,M,1969-08-12,53,Australia,NSW,Wraps,Open,65,67.5,140,150,160,160,75,82.5,-87.5,82.5,175,185,195,195,437.5,SBD
-DQ,Jeffrey Allen #3,M,1992-12-31,29,Australia,NSW,Wraps,Open,79.9,82.5,-230,-230,-230,,,,,,,,,,,SBD
-1,Justen Hadley Mackay,M,1993-01-13,29,Australia,NSW,Wraps,Open,89.8,90,205,215,220,220,155,162.5,167.5,167.5,210,220,227.5,227.5,615,SBD
-2,Tim McGill,M,2001-10-16,20,Australia,NSW,Raw,Open,88.5,90,195,207.5,215,215,122.5,127.5,130,130,215,225,-235,225,570,SBD
-3,Alex Lara,M,2006-03-07,16,Australia,NSW,Raw,Open,89.1,90,165,180,-190,180,107.5,-112.5,112.5,112.5,195,207.5,-212.5,207.5,500,SBD
-4,Caleb Artist,M,1992-02-27,30,Australia,NSW,Raw,Open,88.05,90,145,160,172.5,172.5,87.5,-92.5,92.5,92.5,150,170,180,180,445,SBD
-1,Justen Hadley Mackay,M,1993-01-13,29,Australia,NSW,Raw,Open,89.8,90,,,,,155,162.5,167.5,167.5,,,,,167.5,B
+Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Tested
+1,Kaylene Jones,F,1974-06-13,48,Australia,,Raw,Masters 45-49,67.7,75,85,92.5,,92.5,57.5,62.5,-65,62.5,110,117.5,122.5,122.5,277.5,SBD,No
+1,Rosie Mandala,F,1992-05-08,30,Australia,NSW,Raw,Open,59.75,60,95,105,110,110,57.5,-62.5,62.5,62.5,130,140,145,145,317.5,SBD,No
+1,Kaylene Jones,F,1974-06-13,48,Australia,,Raw,Open,67.7,75,85,92.5,,92.5,57.5,62.5,-65,62.5,110,117.5,122.5,122.5,277.5,SBD,No
+1,Alex Lara,M,2006-03-07,16,Australia,NSW,Raw,Juniors 16-17,89.1,90,165,180,-190,180,107.5,-112.5,112.5,112.5,195,207.5,-212.5,207.5,500,SBD,No
+1,Tim McGill,M,2001-10-16,20,Australia,NSW,Raw,Juniors 20-23,88.5,90,195,207.5,215,215,122.5,127.5,130,130,215,225,-235,225,570,SBD,No
+1,Jagdish Chauhan,M,1969-08-12,53,Australia,NSW,Wraps,Masters 50-54,65,67.5,140,150,160,160,75,82.5,-87.5,82.5,175,185,195,195,437.5,SBD,No
+1,Jagdish Chauhan,M,1969-08-12,53,Australia,NSW,Wraps,Open,65,67.5,140,150,160,160,75,82.5,-87.5,82.5,175,185,195,195,437.5,SBD,No
+DQ,Jeffrey Allen #3,M,1992-12-31,29,Australia,NSW,Wraps,Open,79.9,82.5,-230,-230,-230,,,,,,,,,,,SBD,No
+1,Justen Hadley Mackay,M,1993-01-13,29,Australia,NSW,Wraps,Open,89.8,90,205,215,220,220,155,162.5,167.5,167.5,210,220,227.5,227.5,615,SBD,No
+2,Tim McGill,M,2001-10-16,20,Australia,NSW,Raw,Open,88.5,90,195,207.5,215,215,122.5,127.5,130,130,215,225,-235,225,570,SBD,No
+3,Alex Lara,M,2006-03-07,16,Australia,NSW,Raw,Open,89.1,90,165,180,-190,180,107.5,-112.5,112.5,112.5,195,207.5,-212.5,207.5,500,SBD,No
+4,Caleb Artist,M,1992-02-27,30,Australia,NSW,Raw,Open,88.05,90,145,160,172.5,172.5,87.5,-92.5,92.5,92.5,150,170,180,180,445,SBD,No
+1,Justen Hadley Mackay,M,1993-01-13,29,Australia,NSW,Raw,Open,89.8,90,,,,,155,162.5,167.5,167.5,,,,,167.5,B,No

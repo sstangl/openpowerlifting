@@ -1,21 +1,21 @@
-Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Place
-Elizabeth Kuskovska,21,F-J2R,F,73.1,75,50,55,-60,55,127.5,135,145,145,200,BD,Raw,1
-Elise Cupitt,30,F-OR,F,78.8,82.5,65,-70,70,70,130,140,147.5,147.5,217.5,BD,Raw,1
-Lexi Myers,27,F-OR,F,73.6,75,75,80,82.5,82.5,140,147.5,-152.5,147.5,230,BD,Raw,1
-Isaac Morris,16,M-J1R,M,97.8,100,100,110,120,120,210,227.5,240,240,360,BD,Raw,1
-Brad Hooper-Matthias,26,M-OR,M,68.4,75,107.5,-112.5,-112.5,107.5,180,-187.5,,180,287.5,BD,Raw,1
-Brodie McNally,16,M-J1R,M,97.1,100,110,125,127.5,127.5,210,230,-235,230,357.5,BD,Raw,2
-Luke Coleman,28,M-OR,M,81.9,82.5,120,-130,-137.5,120,235,250,-255,250,370,BD,Raw,1
-Brent Pritchard,30,M-OR,M,112.3,125,130,142.5,-150,142.5,230,250,,250,392.5,BD,Raw,1
-Jai Quinlan,20,M-J2R,M,82.4,82.5,105,110,-112.5,110,,,,,110,B,Raw,1
-Brad Hooper-Matthias,26,M-OR,M,68.4,75,107.5,-112.5,-112.5,107.5,,,,,107.5,B,Raw,1
-Luke Coleman,28,M-OR,M,81.9,82.5,120,-130,-137.5,120,,,,,120,B,Raw,1
-Brad Hooper-Matthias,26,M-OR,M,68.4,75,,,,,180,-187.5,-187.5,180,180,D,Raw,1
-Corey Pomeroy,29,M-OR,M,79,82.5,,,,,215,-230,-240,215,215,D,Raw,2
-Luke Coleman,28,M-OR,M,81.9,82.5,,,,,235,250,-255,250,250,D,Raw,1
-Chris Andrews,47,M-M2R,M,89.9,90,160,170,175,175,,,,,175,B,Raw,1
-Troy Nelson,55,M-M4R,M,89.9,90,135,145,-152.5,145,,,,,145,B,Raw,1
-Dominic Merrit,19,M-J1R,M,89.9,90,130,-140,,130,185,195,215,215,345,BD,Raw,1
-Nick King,21,M-J2R,M,,110,105,-112.5,-115,105,250,,,250,355,BD,Raw,1
-Robbie Smith #1,,M-OR,M,89.9,90,125,135,140,140,260,270,280,280,420,BD,Raw,1
-Leesa Langley,,F-OR,F,,,52.5,57.5,-60,57.5,140,150,-155,150,207.5,BD,Raw,G
+Name,Age,Division,Sex,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Place,Tested
+Elizabeth Kuskovska,21,F-J2R,F,73.1,75,50,55,-60,55,127.5,135,145,145,200,BD,Raw,1,No
+Elise Cupitt,30,F-OR,F,78.8,82.5,65,-70,70,70,130,140,147.5,147.5,217.5,BD,Raw,1,No
+Lexi Myers,27,F-OR,F,73.6,75,75,80,82.5,82.5,140,147.5,-152.5,147.5,230,BD,Raw,1,No
+Isaac Morris,16,M-J1R,M,97.8,100,100,110,120,120,210,227.5,240,240,360,BD,Raw,1,No
+Brad Hooper-Matthias,26,M-OR,M,68.4,75,107.5,-112.5,-112.5,107.5,180,-187.5,,180,287.5,BD,Raw,1,No
+Brodie McNally,16,M-J1R,M,97.1,100,110,125,127.5,127.5,210,230,-235,230,357.5,BD,Raw,2,No
+Luke Coleman,28,M-OR,M,81.9,82.5,120,-130,-137.5,120,235,250,-255,250,370,BD,Raw,1,No
+Brent Pritchard,30,M-OR,M,112.3,125,130,142.5,-150,142.5,230,250,,250,392.5,BD,Raw,1,No
+Jai Quinlan,20,M-J2R,M,82.4,82.5,105,110,-112.5,110,,,,,110,B,Raw,1,No
+Brad Hooper-Matthias,26,M-OR,M,68.4,75,107.5,-112.5,-112.5,107.5,,,,,107.5,B,Raw,1,No
+Luke Coleman,28,M-OR,M,81.9,82.5,120,-130,-137.5,120,,,,,120,B,Raw,1,No
+Brad Hooper-Matthias,26,M-OR,M,68.4,75,,,,,180,-187.5,-187.5,180,180,D,Raw,1,No
+Corey Pomeroy,29,M-OR,M,79,82.5,,,,,215,-230,-240,215,215,D,Raw,2,No
+Luke Coleman,28,M-OR,M,81.9,82.5,,,,,235,250,-255,250,250,D,Raw,1,No
+Chris Andrews,47,M-M2R,M,89.9,90,160,170,175,175,,,,,175,B,Raw,1,No
+Troy Nelson,55,M-M4R,M,89.9,90,135,145,-152.5,145,,,,,145,B,Raw,1,No
+Dominic Merrit,19,M-J1R,M,89.9,90,130,-140,,130,185,195,215,215,345,BD,Raw,1,No
+Nick King,21,M-J2R,M,,110,105,-112.5,-115,105,250,,,250,355,BD,Raw,1,No
+Robbie Smith #1,,M-OR,M,89.9,90,125,135,140,140,260,270,280,280,420,BD,Raw,1,No
+Leesa Langley,,F-OR,F,,,52.5,57.5,-60,57.5,140,150,-155,150,207.5,BD,Raw,G,No
