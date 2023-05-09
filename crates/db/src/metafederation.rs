@@ -896,7 +896,7 @@ impl MetaFederation {
             MetaFederation::LJTF => affiliation!(meet, entry, LJTF, IPF, EPF),
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
             MetaFederation::KDKS => {
-                affiliation!(meet, entry, KDKS, IPF, EPF) && meet.date.year >= 2020
+                affiliation!(meet, entry, KDKS, IPF, EPF) && meet.date.year() >= 2020
             }
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
@@ -931,7 +931,7 @@ impl MetaFederation {
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
             MetaFederation::SwissPL => {
-                affiliation!(meet, entry, SwissPL, IPF, EPF) && meet.date.year < 2020
+                affiliation!(meet, entry, SwissPL, IPF, EPF) && meet.date.year() < 2020
             }
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
