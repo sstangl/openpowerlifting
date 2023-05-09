@@ -359,7 +359,7 @@ fn check_headers(
         const MANDATORY_COLUMNS: [Header; 6] = [Name, Sex, Equipment, TotalKg, Place, Event];
         for column in &MANDATORY_COLUMNS {
             if !header_map.has(*column) {
-                report.error("There must be a '{column}' column");
+                report.error(format!("There must be a '{column}' column"));
             }
         }
         if !header_map.has(Header::WeightClassKg) && !header_map.has(Header::BodyweightKg) {
