@@ -121,6 +121,7 @@
   <option value="ausdfpf" {% if selection.federation == "AusDFPF" %}selected{% endif %}>AusDFPF - Australian Drug Free Powerlifting Federation [WDFPF]</option>
   <option value="auspf" {% if selection.federation == "AusPF" %}selected{% endif %}>AusPF - Australian Powerlifting Federation [IPF]</option>
   <option value="auspl" {% if selection.federation == "AusPL" %}selected{% endif %}>AusPL - Australian Powerlifting League</option>
+  <option value="auspl-tested" {% if selection.federation == "AusPLTested" %}selected{% endif %}>AusPL Tested</option>
   <option value="capo" {% if selection.federation == "CAPO" %}selected{% endif %}>CAPO - CAPO Powerlifting [WPC/GPA/IPO]</option>
   <option value="gpc-aus" {% if selection.federation == "GPC-AUS" %}selected{% endif %}>GPC-AUS - GPC Australia [GPC]</option>
   <option value="mm-aus" {% if selection.federation == "MM-AUS" %}selected{% endif %}>MM-AUS - Metal Militia Australia [MM]</option>
