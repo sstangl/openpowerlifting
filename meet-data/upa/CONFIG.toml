@@ -38,6 +38,8 @@
     fm8r = {name="FM8R", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
     mm9r = {name="MM9R", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
     fm9r = {name="FM9R", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mm10r = {name="MM10R", min=85, max=89, sex="M", equipment=["Raw","Wraps"]}
+    fm10r = {name="FM10R", min=85, max=89, sex="F", equipment=["Raw","Wraps"]}
     mmxr = {name="MMXR", min=40, max=999, sex="M", equipment=["Raw","Wraps"]}
     fmxr = {name="FMXR", min=40, max=999, sex="F", equipment=["Raw","Wraps"]}
 
