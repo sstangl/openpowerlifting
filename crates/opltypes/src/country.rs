@@ -238,6 +238,7 @@ pub enum Country {
     #[strum(to_string = "Sri Lanka")]
     SriLanka,
     Sudan,
+    Suriname,
     Sweden,
     Syria,
     Switzerland,
