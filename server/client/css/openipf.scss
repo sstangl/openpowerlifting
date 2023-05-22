@@ -3,6 +3,8 @@
 // This provides the theming for the OpenIPF site distribution.
 // It's a copy of "style.scss" with custom variables.
 
+@use "sass:color";
+
 $background-color: #F4F4F4;
 $header-color: $background-color;
 $header-background-color: #303030;
@@ -19,6 +21,7 @@ $accent-font-weight: normal;
 $table-header-background-color: $primary-color;
 $row-alt-background-color: #E8E6E7; // Every even-numbered row.
 $row-hover-background-color: #CACACA;
+$row-highlight-background-color: color.adjust($row-hover-background-color, $lightness: -10%);
 
 $control-bar-background-color: #C2C2C2;
 $control-text-color: #4A4A50;

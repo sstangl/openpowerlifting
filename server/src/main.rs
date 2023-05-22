@@ -32,6 +32,7 @@ use rocket::serde::json::Json;
 use rocket::State;
 use rocket::{Build, Rocket};
 use rocket_dyn_templates::Template;
+use server::referring_path::ReferringPath;
 
 use std::collections::HashMap;
 use std::env;
@@ -325,6 +326,7 @@ fn meetlist_default(
 fn meet(
     meetpath: PathBuf,
     lang: Option<&str>,
+    referring_path: Option<ReferringPath>,
     opldb: &State<ManagedOplDb>,
     languages: AcceptLanguage,
     device: Device,
@@ -342,6 +344,9 @@ fn meet(
         meetpath_str = meetpath.as_path().parent()?.to_str()?;
     }
 
+    let referring_username =
+        referring_path.and_then(|s| s.strip_prefix("/u/").map(ToString::to_string));
+
     let meet_id = opldb.meet_id(meetpath_str)?;
     let locale = make_locale(lang, languages, cookies);
     let use_ipf_equipment = false;
@@ -352,6 +357,7 @@ fn meet(
         sort,
         default_sort,
         use_ipf_equipment,
+        referring_username,
     );
 
     Some(match device {

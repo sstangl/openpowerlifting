@@ -19,6 +19,7 @@ pub struct Context<'db> {
     pub meet: MeetInfo<'db>,
     pub language: Language,
     pub strings: &'db langpack::Translations,
+    pub referring_username: Option<String>,
     pub units: WeightUnits,
     pub points_column_title: &'db str,
 
@@ -632,6 +633,7 @@ impl<'db> Context<'db> {
         sort: MeetSortSelection,
         default_sort: MeetSortSelection,
         use_ipf_equipment: bool,
+        referring_username: Option<String>,
     ) -> Context<'db> {
         let meet = opldb.meet(meet_id);
         let default_points: PointsSystem = meet.federation.default_points(meet.date);
@@ -748,6 +750,7 @@ impl<'db> Context<'db> {
             language: locale.language,
             strings: locale.strings,
             units: locale.units,
+            referring_username,
             points_column_title: sort.column_title(locale, default_points),
             sortselection: sort.resolve_fed_default(default_points),
             meet: MeetInfo::from(meet, locale.strings),

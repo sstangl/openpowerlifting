@@ -118,6 +118,17 @@ td a {
   color: $default-color;
 }
 
+tr.highlighted {
+  background-color: $row-highlight-background-color;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -50vh;
+  visibility: hidden;
+}
+
 .table-divider {
   color: $primary-color;
 }

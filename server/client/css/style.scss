@@ -2,6 +2,8 @@
 //
 // This provides the theming for the main OpenPowerlifting site.
 
+@use "sass:color";
+
 $background-color: #272727;
 $header-color: #4A4A50;
 $header-background-color: #F3F3F3;
@@ -19,6 +21,7 @@ $accent-font-weight: bold;
 $table-header-background-color: #BF262B;
 $row-alt-background-color: #333333; // Every even-numbered row.
 $row-hover-background-color: #484848;
+$row-highlight-background-color: color.adjust($row-hover-background-color, $lightness: 10%);
 
 $control-bar-background-color: #C2C2C2;
 $control-text-color: #4A4A50;

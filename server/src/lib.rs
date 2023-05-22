@@ -10,3 +10,4 @@ extern crate serde_derive;
 
 // Exported modules.
 pub mod pages;
+pub mod referring_path;

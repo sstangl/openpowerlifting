@@ -14,6 +14,7 @@ use rocket::State;
 use rocket_dyn_templates::Template;
 
 use server::pages;
+use server::referring_path::ReferringPath;
 
 use std::path::PathBuf;
 
@@ -399,6 +400,7 @@ pub fn meetlist_default(
 pub fn meet(
     meetpath: PathBuf,
     lang: Option<&str>,
+    referring_path: Option<ReferringPath>,
     opldb: &State<ManagedOplDb>,
     languages: AcceptLanguage,
     host: Host,
@@ -417,6 +419,9 @@ pub fn meet(
         meetpath_str = meetpath.as_path().parent()?.to_str()?;
     }
 
+    let referring_username =
+        referring_path.and_then(|s| s.strip_prefix("/u/").map(ToString::to_string));
+
     let meet_id = opldb.meet_id(meetpath_str)?;
     let locale = make_locale(lang, languages, cookies);
     let use_ipf_equipment = true;
@@ -427,6 +432,7 @@ pub fn meet(
         sort,
         default_sort,
         use_ipf_equipment,
+        referring_username,
     );
     cx.urlprefix = local_prefix(&host);
 
