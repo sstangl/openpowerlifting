@@ -133,6 +133,12 @@ def getresults(soup, meetcsv):
                     csv.fieldnames += ['Deadlift2Kg']
                 elif h == 'MT3':
                     csv.fieldnames += ['Deadlift3Kg']
+                elif h == 'DL1':
+                    csv.fieldnames += ['Deadlift1Kg']
+                elif h == 'DL2':
+                    csv.fieldnames += ['Deadlift2Kg']
+                elif h == 'DL3':
+                    csv.fieldnames += ['Deadlift3Kg']
                 elif h == 'MT':
                     csv.fieldnames += ['Best3DeadliftKg']
                 elif h == 'Total':
