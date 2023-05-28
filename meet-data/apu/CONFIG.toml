@@ -38,6 +38,7 @@
 
     fo = {name="F-O", sex="F", min=0, max=999, equipment="Single-ply"}
     fm1 = {name="F-M1", sex="F", min=39.5, max=48.5, equipment="Single-ply"}
+	fm2 = {name="F-M2", sex="F", min=49.5, max=58.5, equipment="Single-ply"}
     fm3 = {name="F-M3", sex="F", min=59.5, max=68.5, equipment="Single-ply"}
     fm4 = {name="F-M4", sex="F", min=69.5, max=78.5, equipment="Single-ply"}
 
