@@ -20,7 +20,7 @@
     m7 = {name ="M7",min=70,max=74}
     m8 = {name ="M8",min=75,max=79}
     m9 = {name ="M9",min=80,max=999}
-    sm = {name ="SM",min=35,max=39}
+    sm = {name ="SM",min=33,max=39}
 
     # Paralympics.
     para = {name="Para", min=0, max=999}
