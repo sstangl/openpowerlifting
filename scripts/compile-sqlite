@@ -104,8 +104,7 @@ CREATE TABLE lifters (
   KoreanName TEXT,
   Username TEXT UNIQUE NOT NULL,
   Instagram TEXT,
-  Color TEXT,
-  Flair TEXT
+  Color TEXT
 );
 "
 
