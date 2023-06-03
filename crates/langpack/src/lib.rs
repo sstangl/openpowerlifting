@@ -17,6 +17,8 @@ use std::fmt;
     Clone, Copy, Debug, EnumIter, EnumString, IntoStaticStr, PartialEq, Eq, Serialize, Deserialize,
 )]
 pub enum Language {
+    /// Arabic.
+    ar,
     /// Czech.
     cs,
     /// German, without regional variance.
@@ -667,6 +669,7 @@ pub struct Translations {
 
 /// Owner struct of all translation state.
 pub struct LangInfo {
+    ar: Translations,
     cs: Translations,
     de: Translations,
     el: Translations,
@@ -697,6 +700,7 @@ pub struct LangInfo {
 }
 
 static LANGPACK: LangInfo = LangInfo {
+    ar: include!(concat!(env!("OUT_DIR"), "/ar.rs")),
     cs: include!(concat!(env!("OUT_DIR"), "/cs.rs")),
     de: include!(concat!(env!("OUT_DIR"), "/de.rs")),
     el: include!(concat!(env!("OUT_DIR"), "/el.rs")),
@@ -734,6 +738,7 @@ impl LangInfo {
 
     pub fn translations(&self, language: Language) -> &Translations {
         match language {
+            Language::ar => &self.ar,
             Language::cs => &self.cs,
             Language::de => &self.de,
             Language::el => &self.el,
@@ -1003,6 +1008,7 @@ impl Language {
         // Taken from the following list:
         // https://en.wikipedia.org/wiki/Decimal_separator
         match self {
+            Language::ar => NumberFormat::ArabicPeriod,
             Language::cs => NumberFormat::ArabicComma,
             Language::de => NumberFormat::ArabicComma,
             Language::el => NumberFormat::ArabicComma,

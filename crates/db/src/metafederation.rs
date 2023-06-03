@@ -149,6 +149,8 @@ pub enum MetaFederation {
     AllRomania,
     #[strum(to_string = "all-russia")]
     AllRussia,
+    #[strum(to_string = "all-saudiarabia")]
+    AllSaudiArabia,
     #[strum(to_string = "all-scotland")]
     AllScotland,
     #[strum(to_string = "all-serbia")]
@@ -501,6 +503,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ssf")]
     SSF,
 
+    /// SSSC, but with international results also.
+    #[strum(to_string = "sssc")]
+    SSSC,
+
     /// SVNL, but with international results also.
     #[strum(to_string = "svnl")]
     SVNL,
@@ -713,6 +719,7 @@ impl MetaFederation {
             MetaFederation::AllPortugal => is_from(Country::Portugal, entry, meet),
             MetaFederation::AllRomania => is_from(Country::Romania, entry, meet),
             MetaFederation::AllRussia => is_from(Country::Russia, entry, meet),
+            MetaFederation::AllSaudiArabia => is_from(Country::SaudiArabia, entry, meet),
             MetaFederation::AllScotland => is_from(Country::Scotland, entry, meet),
             MetaFederation::AllSerbia => is_from(Country::Serbia, entry, meet),
             MetaFederation::AllSingapore => is_from(Country::Singapore, entry, meet),
@@ -934,6 +941,7 @@ impl MetaFederation {
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
+            MetaFederation::SSSC => affiliation!(meet, entry, SSSC, IPF, AsianPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
             MetaFederation::SwissPL => {
                 affiliation!(meet, entry, SwissPL, IPF, EPF) && meet.date.year() < 2020

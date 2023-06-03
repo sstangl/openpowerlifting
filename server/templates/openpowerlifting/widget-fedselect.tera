@@ -473,6 +473,10 @@
   <option value="wpf-rus" {% if selection.federation == "WPF-RUS" %}selected{% endif %}>WPF-RUS - WPF Russia</option>
   <option value="wrpf" {% if selection.federation == "WRPF" %}selected{% endif %}>WRPF - World Raw Powerlifting Federation</option>
 </optgroup>
+<optgroup label="{{strings.country.saudiarabia}}">
+  <option value="all-saudiarabia" {% if selection.federation == "AllSaudiArabia" %}selected{% endif %}>All Saudi Lifters</option>
+  <option value="sssc" {% if selection.federation == "SSSC" %}selected{% endif %}>SSSC - Saudi Strength Sports Committee [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.serbia}}">
   <option value="all-serbia" {% if selection.federation == "AllSerbia" %}selected{% endif %}>{{strings.selectors.fed.all_serbia}}</option>
   <option value="plss" {% if selection.federation == "PLSS" %}selected{% endif %}>PLSS - Power Lifting Savez Srbije [IPF]</option>

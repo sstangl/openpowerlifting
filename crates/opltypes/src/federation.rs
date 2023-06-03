@@ -1104,6 +1104,10 @@ pub enum Federation {
     #[strum(to_string = "SSF", serialize = "ssf")]
     SSF,
 
+    /// Saudi Strength Sports Committee, IPF.
+    #[strum(to_string = "SSSC", serialize = "sssc")]
+    SSSC,
+
     /// Finnish IPF affiliate.
     #[strum(to_string = "SVNL", serialize = "svnl")]
     SVNL,
@@ -1965,6 +1969,7 @@ impl Federation {
             Federation::SPSS => false,
             Federation::SSA => false,
             Federation::SSF => FULLY_TESTED,
+            Federation::SSSC => FULLY_TESTED,
             Federation::SVNL => FULLY_TESTED,
             Federation::SwissPL => false,
             Federation::TAAP => FULLY_TESTED,
@@ -2348,6 +2353,7 @@ impl Federation {
             Federation::SPSS => Some(Country::Russia),
             Federation::SSA => Some(Country::USA),
             Federation::SSF => Some(Country::Sweden),
+            Federation::SSSC => Some(Country::SaudiArabia),
             Federation::SVNL => Some(Country::Finland),
             Federation::SwissPL => Some(Country::Switzerland),
             Federation::TAAP => Some(Country::Thailand),
@@ -2799,6 +2805,7 @@ impl Federation {
             Federation::SPSS => None,
             Federation::SSA => None,
             Federation::SSF => Some(Federation::IPF),
+            Federation::SSSC => Some(Federation::IPF),
             Federation::SVNL => Some(Federation::IPF),
             Federation::SwissPL => {
                 // Not sure about the exact date of the switch to IPF; ended in 2020.
@@ -3296,6 +3303,7 @@ impl Federation {
             Federation::SPSS => PointsSystem::Wilks,
             Federation::SSA => PointsSystem::Wilks,
             Federation::SSF => Federation::ipf_rules_on(date),
+            Federation::SSSC => Federation::ipf_rules_on(date),
             Federation::SVNL => Federation::ipf_rules_on(date),
             Federation::SwissPL => {
                 // Federation voted in Nov 2019 to switch to Dots in 2020.

@@ -1,4 +1,5 @@
 <select id="langselect">
+  <option value="ar" {% if language == "ar" %}selected{% endif %}>العربية</option>
   <option value="cs" {% if language == "cs" %}selected{% endif %}>Česky</option>
   <option value="de" {% if language == "de" %}selected{% endif %}>Deutsch</option>
   <option value="el" {% if language == "el" %}selected{% endif %}>Ελληνικά</option>

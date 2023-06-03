@@ -83,6 +83,7 @@
   <option value="sapf" {% if selection.federation == "SAPF" %}selected{% endif %}>SAPF / {{strings.country.southafrica}}</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL / {{strings.country.scotland}}</option>
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF / {{strings.country.sweden}}</option>
+  <option value="sssc" {% if selection.federation == "SSSC" %}selected{% endif %}>SSSC / {{strings.country.saudiarabia}}</option>
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL / {{strings.country.finland}}</option>
   <option value="taap" {% if selection.federation == "TAAP" %}selected{% endif %}>TAAP / {{strings.country.thailand}}</option>
   <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF / {{strings.country.turkey}}</option>
