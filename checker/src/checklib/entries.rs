@@ -440,7 +440,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> CompactStrin
                 // Common short words that mostly translate to "the".
                 "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di" | "dos"
                 | "du" | "e" | "el" | "in't" | "la" | "le" | "los" | "op" | "of" | "'t" | "te"
-                | "ten" | "und" | "v" | "v." | "v.d." | "van" | "von" | "zur" | "y" | "zu" => {
+                | "ten" | "ter" | "und" | "v" | "v." | "v.d." | "van" | "von" | "zur" | "y" | "zu" => {
                     continue;
                 }
 
