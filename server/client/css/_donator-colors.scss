@@ -287,6 +287,14 @@
   background-image: linear-gradient(to right, $blue, $orange);
 }
 
+.blue_to_purple_to_red {
+  $blue: #3364ea;
+  $purple: #a747ff;
+  $red: #ff2b6b;
+  @include gradient-prereqs(#33333300);
+  background-image: linear-gradient(to right, $blue, $purple, $red);
+}
+
 .blue_to_yellow {
   $blue: #507CFF;
   $yellow: #FFFC00;
