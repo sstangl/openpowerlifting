@@ -1,7 +1,6 @@
 //! CLI driver for developing the search interface.
 
 use rustyline::error::ReadlineError;
-use rustyline::Editor;
 
 use std::path::Path;
 
@@ -18,12 +17,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         Path::new(ENTRIES_CSV),
     )?;
 
-    let mut rl = Editor::<()>::new().unwrap();
+    let mut rl = rustyline::DefaultEditor::new().unwrap();
     loop {
         match rl.readline(READLINE_PROMPT) {
             Ok(line) => {
                 if !line.is_empty() {
-                    rl.add_history_entry(line.as_str());
+                    rl.add_history_entry(line.as_str()).unwrap();
                     println!("{line}");
                 }
             }
