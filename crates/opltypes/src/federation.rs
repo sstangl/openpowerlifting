@@ -3127,7 +3127,7 @@ impl Federation {
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
-            Federation::GPC => PointsSystem::Glossbrenner,
+            Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCCAN => PointsSystem::Glossbrenner,
             Federation::GPCGB => PointsSystem::Reshel,
