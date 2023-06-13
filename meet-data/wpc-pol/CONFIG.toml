@@ -60,3 +60,4 @@
     2202 = ["ExemptWeightClassConsistency"] # Lots of 0+ to score this properly
     2203 = ["ExemptWeightClassConsistency"] # 75+ used for Women's
     2204 = ["ExemptWeightClassConsistency"] # 67.5+ used for Women's
+    2301 = ["ExemptWeightClassConsistency", "ExemptDivision"] #Divisions and weightclasses are all over the show
