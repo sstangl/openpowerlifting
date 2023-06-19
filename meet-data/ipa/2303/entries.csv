@@ -10,10 +10,10 @@ Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,Weigh
 1,Robyn Schmidt,F,1988-03-16,35,Canada,,Unlimited,Pro Open,63.9,67.5,,,,,,,,,,187.5,200,210,210,210,D
 1,Christopher McGuire,M,1997-08-16,25,,CO,Wraps,Amateur Open,88.96,90,145,167.5,182.5,182.5,122.5,-132.5,132.5,,132.5,165,175,185,185,500,SBD
 3,Ethan Davis,M,2005-06-16,17,,OR,Wraps,Amateur Open,87.87,90,125,132.5,172.5,172.5,102.5,112.5,-120,,112.5,145,185,192.5,192.5,477.5,SBD
-4,Curtis Logman,M,2011-01-17,12,,OR,Wraps,Amateur Open,86.43,90,95,102.5,112.5,112.5,47.5,50,52.5,,52.5,100,110,117.5,117.5,282.5,SBD
+4,Curtis Logman,M,2011-01-17,,,OR,Wraps,Amateur Open,86.43,90,95,102.5,112.5,112.5,47.5,50,52.5,,52.5,100,110,117.5,117.5,282.5,SBD
 2,Trystan Williams,M,1997-09-29,25,,OR,Wraps,Amateur Open,97.3,100,160,165,170,170,-110,120,-125,,120,210,222.5,230,230,520,SBD
 4,Drake Brewer,M,,,,WA,Wraps,Amateur Open,97.56,100,125,137.5,152.5,152.5,130,142.5,-155,,142.5,170,190,-205,190,485,SBD
-6,Craig Logman,M,2011-01-17,12,,OR,Wraps,Amateur Open,93.67,100,95,102.5,112.5,112.5,47.5,52.5,55,,55,100,110,115,115,282.5,SBD
+6,Craig Logman,M,2011-01-17,,,OR,Wraps,Amateur Open,93.67,100,95,102.5,112.5,112.5,47.5,52.5,55,,55,100,110,115,115,282.5,SBD
 1,Tyler Corel,M,1994-08-16,28,,WA,Wraps,Amateur Open,118.37,125,180,205,215,215,125,140,150,,150,215,250,-262.5,250,615,SBD
 1,Niko Suragdeen,M,2002-02-27,,,CO,Wraps,Amateur Juniors 20-23,122.26,125,217.5,232.5,-252.2,232.5,155,172.5,-182.5,,172.5,227.5,242.5,-250,242.5,647.5,SBD
 1,Larry Bush,M,1967-11-20,55,,WA,Wraps,Amateur Masters 55-59,122.62,125,170,182.5,192.5,192.5,135,142.5,145,,145,180,197.5,205,205,542.5,SBD
@@ -29,27 +29,27 @@ Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,Weigh
 1,Brady Duba,M,2007-09-20,15,,CO,Wraps,Amateur Teen 13-15,52.76,56,62.5,70,-82.5,70,42.5,-50,50,,50,82.5,95,110,110,230,SBD
 1,Ryan O'Neill,M,2008-02-16,15,,WA,Wraps,Amateur Teen 13-15,133.76,140,62.5,77.5,95,95,55,-62.5,62.5,,62.5,100,110,-120,110,267.5,SBD
 1,Ethan Davis,M,2005-06-16,17,,OR,Wraps,Amateur Teen 16-17,87.87,90,125,132.5,172.5,172.5,102.5,112.5,-120,,112.5,145,185,192.5,192.5,477.5,SBD
-1,Curtis Logman,M,2011-01-17,12,,OR,Wraps,Amateur Teen 13,86.43,90,95,102.5,112.5,112.5,47.5,50,52.5,,52.5,100,110,117.5,117.5,282.5,SBD
-1,Craig Logman,M,2011-01-17,12,,OR,Wraps,Amateur Teen 13,93.67,100,95,102.5,112.5,112.5,47.5,52.5,55,,55,100,110,115,115,282.5,SBD
+1,Curtis Logman,M,2011-01-17,,,OR,Wraps,Amateur Teen 13,86.43,90,95,102.5,112.5,112.5,47.5,50,52.5,,52.5,100,110,117.5,117.5,282.5,SBD
+1,Craig Logman,M,2011-01-17,,,OR,Wraps,Amateur Teen 13,93.67,100,95,102.5,112.5,112.5,47.5,52.5,55,,55,100,110,115,115,282.5,SBD
 1,Anthony Faggiani,M,1986-07-07,36,Canada,,Unlimited,Pro Open,145.88,140+,400,-427.5,-427.5,400,372.5,-392.5,392.5,,392.5,300,320,-335,320,1112.5,SBD
 1,Anthony Faggiani,M,1986-07-07,36,Canada,,Unlimited,Pro Submasters 35-39,145.88,140+,400,-427.5,-427.5,400,372.5,-392.5,392.5,,392.5,300,320,-335,320,1112.5,SBD
-1,Curtis Logman,M,2011-01-17,12,,OR,Raw,Amateur Open,86.43,90,,,,,47.5,50,52.5,,52.5,100,110,117.5,117.5,170,BD
-1,Craig Logman,M,2011-01-17,12,,OR,Raw,Amateur Open,93.67,100,,,,,47.5,52.5,55,,55,100,110,115,115,170,BD
+1,Curtis Logman,M,2011-01-17,,,OR,Raw,Amateur Open,86.43,90,,,,,47.5,50,52.5,,52.5,100,110,117.5,117.5,170,BD
+1,Craig Logman,M,2011-01-17,,,OR,Raw,Amateur Open,93.67,100,,,,,47.5,52.5,55,,55,100,110,115,115,170,BD
 1,Christopher Logman,M,2006-01-16,17,,OR,Raw,Amateur Open,130.95,140,,,,,130,137.5,152.5,,152.5,185,207.5,-230,207.5,360,BD
 1,Morgan Styvar,M,1998-04-13,24,,OR,Raw,Amateur Open,106.15,110,,,,,175,-185,-185,,175,265,275,280,280,455,BD
 1,Christopher Logman,M,2006-01-16,17,,OR,Raw,Amateur Teen 16-17,130.95,140,,,,,130,137.5,152.5,,152.5,185,207.5,-230,207.5,360,BD
-1,Curtis Logman,M,2011-01-17,12,,OR,Raw,Amateur Teen 13,86.43,90,,,,,47.5,50,52.5,,52.5,100,110,117.5,117.5,170,BD
-1,Craig Logman,M,2011-01-17,12,,OR,Raw,Amateur Teen 13,93.67,100,,,,,47.5,52.5,55,,55,100,110,115,115,170,BD
+1,Curtis Logman,M,2011-01-17,,,OR,Raw,Amateur Teen 13,86.43,90,,,,,47.5,50,52.5,,52.5,100,110,117.5,117.5,170,BD
+1,Craig Logman,M,2011-01-17,,,OR,Raw,Amateur Teen 13,93.67,100,,,,,47.5,52.5,55,,55,100,110,115,115,170,BD
 1,Azin Nicholson,M,2006-10-28,16,,OR,Wraps,Amateur Open,81.72,82.5,100,117.5,-125,117.5,,,,,,,,,,117.5,S
 1,Azin Nicholson,M,2006-10-28,16,,OR,Wraps,Amateur Teen 16-17,81.72,82.5,100,117.5,-125,117.5,,,,,,,,,,117.5,S
-1,Curtis Logman,M,2011-01-17,12,,OR,Raw,Amateur Open,86.43,90,,,,,47.5,50,52.5,,52.5,,,,,52.5,B
-1,Craig Logman,M,2011-01-17,12,,OR,Raw,Amateur Open,93.67,100,,,,,47.5,52.5,55,,55,,,,,55,B
+1,Curtis Logman,M,2011-01-17,,,OR,Raw,Amateur Open,86.43,90,,,,,47.5,50,52.5,,52.5,,,,,52.5,B
+1,Craig Logman,M,2011-01-17,,,OR,Raw,Amateur Open,93.67,100,,,,,47.5,52.5,55,,55,,,,,55,B
 1,Christopher Logman,M,2006-01-16,17,,OR,Raw,Amateur Open,130.95,140,,,,,130,137.5,152.5,,152.5,,,,,152.5,B
 1,Morgan Styvar,M,1998-04-13,24,,OR,Raw,Amateur Open,106.15,110,,,,,175,-185,-185,,175,,,,,175,B
 2,Samuel Jenne,M,1994-03-03,29,,OR,Raw,Amateur Open,108.51,110,,,,,130,142.5,147,,147,,,,,147,B
 1,Christopher Logman,M,2006-01-16,17,,OR,Raw,Amateur Teen 16-17,130.95,140,,,,,130,137.5,152.5,,152.5,,,,,152.5,B
-1,Curtis Logman,M,2011-01-17,12,,OR,Raw,Amateur Teen 13,86.43,90,,,,,47.5,50,52.5,,52.5,,,,,52.5,B
-1,Craig Logman,M,2011-01-17,12,,OR,Raw,Amateur Teen 13,93.67,100,,,,,47.5,52.5,55,,55,,,,,55,B
+1,Curtis Logman,M,2011-01-17,,,OR,Raw,Amateur Teen 13,86.43,90,,,,,47.5,50,52.5,,52.5,,,,,52.5,B
+1,Craig Logman,M,2011-01-17,,,OR,Raw,Amateur Teen 13,93.67,100,,,,,47.5,52.5,55,,55,,,,,55,B
 1,Chad Bertelmann,M,1976-03-21,46,,HI,Unlimited,Amateur Open,108.24,110,,,,,342.5,355,365,,365,,,,,365,B
 1,Chad Bertelmann,M,1976-03-21,46,,HI,Unlimited,Amateur Masters 45-49,108.24,110,,,,,342.5,355,365,,365,,,,,365,B
 1,Daniel Logman,M,1971-08-18,51,,OR,Unlimited,Pro Masters 50-54,136.92,140,,,,,277.5,325,340,-365,340,,,,,340,B
@@ -61,13 +61,13 @@ Place,Name,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,Weigh
 1,William Dirk,M,1979-07-10,,,WA,Unlimited,Pro Masters 40-44,116.2,125,,,,,386,422.5,-455,-477,422.5,,,,,422.5,B
 1,AJ Roberts,M,1985-03-20,37,,CA,Unlimited,Pro Submasters 35-39,143.44,140+,,,,,387.5,420,-440,-440,420,,,,,420,B
 1,Azin Nicholson,M,2006-10-28,16,,OR,Raw,Amateur Open,81.72,82.5,,,,,,,,,,-125,142.5,147.5,147.5,147.5,D
-1,Curtis Logman,M,2011-01-17,12,,OR,Raw,Amateur Open,86.43,90,,,,,,,,,,100,110,117.5,117.5,117.5,D
+1,Curtis Logman,M,2011-01-17,,,OR,Raw,Amateur Open,86.43,90,,,,,,,,,,100,110,117.5,117.5,117.5,D
 1,Trystan Williams,M,1997-09-29,25,,OR,Raw,Amateur Open,97.3,100,,,,,,,,,,210,222.5,230,230,230,D
-3,Craig Logman,M,2011-01-17,12,,OR,Raw,Amateur Open,93.67,100,,,,,,,,,,100,110,115,115,115,D
+3,Craig Logman,M,2011-01-17,,,OR,Raw,Amateur Open,93.67,100,,,,,,,,,,100,110,115,115,115,D
 1,Christopher Logman,M,2006-01-16,17,,OR,Raw,Amateur Open,130.95,140,,,,,,,,,,185,207.5,-230,207.5,207.5,D
 2,Trystan Williams,M,1997-09-29,25,,OR,Raw,Amateur Open,97.3,100,,,,,,,,,,210,222.5,230,230,230,D
 1,Morgan Styvar,M,1998-04-13,24,,OR,Raw,Amateur Open,106.15,110,,,,,,,,,,265,275,280,280,280,D
 1,Azin Nicholson,M,2006-10-28,16,,OR,Raw,Amateur Teen 16-17,81.72,82.5,,,,,,,,,,-125,142.5,147.5,147.5,147.5,D
 1,Christopher Logman,M,2006-01-16,17,,OR,Raw,Amateur Teen 16-17,130.95,140,,,,,,,,,,185,207.5,-230,207.5,207.5,D
-1,Curtis Logman,M,2011-01-17,12,,OR,Raw,Amateur Teen 13,86.43,90,,,,,,,,,,100,110,117.5,117.5,117.5,D
-1,Craig Logman,M,2011-01-17,12,,OR,Raw,Amateur Teen 13,93.67,100,,,,,,,,,,100,110,115,115,115,D
+1,Curtis Logman,M,2011-01-17,,,OR,Raw,Amateur Teen 13,86.43,90,,,,,,,,,,100,110,117.5,117.5,117.5,D
+1,Craig Logman,M,2011-01-17,,,OR,Raw,Amateur Teen 13,93.67,100,,,,,,,,,,100,110,115,115,115,D
