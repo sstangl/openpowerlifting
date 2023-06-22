@@ -849,7 +849,10 @@ impl MetaFederation {
                     && (entry.lifter_country.is_none() || entry.lifter_country == Some(Country::France))
                 )
                 // The FFHMFAC is the precursor to the FFForce.
-                || meet.federation == Federation::FFHMFAC
+                || (
+                        meet.federation == Federation::FFHMFAC
+                        && (entry.lifter_country.is_none() || entry.lifter_country == Some(Country::France))
+                    )
                 // French lifters expect their international results included.
                 || (
                         is_from(Country::France, entry, meet)
