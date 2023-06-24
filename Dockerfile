@@ -2,9 +2,9 @@
 FROM rust:slim-buster AS builder
 
 # Install our box dependencies in one, easily-cached layer image
-RUN apt-get update -qq && apt-get install -y curl && \
-    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt-get install -y git nodejs python3-pip && \
+RUN apt-get update -qq && apt-get install -y curl libjemalloc2 && \
+    #curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y git npm python3-pip uglifyjs && \
     pip3 install toml flake8
 
 # Move to our project directory
@@ -32,10 +32,10 @@ COPY Makefile ./
 
 # project code
 COPY .git .git/
-COPY api api/
 COPY checker checker/
 COPY crates crates/
 COPY server server/
+COPY tests tests/
 
 # Build it
 RUN make
@@ -53,7 +53,7 @@ ENV ROCKET_ADDRESS=0.0.0.0
 CMD ["cargo", "run", "--release"]
 
 # Put server executable and data in a smaller image
-FROM debian:buster-slim
+FROM debian:stable-slim
 WORKDIR /opt/openpowerlifting/
 COPY --from=builder /opt/openpowerlifting/server/build .
 EXPOSE 8000
