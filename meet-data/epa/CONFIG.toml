@@ -66,6 +66,7 @@
     mru18 = {name ="MR-Sj",min=14,max=17.5,equipment="Raw"}
     mu18 = {name ="M-Sj",min=14,max=17.5,equipment="Single-ply"}
     mrm1 = {name ="MR-M1",min=39.5,max=48.5,equipment="Raw"}
+	mwm1 = {name ="MW-M1",min=0,max=999,equipment="Wraps"}
     mm1 = {name ="M-M1",min=39.5,max=48.5,equipment="Single-ply"}
     mrm2 = {name ="MR-M2",min=49.5,max=58.5,equipment="Raw"}
     mm2 = {name ="M-M2",min=49.5,max=58.5,equipment="Single-ply"}
