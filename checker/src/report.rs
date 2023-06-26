@@ -11,6 +11,8 @@
 
 use std::path::PathBuf;
 
+use crate::report_count::ReportCount;
+
 /// A data error or warning message that should be reported.
 #[derive(Debug, Serialize)]
 pub enum Message {
@@ -64,7 +66,7 @@ impl Report {
     }
 
     /// Returns how many messages there are of (errors, warnings).
-    pub fn count_messages(&self) -> (usize, usize) {
+    pub fn count_messages(&self) -> ReportCount {
         let mut errors = 0;
         let mut warnings = 0;
 
@@ -75,19 +77,7 @@ impl Report {
             }
         }
 
-        (errors, warnings)
-    }
-
-    /// Returns how many errors there are.
-    pub fn count_errors(&self) -> usize {
-        let (errors, _) = self.count_messages();
-        errors
-    }
-
-    /// Returns how many warnings there are.
-    pub fn count_warnings(&self) -> usize {
-        let (_, warnings) = self.count_messages();
-        warnings
+        ReportCount::new(errors, warnings)
     }
 
     /// Returns the name of the parent folder of the given file.

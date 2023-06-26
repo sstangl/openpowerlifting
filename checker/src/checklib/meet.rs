@@ -329,7 +329,7 @@ pub fn do_check<R: io::Read>(
 ) -> Result<MeetCheckResult, Box<dyn Error>> {
     // Remember the number of errors at the start.
     // If the number increased during checking, don't return a parsed Meet struct.
-    let initial_errors = report.count_errors();
+    let initial_errors = report.count_messages().errors();
 
     // Verify column headers. Only continue if they're valid.
     check_headers(rdr.headers()?, &mut report);
@@ -366,7 +366,7 @@ pub fn do_check<R: io::Read>(
     }
 
     // If there were errors, return early.
-    if initial_errors != report.count_errors() {
+    if initial_errors != report.count_messages().errors() {
         return Ok(MeetCheckResult { report, meet: None });
     }
 

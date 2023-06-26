@@ -1,5 +1,6 @@
 //! Checks CSV data files for validity.
 
+use checker::report_count::ReportCount;
 use checker::{compiler, disambiguator, AllMeetData, SingleMeetData};
 use colored::*;
 use opltypes::Username;
@@ -89,7 +90,10 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
 }
 
 /// Outputs a final summary line.
-fn print_summary(error_count: usize, warning_count: usize, search_root: &Path) {
+fn print_summary(report_count: ReportCount, search_root: &Path) {
+    let error_count = report_count.errors();
+    let warning_count = report_count.warnings();
+
     let error_str = format!(
         "{error_count} error{}",
         if error_count == 1 { "" } else { "s" }
@@ -130,7 +134,7 @@ type ConfigMap = BTreeMap<String, checker::Config>;
 ///
 /// Returns a map of (path -> Config) on success, or (errors, warnings) on
 /// failure.
-fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
+fn configurations(meet_data_root: &Path) -> Result<ConfigMap, ReportCount> {
     let mut configmap = ConfigMap::new();
 
     // Look at federation directories at depth 1, like "meet-data/usapl".
@@ -163,8 +167,7 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
     let stdout = io::stdout();
     let mut handle = stdout.lock();
 
-    let mut error_count: usize = 0;
-    let mut warning_count: usize = 0;
+    let mut overall_report_count = ReportCount::default();
 
     // Parse each CONFIG.toml and file it in a hashmap.
     for configpath in configs {
@@ -174,10 +177,10 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
         match checker::check_config(configpath) {
             Ok(result) => {
                 // Tally up and output and errors and warnings.
-                let (errors, warnings) = result.report.count_messages();
-                if errors > 0 || warnings > 0 {
-                    error_count += errors;
-                    warning_count += warnings;
+                let report_count = result.report.count_messages();
+
+                if report_count.any() {
+                    overall_report_count += report_count;
                     write_report(&mut handle, result.report);
                 }
 
@@ -189,7 +192,13 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
                         }
                         Err(e) => {
                             println!(" Internal Error: {}", e.to_string().bold().red());
-                            return Err((error_count + 1, warning_count));
+
+                            let report_count = ReportCount::new(
+                                overall_report_count.errors() + 1,
+                                overall_report_count.warnings(),
+                            );
+
+                            return Err(report_count);
                         }
                     };
                 }
@@ -197,14 +206,20 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, (usize, usize)> {
             Err(e) => {
                 println!("{}", sourcefile.as_path().to_str().unwrap());
                 println!(" Internal Error: {}", e.to_string().bold().red());
-                return Err((error_count + 1, warning_count));
+
+                let report_count = ReportCount::new(
+                    overall_report_count.errors() + 1,
+                    overall_report_count.warnings(),
+                );
+
+                return Err(report_count);
             }
         }
     }
 
     // If there were errors, don't return anything.
-    if error_count > 0 {
-        Err((error_count, warning_count))
+    if overall_report_count.any() {
+        Err(overall_report_count)
     } else {
         Ok(configmap)
     }
@@ -312,8 +327,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let timing = instant_if(args.debug_timing);
     let configmap = match configurations(&meet_data_root) {
         Ok(configmap) => configmap,
-        Err((errors, warnings)) => {
-            print_summary(errors, warnings, &search_root);
+        Err(report_count) => {
+            print_summary(report_count, &search_root);
             process::exit(1);
         }
     };
@@ -333,10 +348,14 @@ fn main() -> Result<(), Box<dyn Error>> {
     let timing = instant_if(args.debug_timing);
     let result = checker::check_lifterdata(&reader, &project_root.join("lifter-data"));
     for report in result.reports {
-        let (errors, warnings) = report.count_messages();
+        let report_count = report.count_messages();
+        let errors = report_count.errors();
+        let warnings = report_count.warnings();
+
         if errors > 0 {
             error_count.fetch_add(errors, Ordering::SeqCst);
         }
+
         if warnings > 0 {
             warning_count.fetch_add(warnings, Ordering::SeqCst);
         }
@@ -376,9 +395,9 @@ fn main() -> Result<(), Box<dyn Error>> {
                     let mut local_errors = 0;
                     let mut local_warnings = 0;
                     for report in &reports {
-                        let (errors, warnings) = report.count_messages();
-                        local_errors += errors;
-                        local_warnings += warnings;
+                        let report_count = report.count_messages();
+                        local_errors += report_count.errors();
+                        local_warnings += report_count.warnings();
                     }
 
                     // Update the global error and warning counts.
@@ -424,8 +443,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut meetdata = AllMeetData::from(singlemeets);
 
     // Move out of atomics.
-    let mut error_count = error_count.load(Ordering::SeqCst);
-    let mut warning_count = warning_count.load(Ordering::SeqCst);
+    let mut report_count = ReportCount::new(
+        error_count.load(Ordering::SeqCst),
+        warning_count.load(Ordering::SeqCst),
+    );
+
     let internal_error_count = internal_error_count.load(Ordering::SeqCst);
 
     // Group entries by lifter.
@@ -436,9 +458,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Check for consistency errors for individual lifters.
     let timing = instant_if(args.debug_timing);
     for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial) {
-        let (errors, warnings) = report.count_messages();
-        error_count += errors;
-        warning_count += warnings;
+        report_count += report.count_messages();
 
         if report.has_messages() {
             let stdout = io::stdout();
@@ -450,11 +470,14 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // The default mode without arguments just performs data checks.
     print_summary(
-        error_count + internal_error_count,
-        warning_count,
+        ReportCount::new(
+            report_count.errors() + internal_error_count,
+            report_count.warnings(),
+        ),
         &search_root,
     );
-    if error_count > 0 || internal_error_count > 0 {
+
+    if report_count.errors() > 0 || internal_error_count > 0 {
         process::exit(1);
     }
 

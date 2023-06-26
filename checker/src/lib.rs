@@ -31,6 +31,8 @@ pub use meetdata::{AllMeetData, LifterMap, SingleMeetData};
 mod report;
 pub use report::{Message, Report};
 
+pub mod report_count;
+
 use std::error::Error;
 use std::path::Path;
 
