@@ -56,6 +56,7 @@
   <option value="kbgv" {% if selection.federation == "KBGV" %}selected{% endif %}>KBGV / {{strings.country.belgium}}</option>
   <option value="kdks" {% if selection.federation == "KDKS" %}selected{% endif %}>KDKS / {{strings.country.switzerland}}</option>
   <option value="knkf-sp" {% if selection.federation == "KNKF-SP" %}selected{% endif %}>KNKF-SP / {{strings.country.netherlands}}</option>
+  <option value="kpc" {% if selection.federation == "KPC" %}selected{% endif %}>KPC / {{strings.country.kuwait}}</option>
   <option value="kpf" {% if selection.federation == "KPF" %}selected{% endif %}>KPF / {{strings.country.kazakhstan}}</option>
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT / {{strings.country.iceland}}</option>
   <option value="lfph" {% if selection.federation == "LFPH" %}selected{% endif %}>LFPH / {{strings.country.belgium}}</option>
@@ -79,6 +80,7 @@
   <option value="ps" {% if selection.federation == "PS" %}selected{% endif %}>PS / {{strings.country.singapore}}</option>
   <option value="pwfl" {% if selection.federation == "PWFL" %}selected{% endif %}>PWFL / {{strings.country.luxembourg}}</option>
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS / {{strings.country.poland}}</option>
+  <option value="qatarpl" {% if selection.federation == "QatarPL" %}selected{% endif %}>QatarPL / {{strings.country.qatar}}</option>
   <option value="safkst" {% if selection.federation == "SAFKST" %}selected{% endif %}>SAFKST / {{strings.country.slovakia}}</option>
   <option value="sapf" {% if selection.federation == "SAPF" %}selected{% endif %}>SAPF / {{strings.country.southafrica}}</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL / {{strings.country.scotland}}</option>

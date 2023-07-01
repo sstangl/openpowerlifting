@@ -358,6 +358,7 @@
 </optgroup>
 <optgroup label="{{strings.country.kuwait}}">
   <option value="all-kuwait" {% if selection.federation == "AllKuwait" %}selected{% endif %}>{{strings.selectors.fed.all_kuwait}}</option>
+  <option value="kpc" {% if selection.federation == "KPC" %}selected{% endif %}>KPC - Kuwait Powerlifting Committee [IPF]</option>
   <option value="kuwaitpl" {% if selection.federation == "KuwaitPL" %}selected{% endif %}>KuwaitPL - Kuwait Powerlifting League [IPL]</option>
 </optgroup>
 <optgroup label="{{strings.country.kyrgyzstan}}">
@@ -421,6 +422,10 @@
   <option value="all-norway" {% if selection.federation == "AllNorway" %}selected{% endif %}>{{strings.selectors.fed.all_norway}}</option>
   <option value="nsf" {% if selection.federation == "NSF" %}selected{% endif %}>NSF - Norges Styrkeløftforbund [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.oman}}">
+  <option value="all-oman" {% if selection.federation == "AllOman" %}selected{% endif %}>All Oman Lifters</option>
+  <option value="ocwp" {% if selection.federation == "OCWP" %}selected{% endif %}>OCWP - Oman Committee for Weightlifting & Powerlifting [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.papuanewguinea}}">
   <option value="all-papuanewguinea" {% if selection.federation == "AllPapuaNewGuinea" %}selected{% endif %}>{{strings.selectors.fed.all_papuanewguinea}}</option>
   <option value="pngpf" {% if selection.federation == "PNGPF" %}selected{% endif %}>PNGPF - Papua New Guinea Powerlifting Federation [IPF]</option>
@@ -452,6 +457,8 @@
 
 </optgroup>
 <optgroup label="{{strings.country.qatar}}">
+  <option value="all-qatar" {% if selection.federation == "AllQatar" %}selected{% endif %}>All Qatar Lifters</option>
+  <option value="qatarpl" {% if selection.federation == "QatarPL" %}selected{% endif %}>QatarPL - Qatar Powerlifting [IPF]</option>
   <option value="qatar-ua" {% if selection.federation == "QATAR-UA" %}selected{% endif %}>QATAR-UA</option></optgroup>
 
 <optgroup label="{{strings.country.romania}}">

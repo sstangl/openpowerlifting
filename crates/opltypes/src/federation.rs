@@ -737,6 +737,10 @@ pub enum Federation {
     #[strum(to_string = "KRAFT", serialize = "kraft")]
     KRAFT,
 
+    /// Kuwait Powerlifting Committe, IPF. Previously Kuwait Powerlifting & Armwrestling Federation
+    #[strum(to_string = "KPC", serialize = "kpc")]
+    KPC,
+
     /// Kuwait Powerlifting League, IPL.
     #[strum(to_string = "KuwaitPL", serialize = "kuwaitpl")]
     KuwaitPL,
@@ -859,7 +863,7 @@ pub enum Federation {
     /// National Powerlifting League.
     #[strum(to_string = "NPL", serialize = "npl")]
     NPL,
-	
+
     /// Nederlandse Powerlifting Bond, IPF.
     #[strum(to_string = "NPB", serialize = "npb")]
     NPB,
@@ -888,6 +892,10 @@ pub enum Federation {
     /// Oceania Powerlifting Organisation, WPC.
     #[strum(to_string = "OceaniaPO", serialize = "oceaniapo")]
     OceaniaPO,
+
+    /// Oman Committee for Weightlifting and Powerlifting, IPF.
+    #[strum(to_string = "OCWP", serialize = "ocwp")]
+    OCWP,
 
     /// Oceania Regional Powerlifting Federation, IPF.
     #[strum(to_string = "ORPF", serialize = "orpf")]
@@ -977,6 +985,10 @@ pub enum Federation {
     /// Polish IPF affiliate.
     #[strum(to_string = "PZKFiTS", serialize = "pzkfits")]
     PZKFiTS,
+
+    /// Qatar Powerlifting, IPF.
+    #[strum(to_string = "QatarPL", serialize = "qatarpl")]
+    QatarPL,
 
     /// Unaffiliated meets held in Qatar.
     #[serde(rename = "Qatar-UA")]
@@ -1878,6 +1890,7 @@ impl Federation {
             Federation::KNKFSP => FULLY_TESTED,
             Federation::KPF => FULLY_TESTED,
             Federation::KRAFT => FULLY_TESTED,
+            Federation::KPC => FULLY_TESTED,
             Federation::KuwaitPL => false,
             Federation::LFPH => FULLY_TESTED,
             Federation::LGBT => false,
@@ -1915,6 +1928,7 @@ impl Federation {
             Federation::NZUA => false,
             Federation::OceaniaPF => FULLY_TESTED,
             Federation::OceaniaPO => false,
+            Federation::OCWP => FULLY_TESTED,
             Federation::ORPF => FULLY_TESTED,
             Federation::OEVK => FULLY_TESTED,
             Federation::PA => FULLY_TESTED,
@@ -1937,6 +1951,7 @@ impl Federation {
             Federation::PS => FULLY_TESTED,
             Federation::PWFL => FULLY_TESTED,
             Federation::PZKFiTS => FULLY_TESTED,
+            Federation::QatarPL => FULLY_TESTED,
             Federation::QatarUA => false,
             Federation::RAW => FULLY_TESTED,
             Federation::RAWCAN => FULLY_TESTED,
@@ -2270,6 +2285,7 @@ impl Federation {
             Federation::KNKFSP => Some(Country::Netherlands),
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::KRAFT => Some(Country::Iceland),
+            Federation::KPC => Some(Country::Kuwait),
             Federation::KuwaitPL => Some(Country::Kuwait),
             Federation::LFPH => Some(Country::Belgium),
             Federation::LGBT => None,
@@ -2307,6 +2323,7 @@ impl Federation {
             Federation::NZUA => Some(Country::NewZealand),
             Federation::OceaniaPF => None,
             Federation::OceaniaPO => Some(Country::Australia),
+            Federation::OCWP => Some(Country::Oman),
             Federation::ORPF => None,
             Federation::OEVK => Some(Country::Austria),
             Federation::PA => Some(Country::Australia),
@@ -2329,6 +2346,7 @@ impl Federation {
             Federation::PS => Some(Country::Singapore),
             Federation::PWFL => Some(Country::Luxembourg),
             Federation::PZKFiTS => Some(Country::Poland),
+            Federation::QatarPL => Some(Country::Qatar),
             Federation::QatarUA => Some(Country::Qatar),
             Federation::RAW => Some(Country::USA),
             Federation::RAWCAN => Some(Country::Canada),
@@ -2709,6 +2727,7 @@ impl Federation {
             Federation::KNKFSP => Some(Federation::IPF),
             Federation::KPF => Some(Federation::IPF),
             Federation::KRAFT => Some(Federation::IPF),
+            Federation::KPC => Some(Federation::IPF),
             Federation::KuwaitPL => Some(Federation::IPL),
             Federation::LFPH => Some(Federation::IPF),
             Federation::LGBT => None,
@@ -2753,6 +2772,7 @@ impl Federation {
                 }
             }
             Federation::OceaniaPO => Some(Federation::WPC),
+            Federation::OCWP => Some(Federation::IPF),
             Federation::ORPF => Some(Federation::IPF),
             Federation::OEVK => Some(Federation::IPF),
             Federation::PA => {
@@ -2782,6 +2802,7 @@ impl Federation {
             Federation::PS => Some(Federation::IPF),
             Federation::PWFL => Some(Federation::IPF),
             Federation::PZKFiTS => Some(Federation::IPF),
+            Federation::QatarPL => Some(Federation::IPF),
             Federation::QatarUA => None,
             Federation::RAW => None,
             Federation::RAWCAN => None,
@@ -3208,6 +3229,7 @@ impl Federation {
                     Federation::ipf_rules_on(date)
                 }
             }
+            Federation::KPC => Federation::ipf_rules_on(date),
             Federation::KuwaitPL => Federation::ipl_rules_on(date),
             Federation::LFPH => Federation::ipf_rules_on(date),
             Federation::LGBT => PointsSystem::Wilks,
@@ -3245,6 +3267,7 @@ impl Federation {
             Federation::NZUA => PointsSystem::Wilks,
             Federation::OceaniaPF => Federation::wp_rules_on(date),
             Federation::OceaniaPO => PointsSystem::Glossbrenner,
+            Federation::OCWP => Federation::ipf_rules_on(date),
             Federation::ORPF => Federation::ipf_rules_on(date),
             Federation::OEVK => Federation::ipf_rules_on(date),
             Federation::PA => {
@@ -3275,6 +3298,7 @@ impl Federation {
             Federation::PS => Federation::ipf_rules_on(date),
             Federation::PWFL => Federation::ipf_rules_on(date),
             Federation::PZKFiTS => Federation::ipf_rules_on(date),
+            Federation::QatarPL => Federation::ipf_rules_on(date),
             Federation::QatarUA => Federation::ipf_rules_on(date),
             Federation::RAW => PointsSystem::SchwartzMalone,
             Federation::RAWCAN => PointsSystem::Wilks,
