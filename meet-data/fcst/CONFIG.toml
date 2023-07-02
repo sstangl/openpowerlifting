@@ -49,3 +49,4 @@
 [exemptions]
     1801 =  ["ExemptWeightClassConsistency"] # No Weightclasses
     2001 =  ["ExemptWeightClassConsistency", "ExemptDivision"] # Reduced weightclasses, non-standard divisions
+    1901 =  ["ExemptWeightClassConsistency", "ExemptDivision"] # Reduced weightclasses, non-standard divisions
