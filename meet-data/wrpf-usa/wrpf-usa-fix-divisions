@@ -22,6 +22,7 @@ except ImportError:
 # Map of substitutions, after some computation has been applied.
 DIVISION_MAP = {
     "Open": "Open",
+    "Junior (13-15)": "J13-15",
     "Junior (16-17)": "J16-17",
     "Junior (18-19)": "J18-19",
     "Junior (20-23)": "J20-23",
@@ -42,10 +43,12 @@ DIVISION_MAP = {
 def remove_common_elements(division):
     division = division.replace("Men's ", "")
     division = division.replace("Women's ", "")
+    division = division.replace("Drug Tested ", "")
     division = division.strip()
 
     division = division.replace("Classic Raw ", "")
     division = division.replace("Raw ", "")
+    division = division.replace("With Wraps ", "")
     division = division.replace("Single Ply ", "")
     division = division.strip()
 
