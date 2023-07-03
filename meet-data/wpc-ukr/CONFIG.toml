@@ -1,4 +1,34 @@
 [divisions]
+    # More helpful division names used starting in 2023.
+    am_open = {name="Amateur Open", min=0, max=999, tested="Yes"}
+    am_1315 = {name="Amateur 13-15", min=13, max=15, tested="Yes"}
+    am_1617 = {name="Amateur 16-17", min=16, max=17, tested="Yes"}
+    am_1819 = {name="Amateur 18-19", min=18, max=19, tested="Yes"}
+    am_2023 = {name="Amateur 20-23", min=20, max=23, tested="Yes"}
+    am_4044 = {name="Amateur 40-44", min=40, max=44, tested="Yes"}
+    am_4549 = {name="Amateur 45-49", min=45, max=49, tested="Yes"}
+    am_5054 = {name="Amateur 50-54", min=50, max=54, tested="Yes"}
+    am_5559 = {name="Amateur 55-59", min=55, max=59, tested="Yes"}
+    am_6064 = {name="Amateur 60-64", min=60, max=64, tested="Yes"}
+    am_6569 = {name="Amateur 65-69", min=65, max=69, tested="Yes"}
+    am_7074 = {name="Amateur 70-74", min=70, max=74, tested="Yes"}
+    am_7579 = {name="Amateur 75-79", min=75, max=79, tested="Yes"}
+
+    pro_open = {name="Pro Open", min=0, max=999}
+    pro_1315 = {name="Pro 13-15", min=13, max=15}
+    pro_1617 = {name="Pro 16-17", min=16, max=17}
+    pro_1819 = {name="Pro 18-19", min=18, max=19}
+    pro_2023 = {name="Pro 20-23", min=20, max=23}
+    pro_4044 = {name="Pro 40-44", min=40, max=44}
+    pro_4549 = {name="Pro 45-49", min=45, max=49}
+    pro_5054 = {name="Pro 50-54", min=50, max=54}
+    pro_5559 = {name="Pro 55-59", min=55, max=59}
+    pro_6064 = {name="Pro 60-64", min=60, max=64}
+    pro_6569 = {name="Pro 65-69", min=65, max=69}
+    pro_7074 = {name="Pro 70-74", min=70, max=74}
+    pro_7579 = {name="Pro 75-79", min=75, max=79}
+
+    # Divisions used in historical meets.
     open = {name ="O",min=0,max=999}
     juniors = {name ="J",min=20,max=23}
     youth = {name ="Y",min=0,max=12}
