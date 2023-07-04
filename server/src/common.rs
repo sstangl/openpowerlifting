@@ -137,7 +137,7 @@ pub fn select_display_language(languages: &AcceptLanguage, cookies: &CookieJar<'
     // If a language was not explicitly selected, the Accept-Language HTTP
     // header is consulted, defaulting to English.
     match &languages.0 {
-        Some(userlist) => accept_language::intersection(userlist, Language::string_list())
+        Some(userlist) => accept_language::intersection(userlist, &Language::string_list())
             .first()
             .and_then(|lang| lang.parse::<Language>().ok())
             .unwrap_or(DEFAULT_LANGUAGE),
