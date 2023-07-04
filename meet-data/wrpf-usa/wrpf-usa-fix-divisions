@@ -37,6 +37,7 @@ DIVISION_MAP = {
     "Master (75-79)": "M75-79",
 }
 
+
 # Given a division like "Men's Drug Tested Raw Open", make that just "Open".
 #
 # This is standardizing LiftingCast output, primarily.
