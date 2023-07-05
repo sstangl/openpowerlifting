@@ -931,7 +931,7 @@ impl MetaFederation {
             MetaFederation::KDKS => {
                 affiliation!(meet, entry, KDKS, IPF, EPF) && meet.date.year() >= 2020
             }
-            MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF),
+            MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF, UAEPA), // Kuwait often use UAE meets for team selection
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
             MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA),

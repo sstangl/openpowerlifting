@@ -69,6 +69,7 @@
   <option value="npaj" {% if selection.federation == "NPAJ" %}selected{% endif %}>NPAJ / {{strings.country.jamaica}}</option>
   <option value="nsf" {% if selection.federation == "NSF" %}selected{% endif %}>NSF / {{strings.country.norway}}</option>
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF / {{strings.country.newzealand}}</option>
+  <option value="ocwp" {% if selection.federation == "OCWP" %}selected{% endif %}>OCWP / {{strings.country.oman}}</option>
   <option value="oevk" {% if selection.federation == "OEVK" %}selected{% endif %}>OEVK / {{strings.country.austria}}</option>
   <option value="pap" {% if selection.federation == "PAP" %}selected{% endif %}>PAP / {{strings.country.philippines}}</option>
   <option value="pfbd" {% if selection.federation == "PFBD" %}selected{% endif %}>PFBD / {{strings.country.brunei}}</option>

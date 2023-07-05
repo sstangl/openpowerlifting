@@ -41,6 +41,7 @@ DIVISION_MAP = {
 # Given a division like "Men's Drug Tested Raw Open", make that just "Open".
 #
 # This is standardizing LiftingCast output, primarily.
+
 def remove_common_elements(division):
     division = division.replace("Men's ", "")
     division = division.replace("Women's ", "")
