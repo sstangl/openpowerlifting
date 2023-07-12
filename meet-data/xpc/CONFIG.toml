@@ -19,6 +19,8 @@
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
 
+    s33_39 = {name="S33-39", min=33, max=39} # Used accidentally.
+
     pro = {name = "Pro", min = 0, max = 999}
     elite = {name = "Elite", min = 0, max = 999}
 
