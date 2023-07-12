@@ -301,6 +301,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
 
     // Maintainership variables.
     let email_alan = "<a href=\"mailto:alan.zgb@gmail.com\">alan@</a>";
+    let email_artem = "<a href=\"mailto:artem.rodygin@gmail.com\">Artem Rodygin</a>";
     let email_boris = "<a href=\"mailto:boris@openpowerlifting.org\">boris@</a>";
     let email_enno = "<a href=\"mailto:enno@openpowerlifting.org\">enno@</a>";
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
@@ -356,7 +357,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
     statuses[NPB as usize].maintainers = email_mbeelen;
-    statuses[NZPF as usize].maintainers = email_matt;
+    statuses[NZPF as usize].maintainers = email_artem;
     statuses[OceaniaPF as usize].maintainers = email_matt;
     statuses[OEVK as usize].maintainers = email_milena;
     statuses[ORPF as usize].maintainers = email_matt;
