@@ -1,8 +1,8 @@
 Name,Team,Country,Sex,BirthYear,BirthDate,Division,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Event,Equipment
 Mihkel Laurits,Estonia,Estonia,M,1944,,Masters 4,105,102.86,-125,125,,125,105,-145,-145,105,170,185,,185,415,1,SBD,Single-ply
-Kazimierz Forys,Germany,Germany,M,1945,,Masters 4,93,91.35,-150,-150,-150,,,,,,,,,,,DQ,SBD,Single-ply
+Kazimierz Michael Forys,Germany,Germany,M,1945,,Masters 4,93,91.35,-150,-150,-150,,,,,,,,,,,DQ,SBD,Single-ply
 John Terragni,Denmark,Denmark,M,1947,,Masters 4,74,72.61,145,155,165,165,117.5,125.5,130,130,160,172.5,-180,172.5,467.5,1,SBD,Single-ply
-Guenter Luedecke,Germany,Germany,M,1948,,Masters 4,83,82.25,-155,155,165,165,100,105,110,110,170,180,-190,180,455,1,SBD,Single-ply
+Günter Lüdecke,Germany,Germany,M,1948,,Masters 4,83,82.25,-155,155,165,165,100,105,110,110,170,180,-190,180,455,1,SBD,Single-ply
 Markku Kemppainen,Finland,Finland,M,1949,,Masters 4,66,65.75,125,-127.5,135,135,107.5,-115,115,115,145,155,165,165,415,1,SBD,Single-ply
 Toivo Kyllönen,Finland,Finland,M,1952,,Masters 4,120,115.42,165,190,200,200,85,-95,-95,85,180,190,195,195,480,2,SBD,Single-ply
 Josef Ptáček,Czechia,Czechia,M,1953,,Masters 4,93,89.72,142.5,-157.5,157.5,157.5,112.5,117.5,-125,117.5,-150,150,160,160,435,2,SBD,Single-ply
@@ -30,7 +30,7 @@ Ole Olsen,Denmark,Denmark,M,1961,,Masters 3,105,94.69,-240,-240,240,240,-160,160
 Erik Rasmussen,Denmark,Denmark,M,1962,,Masters 3,83,82.91,205,-212.5,,205,145,152.5,160,160,150,165,175,175,540,3,SBD,Single-ply
 Frans van der Putten,Netherlands,Netherlands,M,1962,,Masters 3,105,100.56,-225,225,235,235,226,236,-241,236,200,-215,220,220,691,1,SBD,Single-ply
 Zoltán Kanát,Czechia,Czechia,M,1962,,Masters 3,120,116.43,270,-285,285,285,210,217.5,-222.5,217.5,260,-275,277.5,277.5,780,1,SBD,Single-ply
-Douglas D'Gama,Great Britain,UK,M,1962,,Masters 3,83,82.28,200,210,-215,210,122.5,127.5,-130,127.5,-200,210,-237.5,210,547.5,2,SBD,Single-ply
+Doug D'Gama,Great Britain,UK,M,1962,,Masters 3,83,82.28,200,210,-215,210,122.5,127.5,-130,127.5,-200,210,-237.5,210,547.5,2,SBD,Single-ply
 Bjørn Astad,Norway,Norway,M,1963,,Masters 3,74,73.52,205,-215,-233.5,205,125,132.5,-140,132.5,180,190,-195,190,527.5,4,SBD,Single-ply
 Ismo Hietanen,Finland,Finland,M,1963,,Masters 3,74,72.81,160,170,180,180,130,135,140,140,-190,192.5,207.5,207.5,527.5,3,SBD,Single-ply
 Keith Blacknell,Great Britain,UK,M,1963,,Masters 3,93,92.58,230,240,245,245,130,-137.5,-142.5,130,225,-235,-240,225,600,3,SBD,Single-ply
@@ -110,7 +110,7 @@ Britten Fernström,Sweden,Sweden,F,1949,,Masters 4,57,55.84,90,96,100.5,100.5,65
 Lucica Olah,Romania,Romania,F,1955,,Masters 3,69,66.01,110,115,120,120,50,55,57.5,57.5,115,125,-127.5,125,302.5,1,SBD,Single-ply
 Dawn Morrell,Great Britain,UK,F,1960,,Masters 3,69,68.29,-105,-105,105,105,60,-62.5,62.5,62.5,120,-125,-125,120,287.5,2,SBD,Single-ply
 Lene Einarsen,Norway,Norway,F,1963,,Masters 3,76,74.87,-135,-135,-135,,90,95,100,100,117.5,122.5,127.5,127.5,,DQ,SBD,Single-ply
-Jacqueline Blasbery,Great Britain,UK,F,1963,,Masters 3,84+,96.9,100,110,120,120,80,90,100,100,150,165,175,175,395,1,SBD,Single-ply
+Jackie Blasbery,Great Britain,UK,F,1963,,Masters 3,84+,96.9,100,110,120,120,80,90,100,100,150,165,175,175,395,1,SBD,Single-ply
 Gro-Berit Stavheim,Norway,Norway,F,1964,,Masters 2,69,68.69,-150,150,-157.5,150,67.5,70,72.5,72.5,145,152.5,-155,152.5,375,4,SBD,Single-ply
 Maureen Gordon,Great Britain,UK,F,1964,,Masters 2,69,67.61,125,130,132.5,132.5,100,105,110,110,145,152.5,157.5,157.5,400,3,SBD,Single-ply
 Rita Shergold,Great Britain,UK,F,1965,,Masters 2,63,62.39,-120,120,127.5,127.5,87.5,-92.5,92.5,92.5,117.5,127.5,132.5,132.5,352.5,2,SBD,Single-ply
@@ -152,7 +152,7 @@ Helena Rehnberg,Finland,Finland,F,1979,,Masters 1,84+,133.61,125,130,,130,115,12
 Lene Thorén,Norway,Norway,F,1980,,Masters 1,84+,126.47,-240,240,-247.5,240,150,-160,-160,150,180,190,-200,190,580,1,SBD,Single-ply
 Kathleen Compagnie,Belgium,Belgium,F,1980,,Masters 1,69,67.15,-170,172.5,-177.5,172.5,115,-120,120,120,155,167.5,-177.5,167.5,460,2,SBD,Single-ply
 Verena Rehagel,Germany,Germany,F,1980,,Masters 1,69,68.72,145,152.5,157.5,157.5,90,-95,97.5,97.5,145,155,-165,155,410,5,SBD,Single-ply
-Kathrine Bak,Denmark,Denmark,F,1981,,Masters 1,63,61.7,167.5,-175,175,175,100,105,-110,105,212.5,-226,226,226,506,1,SBD,Single-ply
+Kathrine Holmgaard Bak,Denmark,Denmark,F,1981,,Masters 1,63,61.7,167.5,-175,175,175,100,105,-110,105,212.5,-226,226,226,506,1,SBD,Single-ply
 Ira Neitzel,Germany,Germany,F,1981,,Masters 1,52,51.6,132.5,137.5,140,140,77.5,80,82.5,82.5,120,127.5,130,130,352.5,1,SBD,Single-ply
 Lena Kruuse Skovby Andersen,Denmark,Denmark,F,1981,,Masters 1,69,68.31,150,-157.5,-157.5,150,90,95,97.5,97.5,-150,150,162.5,162.5,410,4,SBD,Single-ply
 Nicola Murphy,Great Britain,UK,F,1981,,Masters 1,57,55.53,130,135,-137.5,135,-70,-70,-70,,125,130,137.5,137.5,,DQ,SBD,Single-ply
