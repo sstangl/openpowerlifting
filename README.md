@@ -2,14 +2,20 @@
 
 [![Build Status](https://gitlab.com/openpowerlifting/opl-data/badges/main/pipeline.svg)](https://gitlab.com/openpowerlifting/opl-data/commits/main)
 
-A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.<br/>
+A permanent, accurate, convenient, accessible, open archive of the world's powerlifting data.
 Presentation of this data is available at [OpenPowerlifting.org](https://www.openpowerlifting.org).
 
 **Powerlifting to the People.**
 
-## Development Chat
+## Contents
 
-Project development is discussed in the [OpenPowerlifting Zulip Chat](https://openpl.zulipchat.com/). Everyone is welcome to join.
+1. [Project Chat](#project-chat)
+2. [Licensing](#licensing)
+3. [Development Installation](#development-installation)
+
+## Project Chat
+
+Project work is discussed in the [OpenPowerlifting Zulip Chat](https://openpl.zulipchat.com/). Everyone is welcome to join.
 
 ## Licensing
 
