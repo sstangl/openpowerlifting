@@ -9,7 +9,23 @@
     masters2 = {name = "Master 2",min=49.5,max=58.5}
     masters3 = {name = "Master 3",min=59.5,max=68.5}
     masters4 = {name = "Master 4",min=69.5,max=999}
-
+	
+	fro = {name ="F-O",min=0,max=999,equipment="Raw",sex="F"}
+    frjr = {name = "F-Jr",min=0,max=22.5,equipment="Raw",sex="F"}
+    frsj = {name = "F-Sj",min=0,max=17.5,equipment="Raw",sex="F"}
+    frm1 = {name = "F-M1",min=39.5,max=48.5,equipment="Raw",sex="F"}
+    frm2 = {name = "F-M2",min=49.5,max=58.5,equipment="Raw",sex="F"}
+    frm3 = {name = "F-M3",min=59.5,max=68.5,equipment="Raw",sex="F"}
+    frm4 = {name = "F-M4",min=69.5,max=999,equipment="Raw",sex="F"}
+	
+	mro = {name ="M-O",min=0,max=999,equipment="Raw",sex="M"}
+    mrjr = {name = "M-Jr",min=0,max=22.5,equipment="Raw",sex="M"}
+    mrsj = {name = "M-Sj",min=0,max=17.5,equipment="Raw",sex="M"}
+    mrm1 = {name = "M-M1",min=39.5,max=48.5,equipment="Raw",sex="M"}
+    mrm2 = {name = "M-M2",min=49.5,max=58.5,equipment="Raw",sex="M"}
+    mrm3 = {name = "M-M3",min=59.5,max=68.5,equipment="Raw",sex="M"}
+    mrm4 = {name = "M-M4",min=69.5,max=999,equipment="Raw",sex="M"}
+	
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
