@@ -1,9 +1,18 @@
-Equipment,Division,WeightClassKg,BodyweightKg,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Sex,Event,BirthDate,Place
-Raw,Pro Open,67.5,62.1,Sara Campisi,149.69,68.04,154.22,371.95,F,SBD,,1
-Raw,Amateur Open,75,74.62,Autum Cussen,122.47,74.84,154.22,351.53,F,SBD,,1
-Wraps,Pro Open,90,87.72,Sabrina Omand,215.46,117.93,197.31,530.7,F,SBD,,1
-Wraps,Amateur Open,100,99.11,Brittney Bing,188.24,70.31,170.1,428.64,F,SBD,,1
-Multi-ply,Pro Open,90,89.63,Abby Dejnak,229.06,142.88,183.7,555.65,F,SBD,,1
-Multi-ply,Amateur Open,75,73.94,Krissy Camisa,204.12,122.47,174.63,501.22,F,SBD,,1
-Unlimited,Pro Open,90,87.72,Sabrina Omand,,192.78,,192.78,F,B,,1
-Unlimited,Pro Open,90,89.77,Priyanka Santiago,,158.76,,158.76,F,B,,2
+Division,WeightClassKg,Sex,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BodyweightKg,Event,Equipment,BirthDate,Place
+Amateur Open,48,F,Julia Colica,77.11,47.63,136.08,260.82,44.91,SBD,Raw,,1
+Pro Open,67.5,F,Sara Campisi,149.69,68.04,154.22,371.95,62.1,SBD,Raw,,1
+Pro Open,67.5,F,Sophia Gigliotti,122.47,72.57,122.47,317.51,61.23,SBD,Raw,,2
+Amateur Open,75,F,Autum Cussen,122.47,74.84,154.22,351.53,74.62,SBD,Raw,,1
+Amateur Open,82.5,F,Megan Uhrynowski,151.95,63.5,167.83,383.29,80.83,SBD,Raw,,1
+Amateur Open,100,F,Torrie Long,127.01,52.16,127.01,306.17,98.75,SBD,Raw,,1
+Amateur Open,100,F,Bonnie Jenkins,49.9,38.56,83.91,172.37,98.79,SBD,Raw,,2
+Amateur Open,82.5,F,Morgan Salerno,197.31,68.04,174.63,439.98,82.15,SBD,Wraps,,1
+Amateur Open,82.5,F,Lauren Brown #6,185.97,72.57,147.42,405.97,80.01,SBD,Wraps,,2
+Pro Open,90,F,Sabrina Omand,215.46,117.93,197.31,530.7,87.72,SBD,Wraps,,1
+Amateur Open,100,F,Brittney Bing,188.24,70.31,170.1,428.64,99.11,SBD,Wraps,,1
+Amateur Open,75,F,Krissy Camisa,204.12,122.47,174.63,501.22,73.94,SBD,Multi-ply,,1
+Pro Open,90,F,Abby Dejnak,229.06,142.88,183.7,555.65,89.63,SBD,Multi-ply,,1
+Pro Open,82.5,F,Anastasia Matevosian,,181.44,,181.44,82.1,B,Unlimited,,1
+Pro Open,90,F,Sabrina Omand,,192.78,,192.78,87.72,B,Unlimited,,1
+Pro Open,90,F,Priyanka Santiago,,158.76,,158.76,89.77,B,Unlimited,,2
+Pro Open,100,F,Katrina Bielomyza,,294.84,,294.84,96.98,B,Unlimited,,1
