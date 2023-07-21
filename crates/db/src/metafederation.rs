@@ -765,6 +765,7 @@ impl MetaFederation {
                         || (meet.federation == USPF && meet.date < date!(1997-12-05)))
             }
             MetaFederation::AllIran => is_from(Country::Iran, entry, meet),
+            MetaFederation::AllIraq => is_from(Country::Iraq, entry, meet),
             MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
             MetaFederation::AllIsrael => is_from(Country::Israel, entry, meet),
             MetaFederation::AllItaly => is_from(Country::Italy, entry, meet),
