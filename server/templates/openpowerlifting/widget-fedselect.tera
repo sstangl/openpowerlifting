@@ -105,6 +105,10 @@
   <option value="welshpa" {% if selection.federation == "WelshPA" %}selected{% endif %}>WelshPA - Welsh Powerlifting Association [IPF]</option>
   <option value="wrpf-uk" {% if selection.federation == "WRPF-UK" %}selected{% endif %}>WRPF UK</option>
 </optgroup>
+<optgroup label="{{strings.country.algeria}}">
+  <option value="all-algeria" {% if selection.federation == "AllAlgeria" %}selected{% endif %}>All Algerian Lifters</option>
+  <option value="fapl" {% if selection.federation == "FAPL" %}selected{% endif %}>FAPL - Fédération Algérienne de Powerlifting [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.argentina}}">
   <option value="all-argentina" {% if selection.federation == "AllArgentina" %}selected{% endif %}>{{strings.selectors.fed.all_argentina}}</option>
   <option value="aap" {% if selection.federation == "AAP" %}selected{% endif %}>AAP - Alianza Argentina Powerlifting [GPA/IPO]</option>
@@ -242,6 +246,10 @@
 <optgroup label="{{strings.country.dominicanrepublic}}">
   <option value="plrd" {% if selection.federation == "PLRD" %}selected{% endif %}>PLRD - Powerlifting Republica Dominicana [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.egypt}}">
+  <option value="all-egypt" {% if selection.federation == "AllEgypt" %}selected{% endif %}>All Egyptian Lifters</option>
+  <option value="egyptpf" {% if selection.federation == "EgyptPF" %}selected{% endif %}>EgyptPF - Egypt Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.estonia}}">
   <option value="all-estonia" {% if selection.federation == "AllEstonia" %}selected{% endif %}>{{strings.selectors.fed.all_estonia}}</option>
   <option value="ejtl" {% if selection.federation == "EJTL" %}selected{% endif %}>EJTL - Eesti jõutõsteliit [IPF]</option>
@@ -315,6 +323,10 @@
   <option value="all-iran" {% if selection.federation == "AllIran" %}selected{% endif %}>{{strings.selectors.fed.all_iran}}</option>
   <option value="iranbbf" {% if selection.federation == "IranBBF" %}selected{% endif %}>IranBBF - Iran Bodybuilding & Fitness [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.iraq}}">
+  <option value="all-iraq" {% if selection.federation == "AllIraq" %}selected{% endif %}>All Iraqi Lifters</option>
+  <option value="iraqpf" {% if selection.federation == "IraqPF" %}selected{% endif %}>IraqPF - Iraq Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.ireland}}">
   <option value="all-ireland" {% if selection.federation == "AllIreland" %}selected{% endif %}>{{strings.selectors.fed.all_ireland}}</option>
   <option value="abs-series" {% if selection.federation == "ABSSeries" %}selected{% endif %}>ABS Series</option>
@@ -371,6 +383,14 @@
   <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF - Latvijas Pauerliftinga Federācija [IPF]</option>
   <option value="wpc-latvia" {% if selection.federation == "WPC-Latvia" %}selected{% endif %}>WPC Latvia</option>
 </optgroup>
+<optgroup label="{{strings.country.lebanon}}">
+  <option value="all-lebanon" {% if selection.federation == "AllLebanon" %}selected{% endif %}>All Lebanese Lifters</option>
+  <option value="lebanonpf" {% if selection.federation == "LebanonPF" %}selected{% endif %}>LebanonPF - Lebanon Powerlifting Federation [IPF]</option>
+</optgroup>
+<optgroup label="{{strings.country.libya}}">
+  <option value="all-libya" {% if selection.federation == "AllLibya" %}selected{% endif %}>All Libyan Lifters</option>
+  <option value="libyapf" {% if selection.federation == "LibyaPF" %}selected{% endif %}>LibyaPF - Libyan Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.lithuania}}">
   <option value="all-lithuania" {% if selection.federation == "AllLithuania" %}selected{% endif %}>{{strings.selectors.fed.all_lithuania}}</option>
   <option value="ljtf" {% if selection.federation == "LJTF" %}selected{% endif %}>LJTF - Lietuvos Jėgos Trikovės Federacija [IPF]</option>
@@ -394,6 +414,10 @@
 <optgroup label="{{strings.country.moldova}}">
   <option value="all-moldova" {% if selection.federation == "AllMoldova" %}selected{% endif %}>{{strings.selectors.fed.all_moldova}}</option>
   <option value="wpc-moldova" {% if selection.federation == "WPC-Moldova" %}selected{% endif %}>WPC Moldova</option>
+</optgroup>
+<optgroup label="{{strings.country.mongolia}}">
+  <option value="all-mongolia" {% if selection.federation == "AllMongolia" %}selected{% endif %}>All Mongolian Lifters</option>
+  <option value="mupf" {% if selection.federation == "MUPF" %}selected{% endif %}>MUPF - Mongolian United Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.nauru}}">
   <option value="all-nauru" {% if selection.federation == "AllNauru" %}selected{% endif %}>{{strings.selectors.fed.all_nauru}}</option>
@@ -522,6 +546,10 @@
   <option value="ipl-spain" {% if selection.federation == "IPL-Spain" %}selected{% endif %}>IPL Spain</option>
   <option value="wrpf-spain" {% if selection.federation == "WRPF-Spain" %}selected{% endif %}>WRPF Spain</option>
 </optgroup>
+<optgroup label="{{strings.country.srilanka}}">
+  <option value="all-srilanka" {% if selection.federation == "AllSriLanka" %}selected{% endif %}>All Sri Lankan Lifters</option>
+  <option value="slpf" {% if selection.federation == "SLPF" %}selected{% endif %}>SLPF - Sri Lanka Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.sweden}}">
   <option value="all-sweden" {% if selection.federation == "AllSweden" %}selected{% endif %}>{{strings.selectors.fed.all_sweden}}</option>
   <option value="ssf" {% if selection.federation == "SSF" %}selected{% endif %}>SSF - Svenska Styrkelyft Förbundet [IPF]</option>
@@ -532,6 +560,10 @@
   <option value="swisspl" {% if selection.federation == "SwissPL" %}selected{% endif %}>Swiss Powerlifting</option>
   <option value="sdfpf" {% if selection.federation == "SDFPF" %}selected{% endif %}>SDFPF - Swiss Drug-Free Powerlifting Federation</option>
   <option value="kdks" {% if selection.federation == "KDKS" %}selected{% endif %}>KDKS - Kraftdreikampfverband Schweiz</option>
+</optgroup>
+<optgroup label="{{strings.country.syria}}">
+  <option value="all-syria" {% if selection.federation == "AllSyria" %}selected{% endif %}>All Syrian Lifters</option>
+  <option value="safp" {% if selection.federation == "SAFP" %}selected{% endif %}>SAFP - Syrian Arab Federation of Powerlifting [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.thailand}}">
   <option value="all-thailand" {% if selection.federation == "AllThailand" %}selected{% endif %}>{{strings.selectors.fed.all_thailand}}</option>

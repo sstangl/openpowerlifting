@@ -27,6 +27,8 @@ pub enum MetaFederation {
     #[strum(to_string = "all-tested")]
     AllTested,
 
+    #[strum(to_string = "all-algeria")]
+    AllAlgeria,
     #[strum(to_string = "all-argentina")]
     AllArgentina,
     #[strum(to_string = "all-australia")]
@@ -72,6 +74,8 @@ pub enum MetaFederation {
     AllCzechia,
     #[strum(to_string = "all-denmark")]
     AllDenmark,
+    #[strum(to_string = "all-egypt")]
+    AllEgypt,
     #[strum(to_string = "all-estonia")]
     AllEstonia,
     #[strum(to_string = "all-finland")]
@@ -101,6 +105,8 @@ pub enum MetaFederation {
     AllIPFUSA,
     #[strum(to_string = "all-iran")]
     AllIran,
+    #[strum(to_string = "all-iraq")]
+    AllIraq,
     #[strum(to_string = "all-ireland")]
     AllIreland,
     #[strum(to_string = "all-israel")]
@@ -117,6 +123,10 @@ pub enum MetaFederation {
     AllKyrgyzstan,
     #[strum(to_string = "all-latvia")]
     AllLatvia,
+    #[strum(to_string = "all-lebanon")]
+    AllLebanon,
+    #[strum(to_string = "all-libya")]
+    AllLibya,
     #[strum(to_string = "all-lithuania")]
     AllLithuania,
     #[strum(to_string = "all-malaysia")]
@@ -125,6 +135,8 @@ pub enum MetaFederation {
     AllMexico,
     #[strum(to_string = "all-moldova")]
     AllMoldova,
+    #[strum(to_string = "all-mongolia")]
+    AllMongolia,
     #[strum(to_string = "all-nauru")]
     AllNauru,
     #[strum(to_string = "all-netherlands")]
@@ -169,10 +181,14 @@ pub enum MetaFederation {
     AllSpain,
     #[strum(to_string = "all-southafrica")]
     AllSouthAfrica,
+    #[strum(to_string = "all-srilanka")]
+    AllSriLanka,
     #[strum(to_string = "all-sweden")]
     AllSweden,
     #[strum(to_string = "all-switzerland")]
     AllSwitzerland,
+    #[strum(to_string = "all-syria")]
+    AllSyria,
     #[strum(to_string = "all-thailand")]
     AllThailand,
     #[strum(to_string = "all-turkey")]
@@ -291,6 +307,10 @@ pub enum MetaFederation {
     #[strum(to_string = "dsf")]
     DSF,
 
+    /// EgyptPF, but with international results also.
+    #[strum(to_string = "egyptpf")]
+    EgyptPF,
+
     /// EJTL, but with international results also.
     #[strum(to_string = "ejtl")]
     EJTL,
@@ -302,6 +322,10 @@ pub enum MetaFederation {
     /// FALPO, but with international results also.
     #[strum(to_string = "falpo")]
     FALPO,
+
+    /// FAPL, but with international results also.
+    #[strum(to_string = "fapl")]
+    FAPL,
 
     /// FCP, but with international results also
     #[strum(to_string = "fcp")]
@@ -382,6 +406,14 @@ pub enum MetaFederation {
     #[strum(to_string = "ipf-china")]
     IPFChina,
 
+    /// IranBBF, but with international results also.
+    #[strum(to_string = "iranbbf")]
+    IranBBF,
+
+    /// IraqPF, but with international results also.
+    #[strum(to_string = "iraqpf")]
+    IraqPF,
+
     /// IrishPF, but with international results also.
     #[strum(to_string = "irishpf")]
     IrishPF,
@@ -419,9 +451,17 @@ pub enum MetaFederation {
     #[strum(to_string = "kraft")]
     KRAFT,
 
+    /// lebanonpf, but with international results also.
+    #[strum(to_string = "lebanonpf")]
+    LebanonPF,
+
     /// LFPH, but with international results also.
     #[strum(to_string = "lfph")]
     LFPH,
+
+    /// libyapf, but with international results also.
+    #[strum(to_string = "libyapf")]
+    LibyaPF,
 
     /// LJTF, but with international results also.
     #[strum(to_string = "ljtf")]
@@ -438,6 +478,10 @@ pub enum MetaFederation {
     /// MAP, but with international results also.
     #[strum(to_string = "map")]
     MAP,
+
+    /// MUPF, but with international results also.
+    #[strum(to_string = "mupf")]
+    MUPF,
 
     /// NauruPF, but with international results also.
     #[strum(to_string = "naurupf")]
@@ -507,6 +551,10 @@ pub enum MetaFederation {
     #[strum(to_string = "qatarpl")]
     QatarPL,
 
+    /// SAFP, but with international results also.
+    #[strum(to_string = "safp")]
+    SAFP,
+
     /// SAPF, but with international results also.
     #[strum(to_string = "sapf")]
     SAPF,
@@ -514,6 +562,10 @@ pub enum MetaFederation {
     /// ScottishPL, but with BP and international results also.
     #[strum(to_string = "scottishpl")]
     ScottishPL,
+
+    /// SLPF, but with international results also.
+    #[strum(to_string = "slpf")]
+    SLPF,
 
     /// SSF, but with international results also.
     #[strum(to_string = "ssf")]
@@ -651,6 +703,7 @@ impl MetaFederation {
                 entry.tested && meet.federation.is_fully_tested(meet.date)
             }
             MetaFederation::AllTested => entry.tested,
+            MetaFederation::AllAlgeria => is_from(Country::Algeria, entry, meet),
             MetaFederation::AllArgentina => is_from(Country::Argentina, entry, meet),
             MetaFederation::AllAustralia => is_from(Country::Australia, entry, meet),
             MetaFederation::AllAustraliaTested => {
@@ -689,6 +742,7 @@ impl MetaFederation {
             MetaFederation::AllCyprus => is_from(Country::Cyprus, entry, meet),
             MetaFederation::AllCzechia => is_from(Country::Czechia, entry, meet),
             MetaFederation::AllDenmark => is_from(Country::Denmark, entry, meet),
+            MetaFederation::AllEgypt => is_from(Country::Egypt, entry, meet),
             MetaFederation::AllEstonia => is_from(Country::Estonia, entry, meet),
             MetaFederation::AllFinland => is_from(Country::Finland, entry, meet),
             MetaFederation::AllFrance => is_from(Country::France, entry, meet),
@@ -719,10 +773,13 @@ impl MetaFederation {
             MetaFederation::AllKuwait => is_from(Country::Kuwait, entry, meet),
             MetaFederation::AllKyrgyzstan => is_from(Country::Kyrgyzstan, entry, meet),
             MetaFederation::AllLatvia => is_from(Country::Latvia, entry, meet),
+            MetaFederation::AllLebanon => is_from(Country::Lebanon, entry, meet),
+            MetaFederation::AllLibya => is_from(Country::Libya, entry, meet),
             MetaFederation::AllLithuania => is_from(Country::Lithuania, entry, meet),
             MetaFederation::AllMalaysia => is_from(Country::Malaysia, entry, meet),
             MetaFederation::AllMexico => is_from(Country::Mexico, entry, meet),
             MetaFederation::AllMoldova => is_from(Country::Moldova, entry, meet),
+            MetaFederation::AllMongolia => is_from(Country::Mongolia, entry, meet),
             MetaFederation::AllNauru => is_from(Country::Nauru, entry, meet),
             MetaFederation::AllNetherlands => is_from(Country::Netherlands, entry, meet),
             MetaFederation::AllNewZealand => is_from(Country::NewZealand, entry, meet),
@@ -744,8 +801,10 @@ impl MetaFederation {
             MetaFederation::AllSlovakia => is_from(Country::Slovakia, entry, meet),
             MetaFederation::AllSlovenia => is_from(Country::Slovenia, entry, meet),
             MetaFederation::AllSpain => is_from(Country::Spain, entry, meet),
+            MetaFederation::AllSriLanka => is_from(Country::SriLanka, entry, meet),
             MetaFederation::AllSouthAfrica => is_from(Country::SouthAfrica, entry, meet),
             MetaFederation::AllSweden => is_from(Country::Sweden, entry, meet),
+            MetaFederation::AllSyria => is_from(Country::Syria, entry, meet),
             MetaFederation::AllSwitzerland => is_from(Country::Switzerland, entry, meet),
             MetaFederation::AllThailand => is_from(Country::Thailand, entry, meet),
             MetaFederation::AllTurkey => is_from(Country::Turkey, entry, meet),
@@ -854,9 +913,11 @@ impl MetaFederation {
             MetaFederation::CyprusPF => affiliation!(meet, entry, CyprusPF, IPF, EPF),
             MetaFederation::DPL => affiliation!(meet, entry, DPL, IPL),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
+            MetaFederation::EgyptPF => affiliation!(meet, entry, EgyptPF, IPF, AfricanPF),
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
+            MetaFederation::FAPL => affiliation!(meet, entry, FAPL, IPF, AfricanPF),
             MetaFederation::FCP => affiliation!(meet, entry, FCP, IPF, EPF),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO),
@@ -920,12 +981,16 @@ impl MetaFederation {
                     | Federation::CommonwealthPF
             ),
             MetaFederation::IPFChina => affiliation!(meet, entry, IPFChina, IPF, AsianPF),
+            MetaFederation::IranBBF => affiliation!(meet, entry, IranBBF, IPF, AsianPF),
+            MetaFederation::IraqPF => affiliation!(meet, entry, IraqPF, IPF, AsianPF),
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
             MetaFederation::JPA => affiliation!(meet, entry, JPA, IPF, AsianPF),
             MetaFederation::KBGV => affiliation!(meet, entry, KBGV, IPF, EPF),
             MetaFederation::KNKFSP => affiliation!(meet, entry, KNKFSP, NPB, IPF, EPF),
+            MetaFederation::LebanonPF => affiliation!(meet, entry, LebanonPF, IPF, AsianPF),
             MetaFederation::LFPH => affiliation!(meet, entry, LFPH, IPF, EPF, KBGV),
+            MetaFederation::LibyaPF => affiliation!(meet, entry, LibyaPF, IPF, AfricanPF),
             MetaFederation::LJTF => affiliation!(meet, entry, LJTF, IPF, EPF),
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
             MetaFederation::KDKS => {
@@ -936,6 +1001,7 @@ impl MetaFederation {
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
             MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA),
             MetaFederation::MAP => affiliation!(meet, entry, MAP, IPF, AsianPF),
+            MetaFederation::MUPF => affiliation!(meet, entry, MUPF, IPF, AsianPF),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
             MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
@@ -962,8 +1028,10 @@ impl MetaFederation {
             MetaFederation::PWFL => affiliation!(meet, entry, PWFL, IPF, EPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
             MetaFederation::QatarPL => affiliation!(meet, entry, QatarPL, IPF, AsianPF),
+            MetaFederation::SAFP => affiliation!(meet, entry, SAFP, IPF, AsianPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
+            MetaFederation::SLPF => affiliation!(meet, entry, SLPF, IPF, AsianPF),
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
             MetaFederation::SSSC => affiliation!(meet, entry, SSSC, IPF, AsianPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),
