@@ -249,6 +249,7 @@
 <optgroup label="{{strings.country.egypt}}">
   <option value="all-egypt" {% if selection.federation == "AllEgypt" %}selected{% endif %}>All Egyptian Lifters</option>
   <option value="egyptpf" {% if selection.federation == "EgyptPF" %}selected{% endif %}>EgyptPF - Egypt Powerlifting Federation [IPF]</option>
+  <option value="wpc-egypt" {% if selection.federation == "WPC-Egypt" %}selected{% endif %}>WPC Egypt</option>
 </optgroup>
 <optgroup label="{{strings.country.estonia}}">
   <option value="all-estonia" {% if selection.federation == "AllEstonia" %}selected{% endif %}>{{strings.selectors.fed.all_estonia}}</option>

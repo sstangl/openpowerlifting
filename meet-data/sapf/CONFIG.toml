@@ -12,6 +12,7 @@
 
     student = {name ="Student",min=0,max=999}
     youth = {name = "Youth",min=0,max=13}
+    special_olympics = {name="Special Olympics", min=0, max=999}
 
 	# USAPL-style divisions.
 	mro = {name="MR-O", min=0, max=999, sex="M", equipment="Raw"}
@@ -82,19 +83,19 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors","MR-SJ","MR-Jr","M-SJ","M-Jr","MR-PSJ","MR-PJr"]
+    divisions = ["Youth","Juniors","Sub-Juniors","MR-SJ","MR-Jr","M-SJ","M-Jr","MR-PSJ","MR-PJr"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2020-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors","FR-SJ","FR-Jr","F-SJ","F-Jr"]
+    divisions = ["Youth","Juniors","Sub-Juniors","FR-SJ","FR-Jr","F-SJ","F-Jr"]
 
 [weightclasses.year2020_junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","2019-12-31"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors","FR-SJ","FR-Jr","F-SJ","F-Jr"]
+    divisions = ["Youth","Juniors","Sub-Juniors","FR-SJ","FR-Jr","F-SJ","F-Jr"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
