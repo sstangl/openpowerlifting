@@ -12,6 +12,8 @@
     mru18 = {name="MR-Sj", min=14, max=17.5, sex="M", equipment="Raw"}
     mu18 = {name="M-Sj", min=14, max=17.5, sex="M", equipment="Single-ply"}
     mu14 = {name="MR-Pre-Sub-Jr", min=8, max=14, sex="M", equipment="Raw"}
+    mru11 = {name="MR-PS", min=11, max=14, sex="M", equipment="Raw"}
+    mu11 = {name="M-PS", min=11, max=14, sex="M", equipment="Single-ply"}
     mrm1 = {name="MR-M1", min=39.5, max=48.5, sex="M", equipment="Raw"}
     mry = {name="MR-Y", min=8, max=13, sex="M", equipment="Raw"}
     my = {name="M-Y", min=8, max=13, sex="M", equipment="Single-ply"}
@@ -33,6 +35,8 @@
     fru18 = {name="FR-Sj", min=11, max=17.5, sex="F", equipment="Raw"}
     fu18 = {name="F-Sj", min=11, max=17.5, sex="F", equipment="Single-ply"}
     fu14 = {name="FR-Pre-Sub-Jr", min=8, max=14, sex="F", equipment="Raw"}
+    fru11 = {name="FR-PS", min=11, max=14, sex="F", equipment="Raw"}
+    fu11 = {name="F-PS", min=11, max=14, sex="F", equipment="Single-ply"}
     fry = {name="FR-Y", min=8, max=13, sex="F", equipment="Raw"}
     fy = {name="F-Y", min=8, max=13, sex="F", equipment="Single-ply"}
     frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
