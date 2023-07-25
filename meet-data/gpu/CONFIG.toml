@@ -24,4 +24,5 @@
     sex = "F"
 
 [exemptions]
+    2302 = ["ExemptWeightClassConsistency","ExemptDivision"] # Open Tournament Mode
   
