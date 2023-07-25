@@ -18,7 +18,7 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 1,Kirill Tezichev,Juniors,1997,Kazakhstan,87.49,200,205,,205,93,M,Raw,B,205
 2,Afzalsho Kholov,Juniors,1995,Tajikistan,91.38,185,195,-197.5,195,93,M,Raw,B,195
 3,Mohammed Adeelah,Juniors,1997,Iraq,91.6,180,187.5,-197.5,187.5,93,M,Raw,B,187.5
-4,Ghalib Matar Ghalib Almansoori Khalid,Juniors,1996,UAE,93,135,-142.5,142.5,142.5,93,M,Raw,B,142.5
+4,Khalid Ghalib Almansoori,Juniors,1996,UAE,93,135,-142.5,142.5,142.5,93,M,Raw,B,142.5
 5,Viktor Timorskiy,Juniors,1996,Kazakhstan,91.28,140,-145,-145,140,93,M,Raw,B,140
 6,Husain Hosny Elloulou Ahmed,Juniors,1996,UAE,92.2,80,130,-140,130,93,M,Raw,B,130
 1,Yevgeniy Parshin,Juniors,1995,Kazakhstan,104,185,195,-210.5,195,105,M,Raw,B,195
@@ -33,7 +33,7 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 2,Kumar Manoj,Masters 1,1977,India,64.38,100,107.5,110,110,66,M,Raw,B,110
 3,Hassan Emam Seyed,Masters 1,1976,Iran,64.72,85,95,-110,95,66,M,Raw,B,95
 1,Kunihiro Watanabe,Masters 1,1977,Japan,72.6,127.5,135,-142.5,135,74,M,Raw,B,135
-2,Suhail Mohammed Binhuwaiden Alketbi Ahmed,Masters 1,1977,UAE,73.3,120,127.5,-142.5,127.5,74,M,Raw,B,127.5
+2,Ahmed Suhail Alketbi,Masters 1,1977,UAE,73.3,120,127.5,-142.5,127.5,74,M,Raw,B,127.5
 3,Nagaraj P D,Masters 1,1973,India,71.44,-115,115,120,120,74,M,Raw,B,120
 4,Ruben Srivastava,Masters 1,,India,72.9,95,110,-117.5,110,74,M,Raw,B,110
 5,Javed Iqbal,Masters 1,1971,Pakistan,71.84,50,60,65,65,74,M,Raw,B,65
@@ -90,7 +90,7 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 3,Alexander Suprunkov,Open,1987,Kazakhstan,82.9,190,-195,-197.5,190,83,M,Raw,B,190
 4,Yuki Daido,Open,1994,Japan,81.72,-170,170,175,175,83,M,Raw,B,175
 5,Aziz Ismailov,Open,1980,Kazakhstan,81.69,150,160,170,170,83,M,Raw,B,170
-6,Haider Husain Ghuloom Ahmed,Open,1992,UAE,82.12,170,-180,-180,170,83,M,Raw,B,170
+6,Ahmad Haider Ghuloom,Open,1992,UAE,82.12,170,-180,-180,170,83,M,Raw,B,170
 7,Prakash Carlo Vincent,Open,1972,India,81.29,130,137.5,142.5,142.5,83,M,Raw,B,142.5
 8,Jaspreet Singh,Open,1989,India,80.86,125,135,140,140,83,M,Raw,B,140
 1,Vyacheslav Tsoy,Open,1984,Kazakhstan,89.6,215,222.5,233.5,233.5,93,M,Raw,B,233.5
@@ -100,7 +100,7 @@ Place,Name,Division,BirthYear,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Be
 5,Valeriy Kuzhakhmetov,Open,1988,Kazakhstan,92.29,185,-192.5,-192.5,185,93,M,Raw,B,185
 6,Arshad Ulla,Open,1993,India,92.6,135,142.5,-150,142.5,93,M,Raw,B,142.5
 7,Ashraf Khan Adil,Open,1988,India,92.65,125,127.5,140,140,93,M,Raw,B,140
-1,Mohammed Alkhanbouli,Open,1980,UAE,102.22,180,190,-197.5,190,105,M,Raw,B,190
+1,Mohammed Ali Alkhanbouli,Open,1980,UAE,102.22,180,190,-197.5,190,105,M,Raw,B,190
 2,Vijay Kanchan,Open,1968,India,104.5,160,170,-182.5,170,105,M,Raw,B,170
 3,Ali Obaid,Open,1980,Iraq,96.7,-110,110,125,125,105,M,Raw,B,125
 1,Dmitriy Li,Open,1991,Kazakhstan,110,220,225,226.5,226.5,120,M,Raw,B,226.5
@@ -272,7 +272,7 @@ DQ,Zhaslan Donanov,Open,1992,Kazakhstan,65.12,-160,-160,-170,,66,M,Single-ply,B,
 5,Prakash Carlo Vincent,Open,1972,India,80.05,185,192.5,-200,192.5,83,M,Single-ply,B,192.5
 6,Jaspreet Singh,Open,1989,India,80.92,170,180,187.5,187.5,83,M,Single-ply,B,187.5
 7,Aziz Abdul Raheem Abdulla Ismail Abdul,Open,1981,UAE,83.08,120,122.5,-125,122.5,93,M,Single-ply,B,122.5
-DQ,Haider Husain Ghuloom Ahmed,Open,1992,UAE,81,-210,-210,-215,,83,M,Single-ply,B,
+DQ,Ahmad Haider Ghuloom,Open,1992,UAE,81,-210,-210,-215,,83,M,Single-ply,B,
 DQ,Alexander Suprunkov,Open,1987,Kazakhstan,82.38,-245,-245,-245,,83,M,Single-ply,B,
 1,Vyacheslav Tsoy,Open,1984,Kazakhstan,88.41,270,277.5,280,280,93,M,Single-ply,B,280
 2,Masahito Kitsui,Open,1978,Hong Kong,92.65,260,272.5,280,280,93,M,Single-ply,B,280
@@ -285,7 +285,7 @@ DQ,Arshad Ulla,Open,1993,India,92.28,-195,-210,-210,,93,M,Single-ply,B,
 2,Ilya Maslov,Open,1989,Kazakhstan,102.72,280,290,-310,290,105,M,Single-ply,B,290
 3,Saduakas Salavatov,Open,1980,Kazakhstan,102.74,230,235,237.5,237.5,105,M,Single-ply,B,237.5
 4,Vijay Kanchan,Open,1968,India,104.86,-220,227.5,237.5,237.5,105,M,Single-ply,B,237.5
-5,Mohammed Alkhanbouli,Open,1980,UAE,103.05,222.5,-230,-237.5,222.5,105,M,Single-ply,B,222.5
+5,Mohammed Ali Alkhanbouli,Open,1980,UAE,103.05,222.5,-230,-237.5,222.5,105,M,Single-ply,B,222.5
 DQ,Kalian Karde,Open,1989,India,96.31,-222.5,-222.5,-222.5,,105,M,Single-ply,B,
 1,Arslan Suyunshaliyev,Open,1989,Kazakhstan,106.34,310,330,345,345,120,M,Single-ply,B,345
 2,Erdenekhuu Timurbaatar,Open,1985,Mongolia,118.28,270,-280,282.5,282.5,120,M,Single-ply,B,282.5
