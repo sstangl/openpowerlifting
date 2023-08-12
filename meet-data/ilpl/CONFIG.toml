@@ -9,6 +9,8 @@
     masters_50_54 = {name = "M3", min = 50, max = 54}
     masters_55_59 = {name = "M4", min = 55, max = 59}
     masters_60_64 = {name = "M5", min = 60, max = 64}
+    masters_65_69 = {name = "M6", min = 64, max = 69}
+    masters_70_74 = {name = "M7", min = 70, max = 74}
 
     teen = {name = "T", min = 13, max = 19}
     guest = {name = "G", min = 0, max = 999}
