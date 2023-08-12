@@ -230,6 +230,8 @@
     myesawpc = {name ="M_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
     myemawpc = {name ="M_YEM_AWPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Youth
     mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Police/Fire
+    msorawpc = {name ="M_SOR_AWPC",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
+    msocrawpc = {name ="M_SOCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M"} #Special Olympics
 
     forawpc = {name ="F_OR_AWPC",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrawpc = {name ="F_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
