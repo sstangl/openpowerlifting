@@ -14,6 +14,7 @@
     paralympics = {name = "Paralympics",min=0,max=999}
     university = {name = "University",min=0,max=999}
     specialolympics = {name = "Special Olympics",min=0,max=999}
+	guest = {name = "Guest",min=0,max=999}
     lw = {name = "LW",min=0,max=999}
     mw = {name = "MW",min=0,max=999}
     hw = {name = "HW",min=0,max=999}
