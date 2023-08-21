@@ -18,6 +18,7 @@
     masters4 = {name = "Masters 4", min=69.5, max=999}
     masters5 = {name = "Masters 5", min=79.5, max=999}
     special_olympics = {name="Special Olympics", min=0, max=999}
+	guest = {name="Guest", min=0, max=999}
 
     masters = {name = "Masters", min=39.5, max=999}
 
