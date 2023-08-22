@@ -1533,6 +1533,11 @@ pub enum Federation {
     #[strum(to_string = "WPPL-Mexico", serialize = "wppl-mexico")]
     WPPLMexico,
 
+    /// World Power Power League, Peru.
+    #[serde(rename = "WPPL-Peru")]
+    #[strum(to_string = "WPPL-Peru", serialize = "wppl-peru")]
+    WPPLPeru,
+
     /// World Power Power League, Russia.
     #[serde(rename = "WPPL-Russia")]
     #[strum(to_string = "WPPL-Russia", serialize = "wppl-russia")]
@@ -2113,6 +2118,7 @@ impl Federation {
             Federation::WPNZ => FULLY_TESTED,
             Federation::WPPLBelarus => false,
             Federation::WPPLMexico => false,
+            Federation::WPPLPeru => false,
             Federation::WPPLRussia => false,
             Federation::WPPLUkraine => false,
             Federation::WPPO => FULLY_TESTED,
@@ -2508,6 +2514,7 @@ impl Federation {
             Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPPLBelarus => Some(Country::Belarus),
             Federation::WPPLMexico => Some(Country::Mexico),
+            Federation::WPPLPeru => Some(Country::Peru),
             Federation::WPPLRussia => Some(Country::Russia),
             Federation::WPPLUkraine => Some(Country::Ukraine),
             Federation::WPPO => None,
@@ -3001,6 +3008,7 @@ impl Federation {
             Federation::WPNZ => Some(Federation::WP),
             Federation::WPPLBelarus => None,
             Federation::WPPLMexico => None,
+            Federation::WPPLPeru => None,
             Federation::WPPLRussia => None,
             Federation::WPPLUkraine => None,
             Federation::WPPO => None,
@@ -3504,6 +3512,7 @@ impl Federation {
             Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPPLBelarus => PointsSystem::Wilks,
             Federation::WPPLMexico => PointsSystem::Wilks,
+            Federation::WPPLPeru => PointsSystem::Wilks,
             Federation::WPPLRussia => PointsSystem::Wilks,
             Federation::WPPLUkraine => PointsSystem::Wilks,
             Federation::WPPO => PointsSystem::AH,
