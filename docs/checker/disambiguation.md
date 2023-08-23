@@ -13,12 +13,12 @@ We have finished adding our meet and we think it's ready to go.
 
 So we run the checker to make sure it's ready. 
 
->user@machine:~/opl-data/meet-data/spf/2315$ ../../../tests/check
->    Finished release [optimized] target(s) in 7.57s
->     Running `target/release/checker /home/user/opl-data/meet-data/spf/2315`
->/home/user/opl-data/meet-data/spf/2315/entries.csv
->  Line 10: Disambiguate Andrew Johnson (https://www.openpowerlifting.org/u/andrewjohnson)
->Summary: 1 error, 0 warnings for spf/2315
+>user@machine:~/opl-data/meet-data/spf/2315$ ../../../tests/check  
+>    Finished release [optimized] target(s) in 7.57s  
+>     Running `target/release/checker /home/user/opl-data/meet-data/spf/2315`  
+>/home/user/opl-data/meet-data/spf/2315/entries.csv  
+>  Line 10: Disambiguate Andrew Johnson (https://www.openpowerlifting.org/u/andrewjohnson)  
+>Summary: 1 error, 0 warnings for spf/2315  
 
 But we have an error and need to disambiguate this lifter.
 
@@ -59,10 +59,10 @@ Then we edit our entries.csv file:
 
 We run the checker again...
 
->user@machine:~/opl-data/meet-data/spf/2315$ ../../../tests/check
->    Finished release [optimized] target(s) in 0.59s
->     Running `target/release/checker /home/user/opl-data/meet-data/spf/2315`
->Summary: 0 errors, 0 warnings for spf/2315
+>user@machine:~/opl-data/meet-data/spf/2315$ ../../../tests/check  
+>    Finished release [optimized] target(s) in 0.59s  
+>     Running `target/release/checker /home/user/opl-data/meet-data/spf/2315`  
+>Summary: 0 errors, 0 warnings for spf/2315  
 
 And our meet is good. It's worth noting that that this just tests our meet for internal structure and consistency, and does not check against the rest of the data in the project. But for our purposes here, it is good to go.  
 
