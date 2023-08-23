@@ -1,4 +1,4 @@
-# Where to Start
+# Where to Start READ THIS FIRST
 
 A guide for new volunteers to the OpenPowerlifting project.
 
