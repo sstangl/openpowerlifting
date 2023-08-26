@@ -70,7 +70,7 @@ title = body.split('\n')[0].split('\t')[1]
 # ```
 # So we can extract this information by splitting into paragraphs.
 paragraphs = body.replace("\n\n\n", "\n\n").replace("\n\nHi ", "\nHi").split("\n\n")
-info = ' '.join(paragraphs[1].split('\n')).strip()  # Compress into one line.
+info = ' '.join(paragraphs[2].split('\n')).strip()  # Compress into one line.
 
 # Extract out from "... meet held on October 2, 2022 in Fargo, ND is attached ..."
 # Sometimes the "m" in "meet" is capitalized, so we just ignore that character.
