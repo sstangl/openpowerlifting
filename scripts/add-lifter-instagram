@@ -18,8 +18,12 @@ from typing import List
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers(required=True)
 
-    parser.add_argument(
+    single = subparsers.add_parser("single", help="Add a single Instagram handle")
+    batch = subparsers.add_parser("batch", help="Add a batch of handles from a CSV")
+
+    single.add_argument(
         "-n",
         "--name",
         type=str,
@@ -27,12 +31,20 @@ def parse_args() -> argparse.Namespace:
         help="Name of the lifter"
     )
 
-    parser.add_argument(
+    single.add_argument(
         "-i",
         "--instagram",
         type=str,
         required=True,
         help="Instagram handle for the athlete"
+    )
+
+    batch.add_argument(
+        "-f",
+        "--file",
+        type=str,
+        required=True,
+        help="CSV file containing names and Instagram handles"
     )
 
     return parser.parse_args()
@@ -52,8 +64,13 @@ def insert_instagram_entry(current_contents: List[str], name: str, instagram: st
     for index, entry in enumerate(current_contents[1:]):
         # Find the index of the comma to avoid copying strings
         comma_index = entry.index(",")
+        sanitised = strip_accents(entry[:comma_index])
 
-        if strip_accents(entry[:comma_index]) > name:
+        if sanitised == name:
+            current_contents[index + 1] = line_entry
+            return
+
+        if sanitised > name:
             # Mutating while iterating, Rust would have a fit
             current_contents.insert(index + 1, line_entry)
             return
@@ -81,7 +98,16 @@ def main():
     with open(social_instagram_path, "r", encoding="utf-8") as f:
         contents = f.readlines()
 
-    insert_instagram_entry(contents, args.name, args.instagram)
+    if args.file:
+        with open(args.file, "r", encoding="utf-8") as f:
+            lines_without_header = f.readlines()[1:]
+            pairs = map(lambda x: x.strip().split(","), lines_without_header)
+            filtered_pairs = filter(lambda p: p[1] != '', pairs)
+
+            for (name, instagram) in filtered_pairs:
+                insert_instagram_entry(contents, name, instagram)
+    else:
+        insert_instagram_entry(contents, args.name, args.instagram)
 
     # Write everything back to the correct path
     with open(social_instagram_path, "w", encoding="utf-8", newline="\n") as f:
