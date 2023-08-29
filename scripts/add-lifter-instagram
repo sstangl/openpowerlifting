@@ -10,10 +10,11 @@ Usage:
 """
 
 import os
+import csv
 import argparse
 import unicodedata
 
-from typing import List
+from typing import Dict, List
 
 
 def parse_args() -> argparse.Namespace:
@@ -79,6 +80,10 @@ def insert_instagram_entry(current_contents: List[str], name: str, instagram: st
     current_contents.append(line_entry)
 
 
+def instagram_is_not_empty(row: Dict[str, str]) -> bool:
+    return row["Instagram"] != ""
+
+
 def main():
     # Parse the arguments for the script
     args = parse_args()
@@ -100,12 +105,10 @@ def main():
 
     if args.file:
         with open(args.file, "r", encoding="utf-8") as f:
-            lines_without_header = f.readlines()[1:]
-            pairs = map(lambda x: x.strip().split(","), lines_without_header)
-            filtered_pairs = filter(lambda p: p[1] != '', pairs)
+            reader = csv.DictReader(f)
 
-            for (name, instagram) in filtered_pairs:
-                insert_instagram_entry(contents, name, instagram)
+            for row in filter(instagram_is_not_empty, reader):
+                insert_instagram_entry(contents, row["Name"], row["Instagram"])
     else:
         insert_instagram_entry(contents, args.name, args.instagram)
 
