@@ -18,7 +18,7 @@ except ImportError:
     import oplprobe
 
 
-FEDURL = "http://nasa-sports.com/meet-results-index/"
+FEDURL = "http://nasa-sports.com/results/"
 BASEURL = "http://nasa-sports.com"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -35,7 +35,7 @@ def color(s):
 def getmeetlist(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    content = soup.find_all("main", {"id": "content"})
+    content = soup.find_all("main")
     if len(content) == 0:
         error("Page layout seems to have changed.")
     elif len(content) > 1:
