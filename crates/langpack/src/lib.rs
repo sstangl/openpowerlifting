@@ -531,6 +531,7 @@ pub struct FedSelectorTranslations {
     pub continents: &'static str,
     pub countries: &'static str,
     pub all_usa: &'static str,
+    pub all_usa_tested: &'static str,
     pub all_argentina: &'static str,
     pub all_australia: &'static str,
     pub all_austria: &'static str,

@@ -207,6 +207,8 @@ pub enum MetaFederation {
     AllVietnam,
     #[strum(to_string = "all-usa")]
     AllUSA,
+    #[strum(to_string = "all-usa-tested")]
+    AllUSATested,
     #[strum(to_string = "all-usvirginislands")]
     AllUSVirginIslands,
 
@@ -834,6 +836,9 @@ impl MetaFederation {
             }
             MetaFederation::AllUkraine => is_from(Country::Ukraine, entry, meet),
             MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
+            MetaFederation::AllUSATested => {
+                entry.tested && MetaFederation::AllUSA.contains(entry, meets)
+            }
             MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
             MetaFederation::AAPF => entry.tested && affiliation!(meet, entry, APF, WPC),
             MetaFederation::ABPU => {

@@ -33,6 +33,7 @@
 </optgroup>
 <optgroup label="{{strings.country.usa}}">
   <option value="all-usa" {% if selection.federation == "AllUSA" %}selected{% endif %}>{{strings.selectors.fed.all_usa}}</option>
+  <option value="all-usa-tested" {% if selection.federation == "AllUSATested" %}selected{% endif %}>{{strings.selectors.fed.all_usa_tested}}</option>
   <option value="365strong" {% if selection.federation == "365Strong" %}selected{% endif %}>365Strong - 365 Strong Powerlifting Federation</option>
   <option value="aapf" {% if selection.federation == "AAPF" %}selected{% endif %}>AAPF - Amateur American Powerlifting Federation [WPC]</option>
   <option value="aau" {% if selection.federation == "AAU" %}selected{% endif %}>AAU - Amateur Athletic Union</option>
