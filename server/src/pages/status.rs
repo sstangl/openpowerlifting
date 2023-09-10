@@ -78,6 +78,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[HPO as usize].status = complete;
     statuses[IPF as usize].status = complete;
     statuses[IrishPF as usize].status = complete;
+    statuses[KDKS as usize].status = complete;
     statuses[KPC as usize].status = complete;
     statuses[LGBT as usize].status = complete;
     statuses[PA as usize].status = complete;
@@ -206,6 +207,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[IrishPF as usize].format = html;
     statuses[IrishPO as usize].format = xls_unstructured;
     statuses[LGBT as usize].format = xls_unstructured;
+    statuses[KDKS as usize].format = openlifter;
     statuses[NASA as usize].format = pdf_structured;
     statuses[NZPF as usize].format = pdf_unstructured;
     statuses[OceaniaPF as usize].format = pdf_structured;
@@ -216,6 +218,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[PS as usize].format = openlifter;
     statuses[RAW as usize].format = pdf_unstructured;
     statuses[RPS as usize].format = html;
+    statuses[SDFPF as usize].format = pdf_unstructured;
     statuses[SPF as usize].format = html;
     statuses[SSSC as usize].format = xls_structured;
     statuses[SwissPL as usize].format = pdf_structured;
@@ -271,6 +274,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[IPLNZ as usize].ease = medium;
     statuses[IrishPF as usize].ease = easy;
     statuses[IrishPO as usize].ease = easy;
+    statuses[KDKS as usize].ease = easy;
     statuses[LGBT as usize].ease = easy;
     statuses[NASA as usize].ease = easy;
     statuses[NZPF as usize].ease = difficult;
@@ -282,6 +286,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[PS as usize].ease = easy;
     statuses[RAW as usize].ease = difficult;
     statuses[RPS as usize].ease = easy;
+    statuses[SDFPF as usize].ease = difficult;
     statuses[SPF as usize].ease = easy;
     statuses[SSSC as usize].ease = easy;
     statuses[SwissPL as usize].ease = difficult;
@@ -307,6 +312,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_laszlo = "László Póta";
+    let email_laura = "<a href=\"mailto:rettigx+opl@gmail.com\">laura@</a>";
     let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
     let email_mayed = "<a href=\"mailto:mayed.alredha@gmail.com\">Mayed Alredha</a>";
     let email_mbeelen = "<a href=\"mailto:mbeelen@openpowerlifting.org\">mbeelen@</a>";
@@ -352,6 +358,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[IrelandUA as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[KBGV as usize].maintainers = email_stefanie;
+    statuses[KDKS as usize].maintainers = email_laura;
     statuses[KNKFSP as usize].maintainers = email_mbeelen;
     statuses[KPC as usize].maintainers = email_mayed;
     statuses[LFPH as usize].maintainers = email_stefanie;
@@ -371,6 +378,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[ScottishPL as usize].maintainers = email_robby;
     statuses[SPF as usize].maintainers = email_sean;
     statuses[SSSC as usize].maintainers = email_mayed;
+    statuses[SwissPL as usize].maintainers = email_laura;
     statuses[UAEPA as usize].maintainers = email_mayed;
     statuses[USAPL as usize].maintainers = email_sean;
     statuses[USPA as usize].maintainers = email_sean;
@@ -418,6 +426,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[IPL as usize].instagram = "iplpowerlifting";
     statuses[IrishPF as usize].instagram = "irishpowerliftingfederation";
     statuses[IrishPO as usize].instagram = "ipoaipowpc";
+    statuses[KDKS as usize].instagram = "kdkschweiz";
     statuses[KNKFSP as usize].instagram = "powerliften";
     statuses[KPC as usize].instagram = "kuwait.powerlifting";
     statuses[LJTF as usize].instagram = "lithuanianpowerlifting";
@@ -429,6 +438,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[RAWUKR as usize].instagram = "raw100power";
     statuses[RPS as usize].instagram = "rps_powerlifting";
     statuses[ScottishPL as usize].instagram = "scottishpowerlifting";
+    statuses[SDFPF as usize].instagram = "sdfpf";
     statuses[SPF as usize].instagram = "southernpowerliftingfederation";
     statuses[SVNL as usize].instagram = "voimanostoliitto";
     statuses[SSSC as usize].instagram = "ksa_strength";
