@@ -309,7 +309,7 @@
     fssabpu = {name ="F_SES_ABPU",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmabpu = {name ="F_SEM_ABPU",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
 
-	mxorabpu = {name ="Mx_O_R_ABPU",min=0,max=999,equipment="Raw",sex="Mx",tested="No"}
+    mxorabpu = {name ="Mx_O_R_ABPU",min=0,max=999,equipment="Raw",sex="Mx",tested="No"}
     mxocrabpu = {name ="Mx_O_CR_ABPU",min=0,max=999,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
     mxosabpu = {name ="Mx_O_S_ABPU",min=0,max=999,equipment="Single-ply",sex="Mx",tested="No"}
     mxomabpu = {name ="Mx_O_M_ABPU",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="Mx",tested="No"}
