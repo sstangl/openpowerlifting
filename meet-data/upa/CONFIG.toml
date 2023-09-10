@@ -270,6 +270,8 @@
     sex = "F"
 
 [exemptions]
+    0804 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass.
+    0903 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass.
     1107 = ["ExemptWeightClassConsistency"] # Non standard weightclasses
     1305 = ["ExemptWeightClassConsistency"] # Lifter missing weightclass.
     1510 = ["ExemptWeightClassConsistency"]
