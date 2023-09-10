@@ -25,14 +25,14 @@ pub struct Lifter {
     //
     // Because they are almost always None in the current dataset, it's more beneficial
     // to take the Option<String> None optimization than the CompactString optimization.
-    pub chinese_name: Option<String>,
-    pub cyrillic_name: Option<String>,
-    pub greek_name: Option<String>,
-    pub japanese_name: Option<String>,
-    pub korean_name: Option<String>,
+    pub chinese_name: Option<Box<str>>,
+    pub cyrillic_name: Option<Box<str>>,
+    pub greek_name: Option<Box<str>>,
+    pub japanese_name: Option<Box<str>>,
+    pub korean_name: Option<Box<str>>,
 
-    pub instagram: Option<String>,
-    pub color: Option<String>,
+    pub instagram: Option<Box<str>>,
+    pub color: Option<Box<str>>,
 }
 
 /// The definition of a Meet in the database.
@@ -54,7 +54,7 @@ pub struct Meet {
     #[serde(rename(deserialize = "MeetTown"))]
     pub town: Option<CompactString>,
     #[serde(rename(deserialize = "MeetName"))]
-    pub name: String,
+    pub name: Box<str>,
     #[serde(rename(deserialize = "RuleSet"))]
     pub ruleset: RuleSet,
 
@@ -132,10 +132,8 @@ pub struct Entry {
     pub goodlift: Points,
     #[serde(rename(deserialize = "Dots"))]
     pub dots: Points,
-    #[serde(
-        rename(deserialize = "Tested"),
-        deserialize_with = "deserialize_yes_no"
-    )]
+    #[serde(rename = "Tested")]
+    #[serde(deserialize_with = "deserialize_yes_no")]
     pub tested: bool,
     #[serde(rename(deserialize = "AgeClass"))]
     pub ageclass: AgeClass,
