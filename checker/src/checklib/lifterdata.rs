@@ -43,10 +43,10 @@ pub type LifterDataMap = FxHashMap<Username, LifterData>;
 #[derive(Debug, Default)]
 pub struct LifterData {
     /// CSS class, for lifters who donate to the project.
-    pub color: Option<String>,
+    pub color: Option<Box<str>>,
 
     /// The lifter's Instagram.
-    pub instagram: Option<String>,
+    pub instagram: Option<Box<str>>,
 
     /// Number of known lifters sharing the same username.
     pub disambiguation_count: u32,
@@ -75,9 +75,9 @@ fn has_whitespace_errors(s: &str) -> bool {
 #[derive(Deserialize)]
 struct DonatorColorsRow {
     #[serde(rename = "Name")]
-    pub name: String,
+    pub name: Box<str>,
     #[serde(rename = "Color")]
-    pub color: String,
+    pub color: Box<str>,
 }
 
 /// Checks `lifter-data/donator-colors.csv`, mutating the LifterDataMap.
@@ -184,7 +184,7 @@ pub fn load_exemptions(report: &mut Report, map: &mut LifterDataMap) -> Result<(
 #[derive(Deserialize)]
 struct PrivacyRow {
     #[serde(rename = "Name")]
-    pub name: String,
+    pub name: Box<str>,
 }
 
 /// Checks `lifter-data/privacy.csv`, mutating the LifterDataMap.
@@ -240,9 +240,9 @@ fn check_privacy(
 #[derive(Deserialize)]
 struct InstagramRow {
     #[serde(rename = "Name")]
-    pub name: String,
+    pub name: Box<str>,
     #[serde(rename = "Instagram")]
-    pub instagram: String,
+    pub instagram: Box<str>,
 }
 
 /// Checks `lifter-data/social-instagram.csv`, mutating the LifterDataMap.
@@ -322,7 +322,7 @@ pub type DisambiguationMap = FxHashMap<String, u32>;
 #[derive(Deserialize)]
 struct NameDisambiguationRow {
     #[serde(rename = "Name")]
-    pub name: String,
+    pub name: Box<str>,
     #[serde(rename = "Count")]
     pub count: u32,
 }
