@@ -201,6 +201,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[HPLS as usize].format = xls_unstructured;
     statuses[HPLSUA as usize].format = jpg;
     statuses[HPO as usize].format = html;
+    statuses[Hunpower as usize].format = xls_structured;
     statuses[IPA as usize].format = xls_unstructured;
     statuses[IPF as usize].format = html;
     statuses[IPLNZ as usize].format = pdf_structured;
@@ -269,6 +270,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[HPLS as usize].ease = medium;
     statuses[HPLSUA as usize].ease = difficult;
     statuses[HPO as usize].ease = medium;
+    statuses[Hunpower as usize].ease = easy;
     statuses[IPA as usize].ease = difficult;
     statuses[IPF as usize].ease = easy;
     statuses[IPLNZ as usize].ease = medium;
@@ -311,7 +313,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_enno = "<a href=\"mailto:enno@openpowerlifting.org\">enno@</a>";
     let email_gem = "<a href=\"mailto:gem@openpowerlifting.org\">gem@</a>";
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
-    let email_laszlo = "László Póta";
+    let email_laszlo = "<a href=\"mailto:laszlopota00@gmail.com\">laszlo@</a>";
     let email_laura = "<a href=\"mailto:rettigx+opl@gmail.com\">laura@</a>";
     let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
     let email_mayed = "<a href=\"mailto:mayed.alredha@gmail.com\">Mayed Alredha</a>";
@@ -422,6 +424,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[GPCIRL as usize].instagram = "gpcireland";
     statuses[GPCNZ as usize].instagram = "gpcnewzealand";
     statuses[GPCScotland as usize].instagram = "gpc.scotland";
+    statuses[Hunpower as usize].instagram = "hunpowerlifting";
     statuses[IPF as usize].instagram = "theipf";
     statuses[IPL as usize].instagram = "iplpowerlifting";
     statuses[IrishPF as usize].instagram = "irishpowerliftingfederation";
