@@ -173,7 +173,7 @@ def getresults(soup):
                 [next(iterable) for x in range(2)]
             elif h == 'Total':
                 curr_csv.fieldnames += ['TotalKg']
-            elif h == 'Wilks' or h == 'IPF Points':
+            elif h == 'Wilks' or h == 'IPF Points' or h == 'IPF GL Points':
                 curr_csv.fieldnames += ['Wilks']
             elif h == '':
                 curr_csv.fieldnames += ['IGNORE']
@@ -391,13 +391,13 @@ def combine_columns(csv, attemptlist):
                     break
 
 
-def main(url):
+def main(url, input_dir):
     html = gethtml(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
     meetcsv = getmeetinfo(soup)
-    dirname = getdirname(url)
+    dirname = input_dir #getdirname(url)
     entriescsv = getresults(soup)
     if len(entriescsv.rows) == 0:
         error("No rows found!")
@@ -479,6 +479,6 @@ def main(url):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
-    main(sys.argv[1])
+    if len(sys.argv) != 3:
+        print("Usage: %s url importdir" % sys.argv[0])
+    main(sys.argv[1], sys.argv[2])
