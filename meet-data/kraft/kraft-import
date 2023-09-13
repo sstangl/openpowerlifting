@@ -397,7 +397,7 @@ def main(url, input_dir):
     soup = BeautifulSoup(html, 'html.parser')
 
     meetcsv = getmeetinfo(soup)
-    dirname = input_dir #getdirname(url)
+    dirname = input_dir     # getdirname(url)
     entriescsv = getresults(soup)
     if len(entriescsv.rows) == 0:
         error("No rows found!")
