@@ -34,6 +34,7 @@ pub use report::{Message, Report};
 pub mod report_count;
 
 use std::error::Error;
+use std::ffi::OsStr;
 use std::path::Path;
 
 /// Checks a directory with meet data.
@@ -69,14 +70,32 @@ pub fn check(
         report.error("Must be named 'URL' with no extension");
         acc.push(report);
     }
-    if meetdir.join("results.csv").exists() {
-        let mut report = Report::new(meetdir.join("results.csv"));
-        report.error("'results.csv' files should now be named 'original.csv'");
-        acc.push(report);
-    }
-    if meetdir.join("results.txt").exists() {
-        let mut report = Report::new(meetdir.join("results.txt"));
-        report.error("'results.txt' files should now be named 'original.txt'");
+
+    // Recursively look for files that may be misnamed or have disallowed extensions.
+    for entry in walkdir::WalkDir::new(meetdir)
+        .min_depth(1)
+        .into_iter()
+        .filter_map(Result::ok)
+        .filter(is_invalid_entry)
+    {
+        let mut report = Report::new(meetdir.join(entry.path()));
+
+        // The file was flagged as invalid. Try to emit a helpful error message.
+        let extension: &str = entry
+            .path()
+            .extension()
+            .map(OsStr::to_str)
+            .flatten()
+            .unwrap_or_default();
+
+        if extension == "pdf" {
+            report.error("PDF files are disallowed, please use a program to convert it to text");
+        } else if extension.contains("xls") {
+            report.error("Binary spreadsheet files are disallowed, please resave as CSV");
+        } else {
+            report.error("Unknown file, please check spelling and extension");
+        }
+
         acc.push(report);
     }
 
@@ -85,4 +104,32 @@ pub fn check(
         meet: meetresult.meet,
         entries: entriesresult.entries,
     })
+}
+
+/// Returns whether an entry is invalid, and therefore should be flagged for error.
+fn is_invalid_entry(entry: &walkdir::DirEntry) -> bool {
+    let filename = entry.file_name();
+
+    // Approve any files that match the list of known entities.
+    let valid_filenames = &[
+        OsStr::new("URL"),
+        OsStr::new("entries.csv"),
+        OsStr::new("meet.csv"),
+        OsStr::new("INFO"),
+    ];
+    if valid_filenames.contains(&filename) {
+        return false;
+    }
+
+    // Allow files containing the name "original", such as "original1.txt", in textual formats.
+    if let Some(utf8) = filename.to_str() {
+        if utf8.starts_with("original")
+            && (utf8.ends_with(".csv") || utf8.ends_with(".txt") || utf8.ends_with(".html"))
+        {
+            return false;
+        }
+    }
+
+    // The entry didn't match any known pattern, and therefore should raise an error.
+    true
 }
