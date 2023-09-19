@@ -25,7 +25,10 @@ impl<'request> FromRequest<'request> for ReferringPath {
 
     async fn from_request(req: &'request Request<'_>) -> Outcome<Self, Self::Error> {
         // Get the `referer` header and parse to a URI
-        let Some(Ok(referrer)) = req.headers().get_one(REFERER.as_str()).map(Absolute::parse) else { return Outcome::Failure((Status::Ok, ())) };
+        let Some(Ok(referrer)) = req.headers().get_one(REFERER.as_str()).map(Absolute::parse)
+        else {
+            return Outcome::Failure((Status::Ok, ()));
+        };
 
         // Get the path component
         let inner = referrer.path().as_str().to_owned();

@@ -134,6 +134,7 @@
   <option value="oceaniapo" {% if selection.federation == "OceaniaPO" %}selected{% endif %}>OceaniaPO - Oceania Powerlifting Organisation [WPC]</option>
   <option value="pa" {% if selection.federation == "PA" %}selected{% endif %}>PA - Powerlifting Australia [WP]</option>
   <option value="proraw" {% if selection.federation == "ProRaw" %}selected{% endif %}>ProRaw</option>
+  <option value="usapl-australia" {% if selection.federation == "USAPL-Australia" %}selected{% endif %}>USAPL Australia</option>
   <option value="vdfpa" {% if selection.federation == "VDFPA" %}selected{% endif %}>VDFPA - Victorian Drug Free Powerlifting Association [RAW]</option>
   <option value="wrpf-aus" {% if selection.federation == "WRPF-AUS" %}selected{% endif %}>WRPF-AUS - WRPF Australia [WRPF]</option>
 </optgroup>

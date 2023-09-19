@@ -439,9 +439,9 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> CompactStrin
             match word {
                 // Common short words that mostly translate to "the".
                 "bin" | "da" | "de" | "do" | "del" | "den" | "der" | "des" | "di" | "dos"
-                | "du" | "e" | "el" | "in" | "in 't" | "in't" | "la" | "le" | "los" | "op" | "of"
-                | "'t" | "te" | "ten" | "ter" | "und" | "v" | "v." | "v.d." | "van" | "von"
-                | "zur" | "y" | "zu" => {
+                | "du" | "e" | "el" | "in" | "in 't" | "in't" | "la" | "le" | "los" | "op"
+                | "of" | "'t" | "te" | "ten" | "ter" | "und" | "v" | "v." | "v.d." | "van"
+                | "von" | "zur" | "y" | "zu" => {
                     continue;
                 }
 

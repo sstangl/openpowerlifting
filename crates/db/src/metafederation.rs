@@ -609,6 +609,11 @@ pub enum MetaFederation {
     #[strum(to_string = "usapl")]
     USAPL,
 
+    /// USAPL, which apparently has an Australian affiliate now.
+    #[strum(to_string = "usapl-australia")]
+    #[serde(rename = "USAPL-Australia")]
+    USAPLAustralia,
+
     /// USPA, plus IPL results for American lifters.
     #[strum(to_string = "uspa")]
     USPA,
@@ -1060,7 +1065,12 @@ impl MetaFederation {
                             && meet.date <= date!(2021-11-07))
                         || (meet.federation == ADFPA && meet.date < date!(1997-12-05)))
             }
-
+            // Include USAPL Australia results after metafederation formed from 2022-05-14.
+            MetaFederation::USAPLAustralia => {
+                meet.federation == Federation::USAPL
+                    && entry.lifter_country == Some(Country::Australia)
+                    && meet.date >= date!(2022-05-14)
+            }
             MetaFederation::USPA => affiliation!(meet, entry, USPA, IPL),
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
