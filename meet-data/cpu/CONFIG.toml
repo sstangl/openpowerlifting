@@ -15,6 +15,7 @@
     specialolympicsjr = {name = "SO Juniors",min=18.5,max=22.5}
     specialolympicsm1 = {name = "SO Masters 1",min=39.5,max=48.5}
     specialolympicsm2 = {name = "SO Masters 2",min=49.5,max=58.5}
+    para = {name = "Para",min=0,max=999}
     blind = {name = "Blind",min=0,max=999}
     disabled = {name = "Disabled",min=0,max=999}
 
