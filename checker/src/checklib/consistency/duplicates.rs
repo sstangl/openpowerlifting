@@ -94,6 +94,14 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2021, 06, 26) {
                     continue;
                 }
+                // wrpf-argentina/2307 and wrpf-argentina/2309.
+                if cur_meet.date == opltypes::Date::from_parts(2023, 06, 17) {
+                    continue;
+                }   
+                // wrpf-argentina/2308 and wrpf-argentina/2301.
+                if cur_meet.date == opltypes::Date::from_parts(2023, 03, 25) {
+                    continue;
+                }
 
                 let msg = format!(
                     "www.openpowerlifting.org/u/{username} on {}: {} and {}",
