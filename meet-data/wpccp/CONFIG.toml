@@ -162,7 +162,7 @@
     morcpf = {name ="M_OR_CP",min=0,max=999,equipment="Raw",sex="M"}
     mocrcpf = {name ="M_OCR_CP",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
     moscpf = {name ="M_OES_CP",min=0,max=999,equipment="Single-ply",sex="M"}
-    momcpf = {name ="M_OEM_CP",min=0,max=999,equipment="Multi-ply",sex="M"}
+    momcpf = {name ="M_OEM_CP",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr1cpf = {name ="M_MR_1_CP",min=40,max=44,equipment="Raw",sex="M"}
     mmcr1cpf = {name ="M_MCR_1_CP",min=40,max=44,equipment=["Raw","Wraps"],sex="M"}
     mms1cpf = {name ="M_MES_1_CP",min=40,max=44,equipment="Single-ply",sex="M"}
