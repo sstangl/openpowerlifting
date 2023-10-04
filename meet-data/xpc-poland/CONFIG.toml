@@ -63,3 +63,4 @@
 [exemptions]
     1803 = ["ExemptWeightClassConsistency"]
     2001 = ["ExemptDivision"] # 24 year old in Juniors class.
+    2301 = ["ExemptWeightClassConsistency","ExemptDivision"]
