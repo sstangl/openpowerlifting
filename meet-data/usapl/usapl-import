@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 import errno
 import os
 import sys
-import urllib.request
+from urllib.request import Request, urlopen
 
 try:
     from oplcsv import Csv
@@ -23,7 +23,7 @@ except ImportError:
 
 
 def gethtml(url):
-    with urllib.request.urlopen(url) as r:
+    with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'})) as r:
         return r.read()
 
 
