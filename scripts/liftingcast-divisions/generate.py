@@ -27,6 +27,7 @@ def gen_divisions(config_d):
                         wtcls_l = config_d["f_wtcls"]
                     else:
                         raise ValueError(f"Unknown sex:{sex}")
+                    # for each division also generate a division for guest lifters
                     for guest in [False, True]:
                         for (i, wtcls,) in enumerate(wtcls_l):
                             div_d = {
@@ -52,10 +53,12 @@ def gen_divisions(config_d):
                             yield div_d
 
 if __name__ == "__main__":
-    config_path = Path(sys.argv[1])
+    if len(sys.argv) != 3:
+        sys.stderr.write(f"Usage: {sys.argv[0]} config_path output_path")
+    config_path = sys.argv[1]
     with open(config_path, "rt") as config_f:
         config_d = json.load(config_f)
-    output_path = Path(sys.argv[2])
+    output_path = sys.argv[2]
     with open(output_path, "wt") as output_f:
         dw = DictWriter(
             output_f,
