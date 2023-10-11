@@ -2,7 +2,6 @@ import json
 import sys
 import csv
 
-from pathlib import Path
 from csv import DictWriter
 
 
@@ -15,6 +14,7 @@ def lifts_str(event):
     if "D" in event:
         lifts_l.append("dead")
     return ",".join(lifts_l)
+
 
 def gen_divisions(config_d):
     for sex in ["M", "F"]:
@@ -43,14 +43,19 @@ def gen_divisions(config_d):
                             }
                             if i == 0:
                                 div_d.update({
-                                    "name": f"{sex} {age} {eq_d['show']} {event}{' GUEST' if guest else ''}",
+                                    "name": (
+                                        f"{sex} {age} {eq_d['show']} {event}"
+                                        f"{' GUEST' if guest else ''}"
+                                    ),
                                     "gender": "Male" if sex == "M" else "Female",
                                     "rawOrEquipped": eq_d["lc"],
                                     "lifts": lifts_str(event),
                                     "scoreBy": "Total",
-                                    "usaplDivisionCode": "G" if guest else "O", #TODO - confirm this does nothing
+                                    # TODO - confirm this does nothing
+                                    "usaplDivisionCode": "G" if guest else "O",
                                 })
                             yield div_d
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
