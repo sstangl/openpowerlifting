@@ -1061,6 +1061,10 @@ pub enum Federation {
     #[strum(to_string = "RhinoPC", serialize = "rhinopc")]
     RhinoPC,
 
+    /// Unaffiliated meets held in the Taiwan.
+    #[strum(to_string = "Taiwan-UA", serialize = "taiwan-ua")]
+    TaiwanUA,
+
     /// Revolution Powerlifting Syndicate.
     #[strum(to_string = "RPS", serialize = "rps")]
     RPS,
@@ -2017,6 +2021,7 @@ impl Federation {
             Federation::RAWU => false,
             Federation::RDFPF => FULLY_TESTED,
             Federation::RhinoPC => false,
+            Federation::TaiwanUA => false,
             Federation::RPS => false,
             Federation::RPU => false,
             Federation::RUPC => false,
@@ -2415,6 +2420,7 @@ impl Federation {
             Federation::RAWU => Some(Country::USA),
             Federation::RDFPF => Some(Country::Russia),
             Federation::RhinoPC => Some(Country::SouthAfrica),
+            Federation::TaiwanUA => Some(Country::Taiwan),
             Federation::RPS => Some(Country::USA),
             Federation::RPU => Some(Country::Russia),
             Federation::RUPC => Some(Country::USA),
@@ -2881,6 +2887,7 @@ impl Federation {
             Federation::RAWU => None,
             Federation::RDFPF => Some(Federation::WDFPF),
             Federation::RhinoPC => Some(Federation::GPC),
+            Federation::TaiwanUA => None,
             Federation::RPS => None,
             Federation::RPU => None,
             Federation::RUPC => None,
@@ -3393,6 +3400,7 @@ impl Federation {
             Federation::RAWU => PointsSystem::Wilks,
             Federation::RDFPF => PointsSystem::SchwartzMalone,
             Federation::RhinoPC => PointsSystem::Glossbrenner,
+            Federation::TaiwanUA => Federation::ipf_rules_on(date),
             Federation::RPS => PointsSystem::Wilks,
             Federation::RPU => PointsSystem::Wilks,
             Federation::RUPC => PointsSystem::Wilks,

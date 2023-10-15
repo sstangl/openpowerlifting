@@ -600,6 +600,7 @@ pub struct FedSelectorTranslations {
     pub all_southafrica: &'static str,
     pub all_sweden: &'static str,
     pub all_switzerland: &'static str,
+    pub all_taiwan: &'static str,
     pub all_thailand: &'static str,
     pub all_turkey: &'static str,
     pub all_uganda: &'static str,

@@ -572,6 +572,9 @@
   <option value="all-syria" {% if selection.federation == "AllSyria" %}selected{% endif %}>All Syrian Lifters</option>
   <option value="safp" {% if selection.federation == "SAFP" %}selected{% endif %}>SAFP - Syrian Arab Federation of Powerlifting [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.taiwan}}">
+  <option value="all-taiwan" {% if selection.federation == "AllTaiwan" %}selected{% endif %}>{{strings.selectors.fed.all_taiwan}}</option>
+</optgroup>
 <optgroup label="{{strings.country.thailand}}">
   <option value="all-thailand" {% if selection.federation == "AllThailand" %}selected{% endif %}>{{strings.selectors.fed.all_thailand}}</option>
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
