@@ -79,6 +79,7 @@
     divisions = ["FR-Jr", "F-Jr", "FR-Sj", "F-Sj", "FR-Pre-Sub-Jr", "F-PS", "FR-PS"]
 
 [exemptions]
+    2201 = ["ExemptWeightClassConsistency"] #4 Youth Class lifters reported without weights or weight class
     2023-FL-02 = ["ExemptWeightClassConsistency"] #2 Youth Class lifters reported without weights or weight class
     2023-MS-01 = ["ExemptWeightClassConsistency"] #1 Youth Class lifter reported without weight class
     2023-FL-05 = ["ExemptWeightClassConsistency"] #3 Youth Class lifters reported without weights or weight class
