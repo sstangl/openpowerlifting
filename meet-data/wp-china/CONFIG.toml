@@ -3,9 +3,13 @@
 [divisions]
 	mo = {name="M-O", min=0, max=999, sex="M"}
 	mbl = {name="M-BL", min=0, max=999, sex="M"}
+        mj18-23 = {name="M-J18-23", min=18, max=23, sex="M"}
+        mm40-44 = {name="M-M40-44", min=40, max=44, sex="M"}
+        mm47-53 = {name="M-M47-53", min=47, max=53, sex="M"}
 
 	fo = {name="F-O", min=0, max=999, sex="F"}
 	fbl = {name="F-BL", min=0, max=999, sex="F"}
+        fj18-23 = {name="F-J18-23", min=18, max=23, sex="F"}
 
 [weightclasses.default_M]
     classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]
