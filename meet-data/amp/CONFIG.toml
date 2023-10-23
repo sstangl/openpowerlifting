@@ -78,6 +78,18 @@
     sex = "F"
     divisions = ["FR-Jr", "F-Jr", "FR-Sj", "F-Sj", "FR-Pre-Sub-Jr", "F-PS", "FR-PS"]
 
+[weightclasses.youth_F]
+    classes = ["0+"]
+    date_range=["2022-01-01","9999-12-31"]
+    sex = "F"
+    divisions = ["FR-Y", "F-Y"]
+
+[weightclasses.youth_M]
+    classes = ["0+"]
+    date_range=["2022-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-Y", "M-Y"]
+
 [exemptions]
     2201 = ["ExemptWeightClassConsistency"] #4 Youth Class lifters reported without weights or weight class
     2023-FL-02 = ["ExemptWeightClassConsistency"] #2 Youth Class lifters reported without weights or weight class
