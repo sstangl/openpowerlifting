@@ -1,480 +1,1138 @@
-Event,Division,WeightClassKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Name,Country,State,Equipment,Sex,Place
-D,Class 1,67.5,,,195,,195,Dave Constantineau,,WI,Single-ply,M,1
-D,Class 1,75,,,200,,200,James Lin #2,,WA,Single-ply,M,1
-D,Class 1,75,,,192.5,,192.5,Rick Michaud,,ME,Single-ply,M,2
-D,Class 1,75,,,182.5,,182.5,Caleb Nute,,ME,Single-ply,M,3
-D,Class 1,82.5,,,250,,250,Ben Dehghan,,WA,Single-ply,M,1
-D,Class 1,82.5,,,197.5,,197.5,Josh Nemcek,,UT,Single-ply,M,4
-D,Class 1,82.5,,,250,,250,Kaneala Ablao,,HI,Single-ply,M,2
-D,Class 1,82.5,,,195,,195,Aramiq Amirchian,,AZ,Single-ply,M,5
-D,Class 1,82.5,,,217.5,,217.5,Jackson Jones,,WA,Single-ply,M,3
-D,Class 1,90,,,285.5,,285.5,Antjuan Buffett,,TX,Single-ply,M,1
-D,Class 1,90,,,205,,205,Matthew Collins #3,,CA,Multi-ply,M,1
-D,Class 1,90,,,255,,255,Preston Quinn,,WI,Single-ply,M,2
-D,Class 1,90,,,252.5,,252.5,Zachary Freemantle,,WA,Single-ply,M,3
-D,Class 1,90,,,210,,210,Derek Kumagai,,WA,Single-ply,M,5
-D,Class 1,90,,,232.5,,232.5,Kevin Dunford,Canada,,Single-ply,M,4
-D,Class 1,100,,,192.5,,192.5,Michael Collins #5,,CA,Multi-ply,M,1
-D,Class 1,100,,,272.5,,272.5,Adam Pixton,,UT,Single-ply,M,1
-D,Class 1,100,,,265.5,,265.5,John Westleigh,,ME,Single-ply,M,2
-D,Class 1,100,,,265,,265,Brady Hosley,,UT,Single-ply,M,3
-D,Class 1,100,,,250,,250,Marks Labostrie III,,TX,Single-ply,M,4
-D,Class 1,100,,,237.5,,237.5,Kyle Herzik,,NV,Single-ply,M,5
-D,Class 1,100,,,217.5,,217.5,Samuel Swift,,TX,Single-ply,M,6
-D,Class 1,110,,,165,,165,Harry Munro,,CA,Single-ply,M,6
-D,Class 1,110,,,260,,260,Mike Lazenby,,UT,Single-ply,M,2
-D,Class 1,110,,,278,,278,Dennis Schmidt #2,,MN,Single-ply,M,1
-D,Class 1,110,,,220,,220,Joseph Doyon,,ME,Single-ply,M,3
-D,Class 1,110,,,182.5,,182.5,Chris Knott,,MN,Single-ply,M,5
-D,Class 1,110,,,215,,215,William G Caughey,,UT,Single-ply,M,4
-D,Class 1,117.5,,,250,,250,Dan Oldham,,ID,Single-ply,M,2
-D,Class 1,117.5,,,280,,280,David Palmer,,ME,Single-ply,M,1
-D,Class 1,117.5,,,227.5,,227.5,Jeremy Donnelly,,AZ,Single-ply,M,3
-D,Class 1,117.5,,,225,,225,Isaac Conde,,TX,Single-ply,M,4
-D,Class 1,125,,,295,,295,Jason Sacre,,UT,Single-ply,M,1
-D,Class 1,125,,,275,,275,Marcus Ellison,,IL,Single-ply,M,2
-D,Class 1,125,,,273,,273,Gene Cameron,,AZ,Single-ply,M,3
-D,Class 1,140,,,267.5,,267.5,Tarlus McDaniel,,TX,Single-ply,M,1
-D,Class 1,140+,,,205,,205,Mitchell Garrett,,TX,Single-ply,M,1
-D,Law-Fire 40-47,110,,,260,,260,Freddy Crosby,,IL,Single-ply,M,2
-D,Law-Fire 40-47,110,,,310,,310,Troy Fryar,,WA,Single-ply,M,1
-D,Law-Fire 40-47,117.5,,,255,272.5,255,Flip Silva Jr,,TX,Multi-ply,M,1
-D,Law-Fire 40-47,125,,,227.5,,227.5,Bobby Gray,,CA,Single-ply,M,2
-D,Law-Fire 40-47,125,,,255,,255,Tommy Harrison,,IL,Single-ply,M,1
-D,Law-Fire 48-55,75,,,195,,195,Larry Esquivel,,CA,Single-ply,M,1
-D,Law-Fire 48-55,90,,,255.5,,255.5,Dan Guches,,OR,Single-ply,M,1
-D,Law-Fire 48-55,90,,,205,,205,David Edborg,,NY,Single-ply,M,3
-D,Law-Fire 48-55,90,,,235,241,235,Luis Fernando Meireles Dias,Brazil,,Single-ply,M,2
-D,Law-Fire 48-55,100,,,315,,315,Al Bianchi,,MA,Single-ply,M,1
-D,Law-Fire 48-55,100,,,227.5,,227.5,Lance Davis,,UT,Single-ply,M,2
-D,Law-Fire 56-63,90,,,250,,250,Charles McFarland,,OR,Single-ply,M,1
-D,Law-Fire 56-63,100,,,190,,190,William Denniston,,MI,Multi-ply,M,1
-D,Law-Fire 56-63,110,,,255,,255,Manny Burruel,,CA,Multi-ply,M,1
-D,Law-Fire 56-63,110,,,277.5,,277.5,Mike Frizzell,,IL,Single-ply,M,1
-D,Law-Fire 56-63,125,,,205,,205,Michal Johnson,,CA,Multi-ply,M,1
-D,Law-Fire 56-63,125,,,235,,235,Dennis Schultz,,CA,Single-ply,M,1
-D,Law-Fire 56-63,125,,,187.5,,187.5,Jay Simmons,,TX,Single-ply,M,2
-D,Law-Fire 64+,67.5,,,170,,170,Gary Miller #2,,NV,Multi-ply,M,1
-D,Law-Fire 64+,100,,,245,,245,Jon Wolbers,Canada,,Single-ply,M,1
-D,Law-Fire 64+,125,,,235,,235,Mike Fryar,,WA,Single-ply,M,1
-D,Law-Fire 64+,140,,,105.5,,105.5,JP Krachunis,,CA,Single-ply,M,1
-D,Law-Fire Open,75,,,180,,180,Eli Huizar Zuniga,,WA,Multi-ply,M,1
-D,Law-Fire Open,82.5,,,235,,235,Donavin Bender,,ND,Single-ply,M,1
-D,Law-Fire Open,90,,,255.5,,255.5,Dan Guches,,OR,Single-ply,M,1
-D,Law-Fire Open,90,,,240,,240,Ryan Marble,,UT,Single-ply,M,2
-D,Law-Fire Open,90,,,235,,235,Luis Fernando Meireles Dias,Brazil,,Single-ply,M,3
-D,Law-Fire Open,125,,,255,,255,Tommy Harrison,,IL,Single-ply,M,1
-D,Law-Fire Open,140,,,230,245,230,William Lee,,TX,Multi-ply,M,1
-D,Law-Fire Open,110,,,310,,310,Troy Fryar,,WA,Single-ply,M,1
-D,Law-Fire Submasters,100,,,230,,230,Nick Berriman,,OR,Single-ply,M,1
-D,Law-Fire Submasters,140,,,230,245,230,William Lee,,TX,Multi-ply,M,1
-D,Open,67.5,,,190,,190,Ray Padilla,,CA,Single-ply,M,1
-D,Open,67.5,,,232.5,,232.5,James Valmoja,,HI,Multi-ply,M,1
-D,Open,75,,,215,,215,Tanner Kennedy,,NY,Single-ply,M,4
-D,Open,75,,,282.5,,282.5,Derrick Martini,,MN,Single-ply,M,1
-D,Open,75,,,230,,230,Alfredo Evangelista,,OR,Single-ply,M,2
-D,Open,75,,,227.5,,227.5,Richard Cirigliano,,CA,Single-ply,M,3
-D,Open,82.5,,,300,,300,Matt Griffin,,TX,Single-ply,M,2
-D,Open,82.5,,,,,,Tom Eiseman,,NJ,Single-ply,M,DQ
-D,Open,82.5,,,195,,195,Bruno Dos Santos Modernel,Brazil,,Single-ply,M,8
-D,Open,82.5,,,330,,330,Romar Lagamo,,HI,Single-ply,M,1
-D,Open,82.5,,,320,,320,Edwin Manmano,,HI,Multi-ply,M,1
-D,Open,82.5,,,297.5,,297.5,Leamon Woodley,,WA,Single-ply,M,3
-D,Open,82.5,,,235,,235,Donavin Bender,,ND,Single-ply,M,4
-D,Open,82.5,,,212.5,,212.5,Daniel Porrazzo,,MA,Single-ply,M,5
-D,Open,82.5,,,205,,205,Daniel Sisneros,,CA,Single-ply,M,6
-D,Open,82.5,,,205,,205,Ray Segura,,WA,Single-ply,M,7
-D,Open,90,,,237.5,,237.5,Kevin Zybert,,NY,Single-ply,M,4
-D,Open,90,,,297.5,,297.5,Pasi Koukkula,Finland,,Single-ply,M,1
-D,Open,90,,,250,,250,Victor Luiz Ramos Medeiros,Brazil,,Single-ply,M,3
-D,Open,90,,,292.5,,292.5,Eddie DiFruscia,,NH,Single-ply,M,2
-D,Open,100,,,315,,315,Al Bianchi,,MA,Single-ply,M,1
-D,Open,100,,,265,,265,Dustin McFarland,,OR,Multi-ply,M,1
-D,Open,100,,,303.5,,303.5,Jimmy House,,AZ,Single-ply,M,2
-D,Open,100,,,292.5,300,292.5,Drew Burton,Canada,,Single-ply,M,3
-D,Open,100,,,282.5,,282.5,Christopher Calderon,,TX,Single-ply,M,4
-D,Open,100,,,272.5,,272.5,Adam Pixton,,UT,Single-ply,M,5
-D,Open,110,,,260,,260,Ryan Martin #3,,ME,Single-ply,M,3
-D,Open,110,,,320,,320,Tim Sparkes,,AZ,Single-ply,M,1
-D,Open,110,,,282.5,,282.5,Robert Exum,,CA,Single-ply,M,2
-D,Open,110,,,260,,260,Marcelo Schneider,Brazil,,Single-ply,M,4
-D,Open,117.5,,,322.5,,322.5,Kari Pöntinen,Finland,,Single-ply,M,1
-D,Open,117.5,,,210,215,210,Eduardo Turrini Ribeiro,Brazil,,Single-ply,M,4
-D,Open,117.5,,,282.5,,282.5,Terry Putman,,OK,Single-ply,M,2
-D,Open,117.5,,,227.5,,227.5,Paul Mercado,,IL,Single-ply,M,3
-D,Open,125,,,287.5,,287.5,Dwight Anderson,,WI,Single-ply,M,3
-D,Open,125,,,355,,355,Patrick Holloway,,AZ,Single-ply,M,1
-D,Open,125,,,227.5,,227.5,Jim Presley,,CA,Multi-ply,M,1
-D,Open,125,,,310,,310,Joe Carter,,TN,Single-ply,M,2
-D,Open,125,,,235,,235,Dennis Schultz,,CA,Single-ply,M,4
-D,Open,140,,,333,,333,Colby Ballinger,,CA,Single-ply,M,2
-D,Open,140,,,351,,351,Harri Väisänen,Finland,,Single-ply,M,1
-D,Open,140+,,,227.5,,227.5,Scott Wesley Jordan,,AZ,Single-ply,M,5
-D,Open,140+,,,370,,370,William Mott,,UT,Single-ply,M,1
-D,Open,140+,,,320,,320,Keoni Reich,,HI,Single-ply,M,2
-D,Open,140+,,,262.5,,262.5,Thomas Guiney,,OK,Single-ply,M,3
-D,Open,140+,,,252.5,,252.5,Joe Mickelson,,WA,Single-ply,M,4
-D,Special Olympian,82.5,,,165,,165,Dylan Kuehl,,WA,Single-ply,M,1
-B,Class 1,67.5,130,,,,130,Dave Constantineau,,WI,Single-ply,M,1
-B,Class 1,75,,,,,,Charles Vaughn,,OR,Single-ply,M,DQ
-B,Class 1,75,175,,,,175,Nick Buck,,WI,Single-ply,M,1
-B,Class 1,75,170,,,,170,Rick Michaud,,ME,Multi-ply,M,1
-B,Class 1,75,162.5,,,,162.5,Jeramie Dawley,,OR,Single-ply,M,2
-B,Class 1,75,150,,,,150,James Lin #2,,WA,Multi-ply,M,2
-B,Class 1,75,157.5,,,,157.5,Robert Hutchens,,NJ,Single-ply,M,3
-B,Class 1,75,145,,,,145,Andy Kaszubski,,WI,Single-ply,M,4
-B,Class 1,82.5,,,,,,Kawika Machado,,HI,Single-ply,M,DQ
-B,Class 1,82.5,195,,,,195,Kaneala Ablao,,HI,Single-ply,M,1
-B,Class 1,82.5,172.5,,,,172.5,Jackson Jones,,WA,Multi-ply,M,1
-B,Class 1,82.5,147.5,,,,147.5,Matthew Jones #8,,MI,Single-ply,M,6
-B,Class 1,82.5,190,,,,190,Edwin Manmano,,HI,Single-ply,M,2
-B,Class 1,82.5,172.5,,,,172.5,Aramiq Amirchian,,AZ,Single-ply,M,3
-B,Class 1,82.5,157.5,,,,157.5,Scott Rickford,,MN,Single-ply,M,4
-B,Class 1,82.5,153.5,,,,153.5,Dylan Kuehl,,WA,Single-ply,M,5
-B,Class 1,90,,,,,,Arnel Sibucao,,HI,Single-ply,M,DQ
-B,Class 1,90,112.5,,,,112.5,Chansey McKendrick,,UT,Single-ply,M,6
-B,Class 1,90,212.5,,,,212.5,Preston Quinn,,WI,Single-ply,M,1
-B,Class 1,90,197.5,,,,197.5,Patrick Rocha,,TX,Multi-ply,M,1
-B,Class 1,90,140,,,,140,Derek Kumagai,,WA,Multi-ply,M,2
-B,Class 1,90,200,,,,200,Benny Long,,OK,Single-ply,M,2
-B,Class 1,90,185,,,,185,Kamu Lyman,,HI,Single-ply,M,3
-B,Class 1,90,182.5,,,,182.5,Pete Ramundo,,NY,Single-ply,M,4
-B,Class 1,90,115,,,,115,Matthew Collins #3,,CA,Single-ply,M,5
-B,Class 1,100,,,,,,Samuel Swift,,TX,Single-ply,M,DQ
-B,Class 1,100,155,,,,155,Will Potter,,WA,Multi-ply,M,1
-B,Class 1,100,227.5,,,,227.5,John Westleigh,,ME,Single-ply,M,1
-B,Class 1,100,147.5,,,,147.5,Michael Collins #5,,CA,Multi-ply,M,2
-B,Class 1,100,182.5,,,,182.5,Kyle Herzik,,NV,Single-ply,M,2
-B,Class 1,100,170,,,,170,Brian Fahrenfeld,,NY,Single-ply,M,3
-B,Class 1,110,82.5,,,,82.5,Harry Munro,,CA,Single-ply,M,4
-B,Class 1,110,,,,,,Joseph Doyon,,ME,Single-ply,M,DQ
-B,Class 1,110,,,,,,Brent Gapusan,,HI,Multi-ply,M,DQ
-B,Class 1,110,132.5,,,,132.5,Chris Knott,,MN,Single-ply,M,2
-B,Class 1,110,208,,,,208,Frank Powell,,OK,Single-ply,M,1
-B,Class 1,110,97.5,,,,97.5,William G Caughey,,UT,Single-ply,M,3
-B,Class 1,117.5,,,,,,Jeremy Donnelly,,AZ,Single-ply,M,DQ
-B,Class 1,117.5,,,,,,Joe LaSalle,,WA,Single-ply,M,DQ
-B,Class 1,117.5,147.5,,,,147.5,Isaac Conde,,TX,Single-ply,M,3
-B,Class 1,117.5,252.5,,,,252.5,Dan Oldham,,ID,Single-ply,M,1
-B,Class 1,117.5,218,,,,218,Mick Quilici,,NV,Multi-ply,M,1
-B,Class 1,117.5,227.5,,,,227.5,David Palmer,,ME,Single-ply,M,2
-B,Class 1,125,172.5,,,,172.5,Gene Cameron,,AZ,Single-ply,M,1
-B,Class 1,125,172.5,,,,172.5,Marcus Ellison,,IL,Single-ply,M,2
-B,Class 1,140,,,,,,Walter Kupihe,,HI,Single-ply,M,DQ
-B,Class 1,140,160,,,,160,John Solleder,,TX,Single-ply,M,1
-B,Class 1,140+,130,,,,130,Keith Sayles,,TX,Multi-ply,M,1
-B,Elite Open,67.5,,,,,,Kerwin Unten,,HI,Single-ply,M,DQ
-B,Elite Open,75,255.5,,,,255.5,Donald Ramil,,HI,Single-ply,M,1
-B,Elite Open,75,235,,,,235,David R Smith,,TX,Single-ply,M,2
-B,Elite Open,125,297.5,,,,297.5,David Lewis #4,,IL,Single-ply,M,1
-B,Elite Open,140+,,,,,,Tiny Meeker,,TX,Single-ply,M,DQ
-B,Elite Open,140+,,,,,,Robert Vick,,IL,Single-ply,M,DQ
-B,Law-Fire 40-47,110,170,,,,170,Freddy Crosby,,IL,Single-ply,M,1
-B,Law-Fire 40-47,117.5,,,,,,Flip Silva Jr,,TX,Multi-ply,M,DQ
-B,Law-Fire 40-47,117.5,237.5,247.5,,,237.5,Chris Chopp,,UT,Multi-ply,M,1
-B,Law-Fire 40-47,125,167.5,,,,167.5,Bobby Gray,,CA,Single-ply,M,2
-B,Law-Fire 40-47,125,305,,,,305,Tommy Harrison,,IL,Single-ply,M,1
-B,Law-Fire 40-47,140+,,,,,,Hiram Kaikaina III,,HI,Multi-ply,M,DQ
-B,Law-Fire 48-55,90,,,,,,Gary McFarland,,CA,Single-ply,M,DQ
-B,Law-Fire 48-55,90,137.5,,,,137.5,Dan Guches,,OR,Single-ply,M,2
-B,Law-Fire 48-55,90,155,,,,155,Luis Fernando Meireles Dias,Brazil,,Single-ply,M,1
-B,Law-Fire 48-55,100,230,,,,230,Brian Reynolds #2,,WA,Single-ply,M,1
-B,Law-Fire 48-55,100,210,,,,210,Joe Gardner,,IL,Single-ply,M,2
-B,Law-Fire 48-55,110,155,160,,,155,Dave Ettinger,Canada,,Single-ply,M,1
-B,Law-Fire 48-55,125,190.5,,,,190.5,Eric Jones,,MI,Single-ply,M,1
-B,Law-Fire 48-55,140,227.5,,,,227.5,Warren Orr,Canada,,Single-ply,M,1
-B,Law-Fire 56-63,90,147.5,,,,147.5,Charles McFarland,,OR,Single-ply,M,1
-B,Law-Fire 56-63,100,185,,,,185,William Denniston,,MI,Single-ply,M,1
-B,Law-Fire 56-63,110,130,,,,130,Manny Burruel,,CA,Multi-ply,M,1
-B,Law-Fire 56-63,110,272.5,,,,272.5,Mike Frizzell,,IL,Single-ply,M,1
-B,Law-Fire 56-63,125,,,,,,Michal Johnson,,CA,Multi-ply,M,DQ
-B,Law-Fire 56-63,125,187.5,,,,187.5,Dennis Schultz,,CA,Single-ply,M,2
-B,Law-Fire 56-63,125,222.5,,,,222.5,Jay Simmons,,TX,Single-ply,M,1
-B,Law-Fire 56-63,125,135,,,,135,Donald Bryant,,WA,Single-ply,M,3
-B,Law-Fire 64+,67.5,155,,,,155,Gary Miller #2,,NV,Multi-ply,M,1
-B,Law-Fire 64+,100,165,,,,165,Jon Wolbers,Canada,,Single-ply,M,1
-B,Law-Fire 64+,140,45,,,,45,JP Krachunis,,CA,Single-ply,M,1
-B,Law-Fire Open,75,125,,,,125,Eli Huizar Zuniga,,WA,Multi-ply,M,1
-B,Law-Fire Open,82.5,160,,,,160,Donavin Bender,,ND,Single-ply,M,1
-B,Law-Fire Open,90,137.5,,,,137.5,Dan Guches,,OR,Single-ply,M,4
-B,Law-Fire Open,90,,,,,,Gary McFarland,,CA,Single-ply,M,DQ
-B,Law-Fire Open,90,260.5,272.5,,,260.5,Ryan Marble,,UT,Single-ply,M,1
-B,Law-Fire Open,90,155,,,,155,Luis Fernando Meireles Dias,Brazil,,Single-ply,M,3
-B,Law-Fire Open,90,197.5,,,,197.5,Darren Carr,,UT,Single-ply,M,2
-B,Law-Fire Open,125,305,,,,305,Tommy Harrison,,IL,Single-ply,M,1
-B,Law-Fire Open,140,262.5,278,,,262.5,William Lee,,TX,Multi-ply,M,1
-B,Law-Fire Submasters,100,187.5,,,,187.5,Nick Berriman,,OR,Single-ply,M,1
-B,Law-Fire Submasters,140,262.5,278,,,262.5,William Lee,,TX,Multi-ply,M,1
-B,Open,60,183.5,,,,183.5,Jallel Fabro,,HI,Single-ply,M,1
-B,Open,67.5,182.5,,,,182.5,Jake Fiscus,,OR,Single-ply,M,1
-B,Open,67.5,182.5,,,,182.5,Raymond Gallegos,,CA,Single-ply,M,2
-B,Open,75,,,,,,Deron Agaran,,HI,Single-ply,M,DQ
-B,Open,75,190,,,,190,Alfredo Evangelista,,OR,Single-ply,M,1
-B,Open,75,117.5,,,,117.5,Tanner Kennedy,,NY,Single-ply,M,2
-B,Open,82.5,190,,,,190,Matt Griffin,,TX,Single-ply,M,3
-B,Open,82.5,152.5,,,,152.5,Leamon Woodley,,WA,Single-ply,M,6
-B,Open,82.5,237.5,,,,237.5,Willard Crossen III,,WA,Single-ply,M,1
-B,Open,82.5,100,,,,100,Bruno Dos Santos Modernel,Brazil,,Single-ply,M,7
-B,Open,82.5,205,,,,205,Daniel Sisneros,,CA,Single-ply,M,2
-B,Open,82.5,185,,,,185,Ray Segura,,WA,Single-ply,M,4
-B,Open,82.5,160,,,,160,Donavin Bender,,ND,Single-ply,M,5
-B,Open,90,150,,,,150,Kevin Zybert,,NY,Single-ply,M,3
-B,Open,90,210,,,,210,James Noblit,,OR,Multi-ply,M,1
-B,Open,90,225,,,,225,Kim Päivöke,Finland,,Single-ply,M,1
-B,Open,90,147.5,,,,147.5,Victor Luiz Ramos Medeiros,Brazil,,Single-ply,M,4
-B,Open,90,182.5,,,,182.5,Pete Ramundo,,NY,Single-ply,M,2
-B,Open,90,60,,,,60,Pasi Koukkula,Finland,,Single-ply,M,5
-B,Open,100,,,,,,Seth Reed,,ME,Single-ply,M,DQ
-B,Open,100,273,,,,273,Coby Washburn,,TX,Single-ply,M,1
-B,Open,100,265,,,,265,Chad Bertelmann,,HI,Single-ply,M,2
-B,Open,100,210,,,,210,Juha Pukkila,Finland,,Single-ply,M,3
-B,Open,110,,,,,,Brent Gapusan,,HI,Multi-ply,M,DQ
-B,Open,110,,,,,,Austin Sellers,,TX,Single-ply,M,DQ
-B,Open,110,190,,,,190,Ryan Martin #3,,ME,Single-ply,M,2
-B,Open,110,280,,,,280,Kenneth Millrany,,TN,Multi-ply,M,1
-B,Open,110,287.5,,,,287.5,Joey Murphy,,GA,Single-ply,M,1
-B,Open,110,185,,,,185,Marcelo Schneider,Brazil,,Single-ply,M,3
-B,Open,110,235,,,,235,Ulrich Zamora,,NV,Multi-ply,M,2
-B,Open,117.5,252.5,,,,252.5,Dan Oldham,,ID,Single-ply,M,1
-B,Open,117.5,185,190,,,185,Eduardo Turrini Ribeiro,Brazil,,Single-ply,M,2
-B,Open,117.5,125,,,,125,John Johnson,,MI,Single-ply,M,3
-B,Open,125,,,,,,Willard Crossen Jr,,WA,Single-ply,M,DQ
-B,Open,125,,,,,,George Leota,,HI,Multi-ply,M,DQ
-B,Open,125,215,,,,215,Dwight Anderson,,WI,Single-ply,M,2
-B,Open,125,227.5,,,,227.5,Jim Presley,,CA,Multi-ply,M,1
-B,Open,125,265.5,,,,265.5,Norman Tavares,,HI,Single-ply,M,1
-B,Open,140,192.5,,,,192.5,Colby Ballinger,,CA,Single-ply,M,2
-B,Open,140,342.5,,,,342.5,Tim Moon,,GA,Single-ply,M,1
-B,Open,140,182.5,,,,182.5,Dennis Schultz,,CA,Single-ply,M,3
-B,Open,140+,265,,,,265,Scott Bromeisl,,WI,Single-ply,M,1
-B,Open,140+,237.5,,,,237.5,Joe Mickelson,,WA,Single-ply,M,2
-B,Open,140+,301.5,,,,301.5,Gary Shim,,HI,Multi-ply,M,1
-B,Special Olympian,48,65,67.5,,,65,Cameron Evans,,TX,Single-ply,M,1
-B,Special Olympian,82.5,153.5,,,,153.5,Dylan Kuehl,,WA,Single-ply,M,1
-D,Class 1,52,,,92.5,,92.5,Jeanne Morris,,WA,Single-ply,F,1
-D,Class 1,56,,,107.5,,107.5,Rebecca Moore,,WA,Single-ply,F,1
-D,Class 1,60,,,141,,141,Dolores Garcia-Munro,,CA,Single-ply,F,2
-D,Class 1,60,,,142.5,,142.5,Danielle Llamas,,OR,Single-ply,F,1
-D,Class 1,60,,,115.5,,115.5,Ardith Stitt,,UT,Single-ply,F,5
-D,Class 1,60,,,135,,135,Lynn Puana,,HI,Single-ply,F,3
-D,Class 1,60,,,122.5,,122.5,Michelle Kahakalau,,HI,Single-ply,F,4
-D,Class 1,60,,,115,,115,Susan Chloupek,,WA,Single-ply,F,6
-D,Class 1,60,,,110,,110,Mitzy Hurtado,,TX,Single-ply,F,7
-D,Class 1,67.5,,,147.5,,147.5,Kayla Krueger,,WI,Single-ply,F,1
-D,Class 1,67.5,,,120,,120,Holly Morello,,CA,Single-ply,F,2
-D,Class 1,67.5,,,85.5,90,85.5,Cassidy Bauer,,MA,Single-ply,F,3
-D,Class 1,75,,,137.5,,137.5,DeAnna Dutton,,WA,Single-ply,F,2
-D,Class 1,75,,,140,,140,Briana Lacey,,AZ,Single-ply,F,1
-D,Class 1,75,,,132.5,,132.5,Victoria Osuna,,OR,Single-ply,F,3
-D,Class 1,82.5,,,152.5,,152.5,Millicent Jefferies,,IL,Single-ply,F,1
-D,Class 1,82.5,,,117.5,,117.5,Pamela Michaels,,WA,Single-ply,F,2
-D,Class 1,82.5,,,115,,115,Deborah Maxwell,,CA,Single-ply,F,3
-D,Class 1,90,,,170.5,,170.5,Linda Gerking,,WA,Single-ply,F,1
-D,Class 1,90,,,160,,160,Felicia Thomas,,IL,Single-ply,F,2
-D,Class 1,100,,,182.5,,182.5,Jescelia Durr,,IL,Single-ply,F,1
-D,Class 1,100,,,155,,155,Scharlotte Spencer,,TX,Single-ply,F,2
-D,Class 1,90+,,,157.5,,157.5,Tiffany Capouch,,MN,Single-ply,F,1
-D,Class 1,90+,,,155,,155,Kay Kadoun,,WA,Single-ply,F,2
-D,Class 1,90+,,,150,,150,Lakisha Campbell,,TX,Single-ply,F,3
-D,Class 1,90+,,,102.5,,102.5,Sharon Price,,TX,Single-ply,F,4
-D,Juniors 20-25,52,,,92.5,,92.5,Brooke Caraccioli,,CA,Single-ply,F,1
-D,Juniors 20-25,56,,,122.5,,122.5,Hannah Barnhill,,CA,Single-ply,F,1
-D,Juniors 20-25,67.5,,,182.5,,182.5,Cristal Cabral,,TX,Single-ply,F,1
-D,Juniors 20-25,67.5,,,142.5,,142.5,Natalie Caughey,,UT,Single-ply,F,2
-D,Juniors 20-25,75,,,167.5,,167.5,Zena Kiyota,,HI,Single-ply,F,1
-D,Juniors 20-25,75,,,145,,145,Alycia Rodriguez,,AZ,Single-ply,F,2
-D,Juniors 20-25,75,,,137.5,,137.5,Nicole Camacho,,HI,Single-ply,F,4
-D,Juniors 20-25,75,,,140,,140,Briana Lacey,,AZ,Single-ply,F,3
-D,Juniors 20-25,75,,,115,,115,Rachel Clements,,AZ,Single-ply,F,5
-D,Juniors 20-25,82.5,,,192.5,,192.5,Kayla Sua,,WA,Single-ply,F,1
-D,Juniors 20-25,82.5,,,172.5,,172.5,Jessica Muskat,,HI,Single-ply,F,2
-D,Juniors 20-25,90+,,,208,,208,Makala Davis,,AZ,Single-ply,F,1
-D,Juniors 20-25,90+,,,165,,165,Rachelle Meidinger,,MT,Single-ply,F,2
-D,Law-Fire 48-55,60,,,95,,95,Tammie Casper,,CA,Single-ply,F,1
-D,Law-Fire 48-55,75,,,130,,130,Gion Prevard,,IL,Single-ply,F,1
-D,Law-Fire 48-55,100,,,142.5,,142.5,Robin Martin,,IL,Single-ply,F,1
-D,Law-Fire Open,75,,,130,,130,Gion Prevard,,IL,Single-ply,F,1
-D,Law-Fire Open,90,,,,,,Alisha Howard,,WA,Single-ply,F,DQ
-D,Law-Fire Submasters,82.5,,,100,,100,Dana Barnes,,IL,Single-ply,F,1
-D,Open,44,,,152.5,155,152.5,Elizabeth Cabe,,HI,Single-ply,F,1
-D,Open,48,,,147.5,,147.5,Linda Barnes,,CA,Multi-ply,F,1
-D,Open,52,,,150,,150,Valesca Cristina Rocha,Brazil,,Single-ply,F,1
-D,Open,56,,,139,,139,Martha Godinez-Shim,,HI,Single-ply,F,1
-D,Open,60,,,142.5,,142.5,Arlene Jara,,NV,Single-ply,F,4
-D,Open,60,,,192.5,,192.5,Jane McCubbin,,WI,Single-ply,F,1
-D,Open,60,,,185,,185,Ana Catia Portilho Couto,Brazil,,Single-ply,F,2
-D,Open,60,,,152.5,,152.5,Nichole Machado,,HI,Single-ply,F,3
-D,Open,60,,,142.5,,142.5,Judy Vierra,,HI,Single-ply,F,5
-D,Open,60,,,142.5,,142.5,Rachel Strauss,,HI,Single-ply,F,6
-D,Open,67.5,,,,,,Rebekah Schmidt,,MN,Single-ply,F,DQ
-D,Open,67.5,,,165,,165,Kimberly Phanthavong,,WA,Single-ply,F,1
-D,Open,67.5,,,137.5,140,137.5,Peach Presley,,CA,Multi-ply,F,1
-D,Open,67.5,,,155,,155,Krystal Miller,,NV,Single-ply,F,2
-D,Open,67.5,,,155,,155,Rosa Narikiyo,,HI,Single-ply,F,3
-D,Open,67.5,,,142.5,,142.5,Natalie Caughey,,UT,Single-ply,F,4
-D,Open,75,,,150,,150,Adriane Harris,,TX,Single-ply,F,2
-D,Open,75,,,110,,110,Kyla Mc Carty,,CA,Single-ply,F,6
-D,Open,75,,,147.5,,147.5,Liza Sanchez,,MA,Single-ply,F,4
-D,Open,75,,,216,,216,Cindy Shockman,,OR,Single-ply,F,1
-D,Open,75,,,150,,150,Deb Kesper,,MA,Single-ply,F,3
-D,Open,75,,,137.5,,137.5,Nicole Camacho,,HI,Single-ply,F,5
-D,Open,82.5,,,192.5,,192.5,Kayla Sua,,WA,Single-ply,F,2
-D,Open,82.5,,,195,,195,Sophia Hussary,,AZ,Single-ply,F,1
-D,Open,82.5,,,172.5,,172.5,Jessica Muskat,,HI,Single-ply,F,3
-D,Open,82.5,,,145,,145,Elizabeth Couture,,MA,Single-ply,F,4
-D,Open,90,,,185,,185,Sarah Hartman,,WA,Single-ply,F,2
-D,Open,90,,,215,,215,Alisha Howard,,WA,Single-ply,F,1
-D,Open,90,,,160.5,,160.5,Irene Peterson,,MA,Single-ply,F,4
-D,Open,90,,,182.5,,182.5,Kirsten Shockman,,WA,Single-ply,F,3
-D,Open,90,,,147.5,,147.5,Amy Rudder,,TN,Single-ply,F,5
-D,Open,100,,,170,,170,Megan Dutton,,TX,Single-ply,F,2
-D,Open,100,,,217.5,,217.5,Holly Garner,,OR,Single-ply,F,1
-D,Open,100,,,165,,165,Susan Johnson #2,,HI,Single-ply,F,3
-D,Open,90+,,,208,,208,Makala Davis,,AZ,Single-ply,F,1
-D,Open,90+,,,182.5,,182.5,Keeya Sutherland,,TX,Single-ply,F,2
-D,Open,90+,,,170,,170,Ashley Boykin,,IL,Single-ply,F,3
-D,Open,90+,,,152.5,,152.5,Alyssa Greenwood,,CA,Single-ply,F,4
-D,Special Olympian,90,,,138,,138,Chloe Kaalund,,CA,Single-ply,F,1
-D,Submasters 33-39,52,,,105,,105,Jamie Field,,CA,Single-ply,F,1
-D,Submasters 33-39,60,,,152.5,,152.5,Nichole Machado,,HI,Single-ply,F,1
-D,Submasters 33-39,60,,,142.5,,142.5,Rachel Strauss,,HI,Single-ply,F,2
-D,Submasters 33-39,60,,,135,,135,Lynn Puana,,HI,Single-ply,F,3
-D,Submasters 33-39,67.5,,,105,,105,Lynn Gilpin-Parks,,WI,Single-ply,F,5
-D,Submasters 33-39,67.5,,,155,,155,Nida Namathep,,AZ,Single-ply,F,2
-D,Submasters 33-39,67.5,,,200,,200,Rebekah Schmidt,,MN,Single-ply,F,1
-D,Submasters 33-39,67.5,,,115,,115,Michelle Bialek,,MN,Single-ply,F,4
-D,Submasters 33-39,67.5,,,155,,155,Rosa Narikiyo,,HI,Single-ply,F,3
-D,Submasters 33-39,82.5,,,195,,195,Sophia Hussary,,AZ,Single-ply,F,1
-D,Submasters 33-39,90,,,160.5,,160.5,Irene Peterson,,MA,Single-ply,F,1
-D,Submasters 33-39,90,,,142.5,,142.5,Mary Denning,,WA,Single-ply,F,2
-D,Submasters 33-39,100,,,217.5,,217.5,Holly Garner,,OR,Single-ply,F,1
-D,Submasters 33-39,90+,,,160,,160,Michelle Garrett,,TX,Single-ply,F,2
-D,Submasters 33-39,90+,,,147.5,,147.5,Janessa Sturtz,,MN,Single-ply,F,3
-D,Submasters 33-39,90+,,,182.5,,182.5,Keeya Sutherland,,TX,Single-ply,F,1
-D,Submasters 33-39,90+,,,140,,140,Christine Ruscher,,MN,Single-ply,F,4
-B,Class 1,52,35,,,,35,Jeanne Morris,,WA,Single-ply,F,1
-B,Class 1,60,70,,,,70,Danielle Llamas,,OR,Single-ply,F,2
-B,Class 1,60,72.5,,,,72.5,Lynn Puana,,HI,Single-ply,F,1
-B,Class 1,60,70,,,,70,Michelle Kahakalau,,HI,Single-ply,F,3
-B,Class 1,60,67.5,,,,67.5,Judy Vierra,,HI,Single-ply,F,4
-B,Class 1,60,67.5,,,,67.5,Dolores Garcia-Munro,,CA,Single-ply,F,5
-B,Class 1,67.5,75,,,,75,Kayla Krueger,,WI,Single-ply,F,1
-B,Class 1,67.5,75,,,,75,Dayna Ng,,HI,Single-ply,F,2
-B,Class 1,67.5,40,,,,40,Cassidy Bauer,,MA,Single-ply,F,3
-B,Class 1,75,67.5,,,,67.5,DeAnna Dutton,,WA,Multi-ply,F,1
-B,Class 1,75,77.5,,,,77.5,Victoria Osuna,,OR,Single-ply,F,1
-B,Class 1,82.5,67.5,,,,67.5,Millicent Jefferies,,IL,Single-ply,F,2
-B,Class 1,82.5,70,,,,70,Deborah Maxwell,,CA,Single-ply,F,1
-B,Class 1,82.5,60,,,,60,Pamela Michaels,,WA,Single-ply,F,3
-B,Class 1,90,92.5,,,,92.5,Destinee Pakani,,HI,Single-ply,F,1
-B,Class 1,90,62.5,,,,62.5,Felicia Thomas,,IL,Single-ply,F,2
-B,Class 1,100,75,,,,75,Jescelia Durr,,IL,Single-ply,F,1
-B,Class 1,90+,72.5,,,,72.5,Tiffany Capouch,,MN,Single-ply,F,2
-B,Class 1,90+,87.5,,,,87.5,Kay Kadoun,,WA,Single-ply,F,1
-B,Class 1,90+,60,,,,60,Lakisha Campbell,,TX,Single-ply,F,3
-B,Juniors 20-25,44,65,67.5,,,65,Ekaterina Romanova,Russia,,Single-ply,F,1
-B,Juniors 20-25,52,42.5,,,,42.5,Brooke Caraccioli,,CA,Single-ply,F,1
-B,Juniors 20-25,67.5,102.5,,,,102.5,Cristal Cabral,,TX,Single-ply,F,1
-B,Juniors 20-25,67.5,52.5,,,,52.5,Natalie Caughey,,UT,Single-ply,F,2
-B,Juniors 20-25,75,57.5,,,,57.5,Rachel Clements,,AZ,Single-ply,F,2
-B,Juniors 20-25,75,120,,,,120,Zena Kiyota,,HI,Single-ply,F,1
-B,Juniors 20-25,82.5,97.5,,,,97.5,Jessica Muskat,,HI,Single-ply,F,1
-B,Juniors 20-25,82.5,102.5,,,,102.5,Kayla Sua,,WA,Multi-ply,F,1
-B,Juniors 20-25,90+,115,120.5,,,115,Rachelle Meidinger,,MT,Single-ply,F,1
-B,Law-Fire 48-55,75,105,,,,105,Gion Prevard,,IL,Single-ply,F,1
-B,Law-Fire 48-55,100,57.5,,,,57.5,Robin Martin,,IL,Single-ply,F,1
-B,Law-Fire 64+,82.5,70,73.5,,,70,Pam Carter,,AZ,Single-ply,F,1
-B,Law-Fire Open,75,105,,,,105,Gion Prevard,,IL,Single-ply,F,1
-B,Law-Fire Open,90,158,,,,158,Alisha Howard,,WA,Single-ply,F,1
-B,Law-Fire Submasters,82.5,72.5,,,,72.5,Dana Barnes,,IL,Single-ply,F,1
-B,Open,44,65,67.5,,,65,Ekaterina Romanova,Russia,,Single-ply,F,1
-B,Open,48,87.5,,,,87.5,Linda Barnes,,CA,Single-ply,F,1
-B,Open,52,50,,,,50,Valesca Cristina Rocha,Brazil,,Single-ply,F,1
-B,Open,56,75,,,,75,Martha Godinez-Shim,,HI,Multi-ply,F,1
-B,Open,56,92.5,,,,92.5,Kali Schierl,,WI,Single-ply,F,1
-B,Open,56,65,,,,65,Rebecca Moore,,WA,Multi-ply,F,2
-B,Open,60,77.5,,,,77.5,Ana Catia Portilho Couto,Brazil,,Single-ply,F,2
-B,Open,60,102.5,,,,102.5,Rachel Strauss,,HI,Single-ply,F,1
-B,Open,67.5,137.5,,,,137.5,Kandice Kinney,,HI,Single-ply,F,1
-B,Open,67.5,102.5,,,,102.5,Peach Presley,,CA,Multi-ply,F,1
-B,Open,67.5,115,,,,115,Krystal Miller,,NV,Single-ply,F,2
-B,Open,67.5,75,,,,75,Kimberly Phanthavong,,WA,Single-ply,F,3
-B,Open,67.5,52.5,,,,52.5,Natalie Caughey,,UT,Single-ply,F,4
-B,Open,75,52.5,,,,52.5,Adriane Harris,,TX,Single-ply,F,4
-B,Open,75,73,,,,73,Kyla Mc Carty,,CA,Single-ply,F,3
-B,Open,75,157.5,160,,,157.5,Virpi Pukkila,Finland,,Single-ply,F,1
-B,Open,75,150,158,,,150,Cindy Shockman,,OR,Single-ply,F,2
-B,Open,82.5,,,,,,Karen Campbell,,ME,Single-ply,F,DQ
-B,Open,82.5,120,,,,120,Elizabeth Couture,,MA,Single-ply,F,1
-B,Open,82.5,102.5,,,,102.5,Kayla Sua,,WA,Multi-ply,F,1
-B,Open,82.5,97.5,,,,97.5,Jessica Muskat,,HI,Single-ply,F,2
-B,Open,90,132.5,,,,132.5,Mary Denning,,WA,Multi-ply,F,1
-B,Open,90,102.5,,,,102.5,Amy Rudder,,TN,Multi-ply,F,2
-B,Open,100,85,92.5,,,85,Susan Johnson #2,,HI,Multi-ply,F,1
-B,Open,90+,65,,,,65,Ashley Boykin,,IL,Single-ply,F,2
-B,Open,90+,98,,,,98,Gloria Caughey,,UT,Multi-ply,F,1
-B,Open,90+,82.5,,,,82.5,Alyssa Greenwood,,CA,Single-ply,F,1
-B,Special Olympian,90,70,75,,,70,Chloe Kaalund,,CA,Single-ply,F,1
-B,Submasters 33-39,52,50,,,,50,Jamie Field,,CA,Single-ply,F,1
-B,Submasters 33-39,60,102.5,,,,102.5,Rachel Strauss,,HI,Single-ply,F,1
-B,Submasters 33-39,60,72.5,,,,72.5,Lynn Puana,,HI,Single-ply,F,2
-B,Submasters 33-39,67.5,80,,,,80,Lynn Gilpin-Parks,,WI,Single-ply,F,2
-B,Submasters 33-39,67.5,87.5,,,,87.5,Nida Namathep,,AZ,Single-ply,F,1
-B,Submasters 33-39,67.5,52.5,,,,52.5,Michelle Bialek,,MN,Single-ply,F,3
-B,Submasters 33-39,90,132.5,,,,132.5,Mary Denning,,WA,Multi-ply,F,1
-B,Submasters 33-39,90,158,,,,158,Alisha Howard,,WA,Single-ply,F,1
-B,Submasters 33-39,90+,57.5,,,,57.5,Michelle Garrett,,TX,Single-ply,F,2
-B,Submasters 33-39,90+,67.5,,,,67.5,Janessa Sturtz,,MN,Single-ply,F,1
-B,Submasters 33-39,90+,55,,,,55,Christine Ruscher,,MN,Single-ply,F,3
-BD,Class 1,67.5,130,,195,,325,Dave Constantineau,,,Single-ply,M,1
-BD,Class 1,90,212.5,,255,,467.5,Preston Quinn,,WI,Single-ply,M,1
-BD,Class 1,100,147.5,,192.5,,340,Michael Collins #5,,CA,Multi-ply,M,1
-BD,Class 1,110,97.5,,215,,312,William G Caughey,,UT,Single-ply,M,1
-BD,Class 1,110,82.5,,165,,247.5,Harry Munro,,CA,Single-ply,M,2
-BD,Class 1,117.5,227.5,,280,,507.5,David Palmer,,ME,Single-ply,M,1
-BD,Law-Fire 40-47,110,170,,260,,430,Freddy Crosby,,IL,Single-ply,M,1
-BD,Law-Fire 40-47,117.5,,,255,272.5,,Flip Silva Jr,,,Multi-ply,M,DQ
-BD,Law-Fire 40-47,125,305,,255,,560,Tommy Harrison,,IL,Single-ply,M,1
-BD,Law-Fire 40-47,125,167.5,,227.5,,395,Bobby Gray,,CA,Single-ply,M,2
-BD,Law-Fire 48-55,90,137.5,,255.5,,393,Dan Guches,,OR,Single-ply,M,1
-BD,Law-Fire 56-63,90,147.5,,250,,397.5,Charles McFarland,,OR,Single-ply,M,1
-BD,Law-Fire 56-63,110,272.5,,277.5,,550,Mike Frizzell,,IL,Single-ply,M,1
-BD,Law-Fire 56-63,110,130,,255,,385,Manny Burruel,,CA,Multi-ply,M,1
-BD,Law-Fire 56-63,125,222.5,,187.5,,410,Jay Simmons,,TX,Single-ply,M,1
-BD,Law-Fire 64+,67.5,155,,170,,325,Gary Miller #2,,NV,Multi-ply,M,1
-BD,Law-Fire Open,75,125,,180,,305,Eli Huizar Zuniga,,WA,Multi-ply,M,1
-BD,Law-Fire Open,90,260.5,272.5,240,,500.5,Ryan Marble,,UT,Single-ply,M,1
-BD,Law-Fire Open,90,137.5,,255.5,,393,Dan Guches,,OR,Single-ply,M,2
-BD,Law-Fire Open,140,262.5,278,230,245,492.5,William Lee,,TX,Multi-ply,M,1
-BD,Law-Fire Submasters,100,187.5,,230,,417.5,Nick Berriman,,OR,Single-ply,M,1
-BD,Law-Fire Submasters,140,262.5,278,230,245,492.5,William Lee,,TX,Multi-ply,M,1
-BD,Open,75,190,,230,,420,Alfredo Evangelista,,,Single-ply,M,1
-BD,Open,75,117.5,,215,,332.5,Tanner Kennedy,,NY,Single-ply,M,2
-BD,Open,82.5,190,,300,,490,Matt Griffin,,TX,Single-ply,M,1
-BD,Open,82.5,152.5,,297.5,,450,Leamon Woodley,,WA,Single-ply,M,2
-BD,Open,90,150,,237.5,,387.5,Kevin Zybert,,NY,Single-ply,M,1
-BD,Open,125,227.5,,227.5,,455,Jim Presley,,CA,Multi-ply,M,1
-BD,Open,140+,237.5,,252.5,,490,Joe Mickelson,,WA,Single-ply,M,1
-BD,Class 1,52,35,,92.5,,127.5,Jeanne Morris,,CA,Single-ply,F,1
-BD,Class 1,60,70,,142.5,,212.5,Danielle Llamas,,OR,Single-ply,F,1
-BD,Class 1,60,67.5,,141,,208.5,Dolores Garcia-Munro,,CA,Single-ply,F,2
-BD,Class 1,75,77.5,,132.5,,210,Victoria Osuna,,OR,Single-ply,F,1
-BD,Class 1,82.5,67.5,,152.5,,220,Millicent Jefferies,,IL,Single-ply,F,1
-BD,Class 1,82.5,60,,117.5,,177.5,Pamela Michaels,,WA,Single-ply,F,2
-BD,Class 1,90,62.5,,160,,222.5,Felicia Thomas,,IL,Single-ply,F,1
-BD,Class 1,90+,87.5,,155,,242.5,Kay Kadoun,,WA,Single-ply,F,1
-BD,Juniors 20-25,52,42.5,,92.5,,135,Brooke Caraccioli,,CA,Single-ply,F,1
-BD,Juniors 20-25,67.5,52.5,,142.5,,195,Natalie Caughey,,UT,Single-ply,F,1
-BD,Juniors 20-25,75,120,,167.5,,287.5,Zena Kiyota,,HI,Single-ply,F,1
-BD,Juniors 20-25,90+,115,120.5,165,,280,Rachelle Meidinger,,MT,Single-ply,F,1
-BD,Law-Fire 48-55,75,105,,130,,235,Gion Prevard,,IL,Single-ply,F,1
-BD,Law-Fire 48-55,100,57.5,,142.5,,200,Robin Martin,,IL,Single-ply,F,1
-BD,Law-Fire Submasters,82.5,72.5,,100,,172.5,Dana Barnes,,IL,Single-ply,F,1
-BD,Open,60,77.5,,185,,262.5,Ana Catia Portilho Couto,,,Single-ply,F,1
-BD,Open,60,102.5,,142.5,,245,Rachel Strauss,,HI,Single-ply,F,2
-BD,Open,67.5,115,,155,,270,Krystal Miller,,NV,Single-ply,F,1
-BD,Open,67.5,102.5,,137.5,140,240,Peach Presley,,CA,Multi-ply,F,1
-BD,Open,75,73,,110,,183,Kyla Mc Carty,,CA,Single-ply,F,1
-BD,Submasters 33-39,60,102.5,,142.5,,245,Rachel Strauss,,HI,Single-ply,F,1
-BD,Submasters 33-39,67.5,80,,105,,185,Lynn Gilpin-Parks,,WI,Single-ply,F,1
-BD,Submasters 33-39,90+,57.5,,160,,217.5,Michelle Garrett,,TX,Single-ply,F,1
+Event,Division,WeightClassKg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Name,State,Country,Equipment,Sex,Place
+D,Class 1,67.5,,,194.91,,194.91,Dave Constantineau,WI,,Single-ply,M,1
+D,Class 1,75,,,199.9,,199.9,James Lin,WA,,Single-ply,M,1
+D,Class 1,75,,,192.41,,192.41,Rick Michaud,ME,,Single-ply,M,2
+D,Class 1,75,,,182.43,,182.43,Caleb Nute,ME,,Single-ply,M,3
+D,Class 1,82.5,,,249.93,,249.93,Ben Dehghan,WA,,Single-ply,M,1
+D,Class 1,82.5,,,197.4,,197.4,Josh Nemcek,UT,,Single-ply,M,4
+D,Class 1,82.5,,,249.93,,249.93,Kaneala Ablao,HI,,Single-ply,M,2
+D,Class 1,82.5,,,194.91,,194.91,Aramiq Amirchian,AZ,,Single-ply,M,5
+D,Class 1,82.5,,,217.5,,217.5,Jackson Jones,WA,,Single-ply,M,3
+D,Class 1,90,,,285.45,,285.45,Antjuan Buffett,TX,,Single-ply,M,1
+D,Class 1,90,,,204.89,,204.89,Matthew Collins,CA,,Multi-ply,M,1
+D,Class 1,90,,,254.92,,254.92,Preston Quinn,WI,,Single-ply,M,2
+D,Class 1,90,,,252.42,,252.42,Zachary Freemantle,WA,,Single-ply,M,3
+D,Class 1,90,,,209.88,,209.88,Derek Kumagai,WA,,Single-ply,M,5
+D,Class 1,90,,,232.47,,232.47,Kevin Dunford,,Canada,Single-ply,M,4
+D,Class 1,100,,,192.41,,192.41,Michael Collins,CA,,Multi-ply,M,1
+D,Class 1,100,,,272.47,,272.47,Adam Pixton,UT,,Single-ply,M,1
+D,Class 1,100,,,265.4,,265.4,John Westleigh,ME,,Single-ply,M,2
+D,Class 1,100,,,264.9,,264.9,Brady Hosley,UT,,Single-ply,M,3
+D,Class 1,100,,,249.93,,249.93,Marks Labostrie III,TX,,Single-ply,M,4
+D,Class 1,100,,,237.46,,237.46,Kyle Herzik,NV,,Single-ply,M,5
+D,Class 1,100,,,217.5,,217.5,Samuel Swift,TX,,Single-ply,M,6
+D,Class 1,110,,,164.97,,164.97,Harry Munro,CA,,Single-ply,M,6
+D,Class 1,110,,,259.91,,259.91,Mike Lazenby,UT,,Single-ply,M,2
+D,Class 1,110,,,277.96,,277.96,Dennis Schmidt,MN,,Single-ply,M,1
+D,Class 1,110,,,219.99,,219.99,Joseph Doyon,ME,,Single-ply,M,3
+D,Class 1,110,,,182.43,,182.43,Chris Knott,MN,,Single-ply,M,5
+D,Class 1,110,,,214.87,,214.87,William G Caughey,UT,,Single-ply,M,4
+D,Class 1,117.5,,,249.93,,249.93,Dan Oldham,ID,,Single-ply,M,2
+D,Class 1,117.5,,,279.96,,279.96,David Palmer,ME,,Single-ply,M,1
+D,Class 1,117.5,,,227.48,,227.48,Jeremy Donnelly,AZ,,Single-ply,M,3
+D,Class 1,117.5,,,224.98,,224.98,Isaac Conde,TX,,Single-ply,M,4
+D,Class 1,125,,,294.93,,294.93,Jason Sacre,UT,,Single-ply,M,1
+D,Class 1,125,,,274.97,,274.97,Marcus Ellison,IL,,Single-ply,M,2
+D,Class 1,125,,,272.97,,272.97,Gene Cameron,AZ,,Single-ply,M,3
+D,Class 1,140,,,267.39,,267.39,Tarlus McDaniel,TX,,Single-ply,M,1
+D,Class 1,140+,,,204.89,,204.89,Mitchell Garrett,TX,,Single-ply,M,1
+D,Disabled 1 13-19,56,,,97.39,102.38,97.39,Clarence Kehres,CA,,Single-ply,M,1
+D,Disabled 1 20-39,75,,,29.94,34.93,29.94,Matthew Holling,OR,,Single-ply,M,1
+D,Disabled 1 40-59,110,,,232.97,237.46,232.97,Steve Pena,CA,,Single-ply,M,1
+D,Disabled 2 20-39,75,,,199.9,,199.9,Chad McFarland,OR,,Single-ply,M,1
+D,Disabled 2 20-39,82.5,,,164.97,,164.97,Dylan Kuehl,WA,,Single-ply,M,1
+D,Disabled 2 20-39,100,,,137.44,,137.44,Will Beavers,CA,,Multi-ply,M,1
+D,Disabled 2 20-39,125,,,239.95,,239.95,Brady Tanner,KS,,Single-ply,M,1
+D,Disabled 2 40-59,82.5,,,199.9,,199.9,Vilmar Oliveira,,Brazil,Single-ply,M,1
+D,Disabled 2 40-59,100,,,179.94,,179.94,Jorge Roberto Correia Rocha,,Brazil,Single-ply,M,3
+D,Disabled 2 40-59,100,,,254.92,,254.92,Reid Solar,AZ,,Single-ply,M,1
+D,Disabled 2 40-59,100,,,229.97,,229.97,Duane Burlingame,IL,,Single-ply,M,2
+D,Disabled 2 40-59,125,,,272.47,,272.47,Dawane Harris,OR,,Single-ply,M,1
+D,Disabled 2 60,75,,,134.94,,134.94,Stan Miyahira,NV,,Multi-ply,M,1
+D,Disabled 2 60,100,,,227.48,,227.48,Bob Hafner,TX,,Single-ply,M,1
+D,Disabled 2 60,100,,,219.99,227.48,219.99,Vincent Breaux,LA,,Single-ply,M,2
+D,Disabled 2 60,140,,,105.37,,105.37,JP Krachunis,CA,,Single-ply,M,1
+D,Juniors 20-25,67.5,,,234.96,,234.96,Jonathan Iloreta,HI,,Single-ply,M,1
+D,Juniors 20-25,67.5,,,222.49,,222.49,Wayne Schmitt Jr,NY,,Single-ply,M,2
+D,Juniors 20-25,67.5,,,202.39,,202.39,Austin Soto,TX,,Single-ply,M,3
+D,Juniors 20-25,67.5,,,192.41,,192.41,James Wells,VT,,Single-ply,M,4
+D,Juniors 20-25,75,,,282.45,,282.45,Luis Alaniz,TX,,Single-ply,M,1
+D,Juniors 20-25,75,,,264.9,,264.9,Dylan Price,MI,,Single-ply,M,2
+D,Juniors 20-25,75,,,192.41,,192.41,Omar Shake,CA,,Single-ply,M,3
+D,Juniors 20-25,82.5,,,299.92,,299.92,Matt Griffin,TX,,Single-ply,M,1
+D,Juniors 20-25,82.5,,,197.4,,197.4,Josh Nemcek,UT,,Single-ply,M,4
+D,Juniors 20-25,82.5,,,194.91,,194.91,Bruno Dos Santos Modernel,,Brazil,Single-ply,M,5
+D,Juniors 20-25,82.5,,,249.93,,249.93,Mahmud Marhamo,MA,,Single-ply,M,2
+D,Juniors 20-25,82.5,,,209.88,,209.88,Andrew Vickery,CA,,Single-ply,M,3
+D,Juniors 20-25,90,,,237.46,,237.46,Kevin Zybert,NY,,Single-ply,M,3
+D,Juniors 20-25,90,,,249.93,,249.93,Victor Luiz Ramos Medeiros,,Brazil,Single-ply,M,2
+D,Juniors 20-25,90,,,292.43,,292.43,Kyle Sugi,HI,,Single-ply,M,1
+D,Juniors 20-25,90,,,229.97,,229.97,Edward Young,NV,,Single-ply,M,4
+D,Juniors 20-25,100,,,277.46,,277.46,Joshua Yong,HI,,Single-ply,M,1
+D,Juniors 20-25,100,,,204.89,,204.89,Jeremiah Lopez,CA,,Single-ply,M,2
+D,Juniors 20-25,110,,,217.5,,217.5,David Morrison,MA,,Single-ply,M,1
+D,Juniors 20-25,117.5,,,284.95,,284.95,Joshua Winterrowd,MT,,Single-ply,M,1
+D,Juniors 20-25,140,,,332.98,,332.98,Colby Ballinger,CA,,Single-ply,M,1
+D,Juniors 20-25,140,,,249.93,,249.93,Ray Voigt,MI,,Single-ply,M,2
+D,Juniors 20-25,140+,,,252.42,,252.42,Devin Del Vecchio,AZ,,Single-ply,M,2
+D,Juniors 20-25,140+,,,272.47,,272.47,Donald Loew,WI,,Single-ply,M,1
+D,Law-Fire 40-47,110,,,259.91,,259.91,Freddy Crosby,IL,,Single-ply,M,2
+D,Law-Fire 40-47,110,,,309.89,,309.89,Troy Fryar,WA,,Single-ply,M,1
+D,Law-Fire 40-47,117.5,,,254.92,272.47,254.92,Flip Silva,TX,,Multi-ply,M,1
+D,Law-Fire 40-47,125,,,227.48,,227.48,Bobby Gray,CA,,Single-ply,M,2
+D,Law-Fire 40-47,125,,,254.92,,254.92,Tommy Harrison,IL,,Single-ply,M,1
+D,Law-Fire 48-55,75,,,194.91,,194.91,Larry Esquivel,CA,,Single-ply,M,1
+D,Law-Fire 48-55,90,,,255.42,,255.42,Dan Guches,OR,,Single-ply,M,1
+D,Law-Fire 48-55,90,,,204.89,,204.89,David Edborg,NY,,Single-ply,M,3
+D,Law-Fire 48-55,90,,,234.96,240.95,234.96,Luis Fernando Meireles Dias,,Brazil,Single-ply,M,2
+D,Law-Fire 48-55,100,,,314.88,,314.88,Al Bianchi,MA,,Single-ply,M,1
+D,Law-Fire 48-55,100,,,227.48,,227.48,Lance Davis,UT,,Single-ply,M,2
+D,Law-Fire 56-63,90,,,249.93,,249.93,Charles McFarland,OR,,Single-ply,M,1
+D,Law-Fire 56-63,100,,,189.92,,189.92,William Denniston,MI,,Multi-ply,M,1
+D,Law-Fire 56-63,110,,,254.92,,254.92,Manny Burruel,CA,,Multi-ply,M,1
+D,Law-Fire 56-63,110,,,277.46,,277.46,Mike Frizzell,IL,,Single-ply,M,1
+D,Law-Fire 56-63,125,,,204.89,,204.89,Michal Johnson,CA,,Multi-ply,M,1
+D,Law-Fire 56-63,125,,,234.96,,234.96,Dennis Schultz,CA,,Single-ply,M,1
+D,Law-Fire 56-63,125,,,187.42,,187.42,Jay Simmons,TX,,Single-ply,M,2
+D,Law-Fire 64+,67.5,,,169.96,,169.96,Gary Miller,NV,,Multi-ply,M,1
+D,Law-Fire 64+,100,,,244.94,,244.94,Jon Wolbers,,Canada,Single-ply,M,1
+D,Law-Fire 64+,125,,,234.96,,234.96,Mike Fryar,WA,,Single-ply,M,1
+D,Law-Fire 64+,140,,,105.37,,105.37,JP Krachunis,CA,,Single-ply,M,1
+D,Law-Fire Open,75,,,179.94,,179.94,Eli Huizar Zuniga,WA,,Multi-ply,M,1
+D,Law-Fire Open,82.5,,,234.96,,234.96,Donavin Bender,ND,,Single-ply,M,1
+D,Law-Fire Open,90,,,255.42,,255.42,Dan Guches,OR,,Single-ply,M,1
+D,Law-Fire Open,90,,,239.95,,239.95,Ryan Marble,UT,,Single-ply,M,2
+D,Law-Fire Open,90,,,234.96,,234.96,Luis Fernando Meireles Dias,,Brazil,Single-ply,M,3
+D,Law-Fire Open,125,,,254.92,,254.92,Tommy Harrison,IL,,Single-ply,M,1
+D,Law-Fire Open,140,,,229.97,244.94,229.97,William Lee,TX,,Multi-ply,M,1
+D,Law-Fire Open,110,,,309.89,,309.89,Troy Fryar,WA,,Single-ply,M,1
+D,Law-Fire Submasters,100,,,229.97,,229.97,Nick Berriman,OR,,Single-ply,M,1
+D,Law-Fire Submasters,140,,,229.97,244.94,229.97,William Lee,TX,,Multi-ply,M,1
+D,Masters 40-46,67.5,,,227.48,,227.48,Chris Balanga,CA,,Multi-ply,M,1
+D,Masters 40-46,75,,,199.9,,199.9,James Lin,WA,,Single-ply,M,1
+D,Masters 40-46,90,,,297.42,,297.42,Pasi Koukkula,,Finland,Single-ply,M,1
+D,Masters 40-46,90,,,287.44,,287.44,Matt LaMarque,CA,,Single-ply,M,2
+D,Masters 40-46,90,,,279.96,,279.96,Robert Miller,TX,,Single-ply,M,3
+D,Masters 40-46,90,,,214.87,,214.87,Eric Litster,UT,,Single-ply,M,4
+D,Masters 40-46,100,,,292.43,299.92,292.43,Drew Burton,,Canada,Single-ply,M,1
+D,Masters 40-46,100,,,214.87,,214.87,Marco Govea,TX,,Single-ply,M,2
+D,Masters 40-46,110,,,239.95,,239.95,Joe Guerra,TX,,Single-ply,M,1
+D,Masters 40-46,110,,,232.97,237.46,232.97,Steve Pena,CA,,Single-ply,M,2
+D,Masters 40-46,117.5,,,322.37,,322.37,Kari Pöntinen,,Finland,Single-ply,M,1
+D,Masters 40-46,117.5,,,292.43,,292.43,Nick Massey,CA,,Single-ply,M,2
+D,Masters 40-46,117.5,,,254.92,,254.92,Allen Heisler,MT,,Single-ply,M,3
+D,Masters 40-46,117.5,,,227.48,,227.48,Paul Mercado,IL,,Single-ply,M,4
+D,Masters 40-46,125,,,309.89,,309.89,Joe Carter,TN,,Single-ply,M,1
+D,Masters 40-46,125,,,302.41,,302.41,Chris Johnson,WA,,Single-ply,M,2
+D,Masters 40-46,125,,,272.47,,272.47,Dawane Harris,OR,,Single-ply,M,3
+D,Masters 40-46,140,,,299.92,,299.92,Dave Forstner,MI,,Multi-ply,M,1
+D,Masters 40-46,140,,,239.95,,239.95,Kevin Krauss,NY,,Single-ply,M,1
+D,Masters 40-46,140,,,287.44,,287.44,Jeremiah Johnson,UT,,Multi-ply,M,2
+D,Masters 40-46,140+,,,274.97,,274.97,Scott Wesley Jordan,AZ,,Single-ply,M,2
+D,Masters 40-46,140+,,,319.87,,319.87,Keoni Reich,HI,,Single-ply,M,1
+D,Masters 40-46,140+,,,249.93,,249.93,Scott Bromeisl,WI,,Single-ply,M,3
+D,Masters 40-46,140+,,,239.95,,239.95,Robert Vick,IL,,Single-ply,M,4
+D,Masters 47-53,75,,,227.48,,227.48,Keith Cunningham,WA,,Single-ply,M,1
+D,Masters 47-53,75,,,184.93,,184.93,Nino Domingo,AZ,,Single-ply,M,2
+D,Masters 47-53,82.5,,,229.97,,229.97,Chris Goyes,TX,,Single-ply,M,1
+D,Masters 47-53,82.5,,,214.87,,214.87,Pat Young,ID,,Single-ply,M,2
+D,Masters 47-53,82.5,,,212.37,,212.37,Daniel Porrazzo,MA,,Single-ply,M,3
+D,Masters 47-53,90,,,292.43,,292.43,Eddie DiFruscia,NH,,Single-ply,M,1
+D,Masters 47-53,90,,,167.47,,167.47,John Flagg,MN,,Single-ply,M,3
+D,Masters 47-53,90,,,186.43,189.92,186.43,David Franke,NV,,Multi-ply,M,1
+D,Masters 47-53,90,,,219.99,,219.99,Percy Taylor,TX,,Single-ply,M,2
+D,Masters 47-53,100,,,249.93,,249.93,Gary Gulseth,WI,,Single-ply,M,2
+D,Masters 47-53,100,,,199.9,,199.9,Chris Hatley,AR,,Single-ply,M,6
+D,Masters 47-53,100,,,265.4,,265.4,John Westleigh,ME,,Single-ply,M,1
+D,Masters 47-53,100,,,237.46,,237.46,George Phipps,NV,,Single-ply,M,3
+D,Masters 47-53,100,,,234.96,,234.96,Steven Petersen,TX,,Single-ply,M,4
+D,Masters 47-53,100,,,227.48,,227.48,Lance Davis,UT,,Single-ply,M,5
+D,Masters 47-53,110,,,,,,Michael Neely,MT,,Single-ply,M,DQ
+D,Masters 47-53,110,,,259.91,,259.91,Marcelo Schneider,,Brazil,Single-ply,M,3
+D,Masters 47-53,110,,,319.87,,319.87,Tim Sparkes,AZ,,Single-ply,M,1
+D,Masters 47-53,110,,,282.45,,282.45,Robert Exum,CA,,Single-ply,M,2
+D,Masters 47-53,110,,,242.45,,242.45,Burnell Harvin,CA,,Single-ply,M,4
+D,Masters 47-53,117.5,,,282.45,,282.45,Terry Putman,OK,,Single-ply,M,1
+D,Masters 47-53,117.5,,,279.96,,279.96,David Palmer,ME,,Single-ply,M,2
+D,Masters 47-53,125,,,227.48,,227.48,Bobby Gray,CA,,Single-ply,M,2
+D,Masters 47-53,125,,,354.94,,354.94,Patrick Holloway,AZ,,Single-ply,M,1
+D,Masters 47-53,125,,,252.42,,252.42,Jesse Johnson,UT,,Multi-ply,M,1
+D,Masters 47-53,140,,,289.94,,289.94,Gary Palumbis,OR,,Single-ply,M,1
+D,Masters 47-53,140+,,,267.17,,267.17,Thomas Guiney,OK,,Single-ply,M,1
+D,Masters 54-60,60,,,112.49,,112.49,Chetram Mangra,NY,,Single-ply,M,1
+D,Masters 54-60,67.5,,,194.91,,194.91,Dave Constantineau,WI,,Single-ply,M,1
+D,Masters 54-60,67.5,,,145.42,,145.42,Dee Vajgrt,CA,,Single-ply,M,3
+D,Masters 54-60,67.5,,,232.47,,232.47,James Valmoja,HI,,Multi-ply,M,1
+D,Masters 54-60,67.5,,,192.41,,192.41,Steve Winslow,ID,,Single-ply,M,2
+D,Masters 54-60,75,,,247.43,,247.43,Fulton White,NV,,Single-ply,M,1
+D,Masters 54-60,75,,,227.48,,227.48,Richard Cirigliano,CA,,Single-ply,M,2
+D,Masters 54-60,82.5,,,,,,Tom Eiseman,NJ,,Single-ply,M,DQ
+D,Masters 54-60,82.5,,,147.42,,147.42,John Pastorius,OH,,Single-ply,M,3
+D,Masters 54-60,82.5,,,297.42,,297.42,Leamon Woodley,WA,,Single-ply,M,1
+D,Masters 54-60,82.5,,,227.48,,227.48,Danny Winslow,ID,,Single-ply,M,2
+D,Masters 54-60,90,,,232.47,,232.47,Kevin Dunford,,Canada,Single-ply,M,1
+D,Masters 54-60,100,,,214.87,,214.87,Pete Diaz,NJ,,Single-ply,M,4
+D,Masters 54-60,100,,,254.92,,254.92,Reid Solar,AZ,,Single-ply,M,1
+D,Masters 54-60,100,,,229.97,,229.97,Duane Burlingame,IL,,Single-ply,M,2
+D,Masters 54-60,100,,,182.43,,182.43,Gene A Wenzel,OH,,Single-ply,M,5
+D,Masters 54-60,100,,,227.48,,227.48,Jim Curley,CO,,Single-ply,M,3
+D,Masters 54-60,110,,,164.97,,164.97,Harry Munro,CA,,Single-ply,M,2
+D,Masters 54-60,110,,,217.5,,217.5,Mark Vainas,MA,,Single-ply,M,1
+D,Masters 54-60,125,,,227.48,,227.48,Jim Presley,CA,,Multi-ply,M,1
+D,Masters 54-60,125,,,219.99,,219.99,Ted Stewart,NV,,Single-ply,M,1
+D,Masters 54-60,125,,,187.42,,187.42,Jay Simmons,TX,,Single-ply,M,2
+D,Masters 54-60,140+,,,252.42,,252.42,Joe Mickelson,WA,,Single-ply,M,1
+D,Masters 61-67,67.5,,,169.96,,169.96,Gary Miller,NV,,Multi-ply,M,1
+D,Masters 61-67,75,,,229.97,,229.97,Alfredo Evangelista,OR,,Single-ply,M,1
+D,Masters 61-67,75,,,164.97,,164.97,Dave Higgins,MN,,Single-ply,M,2
+D,Masters 61-67,82.5,,,157.4,,157.4,Craig Gustafson,NV,,Single-ply,M,2
+D,Masters 61-67,82.5,,,232.47,,232.47,Gregory Kleyn,IL,,Single-ply,M,1
+D,Masters 61-67,90,,,249.93,,249.93,Charles McFarland,OR,,Single-ply,M,1
+D,Masters 61-67,100,,,244.94,,244.94,Jon Wolbers,,Canada,Single-ply,M,1
+D,Masters 61-67,100,,,162.39,,162.39,Peter Assumma,NY,,Single-ply,M,5
+D,Masters 61-67,100,,,227.48,,227.48,Bob Hafner,TX,,Single-ply,M,2
+D,Masters 61-67,100,,,210.38,,210.38,Charles Folinus,AZ,,Single-ply,M,3
+D,Masters 61-67,100,,,192.41,,192.41,Randy Waldorf,MN,,Single-ply,M,4
+D,Masters 61-67,110,,,274.97,,274.97,Eddie Morgan,AR,,Single-ply,M,1
+D,Masters 61-67,110,,,254.92,,254.92,Manny Burruel,CA,,Multi-ply,M,1
+D,Masters 61-67,117.5,,,209.88,,209.88,Tom Matlock,AZ,,Single-ply,M,1
+D,Masters 61-67,125,,,204.89,,204.89,Tom Morgan,AR,,Single-ply,M,1
+D,Masters 61-67,125,,,182.43,,182.43,Alan Fraser,NV,,Single-ply,M,2
+D,Masters 61-67,140,,,164.97,,164.97,Larry Riskey,OR,,Single-ply,M,1
+D,Masters 68-74,56,,,92.4,,92.4,Gary Nye Schwebs,NV,,Single-ply,M,1
+D,Masters 68-74,75,,,189.92,,189.92,James Christian,TX,,Single-ply,M,1
+D,Masters 68-74,75,,,185.43,,185.43,Stefan Lemire,UT,,Single-ply,M,2
+D,Masters 68-74,75,,,184.93,,184.93,Martin Montgomery,IN,,Single-ply,M,3
+D,Masters 68-74,75,,,139.93,,139.93,Gary Witzel,WA,,Single-ply,M,4
+D,Masters 68-74,82.5,,,197.4,,197.4,Willie Kindred,AZ,,Single-ply,M,2
+D,Masters 68-74,82.5,,,207.38,,207.38,Robert Batko,MI,,Single-ply,M,1
+D,Masters 68-74,82.5,,,197.4,,197.4,Jack Rankin,WA,,Single-ply,M,3
+D,Masters 68-74,82.5,,,154.9,,154.9,Tom Haggenmiller,MN,,Single-ply,M,4
+D,Masters 68-74,90,,,149.91,,149.91,Alfred Franke,NV,,Multi-ply,M,1
+D,Masters 68-74,90,,,239.95,,239.95,Fred Rice,VA,,Single-ply,M,1
+D,Masters 68-74,90,,,227.48,,227.48,Bob Hochstein,IL,,Single-ply,M,2
+D,Masters 68-74,117.5,,,302.41,,302.41,James Hodges,AR,,Single-ply,M,1
+D,Masters 68-74,125,,,234.96,,234.96,Mike Fryar,WA,,Single-ply,M,1
+D,Masters 75-79,67.5,,,104.87,,104.87,Skip Schacher,MT,,Single-ply,M,1
+D,Masters 75-79,90,,,77.43,,77.43,Ronald Ford,CA,,Single-ply,M,3
+D,Masters 75-79,90,,,183.43,,183.43,John Herbein,PA,,Single-ply,M,1
+D,Masters 75-79,90,,,182.43,,182.43,Robert Andre,ND,,Single-ply,M,2
+D,Masters 80-84,82.5,,,69.94,,69.94,Cleophus Scrutchions,IL,,Single-ply,M,1
+D,Masters 85-89,90,,,159.89,,159.89,William Leedy,CA,,Single-ply,M,1
+D,Open,67.5,,,189.92,,189.92,Ray Padilla,CA,,Single-ply,M,1
+D,Open,67.5,,,232.47,,232.47,James Valmoja,HI,,Multi-ply,M,1
+D,Open,75,,,214.87,,214.87,Tanner Kennedy,NY,,Single-ply,M,4
+D,Open,75,,,282.45,,282.45,Derrick Martini,MN,,Single-ply,M,1
+D,Open,75,,,229.97,,229.97,Alfredo Evangelista,OR,,Single-ply,M,2
+D,Open,75,,,227.48,,227.48,Richard Cirigliano,CA,,Single-ply,M,3
+D,Open,82.5,,,299.92,,299.92,Matt Griffin,TX,,Single-ply,M,2
+D,Open,82.5,,,,,,Tom Eiseman,NJ,,Single-ply,M,DQ
+D,Open,82.5,,,194.91,,194.91,Bruno Dos Santos Modernel,,Brazil,Single-ply,M,8
+D,Open,82.5,,,329.99,,329.99,Romar Lagamo,HI,,Single-ply,M,1
+D,Open,82.5,,,319.87,,319.87,Edwin Manmano,HI,,Multi-ply,M,1
+D,Open,82.5,,,297.42,,297.42,Leamon Woodley,WA,,Single-ply,M,3
+D,Open,82.5,,,234.96,,234.96,Donavin Bender,ND,,Single-ply,M,4
+D,Open,82.5,,,212.37,,212.37,Daniel Porrazzo,MA,,Single-ply,M,5
+D,Open,82.5,,,204.89,,204.89,Daniel Sisneros,CA,,Single-ply,M,6
+D,Open,82.5,,,204.89,,204.89,Ray Segura,WA,,Single-ply,M,7
+D,Open,90,,,237.46,,237.46,Kevin Zybert,NY,,Single-ply,M,4
+D,Open,90,,,297.42,,297.42,Pasi Koukkula,,Finland,Single-ply,M,1
+D,Open,90,,,249.93,,249.93,Victor Luiz Ramos Medeiros,,Brazil,Single-ply,M,3
+D,Open,90,,,292.43,,292.43,Eddie DiFruscia,NH,,Single-ply,M,2
+D,Open,100,,,314.88,,314.88,Al Bianchi,MA,,Single-ply,M,1
+D,Open,100,,,264.9,,264.9,Dustin McFarland,OR,,Multi-ply,M,1
+D,Open,100,,,303.41,,303.41,Jimmy House,AZ,,Single-ply,M,2
+D,Open,100,,,292.43,299.92,292.43,Drew Burton,,Canada,Single-ply,M,3
+D,Open,100,,,282.45,,282.45,Christopher Calderon,TX,,Single-ply,M,4
+D,Open,100,,,272.47,,272.47,Adam Pixton,UT,,Single-ply,M,5
+D,Open,110,,,259.91,,259.91,Ryan Martin,ME,,Single-ply,M,3
+D,Open,110,,,319.87,,319.87,Tim Sparkes,AZ,,Single-ply,M,1
+D,Open,110,,,282.45,,282.45,Robert Exum,CA,,Single-ply,M,2
+D,Open,110,,,259.91,,259.91,Marcelo Schneider,,Brazil,Single-ply,M,4
+D,Open,117.5,,,322.37,,322.37,Kari Pöntinen,,Finland,Single-ply,M,1
+D,Open,117.5,,,209.88,214.87,209.88,Eduardo Turrini Ribeiro,,Brazil,Single-ply,M,4
+D,Open,117.5,,,282.45,,282.45,Terry Putman,OK,,Single-ply,M,2
+D,Open,117.5,,,227.48,,227.48,Paul Mercado,IL,,Single-ply,M,3
+D,Open,125,,,287.44,,287.44,Dwight Anderson,WI,,Single-ply,M,3
+D,Open,125,,,354.94,,354.94,Patrick Holloway,AZ,,Single-ply,M,1
+D,Open,125,,,227.48,,227.48,Jim Presley,CA,,Multi-ply,M,1
+D,Open,125,,,309.89,,309.89,Joe Carter,TN,,Single-ply,M,2
+D,Open,125,,,234.96,,234.96,Dennis Schultz,CA,,Single-ply,M,4
+D,Open,140,,,332.98,,332.98,Colby Ballinger,CA,,Single-ply,M,2
+D,Open,140,,,350.94,,350.94,Harri Väisänen,,Finland,Single-ply,M,1
+D,Open,140+,,,227.48,,227.48,Scott Wesley Jordan,AZ,,Single-ply,M,5
+D,Open,140+,,,369.9,,369.9,William Mott,UT,,Single-ply,M,1
+D,Open,140+,,,319.87,,319.87,Keoni Reich,HI,,Single-ply,M,2
+D,Open,140+,,,262.4,,262.4,Thomas Guiney,OK,,Single-ply,M,3
+D,Open,140+,,,252.42,,252.42,Joe Mickelson,WA,,Single-ply,M,4
+D,Special Olympian,82.5,,,164.97,,164.97,Dylan Kuehl,WA,,Single-ply,M,1
+D,Submasters 33-39,56,,,147.42,,147.42,Vin Voeun,AZ,,Single-ply,M,1
+D,Submasters 33-39,75,,,207.38,,207.38,Brian Mitchell,ID,,Single-ply,M,1
+D,Submasters 33-39,75,,,272.47,,272.47,Ryan Snelling,MO,,Multi-ply,M,1
+D,Submasters 33-39,82.5,,,329.99,,329.99,Romar Lagamo,HI,,Single-ply,M,1
+D,Submasters 33-39,82.5,,,249.93,,249.93,Ben Dehghan,WA,,Single-ply,M,2
+D,Submasters 33-39,90,,,209.88,,209.88,Derek Kumagai,WA,,Single-ply,M,1
+D,Submasters 33-39,100,,,274.97,,274.97,Matt Krueger,MI,,Single-ply,M,1
+D,Submasters 33-39,100,,,264.9,,264.9,Brady Hosley,UT,,Single-ply,M,2
+D,Submasters 33-39,110,,,214.87,,214.87,Jesse Gavin,MN,,Single-ply,M,1
+D,Submasters 33-39,110,,,194.91,,194.91,Jeffrey Mott,NY,,Single-ply,M,2
+D,Submasters 33-39,117.5,,,214.87,,214.87,Aldon Tibbs,MN,,Single-ply,M,1
+D,Submasters 33-39,117.5,,,209.88,214.87,209.88,Eduardo Turrini Ribeiro,,Brazil,Single-ply,M,2
+D,Submasters 33-39,125,,,217.5,,217.5,Patrick Mitchell,MI,,Single-ply,M,2
+D,Submasters 33-39,125,,,294.93,,294.93,Jason Sacre,UT,,Single-ply,M,1
+D,Submasters 33-39,140,,,267.39,,267.39,Tarlus McDaniel,TX,,Single-ply,M,3
+D,Submasters 33-39,140,,,329.99,,329.99,Joseph Giannetti,AZ,,Single-ply,M,2
+D,Submasters 33-39,140,,,350.94,,350.94,Harri Väisänen,,Finland,Single-ply,M,1
+D,Submasters 33-39,140+,,,369.9,,369.9,William Mott,UT,,Single-ply,M,1
+D,Teen 12-13,56,,,129.95,,129.95,Kaison Uehara,OR,,Single-ply,M,1
+D,Teen 12-13,100,,,69.94,,69.94,Robert Vick Jr,IL,,Single-ply,M,1
+D,Teen 14-15,75,,,164.97,,164.97,Drayden-Steele Kawewehi,HI,,Single-ply,M,1
+D,Teen 14-15,82.5,,,172.46,,172.46,Michael Berrian,CO,,Single-ply,M,1
+D,Teen 14-15,100,,,137.44,147.42,137.44,Brennan Ettinger,,Canada,Single-ply,M,1
+D,Teen 14-15,110,,,179.94,,179.94,Noah Tibbetts,ME,,Single-ply,M,1
+D,Teen 16-17,60,,,154.9,,154.9,Hany Sukkary Jr,CA,,Single-ply,M,1
+D,Teen 16-17,60,,,142.43,,142.43,Jun Yang,FL,,Single-ply,M,2
+D,Teen 16-17,67.5,,,204.89,,204.89,Benjamin Boyette,FL,,Single-ply,M,1
+D,Teen 16-17,67.5,,,137.44,,137.44,Christian Herrera,OR,,Single-ply,M,2
+D,Teen 16-17,75,,,199.9,,199.9,Karter Brachear,IL,,Single-ply,M,2
+D,Teen 16-17,75,,,227.48,,227.48,Michael Megler,FL,,Single-ply,M,1
+D,Teen 16-17,75,,,169.96,,169.96,Cherokee Widner,VA,,Single-ply,M,4
+D,Teen 16-17,75,,,194.91,,194.91,Ziyan Xia,FL,,Single-ply,M,3
+D,Teen 16-17,82.5,,,179.94,,179.94,Brandon Keith,OR,,Single-ply,M,1
+D,Teen 16-17,100,,,244.94,,244.94,Alejandro Ruiz,FL,,Single-ply,M,1
+D,Teen 16-17,100,,,187.42,,187.42,Yudai Katsumata,FL,,Single-ply,M,2
+D,Teen 16-17,117.5,,,,,,Jameson Jessup,CA,,Single-ply,M,DQ
+D,Teen 16-17,125,,,239.95,,239.95,Wyatt Burnett,MO,,Single-ply,M,1
+D,Teen 16-17,140+,,,277.46,,277.46,Fernando Cavazos,TX,,Single-ply,M,1
+D,Teen 18-19,67.5,,,182.43,,182.43,Sung-Yueh Chang,FL,,Single-ply,M,1
+D,Teen 18-19,75,,,159.89,,159.89,Cody Childs,OR,,Single-ply,M,2
+D,Teen 18-19,75,,,182.43,,182.43,Caleb Nute,ME,,Single-ply,M,1
+D,Teen 18-19,82.5,,,209.88,,209.88,Irving Dominguez,AZ,,Single-ply,M,3
+D,Teen 18-19,82.5,,,224.98,,224.98,Daniel Buchak,AZ,,Single-ply,M,1
+D,Teen 18-19,82.5,,,224.98,,224.98,Zane Vanderwal,WA,,Single-ply,M,2
+D,Teen 18-19,100,,,303.41,,303.41,Jimmy House,AZ,,Single-ply,M,1
+D,Teen 18-19,100,,,227.48,,227.48,Gaven White,AZ,,Single-ply,M,2
+D,Teen 18-19,125,,,237.46,,237.46,Robert Cervantes,TX,,Single-ply,M,1
+B,Class 1,67.5,129.95,,,,129.95,Dave Constantineau,WI,,Single-ply,M,1
+B,Class 1,75,,,,,,Charles Vaughn,OR,,Single-ply,M,DQ
+B,Class 1,75,174.95,,,,174.95,Nick Buck,WI,,Single-ply,M,1
+B,Class 1,75,169.96,,,,169.96,Rick Michaud,ME,,Multi-ply,M,1
+B,Class 1,75,162.39,,,,162.39,Jeramie Dawley,OR,,Single-ply,M,2
+B,Class 1,75,149.91,,,,149.91,James Lin,WA,,Multi-ply,M,2
+B,Class 1,75,157.4,,,,157.4,Robert Hutchens,NJ,,Single-ply,M,3
+B,Class 1,75,144.92,,,,144.92,Andy Kaszubski,WI,,Single-ply,M,4
+B,Class 1,82.5,,,,,,Kawika Machado,HI,,Single-ply,M,DQ
+B,Class 1,82.5,194.91,,,,194.91,Kaneala Ablao,HI,,Single-ply,M,1
+B,Class 1,82.5,172.46,,,,172.46,Jackson Jones,WA,,Multi-ply,M,1
+B,Class 1,82.5,147.42,,,,147.42,Matthew Jones,MI,,Single-ply,M,6
+B,Class 1,82.5,189.92,,,,189.92,Edwin Manmano,HI,,Single-ply,M,2
+B,Class 1,82.5,172.46,,,,172.46,Aramiq Amirchian,AZ,,Single-ply,M,3
+B,Class 1,82.5,157.4,,,,157.4,Scott Rickford,MN,,Single-ply,M,4
+B,Class 1,82.5,153.4,,,,153.4,Dylan Kuehl,WA,,Single-ply,M,5
+B,Class 1,90,,,,,,Arnel Sibucao,HI,,Single-ply,M,DQ
+B,Class 1,90,112.49,,,,112.49,Chansey McKendrick,UT,,Single-ply,M,6
+B,Class 1,90,212.37,,,,212.37,Preston Quinn,WI,,Single-ply,M,1
+B,Class 1,90,197.4,,,,197.4,Patrick Rocha,TX,,Multi-ply,M,1
+B,Class 1,90,139.93,,,,139.93,Derek Kumagai,WA,,Multi-ply,M,2
+B,Class 1,90,199.9,,,,199.9,Benny Long,OK,,Single-ply,M,2
+B,Class 1,90,184.93,,,,184.93,Kamu Lyman,HI,,Single-ply,M,3
+B,Class 1,90,182.43,,,,182.43,Pete Ramundo,NY,,Single-ply,M,4
+B,Class 1,90,114.99,,,,114.99,Matthew Collins,CA,,Single-ply,M,5
+B,Class 1,100,,,,,,Samuel Swift,TX,,Single-ply,M,DQ
+B,Class 1,100,154.9,,,,154.9,Will Potter,WA,,Multi-ply,M,1
+B,Class 1,100,227.48,,,,227.48,John Westleigh,ME,,Single-ply,M,1
+B,Class 1,100,147.42,,,,147.42,Michael Collins,CA,,Multi-ply,M,2
+B,Class 1,100,182.43,,,,182.43,Kyle Herzik,NV,,Single-ply,M,2
+B,Class 1,100,169.96,,,,169.96,Brian Fahrenfeld,NY,,Single-ply,M,3
+B,Class 1,110,82.42,,,,82.42,Harry Munro,CA,,Single-ply,M,4
+B,Class 1,110,,,,,,Joseph Doyon,ME,,Single-ply,M,DQ
+B,Class 1,110,,,,,,Brent Gapusan,HI,,Multi-ply,M,DQ
+B,Class 1,110,132.45,,,,132.45,Chris Knott,MN,,Single-ply,M,2
+B,Class 1,110,207.88,,,,207.88,Frank Powell,OK,,Single-ply,M,1
+B,Class 1,110,97.39,,,,97.39,William G Caughey,UT,,Single-ply,M,3
+B,Class 1,117.5,,,,,,Jeremy Donnelly,AZ,,Single-ply,M,DQ
+B,Class 1,117.5,,,,,,Joe LaSalle,WA,,Single-ply,M,DQ
+B,Class 1,117.5,147.42,,,,147.42,Isaac Conde,TX,,Single-ply,M,3
+B,Class 1,117.5,252.42,,,,252.42,Dan Oldham,ID,,Single-ply,M,1
+B,Class 1,117.5,218,,,,218,Mick Quilici,NV,,Multi-ply,M,1
+B,Class 1,117.5,227.48,,,,227.48,David Palmer,ME,,Single-ply,M,2
+B,Class 1,125,172.46,,,,172.46,Gene Cameron,AZ,,Single-ply,M,1
+B,Class 1,125,172.46,,,,172.46,Marcus Ellison,IL,,Single-ply,M,2
+B,Class 1,140,,,,,,Walter Kupihe,HI,,Single-ply,M,DQ
+B,Class 1,140,159.89,,,,159.89,John Solleder,TX,,Single-ply,M,1
+B,Class 1,140+,129.95,,,,129.95,Keith Sayles,TX,,Multi-ply,M,1
+B,Disabled 1 13-19,56,49.9,,,,49.9,Clarence Kehres,CA,,Single-ply,M,1
+B,Disabled 1 13-19,117.5,154.9,,,,154.9,Benjamin Bleskin,MT,,Single-ply,M,1
+B,Disabled 1 20-39,75,134.94,,,,134.94,Matthew Holling,OR,,Single-ply,M,1
+B,Disabled 1 20-39,82.5,132.45,137.44,,,132.45,Keith Stich,PA,,Single-ply,M,1
+B,Disabled 1 20-39,110,172.46,,,,172.46,Brad Vinyard,IL,,Single-ply,M,1
+B,Disabled 1 40-59,82.5,157.4,,,,157.4,Scott Rickford,MN,,Single-ply,M,1
+B,Disabled 1 40-59,90,114.99,,,,114.99,Seth Reardon,ME,,Single-ply,M,1
+B,Disabled 1 40-59,110,237.46,,,,237.46,Steve Pena,CA,,Single-ply,M,1
+B,Disabled 2 20-39,48,64.95,67.45,,,64.95,Cameron Evans,TX,,Single-ply,M,1
+B,Disabled 2 20-39,75,110,,,,110,Chad McFarland,OR,,Single-ply,M,1
+B,Disabled 2 20-39,100,167.47,,,,167.47,Will Beavers,CA,,Multi-ply,M,1
+B,Disabled 2 20-39,125,195.41,199.9,,,195.41,Brady Tanner,KS,,Single-ply,M,1
+B,Disabled 2 40-59,82.5,119.98,,,,119.98,Vilmar Oliveira,,Brazil,Single-ply,M,1
+B,Disabled 2 40-59,100,137.44,,,,137.44,Duane Burlingame,IL,,Single-ply,M,1
+B,Disabled 2 40-59,100,119.98,,,,119.98,Jorge Roberto Correia Rocha,,Brazil,Single-ply,M,2
+B,Disabled 2 40-59,125,204.89,,,,204.89,Joseph Pyle,OR,,Single-ply,M,1
+B,Disabled 2 60,75,74.93,,,,74.93,Stan Miyahira,NV,,Multi-ply,M,1
+B,Disabled 2 60,100,187.42,192.41,,,187.42,Vincent Breaux,LA,,Single-ply,M,1
+B,Disabled 2 60,110,147.42,152.41,,,147.42,Scott Dolan,CA,,Multi-ply,M,1
+B,Disabled 2 60,125,149.91,,,,149.91,Jim Graham,CA,,Single-ply,M,1
+B,Disabled 2 60,140,44.91,,,,44.91,JP Krachunis,CA,,Single-ply,M,1
+B,Elite Open,67.5,,,,,,Kerwin Unten,HI,,Single-ply,M,DQ
+B,Elite Open,75,255.42,,,,255.42,Donald Ramil,HI,,Single-ply,M,1
+B,Elite Open,75,234.96,,,,234.96,David R Smith,TX,,Single-ply,M,2
+B,Elite Open,125,297.42,,,,297.42,David Lewis,IL,,Single-ply,M,1
+B,Elite Open,140+,,,,,,Tiny Meeker,TX,,Single-ply,M,DQ
+B,Elite Open,140+,,,,,,Robert Vick,IL,,Single-ply,M,DQ
+B,Juniors 20-25,67.5,172.46,,,,172.46,Dinesh Mangra,NY,,Multi-ply,M,1
+B,Juniors 20-25,67.5,124.96,,,,124.96,Wayne Schmitt Jr,NY,,Single-ply,M,3
+B,Juniors 20-25,67.5,150.41,,,,150.41,Josh Sisneros,CA,,Single-ply,M,1
+B,Juniors 20-25,67.5,142.43,,,,142.43,Austin Soto,TX,,Single-ply,M,2
+B,Juniors 20-25,67.5,117.48,,,,117.48,James Wells,VT,,Single-ply,M,4
+B,Juniors 20-25,75,184.93,,,,184.93,Luis Alaniz,TX,,Single-ply,M,1
+B,Juniors 20-25,75,182.43,,,,182.43,Dylan Price,MI,,Single-ply,M,2
+B,Juniors 20-25,75,162.39,,,,162.39,Jeramie Dawley,OR,,Single-ply,M,3
+B,Juniors 20-25,75,144.92,,,,144.92,Brandon Presto,NV,,Single-ply,M,4
+B,Juniors 20-25,75,137.44,,,,137.44,Charles Vaughn,OR,,Single-ply,M,5
+B,Juniors 20-25,82.5,189.92,,,,189.92,Matt Griffin,TX,,Single-ply,M,1
+B,Juniors 20-25,82.5,147.42,,,,147.42,Matthew Jones,MI,,Single-ply,M,2
+B,Juniors 20-25,82.5,139.93,,,,139.93,Andrew Vickery,CA,,Single-ply,M,3
+B,Juniors 20-25,82.5,99.88,,,,99.88,Bruno Dos Santos Modernel,,Brazil,Single-ply,M,4
+B,Juniors 20-25,90,149.91,,,,149.91,Kevin Zybert,NY,,Single-ply,M,1
+B,Juniors 20-25,90,147.42,,,,147.42,Victor Luiz Ramos Medeiros,,Brazil,Single-ply,M,2
+B,Juniors 20-25,100,,,,,,Seth Reed,ME,,Single-ply,M,DQ
+B,Juniors 20-25,100,227.48,,,,227.48,Jeremiah Lopez,CA,,Single-ply,M,1
+B,Juniors 20-25,110,,,,,,Austin Sellers,TX,,Single-ply,M,DQ
+B,Juniors 20-25,110,137.44,,,,137.44,David Morrison,MA,,Single-ply,M,1
+B,Juniors 20-25,117.5,192.41,,,,192.41,Joshua Winterrowd,MT,,Single-ply,M,1
+B,Juniors 20-25,140,192.41,,,,192.41,Colby Ballinger,CA,,Single-ply,M,3
+B,Juniors 20-25,140,272.47,,,,272.47,Walter Kupihe,HI,,Single-ply,M,1
+B,Juniors 20-25,140,219.99,,,,219.99,Ray Voigt,MI,,Single-ply,M,2
+B,Juniors 20-25,140+,147.42,,,,147.42,Devin Del Vecchio,AZ,,Single-ply,M,1
+B,Juniors 20-25,140+,127.46,,,,127.46,Donald Loew,WI,,Single-ply,M,2
+B,Law-Fire 40-47,110,169.96,,,,169.96,Freddy Crosby,IL,,Single-ply,M,1
+B,Law-Fire 40-47,117.5,,,,,,Flip Silva,TX,,Multi-ply,M,DQ
+B,Law-Fire 40-47,117.5,237.46,247.43,,,237.46,Chris Chopp,UT,,Multi-ply,M,1
+B,Law-Fire 40-47,125,167.47,,,,167.47,Bobby Gray,CA,,Single-ply,M,2
+B,Law-Fire 40-47,125,304.9,,,,304.9,Tommy Harrison,IL,,Single-ply,M,1
+B,Law-Fire 40-47,140+,,,,,,Hiram Kaikaina III,HI,,Multi-ply,M,DQ
+B,Law-Fire 48-55,90,,,,,,Gary McFarland,CA,,Single-ply,M,DQ
+B,Law-Fire 48-55,90,137.44,,,,137.44,Dan Guches,OR,,Single-ply,M,2
+B,Law-Fire 48-55,90,154.9,,,,154.9,Luis Fernando Meireles Dias,,Brazil,Single-ply,M,1
+B,Law-Fire 48-55,100,229.97,,,,229.97,Brian Reynolds,WA,,Single-ply,M,1
+B,Law-Fire 48-55,100,209.88,,,,209.88,Joe Gardner,IL,,Single-ply,M,2
+B,Law-Fire 48-55,110,154.9,159.89,,,154.9,Dave Ettinger,,Canada,Single-ply,M,1
+B,Law-Fire 48-55,125,190.42,,,,190.42,Eric Jones,MI,,Single-ply,M,1
+B,Law-Fire 48-55,140,227.48,,,,227.48,Warren Orr,,Canada,Single-ply,M,1
+B,Law-Fire 56-63,90,147.42,,,,147.42,Charles McFarland,OR,,Single-ply,M,1
+B,Law-Fire 56-63,100,184.93,,,,184.93,William Denniston,MI,,Single-ply,M,1
+B,Law-Fire 56-63,110,129.95,,,,129.95,Manny Burruel,CA,,Multi-ply,M,1
+B,Law-Fire 56-63,110,272.47,,,,272.47,Mike Frizzell,IL,,Single-ply,M,1
+B,Law-Fire 56-63,125,,,,,,Michal Johnson,CA,,Multi-ply,M,DQ
+B,Law-Fire 56-63,125,187.42,,,,187.42,Dennis Schultz,CA,,Single-ply,M,2
+B,Law-Fire 56-63,125,222.49,,,,222.49,Jay Simmons,TX,,Single-ply,M,1
+B,Law-Fire 56-63,125,134.94,,,,134.94,Donald Bryant,WA,,Single-ply,M,3
+B,Law-Fire 64+,67.5,154.9,,,,154.9,Gary Miller,NV,,Multi-ply,M,1
+B,Law-Fire 64+,100,164.97,,,,164.97,Jon Wolbers,,Canada,Single-ply,M,1
+B,Law-Fire 64+,140,44.91,,,,44.91,JP Krachunis,CA,,Single-ply,M,1
+B,Law-Fire Open,75,124.96,,,,124.96,Eli Huizar Zuniga,WA,,Multi-ply,M,1
+B,Law-Fire Open,82.5,159.89,,,,159.89,Donavin Bender,ND,,Single-ply,M,1
+B,Law-Fire Open,90,137.44,,,,137.44,Dan Guches,OR,,Single-ply,M,4
+B,Law-Fire Open,90,,,,,,Gary McFarland,CA,,Single-ply,M,DQ
+B,Law-Fire Open,90,260.41,272.47,,,260.41,Ryan Marble,UT,,Single-ply,M,1
+B,Law-Fire Open,90,154.9,,,,154.9,Luis Fernando Meireles Dias,,Brazil,Single-ply,M,3
+B,Law-Fire Open,90,197.4,,,,197.4,Darren Carr,UT,,Single-ply,M,2
+B,Law-Fire Open,125,304.9,,,,304.9,Tommy Harrison,IL,,Single-ply,M,1
+B,Law-Fire Open,140,262.4,277.96,,,262.4,William Lee,TX,,Multi-ply,M,1
+B,Law-Fire Submasters,100,187.42,,,,187.42,Nick Berriman,OR,,Single-ply,M,1
+B,Law-Fire Submasters,140,262.4,277.96,,,262.4,William Lee,TX,,Multi-ply,M,1
+B,Masters 40-46,67.5,,,,,,Kerwin Unten,HI,,Single-ply,M,DQ
+B,Masters 40-46,67.5,149.91,,,,149.91,Chris Balanga,CA,,Multi-ply,M,1
+B,Masters 40-46,75,,,,,,Donald Ramil,HI,,Single-ply,M,DQ
+B,Masters 40-46,75,149.91,,,,149.91,James Lin,WA,,Multi-ply,M,1
+B,Masters 40-46,75,234.96,,,,234.96,David R Smith,TX,,Single-ply,M,1
+B,Masters 40-46,82.5,162.39,,,,162.39,Chad Medina,NM,,Single-ply,M,1
+B,Masters 40-46,90,262.4,,,,262.4,Matt LaMarque,CA,,Multi-ply,M,1
+B,Masters 40-46,90,192.41,,,,192.41,Robert Miller,TX,,Single-ply,M,3
+B,Masters 40-46,90,224.98,,,,224.98,Kim Päivöke,,Finland,Single-ply,M,1
+B,Masters 40-46,90,199.9,,,,199.9,Benny Long,OK,,Single-ply,M,2
+B,Masters 40-46,90,59.96,,,,59.96,Pasi Koukkula,,Finland,Single-ply,M,4
+B,Masters 40-46,100,,,,,,Reynold Ines,NV,,Multi-ply,M,DQ
+B,Masters 40-46,100,,,,,,Hany Sukkary Sr,CA,,Single-ply,M,DQ
+B,Masters 40-46,100,272.97,,,,272.97,Coby Washburn,TX,,Single-ply,M,1
+B,Masters 40-46,100,169.96,,,,169.96,Brian Fahrenfeld,NY,,Single-ply,M,2
+B,Masters 40-46,110,237.46,,,,237.46,Steve Pena,CA,,Single-ply,M,2
+B,Masters 40-46,110,287.44,,,,287.44,Joey Murphy,GA,,Single-ply,M,1
+B,Masters 40-46,110,232.47,,,,232.47,Joe Guerra,TX,,Single-ply,M,3
+B,Masters 40-46,117.5,194.91,,,,194.91,Allen Heisler,MT,,Single-ply,M,1
+B,Masters 40-46,117.5,218,,,,218,Mick Quilici,NV,,Multi-ply,M,1
+B,Masters 40-46,125,184.93,,,,184.93,Chris Johnson,WA,,Single-ply,M,3
+B,Masters 40-46,125,297.42,,,,297.42,David Lewis,IL,,Single-ply,M,1
+B,Masters 40-46,125,242.45,,,,242.45,Dawane Harris,OR,,Single-ply,M,2
+B,Masters 40-46,140,,,,,,Dave Forstner,MI,,Multi-ply,M,DQ
+B,Masters 40-46,140,272.47,,,,272.47,Jeremiah Johnson,UT,,Multi-ply,M,1
+B,Masters 40-46,140,152.41,,,,152.41,Kevin Krauss,NY,,Single-ply,M,1
+B,Masters 40-46,140+,264.9,,,,264.9,Scott Bromeisl,WI,,Single-ply,M,1
+B,Masters 40-46,140+,,,,,,Tiny Meeker,TX,,Single-ply,M,DQ
+B,Masters 40-46,140+,,,,,,Robert Vick,IL,,Single-ply,M,DQ
+B,Masters 40-46,140+,294.93,,,,294.93,Hiram Kaikaina III,HI,,Multi-ply,M,1
+B,Masters 40-46,140+,264.9,,,,264.9,Keoni Reich,HI,,Single-ply,M,2
+B,Masters 47-53,75,,,,,,Deron Agaran,HI,,Single-ply,M,DQ
+B,Masters 47-53,75,,,,,,Kenny Lyons,ID,,Single-ply,M,DQ
+B,Masters 47-53,75,154.9,,,,154.9,Keith Cunningham,WA,,Multi-ply,M,1
+B,Masters 47-53,75,119.98,,,,119.98,Nino Domingo,AZ,,Single-ply,M,1
+B,Masters 47-53,82.5,112.49,,,,112.49,Pat Young,ID,,Single-ply,M,1
+B,Masters 47-53,90,84.91,,,,84.91,John Flagg,MN,,Single-ply,M,3
+B,Masters 47-53,90,209.88,,,,209.88,James Noblit,OR,,Multi-ply,M,1
+B,Masters 47-53,90,212.37,,,,212.37,Jeff Woods,OH,,Single-ply,M,1
+B,Masters 47-53,90,197.4,,,,197.4,Patrick Rocha,TX,,Multi-ply,M,2
+B,Masters 47-53,90,132.45,,,,132.45,Percy Taylor,TX,,Single-ply,M,2
+B,Masters 47-53,90,144.92,,,,144.92,David Franke,NV,,Multi-ply,M,3
+B,Masters 47-53,100,209.88,,,,209.88,Gary Gulseth,WI,,Single-ply,M,4
+B,Masters 47-53,100,237.95,,,,237.95,Tony Coduto,IL,,Single-ply,M,1
+B,Masters 47-53,100,149.91,,,,149.91,Chris Hatley,AR,,Single-ply,M,7
+B,Masters 47-53,100,229.97,,,,229.97,Brian Reynolds,WA,,Single-ply,M,2
+B,Masters 47-53,100,227.48,,,,227.48,John Westleigh,ME,,Single-ply,M,3
+B,Masters 47-53,100,209.88,,,,209.88,Juha Pukkila,,Finland,Single-ply,M,5
+B,Masters 47-53,100,184.93,,,,184.93,Steven Petersen,TX,,Single-ply,M,6
+B,Masters 47-53,110,,,,,,Kenneth Millrany,TN,,Multi-ply,M,DQ
+B,Masters 47-53,110,,,,,,Michael Neely,MT,,Single-ply,M,DQ
+B,Masters 47-53,110,207.88,,,,207.88,Frank Powell,OK,,Single-ply,M,1
+B,Masters 47-53,110,184.93,,,,184.93,Marcelo Schneider,,Brazil,Single-ply,M,2
+B,Masters 47-53,110,144.92,,,,144.92,Burnell Harvin,CA,,Single-ply,M,3
+B,Masters 47-53,117.5,,,,,,John Johnson,MI,,Single-ply,M,DQ
+B,Masters 47-53,117.5,,,,,,Darren Kaleleiki,HI,,Single-ply,M,DQ
+B,Masters 47-53,117.5,227.48,,,,227.48,David Palmer,ME,,Single-ply,M,1
+B,Masters 47-53,117.5,187.42,,,,187.42,Dave Sickler,WI,,Single-ply,M,2
+B,Masters 47-53,125,,,,,,Jesse Johnson,UT,,Multi-ply,M,DQ
+B,Masters 47-53,125,,,,,,George Leota,HI,,Multi-ply,M,DQ
+B,Masters 47-53,125,190.42,,,,190.42,Eric Jones,MI,,Single-ply,M,1
+B,Masters 47-53,125,167.47,,,,167.47,Bobby Gray,CA,,Single-ply,M,2
+B,Masters 47-53,140,342.46,,,,342.46,Tim Moon,GA,,Single-ply,M,1
+B,Masters 47-53,140,319.87,,,,319.87,John Stewart,TX,,Single-ply,M,2
+B,Masters 47-53,140,227.48,,,,227.48,Warren Orr,,Canada,Single-ply,M,3
+B,Masters 47-53,140+,301.41,,,,301.41,Gary Shim,HI,,Multi-ply,M,1
+B,Masters 54-60,60,97.39,,,,97.39,Chetram Mangra,NY,,Single-ply,M,1
+B,Masters 54-60,67.5,129.95,,,,129.95,Dave Constantineau,WI,,Single-ply,M,1
+B,Masters 54-60,67.5,107.37,,,,107.37,Dee Vajgrt,CA,,Single-ply,M,2
+B,Masters 54-60,67.5,102.38,,,,102.38,Steve Winslow,ID,,Single-ply,M,3
+B,Masters 54-60,75,157.4,,,,157.4,Fulton White,NV,,Single-ply,M,1
+B,Masters 54-60,75,149.91,,,,149.91,Mark Laurel,CA,,Single-ply,M,2
+B,Masters 54-60,82.5,152.41,,,,152.41,Leamon Woodley,WA,,Single-ply,M,3
+B,Masters 54-60,82.5,192.41,,,,192.41,Bob Levering,CA,,Single-ply,M,1
+B,Masters 54-60,82.5,179.94,,,,179.94,Danny Winslow,ID,,Single-ply,M,2
+B,Masters 54-60,82.5,117.48,,,,117.48,John Pastorius,OH,,Single-ply,M,4
+B,Masters 54-60,90,179.94,,,,179.94,Cody Evans,TX,,Single-ply,M,1
+B,Masters 54-60,90,124.96,,,,124.96,Joel Korotkin,CA,,Single-ply,M,2
+B,Masters 54-60,100,137.44,,,,137.44,Duane Burlingame,IL,,Single-ply,M,1
+B,Masters 54-60,100,104.87,,,,104.87,Gene A Wenzel,OH,,Single-ply,M,3
+B,Masters 54-60,100,129.95,,,,129.95,Jim Curley,CO,,Single-ply,M,2
+B,Masters 54-60,110,82.42,,,,82.42,Harry Munro,CA,,Single-ply,M,3
+B,Masters 54-60,110,,,,,,Ed Macauley,OR,,Single-ply,M,DQ
+B,Masters 54-60,110,,,,,,Michael Thomas,TX,,Single-ply,M,DQ
+B,Masters 54-60,110,272.47,,,,272.47,Mike Frizzell,IL,,Single-ply,M,1
+B,Masters 54-60,110,132.45,,,,132.45,Mark Vainas,MA,,Single-ply,M,2
+B,Masters 54-60,125,227.48,,,,227.48,Jim Presley,CA,,Multi-ply,M,1
+B,Masters 54-60,125,222.49,,,,222.49,Jay Simmons,TX,,Single-ply,M,1
+B,Masters 54-60,125,127.46,,,,127.46,Ted Stewart,NV,,Single-ply,M,2
+B,Masters 54-60,140,,,,,,Robert Jackson,TX,,Single-ply,M,DQ
+B,Masters 54-60,140,159.89,,,,159.89,John Solleder,TX,,Single-ply,M,1
+B,Masters 54-60,140+,237.46,,,,237.46,Joe Mickelson,WA,,Single-ply,M,1
+B,Masters 54-60,140+,129.95,,,,129.95,Keith Sayles,TX,,Multi-ply,M,1
+B,Masters 61-67,67.5,,,,,,Gary Miller,NV,,Multi-ply,M,DQ
+B,Masters 61-67,75,189.92,,,,189.92,Alfredo Evangelista,OR,,Single-ply,M,1
+B,Masters 61-67,75,150.91,152.41,,,150.91,Jody Fjelstad,MN,,Multi-ply,M,1
+B,Masters 61-67,75,147.42,,,,147.42,Robert Dye,OH,,Single-ply,M,2
+B,Masters 61-67,82.5,129.95,,,,129.95,Gregory Kleyn,IL,,Single-ply,M,1
+B,Masters 61-67,90,147.42,,,,147.42,Charles McFarland,OR,,Single-ply,M,2
+B,Masters 61-67,90,157.4,,,,157.4,Joseph Kim,HI,,Single-ply,M,1
+B,Masters 61-67,100,164.97,,,,164.97,Jon Wolbers,,Canada,Single-ply,M,1
+B,Masters 61-67,100,94.89,,,,94.89,Peter Assumma,NY,,Single-ply,M,3
+B,Masters 61-67,100,152.91,,,,152.91,Charles Folinus,AZ,,Single-ply,M,2
+B,Masters 61-67,100,205.39,,,,205.39,Tom Gonnering,AL,,Multi-ply,M,1
+B,Masters 61-67,110,129.95,,,,129.95,Manny Burruel,CA,,Multi-ply,M,1
+B,Masters 61-67,117.5,97.39,,,,97.39,Tom Matlock,AZ,,Single-ply,M,1
+B,Masters 61-67,125,,,,,,Willard Crossen Jr,WA,,Single-ply,M,DQ
+B,Masters 61-67,125,137.44,,,,137.44,Alan Fraser,NV,,Single-ply,M,1
+B,Masters 61-67,140,129.95,,,,129.95,Edward Lucas,AZ,,Single-ply,M,2
+B,Masters 61-67,140,162.39,,,,162.39,Larry Riskey,OR,,Single-ply,M,1
+B,Masters 68-74,56,74.93,,,,74.93,Gary Nye Schwebs,NV,,Single-ply,M,1
+B,Masters 68-74,75,119.98,,,,119.98,Stefan Lemire,UT,,Single-ply,M,1
+B,Masters 68-74,75,129.95,134.94,,,129.95,Bryan Yager,CA,,Multi-ply,M,1
+B,Masters 68-74,75,120.47,,,,120.47,Gary Witzel,WA,,Multi-ply,M,2
+B,Masters 68-74,82.5,129.95,,,,129.95,Willie Kindred,AZ,,Single-ply,M,1
+B,Masters 68-74,82.5,107.37,,,,107.37,Tom Haggenmiller,MN,,Single-ply,M,2
+B,Masters 68-74,82.5,134.94,,,,134.94,Daniel Hofeditz,AZ,,Multi-ply,M,1
+B,Masters 68-74,82.5,104.87,,,,104.87,Robert Batko,MI,,Single-ply,M,3
+B,Masters 68-74,82.5,104.87,,,,104.87,Arnold Pereza,HI,,Multi-ply,M,2
+B,Masters 68-74,90,164.97,,,,164.97,Bob Rudge,CA,,Single-ply,M,1
+B,Masters 68-74,100,217.5,,,,217.5,Dan Swift,IL,,Single-ply,M,1
+B,Masters 68-74,100,122.47,,,,122.47,Ed Marshall,AZ,,Single-ply,M,2
+B,Masters 68-74,110,154.9,,,,154.9,Daniel Smith III,CA,,Single-ply,M,1
+B,Masters 75-79,67.5,84.91,,,,84.91,Skip Schacher,MT,,Multi-ply,M,1
+B,Masters 75-79,82.5,99.88,,,,99.88,William Prince,NV,,Multi-ply,M,1
+B,Masters 75-79,90,54.98,,,,54.98,Ronald Ford,CA,,Single-ply,M,2
+B,Masters 75-79,90,97.39,,,,97.39,John Herbein,PA,,Single-ply,M,1
+B,Masters 75-79,100,124.96,,,,124.96,Fredrick Shubayev,IL,,Single-ply,M,1
+B,Masters 80-84,75,72.44,,,,72.44,Charles Vause,HI,,Single-ply,M,1
+B,Masters 80-84,82.5,92.4,,,,92.4,John McEwen,CA,,Single-ply,M,1
+B,Masters 80-84,82.5,52.39,,,,52.39,Cleophus Scrutchions,IL,,Single-ply,M,2
+B,Masters 85-89,82.5,57.47,,,,57.47,Nixon Munly,OR,,Single-ply,M,1
+B,Masters 85-89,110,102.38,,,,102.38,Walter Richter,AZ,,Single-ply,M,1
+B,Open,60,183.43,,,,183.43,Jallel Fabro,HI,,Single-ply,M,1
+B,Open,67.5,182.43,,,,182.43,Jake Fiscus,OR,,Single-ply,M,1
+B,Open,67.5,182.43,,,,182.43,Raymond Gallegos,CA,,Single-ply,M,2
+B,Open,75,,,,,,Deron Agaran,HI,,Single-ply,M,DQ
+B,Open,75,189.92,,,,189.92,Alfredo Evangelista,OR,,Single-ply,M,1
+B,Open,75,117.48,,,,117.48,Tanner Kennedy,NY,,Single-ply,M,2
+B,Open,82.5,189.92,,,,189.92,Matt Griffin,TX,,Single-ply,M,3
+B,Open,82.5,152.41,,,,152.41,Leamon Woodley,WA,,Single-ply,M,6
+B,Open,82.5,237.46,,,,237.46,Willard Crossen III,WA,,Single-ply,M,1
+B,Open,82.5,99.88,,,,99.88,Bruno Dos Santos Modernel,,Brazil,Single-ply,M,7
+B,Open,82.5,204.89,,,,204.89,Daniel Sisneros,CA,,Single-ply,M,2
+B,Open,82.5,184.93,,,,184.93,Ray Segura,WA,,Single-ply,M,4
+B,Open,82.5,159.89,,,,159.89,Donavin Bender,ND,,Single-ply,M,5
+B,Open,90,149.91,,,,149.91,Kevin Zybert,NY,,Single-ply,M,3
+B,Open,90,209.88,,,,209.88,James Noblit,OR,,Multi-ply,M,1
+B,Open,90,224.98,,,,224.98,Kim Päivöke,,Finland,Single-ply,M,1
+B,Open,90,147.42,,,,147.42,Victor Luiz Ramos Medeiros,,Brazil,Single-ply,M,4
+B,Open,90,182.43,,,,182.43,Pete Ramundo,NY,,Single-ply,M,2
+B,Open,90,59.96,,,,59.96,Pasi Koukkula,,Finland,Single-ply,M,5
+B,Open,100,,,,,,Seth Reed,ME,,Single-ply,M,DQ
+B,Open,100,272.97,,,,272.97,Coby Washburn,TX,,Single-ply,M,1
+B,Open,100,264.9,,,,264.9,Chad Bertelmann,HI,,Single-ply,M,2
+B,Open,100,209.88,,,,209.88,Juha Pukkila,,Finland,Single-ply,M,3
+B,Open,110,,,,,,Brent Gapusan,HI,,Multi-ply,M,DQ
+B,Open,110,,,,,,Austin Sellers,TX,,Single-ply,M,DQ
+B,Open,110,189.92,,,,189.92,Ryan Martin,ME,,Single-ply,M,2
+B,Open,110,279.96,,,,279.96,Kenneth Millrany,TN,,Multi-ply,M,1
+B,Open,110,287.44,,,,287.44,Joey Murphy,GA,,Single-ply,M,1
+B,Open,110,184.93,,,,184.93,Marcelo Schneider,,Brazil,Single-ply,M,3
+B,Open,110,234.96,,,,234.96,Ulrich Zamora,NV,,Multi-ply,M,2
+B,Open,117.5,252.42,,,,252.42,Dan Oldham,ID,,Single-ply,M,1
+B,Open,117.5,184.93,189.92,,,184.93,Eduardo Turrini Ribeiro,,Brazil,Single-ply,M,2
+B,Open,117.5,124.96,,,,124.96,John Johnson,MI,,Single-ply,M,3
+B,Open,125,,,,,,Willard Crossen Jr,WA,,Single-ply,M,DQ
+B,Open,125,,,,,,George Leota,HI,,Multi-ply,M,DQ
+B,Open,125,214.87,,,,214.87,Dwight Anderson,WI,,Single-ply,M,2
+B,Open,125,227.48,,,,227.48,Jim Presley,CA,,Multi-ply,M,1
+B,Open,125,265.4,,,,265.4,Norman Tavares,HI,,Single-ply,M,1
+B,Open,140,192.41,,,,192.41,Colby Ballinger,CA,,Single-ply,M,2
+B,Open,140,342.46,,,,342.46,Tim Moon,GA,,Single-ply,M,1
+B,Open,140,182.43,,,,182.43,Dennis Schultz,CA,,Single-ply,M,3
+B,Open,140+,264.9,,,,264.9,Scott Bromeisl,WI,,Single-ply,M,1
+B,Open,140+,237.46,,,,237.46,Joe Mickelson,WA,,Single-ply,M,2
+B,Open,140+,301.41,,,,301.41,Gary Shim,HI,,Multi-ply,M,1
+B,Special Olympian,48,64.95,67.45,,,64.95,Cameron Evans,TX,,Single-ply,M,1
+B,Special Olympian,82.5,153.4,,,,153.4,Dylan Kuehl,WA,,Single-ply,M,1
+B,Submasters 33-39,56,104.87,,,,104.87,Vin Voeun,AZ,,Single-ply,M,1
+B,Submasters 33-39,67.5,182.43,,,,182.43,Jake Fiscus,OR,,Single-ply,M,1
+B,Submasters 33-39,75,127.46,,,,127.46,Brian Mitchell,ID,,Single-ply,M,1
+B,Submasters 33-39,82.5,,,,,,Kawika Machado,HI,,Single-ply,M,DQ
+B,Submasters 33-39,82.5,237.46,,,,237.46,Willard Crossen III,WA,,Single-ply,M,1
+B,Submasters 33-39,90,139.93,,,,139.93,Derek Kumagai,WA,,Multi-ply,M,1
+B,Submasters 33-39,100,264.9,,,,264.9,Chad Bertelmann,HI,,Single-ply,M,1
+B,Submasters 33-39,100,,,,,,Matt Krueger,MI,,Single-ply,M,DQ
+B,Submasters 33-39,100,167.47,,,,167.47,Will Beavers,CA,,Single-ply,M,2
+B,Submasters 33-39,110,154.9,,,,154.9,Jeffrey Mott,NY,,Single-ply,M,1
+B,Submasters 33-39,110,134.94,,,,134.94,Jesse Gavin,MN,,Single-ply,M,2
+B,Submasters 33-39,117.5,184.93,189.92,,,184.93,Eduardo Turrini Ribeiro,,Brazil,Single-ply,M,1
+B,Submasters 33-39,117.5,127.46,,,,127.46,Aldon Tibbs,MN,,Single-ply,M,2
+B,Submasters 33-39,125,199.9,,,,199.9,Patrick Mitchell,MI,,Single-ply,M,2
+B,Submasters 33-39,125,212.37,,,,212.37,Mike McElroy,ID,,Single-ply,M,1
+B,Submasters 33-39,140,144.92,,,,144.92,Tarlus McDaniel,TX,,Single-ply,M,2
+B,Submasters 33-39,140,234.96,,,,234.96,Joseph Giannetti,AZ,,Single-ply,M,1
+B,Submasters 33-39,140+,352.44,,,,352.44,Christopher Sutton,TX,,Single-ply,M,1
+B,Teen 12-13,56,87.91,89.9,,,87.91,Kaison Uehara,OR,,Single-ply,M,1
+B,Teen 14-15,52,77.93,,,,77.93,Max Schierl,WI,,Single-ply,M,1
+B,Teen 14-15,60,69.94,72.44,,,69.94,Seth Franke,NV,,Multi-ply,M,1
+B,Teen 14-15,75,137.44,,,,137.44,Drayden-Steele Kawewehi,HI,,Single-ply,M,1
+B,Teen 14-15,82.5,127.46,,,,127.46,Michael Berrian,CO,,Single-ply,M,1
+B,Teen 14-15,100,122.47,,,,122.47,Dahlton Franco,HI,,Single-ply,M,1
+B,Teen 14-15,110,127.46,,,,127.46,Noah Tibbetts,ME,,Single-ply,M,1
+B,Teen 16-17,60,77.43,,,,77.43,Hany Sukkary Jr,CA,,Single-ply,M,1
+B,Teen 16-17,60,62.46,,,,62.46,Jun Yang,FL,,Single-ply,M,2
+B,Teen 16-17,67.5,104.87,,,,104.87,Benjamin Boyette,FL,,Single-ply,M,1
+B,Teen 16-17,75,144.92,,,,144.92,Karter Brachear,IL,,Single-ply,M,1
+B,Teen 16-17,75,114.99,,,,114.99,Michael Megler,FL,,Single-ply,M,4
+B,Teen 16-17,75,122.47,,,,122.47,Cherokee Widner,VA,,Single-ply,M,3
+B,Teen 16-17,75,137.44,,,,137.44,Ziyan Xia,FL,,Single-ply,M,2
+B,Teen 16-17,100,152.41,,,,152.41,Alejandro Ruiz,FL,,Single-ply,M,1
+B,Teen 16-17,100,134.94,,,,134.94,Yudai Katsumata,FL,,Single-ply,M,2
+B,Teen 16-17,125,,,,,,Wyatt Burnett,MO,,Single-ply,M,DQ
+B,Teen 16-17,140+,177.45,,,,177.45,Fernando Cavazos,TX,,Single-ply,M,1
+B,Teen 18-19,52,129.95,,,,129.95,Michael Saldivar,TX,,Single-ply,M,1
+B,Teen 18-19,60,183.43,,,,183.43,Jallel Fabro,HI,,Single-ply,M,1
+B,Teen 18-19,67.5,92.4,,,,92.4,Oscar Barragan,CA,,Single-ply,M,2
+B,Teen 18-19,67.5,102.38,,,,102.38,Sung-Yueh Chang,FL,,Single-ply,M,1
+B,Teen 18-19,75,92.4,,,,92.4,Cody Childs,OR,,Single-ply,M,2
+B,Teen 18-19,75,110,,,,110,Qin Yi Wang,FL,,Single-ply,M,1
+B,Teen 18-19,82.5,104.87,,,,104.87,Irving Dominguez,AZ,,Single-ply,M,2
+B,Teen 18-19,82.5,114.99,,,,114.99,Daniel Buchak,AZ,,Single-ply,M,1
+B,Teen 18-19,117.5,154.9,,,,154.9,Benjamin Bleskin,MT,,Single-ply,M,1
+B,Teen 18-19,125,,,,,,Calob Chipman,ME,,Single-ply,M,DQ
+B,Teen 18-19,125,190.92,,,,190.92,Robert Cervantes,TX,,Single-ply,M,1
+D,Class 1,52,,,92.4,,92.4,Jeanne Morris,WA,,Single-ply,F,1
+D,Class 1,56,,,107.37,,107.37,Rebecca Moore,WA,,Single-ply,F,1
+D,Class 1,60,,,140.93,,140.93,Dolores Garcia-Munro,CA,,Single-ply,F,2
+D,Class 1,60,,,142.43,,142.43,Danielle Llamas,OR,,Single-ply,F,1
+D,Class 1,60,,,115.48,,115.48,Ardith Stitt,UT,,Single-ply,F,5
+D,Class 1,60,,,134.94,,134.94,Lynn Puana,HI,,Single-ply,F,3
+D,Class 1,60,,,122.47,,122.47,Michelle Kahakalau,HI,,Single-ply,F,4
+D,Class 1,60,,,114.99,,114.99,Susan Chloupek,WA,,Single-ply,F,6
+D,Class 1,60,,,110,,110,Mitzy Hurtado,TX,,Single-ply,F,7
+D,Class 1,67.5,,,147.42,,147.42,Kayla Krueger,WI,,Single-ply,F,1
+D,Class 1,67.5,,,119.98,,119.98,Holly Morello,CA,,Single-ply,F,2
+D,Class 1,67.5,,,85.41,89.9,85.41,Cassidy Bauer,MA,,Single-ply,F,3
+D,Class 1,75,,,137.44,,137.44,DeAnna Dutton,WA,,Single-ply,F,2
+D,Class 1,75,,,139.93,,139.93,Briana Lacey,AZ,,Single-ply,F,1
+D,Class 1,75,,,132.45,,132.45,Victoria Osuna,OR,,Single-ply,F,3
+D,Class 1,82.5,,,152.41,,152.41,Millicent Jefferies,IL,,Single-ply,F,1
+D,Class 1,82.5,,,117.48,,117.48,Pamela Michaels,WA,,Single-ply,F,2
+D,Class 1,82.5,,,114.99,,114.99,Deborah Maxwell,CA,,Single-ply,F,3
+D,Class 1,90,,,170.46,,170.46,Linda Gerking,WA,,Single-ply,F,1
+D,Class 1,90,,,159.89,,159.89,Felicia Thomas,IL,,Single-ply,F,2
+D,Class 1,100+,,,182.43,,182.43,Jescelia Durr,IL,,Single-ply,F,1
+D,Class 1,100+,,,154.9,,154.9,Scharlotte Spencer,TX,,Single-ply,F,3
+D,Class 1,100+,,,157.4,,157.4,Tiffany Capouch,MN,,Single-ply,F,2
+D,Class 1,100+,,,154.9,,154.9,Kay Kadoun,WA,,Single-ply,F,4
+D,Class 1,100+,,,149.91,,149.91,Lakisha Campbell,TX,,Single-ply,F,5
+D,Class 1,100+,,,102.38,,102.38,Sharon Price,TX,,Single-ply,F,6
+D,Disabled 2 20-39,67.5,,,85.41,89.9,85.41,Cassidy Bauer,MA,,Single-ply,F,1
+D,Disabled 2 60,60,,,102.38,,102.38,Jill Porter,TX,,Single-ply,F,1
+D,Disabled 2 60,75,,,110,,110,Marlene Wexler,MN,,Single-ply,F,1
+D,Juniors 20-25,52,,,92.4,,92.4,Brooke Caraccioli,CA,,Single-ply,F,1
+D,Juniors 20-25,56,,,122.47,,122.47,Hannah Barnhill,CA,,Single-ply,F,1
+D,Juniors 20-25,67.5,,,182.43,,182.43,Cristal Cabral,TX,,Single-ply,F,1
+D,Juniors 20-25,67.5,,,142.43,,142.43,Natalie Caughey,UT,,Single-ply,F,2
+D,Juniors 20-25,75,,,167.47,,167.47,Zena Kiyota,HI,,Single-ply,F,1
+D,Juniors 20-25,75,,,144.92,,144.92,Alycia Rodriguez,AZ,,Single-ply,F,2
+D,Juniors 20-25,75,,,137.44,,137.44,Nicole Camacho,HI,,Single-ply,F,4
+D,Juniors 20-25,75,,,139.93,,139.93,Briana Lacey,AZ,,Single-ply,F,3
+D,Juniors 20-25,75,,,114.99,,114.99,Rachel Clements,AZ,,Single-ply,F,5
+D,Juniors 20-25,82.5,,,192.41,,192.41,Kayla Sua,WA,,Single-ply,F,1
+D,Juniors 20-25,82.5,,,172.46,,172.46,Jessica Muskat,HI,,Single-ply,F,2
+D,Juniors 20-25,100+,,,207.88,,207.88,Makala Davis,AZ,,Single-ply,F,1
+D,Juniors 20-25,100+,,,164.97,,164.97,Rachelle Meidinger,MT,,Single-ply,F,2
+D,Law-Fire 48-55,60,,,94.89,,94.89,Tammie Casper,CA,,Single-ply,F,1
+D,Law-Fire 48-55,75,,,129.95,,129.95,Gion Prevard,IL,,Single-ply,F,1
+D,Law-Fire 48-55,100+,,,142.43,,142.43,Robin Martin,IL,,Single-ply,F,1
+D,Law-Fire Open,75,,,129.95,,129.95,Gion Prevard,IL,,Single-ply,F,1
+D,Law-Fire Open,90,,,,,,Alisha Howard,WA,,Single-ply,F,DQ
+D,Law-Fire Submasters,82.5,,,99.88,,99.88,Dana Barnes,IL,,Single-ply,F,1
+D,Masters 40-46,52,,,149.91,,149.91,Valesca Cristina Rocha,,Brazil,Single-ply,F,1
+D,Masters 40-46,52,,,149.91,,149.91,Valesca Cristina Rocha,,Brazil,Single-ply,F,2
+D,Masters 40-46,60,,,142.43,,142.43,Arlene Jara,NV,,Single-ply,F,1
+D,Masters 40-46,67.5,,,139.93,,139.93,Keya Douglas,TX,,Single-ply,F,1
+D,Masters 40-46,75,,,137.44,,137.44,Wendy Hibbitts,OR,,Single-ply,F,1
+D,Masters 40-46,75,,,114.99,,114.99,Heather Petri,MN,,Single-ply,F,2
+D,Masters 40-46,90,,,159.89,,159.89,Donnie Rogers,HI,,Single-ply,F,2
+D,Masters 40-46,90,,,167.47,,167.47,Olympia Soto,CA,,Single-ply,F,1
+D,Masters 40-46,90,,,147.42,,147.42,Amy Rudder,TN,,Single-ply,F,3
+D,Masters 40-46,100+,,,172.46,,172.46,Leane Coetser,CA,,Single-ply,F,1
+D,Masters 40-46,100+,,,122.47,,122.47,Angela Heins,MN,,Single-ply,F,3
+D,Masters 40-46,100+,,,154.9,,154.9,Scharlotte Spencer,TX,,Single-ply,F,2
+D,Masters 47-53,44,,,152.41,154.9,152.41,Elizabeth Cabe,HI,,Single-ply,F,1
+D,Masters 47-53,48,,,124.96,,124.96,Yu-Xin Hao,OH,,Single-ply,F,1
+D,Masters 47-53,56,,,107.37,,107.37,Rebecca Moore,WA,,Single-ply,F,1
+D,Masters 47-53,60,,,184.93,,184.93,Ana Catia Portilho Couto,,Brazil,Single-ply,F,1
+D,Masters 47-53,60,,,142.43,,142.43,Judy Vierra,HI,,Single-ply,F,2
+D,Masters 47-53,60,,,122.47,,122.47,Michelle Kahakalau,HI,,Single-ply,F,3
+D,Masters 47-53,67.5,,,137.44,,137.44,Kathy Caraccioli,CA,,Single-ply,F,1
+D,Masters 47-53,75,,,107.37,,107.37,Melissa Benson,CO,,Single-ply,F,5
+D,Masters 47-53,75,,,215.86,,215.86,Cindy Shockman,OR,,Single-ply,F,1
+D,Masters 47-53,75,,,149.91,,149.91,Debi Kesper,MA,,Single-ply,F,2
+D,Masters 47-53,75,,,142.43,,142.43,Josefina Jackson,TX,,Single-ply,F,3
+D,Masters 47-53,75,,,112.49,,112.49,Becky Mauney,OR,,Single-ply,F,4
+D,Masters 47-53,90,,,170.46,,170.46,Linda Gerking,WA,,Single-ply,F,1
+D,Masters 47-53,90,,,159.89,,159.89,Felicia Thomas,IL,,Single-ply,F,2
+D,Masters 54-60,56,,,97.39,,97.39,Karon Denniston,MI,,Multi-ply,F,1
+D,Masters 54-60,56,,,138.94,,138.94,Martha Godinez-Shim,HI,,Single-ply,F,1
+D,Masters 54-60,56,,,107.37,,107.37,Lori Robinson,MN,,Single-ply,F,2
+D,Masters 54-60,60,,,192.41,,192.41,Jane McCubbin,WI,,Single-ply,F,1
+D,Masters 54-60,60,,,115.48,,115.48,Ardith Stitt,UT,,Single-ply,F,3
+D,Masters 54-60,60,,,140.93,,140.93,Dolores Garcia-Munro,CA,,Single-ply,F,2
+D,Masters 54-60,67.5,,,114.99,,114.99,Marsha Goodman,AZ,,Single-ply,F,1
+D,Masters 54-60,67.5,,,137.44,139.93,137.44,Peach Presley,CA,,Multi-ply,F,1
+D,Masters 54-60,67.5,,,89.9,,89.9,Tierney Korotkin,CA,,Single-ply,F,2
+D,Masters 54-60,75,,,137.44,,137.44,DeAnna Dutton,WA,,Single-ply,F,1
+D,Masters 54-60,82.5,,,147.42,,147.42,Margie Huston,WA,,Single-ply,F,1
+D,Masters 54-60,100+,,,164.97,,164.97,Susan Johnson,HI,,Single-ply,F,1
+D,Masters 61-67,48,,,147.42,,147.42,Linda Barnes,CA,,Multi-ply,F,1
+D,Masters 61-67,60,,,114.99,,114.99,Susan Chloupek,WA,,Single-ply,F,1
+D,Masters 61-67,60,,,102.38,,102.38,Jill Porter,TX,,Single-ply,F,2
+D,Masters 61-67,60,,,72.44,,72.44,Lynn Smith,CA,,Single-ply,F,3
+D,Masters 61-67,67.5,,,117.48,,117.48,Charlene Muscio,CA,,Single-ply,F,1
+D,Masters 61-67,67.5,,,69.94,,69.94,Carolyn Vanzlow-Edgar,NV,,Multi-ply,F,1
+D,Masters 61-67,100+,,,99.88,,99.88,Jacqueline Fendler,MN,,Single-ply,F,2
+D,Masters 61-67,100+,,,110.5,,110.5,Sue Vaterlaus,CA,,Single-ply,F,1
+D,Masters 68-74,48,,,62.46,,62.46,Betty Lafferty,AL,,Single-ply,F,1
+D,Masters 68-74,60,,,112.49,,112.49,Flo Robinson,CA,,Single-ply,F,1
+D,Masters 68-74,75,,,110,,110,Marlene Wexler,MN,,Single-ply,F,1
+D,Masters 68-74,82.5,,,147.92,,147.92,Gerda Shupe,CA,,Single-ply,F,1
+D,Masters 68-74,82.5,,,119.98,,119.98,Pat Robey,WA,,Single-ply,F,2
+D,Masters 75-79,82.5,,,102.87,,102.87,Carrie Reese,CA,,Single-ply,F,1
+D,Open,44,,,152.41,154.9,152.41,Elizabeth Cabe,HI,,Single-ply,F,1
+D,Open,48,,,147.42,,147.42,Linda Barnes,CA,,Multi-ply,F,1
+D,Open,52,,,149.91,,149.91,Valesca Cristina Rocha,,Brazil,Single-ply,F,1
+D,Open,56,,,138.94,,138.94,Martha Godinez-Shim,HI,,Single-ply,F,1
+D,Open,60,,,142.43,,142.43,Arlene Jara,NV,,Single-ply,F,4
+D,Open,60,,,192.41,,192.41,Jane McCubbin,WI,,Single-ply,F,1
+D,Open,60,,,184.93,,184.93,Ana Catia Portilho Couto,,Brazil,Single-ply,F,2
+D,Open,60,,,152.41,,152.41,Nichole Machado,HI,,Single-ply,F,3
+D,Open,60,,,142.43,,142.43,Judy Vierra,HI,,Single-ply,F,5
+D,Open,60,,,142.43,,142.43,Rachel Strauss,HI,,Single-ply,F,6
+D,Open,67.5,,,,,,Rebekah Schmidt,MN,,Single-ply,F,DQ
+D,Open,67.5,,,164.97,,164.97,Kimberly Phanthavong,WA,,Single-ply,F,1
+D,Open,67.5,,,137.44,139.93,137.44,Peach Presley,CA,,Multi-ply,F,1
+D,Open,67.5,,,154.9,,154.9,Krystal Miller,NV,,Single-ply,F,2
+D,Open,67.5,,,154.9,,154.9,Rosa Narikiyo,HI,,Single-ply,F,3
+D,Open,67.5,,,142.43,,142.43,Natalie Caughey,UT,,Single-ply,F,4
+D,Open,75,,,149.91,,149.91,Adriane Harris,TX,,Single-ply,F,2
+D,Open,75,,,110,,110,Kyla Mc Carty,CA,,Single-ply,F,6
+D,Open,75,,,147.42,,147.42,Liza Sanchez,MA,,Single-ply,F,4
+D,Open,75,,,215.86,,215.86,Cindy Shockman,OR,,Single-ply,F,1
+D,Open,75,,,149.91,,149.91,Debi Kesper,MA,,Single-ply,F,3
+D,Open,75,,,137.44,,137.44,Nicole Camacho,HI,,Single-ply,F,5
+D,Open,82.5,,,192.41,,192.41,Kayla Sua,WA,,Single-ply,F,2
+D,Open,82.5,,,194.91,,194.91,Sophia Hussary,AZ,,Single-ply,F,1
+D,Open,82.5,,,172.46,,172.46,Jessica Muskat,HI,,Single-ply,F,3
+D,Open,82.5,,,144.92,,144.92,Elizabeth Couture,MA,,Single-ply,F,4
+D,Open,90,,,184.93,,184.93,Sarah Hartman,WA,,Single-ply,F,2
+D,Open,90,,,214.87,,214.87,Alisha Howard,WA,,Single-ply,F,1
+D,Open,90,,,160.39,,160.39,Irene Peterson,MA,,Single-ply,F,4
+D,Open,90,,,182.43,,182.43,Kirsten Shockman,WA,,Single-ply,F,3
+D,Open,90,,,147.42,,147.42,Amy Rudder,TN,,Single-ply,F,5
+D,Open,100+,,,169.96,,169.96,Megan Dutton,TX,,Single-ply,F,4
+D,Open,100+,,,217.5,,217.5,Holly Garner,OR,,Single-ply,F,1
+D,Open,100+,,,164.97,,164.97,Susan Johnson,HI,,Single-ply,F,6
+D,Open,100+,,,207.88,,207.88,Makala Davis,AZ,,Single-ply,F,2
+D,Open,100+,,,182.43,,182.43,Keeya Sutherland,TX,,Single-ply,F,3
+D,Open,100+,,,169.96,,169.96,Ashley Boykin,IL,,Single-ply,F,5
+D,Open,100+,,,152.41,,152.41,Alyssa Greenwood,CA,,Single-ply,F,7
+D,Special Olympian,90,,,137.94,,137.94,Chloe Kaalund,CA,,Single-ply,F,1
+D,Submasters 33-39,52,,,104.87,,104.87,Jamie Field,CA,,Single-ply,F,1
+D,Submasters 33-39,60,,,152.41,,152.41,Nichole Machado,HI,,Single-ply,F,1
+D,Submasters 33-39,60,,,142.43,,142.43,Rachel Strauss,HI,,Single-ply,F,2
+D,Submasters 33-39,60,,,134.94,,134.94,Lynn Puana,HI,,Single-ply,F,3
+D,Submasters 33-39,67.5,,,104.87,,104.87,Lynn Gilpin-Parks,WI,,Single-ply,F,5
+D,Submasters 33-39,67.5,,,154.9,,154.9,Nida Namathep,AZ,,Single-ply,F,2
+D,Submasters 33-39,67.5,,,199.9,,199.9,Rebekah Schmidt,MN,,Single-ply,F,1
+D,Submasters 33-39,67.5,,,114.99,,114.99,Michelle Bialek,MN,,Single-ply,F,4
+D,Submasters 33-39,67.5,,,154.9,,154.9,Rosa Narikiyo,HI,,Single-ply,F,3
+D,Submasters 33-39,82.5,,,194.91,,194.91,Sophia Hussary,AZ,,Single-ply,F,1
+D,Submasters 33-39,90,,,160.39,,160.39,Irene Peterson,MA,,Single-ply,F,1
+D,Submasters 33-39,90,,,142.43,,142.43,Mary Denning,WA,,Single-ply,F,2
+D,Submasters 33-39,100+,,,217.5,,217.5,Holly Garner,OR,,Single-ply,F,1
+D,Submasters 33-39,100+,,,159.89,,159.89,Michelle Garrett,TX,,Single-ply,F,3
+D,Submasters 33-39,100+,,,147.42,,147.42,Janessa Sturtz,MN,,Single-ply,F,4
+D,Submasters 33-39,100+,,,182.43,,182.43,Keeya Sutherland,TX,,Single-ply,F,2
+D,Submasters 33-39,100+,,,139.93,,139.93,Christine Ruscher,MN,,Single-ply,F,5
+D,Teen 12-13,56,,,74.93,,74.93,Sophia Lamarque,CA,,Single-ply,F,1
+D,Teen 14-15,52,,,99.88,,99.88,Alexis Marotta,AZ,,Single-ply,F,2
+D,Teen 14-15,52,,,119.98,,119.98,Daniella Tipton,ID,,Single-ply,F,1
+D,Teen 14-15,60,,,104.87,,104.87,Cate Stowell,TX,,Single-ply,F,1
+D,Teen 14-15,82.5,,,117.48,,117.48,Kristina Cavazos,TX,,Single-ply,F,1
+D,Teen 16-17,52,,,117.48,,117.48,Britney Golladay,TX,,Single-ply,F,1
+D,Teen 16-17,52,,,112.49,,112.49,Sonni Gehring,TX,,Single-ply,F,2
+D,Teen 16-17,56,,,124.96,,124.96,Misty Prado,TX,,Single-ply,F,1
+D,Teen 16-17,67.5,,,142.43,,142.43,Briana Williams,TX,,Single-ply,F,1
+D,Teen 16-17,75,,,152.41,157.4,152.41,Ashtyn Burget,TX,,Single-ply,F,1
+D,Teen 16-17,75,,,139.93,,139.93,Makayla Millbrook,TX,,Single-ply,F,2
+D,Teen 16-17,82.5,,,119.98,,119.98,Emily Jondron,TX,,Single-ply,F,1
+D,Teen 18-19,60,,,149.91,,149.91,Alexandra Pecktol,OR,,Single-ply,F,1
+D,Teen 18-19,60,,,119.98,,119.98,Eda Hnatek,TX,,Single-ply,F,2
+B,Class 1,52,34.93,,,,34.93,Jeanne Morris,WA,,Single-ply,F,1
+B,Class 1,60,69.94,,,,69.94,Danielle Llamas,OR,,Single-ply,F,2
+B,Class 1,60,72.44,,,,72.44,Lynn Puana,HI,,Single-ply,F,1
+B,Class 1,60,69.94,,,,69.94,Michelle Kahakalau,HI,,Single-ply,F,3
+B,Class 1,60,67.45,,,,67.45,Judy Vierra,HI,,Single-ply,F,4
+B,Class 1,60,67.45,,,,67.45,Dolores Garcia-Munro,CA,,Single-ply,F,5
+B,Class 1,67.5,74.93,,,,74.93,Kayla Krueger,WI,,Single-ply,F,1
+B,Class 1,67.5,74.93,,,,74.93,Dayna Ng,HI,,Single-ply,F,2
+B,Class 1,67.5,39.92,,,,39.92,Cassidy Bauer,MA,,Single-ply,F,3
+B,Class 1,75,67.45,,,,67.45,DeAnna Dutton,WA,,Multi-ply,F,1
+B,Class 1,75,77.43,,,,77.43,Victoria Osuna,OR,,Single-ply,F,1
+B,Class 1,82.5,67.45,,,,67.45,Millicent Jefferies,IL,,Single-ply,F,2
+B,Class 1,82.5,69.94,,,,69.94,Deborah Maxwell,CA,,Single-ply,F,1
+B,Class 1,82.5,59.96,,,,59.96,Pamela Michaels,WA,,Single-ply,F,3
+B,Class 1,90,92.4,,,,92.4,Destinee Pakani,HI,,Single-ply,F,1
+B,Class 1,90,62.46,,,,62.46,Felicia Thomas,IL,,Single-ply,F,2
+B,Class 1,100+,74.93,,,,74.93,Jescelia Durr,IL,,Single-ply,F,2
+B,Class 1,100+,72.44,,,,72.44,Tiffany Capouch,MN,,Single-ply,F,3
+B,Class 1,100+,87.41,,,,87.41,Kay Kadoun,WA,,Single-ply,F,1
+B,Class 1,100+,59.96,,,,59.96,Lakisha Campbell,TX,,Single-ply,F,4
+B,Disabled 2 20-39,67.5,39.92,,,,39.92,Cassidy Bauer,MA,,Single-ply,F,1
+B,Disabled 2 60,60,68.95,,,,68.95,Jill Porter,TX,,Single-ply,F,1
+B,Disabled 2 60,75,42.41,,,,42.41,Marlene Wexler,MN,,Single-ply,F,1
+B,Juniors 20-25,44,64.95,67.45,,,64.95,Ekaterina Romanova,,Russia,Single-ply,F,1
+B,Juniors 20-25,52,42.41,,,,42.41,Brooke Caraccioli,CA,,Single-ply,F,1
+B,Juniors 20-25,67.5,102.38,,,,102.38,Cristal Cabral,TX,,Single-ply,F,1
+B,Juniors 20-25,67.5,52.39,,,,52.39,Natalie Caughey,UT,,Single-ply,F,2
+B,Juniors 20-25,75,57.47,,,,57.47,Rachel Clements,AZ,,Single-ply,F,2
+B,Juniors 20-25,75,119.98,,,,119.98,Zena Kiyota,HI,,Single-ply,F,1
+B,Juniors 20-25,82.5,97.39,,,,97.39,Jessica Muskat,HI,,Single-ply,F,1
+B,Juniors 20-25,82.5,102.38,,,,102.38,Kayla Sua,WA,,Multi-ply,F,1
+B,Juniors 20-25,100+,114.99,120.47,,,114.99,Rachelle Meidinger,MT,,Single-ply,F,1
+B,Law-Fire 48-55,75,104.87,,,,104.87,Gion Prevard,IL,,Single-ply,F,1
+B,Law-Fire 48-55,100+,57.47,,,,57.47,Robin Martin,IL,,Single-ply,F,1
+B,Law-Fire 64+,82.5,69.94,73.44,,,69.94,Pam Carter,AZ,,Single-ply,F,1
+B,Law-Fire Open,75,104.87,,,,104.87,Gion Prevard,IL,,Single-ply,F,1
+B,Law-Fire Open,90,157.9,,,,157.9,Alisha Howard,WA,,Single-ply,F,1
+B,Law-Fire Submasters,82.5,72.44,,,,72.44,Dana Barnes,IL,,Single-ply,F,1
+B,Masters 40-46,52,49.9,,,,49.9,Valesca Cristina Rocha,,Brazil,Single-ply,F,1
+B,Masters 40-46,67.5,74.93,,,,74.93,Dayna Ng,HI,,Single-ply,F,1
+B,Masters 40-46,75,72.44,,,,72.44,Wendy Hibbitts,OR,,Single-ply,F,1
+B,Masters 40-46,75,49.9,,,,49.9,Heather Petri,MN,,Single-ply,F,2
+B,Masters 40-46,90,102.38,,,,102.38,Amy Rudder,TN,,Multi-ply,F,1
+B,Masters 40-46,90,104.87,,,,104.87,Olympia Soto,CA,,Single-ply,F,1
+B,Masters 40-46,90,79.92,,,,79.92,Donnie Rogers,HI,,Single-ply,F,2
+B,Masters 40-46,100+,77.43,,,,77.43,Leane Coetser,CA,,Single-ply,F,1
+B,Masters 40-46,100+,54.98,,,,54.98,Angela Heins,MN,,Single-ply,F,2
+B,Masters 47-53,48,82.42,,,,82.42,Yu-Xin Hao,OH,,Single-ply,F,1
+B,Masters 47-53,56,64.95,,,,64.95,Rebecca Moore,WA,,Multi-ply,F,1
+B,Masters 47-53,60,69.94,,,,69.94,Michelle Kahakalau,HI,,Single-ply,F,2
+B,Masters 47-53,60,77.43,,,,77.43,Ana Catia Portilho Couto,,Brazil,Single-ply,F,1
+B,Masters 47-53,60,67.45,,,,67.45,Judy Vierra,HI,,Single-ply,F,3
+B,Masters 47-53,67.5,74.93,,,,74.93,Andrea Macauley,OR,,Single-ply,F,1
+B,Masters 47-53,75,69.94,,,,69.94,Melissa Benson,CO,,Single-ply,F,4
+B,Masters 47-53,75,157.4,159.89,,,157.4,Virpi Pukkila,,Finland,Single-ply,F,1
+B,Masters 47-53,75,149.91,157.9,,,149.91,Cindy Shockman,OR,,Single-ply,F,2
+B,Masters 47-53,75,79.92,,,,79.92,Josefina Jackson,TX,,Single-ply,F,3
+B,Masters 47-53,75,64.95,,,,64.95,Becky Mauney,OR,,Single-ply,F,5
+B,Masters 47-53,82.5,,,,,,Karen Campbell,ME,,Single-ply,F,DQ
+B,Masters 47-53,90,62.46,,,,62.46,Felicia Thomas,IL,,Single-ply,F,1
+B,Masters 47-53,90,103.37,,,,103.37,Linda Gerking,WA,,Multi-ply,F,1
+B,Masters 54-60,56,59.96,,,,59.96,Karon Denniston,MI,,Single-ply,F,1
+B,Masters 54-60,56,74.93,,,,74.93,Martha Godinez-Shim,HI,,Multi-ply,F,1
+B,Masters 54-60,56,47.4,,,,47.4,Lori Robinson,MN,,Single-ply,F,2
+B,Masters 54-60,60,67.45,,,,67.45,Dolores Garcia-Munro,CA,,Single-ply,F,1
+B,Masters 54-60,67.5,62.46,,,,62.46,Tierney Korotkin,CA,,Single-ply,F,1
+B,Masters 54-60,67.5,102.38,,,,102.38,Peach Presley,CA,,Multi-ply,F,1
+B,Masters 54-60,100+,84.91,92.4,,,84.91,Susan Johnson,HI,,Multi-ply,F,2
+B,Masters 54-60,100+,97.89,,,,97.89,Gloria Caughey,UT,,Multi-ply,F,1
+B,Masters 61-67,48,87.41,,,,87.41,Linda Barnes,CA,,Single-ply,F,1
+B,Masters 61-67,60,68.95,,,,68.95,Jill Porter,TX,,Single-ply,F,1
+B,Masters 61-67,60,29.94,,,,29.94,Lynn Smith,CA,,Single-ply,F,2
+B,Masters 61-67,67.5,42.41,,,,42.41,Carolyn Vanzlow-Edgar,NV,,Multi-ply,F,1
+B,Masters 61-67,100+,89.9,,,,89.9,Sue Vaterlaus,CA,,Single-ply,F,1
+B,Masters 68-74,48,67.95,68.45,,,67.95,Betty Lafferty,AL,,Single-ply,F,1
+B,Masters 68-74,60,49.9,52.39,,,49.9,Leona Pereza,HI,,Multi-ply,F,1
+B,Masters 68-74,60,43.41,,,,43.41,Flo Robinson,CA,,Single-ply,F,1
+B,Masters 68-74,82.5,99.88,,,,99.88,Pat Robey,WA,,Single-ply,F,1
+B,Masters 75-79,82.5,39.92,,,,39.92,Carrie Reese,CA,,Single-ply,F,1
+B,Masters 85-89,56,29.94,,,,29.94,Helen Herring,AL,,Single-ply,F,1
+B,Open,44,64.95,67.45,,,64.95,Ekaterina Romanova,,Russia,Single-ply,F,1
+B,Open,48,87.41,,,,87.41,Linda Barnes,CA,,Single-ply,F,1
+B,Open,52,49.9,,,,49.9,Valesca Cristina Rocha,,Brazil,Single-ply,F,1
+B,Open,56,74.93,,,,74.93,Martha Godinez-Shim,HI,,Multi-ply,F,1
+B,Open,56,92.4,,,,92.4,Kali Schierl,WI,,Single-ply,F,1
+B,Open,56,64.95,,,,64.95,Rebecca Moore,WA,,Multi-ply,F,2
+B,Open,60,77.43,,,,77.43,Ana Catia Portilho Couto,,Brazil,Single-ply,F,2
+B,Open,60,102.38,,,,102.38,Rachel Strauss,HI,,Single-ply,F,1
+B,Open,67.5,137.44,,,,137.44,Kandice Kinney,HI,,Single-ply,F,1
+B,Open,67.5,102.38,,,,102.38,Peach Presley,CA,,Multi-ply,F,1
+B,Open,67.5,114.99,,,,114.99,Krystal Miller,NV,,Single-ply,F,2
+B,Open,67.5,74.93,,,,74.93,Kimberly Phanthavong,WA,,Single-ply,F,3
+B,Open,67.5,52.39,,,,52.39,Natalie Caughey,UT,,Single-ply,F,4
+B,Open,75,52.39,,,,52.39,Adriane Harris,TX,,Single-ply,F,4
+B,Open,75,72.94,,,,72.94,Kyla Mc Carty,CA,,Single-ply,F,3
+B,Open,75,157.4,159.89,,,157.4,Virpi Pukkila,,Finland,Single-ply,F,1
+B,Open,75,149.91,157.9,,,149.91,Cindy Shockman,OR,,Single-ply,F,2
+B,Open,82.5,,,,,,Karen Campbell,ME,,Single-ply,F,DQ
+B,Open,82.5,119.98,,,,119.98,Elizabeth Couture,MA,,Single-ply,F,1
+B,Open,82.5,102.38,,,,102.38,Kayla Sua,WA,,Multi-ply,F,1
+B,Open,82.5,97.39,,,,97.39,Jessica Muskat,HI,,Single-ply,F,2
+B,Open,90,132.45,,,,132.45,Mary Denning,WA,,Multi-ply,F,1
+B,Open,90,102.38,,,,102.38,Amy Rudder,TN,,Multi-ply,F,2
+B,Open,100+,84.91,92.4,,,84.91,Susan Johnson,HI,,Multi-ply,F,2
+B,Open,100+,64.95,,,,64.95,Ashley Boykin,IL,,Single-ply,F,2
+B,Open,100+,97.89,,,,97.89,Gloria Caughey,UT,,Multi-ply,F,1
+B,Open,100+,82.42,,,,82.42,Alyssa Greenwood,CA,,Single-ply,F,1
+B,Special Olympian,90,69.94,74.93,,,69.94,Chloe Kaalund,CA,,Single-ply,F,1
+B,Submasters 33-39,52,49.9,,,,49.9,Jamie Field,CA,,Single-ply,F,1
+B,Submasters 33-39,60,102.38,,,,102.38,Rachel Strauss,HI,,Single-ply,F,1
+B,Submasters 33-39,60,72.44,,,,72.44,Lynn Puana,HI,,Single-ply,F,2
+B,Submasters 33-39,67.5,79.92,,,,79.92,Lynn Gilpin-Parks,WI,,Single-ply,F,2
+B,Submasters 33-39,67.5,87.41,,,,87.41,Nida Namathep,AZ,,Single-ply,F,1
+B,Submasters 33-39,67.5,52.39,,,,52.39,Michelle Bialek,MN,,Single-ply,F,3
+B,Submasters 33-39,90,132.45,,,,132.45,Mary Denning,WA,,Multi-ply,F,1
+B,Submasters 33-39,90,157.9,,,,157.9,Alisha Howard,WA,,Single-ply,F,1
+B,Submasters 33-39,100+,57.47,,,,57.47,Michelle Garrett,TX,,Single-ply,F,2
+B,Submasters 33-39,100+,67.45,,,,67.45,Janessa Sturtz,MN,,Single-ply,F,1
+B,Submasters 33-39,100+,54.98,,,,54.98,Christine Ruscher,MN,,Single-ply,F,3
+B,Teen 12-13,56,24.95,,,,24.95,Sophia Lamarque,CA,,Single-ply,F,1
+B,Teen 14-15,52,42.41,,,,42.41,Alexis Marotta,AZ,,Single-ply,F,1
+B,Teen 14-15,52,37.42,,,,37.42,Daniella Tipton,ID,,Single-ply,F,2
+B,Teen 14-15,60,54.98,,,,54.98,Cate Stowell,TX,,Single-ply,F,1
+B,Teen 14-15,82.5,62.46,,,,62.46,Kristina Cavazos,TX,,Single-ply,F,1
+B,Teen 16-17,52,57.47,,,,57.47,Britney Golladay,TX,,Single-ply,F,1
+B,Teen 16-17,52,57.47,,,,57.47,Sonni Gehring,TX,,Single-ply,F,2
+B,Teen 16-17,56,92.4,,,,92.4,Kali Schierl,WI,,Single-ply,F,1
+B,Teen 16-17,56,77.43,,,,77.43,Misty Prado,TX,,Single-ply,F,2
+B,Teen 16-17,67.5,44.91,,,,44.91,Briana Williams,TX,,Single-ply,F,1
+B,Teen 16-17,75,84.91,,,,84.91,Ashtyn Burget,TX,,Single-ply,F,1
+B,Teen 16-17,75,67.45,,,,67.45,Makayla Millbrook,TX,,Single-ply,F,2
+B,Teen 16-17,82.5,137.94,,,,137.94,Emily Jondron,TX,,Single-ply,F,1
+B,Teen 18-19,60,92.4,,,,92.4,Eda Hnatek,TX,,Single-ply,F,1
+B,Teen 18-19,67.5,62.46,,,,62.46,Sierra Johnson,OR,,Single-ply,F,1
+BD,Class 1,67.5,,,,,324.86,Dave Constantineau,WI,,Single-ply,M,1
+BD,Class 1,90,,,,,467.29,Preston Quinn,WI,,Single-ply,M,1
+BD,Class 1,100,,,,,339.83,Michael Collins,CA,,Multi-ply,M,1
+BD,Class 1,110,,,,,312.25,William G Caughey,UT,,Single-ply,M,1
+BD,Class 1,110,,,,,247.39,Harry Munro,CA,,Single-ply,M,2
+BD,Class 1,117.5,,,,,507.43,David Palmer,ME,,Single-ply,M,1
+BD,Disabled 1 20-39,75,,,,,164.88,Matthew Holling,OR,,Single-ply,M,1
+BD,Disabled 1 40-59,110,,,,,470.42,Steve Pena,CA,,Single-ply,M,1
+BD,Disabled 2 20-39,75,,,,,309.89,Chad McFarland,OR,,Single-ply,M,1
+BD,Disabled 2 20-39,100,,,,,304.9,Will Beavers,CA,,Multi-ply,M,1
+BD,Disabled 2 40-59,100,,,,,367.41,Duane Burlingame,,,Single-ply,M,1
+BD,Disabled 2 60,100,,,,,407.42,Vincent Breaux,LA,,Single-ply,M,1
+BD,Juniors 20-25,67.5,,,,,347.45,Wayne Schmitt Jr,NY,,Single-ply,M,1
+BD,Juniors 20-25,75,,,,,467.38,Luis Alaniz,TX,,Single-ply,M,1
+BD,Juniors 20-25,75,,,,,447.33,Dylan Price,MI,,Single-ply,M,2
+BD,Juniors 20-25,82.5,,,,,489.83,Matt Griffin,TX,,Single-ply,M,1
+BD,Juniors 20-25,82.5,,,,,349.81,Andrew Vickery,CA,,Single-ply,M,2
+BD,Juniors 20-25,90,,,,,387.37,Kevin Zybert,NY,,Single-ply,M,1
+BD,Juniors 20-25,140,,,,,469.92,Ray Voigt,MI,,Single-ply,M,1
+BD,Juniors 20-25,140+,,,,,399.84,Devin Del Vecchio,AZ,,Single-ply,M,1
+BD,Law-Fire 40-47,110,,,,,429.87,Freddy Crosby,IL,,Single-ply,M,1
+BD,Law-Fire 40-47,117.5,,,,,,Flip Silva,,,Multi-ply,M,DQ
+BD,Law-Fire 40-47,125,,,,,559.82,Tommy Harrison,IL,,Single-ply,M,1
+BD,Law-Fire 40-47,125,,,,,394.94,Bobby Gray,CA,,Single-ply,M,2
+BD,Law-Fire 48-55,90,,,,,392.86,Dan Guches,OR,,Single-ply,M,1
+BD,Law-Fire 56-63,90,,,,,397.35,Charles McFarland,OR,,Single-ply,M,1
+BD,Law-Fire 56-63,110,,,,,549.94,Mike Frizzell,IL,,Single-ply,M,1
+BD,Law-Fire 56-63,110,,,,,384.87,Manny Burruel,CA,,Multi-ply,M,1
+BD,Law-Fire 56-63,125,,,,,409.91,Jay Simmons,TX,,Single-ply,M,1
+BD,Law-Fire 64+,67.5,,,,,324.86,Gary Miller,NV,,Multi-ply,M,1
+BD,Law-Fire Open,75,,,,,304.9,Eli Huizar Zuniga,WA,,Multi-ply,M,1
+BD,Law-Fire Open,90,,,,,500.36,Ryan Marble,UT,,Single-ply,M,1
+BD,Law-Fire Open,90,,,,,392.86,Dan Guches,OR,,Single-ply,M,2
+BD,Law-Fire Open,140,,,,,492.37,William Lee,TX,,Multi-ply,M,1
+BD,Law-Fire Submasters,100,,,,,417.4,Nick Berriman,OR,,Single-ply,M,1
+BD,Law-Fire Submasters,140,,,,,492.37,William Lee,TX,,Multi-ply,M,1
+BD,Masters 40-46,67.5,,,,,377.39,Chris Balanga,CA,,Multi-ply,M,1
+BD,Masters 40-46,90,,,,,472.37,Robert Miller,TX,,Single-ply,M,1
+BD,Masters 40-46,110,,,,,472.42,Joe Guerra,TX,,Single-ply,M,1
+BD,Masters 40-46,110,,,,,470.42,Steve Pena,CA,,Single-ply,M,2
+BD,Masters 40-46,117.5,,,,,449.83,Allen Heisler,MT,,Single-ply,M,1
+BD,Masters 40-46,125,,,,,514.92,Dawane Harris,OR,,Single-ply,M,1
+BD,Masters 40-46,125,,,,,487.34,Chris Johnson,WA,,Single-ply,M,2
+BD,Masters 40-46,140,,,,,559.91,Jeremiah Johnson,UT,,Multi-ply,M,1
+BD,Masters 40-46,140,,,,,392.36,Kevin Krauss,NY,,Single-ply,M,1
+BD,Masters 40-46,140,,,,,,Dave Forstner,,,Multi-ply,M,DQ
+BD,Masters 40-46,140+,,,,,584.77,Keoni Reich,,,Single-ply,M,1
+BD,Masters 40-46,140+,,,,,,Robert Vick,,,Single-ply,M,DQ
+BD,Masters 47-53,100,,,,,459.81,Gary Gulseth,WI,,Single-ply,M,1
+BD,Masters 47-53,100,,,,,419.89,Steven Petersen,,,Single-ply,M,2
+BD,Masters 47-53,110,,,,,,Michael Neely,,,Single-ply,M,DQ
+BD,Masters 47-53,117.5,,,,,507.43,David Palmer,ME,,Single-ply,M,1
+BD,Masters 47-53,125,,,,,,Jesse Johnson,,,Multi-ply,M,DQ
+BD,Masters 54-60,67.5,,,,,324.86,Dave Constantineau,WI,,Single-ply,M,1
+BD,Masters 54-60,67.5,,,,,252.79,Dee Vajgrt,CA,,Single-ply,M,2
+BD,Masters 54-60,75,,,,,404.83,Fulton White,,,Single-ply,M,1
+BD,Masters 54-60,82.5,,,,,449.83,Leamon Woodley,WA,,Single-ply,M,1
+BD,Masters 54-60,100,,,,,367.41,Duane Burlingame,,,Single-ply,M,1
+BD,Masters 54-60,110,,,,,247.39,Harry Munro,,,Single-ply,M,1
+BD,Masters 54-60,125,,,,,454.95,Jim Presley,CA,,Multi-ply,M,1
+BD,Masters 54-60,125,,,,,409.91,Jay Simmons,,,Single-ply,M,1
+BD,Masters 54-60,125,,,,,347.45,Ted Stewart,,,Single-ply,M,2
+BD,Masters 54-60,140+,,,,,489.88,Joe Mickelson,WA,,Single-ply,M,1
+BD,Masters 61-67,67.5,,,,,,Gary Miller,,,Multi-ply,M,DQ
+BD,Masters 61-67,75,,,,,419.89,Alfredo Evangelista,OR,,Single-ply,M,1
+BD,Masters 61-67,82.5,,,,,362.42,Gregory Kleyn,,,Single-ply,M,1
+BD,Masters 61-67,90,,,,,397.35,Charles McFarland,OR,,Single-ply,M,1
+BD,Masters 61-67,100,,,,,409.91,Jon Wolbers,,,Single-ply,M,1
+BD,Masters 61-67,100,,,,,363.28,Charles Folinus,AZ,,Single-ply,M,2
+BD,Masters 61-67,110,,,,,384.87,Manny Burruel,,,Multi-ply,M,1
+BD,Masters 61-67,117.5,,,,,307.26,Tom Matlock,,,Single-ply,M,1
+BD,Masters 61-67,125,,,,,319.87,Alan Fraser,NV,,Single-ply,M,1
+BD,Masters 68-74,56,,,,,167.33,Gary Nye Schwebs,NV,,Single-ply,M,1
+BD,Masters 68-74,75,,,,,305.4,Stefan Lemire,UT,,Single-ply,M,1
+BD,Masters 68-74,82.5,,,,,327.36,Willie Kindred,,,Single-ply,M,1
+BD,Masters 68-74,82.5,,,,,312.25,Robert Batko,,,Single-ply,M,2
+BD,Masters 75-79,90,,,,,280.82,John Herbein,PA,,Single-ply,M,1
+BD,Masters 80-84,82.5,,,,,122.33,Cleophus Scrutchions,IL,,Single-ply,M,1
+BD,Open,75,,,,,419.89,Alfredo Evangelista,,,Single-ply,M,1
+BD,Open,75,,,,,332.35,Tanner Kennedy,NY,,Single-ply,M,2
+BD,Open,82.5,,,,,489.83,Matt Griffin,TX,,Single-ply,M,1
+BD,Open,82.5,,,,,449.83,Leamon Woodley,WA,,Single-ply,M,2
+BD,Open,90,,,,,387.37,Kevin Zybert,NY,,Single-ply,M,1
+BD,Open,125,,,,,454.95,Jim Presley,CA,,Multi-ply,M,1
+BD,Open,140+,,,,,489.88,Joe Mickelson,WA,,Single-ply,M,1
+BD,Submasters 33-39,75,,,,,334.84,Brian Mitchell,ID,,Single-ply,M,1
+BD,Submasters 33-39,100,,,,,,Matt Krueger,,,Single-ply,M,DQ
+BD,Submasters 33-39,110,,,,,349.81,Jeffrey Mott,NY,,Single-ply,M,1
+BD,Submasters 33-39,125,,,,,529.89,Steve Thompson,OH,,Single-ply,M,1
+BD,Submasters 33-39,125,,,,,417.4,Patrick Mitchell,MI,,Single-ply,M,2
+BD,Submasters 33-39,140,,,,,564.95,Joseph Giannetti,AZ,,Single-ply,M,1
+BD,Submasters 33-39,140,,,,,412.32,Tarlus McDaniel,TX,,Single-ply,M,2
+BD,Teen 12-13,56,,,,,217.86,Kaison Uehara,OR,,Single-ply,M,1
+BD,Teen 14-15,82.5,,,,,299.92,Michael Berrian,CO,,Single-ply,M,1
+BD,Teen 14-15,110,,,,,307.4,Noah Tibbetts,ME,,Single-ply,M,1
+BD,Teen 16-17,67.5,,,,,309.76,Benjamin Boyette,FL,,Single-ply,M,1
+BD,Teen 16-17,75,,,,,344.82,Karter Brachear,IL,,Single-ply,M,1
+BD,Teen 16-17,75,,,,,342.46,Michael Megler,FL,,Single-ply,M,2
+BD,Teen 16-17,75,,,,,332.35,Ziyan Xia,FL,,Single-ply,M,3
+BD,Teen 16-17,100,,,,,397.35,Alejandro Ruiz,FL,,Single-ply,M,1
+BD,Teen 16-17,100,,,,,322.37,Yudai Katsumata,FL,,Single-ply,M,2
+BD,Teen 16-17,125,,,,,,Wyatt Burnett,,,Single-ply,M,DQ
+BD,Teen 16-17,140+,,,,,454.91,Fernando Cavazos,TX,,Single-ply,M,1
+BD,Teen 18-19,67.5,,,,,284.81,Sung-Yueh Chang,FL,,Single-ply,M,1
+BD,Teen 18-19,82.5,,,,,339.97,Daniel Buchak,,,Single-ply,M,1
+BD,Teen 18-19,82.5,,,,,314.75,Irving Dominguez,,,Single-ply,M,2
+BD,Teen 18-19,125,,,,,428.37,Robert Cervantes,TX,,Single-ply,M,1
+BD,Class 1,52,,,,,127.32,Jeanne Morris,CA,,Single-ply,F,1
+BD,Class 1,60,,,,,212.37,Danielle Llamas,OR,,Single-ply,F,1
+BD,Class 1,60,,,,,208.38,Dolores Garcia-Munro,CA,,Single-ply,F,2
+BD,Class 1,75,,,,,209.88,Victoria Osuna,OR,,Single-ply,F,1
+BD,Class 1,82.5,,,,,219.86,Millicent Jefferies,IL,,Single-ply,F,1
+BD,Class 1,82.5,,,,,177.45,Pamela Michaels,WA,,Single-ply,F,2
+BD,Class 1,90,,,,,222.35,Felicia Thomas,IL,,Single-ply,F,1
+BD,Class 1,100+,,,,,242.31,Kay Kadoun,WA,,Single-ply,F,1
+BD,Disabled 2 20-39,67.5,,,,,125.33,Cassidy Bauer,MA,,Single-ply,F,1
+BD,Disabled 2 60,60,,,,,171.32,Jill Porter,TX,,Single-ply,F,1
+BD,Disabled 2 60,75,,,,,152.41,Marlene Wexler,,,Single-ply,F,1
+BD,Juniors 20-25,52,,,,,134.81,Brooke Caraccioli,CA,,Single-ply,F,1
+BD,Juniors 20-25,67.5,,,,,194.82,Natalie Caughey,UT,,Single-ply,F,1
+BD,Juniors 20-25,75,,,,,287.44,Zena Kiyota,HI,,Single-ply,F,1
+BD,Juniors 20-25,100+,,,,,279.96,Rachelle Meidinger,MT,,Single-ply,F,1
+BD,Law-Fire 48-55,75,,,,,234.82,Gion Prevard,IL,,Single-ply,F,1
+BD,Law-Fire 48-55,100+,,,,,199.9,Robin Martin,IL,,Single-ply,F,1
+BD,Law-Fire Submasters,82.5,,,,,172.32,Dana Barnes,IL,,Single-ply,F,1
+BD,Masters 40-46,75,,,,,209.88,Wendy Hibbitts,OR,,Single-ply,F,1
+BD,Masters 40-46,90,,,,,272.34,Olympia Soto,,,Single-ply,F,1
+BD,Masters 40-46,90,,,,,239.81,Donnie Rogers,HI,,Single-ply,F,2
+BD,Masters 47-53,48,,,,,207.38,Yu-Xin Hao,OH,,Single-ply,F,1
+BD,Masters 47-53,60,,,,,262.36,Ana Catia Portilho Couto,,,Single-ply,F,1
+BD,Masters 47-53,60,,,,,209.88,Judy Vierra,HI,,Single-ply,F,2
+BD,Masters 47-53,75,,,,,177.45,Becky Mauney,OR,,Single-ply,F,1
+BD,Masters 47-53,75,,,,,177.31,Melissa Benson,CO,,Single-ply,F,2
+BD,Masters 47-53,90,,,,,222.35,Felicia Thomas,IL,,Single-ply,F,1
+BD,Masters 54-60,60,,,,,208.38,Dolores Garcia-Munro,CA,,Single-ply,F,1
+BD,Masters 54-60,67.5,,,,,239.81,Peach Presley,CA,,Multi-ply,F,1
+BD,Masters 54-60,67.5,,,,,152.36,Tierney Korotkin,,,Single-ply,F,1
+BD,Masters 61-67,60,,,,,171.32,Jill Porter,TX,,Single-ply,F,1
+BD,Masters 61-67,67.5,,,,,112.35,Carolyn Vanzlow-Edgar,NV,,Multi-ply,F,1
+BD,Masters 68-74,82.5,,,,,219.86,Pat Robey,WA,,Single-ply,F,1
+BD,Open,60,,,,,262.36,Ana Catia Portilho Couto,,,Single-ply,F,1
+BD,Open,60,,,,,244.8,Rachel Strauss,HI,,Single-ply,F,2
+BD,Open,67.5,,,,,269.89,Krystal Miller,NV,,Single-ply,F,1
+BD,Open,67.5,,,,,239.81,Peach Presley,CA,,Multi-ply,F,1
+BD,Open,75,,,,,182.93,Kyla Mc Carty,CA,,Single-ply,F,1
+BD,Submasters 33-39,60,,,,,244.8,Rachel Strauss,HI,,Single-ply,F,1
+BD,Submasters 33-39,67.5,,,,,184.79,Lynn Gilpin-Parks,WI,,Single-ply,F,1
+BD,Submasters 33-39,100+,,,,,217.36,Michelle Garrett,TX,,Single-ply,F,1
+BD,Teen 12-13,56,,,,,99.88,Sophia Lamarque,CA,,Single-ply,F,1
+BD,Teen 14-15,52,,,,,157.4,Daniella Tipton,ID,,Single-ply,F,1
+BD,Teen 14-15,82.5,,,,,179.94,Kristina Cavazos,TX,,Single-ply,F,1
+BD,Teen 16-17,52,,,,,174.95,Britney Golladay,,,Single-ply,F,1
+BD,Teen 16-17,52,,,,,169.96,Sonni Gehring,,,Single-ply,F,2
+BD,Teen 16-17,56,,,,,202.39,Misty Prado,TX,,Single-ply,F,1
+BD,Teen 16-17,82.5,,,,,257.91,Emily Jondron,TX,,Single-ply,F,1
+BD,Teen 18-19,60,,,,,212.37,Eda Hnatek,TX,,Single-ply,F,1
