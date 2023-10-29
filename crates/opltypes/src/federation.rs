@@ -479,6 +479,11 @@ pub enum Federation {
     #[strum(to_string = "GPA-CRO", serialize = "gpa-cro")]
     GPACRO,
 
+    /// Finnish branch of the GPA.
+    #[serde(rename = "GPA-Finland")]
+    #[strum(to_string = "GPA-Finland", serialize = "gpa-finland")]
+    GPAFinland,
+
     /// Global Powerlifting Committee.
     #[strum(to_string = "GPC", serialize = "gpc")]
     GPC,
@@ -1878,6 +1883,7 @@ impl Federation {
             Federation::GlobalPU => false,
             Federation::GPA => false,
             Federation::GPACRO => false,
+            Federation::GPAFinland => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
             Federation::GPCGB => false,
@@ -2284,6 +2290,7 @@ impl Federation {
             Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPA => None,
             Federation::GPACRO => Some(Country::Croatia),
+            Federation::GPAFinland => Some(Country::Finland),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCCAN => Some(Country::Canada),
@@ -2737,6 +2744,7 @@ impl Federation {
             Federation::GlobalPU => Some(Federation::GPC),
             Federation::GPA => Some(Federation::GPA),
             Federation::GPACRO => Some(Federation::GPA),
+            Federation::GPAFinland => Some(Federation::GPA),
             Federation::GPC => Some(Federation::GPC),
             Federation::GPCAUS => Some(Federation::GPC),
             Federation::GPCCAN => Some(Federation::GPC),
@@ -3236,6 +3244,7 @@ impl Federation {
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
+            Federation::GPAFinland => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCCAN => PointsSystem::Glossbrenner,
