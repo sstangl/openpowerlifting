@@ -25,7 +25,11 @@
 
     # Seldom used.   Per IPL rules, minimum age is 15, but it happens
     teen_13_19 = {name = "Teen 13-19", min = 13, max = 19}
-    juniors_13_15 = {name = "Juniors 13-15", min = 13, max = 15} 
+    juniors_13_15 = {name = "Juniors 13-15", min = 13, max = 15}
+
+    # ZeroW Pro divisions 
+    zp_pro = {name="Pro", min=0, max=999, equipment=["Raw", "Wraps"]} 
+    zp_elite = {name="Elite", min=0, max=999, equipment=["Raw", "Wraps"]} 
 
     # IPL rules as of 2022 specify 15-19, these are depreciated
     juniors_16_17 = {name = "Juniors 16-17", min = 16, max = 17}
