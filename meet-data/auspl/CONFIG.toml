@@ -3,6 +3,11 @@
 [options]
     require_manual_disambiguation = true
 
+# ZeroW Pro combines raw and wraps, but normal AusPL meets do not
+[rulesets.zerowpro] 
+    ruleset = ["CombineRawAndWraps"]
+    date_range = ["2023-09-30", "2023-09-30"]
+
 
 [divisions]
 	# OpenLifter-style divisions.
