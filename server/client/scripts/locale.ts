@@ -23,10 +23,8 @@ function changeLanguage(event): void {
     time.setFullYear(time.getFullYear()+3);
     const expiration = time.toUTCString();
 
-
     document.cookie="lang=" + newValue+ "; expires=" + expiration + "; path=/; ";
-    var h = window.location.href;
-    window.location.href = h.substring(0, h.indexOf("?"));
+    reloadPage();
 }
 
 function changeUnits(event): void {
@@ -37,7 +35,7 @@ function changeUnits(event): void {
     const expiration = time.toUTCString();
 
     document.cookie="units=" + newValue + "; expires=" + expiration + "; path=/; ";
-    window.location.href = window.location.href;
+    reloadPage();
 }
 
 function initLocaleEventListeners(): void {
@@ -49,6 +47,15 @@ function initLocaleEventListeners(): void {
     const langselect = document.getElementById("langselect") as HTMLSelectElement;
     if (langselect) {
         langselect.addEventListener("change", changeLanguage);
+    }
+}
+
+function reloadPage() {
+    // We'll use reload() if the url contains a hash since replace() (or assign) doesn't work
+    if (window.location.href.match(/#/) !== null) {
+        window.location.reload();
+    } else {
+        window.location.replace(window.location.href);
     }
 }
 
