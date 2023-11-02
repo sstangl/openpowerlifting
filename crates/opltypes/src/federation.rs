@@ -560,10 +560,10 @@ pub enum Federation {
     #[strum(to_string = "GPC-RUS", serialize = "gpc-rus")]
     GPCRUS,
 
-    /// Croatian branch of the GPA and WUAP. Successor to HPO.
-    #[serde(rename = "GPC-WUAP-CRO")]
-    #[strum(to_string = "GPC-WUAP-CRO", serialize = "gpc-wuap-cro")]
-    GPCWUAPCRO,
+    /// Croatian branch of the GPC. Successor to HPO.
+    #[serde(rename = "GPC-CRO")]
+    #[strum(to_string = "GPC-CRO", serialize = "gpc-cro")]
+    GPCCRO,
 
     /// Global Powerlifting Federation.
     #[strum(to_string = "GPF", serialize = "gpf")]
@@ -615,7 +615,7 @@ pub enum Federation {
     #[strum(to_string = "HPLS-UA", serialize = "hpls-ua")]
     HPLSUA,
 
-    /// Croatian Powerlifting Organization. Defunct: became GPC-WUAP-CRO.
+    /// Croatian Powerlifting Organization. Defunct: became GPC-CRO + WUAP-CRO.
     #[strum(to_string = "HPO", serialize = "hpo")]
     HPO,
 
@@ -1721,6 +1721,11 @@ pub enum Federation {
     #[strum(to_string = "WUAP-AUT", serialize = "wuap-aut")]
     WUAPAUT,
 
+    /// Croatian WUAP affiliate. Successor to HPO.
+    #[serde(rename = "WUAP-CRO")]
+    #[strum(to_string = "WUAP-CRO", serialize = "wuap-cro")]
+    WUAPCRO,
+
     /// Czechian WUAP affiliate.
     #[serde(rename = "WUAP-CZ")]
     #[strum(to_string = "WUAP-CZ", serialize = "wuap-cz")]
@@ -1898,7 +1903,7 @@ impl Federation {
             Federation::GPCUKR => false,
             Federation::GPCUSA => false,
             Federation::GPCRUS => false,
-            Federation::GPCWUAPCRO => false,
+            Federation::GPCCRO => false,
             Federation::GPF => false,
             Federation::GPL => false,
             Federation::GPU => false,
@@ -2170,6 +2175,7 @@ impl Federation {
             Federation::WSHSPL => false,
             Federation::WUAP => false,
             Federation::WUAPAUT => false,
+            Federation::WUAPCRO => false,
             Federation::WUAPCZ => false,
             Federation::WUAPGermany => false,
             Federation::WUAPRUS => false,
@@ -2306,7 +2312,7 @@ impl Federation {
             Federation::GPCUKR => Some(Country::Ukraine),
             Federation::GPCUSA => Some(Country::USA),
             Federation::GPCRUS => Some(Country::Russia),
-            Federation::GPCWUAPCRO => Some(Country::Croatia),
+            Federation::GPCCRO => Some(Country::Croatia),
             Federation::GPF => None,
             Federation::GPL => Some(Country::Greece),
             Federation::GPU => Some(Country::Germany),
@@ -2570,6 +2576,7 @@ impl Federation {
             Federation::WSHSPL => Some(Country::USA),
             Federation::WUAP => None,
             Federation::WUAPAUT => Some(Country::Austria),
+            Federation::WUAPCRO => Some(Country::Croatia),
             Federation::WUAPCZ => Some(Country::Czechia),
             Federation::WUAPGermany => Some(Country::Germany),
             Federation::WUAPRUS => Some(Country::Russia),
@@ -2760,7 +2767,7 @@ impl Federation {
             Federation::GPCUKR => Some(Federation::GPC),
             Federation::GPCUSA => Some(Federation::GPC),
             Federation::GPCRUS => Some(Federation::GPC),
-            Federation::GPCWUAPCRO => Some(Federation::GPC),
+            Federation::GPCCRO => Some(Federation::GPC),
             Federation::GPF => None,
             Federation::GPL => Some(Federation::IPL),
             Federation::GPU => Some(Federation::WPU),
@@ -3067,6 +3074,7 @@ impl Federation {
             Federation::WSHSPL => None,
             Federation::WUAP => Some(Federation::WUAP),
             Federation::WUAPAUT => Some(Federation::WUAP),
+            Federation::WUAPCRO => Some(Federation::WUAP),
             Federation::WUAPCZ => Some(Federation::WUAP),
             Federation::WUAPGermany => Some(Federation::WUAP),
             Federation::WUAPRUS => Some(Federation::WUAP),
@@ -3260,7 +3268,7 @@ impl Federation {
             Federation::GPCUKR => PointsSystem::Glossbrenner,
             Federation::GPCUSA => PointsSystem::Glossbrenner,
             Federation::GPCRUS => PointsSystem::Glossbrenner,
-            Federation::GPCWUAPCRO => PointsSystem::Wilks,
+            Federation::GPCCRO => PointsSystem::Glossbrenner,
             Federation::GPF => PointsSystem::Wilks,
             Federation::GPL => PointsSystem::Dots,
             Federation::GPU => PointsSystem::Wilks,
@@ -3580,6 +3588,7 @@ impl Federation {
             Federation::WSHSPL => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,
             Federation::WUAPAUT => PointsSystem::Wilks,
+            Federation::WUAPCRO => PointsSystem::Wilks,
             Federation::WUAPCZ => PointsSystem::Wilks,
             Federation::WUAPGermany => PointsSystem::Wilks,
             Federation::WUAPRUS => PointsSystem::Wilks,

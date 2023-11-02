@@ -73,7 +73,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[DSF as usize].status = complete;
     statuses[GPACRO as usize].status = complete;
     statuses[GPCAUS as usize].status = complete;
-    statuses[GPCWUAPCRO as usize].status = complete;
+    statuses[GPCCRO as usize].status = complete;
     statuses[HPLS as usize].status = complete;
     statuses[HPLSUA as usize].status = complete;
     statuses[HPO as usize].status = complete;
@@ -94,6 +94,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPA as usize].status = complete;
     statuses[USPC as usize].status = complete;
     statuses[WP as usize].status = complete;
+    statuses[WUAPCRO as usize].status = complete;
     statuses[XPS as usize].status = complete;
 
     // Probes.
@@ -198,7 +199,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[EPA as usize].format = pdf_unstructured;
     statuses[EPF as usize].format = html;
     statuses[GPCAUS as usize].format = openlifter;
-    statuses[GPCWUAPCRO as usize].format = html;
+    statuses[GPCCRO as usize].format = xls_structured;
     statuses[HPLS as usize].format = xls_unstructured;
     statuses[HPLSUA as usize].format = jpg;
     statuses[HPO as usize].format = html;
@@ -239,6 +240,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPNZ as usize].format = jpg;
     statuses[WRPFAUS as usize].format = openlifter;
     statuses[WUAP as usize].format = pdf_structured;
+    statuses[WUAPCRO as usize].format = xls_structured;
 
     // Subjective ease of importation.
     let easy = "Easy";
@@ -268,7 +270,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[EPA as usize].ease = medium;
     statuses[EPF as usize].ease = easy;
     statuses[GPCAUS as usize].ease = easy;
-    statuses[GPCWUAPCRO as usize].ease = medium;
+    statuses[GPCCRO as usize].ease = easy;
     statuses[HPLS as usize].ease = medium;
     statuses[HPLSUA as usize].ease = difficult;
     statuses[HPO as usize].ease = medium;
@@ -308,6 +310,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPNZ as usize].ease = difficult;
     statuses[WRPFAUS as usize].ease = easy;
     statuses[WUAP as usize].ease = difficult;
+    statuses[WUAPCRO as usize].ease = easy;
 
     // Maintainership variables.
     let email_alan = "<a href=\"mailto:alan.zgb@gmail.com\">alan@</a>";
@@ -355,7 +358,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[GPCGB as usize].maintainers = email_robby;
     statuses[GPCNZ as usize].maintainers = email_matt;
     statuses[GPCScotland as usize].maintainers = email_gem;
-    statuses[GPCWUAPCRO as usize].maintainers = email_alan;
+    statuses[GPCCRO as usize].maintainers = email_alan;
     statuses[HPLS as usize].maintainers = email_alan;
     statuses[HPLSUA as usize].maintainers = email_alan;
     statuses[HPO as usize].maintainers = email_alan;
@@ -403,6 +406,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCPortugal as usize].maintainers = email_gem;
     statuses[WPNZ as usize].maintainers = email_matt;
     statuses[WRPFAUS as usize].maintainers = email_james;
+    statuses[WUAPCRO as usize].maintainers = email_alan;
     statuses[XPS as usize].maintainers = email_sean;
 
     // Don't ask for maintainership applications for defunct, completed federations.

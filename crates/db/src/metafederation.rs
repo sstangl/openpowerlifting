@@ -379,10 +379,10 @@ pub enum MetaFederation {
     #[serde(rename = "GPC-GB")]
     GPCGB,
 
-    /// GPC-WUAP-CRO, but including HPO results and excluding non-Croatians.
-    #[strum(to_string = "gpc-wuap-cro")]
-    #[serde(rename = "GPC-WUAP-CRO")]
-    GPCWUAPCRO,
+    /// GPC-CRO, but including HPO results and excluding non-Croatians.
+    #[strum(to_string = "gpc-cro")]
+    #[serde(rename = "GPC-CRO")]
+    GPCCRO,
 
     /// HKWPA, but with international results also.
     #[strum(to_string = "hkwpa")]
@@ -668,6 +668,11 @@ pub enum MetaFederation {
     #[strum(to_string = "wrpf-usa-tested")]
     #[serde(rename = "WRPF-USA-Tested")]
     WRPFUSATested,
+
+    /// WUAP-CRO, but including HPO results and excluding non-Croatians.
+    #[strum(to_string = "wuap-cro")]
+    #[serde(rename = "WUAP-CRO")]
+    WUAPCRO,
 }
 
 /// Helper function for MetaFederation::contains() for AllCountry meta-feds.
@@ -972,8 +977,8 @@ impl MetaFederation {
                     }
                 }
             },
-            MetaFederation::GPCWUAPCRO => {
-                (meet.federation == Federation::GPCWUAPCRO || meet.federation == Federation::HPO)
+            MetaFederation::GPCCRO => {
+                (meet.federation == Federation::GPCCRO || meet.federation == Federation::HPO)
                     && (entry.lifter_country.is_none()
                         || entry.lifter_country == Some(Country::Croatia))
             }
@@ -1101,6 +1106,11 @@ impl MetaFederation {
             },
             MetaFederation::WRPFUSATested => {
                 entry.tested && MetaFederation::WRPFUSA.contains(entry, meets)
+            }
+            MetaFederation::WUAPCRO => {
+                (meet.federation == Federation::WUAPCRO || meet.federation == Federation::HPO)
+                    && (entry.lifter_country.is_none()
+                        || entry.lifter_country == Some(Country::Croatia))
             }
         }
     }
