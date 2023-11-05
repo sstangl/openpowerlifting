@@ -4,14 +4,14 @@
 		"kg": "公斤"
 	},
 	"equipment": {
-		"raw": "Raw",
-		"wraps": "Wraps",
-		"single": "Single",
-		"multi": "Multi",
-		"unlimited": "Unlimited",
-		"straps": "Straps",
-		"classic": "Classic",
-		"equipped": "Equipped"
+		"raw": "無裝",
+		"wraps": "綁腿",
+		"single": "單層",
+		"multi": "多層",
+		"unlimited": "無限制",
+		"straps": "拉力帶",
+		"classic": "經典",
+		"equipped": "有裝"
 	},
 	"sex": {
 		"m": "男",
@@ -19,52 +19,52 @@
 		"mx": "Mx"
 	},
 	"html_header": {
-		"description": "The OpenPowerlifting project aims to create a permanent, accurate, convenient, accessible, open archive of the world's powerlifting data."
+		"description": "The OpenPowerlifting 專案期望創造一個永久、精確、方便、可存取的開源資料庫，存放世界上所有健力比賽的數據"
 	},
 	"page_titles": {
-		"rankings": "Powerlifting Rankings",
-		"records": "Powerlifting Records",
-		"meets": "Powerlifting Competitions"
+		"rankings": "健力排名",
+		"records": "健力紀錄",
+		"meets": "健力比賽"
 	},
 	"header": {
 		"rankings": "排名",
-		"records": "Records",
-		"meets": "Meets",
+		"records": "紀錄",
+		"meets": "比賽",
 		"data": "數據",
 		"apps": "Apps",
-		"status": "項目狀態",
+		"status": "狀態",
 		"faq": "常問問題",
 		"contact": "聯繫我們",
 		"shop": "網上商城",
 		"supportus": "支持我們"
 	},
 	"columns": {
-		"place": "Place",
+		"place": "名次",
 		"formulaplace": "排名",
 		"liftername": "姓名",
-		"federation": "Fed",
-		"date": "Date",
-		"location": "Location",
+		"federation": "協會",
+		"date": "日期",
+		"location": "地點",
 		"home": "Home",
-		"meetname": "Meet Name",
-		"division": "Division",
-		"sex": "Sex",
-		"age": "Age",
-		"equipment": "Equip",
-		"weightclass": "Class",
-		"bodyweight": "Weight",
-		"squat": "Squat",
-		"bench": "Bench",
-		"deadlift": "Deadlift",
-		"total": "Total",
+		"meetname": "賽事名稱",
+		"division": "量級",
+		"sex": "性別",
+		"age": "年齡",
+		"equipment": "裝備",
+		"weightclass": "量級",
+		"bodyweight": "體重",
+		"squat": "深蹲",
+		"bench": "臥推",
+		"deadlift": "硬舉",
+		"total": "總合",
 		"wilks": "Wilks",
 		"wilks2020": "Wilks2020",
 		"mcculloch": "McCulloch",
 		"glossbrenner": "Gloss",
-		"ipfpoints": "IPF",
+		"ipfpoints": "IPF系數",
 		"dots": "Dots",
 		"goodlift": "GLP",
-		"num_lifters": "Lifters"
+		"num_lifters": "選手"
 	},
 	"country": {
 		"abkhazia": "Abkhazia",
@@ -274,75 +274,75 @@
 	},
 	"buttons": {
 		"search": "搜索",
-		"download_as_csv": "Download as CSV"
+		"download_as_csv": "下載為CSV檔"
 	},
 	"labels": {
-		"sort": "Sort",
-		"category": "Category"
+		"sort": "排序",
+		"category": "分類"
 	},
 	"selectors": {
 		"equipment": {
-			"raw": "Raw",
-			"wraps": "Wraps",
-			"raw_wraps": "Raw+Wraps",
-			"single": "Single-ply",
-			"multi": "Multi-ply",
-			"unlimited": "Unlimited"
+			"raw": "無裝",
+			"wraps": "綁腿",
+			"raw_wraps": "無裝+綁腿",
+			"single": "單層",
+			"multi": "多層",
+			"unlimited": "無限制"
 		},
 		"weightclass": {
-			"all": "All Classes",
-			"traditional": "Traditional",
+			"all": "所有量級",
+			"traditional": "傳統量級",
 			"expanded": "Expanded",
-			"ipfmen": "IPF Men",
-			"ipfwomen": "IPF Women",
-			"para_men": "Para Men",
-			"para_women": "Para Women",
-			"wp_men": "WP Men",
-			"wp_women": "WP Women"
+			"ipfmen": "IPF 男子",
+			"ipfwomen": "IPF 女子",
+			"para_men": "Para 男子",
+			"para_women": "Para 女子",
+			"wp_men": "WP 男子",
+			"wp_women": "WP 女子"
 		},
 		"sort": {
-			"by_squat": "By Squat",
-			"by_bench": "By Bench",
-			"by_deadlift": "By Deadlift",
-			"by_total": "By Total",
-			"by_allometric": "By Allometric Scaling",
-			"by_ah": "By AH (Haleczko)",
-			"by_dots": "By Dots",
-			"by_glossbrenner": "By Glossbrenner",
-			"by_goodlift": "By GL Points",
-			"by_ipfpoints": "By IPF Points",
-			"by_mcculloch": "By McCulloch",
-			"by_nasa": "By NASA Points",
-			"by_reshel": "By Reshel",
-			"by_schwartzmalone": "By Schwartz/Malone",
-			"by_wilks": "By Wilks",
-			"by_wilks2020": "By Wilks 2020",
-			"by_division": "By Division",
-			"weight": "Weight Sorts",
-			"points": "Point Sorts"
+			"by_squat": "按深蹲",
+			"by_bench": "按臥推",
+			"by_deadlift": "按硬舉",
+			"by_total": "按總和",
+			"by_allometric": "按Allometric Scaling",
+			"by_ah": "按AH (Haleczko)",
+			"by_dots": "按Dots",
+			"by_glossbrenner": "按Glossbrenner",
+			"by_goodlift": "按GL Points",
+			"by_ipfpoints": "按IPF Points",
+			"by_mcculloch": "按McCulloch",
+			"by_nasa": "按NASA Points",
+			"by_reshel": "按Reshel",
+			"by_schwartzmalone": "按Schwartz/Malone",
+			"by_wilks": "按Wilks",
+			"by_wilks2020": "按Wilks 2020",
+			"by_division": "根據量級",
+			"weight": "體重分類",
+			"points": "系數分類"
 		},
 		"year": {
-			"all": "All Years"
+			"all": "所有年份"
 		},
 		"sex": {
-			"all": "All Sexes",
+			"all": "所有性別",
 			"m": "男性",
 			"f": "女性"
 		},
 		"event": {
-			"all": "All Events",
-			"full_power": "Full Power",
-			"push_pull": "Push-Pull",
-			"squat_only": "Squat Only",
-			"bench_only": "Bench Only",
-			"deadlift_only": "Deadlift Only"
+			"all": "所有賽事",
+			"full_power": "三項賽事",
+			"push_pull": "臥推、硬舉賽事",
+			"squat_only": "深蹲單項",
+			"bench_only": "臥推單項",
+			"deadlift_only": "硬舉單項"
 		},
 		"fed": {
-			"all": "All Feds",
-			"fully_tested": "All Fully-Tested Feds",
-			"all_tested": "All Tested Lifters",
-			"international": "International",
-			"regional": "Regional",
+			"all": "所有協會",
+			"fully_tested": "所有有藥檢協會",
+			"all_tested": "所有被藥檢選手",
+			"international": "國際協會",
+			"regional": "區域協會",
 			"continents": "Continents",
 			"countries": "Countries",
 			"all_usa": "All United States Lifters",
@@ -428,7 +428,7 @@
 			"all_internationals": "All Internationals"
 		},
 		"ageclass": {
-			"all": "All Ages",
+			"all": "所有年齡",
 			"youth5_12": "Youth 5-12",
 			"teen13_15": "Teen 13-15",
 			"teen16_17": "Teen 16-17",
@@ -462,7 +462,7 @@
 		}
 	},
 	"lifter_page": {
-		"personal_bests": "Personal Bests",
-		"competition_results": "Competition Results"
+		"personal_bests": "個人紀錄",
+		"competition_results": "賽事結果"
 	}
 }
