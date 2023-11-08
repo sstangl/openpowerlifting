@@ -25,6 +25,10 @@
 	m60p = {name="M60+", min=60, max=999}
 	m70p = {name="M70+", min=70, max=999}
 
+    # More OpenLifter-style divisions, that aren't in the rulebook or the records
+    t13_15 = {name="T13-15", min=13, max=15}
+    t16_17 = {name="T16-17", min=16, max=17}
+    t18_19 = {name="T18-19", min=18, max=19}
 
     mr_o = {name = "MR-O", min=0, max=999, equipment = ["Raw","Wraps"], sex="M"}
     mr_t = {name = "MR-T", min=14, max=16, equipment = ["Raw","Wraps"], sex="M"}
