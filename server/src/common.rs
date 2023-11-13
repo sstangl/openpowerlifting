@@ -35,7 +35,7 @@ impl<'r> FromRequest<'r> for Host {
         match keys.len() {
             0 => Outcome::Success(Host(None)),
             1 => Outcome::Success(Host(Some(keys[0].to_string()))),
-            _ => Outcome::Failure((Status::BadRequest, ())),
+            _ => Outcome::Error((Status::BadRequest, ())),
         }
     }
 }
@@ -61,7 +61,7 @@ impl<'r> FromRequest<'r> for AcceptEncoding {
         match keys.len() {
             0 => Outcome::Success(AcceptEncoding(None)),
             1 => Outcome::Success(AcceptEncoding(Some(keys[0].to_string()))),
-            _ => Outcome::Failure((Status::BadRequest, ())),
+            _ => Outcome::Error((Status::BadRequest, ())),
         }
     }
 }
@@ -118,7 +118,7 @@ impl<'r> FromRequest<'r> for AcceptLanguage {
         match keys.len() {
             0 => Outcome::Success(AcceptLanguage(None)),
             1 => Outcome::Success(AcceptLanguage(Some(keys[0].to_string()))),
-            _ => Outcome::Failure((Status::BadRequest, ())),
+            _ => Outcome::Error((Status::BadRequest, ())),
         }
     }
 }

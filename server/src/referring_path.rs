@@ -27,7 +27,7 @@ impl<'request> FromRequest<'request> for ReferringPath {
         // Get the `referer` header and parse to a URI
         let Some(Ok(referrer)) = req.headers().get_one(REFERER.as_str()).map(Absolute::parse)
         else {
-            return Outcome::Failure((Status::Ok, ()));
+            return Outcome::Error((Status::Ok, ()));
         };
 
         // Get the path component
