@@ -67,6 +67,7 @@
   <option value="libyapf" {% if selection.federation == "LibyaPF" %}selected{% endif %}>LibyaPF / {{strings.country.libya}}</option>
   <option value="ljtf" {% if selection.federation == "LJTF" %}selected{% endif %}>LJTF / {{strings.country.lithuania}}</option>
   <option value="lpf" {% if selection.federation == "LPF" %}selected{% endif %}>LPF / {{strings.country.latvia}}</option>
+  <option value="maltapa" {% if selection.federation == "MaltaPA" %}selected{% endif %}>MaltaPA / {{strings.country.malta}}</option>
   <option value="manxpl" {% if selection.federation == "ManxPL" %}selected{% endif %}>ManxPL / {{strings.country.isleofman}}</option>
   <option value="map" {% if selection.federation == "MAP" %}selected{% endif %}>MAP / {{strings.country.malaysia}}</option>
   <option value="mupf" {% if selection.federation == "MUPF" %}selected{% endif %}>MUPF / {{strings.country.mongolia}}</option>

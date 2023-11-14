@@ -800,6 +800,10 @@ pub enum Federation {
     #[strum(to_string = "Malaysia-UA", serialize = "malaysia-ua")]
     MalaysiaUA,
 
+    /// Malta Powerlifting Association, IPF.
+    #[strum(to_string = "MaltaPA", serialize = "maltapa")]
+    MaltaPA,
+
     /// Manx Powerlifting, IPF.
     #[strum(to_string = "ManxPL", serialize = "manxpl")]
     ManxPL,
@@ -1961,6 +1965,7 @@ impl Federation {
             Federation::LMP => false,
             Federation::LPF => FULLY_TESTED,
             Federation::MalaysiaUA => false,
+            Federation::MaltaPA => FULLY_TESTED,
             Federation::ManxPL => FULLY_TESTED,
             Federation::MAP => FULLY_TESTED,
             Federation::MDFPA => FULLY_TESTED,
@@ -2369,6 +2374,7 @@ impl Federation {
             Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
             Federation::MalaysiaUA => Some(Country::Malaysia),
+            Federation::MaltaPA => Some(Country::Malta),
             Federation::ManxPL => Some(Country::IsleOfMan),
             Federation::MAP => Some(Country::Malaysia),
             Federation::MHSAA => Some(Country::USA),
@@ -2824,6 +2830,7 @@ impl Federation {
             Federation::LMP => Some(Federation::IPL),
             Federation::LPF => Some(Federation::IPF),
             Federation::MalaysiaUA => None,
+            Federation::MaltaPA => Some(Federation::IPF),
             Federation::ManxPL => Some(Federation::IPF),
             Federation::MAP => Some(Federation::IPF),
             Federation::MDFPA => Some(Federation::WDFPF),
@@ -3339,6 +3346,7 @@ impl Federation {
             Federation::LMP => Federation::ipl_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
             Federation::MalaysiaUA => PointsSystem::Wilks,
+            Federation::MaltaPA => Federation::ipf_rules_on(date),
             Federation::ManxPL => Federation::ipf_rules_on(date),
             Federation::MAP => Federation::ipf_rules_on(date),
             Federation::MDFPA => PointsSystem::SchwartzMalone,

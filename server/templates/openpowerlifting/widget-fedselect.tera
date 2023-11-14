@@ -408,6 +408,10 @@
   <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MAP - Malaysian Powerlifting Alliance [GPA]</option>
   <option value="map" {% if selection.federation == "MAP" %}selected{% endif %}>MPA - Malaysian Association for Powerlifting [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.malta}}">
+  <option value="all-malta" {% if selection.federation == "AllMalta" %}selected{% endif %}>{{strings.selectors.fed.malta}}</option>
+  <option value="mpa" {% if selection.federation == "MaltaPA" %}selected{% endif %}>MaltaPA - Malta Powerlifting Association [IPF]</option>
+  </optgroup>
 <optgroup label="{{strings.country.mexico}}">
   <option value="all-mexico" {% if selection.federation == "AllMexico" %}selected{% endif %}>{{strings.selectors.fed.all_mexico}}</option>
   <option value="femepo" {% if selection.federation == "FEMEPO" %}selected{% endif %}>FEMEPO - Federación Mexicana de Powerlifting A.C. [IPF]</option>
