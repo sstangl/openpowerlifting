@@ -29,7 +29,7 @@ pub fn check_duplicates_one(
         date_a.cmp(&date_b)
     };
 
-    ei_by_date.sort_unstable_by(|a, b| date_sort_closure(a, b));
+    ei_by_date.sort_unstable_by(date_sort_closure);
 
     // Compare all pairs of EntryIndexes that occur on the same date.
     //
