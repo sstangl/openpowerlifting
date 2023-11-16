@@ -13,11 +13,11 @@ opltypes = { path = "../opltypes/" }
 csv = "1.1"
 fxhash = "0.2.1"
 itertools = "0.11"
-serde = "1.0"
-serde_derive = "1.0"
+serde = { workspace = true }
+serde_derive = { workspace = true }
 smartstring = { version = "1.0", features = ["serde"] }
-strum = "0.25"
-strum_macros = "0.25"
+strum = { workspace = true }
+strum_macros = { workspace = true }
 
 [dev-dependencies]
 criterion = { version = "0.5", features = ["html_reports"] }

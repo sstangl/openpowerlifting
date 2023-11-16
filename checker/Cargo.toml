@@ -25,11 +25,11 @@ jemallocator = { version = "0.5", optional = true }
 jemalloc-ctl = { version = "0.5", optional = true }
 pico-args = "0.5"
 rayon = "1.0"
-serde = "1.0"
-serde_derive = "1.0"
+serde = { workspace = true }
+serde_derive = { workspace = true }
 smartstring = "1.0"
-strum = "0.25"
-strum_macros = "0.25"
+strum = { workspace = true }
+strum_macros = { workspace = true }
 toml = "0.8"
 unicode-normalization = "0.1.11"
 walkdir = "2"
