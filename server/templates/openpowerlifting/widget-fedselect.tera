@@ -117,6 +117,7 @@
   <option value="arpl" {% if selection.federation == "ARPL" %}selected{% endif %}>ARPL - Argentina Powerlifting League [IPL]</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO - Federación Argentina de Levantamiento de Potencia [IPF]</option>
   <option value="fepoa" {% if selection.federation == "FEPOA" %}selected{% endif %}>FEPOA - Federación de Powerlifting Argentino [GPC]</option>
+  <option value="wppl-argentina" {% if selection.federation == "WPPL-Argentina" %}selected{% endif %}>WPPL Argentina</option>
   <option value="wrpf-argentina" {% if selection.federation == "WRPF-Argentina" %}selected{% endif %}>WRPF-Argentina - World Raw Powerlifting Federation Argentina</option>
 </optgroup>
 <optgroup label="{{strings.country.australia}}">
