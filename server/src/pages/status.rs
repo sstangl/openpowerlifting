@@ -355,9 +355,10 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[EPF as usize].maintainers = email_jo;
     statuses[GPACRO as usize].maintainers = email_alan;
     statuses[GPCAUS as usize].maintainers = email_james;
-    statuses[GPCGB as usize].maintainers = email_robby;
+    statuses[GPCGB as usize].maintainers = email_gem;
     statuses[GPCNZ as usize].maintainers = email_matt;
-    statuses[GPCScotland as usize].maintainers = email_gem;
+    statuses[GPCPortugal as usize].maintainers = email_gem;
+    statuses[GPCScotland as usize].maintainers = email_robby;
     statuses[GPCCRO as usize].maintainers = email_alan;
     statuses[HPLS as usize].maintainers = email_alan;
     statuses[HPLSUA as usize].maintainers = email_alan;
@@ -403,6 +404,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCFinland as usize].maintainers = email_gem;
     statuses[WPCFrance as usize].maintainers = email_gem;
     statuses[WPCItaly as usize].maintainers = email_gem;
+    statuses[WPCPoland as usize].maintainers = email_gem;
     statuses[WPCPortugal as usize].maintainers = email_gem;
     statuses[WPNZ as usize].maintainers = email_matt;
     statuses[WRPFAUS as usize].maintainers = email_james;
