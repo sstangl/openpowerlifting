@@ -21,7 +21,7 @@ serde = { workspace = true }
 serde_derive = { workspace = true }
 serde_json = { workspace = true }
 strum = { workspace = true }
-rocket = { version = "0.5.0-rc.2", features = ["json"] }
-rocket_dyn_templates = { version = "0.1.0-rc.2", features = ["tera"] }
+rocket = { version = "0.5", features = ["json"] }
+rocket_dyn_templates = { version = "0.1", features = ["tera"] }
 mimalloc = { version = "0.1", default-features = false }
 urlencoding = "2.1.2"
