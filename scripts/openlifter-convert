@@ -8,6 +8,8 @@ def separate_original(
     meet_output_path='meet.csv',
     entries_output_path='entries.csv'
 ):
+    def strip_dblquote(s):
+        return s.replace('"', '')
 
     # when we write output lines, strip the existing newline
     # and explicitly write with LF
@@ -20,21 +22,21 @@ def separate_original(
         _ = input_f.readline()
 
         with open(meet_output_path, 'wt') as meet_output_f:
-            meet_header = input_f.readline().strip()
+            meet_header = strip_dblquote(input_f.readline().strip())
             meet_output_f.write(f"{meet_header}\n")
 
-            meet_data = input_f.readline().strip()
+            meet_data = strip_dblquote(input_f.readline().strip())
             meet_output_f.write(f"{meet_data}\n")
 
         # blank line, then entries.csv content
         _ = input_f.readline()
 
         with open(entries_output_path, 'wt') as entries_output_f:
-            entries_header = input_f.readline().strip()
+            entries_header = strip_dblquote(input_f.readline().strip())
             entries_output_f.write(f"{entries_header}\n")
 
             for entries_data_line in input_f:
-                entries_data_line = entries_data_line.strip()
+                entries_data_line = strip_dblquote(entries_data_line.strip())
                 entries_output_f.write(f"{entries_data_line}\n")
 
 
