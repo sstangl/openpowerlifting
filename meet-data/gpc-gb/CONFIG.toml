@@ -8,7 +8,46 @@
     date_range = ["0000-01-01", "9999-01-01"]
 
 [divisions]
-   mor = {name ="M-O", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
+
+    # new sleeve divisions as of January 2023
+    
+    mos = {name ="M-O-S", min=0, max=999, sex="M", equipment=["Raw"]}
+    fos = {name ="F-O-S", min=0, max=999, sex="F", equipment=["Raw"]}
+    mgs = {name ="M-G-S", min=0, max=999, sex="M", equipment=["Raw"], place="G"}
+    fgs = {name ="F-G-S", min=0, max=999, sex="F", equipment=["Raw"], place="G"}
+    mt1s = {name ="M-T1-S", min=13, max=15, sex="M", equipment=["Raw"]}
+    mt2s = {name ="M-T2-S", min=16, max=17, sex="M", equipment=["Raw"]}
+    mt3s = {name ="M-T3-S", min=18, max=19, sex="M", equipment=["Raw"]}
+    ft1s = {name ="F-T1-S", min=13, max=15, sex="F", equipment=["Raw"]}
+    ft2s = {name ="F-T2-S", min=16, max=17, sex="F", equipment=["Raw"]}
+    ft3s = {name ="F-T3-S", min=18, max=19, sex="F", equipment=["Raw"]}
+    mjs = {name ="M-J-S", min=20, max=23, sex="M", equipment=["Raw"]}
+    fjs = {name ="F-J-S", min=20, max=23, sex="F", equipment=["Raw"]}
+    mss = {name ="M-S-S", min=33, max=39, sex="M", equipment=["Raw"]}
+    fss = {name ="F-S-S", min=33, max=39, sex="F", equipment=["Raw"]}
+    mm1s = {name ="M-M1-S", min=40, max=44, sex="M", equipment=["Raw"]}
+    fm1s = {name ="F-M1-S", min=40, max=44, sex="F", equipment=["Raw"]}
+    mm2s = {name ="M-M2-S", min=45, max=49, sex="M", equipment=["Raw"]}
+    fm2s = {name ="F-M2-S", min=45, max=49, sex="F", equipment=["Raw"]}
+    mm3s = {name ="M-M3-S", min=50, max=54, sex="M", equipment=["Raw"]}
+    fm3s = {name ="F-M3-S", min=50, max=54, sex="F", equipment=["Raw"]}
+    mm4s = {name ="M-M4-S", min=55, max=59, sex="M", equipment=["Raw"]}
+    fm4s = {name ="F-M4-S", min=55, max=59, sex="F", equipment=["Raw"]}
+    mm5s = {name ="M-M5-S", min=60, max=64, sex="M", equipment=["Raw"]}
+    fm5s = {name ="F-M5-S", min=60, max=64, sex="F", equipment=["Raw"]}
+    mm6s = {name ="M-M6-S", min=65, max=69, sex="M", equipment=["Raw"]}
+    fm6s = {name ="F-M6-S", min=65, max=69, sex="F", equipment=["Raw"]}
+    mm7s = {name ="M-M7-S", min=70, max=74, sex="M", equipment=["Raw"]}
+    fm7s = {name ="F-M7-S", min=70, max=74, sex="F", equipment=["Raw"]}
+    mm8s = {name ="M-M8-S", min=75, max=79, sex="M", equipment=["Raw"]}
+    fm8s = {name ="F-M8-S", min=75, max=79, sex="F", equipment=["Raw"]}
+    mm9s = {name ="M-M9-S", min=80, max=999, sex="M", equipment=["Raw"]} 
+    fm9s = {name ="F-M9-S", min=80, max=999, sex="F", equipment=["Raw"]}
+
+
+    # standard divisions
+
+    mor = {name ="M-O", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     for = {name ="F-O", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     mgr = {name ="M-G", min=0, max=999, sex="M", equipment=["Raw","Wraps"], place="G"}
     fgr = {name ="F-G", min=0, max=999, sex="F", equipment=["Raw","Wraps"], place="G"}
