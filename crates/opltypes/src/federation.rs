@@ -1662,6 +1662,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-KAZ", serialize = "wrpf-kaz")]
     WRPFKAZ,
 
+    /// Latvian WRPF affiliate.
+    #[serde(rename = "WRPF-Latvia")]
+    #[strum(to_string = "WRPF-Latvia", serialize = "wrpf-latvia")]
+    WRPFLatvia,
+
     /// Lithuanian WRPF affiliate.
     #[serde(rename = "WRPF-Lithuania")]
     #[strum(to_string = "WRPF-Lithuania", serialize = "wrpf-lithuania")]
@@ -2172,6 +2177,7 @@ impl Federation {
             Federation::WRPFIreland => false,
             Federation::WRPFItaly => false,
             Federation::WRPFKAZ => false,
+            Federation::WRPFLatvia => false,
             Federation::WRPFLithuania => false,
             Federation::WRPFMEX => false,
             Federation::WRPFNIC => false,
@@ -2575,6 +2581,7 @@ impl Federation {
             Federation::WRPFIreland => Some(Country::Ireland),
             Federation::WRPFItaly => Some(Country::Italy),
             Federation::WRPFKAZ => Some(Country::Kazakhstan),
+            Federation::WRPFLatvia => Some(Country::Latvia),
             Federation::WRPFLithuania => Some(Country::Lithuania),
             Federation::WRPFMEX => Some(Country::Mexico),
             Federation::WRPFNIC => Some(Country::Nicaragua),
@@ -3075,6 +3082,7 @@ impl Federation {
             Federation::WRPFIreland => Some(Federation::WRPF),
             Federation::WRPFItaly => Some(Federation::WRPF),
             Federation::WRPFKAZ => Some(Federation::WRPF),
+            Federation::WRPFLatvia => Some(Federation::WRPF),
             Federation::WRPFLithuania => Some(Federation::WRPF),
             Federation::WRPFMEX => Some(Federation::WRPF),
             Federation::WRPFNIC => Some(Federation::WRPF),
@@ -3591,6 +3599,7 @@ impl Federation {
             Federation::WRPFIreland => PointsSystem::Wilks,
             Federation::WRPFItaly => PointsSystem::Wilks,
             Federation::WRPFKAZ => PointsSystem::Wilks,
+            Federation::WRPFLatvia => PointsSystem::Wilks,
             Federation::WRPFLithuania => PointsSystem::Wilks,
             Federation::WRPFMEX => PointsSystem::Wilks,
             Federation::WRPFNIC => PointsSystem::Wilks,
