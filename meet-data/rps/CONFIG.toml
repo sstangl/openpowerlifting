@@ -1,7 +1,8 @@
 # Configuration for RPS.
 
 [options]
-#	require_manual_disambiguation = true
+valid_since = "2023-11-11"
+require_manual_disambiguation = true
 
 # Divisions are specified here: https://www.revolutionpowerlifting.com/rules/?page_id=10
 [divisions]
