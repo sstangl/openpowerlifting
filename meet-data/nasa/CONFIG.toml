@@ -146,6 +146,7 @@
     wdlpure = {name="wdlpure", min=0, max=999, sex='F'}
     wdlsmp = {name="wdlsmp", min=40, max=999, sex='F'}
     wdlmp = {name="wdlmp", min=40, max=999, sex='F'}
+    wsodl = {name="wsodl", min=0, max=999, sex='F'}
 
     # Squat
     sqopen = {name="sqopen", min=0, max=999, sex='M'}
