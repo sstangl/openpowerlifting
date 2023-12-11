@@ -6,6 +6,7 @@
     mocrbpu = {name ="M_OCR_BPU",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mosbpu = {name ="M_OES_BPU",min=0,max=999,equipment="Single-ply",sex="M",tested="No"}
     mombpu = {name ="M_OEM_BPU",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    moubpu = {name ="M_OEU_BPU",min=0,max=999,equipment="Unlimited",sex="M",tested="No"}
     mm1rbpu = {name ="M_MR_1_BPU",min=40,max=44,equipment="Raw",sex="M",tested="No"}
     mm1crbpu = {name ="M_MCR_1_BPU",min=40,max=44,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm1sbpu = {name ="M_MES_1_BPU",min=40,max=44,equipment="Single-ply",sex="M",tested="No"}
