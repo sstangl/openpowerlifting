@@ -143,3 +143,5 @@
 [exemptions]
     2103 = ["ExemptWeightClassConsistency"] #One lifter without weight or weightclass
     2205 = ["ExemptDivision"] # Guest lifter competed in wraps.
+    2206 = ["ExemptWeightClassConsistency"] # Wilks based scoring
+    2308 = ["ExemptWeightClassConsistency"] # GL Points based scoring
