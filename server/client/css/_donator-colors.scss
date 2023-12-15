@@ -239,6 +239,12 @@
   background-image: linear-gradient(to right, #C8102E, #00843D, #FFFFFF, #000000);
 }
 
+// White, yellow, red, and black.
+.medicine_wheel {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #FFFFFF, #FFFF00, #FF0000, #000000);
+}
+
 // A combination of orange, white, and black.
 .tiger {
   @include gradient-prereqs(#FFA200);
