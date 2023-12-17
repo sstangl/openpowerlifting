@@ -186,6 +186,7 @@
     fpfcrapf = {name ="F_PFCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"} #Police/Fire
     forlfapf = {name="F_OR_LF_APF",min=0,max=999,equipment="Raw",sex="F"} # Not sure.
     fmr1lfapf = {name="F_MR_1_LF_APF",min=40,max=45,equipment="Raw",sex="F"} # Not sure.
+    fsojrapf = {name ="F_SOJR_APF",min=20,max=23,equipment="Raw",sex="F"} #Special Olympics
 
     # AAPF Divisions.
     moraapf = {name ="M_OR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
@@ -261,6 +262,7 @@
     myemaapf = {name ="M_YEM_AAPF",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Youth
     msoemaapf = {name ="M_SOEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Special Olympics
     msotr2aapf = {name ="M_SOTR_2_AAPF",min=16,max=17,equipment="Raw",sex="M"} #Special Olympics
+    msotcr2aapf = {name ="M_SOTCR_2_AAPF",min=16,max=17,equipment=["Raw","Wraps"],sex="M",tested="Yes"} #Special Olympics
     msotr3aapf = {name ="M_SOTR_3_AAPF",min=18,max=19,equipment="Raw",sex="M"} #Special Olympics
     msojraapf = {name ="M_SOJR_AAPF",min=20,max=23,equipment="Raw",sex="M"} #Special Olympics
     msoraapf = {name ="M_SOR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
@@ -350,7 +352,7 @@
     fpfraapf = {name ="F_PFR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Police/Fire
     fsotr1aapf = {name ="F_SOTR_1_AAPF",min=13,max=15,equipment="Raw",sex="F"} #Special Olympics
     fsoemaapf = {name ="F_SOEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"} #Special Olympics
-    fsojrapf = {name ="F_SOJR_APF",min=20,max=23,equipment="Raw",sex="F"} #Special Olympics
+    fsojraapf = {name ="F_SOJR_AAPF",min=20,max=23,equipment="Raw",sex="F"} #Special Olympics
 
  # WPC Divisions.
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
