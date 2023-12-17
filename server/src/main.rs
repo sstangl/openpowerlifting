@@ -589,6 +589,9 @@ Disallow: /
 User-agent: dotbot
 Disallow: /
 
+User-agent: GPTBot
+Disallow: /
+
 User-agent: MJ12bot
 Disallow: /
 
