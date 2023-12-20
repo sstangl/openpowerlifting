@@ -50,6 +50,12 @@
     sex = "M"
     divisions = ["Youth 1","Youth 2","Youth 3"]
 
+[weightclasses.youth_F]
+    classes = ["30","35","40","43","47","52","57","63","69","76","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Youth 1","Youth 2","Youth 3"]
+    
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2021-01-01","9999-01-01"]
