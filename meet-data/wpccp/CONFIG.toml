@@ -151,6 +151,7 @@
     foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
     mt1ce= {name ="M-T1E", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
     mm1e = {name ="M-M1E", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
     mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
     mm5e = {name ="M-M5E", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
 
