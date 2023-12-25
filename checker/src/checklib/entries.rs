@@ -1182,7 +1182,8 @@ fn process_attempt_pair(
     }
 
     // A successful attempt shouldn't have been repeated.
-    if !maxweight.is_failed() && attempt.abs() == maxweight {
+    // However, allow it if `exempt_lift_order` is set: this can happen due to misloads.
+    if !maxweight.is_failed() && attempt.abs() == maxweight && !exempt_lift_order {
         report.error_on(
             line,
             format!("{lift}{attempt_num}Kg '{attempt}' repeated a successful attempt"),
