@@ -1469,6 +1469,11 @@ pub enum Federation {
     #[strum(to_string = "WPC-KGZ", serialize = "wpc-kgz")]
     WPCKGZ,
 
+    /// Korean WPC affiliate.
+    #[serde(rename = "WPC-Korea")]
+    #[strum(to_string = "WPC-Korea", serialize = "wpc-korea")]
+    WPCKorea,
+
     /// Latvian WPC affiliate.
     #[serde(rename = "WPC-Latvia")]
     #[strum(to_string = "WPC-Latvia", serialize = "wpc-latvia")]
@@ -2138,6 +2143,7 @@ impl Federation {
             Federation::WPCItaly => false,
             Federation::WPCKAZ => false,
             Federation::WPCKGZ => false,
+            Federation::WPCKorea => false,
             Federation::WPCLatvia => false,
             Federation::WPCMoldova => false,
             Federation::WPCPortugal => false,
@@ -2541,6 +2547,7 @@ impl Federation {
             Federation::WPCItaly => Some(Country::Italy),
             Federation::WPCKAZ => Some(Country::Kazakhstan),
             Federation::WPCKGZ => Some(Country::Kyrgyzstan),
+            Federation::WPCKorea => Some(Country::SouthKorea),
             Federation::WPCLatvia => Some(Country::Latvia),
             Federation::WPCMoldova => Some(Country::Moldova),
             Federation::WPCPortugal => Some(Country::Portugal),
@@ -3042,6 +3049,7 @@ impl Federation {
             Federation::WPCItaly => Some(Federation::WPC),
             Federation::WPCKAZ => Some(Federation::WPC),
             Federation::WPCKGZ => Some(Federation::WPC),
+            Federation::WPCKorea => Some(Federation::WPC),
             Federation::WPCLatvia => Some(Federation::WPC),
             Federation::WPCMoldova => Some(Federation::WPC),
             Federation::WPCPortugal => Some(Federation::WPC),
@@ -3553,6 +3561,7 @@ impl Federation {
             Federation::WPCItaly => PointsSystem::Glossbrenner,
             Federation::WPCKAZ => PointsSystem::Glossbrenner,
             Federation::WPCKGZ => PointsSystem::Glossbrenner,
+            Federation::WPCKorea => PointsSystem::Glossbrenner,
             Federation::WPCLatvia => PointsSystem::Glossbrenner,
             Federation::WPCMoldova => PointsSystem::Glossbrenner,
             Federation::WPCPortugal => PointsSystem::Glossbrenner,
