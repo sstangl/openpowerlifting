@@ -1,7 +1,7 @@
 <select id="ageselect">
   <option value="all"{% if selection.ageclass == "AllAges" %} selected{% endif %}>{{strings.selectors.ageclass.ipf_open}}</option>
   <option value="y14-y18" {% if selection.ageclass == "SubJuniorsY14Y18" %}selected{% endif %}>{{strings.selectors.ageclass.ipf_subjunior}}</option>
-  <option value="y19-y23" {% if selection.ageclass == "JuniorsY19Y23" %}selected{% endif %}>{{strings.selectors.ageclass.ipf_junior}}</option>
+  <option value="y14-y23" {% if selection.ageclass == "JuniorsY14Y23" %}selected{% endif %}>{{strings.selectors.ageclass.ipf_junior}}</option>
   <option value="y24-y39" {% if selection.ageclass == "SeniorsY24Y39" %}selected{% endif %}>{{strings.selectors.ageclass.ipf_senior}}</option>
   <option value="over-y40" {% if selection.ageclass == "MastersOverY40" %}selected{% endif %}>{{strings.selectors.ageclass.ipf_master1}}</option>
   <option value="over-y50" {% if selection.ageclass == "MastersOverY50" %}selected{% endif %}>{{strings.selectors.ageclass.ipf_master2}}</option>

@@ -563,7 +563,7 @@ pub enum AgeClassFilter {
 
     // BirthYear-based classes.
     SubJuniorsY14Y18,
-    JuniorsY19Y23,
+    JuniorsY14Y23,
     SeniorsY24Y39,
     MastersOverY40,
     MastersOverY50,
@@ -600,7 +600,7 @@ impl FromStr for AgeClassFilter {
 
             // BirthYear-based classes.
             "y14-y18" => Ok(AgeClassFilter::SubJuniorsY14Y18),
-            "y19-y23" => Ok(AgeClassFilter::JuniorsY19Y23),
+            "y14-y23" => Ok(AgeClassFilter::JuniorsY14Y23),
             "y24-y39" => Ok(AgeClassFilter::SeniorsY24Y39),
             "over-y40" => Ok(AgeClassFilter::MastersOverY40),
             "over-y50" => Ok(AgeClassFilter::MastersOverY50),
