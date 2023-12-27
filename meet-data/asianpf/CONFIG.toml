@@ -66,3 +66,4 @@
     1201 = ["ExemptWeightClassConsistency"]  # Omits lowest weightclasses.
     1101 = ["ExemptDivision"]
     0801 = ["ExemptDivision"]
+    2306 = ["ExemptLiftOrder"] # Lifter allowed a lighter 3rd attempt.
