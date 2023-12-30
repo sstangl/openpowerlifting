@@ -8,6 +8,8 @@ use std::fmt;
 )]
 pub enum Equipment {
     /// No supportive material (sleeves allowed).
+    #[serde(alias = "Bare", alias = "Sleeves")]
+    #[strum(serialize = "Raw", serialize = "Bare", serialize = "Sleeves")]
     Raw,
 
     /// Knee wraps.
@@ -41,5 +43,18 @@ impl fmt::Display for Equipment {
             Equipment::Unlimited => write!(f, "Unlimited"),
             Equipment::Straps => write!(f, "Straps"),
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn deserialization() {
+        // Parse using the EnumString implementation.
+        assert_eq!("Raw".parse::<Equipment>(), Ok(Equipment::Raw));
+        assert_eq!("Bare".parse::<Equipment>(), Ok(Equipment::Raw));
+        assert_eq!("Sleeves".parse::<Equipment>(), Ok(Equipment::Raw));
     }
 }
