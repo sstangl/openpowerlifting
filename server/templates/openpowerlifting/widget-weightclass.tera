@@ -13,6 +13,7 @@
     <option value="over90"{% if selection.weightclasses == "TOver90" %} selected{% endif %}>{% if units == "kg" %}90+{% else %}198+{% endif %}</option>
     <option value="100"{% if selection.weightclasses == "T100" %} selected{% endif %}>{% if units == "kg" %}-100{% else %}-220{% endif %}</option>
     <option value="110"{% if selection.weightclasses == "T110" %} selected{% endif %}>{% if units == "kg" %}-110{% else %}-242{% endif %}</option>
+    <option value="over110"{% if selection.weightclasses == "TOver110" %} selected{% endif %}>{% if units == "kg" %}110+{% else %}242+{% endif %}</option>
     <option value="125"{% if selection.weightclasses == "T125" %} selected{% endif %}>{% if units == "kg" %}-125{% else %}-275{% endif %}</option>
     <option value="140"{% if selection.weightclasses == "T140" %} selected{% endif %}>{% if units == "kg" %}-140{% else %}-308{% endif %}</option>
     <option value="over140"{% if selection.weightclasses == "TOver140" %} selected{% endif %}>{% if units == "kg" %}140+{% else %}308+{% endif %}</option>
