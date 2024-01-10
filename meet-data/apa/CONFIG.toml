@@ -9,6 +9,24 @@
     date_range = ["0000-01-01", "9999-01-01"]
 
 [divisions]
+    # OpenLifter-style divisions.
+    t13_15 = {name="T13-15", min=13, max=15}
+    t16_17 = {name="T16-17", min=16, max=17}
+    t18_19 = {name="T18-19", min=18, max=19}
+    j20_23 = {name="J20-23", min=20, max=23}
+    s33_39 = {name="S33-39", min=33, max=39}
+    s35_39 = {name="S35-39", min=35, max=39}
+    m40_44 = {name="M40-44", min=40, max=44}
+    m45_49 = {name="M45-49", min=45, max=49}
+    m50_54 = {name="M50-54", min=50, max=54}
+    m55_59 = {name="M55-59", min=55, max=59}
+    m60_64 = {name="M60-64", min=60, max=64}
+    m65_69 = {name="M65-69", min=65, max=69}
+    m70_74 = {name="M70-74", min=70, max=74}
+    m75_79 = {name="M75-79", min=75, max=79}
+    m80p = {name="M80+", min=80, max=999}
+
+
     open = {name ="Open",min=0,max=999}
     open_nt = {name ="Open NT",min=0,max=999,tested="No"}
     military = {name ="Military",min=0,max=999}
@@ -56,9 +74,7 @@
     paralympic = {name ="Paralympic",min=0,max=999}
     masters = {name ="Masters",min=40,max=999}
 
-    # OpenLifter-style divisions, for WPA-Uganda.
-    j20_23 = {name="J20-23", min=20, max=23}
-    s35-39 = {name="S35-39", min=35, max=39}
+    # For WPA-Uganda.
     paralymic_j20_23 = {name="Paralympic J20-23", min=20, max=23}
     paralympic_m40p = {name="Paralympic M40+", min=40, max=999}
 
