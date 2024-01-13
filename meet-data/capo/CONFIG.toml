@@ -74,10 +74,12 @@
     mm5mp  = {name ="MM5-MP",min=60,max=64,sex="M", equipment="Multi-ply"}
     mm6r   = {name ="MM6-R",min=65,max=69,sex="M", equipment="Raw"}
     mm6rp   = {name ="MM6-RP",min=65,max=69,sex="M", equipment=["Raw","Wraps"]}
+    mm6sp   = {name ="MM6-SP",min=65,max=69,sex="M", equipment="Single-ply"}
     mm6mp   = {name ="MM6-MP",min=65,max=69,sex="M", equipment="Multi-ply"}
     mm7r   = {name ="MM7-R",min=70,max=74,sex="M", equipment="Raw"}
     mm7rp   = {name ="MM7-RP",min=70,max=74,sex="M", equipment=["Raw","Wraps"]}
     mm8r   = {name ="MM8-R",min=75,max=79,sex="M", equipment="Raw"}
+    mm8mp   = {name ="MM8-MP",min=75,max=79,sex="M", equipment="Multi-ply"}
     mm9r  = {name ="MM9-R",min=80,max=999,sex="M", equipment="Raw"}
     mm9rp  = {name ="MM9-RP",min=80,max=999,sex="M", equipment=["Raw","Wraps"]}
     fmr    = {name ="FM-R",min=40,max=999,sex="F", equipment="Raw"}
@@ -89,6 +91,8 @@
     fm2r   = {name ="FM2-R",min=45,max=49,sex="F", equipment="Raw"}
     fm2rp  = {name ="FM2-RP",min=45,max=49,sex="F", equipment=["Raw","Wraps"]}
     fm2sp  = {name ="FM2-SP",min=45,max=49,sex="F", equipment="Single-ply"}
+    fm2mp  = {name ="FM2-MP",min=45,max=49,sex="F", equipment="Multi-ply"}
+    fm3sp  = {name ="FM3-SP",min=50,max=54,sex="F", equipment="Multi-ply"}
     fm3r   = {name ="FM3-R",min=50,max=54,sex="F", equipment="Raw"}
     fm3rp  = {name ="FM3-RP",min=50,max=54,sex="F", equipment=["Raw","Wraps"]}
     fm3mp  = {name ="FM3-MP",min=50,max=54,sex="F", equipment="Multi-ply"}
@@ -101,6 +105,7 @@
     fm7r   = {name ="FM7-R",min=70,max=74,sex="F", equipment="Raw"}
     fm7rp   = {name ="FM7-RP",min=70,max=74,sex="F", equipment=["Raw","Wraps"]}
     fm8r   = {name ="FM8-R",min=75,max=79,sex="F", equipment="Raw"}
+    fm9r   = {name ="FM9-R",min=80,max=999,sex="F", equipment="Raw"}
     fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
     fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
     msmr   = {name ="MSM-R",min=33,max=39,sex="M", equipment="Raw"}
