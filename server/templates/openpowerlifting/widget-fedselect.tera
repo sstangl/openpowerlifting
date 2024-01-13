@@ -231,6 +231,7 @@
   <option value="hpls" {% if selection.federation == "HPLS" %}selected{% endif %}>HPLS - Hrvatski Powerlifting Savez [IPF]</option>
   <option value="hpls-ua" {% if selection.federation == "HPLS-UA" %}selected{% endif %}>HPLS-UA - Hrvatski Powerlifting Savez [Unaffiliated]</option>
   <option value="hpo" {% if selection.federation == "HPO" %}selected{% endif %}>HPO - Hrvatska Powerlifting Organizacija [Inactive]</option>
+  <option value="wrpf-cro" {% if selection.federation == "WRPF-CRO" %}selected{% endif %}>WRPF-CRO - WRPF Hrvatska [WRPF]</option>
   <option value="wuap-cro" {% if selection.federation == "WUAP-CRO" %}selected{% endif %}>WUAP-CRO - WUAP Hrvatska [WUAP]</option>
 </optgroup>
 <optgroup label="{{strings.country.cyprus}}">

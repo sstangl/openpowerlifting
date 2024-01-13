@@ -239,8 +239,9 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCItaly as usize].format = jpg;
     statuses[WPNZ as usize].format = jpg;
     statuses[WRPFAUS as usize].format = openlifter;
+    statuses[WRPFCRO as usize].format = database;
     statuses[WUAP as usize].format = pdf_structured;
-    statuses[WUAPCRO as usize].format = xls_structured;
+    statuses[WUAPCRO as usize].format = database;
 
     // Subjective ease of importation.
     let easy = "Easy";
@@ -309,6 +310,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCItaly as usize].ease = difficult;
     statuses[WPNZ as usize].ease = difficult;
     statuses[WRPFAUS as usize].ease = easy;
+    statuses[WRPFCRO as usize].ease = easy;
     statuses[WUAP as usize].ease = difficult;
     statuses[WUAPCRO as usize].ease = easy;
 
@@ -408,6 +410,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCPortugal as usize].maintainers = email_gem;
     statuses[WPNZ as usize].maintainers = email_matt;
     statuses[WRPFAUS as usize].maintainers = email_james;
+    statuses[WRPFCRO as usize].maintainers = email_alan;
     statuses[WUAPCRO as usize].maintainers = email_alan;
     statuses[XPS as usize].maintainers = email_sean;
 

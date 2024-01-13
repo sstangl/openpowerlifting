@@ -1,0 +1,73 @@
+# Configuration for WRPF-Croatia.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    #Official WRPF divisions
+    open = {name = "Open", min = 0, max = 999}
+    topen = {name = "TOpen", min = 0, max = 999, tested="Yes"}
+    youth = {name = "Youth", min = 5, max = 13}
+    subjunior_17_19 = {name = "Sub-Juniors", min = 14, max = 19}
+    juniors_20_23 = {name = "Juniors", min = 20, max = 23}
+    submasters = {name = "Submasters", min = 35, max = 39}
+    m1 = {name = "M1", min = 40, max = 49}
+    m2 = {name = "M2", min = 50, max = 59}
+    m3 = {name = "M3", min = 60, max = 69}
+    m4 = {name = "M4", min = 70, max = 79}
+    m5 = {name = "M5", min = 80, max = 89}
+
+    # OpenLifter-style divisions.
+    j8_9 = {name="J8-9", min=8, max=9}
+    j10_11 = {name="J10-11", min=10, max=11}
+    j12_13 = {name="J12-13", min=12, max=13}
+    j14_16 = {name="J14-16", min=14, max=16}
+    j17_19 = {name="J17-19", min=17, max=19}
+    j20_23 = {name="J20-23", min=20, max=23}
+    s35_39 = {name="S35-39", min=35, max=39}
+    m40_44 = {name="M40-44", min=40, max=44}
+    m45_49 = {name="M45-49", min=45, max=49}
+    m50_54 = {name="M50-54", min=50, max=54}
+    m55_59 = {name="M55-59", min=55, max=59}
+    m60_64 = {name="M60-64", min=60, max=64}
+    m65_69 = {name="M65-69", min=65, max=69}
+    m70_74 = {name="M70-74", min=70, max=74}
+    m75_79 = {name="M75-79", min=75, max=79}
+    m80p = {name="M80+", min=80, max=999}
+
+    # OpenLifter-style divisions, but tested.
+    tj8_9 = {name="TJ8-9", min=8, max=9, tested="Yes"}
+    tj10_11 = {name="TJ10-11", min=10, max=11, tested="Yes"}
+    tj12_13 = {name="TJ12-13", min=12, max=13, tested="Yes"}
+    tj14_16 = {name="TJ14-16", min=14, max=16, tested="Yes"}
+    tj17_19 = {name="TJ17-19", min=17, max=19, tested="Yes"}
+    tj20_23 = {name="TJ20-23", min=20, max=23, tested="Yes"}
+    ts35_39 = {name="TS35-39", min=35, max=39, tested="Yes"}
+    tm40_44 = {name="TM40-44", min=40, max=44, tested="Yes"}
+    tm45_49 = {name="TM45-49", min=45, max=49, tested="Yes"}
+    tm50_54 = {name="TM50-54", min=50, max=54, tested="Yes"}
+    tm55_59 = {name="TM55-59", min=55, max=59, tested="Yes"}
+    tm60_64 = {name="TM60-64", min=60, max=64, tested="Yes"}
+    tm65_69 = {name="TM65-69", min=65, max=69, tested="Yes"}
+    tm70_74 = {name="TM70-74", min=70, max=74, tested="Yes"}
+    tm75_79 = {name="TM75-79", min=75, max=79, tested="Yes"}
+    tm80p = {name="TM80+", min=80, max=999, tested="Yes"}
+
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2022-12-01", "9999-01-01"]
+    sex = "F"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "2022-11-30"]
+    sex = "F"
+
+[exemptions]
