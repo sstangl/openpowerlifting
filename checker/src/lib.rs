@@ -116,6 +116,7 @@ fn is_invalid_entry(entry: &walkdir::DirEntry) -> bool {
         OsStr::new("entries.csv"),
         OsStr::new("meet.csv"),
         OsStr::new("INFO"),
+        OsStr::new(".DS_Store"), // Ignored in the .gitignore, but macOS makes lots of these files.
     ];
     if valid_filenames.contains(&filename) {
         return false;
