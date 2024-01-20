@@ -254,6 +254,10 @@
     shw = {name="SHW", min=0, max=999}
     specialolympics = {name="Special Olympics", min=0, max=999}
 
+    # I have no idea what this is... elite Multi-ply?
+    foe = {name="FOE", min=0, max=999, sex="F"}
+    fm6e = {name="FM6E", min=64, max=69, sex="F"}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
