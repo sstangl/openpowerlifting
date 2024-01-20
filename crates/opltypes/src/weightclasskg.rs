@@ -65,16 +65,16 @@ impl Serialize for WeightClassAny {
 impl WeightClassKg {
     pub fn as_kg(self) -> WeightClassAny {
         match self {
-            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_kg()),
-            WeightClassKg::Over(x) => WeightClassAny::Over(x.as_kg()),
+            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_any()),
+            WeightClassKg::Over(x) => WeightClassAny::Over(x.as_any()),
             WeightClassKg::None => WeightClassAny::None,
         }
     }
 
     pub fn as_lbs(self) -> WeightClassAny {
         match self {
-            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_lbs_class()),
-            WeightClassKg::Over(x) => WeightClassAny::Over(x.as_lbs_class()),
+            WeightClassKg::UnderOrEqual(x) => WeightClassAny::UnderOrEqual(x.as_lbs().as_class()),
+            WeightClassKg::Over(x) => WeightClassAny::Over(x.as_lbs().as_class()),
             WeightClassKg::None => WeightClassAny::None,
         }
     }

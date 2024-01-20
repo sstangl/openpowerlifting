@@ -14,7 +14,7 @@ use std::str::FromStr;
 
 use crate::WeightUnits;
 
-/// Represents numbers describing absolute weights.
+/// Represents numbers describing absolute weights in kilograms.
 ///
 /// The database only tracks weights to two decimal places.
 /// Instead of storing as `f32`, we can store as `i32 * 100`,
@@ -23,8 +23,19 @@ use crate::WeightUnits;
 #[derive(Copy, Clone, Debug, Default, PartialEq, PartialOrd, Ord, Eq)]
 pub struct WeightKg(i32);
 
-/// Represents numbers describing absolute weights in their final
-/// format for printing (either Kg or Lbs).
+/// Represents numbers describing absolute weights in pounds.
+///
+/// This type exists to facilitate easy conversion to `WeightKg` or `WeightAny`.
+/// In general, weight values should be held in kilograms.
+///
+/// Conversion between kilograms and pounds is lossy due to rounding.
+#[derive(Copy, Clone, Debug, Default, PartialEq, PartialOrd, Ord, Eq)]
+pub struct WeightLbs(i32);
+
+/// Represents unit-less numbers describing absolute weights (either Kg or Lbs).
+///
+/// Forgetting the unit is suitable for circumstances in which the value only
+/// needs to be rendered to the user, for example when printing.
 ///
 /// Because the type of the weight is forgotten, these weights
 /// are incomparable with each other.
@@ -81,47 +92,76 @@ impl Serialize for WeightAny {
     }
 }
 
+// Simple format conversions.
 impl From<WeightKg> for f32 {
+    #[inline]
     fn from(w: WeightKg) -> f32 {
         (w.0 as f32) / 100.0
     }
 }
-
 impl From<WeightKg> for f64 {
+    #[inline]
     fn from(w: WeightKg) -> f64 {
         f64::from(w.0) / 100.0
     }
 }
-
-impl From<WeightKg> for Option<f64> {
-    fn from(w: WeightKg) -> Option<f64> {
-        if w.is_zero() {
-            None
-        } else {
-            Some(w.into())
-        }
-    }
-}
-
-impl From<WeightAny> for f32 {
-    fn from(w: WeightAny) -> f32 {
+impl From<WeightLbs> for f32 {
+    #[inline]
+    fn from(w: WeightLbs) -> f32 {
         (w.0 as f32) / 100.0
     }
 }
-
-impl From<WeightAny> for f64 {
-    fn from(w: WeightAny) -> f64 {
+impl From<WeightLbs> for f64 {
+    #[inline]
+    fn from(w: WeightLbs) -> f64 {
         f64::from(w.0) / 100.0
     }
 }
 
-impl From<WeightAny> for Option<f64> {
-    fn from(w: WeightAny) -> Option<f64> {
-        if w.is_zero() {
-            None
-        } else {
-            Some(w.into())
+// Conversions between different representations.
+impl From<WeightKg> for WeightLbs {
+    fn from(value: WeightKg) -> WeightLbs {
+        let f = (value.0.abs() as f32) * 2.2046225; // Max precision for f32.
+
+        // Round to the hundredth place.
+        // Half-way cases are rounded away from zero.
+        let mut rounded = f.round() as i32;
+
+        // Pounds values tend to be reported only to the nearest tenth.
+        // If the fractional part is close to another tenth, add a correction.
+        if (rounded % 10) == 9 {
+            rounded += 1;
         }
+
+        if value.0.is_positive() {
+            WeightLbs(rounded)
+        } else {
+            WeightLbs(-rounded)
+        }
+    }
+}
+impl From<WeightLbs> for WeightKg {
+    fn from(value: WeightLbs) -> Self {
+        let f = (value.0.abs() as f32) / 2.2046225; // Max precision for f32.
+        let rounded = f.round() as i32; // TODO: Is this rounding mode OK? Test round-trip?
+
+        if value.0.is_positive() {
+            WeightKg(rounded)
+        } else {
+            WeightKg(-rounded)
+        }
+    }
+}
+impl From<WeightKg> for WeightAny {
+    #[inline]
+    fn from(value: WeightKg) -> WeightAny {
+        WeightAny(value.0)
+    }
+}
+impl From<WeightLbs> for WeightAny {
+    #[inline]
+    fn from(value: WeightLbs) -> WeightAny {
+        WeightAny(value.0)
     }
 }
 
@@ -176,50 +216,56 @@ impl WeightKg {
         self != WeightKg::from_i32(0)
     }
 
-    pub fn as_kg(self) -> WeightAny {
-        WeightAny(self.0)
+    /// Returns the weight in pounds.
+    #[inline]
+    pub fn as_lbs(self) -> WeightLbs {
+        WeightLbs::from(self)
     }
 
-    pub fn as_lbs(self) -> WeightAny {
-        let f = (self.0.abs() as f32) * 2.2046225; // Max precision for f32.
+    /// Returns the weight without units.
+    #[inline]
+    pub fn as_any(self) -> WeightAny {
+        WeightAny::from(self)
+    }
 
-        // Round to the hundredth place.
-        // Half-way cases are rounded away from zero.
-        let mut rounded = f.round() as i32;
-
-        // Pounds values tend to be reported only to the nearest tenth.
-        // If the fractional part is close to another tenth, add a correction.
-        if (rounded % 10) == 9 {
-            rounded += 1;
+    /// Returns the weight without units, after converting to the given unit.
+    pub fn as_type(self, unit: WeightUnits) -> WeightAny {
+        match unit {
+            WeightUnits::Kg => self.as_any(),
+            WeightUnits::Lbs => self.as_lbs().as_any(),
         }
+    }
+}
 
-        if self.0.is_positive() {
-            WeightAny(rounded)
-        } else {
-            WeightAny(-rounded)
-        }
+impl WeightLbs {
+    /// Returns the weight in kilograms.
+    #[inline]
+    pub fn as_kg(self) -> WeightKg {
+        WeightKg::from(self)
+    }
+
+    /// Returns the weight without units.
+    #[inline]
+    pub fn as_any(self) -> WeightAny {
+        WeightAny::from(self)
     }
 
     /// Report as the "common name" of the weight class.
-    pub fn as_lbs_class(self) -> WeightAny {
-        let lbs = self.as_lbs();
-        let truncated: i32 = (lbs.0 / 100) * 100;
-
+    pub fn as_class(self) -> WeightAny {
+        let truncated: i32 = (self.0 / 100) * 100;
         match truncated {
             182_00 => WeightAny(183_00),
             _ => WeightAny(truncated),
         }
     }
-
-    pub fn as_type(self, unit: WeightUnits) -> WeightAny {
-        match unit {
-            WeightUnits::Kg => self.as_kg(),
-            WeightUnits::Lbs => self.as_lbs(),
-        }
-    }
 }
 
 impl fmt::Display for WeightKg {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        WeightAny(self.0).fmt(f)
+    }
+}
+impl fmt::Display for WeightLbs {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         WeightAny(self.0).fmt(f)
     }
@@ -231,8 +277,8 @@ impl fmt::Display for WeightKg {
 impl ops::Add<WeightKg> for WeightKg {
     type Output = WeightKg;
 
-    fn add(self, _rhs: WeightKg) -> WeightKg {
-        WeightKg(self.0 + _rhs.0)
+    fn add(self, rhs: WeightKg) -> WeightKg {
+        WeightKg(self.0 + rhs.0)
     }
 }
 
@@ -247,8 +293,8 @@ impl ops::AddAssign for WeightKg {
 impl ops::Sub<WeightKg> for WeightKg {
     type Output = WeightKg;
 
-    fn sub(self, _rhs: WeightKg) -> WeightKg {
-        WeightKg(self.0 - _rhs.0)
+    fn sub(self, rhs: WeightKg) -> WeightKg {
+        WeightKg(self.0 - rhs.0)
     }
 }
 
@@ -337,34 +383,35 @@ impl FromStr for WeightKg {
         }
     }
 }
+impl FromStr for WeightLbs {
+    type Err = num::ParseFloatError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        WeightKg::from_str(s).map(|kg| WeightLbs(kg.0)) // Cast to pounds without conversion.
+    }
+}
 
 struct WeightKgVisitor;
 
 impl<'de> Visitor<'de> for WeightKgVisitor {
     type Value = WeightKg;
-
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
         formatter.write_str("a number or numeric string")
     }
-
     fn visit_i64<E: de::Error>(self, i: i64) -> Result<WeightKg, E> {
         let v = i32::try_from(i).map_err(E::custom)?;
         Ok(WeightKg::from_i32(v))
     }
-
     fn visit_u64<E: de::Error>(self, u: u64) -> Result<WeightKg, E> {
         let v = i32::try_from(u).map_err(E::custom)?;
         Ok(WeightKg::from_i32(v))
     }
-
     fn visit_f64<E: de::Error>(self, v: f64) -> Result<WeightKg, E> {
         Ok(WeightKg::from_f64(v))
     }
-
     fn visit_borrowed_str<E: de::Error>(self, v: &str) -> Result<WeightKg, E> {
         WeightKg::from_str(v).map_err(E::custom)
     }
-
     fn visit_str<E: de::Error>(self, v: &str) -> Result<WeightKg, E> {
         self.visit_borrowed_str(v)
     }
@@ -373,6 +420,14 @@ impl<'de> Visitor<'de> for WeightKgVisitor {
 impl<'de> Deserialize<'de> for WeightKg {
     fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<WeightKg, D::Error> {
         deserializer.deserialize_any(WeightKgVisitor)
+    }
+}
+
+impl<'de> Deserialize<'de> for WeightLbs {
+    fn deserialize<D: serde::Deserializer<'de>>(deserializer: D) -> Result<WeightLbs, D::Error> {
+        deserializer
+            .deserialize_any(WeightKgVisitor)
+            .map(|kg| WeightLbs(kg.0)) // Reinterpret the value as pounds without conversion.
     }
 }
 
