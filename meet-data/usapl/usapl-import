@@ -153,6 +153,7 @@ def parsedivision(div):
     s = s.replace('Male - ', 'M-')
     s = s.replace('GuestLifter', 'G')
     s = s.replace('Varsity', 'V')
+    s = s.replace('Adaptive Athletes', 'AA')
 
     # Fix Some common mistakes that crop up.
     s = s.replace('SJr', 'SJ')
