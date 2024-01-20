@@ -31,6 +31,7 @@
     dt_master3 = {name="DT Master 3", min=60, max=69, tested="Yes"}
     dt_master4 = {name="DT Master 4", min=70, max=79, tested="Yes"}
     dt_novice = {name="DT Novice", min=0, max=999, tested="Yes"}
+    dt_so = {name="DT Special Olympics", min=0, max=999, tested="Yes"}
     dt_int = {name="DT Int", min=0, max=999, tested="Yes"} # Intermediate
     dt_first_responder = {name="DT First Responder", min=0, max=999, tested="Yes"}
     dt_pfm = {name="DT P/F/M", min=0, max=999, tested="Yes"}
