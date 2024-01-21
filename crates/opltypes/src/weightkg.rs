@@ -238,6 +238,11 @@ impl WeightKg {
 }
 
 impl WeightLbs {
+    #[inline]
+    pub const fn from_i32(i: i32) -> WeightLbs {
+        WeightLbs(i.saturating_mul(100))
+    }
+
     /// Returns the weight in kilograms.
     #[inline]
     pub fn as_kg(self) -> WeightKg {

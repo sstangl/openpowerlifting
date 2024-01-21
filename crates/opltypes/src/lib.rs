@@ -73,10 +73,10 @@ mod username;
 pub use self::username::Username;
 
 mod weightkg;
-pub use self::weightkg::{WeightAny, WeightKg};
+pub use self::weightkg::{WeightAny, WeightKg, WeightLbs};
 
 mod weightclasskg;
-pub use self::weightclasskg::{WeightClassAny, WeightClassKg};
+pub use self::weightclasskg::{WeightClassAny, WeightClassKg, WeightClassLbs};
 
 mod writing_system;
 pub use self::writing_system::{infer_writing_system, writing_system, WritingSystem};

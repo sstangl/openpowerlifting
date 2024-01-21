@@ -9,7 +9,7 @@ use std::fmt::{self, Write};
 use std::num;
 use std::str::FromStr;
 
-use crate::{WeightAny, WeightKg, WeightUnits};
+use crate::{WeightAny, WeightKg, WeightLbs, WeightUnits};
 
 /// The definition of the "WeightClassKg" column.
 #[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
@@ -18,6 +18,20 @@ pub enum WeightClassKg {
     UnderOrEqual(WeightKg),
     /// A class defined as being over a minimum weight, for superheavies.
     Over(WeightKg),
+    /// No weight class information supplied.
+    #[default]
+    None,
+}
+
+/// The definition of the "WeightClassLbs" column.
+///
+/// This exists to be immediately converted into [`WeightClassKg`].
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
+pub enum WeightClassLbs {
+    /// A class defined as being under or equal to a maximum weight.
+    UnderOrEqual(WeightLbs),
+    /// A class defined as being over a minimum weight, for superheavies.
+    Over(WeightLbs),
     /// No weight class information supplied.
     #[default]
     None,
@@ -115,6 +129,36 @@ impl WeightClassKg {
     }
 }
 
+impl From<WeightClassLbs> for WeightClassKg {
+    fn from(value: WeightClassLbs) -> Self {
+        // Convert to kilograms. The problem is now that after the conversion, the weightclass
+        // values are far off their correct values. For example, instead of 90kg, this will have 89.8kg,
+        // instead of 82.5kg it will have 82.1kg. It's best to think of WeightClassLbs labels as
+        // containing names instead of actual values.
+        //
+        // In general, the values are always an under-estimate, and should be rounded to the nearest
+        // 0.5kg.
+        fn convert(lbs: WeightLbs) -> WeightKg {
+            // Get the raw representation and cast to i64, expanding the range.
+            let kg = f32::from(WeightKg::from(lbs));
+            let rounded = (kg * 2.0).ceil() / 2.0;
+
+            // TODO: This probably should round to the fed's CONFIG, not hardcoded.
+            if rounded == 117.5 {
+                WeightKg::from_f32(118.0)
+            } else {
+                WeightKg::from_f32(rounded)
+            }
+        }
+
+        match value {
+            WeightClassLbs::UnderOrEqual(lbs) => WeightClassKg::UnderOrEqual(convert(lbs)),
+            WeightClassLbs::Over(lbs) => WeightClassKg::Over(convert(lbs)),
+            WeightClassLbs::None => WeightClassKg::None,
+        }
+    }
+}
+
 impl fmt::Display for WeightClassKg {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         self.as_kg().fmt(f)
@@ -199,6 +243,22 @@ impl FromStr for WeightClassKg {
             v.parse::<WeightKg>().map(WeightClassKg::Over)
         } else {
             s.parse::<WeightKg>().map(WeightClassKg::UnderOrEqual)
+        }
+    }
+}
+
+impl FromStr for WeightClassLbs {
+    type Err = num::ParseFloatError;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        if s.is_empty() {
+            return Ok(WeightClassLbs::None);
+        }
+
+        if let Some(v) = s.strip_suffix('+') {
+            v.parse::<WeightLbs>().map(WeightClassLbs::Over)
+        } else {
+            s.parse::<WeightLbs>().map(WeightClassLbs::UnderOrEqual)
         }
     }
 }

@@ -270,6 +270,7 @@ enum Header {
     Country,
     EntryDate,
 
+    // Weights in kilograms.
     WeightClassKg,
     BodyweightKg,
     TotalKg,
@@ -291,6 +292,29 @@ enum Header {
     Deadlift2Kg,
     Deadlift3Kg,
     Deadlift4Kg,
+
+    // Weights in pounds. These get converted to kilograms.
+    WeightClassLbs,
+    BodyweightLbs,
+    TotalLbs,
+
+    Best3SquatLbs,
+    Squat1Lbs,
+    Squat2Lbs,
+    Squat3Lbs,
+    Squat4Lbs,
+
+    Best3BenchLbs,
+    Bench1Lbs,
+    Bench2Lbs,
+    Bench3Lbs,
+    Bench4Lbs,
+
+    Best3DeadliftLbs,
+    Deadlift1Lbs,
+    Deadlift2Lbs,
+    Deadlift3Lbs,
+    Deadlift4Lbs,
 
     // Columns below this point are ignored.
     Team,
@@ -343,27 +367,42 @@ fn check_headers(
     let header_map = HeaderIndexMap(header_index_vec);
 
     // If there is data for a particular lift, there must be a 'Best' column.
-    if has_squat && !header_map.has(Header::Best3SquatKg) {
-        report.error("Squat data requires a 'Best3SquatKg' column");
+    if has_squat && !header_map.has(Header::Best3SquatKg) && !header_map.has(Header::Best3SquatLbs)
+    {
+        report.error("Squat data requires a 'Best3SquatKg' or 'Best3SquatLbs' column");
     }
-    if has_bench && !header_map.has(Header::Best3BenchKg) {
-        report.error("Bench data requires a 'Best3BenchKg' column");
+    if has_bench && !header_map.has(Header::Best3BenchKg) && !header_map.has(Header::Best3BenchLbs)
+    {
+        report.error("Bench data requires a 'Best3BenchKg' or 'Best3BenchLbs' column");
     }
-    if has_deadlift && !header_map.has(Header::Best3DeadliftKg) {
-        report.error("Deadlift data requires a 'Best3DeadliftKg' column");
+    if has_deadlift
+        && !header_map.has(Header::Best3DeadliftKg)
+        && !header_map.has(Header::Best3DeadliftLbs)
+    {
+        report.error("Deadlift data requires a 'Best3DeadliftKg' or 'Best3BenchLbs' column");
     }
 
     // Require mandatory columns.
     {
         use Header::*;
-        const MANDATORY_COLUMNS: [Header; 6] = [Name, Sex, Equipment, TotalKg, Place, Event];
+        const MANDATORY_COLUMNS: [Header; 5] = [Name, Sex, Equipment, Place, Event];
         for column in &MANDATORY_COLUMNS {
             if !header_map.has(*column) {
                 report.error(format!("There must be a '{column}' column"));
             }
         }
-        if !header_map.has(Header::WeightClassKg) && !header_map.has(Header::BodyweightKg) {
-            report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column");
+        // There must be a total.
+        if !header_map.has(Header::TotalKg) && !header_map.has(Header::TotalLbs) {
+            report.error("There must be a 'TotalKg' or 'TotalLbs' column".to_string());
+        }
+
+        // Some weight-based information must be present.
+        if !header_map.has(Header::WeightClassKg)
+            && !header_map.has(Header::WeightClassLbs)
+            && !header_map.has(Header::BodyweightKg)
+            && !header_map.has(Header::BodyweightLbs)
+        {
+            report.error("There must be a 'BodyweightKg' or 'WeightClassKg' column (or in Lbs)");
         }
     }
 
@@ -827,14 +866,26 @@ fn check_column_agerange(
 fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut Report) -> Event {
     match s.parse::<Event>() {
         Ok(event) => {
-            if event.has_squat() && !headers.has(Header::Best3SquatKg) {
-                report.error_on(line, "Event has 'S', but no Best3SquatKg");
+            if event.has_squat()
+                && !headers.has(Header::Best3SquatKg)
+                && !headers.has(Header::Best3SquatLbs)
+            {
+                report.error_on(line, "Event has 'S', but no Best3SquatKg or Best3SquatLbs");
             }
-            if event.has_bench() && !headers.has(Header::Best3BenchKg) {
-                report.error_on(line, "Event has 'B', but no Best3BenchKg");
+            if event.has_bench()
+                && !headers.has(Header::Best3BenchKg)
+                && !headers.has(Header::Best3BenchLbs)
+            {
+                report.error_on(line, "Event has 'B', but no Best3BenchKg or Best3BenchLbs");
             }
-            if event.has_deadlift() && !headers.has(Header::Best3DeadliftKg) {
-                report.error_on(line, "Event has 'D', but no Best3DeadliftKg");
+            if event.has_deadlift()
+                && !headers.has(Header::Best3DeadliftKg)
+                && !headers.has(Header::Best3DeadliftLbs)
+            {
+                report.error_on(
+                    line,
+                    "Event has 'D', but no Best3DeadliftKg or Best3DeadliftLbs",
+                );
             }
             event
         }
@@ -846,7 +897,7 @@ fn check_column_event(s: &str, line: u64, headers: &HeaderIndexMap, report: &mut
 }
 
 /// Tests a column describing the amount of weight lifted.
-fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
+fn check_weight_kg(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, format!("{header} cannot be zero"));
@@ -855,18 +906,18 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
     }
 
     match s.parse::<WeightKg>() {
-        Ok(w) => {
+        Ok(kg) => {
             // Check for weights that are far beyond what's ever been lifted.
             const MAX_KG: i32 = 650;
             if header != Header::TotalKg
-                && (w > WeightKg::from_i32(MAX_KG) || w < WeightKg::from_i32(-MAX_KG))
+                && (kg > WeightKg::from_i32(MAX_KG) || kg < WeightKg::from_i32(-MAX_KG))
             {
                 report.error_on(
                     line,
                     format!("{header} '{s}' exceeds maximum expected weight"),
                 )
             }
-            w
+            kg
         }
         Err(_) => {
             report.error_on(line, format!("Invalid {header} '{s}'"));
@@ -875,19 +926,74 @@ fn check_weight(s: &str, line: u64, header: Header, report: &mut Report) -> Weig
     }
 }
 
-fn check_nonnegative_weight(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
+fn check_weight_lbs(s: &str, line: u64, header: Header, report: &mut Report) -> WeightKg {
+    // Disallow zeros.
+    if s == "0" {
+        report.error_on(line, format!("{header} cannot be zero"));
+    } else if s.starts_with('0') {
+        report.error_on(line, format!("{header} cannot start with 0 in '{s}'"));
+    }
+
+    match s.parse::<WeightLbs>() {
+        Ok(lbs) => {
+            // Check for weights that are far beyond what's ever been lifted.
+            const MAX_LBS: i32 = 1430;
+            if header != Header::TotalLbs
+                && (lbs > WeightLbs::from_i32(MAX_LBS) || lbs < WeightLbs::from_i32(-MAX_LBS))
+            {
+                report.error_on(
+                    line,
+                    format!("{header} '{s}' exceeds maximum expected weight"),
+                )
+            }
+            WeightKg::from(lbs)
+        }
+        Err(_) => {
+            report.error_on(line, format!("Invalid {header} '{s}'"));
+            WeightKg::default()
+        }
+    }
+}
+
+fn check_nonnegative_weight_kg(
+    s: &str,
+    line: u64,
+    header: Header,
+    report: &mut Report,
+) -> WeightKg {
     if s.starts_with('-') {
         report.error_on(line, format!("{header} '{s}' cannot be negative"))
     }
-    check_weight(s, line, header, report)
+    check_weight_kg(s, line, header, report)
+}
+
+fn check_nonnegative_weight_lbs(
+    s: &str,
+    line: u64,
+    header: Header,
+    report: &mut Report,
+) -> WeightKg {
+    if s.starts_with('-') {
+        report.error_on(line, format!("{header} '{s}' cannot be negative"))
+    }
+    check_weight_lbs(s, line, header, report)
 }
 
 fn check_column_bodyweightkg(s: &str, line: u64, report: &mut Report) -> WeightKg {
-    let weight = check_nonnegative_weight(s, line, Header::BodyweightKg, report);
+    let weight = check_nonnegative_weight_kg(s, line, Header::BodyweightKg, report);
     if weight != WeightKg::from_i32(0)
         && (weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300))
     {
         report.error_on(line, format!("Implausible BodyweightKg '{s}'"));
+    }
+    weight
+}
+fn check_column_bodyweightlbs(s: &str, line: u64, report: &mut Report) -> WeightKg {
+    let weight = check_nonnegative_weight_lbs(s, line, Header::BodyweightLbs, report);
+    if weight != WeightKg::from_i32(0)
+        && (weight < WeightKg::from_i32(15) || weight > WeightKg::from_i32(300))
+    {
+        report.error_on(line, format!("Implausible BodyweightLbs '{s}'"));
     }
     weight
 }
@@ -905,6 +1011,22 @@ fn check_column_weightclasskg(s: &str, line: u64, report: &mut Report) -> Weight
         Err(e) => {
             report.error_on(line, format!("Invalid WeightClassKg '{s}': {e}"));
             WeightClassKg::default()
+        }
+    }
+}
+fn check_column_weightclasslbs(s: &str, line: u64, report: &mut Report) -> WeightClassKg {
+    // Disallow zeros.
+    if s == "0" {
+        report.error_on(line, "WeightClassLbs cannot be zero");
+    } else if s.starts_with('0') && s != "0+" {
+        report.error_on(line, format!("WeightClassLbs cannot start with 0 in '{s}'"));
+    }
+
+    match s.parse::<WeightClassLbs>() {
+        Ok(w) => w.into(),
+        Err(e) => {
+            report.error_on(line, format!("Invalid WeightClassLbs '{s}': {e}"));
+            WeightClassLbs::default().into()
         }
     }
 }
@@ -1963,6 +2085,13 @@ pub fn do_check<R: io::Read>(
             ..Default::default()
         };
 
+        // TODO: This code currently lets you mix Kg and Lbs, so you can define both TotalKg
+        // and TotalLbs. That's incorrect -- we should force the units in a single direction.
+        // Either the meet is in pounds, or in kilos. However, note that international meets
+        // often do weigh-in in pounds, but lifting in kilos, so keep those separate.
+        //
+        // TODO: Rather than checking the existence of every column manually, walk over the columns.
+
         // Check mandatory fields.
         if let Some(idx) = headers.get(Header::Name) {
             entry.name = check_column_name(&record[idx], line, &mut report);
@@ -1994,71 +2123,140 @@ pub fn do_check<R: io::Read>(
         }
 
         // Check all the weight fields: they must contain non-zero values.
-        // Squat.
+        // Squat Kg.
         if let Some(idx) = headers.get(Header::Squat1Kg) {
-            entry.squat1kg = check_weight(&record[idx], line, Header::Squat1Kg, &mut report);
+            entry.squat1kg = check_weight_kg(&record[idx], line, Header::Squat1Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Squat2Kg) {
-            entry.squat2kg = check_weight(&record[idx], line, Header::Squat2Kg, &mut report);
+            entry.squat2kg = check_weight_kg(&record[idx], line, Header::Squat2Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Squat3Kg) {
-            entry.squat3kg = check_weight(&record[idx], line, Header::Squat3Kg, &mut report);
+            entry.squat3kg = check_weight_kg(&record[idx], line, Header::Squat3Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Squat4Kg) {
-            entry.squat4kg = check_weight(&record[idx], line, Header::Squat4Kg, &mut report);
+            entry.squat4kg = check_weight_kg(&record[idx], line, Header::Squat4Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Best3SquatKg) {
             entry.best3squatkg =
-                check_weight(&record[idx], line, Header::Best3SquatKg, &mut report);
+                check_weight_kg(&record[idx], line, Header::Best3SquatKg, &mut report);
+        }
+        // Squat Lbs.
+        if let Some(idx) = headers.get(Header::Squat1Lbs) {
+            entry.squat1kg = check_weight_lbs(&record[idx], line, Header::Squat1Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Squat2Lbs) {
+            entry.squat2kg = check_weight_lbs(&record[idx], line, Header::Squat2Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Squat3Lbs) {
+            entry.squat3kg = check_weight_lbs(&record[idx], line, Header::Squat3Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Squat4Lbs) {
+            entry.squat4kg = check_weight_lbs(&record[idx], line, Header::Squat4Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Best3SquatLbs) {
+            entry.best3squatkg =
+                check_weight_lbs(&record[idx], line, Header::Best3SquatLbs, &mut report);
         }
 
-        // Bench.
+        // Bench Kg.
         if let Some(idx) = headers.get(Header::Bench1Kg) {
-            entry.bench1kg = check_weight(&record[idx], line, Header::Bench1Kg, &mut report);
+            entry.bench1kg = check_weight_kg(&record[idx], line, Header::Bench1Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Bench2Kg) {
-            entry.bench2kg = check_weight(&record[idx], line, Header::Bench2Kg, &mut report);
+            entry.bench2kg = check_weight_kg(&record[idx], line, Header::Bench2Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Bench3Kg) {
-            entry.bench3kg = check_weight(&record[idx], line, Header::Bench3Kg, &mut report);
+            entry.bench3kg = check_weight_kg(&record[idx], line, Header::Bench3Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Bench4Kg) {
-            entry.bench4kg = check_weight(&record[idx], line, Header::Bench4Kg, &mut report);
+            entry.bench4kg = check_weight_kg(&record[idx], line, Header::Bench4Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Best3BenchKg) {
             entry.best3benchkg =
-                check_weight(&record[idx], line, Header::Best3BenchKg, &mut report);
+                check_weight_kg(&record[idx], line, Header::Best3BenchKg, &mut report);
+        }
+        // Bench Lbs.
+        if let Some(idx) = headers.get(Header::Bench1Lbs) {
+            entry.bench1kg = check_weight_lbs(&record[idx], line, Header::Bench1Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Bench2Lbs) {
+            entry.bench2kg = check_weight_lbs(&record[idx], line, Header::Bench2Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Bench3Lbs) {
+            entry.bench3kg = check_weight_lbs(&record[idx], line, Header::Bench3Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Bench4Lbs) {
+            entry.bench4kg = check_weight_lbs(&record[idx], line, Header::Bench4Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Best3BenchLbs) {
+            entry.best3benchkg =
+                check_weight_lbs(&record[idx], line, Header::Best3BenchLbs, &mut report);
         }
 
-        // Deadlift.
+        // Deadlift Kg.
         if let Some(idx) = headers.get(Header::Deadlift1Kg) {
-            entry.deadlift1kg = check_weight(&record[idx], line, Header::Deadlift1Kg, &mut report);
+            entry.deadlift1kg =
+                check_weight_kg(&record[idx], line, Header::Deadlift1Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Deadlift2Kg) {
-            entry.deadlift2kg = check_weight(&record[idx], line, Header::Deadlift2Kg, &mut report);
+            entry.deadlift2kg =
+                check_weight_kg(&record[idx], line, Header::Deadlift2Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Deadlift3Kg) {
-            entry.deadlift3kg = check_weight(&record[idx], line, Header::Deadlift3Kg, &mut report);
+            entry.deadlift3kg =
+                check_weight_kg(&record[idx], line, Header::Deadlift3Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Deadlift4Kg) {
-            entry.deadlift4kg = check_weight(&record[idx], line, Header::Deadlift4Kg, &mut report);
+            entry.deadlift4kg =
+                check_weight_kg(&record[idx], line, Header::Deadlift4Kg, &mut report);
         }
         if let Some(idx) = headers.get(Header::Best3DeadliftKg) {
             entry.best3deadliftkg =
-                check_weight(&record[idx], line, Header::Best3DeadliftKg, &mut report);
+                check_weight_kg(&record[idx], line, Header::Best3DeadliftKg, &mut report);
+        }
+        // Deadlift Lbs.
+        if let Some(idx) = headers.get(Header::Deadlift1Lbs) {
+            entry.deadlift1kg =
+                check_weight_lbs(&record[idx], line, Header::Deadlift1Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Deadlift2Lbs) {
+            entry.deadlift2kg =
+                check_weight_lbs(&record[idx], line, Header::Deadlift2Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Deadlift3Lbs) {
+            entry.deadlift3kg =
+                check_weight_lbs(&record[idx], line, Header::Deadlift3Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Deadlift4Lbs) {
+            entry.deadlift4kg =
+                check_weight_lbs(&record[idx], line, Header::Deadlift4Lbs, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::Best3DeadliftLbs) {
+            entry.best3deadliftkg =
+                check_weight_lbs(&record[idx], line, Header::Best3DeadliftLbs, &mut report);
         }
 
         // TotalKg is a positive weight if present or 0 if missing.
         if let Some(idx) = headers.get(Header::TotalKg) {
             entry.totalkg =
-                check_nonnegative_weight(&record[idx], line, Header::TotalKg, &mut report);
+                check_nonnegative_weight_kg(&record[idx], line, Header::TotalKg, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::TotalLbs) {
+            entry.totalkg =
+                check_nonnegative_weight_lbs(&record[idx], line, Header::TotalLbs, &mut report);
         }
 
         if let Some(idx) = headers.get(Header::BodyweightKg) {
             entry.bodyweightkg = check_column_bodyweightkg(&record[idx], line, &mut report);
         }
+        if let Some(idx) = headers.get(Header::BodyweightLbs) {
+            entry.bodyweightkg = check_column_bodyweightlbs(&record[idx], line, &mut report);
+        }
         if let Some(idx) = headers.get(Header::WeightClassKg) {
             entry.weightclasskg = check_column_weightclasskg(&record[idx], line, &mut report);
+        }
+        if let Some(idx) = headers.get(Header::WeightClassLbs) {
+            entry.weightclasskg = check_column_weightclasslbs(&record[idx], line, &mut report);
         }
 
         // If no bodyweight is given but there is a bounded weightclass,

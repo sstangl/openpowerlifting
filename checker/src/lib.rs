@@ -84,8 +84,7 @@ pub fn check(
         let extension: &str = entry
             .path()
             .extension()
-            .map(OsStr::to_str)
-            .flatten()
+            .and_then(OsStr::to_str)
             .unwrap_or_default();
 
         if extension == "pdf" {
