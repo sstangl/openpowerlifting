@@ -16,7 +16,7 @@ pub use meet::Meet;
 pub struct CheckResult {
     pub reports: Vec<Report>,
     pub meet: Option<Meet>,
-    pub entries: Option<Vec<Entry>>,
+    pub entries: Option<Box<[Entry]>>,
 }
 
 /// Creates a [csv::ReaderBuilder], used to read CSV files.

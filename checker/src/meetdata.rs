@@ -9,16 +9,13 @@ use crate::checklib::{Entry, Meet};
 /// All checker-generated data structures for a single meet.
 pub struct SingleMeetData {
     pub meet: Meet,
-    pub entries: Vec<Entry>,
+    pub entries: Box<[Entry]>,
 }
 
 /// Permanent owner of all data from all meets.
 pub struct AllMeetData {
-    /// An owned vector of all meet data.
-    ///
-    /// Once assigned, the Vec may not be resized. To enforce this invariant,
-    /// getters are used that only provide a slice.
-    meets: Vec<SingleMeetData>,
+    /// An owned array referencing all meet data.
+    meets: Box<[SingleMeetData]>,
 }
 
 /// Directions to a specific `Entry` within the `AllMeetData`.
@@ -66,19 +63,21 @@ pub type LifterMap = FxHashMap<Username, Vec<EntryIndex>>;
 
 impl From<Vec<SingleMeetData>> for AllMeetData {
     fn from(v: Vec<SingleMeetData>) -> AllMeetData {
-        AllMeetData { meets: v }
+        AllMeetData {
+            meets: v.into_boxed_slice(),
+        }
     }
 }
 
 impl AllMeetData {
     /// Borrows the meet data immutably.
     pub fn meets(&self) -> &[SingleMeetData] {
-        self.meets.as_slice()
+        &self.meets
     }
 
-    /// Borrows the meet data mutably. The underlying vector remains immutable.
+    /// Borrows the meet data mutably.
     pub fn meets_mut(&mut self) -> &mut [SingleMeetData] {
-        self.meets.as_mut_slice()
+        &mut self.meets
     }
 
     /// Borrows a `Meet` by `EntryIndex`.

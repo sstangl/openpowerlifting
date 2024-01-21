@@ -154,6 +154,7 @@ mod tests {
     /// from a list of entries.
     fn meetdata_from_vec(entries: Vec<Entry>) -> AllMeetData {
         let meet = Meet::test_default();
+        let entries = entries.into_boxed_slice();
         let singlemeetdata = SingleMeetData { meet, entries };
         AllMeetData::from(vec![singlemeetdata])
     }

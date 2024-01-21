@@ -88,7 +88,10 @@ impl HeaderIndexMap {
 
 pub struct EntriesCheckResult {
     pub report: Report,
-    pub entries: Option<Vec<Entry>>,
+    // TODO: Memory could be improved further by using bump allocation in an arena.
+    //  Have each worker thread allocate entries into its own pool, rather than a separate
+    //  allocation per meet.
+    pub entries: Option<Box<[Entry]>>,
 }
 
 /// Returns s as a string in Unicode NFKC form.
@@ -2467,7 +2470,7 @@ pub fn do_check<R: io::Read>(
 
     Ok(EntriesCheckResult {
         report,
-        entries: Some(entries),
+        entries: Some(entries.into_boxed_slice()),
     })
 }
 

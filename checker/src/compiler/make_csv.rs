@@ -320,7 +320,7 @@ pub fn make_csv(
         meets_wtr.serialize(MeetsRow::from(meet, meet_id))?;
 
         // Write a line for each entry.
-        for entry in entries {
+        for entry in entries.iter() {
             // See whether this lifter already exists in the EntryLifterDataMap.
             // If it does not, then we haven't seen the lifter before,
             // so a new LifterID is generated.
