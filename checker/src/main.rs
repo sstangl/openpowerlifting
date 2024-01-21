@@ -1,7 +1,7 @@
 //! Checks CSV data files for validity.
 
 use checker::report_count::ReportCount;
-use checker::{compiler, disambiguator, AllMeetData, SingleMeetData};
+use checker::{compiler, disambiguator, AllMeetData, Severity, SingleMeetData};
 use colored::*;
 use opltypes::Username;
 use rayon::prelude::*;
@@ -78,14 +78,11 @@ fn write_report(handle: &mut io::StdoutLock, report: checker::Report) {
 
     // Output each message with some festive coloring.
     for message in report.messages {
-        match message {
-            checker::Message::Error(s) => {
-                let _ = handle.write_fmt(format_args!(" {}\n", s.bold().red()));
-            }
-            checker::Message::Warning(s) => {
-                let _ = handle.write_fmt(format_args!(" {}\n", s.bold().yellow()));
-            }
-        }
+        let text = match message.severity {
+            Severity::Error => message.text.bold().red(),
+            Severity::Warning => message.text.bold().yellow(),
+        };
+        let _ = handle.write_fmt(format_args!(" {text}\n"));
     }
 }
 

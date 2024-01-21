@@ -29,7 +29,7 @@ use meetdata::EntryIndex;
 pub use meetdata::{AllMeetData, LifterMap, SingleMeetData};
 
 mod report;
-pub use report::{Message, Report};
+pub use report::{Message, Report, Severity};
 
 pub mod report_count;
 

@@ -46,16 +46,16 @@ let entriesErrorPre: HTMLElement;
 //
 // It's defined in Rust, in checker/src/lib.rs.
 interface Message {
-  Error?: string;
-  Warning?: string;
+  severity: string;
+  text: string;
 };
 
 // Converts a Message object to a simple, uncolored string, for the moment.
 function msg2str(msg: Message): string {
-    if (msg.hasOwnProperty("Error")) {
-        return "Error: " + msg["Error"];
+    if (msg.severity === "Warning") {
+        return "<b><font color=\"#fdb93e\">Warning: " + msg.text + "</font></b>";
     }
-    return "Warning: " + msg["Warning"];
+    return "<b><font color=\"#fb3640\">Error: " + msg.text + "</font></b>";
 }
 
 function runChecker(): void {
@@ -83,7 +83,7 @@ function runChecker(): void {
             }
 
             if (output.meet_messages.length > 0) {
-                meetErrorPre.innerText = output.meet_messages.map(msg2str).join("\n");
+                meetErrorPre.innerHTML = output.meet_messages.map(msg2str).join("\n");
             } else {
                 meetErrorPre.innerText = "Pass! :)";
             }

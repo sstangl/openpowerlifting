@@ -13,14 +13,32 @@ use std::path::PathBuf;
 
 use crate::report_count::ReportCount;
 
+/// The severity of the report message.
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Serialize)]
+pub enum Severity {
+    /// Errors are shown in red and halt compilation.
+    ///
+    /// They represent critical errors and must be fixed for compilation to proceed.
+    Error,
+
+    /// Warnings are shown in yellow and do not halt compilation.
+    ///
+    /// They are intended as observations for things that you should fix, but it's fine
+    /// to fix them later. Warnings become obnoxious as they increase in number, which
+    /// provides pressure to fix them quickly.
+    Warning,
+}
+
 /// A data error or warning message that should be reported.
-#[derive(Debug, Serialize)]
-pub enum Message {
-    Error(String),
-    Warning(String),
+#[derive(Clone, Debug, Serialize)]
+pub struct Message {
+    pub severity: Severity,
+    pub text: String,
 }
 
 /// Accumulates messages that should be reported as a single batch.
+///
+/// Serialization must match the deserialization format in "checker.ts".
 #[derive(Debug, Serialize)]
 pub struct Report {
     /// Each report represents errors/warnings from a single file. This is its path.
@@ -39,25 +57,33 @@ impl Report {
     }
 
     /// Reports an error, which causes checks to fail.
-    pub fn error(&mut self, message: impl ToString) {
-        self.messages.push(Message::Error(message.to_string()));
+    pub fn error(&mut self, text: impl ToString) {
+        let message = Message {
+            severity: Severity::Error,
+            text: text.to_string(),
+        };
+        self.messages.push(message);
     }
 
     /// Reports an error on a specific line.
     pub fn error_on(&mut self, line: u64, message: impl ToString) {
-        let msg = format!(" Line {line}: {}", message.to_string());
-        self.messages.push(Message::Error(msg));
+        let text = format!(" Line {line}: {}", message.to_string());
+        self.error(text);
     }
 
     /// Reports a warning, which allows checks to pass with a note.
-    pub fn warning(&mut self, message: impl ToString) {
-        self.messages.push(Message::Warning(message.to_string()));
+    pub fn warning(&mut self, text: impl ToString) {
+        let message = Message {
+            severity: Severity::Warning,
+            text: text.to_string(),
+        };
+        self.messages.push(message);
     }
 
     /// Reports a warning on a specific line.
     pub fn warning_on(&mut self, line: u64, message: impl ToString) {
-        let msg = format!(" Line {line}: {}", message.to_string());
-        self.messages.push(Message::Warning(msg));
+        let text = format!(" Line {line}: {}", message.to_string());
+        self.warning(text);
     }
 
     /// Whether a report has any messages.
@@ -71,12 +97,11 @@ impl Report {
         let mut warnings = 0;
 
         for message in &self.messages {
-            match message {
-                Message::Error(_) => errors += 1,
-                Message::Warning(_) => warnings += 1,
+            match message.severity {
+                Severity::Error => errors += 1,
+                Severity::Warning => warnings += 1,
             }
         }
-
         ReportCount::new(errors, warnings)
     }
 
