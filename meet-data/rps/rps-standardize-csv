@@ -249,13 +249,13 @@ def fixequipment(csv):
         # "Classic" means belt and wrist wraps only to the RPS.
         elif (s == 'raw classic' or s == 'raw clas' or s == 'raw class' or
                 s == 'raw c' or s == 'rc'):
-            x = 'Raw'
+            x = 'Bare'
         # This one below looks the same, but actually has some unicode BS going
         # on.
         elif s == 'raw clas' or s == 'raw classic' or s == 'raw' or s == 'raw -u':
-            x = 'Raw'
+            x = 'Bare'
         elif s == 'raw – u' or 'classic' in s or s == 'raw calssic':
-            x = 'Raw'
+            x = 'Bare'
 
         # "Modern" allows wraps and sleeves for the squat and maybe the deadlift.
         # They track rankings for sleeves independently, but don't mark that
