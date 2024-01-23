@@ -41,10 +41,9 @@ def color(s):
 
 def getpages(url, pagerange):
     LOGGER.setLevel(logging.WARNING)
-    profile = webdriver.FirefoxProfile()
     foptions = Options()
     foptions.headless = True
-    driver = webdriver.Firefox(profile, options=foptions)
+    driver = webdriver.Firefox(options=foptions)
     driver.get(url)
 
     pages = []
