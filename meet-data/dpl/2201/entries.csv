@@ -1,35 +1,35 @@
-Place,Name,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Sex,Division,Event,WeightClassKg,BirthDate
-1,Wendy Ekkelkamp,80.1,105,67.5,132.5,305,Raw,F,Juniors 20-23,SBD,82.5,
-1,Sharon van der Linden,77.7,137.5,72.5,160,370,Raw,F,Open,SBD,82.5,
-1,Ariana Hoeben,65.9,127.5,60,142.5,330,Raw,F,Open,SBD,67.5,
-G,Max Neuhaus,137.4,230,145,260,635,Raw,M,Juniors 20-23,SBD,140,
-1,Tim Geurts,89.2,200,135,235,570,Raw,M,Masters 45-49,SBD,90,
-1,Henk Nijstad,82.5,110,90,140,340,Raw,M,Masters 45-49,SBD,82.5,
-1,Tom Schellekens,74.6,160,95,220,475,Raw,M,Open,SBD,75,
-1,Tom Kiewra,79.3,192.5,135,232.5,560,Raw,M,Open,SBD,82.5,
-2,Don van der Steeg,80.8,190,125,190,505,Raw,M,Open,SBD,82.5,
-1,Taidgh van der Kraan,89.2,245,155,280,680,Raw,M,Open,SBD,90,
-2,Guillaume Ariës,87.4,225,150,250,625,Raw,M,Open,SBD,90,
-3,Rik Schuilling,86.8,192.5,125,242.5,560,Raw,M,Open,SBD,90,
-1,Frank van Leeuwen,100,240,140,260,640,Raw,M,Open,SBD,100,
-2,Yannick Meijer,92.1,225,130,260,615,Raw,M,Open,SBD,100,
-G,Bjorn Stallaert,98.2,207.5,142.5,220,570,Raw,M,Open,SBD,100,
-1,Jugraj Singh,108.8,320,210,340,870,Raw,M,Open,SBD,110,
-2,Berend Aaftink,109,310,190,342.5,842.5,Raw,M,Open,SBD,110,
-3,Chris Kunst,105.8,260,185,320,765,Raw,M,Open,SBD,110,
-G,Philipp Rohlich,122.6,290,192.5,317.5,800,Raw,M,Open,SBD,125,
-1,Mark de Backer,115.9,245,185,345,775,Raw,M,Open,SBD,125,
-2,Kris Appelman,123.3,225,142.5,265,632.5,Raw,M,Open,SBD,125,
-3,Dave Snakenborg,120.5,235,135,230,600,Raw,M,Open,SBD,125,
-G,Joshua Vermeulen,148.8,310,205,280,795,Raw,M,Open,SBD,140+,
-1,Dylan Brink,102.6,235,142.5,242.5,620,Raw,M,Juniors 20-23,SBD,110,
-1,Kadim Al-Buarab,81.7,212.5,145,245,602.5,Raw,M,Open,SBD,82.5,
-1,Sebastiaan Slotema,108.8,300,200,330,830,Raw,M,Open,SBD,110,
-1,Marto Metselaar,111.9,340,190,290,820,Raw,M,Open,SBD,125,
-2,Tibor Arnout,118.8,275,172.5,335,782.5,Raw,M,Open,SBD,125,
-3,Tim Vermeer,119.4,300,170,275,745,Raw,M,Open,SBD,125,
-G,Otto Welt,130.6,280,165,290,735,Raw,M,Open,SBD,140,
-G,Maarten Bollen,82.5,,102.5,140,242.5,Raw,M,Open,BD,82.5,
-G,Gemma Poras,65.1,,70,,70,Raw,F,Open,B,67.5,
-1,Marcel Wagelaar,124.8,,,320,320,Raw,M,Open,D,125,
-G,Kristof De Coninck,125.9,,,352.5,352.5,Raw,M,Open,D,140,
+Place,Name,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Equipment,Sex,Division,Event,WeightClassKg,BirthDate,Country
+1,Wendy Ekkelkamp,80.1,105,67.5,132.5,305,Raw,F,Juniors 20-23,SBD,82.5,,Netherlands
+1,Sharon van der Linden,77.7,137.5,72.5,160,370,Raw,F,Open,SBD,82.5,,Netherlands
+1,Ariana Hoeben,65.9,127.5,60,142.5,330,Raw,F,Open,SBD,67.5,,Netherlands
+G,Max Neuhaus,137.4,230,145,260,635,Raw,M,Juniors 20-23,SBD,140,,Germany
+1,Tim Geurts,89.2,200,135,235,570,Raw,M,Masters 45-49,SBD,90,,Netherlands
+1,Henk Nijstad,82.5,110,90,140,340,Raw,M,Masters 45-49,SBD,82.5,,Netherlands
+1,Tom Schellekens,74.6,160,95,220,475,Raw,M,Open,SBD,75,,Netherlands
+1,Tom Kiewra,79.3,192.5,135,232.5,560,Raw,M,Open,SBD,82.5,,Netherlands
+2,Don van der Steeg,80.8,190,125,190,505,Raw,M,Open,SBD,82.5,,Netherlands
+1,Taidgh van der Kraan,89.2,245,155,280,680,Raw,M,Open,SBD,90,,Netherlands
+2,Guillaume Ariës,87.4,225,150,250,625,Raw,M,Open,SBD,90,,Netherlands
+3,Rik Schuilling,86.8,192.5,125,242.5,560,Raw,M,Open,SBD,90,,Netherlands
+1,Frank van Leeuwen,100,240,140,260,640,Raw,M,Open,SBD,100,,Netherlands
+2,Yannick Meijer,92.1,225,130,260,615,Raw,M,Open,SBD,100,,Netherlands
+G,Bjorn Stallaert,98.2,207.5,142.5,220,570,Raw,M,Open,SBD,100,,Netherlands
+1,Jugraj Singh,108.8,320,210,340,870,Raw,M,Open,SBD,110,,Netherlands
+2,Berend Aaftink,109,310,190,342.5,842.5,Raw,M,Open,SBD,110,,Netherlands
+3,Chris Kunst,105.8,260,185,320,765,Raw,M,Open,SBD,110,,Netherlands
+G,Philipp Rohlich,122.6,290,192.5,317.5,800,Raw,M,Open,SBD,125,,Germany
+1,Mark de Backer,115.9,245,185,345,775,Raw,M,Open,SBD,125,,Netherlands
+2,Kris Appelman,123.3,225,142.5,265,632.5,Raw,M,Open,SBD,125,,Netherlands
+3,Dave Snakenborg,120.5,235,135,230,600,Wraps,M,Open,SBD,125,,Netherlands
+G,Joshua Vermeulen,148.8,310,205,280,795,Raw,M,Open,SBD,140+,,Belgium
+1,Dylan Brink,102.6,235,142.5,242.5,620,Raw,M,Juniors 20-23,SBD,110,,Netherlands
+1,Kadim Al-Buarab,81.7,212.5,145,245,602.5,Wraps,M,Open,SBD,82.5,,Netherlands
+1,Sebastiaan Slotema,108.8,300,200,330,830,Wraps,M,Open,SBD,110,,Netherlands
+1,Marto Metselaar,111.9,340,190,290,820,Wraps,M,Open,SBD,125,,Netherlands
+2,Tibor Arnout,118.8,275,172.5,335,782.5,Wraps,M,Open,SBD,125,,Netherlands
+3,Tim Vermeer,119.4,300,170,275,745,Wraps,M,Open,SBD,125,,Netherlands
+G,Otto Welt,130.6,280,165,290,735,Wraps,M,Open,SBD,140,,Germany
+G,Maarten Bollen,82.5,,102.5,140,242.5,Raw,M,Open,BD,82.5,,Netherlands
+G,Gemma Poras,65.1,,70,,70,Raw,F,Open,B,67.5,,Chile
+1,Marcel Wagelaar,124.8,,,320,320,Raw,M,Open,D,125,,Netherlands
+G,Kristof De Coninck,125.9,,,352.5,352.5,Raw,M,Open,D,140,,Belgium
