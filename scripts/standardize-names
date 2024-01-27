@@ -44,7 +44,10 @@ def load_names(datafilepath):
 def correct_names(namehash, cyrhash, greekhash, entriespath):
     csv = oplcsv.Csv(entriespath)
     if 'Name' not in csv.fieldnames:
-        print(entriespath)
+        RED = '\u001b[31m'
+        RESET = '\u001b[0m'
+        print(RED + entriespath + RESET)
+        print(RED + "error: 'Name' column starts with an invisible character" + RESET)
     assert 'Name' in csv.fieldnames
 
     nameidx = csv.index('Name')
