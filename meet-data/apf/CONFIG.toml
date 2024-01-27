@@ -498,6 +498,7 @@
     fsswpc = {name ="F_SES_WPC",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmwpc = {name ="F_SEM_WPC",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="F"}
     fyrwpc = {name ="F_YR_WPC",min=0,max=12,equipment="Raw",sex="F"} #Youth
+    fycrwpc = {name ="F_YCR_WPC",min=0,max=12,equipment=["Raw","Wraps"],sex="F"} #Youth
     fyeswpc = {name ="F_YES_WPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
     fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="F"} #Youth
     fgemwpc = {name ="F_GEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",place="G"} #Guest
