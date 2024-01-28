@@ -114,11 +114,15 @@ pub enum Federation {
     #[strum(to_string = "APF", serialize = "apf")]
     APF,
 
+    /// Australian Powerlifting Alliance, IPF.
+    #[strum(to_string = "APLA", serialize = "apla")]
+    APLA,
+
     /// Alianza Paraguaya de Powerlifting, Paraguay GPA affiliate.
     #[strum(to_string = "APP", serialize = "app")]
     APP,
 
-    /// Australian Powerlifting Union, IPF.
+    /// Australian Powerlifting Union, formerly IPF, now WDFPF.
     #[strum(to_string = "APU", serialize = "apu")]
     APU,
 
@@ -1826,6 +1830,7 @@ impl Federation {
             Federation::APA => false,
             Federation::APC => false,
             Federation::APF => false,
+            Federation::APLA => FULLY_TESTED,
             Federation::APP => false,
             Federation::APU => FULLY_TESTED,
             Federation::APUA => FULLY_TESTED,
@@ -2239,6 +2244,7 @@ impl Federation {
             Federation::APA => Some(Country::USA),
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
+            Federation::APLA => Some(Country::Australia),
             Federation::APP => Some(Country::Paraguay),
             Federation::APU => Some(Country::Australia),
             Federation::APUA => Some(Country::Argentina),
@@ -2652,8 +2658,16 @@ impl Federation {
             Federation::APA => Some(Federation::WPA),
             Federation::APC => Some(Federation::WUAP),
             Federation::APF => Some(Federation::WPC),
+            Federation::APLA => Some(Federation::IPF),
             Federation::APP => Some(Federation::GPA),
-            Federation::APU => Some(Federation::IPF),
+            Federation::APU => {
+                // The APU withdrew association with the IPF and affiliated with WDFPF from 2024-01-01 onwards.
+                if date >= date!(2024-01-01) {
+                    Some(Federation::WDFPF)
+                } else {
+                    Some(Federation::IPF)
+                }
+            }
             Federation::APUA => Some(Federation::WABDL),
             Federation::ARPL => Some(Federation::IPL),
             Federation::AsianPF => Some(Federation::IPF),
@@ -3192,8 +3206,16 @@ impl Federation {
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
+            Federation::APLA => Federation::ipf_rules_on(date),
             Federation::APP => PointsSystem::Wilks,
-            Federation::APU => Federation::ipf_rules_on(date),
+            Federation::APU => {
+                // Due to change of affiliation from IPF to WDFPF in 2024.
+                if date.year() >= 2024 {
+                    PointsSystem::Wilks
+                } else {
+                    Federation::ipf_rules_on(date)
+                }
+            }
             Federation::APUA => PointsSystem::Wilks,
             Federation::ARPL => Federation::ipl_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),

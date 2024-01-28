@@ -124,7 +124,8 @@
   <option value="all-australia" {% if selection.federation == "AllAustralia" %}selected{% endif %}>{{strings.selectors.fed.all_australia}}</option>
   <option value="all-australia-tested" {% if selection.federation == "AllAustraliaTested" %}selected{% endif %}>All Tested Australian Lifters</option>
   <option value="aaplf" {% if selection.federation == "AAPLF" %}selected{% endif %}>AAPLF - Australian Amateur Powerlifting Federation [IPF]</option>
-  <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union [IPF]</option>
+  <option value="apla" {% if selection.federation == "APLA" %}selected{% endif %}>APLA - Australian Powerlifting Alliance [IPF]</option>
+  <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union [WDFPF]</option>
   <option value="ausdfpf" {% if selection.federation == "AusDFPF" %}selected{% endif %}>AusDFPF - Australian Drug Free Powerlifting Federation [WDFPF]</option>
   <option value="auspf" {% if selection.federation == "AusPF" %}selected{% endif %}>AusPF - Australian Powerlifting Federation [IPF]</option>
   <option value="auspl" {% if selection.federation == "AusPL" %}selected{% endif %}>AusPL - Australian Powerlifting League</option>
@@ -320,7 +321,6 @@
   <option value="all-india" {% if selection.federation == "AllIndia" %}selected{% endif %}>{{strings.selectors.fed.all_india}}</option>
   <option value="pi" {% if selection.federation == "PI" %}selected{% endif %}>PI - Powerlifting India [IPF]</option>
   <option value="wp-india" {% if selection.federation == "WP-India" %}selected{% endif %}>World Powerlifitng India [WP]</option>
-  <option value="wpc-india" {% if selection.federation == "WPC-India" %}selected{% endif %}>WPC India [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.indonesia}}">
   <option value="all-indonesia" {% if selection.federation == "AllIndonesia" %}selected{% endif %}>{{strings.selectors.fed.all_indonesia}}</option>
