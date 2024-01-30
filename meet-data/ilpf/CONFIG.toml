@@ -14,6 +14,10 @@
     masters_70_74 = {name = "M7", min = 70, max = 74}
     teen = {name = "T", min = 13, max = 19}
 
+    # different meets use different teen division definitions
+    teen_13_16 = {name = "Teens1", min = 13, max = 16}
+    teen_17_19 = {name = "Teens2", min = 17, max = 19}
+
     # IPF
     master1 = {name="Masters 1",min=39.5,max=48.5}
     master2 = {name="Masters 2",min=49.5,max=58.5}
