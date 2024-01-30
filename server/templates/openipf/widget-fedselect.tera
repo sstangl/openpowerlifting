@@ -50,6 +50,7 @@
   <option value="hpf" {% if selection.federation == "HPF" %}selected{% endif %}>HPF / {{strings.country.greece}}</option>
   <option value="hpls" {% if selection.federation == "HPLS" %}selected{% endif %}>HPLS / {{strings.country.croatia}}</option>
   <option value="hunpower" {% if selection.federation == "Hunpower" %}selected{% endif %}>Hunpower / {{strings.country.hungary}}</option>
+  <option value="ilpf" {% if selection.federation == "ILPF" %}selected{% endif %}>ILPF / {{strings.country.israel}}</option>
   <option value="all-ipf-belgium" {% if selection.federation == "AllIPFBelgium" %}selected{% endif %}>IPF-Belgium / {{strings.country.belgium}}</option>
   <option value="ipf-china" {% if selection.federation == "IPF-China" %}selected{% endif %}>IPF-China / {{strings.country.china}}</option>
   <option value="iranbbf" {% if selection.federation == "IranBBF" %}selected{% endif %}>IranBBF / {{strings.country.iran}}</option>
