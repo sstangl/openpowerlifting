@@ -1,5 +1,6 @@
 [divisions]
     open = {name = "O", min = 0, max = 999}
+    # pre-IPF
     teen_13_15 = {name = "T1", min = 13, max = 15}
     teen_16_17 = {name = "T2", min = 16, max = 17}
     teen_18_19 = {name = "T3", min = 18, max = 19}
@@ -11,18 +12,36 @@
     masters_60_64 = {name = "M5", min = 60, max = 64}
     masters_65_69 = {name = "M6", min = 64, max = 69}
     masters_70_74 = {name = "M7", min = 70, max = 74}
-
     teen = {name = "T", min = 13, max = 19}
+
+    # IPF
+    master1 = {name="Masters 1",min=39.5,max=48.5}
+    master2 = {name="Masters 2",min=49.5,max=58.5}
+    master3 = {name="Masters 3",min=59.5,max=68.5}
+    master4 = {name="Masters 4",min=69.5,max=999}
+    subjunior = {name="Sub-Juniors", min=0, max=17.5}
+    junior = {name="Juniors", min=18, max=23}
+
     guest = {name = "G", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
-    date_range = ["1990-01-01", "9999-01-01"]
+    date_range = ["1990-01-01", "2023-12-31"]
     sex = "M"
 
 [weightclasses.default_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["1990-01-01", "9999-01-01"]
+    date_range = ["1990-01-01", "2023-12-31"]
+    sex = "F"
+
+[weightclasses.IPF_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range = ["2024-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.IPF_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range = ["2024-01-01", "9999-01-01"]
     sex = "F"
 
 [exemptions]

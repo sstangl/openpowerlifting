@@ -654,8 +654,8 @@ pub enum Federation {
     ILPA,
 
     /// Israeli Powerlifting.
-    #[strum(to_string = "ILPL", serialize = "ilpl")]
-    ILPL,
+    #[strum(to_string = "ILPF", serialize = "ilpf")]
+    ILPF,
 
     /// International Nova Strength Association, tiny Texas "fed".
     ///
@@ -1955,7 +1955,14 @@ impl Federation {
             Federation::HKPF => FULLY_TESTED,
             Federation::HPF => FULLY_TESTED,
             Federation::ILPA => false,
-            Federation::ILPL => false,
+            Federation::ILPF => {
+                // ILPF switched to IPF and drug-tested
+                if date.year() >= 2023 {
+                    FULLY_TESTED
+                } else {
+                    false
+                }
+            },
             Federation::INSA => false,
             Federation::IPA => false,
             Federation::IPAAZE => false,
@@ -2369,7 +2376,7 @@ impl Federation {
             Federation::IDFPF => Some(Country::Ireland),
             Federation::IKF => Some(Country::Iceland),
             Federation::ILPA => Some(Country::Israel),
-            Federation::ILPL => Some(Country::Israel),
+            Federation::ILPF => Some(Country::Israel),
             Federation::INSA => Some(Country::USA),
             Federation::IPA => Some(Country::USA),
             Federation::IPAAZE => Some(Country::Azerbaijan),
@@ -2837,7 +2844,14 @@ impl Federation {
             Federation::IDFPF => Some(Federation::WDFPF),
             Federation::IKF => Some(Federation::GPC),
             Federation::ILPA => Some(Federation::GPA),
-            Federation::ILPL => None,
+            Federation::ILPF => {
+                // Israeli IPF affiliate from 2024
+                if date.year() >= 2024 {
+                    Some(Federation::IPF)
+                } else {
+                    None
+                }
+            }
             Federation::INSA => None,
             Federation::IPA => None,
             Federation::IPAAZE => Some(Federation::IPA),
@@ -3351,7 +3365,7 @@ impl Federation {
             Federation::IDFPF => PointsSystem::SchwartzMalone,
             Federation::IKF => PointsSystem::Wilks,
             Federation::ILPA => PointsSystem::Wilks,
-            Federation::ILPL => PointsSystem::Wilks,
+            Federation::ILPF => Federation::ipf_rules_on(date),
             Federation::INSA => PointsSystem::Wilks,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPAAZE => PointsSystem::Wilks,
