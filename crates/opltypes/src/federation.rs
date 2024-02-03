@@ -1555,6 +1555,11 @@ pub enum Federation {
     #[strum(to_string = "WPPL-Belarus", serialize = "wppl-belarus")]
     WPPLBelarus,
 
+    /// World Power Power League, Georgia.
+    #[serde(rename = "WPPL-Georgia")]
+    #[strum(to_string = "WPPL-Georgia", serialize = "wppl-georgia")]
+    WPPLGeorgia,
+
     /// World Power Power League, Mexico.
     #[serde(rename = "WPPL-Mexico")]
     #[strum(to_string = "WPPL-Mexico", serialize = "wppl-mexico")]
@@ -2177,6 +2182,7 @@ impl Federation {
             Federation::WPNZ => FULLY_TESTED,
             Federation::WPPLArgentina => false,
             Federation::WPPLBelarus => false,
+            Federation::WPPLGeorgia => false,
             Federation::WPPLMexico => false,
             Federation::WPPLPeru => false,
             Federation::WPPLRussia => false,
@@ -2583,6 +2589,7 @@ impl Federation {
             Federation::WPNZ => Some(Country::NewZealand),
             Federation::WPPLArgentina => Some(Country::Argentina),
             Federation::WPPLBelarus => Some(Country::Belarus),
+            Federation::WPPLGeorgia => Some(Country::Georgia),
             Federation::WPPLMexico => Some(Country::Mexico),
             Federation::WPPLPeru => Some(Country::Peru),
             Federation::WPPLRussia => Some(Country::Russia),
@@ -3101,6 +3108,7 @@ impl Federation {
             Federation::WPNZ => Some(Federation::WP),
             Federation::WPPLArgentina => None,
             Federation::WPPLBelarus => None,
+            Federation::WPPLGeorgia => None,
             Federation::WPPLMexico => None,
             Federation::WPPLPeru => None,
             Federation::WPPLRussia => None,
@@ -3622,6 +3630,7 @@ impl Federation {
             Federation::WPNZ => PointsSystem::Wilks,
             Federation::WPPLArgentina => PointsSystem::Wilks,
             Federation::WPPLBelarus => PointsSystem::Wilks,
+            Federation::WPPLGeorgia => PointsSystem::Wilks,
             Federation::WPPLMexico => PointsSystem::Wilks,
             Federation::WPPLPeru => PointsSystem::Wilks,
             Federation::WPPLRussia => PointsSystem::Wilks,
