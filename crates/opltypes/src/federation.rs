@@ -954,6 +954,10 @@ pub enum Federation {
     #[strum(to_string = "PAP", serialize = "pap")]
     PAP,
 
+    /// Armenian Powerlifting Federation, WRPF/WPA/IPU/GPC.
+    #[strum(to_string = "PFA", serialize = "pfa")]
+    PFA,
+
     ///Powerlifting Federation Brunei Darussalam, IPF
     #[strum(to_string = "PFBD", serialize = "pfbd")]
     PFBD,
@@ -2040,6 +2044,7 @@ impl Federation {
             Federation::PoliceAL => false,
             Federation::PAGermany => false,
             Federation::PAP => FULLY_TESTED,
+            Federation::PFA => false,
             Federation::PFBD => FULLY_TESTED,
             Federation::PHPL => false,
             Federation::PI => FULLY_TESTED,
@@ -2455,6 +2460,7 @@ impl Federation {
             Federation::PoliceAL => Some(Country::USA),
             Federation::PAGermany => Some(Country::Germany),
             Federation::PAP => Some(Country::Philippines),
+            Federation::PFA => Some(Country::Armenia),
             Federation::PFBD => Some(Country::Brunei),
             Federation::PHPL => Some(Country::Philippines),
             Federation::PI => Some(Country::India),
@@ -2944,6 +2950,7 @@ impl Federation {
             }
             Federation::PAGermany => Some(Federation::WPF),
             Federation::PAP => Some(Federation::IPF),
+            Federation::PFA => Some(Federation::WRPF),
             Federation::PFBD => Some(Federation::IPF),
             Federation::PHPL => Some(Federation::GPA),
             Federation::PI => Some(Federation::IPF),
@@ -3468,6 +3475,7 @@ impl Federation {
             Federation::PAGermany => PointsSystem::Wilks,
             Federation::PoliceAL => PointsSystem::Wilks,
             Federation::PAP => Federation::ipf_rules_on(date),
+            Federation::PFA => PointsSystem::Dots,
             Federation::PFBD => Federation::ipf_rules_on(date),
             Federation::PHPL => PointsSystem::Reshel,
             Federation::PI => Federation::ipf_rules_on(date),
