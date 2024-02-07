@@ -22,6 +22,7 @@ except ImportError:
     import oplprobe
 
 PAGES = 4
+DELAY = 1
 URL = "http://online.styrkelyft.se/web/oldContest.aspx"
 BASEURL = "http://online.styrkelyft.se/web/"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
@@ -41,19 +42,21 @@ def getpages(url, pagerange):
     foptions = Options()
     foptions.headless = True
     driver = webdriver.Firefox(options=foptions)
-    driver.get(url)
+    try:
+        driver.get(url)
 
-    pages = []
+        pages = []
 
-    for page in pagerange:
-        if page != 1:
-            driver.execute_script(
-                "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
-                'Page$%i')" % page)
-            time.sleep(1)
+        for page in pagerange:
+            if page != 1:
+                driver.execute_script(
+                    "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
+                    'Page$%i')" % page)
+                time.sleep(DELAY)
 
-        pages.append(driver.page_source)
-    driver.quit()
+            pages.append(driver.page_source)
+    finally:
+        driver.quit()
 
     return pages
 
@@ -99,6 +102,7 @@ def main():
     unentered = oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[SSF]'), unentered)
+    return unentered
 
 
 if __name__ == '__main__':

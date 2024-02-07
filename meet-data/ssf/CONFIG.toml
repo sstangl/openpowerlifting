@@ -17,9 +17,9 @@
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
 
-    # Absolutely no idea what this is.
-    # Google Translate suggests that it means "Poor Boy".
-    knatte = {name="Knatte pojke", min=0, max=999}
+    # "Knatte" means kid and according to the Swedish rulebook refers to youths in the range 11-13 years old
+    knatte = {name="Youth", min=11, max=13}
+    
     specialolympics = {name="Special Olympics", min=0, max=999}
 
 [weightclasses.default_M]

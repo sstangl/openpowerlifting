@@ -10,6 +10,7 @@ import errno
 import os
 import sys
 import urllib.request
+import io
 
 try:
     from oplcsv import Csv
@@ -19,16 +20,26 @@ except ImportError:
     from oplcsv import Csv
 
 
+def write_csv_with_lf(csv_obj, filename):
+    with io.StringIO() as buffer:
+        csv_obj.write(buffer)
+        buffer.seek(0)  # Reset buffer position to the beginning
+        with open(filename, 'wb') as file:
+            txt = buffer.read().encode('utf-8')
+            file.write(txt)
+
+
 def gethtml(url):
     req = urllib.request.Request(
         url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
     with urllib.request.urlopen(req) as r:
-        return r.read().decode('utf-8')
+        res = r.read().decode('utf-8')
+        return res
 
 
 def error(msg):
     print(msg, file=sys.stderr)
-    sys.exit(1)
+    raise Exception(msg)
 
 
 def getdirname(url):
@@ -51,6 +62,26 @@ def getmeetinfo(soup):
     date = ''
 
     name = name.replace(',', ' ').replace('  ', ' ').strip()
+
+    # "SSF" may not be in meet titles, so replace
+    # the district abbreviations by their full names
+    # The current year may not be part of the title either.
+    # Replace by more robust solution later.
+    replacements = {
+        'ÖSSF': 'Östra Svealand',
+        'VSSF': 'Västra Svealand',
+        'SSSF': 'Sydsvenska',
+        'NNSF': 'Norra Norrland',
+        'MNSF': 'Mellersta Norrland',
+        'VGSF': 'Västra Götaland',
+        'SÖSF': 'Sydöstra',
+        '2022': '',
+        '2023': '',
+        '2024': ''}
+
+    for old, new in replacements.items():
+        name.replace(old, new)
+    name = name.strip()
 
     row = [fed, date, country, state, town, name]
 
@@ -317,7 +348,8 @@ def addtotals(csv):
                     row[totalidx] = str(total)
 
 
-def main(url):
+# Returns None if unsuccessful, otherwise the directory name
+def main(url, verbose=True):
     html = gethtml(url)
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -326,7 +358,8 @@ def main(url):
     dirname = getdirname(url)
     entriescsv = getresults(soup)
     if len(entriescsv.rows) == 0:
-        error("No rows found!")
+        print("No rows found!")
+        return None
 
     addtotals(entriescsv)
 
@@ -347,6 +380,9 @@ def main(url):
     entriescsv.append_column('BirthDate')
 
     try:
+        import shutil
+        if os.path.exists(dirname):
+            shutil.rmtree(dirname)
         os.makedirs(dirname)
     except OSError as exception:
         if exception.errno != errno.EEXIST:
@@ -354,15 +390,18 @@ def main(url):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
-        entriescsv.write(fd)
-    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
-        meetcsv.write(fd)
-    with open(dirname + os.sep + 'URL', 'w') as fd:
+    # Use the function for each CSV file
+    write_csv_with_lf(entriescsv, os.path.join(dirname, 'entries.csv'))
+    write_csv_with_lf(meetcsv, os.path.join(dirname, 'meet.csv'))
+
+    # Writing URL to file
+    with open(os.path.join(dirname, 'URL'), 'w', encoding='utf-8', newline='\n') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
-    print("Don't forget to run assign_date!")
+    if verbose:
+        print("Imported into %s." % dirname)
+        print("Don't forget to run assign_date!")
+    return dirname
 
 
 if __name__ == '__main__':

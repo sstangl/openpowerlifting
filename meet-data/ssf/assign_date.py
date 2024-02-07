@@ -15,6 +15,7 @@ import os
 import sys
 import time
 import logging
+import io
 from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
@@ -25,9 +26,18 @@ except ImportError:
     from oplcsv import Csv
 
 PAGES = 4
-DELAY = 2
+DELAY = 1
 URL = "http://online.styrkelyft.se/web/oldContest.aspx"
 BASEURL = "http://online.styrkelyft.se/web/"
+
+
+def write_csv_with_lf(csv_obj, filename):
+    with io.StringIO() as buffer:
+        csv_obj.write(buffer)
+        buffer.seek(0)  # Reset buffer position to the beginning
+        with open(filename, 'wb') as file:
+            txt = buffer.read().encode('utf-8')
+            file.write(txt)
 
 
 def error(msg):
@@ -48,14 +58,18 @@ def getpages(url, pagerange):
 
     pages = []
 
-    for page in pagerange:
-        if page != 1:
-            driver.execute_script(
-                "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
-                'Page$%i')" % page)
-        time.sleep(2)
+    try:
+        for page in pagerange:
+            if page != 1:
+                driver.execute_script(
+                    "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
+                    'Page$%i')" % page)
+            time.sleep(DELAY)
 
-        pages.append(driver.page_source)
+            pages.append(driver.page_source)
+    finally:
+        # Close firefox instance
+        driver.quit()
     return pages
 
 
@@ -109,9 +123,7 @@ def main(folders):
             meetcsv = Csv(folderpath + os.sep + 'meet.csv')
             date = meet_info[url]
             meetcsv.rows[0][meetcsv.index('Date')] = date
-
-            with open(folder + os.sep + 'meet.csv', 'w', encoding='utf-8') as fd:
-                meetcsv.write(fd)
+            write_csv_with_lf(meetcsv, os.path.join(folder, 'meet.csv'))
 
 
 if __name__ == '__main__':
