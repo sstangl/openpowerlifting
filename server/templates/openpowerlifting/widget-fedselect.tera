@@ -121,7 +121,7 @@
   <option value="wrpf-argentina" {% if selection.federation == "WRPF-Argentina" %}selected{% endif %}>WRPF-Argentina - World Raw Powerlifting Federation Argentina</option>
 </optgroup>
 <optgroup label="{{strings.country.armenia}}">
-  <option value="pfa" {% if selection.federation == "PFA" %}selected{% endif %}>PFA - Armenian Powerlifting Federation [WRPF/WPA/IPU/GPC]</option>
+  <option value="pfa" {% if selection.federation == "PFA" %}selected{% endif %}>PFA - Powerlifting Federation of Armenia [IPU/WPC/WPA/WP/WRPF/WPL/PRO/IPSU]</option>
 </optgroup>
 <optgroup label="{{strings.country.australia}}">
   <option value="all-australia" {% if selection.federation == "AllAustralia" %}selected{% endif %}>{{strings.selectors.fed.all_australia}}</option>

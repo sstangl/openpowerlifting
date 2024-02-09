@@ -1,7 +1,7 @@
 Event,Name,Sex,BirthYear,BirthDate,Age,Division,Equipment,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Country,Place
 B,Vladimir Agasaryan,M,1991,,32,Open,Raw,82.5,82.5,205,210.5,-213,210.5,,,,,210.5,Lithuania,1
 B,Soloyan Artyom,M,1986,,37,Open,Raw,86,90,185,195,-200,195,,,,,195,Armenia,1
-B,Matsakyan Sedrak,M,1995,,28,Open,Raw,103.5,110,165,175,180,180,,,,,180,Armenia,1
+B,Sedrak Matsakyan,M,1995,,28,Open,Raw,103.5,110,165,175,180,180,,,,,180,Armenia,1
 B,Karen Vardanyan,M,1998,,25,Open,Raw,82.5,82.5,130,135,140,140,,,,,140,Armenia,2
 B,Majebu Ten Abumanazir,M,2001,,22,Open,Raw,90,90,130,135,145,145,,,,,145,Armenia,2
 B,Samvel Hayrapetyan,M,1994,,29,Open,Raw,66.8,67.5,105,110,-115,110,,,,,110,Armenia,1
@@ -18,12 +18,12 @@ B,Eduard Yakovlev,M,2008,,15,Teen,Raw,51.9,52,50,60,70,70,,,,,70,Armenia,2
 B,Artash Avetisyan,M,2011,,12,Teen,Raw,44,44,55,60,62.5,62.5,,,,,62.5,Armenia,1
 B,Garnik Qachakoxyan,M,2008,,15,Teen,Raw,43.1,44,45,47.5,52.5,52.5,,,,,52.5,Armenia,2
 B,Kamo Harutyunyan,M,2007,,16,Teen,Raw,85,90,90,100,-107.5,100,,,,,100,Armenia,1
-B,Aram Xachatryan,M,2011,,12,Teen,Raw,40,40,35,40,45,45,,,,,45,Armenia,1
+B,Aram Khachatryan,M,2011,,12,Teen,Raw,40,40,35,40,45,45,,,,,45,Armenia,1
 B,Tigran Gulyan,M,2007,,16,Teen,Raw,56,56,65,-70,-70,65,,,,,65,Armenia,1
 B,Ella Xudinyan,F,2011,,12,Teen,Raw,44,44,35,40,42.5,42.5,,,,,42.5,Armenia,1
 B,Davit Xanaghyan,M,2012,,11,Teen,Raw,30,30,30,-35,-40,30,,,,,30,Armenia,1
 B,Gagik Aleqsanyan,M,2008,,15,Teen,Raw,94.8,100,80,85,-92.5,85,,,,,85,Armenia,1
-B,Narek Pogosyan,M,2009,,14,Teen,Raw,51,52,45,50,52.5,52.5,,,,,52.5,Armenia,3
+B,Narek Poghosyan,M,2009,,14,Teen,Raw,51,52,45,50,52.5,52.5,,,,,52.5,Armenia,3
 B,Vova Ayvazyan,M,2012,,11,Teen,Raw,67,67.5,40,-50,-50,40,,,,,40,Armenia,1
 D,Gevorg Araqelyan,M,1991,,32,Open,Raw,82.5,82.5,,,,,245,255,267.5,267.5,267.5,Armenia,1
 D,Vahram Zaqaryan,M,2000,,23,Open,Raw,99.8,100,,,,,240,260,-280,260,260,Armenia,1
@@ -49,9 +49,9 @@ D,Angelina Chobanyan,F,2002,,21,Open,Raw,67,67.5,,,,,90,100,105,105,105,Armenia,
 D,Hakob Ghazaryan,M,1996,,27,Paralympic,Raw,75,75,,,,,120,140,145,145,145,Armenia,1
 D,Vahan Araqelyan,M,2013,,10,Teen,Raw,25,25,,,,,40,50,55,55,55,Armenia,1
 D,Gevorg Hakobyan,M,2011,,12,Teen,Raw,36,36,,,,,90,95,100,100,100,Armenia,1
-D,Armen Gazumyan,M,2006,,17,Teen,Raw,60,60,,,,,160,170,-180,170,170,Armenia,1
+D,Armen Ghazumyan,M,2006,,17,Teen,Raw,60,60,,,,,160,170,-180,170,170,Armenia,1
 D,Minas Virabyan,M,2013,,10,Teen,Raw,25,25,,,,,50,55,-57.5,55,55,Armenia,2
-D,Vahe Budaxyan,M,2006,,17,Teen,Raw,65,67.5,,,,,170,175,177.5,177.5,177.5,Armenia,1
+D,Vahe Budaghyan,M,2006,,17,Teen,Raw,65,67.5,,,,,170,175,177.5,177.5,177.5,Armenia,1
 D,Davit Alaverdyan,M,2011,,12,Teen,Raw,36,36,,,,,80,90,-95,90,90,Armenia,2
 D,Artyom Galstyan,M,2009,,14,Teen,Raw,44,44,,,,,105,110,117.5,117.5,117.5,Armenia,1
 D,Edik Xudinyan,M,2007,,16,Teen,Raw,50,52,,,,,135,140,-145,140,140,Armenia,1
@@ -61,7 +61,7 @@ D,Gagik Arshakyan,M,2007,,16,Teen,Raw,63,67.5,,,,,145,155,165,165,165,Armenia,6
 D,Levon Tovmasyan,M,2006,,17,Teen,Raw,82.5,82.5,,,,,170,185,200,200,200,Armenia,1
 D,Armen Hayrapetyan,M,2011,,12,Teen,Raw,30,30,,,,,50,60,65,65,65,Armenia,1
 D,Martiros Abrahamyan,M,2008,,15,Teen,Raw,67,67.5,,,,,165,170,-175,170,170,Armenia,3
-D,Arcrun Petrosyan,M,2012,,11,Teen,Raw,35,36,,,,,80,-85,85,85,85,Armenia,3
+D,Artsrun Petrosyan,M,2012,,11,Teen,Raw,35,36,,,,,80,-85,85,85,85,Armenia,3
 D,Jora Egiazaryan,M,2006,,17,Teen,Raw,67.5,67.5,,,,,140,155,167.5,167.5,167.5,Armenia,4
 D,Narek Harutyunyan,M,2006,,17,Teen,Raw,67.5,67.5,,,,,155,167.5,-175,167.5,167.5,Armenia,5
 D,Karen Ivanyan,M,2009,,14,Teen,Raw,60,60,,,,,130,140,150,150,150,Armenia,2
@@ -81,10 +81,10 @@ D,Aleqs Arstamyan,M,2011,,12,Teen,Raw,30,30,,,,,50,55,-60,55,55,Armenia,3
 D,Lyudvig Sargsyan,M,2007,,16,Teen,Raw,67.5,67.5,,,,,130,140,145,145,145,Armenia,7
 D,Vahe Hovhannisyan,M,2006,,17,Teen,Raw,67.5,67.5,,,,,130,140,145,145,145,Armenia,8
 D,Avet Avetisyan,M,2010,,13,Teen,Raw,48,48,,,,,95,100,105,105,105,Armenia,2
-D,Maria Xachatryan,F,2007,,16,Teen,Raw,60,60,,,,,80,90,100,100,100,Armenia,1
+D,Maria Khachatryan,F,2007,,16,Teen,Raw,60,60,,,,,80,90,100,100,100,Armenia,1
 D,Eduard Mirzoyan,M,2007,,16,Teen,Raw,60,60,,,,,125,130,-135,130,130,Armenia,4
-D,Edgar Pogosyan,M,2014,,9,Teen,Raw,32,36,,,,,50,55,60,60,60,Armenia,5
-D,Sipan Xachatryan,M,2011,,12,Teen,Raw,48,48,,,,,95,-105,-105,95,95,Armenia,3
+D,Edgar Poghosyan,M,2014,,9,Teen,Raw,32,36,,,,,50,55,60,60,60,Armenia,5
+D,Sipan Khachatryan,M,2011,,12,Teen,Raw,48,48,,,,,95,-105,-105,95,95,Armenia,3
 D,Armen Grigoryan,M,2011,,12,Teen,Raw,40,40,,,,,65,70,75,75,75,Armenia,2
 D,Hayk Avagyan,M,2010,,13,Teen,Raw,60,60,,,,,100,107.5,115,115,115,Armenia,5
 D,Avet Davtyan,M,2008,,15,Teen,Raw,56,56,,,,,105,107.5,-110,107.5,107.5,Armenia,2
@@ -97,7 +97,7 @@ D,Lia Chobanyan,F,2007,,16,Teen,Raw,70,75,,,,,-70,70,-72.5,70,70,Armenia,1
 D,Hrach Manukyan,M,2009,,14,Teen,Raw,67.5,67.5,,,,,80,85,-90,85,85,Armenia,9
 D,Andranik Hayrapetyan,M,2007,,16,Teen,Raw,20,25,,,,,25,30,,30,30,Armenia,3
 D,Samvel Tsaturyan,M,2006,,17,Teen,Raw,67,67.5,,,,,-140,-140,,,,Armenia,DQ
-D,Vahram Pogosyan,M,2002,,21,Army,Raw,67.5,67.5,,,,,170,190,200,200,200,Armenia,1
+D,Vahram Poghosyan,M,2002,,21,Army,Raw,67.5,67.5,,,,,170,190,200,200,200,Armenia,1
 D,Hrachya Abgaryan,M,2004,,19,Army,Raw,60,60,,,,,140,150,155,155,155,Armenia,1
 D,Jozef Tigranyan,M,2003,,20,Army,Raw,67.5,67.5,,,,,140,-150,165,165,165,Armenia,2
 D,Mesrop Margaryan,M,1983,,40,Army,Raw,100,100,,,,,150,180,205,205,205,Armenia,1
@@ -107,11 +107,11 @@ D,Martin Sargsyan,M,2005,,18,Army,Raw,82.5,82.5,,,,,130,155,175,175,175,Armenia,
 D,Martin Martirosyan,M,2004,,19,Army,Raw,67.5,67.5,,,,,110,130,150,150,150,Armenia,3
 D,Suren Petrosyan,M,2005,,18,Army,Raw,82.5,82.5,,,,,120,150,170,170,170,Armenia,3
 D,Vladik Mesropyan,M,2004,,19,Army,Raw,56,56,,,,,80,105,125,125,125,Armenia,1
-D,Vahan Budagyan,M,2004,,19,Army,Raw,60,60,,,,,120,,,120,120,Armenia,2
-D,Garik Xachatryan,M,2003,,20,Army,Raw,67.5,67.5,,,,,120,130,-140,130,130,Armenia,4
+D,Vahan Budaghyan,M,2004,,19,Army,Raw,60,60,,,,,120,,,120,120,Armenia,2
+D,Garik Khachatryan,M,2003,,20,Army,Raw,67.5,67.5,,,,,120,130,-140,130,130,Armenia,4
 D,Vurt Araqelyan,M,2003,,20,Army,Raw,75,75,,,,,100,120,140,140,140,Armenia,2
 D,Hovhannes Papoyan,M,2005,,18,Army,Raw,67.5,67.5,,,,,105,115,125,125,125,Armenia,5
-D,Gor Gazaryan,M,2004,,19,Army,Raw,90,90,,,,,120,150,-165,150,150,Armenia,1
+D,Gor Ghazaryan,M,2004,,19,Army,Raw,90,90,,,,,120,150,-165,150,150,Armenia,1
 D,Ashot Petrosyan,M,2005,,18,Army,Raw,75,75,,,,,110,130,-145,130,130,Armenia,3
 D,Roman Gasparyan,M,2003,,20,Army,Raw,75,75,,,,,110,115,125,125,125,Armenia,4
 D,Martin Malxasyan,M,2003,,20,Army,Raw,90,90,,,,,120,125,135,135,135,Armenia,2

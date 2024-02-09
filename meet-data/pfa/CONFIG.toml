@@ -10,6 +10,8 @@
 	para = {name = "Paralympic", min = 0, max = 999}
 
 	# Divisions with age ranges
+	teen_8_10 = {name = "Teen 8-10", min = 8, max = 10}
+	teen_11_12 = {name = "Teen 11-12", min = 11, max = 12}
 	teen_13_15 = {name = "Teen 13-15", min = 13, max = 15}
 	teen_16_17 = {name = "Teen 16-17", min = 16, max = 17}
 	teen_18_19 = {name = "Teen 18-19", min = 18, max = 19}
@@ -27,14 +29,15 @@
 
 
 [weightclasses.default_M]
-	# Added weight classes for Teens
-	classes = ["25", "30", "36", "40", "44", "48", "52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+	classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
 	date_range = ["1990-01-01", "9999-01-01"]
 	sex = "M"
 
 [weightclasses.default_F]
-	classes = ["25", "30", "36", "40", "44","48","52","56","60","67.5","75","82.5","90","90+"]
+	classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
 	date_range = ["1990-01-01", "9999-01-01"]
 	sex = "F"
 
 [exemptions]
+	2301 = ["ExemptWeightClassConsistency"]
+	2302 = ["ExemptWeightClassConsistency"]
