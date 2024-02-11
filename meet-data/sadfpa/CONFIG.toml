@@ -53,10 +53,17 @@
     sex = "M"
     divisions = ["M-O","M-T1","M-T2","M-T3","M-JR","M-SR","M-M1","M-M2","M-M3","M-M4","M-M5","M-M6","M-M7","M-M8","M-M9","M-M10","M-M11","M-M12"]
 
-[weightclasses.F]
+[weightclasses.F_original]
     classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
-    date_range = ["1900-01-01", "9999-12-12"]
+    date_range = ["1900-01-01", "2023-11-10"]
     sex = "F"
     divisions = ["F-O","F-T1","F-T2","F-T3","F-JR","F-SR","F-M1","F-M2","F-M3","F-M4","F-M5","F-M6","F-M7","F-M8","F-M9","F-M10","F-M11","F-M12"]
+
+[weightclasses.F_from_2023_11_11]
+    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","110","110+"]
+    date_range = ["2023-11-11", "9999-12-31"]
+    sex = "F"
+    divisions = ["F-O","F-T1","F-T2","F-T3","F-JR","F-SR","F-M1","F-M2","F-M3","F-M4","F-M5","F-M6","F-M7","F-M8","F-M9","F-M10","F-M11","F-M12"]
+
 
 [exemptions]
