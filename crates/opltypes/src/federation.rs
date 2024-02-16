@@ -1549,6 +1549,10 @@ pub enum Federation {
     #[strum(to_string = "WP-NZ", serialize = "wp-nz")]
     WPNZ,
 
+    /// World Power Power League.
+    #[strum(to_string = "WPPL", serialize = "wppl")]
+    WPPL,
+
     /// World Power Power League, Argentina.
     #[serde(rename = "WPPL-Argentina")]
     #[strum(to_string = "WPPL-Argentina", serialize = "wppl-argentina")]
@@ -2190,6 +2194,7 @@ impl Federation {
             Federation::WPFRUS => false,
             Federation::WPLeague => false,
             Federation::WPNZ => FULLY_TESTED,
+            Federation::WPPL => false,
             Federation::WPPLArgentina => false,
             Federation::WPPLBelarus => false,
             Federation::WPPLGeorgia => false,
@@ -2599,6 +2604,7 @@ impl Federation {
             Federation::WPFRUS => Some(Country::Russia),
             Federation::WPLeague => Some(Country::Ukraine),
             Federation::WPNZ => Some(Country::NewZealand),
+            Federation::WPPL => None,
             Federation::WPPLArgentina => Some(Country::Argentina),
             Federation::WPPLBelarus => Some(Country::Belarus),
             Federation::WPPLGeorgia => Some(Country::Georgia),
@@ -3120,14 +3126,15 @@ impl Federation {
             Federation::WPFRUS => Some(Federation::WPF),
             Federation::WPLeague => None,
             Federation::WPNZ => Some(Federation::WP),
-            Federation::WPPLArgentina => None,
-            Federation::WPPLBelarus => None,
-            Federation::WPPLGeorgia => None,
-            Federation::WPPLIreland => None,
-            Federation::WPPLMexico => None,
-            Federation::WPPLPeru => None,
-            Federation::WPPLRussia => None,
-            Federation::WPPLUkraine => None,
+            Federation::WPPL => Some(Federation::WPPL),
+            Federation::WPPLArgentina => Some(Federation::WPPL),
+            Federation::WPPLBelarus => Some(Federation::WPPL),
+            Federation::WPPLGeorgia => Some(Federation::WPPL),
+            Federation::WPPLIreland => Some(Federation::WPPL),
+            Federation::WPPLMexico => Some(Federation::WPPL),
+            Federation::WPPLPeru => Some(Federation::WPPL),
+            Federation::WPPLRussia => Some(Federation::WPPL),
+            Federation::WPPLUkraine => Some(Federation::WPPL),
             Federation::WPPO => None,
             Federation::WPRO => None,
             Federation::WPSF => Some(Federation::WPSF),
@@ -3644,6 +3651,7 @@ impl Federation {
             Federation::WPFRUS => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
             Federation::WPNZ => PointsSystem::Wilks,
+            Federation::WPPL => PointsSystem::Wilks,
             Federation::WPPLArgentina => PointsSystem::Wilks,
             Federation::WPPLBelarus => PointsSystem::Wilks,
             Federation::WPPLGeorgia => PointsSystem::Wilks,
