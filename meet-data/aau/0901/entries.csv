@@ -210,7 +210,7 @@ M,Joe DiMarco,USA,CA,79,100,B,Open,Single-ply,,,110,,,,110,14
 M,Jayson Markham,USA,VA,38,100,B,Open,Single-ply,,,110,,,,110,15
 M,William Apgar,USA,CA,81,100,B,Open,Single-ply,,,107.5,,,,107.5,16
 M,Daniel Gustafson,USA,CA,41,100,B,Open,Single-ply,,,107.5,,,,107.5,17
-M,Brandon Ward,USA,NV,17,100,B,Open,Single-ply,,,102.5,,,,102.5,18
+M,Brandon Ward #3,USA,NV,17,100,B,Open,Single-ply,,,102.5,,,,102.5,18
 M,Raul Lopez,USA,NV,57,100,B,Open,Single-ply,,,97.5,,,,97.5,19
 M,Michael van Winkle,USA,CA,70,100,B,Open,Single-ply,,,90,,,,90,20
 M,Jack Lano,USA,CA,87,100,B,Open,Single-ply,,,40,,,,40,21
@@ -328,7 +328,7 @@ M,Joe DiMarco,USA,CA,79,100,B,Open,Single-ply,,,110,,,,110,13
 M,Jayson Markham,USA,VA,38,100,B,Open,Single-ply,,,110,,,,110,14
 M,William Apgar,USA,CA,81,100,B,Open,Single-ply,,,107.5,,,,107.5,15
 M,Daniel Gustafson,USA,CA,41,100,B,Open,Single-ply,,,107.5,,,,107.5,16
-M,Brandon Ward,USA,NV,17,100,B,Open,Single-ply,,,102.5,,,,102.5,17
+M,Brandon Ward #3,USA,NV,17,100,B,Open,Single-ply,,,102.5,,,,102.5,17
 M,Raul Lopez,USA,NV,57,100,B,Open,Single-ply,,,97.5,,,,97.5,18
 M,Michael van Winkle,USA,CA,70,100,B,Open,Single-ply,,,90,,,,90,19
 M,Jack Lano,USA,CA,87,100,B,Open,Single-ply,,,40,,,,40,20
@@ -404,7 +404,7 @@ M,Jack Lano,USA,CA,87,100,D,RLM 85-89,Raw,,,,,100,,100,1
 M,Raul Lopez,USA,NV,57,100,D,RM 55-59,Raw,,,,,242.5,,242.5,1
 M,Charley Jones,USA,AZ,60,100,D,RM 60-64,Raw,,,,,165,170,165,1
 M,Jack Lano,USA,CA,87,100,D,RM 85-89,Raw,,,,,100,,100,1
-M,Brandon Ward,USA,NV,17,100,D,RT 16-17,Raw,,,,,205,,205,1
+M,Brandon Ward #3,USA,NV,17,100,D,RT 16-17,Raw,,,,,205,,205,1
 M,Bryan Ziegler,USA,CA,30,110,D,R Open,Raw,,,,,235,,235,1
 M,Mark Mathews Sr,USA,CA,46,110,D,RLM 45-49,Raw,,,,,227.5,,227.5,1
 M,Ed Collins,USA,CA,61,110,D,RLM 60-64,Raw,,,,,170,,170,1
@@ -464,7 +464,7 @@ M,Ethan Perez,USA,CA,28,100,D,Open,Single-ply,,,,,265,,265,1
 M,Daniel Gustafson,USA,CA,41,100,D,Open,Single-ply,,,,,255,,255,2
 M,Ray Ortiz,USA,NV,46,100,D,Open,Single-ply,,,,,252.5,,252.5,3
 M,Raul Lopez,USA,NV,57,100,D,Open,Single-ply,,,,,242.5,,242.5,4
-M,Brandon Ward,USA,NV,17,100,D,Open,Single-ply,,,,,205,,205,5
+M,Brandon Ward #3,USA,NV,17,100,D,Open,Single-ply,,,,,205,,205,5
 M,Tom Pehrson,USA,AK,37,100,D,Open,Single-ply,,,,,200,,200,6
 M,William Leedy,USA,CA,78,100,D,Open,Single-ply,,,,,192.5,,192.5,7
 M,Charley Jones,USA,AZ,60,100,D,Open,Single-ply,,,,,165,170,165,8
@@ -549,11 +549,11 @@ M,Ray Ortiz,USA,NV,46,100,SBD,Open,Single-ply,237.5,,205,,252.5,,695,1
 M,Al Williamson,USA,WI,66,100,SBD,Open,Single-ply,195,,,,,,,DQ
 M,Ethan Perez,USA,CA,28,100,SBD,R Open,Raw,195,,152.5,,265,,612.5,1
 M,Daniel Gustafson,USA,CA,41,100,SBD,R Open,Raw,175,,107.5,,255,,537.5,2
-M,Brandon Ward,USA,NV,17,100,SBD,R Open,Raw,142.5,,102.5,,205,,450,3
+M,Brandon Ward #3,USA,NV,17,100,SBD,R Open,Raw,142.5,,102.5,,205,,450,3
 M,Craig Rasmussen,USA,CA,39,100,SBD,R Sub,Raw,,,,,,,,DQ
 M,Raul Lopez,USA,NV,57,100,SBD,RLM 55-59,Raw,165,,97.5,,242.5,,505,1
 M,Raul Lopez,USA,NV,57,100,SBD,RM 55-59,Raw,165,,97.5,,242.5,,505,1
-M,Brandon Ward,USA,NV,17,100,SBD,RT 16-17,Raw,142.5,,102.5,,205,,450,1
+M,Brandon Ward #3,USA,NV,17,100,SBD,RT 16-17,Raw,142.5,,102.5,,205,,450,1
 M,Keith Mitchell,USA,,40,110,SBD,Open,Single-ply,327.5,,230,,290,,847.5,1
 M,Evritt Brill,USA,NV,20,110,SBD,R JR,Raw,,,,,,,,DQ
 M,Anthony Brill,USA,NV,47,110,SBD,R Open,Raw,205,,155,,227.5,,587.5,1
@@ -622,7 +622,7 @@ M,Raul Lopez,USA,NV,57,100,BD,RM 55-59,Raw,,,,,242.5,,,DQ
 M,Jack Lano,USA,CA,87,100,BD,RM 85-89,Raw,,,40,,100,,140,1
 M,Maurice Williams,USA,VA,30,100,BD,R Law/Mil,Raw,,,145,,185.5,,330.5,1
 M,Jayson Markham,USA,VA,38,100,BD,R Law/Mil Sub,Raw,,,110,,175,,285,1
-M,Brandon Ward,USA,NV,17,100,BD,RT 16-17,Raw,,,102.5,,205,,307.5,1
+M,Brandon Ward #3,USA,NV,17,100,BD,RT 16-17,Raw,,,102.5,,205,,307.5,1
 M,Juilo Porras,Mexico,,23,110,BD,Open,Single-ply,,,110,,,,,DQ
 M,Brandon Blackwood,USA,CA,41,110,BD,R Life,Raw,,,147.5,,205,,352.5,1
 M,Ed Collins,USA,CA,61,110,BD,RLM 60-64,Raw,,,142.5,,170,,312.5,1
