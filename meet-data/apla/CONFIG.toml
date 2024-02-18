@@ -8,10 +8,10 @@
     open = {name ="Open",min=0,max=999}
     junior = {name = "Junior",min=0,max=23.5}
     subjunior = {name = "Sub-Junior",min=0,max=18.5}
-    master1 = {name = "Master 1",min=39.5,max=48.5}
-    master2 = {name = "Master 2",min=49.5,max=58.5}
-    master3 = {name = "Master 3",min=59.5,max=68.5}
-    master4 = {name = "Master 4",min=69.5,max=999}
+    masters1 = {name = "Masters 1",min=39.5,max=48.5}
+    masters2 = {name = "Masters 2",min=49.5,max=58.5}
+    masters3 = {name = "Masters 3",min=59.5,max=68.5}
+    masters4 = {name = "Masters 4",min=69.5,max=999}
 	specialolympics = {name = "Special Olympics",min=0,max=999}
 
 [weightclasses.IPF_M]
