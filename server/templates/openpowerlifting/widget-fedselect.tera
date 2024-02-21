@@ -318,7 +318,7 @@
   <option value="all-iceland" {% if selection.federation == "AllIceland" %}selected{% endif %}>{{strings.selectors.fed.all_iceland}}</option>
   <option value="ikf" {% if selection.federation == "IKF" %}selected{% endif %}>IKF - Íslenska Kraftlyfingafélagið [GPC/WPC]</option>
   <option value="kraft" {% if selection.federation == "KRAFT" %}selected{% endif %}>KRAFT - Kraftlyftingasamband Íslands [IPF]</option>
-  <option value="raw-iceland" {% if selection.federation == "RAW-Iceland" %}selected{% endif %}>RAW-Iceland - 100% RAW Powerlifting Federation Icreland</option>
+  <option value="raw-iceland" {% if selection.federation == "RAW-Iceland" %}selected{% endif %}>RAW-Iceland - 100% RAW Powerlifting Federation Iceland</option>
   <option value="wpc-iceland" {% if selection.federation == "WPC-Iceland" %}selected{% endif %}>WPC Iceland</option>
   <option value="wrpf-iceland" {% if selection.federation == "WRPF-Iceland" %}selected{% endif %}>WRPF Iceland</option>
 </optgroup>
