@@ -377,6 +377,13 @@
   background-image: linear-gradient(to right, $neongreen, $royalblue);
 }
 
+.orange_to_blue_top_down {
+  $blue: #507CFF;
+  $orange: #FFA200;
+  @include gradient-prereqs($orange);
+  background-image: linear-gradient(to bottom, $orange, $blue);
+}
+
 .orange_to_green {
   $orange: #FFA200;
   $green: #F1DA27;
