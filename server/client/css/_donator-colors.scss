@@ -100,6 +100,11 @@
   @include name-color(#3B72FF);
 }
 
+// The sahde of blue used as one of the colors of the University of North Carolina.
+.carolinablue {
+  @include name-color(#4B9CD3);
+}
+
 .royalblue {
   @include name-color(#507CFF);
 }
