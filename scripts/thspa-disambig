@@ -8,8 +8,8 @@
 # and an optional starting index if previous disambiguations have already
 # been made
 #
-# Work in progress (_same_person_scoring function): 
-# Scoring system for determining similarity based on school, bodyweight, total, 
+# Work in progress (_same_person_scoring function):
+# Scoring system for determining similarity based on school, bodyweight, total,
 # and years lifted
 # Further ideas: compare individual S/B/D performances in addition to total
 #
@@ -35,7 +35,7 @@ class Lifter:
         self.years.append(int(meetyear))
         if bw_kg != '':
             self.bodyweights.append(float(bw_kg))
-        if total_kg !='' and event == 'SBD':
+        if total_kg != '' and event == 'SBD':
             # only add total if one was made, and only add full power total
             self.totals.append(float(total_kg))
 
@@ -64,7 +64,7 @@ class Lifter:
 
         max_score = 0
         sim_score = 0
-        
+
         # compare schools
         max_score += 1
         if self.team == other_team:
@@ -82,7 +82,7 @@ class Lifter:
                 sim_score += 1
 
         # compare totals
-        if other_total !='' and other_event == 'SBD' and len(self.totals) > 0:
+        if other_total != '' and other_event == 'SBD' and len(self.totals) > 0:
             # only if other full power total given and previously has a full power total
             max_score += 1
             if (1-total_diff)*mean_total < other_total_fl < (1+total_diff)*mean_total:
@@ -91,15 +91,14 @@ class Lifter:
         if max_score-sim_score <= 1:
             # if at most one of the features is mismatched, same person confirmed
             return True
-        else: 
+        else:
             return False
-        
+
     def same_person(self, other_team, other_bw, other_total, other_event, other_year):
         if self.team == other_team:
             return True
         else:
             return False
-    
 
 
 def disambig_persons(lifters, idx_start, name, username, meetyear, dirname):
@@ -114,8 +113,8 @@ def disambig_persons(lifters, idx_start, name, username, meetyear, dirname):
 
     nameidx = csv.index('Name')
     teamidx = csv.index('Team')
-    bwidx = csv.index('BodyweightKg') # ToDo: handle results in Lbs
-    totalidx = csv.index('TotalKg') 
+    bwidx = csv.index('BodyweightKg')  # ToDo: handle results in Lbs
+    totalidx = csv.index('TotalKg')
     eventidx = csv.index('Event')
 
     changed = False
@@ -164,7 +163,7 @@ def main(name, username, idx_start):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: %s \"Firstname Lastname\" (starting index)" 
+        print("Usage: %s \"Firstname Lastname\" (starting index)"
               % sys.argv[0], file=sys.stderr)
         sys.exit(1)
 
