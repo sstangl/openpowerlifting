@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+#
+# Initial approach to an automatic disambiguation using team information
+# in THSPA. Assumes name+team pairings to be unique, but prints out
+# the disambiguations made for manual verification.
+#
+# Usage: from the project root, give a name in the form of Firstname Lastname
+# and an optional starting index if previous disambiguations have already
+# been made
+#
+# Work in progress (_same_person_scoring function):
+# Scoring system for determining similarity based on school, bodyweight, total,
+# and years lifted
+# Further ideas: compare individual S/B/D performances in addition to total
+#
+
+import oplcsv
+import os
+import sys
+import usernames
+from statistics import mean
+
+
+class Lifter:
+    def __init__(self, team, idx):
+        self.team = team
+        self.identifier = idx
+        self.years = []
+        self.bodyweights = []
+        self.totals = []
+        self.meets = []
+
+    def add_meet(self, dirname, meetyear, bw_kg, total_kg, event):
+        self.meets.append((os.path.basename(dirname), meetyear, bw_kg, total_kg))
+        self.years.append(int(meetyear))
+        if bw_kg != '':
+            self.bodyweights.append(float(bw_kg))
+        if total_kg != '' and event == 'SBD':
+            # only add total if one was made, and only add full power total
+            self.totals.append(float(total_kg))
+
+    def _same_person_scoring(self, other_team, other_bw, other_total, other_event,
+                             other_year):
+        # WIP
+        # given the other_ data, determine whether this is the same person
+        # max_score isn't always the same as data may be missing (BW in case of no-show,
+        # total in case of DQ), which is why it is determined dynamically
+
+        mean_year = mean(self.years)
+        if len(self.bodyweights) > 0:
+            mean_bw = mean(self.bodyweights)
+        if len(self.totals) > 0:
+            mean_total = mean(self.totals)
+
+        if other_bw != '':
+            other_bw_fl = float(other_bw)
+        if other_total != '':
+            other_total_fl = float(other_total)
+
+        # maximum allowable deviations
+        year_diff = 3
+        bw_diff = 0.1  # 10%
+        total_diff = 0.15  # 15%
+
+        max_score = 0
+        sim_score = 0
+
+        # compare schools
+        max_score += 1
+        if self.team == other_team:
+            sim_score += 1
+
+        # compare years active
+        max_score += 1
+        if mean_year-year_diff < other_year < mean_year+year_diff:
+            sim_score += 1
+
+        # compare bodyweight
+        if other_bw != '':
+            max_score += 1
+            if (1-bw_diff)*mean_bw < other_bw_fl < (1+bw_diff)*mean_bw:
+                sim_score += 1
+
+        # compare totals
+        if other_total != '' and other_event == 'SBD' and len(self.totals) > 0:
+            # only if other full power total given and previously has a full power total
+            max_score += 1
+            if (1-total_diff)*mean_total < other_total_fl < (1+total_diff)*mean_total:
+                sim_score += 1
+
+        if max_score-sim_score <= 1:
+            # if at most one of the features is mismatched, same person confirmed
+            return True
+        else:
+            return False
+
+    def same_person(self, other_team, other_bw, other_total, other_event, other_year):
+        if self.team == other_team:
+            return True
+        else:
+            return False
+
+
+def disambig_persons(lifters, idx_start, name, username, meetyear, dirname):
+    entriespath = dirname + os.sep + 'entries.csv'
+    csv = oplcsv.Csv(entriespath)
+    if 'Name' not in csv.fieldnames:
+        RED = '\u001b[31m'
+        RESET = '\u001b[0m'
+        print(RED + entriespath + RESET)
+        print(RED + "error: 'Name' column starts with an invisible character" + RESET)
+    assert 'Name' in csv.fieldnames
+
+    nameidx = csv.index('Name')
+    teamidx = csv.index('Team')
+    bwidx = csv.index('BodyweightKg')  # ToDo: handle results in Lbs
+    totalidx = csv.index('TotalKg')
+    eventidx = csv.index('Event')
+
+    changed = False
+    for row in csv.rows:
+        if usernames.get_username(row[nameidx]) == username:
+            changed = True
+            profile = None
+            for lifter in lifters:
+                if lifter.same_person(row[teamidx], row[bwidx], row[totalidx],
+                                      row[eventidx], meetyear):
+                    # person already exists
+                    profile = lifter
+                    break
+
+            if profile is None:
+                # create a new person
+                idx = idx_start + len(lifters)
+                profile = Lifter(row[teamidx], idx)
+                lifters.append(profile)
+
+            row[nameidx] = name + " #" + str(profile.identifier)
+            profile.add_meet(dirname, meetyear, row[bwidx], row[totalidx],
+                             row[eventidx])
+
+    if changed:
+        with open(entriespath, 'w', encoding='utf-8', newline='\n') as fd:
+            csv.write(fd)
+
+
+def main(name, username, idx_start):
+    lifters = []
+
+    recursedir = os.getcwd() + os.sep + "meet-data" + os.sep + "thspa"
+
+    for dirname, _, files in os.walk(recursedir):
+        if 'entries.csv' in files:
+            meet = oplcsv.Csv(dirname + os.sep + 'meet.csv')
+            meetyear = int(meet.rows[0][meet.index('Date')][:4])
+            disambig_persons(lifters, idx_start, name, username, meetyear, dirname)
+
+    for lifter in lifters:
+        print("#", lifter.identifier, lifter.team)
+        for meet in lifter.meets:
+            print(meet)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Usage: %s \"Firstname Lastname\" (starting index)"
+              % sys.argv[0], file=sys.stderr)
+        sys.exit(1)
+
+    name = sys.argv[1]
+    username = usernames.get_username(name)
+
+    if len(sys.argv) > 2:
+        idx_start = int(sys.argv[2])
+    else:
+        idx_start = 1
+
+    main(name, username, idx_start)
