@@ -206,11 +206,7 @@ impl OplDb {
             }
             owned_strings += mem::size_of::<String>() + meet.name.len();
         }
-        for entry in &self.entries {
-            if let Some(ref division) = entry.division {
-                owned_strings += mem::size_of::<String>() + division.len();
-            }
-        }
+        // TODO(sstangl): Don't know how to account for the global symbol table here.
 
         mem::size_of::<OplDb>() + owned_vectors + owned_strings
     }

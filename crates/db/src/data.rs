@@ -3,6 +3,7 @@
 use opltypes::states::*;
 use opltypes::*;
 use smartstring::alias::CompactString;
+use symbol_table::GlobalSymbol;
 
 use crate::yesno::deserialize_yes_no;
 
@@ -83,7 +84,7 @@ pub struct Entry {
     #[serde(rename(deserialize = "Age"))]
     pub age: Age,
     #[serde(rename(deserialize = "Division"))]
-    pub division: Option<CompactString>,
+    pub division: Option<GlobalSymbol>,
     #[serde(rename(deserialize = "BodyweightKg"))]
     pub bodyweightkg: WeightKg,
     #[serde(rename(deserialize = "WeightClassKg"))]
@@ -167,7 +168,7 @@ impl Entry {
     /// Borrows the Division string.
     #[inline]
     pub fn division(&self) -> Option<&str> {
-        self.division.as_deref()
+        self.division.map(|symbol| symbol.as_str())
     }
 
     /// Calculates the Entry's points.

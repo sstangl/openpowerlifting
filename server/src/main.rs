@@ -727,7 +727,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     )?;
 
     println!(
-        "DB loaded in {}MB and {:#?}.",
+        "DB loaded in {}MB and {:#?} (not counting the GlobalTable).",
         opldb.size_bytes() / 1024 / 1024,
         start.elapsed()
     );

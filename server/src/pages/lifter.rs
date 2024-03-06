@@ -134,7 +134,7 @@ impl<'a> MeetResultsRow<'a> {
             state: meet.state.as_ref().map(|s| s as _),
             meet_name: &meet.name,
             meet_path: &meet.path,
-            division: entry.division.as_ref().map(|d| d as _),
+            division: entry.division.as_ref().map(|d| d.as_str()),
             age: PrettyAge::from(entry.age),
             sex: strings.translate_sex(entry.sex),
             equipment: strings.translate_equipment(entry.equipment),

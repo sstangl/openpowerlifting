@@ -120,7 +120,7 @@ impl<'db> JsEntryRow<'db> {
             sex: strings.translate_sex(entry.sex),
             equipment: strings.translate_equipment(entry.equipment),
             age: PrettyAge::from(entry.age),
-            division: entry.division.as_deref(),
+            division: entry.division.map(|symbol| symbol.as_str()),
             bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
             weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
             squat: entry

@@ -11,8 +11,8 @@ pub fn make_export_row<'a>(
     meet: &'a Meet,
 ) -> opltypes::ExportRow<'a> {
     // Convert from Option<String> to Option<&'a str> while hardcoding &'static "".
-    let division: &'a str = if let Some(div) = &entry.division {
-        div
+    let division: &str = if let Some(div) = &entry.division {
+        div.as_str()
     } else {
         ""
     };
