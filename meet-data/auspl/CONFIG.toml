@@ -11,8 +11,23 @@
 
 [divisions]
 	# OpenLifter-style divisions.
+
+    # pre-2024 
 	j15_19 = {name="J15-19", min=15, max=19}
+
+    # 2024-
+    teen_16_19 = {name="T16-19", min=16, max=19}
+
 	j20_23 = {name="J20-23", min=20, max=23}
+
+    # Masters by 10s 2024-
+	m40_49 = {name="M40-49", min=40, max=49}
+	m50_59 = {name="M50-59", min=50, max=59}
+	m60_69 = {name="M60-69", min=60, max=69}
+	m70p = {name="M70+", min=70, max=999}
+
+
+    # Masters by 5s pre-2024
 	m40_44 = {name="M40-44", min=40, max=44}
 	m45_49 = {name="M45-49", min=45, max=49}
 	m50_54 = {name="M50-54", min=50, max=54}
@@ -26,7 +41,7 @@
 
     # IPL-style divisions (2019+)
     open = {name = "Open", min = 0, max = 999}
-    youth = {name = "Youth", min = 4, max = 12.5}
+    youth = {name = "Youth", min = 0, max = 15}
 
     # Seldom used.   Per IPL rules, minimum age is 15, but it happens
     teen_13_19 = {name = "Teen 13-19", min = 13, max = 19}
