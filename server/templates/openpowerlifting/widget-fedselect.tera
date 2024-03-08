@@ -212,6 +212,7 @@
   <option value="all-chile" {% if selection.federation == "AllChile" %}selected{% endif %}>{{strings.selectors.fed.all_chile}}</option>
   <option value="achipo" {% if selection.federation == "ACHIPO" %}selected{% endif %}>ACHIPO - Alianza Chilena Powerlifting [GPA/IPO]</option>
   <option value="fechipo" {% if selection.federation == "FECHIPO" %}selected{% endif %}>FECHIPO - La Federación Chilena de Powerlifting [IPF]</option>
+  <option value="wrpf-chile" {% if selection.federation == "WRPF-Chile" %}selected{% endif %}>WRPF-Chile</option>
 </optgroup>
 <optgroup label="{{strings.country.china}}">
   <option value="all-china" {% if selection.federation == "AllChina" %}selected{% endif %}>{{strings.selectors.fed.all_china}}</option>
