@@ -74,6 +74,13 @@
     paralympic = {name ="Paralympic",min=0,max=999}
     masters = {name ="Masters",min=40,max=999}
 
+    # More specific combinations
+    s35_39_nt = {name="S35-39 NT", min=35, max=39,tested="No"}
+    m40_44_nt = {name="M40-44 NT", min=40, max=44,tested="No"}
+    m55_59_nt = {name="M55-59 NT", min=55, max=59,tested="No"}
+    vt35_39 = {name ="VT S35-39",min=35,max=39}
+
+
     # For WPA-Uganda.
     paralymic_j20_23 = {name="Paralympic J20-23", min=20, max=23}
     paralympic_m40p = {name="Paralympic M40+", min=40, max=999}
