@@ -89,7 +89,7 @@ function runChecker(): void {
             }
 
             if (output.entries_messages.length > 0) {
-                entriesErrorPre.innerText = output.entries_messages.map(msg2str).join("\n");
+                entriesErrorPre.innerHTML = output.entries_messages.map(msg2str).join("\n");
             } else if (output.meet_messages.length === 0) {
                 // The entries.csv is only checked if the meet.csv passes.
                 entriesErrorPre.innerText = "Pass! :)";
