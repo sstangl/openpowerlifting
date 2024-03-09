@@ -442,6 +442,10 @@
   <option value="naurupf" {% if selection.federation == "NauruPF" %}selected{% endif %}>NauruPF - Nauru Powerlifting Federation [IPF]</option>
   <option value="wp-nauru" {% if selection.federation == "WP-Nauru" %}selected{% endif %}>WP-Nauru - World Powerlifting Nauru [WP]</option>
 </optgroup>
+<optgroup label="{{strings.country.nepal}}">
+  <option value="all-nepal" {% if selection.federation == "AllNepal" %}selected{% endif %}>{{strings.selectors.fed.all_nepal}}</option>
+  <option value="nyfc" {% if selection.federation == "NYFC" %}selected{% endif %}>NYFC - Nepal Youth Fitness & Calisthenics [WP]</option>
+</optgroup>  
 <optgroup label="{{strings.country.netherlands}}">
   <option value="all-netherlands" {% if selection.federation == "AllNetherlands" %}selected{% endif %}>{{strings.selectors.fed.all_netherlands}}</option>
   <option value="dpl" {% if selection.federation == "DPL" %}selected{% endif %}>DPL - Dutch Powerlifting League [IPL]</option>

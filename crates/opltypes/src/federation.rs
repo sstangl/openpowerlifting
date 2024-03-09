@@ -909,6 +909,10 @@ pub enum Federation {
     #[strum(to_string = "NSF", serialize = "nsf")]
     NSF,
 
+    /// Nepali Youth Fitness & Calisthetics, WP affiliate
+    #[strum(to_string = "NYFC", serialize = "nyfc")]
+    NYFC,
+
     /// New Zealand Amateur Weightlifting Association, IPF. (NPZF Precursor)
     #[strum(to_string = "NZAWLA", serialize = "nzawla")]
     NZAWLA,
@@ -2046,6 +2050,7 @@ impl Federation {
             Federation::NPB => FULLY_TESTED,
             Federation::NPL => false,
             Federation::NSF => FULLY_TESTED,
+            Federation::NYFC => FULLY_TESTED,
             Federation::NZPF => FULLY_TESTED,
             Federation::NZAWLA => FULLY_TESTED,
             Federation::NZUA => false,
@@ -2465,6 +2470,7 @@ impl Federation {
             Federation::NPB => Some(Country::Netherlands),
             Federation::NPL => Some(Country::USA),
             Federation::NSF => Some(Country::Norway),
+            Federation::NYFC => Some(Country::Nepal),
             Federation::NZPF => Some(Country::NewZealand),
             Federation::NZAWLA => Some(Country::NewZealand),
             Federation::NZUA => Some(Country::NewZealand),
@@ -2945,6 +2951,7 @@ impl Federation {
             Federation::NPB => Some(Federation::IPF),
             Federation::NPL => None,
             Federation::NSF => Some(Federation::IPF),
+            Federation::NYFC => Some(Federation::WP),
             Federation::NZPF => Some(Federation::IPF),
             Federation::NZAWLA => Some(Federation::IPF),
             Federation::NZUA => None,
@@ -3263,7 +3270,7 @@ impl Federation {
             Federation::APU => {
                 // Due to change of affiliation from IPF to WDFPF in 2024.
                 if date.year() >= 2024 {
-                    PointsSystem::Wilks
+                    PointsSystem::SchwartzMalone
                 } else {
                     Federation::ipf_rules_on(date)
                 }
@@ -3478,6 +3485,7 @@ impl Federation {
             Federation::NPB => Federation::ipf_rules_on(date),
             Federation::NPL => PointsSystem::Dots,
             Federation::NSF => Federation::ipf_rules_on(date),
+            Federation::NYFC => Federation::wp_rules_on(date),
             Federation::NZPF => Federation::ipf_rules_on(date),
             Federation::NZAWLA => Federation::ipf_rules_on(date),
             Federation::NZUA => PointsSystem::Wilks,

@@ -1,0 +1,29 @@
+[divisions]
+    
+    # Over 14 years on the day of competition (assuming they meant >=).
+    open = {name="Open", min=14, max=999}
+
+    # NYFC-specific divisions, these deviate a bit from WP
+    # copy in the WP divisions if they are ever adopted
+
+    # assuming this is "junior, under 21"
+    ju21 = {name="JU21", min=7, max=20}
+
+    # Female masters, 40+
+    fem40p = {name="FeM40+", sex="F", min=40, max=999}
+
+    # Male masters, 45+
+    m45p = {name="M45+", sex="M", min=45, max=999}
+
+# These are trimmed down from the WP weight classes
+[weightclasses.default_M]
+    classes = ["62", "69", "77", "85", "85+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["58", "64", "64+"]
+    date_range = ["2018-08-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
