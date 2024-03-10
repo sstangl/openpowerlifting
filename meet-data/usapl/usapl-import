@@ -21,6 +21,13 @@ except ImportError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     from oplcsv import Csv
 
+try:
+    from countries import standardize_country_csv
+except ImportError:
+    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+    from countries import standardize_country_csv
+
 
 def gethtml(url):
     with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'})) as r:
@@ -132,6 +139,8 @@ def parsedivision(div):
     # "both M1a and M1b", and it's impossible to distinguish the two.
     s = div
     s = s.replace('Raw with Wraps ', 'W-')  # As in "Raw with Wraps Junior"
+    s = s.replace('High School JV', 'JV')
+    s = s.replace('High School Varsity', 'V')
     s = s.replace('Raw ', 'R-')  # As in "Raw Master 1a"
     s = s.replace('Teen and Junior', 'TJ')
     s = s.replace('Master ', 'M')  # As in "Master 1a"
@@ -141,17 +150,17 @@ def parsedivision(div):
     s = s.replace('Collegiate', 'C')
     s = s.replace('Special Olympian', 'SO')
     s = s.replace('Sub Junior', 'SJ')
+    s = s.replace('Military Open', 'MO')
     s = s.replace('Open', 'O')
     s = s.replace('Junior', 'Jr')
     s = s.replace('Youth', 'Y')
     s = s.replace('Police and Fire', 'PF')
-    s = s.replace('Military Open', 'MO')
     s = s.replace('Military', 'ML')
     s = s.replace('Female-', 'F-')
     s = s.replace('Female - ', 'F-')
     s = s.replace('Male-', 'M-')
     s = s.replace('Male - ', 'M-')
-    s = s.replace('GuestLifter', 'G')
+    s = s.replace('Guest Lifter', 'G')
     s = s.replace('Varsity', 'V')
     s = s.replace('Adaptive Athletes', 'AA')
 
@@ -178,6 +187,7 @@ def makeentriescsv(soup):
     csv.append_column('Equipment')
     csv.append_column('BirthYear')
     csv.append_column('Team')
+    csv.append_column('Country')
     csv.append_column('State')
     csv.append_column('BodyweightKg')
     csv.append_column('Squat1Kg')
@@ -255,6 +265,9 @@ def makeentriescsv(soup):
             # wilks = cells[18].text.strip() # Not used. Always recalculated.
             # drugtested = cells[19].text.strip() # Not used.
             # unknown = cells[20].text.strip() # Not used.
+
+            if not bodyweightkg:
+                error(f"{name}'s bodyweight is missing.")
 
             row = ['' for x in csv.fieldnames]
             row[csv.index('WeightClassKg')] = weightclasskg
@@ -364,6 +377,27 @@ def markdqs(csv):
         if row[placeidx] == '-':
             # Don't change the total: sometimes this is an error.
             row[placeidx] = 'DQ'
+
+
+def markguests(csv):
+    divisionidx = csv.index('Division')
+    placeidx = csv.index('Place')
+    for row in csv.rows:
+        if row[divisionidx].endswith('-G') and row[placeidx] != 'DQ':
+            row[placeidx] = 'G'
+
+
+# USAPL uses a single column for state and country
+def splitstatecolumn(csv):
+    stateidx = csv.index('State')
+    countryidx = csv.index('Country')
+    for row in csv.rows:
+        if len(row[stateidx]) == 2:
+            row[countryidx] = 'USA'
+        elif len(row[stateidx]) == 3:
+            row[countryidx] = row[stateidx]
+            row[stateidx] = ''
+    standardize_country_csv(csv)
 
 
 # Some sex information can be inferred from weightclass information.
@@ -509,9 +543,11 @@ def main(url, importdir):
     soup = BeautifulSoup(html, 'lxml')
 
     entriescsv = makeentriescsv(soup)
+    splitstatecolumn(entriescsv)
     removeemptycolumns(entriescsv)
     makebestcolumns(entriescsv)
     markdqs(entriescsv)
+    markguests(entriescsv)
     infersex(entriescsv)
     fixupdivisions(entriescsv)
     inferequipment(entriescsv)
