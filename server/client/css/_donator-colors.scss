@@ -82,6 +82,11 @@
   @include name-color(#00E0D8);
 }
 
+// Andrew wants an unreadable name. ¯\_(ツ)_/¯
+.black {
+  @include name-color(#000000);
+}
+
 .lightazure {
   @include name-color(#00AEFF);
 }
