@@ -673,6 +673,7 @@
     NS-2024-03-J = ["ExemptWeightClassConsistency"] # Arnold (scored by formula)
     LA-2024-06 = ["ExemptWeightClassConsistency"] # No weight classes reported.
     PA-2024-14 = ["ExemptWeightClassConsistency"] # No weight classes reported.
+    LA-2024-02 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Weight classes were combined and scored by formula
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
