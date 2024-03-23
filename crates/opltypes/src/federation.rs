@@ -191,7 +191,7 @@ pub enum Federation {
     #[strum(to_string = "BPC", serialize = "bpc")]
     BPC,
 
-    /// British Powerlifting Federation, IPL, formerly WPU/WRPF.
+    /// British Powerlifting Federation, WPU affiliate, formerly IPL/WRPF.
     #[strum(to_string = "BPF", serialize = "bpf")]
     BPF,
 
@@ -703,6 +703,11 @@ pub enum Federation {
     #[serde(rename = "IPL-Spain")]
     #[strum(to_string = "IPL-Spain", serialize = "ipl-spain")]
     IPLSpain,
+
+    /// UK International Powerlifting League
+    #[serde(rename = "UKIPL")]
+    #[strum(to_string = "UKIPL", serialize = "ukipl")]
+    UKIPL,
 
     /// Iran Bodybuilding & Fitness, IPF.
     #[strum(to_string = "IranBBF", serialize = "iranbbf")]
@@ -2000,6 +2005,7 @@ impl Federation {
             Federation::IPL => false,
             Federation::IPLNZ => false,
             Federation::IPLSpain => false,
+            Federation::UKIPL => false,
             Federation::IranBBF => FULLY_TESTED,
             Federation::IraqPF => FULLY_TESTED,
             Federation::IrelandUA => false,
@@ -2420,6 +2426,7 @@ impl Federation {
             Federation::IPL => None,
             Federation::IPLNZ => Some(Country::NewZealand),
             Federation::IPLSpain => Some(Country::Spain),
+            Federation::UKIPL => Some(Country::UK),
             Federation::IranBBF => Some(Country::Iran),
             Federation::IraqPF => Some(Country::Iraq),
             Federation::IrelandUA => Some(Country::Ireland),
@@ -2671,9 +2678,8 @@ impl Federation {
             Federation::XPC => Some(Country::USA),
             Federation::XPCPoland => Some(Country::Poland),
             Federation::XPS => Some(Country::USA),
-        }
-    }
-
+                }
+            }
     /// The parent federation that provides sanction, if any.
     pub fn sanctioning_body(self, date: Date) -> Option<Federation> {
         match self {
@@ -2901,6 +2907,14 @@ impl Federation {
             Federation::IPL => Some(Federation::IPL),
             Federation::IPLNZ => Some(Federation::IPL),
             Federation::IPLSpain => Some(Federation::IPL),
+            Federation::UKIPL => {
+                // UK IPL affiliate from 2024
+                if date.year() >= 2024 {
+                    Some(Federation::IPL)
+                } else {
+                    None
+                }
+            }        
             Federation::IranBBF => Some(Federation::IPF),
             Federation::IraqPF => Some(Federation::IPF),
             Federation::IrelandUA => None,
@@ -3421,6 +3435,7 @@ impl Federation {
             Federation::IPL => Federation::ipl_rules_on(date),
             Federation::IPLNZ => Federation::ipl_rules_on(date),
             Federation::IPLSpain => Federation::ipl_rules_on(date),
+            Federation::UKIPL => Federation::ipl_rules_on(date),
             Federation::IranBBF => Federation::ipf_rules_on(date),
             Federation::IraqPF => Federation::ipf_rules_on(date),
             Federation::IrelandUA => PointsSystem::Wilks,
