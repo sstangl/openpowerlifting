@@ -61,6 +61,7 @@ pub fn make_export_row<'a>(
         meet_state: meet.state.as_ref().map(|s| s.to_string()),
         meet_town: meet.town.as_deref(),
         meet_name: &meet.name,
+        sanctioned: if meet.sanctioned { "Yes" } else { "No" },
     }
 }
 

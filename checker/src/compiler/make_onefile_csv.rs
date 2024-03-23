@@ -60,6 +60,7 @@ fn make_export_row<'a>(entry: &'a Entry, meet: &'a Meet) -> ExportRow<'a> {
         meet_state: meet.state.map(|s| s.to_state_string()),
         meet_town: meet.town.as_deref(),
         meet_name: &meet.name,
+        sanctioned: if meet.sanctioned { "Yes" } else { "No" },
     }
 }
 

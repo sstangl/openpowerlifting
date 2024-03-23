@@ -58,6 +58,9 @@ pub struct Meet {
     pub name: Box<str>,
     #[serde(rename(deserialize = "RuleSet"))]
     pub ruleset: RuleSet,
+    #[serde(rename(deserialize = "Sanctioned"))]
+    #[serde(deserialize_with = "deserialize_yes_no")]
+    pub sanctioned: bool,
 
     /// Number of unique competitors, by LifterID.
     /// Calculated at load-time.

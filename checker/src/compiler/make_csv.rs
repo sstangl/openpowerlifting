@@ -33,6 +33,8 @@ struct MeetsRow<'d> {
     pub name: &'d str,
     #[serde(rename = "RuleSet")]
     pub ruleset: RuleSet,
+    #[serde(rename = "Sanctioned")]
+    pub sanctioned: &'static str,
 }
 
 impl<'d> MeetsRow<'d> {
@@ -47,6 +49,7 @@ impl<'d> MeetsRow<'d> {
             town: meet.town.as_deref(),
             name: &meet.name,
             ruleset: meet.ruleset,
+            sanctioned: if meet.sanctioned { "Yes" } else { "No" },
         }
     }
 }

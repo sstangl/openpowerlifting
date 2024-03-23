@@ -90,4 +90,6 @@ pub struct ExportRow<'d> {
     pub meet_town: Option<&'d str>,
     #[serde(rename = "MeetName")]
     pub meet_name: &'d str,
+    #[serde(rename = "Sanctioned")]
+    pub sanctioned: &'static str,
 }
