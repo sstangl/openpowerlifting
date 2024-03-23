@@ -83,7 +83,7 @@
       </tr></thead>
       <tbody>
       {% for this in meet_results %}
-        <tr>
+        <tr{% if this.sanctioned == false %} class="unsanctioned"{% endif %}>
           <td>{{this.place}}</td>
           <td>{{this.federation}}</td>
           <td class="meet-list-date">{{this.date}}</td>

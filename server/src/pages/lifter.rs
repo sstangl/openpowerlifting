@@ -77,6 +77,7 @@ pub struct MeetResultsRow<'a> {
     pub equipment: &'a str,
     pub weightclass: langpack::LocalizedWeightClassAny,
     pub bodyweight: langpack::LocalizedWeightAny,
+    pub sanctioned: bool,
 
     // Bests, including 4th attempts
     pub squat: langpack::LocalizedWeightAny,
@@ -140,6 +141,7 @@ impl<'a> MeetResultsRow<'a> {
             equipment: strings.translate_equipment(entry.equipment),
             weightclass: entry.weightclasskg.as_type(units).in_format(number_format),
             bodyweight: entry.bodyweightkg.as_type(units).in_format(number_format),
+            sanctioned: meet.sanctioned,
 
             squat: entry
                 .highest_squatkg()
