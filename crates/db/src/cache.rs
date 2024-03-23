@@ -331,13 +331,14 @@ pub struct LogLinearTimeCache {
 }
 
 impl LogLinearTimeCache {
-    fn filter_entries<F>(entries: &[Entry], select: F) -> NonSortedNonUnique
+    fn filter_entries<F>(entries: &[Entry], meets: &[Meet], select: F) -> NonSortedNonUnique
     where
         F: Fn(&Entry) -> bool,
     {
         let mut vec = Vec::new();
         for (i, entry) in entries.iter().enumerate() {
-            if select(entry) {
+            // Filter out unsanctioned meets. We pretend they don't exist for rankings or records.
+            if select(entry) && meets[entry.meet_id as usize].sanctioned {
                 vec.push(i as u32);
             }
         }
@@ -347,51 +348,51 @@ impl LogLinearTimeCache {
 
     pub fn new(meets: &[Meet], entries: &[Entry]) -> LogLinearTimeCache {
         LogLinearTimeCache {
-            raw: Self::filter_entries(entries, |e| e.equipment == Equipment::Raw),
-            wraps: Self::filter_entries(entries, |e| e.equipment == Equipment::Wraps),
-            raw_wraps: Self::filter_entries(entries, |e| {
+            raw: Self::filter_entries(entries, meets, |e| e.equipment == Equipment::Raw),
+            wraps: Self::filter_entries(entries, meets, |e| e.equipment == Equipment::Wraps),
+            raw_wraps: Self::filter_entries(entries, meets, |e| {
                 e.equipment == Equipment::Raw || e.equipment == Equipment::Wraps
             }),
-            single: Self::filter_entries(entries, |e| e.equipment == Equipment::Single),
-            multi: Self::filter_entries(entries, |e| e.equipment == Equipment::Multi),
-            unlimited: Self::filter_entries(entries, |e| {
+            single: Self::filter_entries(entries, meets, |e| e.equipment == Equipment::Single),
+            multi: Self::filter_entries(entries, meets, |e| e.equipment == Equipment::Multi),
+            unlimited: Self::filter_entries(entries, meets, |e| {
                 matches!(
                     e.equipment,
                     Equipment::Single | Equipment::Multi | Equipment::Unlimited
                 )
             }),
 
-            male: Self::filter_entries(entries, |e| e.sex == Sex::M),
-            female: Self::filter_entries(entries, |e| e.sex == Sex::F),
+            male: Self::filter_entries(entries, meets, |e| e.sex == Sex::M),
+            female: Self::filter_entries(entries, meets, |e| e.sex == Sex::F),
 
-            year2024: Self::filter_entries(entries, |e| {
+            year2024: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2024
             }),
-            year2023: Self::filter_entries(entries, |e| {
+            year2023: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2023
             }),
-            year2022: Self::filter_entries(entries, |e| {
+            year2022: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2022
             }),
-            year2021: Self::filter_entries(entries, |e| {
+            year2021: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2021
             }),
-            year2020: Self::filter_entries(entries, |e| {
+            year2020: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2020
             }),
-            year2019: Self::filter_entries(entries, |e| {
+            year2019: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2019
             }),
-            year2018: Self::filter_entries(entries, |e| {
+            year2018: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2018
             }),
-            year2017: Self::filter_entries(entries, |e| {
+            year2017: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2017
             }),
-            year2016: Self::filter_entries(entries, |e| {
+            year2016: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2016
             }),
-            year2015: Self::filter_entries(entries, |e| {
+            year2015: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2015
             }),
         }
