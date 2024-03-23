@@ -228,3 +228,14 @@ Mandatory. The name of the meet.
 
 The name is defined to never include the year or the federation.
 For example, the meet officially called `2019 USAPL Raw National Championships` would have the MeetName `Raw National Championshps`.
+
+### Sanctioned
+Mandatory. Whether the meet counts as officially sanctioned by a federation we recognize.
+
+Values are "Yes" for sanctioned and "No" for unsanctioned.
+
+Sanctioned meets are competitions that are recognized by a standards body that we recognize (a federation).
+A federation may also sometimes choose to host an unsanctioned meet with a relaxed ruleset for novices.
+
+Unsanctioned meets are competitions that were put on by individual meet directors, typically outside of a federation.
+In OpenPowerlifting, unsanctioned meets are tracked, but do not count for rankings or records.
