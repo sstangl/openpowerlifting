@@ -122,6 +122,11 @@ tr.highlighted {
   background-color: $row-highlight-background-color;
 }
 
+// Used by lifter.html to gray-out unsanctioned meets a bit.
+tr.unsanctioned {
+  filter: brightness(65%)
+}
+
 a.anchor {
   display: block;
   position: relative;
