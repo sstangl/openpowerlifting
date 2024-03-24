@@ -102,6 +102,22 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2023, 03, 25) {
                     continue;
                 }
+                // oevk/2110 and oevk/2109
+                if cur_meet.date == opltypes::Date::from_parts(2021, 10, 17) {
+                    continue;
+                }
+                // oevk/2114 and oevk/2113
+                if cur_meet.date == opltypes::Date::from_parts(2021, 11, 06) {
+                    continue;
+                }
+                // oevk/2315 and oevk/2316
+                if cur_meet.date == opltypes::Date::from_parts(2023, 10, 22) {
+                    continue;
+                }
+                // oevk/2318 and oevk/2320
+                if cur_meet.date == opltypes::Date::from_parts(2023, 11, 04) {
+                    continue;
+                }
 
                 let msg = format!(
                     "www.openpowerlifting.org/u/{username} on {}: {} and {}",

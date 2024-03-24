@@ -5,6 +5,7 @@
 
 [divisions]
     open = {name = "Open", min=0, max=999}
+    guests = {name = "Guest", min=0, max=999, place="G"}
     juniors = {name = "Juniors", min=0, max=22.5}
     subjuniors = {name = "Sub-Juniors", min=0, max=17.5}
     youth = {name = "Youth", min=14, max=18}
