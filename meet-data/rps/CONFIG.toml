@@ -410,30 +410,30 @@ require_manual_disambiguation = false
     mp_aa_a = {name="MP-AA-A", equipment="Multi-ply", tested="Yes", min=0, max=999}
 
     # Multi-ply, Pro.
-    mp_y_p = {name="MP-Y-P", equipment="Multi-ply", min=5, max=13}
-    mp_t14_p = {name="MP-T14-P", equipment="Multi-ply", min=14, max=15}
-    mp_t16_p = {name="MP-T16-P", equipment="Multi-ply", min=16, max=17}
-    mp_t18_p = {name="MP-T18-P", equipment="Multi-ply", min=18, max=19}
-    mp_j20_p = {name="MP-J20-P", equipment="Multi-ply", min=20, max=23}
+    mp_y_p = {name="MP-Y-P", equipment=["Multi-ply","Unlimited"], min=5, max=13}
+    mp_t14_p = {name="MP-T14-P", equipment=["Multi-ply","Unlimited"], min=14, max=15}
+    mp_t16_p = {name="MP-T16-P", equipment=["Multi-ply","Unlimited"], min=16, max=17}
+    mp_t18_p = {name="MP-T18-P", equipment=["Multi-ply","Unlimited"], min=18, max=19}
+    mp_j20_p = {name="MP-J20-P", equipment=["Multi-ply","Unlimited"], min=20, max=23}
     mp_o_p = {name="MP-O-P",equipment=["Multi-ply","Unlimited"], min=0, max=999}
-    mp_s33_p = {name="MP-S33-P", equipment="Multi-ply", min=33, max=39}
-    mp_m40_p = {name="MP-M40-P", equipment="Multi-ply", min=40, max=44}
-    mp_m45_p = {name="MP-M45-P", equipment="Multi-ply", min=45, max=49}
-    mp_m50_p = {name="MP-M50-P", equipment="Multi-ply", min=50, max=54}
-    mp_m55_p = {name="MP-M55-P", equipment="Multi-ply", min=55, max=59}
-    mp_m60_p = {name="MP-M60-P", equipment="Multi-ply", min=60, max=64}
-    mp_m65_p = {name="MP-M65-P", equipment="Multi-ply", min=65, max=69}
-    mp_m70_p = {name="MP-M70-P", equipment="Multi-ply", min=70, max=74}
-    mp_m75_p = {name="MP-M75-P", equipment="Multi-ply", min=75, max=79}
-    mp_m80_p = {name="MP-M80-P", equipment="Multi-ply", min=80, max=84}
-    mp_m85_p = {name="MP-M85-P", equipment="Multi-ply", min=85, max=89}
-    mp_m90_p = {name="MP-M90-P", equipment="Multi-ply", min=90, max=94}
-    mp_m95_p = {name="MP-M95-P", equipment="Multi-ply", min=95, max=99}
-    mp_m100_p = {name="MP-M100-P", equipment="Multi-ply", min=100, max=999}
-    mp_pf_p = {name="MP-PF-P", equipment="Multi-ply", min=0, max=999}
-    mp_mil_p = {name="MP-MIL-P", equipment="Multi-ply", min=0, max=999}
-    mp_cf_p = {name="MP-CF-P", equipment="Multi-ply", min=0, max=999}
-    mp_aa_p = {name="MP-AA-P", equipment="Multi-ply", min=0, max=999}
+    mp_s33_p = {name="MP-S33-P", equipment=["Multi-ply","Unlimited"], min=33, max=39}
+    mp_m40_p = {name="MP-M40-P", equipment=["Multi-ply","Unlimited"], min=40, max=44}
+    mp_m45_p = {name="MP-M45-P", equipment=["Multi-ply","Unlimited"], min=45, max=49}
+    mp_m50_p = {name="MP-M50-P", equipment=["Multi-ply","Unlimited"], min=50, max=54}
+    mp_m55_p = {name="MP-M55-P", equipment=["Multi-ply","Unlimited"], min=55, max=59}
+    mp_m60_p = {name="MP-M60-P", equipment=["Multi-ply","Unlimited"], min=60, max=64}
+    mp_m65_p = {name="MP-M65-P", equipment=["Multi-ply","Unlimited"], min=65, max=69}
+    mp_m70_p = {name="MP-M70-P", equipment=["Multi-ply","Unlimited"], min=70, max=74}
+    mp_m75_p = {name="MP-M75-P", equipment=["Multi-ply","Unlimited"], min=75, max=79}
+    mp_m80_p = {name="MP-M80-P", equipment=["Multi-ply","Unlimited"], min=80, max=84}
+    mp_m85_p = {name="MP-M85-P", equipment=["Multi-ply","Unlimited"], min=85, max=89}
+    mp_m90_p = {name="MP-M90-P", equipment=["Multi-ply","Unlimited"], min=90, max=94}
+    mp_m95_p = {name="MP-M95-P", equipment=["Multi-ply","Unlimited"], min=95, max=99}
+    mp_m100_p = {name="MP-M100-P", equipment=["Multi-ply","Unlimited"], min=100, max=999}
+    mp_pf_p = {name="MP-PF-P", equipment=["Multi-ply","Unlimited"], min=0, max=999}
+    mp_mil_p = {name="MP-MIL-P", equipment=["Multi-ply","Unlimited"], min=0, max=999}
+    mp_cf_p = {name="MP-CF-P", equipment=["Multi-ply","Unlimited"], min=0, max=999}
+    mp_aa_p = {name="MP-AA-P", equipment=["Multi-ply","Unlimited"], min=0, max=999}
 
     # Multi-ply, Elite.
     mp_y_e = {name="MP-Y-E", equipment="Multi-ply", tested="Yes", min=5, max=13}
