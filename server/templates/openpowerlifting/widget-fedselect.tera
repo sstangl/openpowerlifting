@@ -185,6 +185,7 @@
   <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB - Confederação Brasileira de Levantamentos Básicos [IPF]</option>
   <option value="conbrap" {% if selection.federation == "CONBRAP" %}selected{% endif %}>CONBRAP - Confederação Brasileira de Powerlifting [GPC]</option>
   <option value="wrpf-brazil" {% if selection.federation == "WRPF-Brazil" %}selected{% endif %}>WRPF Brazil</option>
+  <option value="wppl-brazil" {% if selection.federation == "WPPL-Brazil" %}selected{% endif %}>WPPL Brazil</option>
 </optgroup>
 <optgroup label="{{strings.country.brunei}}">
   <option value="pfbd" {% if selection.federation == "PFBD" %}selected{% endif %}>PFBD - Powerlifting Federation Brunei Darussalam [IPF]</option>
