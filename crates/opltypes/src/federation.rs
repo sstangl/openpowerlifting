@@ -437,6 +437,11 @@ pub enum Federation {
     #[strum(to_string = "FIAP", serialize = "fiap")]
     FIAP,
 
+    /// Unaffiliated meets held in Finland.
+    #[serde(rename = "Finland-UA")]
+    #[strum(to_string = "Finland-UA", serialize = "finland-ua")]
+    FinlandUA,
+
     /// Federazione Italiana Powerlifting, IPF.
     #[strum(to_string = "FIPL", serialize = "fipl")]
     FIPL,
@@ -1947,6 +1952,7 @@ impl Federation {
             Federation::FFHMFAC => FULLY_TESTED,
             Federation::FHSAA => FULLY_TESTED,
             Federation::FIAP => FULLY_TESTED,
+            Federation::FinlandUA => false,
             Federation::FIPL => FULLY_TESTED,
             Federation::FPO => false,
             Federation::FPPR => FULLY_TESTED,
@@ -2377,6 +2383,7 @@ impl Federation {
             Federation::FFHMFAC => Some(Country::France),
             Federation::FHSAA => Some(Country::USA),
             Federation::FIAP => Some(Country::Italy),
+            Federation::FinlandUA => Some(Country::Finland),
             Federation::FIPL => Some(Country::Italy),
             Federation::FPO => Some(Country::Finland),
             Federation::FPPR => Some(Country::PuertoRico),
@@ -2846,6 +2853,7 @@ impl Federation {
             Federation::FFHMFAC => Some(Federation::IPF),
             Federation::FHSAA => None,
             Federation::FIAP => None,
+            Federation::FinlandUA => None,
             Federation::FIPL => Some(Federation::IPF),
             Federation::FPO => Some(Federation::IPA),
             Federation::FPPR => Some(Federation::IPF),
@@ -3390,6 +3398,7 @@ impl Federation {
             Federation::FFHMFAC => Federation::ipf_rules_on(date),
             Federation::FHSAA => PointsSystem::Wilks,
             Federation::FIAP => Federation::ipf_rules_on(date),
+            Federation::FinlandUA => PointsSystem::Wilks,
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
             Federation::FPPR => Federation::ipf_rules_on(date),
