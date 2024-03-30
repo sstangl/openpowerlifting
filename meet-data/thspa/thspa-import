@@ -201,8 +201,8 @@ def enterdivision(csv, divurl):
         deadlift = strtokg(cells[8].text)
         total = strtokg(cells[9].text)
 
-        # The whole federation appears to be single-ply.
-        equipment = 'Single-ply'
+        # The whole federation appears to be single-ply. Now includes band shirts
+        equipment = 'Unlimited'
         event = 'SBD'
 
         csv.rows.append([division, weightclass, place, name, team,
