@@ -2,18 +2,18 @@
 
 [divisions]
     # The main division used for almost everything.
-    boys = {name="Boys", min=13, max=19, sex="M", equipment="Single-ply"}
+    boys = {name="Boys", min=13, max=19, sex="M"}
 
-    freshmen = {name="Freshmen", min=13, max=15, sex="M", equipment="Single-ply"}
-    jv = {name="Junior Varsity", min=13, max=19, sex="M", equipment="Single-ply"}
-    v = {name="Varsity", min=13, max=19, sex="M", equipment="Single-ply"}
+    freshmen = {name="Freshmen", min=13, max=15, sex="M"}
+    jv = {name="Junior Varsity", min=13, max=19, sex="M"}
+    v = {name="Varsity", min=13, max=19, sex="M"}
 
-    div1 = {name="Div 1", min=13, max=19, sex="M", equipment="Single-ply"}
-    div2 = {name="Div 2", min=13, max=19, sex="M", equipment="Single-ply"}
-    div3 = {name="Div 3", min=13, max=19, sex="M", equipment="Single-ply"}
+    div1 = {name="Div 1", min=13, max=19, sex="M"}
+    div2 = {name="Div 2", min=13, max=19, sex="M"}
+    div3 = {name="Div 3", min=13, max=19, sex="M"}
 
     # Sometimes girls are listed in THSPA for some reason...
-    girls = {name="Girls", min=13, max=19, sex="F", equipment="Single-ply"}
+    girls = {name="Girls", min=13, max=19, sex="F"}
 
 # THSPA uses pounds classes with exact pound values.
 [weightclasses.default_M]
