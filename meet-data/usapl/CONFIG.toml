@@ -677,6 +677,7 @@
     LA-2024-02 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Weight classes were combined and scored by formula
     NE-2024-04 = ["ExemptWeightClassConsistency"] # No weight classes reported.
     WI-2024-13 = ["ExemptWeightClassConsistency"] # No weight classes reported.
+    FL-2024-01 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
