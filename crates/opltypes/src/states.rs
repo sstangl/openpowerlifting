@@ -27,6 +27,7 @@ pub enum State {
     InRomania(RomaniaState),
     InRussia(RussiaState),
     InSouthAfrica(SouthAfricaState),
+    InUAE(UAEState),
     InUSA(USAState),
 }
 
@@ -61,6 +62,7 @@ impl State {
             Country::Romania => Ok(State::InRomania(s.parse::<RomaniaState>()?)),
             Country::Russia => Ok(State::InRussia(s.parse::<RussiaState>()?)),
             Country::SouthAfrica => Ok(State::InSouthAfrica(s.parse::<SouthAfricaState>()?)),
+            Country::UAE => Ok(State::InUAE(s.parse::<UAEState>()?)),
             Country::USA => Ok(State::InUSA(s.parse::<USAState>()?)),
             _ => Err(ParseError::VariantNotFound),
         }
@@ -104,6 +106,7 @@ impl State {
             Country::Romania => inner::<RomaniaState>(),
             Country::Russia => inner::<RussiaState>(),
             Country::SouthAfrica => inner::<SouthAfricaState>(),
+            Country::UAE => inner::<UAEState>(),
             Country::USA => inner::<USAState>(),
             _ => None,
         }
@@ -161,6 +164,7 @@ impl State {
             State::InRomania(_) => Country::Romania,
             State::InRussia(_) => Country::Russia,
             State::InSouthAfrica(_) => Country::SouthAfrica,
+            State::InUAE(_) => Country::UAE,
             State::InUSA(_) => Country::USA,
         }
     }
@@ -193,6 +197,7 @@ impl State {
             State::InRomania(s) => s.to_string(),
             State::InRussia(s) => s.to_string(),
             State::InSouthAfrica(s) => s.to_string(),
+            State::InUAE(s) => s.to_string(),
             State::InUSA(s) => s.to_string(),
         }
     }
@@ -1061,6 +1066,25 @@ pub enum SouthAfricaState {
     NW,
     /// Western Cape.
     WC,
+}
+
+/// AN Emirate in the UAE (non-ISO).
+#[derive(Copy, Clone, Debug, Display, EnumString, EnumIter, PartialEq, Eq, Serialize)]
+pub enum UAEState {
+    /// Abu Dhabi.
+    AD,
+    /// Dubai.
+    DUB,
+    /// Sharjah.
+    SHJ,
+    /// Ajman.
+    AJM,
+    /// Umm Al Quwain.
+    UAQ,
+    /// Ras Al Khaima.
+    RAK,
+    /// Fujairah.
+    FUJ,
 }
 
 /// A state in the USA.

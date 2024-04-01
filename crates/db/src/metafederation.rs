@@ -599,9 +599,9 @@ pub enum MetaFederation {
     #[strum(to_string = "tpssf")]
     TPSSF,
 
-    /// UAEPA, but with international results also.
-    #[strum(to_string = "uaepa")]
-    UAEPA,
+    /// UAEPL, but with international results also.
+    #[strum(to_string = "uaepl")]
+    UAEPL,
 
     /// UgandaPF, but with international results also.
     #[strum(to_string = "ugandapf")]
@@ -1021,7 +1021,7 @@ impl MetaFederation {
             MetaFederation::KDKS => {
                 affiliation!(meet, entry, KDKS, IPF, EPF) && meet.date.year() >= 2020
             }
-            MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF, UAEPA), // Kuwait often use UAE meets for team selection
+            MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF, UAEPL), // Kuwait often use UAE meets for team selection
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
             MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA),
@@ -1065,7 +1065,7 @@ impl MetaFederation {
             }
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
-            MetaFederation::UAEPA => affiliation!(meet, entry, UAEPA, IPF, AsianPF, OceaniaPF),
+            MetaFederation::UAEPL => affiliation!(meet, entry, UAEPL, IPF, AsianPF, OceaniaPF),
             MetaFederation::UgandaPF => affiliation!(meet, entry, UgandaPF, WP),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
 

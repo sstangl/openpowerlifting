@@ -100,7 +100,7 @@
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL / {{strings.country.finland}}</option>
   <option value="taap" {% if selection.federation == "TAAP" %}selected{% endif %}>TAAP / {{strings.country.thailand}}</option>
   <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF / {{strings.country.turkey}}</option>
-  <option value="uaepa" {% if selection.federation == "UAEPA" %}selected{% endif %}>UAEPA / {{strings.country.uae}}</option>
+  <option value="uaepl" {% if selection.federation == "UAEPL" %}selected{% endif %}>UAEPL / {{strings.country.uae}}</option>
   <option value="ukrainepf" {% if selection.federation == "UkrainePF" %}selected{% endif %}>UkrainePF / {{strings.country.ukraine}}</option>
   <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF / {{strings.country.usvirginislands}}</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF / {{strings.country.belgium}}</option>

@@ -609,7 +609,7 @@
 </optgroup>
 <optgroup label="{{strings.country.uae}}">
   <option value="all-uae" {% if selection.federation == "AllUAE" %}selected{% endif %}>All UAE Lifters</option>
-  <option value="uaepa" {% if selection.federation == "UAEPA" %}selected{% endif %}>UAEPA - UAE Powerlifting Assocation [IPF]</option>
+  <option value="uaepl" {% if selection.federation == "UAEPL" %}selected{% endif %}>UAEPL - UAE Powerlifting Assocation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.uganda}}">
   <option value="all-uganda" {% if selection.federation == "AllUganda" %}selected{% endif %}>{{strings.selectors.fed.all_uganda}}</option>
