@@ -228,7 +228,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[SwissPL as usize].format = pdf_structured;
     statuses[THSPA as usize].format = database;
     statuses[THSWPA as usize].format = database;
-    statuses[UAEPA as usize].format = xls_structured;
+    statuses[UAEPL as usize].format = xls_structured;
     statuses[UPA as usize].format = pdf_unstructured;
     statuses[UPCGermany as usize].format = pdf_unstructured;
     statuses[USAPL as usize].format = database;
@@ -300,7 +300,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[SwissPL as usize].ease = difficult;
     statuses[THSPA as usize].ease = medium;
     statuses[THSWPA as usize].ease = medium;
-    statuses[UAEPA as usize].ease = easy;
+    statuses[UAEPL as usize].ease = easy;
     statuses[UPA as usize].ease = difficult;
     statuses[UPCGermany as usize].ease = difficult;
     statuses[USAPL as usize].ease = easy;
@@ -393,7 +393,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[SPF as usize].maintainers = email_sean;
     statuses[SSSC as usize].maintainers = email_mayed;
     statuses[SwissPL as usize].maintainers = email_laura;
-    statuses[UAEPA as usize].maintainers = email_mayed;
+    statuses[UAEPL as usize].maintainers = email_mayed;
     statuses[USAPL as usize].maintainers = email_sean;
     statuses[USPA as usize].maintainers = email_sean;
     statuses[USPC as usize].maintainers = email_sean;
@@ -462,7 +462,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[SSSC as usize].instagram = "ksa_strength";
     statuses[SwissPL as usize].instagram = "swiss_powerlifting";
     statuses[ThaiPF as usize].instagram = "thaipowerlifting";
-    statuses[UAEPA as usize].instagram = "powerlifting_uae";
+    statuses[UAEPL as usize].instagram = "powerlifting_uae";
     statuses[UPA as usize].instagram = "upa_events_";
     statuses[UPC as usize].instagram = "powerliftingupc";
     statuses[USAPL as usize].instagram = "usapowerlifting";
