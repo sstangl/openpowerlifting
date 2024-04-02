@@ -414,6 +414,14 @@ pub enum MetaFederation {
     #[strum(to_string = "ipf-china")]
     IPFChina,
 
+    /// IPL-China, plus IPL results for Chinese lifters.
+    #[strum(to_string = "ipl-china")]
+    IPLChina,
+
+    /// IPL-China MetaFederation, but only for Tested entries.
+    #[strum(to_string = "iplchina-tested")]
+    IPLChinaTested,
+
     /// IranBBF, but with international results also.
     #[strum(to_string = "iranbbf")]
     IranBBF,
@@ -1006,6 +1014,10 @@ impl MetaFederation {
                     | Federation::CommonwealthPF
             ),
             MetaFederation::IPFChina => affiliation!(meet, entry, IPFChina, IPF, AsianPF),
+            MetaFederation::IPLChina => affiliation!(meet, entry, IPLChina, IPL),
+            MetaFederation::IPLChinaTested => {
+                entry.tested && MetaFederation::IPLChina.contains(entry, meets)
+            }
             MetaFederation::IranBBF => affiliation!(meet, entry, IranBBF, IPF, AsianPF),
             MetaFederation::IraqPF => affiliation!(meet, entry, IraqPF, IPF, AsianPF),
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
