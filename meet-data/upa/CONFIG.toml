@@ -154,7 +154,7 @@
 
     # Raw Elite divisions disallow wraps. Untested.
     myre  = {name="MYRE", min=0, max=12, sex="M", equipment="Raw"}
-    fyre  = {name="FYRE", min=0, max=12, sex="M", equipment="Raw"}
+    fyre  = {name="FYRE", min=0, max=12, sex="F", equipment="Raw"}
     mt1re = {name="MT1RE", min=13, max=15, sex="M", equipment="Raw"}
     ft1re = {name="FT1RE", min=13, max=15, sex="F", equipment="Raw"}
     mt2re = {name="MT2RE", min=16, max=17, sex="M", equipment="Raw"}
