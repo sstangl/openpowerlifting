@@ -43,6 +43,8 @@
     tm80_84 = {name = "TM80-84", min=80, max=84, tested="Yes"}
     tm80p = {name = "TM80+", min=80, max=999, tested="Yes"}
 
+    para = {name="Para", min=0, max=999}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
