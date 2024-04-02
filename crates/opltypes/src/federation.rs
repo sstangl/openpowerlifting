@@ -507,6 +507,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-CAN", serialize = "gpc-can")]
     GPCCAN,
 
+    /// Frencg branch of the GPC.
+    #[serde(rename = "GPC-France")]
+    #[strum(to_string = "GPC-France", serialize = "gpc-france")]
+    GPCFrance,
+
     /// British branch of the GPC.
     #[serde(rename = "GPC-GB")]
     #[strum(to_string = "GPC-GB", serialize = "gpc-gb")]
@@ -1978,6 +1983,7 @@ impl Federation {
             Federation::GPAFinland => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
+            Federation::GPCFrance => false,
             Federation::GPCGB => false,
             Federation::GPCGUPU => false,
             Federation::GPCIRL => false,
@@ -2412,6 +2418,7 @@ impl Federation {
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCCAN => Some(Country::Canada),
+            Federation::GPCFrance => Some(Country::France),
             Federation::GPCGB => Some(Country::UK),
             Federation::GPCGUPU => Some(Country::Ukraine),
             Federation::GPCIRL => Some(Country::Ireland),
@@ -2891,6 +2898,7 @@ impl Federation {
             Federation::GPC => Some(Federation::GPC),
             Federation::GPCAUS => Some(Federation::GPC),
             Federation::GPCCAN => Some(Federation::GPC),
+            Federation::GPCFrance => Some(Federation::GPC),
             Federation::GPCGB => Some(Federation::GPC),
             Federation::GPCGUPU => Some(Federation::GPC),
             Federation::GPCIRL => Some(Federation::GPC),
@@ -3431,6 +3439,7 @@ impl Federation {
             Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCCAN => PointsSystem::Glossbrenner,
+            Federation::GPCFrance => PointsSystem::Glossbrenner,
             Federation::GPCGB => PointsSystem::Reshel,
             Federation::GPCGUPU => PointsSystem::Glossbrenner,
             Federation::GPCIRL => PointsSystem::Glossbrenner,

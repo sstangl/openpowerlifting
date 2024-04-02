@@ -279,6 +279,7 @@
   <option value="all-france" {% if selection.federation == "AllFrance" %}selected{% endif %}>{{strings.selectors.fed.all_france}}</option>
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce - Fédération Française de Force [IPF]</option>
   <option value="fsfa" {% if selection.federation == "FSFA" %}selected{% endif %}>FSFA - Fédération Sportive de Force Athlétique [WDFPF]</option>
+  <option value="gpc-france" {% if selection.federation == "GPC-France" %}selected{% endif %}>GPC France</option>
   <option value="wpc-france" {% if selection.federation == "WPC-France" %}selected{% endif %}>WPC France</option>
 </optgroup>
 <optgroup label="{{strings.country.georgia}}">
