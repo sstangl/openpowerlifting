@@ -147,7 +147,7 @@ def disambig_persons(lifters, idx_start, name, username, meetyear, dirname):
 def main(name, username, idx_start):
     lifters = []
 
-    recursedir = os.getcwd() + os.sep + "meet-data" + os.sep + "thswpa"
+    recursedir = os.getcwd() + os.sep + "meet-data" + os.sep + "thspa"
 
     for dirname, _, files in os.walk(recursedir):
         if 'entries.csv' in files:
