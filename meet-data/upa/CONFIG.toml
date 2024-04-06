@@ -42,6 +42,8 @@
     fm10r = {name="FM10R", min=85, max=89, sex="F", equipment=["Raw","Wraps"]}
     mmxr = {name="MMXR", min=40, max=999, sex="M", equipment=["Raw","Wraps"]}
     fmxr = {name="FMXR", min=40, max=999, sex="F", equipment=["Raw","Wraps"]}
+    msor = {name="MSOR", min=0, max=999, sex="M", equipment=["Raw","Wraps"]} # Special Olympics?
+    fsor = {name="FSOR", min=0, max=999, sex="F", equipment=["Raw","Wraps"]} # Special Olympics?
 
     # Tested raw divisions.
     mt1rad = {name="MT1R-AD", min=13, max=15, sex="M", equipment=["Raw","Wraps"], tested="Yes"}
@@ -189,6 +191,8 @@
     fm9re = {name="FM9RE", min=80, max=999, sex="F", equipment="Raw"}
     mmxre = {name="MMXRE", min=40, max=999, sex="M", equipment="Raw"}
     fmxre = {name="FMXRE", min=40, max=999, sex="F", equipment="Raw"}
+    msore = {name="MSORE", min=0, max=999, sex="M", equipment="Raw"} # Special Olympics?
+    fsore = {name="FSORE", min=0, max=999, sex="F", equipment="Raw"} # Special Olympics?
 
     # Raw Elite divisions disallow wraps. Tested.
     mt1read = {name="MT1RE-AD", min=13, max=15, sex="M", equipment="Raw", tested="Yes"}
