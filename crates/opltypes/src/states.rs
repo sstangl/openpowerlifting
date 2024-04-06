@@ -1074,7 +1074,7 @@ pub enum UAEState {
     /// Abu Dhabi.
     AD,
     /// Dubai.
-    DUB,
+    DXB,
     /// Sharjah.
     SHJ,
     /// Ajman.
