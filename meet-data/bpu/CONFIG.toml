@@ -59,6 +59,7 @@
     mjcrbpu = {name ="M_JCR_BPU",min=20,max=23,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mjsbpu = {name ="M_JES_BPU",min=20,max=23,equipment="Single-ply",sex="M",tested="No"}
     mjmbpu = {name ="M_JEM_BPU",min=20,max=23,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mjubpu = {name ="M_JEU_BPU",min=20,max=23,equipment="Unlimited",sex="M",tested="No"}
     msrbpu = {name ="M_SR_BPU",min=33,max=39,equipment="Raw",sex="M",tested="No"}
     mscrbpu = {name ="M_SCR_BPU",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mssbpu = {name ="M_SES_BPU",min=33,max=39,equipment="Single-ply",sex="M",tested="No"}
