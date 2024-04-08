@@ -513,7 +513,7 @@
 <optgroup label="{{strings.country.qatar}}">
   <option value="all-qatar" {% if selection.federation == "AllQatar" %}selected{% endif %}>All Qatar Lifters</option>
   <option value="qatarpl" {% if selection.federation == "QatarPL" %}selected{% endif %}>QatarPL - Qatar Powerlifting [IPF]</option>
-  <option value="qatar-ua" {% if selection.federation == "QATAR-UA" %}selected{% endif %}>QATAR-UA</option></optgroup>
+  <option value="qatar-ua" {% if selection.federation == "QATAR-UA" %}selected{% endif %}>QATAR-UA</option>
   <option value="wrpf-qatar" {% if selection.federation == "WRPF-Qatar" %}selected{% endif %}>WRPF-Qatar</option></optgroup>
 
 <optgroup label="{{strings.country.romania}}">
