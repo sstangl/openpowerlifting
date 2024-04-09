@@ -1,0 +1,23 @@
+# Configuration for IHSPA.
+
+[divisions]
+    # The main division used for almost everything.
+    men = {name="Men",min=0,max=999}
+	women = {name="Women",min=0,max=999}
+	menopen = {name="Men Open",min=0,max=999}
+	womenopen = {name="Women Open",min=0,max=999}
+
+
+
+# IHSPA uses pounds classes with exact pound values.
+[weightclasses.default_M]
+    classes = ["51.71","55.79","59.87","67.13","74.84","82.1","89.81","99.79","109.77","124.74","139.71","139.71+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44.45","47.63","51.71","55.79","59.87","67.13","74.84","82.1","89.81","89.81+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "F"
+
+[exemptions]

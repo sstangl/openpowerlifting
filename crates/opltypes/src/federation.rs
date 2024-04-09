@@ -655,6 +655,11 @@ pub enum Federation {
     #[strum(to_string = "IDFPF", serialize = "idfpf")]
     IDFPF,
 
+    /// Ilinois High School Powerlifting Association.
+    #[strum(to_string = "IHSPA", serialize = "ihspa")]
+    IHSPA,
+
+
     /// Islenska Kraftlyfingafelagid, Icelandic GPC? affiliate.
     #[strum(to_string = "IKF", serialize = "ikf")]
     IKF,
@@ -2018,6 +2023,7 @@ impl Federation {
             Federation::GPCCAN => false,
             Federation::HKPF => FULLY_TESTED,
             Federation::HPF => FULLY_TESTED,
+            Federation::IHSPA => FULLY_TESTED,
             Federation::ILPA => false,
             Federation::ILPF => {
                 // ILPF switched to IPF and drug-tested
@@ -2451,6 +2457,7 @@ impl Federation {
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
+            Federation::IHSPA => Some(Country::USA),
             Federation::IKF => Some(Country::Iceland),
             Federation::ILPA => Some(Country::Israel),
             Federation::ILPF => Some(Country::Israel),
@@ -2931,6 +2938,7 @@ impl Federation {
             Federation::IBSA => None,
             Federation::IDFPA => None,
             Federation::IDFPF => Some(Federation::WDFPF),
+            Federation::IHSPA => None,
             Federation::IKF => Some(Federation::GPC),
             Federation::ILPA => Some(Federation::GPA),
             Federation::ILPF => {
@@ -3472,6 +3480,7 @@ impl Federation {
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::SchwartzMalone,
+            Federation::IHSPA => PointsSystem::Wilks,
             Federation::IKF => PointsSystem::Wilks,
             Federation::ILPA => PointsSystem::Wilks,
             Federation::ILPF => Federation::ipf_rules_on(date),
