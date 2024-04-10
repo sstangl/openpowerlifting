@@ -71,7 +71,7 @@
       <tbody>
       {% for table in tables %}
         {% if table.title %}
-          <td colspan="12" class="divheader">{{table.title}}</td>
+          <td colspan="13" class="divheader">{{table.title}}</td>
         {% endif %}
       {% for this in table.rows %}
         <tr>
