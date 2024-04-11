@@ -25,7 +25,8 @@ CREATE TABLE opldb.opl_meets (
 	state VARCHAR,
 	town VARCHAR,
 	name VARCHAR NOT NULL,
-	ruleset VARCHAR
+	ruleset VARCHAR,
+	sanctioned VARCHAR
 );
 \copy opldb.opl_meets FROM 'build/meets.csv' DELIMITER ',' CSV HEADER
 
