@@ -93,6 +93,12 @@
     date_range=["2021-01-01","9999-12-31"]
     sex = "M"
     divisions = ["MR-M2", "M-M2", "Master II"]	
+
+[weightclasses.masterIII_new_M]
+    classes = ["74","83","83+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-M3", "M-M3", "Master III"]	
 	
 	
 	
@@ -184,3 +190,4 @@
     2203 = ["ExemptWeightClassConsistency"] # Reduced classes
     2204 = ["ExemptWeightClassConsistency"] # Reduced classes
     2301 = ["ExemptWeightClassConsistency"] # Reduced classes
+    2303 = ["ExemptWeightClassConsistency"] # Reduced classes
