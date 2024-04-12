@@ -776,6 +776,25 @@
   animation: redgold 3s cubic-bezier(.77,0,.18,1) infinite;
 }
 
+// Switches from blue to purple to red.
+@keyframes blue_purple_red {
+  0% {
+    color: #3364ea;
+  } 25% {
+    color: #a747ff;
+  } 50% {
+    color: #ff2b6b;
+  } 75% {
+    color: #a747ff;
+  } 100% {
+    color: #3364ea;
+  }
+}
+
+.blue_purple_red_anim {
+  animation: blue_purple_red 3s cubic-bezier(.77,0,.18,1) infinite;
+}
+
 .teal-shadow {
   // Sharp offset shadow in teal.
   // 1px blur is more readable than 0px blur at small sizes.
