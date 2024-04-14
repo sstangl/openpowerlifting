@@ -90,6 +90,9 @@
     mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"} #Police/Fire
     mpfrapf = {name ="M_PFR_APF",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
     mnrapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
+    mnr5apf = {name ="M_NR_5_APF",min=60,max=64,equipment="Raw",sex="M",tested="No"} #Novice
+    mncr1apf = {name ="M_NCR_1_APF",min=40,max=44,equipment=["Raw","Wraps"],sex="M"} #Novice
+    mnesapf = {name ="M_NES_APF",min=0,max=999,equipment="Single-ply",sex="M"} #Novice
     mnemapf = {name ="M_NEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"} #Novice
     mcemapf = {name ="M_CEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"} #Collegiate
     mgrapf = {name ="M_GR_APF",min=0,max=999,equipment="Raw",sex="M",place="G"} #Guest
@@ -273,6 +276,8 @@
     mpfemaapf = {name ="M_PFEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Police/Fire
     mnemaapf = {name ="M_NEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Novice
     mnraapf = {name ="M_NR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Novice
+    mntr3aapf = {name ="M_NTR_3_AAPF",min=17,max=19,equipment="Raw",sex="M",tested="Yes"} #Novice
+    mnr5aapf = {name ="M_NR_5_AAPF",min=60,max=64,equipment="Raw",sex="M",tested="Yes"} #Novice
     mgraapf = {name ="M_GR_AAPF",min=0,max=999,equipment="Raw",sex="M",place="G",tested="Yes"} #Guest
     mgemaapf = {name ="M_GEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",place="G",tested="Yes"} #Guest
 
@@ -347,6 +352,8 @@
     fyraapf = {name ="F_YR_AAPF",min=0,max=12,equipment="Raw",sex="F",tested="Yes"} #Youth
     fyesaapf = {name ="F_YES_AAPF",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
     fyemaapf = {name ="F_YEM_AAPF",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="F"} #Youth
+    fnraapf = {name ="F_NR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Novice
+    fnr1aapf = {name ="F_NR_1_AAPF",min=40,max=44,equipment="Raw",sex="F",tested="Yes"} #Novice
     fgraapf = {name ="F_GR_AAPF",min=0,max=999,equipment="Raw",sex="F",place="G",tested="Yes"} #Guest
     fpfemapf = {name ="F_PFEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F"} #Police/Fire
     fpfraapf = {name ="F_PFR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Police/Fire
