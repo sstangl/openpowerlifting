@@ -21,3 +21,4 @@
 [exemptions]
     2302 = ["ExemptWeightClassConsistency"]
     2303 = ["ExemptWeightClassConsistency"]
+    2402 = ["ExemptWeightClassConsistency"]  # no weightclasses for age divisions
