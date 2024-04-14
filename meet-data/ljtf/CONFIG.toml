@@ -47,7 +47,7 @@
 
 	
 [weightclasses.new_F]
-    classes = ["52","57","63","69","76","76+"] # in LJTF there is no "47", "84","84+"
+    classes = ["52","57","63","69","76","63+","76+"] # in LJTF there is no "47", "84","84+"
     date_range=["2021-01-01","9999-12-31"]
     sex = "F"
 
@@ -66,7 +66,7 @@
 	
 	
 [weightclasses.default_M]
-    classes = ["59","66","74","83","93","105","120","120+"]
+    classes = ["59","66","74","83","93","105","120","83+","105+","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"	
 
@@ -191,3 +191,4 @@
     2204 = ["ExemptWeightClassConsistency"] # Reduced classes
     2301 = ["ExemptWeightClassConsistency"] # Reduced classes
     2303 = ["ExemptWeightClassConsistency"] # Reduced classes
+    2304 = ["ExemptWeightClassConsistency"] # Reduced classes
