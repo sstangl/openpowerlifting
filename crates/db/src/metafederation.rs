@@ -894,19 +894,22 @@ impl MetaFederation {
                 affiliation!(meet, entry, AMP, IPF, NAPF) && meet.date.year() >= 2022
             }
             MetaFederation::APF => affiliation!(meet, entry, APF, WPC),
-            
-            //APLA formed in 2024 and became IPF and ORPF/CommonwealthPF affiliate at this time, replacing APU.
+
+            // APLA formed in 2024 and became IPF and ORPF/CommonwealthPF affiliate at this time, replacing APU.
             MetaFederation::APLA => {
-                affiliation!(meet, entry, APLA, IPF, ORPF, CommonwealthPF) && meet.date.year() >= 2024
+                affiliation!(meet, entry, APLA, IPF, ORPF, CommonwealthPF)
+                    && meet.date.year() >= 2024
             }
             MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
 
-            //APU formed in 2018 and was IPF affiliate until end of 2023.
-            //APU was originally affiliated to ORPF but changed to AsianPF from 2021.
+            // APU formed in 2018 and was IPF affiliate until end of 2023.
+            // APU was originally affiliated to ORPF but changed to AsianPF from 2021.
             MetaFederation::APU => {
-                (meet.date >= date!(2018-01-01) && affiliation!(meet, entry, APU, IPF, CommonwealthPF, ORPF))
-                    || (meet.date >= date!(2021-01-01) && affiliation!(meet, entry, APU, IPF, CommonwealthPF, AsianPF))
-                    || (meet.date >= date!(2024-01-01) && affiliation!(meet, entry, APU, WDFPF))
+                ((2018..2021).contains(&meet.date.year())
+                    && affiliation!(meet, entry, APU, IPF, CommonwealthPF, ORPF))
+                    || ((2021..2024).contains(&meet.date.year())
+                        && affiliation!(meet, entry, APU, IPF, CommonwealthPF, AsianPF))
+                    || (meet.date.year() >= 2024 && affiliation!(meet, entry, APU, WDFPF))
             }
             MetaFederation::AusPLTested => meet.federation == Federation::AusPL && entry.tested,
             MetaFederation::AWPC => meet.federation == Federation::WPC && entry.tested,
