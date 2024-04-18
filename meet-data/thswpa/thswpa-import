@@ -155,9 +155,10 @@ def enterdivision(csv, divurl):
     for row in trlist:
         cells = row.find_all('td')
 
-        # The optional 11th or 12th cell specifies whether it was a state qualifying total.
-        # Very few meets actually have that.
-        assert len(cells) >= 10 and len(cells) <= 12, f"len(cells) assertion failed, len:{len(cells)}"
+        # The optional 11th or 12th cell specifies whether it was a state qualifying
+        # total. Very few meets actually have that.
+        assert len(cells) >= 10 and len(cells) <= 12, \
+               f"len(cells) assertion failed, len:{len(cells)}"
 
         # First column is WeightClassLBS, needs conversion to Kg.
         weightclass = weightclass2kg(cells[0].text.strip(), sex)
