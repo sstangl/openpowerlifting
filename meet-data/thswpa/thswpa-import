@@ -71,7 +71,7 @@ def weightclass2kg(s, sex):
     if s == '220':  # 220.5 by rulebook
         return '100.02'
     if s == '242':  # 242.5 by rulebook
-        return '110' # 109.996 rounded up
+        return '110'  # 109.996 rounded up
     if s == '259':  # 259.5 by rulebook
         return '117.71'
 
@@ -83,7 +83,6 @@ def weightclass2kg(s, sex):
         return '117.71+'
     if s == 'SHW':
         return '110+'
-
 
     if s == 'UNC':  # Unconfirmed.
         return ''
