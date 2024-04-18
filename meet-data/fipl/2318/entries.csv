@@ -1,12 +1,38 @@
-Place,Name,Sex,BirthYear,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,BirthDate
-1,Elena Borgatti,F,1969,Single-ply,Master II,46.24,47,,,,,,,,,150,156,-162,156,156,D,
-2,Ilaria Loi,F,1995,Single-ply,Senior,44.48,47,,,,,,,,,115,125,135,135,135,D,
-1,Sara Guarino,F,1990,Single-ply,Senior,55.74,57,,,,,,,,,162.5,170,-177.5,170,170,D,
-2,Ilaria Marchionne,F,1986,Single-ply,Senior,55.23,57,,,,,,,,,150,162.5,-170,162.5,162.5,D,
-3,Valentina Longhi,F,2005,Single-ply,Sub-Junior,55.24,57,,,,,,,,,125,132.5,140.5,140.5,140.5,D,
-1,Nerea Ferrara,F,2001,Single-ply,Junior,57.91,63,,,,,,,,,170,177.5,-185,177.5,177.5,D,
-2,Laura Locatelli,F,1957,Single-ply,Master III,62,63,,,,,,,,,145,155,162.5,162.5,162.5,D,
-1,Emilia Pituelli,F,1998,Single-ply,Senior,65.69,69,,,,,,,,,182.5,193,-202.5,193,193,D,
-2,Michela Gubernati,F,1981,Single-ply,Master I,66.31,69,,,,,,,,,-190,190,-202.5,190,190,D,
-1,Valentina Dell'Aversana,F,1995,Single-ply,Senior,69.86,76,,,,,,,,,185,195,203,203,203,D,
-1,Harpa Sif Jarlsdottir,F,1980,Single-ply,Master I,77.34,84,,,,,,,,,127.5,137.5,145,145,145,D,
+Place,Name,Sex,Event,Division,WeightClassKg,Equipment,BirthDate,BirthYear,BodyweightKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg
+1,Diego Milani,M,D,Senior,83,Single-ply,,1996,74.13,250,275,285,285,285
+1,Ronni Mulas,M,D,Senior,74,Single-ply,,1993,72.90,270,-280,,270,270
+1,Raffaello Giammichele,M,D,Senior,66,Single-ply,,1995,65.83,235,247.5,-257.5,247.5,247.5
+2,Cosimo Giacomini,M,D,Sub-Junior,74,Single-ply,,2006,73.14,235,250,261,261,261
+1,Francesco Guido Rizzo,M,D,Senior,105,Single-ply,,1995,95.21,260,280,300,300,300
+2,Lorenzo Razzauti,M,D,Master I,93,Single-ply,,1983,86.86,250,270,285,285,285
+2,Francesco Morese,M,D,Master III,83,Single-ply,,1962,82.30,250.5,275.5,-285.5,275.5,275.5
+1,Cristian Cortese,M,D,Senior,93,Single-ply,,1997,91.20,275,285,290,290,290
+2,Stefano Gadler,M,D,Senior,105,Single-ply,,1998,98.40,275,290,-302.5,290,290
+3,Andrea Masoero,M,D,Senior,74,Single-ply,,1991,73.87,222.5,232.5,242.5,242.5,242.5
+3,Kevin Thumadoo,M,D,Senior,83,Single-ply,,1993,81.86,220,232.5,252.5,252.5,252.5
+4,Claudio Sulas,M,D,Senior,83,Single-ply,,1991,80.53,230,250,-260,250,250
+4,Christian Fattori,M,D,Senior,74,Single-ply,,1999,72.83,215,230,-240,230,230
+3,Fabiano Fulvi,M,D,Master II,93,Single-ply,,1969,87.84,230,250,255,255,255
+4,Andrea Zanetti,M,D,Senior,93,Single-ply,,1988,86.94,235,242.5,250,250,250
+5,Amedeo Sapienza,M,D,Senior,74,Single-ply,,1995,72.55,202.5,212.5,222.5,222.5,222.5
+1,Claudio Randazzo,M,D,Master I,120+,Single-ply,,1978,155.00,290,310.5,-315,310.5,310.5
+1,Youssuf El Adlani,M,D,Senior,120,Single-ply,,1996,107.73,180,230,267.5,267.5,267.5
+5,Emilio Cotti Cometti,M,D,Senior,93,Single-ply,,1995,86.93,220,240,,240,240
+2,Filippo Putti,M,D,Senior,120,Single-ply,,1990,109.98,250,-265,265,265,265
+6,Matteo Sandrini,M,D,Master I,93,Single-ply,,1976,90.66,230,240,-250,240,240
+3,Francesco Vendramini,M,D,Senior,105,Single-ply,,1999,94.52,225,240,245,245,245
+7,Giovanni Rastelli,M,D,Sub-Junior,93,Single-ply,,2005,88.63,212.5,225,235,235,235
+3,Lorenzo Costa,M,D,Master III,66,Single-ply,,1954,61.76,170,180,185,185,185
+2,Roberto Gianello,M,D,Master III,66,Single-ply,,1955,65.43,185,190,192.5,192.5,192.5
+3,Niki Foschini,M,D,Master I,120,Single-ply,,1983,106.03,240,252.5,-265,252.5,252.5
+1,Valentina Dell'Aversana,F,D,Senior,76,Single-ply,,1995,69.86,185,195,203,203,203
+1,Elena Borgatti,F,D,Master II,47,Single-ply,,1969,46.24,150,156,-162,156,156
+1,Emilia Pituelli,F,D,Senior,69,Single-ply,,1998,65.69,182.5,193,-202.5,193,193
+1,Nerea Ferrara,F,D,Junior,63,Single-ply,,2001,57.91,170,177.5,-185,177.5,177.5
+2,Michela Gubernati,F,D,Master I,69,Single-ply,,1981,66.31,-190,190,-202.5,190,190
+1,Sara Guarino,F,D,Senior,57,Single-ply,,1990,55.74,162.5,170,-177.5,170,170
+2,Ilaria Marchionne,F,D,Senior,57,Single-ply,,1986,55.23,150,162.5,-170,162.5,162.5
+2,Ilaria Loi,F,D,Senior,47,Single-ply,,1995,44.48,115,125,135,135,135
+2,Laura Locatelli,F,D,Master III,63,Single-ply,,1957,62.00,145,155,162.5,162.5,162.5
+3,Valentina Longhi,F,D,Sub-Junior,57,Single-ply,,2005,55.24,125,132.5,140.5,140.5,140.5
+1,Harpa Sif Jarlsdottir,F,D,Master I,84,Single-ply,,1980,77.34,127.5,137.5,145,145,145
