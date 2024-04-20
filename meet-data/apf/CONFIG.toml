@@ -186,6 +186,7 @@
     framapf = {name="F_RAM_APF", min=0, max=999, equipment=["Multi-ply","Unlimited"], sex="F"} # Soft Equipment.
     fhsemapf = {name="F_HSEM_APF", min=13, max=19, equipment=["Multi-ply","Unlimited"], sex="F"} # High School
     fpfrapf = {name ="F_PFR_APF",min=0,max=999,equipment="Raw",sex="F"} #Police/Fire
+    Mpfesapf = {name ="M_PFES_APF",min=0,max=999,equipment="Single-ply",sex="M"} #Police/Fire
     fpfcrapf = {name ="F_PFCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"} #Police/Fire
     forlfapf = {name="F_OR_LF_APF",min=0,max=999,equipment="Raw",sex="F"} # Not sure.
     fmr1lfapf = {name="F_MR_1_LF_APF",min=40,max=45,equipment="Raw",sex="F"} # Not sure.
@@ -670,6 +671,7 @@
     mmes3wpcdisabled = {name="M_MES_3_WPC_Disabled", min=50, max=55, equipment="Single-ply", sex="M"}
     moeswpcdisabled = {name="M_OES_WPC_Disabled", min=0, max=999, equipment="Single-ply", sex="M"}
     morwpcdisabled = {name="M_OR_WPC_Disabled", min=0, max=999, equipment="Raw", sex="M"}
+    mtr2aapfdisabled = {name="M_TR_2_AAPF_Disabled", min=15, max=17, equipment="Raw",tested="Yes"}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
