@@ -50,6 +50,37 @@
     frm5 = {name="FR-M5", min=79.5, max=999, sex="F", equipment="Raw"}
     fm5 = {name="F-M5", min=79.5, max=999, sex="F", equipment="Single-ply"}
 
+    # High School Junior Varsity.
+    mrjv = {name="MR-JV", min=0, max=999, sex="M", equipment="Raw"}
+    frjv = {name="FR-JV", min=0, max=999, sex="F", equipment="Raw"}
+    mjv = {name="M-JV", min=0, max=999, sex="M", equipment="Single-ply"}
+    fjv = {name="F-JV", min=0, max=999, sex="F", equipment="Single-ply"}
+
+    # High School Varsity.
+    mrv = {name="MR-V", min=0, max=999, sex="M", equipment="Raw"}
+    frv = {name="FR-V", min=0, max=999, sex="F", equipment="Raw"}
+    mv = {name="M-V", min=0, max=999, sex="M", equipment="Single-ply"}
+    fv = {name="F-V", min=0, max=999, sex="F", equipment="Single-ply"}
+
+    # High School.
+    mrhs = {name="MR-HS", min=0, max=999, sex="M", equipment="Raw"}
+    frhs = {name="FR-HS", min=0, max=999, sex="F", equipment="Raw"}
+    mhs = {name="M-HS", min=0, max=999, sex="M", equipment="Single-ply"}
+    fhs = {name="F-HS", min=0, max=999, sex="F", equipment="Single-ply"}
+
+    # Collegiate.
+    mru = {name="MR-Uni", min=0, max=999, sex="M", equipment="Raw"}
+    fru = {name="FR-Uni", min=0, max=999, sex="F", equipment="Raw"}
+    mu = {name="M-Uni", min=0, max=999, sex="M", equipment="Single-ply"}
+    fu = {name="F-Uni", min=0, max=999, sex="F", equipment="Single-ply"}
+   
+
+    # Special Olympics.
+    mrso = {name="MR-SO", min=0, max=999, sex="M", equipment="Raw"}
+    frso = {name="FR-SO", min=0, max=999, sex="F", equipment="Raw"}
+    mso = {name="M-SO", min=0, max=999, sex="M", equipment="Single-ply"}
+    fso = {name="F-SO", min=0, max=999, sex="F", equipment="Single-ply"}
+    
     #Misc divisions
     mrg = {name="MR-G", min=0, max=999, sex="M", equipment="Raw", place="G"}
     mg = {name="M-G", min=0, max=999, sex="M", equipment="Single-ply", place="G"}
