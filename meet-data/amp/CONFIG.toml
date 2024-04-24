@@ -101,13 +101,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2022-01-01","9999-12-31"]
     sex = "M"
-    divisions = ["MR-Jr", "M-Jr", "MR-Sj", "M-Sj", "MR-Pre-Sub-Jr", "MR-PS", "M-PS"]
+    divisions = ["MR-Jr", "M-Jr", "MR-Sj", "M-Sj", "MR-Pre-Sub-Jr", "MR-PS", "M-PS", "M-JV", "MR-JV", "M-V", "MR-V", "M-HS", "MR-HS", "M-Uni", "MR-Uni"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2022-01-01","9999-12-31"]
     sex = "F"
-    divisions = ["FR-Jr", "F-Jr", "FR-Sj", "F-Sj", "FR-Pre-Sub-Jr", "F-PS", "FR-PS"]
+    divisions = ["FR-Jr", "F-Jr", "FR-Sj", "F-Sj", "FR-Pre-Sub-Jr", "F-PS", "FR-PS", "F-JV", "FR-JV", "F-V", "FR-V", "F-HS", "FR-HS", "F-Uni", "FR-Uni"]
 
 [weightclasses.youth_F]
     classes = ["0+"]
