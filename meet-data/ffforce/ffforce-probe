@@ -15,10 +15,8 @@ except ImportError:
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
     import oplprobe
 
-# URL for the 2024 season
-RESULTS_URL = ("https://www.ffforce.fr/fr/nos-disciplines/"
-               "force-athletique-ffforce/competitions-force-athletique/"
-               "saison-2024.html")
+RESULTS_URL = ("https://www.ffforce.fr/fr/force-athletique-ffforce/"
+               "regional-force-athletique/competitions-force-athletique.html")
 BASEURL = "https://www.ffforce.fr"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
