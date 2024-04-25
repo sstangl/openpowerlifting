@@ -110,6 +110,18 @@ pub fn check_duplicates_one(
                 if cur_meet.date == opltypes::Date::from_parts(2021, 11, 06) {
                     continue;
                 }
+                // oevk/2212 and oevk/2213 and oevk/2222 and oevk/2223
+                if cur_meet.date == opltypes::Date::from_parts(2022, 07, 02) {
+                    continue;
+                }
+                // oevk/2203 and oevk/2230
+                if cur_meet.date == opltypes::Date::from_parts(2022, 12, 10) {
+                    continue;
+                }
+                // oevk/2309 and oevk/2328
+                if cur_meet.date == opltypes::Date::from_parts(2023, 05, 27) {
+                    continue;
+                }
                 // oevk/2315 and oevk/2316
                 if cur_meet.date == opltypes::Date::from_parts(2023, 10, 22) {
                     continue;
