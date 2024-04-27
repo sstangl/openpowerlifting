@@ -73,3 +73,4 @@
 [exemptions]
     1901 = ["ExemptWeightClassConsistency"] # IPF Weight Classes for some reason
     1902 = ["ExemptWeightClassConsistency"] # Lifter missing WC
+    2001 = ["ExemptDuplicates"] # Dual-sanctioned as gpc-can/2003.

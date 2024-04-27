@@ -149,7 +149,7 @@
     0604 = ["ExemptDivision"]
     0605 = ["ExemptDivision"]
     0606 = ["ExemptDivision"]
-    0808 = ["ExemptWeightClassConsistency"]
+    0808 = ["ExemptWeightClassConsistency", "ExemptDuplicates"] # With bawla/0814.
     0935 = ["ExemptWeightClassConsistency"]
     0936 = ["ExemptWeightClassConsistency"]
     1025 = ["ExemptWeightClassConsistency"]

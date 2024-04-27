@@ -5,3 +5,7 @@
 # Intentionally left blank.
 
 [exemptions]
+2301 = ["ExemptDuplicates"] # With 2308.
+2307 = ["ExemptDuplicates"] # With 2309.
+2308 = ["ExemptDuplicates"] # With 2301.
+2309 = ["ExemptDuplicates"] # With 2307.

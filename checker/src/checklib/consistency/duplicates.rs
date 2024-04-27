@@ -39,6 +39,10 @@ pub fn check_duplicates_one(
         let cur_entry: &Entry = meetdata.entry(ei_by_date[i]);
         let cur_meet: &Meet = meetdata.meet(ei_by_date[i]);
 
+        if cur_meet.allow_duplicates {
+            continue; // `ExemptDuplicates` was set in this meet's CONFIG.toml.
+        }
+
         if cur_entry.totalkg.is_zero() {
             continue; // DQs can give false positives.
         }
@@ -57,80 +61,6 @@ pub fn check_duplicates_one(
                 && (cur_entry.event == match_entry.event)
                 && (cur_entry.equipment == match_entry.equipment)
             {
-                // FIXME: a USAPL meet was intentionally broken up into two
-                //        separate meets. This is instead of some exemption.
-                if cur_meet.date == opltypes::Date::from_parts(2016, 12, 9) {
-                    continue;
-                }
-                // gpc-can/2003 and wrpf-can/2001 is a single meet, dual-sanctioned.
-                if cur_meet.date == opltypes::Date::from_parts(2020, 11, 7) {
-                    continue;
-                }
-                // IrishPF/2204 and NIPF/2202.
-                if cur_meet.date == opltypes::Date::from_parts(2022, 06, 11) {
-                    continue;
-                }
-                // usapl-archive/MO-2001-04-21-A and usapl-archive/MO-2001-04-21-B.
-                if cur_meet.date == opltypes::Date::from_parts(2001, 4, 21) {
-                    continue;
-                }
-                // mags/ip/IP-2002-01-16-C and mags/ip/IP-2002-01-17-A.
-                if cur_meet.date == opltypes::Date::from_parts(2001, 11, 25) {
-                    continue;
-                }
-                // mags/ip/IP-2002-02-16-C and mags/ip/IP-2002-02-16-B.
-                if cur_meet.date == opltypes::Date::from_parts(2002, 02, 10) {
-                    continue;
-                }
-                // usapl/NS-2021-07 and usapl/NS-2021-07-B.
-                if cur_meet.date == opltypes::Date::from_parts(2021, 03, 20) {
-                    continue;
-                }
-                // bawla/0814 and epa/0808.
-                if cur_meet.date == opltypes::Date::from_parts(2008, 11, 22) {
-                    continue;
-                }
-                // uspc/2118 and wp-usa/2103.
-                if cur_meet.date == opltypes::Date::from_parts(2021, 06, 26) {
-                    continue;
-                }
-                // wrpf-argentina/2307 and wrpf-argentina/2309.
-                if cur_meet.date == opltypes::Date::from_parts(2023, 06, 17) {
-                    continue;
-                }   
-                // wrpf-argentina/2308 and wrpf-argentina/2301.
-                if cur_meet.date == opltypes::Date::from_parts(2023, 03, 25) {
-                    continue;
-                }
-                // oevk/2110 and oevk/2109
-                if cur_meet.date == opltypes::Date::from_parts(2021, 10, 17) {
-                    continue;
-                }
-                // oevk/2114 and oevk/2113
-                if cur_meet.date == opltypes::Date::from_parts(2021, 11, 06) {
-                    continue;
-                }
-                // oevk/2212 and oevk/2213 and oevk/2222 and oevk/2223
-                if cur_meet.date == opltypes::Date::from_parts(2022, 07, 02) {
-                    continue;
-                }
-                // oevk/2203 and oevk/2230
-                if cur_meet.date == opltypes::Date::from_parts(2022, 12, 10) {
-                    continue;
-                }
-                // oevk/2309 and oevk/2328
-                if cur_meet.date == opltypes::Date::from_parts(2023, 05, 27) {
-                    continue;
-                }
-                // oevk/2315 and oevk/2316
-                if cur_meet.date == opltypes::Date::from_parts(2023, 10, 22) {
-                    continue;
-                }
-                // oevk/2318 and oevk/2320
-                if cur_meet.date == opltypes::Date::from_parts(2023, 11, 04) {
-                    continue;
-                }
-
                 let msg = format!(
                     "www.openpowerlifting.org/u/{username} on {}: {} and {}",
                     cur_meet.date, cur_meet.path, match_meet.path,

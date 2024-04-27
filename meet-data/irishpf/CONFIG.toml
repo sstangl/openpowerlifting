@@ -56,3 +56,4 @@
 
 [exemptions]
     1905 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2204 = ["ExemptDuplicates"] # With nipf/2202.

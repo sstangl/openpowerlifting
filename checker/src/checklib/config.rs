@@ -101,6 +101,12 @@ pub enum Exemption {
 
     /// Allows a meet to contain implausibly young or old lifters.
     ExemptAge,
+
+    /// Allows entries within this meet to appear within another meet.
+    ///
+    /// Normally, that happens because the same meet was entered twice.
+    /// Sometimes, this is intentional for bureaucratic reasons.
+    ExemptDuplicates,
 }
 
 #[derive(Debug)]

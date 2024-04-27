@@ -13,7 +13,11 @@ use crate::Report;
 
 /// Product of a successful parse.
 pub struct Meet {
+    /// The path to the meet folder from the root of `meet-data/`.
+    ///
+    /// For example, the file `meet-data/uspa/1234/meet.csv` would have a `path` of `uspa/1234`.
     pub path: String,
+
     pub federation: Federation,
     pub date: Date,
     pub country: Country,
@@ -21,7 +25,14 @@ pub struct Meet {
     pub town: Option<String>,
     pub name: String,
     pub ruleset: RuleSet,
+
+    /// Whether the meet is sanctioned by a recognized federation.
     pub sanctioned: bool,
+
+    /// If true, allows entries in this meet to appear in other meets.
+    ///
+    /// This is enabled by setting `ExemptDuplicates` for the meet in a `CONFIG.toml`.
+    pub allow_duplicates: bool,
 }
 
 impl Meet {
@@ -38,6 +49,7 @@ impl Meet {
             name: "Test Meet".to_string(),
             ruleset: RuleSet::default(),
             sanctioned: true,
+            allow_duplicates: false,
         }
     }
 }
@@ -394,6 +406,7 @@ pub fn do_check<R: io::Read>(
         configured_ruleset(config, date)
     };
 
+    // Check the optional "Sanctioned" column.
     let sanctioned = if let Some(idx) = sanctioned_idx {
         check_sanctioned(&record[idx], &mut report)
     } else {
@@ -410,6 +423,29 @@ pub fn do_check<R: io::Read>(
         return Ok(MeetCheckResult { report, meet: None });
     }
 
+    // Check the CONFIG.toml to see if this meet should be excluded from duplicate checking.
+    // If true, this means that identical entries in this meet can appear in other meets.
+    //
+    // Normally, that happens because a meet was entered twice erroneously. Sometimes however
+    // it's intentional, when a single entry counts toward multiple different federations.
+    //
+    // TODO(sstangl): This is ugly. It would be better to make Config non-optional, and always
+    // pass around a default Config, rather than hardcoding things. We could even make that
+    // present in the data itself, by using a `meet-data/CONFIG.toml`.
+    let allow_duplicates = if let Some(config) = config {
+        if let Some((_fedname, meetname)) = meetpath.rsplit_once('/') {
+            if let Some(exemptions) = config.exemptions_for(&meetname) {
+                exemptions.contains(&super::config::Exemption::ExemptDuplicates)
+            } else {
+                false
+            }
+        } else {
+            false
+        }
+    } else {
+        false
+    };
+
     match (federation, date, country, name) {
         (Some(federation), Some(date), Some(country), Some(name)) => {
             let meet = Some(Meet {
@@ -422,6 +458,7 @@ pub fn do_check<R: io::Read>(
                 name,
                 ruleset,
                 sanctioned,
+                allow_duplicates,
             });
             Ok(MeetCheckResult { report, meet })
         }

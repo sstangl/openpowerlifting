@@ -63,5 +63,30 @@
     1914 = ["ExemptWeightClassConsistency"]
     1910 = ["ExemptWeightClassConsistency"]
     2008 = ["ExemptWeightClassConsistency"]
+
     2101 = ["ExemptWeightClassConsistency"] # Länderpokal
+    2109 = ["ExemptDuplicates"] # With 2110.
+    2110 = ["ExemptDuplicates"] # With 2109.
+    2113 = ["ExemptDuplicates"] # With 2214.
+    2114 = ["ExemptDuplicates"] # With 2213.
+
+    2203 = ["ExemptDuplicates"] # With 2229 and 2230.
+    2212 = ["ExemptDuplicates"] # 2212, 2213, 2222, 2223.
+    2213 = ["ExemptDuplicates"] # 2212, 2213, 2222, 2223.
+    2222 = ["ExemptDuplicates"] # 2212, 2213, 2222, 2223.
+    2223 = ["ExemptDuplicates"] # 2212, 2213, 2222, 2223.
+    2229 = ["ExemptDuplicates"] # With 2203.
+    2230 = ["ExemptDuplicates"] # With 2203.
+
     2303 = ["ExemptWeightClassConsistency"] # Länderpokal
+    2309 = ["ExemptDuplicates"] # With 2326 and 2328.
+    2310 = ["ExemptDuplicates"] # With 2327.
+    2315 = ["ExemptDuplicates"] # With 2316.
+    2316 = ["ExemptDuplicates"] # With 2315.
+    2318 = ["ExemptDuplicates"] # With 2320.
+    2319 = ["ExemptDuplicates"] # With 2321.
+    2320 = ["ExemptDuplicates"] # With 2318.
+    2321 = ["ExemptDuplicates"] # With 2319.
+    2326 = ["ExemptDuplicates"] # With 2309.
+    2327 = ["ExemptDuplicates"] # With 2310.
+    2328 = ["ExemptDuplicates"] # With 2309.

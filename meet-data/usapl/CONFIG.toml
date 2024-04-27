@@ -553,6 +553,8 @@
     WI-2016-03 = ["ExemptWeightClassConsistency"]
     WI-2016-13 = ["ExemptWeightClassConsistency"]
     WI-2016-08 = ["ExemptWeightClassConsistency"]
+    NS-2016-07 = ["ExemptDuplicates"] # With RG-2016-06.
+    RG-2016-06 = ["ExemptDuplicates"] # With NS-2016-07.
 
     # 2017 Traditional Weight Classes.
     GA-2017-01 = ["ExemptWeightClassConsistency"]
@@ -588,6 +590,8 @@
     WI-2021-18 = ["ExemptWeightClassConsistency"] # No weight classes reported.
     FL-2021-14 = ["ExemptWeightClassConsistency"] # No weight classes reported.
     WI-2021-17 = ["ExemptWeightClassConsistency"] # No weight classes reported.
+    NS-2021-07 = ["ExemptDuplicates"] # With NS-2021-07-B.
+    NS-2021-07-B = ["ExemptDuplicates"] # With NS-2021-07.
 
     # 2022 exemptions.
     WI-2022-15 = ["ExemptDivision"] # Lifter under 14 in the Open division.
