@@ -45,6 +45,7 @@
     fpm = {name = "FPM", min=0, max=999} # Fire Police Military
 
 	adaptive = {name="Adaptive", min=0, max=999}
+    disabled = {name="Disabled", min=0, max=999}
     police_fire = {name = "Police and Fire", min = 0, max = 999}
     special_olympics = {name = "Special Olympics", min = 0, max = 999}
     crossfit = {name = "Crossfit", min = 0, max = 999}
