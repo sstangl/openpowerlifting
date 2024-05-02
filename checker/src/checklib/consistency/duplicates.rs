@@ -55,6 +55,10 @@ pub fn check_duplicates_one(
                 break; // No more pairs on this date with cur_entry.
             }
 
+            if match_meet.allow_duplicates {
+                continue; // `ExemptDuplicates` was set in this meet's CONFIG.toml.
+            }
+
             // Check whether (cur_entry, match_entry) is a duplicate pair.
             if (cur_meet.path != match_meet.path)
                 && (cur_entry.totalkg == match_entry.totalkg)
