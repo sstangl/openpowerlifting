@@ -20,7 +20,9 @@
     fjr    = {name ="FJ-R",min=20,max=23,sex="F", equipment="Raw"}
     fjrp   = {name ="FJ-RP",min=20,max=23,sex="F", equipment=["Raw","Wraps"]}
     fjmp   = {name ="FJ-MP",min=20,max=23,sex="F", equipment="Multi-ply"}
+    # youth, sometimes notated as "sub-teen"
     myr    = {name ="MY-R",min=5,max=12,sex="M", equipment="Raw"}
+    myrp    = {name ="MY-RP",min=5,max=12,sex="M", equipment=["Raw","Wraps"]}
     mt1r   = {name ="MT1-R",min=13,max=15,sex="M", equipment="Raw"}
     mt1rp  = {name ="MT1-RP",min=13,max=15,sex="M", equipment=["Raw","Wraps"]}
     mt1mp  = {name ="MT1-MP",min=13,max=15,sex="M", equipment="Multi-ply"}
