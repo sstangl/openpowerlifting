@@ -9,6 +9,7 @@
 
     # Amateur divisions.
     ama_teen_13 = {name="Amateur Teen 13", min=0, max=13, tested="Yes"}
+    ama_teen_13_19 = {name="Amateur Teen 13-19", min=13, max=19, tested="Yes"}
     ama_teen_14_15 = {name="Amateur Teen 14-15", min=14, max=15, tested="Yes"}
     ama_teen_16_17 = {name="Amateur Teen 16-17", min=16, max=17, tested="Yes"}
     ama_teen_18_19 = {name="Amateur Teen 18-19", min=18, max=19, tested="Yes"}
@@ -24,11 +25,13 @@
     ama_masters_65_69 = {name="Amateur Masters 65-69", min=65, max=69, tested="Yes"}
     ama_masters_70_74 = {name="Amateur Masters 70-74", min=70, max=74, tested="Yes"}
     ama_masters_75_79 = {name="Amateur Masters 75-79", min=75, max=79, tested="Yes"}
+    ama_masters_65p = {name="Amateur Masters 65+", min=65, max=999, tested="Yes"}
     ama_masters_80p = {name="Amateur Masters 80+", min=80, max=999, tested="Yes"}
     ama_police = {name="Amateur Police", min=0, max=999, tested="Yes"}
 
     # Pro divisions.
     pro_teen_13 = {name="Pro Teen 13", min=0, max=13}
+    pro_teen_13_19 = {name="Pro Teen 13-19", min=13, max=19}
     pro_teen_14_15 = {name="Pro Teen 14-15", min=14, max=15}
     pro_teen_16_17 = {name="Pro Teen 16-17", min=16, max=17}
     pro_teen_18_19 = {name="Pro Teen 18-19", min=18, max=19}
@@ -44,6 +47,7 @@
     pro_masters_65_69 = {name="Pro Masters 65-69", min=65, max=69}
     pro_masters_70_74 = {name="Pro Masters 70-74", min=70, max=74}
     pro_masters_75_79 = {name="Pro Masters 75-79", min=75, max=79}
+    pro_masters_65p = {name="Pro Masters 65+", min=65, max=999}
     pro_masters_80p = {name="Pro Masters 80+", min=80, max=999}
     pro_police = {name="Pro Police", min=0, max=999}
 
