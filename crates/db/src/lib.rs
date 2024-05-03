@@ -33,7 +33,7 @@ pub use crate::metafederation::*;
 ///
 /// The data structure is immutable. To prevent the owner from modifying
 /// owned data, the struct contents are private and accessed through getters.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug)]
 pub struct OplDb {
     /// The LifterID is implicit in the backing vector, as the index.
     ///
