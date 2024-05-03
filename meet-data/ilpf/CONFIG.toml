@@ -27,6 +27,7 @@
     junior = {name="Juniors", min=18, max=23}
 
     guest = {name = "G", min = 0, max = 999}
+    para = {name = "Paralympic", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -47,5 +48,11 @@
     classes = ["47","52","57","63","69","76","84","84+"]
     date_range = ["2024-01-01", "9999-01-01"]
     sex = "F"
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2024-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors"]
 
 [exemptions]
