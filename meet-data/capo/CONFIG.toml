@@ -127,6 +127,30 @@
     moul = {name="MO-UL", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
 
+    # Some CAPO meets use 10 year Masters
+    mm4049r = {name="MM40-49-R",min=40,max=49,sex="M",equipment="Raw"}
+    mm4049rp = {name="MM40-49-RP",min=40,max=49,sex="M",equipment=["Raw","Wraps"]}
+    mm5059r = {name="MM50-59-R",min=50,max=59,sex="M",equipment="Raw"}
+    mm5059rp = {name="MM50-59-RP",min=50,max=59,sex="M",equipment=["Raw","Wraps"]}
+    mm6069r = {name="MM60-69-R",min=60,max=69,sex="M",equipment="Raw"}
+    mm6069rp = {name="MM60-69-RP",min=60,max=69,sex="M",equipment=["Raw","Wraps"]}
+    mm7079r = {name="MM70-79-R",min=70,max=79,sex="M",equipment="Raw"}
+    mm7057rp = {name="MM70-79-RP",min=70,max=79,sex="M",equipment=["Raw","Wraps"]}
+    mm80pr = {name="MM80+-R",min=80,max=999,sex="M",equipment="Raw"}
+    mm80prp = {name="MM80+-RP",min=80,max=999,sex="M",equipment=["Raw","Wraps"]}
+
+    fm4049r = {name="FM40-49-R",min=40,max=49,sex="F",equipment="Raw"}
+    fm4049rp = {name="FM40-49-RP",min=40,max=49,sex="F",equipment=["Raw","Wraps"]}
+    fm5059r = {name="FM50-59-R",min=50,max=59,sex="F",equipment="Raw"}
+    fm5059rp = {name="FM50-59-RP",min=50,max=59,sex="F",equipment=["Raw","Wraps"]}
+    fm6069r = {name="FM60-69-R",min=60,max=69,sex="F",equipment="Raw"}
+    fm6069rp = {name="FM60-69-RP",min=60,max=69,sex="F",equipment=["Raw","Wraps"]}
+    fm7079r = {name="FM70-79-R",min=70,max=79,sex="F",equipment="Raw"}
+    fm7057rp = {name="FM70-79-RP",min=70,max=79,sex="F",equipment=["Raw","Wraps"]}
+    fm80pr = {name="FM80+-R",min=80,max=999,sex="F",equipment="Raw"}
+    fm80prp = {name="FM80+-RP",min=80,max=999,sex="F",equipment=["Raw","Wraps"]}
+
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","145","140+"]
     date_range = ["0000-01-01","9999-01-01"]
