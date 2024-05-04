@@ -224,6 +224,12 @@
   background-image: linear-gradient(to right, #51DA27, #EDF2F4, #DD1832);
 }
 
+// Green, white, and red.
+.mexico {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #006341, #EDF2F4, #ce1126);
+}
+
 // Millennial pink color palette
 .millennial_pink_color_palette {
   @include gradient-prereqs($default-color);
