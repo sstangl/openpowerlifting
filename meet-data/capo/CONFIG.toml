@@ -85,6 +85,9 @@
     mm8mp   = {name ="MM8-MP",min=75,max=79,sex="M", equipment="Multi-ply"}
     mm9r  = {name ="MM9-R",min=80,max=999,sex="M", equipment="Raw"}
     mm9rp  = {name ="MM9-RP",min=80,max=999,sex="M", equipment=["Raw","Wraps"]}
+    # CAPO uses a Masters 10 for 85-89yos which isn't in the WPC rulebook
+    mm10r  = {name ="MM10-R",min=85,max=89,sex="M", equipment="Raw"}
+    mm10rp  = {name ="MM10-RP",min=85,max=89,sex="M", equipment=["Raw","Wraps"]}
     fmr    = {name ="FM-R",min=40,max=999,sex="F", equipment="Raw"}
     fmrp   = {name ="FM-RP",min=40,max=999,sex="F", equipment=["Raw","Wraps"]}
     fm1r   = {name ="FM1-R",min=40,max=44,sex="F", equipment="Raw"}
@@ -108,6 +111,7 @@
     fm7r   = {name ="FM7-R",min=70,max=74,sex="F", equipment="Raw"}
     fm7rp   = {name ="FM7-RP",min=70,max=74,sex="F", equipment=["Raw","Wraps"]}
     fm8r   = {name ="FM8-R",min=75,max=79,sex="F", equipment="Raw"}
+    fm8rp   = {name ="FM8-RP",min=75,max=79,sex="F", equipment=["Raw","Wraps"]}
     fm9r   = {name ="FM9-R",min=80,max=999,sex="F", equipment="Raw"}
     fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
     fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
