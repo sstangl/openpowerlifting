@@ -14,7 +14,10 @@ def getcategory(csv, row):
     eqidx = csv.index('Equipment')
     sexidx = csv.index('Sex')
     eventidx = csv.index('Event')
-    wtclsidx = csv.index('WeightClassKg')
+    if 'WeightClassKg' in csv.fieldnames:
+        wtclsidx = csv.index('WeightClassKg')
+    elif 'WeightClassLbs' in csv.fieldnames:
+        wtclsidx = csv.index('WeightClassLbs')
     return (div, row[eqidx], row[sexidx], row[eventidx], row[wtclsidx])
 
 
@@ -25,10 +28,15 @@ def main(filename):
         print("There's already a place field.", file=sys.stderr)
         sys.exit(1)
 
-    for i in ['Equipment', 'Sex', 'Event', 'WeightClassKg', 'TotalKg']:
+    for i in ['Equipment', 'Sex', 'Event', 'TotalKg']:
         if i not in csv.fieldnames:
             print("Missing field: %s" % i, file=sys.stderr)
             sys.exit(1)
+
+    if 'WeightClassKg' not in csv.fieldnames and 'WeightClassLbs' not in csv.fieldnames:
+        print("Missing either WeightClassKg or WeightClassLbs field.", file=sys.stderr)
+        sys.exit(1)
+
 
     csv.append_column('Place')
 
