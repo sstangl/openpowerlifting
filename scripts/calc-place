@@ -37,7 +37,6 @@ def main(filename):
         print("Missing either WeightClassKg or WeightClassLbs field.", file=sys.stderr)
         sys.exit(1)
 
-
     csv.append_column('Place')
 
     placeidx = csv.index('Place')
