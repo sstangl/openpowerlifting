@@ -589,9 +589,6 @@ Disallow: /
 User-agent: dotbot
 Disallow: /
 
-User-agent: GPTBot
-Disallow: /
-
 User-agent: MJ12bot
 Disallow: /
 
@@ -602,7 +599,30 @@ User-agent: SemrushBot-SA
 Disallow: /
 
 User-agent: BLEXBot
-Disallow: /"#
+Disallow: /
+
+# Disallow bots from LLM-training companies.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+"#
 }
 
 #[catch(404)]
