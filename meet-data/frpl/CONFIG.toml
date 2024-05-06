@@ -15,9 +15,14 @@
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
 
-[weightclasses.default_F]
+[weightclasses.year2020_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
     sex = "F"
 
 [weightclasses.junior_M]
@@ -26,9 +31,15 @@
     sex = "M"
     divisions = ["Junior I","Junior II"]
 
-[weightclasses.junior_F]
+[weightclasses.year2020_junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","9999-01-01"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+    divisions = ["Junior I","Junior II"]
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
     sex = "F"
     divisions = ["Junior I","Junior II"]
 
