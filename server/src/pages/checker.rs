@@ -62,12 +62,12 @@ fn check_entries(
     reader: &csv::ReaderBuilder,
     opldb: &OplDb,
     input: &CheckerInput,
-    meet: Option<Meet>,
+    meet: &Meet,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     let EntriesCheckResult {
         mut report,
         entries,
-    } = checker::check_entries_from_string(reader, &input.entries, meet.as_ref())?;
+    } = checker::check_entries_from_string(reader, &input.entries, meet)?;
 
     match entries {
         Some(entries) => {
@@ -104,7 +104,7 @@ pub fn check(opldb: &OplDb, input: &CheckerInput) -> CheckerOutput {
             let mut output = CheckerOutput::with_meet_messages(report.messages);
 
             // If the meet.csv parsed successfully, also parse the entries.csv.
-            if meet.is_some() {
+            if let Some(meet) = meet.as_ref() {
                 match check_entries(&reader, opldb, input, meet) {
                     Ok(EntriesCheckResult { report, .. }) => {
                         output.entries_messages = report.messages;

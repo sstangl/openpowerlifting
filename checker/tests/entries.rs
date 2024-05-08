@@ -4,7 +4,8 @@ extern crate checker;
 extern crate csv;
 
 use checker::checklib::entries::do_check;
-use checker::Report;
+use checker::{Meet, Report};
+use opltypes::{Country, Date, Federation, RuleSet};
 
 use std::path::PathBuf;
 
@@ -15,7 +16,22 @@ fn check(csv: &str) -> usize {
     let mut rdr = csv::ReaderBuilder::new()
         .quoting(false)
         .from_reader(csv.as_bytes());
-    let checkresult = do_check(&mut rdr, None, None, None, report).unwrap();
+
+    // A non-existent meet. The details aren't important to the tests below.
+    let meet = Meet {
+        path: "testing/mymeet".to_string(),
+        federation: Federation::USAUA,
+        date: Date::from_parts(2016, 01, 01),
+        country: Country::USA,
+        state: None,
+        town: None,
+        name: "Test Meet For Example Purposes".to_string(),
+        ruleset: RuleSet::default(),
+        sanctioned: true,
+        allow_duplicates: false,
+    };
+
+    let checkresult = do_check(&mut rdr, &meet, None, None, report).unwrap();
     checkresult.report.count_messages().errors()
 }
 

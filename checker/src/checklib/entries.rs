@@ -330,7 +330,7 @@ enum Header {
 /// Checks that the headers are valid.
 fn check_headers(
     headers: &csv::StringRecord,
-    meet: Option<&Meet>,
+    meet: &Meet,
     config: Option<&Config>,
     report: &mut Report,
 ) -> HeaderIndexMap {
@@ -424,10 +424,8 @@ fn check_headers(
     //
     // To avoid excessive version-control churn, the BirthDate column is mandatory
     // (even if totally blank) for all meets since 2020.
-    if let Some(meet) = meet {
-        if meet.date.year() >= 2020 && !header_map.has(Header::BirthDate) {
-            report.error("The BirthDate column is mandatory for all meets since 2020");
-        }
+    if meet.date.year() >= 2020 && !header_map.has(Header::BirthDate) {
+        report.error("The BirthDate column is mandatory for all meets since 2020");
     }
 
     header_map
@@ -628,12 +626,7 @@ fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<St
     Some(canonicalize_name_utf8(s).into())
 }
 
-fn check_column_birthyear(
-    s: &str,
-    meet: Option<&Meet>,
-    line: u64,
-    report: &mut Report,
-) -> Option<u32> {
+fn check_column_birthyear(s: &str, meet: &Meet, line: u64, report: &mut Report) -> Option<u32> {
     if s.is_empty() {
         return None;
     }
@@ -653,21 +646,14 @@ fn check_column_birthyear(
     }
 
     // Compare the BirthYear to the meet date for some basic sanity checks.
-    if let Some(m) = meet {
-        if year > m.date.year().saturating_sub(4) || m.date.year().saturating_sub(year) > 98 {
-            report.error_on(line, format!("BirthYear '{year}' looks implausible"));
-            return None;
-        }
+    if year > meet.date.year().saturating_sub(4) || meet.date.year().saturating_sub(year) > 98 {
+        report.error_on(line, format!("BirthYear '{year}' looks implausible"));
+        return None;
     }
     Some(year)
 }
 
-fn check_column_birthdate(
-    s: &str,
-    meet: Option<&Meet>,
-    line: u64,
-    report: &mut Report,
-) -> Option<Date> {
+fn check_column_birthdate(s: &str, meet: &Meet, line: u64, report: &mut Report) -> Option<Date> {
     if s.is_empty() {
         return None;
     }
@@ -675,16 +661,14 @@ fn check_column_birthdate(
     match s.parse::<Date>() {
         Ok(bd) => {
             // Compare the BirthDate to the meet date for some basic sanity checks.
-            if let Some(m) = meet {
-                if bd.year() >= m.date.year() - 4 || m.date.year() - bd.year() > 98 {
-                    report.error_on(line, format!("BirthDate '{s}' looks implausible"));
-                    return None;
-                }
+            if bd.year() >= meet.date.year() - 4 || meet.date.year() - bd.year() > 98 {
+                report.error_on(line, format!("BirthDate '{s}' looks implausible"));
+                return None;
+            }
 
-                if let Err(e) = bd.age_on(m.date) {
-                    report.error_on(line, format!("BirthDate '{s}' error: {e}"));
-                    return None;
-                }
+            if let Err(e) = bd.age_on(meet.date) {
+                report.error_on(line, format!("BirthDate '{s}' error: {e}"));
+                return None;
             }
 
             // Ensure that the BirthDate exists in the Gregorian calendar.
@@ -1110,7 +1094,7 @@ fn check_column_entrydate(s: &str, line: u64, report: &mut Report) -> Option<Dat
 fn check_column_state(
     s: &str,
     lifter_country: Option<Country>,
-    meet: Option<&Meet>,
+    meet: &Meet,
     line: u64,
     report: &mut Report,
 ) -> Option<State> {
@@ -1119,23 +1103,14 @@ fn check_column_state(
     }
 
     // Get the country either from the Country column or from the MeetCountry.
-    match lifter_country.or_else(|| meet.map(|m| m.country)) {
-        Some(country) => {
-            let state = State::from_str_and_country(s, country).ok();
-            if state.is_none() {
-                let c = country.to_string();
-                let msg = format!("Unknown State '{s}' for Country '{c}'");
-                report.error_on(line, msg);
-            }
-            state
-        }
-        None => {
-            // This can only happen if the MeetCountry is missing.
-            let msg = format!("Unknown State '{s}': no available Country");
-            report.error_on(line, msg);
-            None
-        }
+    let country = lifter_country.unwrap_or(meet.country);
+    let state = State::from_str_and_country(s, country).ok();
+    if state.is_none() {
+        let c = country.to_string();
+        let msg = format!("Unknown State '{s}' for Country '{c}'");
+        report.error_on(line, msg);
     }
+    state
 }
 
 fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Report) {
@@ -1428,7 +1403,7 @@ fn check_attempt_consistency(
 }
 
 /// Checks that gear wasn't used prior to its date of invention.
-fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &mut Report) {
+fn check_equipment_year(entry: &Entry, meet: &Meet, line: u64, report: &mut Report) {
     // Helper function for checking equipped status.
     fn is_equipped(e: Option<Equipment>) -> bool {
         e.map_or(false, |eq| match eq {
@@ -1437,11 +1412,6 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
         })
     }
 
-    // Inelegant unwrapping.
-    let date = match meet.map(|m| &m.date) {
-        Some(d) => d,
-        None => return,
-    };
     let event = entry.event;
 
     // Years of equipment invention.
@@ -1453,7 +1423,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
     let deadlift_suit_invention_year = 1980;
 
     // Check that squat equipment isn't listed before its invention.
-    if date.year() < squat_suit_invention_year
+    if meet.date.year() < squat_suit_invention_year
         && (is_equipped(entry.squat_equipment)
             || (event.has_squat() && is_equipped(Some(entry.equipment))))
     {
@@ -1465,7 +1435,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
 
     // Check that bench equipment isn't listed before its invention.
     // TODO: This avoids conflation with the squat equipment.
-    if date.year() < bench_shirt_invention_year
+    if meet.date.year() < bench_shirt_invention_year
         && (is_equipped(entry.bench_equipment)
             || (event.has_bench() && !event.has_squat() && is_equipped(Some(entry.equipment))))
     {
@@ -1477,7 +1447,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
 
     // Check that deadlift equipment isn't listed before its invention.
     // TODO: This avoids conflation with the squat equipment.
-    if date.year() < deadlift_suit_invention_year
+    if meet.date.year() < deadlift_suit_invention_year
         && (is_equipped(entry.deadlift_equipment)
             || (event.has_deadlift() && !event.has_squat() && is_equipped(Some(entry.equipment))))
     {
@@ -1490,7 +1460,7 @@ fn check_equipment_year(entry: &Entry, meet: Option<&Meet>, line: u64, report: &
 
 fn check_weightclass_consistency(
     entry: &Entry,
-    meet: Option<&Meet>,
+    meet: &Meet,
     config: Option<&Config>,
     exempt_weightclass_consistency: bool,
     line: u64,
@@ -1556,7 +1526,6 @@ fn check_weightclass_consistency(
 
     // The no-config case was handled above, so the config can be known here.
     let config = config.unwrap();
-    let date = meet.map_or(Date::from_parts(2016, 01, 01), |m| m.date);
 
     // Attempt to find out what weightclass group this row is a member of.
     //
@@ -1565,7 +1534,7 @@ fn check_weightclass_consistency(
     let mut matched_group: Option<&WeightClassConfig> = None;
     for group in &config.weightclasses {
         // Sex and date information are mandatory and must match.
-        if date < group.date_min || date > group.date_max || entry.sex != group.sex {
+        if meet.date < group.date_min || meet.date > group.date_max || entry.sex != group.sex {
             continue;
         }
 
@@ -1701,25 +1670,17 @@ fn check_weightclass_consistency(
 /// Returns the (min_age, max_age) associated with the Division.
 fn check_division_age_consistency(
     entry: &Entry,
-    meet: Option<&Meet>,
+    meet: &Meet,
     config: Option<&Config>,
     exempt_division: bool,
     line: u64,
     report: &mut Report,
 ) -> (Age, Age) {
-    // If we don't know when the meet was, there's nothing to diff against.
-    let meet_date = match meet {
-        Some(m) => m.date,
-        None => {
-            return (Age::None, Age::None);
-        }
-    };
-
     // Since it will be needed a bunch below, if there's a BirthDate,
     // figure out how old the lifter would be on the meet date.
     let age_from_birthdate: Option<Age> = entry.birthdate.map(|birthdate| {
         // Unwrapping is safe: the BirthDate column check already validated.
-        birthdate.age_on(meet_date).unwrap()
+        birthdate.age_on(meet.date).unwrap()
     });
 
     let birthyear: Option<u32> = entry.birthyearrange.exact_birthyear();
@@ -1727,7 +1688,7 @@ fn check_division_age_consistency(
     // Check that the Age, BirthYear, and BirthDate columns are internally
     // consistent.
     let age_from_birthyear: Option<Age> =
-        birthyear.map(|birthyear| Age::from_birthyear_on_date(birthyear, meet_date));
+        birthyear.map(|birthyear| Age::from_birthyear_on_date(birthyear, meet.date));
     if let Some(birthyear) = birthyear {
         let approx_age = age_from_birthyear.unwrap();
 
@@ -1811,7 +1772,7 @@ fn check_division_age_consistency(
     };
 
     // Use the various age-related columns to calculate a representative Age value.
-    let age = entry.age_on(meet_date);
+    let age = entry.age_on(meet.date);
 
     if age.is_definitely_less_than(min_age) {
         report.error_on(
@@ -2005,12 +1966,10 @@ fn tested_from_division_config(entry: &Entry, config: Option<&Config>) -> bool {
 
 /// Determines whether this meet falls in the valid range for a
 /// partially-configured federation.
-fn should_ignore_config(meet: Option<&Meet>, config: Option<&Config>) -> bool {
+fn should_ignore_config(meet: &Meet, config: Option<&Config>) -> bool {
     if let Some(config) = config {
-        if let Some(meet) = meet {
-            if let Some(valid_since) = config.valid_since() {
-                return meet.date < valid_since;
-            }
+        if let Some(valid_since) = config.valid_since() {
+            return meet.date < valid_since;
         }
     }
     false
@@ -2022,7 +1981,7 @@ fn should_ignore_config(meet: Option<&Meet>, config: Option<&Config>) -> bool {
 /// for creating tests that do not have a backing CSV file.
 pub fn do_check<R: io::Read>(
     rdr: &mut csv::Reader<R>,
-    meet: Option<&Meet>,
+    meet: &Meet,
     config: Option<&Config>,
     lifterdata: Option<&LifterDataMap>,
     mut report: Report,
@@ -2038,8 +1997,7 @@ pub fn do_check<R: io::Read>(
     // Should pending disambiguations be errors?
     let report_disambiguations = config.map_or(false, |c| c.does_require_manual_disambiguation());
 
-    let fourths_may_lower: bool =
-        meet.map_or(false, |m| m.ruleset.contains(Rule::FourthAttemptsMayLower));
+    let fourths_may_lower: bool = meet.ruleset.contains(Rule::FourthAttemptsMayLower);
 
     // Scan for check exemptions.
     let exemptions = {
@@ -2066,7 +2024,6 @@ pub fn do_check<R: io::Read>(
             entries: None,
         });
     }
-    let default_date = meet.map_or_else(Date::default, |m| m.date);
 
     let mut entries: Vec<Entry> = Vec::new();
 
@@ -2084,7 +2041,7 @@ pub fn do_check<R: io::Read>(
         }
 
         let mut entry = Entry {
-            entrydate: default_date, // Either a default, or sourced from the meet.csv.
+            entrydate: meet.date, // The EntryDate column can overwrite this later.
             ..Default::default()
         };
 
@@ -2272,18 +2229,15 @@ pub fn do_check<R: io::Read>(
 
         // Set the Tested column early for federations that are fully-Tested.
         // This allows check_column_tested() to override it later if needed.
-        if let Some(meet) = meet {
-            entry.tested = meet.federation.is_fully_tested(meet.date);
-        }
+        entry.tested = meet.federation.is_fully_tested(meet.date);
+        // Assign the Tested column if it's configured for the Division.
+        entry.tested = tested_from_division_config(&entry, config);
 
         // Check optional fields.
         if let Some(idx) = headers.get(Header::Division) {
             check_column_division(&record[idx], config, exempt_division, line, &mut report);
             entry.division = CompactString::from(&record[idx]);
         }
-
-        // Assign the Tested column if it's configured for the Division.
-        entry.tested = tested_from_division_config(&entry, config);
 
         // Check the Country and State information.
         if let Some(idx) = headers.get(Header::Country) {
@@ -2370,16 +2324,14 @@ pub fn do_check<R: io::Read>(
         }
 
         // If the Age wasn't assigned yet, infer it from any surrounding information.
-        if let Some(meet) = meet {
-            if entry.age == Age::None {
-                if let Some(birthdate) = entry.birthdate {
-                    entry.age = birthdate.age_on(meet.date).unwrap_or(Age::None);
-                }
+        if entry.age == Age::None {
+            if let Some(birthdate) = entry.birthdate {
+                entry.age = birthdate.age_on(meet.date).unwrap_or(Age::None);
             }
-            if entry.age == Age::None {
-                if let Some(birthyear) = entry.birthyearrange.exact_birthyear() {
-                    entry.age = Age::from_birthyear_on_date(birthyear, meet.date);
-                }
+        }
+        if entry.age == Age::None {
+            if let Some(birthyear) = entry.birthyearrange.exact_birthyear() {
+                entry.age = Age::from_birthyear_on_date(birthyear, meet.date);
             }
         }
 
@@ -2403,7 +2355,7 @@ pub fn do_check<R: io::Read>(
         // Try narrowing the BirthYearRange based on surrounding information.
         if let Some(birthdate) = entry.birthdate {
             entry.birthyearrange = BirthYearRange::from_birthyear(birthdate.year());
-        } else if let Some(meet) = meet {
+        } else {
             // Try using the AgeRange.
             entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
                 entry.agerange.min,
@@ -2420,10 +2372,7 @@ pub fn do_check<R: io::Read>(
         }
 
         // Infer the BirthYearClass.
-        if let Some(meet) = meet {
-            entry.birthyearclass =
-                BirthYearClass::from_range(entry.birthyearrange, meet.date.year());
-        }
+        entry.birthyearclass = BirthYearClass::from_range(entry.birthyearrange, meet.date.year());
 
         // If the Name isn't provided, but there is an international name,
         // just use the international name.
@@ -2478,7 +2427,7 @@ pub fn do_check<R: io::Read>(
 pub fn check_entries_from_string(
     reader: &csv::ReaderBuilder,
     entries_csv: &str,
-    meet: Option<&Meet>,
+    meet: &Meet,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     let report = Report::new(PathBuf::from("uploaded/content"));
     let mut rdr = reader.from_reader(entries_csv.as_bytes());
@@ -2489,7 +2438,7 @@ pub fn check_entries_from_string(
 pub fn check_entries(
     reader: &csv::ReaderBuilder,
     entries_csv: PathBuf,
-    meet: Option<&Meet>,
+    meet: &Meet,
     config: Option<&Config>,
     lifterdata: Option<&LifterDataMap>,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {

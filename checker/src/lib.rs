@@ -52,17 +52,27 @@ pub fn check(
         acc.push(meetresult.report);
     }
 
+    // Only check the entries.csv if the meet.csv passed all tests.
+    //
+    // Previously, we would check the entries.csv with a default config,
+    // but the errors were often nonsense. Because the nonsense errors appeared
+    // after the original errors, this confused new contributors.
     // Check the entries.csv.
-    let entriesresult = check_entries(
-        reader,
-        meetdir.join("entries.csv"),
-        meetresult.meet.as_ref(),
-        config,
-        lifterdata,
-    )?;
-    if !entriesresult.report.messages.is_empty() {
-        acc.push(entriesresult.report);
-    }
+    let entries = if let Some(meet) = meetresult.meet.as_ref() {
+        let entriesresult = check_entries(
+            reader,
+            meetdir.join("entries.csv"),
+            meet,
+            config,
+            lifterdata,
+        )?;
+        if !entriesresult.report.messages.is_empty() {
+            acc.push(entriesresult.report);
+        }
+        entriesresult.entries
+    } else {
+        None
+    };
 
     // Check for commonly-misnamed files.
     if meetdir.join("URL.txt").exists() {
@@ -101,7 +111,7 @@ pub fn check(
     Ok(CheckResult {
         reports: acc,
         meet: meetresult.meet,
-        entries: entriesresult.entries,
+        entries,
     })
 }
 
