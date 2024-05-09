@@ -511,6 +511,10 @@ pub enum MetaFederation {
     #[strum(to_string = "nipf")]
     NIPF,
 
+    /// NPAJ, but with international results also.
+    #[strum(to_string = "npaj")]
+    NPAJ,
+
     /// NSF, but with international results also.
     #[strum(to_string = "nsf")]
     NSF,
@@ -1055,6 +1059,7 @@ impl MetaFederation {
             MetaFederation::MUPF => affiliation!(meet, entry, MUPF, IPF, AsianPF),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
             MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP),
+            MetaFederation::NPAJ => affiliation!(meet, entry, NPAJ, IPF, NAPF),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
             MetaFederation::NZPF => {
                 meet.federation == Federation::NZPF
