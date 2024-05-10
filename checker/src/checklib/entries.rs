@@ -2230,14 +2230,16 @@ pub fn do_check<R: io::Read>(
         // Set the Tested column early for federations that are fully-Tested.
         // This allows check_column_tested() to override it later if needed.
         entry.tested = meet.federation.is_fully_tested(meet.date);
-        // Assign the Tested column if it's configured for the Division.
-        entry.tested = tested_from_division_config(&entry, config);
 
         // Check optional fields.
         if let Some(idx) = headers.get(Header::Division) {
             check_column_division(&record[idx], config, exempt_division, line, &mut report);
             entry.division = CompactString::from(&record[idx]);
         }
+
+        // Assign the Tested column if it's configured for the Division.
+        // Note that this check has to occur after setting the division above.
+        entry.tested = tested_from_division_config(&entry, config);
 
         // Check the Country and State information.
         if let Some(idx) = headers.get(Header::Country) {
