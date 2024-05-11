@@ -2,7 +2,7 @@ Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat
 1,Bryan Brunetti,M,,,Raw,Junior,58.42,59,,,,,,,,,175.0,190.0,-200.5,190.0,190.0,D
 1,Ezio Basano,M,,,Raw,Master III,58.04,59,,,,,,,,,-147.5,147.5,-156.0,147.5,147.5,D
 1,Antonio Pio Ascione,M,,,Raw,Sub-Junior,65.65,66,,,,,,,,,185.0,197.5,205.0,205.0,205.0,D
-2,Giovanni Kristian Di,M,,,Raw,Sub-Junior,64.92,66,,,,,,,,,160.0,172.5,-190.0,172.5,172.5,D
+2,Kristian Di Giovanni,M,,,Raw,Sub-Junior,64.92,66,,,,,,,,,160.0,172.5,-190.0,172.5,172.5,D
 3,Alessandro Zianni,M,,,Raw,Sub-Junior,64.26,66,,,,,,,,,112.5,122.5,130.0,130.0,130.0,D
 1,Matteo Nembri,M,,,Raw,Junior,65.02,66,,,,,,,,,230.0,242.5,243.5,243.5,243.5,D
 2,Valerio Nunziata,M,,,Raw,Junior,65.15,66,,,,,,,,,222.5,235.0,243.0,243.0,243.0,D
@@ -39,7 +39,7 @@ Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat
 3,Gianni Corti,M,,,Raw,Master II,72.41,74,,,,,,,,,150.0,-162.5,162.5,162.5,162.5,D
 1,Luca Santi,M,,,Raw,Sub-Junior,78.68,83,,,,,,,,,210.0,225.0,232.5,232.5,232.5,D
 2,Edoardo Teja,M,,,Raw,Sub-Junior,77.96,83,,,,,,,,,205.0,215.0,-225.0,215.0,215.0,D
-3,Cecconi Gioele Re,M,,,Raw,Sub-Junior,76.30,83,,,,,,,,,185.0,195.0,210.0,210.0,210.0,D
+3,Gioele Re Cecconi,M,,,Raw,Sub-Junior,76.30,83,,,,,,,,,185.0,195.0,210.0,210.0,210.0,D
 4,Tommaso Serri,M,,,Raw,Sub-Junior,78.15,83,,,,,,,,,200.0,210.0,-225.0,210.0,210.0,D
 5,Giovanni Puerari,M,,,Raw,Sub-Junior,77.05,83,,,,,,,,,160.0,170.0,180.0,180.0,180.0,D
 1,Edoardo Mazzucchielli,M,,,Raw,Junior,82.30,83,,,,,,,,,290.0,305.0,314.0,314.0,314.0,D
@@ -47,7 +47,7 @@ Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat
 3,Raoul Sabaini,M,,,Raw,Junior,81.15,83,,,,,,,,,255.0,270.0,280.0,280.0,280.0,D
 4,Gabriele Bellomo,M,,,Raw,Junior,81.93,83,,,,,,,,,280.0,-300.0,-300.0,280.0,280.0,D
 5,Andrea Orlandi #1,M,,,Raw,Junior,82.19,83,,,,,,,,,260.0,275.0,-287.5,275.0,275.0,D
-6,Moro Filippo Del,M,,,Raw,Junior,79.91,83,,,,,,,,,245.0,247.5,-275.0,247.5,247.5,D
+6,Filippo Del Moro,M,,,Raw,Junior,79.91,83,,,,,,,,,245.0,247.5,-275.0,247.5,247.5,D
 7,Andrea Zonca,M,,,Raw,Junior,81.41,83,,,,,,,,,200.0,212.5,-220.0,212.5,212.5,D
 8,Lorenzo Dobbo,M,,,Raw,Junior,82.65,83,,,,,,,,,200.0,212.5,-220.0,212.5,212.5,D
 9,Pietro Lupi,M,,,Raw,Junior,82.48,83,,,,,,,,,185.0,200.0,210.0,210.0,210.0,D
@@ -67,7 +67,7 @@ Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat
 1,Cesar Ravines,M,,,Raw,Sub-Junior,88.41,93,,,,,,,,,230.0,242.5,255.0,255.0,255.0,D
 2,Simone Carrera,M,,,Raw,Sub-Junior,90.96,93,,,,,,,,,210.0,220.0,225.0,225.0,225.0,D
 3,Gianluca Albertini,M,,,Raw,Sub-Junior,85.06,93,,,,,,,,,207.5,-220.0,222.5,222.5,222.5,D
-4,Terlizzi Mauro Emilio Di,M,,,Raw,Sub-Junior,90.74,93,,,,,,,,,200.0,-210.0,-210.0,200.0,200.0,D
+4,Mauro Emilio Di Terlizzi,M,,,Raw,Sub-Junior,90.74,93,,,,,,,,,200.0,-210.0,-210.0,200.0,200.0,D
 1,Luca Umberto Angrisano,M,,,Raw,Junior,91.63,93,,,,,,,,,275.0,290.0,300.0,300.0,300.0,D
 2,Fabio Rinco,M,,,Raw,Junior,88.67,93,,,,,,,,,250.0,272.5,275.0,275.0,275.0,D
 3,Nicolas Bossetti,M,,,Raw,Junior,88.78,93,,,,,,,,,257.5,267.5,275.0,275.0,275.0,D
@@ -90,13 +90,13 @@ Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat
 3,Giorgio Marcazzan,M,,,Raw,Master II,90.85,93,,,,,,,,,180.0,190.0,-200.0,190.0,190.0,D
 4,Sergio Castelli,M,,,Raw,Master II,84.51,93,,,,,,,,,155.0,167.5,180.0,180.0,180.0,D
 1,Dario Blando,M,,,Raw,Sub-Junior,94.02,105,,,,,,,,,205.0,220.0,-230.5,220.0,220.0,D
-1,Riccardo Eccher Montanelli,M,,,Raw,Junior,96.91,105,,,,,,,,,290.0,310.0,326.5,326.5,326.5,D
+1,Riccardo Montanelli Eccher,M,,,Raw,Junior,96.91,105,,,,,,,,,290.0,310.0,326.5,326.5,326.5,D
 2,Vincenzo Conigliaro,M,,,Raw,Junior,103.56,105,,,,,,,,,292.5,310.0,-325.0,310.0,310.0,D
 3,Massimiliano Girotti,M,,,Raw,Junior,95.10,105,,,,,,,,,270.0,287.5,300.0,300.0,300.0,D
 4,Giulio Spinello,M,,,Raw,Junior,93.24,105,,,,,,,,,272.5,287.5,-300.0,287.5,287.5,D
 5,Stefano Favalli,M,,,Raw,Junior,97.60,105,,,,,,,,,270.0,-285.0,-290.0,270.0,270.0,D
 6,Riccardo Perissinotto,M,,,Raw,Junior,96.05,105,,,,,,,,,230.0,240.0,250.0,250.0,250.0,D
-1,Maio Lorenzo Di,M,,,Raw,Master I,103.76,105,,,,,,,,,275.0,-290.0,292.5,292.5,292.5,D
+1,Lorenzo Di Maio,M,,,Raw,Master I,103.76,105,,,,,,,,,275.0,-290.0,292.5,292.5,292.5,D
 2,Floriano Bitturini,M,,,Raw,Master I,98.12,105,,,,,,,,,220.0,232.5,-247.5,232.5,232.5,D
 1,Giuseppe Battisti,M,,,Raw,Master II,101.35,105,,,,,,,,,250.0,260.0,270.0,270.0,270.0,D
 2,Michele Cemin,M,,,Raw,Master II,95.69,105,,,,,,,,,245.0,257.5,-265.0,257.5,257.5,D
@@ -158,7 +158,7 @@ DQ,Nicole Spini,F,,,Raw,Junior,55.62,57,,,,,,,,,,,,,,D
 4,Alice Carazzo,F,,,Raw,Junior,61.85,63,,,,,,,,,125.0,135.0,142.5,142.5,142.5,D
 5,Greta Cesana,F,,,Raw,Junior,59.01,63,,,,,,,,,120.0,130.0,-137.5,130.0,130.0,D
 1,Raffaella Cachia,F,,,Raw,Master I,58.33,63,,,,,,,,,150.0,157.5,162.5,162.5,162.5,D
-2,Ferrara Irene La,F,,,Raw,Master I,58.11,63,,,,,,,,,150.0,157.5,-162.5,157.5,157.5,D
+2,Irene La Ferrara,F,,,Raw,Master I,58.11,63,,,,,,,,,150.0,157.5,-162.5,157.5,157.5,D
 3,Simona Lapustea,F,,,Raw,Master I,62.28,63,,,,,,,,,145.0,155.0,-160.0,155.0,155.0,D
 4,Mara Bolognese,F,,,Raw,Master I,58.04,63,,,,,,,,,110.0,120.0,130.0,130.0,130.0,D
 5,Alice Bambini,F,,,Raw,Master I,62.63,63,,,,,,,,,130.0,-137.5,-137.5,130.0,130.0,D
@@ -170,7 +170,7 @@ DQ,Nicole Spini,F,,,Raw,Junior,55.62,57,,,,,,,,,,,,,,D
 1,Giada Groaz,F,,,Raw,Sub-Junior,64.17,69,,,,,,,,,-70.0,70.0,85.0,85.0,85.0,D
 1,Noemi Fanton,F,,,Raw,Junior,66.62,69,,,,,,,,,175.0,187.5,201.0,201.0,201.0,D
 2,Vittoria Catellani,F,,,Raw,Junior,67.68,69,,,,,,,,,-145.0,145.0,150.0,150.0,150.0,D
-3,Pace Marta De,F,,,Raw,Junior,68.70,69,,,,,,,,,130.0,140.0,-147.5,140.0,140.0,D
+3,Marta De Pace,F,,,Raw,Junior,68.70,69,,,,,,,,,130.0,140.0,-147.5,140.0,140.0,D
 1,Francesca Marina,F,,,Raw,Master I,67.67,69,,,,,,,,,170.0,180.0,183.0,183.0,183.0,D
 2,Cinzia Busato,F,,,Raw,Master I,67.92,69,,,,,,,,,170.0,177.0,-180.5,177.0,177.0,D
 3,Marianna Bovo,F,,,Raw,Master I,66.16,69,,,,,,,,,130.0,137.5,142.5,142.5,142.5,D

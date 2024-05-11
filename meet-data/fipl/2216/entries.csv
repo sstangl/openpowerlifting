@@ -1,11 +1,11 @@
 Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
 1,Edoardo Teja,M,,,Single-ply,Sub-Junior,81.83,83,215,225,236.5,236.5,115,-125,125,125,220,235,-240,235,596.5,SBD
 2,Carlo Vizza,M,,,Single-ply,Sub-Junior,56.36,59,110,122.5,131.5,131.5,95,102.5,107.5,107.5,130,145.5,-160,145.5,384.5,SBD
-3,Pasquale Mattia Di,M,,,Single-ply,Sub-Junior,88.35,93,70,-72.5,,70,145,-152.5,-152.5,145,70,,,70,285,SBD
+3,Mattia Di Pasquale,M,,,Single-ply,Sub-Junior,88.35,93,70,-72.5,,70,145,-152.5,-152.5,145,70,,,70,285,SBD
 1,Davide Cecchetti,M,,,Single-ply,Junior,82.59,83,230,250,-270,250,205.5,212.5,-220,212.5,242.5,-252.5,252.5,252.5,715,SBD
 2,Matteo Nembri,M,,,Single-ply,Junior,65.03,66,170,200,220,220,125,135,-142.5,135,240,251,-257,251,606,SBD
 3,Vittorio Bellan,M,,,Single-ply,Junior,76.45,83,-225,235,245,245,120,-125,125,125,225,237.5,-242.5,237.5,607.5,SBD
-4,Pizzol Roberto De,M,,,Single-ply,Junior,80.51,83,220,232.5,245,245,130,137.5,142.5,142.5,215,230,-245,230,617.5,SBD
+4,Roberto De Pizzol,M,,,Single-ply,Junior,80.51,83,220,232.5,245,245,130,137.5,142.5,142.5,215,230,-245,230,617.5,SBD
 5,Alberto Acquaroni,M,,,Single-ply,Junior,70.68,74,175,190,200,200,-125,-125,125,125,225,240,-250,240,565,SBD
 6,Gioele Gini,M,,,Single-ply,Junior,70.24,74,-205,205,215,215,120,125,-130,125,200,-215,-215,200,540,SBD
 7,Giacomo Verucchi,M,,,Single-ply,Junior,91.84,93,205,215,225,225,150,160,165,165,220,-230,230,230,620,SBD
@@ -19,13 +19,13 @@ Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Squat
 4,Lawrence Koleilat,M,,,Single-ply,Senior,63.92,66,-220,220,-230,220,-130,130,-137.5,130,230,-242.5,-250,230,580,SBD
 5,Mario Iannace,M,,,Single-ply,Senior,58.5,59,-195,-195,195,195,115,125,130,130,200,215,-225,215,540,SBD
 6,Raffaello Giammichele,M,,,Single-ply,Senior,65.4,66,200,-215,-215,200,130,-135,135,135,-235,235,-245,235,570,SBD
-7,Gennaro Vincenzo De,M,,,Single-ply,Senior,72.17,74,200,-215,225,225,140,145,-147.5,145,215,-225,-240,215,585,SBD
+7,Vincenzo De Gennaro,M,,,Single-ply,Senior,72.17,74,200,-215,225,225,140,145,-147.5,145,215,-225,-240,215,585,SBD
 8,Andrea Maiolino,M,,,Single-ply,Senior,72.83,74,187.5,195,200,200,130,135,-137.5,135,230,240,-250,240,575,SBD
 9,Luca Bartolucci,M,,,Single-ply,Senior,72.44,74,-200,200,212.5,212.5,135,140,-142.5,140,200,210,220,220,572.5,SBD
 1,Alessandro Cuttini,M,,,Single-ply,Senior,68.53,74,195,207.5,220,220,110,-115,-115,110,192.5,202.5,-210,202.5,532.5,SBD
 1,Kevin Thumadoo,M,,,Single-ply,Senior,72.89,74,205,212.5,-220,212.5,97.5,105,110,110,210,222.5,232.5,232.5,555,SBD
 1,Michele Fois,M,,,Single-ply,Senior,73.57,74,185,192.5,197.5,197.5,105,110,115,115,225,240,-255,240,552.5,SBD
-1,Monte Lorenzo De,M,,,Single-ply,Senior,61.64,66,170,-180,182.5,182.5,90,-95,-95,90,170,180,190,190,462.5,SBD
+1,Lorenzo De Monte,M,,,Single-ply,Senior,61.64,66,170,-180,182.5,182.5,90,-95,-95,90,170,180,190,190,462.5,SBD
 1,Amos Siracusa,M,,,Single-ply,Senior,60.66,66,142.5,152.5,157.5,157.5,100,-105,-105,100,180,190,-200,190,447.5,SBD
 1,Alessandro Bombardieri,M,,,Single-ply,Senior,74,74,167.5,175,180,180,95,100,-102.5,100,220,-235,-242.5,220,500,SBD
 DQ,Alessandro Antonelli,M,,,Single-ply,Senior,73.1,74,155,162.5,172.5,172.5,-115,-115,-115,,-190,190,202.5,202.5,,SBD
@@ -54,7 +54,7 @@ DQ,Lorenzo Corradini,M,,,Single-ply,Senior,73.62,74,240,247.5,-255,247.5,140,152
 7,Alessio Fontanarossa,M,,,Single-ply,Senior,86.03,93,205,212.5,217.5,217.5,132.5,137.5,-140,137.5,230,240,245,245,600,SBD
 8,Luca Domizio,M,,,Single-ply,Senior,89.59,93,210,220,225,225,140,147.5,150,150,-217.5,217.5,225,225,600,SBD
 9,Antonio Montanino,M,,,Single-ply,Senior,89.5,93,215,-225,-230,215,125,132.5,-140,132.5,235,250,-260,250,597.5,SBD
-1,Polizzotto Alessandro Scagno,M,,,Single-ply,Senior,91.04,93,210,-225,225,225,100,-112.5,112.5,112.5,230,260,-277.5,260,597.5,SBD
+1,Alessandro Scagno Polizzotto,M,,,Single-ply,Senior,91.04,93,210,-225,225,225,100,-112.5,112.5,112.5,230,260,-277.5,260,597.5,SBD
 1,Andrea Campodonico,M,,,Single-ply,Senior,91.09,93,195,205,210,210,117.5,-122.5,122.5,122.5,-210,225,235,235,567.5,SBD
 1,Calogero Provenzano,M,,,Single-ply,Senior,87.92,93,167.5,-175,175,175,117.5,-122.5,122.5,122.5,222.5,235,242.5,242.5,540,SBD
 1,Valentino Durastanti,M,,,Single-ply,Senior,101.54,105,347.5,367.5,375,375,190,197.5,-200,197.5,305,330.5,-358.5,330.5,903,SBD
@@ -70,7 +70,7 @@ DQ,Lorenzo Corradini,M,,,Single-ply,Senior,73.62,74,240,247.5,-255,247.5,140,152
 1,Mattia Repetto,M,,,Single-ply,Senior,107.44,120,210,225,-235,225,162.5,172.5,-180,172.5,225,240,255,255,652.5,SBD
 1,Gennaro Mazzuoccolo,M,,,Single-ply,Senior,116.78,120,225,240,250,250,140,-145,-145,140,240,255,-265,255,645,SBD
 1,Riccardo Masci,M,,,Single-ply,Senior,97.72,105,205,217.5,222.5,222.5,127.5,135,-140,135,220,-232.5,237.5,237.5,595,SBD
-DQ,Martino Mattia Di,M,,,Single-ply,Senior,123.74,120+,310,322.5,335,335,-220,-220,-220,,290,300,-310,300,,SBD
+DQ,Mattia Di Martino,M,,,Single-ply,Senior,123.74,120+,310,322.5,335,335,-220,-220,-220,,290,300,-310,300,,SBD
 1,Pierangelo Puddu,M,,,Single-ply,Master I,78.48,83,220,232.5,240,240,165,-170,-170,165,240,260,272.5,272.5,677.5,SBD
 2,Cristian Turco,M,,,Single-ply,Master I,99.17,105,275,285,,285,200,210,215,215,240,250,260,260,760,SBD
 3,Filippo Cardinetti,M,,,Single-ply,Master I,82.35,83,-245,-260,260,260,145,155,160,160,255,265,-277.5,265,685,SBD
@@ -100,7 +100,7 @@ DQ,Claudio Ravazzola,M,,,Single-ply,Master I,80.13,83,255,-260,-260,255,-150,-15
 4,Ester Pisanu,F,,,Single-ply,Senior,46.02,47,-132.5,132.5,-137.5,132.5,-62.5,62.5,-67.5,62.5,130,135,137.5,137.5,332.5,SBD
 5,Manuela Puzo,F,,,Single-ply,Senior,43.41,47,-107.5,-107.5,107.5,107.5,50,-55,-55,50,120,132.5,140,140,297.5,SBD
 6,Giulia Zulian,F,,,Single-ply,Senior,49.99,52,122.5,130,135,135,55,60,-65,60,127.5,132.5,-140,132.5,327.5,SBD
-7,Chirico Beatrice De,F,,,Single-ply,Senior,50.68,52,112.5,-117.5,-117.5,112.5,60,62.5,67.5,67.5,140,150,-157.5,150,330,SBD
+7,Beatrice De Chirico,F,,,Single-ply,Senior,50.68,52,112.5,-117.5,-117.5,112.5,60,62.5,67.5,67.5,140,150,-157.5,150,330,SBD
 8,Giorgia Cavallo,F,,,Single-ply,Senior,50.5,52,107.5,-112.5,-112.5,107.5,-50,55,-60,55,140,147.5,-155,147.5,310,SBD
 1,Sabrina Mancini,F,,,Single-ply,Senior,56.28,57,192.5,-200.5,-200.5,192.5,102.5,110,-115,110,172.5,182.5,-194.5,182.5,485,SBD
 2,Alessia Leugio,F,,,Single-ply,Senior,56.99,57,165,-175,175,175,100,-102.5,102.5,102.5,-190,190,195,195,472.5,SBD
@@ -125,7 +125,7 @@ DQ,Claudio Ravazzola,M,,,Single-ply,Master I,80.13,83,255,-260,-260,255,-150,-15
 3,Barbara Peti,F,,,Single-ply,Master I,45.99,47,115,120,125,125,-65,-65,65,65,120,125,130,130,320,SBD
 4,Luisa Arienta,F,,,Single-ply,Master I,50.41,52,120,-130,130,130,52.5,55,57.5,57.5,140,-155,-157.5,140,327.5,SBD
 5,Francesca Trippa,F,,,Single-ply,Master I,51.82,52,85,90,95,95,52.5,55,57.5,57.5,100,-107.5,107.5,107.5,260,SBD
-6,Santo Elvira Di,F,,,Single-ply,Master I,60.9,63,80,87.5,92.5,92.5,50,-57.5,-62.5,50,100,112.5,120,120,262.5,SBD
+6,Elvira Di Santo,F,,,Single-ply,Master I,60.9,63,80,87.5,92.5,92.5,50,-57.5,-62.5,50,100,112.5,120,120,262.5,SBD
 DQ,Raffaella Cachia,F,,,Single-ply,Master I,57,57,155,162.5,-170,162.5,-80,-80,-80,,170,182.5,190,190,,SBD
 1,Elena Borgatti,F,,,Single-ply,Master II,46.06,47,130,-138,-138,130,-70,70,-78.5,70,142.5,147.5,158,158,358,SBD
 2,Manuela Stucchi,F,,,Single-ply,Master II,49.69,52,130,-135,135,135,70,-75,75,75,150,160,-169,160,370,SBD
