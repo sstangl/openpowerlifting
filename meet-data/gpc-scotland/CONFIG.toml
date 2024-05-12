@@ -62,6 +62,7 @@
     fm8r = {name ="F-M8", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
     mm9r = {name ="M-M9", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
     fm9r = {name ="F-M9", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
+    mpr = {name ="M-P", min=0, max=999, sex="M", equipment=["Raw","Wraps"]} #Para
 
 
 [weightclasses.default_M]
