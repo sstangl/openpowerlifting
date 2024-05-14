@@ -450,6 +450,10 @@ pub enum Federation {
     #[strum(to_string = "FPO", serialize = "fpo")]
     FPO,
 
+    /// Federación Panameña de Potencia, IPF.
+    #[strum(to_string = "FPP", serialize = "fpp")]
+    FPP,
+
     /// Federación de Powerlifting de Puerto Rico, IPF.
     #[strum(to_string = "FPPR", serialize = "fppr")]
     FPPR,
@@ -1985,6 +1989,7 @@ impl Federation {
             Federation::FinlandUA => false,
             Federation::FIPL => FULLY_TESTED,
             Federation::FPO => false,
+            Federation::FPP => FULLY_TESTED,
             Federation::FPPR => FULLY_TESTED,
             Federation::FPR => FULLY_TESTED,
             Federation::FRPL => FULLY_TESTED,
@@ -2422,6 +2427,7 @@ impl Federation {
             Federation::FinlandUA => Some(Country::Finland),
             Federation::FIPL => Some(Country::Italy),
             Federation::FPO => Some(Country::Finland),
+            Federation::FPP => Some(Country::Panama),
             Federation::FPPR => Some(Country::PuertoRico),
             Federation::FPR => Some(Country::Russia),
             Federation::FRPL => Some(Country::Romania),
@@ -2898,6 +2904,7 @@ impl Federation {
             Federation::FinlandUA => None,
             Federation::FIPL => Some(Federation::IPF),
             Federation::FPO => Some(Federation::IPA),
+            Federation::FPP => Some(Federation::IPF),
             Federation::FPPR => Some(Federation::IPF),
             Federation::FPR => {
                 // FPR was suspended by the IPF 2022-03-01, effective immediately.
@@ -3449,6 +3456,7 @@ impl Federation {
             Federation::FinlandUA => PointsSystem::Wilks,
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Wilks,
+            Federation::FPP => Federation::ipf_rules_on(date),
             Federation::FPPR => Federation::ipf_rules_on(date),
             Federation::FPR => Federation::ipf_rules_on(date),
             Federation::FRPL => Federation::ipf_rules_on(date),

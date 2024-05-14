@@ -1,0 +1,49 @@
+# Configuration for FPP (Panamanian IPF affiliate).
+
+[options]
+    require_manual_disambiguation = true
+    
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    subjunior = {name = "Sub-Junior",min=0,max=17.5}
+    junior = {name = "Junior",min=0,max=22.5}
+    master1 = {name = "Master 1",min=39.5,max=48.5}
+    master2 = {name = "Master 2",min=49.5,max=58.5}
+    master3 = {name = "Master 3",min=59.5,max=69.5}
+    master4 = {name = "Master 4",min=69.5,max=999}
+    guest = {name = "Guest",min=0,max=999}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+
+[weightclasses.new_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+    divisions = ["Junior","Sub-Junior"]
+
+[weightclasses.juniornew_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Junior","Sub-Junior"]
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Junior","Sub-Junior"]
+
+[exemptions]
