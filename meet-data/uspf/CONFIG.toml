@@ -51,6 +51,7 @@
     sex = "F"
 
 [exemptions]
+    8701 = ["ExemptDivision", "ExemptWeightClassConsistency"]
     0001 = ["ExemptDivision"] # Novice lifter and Class I
     0101 = ["ExemptWeightClassConsistency"]
     0201 = ["ExemptWeightClassConsistency"]
