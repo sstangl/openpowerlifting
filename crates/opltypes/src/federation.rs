@@ -1592,6 +1592,10 @@ pub enum Federation {
     #[strum(to_string = "WP-NZ", serialize = "wp-nz")]
     WPNZ,
 
+    /// World Powerlifting Organization.
+    #[strum(to_string = "WPO", serialize = "wpo")]
+    WPO,
+
     /// World Power Power League.
     #[strum(to_string = "WPPL", serialize = "wppl")]
     WPPL,
@@ -2266,6 +2270,7 @@ impl Federation {
             Federation::WPFRUS => false,
             Federation::WPLeague => false,
             Federation::WPNZ => FULLY_TESTED,
+            Federation::WPO => false,
             Federation::WPPL => false,
             Federation::WPPLArgentina => false,
             Federation::WPPLBelarus => false,
@@ -2689,6 +2694,7 @@ impl Federation {
             Federation::WPFRUS => Some(Country::Russia),
             Federation::WPLeague => Some(Country::Ukraine),
             Federation::WPNZ => Some(Country::NewZealand),
+            Federation::WPO => None,
             Federation::WPPL => None,
             Federation::WPPLArgentina => Some(Country::Argentina),
             Federation::WPPLBelarus => Some(Country::Belarus),
@@ -3230,6 +3236,7 @@ impl Federation {
             Federation::WPFRUS => Some(Federation::WPF),
             Federation::WPLeague => None,
             Federation::WPNZ => Some(Federation::WP),
+            Federation::WPO => Some(Federation::WPO),
             Federation::WPPL => Some(Federation::WPPL),
             Federation::WPPLArgentina => Some(Federation::WPPL),
             Federation::WPPLBelarus => Some(Federation::WPPL),
@@ -3768,6 +3775,7 @@ impl Federation {
             Federation::WPFRUS => PointsSystem::Wilks,
             Federation::WPLeague => PointsSystem::Wilks,
             Federation::WPNZ => PointsSystem::Wilks,
+            Federation::WPO => PointsSystem::Glossbrenner,
             Federation::WPPL => PointsSystem::Wilks,
             Federation::WPPLArgentina => PointsSystem::Wilks,
             Federation::WPPLBelarus => PointsSystem::Wilks,
