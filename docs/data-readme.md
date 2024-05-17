@@ -230,9 +230,11 @@ The name is defined to never include the year or the federation.
 For example, the meet officially called `2019 USAPL Raw National Championships` would have the MeetName `Raw National Championshps`.
 
 ### Sanctioned
-Mandatory. Whether the meet counts as officially sanctioned by a federation we recognize.
+Optional. Whether the meet counts as officially sanctioned by a federation we recognize.
 
 Values are "Yes" for sanctioned and "No" for unsanctioned.
+
+Defaults to "Yes".
 
 Sanctioned meets are competitions that are recognized by a standards body that we recognize (a federation).
 A federation may also sometimes choose to host an unsanctioned meet with a relaxed ruleset for novices.
