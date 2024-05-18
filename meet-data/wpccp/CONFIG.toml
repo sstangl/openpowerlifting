@@ -157,7 +157,8 @@
 
         # New-style divisions, Equipped Tested
     mjea = {name ="M-JE-A", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"],tested="Yes"}
-    oea = {name ="M-OE-A", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"],tested="Yes"}    
+    oea = {name ="M-OE-A", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"],tested="Yes"}   
+    foea = {name ="F-OE-A", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"],tested="Yes"}  
 
     # CP Divisions.
     morcpf = {name ="M_OR_CP",min=0,max=999,equipment="Raw",sex="M"}
