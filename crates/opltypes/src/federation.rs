@@ -487,6 +487,11 @@ pub enum Federation {
     #[strum(to_string = "GPA", serialize = "gpa")]
     GPA,
 
+    /// Colombian branch of the GPA.
+    #[serde(rename = "GPA-COL")]
+    #[strum(to_string = "GPA-COL", serialize = "gpa-col")]
+    GPACOL,    
+
     /// Croatian branch of the GPA.
     #[serde(rename = "GPA-CRO")]
     #[strum(to_string = "GPA-CRO", serialize = "gpa-cro")]
@@ -2039,6 +2044,7 @@ impl Federation {
             Federation::IDFPA => FULLY_TESTED,
             Federation::IDFPF => FULLY_TESTED,
             Federation::IKF => false,
+            Federation::GPACOL => false,
             Federation::GPCCAN => false,
             Federation::HKPF => FULLY_TESTED,
             Federation::HPF => FULLY_TESTED,
@@ -2442,6 +2448,7 @@ impl Federation {
             Federation::GFP => Some(Country::Russia),
             Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPA => None,
+            Federation::GPACOL => Some(Country::Colombia),
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPAFinland => Some(Country::Finland),
             Federation::GPC => None,
@@ -2927,6 +2934,7 @@ impl Federation {
             Federation::GFP => None,
             Federation::GlobalPU => Some(Federation::GPC),
             Federation::GPA => Some(Federation::GPA),
+            Federation::GPACOL => Some(Federation::GPA),
             Federation::GPACRO => Some(Federation::GPA),
             Federation::GPAFinland => Some(Federation::GPA),
             Federation::GPC => Some(Federation::GPC),
@@ -3473,6 +3481,7 @@ impl Federation {
             Federation::GFP => PointsSystem::Wilks,
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
+            Federation::GPACOL => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPAFinland => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Reshel,
