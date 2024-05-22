@@ -11,6 +11,7 @@
     mm1crbpu = {name ="M_MCR_1_BPU",min=40,max=44,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm1sbpu = {name ="M_MES_1_BPU",min=40,max=44,equipment="Single-ply",sex="M",tested="No"}
     mm1mbpu = {name ="M_MEM_1_BPU",min=40,max=44,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mm1ubpu = {name ="M_MEU_1_BPU",min=40,max=44,equipment="Unlimited",sex="M",tested="No"}
     mm2rbpu = {name ="M_MR_2_BPU",min=45,max=49,equipment="Raw",sex="M",tested="No"}
     mm2crbpu = {name ="M_MCR_2_BPU",min=45,max=49,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm2sbpu = {name ="M_MES_2_BPU",min=45,max=49,equipment="Single-ply",sex="M",tested="No"}
@@ -27,10 +28,12 @@
     mm5crbpu = {name ="M_MCR_5_BPU",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm5sbpu = {name ="M_MES_5_BPU",min=60,max=64,equipment="Single-ply",sex="M",tested="No"}
     mm5mbpu = {name ="M_MEM_5_BPU",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mm5ubpu = {name ="M_MEU_5_BPU",min=60,max=64,equipment="Unlimited",sex="M",tested="No"}
     mm6rbpu = {name ="M_MR_6_BPU",min=65,max=69,equipment="Raw",sex="M",tested="No"}
     mm6crbpu = {name ="M_MCR_6_BPU",min=65,max=69,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm6sbpu = {name ="M_MES_6_BPU",min=65,max=69,equipment="Single-ply",sex="M",tested="No"}
     mm6mbpu = {name ="M_MEM_6_BPU",min=65,max=69,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mm6ubpu = {name ="M_MEU_6_BPU",min=65,max=69,equipment="Unlimited",sex="M",tested="No"}
     mm7rbpu = {name ="M_MR_7_BPU",min=70,max=74,equipment="Raw",sex="M",tested="No"}
     mm7crbpu = {name ="M_MCR_7_BPU",min=70,max=74,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm7sbpu = {name ="M_MES_7_BPU",min=70,max=74,equipment="Single-ply",sex="M",tested="No"}
@@ -199,6 +202,7 @@
     mm1crabpu = {name ="M_MCR_1_ABPU",min=40,max=44,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm1sabpu = {name ="M_MES_1_ABPU",min=40,max=44,equipment="Single-ply",sex="M",tested="Yes"}
     mm1mabpu = {name ="M_MEM_1_ABPU",min=40,max=44,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    mm1uabpu = {name ="M_MEU_1_ABPU",min=40,max=44,equipment="Unlimited",sex="M",tested="Yes"}
     mm2rabpu = {name ="M_MR_2_ABPU",min=45,max=49,equipment="Raw",sex="M",tested="Yes"}
     mm2crabpu = {name ="M_MCR_2_ABPU",min=45,max=49,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm2sabpu = {name ="M_MES_2_ABPU",min=45,max=49,equipment="Single-ply",sex="M",tested="Yes"}
@@ -207,6 +211,7 @@
     mm3crabpu = {name ="M_MCR_3_ABPU",min=50,max=54,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm3sabpu = {name ="M_MES_3_ABPU",min=50,max=54,equipment="Single-ply",sex="M",tested="Yes"}
     mm3mabpu = {name ="M_MEM_3_ABPU",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    mm3uabpu = {name ="M_MEU_3_ABPU",min=50,max=54,equipment="Unlimited",sex="M",tested="Yes"}
     mm4rabpu = {name ="M_MR_4_ABPU",min=55,max=59,equipment="Raw",sex="M",tested="Yes"}
     mm4crabpu = {name ="M_MCR_4_ABPU",min=55,max=59,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm4sabpu = {name ="M_MES_4_ABPU",min=55,max=59,equipment="Single-ply",sex="M",tested="Yes"}
