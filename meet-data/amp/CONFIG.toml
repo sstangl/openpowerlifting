@@ -80,7 +80,13 @@
     frso = {name="FR-SO", min=0, max=999, sex="F", equipment="Raw"}
     mso = {name="M-SO", min=0, max=999, sex="M", equipment="Single-ply"}
     fso = {name="F-SO", min=0, max=999, sex="F", equipment="Single-ply"}
-    
+
+	# Sport for All
+    mrsa = {name="MR-SA", min=0, max=999, sex="M", equipment="Raw"}
+    frsa = {name="FR-SA", min=0, max=999, sex="F", equipment="Raw"}
+    msa = {name="M-SA", min=0, max=999, sex="M", equipment="Single-ply"}
+    fsa = {name="F-SA", min=0, max=999, sex="F", equipment="Single-ply"}
+        
     #Misc divisions
     mrg = {name="MR-G", min=0, max=999, sex="M", equipment="Raw", place="G"}
     mg = {name="M-G", min=0, max=999, sex="M", equipment="Single-ply", place="G"}
