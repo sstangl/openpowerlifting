@@ -257,10 +257,6 @@ pub enum Federation {
     #[strum(to_string = "CommonwealthPF", serialize = "commonwealthpf")]
     CommonwealthPF,
 
-    /// Confederacao Brasileira De Powerlifting, GPC. 
-    #[strum(to_string = "GPC-Brazil", serialize = "gpc-brazil")]
-    GPCBrazil,
-
     /// Canadian Powerlifting Association, WPA.
     #[strum(to_string = "CPA", serialize = "cpa")]
     CPA,
@@ -490,7 +486,7 @@ pub enum Federation {
     /// Colombian branch of the GPA.
     #[serde(rename = "GPA-COL")]
     #[strum(to_string = "GPA-COL", serialize = "gpa-col")]
-    GPACOL,    
+    GPACOL,
 
     /// Croatian branch of the GPA.
     #[serde(rename = "GPA-CRO")]
@@ -510,6 +506,11 @@ pub enum Federation {
     #[serde(rename = "GPC-AUS")]
     #[strum(to_string = "GPC-AUS", serialize = "gpc-aus")]
     GPCAUS,
+
+    /// Confederacao Brasileira De Powerlifting, GPC. Formerly CONBRAP.
+    #[serde(rename = "GPC-Brazil")]
+    #[strum(to_string = "GPC-Brazil", serialize = "gpc-brazil")]
+    GPCBrazil,
 
     /// Canadian branch of the GPC.
     #[serde(rename = "GPC-CAN")]
@@ -3001,7 +3002,7 @@ impl Federation {
                 } else {
                     None
                 }
-            }        
+            }
             Federation::IranBBF => Some(Federation::IPF),
             Federation::IraqPF => Some(Federation::IPF),
             Federation::IrelandUA => None,
