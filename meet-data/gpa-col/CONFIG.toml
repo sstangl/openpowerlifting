@@ -29,3 +29,4 @@
     sex = "F"
 
 [exemptions]
+    1602 = ["ExemptWeightClassConsistency","ExemptDivision"] # Missing weightclasse
