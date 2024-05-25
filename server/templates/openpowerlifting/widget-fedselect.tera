@@ -185,7 +185,7 @@
 <optgroup label="{{strings.country.brazil}}">
   <option value="all-brazil" {% if selection.federation == "AllBrazil" %}selected{% endif %}>{{strings.selectors.fed.all_brazil}}</option>
   <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB - Confederação Brasileira de Levantamentos Básicos [IPF]</option>
-  <option value="conbrap" {% if selection.federation == "CONBRAP" %}selected{% endif %}>CONBRAP - Confederação Brasileira de Powerlifting [GPC]</option>
+  <option value="gpc-brazil" {% if selection.federation == "GPC-Brazil" %}selected{% endif %}>GPC Brazil</option>
   <option value="wrpf-brazil" {% if selection.federation == "WRPF-Brazil" %}selected{% endif %}>WRPF Brazil</option>
   <option value="wppl-brazil" {% if selection.federation == "WPPL-Brazil" %}selected{% endif %}>WPPL Brazil</option>
 </optgroup>
