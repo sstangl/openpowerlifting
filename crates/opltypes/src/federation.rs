@@ -503,11 +503,6 @@ pub enum Federation {
     #[strum(to_string = "GPA-Finland", serialize = "gpa-finland")]
     GPAFinland,
 
-    /// Malaysian branch of the GPA.
-    #[serde(rename = "GPA-Malaysia")]
-    #[strum(to_string = "GPA-Malaysia", serialize = "gpa-malaysia")]
-    GPAMalaysia,
-
     /// Global Powerlifting Committee.
     #[strum(to_string = "GPC", serialize = "gpc")]
     GPC,
@@ -2021,7 +2016,6 @@ impl Federation {
             Federation::GPABrazil => false,
             Federation::GPACRO => false,
             Federation::GPAFinland => false,
-            Federation::GPAMalaysia => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
             Federation::GPCBrazil => false,
@@ -2465,7 +2459,6 @@ impl Federation {
             Federation::GPACOL => Some(Country::Colombia),
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPAFinland => Some(Country::Finland),
-            Federation::GPAMalaysia => Some(Country::Malaysia),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCBrazil => Some(Country::Brazil),
@@ -2953,7 +2946,6 @@ impl Federation {
             Federation::GPACOL => Some(Federation::GPA),
             Federation::GPACRO => Some(Federation::GPA),
             Federation::GPAFinland => Some(Federation::GPA),
-            Federation::GPAMalaysia => Some(Federation::GPA),
             Federation::GPC => Some(Federation::GPC),
             Federation::GPCAUS => Some(Federation::GPC),
             Federation::GPCBrazil => Some(Federation::GPC),
@@ -3502,7 +3494,6 @@ impl Federation {
             Federation::GPACOL => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPAFinland => PointsSystem::Wilks,
-            Federation::GPAMalaysia => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCBrazil => PointsSystem::Glossbrenner,
