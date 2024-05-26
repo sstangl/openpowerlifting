@@ -71,6 +71,9 @@ def mut_entries(entries_output_path='entries.csv'):
     # remove Points if present
     entries_csv_obj.remove_column_by_name('Points')
 
+    # remove Lot if present
+    entries_csv_obj.remove_column_by_name('Lot')
+
     # change Wraps to Raw for non-squatting entries
     eq_i = entries_csv_obj.index('Equipment')
     event_i = entries_csv_obj.index('Event')
