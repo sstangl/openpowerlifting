@@ -483,6 +483,11 @@ pub enum Federation {
     #[strum(to_string = "GPA", serialize = "gpa")]
     GPA,
 
+    /// Brazilian branch of the GPA.
+    #[serde(rename = "GPA-Brazil")]
+    #[strum(to_string = "GPA-Brazil", serialize = "gpa-brazil")]
+    GPABrazil,
+
     /// Colombian branch of the GPA.
     #[serde(rename = "GPA-COL")]
     #[strum(to_string = "GPA-COL", serialize = "gpa-col")]
@@ -497,6 +502,11 @@ pub enum Federation {
     #[serde(rename = "GPA-Finland")]
     #[strum(to_string = "GPA-Finland", serialize = "gpa-finland")]
     GPAFinland,
+
+    /// Malaysian branch of the GPA.
+    #[serde(rename = "GPA-Malaysia")]
+    #[strum(to_string = "GPA-Malaysia", serialize = "gpa-malaysia")]
+    GPAMalaysia,
 
     /// Global Powerlifting Committee.
     #[strum(to_string = "GPC", serialize = "gpc")]
@@ -2008,8 +2018,10 @@ impl Federation {
             Federation::GFP => false,
             Federation::GlobalPU => false,
             Federation::GPA => false,
+            Federation::GPABrazil => false,
             Federation::GPACRO => false,
             Federation::GPAFinland => false,
+            Federation::GPAMalaysia => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
             Federation::GPCBrazil => false,
@@ -2045,6 +2057,7 @@ impl Federation {
             Federation::IDFPA => FULLY_TESTED,
             Federation::IDFPF => FULLY_TESTED,
             Federation::IKF => false,
+            Federation::GPABrazil => false,
             Federation::GPACOL => false,
             Federation::GPCCAN => false,
             Federation::HKPF => FULLY_TESTED,
@@ -2448,9 +2461,11 @@ impl Federation {
             Federation::GFP => Some(Country::Russia),
             Federation::GlobalPU => Some(Country::Ukraine),
             Federation::GPA => None,
+            Federation::GPABrazil => Some(Country::Brazil),
             Federation::GPACOL => Some(Country::Colombia),
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPAFinland => Some(Country::Finland),
+            Federation::GPAMalaysia => Some(Country::Malaysia),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCBrazil => Some(Country::Brazil),
@@ -2934,9 +2949,11 @@ impl Federation {
             Federation::GFP => None,
             Federation::GlobalPU => Some(Federation::GPC),
             Federation::GPA => Some(Federation::GPA),
+            Federation::GPABrazil => Some(Federation::GPA),
             Federation::GPACOL => Some(Federation::GPA),
             Federation::GPACRO => Some(Federation::GPA),
             Federation::GPAFinland => Some(Federation::GPA),
+            Federation::GPAMalaysia => Some(Federation::GPA),
             Federation::GPC => Some(Federation::GPC),
             Federation::GPCAUS => Some(Federation::GPC),
             Federation::GPCBrazil => Some(Federation::GPC),
@@ -3481,9 +3498,11 @@ impl Federation {
             Federation::GFP => PointsSystem::Wilks,
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => PointsSystem::Wilks,
+            Federation::GPABrazil => PointsSystem::Wilks,
             Federation::GPACOL => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPAFinland => PointsSystem::Wilks,
+            Federation::GPAMalaysia => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCBrazil => PointsSystem::Glossbrenner,

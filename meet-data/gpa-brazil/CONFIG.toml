@@ -1,0 +1,32 @@
+[divisions]
+    open = {name = "Open", min = 0, max = 999}
+    youth = {name = "Youth", min = 0, max = 12}
+    teen = {name = "Teen", min = 13, max = 19}
+    teen1 = {name = "Teen 1", min = 13, max = 15}
+    teen2 = {name = "Teen 2", min = 16, max = 17}
+    teen3 = {name = "Teen 3", min = 18, max = 19}
+    juniors = {name = "Juniors", min = 20, max = 23}
+    submasters = {name = "Submasters", min = 33, max = 39}
+    masters = {name = "Masters", min = 40, max = 999}
+    masters1 = {name = "Masters 1", min = 40, max = 44}
+    masters2 = {name = "Masters 2", min = 45, max = 49}
+    masters3 = {name = "Masters 3", min = 50, max = 54}
+    masters4 = {name = "Masters 4", min = 55, max = 59}
+    masters5 = {name = "Masters 5", min = 60, max = 64}
+    masters6 = {name = "Masters 6", min = 65, max = 69}
+    masters7 = {name = "Masters 7", min = 70, max = 74}
+    masters8 = {name = "Masters 8", min = 75, max = 79}
+    masters9 = {name = "Masters 9", min = 80, max = 999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
+    
