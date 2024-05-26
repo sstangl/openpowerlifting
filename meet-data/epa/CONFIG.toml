@@ -100,6 +100,8 @@
     mg = {name ="M-G",min=0,max=999,equipment="Single-ply",place="G"}
     frg = {name ="FR-G",min=0,max=999,equipment="Raw",place="G"}
     fg = {name ="F-G",min=0,max=999,equipment="Single-ply",place="G"}
+    mxrg = {name ="MxR-G",min=0,max=999,equipment="Raw",place="G"}
+    mxg = {name ="Mx-G",min=0,max=999,equipment="Single-ply",place="G"}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -166,3 +168,4 @@
     1958 = ["ExemptDivision"] # Lifters in equipped divisions competed raw.
     1966 = ["ExemptDivision"] # 24 year old in Juniors.
     2221 = ["ExemptDivision"] # novice divisions
+    2450 = ["ExemptWeightClassConsistency"] # Mx guest lifter without weightclass
