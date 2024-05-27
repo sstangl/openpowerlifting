@@ -355,16 +355,13 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[DBKV as usize].maintainers = email_romi;
     statuses[EPA as usize].maintainers = email_jo;
     statuses[EPF as usize].maintainers = email_jo;
-    statuses[GPACRO as usize].maintainers = email_alan;
     statuses[GPCAUS as usize].maintainers = email_james;
     statuses[GPCGB as usize].maintainers = email_gem;
     statuses[GPCNZ as usize].maintainers = email_matt;
     statuses[GPCPortugal as usize].maintainers = email_gem;
     statuses[GPCScotland as usize].maintainers = email_robby;
-    statuses[GPCCRO as usize].maintainers = email_alan;
     statuses[HPLS as usize].maintainers = email_alan;
     statuses[HPLSUA as usize].maintainers = email_alan;
-    statuses[HPO as usize].maintainers = email_alan;
     statuses[Hunpower as usize].maintainers = email_laszlo;
     statuses[IPF as usize].maintainers = email_jo;
     statuses[IPLNZ as usize].maintainers = email_matt;
@@ -410,8 +407,6 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCPortugal as usize].maintainers = email_gem;
     statuses[WPNZ as usize].maintainers = email_matt;
     statuses[WRPFAUS as usize].maintainers = email_james;
-    statuses[WRPFCRO as usize].maintainers = email_alan;
-    statuses[WUAPCRO as usize].maintainers = email_alan;
     statuses[XPS as usize].maintainers = email_sean;
 
     // Don't ask for maintainership applications for defunct, completed federations.
@@ -439,6 +434,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[GPCIRL as usize].instagram = "gpcireland";
     statuses[GPCNZ as usize].instagram = "gpcnewzealand";
     statuses[GPCScotland as usize].instagram = "gpc.scotland";
+    statuses[HPLS as usize].instagram = "hrvatskipowerliftingsavez";
     statuses[Hunpower as usize].instagram = "hunpowerlifting";
     statuses[IPF as usize].instagram = "theipf";
     statuses[IPL as usize].instagram = "iplpowerlifting";
