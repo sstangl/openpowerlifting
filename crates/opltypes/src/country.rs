@@ -292,7 +292,7 @@ pub enum Country {
 }
 
 impl Country {
-    /// Whether this Country contains the other. Countries contain themselves.
+    /// Whether this Country contains the other.
     #[inline]
     pub fn contains(self, other: Country) -> bool {
         match self {
