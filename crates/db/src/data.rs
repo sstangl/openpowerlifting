@@ -65,7 +65,7 @@ pub struct Meet {
     /// Number of unique competitors, by LifterID.
     /// Calculated at load-time.
     #[serde(default)]
-    pub num_unique_lifters: u32,
+    pub num_unique_lifters: u16,
 }
 
 /// The definition of an Entry in the database.
