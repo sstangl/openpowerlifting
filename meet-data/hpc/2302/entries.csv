@@ -1,313 +1,565 @@
-Place,Name,Team,Sex,Equipment,Age,BodyweightKg,Division,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,BirthDate
-1,Júlia Nagy,Molnár Team,F,Multi-ply,18,65,FET,67.5,72.5,75,77.5,77.5,,,,,77.5,B,
-2,Panna Kratofil,,F,Multi-ply,15,64.5,FET,67.5,50,55,60,60,,,,,60,B,
-1,Tamara Bugár,Molnár Team,F,Multi-ply,16,83.9,FET,90,-77.5,77.5,-82.5,77.5,,,,,77.5,B,
-1,Eszter Polgár,Gym Dzsozy,F,Multi-ply,37,67.2,FOE,67.5,80,92.5,,92.5,,,,,92.5,B,
-2,Tímea Kadenszki,,F,Multi-ply,35,63.5,FOE,67.5,70,75,80,80,,,,,80,B,
-3,Fekete Borbála Biczóné,,F,Multi-ply,38,63.4,FOE,67.5,47.5,50,55,55,,,,,55,B,
-1,Tifani Lili Szabó,,F,Multi-ply,24,96.4,FOE,90+,,105,115,115,,,,,115,B,
-1,Tímea Kadenszki,,F,Multi-ply,35,63.5,FOE,67.5,70,75,80,80,,,,,80,B,
-1,Klaudia Savanyu,God Gym,F,Unlimited,18,56.4,FET,60,75,85,90,90,,,,,90,B,
-1,János Bence Savanyu,God Gym,M,Multi-ply,16,73.9,MET,75,70,80,90,90,,,,,90,B,
-1,Ferenc Busznyák,God Gym,M,Multi-ply,18,108.4,MET,110,180,,195,195,,,,,195,B,
-1,Dávid Kökényesy,,M,Multi-ply,23,89.4,MJE,90,130,160,,160,,,,,160,B,
-1,László Ferenc Horváth,,M,Multi-ply,31,73.9,MOE,75,,135,140,140,,,,,140,B,
-1,Balázs Hadházi,,M,Multi-ply,34,88.3,MOE,90,180,200,205,205,,,,,205,B,
-1,Imre Kadenszki,,M,Multi-ply,30,96.2,MOE,100,180,200,,200,,,,,200,B,
-2,József Nyirádi,,M,Multi-ply,32,93.9,MOE,100,145,,,145,,,,,145,B,
-1,Levente Péter Szakál,,M,Multi-ply,34,106.2,MOE,110,,280,,280,,,,,280,B,
-1,Gábor Salamon,,M,Multi-ply,45,149.9,MOE,140+,320,,,320,,,,,320,B,
-1,Róbert Csetényi,,M,Multi-ply,46,90.4,MEM1,100,,210,240,240,,,,,240,B,
-1,László Nagy,Titán Gym,M,Multi-ply,42,104.9,MEM1,110,190,200,215,215,,,,,215,B,
-1,János Savanyú,,M,Multi-ply,45,125.7,MEM1,140,170,180,190,190,,,,,190,B,
-1,Gábor Salamon,,M,Multi-ply,45,149.9,MEM1,140+,320,,,320,,,,,320,B,
-1,Ödön Hermész,,M,Multi-ply,58,88.3,MEM2,90,140,150,160,160,,,,,160,B,
-1,József Tibor Kozma,,M,Multi-ply,55,102.1,MEM2,110,150,160,175,175,,,,,175,B,
-2,Ákos Bugár,,M,Multi-ply,50,103.1,MEM2,110,155,165,175,175,,,,,175,B,
-1,Imre Kadenszki,,M,Multi-ply,30,96.2,MOE,100,155,,,155,,,,,155,B,
-1,Károly Tölli,,M,Multi-ply,43,87.8,MEM1,90,130,135,140,140,,,,,140,B,
-1,Zoltán Győri,,M,Multi-ply,48,100.5,MEM1,110,-202.5,-202.5,202.5,202.5,,,,,202.5,B,
-1,Béla Kling,Fitness2000,M,Multi-ply,55,98.7,MEM2,100,170,180.5,185,185,,,,,185,B,
-2,László Baross,,M,Multi-ply,53,99.6,MEM2,100,130,140,150,150,,,,,150,B,
-1,János Bence Savanyu,God Gym,M,Unlimited,16,73.9,MET,75,85,95,105,105,,,,,105,B,
-1,Károly Németh,God team,M,Unlimited,52,132.9,MEM2,140,277.5,,,277.5,,,,,277.5,B,
-1,Lilla Adamik,Muscle Fit,F,Raw,14,40.8,FT,44,,,,,60,70,80,80,80,D,
-1,Ada Imola Jucha,,F,Raw,16,48.8,FT,52,,,,,85,87.5,92.5,92.5,92.5,D,
-1,Georgina Hazenfratz,Kovács Műhely,F,Raw,17,55.3,FT,56,,,,,110,122.5,130,130,130,D,
-2,Eszter Kendra Gunczer,gunczereszter@gmail.com,F,Raw,18,56,FT,56,,,,,110,117.5,,117.5,117.5,D,
-1,Anasztázia Rácz,Kiskunfélegyházi Erőemelő SE,F,Raw,15,58.7,FT,60,,,,,120,127.5,131,131,131,D,
-1,Petra Patai,Kiskunfélegyházi Erőemelő SE,F,Raw,19,66.7,FT,67.5,,,,,130,140,150,150,150,D,
-2,Mónika Dancsó,,F,Raw,19,63.2,FT,67.5,,,,,130,142.5,,142.5,142.5,D,
-3,Ilona Czinkó,Kovács Műhely,F,Raw,19,67.3,FT,67.5,,,,,115,125,-137.5,125,125,D,
-4,Hanna Lara Janovics,,F,Raw,16,63.5,FT,67.5,,,,,112.5,117.5,,117.5,117.5,D,
-5,Maja Sára Győrfi,,F,Raw,16,62.8,FT,67.5,,,,,75,85,92.5,92.5,92.5,D,
-1,Zsuzsanna Lichtenberger,,F,Raw,19,69.4,FT,75,,,,,120,130,,130,130,D,
-DQ,Vivien Bodó,Duna Sportcentrum Komárom,F,Raw,17,81.2,FT,82.5,,,,,-115,,,,,D,
-1,Noémi Magura,Komáromi Duna Sportcenter,F,Raw,17,86.9,FT,90,,,,,125,135,145,145,145,D,
-1,Boglárka Kaskova,,F,Raw,20,50,FJ,52,,,,,100,110,,110,110,D,
-1,Laura Tomai,,F,Raw,20,52.9,FJ,56,,,,,125,130,137.5,137.5,137.5,D,
-1,Dóra Kecső,,F,Raw,21,59.6,FJ,60,,,,,100,110,,110,110,D,
-1,Dóra Rita Horváth,,F,Raw,20,64.7,FJ,67.5,,,,,127.5,137.5,145,145,145,D,
-1,Zsófia Barna,Biobuilding SE,F,Raw,23,69.4,FJ,75,,,,,145,,,145,145,D,
-2,Luca Garami,Monster Power,F,Raw,22,72.1,FJ,75,,,,,120,135,-147.5,135,135,D,
-1,Rebeka Makkai,Kovács Műhely,F,Raw,22,125.7,FJ,90+,,,,,130,140,-147.5,140,140,D,
-1,Barbara Berta,Kiskunfélegyházi Erőemelő SE,F,Raw,27,53.2,FO,56,,,,,105,110,115,115,115,D,
-2,Odett Anna Balázs,,F,Raw,31,55.3,FO,56,,,,,100,110,,110,110,D,
-1,Liza Kovács,,F,Raw,26,58.5,FO,60,,,,,120,127.5,137.5,137.5,137.5,D,
-2,Bettina Patyi,Kiskunfélegyházi Erőemelő Sportegyesület,F,Raw,28,58.7,FO,60,,,,,120,127.5,137.5,137.5,137.5,D,
-3,Magdolna Matolcsi,,F,Raw,35,58.1,FO,60,,,,,80,95,105,105,105,D,
-1,Szloboda Eszter,,F,Raw,40,62.4,FO,67.5,,,,,117.5,127.5,132.5,132.5,132.5,D,
-2,Fekete Borbála Biczóné,,F,Raw,38,63.4,FO,67.5,,,,,85,95,100,100,100,D,
-3,Georgina Tóth,,F,Raw,34,66.2,FO,67.5,,,,,85,95,100,100,100,D,
-1,Nikoletta Magura,,F,Raw,24,90,FO,90,,,,,120,130,145,145,145,D,
-2,Zsófia Szűcs,,F,Raw,37,85,FO,90,,,,,110,120,,120,120,D,
-1,Bianka Kiss,,F,Raw,21,90.7,FO,90+,,,,,,120,135,135,135,D,
-2,Dominika Zsófia Blaskó,,F,Raw,25,93,FO,90+,,,,,120,127.5,132.5,132.5,132.5,D,
-1,Szloboda Eszter,,F,Raw,40,62.4,FM1,67.5,,,,,117.5,127.5,132.5,132.5,132.5,D,
-2,Szilvia Sebián,,F,Raw,41,67.5,FM1,67.5,,,,,100,105,,105,105,D,
-3,Gabriella Tóth,,F,Raw,47,64.7,FM1,67.5,,,,,85,92.5,97.5,97.5,97.5,D,
-1,Melinda Ildikó Derdák,Manzera Team,F,Raw,48,80.9,FM1,82.5,,,,,120,130,-132.5,130,130,D,
-2,Anikó Elekes,,F,Raw,40,82.4,FM1,82.5,,,,,110,120,130,130,130,D,
-1,Judit Poliák,,F,Raw,50,50.2,FM2,52,,,,,80,87.5,92.5,92.5,92.5,D,
-1,Kati Györökné,,F,Raw,50,55.4,FM2,56,,,,,115,120,130,130,130,D,
-1,Bálintné Katona,,F,Raw,53,56.7,FM2,60,,,,,130,135,140,140,140,D,
-1,Erika Juhász,,F,Raw,51,74,FM2,75,,,,,115,125,130,130,130,D,
-1,Hunor Hablicsek,,M,Multi-ply,16,66.4,MET,67.5,,,,,115,125,135,135,135,D,
-1,Ádám Hunor Paczuk,,M,Multi-ply,25,81,MOE,82.5,,,,,150,160,,160,160,D,
-1,Szilárd Andrási,Kovács Műhely,M,Multi-ply,26,90,MOE,90,,,,,310,325,,325,325,D,
-1,Imre Hajdú-Kemény,,M,Multi-ply,57,132.6,MOE,140,,,,,140,,,140,140,D,
-1,Norbert Hablicsek,Egyéni,M,Multi-ply,49,108.3,MEM1,110,,,,,230,270,,270,270,D,
-1,Imre Hajdú-Kemény,,M,Multi-ply,57,132.6,MEM2,140,,,,,140,,,140,140,D,
-1,Péter Bana,,M,Raw,18,66.3,MT,67.5,,,,,190,,,190,190,D,
-2,László Zétény Nagy,,M,Raw,17,64.9,MT,67.5,,,,,170,180,185,185,185,D,
-3,Benedek Firtl,,M,Raw,16,65.7,MT,67.5,,,,,160,175,185,185,185,D,
-4,Bernárd Terzin,,M,Raw,16,64.7,MT,67.5,,,,,125,135,140,140,140,D,
-5,Illés Rácz,Kiskunfélegyházi Erőemelő Egyesület,M,Raw,14,64.6,MT,67.5,,,,,120,125,130,130,130,D,
-1,Ádám Fehér,,M,Raw,14,73.4,MT,75,,,,,170,182.5,185,185,185,D,
-2,Zoltán Szebasztián Lapu,,M,Raw,17,73,MT,75,,,,,160,170,-182.5,170,170,D,
-3,Bence Török,,M,Raw,17,73,MT,75,,,,,140,155,162.5,162.5,162.5,D,
-4,Zénó Czinkó,Kovács Műhely,M,Raw,14,73.6,MT,75,,,,,130,145,,145,145,D,
-1,Benjámin Balogh,,M,Raw,17,78.6,MT,82.5,,,,,200,205,215,215,215,D,
-2,Krisztián Horváth,,M,Raw,17,75.3,MT,82.5,,,,,,160,170,170,170,D,
-3,Adrián Fikner,,M,Raw,18,77,MT,82.5,,,,,140,150,162.5,162.5,162.5,D,
-4,Tamás Gyuricza,,M,Raw,15,78.2,MT,82.5,,,,,120,130,140,140,140,D,
-1,László Bogdán,,M,Raw,18,82.8,MT,90,,,,,185,190,200,200,200,D,
-2,Nimród Nádasdi,Goodgym,M,Raw,14,85.4,MT,90,,,,,170,180,,180,180,D,
-3,Péter Erdélyi,,M,Raw,16,82.9,MT,90,,,,,120,130,140,140,140,D,
-4,László Kiss,,M,Raw,14,86.8,MT,90,,,,,100,115,130,130,130,D,
-1,Gergely Kőfalvi,,M,Raw,18,97.6,MT,100,,,,,227.5,-237.5,-237.5,227.5,227.5,D,
-2,Marcell Vollopich,,M,Raw,19,91.2,MT,100,,,,,150,155,162.5,162.5,162.5,D,
-1,Zsolt Viktór Szabó,HQ4,M,Raw,16,108.4,MT,110,,,,,195,,,195,195,D,
-2,Ákos Bendegúz Tóth,,M,Raw,19,100.3,MT,110,,,,,170,185,,185,185,D,
-1,Ádám Botond Sárközi,,M,Raw,17,114,MT,125,,,,,270,,,270,270,D,
-2,Marcell Natovicz,,M,Raw,18,114.4,MT,125,,,,,220,240,245,245,245,D,
-3,Dániel Páder,,M,Raw,18,112,MT,125,,,,,220,230,242.5,242.5,242.5,D,
-4,Kornél Nagy,HQ4,M,Raw,16,117.4,MT,125,,,,,195,215,,215,215,D,
-5,Tamás Torgyik,,M,Raw,15,122.5,MT,125,,,,,160,175,185,185,185,D,
-1,Gergő Róbert Tóth,,M,Raw,23,88.2,MJ,90,,,,,240,260,270,270,270,D,
-2,Attila Horváth,Deli Team,M,Raw,20,89,MJ,90,,,,,210,220,230,230,230,D,
-3,Ádám Bakonyi,,M,Raw,21,87.9,MJ,90,,,,,190,200,210,210,210,D,
-1,Zoltán Gergely Tóth,,M,Raw,21,97.2,MJ,100,,,,,220,230,240,240,240,D,
-1,Bence Békési,,M,Raw,20,106.1,MJ,110,,,,,210,220,,220,220,D,
-1,Martin Gréczi,,M,Raw,22,114.7,MJ,125,,,,,210,220,,220,220,D,
-2,Erik Véró,,M,Raw,23,121.3,MJ,125,,,,,170,200,,200,200,D,
-1,Richárd György Vezér,,M,Raw,26,58.4,MO,60,,,,,170,180,190,190,190,D,
-1,Dániel Rekecki,,M,Raw,29,66.8,MO,67.5,,,,,220,,,220,220,D,
-2,Péter Törzsök,,M,Raw,31,66.9,MO,67.5,,,,,170,185,-192.5,185,185,D,
-1,László Ferenc Horváth,,M,Raw,31,73.9,MO,75,,,,,175,190,,190,190,D,
-2,Tibor Dobó,,M,Raw,26,73.8,MO,75,,,,,180,,,180,180,D,
-1,Patrik Dusnoki,,M,Raw,27,79.2,MO,82.5,,,,,190,200,202.5,202.5,202.5,D,
-2,Bálint Száraz,Egyéni,M,Raw,24,82.2,MO,82.5,,,,,180,195,-202.5,195,195,D,
-3,Loránd Strohner,,M,Raw,24,81.4,MO,82.5,,,,,180,,,180,180,D,
-DQ,Endre Bence Jankó,,M,Raw,25,81.3,MO,82.5,,,,,,,,,,D,
-1,László Cérna,,M,Raw,30,89.6,MO,90,,,,,275,290,,290,290,D,
-2,Pál Tóth,,M,Raw,32,84.5,MO,90,,,,,250,260,,260,260,D,
-3,Dhari Abbas,,M,Raw,28,89.8,MO,90,,,,,245,260,,260,260,D,
-4,Lajos Dávid Zsarnai,,M,Raw,36,89.2,MO,90,,,,,220,240,250,250,250,D,
-5,Ferenc Hajó,,M,Raw,31,87.6,MO,90,,,,,240,,,240,240,D,
-6,Attila Horváth,Deli Team,M,Raw,20,89,MO,90,,,,,210,220,230,230,230,D,
-7,Csaba Demjan,,M,Raw,34,88.7,MO,90,,,,,210,220,,220,220,D,
-8,Lóránt Bálint,,M,Raw,31,89.6,MO,90,,,,,200,205,210,210,210,D,
-1,Szabolcs Szatmári,,M,Raw,31,99.5,MO,100,,,,,280,290,,290,290,D,
-2,Kornél Fodor,Mr Power SE,M,Raw,24,97.3,MO,100,,,,,270,,,270,270,D,
-3,Gábor Kolompár,,M,Raw,25,97.2,MO,100,,,,,,250,,250,250,D,
-4,Tibor Bódi,,M,Raw,36,97,MO,100,,,,,205,215,,215,215,D,
-5,Kálmán Szabó,,M,Raw,38,98.8,MO,100,,,,,190,205,215,215,215,D,
-6,Ádám Antal,,M,Raw,28,92.5,MO,100,,,,,190,210,,210,210,D,
-7,Roland Kristóf Márkus,,M,Raw,25,99.6,MO,100,,,,,180,190,200,200,200,D,
-8,Dominik Szegedi,,M,Raw,26,97.7,MO,100,,,,,165,175,195,195,195,D,
-9,Sohajda Kristóf,,M,Raw,30,92.8,MO,100,,,,,180,190,-202.5,190,190,D,
-10,Bertalan Hajnal,,M,Raw,31,96.3,MO,100,,,,,150,165,,165,165,D,
-1,Róbert Tumpek,Paks Powerlifing Club,M,Raw,30,107,MO,110,,,,,330,361,,361,361,D,
-2,Tóth Bence,Kelet Ereje,M,Raw,27,101.8,MO,110,,,,,300,320,330,330,330,D,
-3,Csaba Mihály Kollár,,M,Raw,25,108,MO,110,,,,,300,320,330,330,330,D,
-4,Gergő Hoffmann,Egyéni,M,Raw,22,109.8,MO,110,,,,,305,-317.5,-317.5,305,305,D,
-5,Mátyás Végh,,M,Raw,27,101.7,MO,110,,,,,250,272.5,282.5,282.5,282.5,D,
-6,Zoltán Patai,,M,Raw,26,104.8,MO,110,,,,,230,245,260,260,260,D,
-7,Krisztián Németh,,M,Raw,27,109.9,MO,110,,,,,230,,250,250,250,D,
-8,Ákos Takács,,M,Raw,47,108,MO,110,,,,,227.5,237.5,245,245,245,D,
-9,Dávid Bakos,,M,Raw,36,106.9,MO,110,,,,,225,235,-242.5,235,235,D,
-10,Dávid Mader,,M,Raw,29,106.8,MO,110,,,,,155,165,180,180,180,D,
-1,János Guti,,M,Raw,28,114.9,MO,125,,,,,320,335,,335,335,D,
-2,Péter Kiss,Óbudai Erőemelők Egyesülete,M,Raw,33,122.1,MO,125,,,,,275,290,300,300,300,D,
-3,Dániel Győri,,M,Raw,26,112.7,MO,125,,,,,130,145,162.5,162.5,162.5,D,
-1,László Bujdosó,,M,Raw,30,126.1,MO,140,,,,,,260,265,265,265,D,
-2,János Sibán,,M,Raw,37,134.3,MO,140,,,,,220,240,250,250,250,D,
-1,László Bador,,M,Raw,43,72.4,MM1,75,,,,,150,160,170,170,170,D,
-1,Mihály Kalóczkai,,M,Raw,47,80.4,MM1,82.5,,,,,180,192.5,,192.5,192.5,D,
-2,József Rezicska,,M,Raw,40,78.2,MM1,82.5,,,,,140,150,160,160,160,D,
-1,Antal Tábor,,M,Raw,44,99.5,MM1,100,,,,,240,260,275,275,275,D,
-2,László Németh,God Gym Ajka,M,Raw,43,96.7,MM1,100,,,,,220,230,,230,230,D,
-1,Tibor Bulátkó,,M,Raw,48,107,MM1,110,,,,,240,250,255,255,255,D,
-2,Ákos Takács,,M,Raw,47,108,MM1,110,,,,,227.5,237.5,245,245,245,D,
-3,Zoltán Győri,,M,Raw,48,100.5,MM1,110,,,,,190,202.5,225,225,225,D,
-4,Mihály Veres,,M,Raw,49,104.4,MM1,110,,,,,200,215,222.5,222.5,222.5,D,
-1,Pál Gubicza,Kiskunfélegyházi Erőemelő Sportegyesület,M,Raw,43,122.3,MM1,125,,,,,282.5,292.5,295,295,295,D,
-2,Ferenc Som,Óbudai Erőemelők Egyesülete,M,Raw,49,114,MM1,125,,,,,280,-292.5,,280,280,D,
-3,Zsolt Viktór Szabó,,M,Raw,48,122.1,MM1,125,,,,,260,280,,280,280,D,
-4,Zsolt Katona,,M,Raw,47,112.8,MM1,125,,,,,170,185,195,195,195,D,
-1,Attila Bója-Kovács,BSD Gym,M,Raw,47,138.6,MM1,140,,,,,245,260,265,265,265,D,
-2,Attila Petrovics,,M,Raw,43,125.3,MM1,140,,,,,220,242.5,250,250,250,D,
-3,János Savanyú,,M,Raw,45,125.7,MM1,140,,,,,195,205,212.5,212.5,212.5,D,
-1,László Tenkei,,M,Raw,51,80.4,MM2,82.5,,,,,165,175,185,185,185,D,
-1,József Török,,M,Raw,53,90,MM2,90,,,,,150,160,165,165,165,D,
-1,János Illés,,M,Raw,51,93.6,MM2,100,,,,,190,,,190,190,D,
-2,Miklós Nagy,,M,Raw,53,94.1,MM2,100,,,,,160,170,,170,170,D,
-1,János Szlovicsák,,M,Raw,62,98.8,MM3,100,,,,,135,145,155,155,155,D,
-1,Imre Deák,,M,Raw,81,81.9,MM5,82.5,,,,,120,,,120,120,D,
-1,Anita Tímea Szűcs,,F,Raw,17,48.4,FT,52,55,60,-65,60,,,,,60,B,
-2,Flóra Dudás,,F,Raw,16,51.7,FT,52,50,52.5,55,55,,,,,55,B,
-3,Ada Imola Jucha,,F,Raw,16,48.8,FT,52,37.5,42.5,-45,42.5,,,,,42.5,B,
-1,Eszter Kendra Gunczer,gunczereszter@gmail.com,F,Raw,18,56,FT,56,57.5,60,62.5,62.5,,,,,62.5,B,
-1,Szandra Zachariás,,F,Raw,19,58.9,FT,60,65,70,73,73,,,,,73,B,
-2,Klaudia Savanyu,God Gym,F,Raw,18,56.4,FT,60,50,52.5,,52.5,,,,,52.5,B,
-3,Emma Sutus,,F,Raw,18,58.9,FT,60,40,42.5,-45,42.5,,,,,42.5,B,
-4,Kata Renáta Körtvélyessy,,F,Raw,16,58.9,FT,60,30,32.5,-35,32.5,,,,,32.5,B,
-1,Mónika Dancsó,,F,Raw,19,63.2,FT,67.5,57.5,62.5,67.5,67.5,,,,,67.5,B,
-2,Júlia Nagy,Molnár Team,F,Raw,18,65,FT,67.5,50,52.5,57.5,57.5,,,,,57.5,B,
-3,Ilona Czinkó,Kovács Műhely,F,Raw,19,67.3,FT,67.5,52.5,-55,-55,52.5,,,,,52.5,B,
-4,Hanna Lara Janovics,,F,Raw,16,63.5,FT,67.5,47.5,-50,50,50,,,,,50,B,
-1,Zsuzsanna Lichtenberger,,F,Raw,19,69.4,FT,75,45,50,-55,50,,,,,50,B,
-2,Szófia Klein,,F,Raw,16,73.7,FT,75,-40,40,-47.5,40,,,,,40,B,
-1,Vivien Bodó,Duna Sportcentrum Komárom,F,Raw,17,81.2,FT,82.5,55,60,-62.5,60,,,,,60,B,
-1,Noémi Magura,Komáromi Duna Sportcenter,F,Raw,17,86.9,FT,90,52.5,57.5,-62.5,57.5,,,,,57.5,B,
-2,Tamara Bugár,Molnár Team,F,Raw,16,83.9,FT,90,50,-52.5,-55,50,,,,,50,B,
-1,Boglárka Horváth,,F,Raw,21,51.7,FJ,52,47.5,52.5,55,55,,,,,55,B,
-1,Laura Tomai,,F,Raw,20,52.9,FJ,56,45,50,52.5,52.5,,,,,52.5,B,
-1,Dóra Kecső,,F,Raw,21,59.6,FJ,60,40,45,-47.5,45,,,,,45,B,
-1,Rebeka Makkai,Kovács Műhely,F,Raw,22,125.7,FJ,90+,-60,60,-70,60,,,,,60,B,
-1,Marianna Csonki,,F,Raw,32,51.3,FO,52,70,-75,-75,70,,,,,70,B,
-1,Beáta Pusztai,,F,Raw,56,66,FO,67.5,62.5,65,-67.5,65,,,,,65,B,
-2,Ilona Egri,Egyéni,F,Raw,50,60.8,FO,67.5,55,57.5,60,60,,,,,60,B,
-1,Gyöngyi Herczeg,Titán Gym,F,Raw,31,73,FO,75,95,100,102.5,102.5,,,,,102.5,B,
-1,Varga Éva Petrovicsné,Fülöpszállási Szabadidő és Sportegyesület,F,Raw,33,85.5,FO,90,50,57.5,60,60,,,,,60,B,
-2,Nikoletta Magura,,F,Raw,24,90,FO,90,45,50,55,55,,,,,55,B,
-1,Beáta Szalay,God Gym Ajka,F,Raw,44,76.3,FM1,82.5,70,75,80,80,,,,,80,B,
-1,Mariann Tóth,Egyéni,F,Raw,44,99.7,FM1,90+,75,80,85,85,,,,,85,B,
-2,Andrea Antal,,F,Raw,43,94.7,FM1,90+,50,55,60,60,,,,,60,B,
-1,Bálintné Katona,,F,Raw,53,56.7,FM2,60,70,75,77.5,77.5,,,,,77.5,B,
-1,Beáta Pusztai,,F,Raw,56,66,FM2,67.5,62.5,65,-67.5,65,,,,,65,B,
-2,Ilona Egri,Egyéni,F,Raw,50,60.8,FM2,67.5,55,57.5,60,60,,,,,60,B,
-1,Mónika Molnár,,F,Raw,50,68.1,FM2,75,47.5,52.5,-55,52.5,,,,,52.5,B,
-2,Mária Hegedűs,,F,Raw,58,68.7,FM2,75,47.5,52.5,-55,52.5,,,,,52.5,B,
-3,Lászlóné Zsédely,,F,Raw,53,68.5,FM2,75,-40,40,47.5,47.5,,,,,47.5,B,
-1,Márton Oravecz,,M,Raw,16,58.6,MT,60,80,85,-90,85,,,,,85,B,
-1,Adrián Györgyi,,M,Raw,19,65.8,MT,67.5,140,150,152.5,152.5,,,,,152.5,B,
-2,Dominik Bador,,M,Raw,15,66.1,MT,67.5,85,90,92.5,92.5,,,,,92.5,B,
-3,Bence Péter Dávid,,M,Raw,17,64.8,MT,67.5,-80,-80,80,80,,,,,80,B,
-4,Zoltán Barkó,,M,Raw,17,67.5,MT,67.5,50,55,60,60,,,,,60,B,
-DQ,Áron Megyeri,,M,Raw,13,64.6,MT,67.5,-67.5,-72.5,-72.5,,,,,,,B,
-1,Áron János Baráth,,M,Raw,17,72.9,MT,75,140,-145,-145,140,,,,,140,B,
-2,Levente Joó,,M,Raw,14,72.5,MT,75,90,95,97.5,97.5,,,,,97.5,B,
-3,Zénó Czinkó,Kovács Műhely,M,Raw,14,73.6,MT,75,60,72.5,-80,72.5,,,,,72.5,B,
-1,Patrik Bálint,,M,Raw,19,77.9,MT,82.5,145,150,152.5,152.5,,,,,152.5,B,
-2,Tamás Csaba Antal,,M,Raw,17,81.3,MT,82.5,110,120,125,125,,,,,125,B,
-3,József Sándor Olah,,M,Raw,17,75.5,MT,82.5,100,110,117.5,117.5,,,,,117.5,B,
-4,Mihály Csordás,,M,Raw,16,80.9,MT,82.5,90,105,115,115,,,,,115,B,
-5,Benjámin Balogh,,M,Raw,17,78.6,MT,82.5,95,100,105,105,,,,,105,B,
-6,Gergő Veres,,M,Raw,14,79.2,MT,82.5,70,75,82.5,82.5,,,,,82.5,B,
-7,Tamás Gyuricza,,M,Raw,15,78.2,MT,82.5,60,65,70,70,,,,,70,B,
-1,Richárd Gazdafi,Benchpress Tem,M,Raw,18,84.7,MT,90,130,135,140,140,,,,,140,B,
-2,Nimród Nádasdi,Goodgym,M,Raw,14,85.4,MT,90,105,110,-115,110,,,,,110,B,
-3,Péter Erdélyi,,M,Raw,16,82.9,MT,90,75,80,85,85,,,,,85,B,
-1,Marcell Vollopich,,M,Raw,19,91.2,MT,100,125,127.5,130,130,,,,,130,B,
-2,Bence Kovács,,M,Raw,15,99.2,MT,100,130,-135,-135,130,,,,,130,B,
-3,Zsolt Berecz,,M,Raw,18,97.1,MT,100,95,100,-107.5,100,,,,,100,B,
-1,Ádám Róbert Zsombok,,M,Raw,18,110,MT,110,-130,130,-140,130,,,,,130,B,
-DQ,Zsolt Viktór Szabó,HQ4,M,Raw,16,108.4,MT,110,-132.5,-132.5,-132.5,,,,,,,B,
-1,Ádám Botond Sárközi,,M,Raw,17,114,MT,125,150,160,-170,160,,,,,160,B,
-2,Kornél Nagy,,M,Raw,16,117.4,MT,125,90,-102.5,-102.5,90,,,,,90,B,
-1,Kristóf Lajos Szalai,,M,Raw,17,140.9,MT,140+,155,161,170,170,,,,,170,B,
-1,Tamás Marosán,,M,Raw,23,55.5,MJ,56,130,140,150,150,,,,,150,B,
-1,Gábor Csicsely,,M,Raw,21,66.4,MJ,67.5,80,-90,-90,80,,,,,80,B,
-1,Ádám Koterlán,,M,Raw,21,73.3,MJ,75,127.5,135,140,140,,,,,140,B,
-1,Ádám Bakonyi,,M,Raw,21,87.9,MJ,90,132.5,137.5,140,140,,,,,140,B,
-2,Attila Horváth,Deli Team,M,Raw,20,89,MJ,90,120,130,-137.5,130,,,,,130,B,
-1,Tamás Horváth,,M,Raw,23,91.7,MJ,100,150,155,157.5,157.5,,,,,157.5,B,
-1,Bence Békési,,M,Raw,20,106.1,MJ,110,110,125,135,135,,,,,135,B,
-1,Erik Véró,,M,Raw,23,121.3,MJ,125,110,120,125,125,,,,,125,B,
-1,Tamás Marosán,,M,Raw,23,55.5,MO,56,130,140,150,150,,,,,150,B,
-1,Richárd György Vezér,,M,Raw,26,58.4,MO,60,107.5,115,-117.5,115,,,,,115,B,
-1,Dániel Rekecki,,M,Raw,29,66.8,MO,67.5,140,-147.5,147.5,147.5,,,,,147.5,B,
-2,Péter Törzsök,,M,Raw,31,66.9,MO,67.5,105,-110,110,110,,,,,110,B,
-1,László Ferenc Horváth,,M,Raw,31,73.9,MO,75,115,125,-130,125,,,,,125,B,
-2,Tamás Marosán,,M,Raw,48,74.8,MO,75,110,117.5,122.5,122.5,,,,,122.5,B,
-3,Richárd Sós-Tóvizi,,M,Raw,16,69.3,MO,75,100,107.5,-110,107.5,,,,,107.5,B,
-1,Bálint Száraz,Egyéni,M,Raw,24,82.2,MO,82.5,170,182.5,187.5,187.5,,,,,187.5,B,
-2,Endre Bence Jankó,,M,Raw,25,81.3,MO,82.5,115,-122.5,,115,,,,,115,B,
-3,Zsolt Vetési,,M,Raw,24,80.3,MO,82.5,95,100,105,105,,,,,105,B,
-1,Máté Takács,,M,Raw,35,88,MO,90,165,170,175,175,,,,,175,B,
-2,Szilárd Andrási,Kovács Műhely,M,Raw,26,90,MO,90,140,150,-160,150,,,,,150,B,
-3,Dhari Abbas,,M,Raw,28,89.8,MO,90,135,142.5,-145,142.5,,,,,142.5,B,
-4,Lajos Dávid Zsarnai,,M,Raw,36,89.2,MO,90,130,140,-150,140,,,,,140,B,
-5,Attila Horváth,Deli Team,M,Raw,20,89,MO,90,120,130,-137.5,130,,,,,130,B,
-6,Szerhij Brilinszki,,M,Raw,27,87.9,MO,90,110,120,-127.5,120,,,,,120,B,
-1,Ákos Oláh,Miskolc Bench Press Team,M,Raw,34,98.1,MO,100,210,217.5,222.5,222.5,,,,,222.5,B,
-2,Richárd Imre Balogh,,M,Raw,28,96.5,MO,100,170,177.5,180,180,,,,,180,B,
-3,Tibor Bódi,,M,Raw,36,97,MO,100,170,-175,175,175,,,,,175,B,
-4,Krisztián Somogyi,,M,Raw,36,97,MO,100,150,-157.5,-157.5,150,,,,,150,B,
-5,Roland Kristóf Márkus,,M,Raw,25,99.6,MO,100,112.5,117.5,122.5,122.5,,,,,122.5,B,
-6,Sohajda Kristóf,,M,Raw,30,92.8,MO,100,110,120,-125,120,,,,,120,B,
-7,Bertalan Hajnal,,M,Raw,31,96.3,MO,100,112.5,117.5,120,120,,,,,120,B,
-8,Gyula Hautzinger,,M,Raw,32,92.3,MO,100,70,85,-95,85,,,,,85,B,
-1,Csaba Mihály Kollár,,M,Raw,25,108,MO,110,195,205,-210,205,,,,,205,B,
-2,Dávid Bakos,,M,Raw,36,106.9,MO,110,165,175,-185,175,,,,,175,B,
-3,Zoltán Patai,,M,Raw,26,104.8,MO,110,130,142.5,-150,142.5,,,,,142.5,B,
-1,Ádám Moszkál,Egyéni,M,Raw,27,116.1,MO,125,240,250,257.5,257.5,,,,,257.5,B,
-2,Mihály Horváth,HQ4,M,Raw,24,114.4,MO,125,200,205,210,210,,,,,210,B,
-3,Péter Kiss,Óbudai Erőemelők Egyesülete,M,Raw,33,122.1,MO,125,175,185,-190,185,,,,,185,B,
-4,Kristóf Mészáros,,M,Raw,29,122.8,MO,125,155,165,170,170,,,,,170,B,
-1,István Feigl,,M,Raw,35,128.2,MO,140,195,205,215,215,,,,,215,B,
-2,Anwar Mohamed,,M,Raw,38,132.8,MO,140,200,210,215,215,,,,,215,B,
-3,László Bujdosó,,M,Raw,30,126.1,MO,140,200,210,-212.5,210,,,,,210,B,
-4,János Sibán,,M,Raw,37,134.3,MO,140,130,140,155,155,,,,,155,B,
-1,Tamás Marosán,,M,Raw,48,74.8,MM1,75,110,117.5,122.5,122.5,,,,,122.5,B,
-2,Gábor Mészáros,,M,Raw,43,71.7,MM1,75,105,110,-115,110,,,,,110,B,
-3,László Bador,,M,Raw,43,72.4,MM1,75,105,110,-115,110,,,,,110,B,
-1,József Rezicska,,M,Raw,40,78.2,MM1,82.5,105,110,115,115,,,,,115,B,
-1,György Berecz,Egyéni,M,Raw,47,89.3,MM1,90,170,-180,,170,,,,,170,B,
-1,László Németh,God Gym Ajka,M,Raw,43,96.7,MM1,100,192.5,195,202.5,202.5,,,,,202.5,B,
-2,Antal Tábor,,M,Raw,44,99.5,MM1,100,160,170,180,180,,,,,180,B,
-1,András Sebők,Egyéni,M,Raw,46,106.6,MM1,110,180,190,200,200,,,,,200,B,
-2,László Nagy,Titán Gym,M,Raw,42,104.9,MM1,110,160,170,-180,170,,,,,170,B,
-3,Zoltán Kézi,,M,Raw,45,107.8,MM1,110,145,152.5,-157.5,152.5,,,,,152.5,B,
-4,Mihály Veres,,M,Raw,49,104.4,MM1,110,125,130,132.5,132.5,,,,,132.5,B,
-1,György Bajzák,Kiskunfélegyházi Erőemelő Sportegyesület,M,Raw,40,110.4,MM1,125,167.5,175,180,180,,,,,180,B,
-1,Attila Petrovics,,M,Raw,43,125.3,MM1,140,150,160,170,170,,,,,170,B,
-2,Attila Bója-Kovács,BSD Gym,M,Raw,47,138.6,MM1,140,150,160,170,170,,,,,170,B,
-3,János Savanyú,,M,Raw,45,125.7,MM1,140,130,135,140,140,,,,,140,B,
-1,Zsolt Karlik,Titán Gym,M,Raw,51,72.4,MM2,75,140,145,150,150,,,,,150,B,
-2,Ernő Varga,Egyéni,M,Raw,58,70.3,MM2,75,120,-125,125,125,,,,,125,B,
-3,István Bara,Egyéni,M,Raw,54,74.7,MM2,75,-120,120,122.5,122.5,,,,,122.5,B,
-1,Gábor Győri,,M,Raw,52,75.9,MM2,82.5,115,120,122.5,122.5,,,,,122.5,B,
-1,Norbert Cseke,,M,Raw,52,89.6,MM2,90,150,-155,-155,150,,,,,150,B,
-2,József Török,,M,Raw,53,90,MM2,90,95,100,102.5,102.5,,,,,102.5,B,
-1,Sándor Bíró,Pumping Iron Gym And Fitness,M,Raw,51,96.7,MM2,100,-167.5,167.5,170,170,,,,,170,B,
-2,László Baross,,M,Raw,53,99.6,MM2,100,120,130,140,140,,,,,140,B,
-3,Miklós Nagy,,M,Raw,53,94.1,MM2,100,100,110,-115,110,,,,,110,B,
-1,Zoltán Sánta,,M,Raw,52,103.3,MM2,110,-160,160,170,170,,,,,170,B,
-2,László Bugyi,Egyéni,M,Raw,59,102.7,MM2,110,140,150,,150,,,,,150,B,
-3,Ákos Bugár,,M,Raw,50,103.1,MM2,110,115,122.5,127.5,127.5,,,,,127.5,B,
-1,István Kucsera,Fitness 2000,M,Raw,69,87.2,MM3,90,132.5,135,137.5,137.5,,,,,137.5,B,
-1,Lajos Torma,,M,Raw,63,98.7,MM3,100,100,110,125,125,,,,,125,B,
-1,József Károly Gellért,,M,Raw,79,72.8,MM4,75,70,75,80,80,,,,,80,B,
+Place,Name,BirthDate,Sex,BodyweightKg,WeightClassKg,Division,Equipment,Event,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg
+1,Anna Dorottya Tóth,1996-10-20,F,64.3,67.5,FOE,Single-ply,B,,75,,75
+2,Tímea Kadenszki,1988-10-08,F,65.2,67.5,FOE,Single-ply,B,,75,,75
+1,Eszter Polgár,1986-08-17,F,74.9,75,FOE,Single-ply,B,,55,,55
+1,Edina Somogyi,1991-12-23,F,46.7,48,FO,Raw,B,,55,,55
+1,Erika Molnár,2005-06-11,F,47.8,48,FT,Raw,B,,45,,45
+1,Marianna Csonki,1991-08-13,F,50.9,52,FO,Raw,B,,75,,75
+1,Brigitta Rékási,2006-01-26,F,50.7,52,FT,Raw,B,,52.5,,52.5
+2,Vanda Szalai,2006-11-07,F,50,52,FT,Raw,B,,37.5,,37.5
+1,Gőz Erika Rékásiné,1976-03-21,F,55.1,56,FM1,Raw,B,,60,,60
+1,Gőz Erika Rékásiné,1976-03-21,F,55.1,56,FO,Raw,B,,60,,60
+2,Tímea Fekete-Horváth,1985-05-14,F,55.4,56,FO,Raw,B,,55,,55
+1,Klaudia Savanyu,2005-04-30,F,55.8,56,FT,Raw,B,,42.5,,42.5
+1,Anita Nagy,1974-03-05,F,58.7,60,FM1,Raw,B,,85,,85
+2,Ruba Mónika Hollóné,1977-08-02,F,59.4,60,FM1,Raw,B,,62.5,,62.5
+3,Zsanett Pálfalvi,1973-05-28,F,59.9,60,FM1,Raw,B,,52.5,,52.5
+1,Tövisháti Etelka Gaálné,1965-12-21,F,58.4,60,FM2,Raw,B,,65,,65
+2,Ilona Egri,1972-12-11,F,58.6,60,FM2,Raw,B,,60,,60
+1,Ruba Mónika Hollóné,1977-08-02,F,59.4,60,FO,Raw,B,,62.5,,62.5
+2,Ilona Egri,1972-12-11,F,58.6,60,FO,Raw,B,,60,,60
+3,Zsanett Pálfalvi,1973-05-28,F,59.9,60,FO,Raw,B,,52.5,,52.5
+4,Vanessza Boda,1999-04-28,F,60,60,FO,Raw,B,,52.5,,52.5
+5,Zsanett Boda,1992-08-26,F,56.6,60,FO,Raw,B,,45,,45
+1,Szandra Zachariás,2004-09-02,F,58.5,60,FT,Raw,B,,72.5,,72.5
+1,Vivien Halász,2002-03-31,F,66.5,67.5,FJ,Raw,B,,65,,65
+1,Erika Molnár,1977-03-23,F,64.6,67.5,FM1,Raw,B,,72.5,,72.5
+1,Beáta Pusztai,1967-10-08,F,66.8,67.5,FM2,Raw,B,,67.5,,67.5
+2,Anikó Csonka,1968-04-27,F,62,67.5,FM2,Raw,B,,65,,65
+1,Flóra Kosztin,1955-10-17,F,64.1,67.5,FM3,Raw,B,,112.5,,112.5
+1,Gyöngyi Herczeg,1992-11-23,F,66.8,67.5,FO,Raw,B,,102.5,,102.5
+1,Beáta Pusztai,1967-10-08,F,66.8,67.5,FO,Raw,B,,67.5,,67.5
+1,Júlia Nagy,2005-02-19,F,60.5,67.5,FT,Raw,B,,42.5,,42.5
+2,Martina Nagy,2008-03-01,F,60.4,67.5,FT,Raw,B,,37.5,,37.5
+1,Nelli Eszenyi,1978-12-25,F,72.7,75,FM1,Raw,B,,87.5,,87.5
+2,Edit Dudás,1979-09-02,F,68.4,75,FM1,Raw,B,,52.5,,52.5
+1,Mária Hegedűs,1965-02-14,F,68.1,75,FM2,Raw,B,,50,,50
+2,Mónika Molnár,1973-05-14,F,67.7,75,FM2,Raw,B,,45,,45
+1,Edit Borka,1980-01-09,F,68.4,75,FO,Raw,B,,80,,80
+2,Vanda Savanyú,2009-11-11,F,73.9,75,FO,Raw,B,,57.5,,57.5
+1,Hanna Marosi,2007-03-21,F,68.2,75,FT,Raw,B,,62.5,,62.5
+2,Dalma Kovács,2008-03-28,F,71.9,75,FT,Raw,B,,57.5,,57.5
+3,Ilona Czinkó,2004-09-19,F,68.9,75,FT,Raw,B,,50,,50
+1,Ilona Simon,1979-02-05,F,79.7,82.5,FM1,Raw,B,,93,,93
+2,Beáta Szalay,1979-11-24,F,76.9,82.5,FM1,Raw,B,,75,,75
+1,Viktória Gombás,1988-01-05,F,75.5,82.5,FO,Raw,B,,57.5,,57.5
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FO,Raw,B,,117.5,,117.5
+1,Vivien Bodó,2006-04-30,F,82.2,82.5,FT,Raw,B,,60,,60
+2,Tamara Bugár,2007-10-07,F,80.7,82.5,FT,Raw,B,,47.5,,47.5
+1,Andrea Csuti,1975-02-14,F,87,90,FM1,Raw,B,,65,,65
+1,Ildikó György,1970-05-23,F,84.3,90,FM2,Raw,B,,112.5,,112.5
+1,Barbara Mocsár,1986-03-15,F,84.7,90,FO,Raw,B,,95,,95
+2,Ágnes Nagy,1985-07-01,F,87.1,90,FO,Raw,B,,90,,90
+1,Noémi Magura,2006-03-09,F,86.4,90,FT,Raw,B,,60,,60
+1,Mariann Tóth,1979-07-23,F,103.2,90+,FM1,Raw,B,,95,,95
+1,Mária Köteles,1992-11-18,F,169.4,90+,FO,Raw,B,,118,,118
+2,Boglarka Balogh,1989-12-18,F,94.6,90+,FO,Raw,B,,42.5,,42.5
+1,Ilka Németh,2004-10-10,F,115.4,90+,FT,Raw,B,,62.5,,62.5
+1,Lilla Adamik,2009-03-11,F,41.8,44,FT,Raw,D,,,72.5,72.5
+1,Réka Toplenszki,1999-09-11,F,46.2,48,FJ,Raw,D,,,105,105
+1,Judit Poliák,1973-07-18,F,49.6,52,FM1,Raw,D,,,75,75
+1,Marianna Csonki,1991-08-13,F,51.3,52,FO,Raw,D,,,137.5,137.5
+1,Vivien Szilágyi,2006-03-13,F,50.7,52,FT,Raw,D,,,120,120
+2,Vanda Szalai,2005-11-07,F,51.4,52,FT,Raw,D,,,85,85
+1,Kati Györökné,1973-11-02,F,53.4,56,FM1,Raw,D,,,110,110
+1,Barbara Berta,1996-08-31,F,54,56,FO,Raw,D,,,100,100
+1,Luca Lukács,2007-08-05,F,55.9,56,FT,Raw,D,,,120,120
+2,Georgina Hazenfratz,2006-01-05,F,53.9,56,FT,Raw,D,,,105,105
+1,Bianka Bács,2001-03-20,F,56.2,60,FJ,Raw,D,,,70,70
+1,Ildikó Barna,1975-05-30,F,57.7,60,FM1,Raw,D,,,125,125
+2,Viktória Sebestyén,1979-05-25,F,59.5,60,FM1,Raw,D,,,110,110
+1,Bettina Patyi,1995-08-03,F,58.8,60,FO,Raw,D,,,132.5,132.5
+2,Fekete Borbála Biczóné,1985-09-25,F,59.6,60,FO,Raw,D,,,80,80
+1,Anasztázia Rácz,2007-12-27,F,58.8,60,FT,Raw,D,,,130,130
+1,Dragomir Dóra Stáhlné,1977-05-17,F,66.2,67.5,FM1,Raw,D,,,115,115
+1,Anikó Csonka,1968-04-27,F,62.3,67.5,FM2,Raw,D,,,155,155
+1,Gyöngyi Herczeg,1992-11-23,F,66.6,67.5,FO,Raw,D,,,160,160
+2,Dóra Balogh,1994-12-30,F,67.2,67.5,FO,Raw,D,,,137.5,137.5
+3,Eszter Szloboda,1983-10-28,F,63.9,67.5,FO,Raw,D,,,130,130
+4,Marcellina Miklós,1999-04-07,F,67.3,67.5,FO,Raw,D,,,120,120
+1,Janka Kajdi,2000-09-20,F,71.7,75,FJ,Raw,D,,,137.5,137.5
+1,Andrea Kasa,1985-07-28,F,72,75,FO,Raw,D,,,192.5,192.5
+1,Anikó Hajdú,1986-08-25,F,68.7,75,FO,Raw,D,,,165,165
+2,Dorina Bordás,1999-09-11,F,73.3,75,FO,Raw,D,,,165,165
+3,Janka Kajdi,2000-09-20,F,71.7,75,FO,Raw,D,,,137.5,137.5
+4,Veronika Budai,1998-12-18,F,74.2,75,FO,Raw,D,,,115,115
+1,Ilona Czinkó,2004-09-19,F,69.5,75,FT,Raw,D,,,125,125
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FM1,Raw,D,,,200,200
+1,Katalin Rohrmann,1953-07-06,F,82.3,82.5,FM3,Raw,D,,,132.5,132.5
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FO,Raw,D,,,200,200
+2,Agnes Bajzak-Csikos,1987-04-08,F,77.5,82.5,FO,Raw,D,,,112.5,112.5
+3,Zsófia Szűcs,1986-11-12,F,80.5,82.5,FO,Raw,D,,,110,110
+1,Vivien Bodó,2006-04-30,F,80.9,82.5,FT,Raw,D,,,122.5,122.5
+1,Ilona Simon,1979-02-05,F,85.1,90,FM1,Raw,D,,,182.5,182.5
+2,Éva Manzera,1976-10-15,F,83.6,90,FM1,Raw,D,,,167.5,167.5
+3,Andrea Györki,1976-05-22,F,85.4,90,FM1,Raw,D,,,165,165
+4,Melinda Ildikó Derdák,1975-01-02,F,84.2,90,FM1,Raw,D,,,137.5,137.5
+1,Éva Manzera,1976-10-15,F,83.6,90,FO,Raw,D,,,167.5,167.5
+2,Varga Éva Petrovicsné,1990-08-20,F,87.2,90,FO,Raw,D,,,142.5,142.5
+1,Gréta Maczelka,2005-12-07,F,87.5,90,FT,Raw,D,,,157.5,157.5
+2,Noémi Magura,2006-03-09,F,85.2,90,FT,Raw,D,,,135,135
+1,Patricia Ilona Grim,2000-08-17,F,104.5,90+,FJ,Raw,D,,,130,130
+2,Rebeka Makkai,2001-02-08,F,122.4,90+,FJ,Raw,D,,,122.5,122.5
+1,Anita Melinda Danicser,1979-05-21,F,93.6,90+,FM1,Raw,D,,,160,160
+1,Anita Melinda Danicser,1979-05-21,F,93.6,90+,FO,Raw,D,,,160,160
+1,Ilka Németh,2004-10-10,F,114.7,90+,FT,Raw,D,,,142.5,142.5
+1,Ágnes Papp,1978-01-19,F,49.5,52,FM1,Wraps,S,55,,,55
+1,Luca Lukács,2007-08-05,F,55.9,56,FT,Wraps,S,80,,,80
+1,Dóra Balogh,1994-12-30,F,67.2,67.5,FO,Wraps,S,140,,,140
+2,Eszter Szloboda,1983-10-28,F,63.9,67.5,FO,Wraps,S,100,,,100
+1,Dorina Bordás,1999-09-11,F,73.3,75,FJ,Wraps,S,160,,,160
+2,Janka Kajdi,2000-09-20,F,71.7,75,FJ,Wraps,S,115,,,115
+1,Janka Kajdi,2000-09-20,F,71.7,75,FO,Wraps,S,115,,,115
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FM1,Wraps,S,185,,,185
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FO,Wraps,S,185,,,185
+1,Andrea Györki,1976-05-22,F,85.4,90,FM1,Wraps,S,130,,,130
+1,Laura Tomai,2003-05-12,F,54.4,56,FJ,Wraps,SBD,117.5,45,112.5,275
+1,Fanni Tóth,1999-12-04,F,57.9,60,FJ,Wraps,SBD,95,60,120,275
+2,Leila Kozák,2001-06-23,F,58.9,60,FJ,Wraps,SBD,110,42.5,122.5,275
+1,Renáta Pápai,1976-07-19,F,58.6,60,FM1,Wraps,SBD,125,72.5,145,342.5
+1,Judit Palecian,1971-11-30,F,58.3,60,FM2,Wraps,SBD,90,65,110,265
+1,Eszter Gunczer,2005-08-14,F,58.6,60,FT,Wraps,SBD,110,65,120,295
+2,Zsófia Nagy,2005-09-19,F,58.3,60,FT,Wraps,SBD,100,55,110,265
+1,Hajnalka Kun-Gazda,1999-07-20,F,61.3,67.5,FJ,Wraps,SBD,102.5,60,130,292.5
+2,Orsolya Miskolczi,1999-12-24,F,65,67.5,FJ,Wraps,SBD,110,62.5,120,292.5
+3,Dóra Rita Horváth,2003-01-29,F,64.7,67.5,FJ,Wraps,SBD,90,50,137.5,277.5
+4,Dóra Szabados,1999-09-02,F,65.5,67.5,FJ,Wraps,SBD,107.5,45,122.5,275
+5,Virág Molnár,2002-11-14,F,62.2,67.5,FJ,Wraps,SBD,85,32.5,122.5,240
+1,Henrietta Tuba,1975-03-28,F,64.6,67.5,FM1,Wraps,SBD,130,95,170,395
+1,Marcellina Miklós,1999-04-07,F,67.3,67.5,FO,Wraps,SBD,100,50,120,270
+1,Krisztina Majoros,1993-08-18,F,65.9,67.5,FO,Wraps,SBD,205,92.5,175,472.5
+1,Cintia Kis,2004-07-15,F,64.3,67.5,FT,Wraps,SBD,85,42.5,100,227.5
+2,Julianna Frankó,2004-12-20,F,64.6,67.5,FT,Wraps,SBD,80,42.5,95,217.5
+1,Ildikó Sztrunga,1979-01-17,F,67.8,75,FM1,Wraps,SBD,90,50,120,260
+1,Eszter Tompa,1984-11-21,F,73.9,75,FO,Wraps,SBD,157.5,67.5,162.5,387.5
+1,Dorina Murányi,2004-04-22,F,73.2,75,FT,Wraps,SBD,127.5,82.5,155,365
+2,Tünde Szabó,2004-05-26,F,73.5,75,FT,Wraps,SBD,132.5,85,145,362.5
+3,Petra Orovecz,2004-12-01,F,71.4,75,FT,Wraps,SBD,135,62.5,160,357.5
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FM1,Wraps,SBD,185,115,200,500
+1,Mónika Bazsó,1974-02-01,F,80.2,82.5,FO,Wraps,SBD,185,115,200,500
+1,Boglárka Trencsényi,2007-06-22,F,80.1,82.5,FT,Wraps,SBD,130,57.5,150,337.5
+2,Réka Székely,2004-07-08,F,80.9,82.5,FT,Wraps,SBD,130,62.5,140,332.5
+3,Eliza Kékesi,2005-06-09,F,75.9,82.5,FT,Wraps,SBD,107.5,72.5,120,300
+1,Viktória Majoros,2000-05-13,F,84.3,90,FJ,Wraps,SBD,172.5,92.5,165,430
+2,Hanna Körömi,2001-08-26,F,87.6,90,FJ,Wraps,SBD,115,45,130,290
+1,Andrea Györki,1976-05-22,F,85.4,90,FM1,Wraps,SBD,130,75,165,370
+1,Gréta Maczelka,2005-12-07,F,87.9,90,FT,Wraps,SBD,110,62.5,157.5,330
+1,Patricia Ilona Grim,2000-08-17,F,104.5,90+,FJ,Wraps,SBD,115,52.5,130,297.5
+1,Szilvia Juhász-Ilyés,1976-04-08,F,92.8,90+,FM1,Wraps,SBD,122.5,50,146,318.5
+1,Béla Kling,1968-01-16,M,98.4,100,MEM2,Single-ply,B,,170,,170
+1,József Sztanke,1954-06-14,M,97.3,100,MEM3,Single-ply,B,,155,,155
+1,Zsolt Nándor Oláh,1995-06-10,M,92,100,MOE,Single-ply,B,,170,,170
+1,Zsolt Mohácsi,1966-03-12,M,101,110,MEM2,Single-ply,B,,180.5,,180.5
+1,Imre Kadenszki,1993-06-06,M,100.1,110,MOE,Single-ply,B,,140,,140
+1,József Somogyi,1992-07-21,M,116.9,125,MOE,Single-ply,B,,210,,210
+1,Lajos Víg,1980-09-05,M,129.9,140,MEM1,Single-ply,B,,340,,340
+1,Csaba Molnár,1964-08-29,M,133.7,140,MEM2,Single-ply,B,,255,,255
+1,Csaba Molnár,1964-08-29,M,133.7,140,MOE,Single-ply,B,,255,,255
+2,István Dávid,1981-09-27,M,126.5,140,MOE,Single-ply,B,,200,,200
+1,László Jobbágy,1947-08-09,M,79.7,82.5,MEM4,Single-ply,B,,150,,150
+1,Dávid Kökényesy,2000-05-17,M,88.3,90,MJE,Single-ply,B,,125,,125
+1,József Kovács,1973-08-12,M,88.9,90,MEM1,Single-ply,B,,160,,160
+1,Gábor Bujdosó,1995-02-21,M,86.6,90,MOE,Single-ply,B,,160,,160
+1,Tamás Sándor Margittai,1976-11-02,M,94.1,100,MEM1,Single-ply,D,,,260,260
+2,László Eck,1978-05-27,M,91.3,100,MEM1,Single-ply,D,,,140,140
+1,Ladislau Kiss,1948-05-22,M,95,100,MEM4,Single-ply,D,,,250,250
+1,Mátyás Sándor Mészáros,1995-02-18,M,96,100,MOE,Single-ply,D,,,240,240
+1,Norbert Hablicsek,1974-01-15,M,108.4,110,MEM1,Single-ply,D,,,300,300
+1,Tibor Manzera,1968-09-12,M,109.4,110,MEM2,Single-ply,D,,,175,175
+1,Norbert Hablicsek,1974-01-15,M,108.4,110,MOE,Single-ply,D,,,300,300
+1,István Dávid,1981-09-27,M,127,140,MOE,Single-ply,D,,,240,240
+1,Huba Hablicsek,1998-01-06,M,63.3,67.5,MOE,Single-ply,D,,,170,170
+1,Hunor Hablicsek,2007-08-08,M,65.7,67.5,MET,Single-ply,D,,,105,105
+1,Roland Póta,1978-03-02,M,87.8,90,MEM1,Single-ply,D,,,290,290
+1,Tibor Manzera,1968-09-12,M,109.4,110,MEM2,Single-ply,S,110,,,110
+1,Tibor Manzera,1968-09-12,M,109.4,110,MOE,Single-ply,S,110,,,110
+1,István Dávid,1981-09-27,M,127,140,MOE,Single-ply,S,225,,,225
+1,Attila Horváth,2003-09-24,M,88.4,90,MOE,Single-ply,S,220,,,220
+1,Attila Horváth,2003-09-24,M,88.4,90,MET,Single-ply,S,220,,,220
+1,István Dávid,1981-09-27,M,127,140,MOE,Single-ply,SBD,225,180,240,645
+1,Ferenc Balázs,1970-06-18,M,107.2,110,MEM2,Unlimited,B,,312.5,,312.5
+1,Károly Németh,1971-01-15,M,133.2,140,MEM2,Unlimited,B,,235,,235
+1,Richárd Buda,1993-07-14,M,136.6,140,MOE,Unlimited,B,,425,,425
+1,Dániel Oláh,1998-02-02,M,89.5,90,MOE,Unlimited,B,,305,,305
+1,Valentin Veres,1999-07-06,M,99.6,100,MJ,Raw,B,,190,,190
+2,Ervin Tarcsa,2000-03-11,M,90.6,100,MJ,Raw,B,,160,,160
+1,József Tóth,1974-05-30,M,96.3,100,MM1,Raw,B,,202.5,,202.5
+2,István Szeifert,1977-01-13,M,98.1,100,MM1,Raw,B,,190,,190
+3,Károly Szalai,1977-09-03,M,91.9,100,MM1,Raw,B,,160,,160
+1,Sándor Bíró,1972-04-11,M,97.8,100,MM2,Raw,B,,175,,175
+2,Attila Marosi,1972-12-22,M,98.6,100,MM2,Raw,B,,170,,170
+3,Miklós Nagy,1970-06-02,M,97.1,100,MM2,Raw,B,,120,,120
+1,Gábor Kovács,1962-12-16,M,91.6,100,MM3,Raw,B,,120,,120
+2,Tibor Horváth,1956-02-23,M,99.5,100,MM3,Raw,B,,115,,115
+1,Richárd Imre Balogh,1995-11-25,M,100,100,MO,Raw,B,,182.5,,182.5
+1,Ákos Oláh,1989-03-04,M,99.2,100,MO,Raw,B,,222.5,,222.5
+2,Gergely Pál Lovas,1985-01-11,M,97.1,100,MO,Raw,B,,175,,175
+3,Gabor Mate,1987-11-05,M,97.4,100,MO,Raw,B,,172.5,,172.5
+4,Ervin Tarcsa,2000-03-11,M,90.6,100,MO,Raw,B,,160,,160
+5,Levente Márgli,1991-08-08,M,93.1,100,MO,Raw,B,,160,,160
+6,Norbert Csalami,1987-04-23,M,91.6,100,MO,Raw,B,,155,,155
+7,Zoltan Klar,1987-01-14,M,95.2,100,MO,Raw,B,,150,,150
+1,Marcell Péter Lázár,2004-04-30,M,92.2,100,MT,Raw,B,,137.5,,137.5
+2,Barnabás Szabó,2004-03-22,M,92.3,100,MT,Raw,B,,127.5,,127.5
+3,Ádám Porteleki,2006-05-29,M,94.4,100,MT,Raw,B,,117.5,,117.5
+4,Istvan Orsos,2007-02-02,M,90.5,100,MT,Raw,B,,85,,85
+1,Miklós Kelemen,2000-05-04,M,100.2,110,MJ,Raw,B,,127.5,,127.5
+2,László Dávid,2000-10-26,M,101.1,110,MJ,Raw,B,,125,,125
+1,Tamás Bocz,1983-02-24,M,108.6,110,MM1,Raw,B,,215,,215
+2,Péter Ödön Takács,1973-09-22,M,102.3,110,MM1,Raw,B,,210,,210
+3,Sándor Vaszilkó,1982-06-06,M,105.7,110,MM1,Raw,B,,175,,175
+4,Zsolt Takó,1983-05-24,M,102.3,110,MM1,Raw,B,,170,,170
+5,Holló Tamás,1974-06-14,M,107.5,110,MM1,Raw,B,,152.5,,152.5
+1,János Gombos,1968-05-24,M,104,110,MM2,Raw,B,,172.5,,172.5
+2,László Bugyi,1964-07-23,M,104.4,110,MM2,Raw,B,,172.5,,172.5
+3,Károly Willand,1972-09-24,M,104,110,MM2,Raw,B,,155,,155
+4,György Mátyás,1969-06-25,M,109.6,110,MM2,Raw,B,,140,,140
+1,Imre Nagy,1962-11-29,M,104.8,110,MM3,Raw,B,,137.5,,137.5
+2,Béla Nagy,1960-11-09,M,104.9,110,MM3,Raw,B,,127.5,,127.5
+1,Ottó Dallos,1952-11-09,M,100.5,110,MM4,Raw,B,,131,,131
+1,Dániel Selymes,1990-12-01,M,105.2,110,MO,Raw,B,,210,,210
+1,Ádám Moszkál,1996-01-31,M,109.5,110,MO,Raw,B,,255,,255
+2,Viktor Gergő Vakarcs,1995-12-21,M,104.5,110,MO,Raw,B,,205,,205
+3,Ferenc Bernáth,1987-09-22,M,105.2,110,MO,Raw,B,,180,,180
+4,Vilmos Szilagyi,1994-11-21,M,105.3,110,MO,Raw,B,,180,,180
+1,Dominik Birinyi,2004-08-02,M,105.9,110,MT,Raw,B,,150,,150
+2,Péter Holéczy,2006-04-03,M,107.8,110,MT,Raw,B,,130,,130
+3,Ferenc Busznyák,2005-05-30,M,105.4,110,MT,Raw,B,,120,,120
+1,Mihály Horváth,1999-08-14,M,117.2,125,MJ,Raw,B,,207.5,,207.5
+1,András Sebők,1977-05-01,M,112.3,125,MM1,Raw,B,,210,,210
+2,Péter Géresi,1977-04-01,M,112.4,125,MM1,Raw,B,,200,,200
+3,Gábor Somogyi,1980-06-09,M,115.8,125,MM1,Raw,B,,190,,190
+4,Dávid Baksa,1978-09-24,M,121,125,MM1,Raw,B,,180,,180
+5,Richárd Nagy,1974-05-29,M,117.1,125,MM1,Raw,B,,175,,175
+6,Richárd Veres,1978-09-24,M,125,125,MM1,Raw,B,,170,,170
+1,Gábor Minya,1969-10-30,M,122.1,125,MM2,Raw,B,,182.5,,182.5
+2,Sándor Szabó,1963-09-20,M,113,125,MM2,Raw,B,,175,,175
+3,Tibor Varga,1965-09-29,M,118.3,125,MM2,Raw,B,,162.5,,162.5
+1,Zoltán Varjú,1954-12-01,M,111.3,125,MM3,Raw,B,,130,,130
+1,Sándor Csősz,1995-09-22,M,117,125,MO,Raw,B,,202.5,,202.5
+2,Attila Székely,1998-04-06,M,116.6,125,MO,Raw,B,,200,,200
+3,Péter Forgács,1989-08-17,M,117.6,125,MO,Raw,B,,170,,170
+4,András Tóth,1983-08-28,M,119.3,125,MO,Raw,B,,150,,150
+1,Balazs Voros,2006-09-16,M,120.7,125,MT,Raw,B,,235,,235
+1,Gyula Ujvári,1978-03-21,M,140,140,MM1,Raw,B,,190,,190
+2,Roland Lukács,1975-02-28,M,126.4,140,MM1,Raw,B,,172.5,,172.5
+3,Attila Pupos,1977-10-15,M,136,140,MM1,Raw,B,,170,,170
+4,Attila Bója-Kovács,1976-03-16,M,136.3,140,MM1,Raw,B,,167.5,,167.5
+1,László Horváth,1972-07-17,M,127,140,MM2,Raw,B,,205,,205
+2,Gábor Erdődi,1971-11-12,M,125.6,140,MM2,Raw,B,,145,,145
+1,Pál Kovács,1962-09-03,M,137.1,140,MM3,Raw,B,,140.5,,140.5
+2,Gábor Köles,1963-03-11,M,127.8,140,MM3,Raw,B,,125,,125
+1,Dénes Kovács,1990-10-06,M,127.8,140,MO,Raw,B,,250,,250
+1,Mihály Tibor Kővári,1988-09-05,M,126.8,140,MO,Raw,B,,225,,225
+2,Anwar Mohamed,1985-05-21,M,132.5,140,MO,Raw,B,,205,,205
+3,István Norbert Szalay,1999-04-02,M,128.1,140,MO,Raw,B,,200,,200
+4,Roland Lukács,1975-02-28,M,126.4,140,MO,Raw,B,,172.5,,172.5
+1,Kristóf Lajos Szalai,2006-01-24,M,136,140,MT,Raw,B,,140,,140
+1,Gábor Salamon,1978-02-18,M,144.4,140+,MM1,Raw,B,,190,,190
+2,Barna Csőke,1977-06-10,M,167.3,140+,MM1,Raw,B,,140,,140
+1,Ferenc Kalauz,1971-12-28,M,151.5,140+,MM2,Raw,B,,202.5,,202.5
+1,Ferenc Kalauz,1971-12-28,M,151.5,140+,MO,Raw,B,,202.5,,202.5
+3,István László Lechner,1967-04-12,M,169.2,140+,MO,Raw,B,,120,,120
+1,Tamás Marosán,2000-08-16,M,56.5,60,MJ,Raw,B,,135,,135
+2,Bence Csömör,2001-01-06,M,57.5,60,MJ,Raw,B,,85,,85
+1,János Tóth,1974-03-19,M,58.2,60,MM1,Raw,B,,80,,80
+1,István Répás,1977-02-23,M,66.3,67.5,MM1,Raw,B,,137.5,,137.5
+1,László Kurucz,1953-01-16,M,63.9,67.5,MM4,Raw,B,,100,,100
+1,Gábor Baranyai,1992-01-11,M,67.5,67.5,MO,Raw,B,,122.5,,122.5
+1,Adrián Györgyi,2004-08-09,M,62.4,67.5,MT,Raw,B,,135,,135
+2,Balázs Laklóth,2005-03-01,M,63.1,67.5,MT,Raw,B,,85,,85
+1,Szilárd Bodó,1979-10-25,M,72.4,75,MM1,Raw,B,,140,,140
+2,Mihály Gróza,1977-08-26,M,73.4,75,MM1,Raw,B,,100,,100
+1,Zsolt Karlik,1972-06-07,M,74,75,MM2,Raw,B,,160.5,,160.5
+2,István Bara,1968-12-05,M,74.5,75,MM2,Raw,B,,120,,120
+3,László Göbölös,1963-11-17,M,73.7,75,MM2,Raw,B,,102.5,,102.5
+4,Gábor Szurma,1965-01-18,M,69.6,75,MM2,Raw,B,,100,,100
+1,Gábor Goda,1954-11-22,M,72.2,75,MM3,Raw,B,,125,,125
+1,István Verebi,1951-02-17,M,74.1,75,MM4,Raw,B,,95,,95
+2,József Károly Gellért,1944-07-24,M,71.9,75,MM4,Raw,B,,70,,70
+1,Gergely Kerecsényi,1990-04-20,M,75,75,MO,Raw,B,,142.5,,142.5
+2,Szilárd Bodó,1979-10-25,M,72.4,75,MO,Raw,B,,143.5,,143.5
+3,László Ferenc Horváth,1992-02-12,M,73.4,75,MO,Raw,B,,125,,125
+4,László Tarcsa,1997-08-06,M,70.8,75,MO,Raw,B,,122.5,,122.5
+5,Attila Sagi,1994-05-29,M,73.6,75,MO,Raw,B,,112.5,,112.5
+1,Bence Dóró,2004-06-12,M,73.6,75,MT,Raw,B,,132.5,,132.5
+2,Áron János Baráth,2006-03-31,M,73.3,75,MT,Raw,B,,125,,125
+3,Gábor Cséplő,2005-03-08,M,69.6,75,MT,Raw,B,,117.5,,117.5
+1,Márton Körmöczi,1999-12-08,M,80.4,82.5,MJ,Raw,B,,140,,140
+1,Péter Barkó,1974-09-27,M,79.7,82.5,MM1,Raw,B,,152.5,,152.5
+1,László Kupcsik,1967-01-03,M,81.7,82.5,MM2,Raw,B,,175,,175
+2,János Aranyász,1972-01-11,M,79.9,82.5,MM2,Raw,B,,145,,145
+3,Péter Kukla,1973-01-07,M,81.3,82.5,MM2,Raw,B,,140,,140
+4,Gábor Győri,1971-11-19,M,77.7,82.5,MM2,Raw,B,,125,,125
+1,Zoltán Boda,1958-11-07,M,81.1,82.5,MM3,Raw,B,,122.5,,122.5
+2,Gyula Leyer,1960-01-13,M,80.9,82.5,MM3,Raw,B,,117.5,,117.5
+1,László Jobbágy,1947-08-09,M,79.7,82.5,MM4,Raw,B,,110,,110
+2,Sándor Bezsenyi,1948-11-24,M,82.4,82.5,MM4,Raw,B,,90,,90
+1,József Baranyai,1940-05-15,M,76.7,82.5,MM5,Raw,B,,82.5,,82.5
+1,Bálint Száraz,1999-05-22,M,82.2,82.5,MO,Raw,B,,185,,185
+1,Bence Attila Sinka,1995-12-27,M,81.8,82.5,MO,Raw,B,,220.5,,220.5
+2,Ödön Takács,1982-06-16,M,81.2,82.5,MO,Raw,B,,150,,150
+3,Márton Körmöczi,1999-12-08,M,80.4,82.5,MO,Raw,B,,140,,140
+4,Attila Seres,1987-05-03,M,80,82.5,MO,Raw,B,,117.5,,117.5
+1,Martin Varga,2007-05-02,M,75.7,82.5,MT,Raw,B,,125,,125
+2,András Várkonyi,2005-05-13,M,81.2,82.5,MT,Raw,B,,115,,115
+3,Dániel Sándor,2007-06-02,M,78.9,82.5,MT,Raw,B,,112.5,,112.5
+4,Márton Csák,2003-07-24,M,77.5,82.5,MT,Raw,B,,110,,110
+5,István Balázs Szerencsés,2004-10-27,M,75.6,82.5,MT,Raw,B,,107.5,,107.5
+6,Nimród Nádasdi,2009-02-16,M,81.6,82.5,MT,Raw,B,,102.5,,102.5
+7,Zénó Zoltán Czinkó,2009-09-09,M,77.5,82.5,MT,Raw,B,,57.5,,57.5
+1,Ferenc Márk Mata,2001-07-15,M,89.1,90,MJ,Raw,B,,170,,170
+2,Tamás Benedek Lóczi,2001-05-30,M,84,90,MJ,Raw,B,,130,,130
+3,Martin Tóvaj,1999-09-27,M,87.4,90,MJ,Raw,B,,125,,125
+1,László Németh,1980-01-04,M,89.2,90,MM1,Raw,B,,182.5,,182.5
+2,György Berecz,1976-04-07,M,89.2,90,MM1,Raw,B,,175,,175
+3,Tamás Podmaniczki,1978-10-18,M,84.4,90,MM1,Raw,B,,142.5,,142.5
+4,Károly Tölli,1980-02-29,M,87.5,90,MM1,Raw,B,,130,,130
+1,Korom Dezső,1971-03-05,M,84.2,90,MM2,Raw,B,,170,,170
+2,Norbert Cseke,1971-04-24,M,89.3,90,MM2,Raw,B,,155,,155
+3,Ödön Hermész,1965-05-23,M,87.6,90,MM2,Raw,B,,125,,125
+1,István Fazekas,1960-03-05,M,87.1,90,MM3,Raw,B,,141,,141
+2,László Kozma,1957-02-12,M,88.6,90,MM3,Raw,B,,132.5,,132.5
+3,István Kucsera,1954-02-21,M,87,90,MM3,Raw,B,,120,,120
+1,György Kerékgyártó,1949-10-20,M,89,90,MM4,Raw,B,,135,,135
+2,Sándor Busák,1952-04-26,M,88.7,90,MM4,Raw,B,,105,,105
+3,Ernő Újvári,1948-05-30,M,88.1,90,MM4,Raw,B,,100,,100
+1,Imre József Élő,1942-11-01,M,88.6,90,MM5,Raw,B,,85,,85
+1,Benjámín Móricz,1995-08-12,M,88.3,90,MO,Raw,B,,230,,230
+1,Balázs Bíró,1996-09-26,M,89.4,90,MO,Raw,B,,192.5,,192.5
+2,Gábor Molnár,1992-12-08,M,87.9,90,MO,Raw,B,,180,,180
+3,Balázs Hadházi,1989-10-18,M,89.1,90,MO,Raw,B,,175,,175
+4,Janos Pozsar,1989-07-03,M,89.3,90,MO,Raw,B,,162.5,,162.5
+5,Tibor Pupos,1993-05-09,M,89.6,90,MO,Raw,B,,160,,160
+6,Csaba Pupos,1998-08-22,M,85.6,90,MO,Raw,B,,120,,120
+1,Máté Kormos,2004-07-15,M,85.4,90,MT,Raw,B,,162.5,,162.5
+2,Bence Kristóf Fodor,2006-06-06,M,88.1,90,MT,Raw,B,,125,,125
+3,Levente Árvai,2005-08-11,M,87.5,90,MT,Raw,B,,122.5,,122.5
+4,Marcell Tornyos,2007-08-15,M,82.9,90,MT,Raw,B,,115,,115
+1,Dániel Misi,2002-07-24,M,90.3,100,MJ,Raw,D,,,272.5,272.5
+2,Dominik Patrik Budai,2003-04-30,M,95.9,100,MJ,Raw,D,,,272.5,272.5
+1,István Bognár,1972-05-01,M,97,100,MM2,Raw,D,,,220,220
+2,Tibor Illés Rácz,1970-08-22,M,95,100,MM2,Raw,D,,,217.5,217.5
+3,Attila Heizer,1965-12-26,M,98.4,100,MM2,Raw,D,,,190,190
+4,Miklós Nagy,1970-06-02,M,96.4,100,MM2,Raw,D,,,170,170
+1,Ladislau Kiss,1948-05-22,M,95,100,MM4,Raw,D,,,240,240
+1,Viktor Kiss,1993-10-06,M,98,100,MO,Raw,D,,,312.5,312.5
+1,Péter Czentye,1989-01-23,M,97.4,100,MO,Raw,D,,,325,325
+2,Szabolcs Szatmári,1992-01-22,M,91.9,100,MO,Raw,D,,,290,290
+2,Bence Toth,1996-05-30,M,99.7,100,MO,Raw,D,,,322.5,322.5
+3,Kornél Fodor,1998-12-11,M,97.2,100,MO,Raw,D,,,290,290
+3,Tamás Barna,1992-12-25,M,94.9,100,MO,Raw,D,,,312.5,312.5
+4,Gabor Kajtor,1983-08-15,M,96.4,100,MO,Raw,D,,,260,260
+5,Attila Gonda,1995-07-18,M,99.2,100,MO,Raw,D,,,255,255
+6,Róbert Szücs,1992-10-25,M,93.2,100,MO,Raw,D,,,250,250
+1,Dániel Horváth,2004-06-21,M,99.9,100,MT,Raw,D,,,240,240
+1,László Dávid,2000-10-26,M,102.2,110,MJ,Raw,D,,,205,205
+1,Tamás Bocz,1983-02-24,M,107.9,110,MM1,Raw,D,,,320,320
+2,Szabolcs Szép,1973-06-19,M,101,110,MM1,Raw,D,,,240,240
+3,Lajos Bán,1976-11-27,M,107.3,110,MM1,Raw,D,,,225,225
+1,László Kiss,1969-04-08,M,107.6,110,MM2,Raw,D,,,250,250
+2,György Mátyás,1969-06-25,M,108.3,110,MM2,Raw,D,,,220,220
+3,Zoltán Németh,1967-05-04,M,104.1,110,MM2,Raw,D,,,197.5,197.5
+1,Mihály Erdei,1994-02-24,M,101.1,110,MO,Raw,D,,,285,285
+1,Dominik Lipták,2001-03-23,M,109.7,110,MO,Raw,D,,,305,305
+2,Barnabás Bradanovits,1993-12-08,M,107.4,110,MO,Raw,D,,,250,250
+3,Tamás Szűcs,1984-01-15,M,104,110,MO,Raw,D,,,240,240
+4,István Szilárd Nyúzó,1996-03-24,M,102.4,110,MO,Raw,D,,,200,200
+1,Péter Holéczy,2006-04-03,M,107.5,110,MT,Raw,D,,,230,230
+1,Gergő Grézál,1999-06-21,M,112.5,125,MJ,Raw,D,,,315,315
+1,Pál Gubicza,1980-11-29,M,120.6,125,MM1,Raw,D,,,280,280
+2,Zsolt Viktór Szabó,1975-06-07,M,118.1,125,MM1,Raw,D,,,270,270
+3,Ferenc Som,1974-11-04,M,121.5,125,MM1,Raw,D,,,270,270
+4,Krisztián Nagy,1977-05-28,M,117.2,125,MM1,Raw,D,,,240,240
+5,Zsolt Viktór Szabó,1976-07-01,M,117.3,125,MM1,Raw,D,,,240,240
+1,Róbert Szabó,1973-01-27,M,111.6,125,MM2,Raw,D,,,240,240
+2,István Debus,1967-07-11,M,122.8,125,MM2,Raw,D,,,240,240
+3,Tamás Szabó,1971-04-09,M,116.6,125,MM2,Raw,D,,,230,230
+4,Bálint Nácsa,1964-11-22,M,117.6,125,MM2,Raw,D,,,200,200
+1,Gábor Palásti,1960-09-02,M,113,125,MM3,Raw,D,,,255,255
+1,Ádám Kiss,1997-05-16,M,119.7,125,MO,Raw,D,,,370,370
+1,Péter Kiss,1990-06-07,M,119.4,125,MO,Raw,D,,,282.5,282.5
+2,Krisztián Németh,1996-09-13,M,110.3,125,MO,Raw,D,,,240,240
+2,Béla Szolnoki,1969-06-15,M,120.1,125,MO,Raw,D,,,340,340
+3,András Tóth,1983-08-28,M,119.4,125,MO,Raw,D,,,165,165
+3,Imre Lovász,1989-07-07,M,113.1,125,MO,Raw,D,,,330,330
+4,Zoltán Borbíró,1995-08-28,M,112,125,MO,Raw,D,,,315,315
+1,Dániel Páder,2005-02-08,M,111.9,125,MT,Raw,D,,,240,240
+2,Richárd Soma Tóth,2004-05-24,M,117.9,125,MT,Raw,D,,,237.5,237.5
+1,Tibor Karalyos,1973-12-26,M,140,140,MM1,Raw,D,,,285,285
+2,Attila Bója-Kovács,1976-03-16,M,136.7,140,MM1,Raw,D,,,260,260
+1,Imre Hajdú-Kemény,1966-05-16,M,128.4,140,MM2,Raw,D,,,180,180
+1,Imre Hajdú-Kemény,1966-05-16,M,128.4,140,MO,Raw,D,,,180,180
+1,Dávid Kecskés,1993-02-08,M,129.6,140,MO,Raw,D,,,380,380
+1,Zoltán Csibrák,1980-01-23,M,154.6,140+,MM1,Raw,D,,,250,250
+2,Krisztián Szücs,1982-01-14,M,163.9,140+,MM1,Raw,D,,,215,215
+1,Ottó Antal,1959-08-10,M,58.1,60,MM3,Raw,D,,,140,140
+1,Gábor Görcs,1984-03-14,M,56.8,60,MO,Raw,D,,,135,135
+1,Dániel Varró,2000-06-27,M,62.8,67.5,MJ,Raw,D,,,135,135
+1,László Kurucz,1953-01-16,M,64.1,67.5,MM4,Raw,D,,,140,140
+1,Attila Horváth,1985-07-13,M,66.5,67.5,MO,Raw,D,,,180,180
+1,Máté Faragó,2007-03-30,M,66.2,67.5,MT,Raw,D,,,215,215
+2,Dávid Dobos,2005-03-10,M,65.9,67.5,MT,Raw,D,,,180,180
+3,Illés Rácz,2009-01-11,M,63.4,67.5,MT,Raw,D,,,115,115
+1,Péter Csitkovics,1979-04-22,M,71.5,75,MM1,Raw,D,,,195,195
+2,Zsolt Sipos,1974-03-16,M,72.9,75,MM1,Raw,D,,,190,190
+1,Tibor Dobó,1997-07-29,M,73.1,75,MO,Raw,D,,,185,185
+2,Dávid Boros,2001-03-14,M,71.1,75,MO,Raw,D,,,180,180
+1,Tibor Mózes Hegyes,2004-06-04,M,70.2,75,MT,Raw,D,,,205,205
+2,Dávid Simon,2005-01-01,M,73.9,75,MT,Raw,D,,,190,190
+1,Csaba Simon,1968-05-15,M,81.9,82.5,MM2,Raw,D,,,250,250
+1,László Harkály,1952-11-29,M,81.1,82.5,MM4,Raw,D,,,185,185
+1,Markó Mari,1994-08-09,M,81.4,82.5,MO,Raw,D,,,280,280
+2,Máté Miklós Sajtos,1997-11-07,M,80.2,82.5,MO,Raw,D,,,275,275
+3,Máté Zelena,1993-02-02,M,81.3,82.5,MO,Raw,D,,,275,275
+4,Gábor Bezzeg,1997-05-11,M,80.9,82.5,MO,Raw,D,,,265,265
+5,Tamás Sipos,1986-09-09,M,81.4,82.5,MO,Raw,D,,,232.5,232.5
+6,Péter Pál Miklai,1996-07-29,M,80.6,82.5,MO,Raw,D,,,205,205
+7,Zénó Czinkó,2009-09-09,M,78,82.5,MO,Raw,D,,,120,120
+1,Benjamin Patai,2005-12-28,M,77.1,82.5,MT,Raw,D,,,170,170
+1,János Illés,1972-01-19,M,88.4,90,MM2,Raw,D,,,180,180
+2,József Török,1970-06-29,M,86.3,90,MM2,Raw,D,,,150,150
+1,Imre Deák,1942-05-26,M,84.7,90,MM5,Raw,D,,,165,165
+1,Szilárd Andrási,1997-06-09,M,90,90,MO,Raw,D,,,302.5,302.5
+1,Mihály Márki-Kira,1993-10-21,M,87.8,90,MO,Raw,D,,,270,270
+2,László Cérna,1993-05-19,M,89.2,90,MO,Raw,D,,,270,270
+3,Attila Salamon,1995-11-14,M,83.3,90,MO,Raw,D,,,260,260
+4,András Márton,1989-12-14,M,85.7,90,MO,Raw,D,,,252.5,252.5
+5,Ferenc Hajó,1992-05-13,M,87.9,90,MO,Raw,D,,,252.5,252.5
+6,Pál Tóth,1991-03-03,M,83.8,90,MO,Raw,D,,,250,250
+7,Norbert Gerhát,1991-09-11,M,87.7,90,MO,Raw,D,,,250,250
+1,Barnabás Faragó,2005-05-17,M,86.2,90,MT,Raw,D,,,232.5,232.5
+2,Máté Hegedűs,2005-07-28,M,86.3,90,MT,Raw,D,,,205,205
+1,Károly Horváth,1980-08-20,M,95.8,100,MM1,Wraps,S,280,,,280
+2,Tamás Deli,1977-08-23,M,95.2,100,MM1,Wraps,S,220,,,220
+1,Mátyás Végh,1996-07-15,M,99.2,100,MO,Wraps,S,245,,,245
+2,Károly József Szuder,1987-03-16,M,96.9,100,MO,Wraps,S,240,,,240
+3,Róbert Szücs,1992-10-25,M,93.2,100,MO,Wraps,S,200,,,200
+1,Ákos Takács,1976-08-27,M,106,110,MM1,Wraps,S,120,,,120
+1,Zoltán Németh,1967-05-04,M,104.1,110,MM2,Wraps,S,197.5,,,197.5
+1,Barnabás Bradanovits,1993-12-08,M,107.4,110,MO,Wraps,S,245,,,245
+2,Mihály Erdei,1994-02-24,M,101.1,110,MO,Wraps,S,220,,,220
+3,Bence József Oravecz,1997-07-22,M,100.3,110,MO,Wraps,S,205,,,205
+1,Erik Véró,2000-06-07,M,123.6,125,MJ,Wraps,S,185,,,185
+1,Róbert Csaba Pintér,1978-07-12,M,115.1,125,MM1,Wraps,S,210,,,210
+1,István Debus,1967-07-11,M,122.8,125,MM2,Wraps,S,200,,,200
+2,Tamás Szabó,1971-04-09,M,116.6,125,MM2,Wraps,S,180,,,180
+1,Krisztián Németh,1996-09-13,M,110.3,125,MO,Wraps,S,215,,,215
+2,András Tóth,1983-08-28,M,119.4,125,MO,Wraps,S,120,,,120
+1,Attila Bója-Kovács,1976-03-16,M,136.7,140,MM1,Wraps,S,220,,,220
+1,Gábor Kocsis,1992-09-11,M,132.1,140,MO,Wraps,S,320,,,320
+1,Csanád Sári,2007-05-16,M,65.3,67.5,MT,Wraps,S,150,,,150
+1,Dávid Boros,2001-03-14,M,71.1,75,MJ,Wraps,S,142.5,,,142.5
+1,Tamás Benedek Lóczi,2001-05-30,M,82.1,82.5,MJ,Wraps,S,195,,,195
+1,László Harkály,1952-11-29,M,81.1,82.5,MM4,Wraps,S,130,,,130
+1,Máté Zelena,1993-02-02,M,81.3,82.5,MO,Wraps,S,240,,,240
+2,László Posnyák,1993-01-14,M,81.7,82.5,MO,Wraps,S,150,,,150
+1,Péter Árpád Katona,1984-05-10,M,88.2,90,MO,Wraps,S,217.5,,,217.5
+2,András Márton,1989-12-14,M,85.7,90,MO,Wraps,S,215,,,215
+3,Attila Horváth,2003-09-24,M,88.4,90,MO,Wraps,S,210,,,210
+4,Bence Bíró,1996-10-06,M,89,90,MO,Wraps,S,200,,,200
+1,Bence Eklics,2003-07-10,M,88.1,90,MT,Wraps,S,240,,,240
+2,Attila Horváth,2003-09-24,M,88.4,90,MT,Wraps,S,210,,,210
+1,Gergő Róbert Tóth,2000-02-10,M,92,100,MJ,Wraps,SBD,180,120,250,550
+2,Péter Forisek,2001-01-01,M,98.7,100,MJ,Wraps,SBD,130,110,200,440
+3,Gergő Attila Zádor,2000-07-25,M,91.9,100,MJ,Wraps,SBD,150,107.5,165,422.5
+1,Antal Tábor,1979-06-04,M,99.4,100,MM1,Wraps,SBD,260,170,273,703
+2,Gábor Szabó,1975-10-24,M,97.7,100,MM1,Wraps,SBD,120,100,210,430
+1,Milán Apaceller,1993-10-22,M,97.1,100,MO,Wraps,SBD,290,190,317.5,797.5
+1,István Bakkancsos,1994-03-18,M,99.1,100,MO,Wraps,SBD,295,200,280,775
+2,Tibor Kiss,1988-10-17,M,92.9,100,MO,Wraps,SBD,270,195,270,735
+2,Szilveszter Zsilák,1992-12-17,M,99.2,100,MO,Wraps,SBD,280,160,310,750
+3,Mátyás Végh,1996-07-15,M,99.2,100,MO,Wraps,SBD,245,165,277.5,687.5
+4,Károly József Szuder,1987-03-16,M,96.8,100,MO,Wraps,SBD,240,180,260,680
+5,Tamás Ősi,1993-09-02,M,95.9,100,MO,Wraps,SBD,225,152.5,257.5,635
+6,Attila Gonda,1995-07-18,M,99.2,100,MO,Wraps,SBD,227.5,140,255,622.5
+7,Róbert Szücs,1992-10-25,M,93.2,100,MO,Wraps,SBD,200,145,250,595
+8,Gergo Andrej,1991-07-26,M,95.7,100,MO,Wraps,SBD,195,132.5,240,567.5
+9,Zoltán Patai,1997-07-14,M,93.7,100,MO,Wraps,SBD,185,110,215,510
+10,Tamás Mihályi,1998-09-16,M,100,100,MO,Wraps,SBD,180,100,170,450
+1,Miklós Bence Bartha,2003-07-14,M,94.7,100,MT,Wraps,SBD,210,110,230,550
+2,József Tibor Kozma,2005-08-16,M,91.7,100,MT,Wraps,SBD,190,97.5,197.5,485
+3,Balázs Farkas,2004-07-24,M,97.2,100,MT,Wraps,SBD,162.5,120,202.5,485
+4,Levente Sipos,2006-08-07,M,91.3,100,MT,Wraps,SBD,170,95,212.5,477.5
+1,Gergő Hoffmann,2001-09-15,M,109.7,110,MJ,Wraps,SBD,255,170,300,725
+2,Gábor Hovanecz,2003-02-26,M,108.1,110,MJ,Wraps,SBD,255,165,230,650
+3,Levente Bekő,2002-04-18,M,103.6,110,MJ,Wraps,SBD,175,92.5,180,447.5
+1,Zoltán Németh,1967-05-04,M,104.1,110,MM2,Wraps,SBD,197.5,147.5,197.5,542.5
+1,Gergő Rapos,1994-11-12,M,108.4,110,MO,Wraps,SBD,340,200,300,840
+1,Dávid Kulcsár,1995-08-06,M,109.7,110,MO,Wraps,SBD,335,225,335,895
+2,Róbert Tumpek,1993-01-19,M,104.5,110,MO,Wraps,SBD,305,187.5,330,822.5
+2,Zoltán Ferenc Luka,1986-10-11,M,102.7,110,MO,Wraps,SBD,282.5,217.5,285,785
+3,Ferenc Hevesi,2000-01-18,M,101,110,MO,Wraps,SBD,326,190,305,821
+3,Balint Horvath,1998-09-30,M,106.1,110,MO,Wraps,SBD,242.5,162.5,280,685
+4,Zsolt Fazekas,1994-05-25,M,106.1,110,MO,Wraps,SBD,230,200,220,650
+5,Dávid Bakos,1987-08-07,M,106.5,110,MO,Wraps,SBD,215,187.5,240,642.5
+6,Tibor Bódi,1987-11-18,M,104.9,110,MO,Wraps,SBD,210,182.5,220,612.5
+7,Péter Szabó,1992-06-26,M,108.4,110,MO,Wraps,SBD,235,140,232.5,607.5
+1,Zsolt Viktór Szabó,2007-04-05,M,108.3,110,MT,Wraps,SBD,180,122.5,200,502.5
+2,Bendegúz Gyüre,2006-08-22,M,103.7,110,MT,Wraps,SBD,150,85,165,400
+3,Mark Mogyorosy,2003-09-16,M,106.3,110,MT,Wraps,SBD,120,100,180,400
+1,Martin Gréczi,2001-05-23,M,115.7,125,MJ,Wraps,SBD,220,160,220,600
+1,Tibor Szántó,1976-01-26,M,119.2,125,MM1,Wraps,SBD,240,160,280,680
+2,Péter Juhász-Ilyés,1982-06-21,M,120.6,125,MM1,Wraps,SBD,192.5,140,210,542.5
+1,Tamás Bartalos,1973-04-09,M,123.4,125,MM2,Wraps,SBD,200,185,240,625
+2,István Debus,1967-07-11,M,122.8,125,MM2,Wraps,SBD,200,170,240,610
+3,Tamás Szabó,1971-04-09,M,116.6,125,MM2,Wraps,SBD,180,165,230,575
+1,Péter Tóth,1985-01-30,M,115.8,125,MO,Wraps,SBD,320,220,325,865
+1,János Guti,1994-12-03,M,116.2,125,MO,Wraps,SBD,330,190,335,855
+2,Tibor Fülpesi,1997-08-14,M,124.4,125,MO,Wraps,SBD,290,210,320,820
+3,Csaba Mihály Kollár,1998-04-23,M,113.9,125,MO,Wraps,SBD,285,197.5,300,782.5
+5,András Tóth,1983-08-28,M,119.4,125,MO,Wraps,SBD,100,147.5,165,412.5
+1,Kornél Nagy,2007-07-04,M,112.2,125,MT,Wraps,SBD,160,80,180,420
+1,Gábor Bencze,1978-09-18,M,128.3,140,MM1,Wraps,SBD,320,210,336,866
+2,Attila Szegi,1976-03-27,M,135.6,140,MM1,Wraps,SBD,270,175,292.5,737.5
+3,Zoltan Lauscher,1977-03-20,M,138.5,140,MM1,Wraps,SBD,190,130,230,550
+1,Sándor Varjú,2000-03-03,M,148,140+,MJ,Wraps,SBD,307.5,207.5,250,765
+1,Richárd György Vezér,1997-03-05,M,59.4,60,MO,Wraps,SBD,150,115,175,440
+2,János Zsibrek,1997-12-24,M,59.1,60,MO,Wraps,SBD,145,85,190,420
+1,Dániel Rekecki,1994-07-21,M,65.6,67.5,MO,Wraps,SBD,190,147.5,220,557.5
+2,Viktor Nagy,1995-06-23,M,65.8,67.5,MO,Wraps,SBD,203,112.5,220,535.5
+1,Máté Faragó,2007-03-30,M,66.2,67.5,MT,Wraps,SBD,173,102.5,215,490.5
+2,Zsombor Honavecz,2007-04-12,M,66.2,67.5,MT,Wraps,SBD,125,75,145,345
+1,Gergő Kerekes,2000-01-24,M,74.3,75,MJ,Wraps,SBD,195,107.5,207.5,510
+1,Péter Csitkovics,1979-04-22,M,71.5,75,MM1,Wraps,SBD,170,132.5,195,497.5
+1,Zoltán Vódli,1994-11-11,M,73.9,75,MO,Wraps,SBD,227.5,160,232.5,620
+2,Renátó Tóth,1993-11-18,M,74.5,75,MO,Wraps,SBD,200,137.5,250,587.5
+3,Dávid Boros,2001-03-14,M,71.1,75,MO,Wraps,SBD,142.5,117.5,180,440
+1,Kristóf Goór,2004-11-15,M,72.5,75,MT,Wraps,SBD,180,137.5,202.5,520
+2,Daniel Ronaldo Csaki,2003-12-05,M,72.5,75,MT,Wraps,SBD,150,115,207.5,472.5
+3,Ádám Walter,2008-01-25,M,72.4,75,MT,Wraps,SBD,145,85,142.5,372.5
+1,Tamás Mandel,2000-08-11,M,80.9,82.5,MJ,Wraps,SBD,215,152.5,215,582.5
+2,Tamás Benedek Lóczi,2001-05-30,M,82.1,82.5,MJ,Wraps,SBD,195,132.5,232.5,560
+3,Ákos Keppler,2002-11-14,M,80.9,82.5,MJ,Wraps,SBD,222.5,115,220,557.5
+4,Róbert Makai,2002-11-16,M,79.4,82.5,MJ,Wraps,SBD,165,107.5,220,492.5
+5,Tamás Oládi,2002-12-30,M,78.3,82.5,MJ,Wraps,SBD,170,85,190,445
+1,Markó Mari,1994-08-09,M,81.4,82.5,MO,Wraps,SBD,252.5,182.5,280,715
+2,Máté Zelena,1993-02-02,M,81.3,82.5,MO,Wraps,SBD,240,150,275,665
+3,Gergő Petneházi,1991-12-18,M,81.5,82.5,MO,Wraps,SBD,230,142.5,237.5,610
+4,Tamás Sipos,1986-09-09,M,81.4,82.5,MO,Wraps,SBD,225,140,232.5,597.5
+5,Gábor Jádi,1988-07-25,M,82.4,82.5,MO,Wraps,SBD,207.5,120,230,557.5
+1,Boldizsar Szendrei,2004-09-10,M,81.7,82.5,MT,Wraps,SBD,205,122.5,220,547.5
+2,Balázs Juhász,2004-05-26,M,80.6,82.5,MT,Wraps,SBD,190,115,220,525
+3,Barnabás Talapka,2005-02-16,M,79,82.5,MT,Wraps,SBD,142.5,97.5,170,410
+4,Dolzhenko Maksym,2005-10-04,M,80,82.5,MT,Wraps,SBD,135,90,150,375
+5,Máté Mihályi,2007-07-17,M,82.5,82.5,MT,Wraps,SBD,125,80,160,365
+1,Krisztián József Horváth,2002-09-03,M,88.8,90,MJ,Wraps,SBD,257.5,140,257.5,655
+2,Zoltán Somi,1999-08-15,M,88.3,90,MJ,Wraps,SBD,215,147.5,240,602.5
+3,Alex Kozma,2003-01-26,M,86.5,90,MJ,Wraps,SBD,210,132.5,225,567.5
+4,Krisztián Nagy,2002-12-31,M,83.2,90,MJ,Wraps,SBD,185,120,252.5,557.5
+5,Bence Gémes,1999-12-03,M,86.3,90,MJ,Wraps,SBD,182.5,120,225,527.5
+6,Robin Horváth,2001-09-04,M,88.3,90,MJ,Wraps,SBD,172.5,112.5,210,495
+1,Viktor Kovács,1982-02-07,M,89.1,90,MM1,Wraps,SBD,235,157.5,230,622.5
+2,Zsolt Molnár,1980-12-17,M,85,90,MM1,Wraps,SBD,145,100,160,405
+1,István Gyuricska Jr,1967-04-06,M,87.7,90,MM2,Wraps,SBD,190,155,200,545
+1,Ferenc Smuk,1952-05-08,M,88.4,90,MM4,Wraps,SBD,240,95,230,565
+1,Gergely Kuti,1993-03-01,M,88.8,90,MO,Wraps,SBD,300,155,300,755
+1,Gábor Somogyi,2000-05-09,M,87.6,90,MO,Wraps,SBD,270,175,325,770
+2,Lajos Dávid Zsarnai,1987-11-09,M,89.1,90,MO,Wraps,SBD,235,140,235,610
+2,Kornél Mengyi,1997-06-05,M,90,90,MO,Wraps,SBD,275,195,290,760
+3,István Bodó,1988-01-09,M,88.3,90,MO,Wraps,SBD,215,157.5,227.5,600
+4,Levente Lovas,1995-04-20,M,89,90,MO,Wraps,SBD,200,140,240,580
+5,Kristóf Sohajda,1993-05-12,M,88.8,90,MO,Wraps,SBD,160,107.5,185,452.5
+1,Bence Eklics,2003-07-10,M,88.1,90,MT,Wraps,SBD,240,150,290,680
+2,Barnabás Faragó,2005-05-17,M,86.2,90,MT,Wraps,SBD,165,105,232.5,502.5
+3,Gergely Kőfalvi,2005-11-07,M,89.6,90,MT,Wraps,SBD,170,100,215,485
