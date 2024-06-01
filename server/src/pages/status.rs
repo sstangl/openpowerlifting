@@ -343,7 +343,6 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[AusPL as usize].maintainers = email_james;
     statuses[BAWLA as usize].maintainers = email_jo;
     statuses[BP as usize].maintainers = email_jo;
-    statuses[BPF as usize].maintainers = email_gem;
     statuses[BPU as usize].maintainers = email_gem;
     statuses[BVDG as usize].maintainers = email_romi;
     statuses[BVDK as usize].maintainers = email_romi;
@@ -357,14 +356,12 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[EPF as usize].maintainers = email_jo;
     statuses[GPCAUS as usize].maintainers = email_james;
     statuses[GPCGB as usize].maintainers = email_gem;
-    statuses[GPCNZ as usize].maintainers = email_matt;
     statuses[GPCPortugal as usize].maintainers = email_gem;
     statuses[GPCScotland as usize].maintainers = email_robby;
     statuses[HPLS as usize].maintainers = email_alan;
     statuses[HPLSUA as usize].maintainers = email_alan;
     statuses[Hunpower as usize].maintainers = email_laszlo;
     statuses[IPF as usize].maintainers = email_jo;
-    statuses[IPLNZ as usize].maintainers = email_matt;
     statuses[IrelandUA as usize].maintainers = email_jo;
     statuses[IrishPO as usize].maintainers = email_gem;
     statuses[KBGV as usize].maintainers = email_stefanie;
@@ -372,15 +369,12 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[KNKFSP as usize].maintainers = email_mbeelen;
     statuses[KPC as usize].maintainers = email_mayed;
     statuses[LFPH as usize].maintainers = email_stefanie;
-    statuses[LGBT as usize].maintainers = email_gem;
     statuses[MMAUS as usize].maintainers = email_james;
     statuses[NASA as usize].maintainers = email_boris;
     statuses[NIPF as usize].maintainers = email_jo;
     statuses[NPB as usize].maintainers = email_mbeelen;
     statuses[NZPF as usize].maintainers = email_artem;
-    statuses[OceaniaPF as usize].maintainers = email_matt;
     statuses[OEVK as usize].maintainers = email_milena;
-    statuses[ORPF as usize].maintainers = email_matt;
     statuses[PA as usize].maintainers = email_james;
     statuses[ProRaw as usize].maintainers = email_james;
     statuses[PS as usize].maintainers = email_mayed;
@@ -396,7 +390,6 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPC as usize].maintainers = email_sean;
     statuses[THSPA as usize].maintainers = email_sean;
     statuses[THSWPA as usize].maintainers = email_sean;
-    statuses[UPA as usize].maintainers = email_gem;
     statuses[VGPF as usize].maintainers = email_stefanie;
     statuses[WelshPA as usize].maintainers = email_jo;
     statuses[WPC as usize].maintainers = email_gem;
@@ -405,8 +398,9 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPCItaly as usize].maintainers = email_gem;
     statuses[WPCPoland as usize].maintainers = email_gem;
     statuses[WPCPortugal as usize].maintainers = email_gem;
-    statuses[WPNZ as usize].maintainers = email_matt;
     statuses[WRPFAUS as usize].maintainers = email_james;
+    statuses[WRPFEIRE as usize].maintainers = email_gem;
+    statuses[WRPFUK as usize].maintainers = email_gem;
     statuses[XPS as usize].maintainers = email_sean;
 
     // Don't ask for maintainership applications for defunct, completed federations.
