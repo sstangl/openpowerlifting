@@ -324,7 +324,6 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_laszlo = "<a href=\"mailto:laszlopota00@gmail.com\">laszlo@</a>";
     let email_laura = "<a href=\"mailto:rettigx+opl@gmail.com\">laura@</a>";
-    let email_matt = "<a href=\"mailto:matt@openpowerlifting.org\">matt@</a>";
     let email_mayed = "<a href=\"mailto:mayed.alredha@gmail.com\">Mayed Alredha</a>";
     let email_mbeelen = "<a href=\"mailto:mbeelen@openpowerlifting.org\">mbeelen@</a>";
     let email_milena = "<a href=\"mailto:milena@openpowerlifting.org\">milena@</a>";
