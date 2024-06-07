@@ -654,5 +654,6 @@
   <option value="all-vietnam" {% if selection.federation == "AllVietnam" %}selected{% endif %}>{{strings.selectors.fed.all_vietnam}}</option>
   <option value="vietnampa" {% if selection.federation == "VietnamPA" %}selected{% endif %}>VietnamPA - Vietnam Powerlifting Alliance [GPA]</option>
   <option value="vpf" {% if selection.federation == "VPF" %}selected{% endif %}>VPF - Vietnam Powerlifting Federation [IPF]</option>
+  <option value="wrpf-vietnam" {% if selection.federation == "WRPF-Vietnam" %}selected{% endif %}>WRPF Vietnam</option>
 </optgroup>
 </select>
