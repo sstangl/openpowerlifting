@@ -1388,6 +1388,11 @@ pub enum Federation {
     #[strum(to_string = "VietnamPA", serialize = "vietnampa")]
     VietnamPA,
 
+    /// Unaffiliated meets held Vietnam.
+    #[serde(rename = "Vietnam-UA")]
+    #[strum(to_string = "Vietnam-UA", serialize = "vietnam-ua")]
+    VietnamUA,
+
     /// Defunct Russian meet.
     #[strum(to_string = "Vityaz", serialize = "vityaz")]
     Vityaz,
@@ -2241,6 +2246,7 @@ impl Federation {
             Federation::VDFPA => FULLY_TESTED,
             Federation::VGPF => FULLY_TESTED,
             Federation::VietnamPA => false,
+            Federation::VietnamUA => false,
             Federation::Vityaz => false,
             Federation::VPF => FULLY_TESTED,
             Federation::WABDL => FULLY_TESTED,
@@ -2669,6 +2675,7 @@ impl Federation {
             Federation::VDFPA => Some(Country::Australia),
             Federation::VGPF => Some(Country::Belgium),
             Federation::VietnamPA => Some(Country::Vietnam),
+            Federation::VietnamUA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
             Federation::VPF => Some(Country::Vietnam),
             Federation::WABDL => Some(Country::USA),
@@ -3214,6 +3221,7 @@ impl Federation {
             }
             Federation::VGPF => Some(Federation::IPF),
             Federation::VietnamPA => Some(Federation::GPA),
+            Federation::VietnamUA => None,
             Federation::Vityaz => None,
             Federation::VPF => Some(Federation::IPF),
             Federation::WABDL => None,
@@ -3756,6 +3764,7 @@ impl Federation {
             Federation::VDFPA => PointsSystem::SchwartzMalone,
             Federation::VGPF => Federation::ipf_rules_on(date),
             Federation::VietnamPA => PointsSystem::Wilks,
+            Federation::VietnamUA => PointsSystem::Dots,
             Federation::Vityaz => PointsSystem::Wilks,
             Federation::VPF => Federation::ipf_rules_on(date),
             Federation::WABDL => PointsSystem::Wilks,
