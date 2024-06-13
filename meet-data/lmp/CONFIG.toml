@@ -51,4 +51,4 @@
     sex = "F"
 
 [exemptions]
-   
+    2407 = ["ExemptWeightClassConsistency"] # no weightclass for some DQed lifters
