@@ -16,7 +16,7 @@
   <option value="wpa" {% if selection.federation == "WPA" %}selected{% endif %}>WPA - World Powerlifting Alliance</option>
   <option value="wpc" {% if selection.federation == "WPC" %}selected{% endif %}>WPC - World Powerlifting Congress</option>
   <option value="wpf" {% if selection.federation == "WPF" %}selected{% endif %}>WPF - World Powerlifting Federation (Incomplete)</option>
-  <option value="wpo" {% if selection.federation == "WPO" %}selected{% endif %}>WPC - World Powerlifting Organization</option>
+  <option value="wpo" {% if selection.federation == "WPO" %}selected{% endif %}>WPO - World Powerlifting Organization</option>
   <option value="wppl" {% if selection.federation == "WPPL" %}selected{% endif %}>WPPL - World Professional Power League</option>  
   <option value="wppo" {% if selection.federation == "WPPO" %}selected{% endif %}>WPPO - World Para Powerlifting</option>
   <option value="wuap" {% if selection.federation == "WUAP" %}selected{% endif %}>WUAP - World United Amateur Powerlifting</option>
