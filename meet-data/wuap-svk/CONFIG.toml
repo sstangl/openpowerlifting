@@ -19,7 +19,11 @@
 
     m_40_49 = {name = "M 40-49", min = 40, max = 49}
     m_50_59 = {name = "M 50-59", min = 50, max = 59}
+    m_60_69 = {name = "M 60-69", min = 60, max = 69}
     m_60p = {name = "M 60+", min = 60, max = 999}
+    m_75p = {name = "M 75+", min = 75, max = 999}
+
+    g = {name = "Guest", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -32,3 +36,6 @@
     sex = "F"
 
 [exemptions]
+    2401 = ["ExemptWeightClassConsistency"] # data is a mess
+    2402 = ["ExemptWeightClassConsistency"] # data is a mess
+    2403 = ["ExemptWeightClassConsistency"] # data is a mess
