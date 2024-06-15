@@ -382,7 +382,7 @@ fn check_headers(
         && !header_map.has(Header::Best3DeadliftKg)
         && !header_map.has(Header::Best3DeadliftLbs)
     {
-        report.error("Deadlift data requires a 'Best3DeadliftKg' or 'Best3BenchLbs' column");
+        report.error("Deadlift data requires a 'Best3DeadliftKg' or 'Best3DeadliftLbs' column");
     }
 
     // Require mandatory columns.
