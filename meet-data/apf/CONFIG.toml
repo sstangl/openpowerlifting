@@ -104,6 +104,8 @@
     forlfmapf = {name="F_OR_LFM_APF", min=0, max=999, equipment="Raw", sex="F"} # Military
     mhsemapf = {name="M_HSEM_APF", min=13, max=19, equipment=["Multi-ply","Unlimited"], sex="M"} # High School
     mpfcrapf = {name ="M_PFCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="M"} #Police/Fire
+    mmpfcr1apf = {name ="M_MPFCR_1_APF",min=40,max=44,equipment=["Raw","Wraps"],sex="M"} #Police/Fire
+    mmpfr1apf = {name ="M_MPFR_1_APF",min=40,max=44,equipment="Raw",sex="M"} #Police/Fire
 
     forapf = {name ="F_OR_APF",min=0,max=999,equipment="Raw",sex="F"}
     focrapf = {name ="F_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -186,6 +188,8 @@
     framapf = {name="F_RAM_APF", min=0, max=999, equipment=["Multi-ply","Unlimited"], sex="F"} # Soft Equipment.
     fhsemapf = {name="F_HSEM_APF", min=13, max=19, equipment=["Multi-ply","Unlimited"], sex="F"} # High School
     fpfrapf = {name ="F_PFR_APF",min=0,max=999,equipment="Raw",sex="F"} #Police/Fire
+    fmpfcr2apf = {name ="F_MPFCR_2_APF",min=45,max=49,equipment=["Raw","Wraps"],sex="F"} #Police/Fire
+    fmpfr3apf = {name ="F_MPFR_3_APF",min=50,max=54,equipment="Raw",sex="F"} #Police/Fire
     Mpfesapf = {name ="M_PFES_APF",min=0,max=999,equipment="Single-ply",sex="M"} #Police/Fire
     fpfcrapf = {name ="F_PFCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"} #Police/Fire
     forlfapf = {name="F_OR_LF_APF",min=0,max=999,equipment="Raw",sex="F"} # Not sure.
@@ -275,6 +279,7 @@
     mpfcraapf = {name ="M_PFCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"} #Police/Fire
     mpfesaapf = {name ="M_PFES_AAPF",min=0,max=999,equipment="Single-ply",sex="M",tested="Yes"} #Police/Fire
     mpfemaapf = {name ="M_PFEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Police/Fire
+    mmpfr1aapf = {name ="M_MPFR_1_AAPF",min=40,max=44,equipment="Raw",sex="M",tested="Yes"} #Police/Fire
     mnemaapf = {name ="M_NEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Novice
     mnraapf = {name ="M_NR_AAPF",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Novice
     mntr3aapf = {name ="M_NTR_3_AAPF",min=17,max=19,equipment="Raw",sex="M",tested="Yes"} #Novice
