@@ -685,6 +685,7 @@
     VA-2024-06 = ["ExemptLiftOrder"] # See issue #20902
     NY-2024-13 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
     IL-2024-12 = ["ExemptWeightClassConsistency"] # Weight classes were combined and scored by formula
+    NJ-2024-10 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
