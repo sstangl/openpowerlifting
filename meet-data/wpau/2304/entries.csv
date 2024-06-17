@@ -3,7 +3,7 @@ Place,CyrillicName,Name,Sex,Event,BirthDate,Equipment,Tested,Division,Bodyweight
 1,Артур Прохонюк,Artur Prokhonyuk,M,BD,2000-07-14,Raw,Yes,Amateur Juniors 20-23,118.7,125,172.5,180,185,185,272.5,-280,-285,272.5,457.5
 1,Петро Гулій,Petro Guliy,M,BD,1997-07-11,Raw,Yes,Amateur Open,79.95,82.5,145,150,152.5,152.5,240,252.5,260,260,412.5
 2,Михайло Тимків,Mikhaylo Timkiv,M,BD,1999-11-22,Raw,Yes,Amateur Open,81.85,82.5,135,142.5,-150,142.5,222.5,235,245,245,387.5
-3,Колесюк Олександр,Oleksandr Kolesyuk,M,BD,1993-06-16,Raw,Yes,Amateur Open,81.45,82.5,120,-125,-125,120,220,-230,-230,220,340
+3,Олександр Колесюк,Oleksandr Kolesyuk,M,BD,1993-06-16,Raw,Yes,Amateur Open,81.45,82.5,120,-125,-125,120,220,-230,-230,220,340
 4,Юрій Панасюк,Yuriy Panasyuk,M,BD,1993-11-04,Raw,Yes,Amateur Open,80.15,82.5,100,110,-112.5,110,180,202.5,-220,202.5,312.5
 5,Денис Стаднюк,Denis Stadnyuk,M,BD,2007-11-04,Raw,Yes,Amateur Open,78.45,82.5,75,-80,80,80,120,125,135,135,215
 DQ,Вадим Годунко,Vadim Godunko,M,BD,1999-06-10,Raw,Yes,Amateur Open,88.5,90,-120,-130,-130,,-220,,,,
@@ -22,8 +22,8 @@ DQ,Юрій Чорноус,Yuriy Chornous,M,B,2002-05-17,Raw,Yes,Amateur Juniors
 1,Нестор Василюк,Nestor Vasilyuk,M,B,1993-07-16,Raw,Yes,Amateur Open,74.7,75,155,162.5,170,170,,,,,170
 1,Петро Гулій,Petro Guliy,M,B,1997-07-11,Raw,Yes,Amateur Open,79.95,82.5,145,150,152.5,152.5,,,,,152.5
 2,Мар'ян Глушко,Mar'yan Glushko,M,B,2001-09-20,Raw,Yes,Amateur Open,79.2,82.5,125,132.5,135,135,,,,,135
-3,Колесюк Олександр,Oleksandr Kolesyuk,M,B,1993-06-16,Raw,Yes,Amateur Open,81.45,82.5,120,-125,-125,120,,,,,120
-1,Вознюк Павло,Pavlo Voznyuk,M,B,1989-07-14,Raw,Yes,Amateur Open,89,90,165,170,175,175,,,,,175
+3,Олександр Колесюк,Oleksandr Kolesyuk,M,B,1993-06-16,Raw,Yes,Amateur Open,81.45,82.5,120,-125,-125,120,,,,,120
+1,Павло Вознюк,Pavlo Voznyuk,M,B,1989-07-14,Raw,Yes,Amateur Open,89,90,165,170,175,175,,,,,175
 2,Артьом Оніщук,Artom Onishchuk,M,B,2000-07-21,Raw,Yes,Amateur Open,89.7,90,147.5,157.5,-160,157.5,,,,,157.5
 1,Сергій Пашко,Sergiy Pashko,M,B,1973-04-06,Raw,Yes,Amateur Open,99.8,100,130,140,142.5,142.5,,,,,142.5
 DQ,Сергій Паламарчук,Sergiy Palamarchuk,M,B,1997-05-24,Raw,Yes,Amateur Open,99.85,100,-135,-140,-140,,,,,,
@@ -31,14 +31,14 @@ DQ,Сергій Паламарчук,Sergiy Palamarchuk,M,B,1997-05-24,Raw,Yes,A
 2,Іван Мисковець,Ivan Miskovets,M,B,1999-09-19,Raw,Yes,Amateur Open,105.2,110,167.5,-175,-175,167.5,,,,,167.5
 1,Юрій Шевчук,Yuriy Shevchuk,M,B,1992-04-25,Raw,Yes,Amateur Open,120.7,125,190,200,210,210,,,,,210
 2,Артур Прохонюк,Artur Prokhonyuk,M,B,2000-07-14,Raw,Yes,Amateur Open,118.7,125,172.5,180,185,185,,,,,185
-1,Юрий Семенчук,Yuriy Semenchuk,M,B,1989-05-08,Raw,Yes,Amateur Submasters 33-39,99.3,100,147.5,155,-160,155,,,,,155
+1,Юрій Семенчук,Yuriy Semenchuk,M,B,1989-05-08,Raw,Yes,Amateur Submasters 33-39,99.3,100,147.5,155,-160,155,,,,,155
 1,Олександр Лісовський,Oleksandr Lisovskiy,M,B,1990-01-17,Raw,Yes,Amateur Submasters 33-39,107.5,110,170,180,-185,180,,,,,180
 1,Олексій Млевський,Oleksiy Mlevskiy,M,B,1980-09-30,Raw,Yes,Amateur Masters 40-44,106.9,110,162.5,-170,-170,162.5,,,,,162.5
 1,Сергій Пашко,Sergiy Pashko,M,B,1973-04-06,Raw,Yes,Amateur Masters 50-54,99.8,100,130,140,142.5,142.5,,,,,142.5
 1,Олег Рябченко,Oleg Ryabchenko,M,B,1995-05-14,Raw,Yes,Amateur Military/Fire/Police,85.4,90,-120,120,-140,120,,,,,120
 1,Ольга Наумова,Olga Naumova,F,B,2003-11-06,Raw,Yes,Amateur Juniors 20-23,63.85,67.5,50,55,-62.5,55,,,,,55
 1,Олександр Карнаух,Oleksandr Karnaukh,M,B,1980-08-15,Raw,,Pro Open,106.9,110,190,200,205,205,,,,,205
-1,Пилипюк Назар,Nazar Pilipyuk,M,D,2005-08-31,Raw,Yes,Amateur Teen 18-19,64.15,67.5,,,,,160,175,180,180,180
+1,Назар Пилипюк,Nazar Pilipyuk,M,D,2005-08-31,Raw,Yes,Amateur Teen 18-19,64.15,67.5,,,,,160,175,180,180,180
 1,Олег Іванкевич,Oleg Ivankevich,M,D,2003-12-23,Raw,Yes,Amateur Teen 18-19,89.75,90,,,,,225,242.5,,242.5,242.5
 2,Максим Ковальчук,Maksim Kovalchuk,M,D,2004-10-25,Raw,Yes,Amateur Teen 18-19,87.35,90,,,,,180,-185,185,185,185
 1,Андрій Мороченець,Andriy Morochenets,M,D,2004-12-17,Raw,Yes,Amateur Teen 18-19,103.35,110,,,,,200,-225,-225,200,200
@@ -49,7 +49,7 @@ DQ,Сергій Паламарчук,Sergiy Palamarchuk,M,B,1997-05-24,Raw,Yes,A
 1,Дмитро Шабала,Dmitro Shabala,M,D,1996-11-10,Raw,Yes,Amateur Open,72.7,75,,,,,175,185,195,195,195
 1,Петро Гулій,Petro Guliy,M,D,1997-07-11,Raw,Yes,Amateur Open,79.95,82.5,,,,,240,252.5,260,260,260
 2,Михайло Тимків,Mikhaylo Timkiv,M,D,1999-11-22,Raw,Yes,Amateur Open,81.85,82.5,,,,,222.5,235,245,245,245
-3,Колесюк Олександр,Oleksandr Kolesyuk,M,D,1993-06-16,Raw,Yes,Amateur Open,81.45,82.5,,,,,220,-230,-230,220,220
+3,Олександр Колесюк,Oleksandr Kolesyuk,M,D,1993-06-16,Raw,Yes,Amateur Open,81.45,82.5,,,,,220,-230,-230,220,220
 4,Юрій Панасюк,Yuriy Panasyuk,M,D,1993-11-04,Raw,Yes,Amateur Open,80.15,82.5,,,,,180,202.5,-220,202.5,202.5
 1,Павло Кривош,Pavlo Krivosh,M,D,2000-08-19,Raw,Yes,Amateur Open,87.35,90,,,,,255,272.5,280,280,280
 2,Вадим Годунко,Vadim Godunko,M,D,1999-06-10,Raw,Yes,Amateur Open,88.5,90,,,,,220,230,-240,230,230
