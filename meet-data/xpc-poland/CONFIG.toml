@@ -4,6 +4,7 @@
     open = {name = "Open", min = 0, max = 999}
 
     # OpenLifter-style divisions.
+    youth = {name = "Youth", min = 4, max = 12}
     t13_15 = {name = "T13-15", min = 13, max = 15}
     t16_17 = {name = "T16-17", min = 16, max = 17}
     t18_19 = {name = "T18-19", min = 18, max = 19}
