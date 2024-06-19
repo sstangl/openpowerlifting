@@ -269,17 +269,34 @@ impl OplDb {
     ///
     /// For example, "johndoe" matches "johndoe" and "johndoe1",
     /// but does not match "johndoenut".
-    pub fn lifters_under_username(&self, base: &str) -> Vec<u32> {
+    pub fn lifters_under_username_base(&self, base: &str) -> Vec<u32> {
+        // Disambiguations end with a digit.
+        // Some lifters may have failed to be merged with their disambiguated username.
+        // Therefore, for usernames without a digit, it cannot be assumed that they are
+        // *not* a disambiguation.
+        let is_already_disambiguated: bool =
+            base.chars().last().map_or(false, |c| c.is_ascii_digit());
+        if is_already_disambiguated {
+            if let Some(id) = self.lifter_id(base) {
+                return vec![id]; // The input base was an exact lifter.
+            }
+            return vec![]; // The input base was exact, but with no matches.
+        }
+
         let mut acc = vec![];
-        for i in 0..self.lifters.len() {
-            let username = &self.lifters[i].username;
-            if username.as_str().starts_with(base) {
-                // If the base is shared, the remainder of the string
-                // should be empty or a number for disambiguation.
-                let (_, remainder) = username.as_str().split_at(base.len());
-                if remainder.is_empty() || remainder.parse::<u8>().is_ok() {
-                    acc.push(i as u32);
-                }
+
+        // Look up the name directly.
+        if let Some(id) = self.lifter_id(base) {
+            acc.push(id);
+        }
+
+        // Look up each possible disambiguation value, stopping when one is missing.
+        for i in 1.. {
+            let disambig = format!("{base}{i}");
+            if let Some(id) = self.lifter_id(&disambig) {
+                acc.push(id);
+            } else {
+                break;
             }
         }
         acc

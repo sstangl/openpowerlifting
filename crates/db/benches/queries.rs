@@ -72,5 +72,21 @@ pub fn data_structures(c: &mut Criterion) {
     });
 }
 
-criterion_group!(benches, query_benchmarks, data_structures);
+/// Benchmarks dealing with looking up information on specific lifters.
+///
+/// This is the most common operation on the server because of web crawlers.
+pub fn lifter_info(c: &mut Criterion) {
+    let mut group = c.benchmark_group("lifter_info");
+    let db = db();
+
+    group.bench_function("lifters_under_username_base (many lifters)", |b| {
+        b.iter(|| black_box(db.lifters_under_username_base("joserodriguez")))
+    });
+
+    group.bench_function("lifters_under_username_base (one lifter)", |b| {
+        b.iter(|| black_box(db.lifters_under_username_base("seanstangl")))
+    });
+}
+
+criterion_group!(benches, query_benchmarks, data_structures, lifter_info);
 criterion_main!(benches);

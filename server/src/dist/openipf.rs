@@ -271,7 +271,7 @@ pub fn lifter(
             vec![]
         }
     } else {
-        opldb.lifters_under_username(username)
+        opldb.lifters_under_username_base(username)
     };
 
     match lifter_ids.len() {
