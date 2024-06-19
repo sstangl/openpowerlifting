@@ -188,7 +188,7 @@ impl Date {
 
         // The diff of years must be able to fit into the limited range of an Age.
         let years_u32: u32 = date.year() - self.year();
-        if years_u32 > u8::max_value().into() {
+        if years_u32 > u8::MAX.into() {
             return Err("Calculated Age greater than 256");
         }
         let years = years_u32 as u8;

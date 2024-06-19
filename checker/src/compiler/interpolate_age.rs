@@ -103,8 +103,8 @@ impl BirthDateRange {
         }
 
         // If they are off-by-one, return an Age::Approximate.
-        let min_num = min_inferred.to_u8_option().unwrap_or(std::u8::MIN);
-        let max_num = max_inferred.to_u8_option().unwrap_or(std::u8::MAX);
+        let min_num = min_inferred.to_u8_option().unwrap_or(u8::MIN);
+        let max_num = max_inferred.to_u8_option().unwrap_or(u8::MAX);
         if u32::from(min_num) + 1 == u32::from(max_num) {
             return Age::Approximate(min_num);
         }

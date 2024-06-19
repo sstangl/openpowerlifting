@@ -56,13 +56,13 @@ impl Age {
     pub fn from_i64(n: i64) -> Result<Self, &'static str> {
         // Some of the CONFIG.toml files hardcode 999 to mean "max Age".
         if n == 999 {
-            return Ok(Age::Exact(u8::max_value()));
+            return Ok(Age::Exact(u8::MAX));
         }
 
         if n < 0 {
             return Err("Age may not be negative");
         }
-        if n > (i64::from(u8::max_value())) {
+        if n > (i64::from(u8::MAX)) {
             return Err("Age can be at most 256");
         }
 
@@ -225,8 +225,8 @@ impl PartialOrd for Age {
             Age::Exact(age) => match other {
                 Age::Exact(other_age) => Some(age.cmp(other_age)),
                 Age::Approximate(other_age) => {
-                    if *other_age == u8::max_value() {
-                        if *age == u8::max_value() {
+                    if *other_age == u8::MAX {
+                        if *age == u8::MAX {
                             Some(Ordering::Equal)
                         } else {
                             Some(Ordering::Less)
@@ -239,8 +239,8 @@ impl PartialOrd for Age {
             },
             Age::Approximate(age) => match other {
                 Age::Exact(other_age) => {
-                    if *age == u8::max_value() {
-                        if *other_age == u8::max_value() {
+                    if *age == u8::MAX {
+                        if *other_age == u8::MAX {
                             Some(Ordering::Equal)
                         } else {
                             Some(Ordering::Greater)
@@ -280,7 +280,7 @@ impl FromStr for Age {
 
         // Some of the CONFIG.toml files hardcode 999 to mean "max Age".
         if s == "999" {
-            return Ok(Age::Exact(u8::max_value()));
+            return Ok(Age::Exact(u8::MAX));
         }
 
         let v: Vec<&str> = s.split('.').collect();

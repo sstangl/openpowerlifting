@@ -434,7 +434,7 @@ pub fn do_check<R: io::Read>(
     // present in the data itself, by using a `meet-data/CONFIG.toml`.
     let allow_duplicates = if let Some(config) = config {
         if let Some((_fedname, meetname)) = meetpath.rsplit_once('/') {
-            if let Some(exemptions) = config.exemptions_for(&meetname) {
+            if let Some(exemptions) = config.exemptions_for(meetname) {
                 exemptions.contains(&super::config::Exemption::ExemptDuplicates)
             } else {
                 false
