@@ -200,22 +200,40 @@ pub struct StaticCache {
 
     /// Precalculated map of Lifter Username to Lifter ID.
     pub username_map: FxHashMap<CompactString, u32>,
+
+    /// Precalculated table of EntryIDs sorted by their underlying MeetID.
+    ///
+    /// This facilitates a quick binary search lookup for all entries under a given MeetID.
+    pub entry_ids_sorted_by_meet_id: Vec<u32>,
 }
 
 impl StaticCache {
     pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
+        // Calculate the map from Username to ID.
         let mut username_map = FxHashMap::with_hasher(FxBuildHasher::default());
         for (i, lifter) in lifters.iter().enumerate() {
             let cloned = CompactString::from(lifter.username.as_str());
             username_map.insert(cloned, i as u32);
         }
+        username_map.shrink_to_fit();
 
+        // Calculate Entry IDs sorted by Meet ID, for quick entries-in-meet lookup.
+        let mut entry_ids_sorted_by_meet_id: Vec<u32> = Vec::with_capacity(entries.len());
+        for i in 0..entries.len() {
+            entry_ids_sorted_by_meet_id.push(i as u32);
+        }
+        entry_ids_sorted_by_meet_id
+            .sort_unstable_by_key(|entry_id| entries[*entry_id as usize].meet_id);
+        entry_ids_sorted_by_meet_id.shrink_to_fit();
+
+        // Calculate the rankings and records caches.
         let loglin = LogLinearTimeCache::new(meets, entries);
 
         StaticCache {
             constant_time: ConstantTimeCache::new(&loglin, meets, entries),
             log_linear_time: loglin,
             username_map,
+            entry_ids_sorted_by_meet_id,
         }
     }
 }

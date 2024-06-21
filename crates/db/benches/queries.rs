@@ -72,7 +72,7 @@ pub fn data_structures(c: &mut Criterion) {
     });
 }
 
-/// Benchmarks dealing with looking up information on specific lifters.
+/// Benchmarks looking up information on specific lifters.
 ///
 /// This is the most common operation on the server because of web crawlers.
 pub fn lifter_info(c: &mut Criterion) {
@@ -88,5 +88,36 @@ pub fn lifter_info(c: &mut Criterion) {
     });
 }
 
-criterion_group!(benches, query_benchmarks, data_structures, lifter_info);
+/// Benchmarks looking up information on specific meets.
+///
+/// This is the second-most common operation on the server because of web crawlers.
+pub fn meet_info(c: &mut Criterion) {
+    let mut group = c.benchmark_group("lifter_info");
+    let db = db();
+
+    // Search for the first meet.
+    group.bench_function("entries_for_meet(0)", |b| {
+        b.iter(|| black_box(db.entries_for_meet(black_box(0))))
+    });
+
+    // Search for the last meet.
+    let last_meet_id = (db.meets().len() - 1) as u32;
+    group.bench_function("entries_for_meet(last)", |b| {
+        b.iter(|| black_box(db.entries_for_meet(black_box(last_meet_id))))
+    });
+
+    // Search for a meet in the middle.
+    let middle_meet_id = (db.meets().len() / 2) as u32;
+    group.bench_function("entries_for_meet(middle)", |b| {
+        b.iter(|| black_box(db.entries_for_meet(black_box(middle_meet_id))))
+    });
+}
+
+criterion_group!(
+    benches,
+    query_benchmarks,
+    data_structures,
+    lifter_info,
+    meet_info
+);
 criterion_main!(benches);
