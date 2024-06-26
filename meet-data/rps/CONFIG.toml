@@ -45,7 +45,7 @@ require_manual_disambiguation = false
     
     # Juniors.
     ama_junior_20_23 = {name = "Amateur Juniors 20-23", min = 20, max = 23, tested="Yes"}
-    pro_junior_20_23 = {name = "Pro Juniors 20-23", min = 20, max = 23}
+    pro_junior_20_23 = {name = "Pro Juniors 20-23", min = 0, max = 23}
 
     # Submasters.
     ama_submaster_33_39 = {name = "Amateur Submasters 33-39", min = 33, max = 39, tested="Yes"}
