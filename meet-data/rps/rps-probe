@@ -21,8 +21,8 @@ except ImportError:
 
 
 # URL needs updating every year.
-MEETSURL = "http://meets.revolutionpowerlifting.com/results/2023-meet-results/"
-if datetime.datetime.now().strftime("%Y") != "2023":
+MEETSURL = "http://meets.revolutionpowerlifting.com/results/2024-meet-results/"
+if datetime.datetime.now().strftime("%Y") != "2024":
     print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
