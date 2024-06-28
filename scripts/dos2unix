@@ -12,6 +12,6 @@ for filename in sys.argv[1:]:
     if read_contents != write_contents:
         with open(filename, "wb") as f:
             f.write(write_contents)
-        print(f"Converted {filename} ✅") 
+        print(f"Converted {filename} ✅")
     else:
         print(f"No CRLFs in {filename}, no change ❌")
