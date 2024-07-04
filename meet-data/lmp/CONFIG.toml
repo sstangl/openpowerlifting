@@ -20,6 +20,9 @@
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
 
+    j13_14 = {name="J13-14", min=13, max=14}
+    j15_19 = {name="J15-19", min=15, max=19}
+
     # Old-style divisions.
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
