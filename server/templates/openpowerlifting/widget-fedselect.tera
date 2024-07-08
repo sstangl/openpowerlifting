@@ -375,6 +375,7 @@
   <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL - Federazione Italiana Powerlifting [IPF]</option>
   <option value="wpc-italy" {% if selection.federation == "WPC-Italy" %}selected{% endif %}>WPC Italy</option>
   <option value="wrpf-italy" {% if selection.federation == "WRPF-Italy" %}selected{% endif %}>WRPF Italy</option>
+  <option value="italy-ua" {% if selection.federation == "Italy-UA" %}selected{% endif %}>Italy-UA - Italy [Unaffiliated]</option>
 </optgroup>
 <optgroup label="{{strings.country.jamaica}}">
   <option value="npaj" {% if selection.federation == "NPAJ" %}selected{% endif %}>NPAJ - National Powerlifting Association of Jamaica [IPF]</option>

@@ -1,0 +1,15 @@
+[divisions]
+#Intentionally blank  
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["0000-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range = ["0000-01-01","9999-01-01"]
+    sex = "F"
+
+
+[exemptions]

@@ -767,6 +767,11 @@ pub enum Federation {
     #[strum(to_string = "IRP", serialize = "irp")]
     IRP,
 
+    /// Unaffiliated meets held in Italy.
+    #[serde(rename = "Italy-UA")]
+    #[strum(to_string = "Italy-UA", serialize = "italy-ua")]
+    ItalyUA,
+
     /// Japan Powerlifting Federation, IPF.
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
@@ -2097,6 +2102,7 @@ impl Federation {
             Federation::IrishPO => false,
             Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
+            Federation::ItalyUA => false,
             Federation::JPA => FULLY_TESTED,
             Federation::KBGV => FULLY_TESTED,
             Federation::KDKS => FULLY_TESTED,
@@ -2534,6 +2540,7 @@ impl Federation {
             Federation::IrishPO => Some(Country::Ireland),
             Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
+            Federation::ItalyUA => Some(Country::Italy),
             Federation::JPA => Some(Country::Japan),
             Federation::KBGV => Some(Country::Belgium),
             Federation::KDKS => Some(Country::Switzerland),
@@ -3038,6 +3045,7 @@ impl Federation {
             Federation::IrishPO => Some(Federation::IPL),
             Federation::IronBoy => None,
             Federation::IRP => None,
+            Federation::ItalyUA => None,
             Federation::JPA => Some(Federation::IPF),
             Federation::KBGV => Some(Federation::IPF),
             Federation::KDKS => Some(Federation::IPF),
@@ -3582,6 +3590,7 @@ impl Federation {
             Federation::IrishPO => Federation::ipl_rules_on(date),
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
+            Federation::ItalyUA => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
             Federation::KBGV => Federation::ipf_rules_on(date),
             Federation::KDKS => PointsSystem::Dots,
