@@ -1,10 +1,4 @@
 Place,Name,Sex,BirthDate,Age,Equipment,Division,BodyweightKg,WeightClassKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Team
-1,Elena Lucrezia Iaia,F,2003-01-26,21,Raw,Junior,59.1,63,125,132.5,137.5,137.5,137.5,D,Powerlifting Genova
-2,Sara Alfieri,F,2004-05-28,20,Raw,Junior,57.9,63,105,115,122.5,122.5,122.5,D,Crazy team Lecco
-1,Gloria Olearo,F,2001-07-30,22,Raw,Junior,66.2,69,112.5,122.5,130,130,130,D,Cus.po powerlifting novara
-2,Nicole Bertacco,F,2003-12-21,20,Raw,Junior,66.2,69,105,112.5,122.5,122.5,122.5,D,Italian lifter united
-1,Clelia Corti,F,2002-04-30,22,Raw,Junior,79.3,84,160,172.5,180,180,180,D,Toplifters
-1,Cresta Ruena,F,1978-01-17,46,Raw,Master,80.5,84,147.5,157.5,162.5,162.5,162.5,D,GAR Powerlifting
 1,Elisa Lanni,F,2007-08-01,16,Raw,Open,56.6,57,155,-160,-160,155,155,D,Barbarians
 2,Sara Busan,F,,,Raw,Open,55,57,135,142.5,150,150,150,D,Toplifters Milano
 3,Clara Leone,F,2006-08-10,17,Raw,Open,56.5,57,92.5,100,107.5,107.5,107.5,D,Italianlifters united
@@ -19,31 +13,11 @@ DQ,Michela Fiorini,F,1986-09-11,37,Raw,Open,62,63,-142.5,,-142.5,,,D,PL United
 1,Diatel Nataliia,F,1988-03-20,36,Raw,Open,67.1,69,142.5,147.5,150,150,150,D,Indipendente
 2,Gloria Olearo,F,2001-07-30,22,Raw,Open,66.2,69,112.5,122.5,130,130,130,D,Cus.po powerlifting novara
 3,Nicole Bertacco,F,2003-12-21,20,Raw,Open,66.2,69,105,112.5,122.5,122.5,122.5,D,Italian lifter united
-1,Chiara Gianfranchi,F,1992-08-07,31,Raw,Open,70.7,76,112.5,117.5,-122.5,117.5,117.5,D,Barbarians Parma
-DQ,Fiorenza Mioli,F,1996-02-21,28,Raw,Open,73.8,76,-147.5,,-155,,,D,Powerlifting Genova
+2,Chiara Gianfranchi,F,1992-08-07,31,Raw,Open,70.7,76,112.5,117.5,-122.5,117.5,117.5,D,Barbarians Parma
+1,Fiorenza Mioli,F,1996-02-21,28,Raw,Open,73.8,76,-147.5,147.5,-155,147.5,147.5,D,Powerlifting Genova
 1,Clelia Corti,F,2002-04-30,22,Raw,Open,79.3,84,160,172.5,180,180,180,D,Toplifters
-2,Cresta Ruena,F,1978-01-17,46,Raw,Open,80.5,84,147.5,157.5,162.5,162.5,162.5,D,GAR Powerlifting
+2,Ruena Cresta,F,1978-01-17,46,Raw,Open,80.5,84,147.5,157.5,162.5,162.5,162.5,D,GAR Powerlifting
 1,Elena Di Bisceglie,F,1998-12-01,25,Raw,Open,102.8,84+,200,-215,-215,200,200,D,Creazy Team
-1,Sara Busan,F,,,Raw,Senior,55,57,135,142.5,150,150,150,D,Toplifters Milano
-1,Giada Guasti,F,1996-03-31,28,Raw,Senior,62,63,135,142.5,147.5,147.5,147.5,D,Chiavari White Shark
-2,Eleonora De Gasperis,F,1997-12-09,26,Raw,Senior,61.5,63,125,132.5,-137.5,132.5,132.5,D,Top Lifters Milano
-DQ,Michela Fiorini,F,1986-09-11,37,Raw,Senior,62,63,-142.5,,-142.5,,,D,PL United
-1,Diatel Nataliia,F,1988-03-20,36,Raw,Senior,67.1,69,142.5,147.5,150,150,150,D,Indipendente
-1,Chiara Gianfranchi,F,1992-08-07,31,Raw,Senior,70.7,76,112.5,117.5,-122.5,117.5,117.5,D,Barbarians Parma
-DQ,Fiorenza Mioli,F,1996-02-21,28,Raw,Senior,73.8,76,-147.5,,-155,,,D,Powerlifting Genova
-1,Elena Di Bisceglie,F,1998-12-01,25,Raw,Senior,102.8,84+,200,-215,-215,200,200,D,Creazy Team
-1,Elisa Lanni,F,2007-08-01,16,Raw,Subjunior,56.6,57,155,-160,-160,155,155,D,Barbarians
-2,Clara Leone,F,2006-08-10,17,Raw,Subjunior,56.5,57,92.5,100,107.5,107.5,107.5,D,Italianlifters united
-1,Gloria Lentini,F,2007-01-22,17,Raw,Subjunior,59.9,63,145,155,160,160,160,D,Crazy team Lecco
-2,Francesca Guido,F,2006-10-19,17,Raw,Subjunior,60.3,63,120,130,-140,130,130,D,Crazy team Lecco
-3,Giada Fabiola Biagi,F,2007-03-09,17,Raw,Subjunior,59.9,63,90,97.5,-100,97.5,97.5,D,Iron Eaters
-1,Lorenzo Mistretta,M,2001-09-12,22,Raw,Junior,74,74,-215,227.5,235,235,235,D,Lions powerlifting Livorno
-1,Marco Bonfanti,M,2003-12-11,20,Raw,Junior,82.9,83,190,205,220,220,220,D,Crazy team
-2,Mattia Sansone,M,2002-08-16,21,Raw,Junior,83,83,195,210,-220,210,210,D,Crazy team lecco
-1,Marco Colombo,M,2000-06-27,24,Raw,Junior,90.4,93,-205,215,-222.5,215,215,D,Indipendente
-1,Tommaso Montiron,M,2001-12-08,22,Raw,Junior,112.3,120,245,260,267.5,267.5,267.5,D,Grind League
-1,Fabio Meazza,M,1975-02-19,49,Raw,Master,83,83,260,-270,270,270,270,D,Toplifter Milano
-1,Marco Masini,M,1975-12-16,48,Raw,Master,92.2,93,175,190,200,200,200,D,Iron Eaters
 1,Andrea Onori,M,2006-05-29,18,Raw,Open,62.1,66,165,175,-195,175,175,D,Ironeaters
 2,Luca Biggi,M,2006-10-20,17,Raw,Open,64.5,66,147,157.5,167.5,167.5,167.5,D,Crazy team Lecco
 3,Romano Belicchi,M,1996-03-23,28,Raw,Open,61.4,66,130,140,150,150,150,D,Italian lifters united
@@ -73,25 +47,3 @@ DQ,Fiorenza Mioli,F,1996-02-21,28,Raw,Senior,73.8,76,-147.5,,-155,,,D,Powerlifti
 7,Marco Masini,M,1975-12-16,48,Raw,Open,92.2,93,175,190,200,200,200,D,Iron Eaters
 1,Luca Prada,M,1989-10-14,34,Raw,Open,104.2,105,300,310,-320,310,310,D,Creazy Team
 1,Tommaso Montiron,M,2001-12-08,22,Raw,Open,112.3,120,245,260,267.5,267.5,267.5,D,Grind League
-1,Romano Belicchi,M,1996-03-23,28,Raw,Senior,61.4,66,130,140,150,150,150,D,Italian lifters united
-1,William Tancredi,M,1996-05-08,28,Raw,Senior,73.4,74,190,200,210,210,210,D,Warriors
-2,Riccardo Vezzosi,M,1992-12-20,31,Raw,Senior,73.6,74,175,185,-190,185,185,D,Asd Athlete Lab
-3,Antonio Carbone,M,1995-04-26,29,Raw,Senior,73.4,74,160,172.5,177.5,177.5,177.5,D,Lions Livorno Pesistica Rosignano
-1,Mattia Masiero,M,1995-12-30,28,Raw,Senior,80.1,83,210,225,-240,225,225,D,GAR Powerlifting
-2,Manuel Lozza,M,1993-10-28,30,Raw,Senior,78.3,83,190,205,-220,205,205,D,Creazyteamlecco
-3,Mattia Secomandi,M,1995-06-06,29,Raw,Senior,76.4,83,190,200,-220,200,200,D,Creazy Team
-4,Lorenzo Genovesi,M,1989-04-12,35,Raw,Senior,78.7,83,190,-200,-200,190,190,D,Creazy Team Lecco
-5,Simone Acestino,M,1996-01-05,28,Raw,Senior,81,83,160,170,180,180,180,D,Italian lifter United
-6,Giovanni Corgnali,M,1994-09-08,29,Raw,Senior,81.1,83,150,160,-180,160,160,D,Creazy Team Lecco
-1,Paolo Alfieri,M,2000-09-12,23,Raw,Senior,93,93,250,262.5,272.5,272.5,272.5,D,Crazy team Lecco
-2,Elio Matarazzi,M,1993-05-01,31,Raw,Senior,91.9,93,220,232.5,-240,232.5,232.5,D,POWERLIFTING GUBBIO
-3,Alberto Palma,M,1996-07-29,27,Raw,Senior,89.8,93,190,200,212.5,212.5,212.5,D,Warriors
-1,Luca Prada,M,1989-10-14,34,Raw,Senior,104.2,105,300,310,-320,310,310,D,Creazy Team
-1,Andrea Onori,M,2006-05-29,18,Raw,Subjunior,62.1,66,165,175,-195,175,175,D,Ironeaters
-2,Luca Biggi,M,2006-10-20,17,Raw,Subjunior,64.5,66,147,157.5,167.5,167.5,167.5,D,Crazy team Lecco
-3,Nicolò Guglielmone,M,2006-01-09,18,Raw,Subjunior,60,66,82.5,90,-92.5,90,90,D,Barbarians Parma
-1,Carlo Piovan,M,2007-01-15,17,Raw,Subjunior,77.2,83,-182,195,-205,195,195,D,Grind Legue
-2,Giovanni Spezia,M,2007-09-08,16,Raw,Subjunior,76.5,83,192.5,-205,-205,192.5,192.5,D,GAR Powerlifting
-3,Andrea Nardini,M,2008-11-10,15,Raw,Subjunior,79.1,83,112.5,117.5,122.5,122.5,122.5,D,Barbarians
-1,Mattia Giaretto,M,2006-08-06,17,Raw,Subjunior,91.3,93,-235,-245,245,245,245,D,Power7
-2,Davide D'Achille,M,2006-03-15,18,Raw,Subjunior,92.2,93,200,-212.5,-212.5,200,200,D,Cus.po powerlifting novara
