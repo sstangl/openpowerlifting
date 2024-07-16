@@ -285,3 +285,4 @@
     1813 = ["ExemptWeightClassConsistency"]  # old Youth weightclass used
     2307 = ["ExemptDivision"] # Non-standard divisions.
     2321 = ["ExemptWeightClassConsistency"]  # uses some other weight classes for youth
+    2401 = ["ExemptDuplicates"]  # With rawironpl/2401, false positive for one lifter, I think.
