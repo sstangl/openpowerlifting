@@ -46,6 +46,8 @@
 
     moeq = {name ="MO EQ", min=0, max=999, sex="M", equipment = ["Single-ply","Multi-ply"]}
     foeq = {name ="FO EQ", min=0, max=999, sex="F", equipment = ["Single-ply","Multi-ply"]}
+    mt1315eq = {name ="MT 13-15 EQ", min=13, max=15, sex="M", equipment = ["Single-ply","Multi-ply"]}
+    ft1315eq = {name ="FT 13-15 EQ", min=13, max=15, sex="F", equipment = ["Single-ply","Multi-ply"]}
     mt1617eq = {name ="MT 16-17 EQ", min=16, max=17, sex="M", equipment = ["Single-ply","Multi-ply"]}
     ft1617eq = {name ="FT 16-17 EQ", min=16, max=17, sex="F", equipment = ["Single-ply","Multi-ply"]}
     mt1819eq = {name ="MT 18-19 EQ", min=18, max=19, sex="M", equipment = ["Single-ply","Multi-ply"]}
