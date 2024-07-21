@@ -1,7 +1,7 @@
 Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
 1,Sara Nalazek,,F,,,Poland,,Wraps,J20-23,59.5,60,130,-140,140,140,50,52.5,57.5,57.5,-125,125,,125,322.5,SBD
 1,Adrianna Borowczyk,,F,,,Poland,,Wraps,J20-23,64.5,67.5,160,167.5,-172.5,167.5,75,77.5,80,80,145,152.5,-157.5,152.5,400,SBD
-2,Joanna Zaborowska,,F,,,Poland,,Wraps,J20-23,64.7,67.5,100,107.5,110,110,50,55,-57.5,55,125,130,-135,130,295,SBD
+2,Joanna Żaborowska,,F,,,Poland,,Wraps,J20-23,64.7,67.5,100,107.5,110,110,50,55,-57.5,55,125,130,-135,130,295,SBD
 1,Dominika Piotrowicz,,F,,,Poland,,Wraps,J20-23,70.4,75,160,-170,-175,160,90,-95,-95,90,160,172.5,180,180,430,SBD
 2,Marcelina Wodzinska,,F,,,Poland,,Wraps,J20-23,75,75,130,-137.5,-137.5,130,65,72.5,-77.5,72.5,130,140,-152.5,140,342.5,SBD
 1,Sylvia Schmidt,,F,,,Germany,,Wraps,M40-49,55.1,56,90,-100,105,105,50,55,-57.5,55,105,115,125,125,285,SBD
@@ -26,7 +26,7 @@ Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,Bodyweig
 1,Anna Patrzek,,F,,,Poland,,Wraps,Open,96.6,90+,170,180,187.5,187.5,107.5,112.5,-117.5,112.5,160,170,175,175,475,SBD
 1,Natasza Krawczyk,,F,,,Poland,,Wraps,T16-17,65.1,67.5,80,92.5,-100,92.5,35,40,42.5,42.5,90,100,110,110,245,SBD
 1,Amelia Ruszkowska,,F,,,Poland,,Wraps,T18-19,66.2,67.5,102.5,107.5,112.5,112.5,45,47.5,50,50,102.5,110,115,115,277.5,SBD
-1,Emilia Brynczak,,F,,,Poland,,Wraps,T13-15,51.3,52,85,92.5,100,100,42.5,46,47.5,47.5,-85,85,-95,85,232.5,SBD
+1,Emilia Bryńczak,,F,,,Poland,,Wraps,T13-15,51.3,52,85,92.5,100,100,42.5,46,47.5,47.5,-85,85,-95,85,232.5,SBD
 1,Wiktoria Karwel,,F,,,Poland,,Sleeves,J20-23,51.3,52,92.5,97.5,100,100,47.5,50,52.5,52.5,120,127.5,132.5,132.5,285,SBD
 1,Ewa Matuszka,,F,,,Poland,,Sleeves,J20-23,54,56,-105,107.5,-112.5,107.5,55,-60,-60,55,110,-120,,110,272.5,SBD
 1,Magdalena Piktel-Brzeska,,F,,,Poland,,Sleeves,M40-49,57.6,60,70,80,-90,80,50,55,62.5,62.5,100,110,-120,110,252.5,SBD
@@ -73,7 +73,7 @@ DQ,Hennadii Popov,,M,,,Ukraine,,Wraps,T16-17,88.5,90,160,-170,-170,160,-115,-115
 2,Oskar Hirsz,,M,,,Poland,,Sleeves,T13-15,74.5,75,165,172.5,182.5,182.5,95,-105,-105,95,-195,205,220,220,497.5,SBD
 3,Jakub Starnawski,,M,,,Poland,,Sleeves,T13-15,74.4,75,130,-142.5,-142.5,130,82.5,87.5,92.5,92.5,140,150,155,155,377.5,SBD
 1,Szymon Kudzia,,M,,,Poland,,Sleeves,T13-15,91.4,100,80,95,102.5,102.5,50,55,-57.5,55,80,-95,95,95,252.5,SBD
-1,Wiktor Skwarczynski,,M,,,Poland,,Sleeves,T16-17,58.8,60,110,117.5,122.5,122.5,62.5,67.5,-72.5,67.5,120,-127.5,-127.5,120,310,SBD
+1,Wiktor Skwarczyński,,M,,,Poland,,Sleeves,T16-17,58.8,60,110,117.5,122.5,122.5,62.5,67.5,-72.5,67.5,120,-127.5,-127.5,120,310,SBD
 1,Szymon Rumel,,M,,,Poland,,Sleeves,T16-17,80.9,82.5,200,207.5,-215,207.5,105,110,112.5,112.5,205,212.5,220,220,540,SBD
 2,Maciej Zdeb,,M,,,Poland,,Sleeves,T16-17,80,82.5,150,160,-167.5,160,95,102.5,-105,102.5,220,230,-235,230,492.5,SBD
 3,Jaroslaw Jaskulski,,M,,,Poland,,Sleeves,T16-17,80.5,82.5,160,170,-175,170,105,107.5,-110,107.5,185,192.5,200,200,477.5,SBD
@@ -376,10 +376,10 @@ DQ,Łukasz Kantor,,M,,,Poland,,Unlimited,Open,98.9,100,,,,,,,,,,,,,,B
 1,Jozef Tomaszewski,,M,,,Poland,,Raw,M40-49,117.5,125,,,,,,,,,265,275,280,280,280,D
 2,Bartosz Haluch,,M,,,Poland,,Raw,M40-49,117.2,125,,,,,,,,,210,220,-235,220,220,D
 1,Davit Grigoryan,,M,,,Armenia,,Raw,M50-59,82.5,82.5,,,,,,,,,-135,135,-152.5,135,135,D
-1,Boleslaw Jastak,,M,,,Poland,,Raw,M50-59,97.9,100,,,,,,,,,210,230,245,245,245,D
+1,Bolesław Jastak,,M,,,Poland,,Raw,M50-59,97.9,100,,,,,,,,,210,230,245,245,245,D
 1,Maciej Czereba,,M,,,Poland,,Raw,M50-59,104,110,,,,,,,,,265,,,265,265,D
 2,István Lugasi,,M,,,Hungary,,Raw,M50-59,110,110,,,,,,,,,175,185,-200,185,185,D
-3,Slawomir Kucharski,,M,,,Poland,,Raw,M50-59,103,110,,,,,,,,,160,175,-202.5,175,175,D
+3,Sławomir Kucharski,,M,,,Poland,,Raw,M50-59,103,110,,,,,,,,,160,175,-202.5,175,175,D
 1,Robert Nemś,,M,,,Poland,,Raw,M50-59,119.5,125,,,,,,,,,250,260,-265,260,260,D
 1,Ireneusz Czupryn,,M,,,Poland,,Raw,M60-69,84.3,90,,,,,,,,,175,185,195,195,195,D
 1,Andreas Friedel,,M,,,Germany,,Raw,M60-69,113.8,125,,,,,,,,,170,180,192.5,192.5,192.5,D
@@ -391,7 +391,7 @@ DQ,Łukasz Kantor,,M,,,Poland,,Unlimited,Open,98.9,100,,,,,,,,,,,,,,B
 1,Dominik Šafránek,,M,,,Slovakia,,Raw,Open,78.9,82.5,,,,,,,,,285,300,-308.5,300,300,D
 2,Przemysław Kawczyński,,M,,,Poland,,Raw,Open,82.1,82.5,,,,,,,,,250,265,-272.5,265,265,D
 1,David Žemlička,,M,,,Czechia,,Raw,Open,89.4,90,,,,,,,,,-260,260,280,280,280,D
-2,Lukasz Drozdz,,M,,,Poland,,Raw,Open,88.5,90,,,,,,,,,240,250,-280,250,250,D
+2,Łukasz Dróżdż,,M,,,Poland,,Raw,Open,88.5,90,,,,,,,,,240,250,-280,250,250,D
 1,Konrad Czupryn,,M,,,Poland,,Raw,Open,98.8,100,,,,,,,,,210,220,-230,220,220,D
 2,Viktor Kvile Anders,,M,,,Norway,,Raw,Open,100,100,,,,,,,,,160,172.5,-185,172.5,172.5,D
 1,Krzysztof Antosik,,M,,,Poland,,Raw,Open,108,110,,,,,,,,,290,310,,310,310,D
