@@ -279,6 +279,7 @@ def getresults(soup, meet_name, url):
     sexstate = ''
     divstate = ''
     eqpstate = ''
+    DivisionColumnIndex = None
 
     if 'miehet' in meet_name.lower() or 'miesten' in meet_name.lower():
         sexstate = 'M'
@@ -339,6 +340,7 @@ def getresults(soup, meet_name, url):
                     csv.fieldnames += ['Sex']
                 elif h == 'sarja' or h == 'cls' or h == 'class':
                     csv.fieldnames += ['WeightClassKg']
+                    DivisionColumnIndex = ii
                 elif h == 'paino' or h == 'bwt':
                     csv.fieldnames += ['BodyweightKg']
                 elif 'nimi' in h or 'name' in h:
@@ -376,7 +378,7 @@ def getresults(soup, meet_name, url):
                     csv.fieldnames += ['TotalKg']
                 elif h in ['wilks', 'wpist', 'pist', 'wpts', 'wilks pist', 'wilks pts',
                            'ipf pist', 'ipf pts', 'ipf glp', 'ipf gl pist', 'gl pist',
-                           'ipf gl pts', 'ipfgl', 'gl pts']:
+                           'ipf gl pts', 'ipfgl', 'gl pts', 'ipf gl pisteet']:
                     csv.fieldnames += ['Wilks']
                 elif h == 'jpist' or h == 'j pist':
                     csv.fieldnames += ['Points']
@@ -473,6 +475,7 @@ def getresults(soup, meet_name, url):
 
             expand_colspans(tr, soup)
 
+            col_idx = 0
             for td in tr.find_all('td'):
                 col_text = td.text
                 # Switch to dots for decimals
@@ -499,6 +502,8 @@ def getresults(soup, meet_name, url):
                       'text-decoration: line-through' in td.span['style']):
                     col_text = '-' + col_text.strip()
                     col_text = col_text.replace('--', '-')
+                elif col_text == 'DSQ' or col_text == 'DNS':
+                    col_text = ''
 
                 # Skipped lift.
                 if (len(col_text.strip()) > 1 and col_text.replace(' ', '').count('-')
@@ -519,6 +524,11 @@ def getresults(soup, meet_name, url):
                     '  ', ' ').replace(',', ' '))
                 if len(lifter_data) > len(csv.fieldnames)-1:
                     csv.fieldnames.insert(len(lifter_data) - 1, 'Extra')
+
+                if col_idx == DivisionColumnIndex:
+                    [divstate, div_text] = get_division(col_text)
+                    pass
+                col_idx = col_idx + 1
 
             lifter_data = lifter_data + [divstate]
 
@@ -545,7 +555,7 @@ def fixplace(csv):
         totalidx = csv.index('TotalKg')
         for row in csv.rows:
             row[placeidx] = row[placeidx].replace('.', '')
-            if row[placeidx] == '-':
+            if row[placeidx] == '-' or row[placeidx] == '0' or row[placeidx] == '':
                 row[placeidx] = 'DQ'
                 row[totalidx] = ''  # Instead of a zero.
             elif 'ulkop' in row[placeidx].lower():  # Guest lifter, I think.
@@ -624,7 +634,7 @@ def add_birthyear(csv):
                 birthyear = birthyear.strip()
 
                 if birthyear.isdigit() and len(birthyear) == 2:
-                    if int(birthyear) < 10:  # Will need to be periodicaly updated
+                    if int(birthyear) < 20:  # Will need to be periodicaly updated
                         birthyear = '20' + birthyear
                     else:
                         birthyear = '19' + birthyear
@@ -657,7 +667,7 @@ def add_birthyear(csv):
 
 
 def get_division(div_text):
-    division = ''
+    division = 'Open'
     if '14' in div_text:
         division = 'Under 14'
         div_text = div_text.replace('14', '')
@@ -700,7 +710,7 @@ def get_division(div_text):
     elif 'jun' in div_text:
         division = 'Under 23'
         div_text = div_text.replace('jun', '')
-    elif 'as' in div_text:
+    elif 'as' in div_text:  # 'Klassien, miehet' ends here which is wrong!
         division = 'Over 40'
         div_text = div_text.replace('as', '')
     elif 'avoin' in div_text:
@@ -785,17 +795,19 @@ def fixtotals(csv):
             if 'S' in row[eventidx] and 'Best3SquatKg' in csv.fieldnames:
                 if row[csv.index('Best3SquatKg')] in ['', 'out']:  # then lifter bombed
                     row[csv.index('Best3SquatKg')] = ''
-                total += float(row[csv.index('Best3SquatKg')])
+                if row[csv.index('Best3SquatKg')] != "DSQ":
+                    total += float(row[csv.index('Best3SquatKg')])
             elif 'B' in row[eventidx] and 'Best3BenchKg' in csv.fieldnames:
                 if row[csv.index('Best3BenchKg')] in ['', 'out']:
                     row[csv.index('Best3BenchKg')] = ''
                     continue
-                total += float(row[csv.index('Best3BenchKg')])
+                if row[csv.index('Best3BenchKg')] != 'DSQ':
+                    total += float(row[csv.index('Best3BenchKg')])
             elif 'D' in row[eventidx] and 'Best3DeadliftKg' in csv.fieldnames:
                 if row[csv.index('Best3DeadliftKg')] in ['', 'out']:
                     row[csv.index('Best3DeadliftKg')] = ''
-                total += float(row[csv.index('Best3DeadliftKg')])
-
+                if row[csv.index('Best3DeadliftKg')] != 'DSQ':
+                    total += float(row[csv.index('Best3DeadliftKg')])
             row[-1] = str(total)
     elif 'Place' in csv.fieldnames:
         totalidx = csv.index('TotalKg')
@@ -996,9 +1008,9 @@ def main(dirname, url):
         else:
             error("Directory '%s' already exists." % dirname)
 
-    with open(dirname + os.sep + 'entries.csv', 'w') as fd:
+    with open(dirname + os.sep + 'entries.csv', 'w', encoding='utf-8') as fd:
         entriescsv.write(fd)
-    with open(dirname + os.sep + 'meet.csv', 'w') as fd:
+    with open(dirname + os.sep + 'meet.csv', 'w', encoding='utf-8') as fd:
         meetcsv.write(fd)
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
