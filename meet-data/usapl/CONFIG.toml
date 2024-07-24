@@ -370,6 +370,8 @@
     frpf = {name="FR-PF", min=0, max=999, sex="F", equipment="Raw"}
     mpf = {name="M-PF", min=0, max=999, sex="M", equipment="Single-ply"}
     fpf = {name="F-PF", min=0, max=999, sex="F", equipment="Single-ply"}
+    mwpf = {name="MW-PF", min=0, max=999, sex="M", equipment="Wraps"}
+    fwpf = {name="FW-PF", min=0, max=999, sex="F", equipment="Wraps"}
 
     # Police, Fire, and Military.
     mrpfm = {name="MR-PFM", min=0, max=999, sex="M", equipment="Raw"}
