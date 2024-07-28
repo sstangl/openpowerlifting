@@ -16,6 +16,7 @@
     master1 = {name="Master 1", min=40, max=49}
     master2 = {name="Master 2", min=50, max=59}
     master3 = {name="Master 3", min=60, max=69}
+    master4 = {name="Master 4", min=70, max=79}
     novice = {name="Novice", min=0, max=999}
     Intermediate = {name="Intermediate", min=0, max=999}
     first_responder = {name="First Responder", min=0, max=999}
