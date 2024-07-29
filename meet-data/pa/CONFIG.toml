@@ -40,6 +40,8 @@
     masters75_79 = {name="Masters 75-79", min=74.5, max=78.5}
     masters80p = {name="Masters 80+", min=79.5, max=999}
 
+    nauru_open = {name="Nauru Open", min=0, max=999}
+
 [weightclasses.WP_M]
     classes = ["62","69","77","85","94","105","120","120+"]
     date_range=["2018-08-25","9999-01-01"]
