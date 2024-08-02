@@ -60,6 +60,8 @@
     ft3cr = {name ="F-T3CR", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
     mjcr = {name ="M-JCR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
     fjcr = {name ="F-JCR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+    mscr = {name ="M-SCR", min=33, max=39, sex="M", equipment=["Raw","Wraps"]}
+    fscr = {name ="F-SCR", min=33, max=39, sex="F", equipment=["Raw","Wraps"]}
     mm1cr = {name ="M-M1CR", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
     fm1cr = {name ="F-M1CR", min=40, max=44, sex="F", equipment=["Raw","Wraps"]}
     mm2cr = {name ="M-M2CR", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
@@ -130,6 +132,8 @@
     ft3cra= {name ="F-T3CR-A", min=18, max=19, sex="F", equipment=["Raw","Wraps"],tested="Yes"}
     mjcra= {name ="M-JCR-A", min=20, max=23, sex="M", equipment=["Raw","Wraps"],tested="Yes"}
     fjcra= {name ="F-JCR-A", min=20, max=23, sex="F", equipment=["Raw","Wraps"],tested="Yes"}
+    mscra = {name ="M-SCR-A", min=33, max=39, sex="M", equipment=["Raw","Wraps"],tested="Yes"}
+    fscra = {name ="F-SCR-A", min=33, max=39, sex="F", equipment=["Raw","Wraps"],tested="Yes"}
     mm1cra= {name ="M-M1CR-A", min=40, max=44, sex="M", equipment=["Raw","Wraps"],tested="Yes"}
     fm1cra= {name ="F-M1CR-A", min=40, max=44, sex="F", equipment=["Raw","Wraps"],tested="Yes"}
     mm2cra= {name ="M-M2CR-A", min=45, max=49, sex="M", equipment=["Raw","Wraps"],tested="Yes"}
