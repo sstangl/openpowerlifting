@@ -177,6 +177,7 @@
 </optgroup>
 <optgroup label="{{strings.country.bolivia}}">
   <option value="all-bolivia" {% if selection.federation == "AllBolivia" %}selected{% endif %}>{{strings.selectors.fed.all_bolivia}}</option>
+  <option value="wrpf-bolivia" {% if selection.federation == "WRPF-Bolivia" %}selected{% endif %}>WRPF Bolivia</option>
   <option value="abp" {% if selection.federation == "ABP" %}selected{% endif %}>ABP - Alianza Boliviana Powerlifting [GPA/IPO]</option>
 </optgroup>
 <optgroup label="{{strings.country.bosniaandherzegovina}}">

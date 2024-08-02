@@ -1721,6 +1721,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Belarus", serialize = "wrpf-belarus")]
     WRPFBelarus,
 
+    /// Bolivian WRPF affiliate.
+    #[serde(rename = "WRPF-Bolivia")]
+    #[strum(to_string = "WRPF-Bolivia", serialize = "wrpf-bolivia")]
+    WRPFBolivia,
+
     /// Brazilian WRPF affiliate.
     #[serde(rename = "WRPF-Brazil")]
     #[strum(to_string = "WRPF-Brazil", serialize = "wrpf-brazil")]
@@ -2326,6 +2331,7 @@ impl Federation {
             Federation::WRPFArgentina => false,
             Federation::WRPFAUS => false,
             Federation::WRPFBelarus => false,
+            Federation::WRPFBolivia => false,
             Federation::WRPFBrazil => false,
             Federation::WRPFBulgaria => false,
             Federation::WRPFCAN => false,
@@ -2757,6 +2763,7 @@ impl Federation {
             Federation::WRPFArgentina => Some(Country::Argentina),
             Federation::WRPFAUS => Some(Country::Australia),
             Federation::WRPFBelarus => Some(Country::Belarus),
+            Federation::WRPFBolivia => Some(Country::Bolivia),
             Federation::WRPFBrazil => Some(Country::Brazil),
             Federation::WRPFBulgaria => Some(Country::Bulgaria),
             Federation::WRPFCAN => Some(Country::Canada),
@@ -3305,6 +3312,7 @@ impl Federation {
             Federation::WRPFArgentina => Some(Federation::WRPF),
             Federation::WRPFAUS => Some(Federation::WRPF),
             Federation::WRPFBelarus => Some(Federation::WRPF),
+            Federation::WRPFBolivia => Some(Federation::WRPF),
             Federation::WRPFBrazil => Some(Federation::WRPF),
             Federation::WRPFBulgaria => Some(Federation::WRPF),
             Federation::WRPFCAN => Some(Federation::WRPF),
@@ -3856,6 +3864,7 @@ impl Federation {
             Federation::WRPFArgentina => PointsSystem::Wilks,
             Federation::WRPFAUS => PointsSystem::Wilks,
             Federation::WRPFBelarus => PointsSystem::Wilks,
+            Federation::WRPFBolivia => PointsSystem::Wilks,
             Federation::WRPFBrazil => PointsSystem::Wilks,
             Federation::WRPFBulgaria => PointsSystem::Wilks,
             Federation::WRPFCAN => PointsSystem::Wilks,
