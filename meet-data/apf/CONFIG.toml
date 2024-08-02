@@ -773,3 +773,4 @@
     2310 = ["ExemptWeightClassConsistency"] # Two youth lifters missing bodyweight info
     2316 = ["ExemptDivision"] # Pro/Am, different divisions.
     2343 = ["ExemptWeightClassConsistency","ExemptDivision"] # Missing weightclasses
+    2413 = ["ExemptWeightClassConsistency"] # Missing weightclasses
