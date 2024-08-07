@@ -171,7 +171,7 @@ def integrate_stateful_data(csv):
                     elif part == 'Single':
                         state_equipment = 'Single-ply'
                     elif part == 'Multi':
-                        state_equipment = 'Multi-ply'
+                        state_equipment = 'Unlimited'
                     elif part == 'Ply':
                         pass
                     elif part == 'Powerlifting':
