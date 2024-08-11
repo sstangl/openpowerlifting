@@ -74,6 +74,10 @@ function send_message {
 # If the network is down, the function is expected to return early,
 # at which point the main loop will try again with the next scheduled update.
 function run_iteration {
+	# Sometimes, CRLF errors cause `git pull` to fail.
+	# To avoid this, stash and drop and local changes (potential CRLF conversion).
+	git stash; git stash drop
+
 	# Update the repo, getting new probe scripts and URL files.
 	git pull --force || return 1
 
