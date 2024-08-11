@@ -8,8 +8,8 @@
     youth3 = {name = "Youth 3", min=12, max=13}
     subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
     juniors = {name = "Juniors",min=0,max=22.5}
-    masters1 = {name = "Masters 1",min=39.5,max=48.5}
-    masters2 = {name = "Masters 2",min=49.5,max=58.5}
+    masters1 = {name = "Masters 1",min=39.5,max=49.5}
+    masters2 = {name = "Masters 2",min=49.5,max=59.5}
     masters3 = {name = "Masters 3",min=59.5,max=69.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
 
