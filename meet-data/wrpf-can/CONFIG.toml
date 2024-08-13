@@ -53,6 +53,9 @@
     tm75_79 = {name="TM75-79", min=75, max=79, tested="Yes"}
     tm80p = {name="TM80+", min=80, max=999, tested="Yes"}
 
+    # Unofficial divisions that show up anyway.
+    j16_17 = {name="J16-17", min=16, max=17}
+
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
