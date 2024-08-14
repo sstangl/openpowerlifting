@@ -115,3 +115,4 @@
     1401 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
     1418 = ["ExemptDivision"]  # Lightweight / Heavyweight / etc.
     2412 = ["ExemptWeightClassConsistency"]  # Used 0+ weightclass.
+    2413 = ["ExemptWeightClassConsistency"]  # Lifter with no weight class or bodyweight given.
