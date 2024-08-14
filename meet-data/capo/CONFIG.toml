@@ -22,7 +22,7 @@
     fjmp   = {name ="FJ-MP",min=20,max=23,sex="F", equipment="Multi-ply"}
     # youth, sometimes notated as "sub-teen"
     myr    = {name ="MY-R",min=5,max=12,sex="M", equipment="Raw"}
-    myrp    = {name ="MY-RP",min=5,max=12,sex="M", equipment=["Raw","Wraps"]}
+    myrp   = {name ="MY-RP",min=5,max=12,sex="M", equipment=["Raw","Wraps"]}
     mt1r   = {name ="MT1-R",min=13,max=15,sex="M", equipment="Raw"}
     mt1rp  = {name ="MT1-RP",min=13,max=15,sex="M", equipment=["Raw","Wraps"]}
     mt1mp  = {name ="MT1-MP",min=13,max=15,sex="M", equipment="Multi-ply"}
@@ -37,6 +37,7 @@
     mtsp   = {name ="MT-SP",min=13,max=19,sex="M", equipment="Single-ply"}
     mtmp   = {name ="MT-MP",min=13,max=19,sex="M", equipment="Multi-ply"}
     fyr    = {name ="FY-R",min=5,max=12,sex="F", equipment="Raw"}
+    fyrp   = {name ="FY-RP",min=5,max=12,sex="F", equipment=["Raw","Wraps"]}
     ftr    = {name ="FT-R",min=13,max=19,sex="F", equipment="Raw"}
     ftrp   = {name ="FT-RP",min=13,max=19,sex="F", equipment=["Raw","Wraps"]}
     ft1r   = {name ="FT1-R",min=13,max=15,sex="F", equipment="Raw"}
@@ -130,6 +131,7 @@
     # for bench-only, in 2024
     moul = {name="MO-UL", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
+    foul = {name="FO-UL", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
 
     # Some CAPO meets use 10 year Masters
     mm4049r = {name="MM40-49-R",min=40,max=49,sex="M",equipment="Raw"}
