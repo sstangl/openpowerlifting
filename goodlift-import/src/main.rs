@@ -86,7 +86,7 @@ fn parse_content(content: &str) -> Result<(Meet, Entries)> {
         meet.populate(
             row.event_federation.clone(),
             row.event_date_begin.clone(),
-            row.event_country.clone(),
+            map_country(row.event_country.clone()),
             String::new(),
             row.event_city.clone(),
             row.event_title.clone(),
