@@ -282,6 +282,7 @@
 [exemptions]
     0904 = ["ExemptDivision"]  # Non-standard divisions.
     1005 = ["ExemptDivision"]  # LW, HW
+    2404 = ["ExemptDivision"] 
     1813 = ["ExemptWeightClassConsistency"]  # old Youth weightclass used
     2307 = ["ExemptDivision"] # Non-standard divisions.
     2321 = ["ExemptWeightClassConsistency"]  # uses some other weight classes for youth
