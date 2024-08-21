@@ -43,7 +43,8 @@ CREATE TABLE meets (
   MeetState TEXT,
   MeetTown TEXT,
   MeetName TEXT NOT NULL,
-  RuleSet TEXT
+  RuleSet TEXT,
+  Sanctioned TEXT
 );
 "
 
