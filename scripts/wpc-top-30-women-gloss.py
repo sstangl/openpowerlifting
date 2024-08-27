@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import sys
-import math
 
 from csv import DictReader
 
@@ -42,7 +41,8 @@ def get_meet_data(meet_file_path):
 
     with open(meet_file_path, 'rt') as meet_f:
         for meet_row in DictReader(meet_f):
-            if meet_row['Date'].startswith('2022-') and meet_row['Federation'] in wpc_affiliate_list:
+            if meet_row['Date'].startswith('2022-') and \
+               meet_row['Federation'] in wpc_affiliate_list:
                 meet_data_dict[meet_row['MeetID']] = meet_row
 
     return meet_data_dict
@@ -80,7 +80,11 @@ def get_augment_entries(entry_file_path, meet_data_dict, lifter_data_dict):
                 entry_row['MeetCountry'] = meet_data_dict[meet_id]['MeetCountry']
                 entry_row['MeetName'] = meet_data_dict[meet_id]['MeetName']
 
-                if (not entry_dict.get(lifter_id)) or (float(entry_row['Glossbrenner']) > float(entry_dict[lifter_id]['Glossbrenner'])):
+                if (not entry_dict.get(lifter_id)) or \
+                   (
+                    float(entry_row['Glossbrenner']) >
+                    float(entry_dict[lifter_id]['Glossbrenner'])
+                   ):
                     entry_dict[lifter_id] = entry_row
 
     return entry_dict
@@ -90,6 +94,12 @@ if __name__ == '__main__':
     meet_data_dict = get_meet_data(sys.argv[1])
     lifter_data_dict = get_lifter_data(sys.argv[2])
     entry_dict = get_augment_entries(sys.argv[3], meet_data_dict, lifter_data_dict)
-    
-    for (lifter_id, entry,) in sorted(entry_dict.items(), key=lambda i: float(i[1]['Glossbrenner']), reverse=True)[:30]:
-        print(entry['Name'], entry['Date'], entry['Federation'], entry['MeetCountry'], entry['MeetName'], entry['TotalKg'], entry['BodyweightKg'], entry['Glossbrenner'], entry['Equipment'])
+    for (lifter_id, entry,) in sorted(
+        entry_dict.items(),
+        key=lambda i: float(i[1]['Glossbrenner']),
+        reverse=True
+    )[:30]:
+        print(entry['Name'], entry['Date'], entry['Federation'],
+              entry['MeetCountry'], entry['MeetName'],
+              entry['TotalKg'], entry['BodyweightKg'],
+              entry['Glossbrenner'], entry['Equipment'])
