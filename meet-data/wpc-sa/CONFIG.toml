@@ -119,6 +119,9 @@
     msotr3apf = {name ="M_SOTR_3_APF",min=18,max=19,equipment="Raw",sex="M"} #Special Olympics
     msorapf = {name ="M_SOR_APF",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
     msojrapf = {name ="M_SOJR_APF",min=20,max=23,equipment="Raw",sex="M"} #Special Olympics
+    msomcr2apf = {name ="M_SOMCR_2_APF",min=45,max=49,equipment=["Raw","Wraps"],sex="M"} #Special Olympics
+    msotcr1apf = {name ="M_SOTCR_1_APF",min=13,max=15,equipment=["Raw","Wraps"],sex="M"} #Special Olympics
+    msotcr2apf = {name ="M_SOTCR_2_APF",min=16,max=17,equipment=["Raw","Wraps"],sex="M"} #Special Olympics
     mpfemapf = {name ="M_PFEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"} #Police/Fire
     mpfrapf = {name ="M_PFR_APF",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
     mnrapf = {name ="M_NR_APF",min=0,max=999,equipment="Raw",sex="M"} #Novice
@@ -210,6 +213,8 @@
     fnemapf = {name ="F_NEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F"} #Novice
     fcemapf = {name ="F_CEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F"} #Collegiate
     fsorapf = {name ="F_SOR_APF",min=0,max=999,equipment="Raw",sex="F"} #Special Olympics
+    fsotcr1apf = {name ="F_SOTCR_1_APF",min=13,max=15,equipment=["Raw","Wraps"],sex="F"} #Special Olympics
+    fsotcr2apf = {name ="F_SOTCR_2_APF",min=16,max=17,equipment=["Raw","Wraps"],sex="F"} #Special Olympics
     fgrapf = {name ="F_GR_APF",min=0,max=999,equipment="Raw",sex="F",place="G"} #Guest
     fgemapf = {name ="F_GEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",place="G"} #Guest
     framapf = {name="F_RAM_APF", min=0, max=999, equipment=["Multi-ply","Unlimited"], sex="F"} # Soft Equipment.
