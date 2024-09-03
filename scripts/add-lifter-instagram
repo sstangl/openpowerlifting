@@ -7,44 +7,42 @@ so that it remains ordered.
 
 Usage:
     ./scripts/add-lifter-instagram --name "<name>" --instagram "<handle>"
+    ./scripts/add-lifter-instagram --from-file input.csv
 """
 
 import os
 import csv
 import argparse
 import unicodedata
+import sys
 
 from typing import Dict, List
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    subparsers = parser.add_subparsers(required=True)
 
-    single = subparsers.add_parser("single", help="Add a single Instagram handle")
-    batch = subparsers.add_parser("batch", help="Add a batch of handles from a CSV")
-
-    single.add_argument(
+    parser.add_argument(
         "-n",
         "--name",
         type=str,
-        required=True,
+        required=False,
         help="Name of the lifter"
     )
 
-    single.add_argument(
+    parser.add_argument(
         "-i",
         "--instagram",
         type=str,
-        required=True,
+        required=False,
         help="Instagram handle for the athlete"
     )
 
-    batch.add_argument(
+    parser.add_argument(
         "-f",
-        "--file",
+        "--from-file",
         type=str,
-        required=True,
+        required=False,
         help="CSV file containing names and Instagram handles"
     )
 
@@ -103,13 +101,21 @@ def main():
     with open(social_instagram_path, "r", encoding="utf-8") as f:
         contents = f.readlines()
 
-    if args.file:
-        with open(args.file, "r", encoding="utf-8") as f:
+    # If this is a batch request, the input is a CSV file of Name,Instagram pairs.
+    if args.from_file:
+        with open(args.from_file, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
 
             for row in filter(instagram_is_not_empty, reader):
                 insert_instagram_entry(contents, row["Name"], row["Instagram"])
     else:
+        if args.name is None:
+            print("Missing argument --name")
+            sys.exit(1)
+        if args.instagram is None:
+            print("Missing argument --instagram")
+            sys.exit(1)
+
         insert_instagram_entry(contents, args.name, args.instagram)
 
     # Write everything back to the correct path
