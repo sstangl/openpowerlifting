@@ -18,6 +18,7 @@
     m65_69 = {name="M65-69", min=65, max=69}
     m70_74 = {name="M70-74", min=70, max=74}
     m75_79 = {name="M75-79", min=75, max=79}
+    m40p = {name="M40+", min=40, max=999}
     m80p = {name="M80+", min=80, max=999}
 
     j13_14 = {name="J13-14", min=13, max=14}
