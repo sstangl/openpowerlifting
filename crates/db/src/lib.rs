@@ -292,6 +292,8 @@ impl OplDb {
         }
 
         // Look up each possible disambiguation value, stopping when one is missing.
+        //
+        // FIXME(sstangl): This logic does not account for redacted lifters.
         for i in 1.. {
             let disambig = format!("{base}{i}");
             if let Some(id) = self.lifter_id(&disambig) {
