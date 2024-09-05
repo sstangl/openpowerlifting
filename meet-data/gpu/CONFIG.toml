@@ -5,6 +5,7 @@
 	teen_a = {name = "T-A", min = 13, max = 15}
 	teen_b = {name = "T-B", min = 16, max = 17}
 	teen_c = {name = "T-C", min = 18, max = 19}
+	teen = {name = "Teen", min = 13, max = 19}
     juniors_20_23 = {name = "Jun", min = 20, max = 23}
     masters_40_44 = {name = "M-1", min = 40, max = 44}
     masters_45_49 = {name = "M-2", min = 45, max = 49}
@@ -15,6 +16,11 @@
     masters_70_74 = {name = "M-7", min = 70, max = 74}
     masters_75_79 = {name = "M-8", min = 75, max = 79}
     masters_80p = {name = "M-9", min = 80, max = 999}
+    masters_40_49 = {name = "M40-49", min = 40, max = 49}
+    masters_50_59 = {name = "M50-59", min = 50, max = 59}
+    masters_60_69 = {name = "M60-69", min = 60, max = 69}
+    masters_70_79 = {name = "M70-79", min = 70, max = 79}
+    masters_80_plus = {name = "M80+", min = 80, max = 999}
 
 [weightclasses.old_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -40,3 +46,4 @@
     2302 = ["ExemptWeightClassConsistency","ExemptDivision"] # Open Tournament Mode
     2401 = ["ExemptWeightClassConsistency","ExemptDivision"] # Open Tournament Mode for primetime lifters
     2402 = ["ExemptWeightClassConsistency"] # No WeightClasses in unlimited Benchpress and Deadlift with Straps
+    2404 = ["ExemptWeightClassConsistency"]
