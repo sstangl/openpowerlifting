@@ -355,6 +355,7 @@
     0702 = ["ExemptWeightClassConsistency"] # Non-standard weightclasses.
     0703 = ["ExemptWeightClassConsistency"] # No weightclasses.
     0704 = ["ExemptWeightClassConsistency"] # Light/Middle/Heavyweight classes.
+    0901 = ["ExemptDivision"] # Allow single-ply in multi-ply division.
     1902 = ["ExemptDivision"] # Slingshots.
     1903 = ["ExemptWeightClassConsistency"] # Non-standard weightclasses.
     2201 = ["ExemptWeightClassConsistency"] # No weightclasses.
