@@ -381,6 +381,10 @@ pub enum MetaFederation {
     #[strum(to_string = "frpl")]
     FRPL,
 
+    /// GPC, but with affiliate results also.
+    #[strum(to_string = "gpcaff")]
+    GPCAff,
+
     /// GPC-AUS, but excluding non-Australian lifters.
     #[strum(to_string = "gpc-aus")]
     #[serde(rename = "GPC-AUS")]
@@ -1001,6 +1005,7 @@ impl MetaFederation {
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
+            MetaFederation::GPCAff => meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC),
             MetaFederation::GPCAUS => affiliation!(meet, entry, GPCAUS, GPC),
             MetaFederation::GPCGB => match meet.federation {
                 Federation::GPCGB => true,

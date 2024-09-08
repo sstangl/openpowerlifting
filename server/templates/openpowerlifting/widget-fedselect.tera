@@ -6,6 +6,7 @@
   <option value="awpc" {% if selection.federation == "AWPC" %}selected{% endif %}>AWPC - Amateur World Powerlifting Congress</option>
   <option value="gpa" {% if selection.federation == "GPA" %}selected{% endif %}>GPA - Global Powerlifting Alliance</option>
   <option value="gpc" {% if selection.federation == "GPC" %}selected{% endif %}>GPC - Global Powerlifting Committee</option>
+  <option value="gpcaff" {% if selection.federation == "GPCAff" %}selected{% endif %}>GPC and affiliates</option>
   <option value="gpf" {% if selection.federation == "GPF" %}selected{% endif %}>GPF - Global Powerlifting Federation</option>
   <option value="ibsa" {% if selection.federation == "IBSA" %}selected{% endif %}>IBSA - International Blind Sports Association</option>
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF - International Powerlifting Federation</option>
