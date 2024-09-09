@@ -3054,7 +3054,7 @@ impl Federation {
             Federation::IraqPF => Some(Federation::IPF),
             Federation::IrelandUA => None,
             Federation::IrishPF => Some(Federation::IPF),
-            Federation::IrishPO => Some(Federation::IPL),
+            Federation::IrishPO => Some(Federation::WPC),
             Federation::IronBoy => None,
             Federation::IRP => None,
             Federation::ItalyUA => None,
@@ -3601,7 +3601,7 @@ impl Federation {
                     Federation::ipf_rules_on(date)
                 }
             }
-            Federation::IrishPO => Federation::ipl_rules_on(date),
+            Federation::IrishPO => PointsSystem::Glossbrenner,
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::ItalyUA => PointsSystem::Wilks,

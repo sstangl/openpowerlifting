@@ -396,4 +396,5 @@
 
 
 [exemptions]
+    2403 = ["ExemptDivision"] # Some SP used in MP divisions
    
