@@ -11,13 +11,13 @@ def float2(s):
     return float(s)
 
 
-def add_best_column(csv, lift):
-    idx = csv.index(lift + '3Kg') + 1
-    csv.insert_column(idx, 'Best3%sKg' % lift)
+def add_best_column(csv, lift, unit):
+    idx = csv.index(lift + '3' + unit) + 1
+    csv.insert_column(idx, 'Best3%s%s' % (lift,unit))
 
-    idx1 = csv.index(lift + '1Kg')
-    idx2 = csv.index(lift + '2Kg')
-    idx3 = csv.index(lift + '3Kg')
+    idx1 = csv.index(lift + '1' + unit)
+    idx2 = csv.index(lift + '2' + unit)
+    idx3 = csv.index(lift + '3' + unit)
 
     for row in csv.rows:
         best = '0'
@@ -33,12 +33,20 @@ def main(filename):
     csv = oplcsv.Csv(filename)
 
     if 'Squat1Kg' in csv.fieldnames and 'Best3SquatKg' not in csv.fieldnames:
-        add_best_column(csv, 'Squat')
+        add_best_column(csv, 'Squat', 'Kg')
     if 'Bench1Kg' in csv.fieldnames and 'Best3BenchKg' not in csv.fieldnames:
-        add_best_column(csv, 'Bench')
+        add_best_column(csv, 'Bench', 'Kg')
     if ('Deadlift1Kg' in csv.fieldnames
             and 'Best3DeadliftKg' not in csv.fieldnames):
-        add_best_column(csv, 'Deadlift')
+        add_best_column(csv, 'Deadlift', 'Kg')
+
+    if 'Squat1Lbs' in csv.fieldnames and 'Best3SquatLbs' not in csv.fieldnames:
+        add_best_column(csv, 'Squat', 'Lbs')
+    if 'Bench1Lbs' in csv.fieldnames and 'Best3BenchLbs' not in csv.fieldnames:
+        add_best_column(csv, 'Bench', 'Lbs')
+    if ('Deadlift1Lbs' in csv.fieldnames
+            and 'Best3DeadliftLbs' not in csv.fieldnames):
+        add_best_column(csv, 'Deadlift', 'Lbs')
 
     with open(filename, 'w') as fd:
         csv.write(fd)
