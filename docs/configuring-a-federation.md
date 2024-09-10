@@ -95,7 +95,7 @@ within the appropriate `<optgroup ... > ... </optgroup>` tags.  The option group
 
 ## Creating the federation's meet data directory
 
-Create a new directory in `opl-data/meet-data`.  The name of this directory should be the `serializable` parameter to the `strum` attribute
+Create a new directory in `opl-data/meet-data`.  The name of this directory should be the `serialize` parameter to the `strum` attribute
 added earlier to the `Federation` enum.
 
 

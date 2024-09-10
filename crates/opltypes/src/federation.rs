@@ -658,6 +658,11 @@ pub enum Federation {
     #[strum(to_string = "Hunpower", serialize = "hunpower")]
     Hunpower,
 
+    /// Unaffiliated meets held in Hungary.
+    #[serde(rename = "Hungary-UA")]
+    #[strum(to_string = "Hungary-UA", serialize = "hungary-ua")]
+    HungaryUA,
+
     /// International Blind Sport Assocation.
     #[strum(to_string = "IBSA", serialize = "ibsa")]
     IBSA,
@@ -2078,6 +2083,7 @@ impl Federation {
             Federation::HPO => false,
             Federation::HTPL => FULLY_TESTED,
             Federation::Hunpower => FULLY_TESTED,
+            Federation::HungaryUA => false,
             Federation::IBSA => FULLY_TESTED,
             Federation::IDFPA => FULLY_TESTED,
             Federation::IDFPF => FULLY_TESTED,
@@ -2525,6 +2531,7 @@ impl Federation {
             Federation::HPO => Some(Country::Croatia),
             Federation::HTPL => Some(Country::China),
             Federation::Hunpower => Some(Country::Hungary),
+            Federation::HungaryUA => Some(Country::Hungary),
             Federation::IBSA => None,
             Federation::IDFPA => Some(Country::Ireland),
             Federation::IDFPF => Some(Country::Ireland),
@@ -3018,6 +3025,7 @@ impl Federation {
             Federation::HPO => None,
             Federation::HTPL => None,
             Federation::Hunpower => Some(Federation::IPF),
+            Federation::HungaryUA => None,
             Federation::IBSA => None,
             Federation::IDFPA => None,
             Federation::IDFPF => Some(Federation::WDFPF),
@@ -3572,6 +3580,7 @@ impl Federation {
             Federation::HPO => PointsSystem::Wilks,
             Federation::HTPL => PointsSystem::Wilks,
             Federation::Hunpower => Federation::ipf_rules_on(date),
+            Federation::HungaryUA => Federation::ipf_rules_on(date),
             Federation::IBSA => PointsSystem::Wilks,
             Federation::IDFPA => PointsSystem::Wilks,
             Federation::IDFPF => PointsSystem::SchwartzMalone,

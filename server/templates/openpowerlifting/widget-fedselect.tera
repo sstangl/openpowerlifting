@@ -323,6 +323,7 @@
   <option value="hpc" {% if selection.federation == "HPC" %}selected{% endif %}>HPC - Hungarian Powerlifting Congress [WPC]</option>
   <option value="hunpower" {% if selection.federation == "Hunpower" %}selected{% endif %}>Hunpower - Magyar Erőemelő Szövetség [IPF]</option>
   <option value="wrpf-hun" {% if selection.federation == "WRPF-HUN" %}selected{% endif %}>WRPF Hungary</option>
+  <option value="hungary-ua" {% if selection.federation == "Hungary-UA" %}selected{% endif %}>Hungary-UA - Hungary [Unaffiliated]</option>
 </optgroup>
 <optgroup label="{{strings.country.iceland}}">
   <option value="all-iceland" {% if selection.federation == "AllIceland" %}selected{% endif %}>{{strings.selectors.fed.all_iceland}}</option>
