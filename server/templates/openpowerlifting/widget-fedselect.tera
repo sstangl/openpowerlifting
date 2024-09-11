@@ -353,7 +353,7 @@
 </optgroup>
 <optgroup label="{{strings.country.ireland}}">
   <option value="all-ireland" {% if selection.federation == "AllIreland" %}selected{% endif %}>{{strings.selectors.fed.all_ireland}}</option>
-  <option value="abs-series" {% if selection.federation == "ABSSeries" %}selected{% endif %}>ABS Series</option>
+  <option value="abs" {% if selection.federation == "ABS" %}selected{% endif %}>ABS - Advanced Barbell Systems</option>
   <option value="airishpo" {% if selection.federation == "AIrishPO" %}selected{% endif %}>AIrishPO - Amateur Irish Powerlifting Organisation [WPC]</option>
   <option value="gpc-irl" {% if selection.federation == "GPC-IRL" %}selected{% endif %}>GPC-IRL - GPC Ireland [GPC]</option>
   <option value="idfpa" {% if selection.federation == "IDFPA" %}selected{% endif %}>IDFPA - Irish Drug Free Powerlifting Association [WP]</option>

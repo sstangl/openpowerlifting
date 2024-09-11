@@ -232,10 +232,6 @@ pub enum MetaFederation {
     #[strum(to_string = "abpu")]
     ABPU,
 
-    /// ABS Series, a recurring Irish competition.
-    #[strum(to_string = "abs-series")]
-    ABSSeries,
-
     /// AEP, but with international results also.
     #[strum(to_string = "aep")]
     AEP,
@@ -894,9 +890,6 @@ impl MetaFederation {
                             && entry.lifter_country.map_or(false, |c| c.is_in_uk())
                             && meet.date.year() >= 2013))
             }
-            MetaFederation::ABSSeries => {
-                meet.federation == Federation::IrelandUA && meet.name.starts_with("ABS")
-            }
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
             MetaFederation::AIrishPO => {
                 entry.tested
@@ -1005,7 +998,9 @@ impl MetaFederation {
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
-            MetaFederation::GPCAff => meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC),
+            MetaFederation::GPCAff => {
+                meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC)
+            }
             MetaFederation::GPCAUS => affiliation!(meet, entry, GPCAUS, GPC),
             MetaFederation::GPCGB => match meet.federation {
                 Federation::GPCGB => true,

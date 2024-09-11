@@ -52,6 +52,10 @@ pub enum Federation {
     #[strum(to_string = "ABP", serialize = "abp")]
     ABP,
 
+    /// ABS, Advanced Barbell Systems, a series of pro meets like ProRaw.
+    #[strum(to_string = "ABS", serialize = "abs")]
+    ABS,
+
     /// Alianza Chilena Powerlifting, GPA/IPO.
     #[strum(to_string = "ACHIPO", serialize = "achipo")]
     ACHIPO,
@@ -1163,7 +1167,7 @@ pub enum Federation {
 
     /// Unaffiliated meets in Saudi Arabia.
     #[strum(to_string = "Saudi-UA", serialize = "saudi-ua")]
-    SaudiUA,    
+    SaudiUA,
 
     /// Slovenská Asociácia Fitnes, Kulturistiky a Silového Trojboja.
     /// Slovakian IPF Affilate.
@@ -1943,6 +1947,7 @@ impl Federation {
                 }
             }
             Federation::ABP => false,
+            Federation::ABS => false,
             Federation::ACHIPO => false,
             Federation::ACPA => false,
             Federation::ADAU => FULLY_TESTED,
@@ -2391,6 +2396,7 @@ impl Federation {
             Federation::AAPLF => Some(Country::Australia),
             Federation::AAU => Some(Country::USA),
             Federation::ABP => Some(Country::Bolivia),
+            Federation::ABS => None, // Ireland, but meets are in many countries.
             Federation::ACHIPO => Some(Country::Chile),
             Federation::ACPA => None,
             Federation::ADAU => Some(Country::USA),
@@ -2824,6 +2830,7 @@ impl Federation {
             Federation::AAPLF => Some(Federation::IPF),
             Federation::AAU => None,
             Federation::ABP => Some(Federation::GPA),
+            Federation::ABS => None,
             Federation::ACHIPO => Some(Federation::GPA),
             Federation::ACPA => Some(Federation::WPA),
             Federation::ADAU => None,
@@ -3420,6 +3427,7 @@ impl Federation {
             Federation::AAPLF => PointsSystem::SchwartzMalone,
             Federation::AAU => PointsSystem::Wilks,
             Federation::ABP => PointsSystem::Wilks,
+            Federation::ABS => PointsSystem::Dots,
             Federation::ACHIPO => PointsSystem::Wilks,
             Federation::ACPA => PointsSystem::Wilks,
             Federation::ADAU => PointsSystem::Wilks,
