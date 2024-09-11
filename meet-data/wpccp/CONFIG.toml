@@ -154,19 +154,19 @@
     fm9cra= {name ="F-M9CR-A", min=80, max=999, sex="F", equipment=["Raw","Wraps"],tested="Yes"}
 
 	# New-style divisions, Equipped.
-    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mje = {name ="M-JE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"]}
-    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mt1ce= {name ="M-T1E", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mm1e = {name ="M-M1E", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply"]}
-    mm5e = {name ="M-M5E", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply"]}
+    moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mje = {name ="M-JE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mt1ce= {name ="M-T1E", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mm1e = {name ="M-M1E", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mm5e = {name ="M-M5E", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
 
         # New-style divisions, Equipped Tested
-    mjea = {name ="M-JE-A", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply"],tested="Yes"}
-    oea = {name ="M-OE-A", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply"],tested="Yes"}   
-    foea = {name ="F-OE-A", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply"],tested="Yes"}  
+    mjea = {name ="M-JE-A", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}
+    oea = {name ="M-OE-A", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}   
+    foea = {name ="F-OE-A", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}  
 
     # CP Divisions.
     morcpf = {name ="M_OR_CP",min=0,max=999,equipment="Raw",sex="M"}
