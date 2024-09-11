@@ -13,7 +13,7 @@ def float2(s):
 
 def add_best_column(csv, lift, unit):
     idx = csv.index(lift + '3' + unit) + 1
-    csv.insert_column(idx, 'Best3%s%s' % (lift,unit))
+    csv.insert_column(idx, 'Best3%s%s' % (lift, unit))
 
     idx1 = csv.index(lift + '1' + unit)
     idx2 = csv.index(lift + '2' + unit)
