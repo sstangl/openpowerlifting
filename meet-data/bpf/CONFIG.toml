@@ -164,5 +164,6 @@
     sex = "F"
 
 [exemptions]
-	2002 = ["ExemptDivision"] # Just total nonsense.
-	2102 = ["ExemptDivision"] # no information
+    2002 = ["ExemptDivision"] # Just total nonsense.
+    2102 = ["ExemptDivision"] # no information
+    2406 = ["ExemptDuplicates"] # Four duplicate lifters with bpf/2403. No idea why.
