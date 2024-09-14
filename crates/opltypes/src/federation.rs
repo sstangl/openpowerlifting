@@ -122,6 +122,10 @@ pub enum Federation {
     #[strum(to_string = "APLA", serialize = "apla")]
     APLA,
 
+    /// American Powerlifting Organization.
+    #[strum(to_string = "APO", serialize = "apo")]
+    APO,
+
     /// Alianza Paraguaya de Powerlifting, Paraguay GPA affiliate.
     #[strum(to_string = "APP", serialize = "app")]
     APP,
@@ -1969,6 +1973,7 @@ impl Federation {
             Federation::APC => false,
             Federation::APF => false,
             Federation::APLA => FULLY_TESTED,
+            Federation::APO => false,
             Federation::APP => false,
             Federation::APU => FULLY_TESTED,
             Federation::APUA => FULLY_TESTED,
@@ -2419,6 +2424,7 @@ impl Federation {
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
             Federation::APLA => Some(Country::Australia),
+            Federation::APO => Some(Country::USA),
             Federation::APP => Some(Country::Paraguay),
             Federation::APU => Some(Country::Australia),
             Federation::APUA => Some(Country::Argentina),
@@ -2861,6 +2867,7 @@ impl Federation {
             Federation::APC => Some(Federation::WUAP),
             Federation::APF => Some(Federation::WPC),
             Federation::APLA => Some(Federation::IPF),
+            Federation::APO => None,
             Federation::APP => Some(Federation::GPA),
             Federation::APU => {
                 // The APU withdrew association with the IPF and affiliated with WDFPF from 2024-01-01 onwards.
@@ -3452,6 +3459,7 @@ impl Federation {
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APLA => Federation::ipf_rules_on(date),
+            Federation::APO => PointsSystem::Glossbrenner,
             Federation::APP => PointsSystem::Wilks,
             Federation::APU => {
                 // Due to change of affiliation from IPF to WDFPF in 2024.

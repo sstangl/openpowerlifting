@@ -48,6 +48,7 @@
   <option value="apa" {% if selection.federation == "APA" %}selected{% endif %}>APA - American Powerlifting Association [WPA]</option>
   <option value="apc" {% if selection.federation == "APC" %}selected{% endif %}>APC - American Powerlifting Committee [GPA/IPO]</option>
   <option value="apf" {% if selection.federation == "APF" %}selected{% endif %}>APF - American Powerlifting Federation [WPC]</option>
+  <option value="apo" {% if selection.federation == "APO" %}selected{% endif %}>APO - American Powerlifting Organization</option>
   <option value="fhsaa" {% if selection.federation == "FHSAA" %}selected{% endif %}>FHSAA - Florida High School Athletics Association</option>
   <option value="hardcore" {% if selection.federation == "Hardcore" %}selected{% endif %}>Hardcore - Hardcore Powerlifting</option>
   <option value="ihspla" {% if selection.federation == "IHSPLA" %}selected{% endif %}>IHSPLA - Illinois High School Powerlifting Assocation</option>
