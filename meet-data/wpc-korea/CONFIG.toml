@@ -1,19 +1,23 @@
 [divisions]
-    open = {name = "O", min=0, max=999}
-    youth = {name = "Y", min=0, max=12}
-    teen1 = {name = "T1", min=13, max=15}
-    teen2 = {name = "T2", min=16, max=17}
-    teen3 = {name = "T3", min=18, max=19}
-    juniors = {name = "J", min=20, max=23}
-    masters1 = {name = "M1", min=40, max=44}
-    masters2 = {name = "M2", min=45, max=49}
-    masters3 = {name = "M3", min=50, max=54}
-    masters4 = {name = "M4", min=55, max=59}
-    masters5 = {name = "M5", min=60, max=64}
-    masters6 = {name = "M6", min=65, max=69}
-    masters7 = {name = "M7", min=70, max=74}
-    masters8 = {name = "M8", min=75, max=79}
-    masters9 = {name = "M9", min=80, max=999}
+    open = {name = "Open", min=0, max=999}
+    juniors = {name = "Juniors", min=20, max=23}
+    masters = {name = "Masters", min=40, max=999}
+
+    o = {name = "O", min=0, max=999}
+    y = {name = "Y", min=0, max=12}
+    t1 = {name = "T1", min=13, max=15}
+    t2 = {name = "T2", min=16, max=17}
+    t3 = {name = "T3", min=18, max=19}
+    j = {name = "J", min=20, max=23}
+    m1 = {name = "M1", min=40, max=44}
+    m2 = {name = "M2", min=45, max=49}
+    m3 = {name = "M3", min=50, max=54}
+    m4 = {name = "M4", min=55, max=59}
+    m5 = {name = "M5", min=60, max=64}
+    m6 = {name = "M6", min=65, max=69}
+    m7 = {name = "M7", min=70, max=74}
+    m8 = {name = "M8", min=75, max=79}
+    m9 = {name = "M9", min=80, max=999}
     teen = {name = "T", min=13, max=19}
 
 [weightclasses.M]
