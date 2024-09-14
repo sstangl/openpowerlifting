@@ -66,6 +66,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     // Completeness.
     let complete = "Complete";
     statuses[_365Strong as usize].status = complete;
+    statuses[APLA as usize].status = complete;
     statuses[APU as usize].status = complete;
     statuses[BB as usize].status = complete;
     statuses[BPU as usize].status = complete;
@@ -181,6 +182,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[AEP as usize].format = html;
     statuses[APA as usize].format = openlifter;
     statuses[APF as usize].format = xls_unstructured;
+    statuses[APLA as usize].format = xls_structured;
     statuses[APU as usize].format = html;
     statuses[AusPL as usize].format = openlifter;
     statuses[BB as usize].format = xls_unstructured;
@@ -253,7 +255,8 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[AEP as usize].ease = medium;
     statuses[APA as usize].ease = easy;
     statuses[APF as usize].ease = medium;
-    statuses[APU as usize].ease = easy;
+    statuses[APLA as usize].ease = easy;
+    statuses[APU as usize].ease = medium;
     statuses[AusPL as usize].ease = easy;
     statuses[BB as usize].ease = difficult;
     statuses[BDFPA as usize].ease = impossible;
@@ -338,6 +341,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[AEP as usize].maintainers = email_enno;
     statuses[APF as usize].maintainers = email_gem;
     statuses[APA as usize].maintainers = email_sean;
+    statuses[APLA as usize].maintainers = email_rosie;
     statuses[APU as usize].maintainers = email_rosie;
     statuses[AusPL as usize].maintainers = email_james;
     statuses[BAWLA as usize].maintainers = email_jo;
@@ -374,6 +378,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[NPB as usize].maintainers = email_mbeelen;
     statuses[NZPF as usize].maintainers = email_artem;
     statuses[OEVK as usize].maintainers = email_milena;
+    statuses[ORPF as usize].maintainers = email_rosie;
     statuses[PA as usize].maintainers = email_james;
     statuses[ProRaw as usize].maintainers = email_james;
     statuses[PS as usize].maintainers = email_mayed;
@@ -411,6 +416,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[AAP as usize].instagram = "alianzaargentinapowerlifting_";
     statuses[APA as usize].instagram = "apawpa_official";
     statuses[APF as usize].instagram = "apf_powerlifting";
+    statuses[APLA as usize].instagram = "australianpowerliftingalliance";
     statuses[APU as usize].instagram = "australianpowerliftingunion";
     statuses[ARPL as usize].instagram = "powerlifting.apl";
     statuses[AsianPF as usize].instagram = "asian.powerlifting.federation";
