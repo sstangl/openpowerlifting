@@ -470,6 +470,10 @@ pub enum Federation {
     #[strum(to_string = "FRPL", serialize = "frpl")]
     FRPL,
 
+    /// Guyana Amateur Powerlifting Federation, Guyanese IPF affiliate.
+    #[strum(to_string = "GAPLF", serialize = "gaplf")]
+    GAPLF,
+
     /// German Drug-Free Powerlifting Federation, WDFPF.
     #[strum(to_string = "GDFPF", serialize = "gdfpf")]
     GDFPF,
@@ -2056,6 +2060,7 @@ impl Federation {
             Federation::FPR => FULLY_TESTED,
             Federation::FRPL => FULLY_TESTED,
             Federation::FSFA => FULLY_TESTED,
+            Federation::GAPLF => FULLY_TESTED,
             Federation::GDFPF => FULLY_TESTED,
             Federation::GermanyUA => false,
             Federation::GFP => false,
@@ -2506,6 +2511,7 @@ impl Federation {
             Federation::FPR => Some(Country::Russia),
             Federation::FRPL => Some(Country::Romania),
             Federation::FSFA => Some(Country::France),
+            Federation::GAPLF => Some(Country::Guyana),
             Federation::GDFPF => Some(Country::Germany),
             Federation::GermanyUA => Some(Country::Germany),
             Federation::GFP => Some(Country::Russia),
@@ -3003,6 +3009,7 @@ impl Federation {
             }
             Federation::FRPL => Some(Federation::IPF),
             Federation::FSFA => Some(Federation::WDFPF),
+            Federation::GAPLF => Some(Federation::IPF),
             Federation::GDFPF => Some(Federation::WDFPF),
             Federation::GermanyUA => None,
             Federation::GFP => None,
@@ -3561,6 +3568,7 @@ impl Federation {
             Federation::FPR => Federation::ipf_rules_on(date),
             Federation::FRPL => Federation::ipf_rules_on(date),
             Federation::FSFA => PointsSystem::Wilks,
+            Federation::GAPLF => Federation::ipf_rules_on(date),
             Federation::GDFPF => PointsSystem::Wilks,
             Federation::GermanyUA => PointsSystem::Wilks,
             Federation::GFP => PointsSystem::Wilks,

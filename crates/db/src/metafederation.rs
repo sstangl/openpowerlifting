@@ -90,6 +90,8 @@ pub enum MetaFederation {
     AllGreece,
     #[strum(to_string = "all-guatemala")]
     AllGuatemala,
+    #[strum(to_string = "all-guyana")]
+    AllGuyana,
     #[strum(to_string = "all-hongkong")]
     AllHongKong,
     #[strum(to_string = "all-hungary")]
@@ -376,6 +378,10 @@ pub enum MetaFederation {
     /// FRPL, but with international results also.
     #[strum(to_string = "frpl")]
     FRPL,
+
+    /// GAPLF, but with international results also.
+    #[strum(to_string = "gaplf")]
+    GAPLF,
 
     /// GPC, but with affiliate results also.
     #[strum(to_string = "gpcaff")]
@@ -794,6 +800,7 @@ impl MetaFederation {
             MetaFederation::AllGermany => is_from(Country::Germany, entry, meet),
             MetaFederation::AllGreece => is_from(Country::Greece, entry, meet),
             MetaFederation::AllGuatemala => is_from(Country::Guatemala, entry, meet),
+            MetaFederation::AllGuyana => is_from(Country::Guyana, entry, meet),
             MetaFederation::AllHongKong => is_from(Country::HongKong, entry, meet),
             MetaFederation::AllHungary => is_from(Country::Hungary, entry, meet),
             MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
@@ -1002,6 +1009,7 @@ impl MetaFederation {
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
+            MetaFederation::GAPLF => affiliation!(meet, entry, GAPLF, IPF, FESUPO),
             MetaFederation::GPCAff => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC)
             }
