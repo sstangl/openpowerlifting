@@ -4,14 +4,13 @@
     require_manual_disambiguation = true
 
 [divisions]
-    open = {name="Open", min=13, max=999} # Younger lifters should be Guest.
-    guest = {name="Guest", min=0, max=999}
-
     # OpenLifter-style divisions.
     #
     # These are not the official names, but they are significantly more helpful
     # than the official names, so please use these.
     #
+    open = {name="Open", min=13, max=999} # Younger lifters should be Guest.
+    guest = {name="Guest", min=0, max=999}
     t13_15 = {name="T13-15", min=13, max=15}
     t16_17 = {name="T16-17", min=16, max=17}
     t18_19 = {name="T18-19", min=18, max=19}
@@ -28,6 +27,24 @@
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
 
+    # Tested divisions.
+    opent = {name="OpenT", min=13, max=999, tested="Yes"}
+    t13_15t = {name="T13-15T", min=13, max=15, tested="Yes"}
+    t16_17t = {name="T16-17T", min=16, max=17, tested="Yes"}
+    t18_19t = {name="T18-19T", min=18, max=19, tested="Yes"}
+    j20_23t = {name="J20-23T", min=20, max=23, tested="Yes"}
+    s33_39t = {name="S33-39T", min=33, max=39, tested="Yes"} # In rulebook.
+    s35_39t = {name="S35-39T", min=35, max=39, tested="Yes"} # Not in rulebook, but used in practice.
+    m40_44t = {name="M40-44T", min=40, max=44, tested="Yes"}
+    m45_49t = {name="M45-49T", min=45, max=49, tested="Yes"}
+    m50_54t = {name="M50-54T", min=50, max=54, tested="Yes"}
+    m55_59t = {name="M55-59T", min=55, max=59, tested="Yes"}
+    m60_64t = {name="M60-64T", min=60, max=64, tested="Yes"}
+    m65_69t = {name="M65-69T", min=65, max=69, tested="Yes"}
+    m70_74t = {name="M70-74T", min=70, max=74, tested="Yes"}
+    m75_79t = {name="M75-79T", min=75, max=79, tested="Yes"}
+    m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
+
 [weightclasses.default_M] # Men and women have the same classes.
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["2024-01-01", "9999-01-01"]
@@ -39,3 +56,4 @@
     sex = "F"
 
 [exemptions]
+    2403 = ["ExemptWeightClassConsistency"] # Guest lifters did not weigh-in.
