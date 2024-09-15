@@ -441,6 +441,9 @@
     myemwpc = {name ="M_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M"} #Youth
     mpfrwpc = {name ="M_PFR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
     msorwpc = {name ="M_SOR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
+    mpfcrwpc = {name ="M_PFCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="No"} #Police/Fire
+    mpfemwpc = {name ="M_PFEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"} #Police/Fire
+    mpfeswpc = {name ="M_PFES_WPC",min=0,max=999,equipment="Single-ply",sex="M"} #Police/Fire
 
     forwpc = {name ="F_OR_WPC",min=0,max=999,equipment="Raw",sex="F"}
     focrwpc = {name ="F_OCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
@@ -515,6 +518,7 @@
     fyeswpc = {name ="F_YES_WPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
     fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="F"} #Youth
     fgemwpc = {name ="F_GEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",place="G"} #Guest
+    fpfcrwpc = {name ="F_PFCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="No"} #Police/Fire
 
     # AWPC Divisions.
     morawpc = {name ="M_OR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
@@ -590,7 +594,11 @@
     myesawpc = {name ="M_YES_AWPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
     myemawpc = {name ="M_YEM_AWPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Youth
     mpfemawpc = {name ="M_PFEM_AWPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Police/Fire
+    mpfcrawpc = {name ="M_PFCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"} #Police/Fire
+    mpfrawpc = {name ="M_PFR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Police/Fire
+    mpsorawpc = {name ="M_SOR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Special Olympics
     fpfemawpc = {name ="F_PFEM_AWPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"} #Police/Fire
+    fpfcrawpc = {name ="F_PFCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"} #Police/Fire
 
     forawpc = {name ="F_OR_AWPC",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrawpc = {name ="F_OCR_AWPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
