@@ -1,0 +1,79 @@
+# Configuration for GAPLF.
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    mopen = {name ="M-O",min=0,max=999}
+    fopen = {name ="F-O",min=0,max=999}
+    mopenraw = {name ="M-O-U",min=0,max=999}
+    fopenraw = {name ="F-O-U",min=0,max=999}  
+    mjunior = {name = "M-J",min=0,max=22.5}
+    fjunior = {name = "F-J",min=0,max=22.5}
+    mjuniorraw = {name = "M-J-U",min=0,max=22.5}
+    fjuniorraw = {name = "F-J-U",min=0,max=22.5}
+    msubjunior = {name = "M-SJ",min=0,max=17.5}
+    fsubjunior = {name = "F-SJ",min=0,max=17.5}
+    msubjuniorraw = {name = "M-SJ-U",min=0,max=17.5}
+    fsubjuniorraw = {name = "F-SJ-U",min=0,max=17.5}
+    mmasters1 = {name = "M-M1",min=39.5,max=48.5}
+    fmasters1 = {name = "F-M1",min=39.5,max=48.5}
+    mmasters1raw = {name = "M-M1-U",min=39.5,max=48.5}
+    fmasters1raw = {name = "F-M1-U",min=39.5,max=48.5}
+    mmasters2 = {name = "M-M2",min=49.5,max=58.5}
+    fmasters2 = {name = "F-M2",min=49.5,max=58.5}
+    mmasters2raw = {name = "M-M2-U",min=49.5,max=58.5}
+    fmasters2raw = {name = "F-M2-U",min=49.5,max=58.5}
+    mmasters3 = {name = "M-M3",min=59.5,max=68.5}
+    fmasters3 = {name = "F-M3",min=59.5,max=68.5}
+    mmasters3raw = {name = "M-M3-U",min=59.5,max=68.5}
+    fmasters3raw = {name = "F-M3-U",min=59.5,max=68.5}
+    mmasters4 = {name = "M-M4",min=69.5,max=999}
+    fmasters4 = {name = "F-M4",min=69.5,max=999}
+    mmasters4raw = {name = "M-M4-U",min=69.5,max=999}
+    fmasters4raw = {name = "F-M4-U",min=69.5,max=999}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.year2020_F]
+    classes = ["47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["M-J","F-J","M-J-U","F-J-U","M-SJ","F-SJ","M-SJ-U","F-SJ-U"]
+
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["M-J","F-J","M-J-U","F-J-U","M-SJ","F-SJ","M-SJ-U","F-SJ-U"]
+
+[weightclasses.year2020_junior_F]
+    classes = ["43","47","52","57","63","72","84","84+"]
+    date_range=["2011-01-01","2020-12-31"]
+    sex = "F"
+    divisions = ["M-J","F-J","M-J-U","F-J-U","M-SJ","F-SJ","M-SJ-U","F-SJ-U"]
+
+[weightclasses.old_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "M"
+
+[weightclasses.old_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01","2010-12-31"]
+    sex = "F"
+
+[exemptions]
