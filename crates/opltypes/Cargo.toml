@@ -8,7 +8,7 @@ edition = "2021"
 
 [dependencies]
 arrayvec = "0.7"
-ascii = "1.0"
+ascii = "1.1"
 serde = { workspace = true }
 serde_derive = { workspace = true }
 strum = { workspace = true }
