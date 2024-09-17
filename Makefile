@@ -1,5 +1,3 @@
-.PHONY: datadist sqlite check probe-quick probe deploy clean
-
 MEETDATADIR := meet-data
 BUILDDIR := build
 
@@ -7,14 +5,19 @@ DATE := $(shell date '+%Y-%m-%d') # Updated to work on macOS.
 COMMIT := $(shell git rev-parse --short HEAD)
 DATADIR := ${BUILDDIR}/openpowerlifting-${DATE}-${COMMIT}
 
+# Default build target.
+# Compiles all data into CSV files, and builds the server that loads the CSV files.
+.PHONY: all
 all: csv server
 
-# Cram all the data into huge CSV files. New hotness.
+# Combines raw data files into "build/{entries,meets,lifters}.csv".
+.PHONY: csv
 csv:
 	tests/check --compile
 
-# Build the CSV file hosted on the Data page for use by humans.
-# The intention is to make it easy to use for people on Windows.
+# Builds the CSV file hosted on the Data page for use by humans.
+# This is a single huge "build/openpowerlifting.csv" that's intended to be easily used by humans.
+.PHONY: data
 data:
 	tests/check --compile-onefile
 	mkdir -p "${DATADIR}"
@@ -24,35 +27,46 @@ data:
 	rm -f "${BUILDDIR}/openpowerlifting-latest.zip"
 	cd "${BUILDDIR}" && zip -r "openpowerlifting-latest.zip" "openpowerlifting-${DATE}-${COMMIT}"
 
-# Optionally build an SQLite3 version of the database.
+# Builds an SQLite3 version of the database.
+# Nothing in the project uses this file, but it might be interesting for data analysis.
+.PHONY: sqlite
 sqlite: csv
 	scripts/prepare-for-sqlite
 	scripts/compile-sqlite
 
+# Builds the OpenPowerlifting HTTP server.
+.PHONY: server
 server: csv
 	$(MAKE) -C server
 
-# Make sure that all the fields in the CSV files are in expected formats.
+# Makes sure that all the fields in the CSV files are in expected formats.
+.PHONY: check
 check:
 	tests/check --timing
 	tests/check-lifter-data
 
-# Check all the CSV files, but additionally validate the Python scripts too
+# Checks all the CSV files, but additionally validate the Python scripts too
+.PHONY: check-all
 check-all: check
 	tests/check-python-style
 
-# Run all probes in a quick mode that only shows a few pending meets.
+# Runs all probes in a quick mode that only shows a few pending meets.
+.PHONY: probe-quick
 probe-quick:
 	find "${MEETDATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite "{} --quick"
 
-# Run all probes.
+# Runs all probes.
+.PHONY: probe
 probe:
 	find "${MEETDATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite
 
-# Push the current version to the webservers.
+# Pushes the current version to the webservers.
+.PHONY: deploy
 deploy:
 	$(MAKE) -C server/ansible
 
+# Removes all known temporary and build files from the directory tree.
+.PHONY: clean
 clean:
 	rm -rf '${BUILDDIR}'
 	rm -rf 'scripts/__pycache__'
