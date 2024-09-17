@@ -123,8 +123,10 @@ fn decide_best_attempt(first: Attempt, second: Attempt, third: Attempt) -> Attem
 
 fn map_country(country: String) -> String {
     match country.as_str() {
-        "Turkiye" => "Turkey".to_owned(),
+        "Chinese Taipei" => "Taiwan".to_owned(),
         "Great Britain" => "UK".to_owned(),
+        "Turkiye" => "Turkey".to_owned(),
+        "U.S.America" => "USA".to_owned(),
         "United States" => "USA".to_owned(),
         _ => country,
     }
