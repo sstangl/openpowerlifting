@@ -81,6 +81,7 @@
     mm6mp   = {name ="MM6-MP",min=65,max=69,sex="M", equipment="Multi-ply"}
     mm7r   = {name ="MM7-R",min=70,max=74,sex="M", equipment="Raw"}
     mm7rp   = {name ="MM7-RP",min=70,max=74,sex="M", equipment=["Raw","Wraps"]}
+    mm7sp   = {name ="MM7-SP",min=70,max=74,sex="M", equipment="Single-ply"}
     mm8r   = {name ="MM8-R",min=75,max=79,sex="M", equipment="Raw"}
     mm8sp   = {name ="MM8-SP",min=75,max=79,sex="M", equipment="Single-ply"}
     mm8mp   = {name ="MM8-MP",min=75,max=79,sex="M", equipment="Multi-ply"}
@@ -131,7 +132,11 @@
     # for bench-only, in 2024
     moul = {name="MO-UL", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
+    mm5ul = {name="MM5-UL", min=60, max=64, sex="M", equipment="Unlimited", event="B"}
     foul = {name="FO-UL", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
+    fm2ul = {name="FM2-UL", min=45, max=49, sex="F", equipment="Unlimited", event="B"}
+    fm3ul = {name="FM3-UL", min=50, max=54, sex="F", equipment="Unlimited", event="B"}
+
 
     # Some CAPO meets use 10 year Masters
     mm4049r = {name="MM40-49-R",min=40,max=49,sex="M",equipment="Raw"}
