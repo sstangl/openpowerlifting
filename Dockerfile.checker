@@ -1,0 +1,46 @@
+##
+## Create small Docker image with the checker only
+##
+#
+# Local usage:
+# $ docker build -t opl-checker -f Dockerfile.checker .
+# $ docker run --rm --name opl-checker \
+#       -v $PWD/lifter-data:/lifter-data \
+#       -v $PWD/meet-data:/meet-data \
+#       opl-checker
+
+# Build checker binary
+FROM rust:1.81.0-slim AS builder
+
+RUN rustup target add x86_64-unknown-linux-musl
+
+RUN apt-get update -qq && apt-get install -y \
+    build-essential \
+    libjemalloc2 \
+    musl-tools
+
+COPY Cargo.* ./
+COPY checker checker/
+COPY crates crates/
+COPY goodlift-import goodlift-import/
+COPY scripts scripts/
+COPY server server/
+COPY tests tests/
+
+RUN cargo build --release --package checker \
+        --target=x86_64-unknown-linux-musl \
+        --features=jemalloc
+
+# Use smaller image, but include flake8 too
+FROM python:3.12.6-alpine
+
+RUN pip install --no-cache-dir flake8
+
+COPY --from=builder \
+        target/x86_64-unknown-linux-musl/release/checker /usr/bin/
+
+COPY --from=builder scripts/oplcsv.py /usr/bin/
+COPY --from=builder tests/check-lifter-data /usr/bin/
+COPY --from=builder tests/check-python-style /usr/bin/
+
+CMD ["/usr/bin/checker"]

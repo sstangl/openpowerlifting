@@ -2,23 +2,55 @@
 # Disable CI on main for the moment, but allow in MRs: we're running out of minutes.
 workflow:
   rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-      when: never
     - if: $CI_COMMIT_MESSAGE =~ /(WIP:|\[nobuild\]|\[noci\])/
       when: never
     - if: $CI_MERGE_REQUEST_TITLE =~ /(WIP:|\[nobuild\]|\[noci\])/
       when: never
     - when: always
 
-image: rust:slim-buster
+stages:
+  - build
+  - check
+  - deploy
 
-# Test the integrity of the data.
-meet-data:
-  before_script:
-    - apt-get update -qq && apt-get install -y python3-pip
-    - pip3 install flake8
+build-ci-image:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
   script:
-    - make check-all
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${CI_REGISTRY_USER}" "${CI_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
+    - >-
+      /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile.checker"
+      --destination "${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest"
+  rules:
+    - changes:
+      - "**/*.rs"
+      - "**/Cargo.toml"
+      - "Cargo.*"
+      - "scripts/oplcsv.py"
+      - "tests/check-lifter-data"
+      - "tests/check-python-style"
+      # Only build a new checker on the main branch. This means that changes to
+      # Rust code may result in CI failures for yet-to-merge branches.
+      if: $CI_COMMIT_BRANCH == "main"
+
+meet-data:
+  stage: check
+  image: ${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest
+  before_script:
+    - cd ${CI_PROJECT_DIR}
+  script:
+    - opl-checker --project-root ${CI_PROJECT_DIR} --timing
+    - tests/check-lifter-data
+    - tests/check-python-style
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: never
+    - when: always
 
 # Build the data file and run server tests with the current data.
 # Disabled in CI as of 2022-11-01: trying to cut down on minutes.
@@ -38,6 +70,7 @@ meet-data:
 #    - cargo test --workspace --locked
 
 # On success, publish the latest version of the Book to GitLab Pages.
+# Published at https://openpowerlifting.gitlab.io/opl-data/
 pages:
   stage: deploy
   image: rust:latest
@@ -55,5 +88,7 @@ pages:
   artifacts:
     paths:
       - public
-  only:
-    - main
+  rules:
+    - changes:
+      - book/**/*
+      if: $CI_COMMIT_BRANCH == "main"
