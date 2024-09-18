@@ -639,6 +639,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ugandapf")]
     UgandaPF,
 
+    /// UKPU Tested
+    #[strum(to_string = "ukpu-tested")]
+    UKPUTested,
+
     /// UkrainePF, but with international results also.
     #[strum(to_string = "ukrainepf")]
     UkrainePF,
@@ -931,6 +935,7 @@ impl MetaFederation {
                     || (meet.date.year() >= 2024 && affiliation!(meet, entry, APU, WDFPF))
             }
             MetaFederation::AusPLTested => meet.federation == Federation::AusPL && entry.tested,
+            MetaFederation::UKPUTested => meet.federation == Federation::UKPU && entry.tested,
             MetaFederation::AWPC => meet.federation == Federation::WPC && entry.tested,
             MetaFederation::BelPF => affiliation!(meet, entry, BelPF, IPF, EPF),
             MetaFederation::BP => {

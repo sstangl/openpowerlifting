@@ -1303,6 +1303,10 @@ pub enum Federation {
     #[strum(to_string = "UgandaPF", serialize = "ugandapf")]
     UgandaPF,
 
+    /// UK Powerlifting United, WPU
+    #[strum(to_string = "UKPU", serialize = "ukpu")]
+    UKPU,
+
     /// Ukraine Powerlifting Association.
     #[strum(to_string = "UkrainePA", serialize = "ukrainepa")]
     UkrainePA,
@@ -2267,6 +2271,7 @@ impl Federation {
             Federation::UDFPF => FULLY_TESTED,
             Federation::UgandaPA => false,
             Federation::UgandaPF => FULLY_TESTED,
+            Federation::UKPU => false,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
             Federation::UnifiedSA => false,
@@ -2711,6 +2716,7 @@ impl Federation {
             Federation::UPA => Some(Country::USA),
             Federation::UPC => Some(Country::Ukraine),
             Federation::UPCGermany => Some(Country::Germany),
+            Federation::UKPU => Some(Country::UK),
             Federation::UkrainePF => Some(Country::Ukraine),
             Federation::UPL => Some(Country::Ukraine),
             Federation::URPF => Some(Country::Ukraine),
@@ -2895,7 +2901,7 @@ impl Federation {
                 } else {
                     Some(Federation::IPL)
                 }
-            }
+            },
             Federation::AWF => None,
             Federation::BahamasPF => Some(Federation::IPF),
             Federation::BAWLA => Some(Federation::IPF),
@@ -3244,6 +3250,7 @@ impl Federation {
             Federation::UPA => None,
             Federation::UPC => Some(Federation::UPC),
             Federation::UPCGermany => Some(Federation::UPC),
+            Federation::UKPU => None,
             Federation::UkrainePF => Some(Federation::IPF),
             Federation::UPL => Some(Federation::IPL),
             Federation::URPF => Some(Federation::WRPF),
@@ -3803,6 +3810,7 @@ impl Federation {
             Federation::UPA => PointsSystem::Wilks,
             Federation::UPC => PointsSystem::Wilks,
             Federation::UPCGermany => PointsSystem::Glossbrenner,
+            Federation::UKPU => PointsSystem::Dots,
             Federation::UkrainePF => Federation::ipf_rules_on(date),
             Federation::UPL => Federation::ipl_rules_on(date),
             Federation::URPF => PointsSystem::Wilks,

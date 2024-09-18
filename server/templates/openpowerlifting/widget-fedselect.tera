@@ -108,7 +108,9 @@
   <option value="manxpl" {% if selection.federation == "ManxPL" %}selected{% endif %}>ManxPL - Manx Powerlifting [IPF]</option>
   <option value="nipf" {% if selection.federation == "NIPF" %}selected{% endif %}>NIPF - Northern Ireland Powerlifting Federation [IPF]</option>
   <option value="scottishpl" {% if selection.federation == "ScottishPL" %}selected{% endif %}>ScottishPL - Scottish Powerlifting [IPF]</option>
-  <option value="ukipl" {% if selection.federation == "UKIPL" %}selected{% endif %}>UK IPL - [IPL]</option>  
+  <option value="ukipl" {% if selection.federation == "UKIPL" %}selected{% endif %}>UK IPL - [IPL]</option>
+  <option value="ukpu" {% if selection.federation == "UKPU" %}selected{% endif %}>UKPU - UK Powerlifting United</option>
+  <option value="ukpu-tested" {% if selection.federation == "UKPUTested" %}selected{% endif %}>UKPU - UK Powerlifting United Tested</option>
   <option value="welshpa" {% if selection.federation == "WelshPA" %}selected{% endif %}>WelshPA - Welsh Powerlifting Association [IPF]</option>
   <option value="wrpf-uk" {% if selection.federation == "WRPF-UK" %}selected{% endif %}>WRPF UK</option>
 </optgroup>
