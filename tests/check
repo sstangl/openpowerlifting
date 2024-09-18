@@ -21,7 +21,7 @@ else
 fi
 
 # If the system has jemalloc installed, prefer it over the default allocator.
-if [ -f "/usr/lib64/libjemalloc.so.2" ]; then
+if [ -f "/usr/lib64/libjemalloc.so.2" ] || [ -f "/usr/lib/libjemalloc.so.2" ]; then
 	FEATURES="--features=jemalloc"
 else
 	FEATURES=""
