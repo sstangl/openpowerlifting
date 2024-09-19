@@ -27,6 +27,9 @@ struct Args {
     /// Whether the usage information should be printed.
     help: bool,
 
+    /// Sets the path to the project root (containing `meet-data/`).
+    project_root: Option<String>,
+
     /// Prints debug info for a single lifter's Age.
     debug_age_username: Option<String>,
 
@@ -57,6 +60,8 @@ fn is_meetdir(entry: &DirEntry) -> bool {
 }
 
 /// Determines the project root from the binary path.
+///
+/// Users can override this logic by passing a `--project-root` argument.
 fn project_root() -> Result<PathBuf, Box<dyn Error>> {
     const ERR: &str = "project_root() ran out of parent directories";
     Ok(env::current_exe()? // root/target/release/binary
@@ -254,6 +259,7 @@ FLAGS:
     -h, --help               Prints this help information
 
 OPTIONS:
+        --project-root <path>   Sets the path to the project root (containing meet-data/)
         --age <username>        Prints age debug info for the given username
         --age-group <username>  Prints disambugation age debug info for the given username
         --country <username>    Prints country debug info for the given username
@@ -273,6 +279,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Parse the arguments.
     let args = Args {
         help: args.contains(["-h", "--help"]),
+        project_root: args.opt_value_from_str("--project-root")?,
         debug_age_username: args.opt_value_from_str("--age")?,
         debug_age_group_username: args.opt_value_from_str("--age-group")?,
         debug_country_username: args.opt_value_from_str("--country")?,
@@ -291,7 +298,12 @@ fn main() -> Result<(), Box<dyn Error>> {
     let program_start = instant_if(args.debug_timing);
 
     // Get handles to various parts of the project.
-    let project_root = project_root()?;
+    let project_root = if let Some(path_str) = args.project_root {
+        PathBuf::try_from(path_str)?
+    } else {
+        project_root()?
+    };
+
     let meet_data_root = project_root.join("meet-data");
     if !meet_data_root.exists() {
         panic!("Path '{}' does not exist", meet_data_root.to_str().unwrap());
