@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # More helpful division names used starting in 2023.
     am_open = {name="Amateur Open", min=0, max=999, tested="Yes"}

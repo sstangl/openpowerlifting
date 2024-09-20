@@ -1,5 +1,8 @@
 # Configuration for WPC-Portugal.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name="Open", min=0, max=999}
     t10-12 = {name="T 10-12", min=10, max=12}

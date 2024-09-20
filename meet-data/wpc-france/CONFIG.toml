@@ -1,5 +1,8 @@
 # Configuration for the WPC-France.
 
+[options]
+    require_manual_disambiguation = true
+
 # APF specifies equipment in the division.
 [rulesets.default]
     ruleset = ["CombineRawAndWraps"]

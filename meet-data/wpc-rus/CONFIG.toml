@@ -1,7 +1,7 @@
 # Configuration for WPC-RUS
+
 [options]
     require_manual_disambiguation = true
-
 
 [divisions]
     am_open = {name = "Amateur Open", min = 0, max = 999,tested="Yes"}

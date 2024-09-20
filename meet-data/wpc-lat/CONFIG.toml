@@ -1,3 +1,6 @@
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     open = {name = "O", min=0, max=999}
     juniors = {name = "J", min=20, max=23}

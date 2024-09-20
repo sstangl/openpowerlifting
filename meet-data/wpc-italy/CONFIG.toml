@@ -1,5 +1,8 @@
 # Configuration for WPC-Italy.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # Currently unconfigured.
 

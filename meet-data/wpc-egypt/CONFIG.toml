@@ -1,5 +1,8 @@
 # Configuration for WPC-Egypt.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     
 [weightclasses.default_M]

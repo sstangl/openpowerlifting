@@ -1,7 +1,7 @@
 # Configuration for the WPCCP.
+
 [options]
     require_manual_disambiguation = true
-
 
 # Equipment is reported in the Division. For display, just respect Division.
 [rulesets.default]
