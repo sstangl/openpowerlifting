@@ -21,7 +21,7 @@ LANG=en_US.UTF-8 libreoffice --headless --convert-to csv original.xls
 rm -f original.txt
 
 # Parse the CSV to our entries.csv format.
-${SCRIPTDIR}/uspa-xlsx-csv-to-final original.csv > entries.csv
+${SCRIPTDIR}/uspa-xlsx-csv-to-final.py original.csv > entries.csv
 ${REPOSCRIPTDIR}/calc-best-lifts entries.csv
 if [ "$1" != "original.xls" ]; then
 	rm -f original.xls

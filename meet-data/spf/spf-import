@@ -19,7 +19,7 @@ cd "$1"
 echo "$2" > URL
 
 # Import the meet
-${SCRIPTDIR}/spf-parse $2
+${SCRIPTDIR}/spf-parse.py $2
 
 # Commands after this point were extracted into a separate file
 # since they had to be re-run by hand in case of error.

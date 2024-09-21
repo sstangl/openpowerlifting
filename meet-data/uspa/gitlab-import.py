@@ -160,7 +160,7 @@ meetcsv.write_filename("meet.csv")
 # Run our XLSX importation scripts.
 ###############################################################################
 
-res = subprocess.run(["../uspa-xlsx", xlsx_filename])
+res = subprocess.run(["../uspa-xlsx.sh", xlsx_filename])
 if res.returncode == 0:
     os.system("rm " + xlsx_filename)
 

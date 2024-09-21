@@ -53,12 +53,12 @@ check-all: check
 # Runs all probes in a quick mode that only shows a few pending meets.
 .PHONY: probe-quick
 probe-quick:
-	find "${MEETDATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite "{} --quick"
+	find "${MEETDATADIR}" -name "*-probe.py" | sort | parallel --timeout 5m --keep-order --will-cite "{} --quick"
 
 # Runs all probes.
 .PHONY: probe
 probe:
-	find "${MEETDATADIR}" -name "*-probe" | sort | parallel --timeout 5m --keep-order --will-cite
+	find "${MEETDATADIR}" -name "*-probe.py" | sort | parallel --timeout 5m --keep-order --will-cite
 
 # Pushes the current version to the webservers.
 .PHONY: deploy

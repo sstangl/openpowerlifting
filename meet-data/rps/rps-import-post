@@ -15,7 +15,7 @@ REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
 REPOTESTSDIR="${SCRIPTDIR}/../../tests"
 
 # Use RPS-specific knowledge to parse original.csv into entries.csv.
-${SCRIPTDIR}/rps-standardize-csv original.csv > entries.csv
+${SCRIPTDIR}/rps-standardize-csv.py original.csv > entries.csv
 
 # Convert to kg.
 ${REPOSCRIPTDIR}/csv-tokg entries.csv
