@@ -37,7 +37,7 @@ build-checker-image:
   rules:
     # Only build a new checker on the main branch. This means that changes to
     # Rust code may result in CI failures for yet-to-merge branches.
-    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
         paths:
           - "Dockerfile.checker"
@@ -128,7 +128,7 @@ pages:
     paths:
       - public
   rules:
-    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
         paths:
           - book/**/*
