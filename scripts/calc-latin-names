@@ -6,7 +6,11 @@
 
 import oplcsv
 import sys
-import romkan
+
+try:
+    import romkan
+except ImportError:
+    pass  # Safe to ignore if only converting Cyrillic.
 
 # абвгдеёжзийклмнопрстуфхцчшщъьэюя
 
