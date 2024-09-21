@@ -44,7 +44,7 @@ meet-data:
   before_script:
     - cd ${CI_PROJECT_DIR}
   script:
-    - opl-checker --project-root ${CI_PROJECT_DIR} --timing
+    - checker --project-root ${CI_PROJECT_DIR} --timing
     - tests/check-lifter-data
     - tests/check-python-style
   rules:
