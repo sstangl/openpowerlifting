@@ -212,7 +212,7 @@ def combine_header(trs):
 
     # Get the original soup object
     enclosing_soup = trs[0]
-    while type(enclosing_soup) != BeautifulSoup:
+    while not isinstance(enclosing_soup, BeautifulSoup):
         enclosing_soup = enclosing_soup.parent
 
     for ii in range(0, len(trs)):

@@ -26,7 +26,7 @@ def expand_colspans(tr):
 
     # Get the original soup object
     enclosing_soup = tr
-    while type(enclosing_soup) != BeautifulSoup:
+    while not isinstance(enclosing_soup, BeautifulSoup):
         enclosing_soup = enclosing_soup.parent
 
     tds = tr.find_all('td')
