@@ -13,7 +13,7 @@ stages:
   - check
   - deploy
 
-build-ci-image:
+build-checker-image:
   stage: build
   image:
     name: gcr.io/kaniko-project/executor:debug
@@ -28,6 +28,7 @@ build-ci-image:
       --destination "${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest"
   rules:
     - changes:
+      - "Dockerfile.checker"
       - "**/*.rs"
       - "**/Cargo.toml"
       - "Cargo.*"
