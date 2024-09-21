@@ -13,6 +13,14 @@ stages:
   - check
   - deploy
 
+
+###########################################################
+# Build-stage jobs.
+###########################################################
+
+# Creates and publishes a Docker image of the latest version of the checker.
+#
+# This image can be used in "run-checker" jobs in MRs. Building only happens on main.
 build-checker-image:
   stage: build
   image:
@@ -27,19 +35,27 @@ build-checker-image:
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile.checker"
       --destination "${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest"
   rules:
-    - changes:
-      - "Dockerfile.checker"
-      - "**/*.rs"
-      - "**/Cargo.toml"
-      - "Cargo.*"
-      - "scripts/oplcsv.py"
-      - "tests/check-lifter-data"
-      - "tests/check-python-style"
-      # Only build a new checker on the main branch. This means that changes to
-      # Rust code may result in CI failures for yet-to-merge branches.
-      if: $CI_COMMIT_BRANCH == "main"
+    # Only build a new checker on the main branch. This means that changes to
+    # Rust code may result in CI failures for yet-to-merge branches.
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        paths:
+          - "Dockerfile.checker"
+          - "**/*.rs"
+          - "**/Cargo.toml"
+          - "Cargo.*"
+          - "scripts/oplcsv.py" # Support library for check-lifter-data.
+          - "tests/check-lifter-data" # This code should eventually be rewritten into the checker.
 
-meet-data:
+###########################################################
+# Check-stage jobs.
+###########################################################
+
+# Checks that data passes the checker.
+#
+# Note: if this commit is doing both Rust and data changes, it will use the main branch's checker.
+# Using a pre-built checker avoids having to rebuild Rust code, which is expensive.
+run-checker:
   stage: check
   image: ${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest
   before_script:
@@ -47,11 +63,29 @@ meet-data:
   script:
     - checker --project-root ${CI_PROJECT_DIR} --timing
     - tests/check-lifter-data
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      changes:
+        paths: # Note that this doesn't run if the checker itself changes.
+          - "meet-data/**/*.csv" # Run the checker if CSV meet data changed (not just scripts).
+          - "**/CONFIG.toml" # Run the checker if federation configurations changed.
+          - "lifter-data/**/*" # Run the checker if any lifter data changed.
+
+# Checks that Python scripts have an enforced style.
+python-style:
+  stage: check
+  image: python:3.12.6-alpine
+  before_script:
+    - pip install --no-cache-dir flake8
+  script:
     - tests/check-python-style
   rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-      when: never
-    - when: always
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      changes:
+        paths:
+          - "**/*.py" # All Python scripts in meet-data/ must end with ".py".
+          - "scripts/*" # These are mostly python scripts, so safe to check.
+          - "tests/*" # Also mostly python scripts.
 
 # Build the data file and run server tests with the current data.
 # Disabled in CI as of 2022-11-01: trying to cut down on minutes.
@@ -69,6 +103,10 @@ meet-data:
 #    - make csv
 #    - make -C server checkprerequisites
 #    - cargo test --workspace --locked
+
+###########################################################
+# Deploy-stage jobs.
+###########################################################
 
 # On success, publish the latest version of the Book to GitLab Pages.
 # Published at https://openpowerlifting.gitlab.io/opl-data/
@@ -90,6 +128,7 @@ pages:
     paths:
       - public
   rules:
-    - changes:
-      - book/**/*
-      if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        paths:
+          - book/**/*

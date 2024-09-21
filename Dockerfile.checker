@@ -31,16 +31,14 @@ RUN cargo build --release --package checker \
         --target=x86_64-unknown-linux-musl \
         --features=jemalloc
 
-# Use smaller image, but include flake8 too
+# Use a smaller base image for the final image.
+# TODO: Once check-lifter-data is folded into the checker proper, this can be stock alpine.
 FROM python:3.12.6-alpine
-
-RUN pip install --no-cache-dir flake8
 
 COPY --from=builder \
         target/x86_64-unknown-linux-musl/release/checker /usr/bin/
 
 COPY --from=builder scripts/oplcsv.py /usr/bin/
 COPY --from=builder tests/check-lifter-data /usr/bin/
-COPY --from=builder tests/check-python-style /usr/bin/
 
 CMD ["/usr/bin/checker"]
