@@ -329,7 +329,7 @@ fn meet(
     let referring_username =
         referring_path.and_then(|s| s.strip_prefix("/u/").map(ToString::to_string));
 
-    let meet_id = opldb.meet_id(meetpath_str)?;
+    let meet_id = opldb.meet_id(str::replace(meetpath_str, "\\", "/").as_str())?;
     let locale = make_locale(lang, languages, cookies);
     let use_ipf_equipment = false;
     let context = pages::meet::Context::new(
