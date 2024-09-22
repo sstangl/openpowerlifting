@@ -519,6 +519,7 @@
     fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="F"} #Youth
     fgemwpc = {name ="F_GEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",place="G"} #Guest
     fpfcrwpc = {name ="F_PFCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="No"} #Police/Fire
+    fpfrwpc = {name ="F_PFR_WPC",min=0,max=999,equipment="Raw",sex="F",tested="No"} #Police/Fire
 
     # AWPC Divisions.
     morawpc = {name ="M_OR_AWPC",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
