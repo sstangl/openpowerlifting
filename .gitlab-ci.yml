@@ -74,9 +74,9 @@ run-checker:
 # Checks that Python scripts have an enforced style.
 python-style:
   stage: check
-  image: python:3.12.6-alpine
-  before_script:
-    - pip install --no-cache-dir flake8
+  image:
+    name: alpine/flake8
+    entrypoint: [""]
   script:
     - tests/check-python-style
   rules:
