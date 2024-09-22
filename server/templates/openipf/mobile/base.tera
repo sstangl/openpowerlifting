@@ -50,7 +50,7 @@
         <a href="https://openpowerlifting.gitlab.io/opl-csv/" class="nav__link_mobile">{{strings.header.data}}</a>
         <a href="https://www.plsource.org" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.apps}}</a>
         <a href="https://openpowerlifting.bigcartel.com" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.shop}}</a>
-        <a href="{{urlprefix | safe}}contact" class="nav__link_mobile">{{strings.header.contact}}</a>
+        <a href="https://gitlab.com/openpowerlifting/opl-data/-/issues/new" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.contact}}</a>
         <a href="https://www.patreon.com/join/openpowerlifting" class="nav__link_mobile" rel="noopener" target="_blank">{{strings.header.supportus}}</a>
         <a href="https://instagram.com/openipf/" class="nav__link_mobile" rel="noopener" target="_blank"><i class="iglogo"></i></a>
 
