@@ -3,7 +3,7 @@
 # The USAPL is in such a bad state that it makes sense to partially-configure it.
 [options]
     valid_since = "2017-07-01"
-	require_manual_disambiguation = true
+    require_manual_disambiguation = true
 
 [divisions]
     # Official division names are as described in an email from the USAPL
@@ -785,3 +785,4 @@
     NM-2024-02 = ["ExemptDivision"]
     MI-2024-05 = ["ExemptDivision"]
     AZ-2024-02 = ["ExemptDivision"]
+    ENG-2024-04 = ["ExemptDivision"]
