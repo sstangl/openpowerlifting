@@ -330,7 +330,7 @@
     mmr3acpf = {name ="M_MR_3_ACP",min=50,max=54,equipment="Raw",sex="M",tested="Yes"}
     mmcr3acpf = {name ="M_MCR_3_ACP",min=50,max=54,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms3acpf = {name ="M_MES_3_ACP",min=50,max=54,equipment="Single-ply",sex="M",tested="Yes"}
-    mmm3acpf = {name ="M_MEM_3_ACP",min=50,max=54,equipment="Multi-ply",sex="M",tested="Yes"}
+    mmm3acpf = {name ="M_MEM_3_ACP",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr4acpf = {name ="M_MR_4_ACP",min=55,max=59,equipment="Raw",sex="M",tested="Yes"}
     mmcr4acpf = {name ="M_MCR_4_ACP",min=55,max=59,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms4acpf = {name ="M_MES_4_ACP",min=55,max=59,equipment="Single-ply",sex="M",tested="Yes"}
