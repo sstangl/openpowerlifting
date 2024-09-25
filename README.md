@@ -49,30 +49,19 @@ the changes back so the entire powerlifting community may benefit.
 
 ## Development Installation
 
-### Fedora 31
+### Fedora 40
 
 Install dependencies:
 
 ```bash
-sudo dnf install make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js jemalloc
+sudo dnf install rust make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js jemalloc
 ```
-
-Install the Rust programming language using `rustup`:
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-The default options are OK.
-
-Log out and log back in to allow `~/.cargo/bin` to be part of your default shell `$PATH`.
 
 Build the project and run the server:
 
 ```bash
 make
-cd server
-cargo run --release
+cargo run --release --bin server
 ```
 
 ### Ubuntu 20.04 LTS (Focal)
