@@ -861,6 +861,11 @@ pub enum Federation {
     LPF,
 
     /// Unaffiliated meets held in Malaysia.
+    #[serde(rename = "Madagascar-UA")]
+    #[strum(to_string = "Madagascar-UA", serialize = "madagascar-ua")]
+    MadagascarUA,
+
+    /// Unaffiliated meets held in Malaysia.
     #[serde(rename = "Malaysia-UA")]
     #[strum(to_string = "Malaysia-UA", serialize = "malaysia-ua")]
     MalaysiaUA,
@@ -2158,6 +2163,7 @@ impl Federation {
             Federation::LJTF => FULLY_TESTED,
             Federation::LMP => false,
             Federation::LPF => FULLY_TESTED,
+            Federation::MadagascarUA => false,
             Federation::MalaysiaUA => false,
             Federation::MaltaPA => FULLY_TESTED,
             Federation::ManxPL => FULLY_TESTED,
@@ -2604,6 +2610,7 @@ impl Federation {
             Federation::LJTF => Some(Country::Lithuania),
             Federation::LMP => Some(Country::Mexico),
             Federation::LPF => Some(Country::Latvia),
+            Federation::MadagascarUA => Some(Country::Madagascar),
             Federation::MalaysiaUA => Some(Country::Malaysia),
             Federation::MaltaPA => Some(Country::Malta),
             Federation::ManxPL => Some(Country::IsleOfMan),
@@ -3117,6 +3124,7 @@ impl Federation {
             Federation::LJTF => Some(Federation::IPF),
             Federation::LMP => Some(Federation::IPL),
             Federation::LPF => Some(Federation::IPF),
+            Federation::MadagascarUA => None,
             Federation::MalaysiaUA => None,
             Federation::MaltaPA => Some(Federation::IPF),
             Federation::ManxPL => Some(Federation::IPF),
@@ -3677,6 +3685,7 @@ impl Federation {
             Federation::LJTF => Federation::ipf_rules_on(date),
             Federation::LMP => Federation::ipl_rules_on(date),
             Federation::LPF => Federation::ipf_rules_on(date),
+            Federation::MadagascarUA => PointsSystem::Dots,
             Federation::MalaysiaUA => PointsSystem::Wilks,
             Federation::MaltaPA => Federation::ipf_rules_on(date),
             Federation::ManxPL => Federation::ipf_rules_on(date),

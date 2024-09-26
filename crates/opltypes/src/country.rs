@@ -142,6 +142,7 @@ pub enum Country {
     Libya,
     Lithuania,
     Luxembourg,
+    Madagascar,
     Malaysia,
     Mali,
     Malta,
