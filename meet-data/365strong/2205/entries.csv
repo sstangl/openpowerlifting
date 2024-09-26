@@ -24,8 +24,8 @@ Place,Name,Sex,BirthDate,Age,State,Equipment,Division,BodyweightKg,WeightClassKg
 1,Katy Silvers,F,,40,NC,Raw,M1-T,109.9,110,,,,,,60,70,-75,,70,145,160,167.5,,167.5,237.5,BD
 1,Katy Silvers,F,,40,NC,Raw,O-T,109.9,110,,,,,,60,70,-75,,70,145,160,167.5,,167.5,237.5,BD
 1,Christina Lauffer,F,,43,TN,Single-ply,M1-U,80.4,82.5,,,,,,100,115,-120,,115,127.5,140,-142.5,,140,255,BD
-1,Anika Harper,F,,42,NC,Single-ply,M1-U,86.6,90,,,,,,95,107.5,-110,,107.5,145,152.5,-162.5,,152.5,260,BD
-1,Anika Harper,F,,42,NC,Single-ply,O-U,86.6,90,,,,,,95,107.5,-110,,107.5,145,152.5,-162.5,,152.5,260,BD
+1,Anika Harper,F,,42,NC,Single-ply,M1-T,86.6,90,,,,,,95,107.5,-110,,107.5,145,152.5,-162.5,,152.5,260,BD
+1,Anika Harper,F,,42,NC,Single-ply,O-T,86.6,90,,,,,,95,107.5,-110,,107.5,145,152.5,-162.5,,152.5,260,BD
 1,Melissa Smith #1,F,,47,NC,Unlimited,M2-T,64.1,67.5,,,,,,95,120,125,,125,145,157.5,-167.5,,157.5,282.5,BD
 1,Shelley Yates,F,,46,NC,Unlimited,M2-U,90.1,100,,,,,,127.5,157.5,170,,170,175,192.5,-207.5,,192.5,362.5,BD
 1,Melissa Smith #1,F,,47,NC,Unlimited,O-T,64.1,67.5,,,,,,95,120,125,,125,145,157.5,-167.5,,157.5,282.5,BD
@@ -40,21 +40,21 @@ Place,Name,Sex,BirthDate,Age,State,Equipment,Division,BodyweightKg,WeightClassKg
 1,Janet Martin #1,F,,53,NC,Raw,M3-T,113.7,110+,,,,,,60,65,70,-75.5,70,,,,,,70,B
 1,Katy Silvers,F,,40,NC,Raw,M1-T,109.9,110,,,,,,60,70,-75,,70,,,,,,70,B
 1,Katy Silvers,F,,40,NC,Raw,O-T,109.9,110,,,,,,60,70,-75,,70,,,,,,70,B
-1,Anika Harper,F,,42,NC,Single-ply,M1-U,86.6,90,,,,,,95,107.5,-110,,107.5,,,,,,107.5,B
+1,Anika Harper,F,,42,NC,Single-ply,M1-T,86.6,90,,,,,,95,107.5,-110,,107.5,,,,,,107.5,B
 1,Cindy Meeker,F,,61,NC,Single-ply,M5-T,74.6,75,,,,,,92.5,95,-97.5,,95,,,,,,95,B
 1,Cindy Meeker,F,,61,NC,Single-ply,O-T,74.6,75,,,,,,92.5,95,-97.5,,95,,,,,,95,B
-1,Anika Harper,F,,42,NC,Single-ply,O-U,86.6,90,,,,,,95,107.5,-110,,107.5,,,,,,107.5,B
+1,Anika Harper,F,,42,NC,Single-ply,O-T,86.6,90,,,,,,95,107.5,-110,,107.5,,,,,,107.5,B
 1,Melissa Smith #1,F,,47,NC,Unlimited,M2-T,64.1,67.5,,,,,,95,120,125,,125,,,,,,125,B
 1,Shelley Yates,F,,46,NC,Unlimited,M2-U,90.1,100,,,,,,127.5,157.5,170,,170,,,,,,170,B
 1,Melissa Smith #1,F,,47,NC,Unlimited,O-T,64.1,67.5,,,,,,95,120,125,,125,,,,,,125,B
 1,Shelley Yates,F,,46,NC,Unlimited,O-U,90.1,100,,,,,,127.5,157.5,170,,170,,,,,,170,B
-1,Anika Harper,F,,42,NC,Raw,M1-U,86.5,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
+1,Anika Harper,F,,42,NC,Raw,M1-T,86.5,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
 1,Janet Martin #1,F,,53,NC,Raw,M3-T,113.7,110+,,,,,,,,,,,150,162.5,-166,,162.5,162.5,D
 1,Cindy Meeker,F,,61,NC,Raw,M5-T,74.6,75,,,,,,,,,,,128,129,,,129,129,D
 1,Cindy Meeker,F,,61,NC,Raw,O-T,74.6,75,,,,,,,,,,,128,129,,,129,129,D
-1,Anika Harper,F,,42,NC,Raw,O-U,86.5,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
-1,Anika Harper,F,,42,NC,Single-ply,M1-U,86.6,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
-1,Anika Harper,F,,42,NC,Single-ply,O-U,86.6,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
+1,Anika Harper,F,,42,NC,Raw,O-T,86.5,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
+1,Anika Harper,F,,42,NC,Single-ply,M1-T,86.6,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
+1,Anika Harper,F,,42,NC,Single-ply,O-T,86.6,90,,,,,,,,,,,145,152.5,-162.5,,152.5,152.5,D
 1,Melissa Smith #1,F,,47,NC,Unlimited,M2-T,64.1,67.5,,,,,,,,,,,145,157.5,-167.5,,157.5,157.5,D
 1,Shelley Yates,F,,46,NC,Unlimited,M2-U,90.1,100,,,,,,,,,,,175,192.5,-207.5,,192.5,192.5,D
 1,Melissa Smith #1,F,,47,NC,Unlimited,O-T,64.1,67.5,,,,,,,,,,,145,157.5,-167.5,,157.5,157.5,D
