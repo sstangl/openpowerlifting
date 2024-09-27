@@ -8,6 +8,21 @@ def separate_original(
     meet_output_path='meet.csv',
     entries_output_path='entries.csv'
 ):
+    # use this where the blank lines aren't supposed to
+    # be in what we're reading
+    def readline_skip_blank(f):
+        while True:
+            line = f.readline().strip()
+            if line != "":
+                return line
+            
+    # as above but for iterating over the file
+    def inter_lines_skip_blank(f):
+        for line in f:
+            line = line.strip()
+            if line != "":
+                yield line
+
     def strip_dblquote(s):
         return s.replace('"', '')
 
@@ -22,20 +37,20 @@ def separate_original(
         _ = input_f.readline()
 
         with open(meet_output_path, 'wt') as meet_output_f:
-            meet_header = strip_dblquote(input_f.readline().strip())
+            meet_header = strip_dblquote(readline_skip_blank(input_f))
             meet_output_f.write(f"{meet_header}\n")
 
-            meet_data = strip_dblquote(input_f.readline().strip())
+            meet_data = strip_dblquote(readline_skip_blank(input_f))
             meet_output_f.write(f"{meet_data}\n")
 
         # blank line, then entries.csv content
         _ = input_f.readline()
 
         with open(entries_output_path, 'wt') as entries_output_f:
-            entries_header = strip_dblquote(input_f.readline().strip())
+            entries_header = strip_dblquote(readline_skip_blank(input_f))
             entries_output_f.write(f"{entries_header}\n")
 
-            for entries_data_line in input_f:
+            for entries_data_line in inter_lines_skip_blank(input_f):
                 entries_data_line = strip_dblquote(entries_data_line.strip())
                 entries_output_f.write(f"{entries_data_line}\n")
 
