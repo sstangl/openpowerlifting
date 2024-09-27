@@ -56,6 +56,7 @@
   <option value="lhspla" {% if selection.federation == "LHSPLA" %}selected{% endif %}>LHSPLA - Louisiana High School Powerlifting Association</option>
   <option value="mhspla" {% if selection.federation == "MHSPLA" %}selected{% endif %}>MHSPLA - Michigan High School Powerlifting Association</option>
   <option value="mm" {% if selection.federation == "MM" %}selected{% endif %}>MM - Metal Militia</option>
+  <option value="plu" {% if selection.federation == "PLU" %}selected{% endif %}>PLU - Powerlifting United</option>
   <option value="pride" {% if selection.federation == "PRIDE" %}selected{% endif %}>PRIDE - Pride Powerlifting</option>
   <option value="npl" {% if selection.federation == "NPL" %}selected{% endif %}>NPL - National Powerlifting League</option>
   <option value="nasa" {% if selection.federation == "NASA" %}selected{% endif %}>NASA - Natural Athlete Strength Association (2016+)</option>
