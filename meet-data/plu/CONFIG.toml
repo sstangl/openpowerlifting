@@ -1,0 +1,35 @@
+# Configuration for Powerlifting United, forked from WRPF-USA.
+
+[options]
+require_manual_disambiguation = true
+
+[divisions]
+	open = {name="Open", min=13, max=999}
+
+	# OpenLifter-style divisions.
+	j13_15 = {name="J13-15", min=13, max=15}
+	j16_17 = {name="J16-17", min=16, max=17}
+	j18_19 = {name="J18-19", min=18, max=19}
+	j20_23 = {name="J20-23", min=20, max=23}
+	s35_39 = {name="S35-39", min=35, max=39}
+	m40_44 = {name="M40-44", min=40, max=44}
+	m45_49 = {name="M45-49", min=45, max=49}
+	m50_54 = {name="M50-54", min=50, max=54}
+	m55_59 = {name="M55-59", min=55, max=59}
+	m60_64 = {name="M60-64", min=60, max=64}
+	m65_69 = {name="M65-69", min=65, max=69}
+	m70_74 = {name="M70-74", min=70, max=74}
+	m75_79 = {name="M75-79", min=75, max=79}
+	m80p = {name="M80+", min=80, max=999}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]
