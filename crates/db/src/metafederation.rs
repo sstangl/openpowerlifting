@@ -291,6 +291,10 @@ pub enum MetaFederation {
     #[strum(to_string = "bpu")]
     BPU,
 
+    /// BulgarianPF, but with international results also.
+    #[strum(to_string = "bulgarianpf")]
+    BulgarianPF,
+
     /// BVDK, but with international results also.
     #[strum(to_string = "bvdk")]
     BVDK,
@@ -970,6 +974,7 @@ impl MetaFederation {
                         && entry.lifter_country.map_or(false, |c| c.is_in_uk())
                         && meet.date.year() >= 2013)
             }
+            MetaFederation::BulgarianPF => affiliation!(meet, entry, BulgarianPF, IPF, EPF),
             MetaFederation::BVDK => match meet.federation {
                 // BVDG is the precursor to the BVDK.
                 Federation::BVDG | Federation::BVDK => {
