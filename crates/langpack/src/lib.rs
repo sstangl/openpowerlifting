@@ -590,6 +590,7 @@ pub struct FedSelectorTranslations {
     pub all_panama: &'static str,
     pub all_papuanewguinea: &'static str,
     pub all_paraguay: &'static str,
+    pub all_peru: &'static str,
     pub all_philippines: &'static str,
     pub all_poland: &'static str,
     pub all_portugal: &'static str,

@@ -37,6 +37,7 @@
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO / {{strings.country.argentina}}</option>
   <option value="fapl" {% if selection.federation == "FAPL" %}selected{% endif %}>FAPL / {{strings.country.algeria}}</option>
   <option value="fcp" {% if selection.federation == "FCP" %}selected{% endif %}>FCP / {{strings.country.portugal}}</option>
+  <option value="fdnlp" {% if selection.federation == "FDNLP" %}selected{% endif %}>FDNLP / {{strings.country.peru}}</option>
   <option value="fecapolif" {% if selection.federation == "FECAPOLIF" %}selected{% endif %}>FECAPOLIF / {{strings.country.cameroon}}</option>
   <option value="fechipo" {% if selection.federation == "FECHIPO" %}selected{% endif %}>FECHIPO / {{strings.country.chile}}</option>
   <option value="fedepotencia" {% if selection.federation == "Fedepotencia" %}selected{% endif %}>Fedepotencia / {{strings.country.guatemala}}</option>

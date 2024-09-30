@@ -508,6 +508,10 @@
   <option value="all-paraguay" {% if selection.federation == "AllParaguay" %}selected{% endif %}>{{strings.selectors.fed.all_paraguay}}</option>
   <option value="app" {% if selection.federation == "APP" %}selected{% endif %}>APP - Alianza Paraguaya de Powerlifting [GPA]</option>
 </optgroup>
+<optgroup label="{{strings.country.peru}}">
+  <option value="all-peru" {% if selection.federation == "AllPeru" %}selected{% endif %}>{{strings.selectors.fed.all_peru}}</option>
+  <option value="fdnlp" {% if selection.federation == "FDNLP" %}selected{% endif %}>FDNLP - Federación Deportiva Nacional de Levantamiento de Potencia [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.philippines}}">
   <option value="all-philippines" {% if selection.federation == "AllPhilippines" %}selected{% endif %}>{{strings.selectors.fed.all_philippines}}</option>
   <option value="pap" {% if selection.federation == "PAP" %}selected{% endif %}>PAP - Powerlifting Association of the Philippines [IPF]</option>

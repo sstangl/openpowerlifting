@@ -161,6 +161,8 @@ pub enum MetaFederation {
     AllPanama,
     #[strum(to_string = "all-paraguay")]
     AllParaguay,
+    #[strum(to_string = "all-peru")]
+    AllPeru,
     #[strum(to_string = "all-philippines")]
     AllPhilippines,
     #[strum(to_string = "all-poland")]
@@ -346,6 +348,10 @@ pub enum MetaFederation {
     /// FCP, but with international results also
     #[strum(to_string = "fcp")]
     FCP,
+
+    /// FDNLP, but with international results also
+    #[strum(to_string = "fdnlp")]
+    FDNLP,
 
     /// FECAPOLIF, but with international results also.
     #[strum(to_string = "fecapolif")]
@@ -995,6 +1001,7 @@ impl MetaFederation {
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
             MetaFederation::FAPL => affiliation!(meet, entry, FAPL, IPF, AfricanPF),
             MetaFederation::FCP => affiliation!(meet, entry, FCP, IPF, EPF),
+            MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
