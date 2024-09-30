@@ -387,7 +387,7 @@ pub enum Federation {
     #[strum(to_string = "FCA", serialize = "fca")]
     FCA,
 
-    ///Federacao De Culturismo Epowerlifting De Portugal, Portuguese IPF Affiliate
+    /// Federacao De Culturismo Epowerlifting De Portugal, Portuguese IPF Affiliate.
     #[strum(to_string = "FCP", serialize = "fcp")]
     FCP,
 
@@ -395,7 +395,7 @@ pub enum Federation {
     #[strum(to_string = "FCST", serialize = "fcst")]
     FCST,
 
-    ///Federación Deportiva Nacional de Levantamiento de Potencia, Peruvian IPF Affiliate
+    /// Federación Deportiva Nacional de Levantamiento de Potencia, Peruvian IPF Affiliate.
     #[strum(to_string = "FDNLP", serialize = "fdnlp")]
     FDNLP,
 
@@ -2513,7 +2513,7 @@ impl Federation {
             Federation::FCA => Some(Country::USA),
             Federation::FCP => Some(Country::Portugal),
             Federation::FCST => Some(Country::Czechia),
-            Federation::FDNLP => Some(Country::Peru),            
+            Federation::FDNLP => Some(Country::Peru),
             Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FECHIPO => Some(Country::Chile),
             Federation::Fedepotencia => Some(Country::Guatemala),
@@ -2920,7 +2920,7 @@ impl Federation {
                 } else {
                     Some(Federation::IPL)
                 }
-            },
+            }
             Federation::AWF => None,
             Federation::BahamasPF => Some(Federation::IPF),
             Federation::BAWLA => Some(Federation::IPF),

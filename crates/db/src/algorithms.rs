@@ -376,7 +376,10 @@ pub fn entry_indices_for<'db>(
 
                         // BirthYear-based classes.
                         SubJuniorsY14Y18 => byclass == BirthYearClass::ClassY14Y18,
-                        JuniorsY14Y23 => byclass == BirthYearClass::ClassY19Y23 || byclass == BirthYearClass::ClassY14Y18,
+                        JuniorsY14Y23 => {
+                            byclass == BirthYearClass::ClassY19Y23
+                                || byclass == BirthYearClass::ClassY14Y18
+                        }
                         SeniorsY24Y39 => byclass == BirthYearClass::ClassY24Y39,
                         MastersOverY40 => byclass >= BirthYearClass::ClassY40Y49,
                         MastersOverY50 => byclass >= BirthYearClass::ClassY50Y59,

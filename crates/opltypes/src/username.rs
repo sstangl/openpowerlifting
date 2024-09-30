@@ -74,7 +74,10 @@ impl Username {
 
         // CJK characters have no canonical ASCII representation, so we use a number.
         let writing_system = infer_writing_system(name);
-        if matches!(writing_system, WritingSystem::Japanese | WritingSystem::CJK | WritingSystem::Korean) {
+        if matches!(
+            writing_system,
+            WritingSystem::Japanese | WritingSystem::CJK | WritingSystem::Korean
+        ) {
             let ea_id: String = name
                 .chars()
                 .filter(|c| !c.is_whitespace())
