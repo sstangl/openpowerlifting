@@ -64,7 +64,8 @@ run-checker:
     - checker --project-root ${CI_PROJECT_DIR} --timing
     - tests/check-lifter-data
   rules:
-    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    # Build on any branch off main. This explicitly allows for checks to run prior to MR creation.
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       changes:
         paths: # Note that this doesn't run if the checker itself changes.
           - "meet-data/**/*.csv" # Run the checker if CSV meet data changed (not just scripts).
@@ -80,7 +81,8 @@ python-style:
   script:
     - tests/check-python-style
   rules:
-    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    # Build on any branch off main. This explicitly allows for checks to run prior to MR creation.
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       changes:
         paths:
           - "**/*.py" # All Python scripts in meet-data/ must end with ".py".
