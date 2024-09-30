@@ -857,6 +857,7 @@ impl MetaFederation {
             MetaFederation::AllPanama => is_from(Country::Panama, entry, meet),
             MetaFederation::AllPapuaNewGuinea => is_from(Country::PapuaNewGuinea, entry, meet),
             MetaFederation::AllParaguay => is_from(Country::Paraguay, entry, meet),
+            MetaFederation::AllPeru => is_from(Country::Peru, entry, meet),
             MetaFederation::AllPhilippines => is_from(Country::Philippines, entry, meet),
             MetaFederation::AllPoland => is_from(Country::Poland, entry, meet),
             MetaFederation::AllPortugal => is_from(Country::Portugal, entry, meet),
