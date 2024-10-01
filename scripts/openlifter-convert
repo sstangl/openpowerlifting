@@ -15,7 +15,7 @@ def separate_original(
             line = f.readline().strip()
             if line != "":
                 return line
-            
+
     # as above but for iterating over the file
     def inter_lines_skip_blank(f):
         for line in f:
