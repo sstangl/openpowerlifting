@@ -17,7 +17,7 @@
     guest = {name = "Guest", min = 0, max = 999} 
 
 
-	# OpenLifter-style divisions.
+	# OpenLifter-style divisions, untested or ambiguous.
 	j8_9 = {name="J8-9", min=8, max=9}
 	j10_11 = {name="J10-11", min=10, max=11}
 	j12_13 = {name="J12-13", min=12, max=13}
@@ -34,6 +34,26 @@
 	m70_74 = {name="M70-74", min=70, max=74}
 	m75_79 = {name="M75-79", min=75, max=79}
 	m80p = {name="M80+", min=80, max=999}
+
+    # OpenLifter-style divisions, but tested.
+    opent = {name = "OpenT", min = 0, max = 999, tested="Yes"}
+    j8_9t = {name="J8-9T", min=8, max=9, tested="Yes"}
+    j10_11t = {name="J10-11T", min=10, max=11, tested="Yes"}
+    j12_13t = {name="J12-13T", min=12, max=13, tested="Yes"}
+    j14_16t = {name="J14-16T", min=14, max=16, tested="Yes"}
+    j17_19t = {name="J17-19T", min=17, max=19, tested="Yes"}
+    j20_23t = {name="J20-23T", min=20, max=23, tested="Yes"}
+    s35_39t = {name="S35-39T", min=35, max=39, tested="Yes"}
+    m40_44t = {name="M40-44T", min=40, max=44, tested="Yes"}
+    m45_49t = {name="M45-49T", min=45, max=49, tested="Yes"}
+    m50_54t = {name="M50-54T", min=50, max=54, tested="Yes"}
+    m55_59t = {name="M55-59T", min=55, max=59, tested="Yes"}
+    m60_64t = {name="M60-64T", min=60, max=64, tested="Yes"}
+    m65_69t = {name="M65-69T", min=65, max=69, tested="Yes"}
+    m70_74t = {name="M70-74T", min=70, max=74, tested="Yes"}
+    m75_79t = {name="M75-79T", min=75, max=79, tested="Yes"}
+    m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
+
 
 	# Extra divisions that keep popping up since 2022.
 	j16_17 = {name="J16-17", min=16, max=17}
@@ -97,3 +117,4 @@
    2306 = ["ExemptDivision"] # Pro/Amateur
    23c7 = ["ExemptWeightClassConsistency"] # Used old F weightclasses.
    2447 = ["ExemptWeightClassConsistency"] # Used a 0+ class.
+   24b6 = ["ExemptDivision"] # Pro/Am
