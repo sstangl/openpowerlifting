@@ -3,6 +3,7 @@
 [divisions]
 open = { name="Open", min=0, max=999 }
 j18-23 = { name="J18-23", min=18, max=23 }
+j19-23 = { name="J19-23", min=19, max=23 }
 
 mo = {name="M-O", min=0, max=999, sex="M"}
 mbl = {name="M-BL", min=0, max=999, sex="M"}
