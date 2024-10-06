@@ -26,6 +26,7 @@
     m70_74 = {name="M70-74", min=70, max=74}
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
+    special = {name="SO", min=0, max=999} #Special Olympics
 
     # Tested divisions.
     opent = {name="OpenT", min=13, max=999, tested="Yes"}
@@ -44,6 +45,7 @@
     m70_74t = {name="M70-74T", min=70, max=74, tested="Yes"}
     m75_79t = {name="M75-79T", min=75, max=79, tested="Yes"}
     m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
+    specialt = {name="SOT", min=0, max=999, tested="Yes"} #Special Olympics
 
 [weightclasses.default_M] # Men and women have the same classes.
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
