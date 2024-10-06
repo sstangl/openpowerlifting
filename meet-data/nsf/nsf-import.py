@@ -101,7 +101,6 @@ def getresults(soup):
 
     # Get column information.
     headers = [x.text for x in trs[0].find_all('td')]
-
     csv.fieldnames = []
     for h in headers:
         if h == '#':
@@ -124,6 +123,8 @@ def getresults(soup):
             csv.fieldnames += ['TotalKg']
         elif h == 'Poeng':
             csv.fieldnames += ['Wilks']
+        elif h == '':
+            None
         else:
             error("Unknown column name: \"%s\"" % h)
 
@@ -170,12 +171,13 @@ def getresults(soup):
             row = []
             for td in tr.find_all('td'):
                 text = td.text
-                c = td.get('class')
-                if c and 'underkjent' in c:  # Failed lift.
-                    text = '-' + text
-                if c and 'ikke_loftet' in c:  # Skipped lift.
-                    text = ''
-                row.append(text.strip().replace('  ', ' ').replace(',', ' '))
+                if not text == 'Diplom':
+                    c = td.get('class')
+                    if c and 'underkjent' in c:  # Failed lift.
+                        text = '-' + text
+                    if c and 'ikke_loftet' in c:  # Skipped lift.
+                        text = ''
+                    row.append(text.strip().replace('  ', ' ').replace(',', ' '))
 
             row = row + [divstate, sexstate]
             csv.rows += [row]
