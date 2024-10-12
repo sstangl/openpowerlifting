@@ -1,7 +1,7 @@
 Place,Name,Sex,BirthDate,Age,Country,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Event,Team
 1,Selena Medina,F,2008-07-24,,Argentina,Sleeves,J14-16,72,75,85,-90,-90,,85,40,-45,-45,,40,95,-105,-105,,95,220,SBD,FENIX
 1,Emely Sanelli,F,2005-11-11,,Argentina,Sleeves,J17-19,52,52,85,87.5,92.5,,92.5,-45,45,-47.5,,45,-110,110,117.5,,117.5,255,SBD,Clover team
-1,Maria Pia Seifer,F,2006-05-30,,Argentina,Sleeves,J17-19,52.3,56,85,90,-95,,90,45,-50,-50,,45,140,-150,150,155,150,285,SBD,Polux
+1,María Pía Seifer,F,2006-05-30,,Argentina,Sleeves,J17-19,52.3,56,85,90,-95,,90,45,-50,-50,,45,140,-150,150,155,150,285,SBD,Polux
 1,Paloma Pedraza,F,2006-08-13,,Argentina,Sleeves,J17-19,59.8,60,87.5,95,97.5,,97.5,50,52.5,-55,,52.5,100,-110,-110,,100,250,SBD,Gimnasio fenix
 1,Melanie Gudiño,F,2005-06-08,,Argentina,Sleeves,J17-19,67.7,75,137.5,-145,-145,,137.5,70,-75,-75,,70,135,150,162.5,165,162.5,370,SBD,gymspace
 1,Valentina Velazquez,F,2006-03-23,,Argentina,Sleeves,J17-19,100.5,110,145,150,155,160,155,-57.5,60,-65,,60,137.5,142.5,150,-158,150,365,SBD,Bull squat
@@ -17,7 +17,7 @@ DQ,Ludmila Esquivel,F,2002-10-21,,Argentina,Sleeves,J20-23,80.6,82.5,147.5,155,-
 2,Jessica Chaparro,F,1992-07-09,,Argentina,Sleeves,Open,51,52,90,-92.5,-92.5,,90,50,52.5,55,,55,115,120,125,,125,270,SBD,Nm-training center
 3,Rocío Diaz,F,2000-05-30,,Argentina,Sleeves,Open,50.3,52,87.5,95,-100,,95,50,-55,55,,55,105,110,-117.5,,110,260,SBD,Polux
 4,Camila Miranda,F,1994-05-01,,Argentina,Sleeves,Open,50.9,52,90,97.5,-102.5,,97.5,42.5,47.5,-50,,47.5,100,107.5,112.5,,112.5,257.5,SBD,Caniche gym
-1,Maria Pia Seifer,F,2006-05-30,,Argentina,Sleeves,Open,52.3,56,85,90,-95,,90,45,-50,-50,,45,140,-150,150,155,150,285,SBD,Polux
+1,María Pía Seifer,F,2006-05-30,,Argentina,Sleeves,Open,52.3,56,85,90,-95,,90,45,-50,-50,,45,140,-150,150,155,150,285,SBD,Polux
 2,Florencia Yuriko,F,2000-05-10,,Argentina,Sleeves,Open,55.7,56,90,95,100,,100,47.5,50,,,50,120,130,135,,135,285,SBD,Dynamo
 1,Camila Perez,F,1999-02-01,,Argentina,Sleeves,Open,58.8,60,137.5,145,150,,150,-72.5,72.5,77.5,,77.5,140,152.5,162.5,-165,162.5,390,SBD,GymSpace
 2,Malena Altamiranda,F,1999-05-26,,Argentina,Sleeves,Open,56.8,60,-115,115,127.5,,127.5,75,-80,-80,,75,147.5,155,-162.5,,155,357.5,SBD,Berserkrs
@@ -78,7 +78,7 @@ NS,Octavio Hanuch,M,2005-06-29,,Argentina,Sleeves,J17-19,,,,,,,,,,,,,,,,,,,SBD,B
 4,Leonel Lo Presti,M,2006-12-02,,Argentina,Sleeves,J17-19,81.1,82.5,172.5,187.5,200,,200,102.5,107.5,-110,,107.5,215,232.5,-245,,232.5,540,SBD,Clover Team
 5,Joaquin Ordoñez #1,M,2005-03-01,,Argentina,Sleeves,J17-19,80.6,82.5,167.5,180,190,,190,102.5,110,-115,,110,190,207.5,220,,220,520,SBD,Black lion
 6,Octavio Hanuch,M,2005-06-29,,Argentina,Sleeves,J17-19,79.5,82.5,170,-185,-185,,170,132.5,-137.5,137.5,-141,137.5,185,195,-205,,195,502.5,SBD,Black Fit
-7,Martin Rins,M,2007-07-18,,Argentina,Sleeves,J17-19,80,82.5,170,180,187.5,,187.5,92.5,100,-105,,100,185,200,-212.5,,200,487.5,SBD,
+7,Martín Rins,M,2007-07-18,,Argentina,Sleeves,J17-19,80,82.5,170,180,187.5,,187.5,92.5,100,-105,,100,185,200,-212.5,,200,487.5,SBD,
 8,Federico Diaz,M,2006-12-02,,Argentina,Sleeves,J17-19,81.7,82.5,180,-190,-190,,180,87.5,-92.5,-92.5,,87.5,190,200,-210,,200,467.5,SBD,Hecmar
 DQ,Ignacio Vedova,M,2005-09-08,,Argentina,Sleeves,J17-19,79.9,82.5,172.5,182.5,195,,195,-100,-105,-105,,,-215,225,-232.5,,225,,SBD,Doble barra
 1,Guido Medina,M,2006-05-11,,Argentina,Sleeves,J17-19,84.6,90,210,225,-230,,225,105,-110,110,,110,225,245,260,-270,260,595,SBD,Clover powerlifting
@@ -95,7 +95,7 @@ DQ,Ignacio Vedova,M,2005-09-08,,Argentina,Sleeves,J17-19,79.9,82.5,172.5,182.5,1
 2,Matias Vazquez,M,2001-02-07,,Argentina,Sleeves,J20-23,74.75,75,170,180,-190,,180,120,122.5,-127.5,,122.5,215,-232.5,232.5,,232.5,535,SBD,Doble barra
 3,Luis Zavala,M,2003-04-23,,Argentina,Sleeves,J20-23,74.9,75,190,202.5,-210,,202.5,105,110,-115,,110,202.5,215,-222.5,,215,527.5,SBD,Team 25
 4,Rodrigo Arce,M,2003-03-16,,Argentina,Sleeves,J20-23,71.5,75,145,155,-160,,155,107.5,112.5,-115,,112.5,185,195,-200,,195,462.5,SBD,Dynamoteam
-1,Jeremias Schalin,M,2001-04-19,,Argentina,Sleeves,J20-23,79.9,82.5,-190,190,-195,,190,110,-115,-115,,110,230,-240,240,,240,540,SBD,Bull Squad
+1,Jeremías Schalin,M,2001-04-19,,Argentina,Sleeves,J20-23,79.9,82.5,-190,190,-195,,190,110,-115,-115,,110,230,-240,240,,240,540,SBD,Bull Squad
 DQ,Matias Cuacci,M,2002-09-06,,Argentina,Sleeves,J20-23,79,82.5,-200,-200,-200,,,,,,,,,,,,,,SBD,
 1,Joaquin Quijano,M,2003-06-04,,Argentina,Sleeves,J20-23,88.6,90,180,192.5,205,,205,132.5,140,-145,,140,207.5,217.5,225,,225,570,SBD,Berserkrs
 2,Julian Guida,M,2000-12-17,,Argentina,Sleeves,J20-23,87.5,90,175,190,200,,200,110,115,-120,,115,-215,220,240,,240,555,SBD,Polux gym
