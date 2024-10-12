@@ -18,6 +18,11 @@
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
 
+    # Extra OpenLifter-style divisions the BPF uses for some reason.
+    Youth = {name = "Youth", min=0, max=12}
+    t16_19 = {name = "T16-19", min=16, max=19}
+    j20_24 = {name = "J20-24", min=20, max=24}
+
     # BPF-style divisions.
     m_open_raw = {name = "MOpe-Ra", min = 0, max = 999,sex='M',equipment='Raw'}
     m_t1_raw = {name = "MT-1-Ra", min = 13, max = 15,sex='M',equipment='Raw'}
