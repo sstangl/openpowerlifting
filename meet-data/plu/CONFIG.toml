@@ -22,6 +22,42 @@ require_manual_disambiguation = true
 	m75_79 = {name="M75-79", min=75, max=79}
 	m80p = {name="M80+", min=80, max=999}
 
+	# OpenLifter-style Pro divisions.
+	proopen = {name="Pro Open", min=13, max=999}
+	proj13_15 = {name="Pro J13-15", min=13, max=15}
+	proj16_17 = {name="Pro J16-17", min=16, max=17}
+	proj18_19 = {name="Pro J18-19", min=18, max=19}
+	proj20_23 = {name="Pro J20-23", min=20, max=23}
+	pros35_39 = {name="Pro S35-39", min=35, max=39}
+	prom40_44 = {name="Pro M40-44", min=40, max=44}
+	prom45_49 = {name="Pro M45-49", min=45, max=49}
+	prom50_54 = {name="Pro M50-54", min=50, max=54}
+	prom55_59 = {name="Pro M55-59", min=55, max=59}
+	prom60_64 = {name="Pro M60-64", min=60, max=64}
+	prom65_69 = {name="Pro M65-69", min=65, max=69}
+	prom70_74 = {name="Pro M70-74", min=70, max=74}
+	prom75_79 = {name="Pro M75-79", min=75, max=79}
+	prom80p = {name="Pro M80+", min=80, max=999}
+
+	# OpenLifter-style divisions, but tested.
+    opent = {name = "OpenT", min = 0, max = 999, tested="Yes"}
+    j8_9t = {name="J8-9T", min=8, max=9, tested="Yes"}
+    j10_11t = {name="J10-11T", min=10, max=11, tested="Yes"}
+    j12_13t = {name="J12-13T", min=12, max=13, tested="Yes"}
+    j14_16t = {name="J14-16T", min=14, max=16, tested="Yes"}
+    j17_19t = {name="J17-19T", min=17, max=19, tested="Yes"}
+    j20_23t = {name="J20-23T", min=20, max=23, tested="Yes"}
+    s35_39t = {name="S35-39T", min=35, max=39, tested="Yes"}
+    m40_44t = {name="M40-44T", min=40, max=44, tested="Yes"}
+    m45_49t = {name="M45-49T", min=45, max=49, tested="Yes"}
+    m50_54t = {name="M50-54T", min=50, max=54, tested="Yes"}
+    m55_59t = {name="M55-59T", min=55, max=59, tested="Yes"}
+    m60_64t = {name="M60-64T", min=60, max=64, tested="Yes"}
+    m65_69t = {name="M65-69T", min=65, max=69, tested="Yes"}
+    m70_74t = {name="M70-74T", min=70, max=74, tested="Yes"}
+    m75_79t = {name="M75-79T", min=75, max=79, tested="Yes"}
+    m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
