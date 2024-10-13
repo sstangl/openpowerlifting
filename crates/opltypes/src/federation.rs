@@ -585,6 +585,11 @@ pub enum Federation {
     #[strum(to_string = "GPC-Portugal", serialize = "gpc-portugal")]
     GPCPortugal,
 
+    /// South Korean branch of the IPF.
+    #[serde(rename = "POSK")]
+    #[strum(to_string = "POSK", serialize = "posk")]
+    POSK,
+
     /// Scotland branch of the GPC.
     #[serde(rename = "GPC-Scotland")]
     #[strum(to_string = "GPC-Scotland", serialize = "gpc-scotland")]
@@ -2225,8 +2230,9 @@ impl Federation {
             Federation::PLZS => FULLY_TESTED,
             Federation::PNGPF => FULLY_TESTED,
             Federation::PolandUA => false,
-            Federation::PRIDE => false,
             Federation::PortugalUA => false,
+            Federation::POSK => FULLY_TESTED,
+            Federation::PRIDE => false,
             Federation::ProRaw => false,
             Federation::PRPA => false,
             Federation::PS => FULLY_TESTED,
@@ -2674,8 +2680,9 @@ impl Federation {
             Federation::PLZS => Some(Country::Slovenia),
             Federation::PNGPF => Some(Country::PapuaNewGuinea),
             Federation::PolandUA => Some(Country::Poland),
-            Federation::PRIDE => Some(Country::USA),
             Federation::PortugalUA => Some(Country::Portugal),
+            Federation::POSK => Some(Country::SouthKorea),
+            Federation::PRIDE => Some(Country::USA),
             Federation::ProRaw => Some(Country::Australia),
             Federation::PRPA => Some(Country::USA),
             Federation::PS => Some(Country::Singapore),
@@ -3205,6 +3212,7 @@ impl Federation {
             Federation::PolandUA => None,
             Federation::PoliceAL => None,
             Federation::PortugalUA => None,
+            Federation::POSK => Some(Federation::IPF),
             Federation::PRIDE => None,
             Federation::ProRaw => None,
             Federation::PRPA => None,
@@ -3761,6 +3769,7 @@ impl Federation {
             Federation::PLZS => Federation::ipf_rules_on(date),
             Federation::PNGPF => Federation::ipf_rules_on(date),
             Federation::PolandUA => PointsSystem::Wilks,
+            Federation::POSK => Federation::ipf_rules_on(date),
             Federation::PRIDE => PointsSystem::Wilks,
             Federation::PortugalUA => PointsSystem::Dots,
             Federation::ProRaw => PointsSystem::Glossbrenner,

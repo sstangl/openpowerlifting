@@ -595,6 +595,10 @@
   <option value="sapf" {% if selection.federation == "SAPF" %}selected{% endif %}>SAPF - South African Powerlifting Federation [IPF]</option>
   <option value="wpc-sa" {% if selection.federation == "WPC-SA" %}selected{% endif %}>WPC-SA - WPC South Africa</option>
 </optgroup>
+<optgroup label="{{strings.country.southkorea}}">
+  <option value="all-southkorea" {% if selection.federation == "AllSouthKorea" %}selected{% endif %}>{{strings.selectors.fed.all_southkorea}}</option>
+  <option value="posk" {% if selection.federation == "POSK" %}selected{% endif %}>POSK - Powerlifting of South Korea [IPF]</option>
+  </optgroup>
 <optgroup label="{{strings.country.spain}}">
   <option value="all-spain" {% if selection.federation == "AllSpain" %}selected{% endif %}>{{strings.selectors.fed.all_spain}}</option>
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP - Asociación Española de Powerlifting [IPF]</option>
