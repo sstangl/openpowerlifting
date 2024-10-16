@@ -2,6 +2,7 @@
 
 [divisions]
     # Un-abbreviated divisions.
+    # Since WPC affiliation in 2024: Youth division deprecated and no minimum age limit for T13-15.
     open = {name ="Open",min=0,max=999}
     juniors = {name ="Juniors 20-23",min=20,max=23}
     youth = {name = "Youth", min=4, max=12}
@@ -46,12 +47,61 @@
     m8084 = {name="M80-84",min=80,max=84}
     m80p = {name="M80+",min=80,max=999}
 
+    # AWPC tested divisions.
+    # Since WPC affiliation: Youth division removed and no minimum age limit for T13-15.
+    opend = {name ="Open-D",min=0,max=999,tested="Yes"}
+    juniorsd = {name ="Juniors 20-23-D",min=20,max=23,tested="Yes"}
+    teend = {name ="Teen-D",min=13,max=19,tested="Yes"}
+    teen1315d = {name ="Teen 13-15-D",min=13,max=15,tested="Yes"}
+    teen1617d = {name ="Teen 16-17-D",min=16,max=17,tested="Yes"}
+    teen1819d = {name ="Teen 18-19-D",min=18,max=19,tested="Yes"}
+    mastersd = {name ="Masters-D",min=40,max=999,tested="Yes"}
+    masters4044d = {name ="Masters 40-44-D",min=40,max=44,tested="Yes"}
+    masters4549d = {name ="Masters 45-49-D",min=45,max=49,tested="Yes"}
+    masters4049d = {name ="Masters 40-49-D",min=40,max=49,tested="Yes"}
+    masters5054d = {name ="Masters 50-54-D",min=50,max=54,tested="Yes"}
+    masters5559d = {name ="Masters 55-59-D",min=55,max=59,tested="Yes"}
+    masters5059d = {name ="Masters 50-59-D",min=50,max=59,tested="Yes"}
+    masters6064d = {name ="Masters 60-64-D",min=60,max=64,tested="Yes"}
+    masters6569d = {name ="Masters 65-69-D",min=65,max=69,tested="Yes"}
+    masters6069d = {name ="Masters 60-69-D",min=60,max=69,tested="Yes"}
+    masters7074d = {name ="Masters 70-74-D",min=70,max=74,tested="Yes"}
+    masters7579d = {name ="Masters 75-79-D",min=75,max=79,tested="Yes"}
+    masters7079d = {name ="Masters 70-79-D",min=70,max=79,tested="Yes"}
+    masters8084d = {name ="Masters 80-84-D",min=80,max=84,tested="Yes"}
+    masters80pd = {name ="Masters 80+-D",min=80,max=999,tested="Yes"}
+    submasters3339d = {name ="Submasters 33-39-D",min=33,max=39,tested="Yes"}
+
+    t1315d = {name="T13-15-D",min=13,max=15,tested="Yes"}
+    t1617d = {name="T16-17-D",min=16,max=17,tested="Yes"}
+    t1819d = {name="T18-19-D",min=18,max=19,tested="Yes"}
+    j2023d = {name="J20-23-D",min=20,max=23,tested="Yes"}
+    m4044d = {name="M40-44-D",min=40,max=44,tested="Yes"}
+    m4549d = {name="M45-49-D",min=45,max=49,tested="Yes"}
+    m4049d = {name="M40-49-D",min=40,max=49,tested="Yes"}
+    m5054d = {name="M50-54-D",min=50,max=54,tested="Yes"}
+    m5559d = {name="M55-59-D",min=55,max=59,tested="Yes"}
+    m5059d = {name="M50-59-D",min=50,max=59,tested="Yes"}
+    m6064d = {name="M60-64-D",min=60,max=64,tested="Yes"}
+    m6569d = {name="M65-69-D",min=65,max=69,tested="Yes"}
+    m6069d = {name="M60-69-D",min=60,max=69,tested="Yes"}
+    m7074d = {name="M70-74-D",min=70,max=74,tested="Yes"}
+    m7579d = {name="M75-79-D",min=75,max=79,tested="Yes"}
+    m7079d = {name="M70-79-D",min=70,max=79,tested="Yes"}
+    m8084d = {name="M80-84-D",min=80,max=84,tested="Yes"}
+    m80pd = {name="M80+-D",min=80,max=999,tested="Yes"}
+
     novice = {name ="Novice",min=0,max=999}
     pro = {name ="Pro",min=0,max=999}
 
 [weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","110+"]
+    date_range = ["2024-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.pre2024_F]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-01-01","9999-12-31"]
+    date_range = ["0000-01-01","2023-12-31"]
     sex = "F"
 
 [weightclasses.default_M]
@@ -68,3 +118,4 @@
     1803 = ["ExemptWeightClassConsistency"] #Missing weightclasses
     1404 = ["ExemptWeightClassConsistency"] #WABDL 117.5 class
     0801 = ["ExemptWeightClassConsistency"] #No weightclasses
+	2402 = ["ExemptDivision"] # Allow younger lifters in Teen13-15
