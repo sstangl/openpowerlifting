@@ -259,7 +259,7 @@ struct EntryLifterData<'md> {
 }
 
 impl<'md> EntryLifterData<'md> {
-    fn from(entry: &'md Entry, lifter_id: u32) -> EntryLifterData {
+    fn from(entry: &'md Entry, lifter_id: u32) -> EntryLifterData<'md> {
         EntryLifterData {
             id: lifter_id,
             name: &entry.name,
