@@ -191,6 +191,7 @@ pub struct Row {
     pub surname: String,
     pub country: String,
     pub gender: Gender,
+    pub dob: String,
     pub age: u8,
     pub division: String,
     pub weight_class: WeightClass,

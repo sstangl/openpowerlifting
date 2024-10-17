@@ -23,13 +23,18 @@ impl<'de> Visitor<'de> for AttemptVisitor {
     type Value = Attempt;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
-        formatter.write_str("a valid attempt")
+        formatter.write_str("a valid attempt or empty string")
     }
 
     fn visit_str<E>(self, value: &str) -> Result<Self::Value, E>
     where
         E: serde::de::Error,
     {
+        // Added logic to handle empty strings
+        if value.is_empty() {
+            return Ok(Attempt::Skip);
+        }
+
         if value == "0" || value == "0.0" {
             return Ok(Attempt::Skip);
         }

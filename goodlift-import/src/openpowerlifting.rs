@@ -10,6 +10,7 @@ pub struct Row {
     pub sex: String,
     pub birth_date: Option<String>,
     pub birth_year: String,
+    pub age: u8,
     pub division: String,
     pub weight_class_kg: String,
     pub bodyweight_kg: f32,

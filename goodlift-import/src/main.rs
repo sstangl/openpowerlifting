@@ -48,6 +48,7 @@ impl Meet {
         }
 
         let resolved_federation = match federation.as_str() {
+            "Commonwealth Powerlifting Federation" => "CommonwealthPF",
             "European Powerlifting Federation" => "EPF",
             "International Powerlifting Federation" => "IPF",
             "Asian Powerlifting Federation" => "APF",
@@ -124,12 +125,29 @@ fn decide_best_attempt(first: Attempt, second: Attempt, third: Attempt) -> Attem
 fn map_country(country: String) -> String {
     match country.as_str() {
         "Chinese Taipei" => "Taiwan".to_owned(),
+        "North Ireland" => "N.Ireland".to_owned(),
         "Great Britain" => "UK".to_owned(),
         "Turkiye" => "Turkey".to_owned(),
         "U.S.America" => "USA".to_owned(),
         "United States" => "USA".to_owned(),
         _ => country,
     }
+}
+
+// Function to extract birth year from DOB field
+fn extract_birth_year(dob: &str) -> String {
+    // If DOB is just a year, return it
+    if dob.len() == 4 && dob.parse::<u16>().is_ok() {
+        return dob.to_string();
+    }
+    
+    // If DOB is a full date, extract the year
+    if dob.len() >= 10 {
+        return dob[0..4].to_string();
+    }
+    
+    // If DOB is in an unexpected format, return an empty string
+    String::new()
 }
 
 impl From<goodlift::Row> for openpowerlifting::Row {
@@ -139,22 +157,37 @@ impl From<goodlift::Row> for openpowerlifting::Row {
             country: map_country(row.country),
             sex: row.gender.to_openpowerlifting(),
             birth_date: None,
-            birth_year: String::new(),
+            birth_year: extract_birth_year(&row.dob),
+            age: row.age,
             division: row.division,
             weight_class_kg: row.weight_class.to_openpowerlifting(),
             bodyweight_kg: row.bodyweight,
             squat_1_kg: row.squat1,
             squat_2_kg: row.squat2,
             squat_3_kg: row.squat3,
-            best_3_squat_kg: decide_best_attempt(row.squat1, row.squat2, row.squat3),
+            best_3_squat_kg: if row.best_squat.was_successful() { // Checking if `best_squat` is successful confirms whether we have a valid best squat from Goodlift 
+                row.best_squat 
+            } else { 
+                decide_best_attempt(row.squat1, row.squat2, row.squat3) // Fallback to calculated best attempt if we don't have a valid Goodlift best attempt
+            },
+            
             bench_1_kg: row.bench1,
             bench_2_kg: row.bench2,
             bench_3_kg: row.bench3,
-            best_3_bench_kg: decide_best_attempt(row.bench1, row.bench2, row.bench3),
+            best_3_bench_kg: if row.best_bench.was_successful() {
+                row.best_bench
+            } else {
+                decide_best_attempt(row.bench1, row.bench2, row.bench3)
+            },
+            
             deadlift_1_kg: row.deadlift1,
             deadlift_2_kg: row.deadlift2,
             deadlift_3_kg: row.deadlift3,
-            best_3_deadlift_kg: decide_best_attempt(row.deadlift1, row.deadlift2, row.deadlift3),
+            best_3_deadlift_kg: if row.best_deadlift.was_successful() {
+                row.best_deadlift
+            } else {
+                decide_best_attempt(row.deadlift1, row.deadlift2, row.deadlift3)
+            },
             total_kg: row.total_kg,
             place: row.total_rank,
             event: row.event.to_openpowerlifting(),
@@ -162,6 +195,7 @@ impl From<goodlift::Row> for openpowerlifting::Row {
         }
     }
 }
+
 
 fn main() -> Result<()> {
     let Args { cid } = Args::parse()?;
