@@ -1,4 +1,4 @@
-﻿Name,BirthYear,BodyweightKg,WeightClassKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Equipment,Event,BirthDate,Place
+Name,BirthYear,BodyweightKg,WeightClassKg,Country,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Equipment,Event,BirthDate,Place
 Anasztázia Rácz,2007,59.4,60,Hungary,95,105,115,115,55,60,-65,60,140,150,152.5,152.5,327.5,T2,F,Wraps,SBD,,1
 Nikol Lenghartová,2006,83.5,90,Slovakia,140,-150,150,150,-80,80,-82.5,80,145,155,170,170,400,T3,F,Wraps,SBD,,1
 Pavlína Chovancová,2005,74.8,75,Slovakia,130,142.5,-145,142.5,75,80,-82.5,80,130,142.5,145,145,367.5,T3,F,Wraps,SBD,,1
@@ -79,7 +79,7 @@ Benjámin Farkas,2005,88,90,Hungary,185,200,-205,200,120,-125,125,125,200,207.5,
 Jozef Suchánek,2006,72.4,75,Slovakia,130,135,-145,135,95,-102.5,-102.5,95,-200,200,212.5,212.5,442.5,T3,M,Wraps,SBD,,1
 Bence Takács,2008,84.8,90,Hungary,-180,190,200,200,90,100,-105,100,180,200,-210,200,500,T1,M,Wraps,SBD,,1
 Truong An Vu,2004,89.4,90,Czechia,180,200,-222.5,200,105,115,117.5,117.5,180,200,-205,200,517.5,T3,M,Wraps,SBD,,3
-Zsolt Szabó,2007,116.2,125,Hungary,200,212.5,-217.5,212.5,140,-145,-145,140,210,217.5,225,225,577.5,T2,M,Wraps,SBD,,2
+Zsolt Viktór Szabó,2007,116.2,125,Hungary,200,212.5,-217.5,212.5,140,-145,-145,140,210,217.5,225,225,577.5,T2,M,Wraps,SBD,,2
 Liam Backhurst,2008,65.6,67.5,UK,120,130,135,135,90,-95,-95,90,140,150,160,160,385,T2,M,Wraps,SBD,,1
 Vojtěch Kocourek,2004,76.5,82.5,Czechia,-160,165,-175,165,85,90,-92.5,90,160,175,185,185,440,T3,M,Wraps,SBD,,2
 Richard Benko,2009,55.5,56,Slovakia,90,97.5,107.5,107.5,55,-62.5,-70,55,100,117.5,127.5,127.5,290,T1,M,Wraps,SBD,,1
@@ -183,7 +183,7 @@ Peter Lehocký,1972,82.5,82.5,Slovakia,210,230,245,245,140,155,-162.5,155,240,26
 Darren Walker,1968,97.1,100,UK,205,230,235,235,135,140,145,145,262.5,292.5,300,300,680,M4,M,Wraps,SBD,,1
 József Sztanke,1954,89.5,90,Hungary,-170,170,-190,170,90,105,115,115,180,205,-220.5,205,490,M7,M,Wraps,SBD,,1
 Les Attewell,1966,87.3,90,UK,-200,200,-210,200,130,135,140,140,250,265,-275,265,605,M4,M,Wraps,SBD,,1
-Alexander Romanichev,1963,55.8,56,Israel,90,100,110,110,60,65,70,70,150,160,170,170,350,M5,M,Wraps,SBD,,1
+Aleksandr Romanichev,1963,55.8,56,Israel,90,100,110,110,60,65,70,70,150,160,170,170,350,M5,M,Wraps,SBD,,1
 Erni Gregorčič,1976,74.3,75,Slovenia,205,215,-220,215,140,145,-150,145,240,253,-261,253,613,M2,M,Wraps,SBD,,1
 Juhani Kärkkäinen,1959,107.1,110,Finland,195,210,220,220,130,135,140,140,225,-245,-255,225,585,M5,M,Wraps,SBD,,1
 Peter Herák,1960,92.7,100,Slovakia,180,200,215,215,115,120,-122.5,120,210,220,225,225,560,M5,M,Wraps,SBD,,1
@@ -196,7 +196,7 @@ Jozef Gabrhel,1955,72.3,75,Slovakia,125,132.5,137,137,-90,90,95,95,150,160,-167.
 Mieczysłąw Maczka,1954,82.5,82.5,Germany,140,152.5,,152.5,102.5,110,,110,140,157.5,,157.5,420,M7,M,Wraps,SBD,,2
 Tibor Pukáč,1971,105.9,110,Slovakia,250,-270,-270,250,160,167.5,172.5,172.5,235,240,242.5,242.5,665,M3,M,Wraps,SBD,,1
 Mbarim Mehmeti,1982,70.6,75,Albania,175,185,190,190,140,-145,-145,140,240,245,250,250,580,M1,M,Wraps,SBD,,1
-István Gyuricska,1967,89.6,90,Hungary,170,180,190,190,140,150,160,160,180,190,210,210,560,M4,M,Wraps,SBD,,2
+István Gyuricska Jr,1967,89.6,90,Hungary,170,180,190,190,140,150,160,160,180,190,210,210,560,M4,M,Wraps,SBD,,2
 Robert Hazelton,1984,98.9,100,UK,265,285,-300,285,175,185,-192.5,185,260,275,-285,275,745,M1,M,Wraps,SBD,,2
 Nikolai Mikheev,1984,88.7,90,Russia,-240,240,250,250,170,182.5,190,190,240,260,-280,260,700,M1,M,Wraps,SBD,,1
 Péter Menyhárt,1973,98.2,100,Hungary,227.5,-242.5,-255,227.5,125,132.5,137.5,137.5,250,265,272.5,272.5,637.5,M3,M,Wraps,SBD,,2
@@ -794,7 +794,7 @@ František Szobolovszký,1994,95.5,100,Slovakia,,,,,,,,,,,,250,250,O,M,Multi-ply
 Edward Rożnowski,1951,84.9,90,Poland,,,,,,,,,,,,205,205,M7,M,Multi-ply,D,,1
 László Posnyák,1993,77.1,82.5,Hungary,,,,,,,,,,,,180,180,O,M,Multi-ply,D,,1
 Ladislau Kiss,1948,93.7,100,Hungary,,,,,,,,,,,,240,240,M8,M,Multi-ply,D,,1
-Alexander Romanichev,1963,55.5,56,Israel,,,,,,,,,,,,180,180,M5,M,Multi-ply,D,,1
+Aleksandr Romanichev,1963,55.5,56,Israel,,,,,,,,,,,,180,180,M5,M,Multi-ply,D,,1
 Stefan Sochaňski,1948,81.3,82.5,Poland,,,,,,,,,,,,202.5,202.5,M8,M,Multi-ply,D,,1
 Dennis Ruygrok,1975,136.2,140,Canada,,,,,,,,,,,,350,350,M2,M,Multi-ply,D,,1
 Valery Tomilov,1965,99,100,Israel,,,,,,,,,,,,270,270,M4,M,Multi-ply,D,,1
