@@ -19,6 +19,7 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
+    masters_40p = {name = "Masters 40+", min = 40, max = 999}
     pfm = {name = "Police/Fire/Military", min = 0, max = 999}
 
 
