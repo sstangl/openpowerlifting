@@ -1,5 +1,8 @@
 # Configuration for XPC-Poland.
 
+[options]
+require_manual_disambiguation = true
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
 
