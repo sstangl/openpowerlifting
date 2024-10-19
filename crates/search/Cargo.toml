@@ -9,4 +9,4 @@ license = "AGPL-3.0-or-later"
 [dependencies]
 opldb = { path = "../db/" }
 opltypes = { path = "../opltypes/" }
-rustyline = "12"
+rustyline = "14"
