@@ -7,13 +7,13 @@ Place,Name,Sex,Country,BirthDate,Age,Equipment,Division,Tested,BodyweightKg,Weig
 1,Anna Vuorio,F,Finland,1995-05-09,29,Bare,Open,,75.8,82.5,65,70,-72.5,,70,,,,,,70,B
 1,Emma Huhta,F,Finland,1992-07-02,32,Bare,Open,,88,90,100,-120,-120,,100,,,,,,100,B
 1,Elisabeth Erholtz,F,Finland,1976-09-10,48,Bare,Open,,92.7,100,105,-110,110,,110,,,,,,110,B
-2,Gemma Wright,F,UK,,31,Bare,Open,,96.6,100,80,-87.5,90,-92.5,90,,,,,,90,B
+2,Gemma Wright,F,UK,,31,Bare,Open,Yes,96.6,100,80,-87.5,90,-92.5,90,,,,,,90,B
 1,Oona Kuusisto,F,Finland,2009-08-25,15,Bare,T13-15,,64.5,67.5,45,51,-52.5,,51,,,,,,51,B
 1,Sara Honkakangas,F,Finland,2009-03-12,15,Single-ply,T13-15,,59.9,60,60,65,-70,,65,,,,,,65,B
 1,Maiju Hilander,F,Finland,1957-07-22,67,Bare,M65-69,,67.5,67.5,,,,,,140,147.5,150,,150,150,D
 1,Anna Vuorio,F,Finland,1995-05-09,29,Bare,Open,,75.8,82.5,,,,,,150,160,-170,,160,160,D
 1,Emma Huhta,F,Finland,,32,Bare,Open,,88,90,,,,,,170,195,205,,205,205,D
-1,Gemma Wright,F,UK,,31,Bare,Open,,96.6,100,,,,,,170,180.5,-187.5,,180.5,180.5,D
+1,Gemma Wright,F,UK,,31,Bare,Open,Yes,96.6,100,,,,,,170,180.5,-187.5,,180.5,180.5,D
 1,Riina Mikkonen,F,Finland,1988-03-19,36,Bare,Open,,66.9,67.5,,,,,,135,140,150,,150,150,D
 1,Elisabeth Erholtz,F,Finland,1976-09-10,48,Single-ply,M45-49,,92.7,100,,,,,,190,205,-210,,205,205,D
 1,Elisabeth Erholtz,F,Finland,1976-09-10,48,Single-ply,Open,,92.7,100,,,,,,190,205,-210,,205,205,D
@@ -102,7 +102,7 @@ DQ,Mikael Kettunen,M,Finland,1996-11-30,27,Multi-ply,Open,,109.4,110,-280,-282.5
 1,Petri Lindholm,M,Finland,1970-08-19,54,Bare,M50-54,,126.7,140,,,,,,260,280,290,,290,290,D
 1,Pekka Anttila,M,Finland,1965-04-19,59,Bare,M55-59,,81.3,82.5,,,,,,180,190,-195,,190,190,D
 1,Raimo Hiisiö,M,Finland,1968-12-18,55,Bare,M55-59,,129.1,140,,,,,,220,242.5,260,-285.5,260,260,D
-1,Jarmo Tuomiranta,M,Finland,,62,Bare,M60-64,,75,75,,,,,,175,180,,,180,180,D
+1,Jarmo Tuomiranta,M,Finland,,62,Bare,M60-64,Yes,75,75,,,,,,175,180,,,180,180,D
 1,Asko Kajanoja,M,Finland,1961-03-31,63,Bare,M60-64,,99.7,100,,,,,,247.5,260,,,260,260,D
 1,Pertti Rautiainen,M,Finland,1962-08-23,62,Bare,M60-64,,117,125,,,,,,210,-223,223,,223,223,D
 1,Jarmo Mäkäräinen,M,Finland,1962-12-27,61,Bare,M60-64,,125.7,140,,,,,,-202.5,202.5,-215,,202.5,202.5,D
