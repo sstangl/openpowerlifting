@@ -63,6 +63,8 @@
     y_x = {name="Y-X", min=5, max=12}
     k_x = {name="K-X", min=5, max=12} # Kids' Club
     p_x = {name="P-X", min=0, max=999}
+    pe_t = {name="PE-T", min=0, max=999, tested="Yes"}
+    pe_u = {name="PE-U", min=0, max=999}
 
     # Open divisions, men: $Sex-$Div$Event-$Equipment-Tested.
     # For Event: F = "SBD", P = "BD", B = "B".
