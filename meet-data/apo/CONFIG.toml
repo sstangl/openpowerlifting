@@ -27,6 +27,7 @@
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
     special = {name="SO", min=0, max=999} #Special Olympics
+    lawfire = {name="Law/Fire", min=13, max=999}
 
     # Tested divisions.
     opent = {name="OpenT", min=13, max=999, tested="Yes"}
