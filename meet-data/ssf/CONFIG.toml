@@ -68,3 +68,5 @@
 [exemptions]
     296 = ["ExemptWeightClassConsistency"]  # Ignores 44 weightclass.
     cbf653bf = ["ExemptWeightClassConsistency"]  # Missing weight information.
+    87-01 = ["ExemptWeightClassConsistency"]  # SHIF weightclasses
+    92-01 = ["ExemptWeightClassConsistency"]  # SHIF weightclasses
