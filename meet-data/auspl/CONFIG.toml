@@ -7,7 +7,9 @@
 [rulesets.zerowpro] 
     ruleset = ["CombineRawAndWraps"]
     date_range = ["2023-09-30", "2023-09-30"]
-
+[rulesets.zerowpro2] 
+    ruleset = ["CombineRawAndWraps"]
+    date_range = ["2024-10-26", "2023-10-26"]
 
 [divisions]
 	# OpenLifter-style divisions.
