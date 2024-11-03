@@ -19,6 +19,7 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
+    pro = {name = "Pro", min = 0, max = 999}
 
 
 [weightclasses.default_M]
@@ -32,3 +33,4 @@
     sex = "F"
 
 [exemptions]
+    2410 = ["ExemptWeightClassConsistency"]
