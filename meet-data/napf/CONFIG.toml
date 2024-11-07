@@ -19,6 +19,9 @@
     mw = {name = "MW",min=0,max=999}
     hw = {name = "HW",min=0,max=999}
 
+    # Misc
+    youth = {name = "Youth",min=0,max=15.5} # appears in 2402
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -69,3 +72,4 @@
     7801 = ["ExemptWeightClassConsistency"]
     1007 = ["ExemptWeightClassConsistency"]
     0701 = ["ExemptWeightClassConsistency"]
+    2402 = ["ExemptWeightClassConsistency"]  # Youth division uses no weight classes
