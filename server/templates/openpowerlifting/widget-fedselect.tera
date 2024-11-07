@@ -384,6 +384,7 @@
   <option value="all-italy" {% if selection.federation == "AllItaly" %}selected{% endif %}>{{strings.selectors.fed.all_italy}}</option>
   <option value="fiap" {% if selection.federation == "FIAP" %}selected{% endif %}>FIAP - Federazione Italiana Atletica Pesante</option>
   <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL - Federazione Italiana Powerlifting [IPF]</option>
+  <option value="ipl-italy" {% if selection.federation == "IPL-Italy" %}selected{% endif %}>IPL Italy</option>
   <option value="wpc-italy" {% if selection.federation == "WPC-Italy" %}selected{% endif %}>WPC Italy</option>
   <option value="wrpf-italy" {% if selection.federation == "WRPF-Italy" %}selected{% endif %}>WRPF Italy</option>
   <option value="italy-ua" {% if selection.federation == "Italy-UA" %}selected{% endif %}>Italy-UA - Italy [Unaffiliated]</option>

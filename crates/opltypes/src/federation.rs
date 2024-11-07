@@ -740,14 +740,19 @@ pub enum Federation {
     #[strum(to_string = "IPF-China", serialize = "ipf-china")]
     IPFChina,
 
+    /// International Powerlifting League.
+    #[strum(to_string = "IPL", serialize = "ipl")]
+    IPL,
+
     /// International Powerlifting League, China
     #[serde(rename = "IPL-China")]
     #[strum(to_string = "IPL-China", serialize = "ipl-china")]
     IPLChina,
 
-    /// International Powerlifting League.
-    #[strum(to_string = "IPL", serialize = "ipl")]
-    IPL,
+    /// International Powerlifting League, Italy
+    #[serde(rename = "IPL-Italy")]
+    #[strum(to_string = "IPL-Italy", serialize = "ipl-italy")]
+    IPLItaly,
 
     /// International Powerlifting League, New Zealand
     #[serde(rename = "IPL-NZ")]
@@ -2147,8 +2152,9 @@ impl Federation {
             Federation::IPC => false,
             Federation::IPF => FULLY_TESTED,
             Federation::IPFChina => FULLY_TESTED,
-            Federation::IPLChina => false,
             Federation::IPL => false,
+            Federation::IPLChina => false,
+            Federation::IPLItaly => false,
             Federation::IPLNZ => false,
             Federation::IPLSpain => false,
             Federation::UKIPL => false,
@@ -2597,8 +2603,9 @@ impl Federation {
             Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
             Federation::IPFChina => Some(Country::China),
-            Federation::IPLChina => Some(Country::China),
             Federation::IPL => None,
+            Federation::IPLChina => Some(Country::China),
+            Federation::IPLItaly => Some(Country::Italy),
             Federation::IPLNZ => Some(Country::NewZealand),
             Federation::IPLSpain => Some(Country::Spain),
             Federation::UKIPL => Some(Country::UK),
@@ -3107,8 +3114,9 @@ impl Federation {
             Federation::IPC => None,
             Federation::IPF => Some(Federation::IPF),
             Federation::IPFChina => Some(Federation::IPF),
-            Federation::IPLChina => Some(Federation::IPL),
             Federation::IPL => Some(Federation::IPL),
+            Federation::IPLChina => Some(Federation::IPL),
+            Federation::IPLItaly => Some(Federation::IPL),
             Federation::IPLNZ => Some(Federation::IPL),
             Federation::IPLSpain => Some(Federation::IPL),
             Federation::UKIPL => {
@@ -3664,8 +3672,9 @@ impl Federation {
             Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPFChina => Federation::ipf_rules_on(date),
-            Federation::IPLChina => Federation::ipl_rules_on(date),
             Federation::IPL => Federation::ipl_rules_on(date),
+            Federation::IPLChina => Federation::ipl_rules_on(date),
+            Federation::IPLItaly => Federation::ipl_rules_on(date),
             Federation::IPLNZ => Federation::ipl_rules_on(date),
             Federation::IPLSpain => Federation::ipl_rules_on(date),
             Federation::UKIPL => Federation::ipl_rules_on(date),
