@@ -4,7 +4,7 @@
 require_manual_disambiguation = true
 
 [divisions]
-	open = {name="Open", min=13, max=999}
+	open = {name="Open", min=0, max=999}
 
 	# OpenLifter-style divisions.
 	j13_15 = {name="J13-15", min=13, max=15}
@@ -23,7 +23,7 @@ require_manual_disambiguation = true
 	m80p = {name="M80+", min=80, max=999}
 
 	# OpenLifter-style Pro divisions.
-	proopen = {name="Pro Open", min=13, max=999}
+	proopen = {name="Pro Open", min=0, max=999}
 	proj13_15 = {name="Pro J13-15", min=13, max=15}
 	proj16_17 = {name="Pro J16-17", min=16, max=17}
 	proj18_19 = {name="Pro J18-19", min=18, max=19}
@@ -57,6 +57,10 @@ require_manual_disambiguation = true
     m70_74t = {name="M70-74T", min=70, max=74, tested="Yes"}
     m75_79t = {name="M75-79T", min=75, max=79, tested="Yes"}
     m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
+
+    # Non-existent divisions that nevertheless got used.
+    j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
+    j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
