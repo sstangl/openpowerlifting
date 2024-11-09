@@ -46,6 +46,7 @@ require_manual_disambiguation = true
     j12_13t = {name="J12-13T", min=12, max=13, tested="Yes"}
     j14_16t = {name="J14-16T", min=14, max=16, tested="Yes"}
     j17_19t = {name="J17-19T", min=17, max=19, tested="Yes"}
+    j18_19t = {name="J18-19T", min=18, max=19, tested="Yes"}
     j20_23t = {name="J20-23T", min=20, max=23, tested="Yes"}
     s35_39t = {name="S35-39T", min=35, max=39, tested="Yes"}
     m40_44t = {name="M40-44T", min=40, max=44, tested="Yes"}
