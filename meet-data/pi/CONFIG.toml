@@ -19,12 +19,12 @@
 
 [weightclasses.old2_F]
     classes = ["47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2021-12-31"]
+    date_range=["2011-01-01","2021-11-20"]
     sex = "F"
 
 [weightclasses.new_F]
     classes = ["47","52","57","63","69","76","84","84+"]
-    date_range=["2022-01-01","9999-01-01"]
+    date_range=["2021-11-21","9999-01-01"]
     sex = "F"
 
 [weightclasses.junior_M]
