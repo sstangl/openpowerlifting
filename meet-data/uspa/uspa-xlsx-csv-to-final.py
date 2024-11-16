@@ -64,11 +64,13 @@ def fixup_lifts(csv):
                 row[j] = cell[:-2]
 
 
-def remove_best_lifters(csv):
+# Removes textual info often added by meet directors to the bottom of the spreadsheet
+def remove_extra_info(csv):
     found_index = 0
+    titles = ['best lifters', 'meet director']
 
     for (i, row) in enumerate(csv.rows):
-        if 'Best Lifters' in row[1]:
+        if any(title in row[1].lower() for title in titles):
             found_index = i
             break
 
@@ -234,7 +236,7 @@ def main(filename):
     # Simple processing.
     fixup_fieldnames(csv)
     fixup_lifts(csv)
-    remove_best_lifters(csv)
+    remove_extra_info(csv)
     integrate_4ths(csv)
 
     # Complex processing.
