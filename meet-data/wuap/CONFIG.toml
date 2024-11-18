@@ -6,30 +6,45 @@
     t_13_15 = {name = "T 13-15", min = 13, max = 15}
     t_16_17 = {name = "T 16-17", min = 16, max = 17}
     t_18_19 = {name = "T 18-19", min = 18, max = 19}
+    tenn = {name = "Teen", min = 13, max = 19}   
     juniors = {name = "Juniors", min = 20, max = 23}
     submasters = {name = "Submasters", min = 35, max = 39}
     m_40_44 = {name = "M 40-44", min = 40, max = 44}
+    m_40_49 = {name = "M 40-49", min = 40, max = 49}
     m_45_49 = {name = "M 45-49", min = 45, max = 49}
     m_50_54 = {name = "M 50-54", min = 50, max = 54}
+    m_50_59 = {name = "M 50-59", min = 50, max = 59}
     m_55_59 = {name = "M 55-59", min = 55, max = 59}
     m_60_64 = {name = "M 60-64", min = 60, max = 64}
+    m_60_69 = {name = "M 60-69", min = 60, max = 69}
     m_65_69 = {name = "M 65-69", min = 65, max = 69}
     m_70_74 = {name = "M 70-74", min = 70, max = 74}
     m_75_79 = {name = "M 75-79", min = 75, max = 79}
+    m_75 = {name = "M 75+", min = 75, max = 999}	
     m_80p = {name = "M 80+", min = 80, max = 999}
 
-[weightclasses.default_M]
+[weightclasses.old_M]
     classes = ["56","60","67.5","75","82.5","90","100","110","125","140","140+"]
-    date_range = ["1990-01-01", "9999-01-01"]
+    date_range = ["1990-01-01", "2023-12-31"]
     sex = "M"
 
-[weightclasses.default_F]
+[weightclasses.default_M]
+    classes = ["67.5","82.5","95","110","125","125+"]
+    date_range = ["2024-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.old_F]
     classes = ["48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["1990-01-01", "9999-01-01"]
+    date_range = ["1990-01-01", "2023-12-31"]
+    sex = "F"
+
+[weightclasses.default_F]
+    classes = ["52","60","67.5","82.5","82.5+"]
+    date_range = ["2024-01-01", "9999-01-01"]
     sex = "F"
 
 [exemptions]
     2202 = ["ExemptDivision"] # Eduard Khanjyan was a Guest
     2301 = ["ExemptDivision"] # Used 10 year Masters categories
     2302 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Used 10 year Masters categories
-    2401 = ["ExemptWeightClassConsistency", "ExemptDivision"] # different weigt classes, grouped all teen classes, used 10 years for masters
+    
