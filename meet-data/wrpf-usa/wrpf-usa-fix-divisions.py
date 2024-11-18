@@ -86,6 +86,10 @@ def standardize_division_csv(csv):
             row[idx] = DIVISION_MAP[division.upper()]
             changed = True
 
+        # This uses PLU/USPC format, which I think looks nicer.
+        if "Tested" in division:
+            row[idx] = row[idx] + "T"
+
     return changed
 
 
