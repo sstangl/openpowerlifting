@@ -1311,6 +1311,7 @@ pub enum Federation {
     UAEPL,
 
     /// Unaffiliated meets held in the UAE.
+    #[serde(rename = "UAE-UA")]
     #[strum(to_string = "UAE-UA", serialize = "uae-ua")]
     UAEUA,
 
