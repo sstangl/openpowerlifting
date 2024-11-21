@@ -207,7 +207,7 @@ def convert_meet_csv(input_file, output_dir):
 
         # Process entries
         entries_headers = rows[entries_start]
-        entries_data = rows[entries_start + 1]
+        entries_data = rows[entries_start + 1:]
 
         # Define required columns (excluding Lift4 columns)
         required_columns = [
