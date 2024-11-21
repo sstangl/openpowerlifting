@@ -83,6 +83,9 @@
     myeswpc = {name ="M_YES_WPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
     myemwpc = {name ="M_YEM_WPC",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M"} #Youth
     mpfrwpc = {name ="M_PFR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
+    fpfrwpc = {name ="F_PFCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="F"} #Police/Fire
+    mpfcrwpc = {name ="M_PFCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M"} #Police/Fire
+    mpfemwpc = {name ="M_PFEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"} #Police/Fire
     msorwpc = {name ="M_SOR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Special Olympics
 
     forwpc = {name ="F_OR_WPC",min=0,max=999,equipment="Raw",sex="F"}
