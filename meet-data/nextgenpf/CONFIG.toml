@@ -34,3 +34,4 @@
     sex = "F"
 
 [exemptions]
+    2104 = ["ExemptWeightClassConsistency"]  # no classes for youth
