@@ -35,3 +35,4 @@
 [exemptions]
     0902 = ["ExemptWeightClassConsistency"]  # Removed 44 and 48 classes.
     1001 = ["ExemptWeightClassConsistency"]  # Removed 44 and 48 classes.
+    2301 = ["ExemptDivision","ExemptWeightClassConsistency"]
