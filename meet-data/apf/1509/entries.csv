@@ -1,45 +1,61 @@
-Event,Equipment,Sex,Division,WeightClassKg,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place,Tested
-B,Multi-ply,F,F_MEM_3_AAPF,67.5,Tina Petersen,,70,,70,1,Yes
-SBD,Raw,F,F_OR_AAPF,60,Jenilee Sumagaysay,100,72.5,135,307.5,1,Yes
-SBD,Raw,F,F_OR_APF,82.5,Sara Holt,117.5,75,150,342.5,1,
-SBD,Wraps,F,F_OCR_APF,67.5,Crystal Uriarte,95,55,117.5,267.5,1,
-SBD,Wraps,F,F_OCR_AAPF,90,Stephanie Biernacky,140,82.5,135,357.5,1,Yes
-B,Multi-ply,M,M_MEM_1_AAPF,75,Joe Dominguez Snr,,185,,185,1,Yes
-B,Multi-ply,M,M_MEM_1_AAPF,90,Vincent Lopez III,,165,,165,1,Yes
-B,Raw,M,M_MR_2_AAPF,67.5,James Fernandez #1,,122.5,,122.5,1,
-B,Raw,M,M_OR_APF,67.5,Jerick Dominguez,,130,,130,1,
-B,Raw,M,M_OR_APF,67.5,Jesus Olasaba,,130,,130,1,
-B,Raw,M,M_JR_AAPF,75,Mark Vallejo,,120,,120,1,Yes
-B,Raw,M,M_OR_AAPF,75,Daniel Montes,,172.5,,172.5,1,Yes
-B,Raw,M,M_MR_5_AAPF,75,Jack Plaza,,,,,DQ,Yes
-B,Raw,M,M_OR_APF,75,Jonathan Valadez,,87.5,,87.5,2,
-B,Raw,M,M_OR_APF,75,Pete Giannopoulos,,130,,130,1,
-B,Raw,M,M_OR_AAPF,82.5,Eddie Hernandez,,112.5,,112.5,1,Yes
-B,Raw,M,M_MR_3_AAPF,100,Ken Thunberg,,182.5,,182.5,1,Yes
-B,Raw,M,M_MR_3_APF,140,Steve Guttierez,,172.5,,172.5,1,
-D,Raw,M,M_OR_APF,67.5,Jesus Olasaba,,,185,185,1,
-D,Raw,M,M_JR_AAPF,75,Mark Vallejo,,,185,185,1,Yes
-D,Raw,M,M_OR_APF,75,Jonathan Valadez,,,145,145,1,
-D,Raw,M,M_JR_APF,75,Jose Diaz #6,,,165,165,1,
-D,Raw,M,M_OR_AAPF,140,Eric Sanchez,,,272.5,272.5,1,Yes
-SBD,Multi-ply,M,M_MEM_1_APF,67.5,Chris Balanga,145,127.5,175,447.5,1,
-SBD,Multi-ply,M,M_JEM_APF,82.5,Andrew Vickery,192.5,140,212.5,545,1,
-SBD,Multi-ply,M,M_OEM_APF,82.5,Roy Glenn,262.5,147.5,270,680,1,
-SBD,Multi-ply,M,M_JEM_APF,100,Lawrence McElhaney,227.5,150,200,577.5,1,
-SBD,Raw,M,M_TR_3_AAPF,75,Jimmy Taylor,127.5,112.5,177.5,417.5,1,Yes
-SBD,Raw,M,M_MR_3_AAPF,75,Jeff Pugh,187.5,100,287.5,575,1,Yes
-SBD,Raw,M,M_JR_APF,75,Nathan Anderson,155,125,182.5,462.5,1,
-SBD,Raw,M,M_MR_6_APF,82.5,Bob Pelletier,117.5,45,160,322.5,1,
-SBD,Raw,M,M_OR_APF,90,Jared Holt,145,120,195,460,2,
-SBD,Raw,M,M_OR_APF,90,Dustin Wheeler,160,125,235,520,1,
-SBD,Raw,M,M_MR_3_APF,90,Tom Anderson,207.5,142.5,260,610,1,
-SBD,Raw,M,M_JR_AAPF,100,Aria Pakatchi,147.5,77.5,150,375,1,Yes
-SBD,Raw,M,M_TR_2_APF,100,Chandler Lemmon,175,120,210,505,1,
-SBD,Raw,M,M_OR_APF,100,Jeff Younger,220,132.5,242.5,595,2,
-SBD,Raw,M,M_OR_APF,100,Robert Mitchell,227.5,130,272.5,630,1,
-SBD,Raw,M,M_TR_2_AAPF,110,David Olson,195,140,272.5,607.5,1,Yes
-SBD,Wraps,M,M_JCR_APF,60,Darren Ferrer,137.5,72.5,167.5,377.5,1,
-SBD,Wraps,M,M_OCR_APF,75,Mark Campise,195,137.5,227.5,560,1,
-SBD,Wraps,M,M_OCR_APF,82.5,Jesse Ferrer,190,137.5,240,567.5,1,
-SBD,Wraps,M,M_OCR_APF,100,Taryn Jones,280,185,280,745,1,
-SBD,Wraps,M,M_MCR_3_APF,110,Bill Coffman,160,155,185,500,1,
+Event,Equipment,Sex,Division,WeightClassKg,Name,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Place
+B,Multi-ply,F,F_MEM_3_APF,67.5,Tina Petersen,,70,,70,1
+SBD,Raw,F,F_OR_APF,60,Jenilee Sumagaysay,100,72.5,135,307.5,1
+SBD,Raw,F,F_OR_APF,82.5,Sara Holt,117.5,75,150,342.5,1
+SBD,Wraps,F,F_OCR_APF,67.5,Crystal Uriarte,95,55,117.5,267.5,1
+SBD,Wraps,F,F_OCR_APF,90,Stephanie Biernacky,140,82.5,135,357.5,1
+B,Multi-ply,M,M_MEM_1_APF,75,Joe Dominguez Snr,,185,,185,1
+B,Multi-ply,M,M_MEM_1_APF,90,Vincent Lopez III,,165,,165,1
+B,Raw,M,M_MR_2_APF,67.5,James Fernandez #1,,122.5,,122.5,1
+B,Raw,M,M_OR_APF,67.5,Jerick Dominguez,,130,,130,1
+B,Raw,M,M_OR_APF,67.5,Jesus Olasaba,,130,,130,2
+B,Raw,M,M_JR_APF,75,Mark Vallejo,,120,,120,1
+B,Raw,M,M_OR_APF,75,Daniel Montes,,172.5,,172.5,1
+B,Raw,M,M_MR_5_APF,75,Jack Plaza,,,,,DQ
+B,Raw,M,M_OR_APF,75,Jonathan Valadez,,87.5,,87.5,3
+B,Raw,M,M_OR_APF,75,Pete Giannopoulos,,130,,130,2
+B,Raw,M,M_OR_APF,82.5,Eddie Hernandez,,112.5,,112.5,1
+B,Raw,M,M_MR_3_APF,100,Ken Thunberg,,182.5,,182.5,1
+B,Raw,M,M_MR_3_APF,140,Steve Guttierez,,172.5,,172.5,1
+D,Raw,M,M_OR_APF,67.5,Jesus Olasaba,,,185,185,1
+D,Raw,M,M_JR_APF,75,Mark Vallejo,,,185,185,1
+D,Raw,M,M_OR_APF,75,Jonathan Valadez,,,145,145,1
+D,Raw,M,M_JR_APF,75,Jose Diaz #6,,,165,165,2
+D,Raw,M,M_OR_APF,140,Eric Sanchez,,,272.5,272.5,1
+SBD,Multi-ply,M,M_MEM_1_APF,67.5,Chris Balanga,145,127.5,175,447.5,1
+SBD,Multi-ply,M,M_JEM_APF,82.5,Andrew Vickery,192.5,140,212.5,545,1
+SBD,Multi-ply,M,M_OEM_APF,82.5,Roy Glenn,262.5,147.5,270,680,1
+SBD,Multi-ply,M,M_JEM_APF,100,Lawrence McElhaney,227.5,150,200,577.5,1
+SBD,Raw,M,M_TR_3_APF,75,Jimmy Taylor,127.5,112.5,177.5,417.5,1
+SBD,Raw,M,M_MR_1_APF,75,Jeff Pugh,187.5,100,287.5,575,1
+SBD,Raw,M,M_JR_APF,75,Nathan Anderson,155,125,182.5,462.5,1
+SBD,Raw,M,M_MR_6_APF,82.5,Bob Pelletier,117.5,45,160,322.5,1
+SBD,Raw,M,M_OR_APF,90,Jared Holt,145,120,195,460,2
+SBD,Raw,M,M_OR_APF,90,Dustin Wheeler,160,125,235,520,1
+SBD,Raw,M,M_MR_3_APF,90,Tom Anderson,207.5,142.5,260,610,1
+SBD,Raw,M,M_JR_APF,100,Aria Pakatchi,147.5,77.5,150,375,1
+SBD,Raw,M,M_TR_2_APF,100,Chandler Lemmon,175,120,210,505,1
+SBD,Raw,M,M_OR_APF,100,Jeff Younger,220,132.5,242.5,595,2
+SBD,Raw,M,M_OR_APF,100,Robert Mitchell,227.5,130,272.5,630,1
+SBD,Raw,M,M_TR_2_APF,110,David Olson,195,140,272.5,607.5,1
+SBD,Wraps,M,M_JCR_APF,60,Darren Ferrer,137.5,72.5,167.5,377.5,1
+SBD,Wraps,M,M_OCR_APF,75,Mark Campise,195,137.5,227.5,560,1
+SBD,Wraps,M,M_OCR_APF,82.5,Jesse Ferrer,190,137.5,240,567.5,1
+SBD,Wraps,M,M_OCR_APF,100,Taryn Jones,280,185,280,745,1
+SBD,Wraps,M,M_MCR_3_APF,110,Bill Coffman,160,155,185,500,1
+B,Raw,M,M_OR_AAPF,82.5,Eddie Hernandez,,112.5,,112.5,1
+B,Multi-ply,M,M_MEM_1_AAPF,90,Vincent Lopez III,,165,,165,1
+B,Raw,M,M_MR_3_AAPF,100,Ken Thunberg,,182.5,,182.5,1
+B,Raw,M,M_OR_AAPF,75,Daniel Montes,,172.5,,172.5,1
+B,Raw,M,M_JR_AAPF,75,Mark Vallejo,,120,,120,1
+D,Raw,M,M_JR_AAPF,75,Mark Vallejo,,,185,185,1
+B,Raw,M,M_MR_5_AAPF,75,Jack Plaza,,,,,DQ
+B,Multi-ply,M,M_MEM_1_AAPF,75,Joe Dominguez Snr,,185,,185,1
+B,Multi-ply,F,F_MEM_3_AAPF,67.5,Tina Petersen,,70,,70,1
+D,Raw,M,M_OR_AAPF,140,Eric Sanchez,,,272.5,272.5,1
+SBD,Raw,F,F_OR_AAPF,60,Jenilee Sumagaysay,100,72.5,135,307.5,1
+SBD,Raw,M,M_MR_1_AAPF,75,Jeff Pugh,187.5,100,287.5,575,1
+SBD,Raw,M,M_TR_3_AAPF,75,Jimmy Taylor,127.5,112.5,177.5,417.5,1
+SBD,Wraps,F,F_OCR_AAPF,90,Stephanie Biernacky,140,82.5,135,357.5,1
+SBD,Raw,M,M_JR_AAPF,100,Aria Pakatchi,147.5,77.5,150,375,1
+SBD,Raw,M,M_TR_2_AAPF,110,David Olson,195,140,272.5,607.5,1
