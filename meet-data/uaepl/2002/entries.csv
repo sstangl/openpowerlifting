@@ -1,22 +1,22 @@
-﻿Place,Name,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Division,Event,BirthDate,Sex
-1,Domia Economides,57,125,135,140,140,67.5,70,72.5,72.5,120,132.5,-137.5,132.5,345,Raw,Open,SBD,,F
-2,Karishma Reddy,57,105,112.5,117.5,117.5,65,67.5,70,70,130,145,-155,145,332.5,Raw,Open,SBD,,F
-1,Angelica Yassine,63,130,137.5,140,140,62.5,67.5,-72.5,67.5,145,157.5,162.5,162.5,370,Raw,Open,SBD,,F
-2,Alaa Nazaryan,63,120,130,-135,130,-65,67.5,-70,67.5,125,135,145,145,342.5,Raw,Open,SBD,,F
-DQ,Rachida Moumen,63,90,110,-125,110,-60,-60,-60,,110,120,135,135,,Raw,Open,SBD,,F
-1,Amna Al Mahri,72,80,85,87.5,87.5,20,22.5,27.5,27.5,65,70,80,80,195,Raw,Open,SBD,,F
-1,Mayed Alredha,74,150,-157.5,157.5,157.5,-127.5,127.5,132.5,132.5,162.5,170,-177.5,170,460,Raw,Open,SBD,,M
-2,Amir Reza Mesforoosh,74,140,150,155,155,110,115,120,120,170,-180,-180,170,445,Raw,Open,SBD,,M
-1,Mansour Almarzooqi,83,160,-175,-175,160,140,160,,160,180,200,220,220,540,Raw,Open,SBD,,M
-2,Khalid Ali Abdullah,83,100,115,125,125,120,132.5,137.5,137.5,150,162.5,170,170,432.5,Raw,Open,SBD,,M
-3,Ahmed Suhail Alketbi,83,-120,120,-145,120,-125,130,140,140,140,155,165,165,425,Raw,Open,SBD,,M
-1,Hiba Marwan Omar,84+,100,105,110,110,50,-65,-65,50,110,125,135,135,295,Raw,Open,SBD,,F
-2,Aisha Al Suwadi,84+,-80,-90,100,100,50,55,57.5,57.5,105,115,-120,115,272.5,Raw,Open,SBD,,F
-1,Khalid Ghalib Almansoori,93,170,-180,180,180,132.5,150,155,155,225,240,-250,240,575,Raw,Open,SBD,,M
-2,Mohammed Juma Alkaabi,93,180,190,200,200,140,150,152.5,152.5,-200,-200,200,200,552.5,Raw,Open,SBD,,M
-3,Abdulaziz Abdulrahim Alali,93,105,110,120,120,115,117.5,-120,117.5,175,185,200,200,437.5,Raw,Open,SBD,,M
-1,Mohammed Ali Alkhanbouli,105,200,220,240,240,160,180,-182.5,180,240,260,280,280,700,Raw,Open,SBD,,M
-DQ,Mostafa Hazem,105,-200,200,,200,,,,,,,,,,Raw,Open,SBD,,M
-DQ,Fadhl Zayed,105,180,195,200,200,-150,-160,-160,,200,-220,-220,200,,Raw,Open,SBD,,M
-1,Hamad Al Ajmi,120+,275,285,,285,180,-190,-190,180,-240,250,-260,250,715,Raw,Open,SBD,,M
-1,Sultan Abdulwahhab,120,-140,140,-150,140,90,110,120,120,-180,190,200,200,460,Raw,Open,SBD,,M
+﻿Place,Name,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment,Division,Event,BirthDate,Sex,Country
+1,Domia Economides,57,125,135,140,140,67.5,70,72.5,72.5,120,132.5,-137.5,132.5,345,Raw,Open,SBD,,F,UAE
+2,Karishma Reddy,57,105,112.5,117.5,117.5,65,67.5,70,70,130,145,-155,145,332.5,Raw,Open,SBD,,F,UAE
+1,Angelica Yassine,63,130,137.5,140,140,62.5,67.5,-72.5,67.5,145,157.5,162.5,162.5,370,Raw,Open,SBD,,F,UAE
+2,Alaa Nazaryan,63,120,130,-135,130,-65,67.5,-70,67.5,125,135,145,145,342.5,Raw,Open,SBD,,F,UAE
+DQ,Rachida Moumen,63,90,110,-125,110,-60,-60,-60,,110,120,135,135,,Raw,Open,SBD,,F,UAE
+1,Amna Al Mahri,72,80,85,87.5,87.5,20,22.5,27.5,27.5,65,70,80,80,195,Raw,Open,SBD,,F,UAE
+1,Mayed Alredha,74,150,-157.5,157.5,157.5,-127.5,127.5,132.5,132.5,162.5,170,-177.5,170,460,Raw,Open,SBD,,M,UAE
+2,Amir Reza Mesforoosh,74,140,150,155,155,110,115,120,120,170,-180,-180,170,445,Raw,Open,SBD,,M,UAE
+1,Mansour Almarzooqi,83,160,-175,-175,160,140,160,,160,180,200,220,220,540,Raw,Open,SBD,,M,UAE
+2,Khalid Ali Abdullah,83,100,115,125,125,120,132.5,137.5,137.5,150,162.5,170,170,432.5,Raw,Open,SBD,,M,UAE
+3,Ahmed Suhail Alketbi,83,-120,120,-145,120,-125,130,140,140,140,155,165,165,425,Raw,Open,SBD,,M,UAE
+1,Hiba Marwan Omar,84+,100,105,110,110,50,-65,-65,50,110,125,135,135,295,Raw,Open,SBD,,F,UAE
+2,Aisha Al Suwadi,84+,-80,-90,100,100,50,55,57.5,57.5,105,115,-120,115,272.5,Raw,Open,SBD,,F,UAE
+1,Khalid Ghalib Almansoori,93,170,-180,180,180,132.5,150,155,155,225,240,-250,240,575,Raw,Open,SBD,,M,UAE
+2,Mohammed Juma Alkaabi,93,180,190,200,200,140,150,152.5,152.5,-200,-200,200,200,552.5,Raw,Open,SBD,,M,UAE
+3,Abdulaziz Abdulrahim Alali,93,105,110,120,120,115,117.5,-120,117.5,175,185,200,200,437.5,Raw,Open,SBD,,M,UAE
+1,Mohammed Ali Alkhanbouli,105,200,220,240,240,160,180,-182.5,180,240,260,280,280,700,Raw,Open,SBD,,M,UAE
+DQ,Mostafa Hazem,105,-200,200,,200,,,,,,,,,,Raw,Open,SBD,,M,UAE
+DQ,Fadhl Zayed,105,180,195,200,200,-150,-160,-160,,200,-220,-220,200,,Raw,Open,SBD,,M,UAE
+1,Hamad Al Ajmi,120+,275,285,,285,180,-190,-190,180,-240,250,-260,250,715,Raw,Open,SBD,,M,UAE
+1,Sultan Abdulwahhab,120,-140,140,-150,140,90,110,120,120,-180,190,200,200,460,Raw,Open,SBD,,M,UAE
