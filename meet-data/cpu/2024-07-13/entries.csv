@@ -1,17 +1,17 @@
-﻿Place,Name,Sex,Age,BirthDate,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
-1,Eric Yeung,M,,,Canada,MB,Raw,Juniors,82.28,83,192.5,202.5,210,210,127.5,132.5,137.5,137.5,222.5,237.5,-250,237.5,585,SBD
-1,Asher Navid,M,,,Canada,MB,Raw,Juniors,102.74,105,200,212.5,-220,212.5,127.5,135,-140,135,215,230,-235,230,577.5,SBD
-1,Justin Parisian,M,,,Canada,MB,Raw,Open,119.02,120,255,267.5,-280,267.5,155,-165,165,165,-250,270,-295,270,702.5,SBD
-1,Ryan Los,M,,,Canada,MB,Raw,Open,102.88,105,195,210,-220,210,122.5,130,-135,130,230,242.5,-252.5,242.5,582.5,SBD
-2,Devin Antymniuk,M,,,Canada,MB,Raw,Open,92.94,93,140,147.5,157.5,157.5,77.5,-82.5,-82.5,77.5,155,170,-182.5,170,405,SBD
-1,Riley Bertrand,M,,,Canada,MB,Raw,Open,90.2,93,240,260,270,270,145,160,-167.5,160,-275,-275,275,275,705,SBD
-3,Joseph Alibango,M,,,Canada,MB,Raw,Open,81.42,83,182.5,-190,190,190,120,-127.5,-127.5,120,195,202.5,210,210,520,SBD
-2,Hao-Yi Sim,M,,,Canada,MB,Raw,Open,82.88,83,200,207.5,-212.5,207.5,122.5,127.5,132.5,132.5,235,252.5,-285,252.5,592.5,SBD
-1,Celmar Atienza,M,,,Canada,MB,Raw,Open,82.26,83,220,230,235,235,130,135,137.5,137.5,235,252.5,-260,252.5,625,SBD
-2,Os Bui,M,,,Canada,MB,Raw,Open,62.64,66,135,142.5,147.5,147.5,102.5,107.5,117.5,117.5,170,-180,-185,170,435,SBD
-1,Jonathan Miranda,M,,,Canada,MB,Raw,Open,65.26,66,177.5,190,195,195,120,127.5,130,130,192.5,205,-215,205,530,SBD
-1,Ma Michaella San Juan,F,,,Canada,MB,Raw,Juniors,62.44,63,100,110,115,115,60,65,-67.5,65,120,130,137.5,137.5,317.5,SBD
-1,Taylor Armstrong #2,F,,,Canada,MB,Raw,Juniors,68.5,69,92.5,95,97.5,97.5,65,70,-72.5,70,145,-157.5,-157.5,145,312.5,SBD
-1,Kari Klassen,F,,,Canada,MB,Raw,Masters 2,56.52,57,70,77.5,-87.5,77.5,40,47.5,52.5,52.5,100,120,125,125,255,SBD
-1,Janet Loesel Sitar,F,,,Canada,MB,Raw,Masters 2,79.9,84,95,100,105,105,67.5,72.5,75,75,140,147.5,152.5,152.5,332.5,SBD
-1,Orson Lecheminant,M,,,Canada,MB,Raw,Youth 3,59.4,66,90,92.5,-112.5,92.5,70,72.5,75,75,-130,135,145,145,312.5,SBD
+﻿Place,Name,Sex,Age,BirthDate,BirthYear,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
+1,Eric Yeung,M,,,,Canada,MB,Raw,Juniors,82.28,83,192.5,202.5,210,210,127.5,132.5,137.5,137.5,222.5,237.5,-250,237.5,585,SBD
+1,Asher Navid,M,,,,Canada,MB,Raw,Juniors,102.74,105,200,212.5,-220,212.5,127.5,135,-140,135,215,230,-235,230,577.5,SBD
+1,Justin Parisian,M,,,,Canada,MB,Raw,Open,119.02,120,255,267.5,-280,267.5,155,-165,165,165,-250,270,-295,270,702.5,SBD
+1,Ryan Los,M,,,,Canada,MB,Raw,Open,102.88,105,195,210,-220,210,122.5,130,-135,130,230,242.5,-252.5,242.5,582.5,SBD
+2,Devin Antymniuk,M,,,,Canada,MB,Raw,Open,92.94,93,140,147.5,157.5,157.5,77.5,-82.5,-82.5,77.5,155,170,-182.5,170,405,SBD
+1,Riley Bertrand,M,,,,Canada,MB,Raw,Open,90.2,93,240,260,270,270,145,160,-167.5,160,-275,-275,275,275,705,SBD
+3,Joseph Alibango,M,,,,Canada,MB,Raw,Open,81.42,83,182.5,-190,190,190,120,-127.5,-127.5,120,195,202.5,210,210,520,SBD
+2,Hao-Yi Sim,M,,,,Canada,MB,Raw,Open,82.88,83,200,207.5,-212.5,207.5,122.5,127.5,132.5,132.5,235,252.5,-285,252.5,592.5,SBD
+1,Celmar Atienza,M,,,,Canada,MB,Raw,Open,82.26,83,220,230,235,235,130,135,137.5,137.5,235,252.5,-260,252.5,625,SBD
+2,Os Bui,M,,,,Canada,MB,Raw,Open,62.64,66,135,142.5,147.5,147.5,102.5,107.5,117.5,117.5,170,-180,-185,170,435,SBD
+1,Jonathan Miranda,M,,,1999,Canada,MB,Raw,Open,65.26,66,177.5,190,195,195,120,127.5,130,130,192.5,205,-215,205,530,SBD
+1,Ma Michaella San Juan,F,,,,Canada,MB,Raw,Juniors,62.44,63,100,110,115,115,60,65,-67.5,65,120,130,137.5,137.5,317.5,SBD
+1,Taylor Armstrong #2,F,,,,Canada,MB,Raw,Juniors,68.5,69,92.5,95,97.5,97.5,65,70,-72.5,70,145,-157.5,-157.5,145,312.5,SBD
+1,Kari Klassen,F,,,,Canada,MB,Raw,Masters 2,56.52,57,70,77.5,-87.5,77.5,40,47.5,52.5,52.5,100,120,125,125,255,SBD
+1,Janet Loesel Sitar,F,,,,Canada,MB,Raw,Masters 2,79.9,84,95,100,105,105,67.5,72.5,75,75,140,147.5,152.5,152.5,332.5,SBD
+1,Orson Lecheminant,M,,,,Canada,MB,Raw,Youth 3,59.4,66,90,92.5,-112.5,92.5,70,72.5,75,75,-130,135,145,145,312.5,SBD
