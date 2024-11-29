@@ -55,6 +55,7 @@
 
     # Unofficial divisions that show up anyway.
     j16_17 = {name="J16-17", min=16, max=17}
+    j18_19 = {name="J18-19", min=18, max=19}
 
 
 [weightclasses.default_M]
