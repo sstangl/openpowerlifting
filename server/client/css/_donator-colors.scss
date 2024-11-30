@@ -607,6 +607,13 @@
   background-image: linear-gradient(to right, $yellow, $purple);
 }
 
+.yellow_to_purple2 {
+  $yellow: #FFC200;
+  $purple: #3C1066;
+  @include gradient-prereqs($yellow);
+  background-image: linear-gradient(to right, $yellow, $purple);
+}
+
 // The OpenPowerlifting squat-bench-deadlift colors in a gradient.
 .opl_sbd {
   $squat: #FFAE20;
