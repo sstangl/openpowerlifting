@@ -25,9 +25,11 @@ pub struct CheckResult {
 /// an optimization: internally, each time a ReaderBuilder is created,
 /// it must construct a new DFA. Building that again and again for
 /// each file took about 5% of total program execution.
-pub fn compile_csv_reader() -> csv::ReaderBuilder {
+pub fn compile_csv_reader(allow_crlf: bool) -> csv::ReaderBuilder {
     let mut reader = csv::ReaderBuilder::new();
     reader.quoting(false);
-    reader.terminator(csv::Terminator::Any(b'\n'));
+    if !allow_crlf {
+        reader.terminator(csv::Terminator::Any(b'\n'));
+    }
     reader
 }

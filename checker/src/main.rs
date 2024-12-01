@@ -48,6 +48,12 @@ struct Args {
     /// Whether the database should be compiled for humans.
     compile_onefile: bool,
 
+    /// Whether Windows-style CRLF line endings should be allowed, default disallowed.
+    ///
+    /// This is useful to pass in CI, which has an explicit, separate phase for checking
+    /// line endings.
+    allow_crlf: bool,
+
     /// Any remaining unrecognized arguments.
     free: Vec<OsString>,
 }
@@ -264,6 +270,7 @@ OPTIONS:
         --age-group <username>  Prints disambugation age debug info for the given username
         --country <username>    Prints country debug info for the given username
         --timing                Prints timing information for compiler phases
+        --allow-crlf            Allows Windows-style CRLF line endings in CSV files
 
 ARGS:
     <PATH>    Optionally restricts processing to just this parent directory
@@ -286,6 +293,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         debug_timing: args.contains("--timing"),
         compile: args.contains(["-c", "--compile"]),
         compile_onefile: args.contains(["-1", "--compile-onefile"]),
+        allow_crlf: args.contains("--allow-crlf"),
         free: args.finish(),
     };
 
@@ -351,7 +359,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Compile the CSV parser early.
     // Doing this just once significantly increases performance.
-    let reader: csv::ReaderBuilder = checker::checklib::compile_csv_reader();
+    let reader: csv::ReaderBuilder = checker::checklib::compile_csv_reader(args.allow_crlf);
 
     // Check the lifter-data/ files.
     let timing = instant_if(args.debug_timing);

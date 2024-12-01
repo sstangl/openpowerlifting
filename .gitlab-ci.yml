@@ -61,7 +61,7 @@ run-checker:
   before_script:
     - cd ${CI_PROJECT_DIR}
   script:
-    - checker --project-root ${CI_PROJECT_DIR} --timing
+    - checker --project-root ${CI_PROJECT_DIR} --timing --allow-crlf
     - tests/check-lifter-data
   rules:
     # Build on any branch off main. This explicitly allows for checks to run prior to MR creation.

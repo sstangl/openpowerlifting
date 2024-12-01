@@ -96,7 +96,7 @@ fn check_entries(
 /// Checks a CheckerInput, returning a JSON-serializable CheckerOutput.
 pub fn check(opldb: &OplDb, input: &CheckerInput) -> CheckerOutput {
     // Compile the DFA that reads the CSV.
-    let reader: csv::ReaderBuilder = checker::checklib::compile_csv_reader();
+    let reader: csv::ReaderBuilder = checker::checklib::compile_csv_reader(false);
 
     // First check the meet.csv, because entries.csv date checking is dependent.
     match check_meet(&reader, input) {
