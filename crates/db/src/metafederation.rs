@@ -623,6 +623,10 @@ pub enum MetaFederation {
     #[strum(to_string = "slpf")]
     SLPF,
 
+    /// SSAU, but with international results also.
+    #[strum(to_string = "ssau")]
+    SSAU,
+
     /// SSF, but with international results also.
     #[strum(to_string = "ssf")]
     SSF,
@@ -943,14 +947,13 @@ impl MetaFederation {
             }
             MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
 
-            // APU formed in 2018 and was IPF affiliate until end of 2023.
+            // APU formed in 2018 and was IPF affiliate until early 2024.
             // APU was originally affiliated to ORPF but changed to AsianPF from 2021.
             MetaFederation::APU => {
                 ((2018..2021).contains(&meet.date.year())
                     && affiliation!(meet, entry, APU, IPF, CommonwealthPF, ORPF))
                     || ((2021..2024).contains(&meet.date.year())
                         && affiliation!(meet, entry, APU, IPF, CommonwealthPF, AsianPF))
-                    || (meet.date.year() >= 2024 && affiliation!(meet, entry, APU, WDFPF))
             }
             MetaFederation::AusPLTested => meet.federation == Federation::AusPL && entry.tested,
             MetaFederation::UKPUTested => meet.federation == Federation::UKPU && entry.tested,
@@ -1135,6 +1138,9 @@ impl MetaFederation {
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
             MetaFederation::SLPF => affiliation!(meet, entry, SLPF, IPF, AsianPF),
+            MetaFederation::SSAU => {
+                affiliation!(meet, entry, SSAU, WDFPF) && meet.date.year() >= 2024
+            }
             MetaFederation::SSF => affiliation!(meet, entry, SSF, IPF, EPF, NordicPF),
             MetaFederation::SSSC => affiliation!(meet, entry, SSSC, IPF, AsianPF),
             MetaFederation::SVNL => affiliation!(meet, entry, SVNL, IPF, EPF, NordicPF),

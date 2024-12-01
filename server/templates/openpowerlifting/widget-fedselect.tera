@@ -137,7 +137,7 @@
   <option value="all-australia-tested" {% if selection.federation == "AllAustraliaTested" %}selected{% endif %}>All Tested Australian Lifters</option>
   <option value="aaplf" {% if selection.federation == "AAPLF" %}selected{% endif %}>AAPLF - Australian Amateur Powerlifting Federation [IPF]</option>
   <option value="apla" {% if selection.federation == "APLA" %}selected{% endif %}>APLA - Australian Powerlifting Alliance [IPF]</option>
-  <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union [WDFPF]</option>
+  <option value="apu" {% if selection.federation == "APU" %}selected{% endif %}>APU - Australian Powerlifting Union [IPF]</option>
   <option value="ausdfpf" {% if selection.federation == "AusDFPF" %}selected{% endif %}>AusDFPF - Australian Drug Free Powerlifting Federation [WDFPF]</option>
   <option value="auspf" {% if selection.federation == "AusPF" %}selected{% endif %}>AusPF - Australian Powerlifting Federation [IPF]</option>
   <option value="auspl" {% if selection.federation == "AusPL" %}selected{% endif %}>AusPL - Australian Powerlifting League</option>
@@ -148,6 +148,7 @@
   <option value="oceaniapo" {% if selection.federation == "OceaniaPO" %}selected{% endif %}>OceaniaPO - Oceania Powerlifting Organisation [WPC]</option>
   <option value="pa" {% if selection.federation == "PA" %}selected{% endif %}>PA - Powerlifting Australia [WP]</option>
   <option value="proraw" {% if selection.federation == "ProRaw" %}selected{% endif %}>ProRaw</option>
+  <option value="ssau" {% if selection.federation == "SSAU" %}selected{% endif %}>SSAU - Strength Sports Australia [WDFPF]</option>
   <option value="usapl-australia" {% if selection.federation == "USAPL-Australia" %}selected{% endif %}>USAPL Australia</option>
   <option value="vdfpa" {% if selection.federation == "VDFPA" %}selected{% endif %}>VDFPA - Victorian Drug Free Powerlifting Association [RAW]</option>
   <option value="wrpf-aus" {% if selection.federation == "WRPF-AUS" %}selected{% endif %}>WRPF-AUS - WRPF Australia [WRPF]</option>

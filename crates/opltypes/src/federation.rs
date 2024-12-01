@@ -130,7 +130,7 @@ pub enum Federation {
     #[strum(to_string = "APP", serialize = "app")]
     APP,
 
-    /// Australian Powerlifting Union, formerly IPF, now WDFPF.
+    /// Australian Powerlifting Union, formerly IPF, now SSAU/WDFPF.
     #[strum(to_string = "APU", serialize = "apu")]
     APU,
 
@@ -1266,6 +1266,10 @@ pub enum Federation {
     #[strum(to_string = "SSA", serialize = "ssa")]
     SSA,
 
+    /// Strength Sports Australia, formerly APU/IPF, now WDFPF as of 2024.
+    #[strum(to_string = "SSAU", serialize = "ssau")]
+    SSAU,
+
     /// Swedish IPF affiliate.
     #[strum(to_string = "SSF", serialize = "ssf")]
     SSF,
@@ -2286,6 +2290,7 @@ impl Federation {
             Federation::SPFIRL => false,
             Federation::SPSS => false,
             Federation::SSA => false,
+            Federation::SSAU => FULLY_TESTED,
             Federation::SSF => FULLY_TESTED,
             Federation::SSSC => FULLY_TESTED,
             Federation::SVNL => FULLY_TESTED,
@@ -2730,6 +2735,7 @@ impl Federation {
             Federation::SPFIRL => Some(Country::Ireland),
             Federation::SPSS => Some(Country::Russia),
             Federation::SSA => Some(Country::USA),
+            Federation::SSAU => Some(Country::Australia),
             Federation::SSF => Some(Country::Sweden),
             Federation::SSSC => Some(Country::SaudiArabia),
             Federation::SVNL => Some(Country::Finland),
@@ -2916,8 +2922,8 @@ impl Federation {
             Federation::APO => None,
             Federation::APP => Some(Federation::GPA),
             Federation::APU => {
-                // The APU withdrew association with the IPF and affiliated with WDFPF from 2024-01-01 onwards.
-                if date >= date!(2024-01-01) {
+                // The APU withdrew association with the IPF and affiliated with WDFPF from early 2024.
+                if date >= date!(2024-04-01) {
                     Some(Federation::WDFPF)
                 } else {
                     Some(Federation::IPF)
@@ -3262,6 +3268,7 @@ impl Federation {
             Federation::SPFIRL => Some(Federation::SPF),
             Federation::SPSS => None,
             Federation::SSA => None,
+            Federation::SSAU => Some(Federation::WDFPF),
             Federation::SSF => Some(Federation::IPF),
             Federation::SSSC => Some(Federation::IPF),
             Federation::SVNL => Some(Federation::IPF),
@@ -3514,14 +3521,7 @@ impl Federation {
             Federation::APLA => Federation::ipf_rules_on(date),
             Federation::APO => PointsSystem::Glossbrenner,
             Federation::APP => PointsSystem::Wilks,
-            Federation::APU => {
-                // Due to change of affiliation from IPF to WDFPF in 2024.
-                if date.year() >= 2024 {
-                    PointsSystem::SchwartzMalone
-                } else {
-                    Federation::ipf_rules_on(date)
-                }
-            }
+            Federation::APU => Federation::ipf_rules_on(date),
             Federation::APUA => PointsSystem::Wilks,
             Federation::ARPL => Federation::ipl_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),
@@ -3827,6 +3827,7 @@ impl Federation {
             Federation::SPFIRL => PointsSystem::SchwartzMalone,
             Federation::SPSS => PointsSystem::Wilks,
             Federation::SSA => PointsSystem::Wilks,
+            Federation::SSAU => PointsSystem::Wilks,
             Federation::SSF => Federation::ipf_rules_on(date),
             Federation::SSSC => Federation::ipf_rules_on(date),
             Federation::SVNL => Federation::ipf_rules_on(date),
