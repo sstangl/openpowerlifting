@@ -90,7 +90,7 @@ Abbrev,Description,Abbrev,Description
 "_MES_9_APF",Men Master 9 Equipped Single-Ply APF: 80+,F_MES_9_APF,Women  Master 9 Equipped Single-Ply APF: 80+
 "_MES_9_AAPF",Men Master 9 Equipped Single-Ply AAPF: 80+,F_MES_9_AAPF,Women  Master 9 Equipped Single-Ply AAPF: 80+
 "_ORD_APF",Men Open Raw Disabled APF,F_MRD_3_AAPF,Women  Master 3 Raw Disabled AAPF: 50-54
-Name,Age,Div,BWt (Kg),"WtCls(Kg)",Glossbrenner,Squat  1,Squat  2,Squat  3,"BestSquat",Bench 1,Bench 2,Bench 3,"BestBench","SubTotal",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift",PL Total,"CoeffScore","Age  &Coeff",Pl-Div-WtCl,Team,Notes
+Name,Age,Div,BWt (Kg),"WtCls(Kg)",Glossbrenner,Squat  1,Squat  2,Squat  3,"BestSquat",Bench 1,Bench 2,Bench 3,"BestBench","SubTotal",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift",PL Total,"CoeffScore","Age  &Coeff",Pl-Div-WtCl,Team,Notes
 "Acuna, Richard (aapf)",29,MORAAPF,106.6,110,0.5678,192.5,217.5,-227.5,217.5,137.5,-142.5,-142.5,137.5,355,250,277.5,-282.5,277.5,632.5,359.1335,0.0000,2-MORAAPF-110,,
 "Acuna, Richard (apf)",29,MORAPF,106.6,110,0.5678,192.5,217.5,-227.5,217.5,137.5,-142.5,-142.5,137.5,355,250,277.5,-282.5,277.5,632.5,359.1335,0.0000,5-MORAPF-110,,
 "Ahrabian, Arman",25,MORAPF,106.7,110,0.5677,220,232.5,-242.5,232.5,185,-192.5,-200,185,417.5,275,295,-307.5,295,712.5,404.4506,0.0000,2-MORAPF-110,Gladiator Teddy Bears,
@@ -238,7 +238,7 @@ Name,Age,Div,BWt (Kg),"WtCls(Kg)",Glossbrenner,Squat  1,Squat  2,Squat  3,"Best
 "Yert, Daniel (open)",49,MOEMAPF,73.9,75,0.6999,130,150,-160,150,-120,120,-137.5,120,270,142.5,155,0,155,425,297.4363,331.0465,1-MOEMAPF-75,,
 "Zainea, Jacob",28,MORAPF,119.6,125,0.5514,230,257.5,275,275,200,-212.5,212.5,212.5,487.5,275,297.5,310,310,797.5,439.7415,0.0000,2-MORAPF-125,,
 "",,,,,,,,,,,,,,,,,,,,,,,,
-Name,Age,Div,BWt (Kg),"WtCls(Kg)",Glossbrenner,Squat  1,Squat  2,Squat  3,"BestSquat",Bench 1,Bench 2,Bench 3,"BestBench","SubTotal",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift",PL Total,"CoeffScore","Age  &Coeff",Pl-Div-WtCl,Team,Notes
+Name,Age,Div,BWt (Kg),"WtCls(Kg)",Glossbrenner,Squat  1,Squat  2,Squat  3,"BestSquat",Bench 1,Bench 2,Bench 3,"BestBench","SubTotal",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift",PL Total,"CoeffScore","Age  &Coeff",Pl-Div-WtCl,Team,Notes
 "Acuna, Richard (aapf)",29,M_OR_AAPF,106.6,110,0.5678,424.39,479.50,-501.55,479.50,303.13,-314.16,-314.16,303.13,782.63,551.15,611.78,-622.80,611.78,1394.41,359.1335,0.0000,2-M_OR_AAPF-110,,
 "Acuna, Richard (apf)",29,M_OR_APF,106.6,110,0.5678,424.39,479.50,-501.55,479.50,303.13,-314.16,-314.16,303.13,782.63,551.15,611.78,-622.80,611.78,1394.41,359.1335,0.0000,5-MORAPF-110,,
 "Ahrabian, Arman",25,M_OR_APF,106.7,110,0.5677,485.01,512.57,-534.62,512.57,407.85,-424.39,-440.92,407.85,920.42,606.27,650.36,-677.91,650.36,1570.78,404.4506,0.0000,2-M_OR_APF-110,Gladiator Teddy Bears,
@@ -547,7 +547,7 @@ Name,Age,Div,BWt (Kg),WtCls (Kg),Glossbrenner,Deadlift 1,Deadlift 2,Deadlift 3,B
 "Skory, Reid (aapf)",29,M_OR_AAPF,79.9,82.5,0.6613,518.08,534.62,-551.15,534.62,160.3653,0.0000,2-M_OR_AAPF-82.5,,
 "Skory, Reid (apf)",29,M_OR_APF,79.9,82.5,0.6613,518.08,534.62,-551.15,534.62,160.3653,0.0000,2-M_OR_APF-82.5,,
 "Wood, John (dl-mast)",50,M_MR_3_APF,81.1,82.5,0.6519,440.92,468.48,501.55,501.55,148.2959,167.5743,1-M_MR_3_APF-82.5,Motorcity Barbell,
-Name,Age,Div,"BWt(Kg)","WtCls(Kg)","Glossbrenner",Bench 1,Bench 2,Bench 3,"BestBench",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift","Push PullTotal",Coeff Score,"Age  &Coeff",Pl-Div-WtCl,Team
+Name,Age,Div,"BWt(Kg)","WtCls(Kg)","Glossbrenner",Bench 1,Bench 2,Bench 3,"BestBench",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift","Push PullTotal",Coeff Score,"Age  &Coeff",Pl-Div-WtCl,Team
 "Centner, Casey (pp-aapf)",27,M_OR_AAPF,75,75,0.6886,117.5,125,-132.5,125,182.5,190,200,200,325,223.7788,0,1-M_OR_AAPF-75,
 "Centner, Casey (pp-apf)",27,M_OR_APF,75,75,0.6886,117.5,125,-132.5,125,182.5,190,200,200,325,223.7788,0,1-M_OR_APF-75,
 "Cottone, Michael (aapf)",31,M_OR_AAPF,79.9,82.5,0.6613,125,132.5,137.5,137.5,215,227.5,-232.5,227.5,365,241.3745,0,1-M_OR_AAPF-82.5,Armageddon
@@ -557,7 +557,7 @@ Name,Age,Div,"BWt(Kg)","WtCls(Kg)","Glossbrenner",Bench 1,Bench 2,Bench 3,"Be
 "Hurst, Adam",25,M_OR_APF,99.6,100,0.5823,190,197.5,-205,197.5,280,-287.5,-297.5,280,477.5,278.0483,0,1-M_OR_APF-100,
 "Kurzeja, Mark",21,M_JR_APF,107.1,110,0.5670,150,170,-185,170,260,-280,-280,260,430,243.7885,0,1-M_JR_APF-110,
 "Laduke, Amy",37,F_SR_AAPF,80.4,82.5,0.7993,45,55,62.5,62.5,80,92.5,105,105,167.5,133.8744,0,1-F_SR_AAPF-82.5,Team Repz
-Name,Age,Div,"BWt(Kg)","WtCls(Kg)","Glossbrenner",Bench 1,Bench 2,Bench 3,"BestBench",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift","Push PullTotal",Coeff Score,"Age  &Coeff",Pl-Div-WtCl,Team
+Name,Age,Div,"BWt(Kg)","WtCls(Kg)","Glossbrenner",Bench 1,Bench 2,Bench 3,"BestBench",Deadlift 1,Deadlift 2,Deadlift 3,"BestDeadlift","Push PullTotal",Coeff Score,"Age  &Coeff",Pl-Div-WtCl,Team
 "Centner, Casey (pp-aapf)",27,M_OR_AAPF,75,75,0.6886,259.04,275.58,-292.11,275.58,402.34,418.87,440.92,440.92,716.495,223.7788,0,1-M_OR_AAPF-75,
 "Centner, Casey (pp-apf)",27,M_OR_APF,75,75,0.6886,259.04,275.58,-292.11,275.58,402.34,418.87,440.92,440.92,716.495,223.7788,0,1-M_OR_APF-75,
 "Cottone, Michael (aapf)",31,M_OR_AAPF,79.9,82.5,0.6613,275.58,292.11,303.13,303.13,473.99,501.55,-512.57,501.55,804.679,241.3745,0,1-M_OR_AAPF-82.5,Armageddon

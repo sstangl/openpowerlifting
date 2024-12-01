@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Checks that no file contains the CR (\r) character.
+
+FOUND_ERROR=0
+
+# Loop over matches without spawning a subshell.
+while read file; do
+    FOUND_ERROR=1
+    echo "Error: ${file} contains CRLF line endings"
+done < <(grep -Ilr $'\r' meet-data/)
+
+# Fail if an error was found.
+if [ "${FOUND_ERROR}" -eq 1 ]; then
+    echo "Error: Some files contain CRLF line endings!"
+    exit 1
+fi
+

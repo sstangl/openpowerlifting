@@ -44,6 +44,7 @@ server: csv
 check:
 	tests/check --timing
 	tests/check-lifter-data
+	tests/check-line-endings
 
 # Checks all the CSV files, but additionally validate the Python scripts too
 .PHONY: check-all

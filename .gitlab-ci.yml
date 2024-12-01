@@ -72,6 +72,15 @@ run-checker:
           - "**/CONFIG.toml" # Run the checker if federation configurations changed.
           - "lifter-data/**/*" # Run the checker if any lifter data changed.
 
+# Checks that all files have UNIX line endings (\n) instead of Windows line endings (\r\n).
+line-endings:
+  stage: check
+  image: ${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest
+  before_script:
+    - cd ${CI_PROJECT_DIR}
+  script:
+    - tests/check-line-endings
+
 # Checks that Python scripts have an enforced style.
 python-style:
   stage: check
