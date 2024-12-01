@@ -15,7 +15,7 @@ Place,Name,BirthDate,BirthYear,Team,WeightClassKg,BodyweightKg,Bench1Kg,Bench2Kg
 5,Apoorvi Sharma,1994-06-07,,J & K,57,55.7,50,55,60,60,60,F,Open,B,Single-ply
 6,Moirangthem Anupama Devi,1994-05-01,,MNP,57,53.5,30,35,-37.5,35,35,F,Open,B,Single-ply
 DQ,Bhawna Bisht,1985-03-03,,UP,57,56.5,-85,-90,-92.5,,,F,Open,B,Single-ply
-1,Anjali Sharma,1999-05-25,,RAJ,63,62.1,97.5,105,110,110,110,F,Open,B,Single-ply
+1,Anjali Sharma #1,1999-05-25,,RAJ,63,62.1,97.5,105,110,110,110,F,Open,B,Single-ply
 2,Ashma Khan Alvi,1991-07-01,,UP,63,62.5,75,82.5,90,90,90,F,Open,B,Single-ply
 3,Priya Kandalkar,1984-12-16,,MAH,63,62.1,80,85,-90,85,85,F,Open,B,Single-ply
 4,Kirti Brid,1994-09-01,,MAH,63,61.7,70,-77.5,-82.5,70,70,F,Open,B,Single-ply
@@ -77,7 +77,7 @@ DQ,Bhawna Bisht,1985-03-03,,UP,57,56.5,-85,-90,-92.5,,,F,Open,B,Single-ply
 1,Suchita Tendulkar,1995-02-28,,MAH,57,55.4,55,65,-75,65,65,F,Juniors,B,Single-ply
 2,Jyoti Singh,1997-01-01,,UP,57,55.5,-52.5,52.5,-55,52.5,52.5,F,Juniors,B,Single-ply
 DQ,Swathi. U.K,1997-03-27,,KTK,57,56.5,-55,-55,-55,,,F,Juniors,B,Single-ply
-1,Anjali Sharma,1999-05-25,,RAJ,63,62.1,97.5,105,110,110,110,F,Juniors,B,Single-ply
+1,Anjali Sharma #1,1999-05-25,,RAJ,63,62.1,97.5,105,110,110,110,F,Juniors,B,Single-ply
 2,Madhawi Bilochan,1996-05-21,,JHR,63,57.2,70,77.5,82.5,82.5,82.5,F,Juniors,B,Single-ply
 3,Sampada Nagvekar,1998-04-04,,MAH,63,62.1,65,70,-72.5,70,70,F,Juniors,B,Single-ply
 4,Rajshree Joshi,1999-05-14,,RAJ,63,61,-50,52.5,-70,52.5,52.5,F,Juniors,B,Single-ply
@@ -245,7 +245,7 @@ DQ,Siddharth Verma,1997-06-14,,DEL,66,65.8,-130,-132.5,-140,,,M,Juniors,B,Single
 6,Akhil.K.Kumar,1999-10-30,,KER,74,71.2,105,107.5,-112.5,107.5,107.5,M,Juniors,B,Single-ply
 7,Sreenath.S,1998-06-19,,KER,74,72.3,100,-112.5,-112.5,100,100,M,Juniors,B,Single-ply
 1,Mohd Farhan,1996-09-15,,KTK,83,77.4,155,162.5,-167.5,162.5,162.5,M,Juniors,B,Single-ply
-2,Mohit Kumar,1996-03-11,,UP,83,82.5,150,160,-170,160,160,M,Juniors,B,Single-ply
+2,Mohit Kumar #1,1996-03-11,,UP,83,82.5,150,160,-170,160,160,M,Juniors,B,Single-ply
 3,Dhaneshwar Sahu,1998-12-10,,JHR,83,80.8,145,-155,155,155,155,M,Juniors,B,Single-ply
 4,Vikas Sharma,2000-01-05,,RAJ,83,79.7,-140,-140,150,150,150,M,Juniors,B,Single-ply
 5,B. Harish Kumar,1997-06-12,,AP,83,82.9,130,140,-147.5,140,140,M,Juniors,B,Single-ply
@@ -299,7 +299,7 @@ DQ,Ankit Khatri,1996-12-19,,DEL,120+,137,-230,-230,-230,,,M,Juniors,B,Single-ply
 10,U Jagadish,1972-07-22,,KTK,83,83,115,-120,-122.5,115,115,M,Masters 1,B,Single-ply
 11,Atheeq Ahmed,1977-04-05,,KTK,83,77,110,-117.5,-140,110,110,M,Masters 1,B,Single-ply
 1,Vikram Singh Chouhan,1976-06-08,,RAJ,93,92.2,167.5,172.5,175,175,175,M,Masters 1,B,Single-ply
-2,Ravinder Singh,1975-12-27,,HAR,93,89.1,160,-170,172.5,172.5,172.5,M,Masters 1,B,Single-ply
+2,Ravinder Singh #1,1975-12-27,,HAR,93,89.1,160,-170,172.5,172.5,172.5,M,Masters 1,B,Single-ply
 3,A Arun Kumar,1977-01-05,,KTK,93,90,150,-160,-160,150,150,M,Masters 1,B,Single-ply
 4,Rajhans Mehandale,1972-03-26,,MAH,93,84.4,120,125,130,130,130,M,Masters 1,B,Single-ply
 5,C.Saravanan,1973-05-30,,TN,93,87.9,90,100,-105,100,100,M,Masters 1,B,Single-ply
@@ -378,7 +378,7 @@ DQ,Radha Kumari,1987-02-05,,J & K,47,47,,,,,,F,Open,B,Raw
 7,Moirangthem Anupama Devi,1994-05-01,,MNP,57,53.9,30,,,30,30,F,Open,B,Raw
 1,Chandra Badani Mohanta,1993-06-23,,ODI,63,63,70,77.5,80,80,80,F,Open,B,Raw
 2,Kulwinder Kaur,1982-05-15,,PUN,63,59.2,62.5,-72.5,77.5,77.5,77.5,F,Open,B,Raw
-3,Anjali Sharma,1999-05-25,,RAJ,63,62.8,65,70,-75,70,70,F,Open,B,Raw
+3,Anjali Sharma #1,1999-05-25,,RAJ,63,62.8,65,70,-75,70,70,F,Open,B,Raw
 4,Tapasi Chakraborty,1985-12-04,,WB,63,60.2,50,57.5,,57.5,57.5,F,Open,B,Raw
 5,Gauri Shinde,1991-05-17,,MAH,63,59.6,-50,50,-55,50,50,F,Open,B,Raw
 6,Pallavi Thakur,1993-10-19,,MAH,63,59.6,42.5,-47.5,47.5,47.5,47.5,F,Open,B,Raw
@@ -464,7 +464,7 @@ DQ,Ritu Sharma,2001-05-17,,HAR,52,50.2,-20,,,,,F,Sub-Juniors,B,Raw
 5,Dimple Parihar,1999-09-07,,RAJ,57,55.4,32.5,-40,-42.5,32.5,32.5,F,Juniors,B,Raw
 6,Sahiba,1999-06-19,,HAR,57,52.3,20,,,20,20,F,Juniors,B,Raw
 1,Madhavi Bilochan,1996-05-21,,JHR,63,57.3,65,75,-77.5,75,75,F,Juniors,B,Raw
-2,Anjali Sharma,1999-05-25,,RAJ,63,,65,70,-75,70,70,F,Juniors,B,Raw
+2,Anjali Sharma #1,1999-05-25,,RAJ,63,,65,70,-75,70,70,F,Juniors,B,Raw
 3,Aditi Parshetty,2002-03-26,,MAH,63,60.6,45,50,52.5,52.5,52.5,F,Juniors,B,Raw
 4,Aakansha Sahu,1995-06-23,,MP,63,61.4,25,35,40,40,40,F,Juniors,B,Raw
 5,Kriti,1995-11-01,,HAR,63,60.9,25,27.5,-30,27.5,27.5,F,Juniors,B,Raw
@@ -705,7 +705,7 @@ DQ,Jatinder Kumar,1995-10-04,,PUN,59,58.1,-92.5,-95,-102.5,,,M,Juniors,B,Raw
 8,Sudama Singh,1997-05-11,,ODI,74,68.2,-105,105,-120,105,105,M,Juniors,B,Raw
 9,Kori Jitendra.K,1996-05-15,,GUJ,74,72.2,90,105,-115,105,105,M,Juniors,B,Raw
 10,Arjun. K,1997-11-25,,KER,74,69.7,90,100,-105,100,100,M,Juniors,B,Raw
-11,Gaurav Kumar,1998-11-09,,CHT,74,68.6,80,87.5,90,90,90,M,Juniors,B,Raw
+11,Gaurav Kumar #1,1998-11-09,,CHT,74,68.6,80,87.5,90,90,90,M,Juniors,B,Raw
 12,Aditya Mishra,1998-04-20,,CHT,74,69.9,80,82.5,85,85,85,M,Juniors,B,Raw
 13,Harshad Ram Parab,1998-12-12,,GOA,74,72.1,80,85,-87.5,85,85,M,Juniors,B,Raw
 14,Tejas.V.Gite,1997-10-06,,GUJ,74,67.8,65,75,77.5,77.5,77.5,M,Juniors,B,Raw
@@ -728,7 +728,7 @@ DQ,Vishal Singh,1997-03-04,,J&K,83,81.3,-135,-135,-140,,,M,Juniors,B,Raw
 3,Arvind Singh Tanwar,1997-07-12,,RAJ,93,88.2,125,135,-140,135,135,M,Juniors,B,Raw
 4,Rahul Sawant,1996-12-26,,MAH,93,88.6,125,-135,-137.5,125,125,M,Juniors,B,Raw
 5,Veeranna Hingani,1997-12-19,,KTK,93,92.3,110,122.5,-142.5,122.5,122.5,M,Juniors,B,Raw
-6,Sunil Singh,1999-03-28,,JK,93,87.1,110,120,-137.5,120,120,M,Juniors,B,Raw
+6,Sunil Singh #1,1999-03-28,,JK,93,87.1,110,120,-137.5,120,120,M,Juniors,B,Raw
 7,Manoj Harichandra Bhishi,1997-10-20,,GOA,93,87.6,90,100,105,105,105,M,Juniors,B,Raw
 8,Faseeh Kasim.P,1999-11-01,,KER,93,86.8,-90,90,,90,90,M,Juniors,B,Raw
 9,Gauresh Khandolkar,1997-05-07,,GOA,93,87.5,80,90,-107.5,90,90,M,Juniors,B,Raw
@@ -791,7 +791,7 @@ DQ,Shibir Das,1977-01-15,,WB,74,72.6,-80,-80,-80,,,M,Masters 1,B,Raw
 12,Prafulla Amantya,1975-04-25,,ODI,83,80.5,92.5,100,-107.5,100,100,M,Masters 1,B,Raw
 13,Abdul Fareed,1974-01-01,,MP,83,74.1,95,-100,-100,95,95,M,Masters 1,B,Raw
 1,Pardeep Babbar,1972-07-09,,PUN,93,92,145,152.5,157.5,157.5,157.5,M,Masters 1,B,Raw
-2,Ravinder Singh,1975-12-27,,HAR,93,89.6,140,145,-152.5,145,145,M,Masters 1,B,Raw
+2,Ravinder Singh #1,1975-12-27,,HAR,93,89.6,140,145,-152.5,145,145,M,Masters 1,B,Raw
 3,Gharjeet Singh,1977-05-07,,J&K,93,91,130,-140,140,140,140,M,Masters 1,B,Raw
 4,A Arun Kumar,1977-01-05,,KTK,93,90.9,135,-137.5,-137.5,135,135,M,Masters 1,B,Raw
 5,Vikram Singh Chouhan,1976-06-08,,RAJ,93,92.7,132.5,-137.5,-137.5,132.5,132.5,M,Masters 1,B,Raw

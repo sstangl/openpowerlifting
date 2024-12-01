@@ -4,7 +4,7 @@ Place,Name,BirthDate,BirthYear,Team,WeightClassKg,BodyweightKg,Bench1Kg,Bench2Kg
 3,Raj Laxmi Singh,1988-05-15,,JHR,52,51,57.5,60,-62.5,60,60,F,Open,B,Single-ply
 4,Deeksha Sharma,1991-12-20,,UP,52,49.6,-40,50,-62.5,50,50,F,Open,B,Single-ply
 5,Jasmine Bains,1988-11-25,,DEL,52,50.6,-40,42.5,47.5,47.5,47.5,F,Open,B,Single-ply
-1,Anjali Sharma,1999-05-25,,RAJ,57,56,72.5,-77.5,80,80,80,F,Open,B,Single-ply
+1,Anjali Sharma #1,1999-05-25,,RAJ,57,56,72.5,-77.5,80,80,80,F,Open,B,Single-ply
 2,Radha Kumari,1987-02-05,,J&K,57,55.1,37.5,42.5,45,45,45,F,Open,B,Single-ply
 3,Ankita Singh,1990-08-03,,DEL,57,56.2,-40,40,45,45,45,F,Open,B,Single-ply
 1,Sudha Kumari,,,BIH,63,60.5,-80,80,-95,80,80,F,Open,B,Single-ply
@@ -185,7 +185,7 @@ DQ,Prema Kumar Nayak,1996-10-18,,KTK,105,101.82,-160,-160,,,,M,Juniors,B,Single-
 3,S. Manikandan,1976-07-13,,TN,83,77.72,130,-135,135,135,135,M,Masters 1,B,Single-ply
 4,Kamaym Singh,1976-05-02,,JHR,83,80.6,110,117.5,-135,117.5,117.5,M,Masters 1,B,Single-ply
 DQ,Balveer Singh,1973-12-08,,RAJ,83,80.76,-122.5,-125,-132.5,,,M,Masters 1,B,Single-ply
-1,Ravinder Singh,1975-12-27,,HAR,93,92.75,-170,170,180,180,180,M,Masters 1,B,Single-ply
+1,Ravinder Singh #1,1975-12-27,,HAR,93,92.75,-170,170,180,180,180,M,Masters 1,B,Single-ply
 2,Anup Verma,1978-07-01,,MP,93,92.21,150,157.5,162.5,162.5,162.5,M,Masters 1,B,Single-ply
 3,Rajesh Kumar Singh,1975-01-01,,JHR,93,86.2,150,155,-162.5,155,155,M,Masters 1,B,Single-ply
 4,Rajhans Mehandale,1972-03-26,,MAH,93,85.38,125,-132.5,142.5,142.5,142.5,M,Masters 1,B,Single-ply
@@ -246,7 +246,7 @@ DQ,E. Sanyasi Rao,1964-05-25,,AP,105,94.53,-110,-120,-125,,,M,Masters 2,B,Single
 5,Jasmine Bains,1988-11-25,,DEL,52,51,-42.5,42.5,45,45,45,F,Open,B,Raw
 6,Deeksha Sharma,1991-12-20,,UP,52,50.34,35,37.5,-45,37.5,37.5,F,Open,B,Raw
 1,Bhavana Bisht,1985-03-03,,UP,57,57,40,50,57.5,57.5,57.5,F,Open,B,Raw
-2,Anjali Sharma,1999-05-25,,RAJ,57,56.4,47.5,52.5,55,55,55,F,Open,B,Raw
+2,Anjali Sharma #1,1999-05-25,,RAJ,57,56.4,47.5,52.5,55,55,55,F,Open,B,Raw
 3,Anjana Devi,1989-12-01,,J&K,57,55.8,40,45,-47.5,45,45,F,Open,B,Raw
 4,Radha Kumari,1987-02-05,,J&K,57,54.72,37.5,42.5,-45,42.5,42.5,F,Open,B,Raw
 5,Tulika Chkraborty,1994-02-27,,CHT,57,56,27.5,32.5,-35,32.5,32.5,F,Open,B,Raw
@@ -463,10 +463,10 @@ DQ,Pankaj #1,,,DEL,83,75.1,-110,-110,-115,,,M,Sub-Juniors,B,Raw
 2,Dusmanta Sahoo,1995-06-26,,ODI,74,73.2,115,122.5,-127.5,122.5,122.5,M,Juniors,B,Raw
 3,Vikram Singh Shekhawat,1999-06-20,,RAJ,74,70.2,110,115,-122.5,115,115,M,Juniors,B,Raw
 4,Chandan Das,1997-01-14,,CHT,74,73.1,105,110,112.5,112.5,112.5,M,Juniors,B,Raw
-5,Rahul,1997-07-15,,HAR,74,68.1,-110,-110,110,110,110,M,Juniors,B,Raw
+5,Rahul #1,1997-07-15,,HAR,74,68.1,-110,-110,110,110,110,M,Juniors,B,Raw
 6,Sadasiba Tripathy,1996-05-06,,ODI,74,72.9,90,97.5,105,105,105,M,Juniors,B,Raw
 7,Abhishek Pal,1999-11-08,,UP,74,67.7,80,-90,90,90,90,M,Juniors,B,Raw
-8,Gaurav Kumar,1998-11-09,,CHT,74,69.9,-80,80,87.5,87.5,87.5,M,Juniors,B,Raw
+8,Gaurav Kumar #1,1998-11-09,,CHT,74,69.9,-80,80,87.5,87.5,87.5,M,Juniors,B,Raw
 1,Vikramjit Singh,1998-05-20,,PUN,83,79.6,125,132.5,135,135,135,M,Juniors,B,Raw
 2,Sohan Pal,1995-07-31,,PUN,83,78.3,127.5,132.5,-137.5,132.5,132.5,M,Juniors,B,Raw
 3,Vikram Deep,1995-04-23,,J&K,83,80.64,120,127.5,132.5,132.5,132.5,M,Juniors,B,Raw
@@ -537,7 +537,7 @@ DQ,Chandan Kumar,,,JHR,93,86.65,-115,-115,-115,,,M,Juniors,B,Raw
 12,Vikram Singh,1977-06-01,,RAJ,83,80.7,75,82.5,-90,82.5,82.5,M,Masters 1,B,Raw
 13,Yogendra Kumar N. Rajpal,1974-08-24,,GUJ,83,78.7,50,60,75,75,75,M,Masters 1,B,Raw
 DQ,Mukesh Girap,,,GOA,83,81.3,-120,-130,-135,,,M,Masters 1,B,Raw
-1,Ravinder Singh,1975-12-27,,HAR,93,93,140,150,-160,150,150,M,Masters 1,B,Raw
+1,Ravinder Singh #1,1975-12-27,,HAR,93,93,140,150,-160,150,150,M,Masters 1,B,Raw
 2,Anup Verma,1978-07-01,,MP,93,92.1,130,140,-145,140,140,M,Masters 1,B,Raw
 3,Robin Kingsly Durai,1972-02-22,,TN,93,89.55,125,130,132.5,132.5,132.5,M,Masters 1,B,Raw
 4,Ashir Agha,1975-05-06,,UP,93,87.5,-120,120,130,130,130,M,Masters 1,B,Raw
