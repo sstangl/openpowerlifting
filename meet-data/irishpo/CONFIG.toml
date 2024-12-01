@@ -311,6 +311,7 @@
     fscraipo = {name ="F_SCR_AIPO",min=33,max=39,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
     fssaipo = {name ="F_SES_AIPO",min=33,max=39,equipment="Single-ply",sex="F",tested="Yes"}
     fsmaipo = {name ="F_SEM_AIPO",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"}
+    fmyraipo = {name ="F_YR_AIPO",min=0,max=12,equipment="Raw",sex="F",tested="Yes"}
 
 	mxoraipo = {name ="Mx_O_R_AIPO",min=0,max=999,equipment="Raw",sex="Mx",tested="No"}
     mxocraipo = {name ="Mx_O_CR_AIPO",min=0,max=999,equipment=["Raw","Wraps"],sex="Mx",tested="No"}
