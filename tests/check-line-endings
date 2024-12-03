@@ -4,11 +4,18 @@
 
 FOUND_ERROR=0
 
-# Loop over matches without spawning a subshell.
-while read file; do
+# If available use ripgrep as it's faster.
+if type "rg" > /dev/null; then
+    MATCHES=$(rg -l '\r' meet-data/)
+else
+    MATCHES=$(grep -Ilr $'\r' meet-data/)
+fi
+
+# Loop over matches.
+for file in $MATCHES; do
     FOUND_ERROR=1
     echo "Error: ${file} contains CRLF line endings"
-done < <(grep -Ilr $'\r' meet-data/)
+done
 
 # Fail if an error was found.
 if [ "${FOUND_ERROR}" -eq 1 ]; then

@@ -35,6 +35,9 @@ RUN cargo build --release --package checker \
 # TODO: Once check-lifter-data is folded into the checker proper, this can be stock alpine.
 FROM python:3.12.6-alpine
 
+# Ripgrep speeds up `tests/check-line-endings`.
+RUN apk --no-cache add ripgrep
+
 COPY --from=builder \
         target/x86_64-unknown-linux-musl/release/checker /usr/bin/
 
