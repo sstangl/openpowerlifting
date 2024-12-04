@@ -19,6 +19,7 @@
   <option value="wpf" {% if selection.federation == "WPF" %}selected{% endif %}>WPF - World Powerlifting Federation (Incomplete)</option>
   <option value="wpo" {% if selection.federation == "WPO" %}selected{% endif %}>WPO - World Powerlifting Organization</option>
   <option value="wppl" {% if selection.federation == "WPPL" %}selected{% endif %}>WPPL - World Professional Power League</option>  
+  <option value="wpu" {% if selection.federation == "WPU" %}selected{% endif %}>WPU - World Powerlifting Union</option>  
   <option value="wppo" {% if selection.federation == "WPPO" %}selected{% endif %}>WPPO - World Para Powerlifting</option>
   <option value="wuap" {% if selection.federation == "WUAP" %}selected{% endif %}>WUAP - World United Amateur Powerlifting</option>
   <option value="wrpf-and-affiliates" {% if selection.federation == "WRPFAndAffiliates" %}selected{% endif %}>WRPF - World Raw Powerlifting Federation</option>
@@ -619,9 +620,9 @@
 </optgroup>
 <optgroup label="{{strings.country.switzerland}}">
   <option value="all-switzerland" {% if selection.federation == "AllSwitzerland" %}selected{% endif %}>{{strings.selectors.fed.all_switzerland}}</option>
-  <option value="swisspl" {% if selection.federation == "SwissPL" %}selected{% endif %}>Swiss Powerlifting</option>
-  <option value="sdfpf" {% if selection.federation == "SDFPF" %}selected{% endif %}>SDFPF - Swiss Drug-Free Powerlifting Federation</option>
   <option value="kdks" {% if selection.federation == "KDKS" %}selected{% endif %}>KDKS - Kraftdreikampfverband Schweiz [IPF]</option>
+  <option value="sdfpf" {% if selection.federation == "SDFPF" %}selected{% endif %}>SDFPF - Swiss Drug-Free Powerlifting Federation</option>
+  <option value="swisspl" {% if selection.federation == "SwissPL" %}selected{% endif %}>Swiss Powerlifting</option>
 </optgroup>
 <optgroup label="{{strings.country.syria}}">
   <option value="all-syria" {% if selection.federation == "AllSyria" %}selected{% endif %}>All Syrian Lifters</option>
