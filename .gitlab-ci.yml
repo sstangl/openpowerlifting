@@ -65,6 +65,7 @@ run-checker:
     - tests/check-lifter-data
   rules:
     # Build on any branch off main. This explicitly allows for checks to run prior to MR creation.
+    # We want this to also work in forks, so we don't use $CI_PIPELINE_SOURCE.
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       changes:
         paths: # Note that this doesn't run if the checker itself changes.
@@ -80,6 +81,13 @@ line-endings:
     - cd ${CI_PROJECT_DIR}
   script:
     - tests/check-line-endings
+  rules:
+    # Build on any branch off main. This explicitly allows for checks to run prior to MR creation.
+    # We want this to also work in forks, so we don't use $CI_PIPELINE_SOURCE.
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      changes:
+        paths: # Note that this doesn't run if the checker itself changes.
+          - "meet-data/**/*"
 
 # Checks that Python scripts have an enforced style.
 python-style:
