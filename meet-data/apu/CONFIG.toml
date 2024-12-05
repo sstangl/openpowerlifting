@@ -1,134 +1,67 @@
 # Configuration for the APU.
 
 [options]
-    require_manual_disambiguation = true
+require_manual_disambiguation = true
 
 [divisions]
-    # WDFPF-specific divisions 2024 onwards, from the WDFPF rulebook located at https://wdfpf.co.uk/
-    open = {name ="Open",min=0,max=999}
-    t1 = {name="Teenage 1", min=14, max=15}
-    t2 = {name="Teenage 2", min=16, max=17}
-    t3 = {name="Teenage 3", min=18, max=19}
-    jr = {name="Junior", min=20, max=23}
-    m1 = {name="Masters 1", min=40, max=44}
-    m2 = {name="Masters 2", min=45, max=49}
-    m3 = {name="Masters 3", min=50, max=54}
-    m4 = {name="Masters 4", min=55, max=59}
-    m5 = {name="Masters 5", min=60, max=64}
-    m6 = {name="Masters 6", min=65, max=69}
-    m7 = {name="Masters 7", min=70, max=74}
-    m8 = {name="Masters 8", min=75, max=79}
-    m9 = {name="Masters 9", min=80, max=84}
-    m10 = {name="Masters 10", min=85, max=89}
-    m11 = {name="Masters 11", min=90, max=94}
-    m12 = {name="Masters 12", min=95, max=99}
+# IPF divisions.
+open = { name = "Open", min = 0, max = 999 }
+special_olympics = { name = "Special Olympics", min = 0, max = 999 }
+juniors = { name = "Junior", min = 0, max = 22.5 }
+subjuniors = { name = "Sub-Junior", min = 0, max = 17.5 }
+masters1 = { name = "Masters 1", min = 39.5, max = 48.5 }
+masters2 = { name = "Masters 2", min = 49.5, max = 58.5 }
+masters3 = { name = "Masters 3", min = 59.5, max = 68.5 }
+masters4 = { name = "Masters 4", min = 69.5, max = 999 }
 
-    # USAPL-style divisions, 2021-2023.
-    mro = {name="MR-O", min=14, max=999, sex="M", equipment="Raw"}
-    mry = {name="MR-Y", min=8, max=13, sex="M", equipment="Raw"}
-    mrsj = {name="MR-SJ", min=0, max=17.5, sex="M", equipment="Raw"}
-    mrjr = {name="MR-Jr", min=0, max=22.5, sex="M", equipment="Raw"}
-    mrm = {name="MR-M", min=39.5, max=999, sex="M", equipment="Raw"}
-    mrm1 = {name="MR-M1", min=39.5, max=48.5, sex="M", equipment="Raw"}
-    mrm2 = {name="MR-M2", min=49.5, max=58.5, sex="M", equipment="Raw"}
-    mrm3 = {name="MR-M3", min=59.5, max=68.5, sex="M", equipment="Raw"}
-    mrm4 = {name="MR-M4", min=69.5, max=999, sex="M", equipment="Raw"}
-    mrg = {name="MR-G", min=0, max=999, sex="M", equipment="Raw", place="G"}
-
-    fro = {name="FR-O", min=14, max=999, sex="F", equipment="Raw"}
-    fry = {name="FR-Y", min=8, max=13, sex="F", equipment="Raw"}
-    frsj = {name="FR-SJ", min=0, max=17.5, sex="F", equipment="Raw"}
-    frjr = {name="FR-Jr", min=0, max=22.5, sex="F", equipment="Raw"}
-    frm = {name="FR-M", min=39.5, max=999, sex="F", equipment="Raw"}
-    frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
-    frm2 = {name="FR-M2", min=49.5, max=58.5, sex="F", equipment="Raw"}
-    frm3 = {name="FR-M3", min=59.5, max=68.5, sex="F", equipment="Raw"}
-    frm4 = {name="FR-M4", min=69.5, max=999, sex="F", equipment="Raw"}
-    frg = {name="FR-G", min=0, max=999, sex="F", equipment="Raw", place="G"}
-
-    mo = {name="M-O", sex="M", min=0, max=999, equipment="Single-ply"}
-    msjr = {name="M-SJ", sex="M", min=0, max=17.5, equipment="Single-ply"}
-    mjr = {name="M-Jr", sex="M", min=0, max=22.5, equipment="Single-ply"}
-    mm1 = {name="M-M1", sex="M", min=39.5, max=48.5, equipment="Single-ply"}
-    mm2 = {name="M-M2", sex="M", min=49.5, max=58.5, equipment="Single-ply"}
-    mm3 = {name="M-M3", sex="M", min=59.5, max=68.5, equipment="Single-ply"}
-    mm4 = {name="M-M4", sex="M", min=69.5, max=78.5, equipment="Single-ply"}
-
-    fo = {name="F-O", sex="F", min=0, max=999, equipment="Single-ply"}
-    fsjr = {name="F-SJ", sex="F", min=0, max=17.5, equipment="Single-ply"}
-    fjr = {name="F-Jr", sex="F", min=0, max=22.5, equipment="Single-ply"}
-    fm1 = {name="F-M1", sex="F", min=39.5, max=48.5, equipment="Single-ply"}
-    fm2 = {name="F-M2", sex="F", min=49.5, max=58.5, equipment="Single-ply"}
-    fm3 = {name="F-M3", sex="F", min=59.5, max=68.5, equipment="Single-ply"}
-    fm4 = {name="F-M4", sex="F", min=69.5, max=78.5, equipment="Single-ply"}
-
-    # Old-style divisions, prior to 2021.
-    # moved open division to WDFPF divisions above.
-    special_olympics = {name ="Special Olympics",min=0,max=999}
-    paralympics = {name ="Paralympics",min=0,max=999}
-    so_juniors = {name = "Special Olympics (Juniors)",min=0,max=22.5}
-    juniors = {name = "Juniors",min=0,max=22.5}
-    subjuniors = {name = "Sub-Juniors",min=0,max=17.5}
-    masters1 = {name = "M1",min=39.5,max=48.5}
-    masters2 = {name = "M2",min=49.5,max=58.5}
-    masters3 = {name = "M3",min=59.5,max=68.5}
-    masters4 = {name = "M4",min=69.5,max=999}
-
-    # WDFPF weightclasses have changed to include 110, 110+
-[weightclasses.new_F]
-    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","110","110+"]
-    date_range = ["2024-11-01", "9999-01-01"]
-    sex = "F"
-
-    # WDFPF weightclasses, 2024 onwards.
-[weightclasses.default_M]
-    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","145","145+"]
-    date_range = ["2024-01-01", "9999-01-01"]
-    sex = "M"
-
-[weightclasses.default_F]
-    classes = ["44","47.5","50.5","53","55.5","58.5","63","70","80","90","90+"]
-    date_range = ["2024-01-01", "2024-10-31"]
-    sex = "F"
-
-    # IPF weightclasses, pre-2024.
+# IPF weightclasses.
 [weightclasses.IPF_M]
-    classes = ["59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","2023-12-31"]
-    sex = "M"
+classes = ["59", "66", "74", "83", "93", "105", "120", "120+"]
+date_range = ["2011-01-01", "9999-01-01"]
+sex = "M"
 
 [weightclasses.IPF_F]
-    classes = ["47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","2023-12-31"]
-    sex = "F"
+classes = ["47", "52", "57", "63", "69", "76", "84", "84+"]
+date_range = ["2021-01-01", "9999-01-01"]
+sex = "F"
 
 [weightclasses.year2020_IPF_F]
-    classes = ["43","47","52","57","63","72","84","84+"]
-    date_range=["2011-01-01","2020-12-31"]
-    sex = "F"
+classes = ["43", "47", "52", "57", "63", "72", "84", "84+"]
+date_range = ["2011-01-01", "2020-12-31"]
+sex = "F"
 
 [weightclasses.IPF_juniorM]
-    classes = ["53","59","66","74","83","93","105","120","120+"]
-    date_range=["2011-01-01","2023-12-31"]
-    sex = "M"
-    divisions = ["Juniors","Sub-Juniors","MR-Jr","MR-SJ"]
+classes = ["53", "59", "66", "74", "83", "93", "105", "120", "120+"]
+date_range = ["2011-01-01", "2023-12-31"]
+sex = "M"
+divisions = ["Junior", "Sub-Junior"]
 
 [weightclasses.IPF_juniorF]
-    classes = ["43","47","52","57","63","69","76","84","84+"]
-    date_range=["2021-01-01","2023-12-31"]
-    sex = "F"
-    divisions = ["Juniors","Sub-Juniors","FR-Jr","FR-SJ"]
+classes = ["43", "47", "52", "57", "63", "69", "76", "84", "84+"]
+date_range = ["2021-01-01", "2023-12-31"]
+sex = "F"
+divisions = ["Junior", "Sub-Junior"]
 
 [weightclasses.old_M]
-    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
-    date_range = ["0000-01-01","2010-12-31"]
-    sex = "M"
+classes = [
+    "52",
+    "56",
+    "60",
+    "67.5",
+    "75",
+    "82.5",
+    "90",
+    "100",
+    "110",
+    "125",
+    "125+",
+]
+date_range = ["0000-01-01", "2010-12-31"]
+sex = "M"
 
 [weightclasses.old_F]
-    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
-    date_range = ["0000-01-01","2010-12-31"]
-    sex = "F"
+classes = ["44", "48", "52", "56", "60", "67.5", "75", "82.5", "90", "90+"]
+date_range = ["0000-01-01", "2010-12-31"]
+sex = "F"
 
 [exemptions]
-    2401 = ["ExemptWeightClassConsistency","ExemptDivision"]
-    2402 = ["ExemptWeightClassConsistency","ExemptDivision"]
