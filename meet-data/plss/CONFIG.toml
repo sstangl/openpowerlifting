@@ -7,6 +7,7 @@
     masters3 = {name = "M3",min=59.5,max=68.5}
     masters4 = {name = "M4",min=69.5,max=999}
 
+    osi = {name ="OSI",min=0,max=999}
     masters1_osi = {name = "M1OSI",min=39.5,max=48.5}
     masters2_osi = {name = "M2OSI",min=49.5,max=58.5}
     masters3_osi = {name = "M3OSI",min=59.5,max=68.5}
