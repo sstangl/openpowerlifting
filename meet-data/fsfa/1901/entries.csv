@@ -9,7 +9,7 @@ Clelia Denos,Saint Aubin,F,1986-06-05,F-O,71.8,80,-70,75,-82.5,75,40,-50,-50,40,
 Charles Maheust,Lisieux,M,2000-02-22,M-T3,56.9,60,100,110,115,115,60,67.5,70,70,145,150,,150,335,1,SBD,Raw
 Agostini Luccio,Beauvoir,M,1971-03-27,M-M2,66.7,67.5,100,110,120,120,100,110,117.5,117.5,140,152.5,160,160,397.5,1,SBD,Raw
 Alexis Eude,Lisieux,M,1996-08-20,M-JR,71.5,75,100,110,120,120,100,105,-110,105,150,160,-170,160,385,1,SBD,Raw
-Pascal Costa,Vitry,M,1967-01-04,M-M3,75,75,-137.5,140,-147.5,140,137.5,-145,-147.5,137.5,137.5,147.5,,147.5,425,1,SBD,Raw
+Pascal Costa,Vitry,M,1967-01-04,M-M3,75,75,-137.5,140,-147.5,140,137.5,-145,-147.5,137.5,137.5,147.5,,147.5,425,1,SBD,Single-ply
 Patrick Metayer,Saint Aubin,M,1964-08-26,M-M4,75,75,135,140,142.5,142.5,95,100,102.5,102.5,170,180,190,190,435,1,SBD,Raw
 Jean-Claude D'Heilly,Caudebec,M,1958-05-29,M-M5,75,75,125,130,135,135,90,95,97.5,97.5,180,190,202.5,202.5,435,1,SBD,Raw
 Daniel Brunet,Duclair,M,1951-04-29,M-M6,70.7,75,120,125,130,130,80,85,-87.5,85,140,150,155,155,370,1,SBD,Raw
@@ -36,8 +36,8 @@ Daniel Vallée,Lisieux,M,1967-06-29,M-M3,65.4,67.5,,,,,95,-100,-100,95,,,,,95,1,
 Dominique Loquet,Caudebec,M,1962-09-15,M-M4,64.1,67.5,,,,,85,90,,90,,,,,90,1,B,Raw
 Didier Debail,Lisieux,M,1956-08-24,M-M5,66.3,67.5,,,,,97.5,102.5,105,105,,,,,105,1,B,Raw
 Léo Massi,Caudebec,M,1938-03-28,M-M9,66.6,67.5,,,,,72.5,-75,75,75,,,,,75,1,B,Raw
-Marie-Line Demare,Beauvoir,F,1963-09-06,F-M4,62.5,63,,,,,60,62.5,65,65,,,,,65,1,B,Raw
-Jean-Michel Moreiro,Vitry,M,1953-04-13,M-M6,59.6,60,,,,,-85,85,90,90,,,,,90,1,B,Raw
+Marie-Line Demare,Beauvoir,F,1963-09-06,F-M4,62.5,63,,,,,60,62.5,65,65,,,,,65,1,B,Single-ply
+Jean-Michel Moreiro,Vitry,M,1953-04-13,M-M6,59.6,60,,,,,-85,85,90,90,,,,,90,1,B,Single-ply
 Corentin Spinali,Gournay,M,1996-04-11,M-JR,70.2,75,,,,,105,110,-115,110,,,,,110,1,B,Raw
 Ibrahim Dem,Saint Aubin,M,1990-08-04,M-O,74.5,75,,,,,80,90,-100,90,,,,,90,1,B,Raw
 Cyrille Cusumano,Caudebec,M,1970-12-06,M-M2,71,75,,,,,95,102.5,-110,102.5,,,,,102.5,1,B,Raw
@@ -46,7 +46,7 @@ Nicolas Isacesco,Vitry,M,1962-12-07,M-M4,75,75,,,,,85,90,,90,,,,,90,3,B,Raw
 Eric Buron,Deville,M,1962-11-28,M-M4,74.4,75,,,,,115,122.5,-125,122.5,,,,,122.5,1,B,Raw
 Bruno Maury,Deville,M,1958-10-15,M-M5,65,67.5,,,,,85,90,92.5,92.5,,,,,92.5,2,B,Raw
 Daniel Delaporte,Maromme,M,1948-05-21,M-M7,74.5,75,,,,,90,95,100,100,,,,,100,1,B,Raw
-Nicolas Isacesco,Vitry,M,1962-12-07,M-M4,75,75,,,,,-110,110,-115,110,,,,,110,2,B,Raw
+Nicolas Isacesco,Vitry,M,1962-12-07,M-M4,75,75,,,,,-110,110,-115,110,,,,,110,2,B,Single-ply
 Alexandre Grain,Maromme,M,1997-05-06,M-JR,77.2,82.5,,,,,107.5,112.5,117.5,117.5,,,,,117.5,1,B,Raw
 François Hebert,Deville,M,1986-08-18,M-O,81.1,82.5,,,,,110,-115,-115,110,,,,,110,1,B,Raw
 Gwennaël Lechanoine,Lisieux,M,1967-11-04,M-M3,77.1,82.5,,,,,122.5,127.5,132.5,132.5,,,,,132.5,1,B,Raw
@@ -54,17 +54,17 @@ Mohand Kadoun,Caudebec,M,1964-03-24,M-M4,80.9,82.5,,,,,100,110,-120,110,,,,,110,
 Alain Schall,Caudebec,M,1950-11-05,M-M6,77.6,82.5,,,,,85,90,92.5,92.5,,,,,92.5,1,B,Raw
 Fabrice Marchet,Beauvoir,M,1961-08-11,M-M4,88.9,90,,,,,107.5,-110,-110,107.5,,,,,107.5,3,B,Raw
 Jacky Bussiere,Beauvoir,M,1952-07-11,M-M6,94.6,100,,,,,135,137.5,-140,137.5,,,,,137.5,2,B,Raw
-Jean-Yves Minelle,Physic System,M,1966-04-24,M-M3,130.8,145,,,,,172.5,,,172.5,,,,,172.5,2,B,Raw
+Jean-Yves Minelle,Physic System,M,1966-04-24,M-M3,130.8,145,,,,,172.5,,,172.5,,,,,172.5,2,B,Single-ply
 Vincent Virly,Trilport,M,1981-12-22,M-O,,90,,,,,,,,,,,,,,DQ,B,Raw
 Julien Camdessoucens,Rioz,M,1984-05-24,M-O,,90,,,,,,,,,,,,,,DQ,B,Raw
 Jérôme Prevot,Caudebec,M,1974-06-19,M-M2,83.3,90,,,,,135,142.5,,142.5,,,,,142.5,2,B,Raw
 Richard Navarre,Duclair,M,1974-01-09,M-M2,88.9,90,,,,,145,150,152.5,152.5,,,,,152.5,1,B,Raw
 Thierry Mathieu,Oissel,M,1961-03-21,M-M4,86.5,90,,,,,100,110,,110,,,,,110,2,B,Raw
-Fabrice Marchet,Beauvoir,M,1961-08-11,M-M4,88.9,90,,,,,120,122.5,125,125,,,,,125,1,B,Raw
+Fabrice Marchet,Beauvoir,M,1961-08-11,M-M4,88.9,90,,,,,120,122.5,125,125,,,,,125,1,B,Single-ply
 Daniel Mouchard,Saint Aubin,M,1948-06-17,M-M7,87.1,90,,,,,115,120,-122.5,120,,,,,120,1,B,Raw
 Valentin Pons,Gournay,M,2000-05-13,M-T3,99.4,100,,,,,125,132.5,137.5,137.5,,,,,137.5,2,B,Raw
 Jessy Bouvree,Duclair,M,2000-06-18,M-T3,92.9,100,,,,,145,150,155,155,,,,,155,1,B,Raw
-Jacky Bussiere,Beauvoir,M,1952-07-11,M-M6,94.6,100,,,,,160,165,-170,165,,,,,165,1,B,Raw
+Jacky Bussiere,Beauvoir,M,1952-07-11,M-M6,94.6,100,,,,,160,165,-170,165,,,,,165,1,B,Single-ply
 Pierre Vallais,Caudebec,M,1947-05-14,M-M7,98.1,100,,,,,115,120,125,125,,,,,125,1,B,Raw
 Kamorudeen Animashaun,Maromme,M,1970-11-07,M-M2,107.7,110,,,,,160,170,180,180,,,,,180,1,B,Raw
 Cédric Colange,Maromme,M,1982-11-16,M-O,118.8,125,,,,,165,170,-180,170,,,,,170,1,B,Raw
@@ -74,7 +74,7 @@ Patrick Ruch,Lisieux,M,1962-11-02,M-M4,134.6,145,,,,,127.5,132.5,140,140,,,,,140
 Thibault Auguste,Gournay,M,1998-09-15,M-JR,56.7,60,,,,,,,,,137.5,145,155,155,155,1,D,Raw
 Ibrahim Dem,St Etienne,M,1990-08-04,M-O,74.5,75,,,,,,,,,175,185,195,195,195,1,D,Raw
 Philippe Cazorla,Oissel,M,1959-12-14,M-M5,74.5,75,,,,,,,,,130,142.5,,142.5,142.5,2,D,Raw
-Jean-Claude D'Heilly,Caudebec,M,1958-05-29,M-M5,75,75,,,,,,,,,200,210,,210,210,1,D,Raw
+Jean-Claude D'Heilly,Caudebec,M,1958-05-29,M-M5,75,75,,,,,,,,,200,210,,210,210,1,D,Single-ply
 Daniel Delaporte,Maromme,M,1948-05-21,M-M7,74.5,75,,,,,,,,,155,165,175,175,175,1,D,Raw
 Jean-Claude Peter,,M,1951-02-12,M-M6,,82.5,,,,,,,,,,,,,,DQ,D,Raw
 Norman Camier,Gournay,M,1998-08-12,M-JR,85.7,90,,,,,,,,,185,192.5,200,200,200,1,D,Raw
