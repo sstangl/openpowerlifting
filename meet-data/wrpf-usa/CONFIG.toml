@@ -56,8 +56,12 @@
 
 
 	# Extra divisions that keep popping up since 2022.
+	j13_15 = {name="J13-15", min=13, max=15}
 	j16_17 = {name="J16-17", min=16, max=17}
 	j18_19 = {name="J18-19", min=18, max=19}
+	j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
+	j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
+	j18_19t = {name="J18-19T", min=18, max=19, tested="Yes"}
 
     # WRPF-USA 2021 and on
 	j5_12 = {name="J5-12", min=5, max=12}
@@ -81,7 +85,6 @@
     masters = {name = "Masters", min = 40, max = 999}
     teen = {name = "Teen", min = 14, max = 19}
     teen_13_15 = {name = "Teen 13-15", min = 13, max = 15}
-    j13_15 = {name = "J13-15", min = 13, max = 15}
     teen_16_17 = {name = "Teen 16-17", min = 16, max = 17}
     teen_18_19 = {name = "Teen 18-19", min = 18, max = 19}
     
