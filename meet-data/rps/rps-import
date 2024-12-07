@@ -26,7 +26,7 @@ echo "$2" > URL
 
 # Extract just the original table from original.html.
 # Save it as original.xls so that libreoffice can convert to csv.
-${SCRIPTDIR}/rps-extract-table original.html > original.xls
+${SCRIPTDIR}/rps-extract-table.py original.html > original.xls
 
 # Remove any commas in the xls file.
 sed -i -e 's/,//g' original.xls
