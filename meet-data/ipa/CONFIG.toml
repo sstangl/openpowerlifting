@@ -118,3 +118,4 @@
     2413 = ["ExemptWeightClassConsistency"]  # Lifter with no weight class or bodyweight given.
     2418 = ["ExemptDivision"] # teen lifters in wrong age divisions
     2424 = ["ExemptWeightClassConsistency"]  # Some conversion blabla
+    2428 = ["ExemptDivision","ExemptWeightClassConsistency"]
