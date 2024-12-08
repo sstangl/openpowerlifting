@@ -21,11 +21,18 @@
     masters_70_74 = {name = "Masters 70-74", min = 70, max = 74}
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
+    masters_40_49 = {name = "Masters 40-49", min = 40, max = 49}
+    masters_50_59 = {name = "Masters 50-59", min = 50, max = 59}
+    masters_60_69 = {name = "Masters 60-69", min = 60, max = 69}
+    masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
     teen_13_15 = {name = "Teen 13-15", min = 13, max = 15}
     teen_16_17 = {name = "Teen 16-17", min = 16, max = 17}
     teen_18_19 = {name = "Teen 18-19", min = 18, max = 19}
+    teen_13_16 = {name = "Teen 13-16", min = 13, max = 16}
+    teen_17_19 = {name = "Teen 17-19", min = 17, max = 19}
 
     guest = {name ="Guest",min=0,max=999,place="G"}
+    handicap = {name ="Handicap",min=0,max=999}
 
 
 [weightclasses.default_M]
@@ -34,7 +41,7 @@
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","110","90+","110+"]
     date_range = ["0000-01-01","9999-01-01"]
     sex = "F"
 
