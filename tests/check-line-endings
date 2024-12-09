@@ -1,11 +1,20 @@
 #!/bin/sh
 #
 # Checks that no file contains the CR (\r) character.
+#
+# Note that on Windows, git will store files in the native format (CRLF),
+# but will auto-convert files to the proper format (LF) based on the patterns
+# in this repo's .gitattributes file.
+#
+# That means that running this program on Windows will report a ton of false
+# positives. It's mostly useful for CI, which uses Ubuntu, and for developers
+# using macOS, Linux, or another similar operating system.
+#
 
 FOUND_ERROR=0
 
 # If available use ripgrep as it's faster.
-if type "rg" > /dev/null; then
+if command -v "rg" >/dev/null 2>&1; then
     MATCHES=$(rg -l '\r' meet-data/)
 else
     MATCHES=$(grep -Ilr $'\r' meet-data/)
