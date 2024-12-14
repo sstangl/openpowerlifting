@@ -127,8 +127,12 @@ pub enum Federation {
     APO,
 
     /// Alianza Paraguaya de Powerlifting, Paraguay GPA affiliate.
-    #[strum(to_string = "APP", serialize = "app")]
-    APP,
+    #[strum(to_string = "APParaguay", serialize = "apparaguay")]
+    APParaguay,
+
+    /// Associacão Portuguesa de Powerlifting, Portuguese IPF affiliate.
+    #[strum(to_string = "APPortugal", serialize = "apportugal")]
+    APPortugal,
 
     /// Australian Powerlifting Union, formerly IPF, now SSAU/WDFPF.
     #[strum(to_string = "APU", serialize = "apu")]
@@ -2010,7 +2014,8 @@ impl Federation {
             Federation::APF => false,
             Federation::APLA => FULLY_TESTED,
             Federation::APO => false,
-            Federation::APP => false,
+            Federation::APParaguay => false,
+            Federation::APPortugal => FULLY_TESTED,
             Federation::APU => FULLY_TESTED,
             Federation::APUA => FULLY_TESTED,
             Federation::ARPL => false,
@@ -2469,7 +2474,8 @@ impl Federation {
             Federation::APF => Some(Country::USA),
             Federation::APLA => Some(Country::Australia),
             Federation::APO => Some(Country::USA),
-            Federation::APP => Some(Country::Paraguay),
+            Federation::APParaguay => Some(Country::Paraguay),
+            Federation::APPortugal => Some(Country::Portugal),
             Federation::APU => Some(Country::Australia),
             Federation::APUA => Some(Country::Argentina),
             Federation::ARPL => Some(Country::Argentina),
@@ -2920,7 +2926,8 @@ impl Federation {
             Federation::APF => Some(Federation::WPC),
             Federation::APLA => Some(Federation::IPF),
             Federation::APO => None,
-            Federation::APP => Some(Federation::GPA),
+            Federation::APParaguay => Some(Federation::GPA),
+            Federation::APPortugal => Some(Federation::IPF),
             Federation::APU => {
                 // The APU withdrew association with the IPF and affiliated with WDFPF from early 2024.
                 if date >= date!(2024-04-01) {
@@ -3520,7 +3527,8 @@ impl Federation {
             Federation::APF => PointsSystem::Glossbrenner,
             Federation::APLA => Federation::ipf_rules_on(date),
             Federation::APO => PointsSystem::Glossbrenner,
-            Federation::APP => PointsSystem::Wilks,
+            Federation::APParaguay => PointsSystem::Wilks,
+            Federation::APPortugal => Federation::ipf_rules_on(date),
             Federation::APU => Federation::ipf_rules_on(date),
             Federation::APUA => PointsSystem::Wilks,
             Federation::ARPL => Federation::ipl_rules_on(date),

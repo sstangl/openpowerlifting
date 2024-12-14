@@ -1,0 +1,53 @@
+# Configuration for FCP
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+	# Men's divisions.
+    mropen = {name="MR-O", min=0, max=999, sex="M", equipment="Raw"}
+    mopen = {name="M-O", min=0, max=999, sex="M", equipment="Single-ply"}
+    mru23 = {name="MR-Jr", min=11, max=22.5, sex="M", equipment="Raw"}
+    mu23 = {name="M-Jr", min=11, max=22.5, sex="M", equipment="Single-ply"}
+    mru18 = {name="MR-Sj", min=14, max=17.5, sex="M", equipment="Raw"}
+    mu18 = {name="M-Sj", min=14, max=17.5, sex="M", equipment="Single-ply"}
+    mrm1 = {name="MR-M1", min=39.5, max=48.5, sex="M", equipment="Raw"}
+    mm1 = {name="M-M1", min=39.5, max=48.5, sex="M", equipment="Single-ply"}
+    mrm2 = {name="MR-M2", min=49.5, max=58.5, sex="M", equipment="Raw"}
+    mm2 = {name="M-M2", min=49.5, max=58.5, sex="M", equipment="Single-ply"}
+    mrm3 = {name="MR-M3", min=59.5, max=68.5, sex="M", equipment="Raw"}
+    mm3 = {name="M-M3", min=59.5, max=68.5, sex="M", equipment="Single-ply"}
+    mrm4 = {name="MR-M4", min=69.5, max=999, sex="M", equipment="Raw"}
+    mm4 = {name="M-M4", min=69.5, max=999, sex="M", equipment="Single-ply"}
+    mrm5 = {name="MR-M5", min=79.5, max=999, sex="M", equipment="Raw"}
+    mm5 = {name="M-M5", min=79.5, max=999, sex="M", equipment="Single-ply"}
+
+	# Women's divisions.
+    fropen = {name="FR-O", min=0, max=999, sex="F", equipment="Raw"}
+    fopen = {name="F-O", min=0, max=999, sex="F", equipment="Single-ply"}
+    fru23 = {name="FR-Jr", min=11, max=22.5, sex="F", equipment="Raw"}
+    fu23 = {name="F-Jr", min=11, max=22.5, sex="F", equipment="Single-ply"}
+    fru18 = {name="FR-Sj", min=11, max=17.5, sex="F", equipment="Raw"}
+    fu18 = {name="F-Sj", min=11, max=17.5, sex="F", equipment="Single-ply"}
+    frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
+    fm1 = {name="F-M1", min=39.5, max=48.5, sex="F", equipment="Single-ply"}
+    frm2 = {name="FR-M2", min=49.5, max=58.5, sex="F", equipment="Raw"}
+    fm2 = {name="F-M2", min=49.5, max=58.5, sex="F", equipment="Single-ply"}
+    frm3 = {name="FR-M3", min=59.5, max=68.5, sex="F", equipment="Raw"}
+    fm3 = {name="F-M3", min=59.5, max=68.5, sex="F", equipment="Single-ply"}
+    frm4 = {name="FR-M4", min=69.5, max=999, sex="F", equipment="Raw"}
+    fm4 = {name="F-M4", min=69.5, max=999, sex="F", equipment="Single-ply"}
+    frm5 = {name="FR-M5", min=79.5, max=999, sex="F", equipment="Raw"}
+    fm5 = {name="F-M5", min=79.5, max=999, sex="F", equipment="Single-ply"}
+    
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-12-31"]
+    sex = "F"
+
+[exemptions]

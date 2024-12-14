@@ -509,7 +509,7 @@
 </optgroup>
 <optgroup label="{{strings.country.paraguay}}">
   <option value="all-paraguay" {% if selection.federation == "AllParaguay" %}selected{% endif %}>{{strings.selectors.fed.all_paraguay}}</option>
-  <option value="app" {% if selection.federation == "APP" %}selected{% endif %}>APP - Alianza Paraguaya de Powerlifting [GPA]</option>
+  <option value="apparaguay" {% if selection.federation == "APParaguay" %}selected{% endif %}>APP - Alianza Paraguaya de Powerlifting [GPA]</option>
 </optgroup>
 <optgroup label="{{strings.country.peru}}">
   <option value="all-peru" {% if selection.federation == "AllPeru" %}selected{% endif %}>{{strings.selectors.fed.all_peru}}</option>
@@ -531,7 +531,7 @@
 </optgroup>
 <optgroup label="{{strings.country.portugal}}">
   <option value="all-portugal" {% if selection.federation == "AllPortugal" %}selected{% endif %}>{{strings.selectors.fed.all_portugal}}</option>
-  <option value="fcp" {% if selection.federation == "FCP" %}selected{% endif %}>FCP - Federacao De Culturismo Epowerlifting De Portugal [IPF]</option>
+  <option value="apportugal" {% if selection.federation == "APPortugal" %}selected{% endif %}>APP - Associacão Portuguesa de Powerlifting [IPF]</option>
   <option value="gpc-portugal" {% if selection.federation == "GPC-Portugal" %}selected{% endif %}>GPC Portugal</option>
   <option value="wpc-portugal" {% if selection.federation == "WPC-Portugal" %}selected{% endif %}>WPC Portugal</option>
   <option value="wrpf-portugal" {% if selection.federation == "WRPF-Portugal" %}selected{% endif %}>WRPF Portugal</option>

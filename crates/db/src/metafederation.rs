@@ -262,9 +262,13 @@ pub enum MetaFederation {
     #[strum(to_string = "apla")]
     APLA,
 
-    /// APP, but with international results also.
-    #[strum(to_string = "app")]
-    APP,
+    /// APParaguay, but with international results also.
+    #[strum(to_string = "apparaguay")]
+    APParaguay,
+
+    /// APPortugal, but with international results also.
+    #[strum(to_string = "apportugal")]
+    APPortugal,
 
     /// APU, but with international results also.
     #[strum(to_string = "apu")]
@@ -945,7 +949,8 @@ impl MetaFederation {
                 affiliation!(meet, entry, APLA, IPF, ORPF, CommonwealthPF)
                     && meet.date.year() >= 2024
             }
-            MetaFederation::APP => affiliation!(meet, entry, APP, GPA),
+            MetaFederation::APParaguay => affiliation!(meet, entry, APParaguay, GPA),
+            MetaFederation::APPortugal => affiliation!(meet, entry, APPortugal, IPF, EPF),
 
             // APU formed in 2018 and was IPF affiliate until early 2024.
             // APU was originally affiliated to ORPF but changed to AsianPF from 2021.

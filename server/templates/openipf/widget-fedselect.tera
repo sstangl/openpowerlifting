@@ -21,6 +21,7 @@
   <option value="aiwbpa" {% if selection.federation == "AIWBPA" %}selected{% endif %}>AIWBPA / {{strings.country.indonesia}}</option>
   <option value="amp" {% if selection.federation == "AMP" %}selected{% endif %}>AMP / {{strings.country.usa}}</option>
   <option value="apla" {% if selection.federation == "APLA" %}selected{% endif %}>APLA / {{strings.country.australia}}</option>
+  <option value="apportugal" {% if selection.federation == "APPortugal" %}selected{% endif %}>APP / {{strings.country.portugal}}</option>
   <option value="belpf" {% if selection.federation == "BelPF" %}selected{% endif %}>BelPF / {{strings.country.belarus}}</option>
   <option value="bp" {% if selection.federation == "BP" %}selected{% endif %}>BP / {{strings.country.uk}}</option>
   <option value="bpa" {% if selection.federation == "BPA" %}selected{% endif %}>BPA / {{strings.country.belize}}</option>
@@ -36,7 +37,6 @@
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA / {{strings.country.england}}</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO / {{strings.country.argentina}}</option>
   <option value="fapl" {% if selection.federation == "FAPL" %}selected{% endif %}>FAPL / {{strings.country.algeria}}</option>
-  <option value="fcp" {% if selection.federation == "FCP" %}selected{% endif %}>FCP / {{strings.country.portugal}}</option>
   <option value="fdnlp" {% if selection.federation == "FDNLP" %}selected{% endif %}>FDNLP / {{strings.country.peru}}</option>
   <option value="fecapolif" {% if selection.federation == "FECAPOLIF" %}selected{% endif %}>FECAPOLIF / {{strings.country.cameroon}}</option>
   <option value="fechipo" {% if selection.federation == "FECHIPO" %}selected{% endif %}>FECHIPO / {{strings.country.chile}}</option>
