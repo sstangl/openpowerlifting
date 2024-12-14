@@ -109,6 +109,7 @@
     fm4rp   = {name ="FM4-RP",min=55,max=59,sex="F", equipment=["Raw","Wraps"]}
     fm5r   = {name ="FM5-R",min=60,max=64,sex="F", equipment="Raw"}
     fm5rp   = {name ="FM5-RP",min=60,max=64,sex="F", equipment=["Raw","Wraps"]}
+    fm5sp   = {name ="FM5-SP",min=60,max=64,sex="F", equipment="Single-ply"}
     fm6r   = {name ="FM6-R",min=65,max=69,sex="F", equipment="Raw"}
     fm6rp   = {name ="FM6-RP",min=65,max=69,sex="F", equipment=["Raw","Wraps"]}
     fm7r   = {name ="FM7-R",min=70,max=74,sex="F", equipment="Raw"}
