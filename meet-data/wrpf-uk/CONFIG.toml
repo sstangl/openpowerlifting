@@ -1,7 +1,8 @@
 [options]
     require_manual_disambiguation = true
 
-[divisions]
+[divisions] 
+    #Non Tested
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
     teen_13_15 = {name = "Teen 13-15", min = 13, max = 15}
@@ -20,6 +21,26 @@
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84}
     masters_80p = {name = "Masters 80+", min = 80, max = 999}
     pro = {name = "Pro", min = 0, max = 999}
+
+    #Tested
+    opendt = {name = "Open-DT", min = 0, max = 999}
+    youthdt = {name = "Youth-DT", min = 4, max = 12.5}
+    teen_13_15dt = {name = "Teen 13-15-DT", min = 13, max = 15}
+    teen_16_17dt = {name = "Teen 16-17-DT", min = 16, max = 17}
+    teen_18_19dt = {name = "Teen 18-19-DT", min = 18, max = 19}
+    juniors_20_23dt = {name = "Juniors 20-23-DT", min = 20, max = 23}
+    submastersdt = {name = "Submasters 35-39-DT", min = 35, max = 39}
+    masters_40_44dt = {name = "Masters 40-44-DT", min = 40, max = 44}
+    masters_45_49dt = {name = "Masters 45-49-DT", min = 45, max = 49}
+    masters_50_54dt = {name = "Masters 50-54-DT", min = 50, max = 54}
+    masters_55_59dt = {name = "Masters 55-59-DT", min = 55, max = 59}
+    masters_60_64dt = {name = "Masters 60-64-DT", min = 60, max = 64}
+    masters_65_69dt = {name = "Masters 65-69-DT", min = 65, max = 69}
+    masters_70_74dt = {name = "Masters 70-74-DT", min = 70, max = 74}
+    masters_75_79dt = {name = "Masters 75-79-DT", min = 75, max = 79}
+    masters_80_84dt = {name = "Masters 80-84-DT", min = 80, max = 84}
+    masters_80pdt = {name = "Masters 80+-DT", min = 80, max = 999}
+    prodt = {name = "Pro-DT", min = 0, max = 999}
 
 
 [weightclasses.default_M]
