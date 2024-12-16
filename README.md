@@ -72,6 +72,14 @@ Follow the instructions for Fedora, but use this alternate command for installin
 sudo apt-get install cargo rust curl make npm python3-bs4 flake8 ansible parallel uglifyjs jemalloc
 ```
 
+### Arch Linux
+
+Follow the instructions for Fedora, but use this alternate command for installing dependencies:
+
+```bash
+sudo pacman -S cargo rust curl make npm python-beautifulsoup4 flake8 ansible parallel uglify-js jemalloc
+```
+
 ### Windows 10 (Native)
 
 1. Download and install the [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
