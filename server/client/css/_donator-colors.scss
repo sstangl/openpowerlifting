@@ -470,6 +470,13 @@
   background-image: linear-gradient(to right, $lightpink, $darkpink);
 }
 
+.purple_hombre {
+  $purple1: #c07ff5;
+  $purple2: #f37ff5;
+  @include gradient-prereqs($purple1);
+  background-image: linear-gradient(to right, $purple1, $purple2);
+}
+
 .purple_to_hotpink {
   $purple: #AE76FF;
   $hotpink: #F442B0;
