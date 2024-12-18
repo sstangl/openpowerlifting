@@ -132,6 +132,7 @@
 
     # Unlimited divisions cover WPC introduction of rubberised shirts,
     # for bench-only, in 2024
+    mjul = {name="MJ-UL", min=20, max=23, sex="M", equipment="Unlimited", event="B"}
     moul = {name="MO-UL", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
     mmul = {name="MM-UL", min=40, max=999, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
