@@ -82,3 +82,4 @@
     sex = "F"
 
 [exemptions]
+    2402 = ["ExemptWeightClassConsistency"]  # miscellaneous grouping
