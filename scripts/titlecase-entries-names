@@ -7,17 +7,23 @@ from pathlib import Path
 from oplcsv import Csv
 
 
+# Define common name suffixes that should remain uppercase
+SUFFIXES = {'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'}
+
 def transform_name(name):
-
     ret_name_tokens = list()
-
-    # McFoobar shouldn't normally become Mcfoobar
     name_tokens = name.title().split(' ')
+    
     for name_token in name_tokens:
-        ret_name_token = name_token.title()
+        # Check if the current token is a suffix
+        if name_token.upper() in SUFFIXES:
+            ret_name_token = name_token.upper()
+        else:
+            ret_name_token = name_token.title()
 
-        if ret_name_token.startswith("Mc"):
-            ret_name_token = f"Mc{ret_name_token[2:].title()}"
+            # McFoobar shouldn't normally become Mcfoobar
+            if ret_name_token.startswith("Mc"):
+                ret_name_token = f"Mc{ret_name_token[2:].title()}"
 
         ret_name_tokens.append(ret_name_token)
 
