@@ -9,6 +9,8 @@
     masters3 = {name = "M3",min=59.5,max=999}
     masters4 = {name = "M4",min=69.5,max=999}
 
+    soi = {name = "SOI",min=0,max=999}
+
 [weightclasses.new_F]
     classes = ["47","52","57","63","69","76","84","84+"]
     date_range=["2021-06-27","9999-12-31"]
