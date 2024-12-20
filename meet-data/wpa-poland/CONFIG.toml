@@ -57,4 +57,5 @@
 
 [exemptions]
     2401 = ["ExemptDivision","ExemptWeightClassConsistency"]
+    2402 = ["ExemptWeightClassConsistency"]  # using 90+ for women
   
