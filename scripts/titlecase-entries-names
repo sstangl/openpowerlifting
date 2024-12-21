@@ -10,10 +10,11 @@ from oplcsv import Csv
 # Define common name suffixes that should remain uppercase
 SUFFIXES = {'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'}
 
+
 def transform_name(name):
     ret_name_tokens = list()
     name_tokens = name.title().split(' ')
-    
+
     for name_token in name_tokens:
         # Check if the current token is a suffix
         if name_token.upper() in SUFFIXES:
