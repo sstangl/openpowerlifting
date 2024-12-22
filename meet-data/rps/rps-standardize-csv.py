@@ -422,7 +422,7 @@ def fixweightclass(csv):
             if row[sexidx] == 'M':
                 row[idx] = '308+'
             elif row[sexidx] == 'F':
-                row[idx] = '198+'
+                row[idx] = '242+'
             else:
                 error("Unknown sex in fixweightclass(): '%s'" % row[sexidx])
         elif row[idx] == '' and i > 0:

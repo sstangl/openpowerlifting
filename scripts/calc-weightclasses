@@ -15,8 +15,8 @@ def getwtcls(classtype, sex, bw):
         sys.exit(1)
 
     if classtype == 'trad':
-        if sex == 'F' and bw > 90:
-            return '90+'
+        if sex == 'F' and bw > 110:
+            return '110+'
         if sex == 'M' and bw > 140:
             return '140+'
         weights = [0, 44, 48, 52, 56, 60, 67.5,
