@@ -125,7 +125,8 @@ countries = [
     'Ireland',
     'Israel',
     'Netherlands',
-    'Mexico'
+    'Mexico',
+    'Scotland'
 ]
 
 
