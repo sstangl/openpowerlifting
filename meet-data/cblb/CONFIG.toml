@@ -8,6 +8,7 @@
     masters4 = {name = "Masters 4",min=69.5,max=999}
     novice = {name ="Novice",min=0,max=999}
     especial = {name ="Especial",min=0,max=999}
+    teen = {name ="Teen",min=0,max=13.5}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
