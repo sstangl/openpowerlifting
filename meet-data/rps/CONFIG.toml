@@ -1,7 +1,7 @@
 # Configuration for RPS.
 
 [options]
-require_manual_disambiguation = false
+require_manual_disambiguation = true
 
 # Divisions are specified here: https://www.revolutionpowerlifting.com/rules/?page_id=10
 [divisions]
