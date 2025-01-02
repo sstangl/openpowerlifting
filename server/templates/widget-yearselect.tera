@@ -1,5 +1,6 @@
 <select id="yearselect">
   <option value="all"{% if selection.year == "AllYears" %} selected{% endif %}>{{strings.selectors.year.all}}</option>
+  <option value="2025"{% if selection.year == "Year2025" %} selected{% endif %}>2025</option>
   <option value="2024"{% if selection.year == "Year2024" %} selected{% endif %}>2024</option>
   <option value="2023"{% if selection.year == "Year2023" %} selected{% endif %}>2023</option>
   <option value="2022"{% if selection.year == "Year2022" %} selected{% endif %}>2022</option>
