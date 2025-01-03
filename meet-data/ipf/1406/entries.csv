@@ -8,7 +8,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 2,Ruslan Balabanov,1996,Russia,59,-215,215,-220,215,150,156,158,158,200,-212.5,,200,573,59,Sub-Juniors,SBD,M,Single-ply
 3,Ihor Dorokhin,1996,Ukraine,58.6,190,197.5,202.5,202.5,-122.5,122.5,127.5,127.5,185,190,-200,190,520,59,Sub-Juniors,SBD,M,Single-ply
 4,Motoki Murata,1997,Japan,57,140,150,160,160,135,145,-156.5,145,140,150,160,160,465,59,Sub-Juniors,SBD,M,Single-ply
-5,Tamas Orosi,1996,Hungary,56.5,150,165,-172.5,165,112.5,-120,-120,112.5,157.5,167.5,-172.5,167.5,445,59,Sub-Juniors,SBD,M,Single-ply
+5,Tamás Orosi,1996,Hungary,56.5,150,165,-172.5,165,112.5,-120,-120,112.5,157.5,167.5,-172.5,167.5,445,59,Sub-Juniors,SBD,M,Single-ply
 6,Stefan Straßer,1996,Austria,58,150,160,-167.5,160,80,85,92.5,92.5,170,182.5,-192.5,182.5,435,59,Sub-Juniors,SBD,M,Single-ply
 1,Yosuke Kiuchi,1996,Japan,65.2,237.5,247.5,255,255,145,152.5,157.5,157.5,240,255,-262.5,255,667.5,66,Sub-Juniors,SBD,M,Single-ply
 2,Viktor Panteleev,1996,Russia,65.7,235,245,255,255,140,150,155,155,225,-235,240,240,650,66,Sub-Juniors,SBD,M,Single-ply
@@ -21,7 +21,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 2,Vladislav Slaikovskii,1996,Russia,71,235,247.5,-257.5,247.5,170,177.5,182.5,182.5,225,232.5,-242.5,232.5,662.5,74,Sub-Juniors,SBD,M,Single-ply
 3,Klaudijus Malevskis,1996,Lithuania,73.6,232.5,242.5,-250,242.5,175,180,-182.5,180,222.5,230,-235,230,652.5,74,Sub-Juniors,SBD,M,Single-ply
 4,Nicola Degiampietro,1996,Italy,73.7,-235,235,245,245,140,-147.5,-147.5,140,240,252.5,-270,252.5,637.5,74,Sub-Juniors,SBD,M,Single-ply
-5,Dávid Rácz',1996,Hungary,73.4,232.5,-247.5,-250,232.5,-175,175,-180,175,202.5,215,-227.5,215,622.5,74,Sub-Juniors,SBD,M,Single-ply
+5,Dávid Rácz,1996,Hungary,73.4,232.5,-247.5,-250,232.5,-175,175,-180,175,202.5,215,-227.5,215,622.5,74,Sub-Juniors,SBD,M,Single-ply
 6,Eren Kayadan,1996,Germany,73.4,205,215,225,225,-160,160,172.5,172.5,207.5,215,-227.5,215,612.5,74,Sub-Juniors,SBD,M,Single-ply
 7,Hiroshi Utsugi,1996,Japan,72.9,210,225,242.5,242.5,135,-145,-145,135,210,220,-230,220,597.5,74,Sub-Juniors,SBD,M,Single-ply
 8,Jun Furukawa,1996,Japan,72.9,200,225,242.5,242.5,105,115,-122.5,115,230,-250,-252.5,230,587.5,74,Sub-Juniors,SBD,M,Single-ply
@@ -39,7 +39,7 @@ DQ,Teodor Vaklinov,1996,Bulgaria,81.5,-270,-282.5,-282.5,,165,-170,-170,165,200,
 3,Benjamin Nevares,1996,USA,88.4,240,252.5,-260,252.5,175,187.5,197.5,197.5,255,272.5,282.5,282.5,732.5,93,Sub-Juniors,SBD,M,Single-ply
 4,Anton Kolganov,1996,Russia,92.1,260,270,275,275,150,160,165,165,260,267.5,-282.5,267.5,707.5,93,Sub-Juniors,SBD,M,Single-ply
 5,Franz Graaf,1996,Germany,89.6,255,265,-275,265,175,185,192.5,192.5,242.5,-252.5,-252.5,242.5,700,93,Sub-Juniors,SBD,M,Single-ply
-6,Agoston Flekacs,1996,Hungary,92.3,190,212.5,225,225,135,142.5,147.5,147.5,225,240,-252.5,240,612.5,93,Sub-Juniors,SBD,M,Single-ply
+6,Ágoston Flekács,1996,Hungary,92.3,190,212.5,225,225,135,142.5,147.5,147.5,225,240,-252.5,240,612.5,93,Sub-Juniors,SBD,M,Single-ply
 1,Viacheslav Asanov,1997,Russia,104.4,280,295,305,305,175,187.5,-197.5,187.5,275,285,295,295,787.5,105,Sub-Juniors,SBD,M,Single-ply
 2,Yevgen Svyatenko,1998,Ukraine,105,-260,270,-280,270,-170,170,182.5,182.5,215,225,235,235,687.5,105,Sub-Juniors,SBD,M,Single-ply
 3,Laurynas Žukauskas,1996,Lithuania,94.8,-240,240,-250,240,170,177.5,182.5,182.5,225,232.5,235,235,657.5,105,Sub-Juniors,SBD,M,Single-ply
@@ -100,7 +100,7 @@ DQ,Yoshiki Suzuki,1993,Japan,73.8,260,-272.5,-282.5,260,-167.5,-167.5,-167.5,,22
 11,Kamil Krakowiak,1992,Poland,82.2,240,-250,-250,240,130,-140,-140,130,250,-265,-265,250,620,83,Juniors,SBD,M,Single-ply
 DQ,Fabian Machado,1991,Ecuador,82.3,-290,-297.5,302.5,302.5,-210,-210,-210,,280,292.5,305,305,,83,Juniors,SBD,M,Single-ply
 DQ,Nikolay Tsveloy,1991,Russia,82.8,-310,-310,310,310,-215,-215,-215,,265,280,-295,280,,83,Juniors,SBD,M,Single-ply
-DQ,Raymond Czegenyi,1994,Hungary,82.2,-260,-260,-260,,,,,,,,,,,83,Juniors,SBD,M,Single-ply
+DQ,Raymond Czégényi,1994,Hungary,82.2,-260,-260,-260,,,,,,,,,,,83,Juniors,SBD,M,Single-ply
 1,Ian Bell,1992,USA,92.5,340,-355,355,355,-212.5,-212.5,212.5,212.5,345,355,365.5,365.5,933,93,Juniors,SBD,M,Single-ply
 2,Mykyta Skobieliev,1994,Ukraine,92.8,320,340,347.5,347.5,215,230,240,240,-300,300,-322.5,300,887.5,93,Juniors,SBD,M,Single-ply
 3,Sascha Stendebach,1991,Germany,91.3,275,-300,300,300,215,225,230,230,302.5,310,325,325,855,93,Juniors,SBD,M,Single-ply
@@ -178,13 +178,13 @@ DQ,Asuka Saito,1996,Japan,59.2,-110,-110,-110,,52.5,-57.5,-57.5,52.5,100,115,127
 2,Majken Hansen,1996,Denmark,68.6,-162.5,162.5,-170,162.5,80,-90,-90,80,145,-152.5,160,160,402.5,72,Sub-Juniors,SBD,F,Single-ply
 3,Kazusa Madoba,1996,Japan,66,-155,160,167.5,167.5,85,-92.5,-92.5,85,147.5,-155,-155,147.5,400,72,Sub-Juniors,SBD,F,Single-ply
 4,Dariia Kontsova,1997,Russia,71.5,132.5,140,-145,140,70,75,-77.5,75,130,137.5,142.5,142.5,357.5,72,Sub-Juniors,SBD,F,Single-ply
-5,Renata Balazs,1996,Hungary,66.8,130,140,-152.5,140,70,-90,-90,70,100,-115,115,115,325,72,Sub-Juniors,SBD,F,Single-ply
+5,Renáta Balázs,1996,Hungary,66.8,130,140,-152.5,140,70,-90,-90,70,100,-115,115,115,325,72,Sub-Juniors,SBD,F,Single-ply
 6,Olimpia-Camelia Olariu,1997,Romania,71.1,100,-112.5,112.5,112.5,87.5,95,100,100,90,102.5,107.5,107.5,320,72,Sub-Juniors,SBD,F,Single-ply
 1,Nadège Dechamps,1996,Belgium,80.5,180,-192.5,-192.5,180,130,-135,-135,130,160,170,175,175,485,84,Sub-Juniors,SBD,F,Single-ply
 2,Delicia Garza,1996,USA,83.7,172.5,182.5,-190,182.5,-105,-105,105,105,167.5,185,-200,185,472.5,84,Sub-Juniors,SBD,F,Single-ply
 3,Alina Nikolaenko,1997,Russia,75.1,150,160,-170,160,92.5,100,-105,100,135,145,150,150,410,84,Sub-Juniors,SBD,F,Single-ply
 4,Anni Beckert,1996,Germany,79.2,127.5,140,152.5,152.5,72.5,77.5,82.5,82.5,130,140,152.5,152.5,387.5,84,Sub-Juniors,SBD,F,Single-ply
-5,Mercedesz Tobias,1997,Hungary,81.7,90,-102.5,102.5,102.5,57.5,-67.5,67.5,67.5,87.5,-97.5,-97.5,87.5,257.5,84,Sub-Juniors,SBD,F,Single-ply
+5,Mercédesz Tóbiás,1997,Hungary,81.7,90,-102.5,102.5,102.5,57.5,-67.5,67.5,67.5,87.5,-97.5,-97.5,87.5,257.5,84,Sub-Juniors,SBD,F,Single-ply
 1,Jaelynn Clark,1996,USA,125.9,235,-242.5,248,248,127.5,135,-140,135,175,-207.5,-207.5,175,558,84+,Sub-Juniors,SBD,F,Single-ply
 2,China Storks,1997,USA,103.5,165,175,-192.5,175,100,110,120,120,155,170,185,185,480,84+,Sub-Juniors,SBD,F,Single-ply
 3,Dorottya Haklik,1996,Hungary,88.6,-180,180,-192.5,180,65,100,-105,100,160,172.5,-185,172.5,452.5,84+,Sub-Juniors,SBD,F,Single-ply
