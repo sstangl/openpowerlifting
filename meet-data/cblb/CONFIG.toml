@@ -29,13 +29,13 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Teen", "Juniors","Sub-Juniors"]
 
 [weightclasses.newjunior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Teen", "Juniors","Sub-Juniors"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
