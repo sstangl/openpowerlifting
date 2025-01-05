@@ -701,6 +701,22 @@
   background-image: linear-gradient(to right, #00f2ff, #ae76ff);
 }
 
+// Designed by Josip Torić.
+.josip_toric {
+  font-weight: bolder;
+  font-family: "Lucinda Handwriting", cursive;
+  color: transparent;
+  background: #BB228A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: josip_toric_animation 1s ease-in-out infinite;
+  text-shadow: 0px -1px 3px #BB228A;
+}
+@keyframes josip_toric_animation {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
 .fire_animation {
   animation: fire_animation 0.75s infinite linear alternate;
 }
