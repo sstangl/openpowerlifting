@@ -193,6 +193,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[BVDG as usize].format = magazines;
     statuses[BVDK as usize].format = pdf_unstructured;
     statuses[CAPO as usize].format = openlifter;
+    statuses[CBLB as usize].format = html;
     statuses[CPF as usize].format = pdf_unstructured;
     statuses[CPU as usize].format = database;
     statuses[CroatiaUA as usize].format = jpg;
@@ -266,6 +267,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[BVDG as usize].ease = difficult;
     statuses[BVDK as usize].ease = medium;
     statuses[CAPO as usize].ease = easy;
+    statuses[CBLB as usize].ease = medium;
     statuses[CPF as usize].ease = medium;
     statuses[CPU as usize].ease = easy;
     statuses[CroatiaUA as usize].ease = difficult;
@@ -335,6 +337,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_rosie = "<a href=\"mailto:issues@openpowerlifting.org\">Rosie@</a>";
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
     let email_stefanie = "<a href=\"mailto:stefanie@openpowerlifting.org\">stefanie@</a>";
+    let email_victor = "<a href=\"mailto:victorbegha.dev@gmail.com\">Victor Begha</a>"
 
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
@@ -350,6 +353,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[BVDG as usize].maintainers = email_romi;
     statuses[BVDK as usize].maintainers = email_romi;
     statuses[CAPO as usize].maintainers = email_james;
+    statuses[CBLB as usize].maintainers = email_victor;
     statuses[CommonwealthPF as usize].maintainers = email_jo;
     statuses[CPF as usize].maintainers = email_sean;
     statuses[CPU as usize].maintainers = email_sean;
@@ -424,6 +428,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[BVDK as usize].instagram = "german_powerlifting";
     statuses[BPU as usize].instagram = "british_powerlifting_union";
     statuses[CAPO as usize].instagram = "capopowerlifting";
+    statuses[CBLB as usize].instagram = "powerliftingbrazil_ipf";
     statuses[ChinaPA as usize].instagram = "gpachina";
     statuses[DSF as usize].instagram = "danskstyrkeloeftforbund";
     statuses[FFForce as usize].instagram = "ffforce__";
