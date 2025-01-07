@@ -103,6 +103,7 @@ require_manual_disambiguation = true
     pro_police_40_44 = {name = "Police Pro Masters 40-44", min = 40, max = 44}
     ama_police_45_49 = {name = "Police Amateur Masters 45-49", min = 45, max = 49, tested="Yes"}
     ama_police_50_54 = {name = "Police Amateur Masters 50-54", min = 50, max = 54, tested="Yes"}
+    ama_police_55_59 = {name = "Police Amateur Masters 55-59", min = 55, max = 59, tested="Yes"}
     pro_police_45_49 = {name = "Police Pro Masters 45-49", min = 45, max = 49}
     pro_police_50_54 = {name = "Police Pro Masters 50-54", min = 50, max = 54}
     pro_police_55_59 = {name = "Police Pro Masters 55-59", min = 55, max = 59}
