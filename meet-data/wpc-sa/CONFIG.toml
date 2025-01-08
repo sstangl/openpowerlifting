@@ -297,6 +297,7 @@
     mssaapf = {name ="M_SES_AAPF",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmaapf = {name ="M_SEM_AAPF",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     myraapf = {name ="M_YR_AAPF",min=0,max=12,equipment="Raw",sex="M",tested="Yes"} #Youth
+    mycraapf = {name ="M_YCR_AAPF",min=0,max=12,equipment=["Raw","Wraps"],sex="M",tested="Yes"} #Youth
     myesaapf = {name ="M_YES_AAPF",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
     myemaapf = {name ="M_YEM_AAPF",min=0,max=12,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Youth
     msoemaapf = {name ="M_SOEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"} #Special Olympics
