@@ -4,6 +4,11 @@
 open = { name="Open", min=0, max=999 }
 j18-23 = { name="J18-23", min=18, max=23 }
 j19-23 = { name="J19-23", min=19, max=23 }
+y14-18 = { name="Y14-18", min=14, max=18 }
+m40-44 = { name="M40-44", min=40, max=44 }
+m45-49 = { name="M45-49", min=45, max=49 }
+m50-54 = { name="M50-54", min=50, max=54 }
+m55-59 = { name="M55-59", min=55, max=59 }
 
 mo = {name="M-O", min=0, max=999, sex="M"}
 mbl = {name="M-BL", min=0, max=999, sex="M"}
