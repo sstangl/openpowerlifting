@@ -238,6 +238,7 @@
 <optgroup label="{{strings.country.colombia}}">
   <option value="all-colombia" {% if selection.federation == "AllColombia" %}selected{% endif %}>{{strings.selectors.fed.all_colombia}}</option>
   <option value="colpf" {% if selection.federation == "ColPF" %}selected{% endif %}>ColPF - Colombian Powerlifting Federation [IPF]</option>
+  <option value="fclp" {% if selection.federation == "FCLP" %}selected{% endif %}>FCLP - Federación Colombiana de Levantamiento de Potencia [IPF]</option>
   <option value="wrpf-colombia" {% if selection.federation == "WRPF-Colombia" %}selected{% endif %}>WRPF-Colombia</option>
 </optgroup>
 <optgroup label="{{strings.country.costarica}}">

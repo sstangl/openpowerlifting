@@ -37,6 +37,7 @@
   <option value="epa" {% if selection.federation == "EPA" %}selected{% endif %}>EPA / {{strings.country.england}}</option>
   <option value="falpo" {% if selection.federation == "FALPO" %}selected{% endif %}>FALPO / {{strings.country.argentina}}</option>
   <option value="fapl" {% if selection.federation == "FAPL" %}selected{% endif %}>FAPL / {{strings.country.algeria}}</option>
+  <option value="fclp" {% if selection.federation == "FCLP" %}selected{% endif %}>FCLP / {{strings.country.colombia}}</option>
   <option value="fdnlp" {% if selection.federation == "FDNLP" %}selected{% endif %}>FDNLP / {{strings.country.peru}}</option>
   <option value="fecapolif" {% if selection.federation == "FECAPOLIF" %}selected{% endif %}>FECAPOLIF / {{strings.country.cameroon}}</option>
   <option value="fechipo" {% if selection.federation == "FECHIPO" %}selected{% endif %}>FECHIPO / {{strings.country.chile}}</option>
@@ -44,7 +45,7 @@
   <option value="femepo" {% if selection.federation == "FEMEPO" %}selected{% endif %}>FEMEPO / {{strings.country.mexico}}</option>
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce / {{strings.country.france}}</option>
   <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL / {{strings.country.italy}}</option>
-  <option value="fppr" {% if selection.federation == "FPP" %}selected{% endif %}>FPP / {{strings.country.panama}}</option>
+  <option value="fpp" {% if selection.federation == "FPP" %}selected{% endif %}>FPP / {{strings.country.panama}}</option>
   <option value="fppr" {% if selection.federation == "FPPR" %}selected{% endif %}>FPPR / {{strings.country.puertorico}}</option>
   <option value="fpr" {% if selection.federation == "FPR" %}selected{% endif %}>FPR / {{strings.country.russia}}</option>
   <option value="frpl" {% if selection.federation == "FRPL" %}selected{% endif %}>FRPL / {{strings.country.romania}}</option>

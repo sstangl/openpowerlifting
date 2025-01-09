@@ -351,6 +351,10 @@ pub enum MetaFederation {
     #[strum(to_string = "fapl")]
     FAPL,
 
+    /// FCLP, but with international results also
+    #[strum(to_string = "fclp")]
+    FCLP,
+
     /// FCP, but with international results also
     #[strum(to_string = "fcp")]
     FCP,
@@ -646,6 +650,10 @@ pub enum MetaFederation {
     /// SwissPL, but with international results also.
     #[strum(to_string = "swisspl")]
     SwissPL,
+
+    /// TAAP, but with international results also.
+    #[strum(to_string = "taap")]
+    TAAP,
 
     /// ThaiPF, excluding non-Thai lifters and including IPF results.
     #[strum(to_string = "thaipf")]
@@ -1016,6 +1024,7 @@ impl MetaFederation {
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
             MetaFederation::FAPL => affiliation!(meet, entry, FAPL, IPF, AfricanPF),
+            MetaFederation::FCLP => affiliation!(meet, entry, FCLP, IPF, FESUPO),
             MetaFederation::FCP => affiliation!(meet, entry, FCP, IPF, EPF),
             MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
@@ -1040,7 +1049,7 @@ impl MetaFederation {
             MetaFederation::FIPL => affiliation!(meet, entry, FIPL, IPF, EPF),
             MetaFederation::FPP => affiliation!(meet, entry, FPP, IPF, NAPF),
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
-            MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF),
+            MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF, AsianPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
             MetaFederation::GAPLF => affiliation!(meet, entry, GAPLF, IPF, FESUPO, NAPF),
             MetaFederation::GPCAff => {
@@ -1160,6 +1169,7 @@ impl MetaFederation {
                     _ => false,
                 }
             }
+            MetaFederation::TAAP => affiliation!(meet, entry, TAAP, IPF, AsianPF),
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
             MetaFederation::UAEPL => affiliation!(meet, entry, UAEPL, IPF, AsianPF, OceaniaPF),
