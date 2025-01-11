@@ -34,19 +34,31 @@
     classes = ["53","59","66","74","83","93","105","120","105+","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors","Teen 1","Teen 2"]
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.teen_M]
+    classes = ["37","47","53","59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Teen 1","Teen 2"]
 
 [weightclasses.juniornew_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors","Teen 1","Teen 2"]
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.teen_F]
+    classes = ["37","43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Teen 1","Teen 2"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","2020-12-31"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors","Teen 1","Teen 2"]
+    divisions = ["Juniors","Sub-Juniors"]
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
