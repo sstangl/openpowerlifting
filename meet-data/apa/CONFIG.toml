@@ -43,6 +43,7 @@
     m70_74dt = {name="M70-74DT", min=70, max=74, tested="Yes"}
     m75_79dt = {name="M75-79DT", min=75, max=79, tested="Yes"}
     m80pdt = {name="M80+DT", min=80, max=999, tested="Yes"}
+    pfpdt = {name="P/FDT", min=0, max=999, tested="Yes"} # Police/Fire.
 
     open = {name ="Open",min=0,max=999}
     open_nt = {name ="Open NT",min=0,max=999,tested="No"}
