@@ -26,6 +26,23 @@
     m75_79 = {name="M75-79", min=75, max=79}
     m80p = {name="M80+", min=80, max=999}
 
+    # OpenLifter-style divisions, drug-tested.
+    opendt = {name ="OpenDT",min=0,max=999,tested="Yes"}
+    t13_15dt = {name="T13-15DT", min=13, max=15, tested="Yes"}
+    t16_17dt = {name="T16-17DT", min=16, max=17, tested="Yes"}
+    t18_19dt = {name="T18-19DT", min=18, max=19, tested="Yes"}
+    j20_23dt = {name="J20-23DT", min=20, max=23, tested="Yes"}
+    s33_39dt = {name="S33-39DT", min=33, max=39, tested="Yes"}
+    s35_39dt = {name="S35-39DT", min=35, max=39, tested="Yes"}
+    m40_44dt = {name="M40-44DT", min=40, max=44, tested="Yes"}
+    m45_49dt = {name="M45-49DT", min=45, max=49, tested="Yes"}
+    m50_54dt = {name="M50-54DT", min=50, max=54, tested="Yes"}
+    m55_59dt = {name="M55-59DT", min=55, max=59, tested="Yes"}
+    m60_64dt = {name="M60-64DT", min=60, max=64, tested="Yes"}
+    m65_69dt = {name="M65-69DT", min=65, max=69, tested="Yes"}
+    m70_74dt = {name="M70-74DT", min=70, max=74, tested="Yes"}
+    m75_79dt = {name="M75-79DT", min=75, max=79, tested="Yes"}
+    m80pdt = {name="M80+DT", min=80, max=999, tested="Yes"}
 
     open = {name ="Open",min=0,max=999}
     open_nt = {name ="Open NT",min=0,max=999,tested="No"}
