@@ -336,3 +336,4 @@
     FL-2014-12-07 = ["ExemptDivision"] 
     MO-2001-04-21-A = ["ExemptDuplicates"] # With MO-2001-04-21-B.
     MO-2001-04-21-B = ["ExemptDuplicates"] # With MO-2001-04-21-A.
+    NC-2011-01-01 = ["ExemptWeightClassConsistency"] #Missing weightclasses
