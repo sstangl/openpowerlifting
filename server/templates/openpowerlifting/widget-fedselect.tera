@@ -348,7 +348,8 @@
   <option value="all-india" {% if selection.federation == "AllIndia" %}selected{% endif %}>{{strings.selectors.fed.all_india}}</option>
   <option value="pi" {% if selection.federation == "PI" %}selected{% endif %}>PI - Powerlifting India [IPF]</option>
   <option value="wp-india" {% if selection.federation == "WP-India" %}selected{% endif %}>World Powerlifting India [WP]</option>
-  <option value="wpc-india" {% if selection.federation == "WPC-India" %}selected{% endif %}>World Powerlifting Congress India [WPC]</option>
+  <option value="wpc-india" {% if selection.federation == "WPC-India" %}selected{% endif %}>World Powerlifting Congress India [WPC]</option>  
+  <option value="wrpf-india" {% if selection.federation == "WRPF-India" %}selected{% endif %}>WRPF India</option>
 </optgroup>
 <optgroup label="{{strings.country.indonesia}}">
   <option value="all-indonesia" {% if selection.federation == "AllIndonesia" %}selected{% endif %}>{{strings.selectors.fed.all_indonesia}}</option>

@@ -1836,6 +1836,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Iceland", serialize = "wrpf-iceland")]
     WRPFIceland,
 
+    /// Indian WRPF affiliate.
+    #[serde(rename = "WRPF-India")]
+    #[strum(to_string = "WRPF-India", serialize = "wrpf-india")]
+    WRPFIndia,
+
     /// Irish WRPF affiliate.
     #[serde(rename = "WRPF-Ireland")]
     #[strum(to_string = "WRPF-Ireland", serialize = "wrpf-ireland")]
@@ -2427,6 +2432,7 @@ impl Federation {
             Federation::WRPFEIRE => false,
             Federation::WRPFHUN => false,
             Federation::WRPFIceland => false,
+            Federation::WRPFIndia => false,
             Federation::WRPFIreland => false,
             Federation::WRPFItaly => false,
             Federation::WRPFKAZ => false,
@@ -2875,6 +2881,7 @@ impl Federation {
             Federation::WRPFEIRE => Some(Country::Ireland),
             Federation::WRPFHUN => Some(Country::Hungary),
             Federation::WRPFIceland => Some(Country::Iceland),
+            Federation::WRPFIndia => Some(Country::India),
             Federation::WRPFIreland => Some(Country::Ireland),
             Federation::WRPFItaly => Some(Country::Italy),
             Federation::WRPFKAZ => Some(Country::Kazakhstan),
@@ -3440,6 +3447,7 @@ impl Federation {
             Federation::WRPFEIRE => Some(Federation::WRPF),
             Federation::WRPFHUN => Some(Federation::WRPF),
             Federation::WRPFIceland => Some(Federation::WRPF),
+            Federation::WRPFIndia => Some(Federation::WRPF),
             Federation::WRPFIreland => Some(Federation::WRPF),
             Federation::WRPFItaly => Some(Federation::WRPF),
             Federation::WRPFKAZ => Some(Federation::WRPF),
@@ -4001,6 +4009,7 @@ impl Federation {
             Federation::WRPFEIRE => PointsSystem::Wilks,
             Federation::WRPFHUN => PointsSystem::Wilks,
             Federation::WRPFIceland => PointsSystem::Wilks,
+            Federation::WRPFIndia => PointsSystem::Wilks,
             Federation::WRPFIreland => PointsSystem::Wilks,
             Federation::WRPFItaly => PointsSystem::Wilks,
             Federation::WRPFKAZ => PointsSystem::Wilks,
