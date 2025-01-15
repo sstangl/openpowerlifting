@@ -957,6 +957,11 @@ pub enum Federation {
     #[strum(to_string = "NauruPF", serialize = "naurupf")]
     NauruPF,
 
+    /// Unaffiliated meets held in the Netherlands.
+    #[serde(rename = "Netherlands-UA")]
+    #[strum(to_string = "Netherlands-UA", serialize = "netherlands-ua")]
+    NetherlandsUA,
+
     /// NextGenPF, a USA-IN Push/Pull/Curl federation.
     #[strum(to_string = "NextGenPF", serialize = "nextgenpf")]
     NextGenPF,
@@ -2216,6 +2221,7 @@ impl Federation {
             Federation::NASA => FULLY_TESTED,
             Federation::NaturalPA => FULLY_TESTED,
             Federation::NauruPF => FULLY_TESTED,
+            Federation::NetherlandsUA => false,
             Federation::NextGenPF => false,
             Federation::NIPF => FULLY_TESTED,
             Federation::NORCAL => FULLY_TESTED,
@@ -2670,6 +2676,7 @@ impl Federation {
             Federation::NASA => Some(Country::USA),
             Federation::NaturalPA => Some(Country::USA),
             Federation::NauruPF => Some(Country::Nauru),
+            Federation::NetherlandsUA => Some(Country::Netherlands),
             Federation::NextGenPF => Some(Country::USA),
             Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
@@ -3191,6 +3198,7 @@ impl Federation {
             Federation::NASA => None,
             Federation::NaturalPA => None,
             Federation::NauruPF => Some(Federation::IPF),
+            Federation::NetherlandsUA => None,
             Federation::NextGenPF => None,
             Federation::NIPF => Some(Federation::IPF),
             Federation::NORCAL => None,
@@ -3752,6 +3760,7 @@ impl Federation {
             Federation::NASA => PointsSystem::NASA,
             Federation::NaturalPA => PointsSystem::Wilks,
             Federation::NauruPF => Federation::ipf_rules_on(date),
+            Federation::NetherlandsUA => PointsSystem::Dots,
             Federation::NextGenPF => PointsSystem::Wilks,
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),
