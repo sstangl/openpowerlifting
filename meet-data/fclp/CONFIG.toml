@@ -71,3 +71,7 @@
     sex = "F"
 
 [exemptions]
+
+2306 = ["ExemptWeightClassConsistency"]  # Didn't use all lower teen classes
+2307 = ["ExemptWeightClassConsistency"]  # Didn't use all lower teen classes
+2407 = ["ExemptWeightClassConsistency"]  # Didn't use all lower teen classes
