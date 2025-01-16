@@ -76,6 +76,8 @@ pub enum MetaFederation {
     AllDenmark,
     #[strum(to_string = "all-egypt")]
     AllEgypt,
+    #[strum(to_string = "all-ecuador")]
+    AllEcuador,
     #[strum(to_string = "all-estonia")]
     AllEstonia,
     #[strum(to_string = "all-finland")]
@@ -217,6 +219,8 @@ pub enum MetaFederation {
     AllUKTested,
     #[strum(to_string = "all-ukraine")]
     AllUkraine,
+    #[strum(to_string = "all-venezuela")]
+    AllVenezuela,
     #[strum(to_string = "all-vietnam")]
     AllVietnam,
     #[strum(to_string = "all-usa")]
@@ -371,9 +375,17 @@ pub enum MetaFederation {
     #[strum(to_string = "fechipo")]
     FECHIPO,
 
+    /// FEFICULP, but with international results also.
+    #[strum(to_string = "feficulp")]
+    FEFICULP,
+
     /// FEMEPO, but with international results also.
     #[strum(to_string = "femepo")]
     FEMEPO,
+
+    /// FEVEPO, but with international results also.
+    #[strum(to_string = "fevepo")]
+    FEVEPO,
 
     /// FFForce, but with international results also.
     #[strum(to_string = "ffforce")]
@@ -828,6 +840,7 @@ impl MetaFederation {
             MetaFederation::AllCyprus => is_from(Country::Cyprus, entry, meet),
             MetaFederation::AllCzechia => is_from(Country::Czechia, entry, meet),
             MetaFederation::AllDenmark => is_from(Country::Denmark, entry, meet),
+            MetaFederation::AllEcuador => is_from(Country::Ecuador, entry, meet),
             MetaFederation::AllEgypt => is_from(Country::Egypt, entry, meet),
             MetaFederation::AllEstonia => is_from(Country::Estonia, entry, meet),
             MetaFederation::AllFinland => is_from(Country::Finland, entry, meet),
@@ -903,6 +916,7 @@ impl MetaFederation {
             MetaFederation::AllThailand => is_from(Country::Thailand, entry, meet),
             MetaFederation::AllTurkey => is_from(Country::Turkey, entry, meet),
             MetaFederation::AllUSVirginIslands => is_from(Country::USVirginIslands, entry, meet),
+            MetaFederation::AllVenezuela => is_from(Country::Venezuela, entry, meet),
             MetaFederation::AllUK => {
                 // UK lifters sometimes switch country affiliation from UK to Ireland
                 // when they compete IrishPF.
@@ -1013,7 +1027,7 @@ impl MetaFederation {
                 Federation::IPF | Federation::EPF => entry.lifter_country == Some(Country::Germany),
                 _ => false,
             },
-            MetaFederation::CBLB => affiliation!(meet, entry, CBLB, IPF, FESUPO),
+            MetaFederation::CBLB => affiliation!(meet, entry, CBLB, IPF, FESUPO, NAPF),
             MetaFederation::CPU => affiliation!(meet, entry, CPU, IPF, NAPF, CommonwealthPF),
             MetaFederation::CSST => affiliation!(meet, entry, CSST, IPF, EPF),
             MetaFederation::CyprusPF => affiliation!(meet, entry, CyprusPF, IPF, EPF),
@@ -1022,14 +1036,16 @@ impl MetaFederation {
             MetaFederation::EgyptPF => affiliation!(meet, entry, EgyptPF, IPF, AfricanPF),
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
-            MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO),
+            MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO, NAPF),
             MetaFederation::FAPL => affiliation!(meet, entry, FAPL, IPF, AfricanPF),
-            MetaFederation::FCLP => affiliation!(meet, entry, FCLP, IPF, FESUPO),
+            MetaFederation::FCLP => affiliation!(meet, entry, FCLP, IPF, FESUPO, NAPF),
             MetaFederation::FCP => affiliation!(meet, entry, FCP, IPF, EPF),
-            MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO),
+            MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO, NAPF),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
-            MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO),
+            MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO, NAPF),
+            MetaFederation::FEFICULP => affiliation!(meet, entry, FEFICULP, IPF, FESUPO, NAPF),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
+            MetaFederation::FEVEPO => affiliation!(meet, entry, FEVEPO, IPF, FESUPO, NAPF),
             MetaFederation::FFForce => {
                 (
                     meet.federation == Federation::FFForce

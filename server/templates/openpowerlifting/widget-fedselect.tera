@@ -272,6 +272,10 @@
 <optgroup label="{{strings.country.dominicanrepublic}}">
   <option value="plrd" {% if selection.federation == "PLRD" %}selected{% endif %}>PLRD - Powerlifting Republica Dominicana [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.ecuador}}">
+  <option value="all-ecuador" {% if selection.federation == "AllEcuador" %}selected{% endif %}>{{strings.selectors.fed.all_ecuador}}</option>
+  <option value="feficulp" {% if selection.federation == "FEFICULP" %}selected{% endif %}>FEFICULP - Federación Ecuatoriana de Fisicoculturismo y Potencia [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.egypt}}">
   <option value="all-egypt" {% if selection.federation == "AllEgypt" %}selected{% endif %}>All Egyptian Lifters</option>
   <option value="egyptpf" {% if selection.federation == "EgyptPF" %}selected{% endif %}>EgyptPF - Egypt Powerlifting Federation [IPF]</option>
@@ -674,6 +678,10 @@
 <optgroup label="{{strings.country.usvirginislands}}">
   <option value="all-usvirginislands" {% if selection.federation == "AllUSVirginIslands" %}selected{% endif %}>{{strings.selectors.fed.all_usvirginislands}}</option>
   <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF - US Virgin Islands Powerlifting Federation [IPF]</option>
+</optgroup>
+<optgroup label="{{strings.country.venezuela}}">
+  <option value="all-venezuela" {% if selection.federation == "AllVenezuela" %}selected{% endif %}>{{strings.selectors.fed.all_venezuela}}</option>
+  <option value="fevepo" {% if selection.federation == "FEVEPO" %}selected{% endif %}>FEVEPO - Federación Venezolana de Potencia [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.vietnam}}">
   <option value="all-vietnam" {% if selection.federation == "AllVietnam" %}selected{% endif %}>{{strings.selectors.fed.all_vietnam}}</option>

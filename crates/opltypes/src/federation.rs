@@ -420,6 +420,10 @@ pub enum Federation {
     #[strum(to_string = "Fedepotencia", serialize = "fedepotencia")]
     Fedepotencia,
 
+    /// Federación Ecuatoriana de Fisicoculturismo y Potencia, Ecuador IPF affiliate.
+    #[strum(to_string = "FEFICULP", serialize = "feficulp")]
+    FEFICULP,
+
     /// Federación de Lifterspower de México A.C., WP.
     #[strum(to_string = "FELIPOME", serialize = "felipome")]
     FELIPOME,
@@ -435,6 +439,10 @@ pub enum Federation {
     /// Federación Sudamericana de Powerlifting, IPF.
     #[strum(to_string = "FESUPO", serialize = "fesupo")]
     FESUPO,
+
+    /// Federación Venezolana de Potencia, Venezuela IPF affiliate.
+    #[strum(to_string = "FEVEPO", serialize = "fevepo")]
+    FEVEPO,
 
     /// Federation Francaise de Force, IPF.
     #[strum(to_string = "FFForce", serialize = "ffforce")]
@@ -2097,10 +2105,12 @@ impl Federation {
             Federation::FECAPOLIF => FULLY_TESTED,
             Federation::FECHIPO => FULLY_TESTED,
             Federation::Fedepotencia => FULLY_TESTED,
+            Federation::FEFICULP => FULLY_TESTED,
             Federation::FELIPOME => FULLY_TESTED,
             Federation::FEMEPO => FULLY_TESTED,
             Federation::FEPOA => false,
             Federation::FESUPO => FULLY_TESTED,
+            Federation::FEVEPO => FULLY_TESTED,
             Federation::FFForce => FULLY_TESTED,
             Federation::FFHMFAC => FULLY_TESTED,
             Federation::FHSAA => FULLY_TESTED,
@@ -2559,10 +2569,12 @@ impl Federation {
             Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FECHIPO => Some(Country::Chile),
             Federation::Fedepotencia => Some(Country::Guatemala),
+            Federation::FEFICULP => Some(Country::Ecuador),
             Federation::FELIPOME => Some(Country::Mexico),
             Federation::FEMEPO => Some(Country::Mexico),
             Federation::FEPOA => Some(Country::Argentina),
             Federation::FESUPO => None,
+            Federation::FEVEPO => Some(Country::Venezuela),
             Federation::FFForce => Some(Country::France),
             Federation::FFHMFAC => Some(Country::France),
             Federation::FHSAA => Some(Country::USA),
@@ -3061,10 +3073,12 @@ impl Federation {
             Federation::FECAPOLIF => Some(Federation::IPF),
             Federation::FECHIPO => Some(Federation::IPF),
             Federation::Fedepotencia => Some(Federation::IPF),
+            Federation::FEFICULP => Some(Federation::IPF),
             Federation::FELIPOME => Some(Federation::WP),
             Federation::FEMEPO => Some(Federation::IPF),
             Federation::FEPOA => Some(Federation::GPC),
             Federation::FESUPO => Some(Federation::IPF),
+            Federation::FEVEPO => Some(Federation::IPF),
             Federation::FFForce => Some(Federation::IPF),
             Federation::FFHMFAC => Some(Federation::IPF),
             Federation::FHSAA => None,
@@ -3631,10 +3645,12 @@ impl Federation {
             Federation::FECAPOLIF => Federation::ipf_rules_on(date),
             Federation::FECHIPO => Federation::ipf_rules_on(date),
             Federation::Fedepotencia => Federation::ipf_rules_on(date),
+            Federation::FEFICULP => Federation::ipf_rules_on(date),
             Federation::FELIPOME => Federation::wp_rules_on(date),
             Federation::FEMEPO => Federation::ipf_rules_on(date),
             Federation::FEPOA => PointsSystem::Wilks,
             Federation::FESUPO => Federation::ipf_rules_on(date),
+            Federation::FEVEPO => Federation::ipf_rules_on(date),
             Federation::FFForce => Federation::ipf_rules_on(date),
             Federation::FFHMFAC => Federation::ipf_rules_on(date),
             Federation::FHSAA => PointsSystem::Wilks,
