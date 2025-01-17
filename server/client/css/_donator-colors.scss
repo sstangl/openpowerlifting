@@ -139,6 +139,10 @@
   @include name-color(#84000E);
 }
 
+.dark_maroon {
+  @include name-color(#550000);
+}
+
 .orange {
   @include name-color(#FFA200);
 }
