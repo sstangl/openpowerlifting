@@ -5,30 +5,19 @@ use opldb::{algorithms, OplDb};
 use search::*;
 
 use std::path::Path;
-use std::sync::Once;
+use std::sync::LazyLock;
 
-static mut OPLDB_GLOBAL: Option<OplDb> = None;
-static OPLDB_INIT: Once = Once::new();
+static OPLDB_GLOBAL: LazyLock<OplDb> = LazyLock::new(|| {
+    OplDb::from_csv(
+        Path::new("../../build/lifters.csv"),
+        Path::new("../../build/meets.csv"),
+        Path::new("../../build/entries.csv"),
+    )
+    .unwrap()
+});
 
 pub fn db() -> &'static OplDb {
-    const LIFTERS_CSV: &str = "../../build/lifters.csv";
-    const MEETS_CSV: &str = "../../build/meets.csv";
-    const ENTRIES_CSV: &str = "../../build/entries.csv";
-
-    unsafe {
-        OPLDB_INIT.call_once(|| {
-            OPLDB_GLOBAL = Some(
-                OplDb::from_csv(
-                    Path::new(LIFTERS_CSV),
-                    Path::new(MEETS_CSV),
-                    Path::new(ENTRIES_CSV),
-                )
-                .unwrap(),
-            );
-        });
-
-        OPLDB_GLOBAL.as_ref().unwrap()
-    }
+    &*OPLDB_GLOBAL
 }
 
 /// Checks that basic rankings search functionality works.

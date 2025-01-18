@@ -6,36 +6,25 @@ use rocket::http::{Cookie, Header, Status};
 use rocket::local::blocking::Client;
 
 use std::path::Path;
-use std::sync::Once;
+use std::sync::LazyLock;
 
 use super::rocket;
 use super::Device;
 
-static mut OPLDB_GLOBAL: Option<OplDb> = None;
-static OPLDB_INIT: Once = Once::new();
+static OPLDB_GLOBAL: LazyLock<OplDb> = LazyLock::new(|| {
+    // This isn't really the place for it, but preload the environment.
+    dotenv::from_filename("server.env").unwrap();
 
-fn db() -> &'static OplDb {
-    const LIFTERS_CSV: &str = "../build/lifters.csv";
-    const MEETS_CSV: &str = "../build/meets.csv";
-    const ENTRIES_CSV: &str = "../build/entries.csv";
+    OplDb::from_csv(
+        Path::new("../build/lifters.csv"),
+        Path::new("../build/meets.csv"),
+        Path::new("../build/entries.csv"),
+    )
+    .unwrap()
+});
 
-    unsafe {
-        OPLDB_INIT.call_once(|| {
-            // This isn't really the place for it, but preload the environment.
-            dotenv::from_filename("server.env").unwrap();
-
-            OPLDB_GLOBAL = Some(
-                OplDb::from_csv(
-                    Path::new(LIFTERS_CSV),
-                    Path::new(MEETS_CSV),
-                    Path::new(ENTRIES_CSV),
-                )
-                .unwrap(),
-            );
-        });
-
-        OPLDB_GLOBAL.as_ref().unwrap()
-    }
+pub fn db() -> &'static OplDb {
+    &*OPLDB_GLOBAL
 }
 
 /// Returns a client's view into the Rocket server, suitable for making

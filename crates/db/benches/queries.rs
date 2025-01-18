@@ -5,29 +5,19 @@ use opldb::query::direct::*;
 use opldb::{MetaFederation, OplDb};
 
 use std::path::Path;
-use std::sync::Once;
+use std::sync::LazyLock;
 
-static mut OPLDB_GLOBAL: Option<OplDb> = None;
-static OPLDB_INIT: Once = Once::new();
+static OPLDB_GLOBAL: LazyLock<OplDb> = LazyLock::new(|| {
+    OplDb::from_csv(
+        Path::new("../../build/lifters.csv"),
+        Path::new("../../build/meets.csv"),
+        Path::new("../../build/entries.csv"),
+    )
+    .unwrap()
+});
 
-const LIFTERS_CSV: &str = "../../build/lifters.csv";
-const MEETS_CSV: &str = "../../build/meets.csv";
-const ENTRIES_CSV: &str = "../../build/entries.csv";
-
-fn db() -> &'static OplDb {
-    unsafe {
-        OPLDB_INIT.call_once(|| {
-            OPLDB_GLOBAL = Some(
-                OplDb::from_csv(
-                    Path::new(LIFTERS_CSV),
-                    Path::new(MEETS_CSV),
-                    Path::new(ENTRIES_CSV),
-                )
-                .unwrap(),
-            );
-        });
-        OPLDB_GLOBAL.as_ref().unwrap()
-    }
+pub fn db() -> &'static OplDb {
+    &*OPLDB_GLOBAL
 }
 
 pub fn query_benchmarks(c: &mut Criterion) {
