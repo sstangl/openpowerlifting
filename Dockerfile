@@ -34,7 +34,6 @@ COPY Makefile ./
 COPY .git .git/
 COPY checker checker/
 COPY crates crates/
-COPY goodlift-import goodlift-import/
 COPY server server/
 COPY tests tests/
 

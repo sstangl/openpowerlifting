@@ -4,7 +4,6 @@ members = [
     "checker",
     "crates/*",
     "server",
-    "goodlift-import",
 ]
 
 # Give CSV-using crates higher optimization levels to avoid extreme CSV load times.
