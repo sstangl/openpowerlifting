@@ -31,6 +31,7 @@
     masters60 = {name = "Masters 60+",min=60,max=999}
     masters70 = {name = "Masters 70+",min=70,max=999}
     masters80 = {name = "Masters 80+",min=80,max=999}
+    guest = {name ="Guest",min=0,max=999}
 
     masters4049 = {name = "Masters 40-49",min=40,max=49}
 
