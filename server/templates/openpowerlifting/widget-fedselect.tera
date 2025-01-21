@@ -675,6 +675,10 @@
   <option value="wpuf" {% if selection.federation == "WPUF" %}selected{% endif %}>WPUF - World Powerlifting Union of Federations [WPUF]</option>
   <option value="wppl-ukraine" {% if selection.federation == "WPPL-Ukraine" %}selected{% endif %}>WPPL Ukraine</option>
 </optgroup>
+<optgroup label="{{strings.country.uruguay}}">
+  <option value="all-uruguay" {% if selection.federation == "AllUruguay" %}selected{% endif %}>{{strings.selectors.fed.all_Uruguay}}</option>
+  <option value="fulp" {% if selection.federation == "FULP" %}selected{% endif %}>FULP - Federación Uruguaya de Levantamiento de Potencia [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.usvirginislands}}">
   <option value="all-usvirginislands" {% if selection.federation == "AllUSVirginIslands" %}selected{% endif %}>{{strings.selectors.fed.all_usvirginislands}}</option>
   <option value="usvipf" {% if selection.federation == "USVIPF" %}selected{% endif %}>USVIPF - US Virgin Islands Powerlifting Federation [IPF]</option>

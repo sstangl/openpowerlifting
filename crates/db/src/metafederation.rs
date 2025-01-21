@@ -219,6 +219,8 @@ pub enum MetaFederation {
     AllUKTested,
     #[strum(to_string = "all-ukraine")]
     AllUkraine,
+    #[strum(to_string = "all-uruguay")]
+    AllUruguay,
     #[strum(to_string = "all-venezuela")]
     AllVenezuela,
     #[strum(to_string = "all-vietnam")]
@@ -410,6 +412,10 @@ pub enum MetaFederation {
     /// FRPL, but with international results also.
     #[strum(to_string = "frpl")]
     FRPL,
+
+    /// FULP, but with international results also.
+    #[strum(to_string = "fulp")]
+    FULP,
 
     /// GAPLF, but with international results also.
     #[strum(to_string = "gaplf")]
@@ -940,6 +946,7 @@ impl MetaFederation {
                 entry.tested && MetaFederation::AllUK.contains(entry, meets)
             }
             MetaFederation::AllUkraine => is_from(Country::Ukraine, entry, meet),
+            MetaFederation::AllUruguay => is_from(Country::Uruguay, entry, meet),
             MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
             MetaFederation::AllUSATested => {
                 entry.tested && MetaFederation::AllUSA.contains(entry, meets)
@@ -1067,6 +1074,7 @@ impl MetaFederation {
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF, AsianPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
+            MetaFederation::FULP => affiliation!(meet, entry, FULP, IPF, FESUPO, NAPF),
             MetaFederation::GAPLF => affiliation!(meet, entry, GAPLF, IPF, FESUPO, NAPF),
             MetaFederation::GPCAff => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC)

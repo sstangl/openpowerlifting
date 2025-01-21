@@ -614,6 +614,7 @@ pub struct FedSelectorTranslations {
     pub all_uk: &'static str,
     pub all_uk_tested: &'static str,
     pub all_ukraine: &'static str,
+    pub all_uruguay: &'static str,
     pub all_usvirginislands: &'static str,
     pub all_venezuela: &'static str,
     pub all_vietnam: &'static str,

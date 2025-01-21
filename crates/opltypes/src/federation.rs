@@ -490,6 +490,10 @@ pub enum Federation {
     #[strum(to_string = "FRPL", serialize = "frpl")]
     FRPL,
 
+    /// Federación Uruguaya de Levantamiento de Potencia, Uruguay IPF affiliate.
+    #[strum(to_string = "FULP", serialize = "fulp")]
+    FULP,
+
     /// Guyana Amateur Powerlifting Federation, Guyanese IPF affiliate.
     #[strum(to_string = "GAPLF", serialize = "gaplf")]
     GAPLF,
@@ -2123,6 +2127,7 @@ impl Federation {
             Federation::FPR => FULLY_TESTED,
             Federation::FRPL => FULLY_TESTED,
             Federation::FSFA => FULLY_TESTED,
+            Federation::FULP => FULLY_TESTED,
             Federation::GAPLF => FULLY_TESTED,
             Federation::GDFPF => FULLY_TESTED,
             Federation::GermanyUA => false,
@@ -2587,6 +2592,7 @@ impl Federation {
             Federation::FPR => Some(Country::Russia),
             Federation::FRPL => Some(Country::Romania),
             Federation::FSFA => Some(Country::France),
+            Federation::FULP => Some(Country::Uruguay),
             Federation::GAPLF => Some(Country::Guyana),
             Federation::GDFPF => Some(Country::Germany),
             Federation::GermanyUA => Some(Country::Germany),
@@ -3098,6 +3104,7 @@ impl Federation {
             }
             Federation::FRPL => Some(Federation::IPF),
             Federation::FSFA => Some(Federation::WDFPF),
+            Federation::FULP => Some(Federation::IPF),
             Federation::GAPLF => Some(Federation::IPF),
             Federation::GDFPF => Some(Federation::WDFPF),
             Federation::GermanyUA => None,
@@ -3663,6 +3670,7 @@ impl Federation {
             Federation::FPR => Federation::ipf_rules_on(date),
             Federation::FRPL => Federation::ipf_rules_on(date),
             Federation::FSFA => PointsSystem::Wilks,
+            Federation::FULP => Federation::ipf_rules_on(date),
             Federation::GAPLF => Federation::ipf_rules_on(date),
             Federation::GDFPF => PointsSystem::Wilks,
             Federation::GermanyUA => PointsSystem::Wilks,
