@@ -17,6 +17,7 @@
     m7079 = {name ="M70-79", min=70, max=79}
     m7074 = {name ="M70-74", min=70, max=74}
     m7579 = {name ="M75-79", min=75, max=79}
+    m80 = {name ="M80+", min=80, max=999}
 
     # Reduced classes.
     t1316 = {name ="T13-16", min=13, max=16}
