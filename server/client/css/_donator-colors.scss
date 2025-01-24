@@ -105,7 +105,7 @@
   @include name-color(#3B72FF);
 }
 
-// The sahde of blue used as one of the colors of the University of North Carolina.
+// The shade of blue used as one of the colors of the University of North Carolina.
 .carolinablue {
   @include name-color(#4B9CD3);
 }
@@ -336,6 +336,11 @@
   $yellow: #FFFC00;
   @include gradient-prereqs($blue);
   background-image: linear-gradient(to right, $blue, $yellow);
+}
+
+.blue_to_white_to_orange_to_white_to_red {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #0036A4, #FFFFFF, #FFAD00, #FFFFFF, #C81026);
 }
 
 .green_to_gray {
