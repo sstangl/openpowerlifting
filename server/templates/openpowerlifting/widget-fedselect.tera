@@ -46,6 +46,7 @@
   <option value="afpf" {% if selection.federation == "AFPF" %}selected{% endif %}>AFPF - American Frantz Powerlifting Federation</option>
   <option value="americansa" {% if selection.federation == "AmericanSA" %}selected{% endif %}>AmericanSA - American Strength Association</option>
   <option value="amp" {% if selection.federation == "AMP" %}selected{% endif %}>AMP - Powerlifting America [IPF]</option>
+  <option value="ampu" {% if selection.federation == "AmPU" %}selected{% endif %}>AmPU - American Powerlifting Union</option>
   <option value="apa" {% if selection.federation == "APA" %}selected{% endif %}>APA - American Powerlifting Association [WPA]</option>
   <option value="apc" {% if selection.federation == "APC" %}selected{% endif %}>APC - American Powerlifting Committee [GPA/IPO]</option>
   <option value="apf" {% if selection.federation == "APF" %}selected{% endif %}>APF - American Powerlifting Federation [WPC]</option>

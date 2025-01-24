@@ -102,6 +102,10 @@ pub enum Federation {
     #[strum(to_string = "AMP", serialize = "amp")]
     AMP,
 
+    /// American Powerlifting Union.
+    #[strum(to_string = "AmPU", serialize = "ampu")]
+    AmPU,
+
     /// All Natural Physique and Power Conference (Defunct).
     #[strum(to_string = "ANPPC", serialize = "anppc")]
     ANPPC,
@@ -2034,6 +2038,7 @@ impl Federation {
             Federation::AIWBPA => FULLY_TESTED,
             Federation::AmericanSA => false,
             Federation::AMP => FULLY_TESTED,
+            Federation::AmPU => false,
             Federation::ANPPC => false,
             Federation::APA => false,
             Federation::APC => false,
@@ -2500,6 +2505,7 @@ impl Federation {
             Federation::AIWBPA => Some(Country::Indonesia),
             Federation::AmericanSA => Some(Country::USA),
             Federation::AMP => Some(Country::USA),
+            Federation::AmPU => Some(Country::USA),
             Federation::ANPPC => Some(Country::USA),
             Federation::APA => Some(Country::USA),
             Federation::APC => Some(Country::USA),
@@ -2958,6 +2964,7 @@ impl Federation {
             Federation::AIWBPA => Some(Federation::IPF),
             Federation::AmericanSA => None,
             Federation::AMP => Some(Federation::IPF),
+            Federation::AmPU => None,
             Federation::ANPPC => None,
             Federation::APA => Some(Federation::WPA),
             Federation::APC => Some(Federation::WUAP),
@@ -3565,6 +3572,7 @@ impl Federation {
             Federation::AIWBPA => Federation::ipf_rules_on(date),
             Federation::AmericanSA => PointsSystem::Wilks,
             Federation::AMP => Federation::ipf_rules_on(date),
+            Federation::AmPU => PointsSystem::Wilks,
             Federation::ANPPC => PointsSystem::Wilks,
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
