@@ -161,12 +161,14 @@
     mm1e = {name ="M-M1E", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mm4e = {name ="M-M4E", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mm5e = {name ="M-M5E", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
 
         # New-style divisions, Equipped Tested
     mjea = {name ="M-JE-A", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}
     oea = {name ="M-OE-A", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}   
     foea = {name ="F-OE-A", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}  
+    mm4ea = {name ="M-M4E-A", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}
 
     # CP Divisions.
     morcpf = {name ="M_OR_CP",min=0,max=999,equipment="Raw",sex="M"}
