@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set - x
+
+echo "$1" > URL
+cp ../../meet.template meet.csv
+wget - -output-document = "original.pdf" "$1"
+pdftotext - layout * .pdf
+../reveal-negatives original.txt
+cp original.txt entries.csv
