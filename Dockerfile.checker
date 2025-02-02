@@ -22,7 +22,6 @@ RUN apt-get update -qq && apt-get install -y \
 COPY Cargo.* ./
 COPY checker checker/
 COPY crates crates/
-COPY goodlift-import goodlift-import/
 COPY scripts scripts/
 COPY server server/
 COPY tests tests/
