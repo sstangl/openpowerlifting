@@ -131,7 +131,9 @@ def get_division(division_str):
     # Correct age divisions
     divisions = {
         "subjunior": "Sub-Junior",
+        "subjnr": "Sub-Junior",
         "junior": "Junior",
+        "jnr": "Junior",
         "open": "Open",
         "master1": "Masters 1",
         "masters1": "Masters 1",
@@ -148,7 +150,14 @@ def get_division(division_str):
     }
 
     # Convert to lowercase and remove punctuation and spaces for matching
-    div_clean = division_str.lower().replace(" ", "").replace("-", "")
+    div_clean = (
+        division_str.lower()
+        .replace("'", "")
+        .replace("-", "")
+        .replace(" ", "")
+        .replace("women", "")
+        .replace("men", "")
+    )
 
     # Try to match against known divisions
     for key, value in divisions.items():
