@@ -1,11 +1,11 @@
 # Start from a stable Debian image
-FROM rust:slim-buster AS builder
+FROM rust:slim AS builder
 
 # Install our box dependencies in one, easily-cached layer image
 RUN apt-get update -qq && apt-get install -y curl libjemalloc2 && \
     #curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt-get install -y git npm python3-pip uglifyjs && \
-    pip3 install toml flake8
+    apt-get install -y git npm uglifyjs && \
+    apt-get install -y python3-toml python3-flake8
 
 # Move to our project directory
 WORKDIR /opt/openpowerlifting
