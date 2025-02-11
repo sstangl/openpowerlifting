@@ -202,6 +202,12 @@
   background-image: linear-gradient(to right, #FB3640, #EDF2F4, #FB3640);
 }
 
+// Red, white, and red.
+.switzerland {
+  @include gradient-prereqs($default-color);
+  background-image: linear-gradient(to right, #D52B1E, #FFFFFF, #D52B1E);
+}
+
 // White, red, and white.
 .england {
   @include gradient-prereqs($default-color);
