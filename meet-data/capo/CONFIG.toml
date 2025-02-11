@@ -10,6 +10,16 @@
 [divisions]
     mobk   = {name ="MO-BK",min=0,max=999,sex="M",equipment="Bare"}
     fobk   = {name ="FO-BK",min=0,max=999,sex="F",equipment="Bare"}
+    mmbk   = {name ="MM-BK",min=40,max=999,sex="M",equipment="Bare"}
+    fmbk   = {name ="FM-BK",min=40,max=999,sex="F",equipment="Bare"}
+    mtbk   = {name ="MT-BK",min=13,max=19,sex="M",equipment="Bare"}
+    ftbk   = {name ="FT-BK",min=13,max=19,sex="F",equipment="Bare"}
+    mjbk   = {name ="MJ-BK",min=20,max=23,sex="M",equipment="Bare"}
+    fjbk   = {name ="FJ-BK",min=20,max=23,sex="F",equipment="Bare"}
+    mybk   = {name ="MY-BK",min=0,max=12,sex="M",equipment="Bare"}
+    fybk   = {name ="FY-BK",min=0,max=12,sex="F",equipment="Bare"}
+
+
     ft2bk   = {name ="FT2-BK",min=16,max=17,sex="F",equipment="Bare"}
     mt1bk   = {name ="MT1-BK",min=13,max=15,sex="M",equipment="Bare"}
     mm5bk   = {name ="MM5-BK",min=60,max=64,sex="M",equipment="Bare"}
