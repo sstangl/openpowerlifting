@@ -520,6 +520,13 @@
   background-image: linear-gradient(to right, $purple, $teal);
 }
 
+.purple_to_white {
+  $purple: #AE76FF;
+  $white: #FFFFFF;
+  @include gradient-prereqs($purple);
+  background-image: linear-gradient(to right, $purple, $white);
+}
+
 .matt_gradient {
   @include gradient-prereqs($default-color);
   background-image: 
