@@ -77,6 +77,7 @@
     j18_19 = {name="J18-19", min=18, max=19}
     j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
     j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
+    j18_19t = {name="J18-19T", min=18, max=19, tested="Yes"}
 
 
 [weightclasses.default_M]
