@@ -91,3 +91,4 @@
 
 [exemptions]
 	2102 = ["ExemptWeightClassConsistency"] # 82.5+ women's class.
+    2501 = ["ExemptDivision"]  # birthday overlap
