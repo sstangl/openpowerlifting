@@ -1337,6 +1337,11 @@ pub enum Federation {
     #[strum(to_string = "TPSSF", serialize = "tpssf")]
     TPSSF,
 
+    /// Unaffiliated meets held in Turkey.
+    #[serde(rename = "Turkey-UA")]
+    #[strum(to_string = "Turkey-UA", serialize = "turkey-ua")]
+    TurkeyUA,
+
     /// United Arab Emirates Powerlifting Association, IPF.
     ///
     /// Also called the United Arab Emirates Powerlifting Committee.
@@ -2341,6 +2346,7 @@ impl Federation {
             Federation::THSPA => FULLY_TESTED,
             Federation::THSWPA => FULLY_TESTED,
             Federation::TPSSF => FULLY_TESTED,
+            Federation::TurkeyUA => false,
             Federation::UAEPL => FULLY_TESTED,
             Federation::UAEUA => false,
             Federation::UDFPF => FULLY_TESTED,
@@ -2794,6 +2800,7 @@ impl Federation {
             Federation::THSPA => Some(Country::USA),
             Federation::THSWPA => Some(Country::USA),
             Federation::TPSSF => Some(Country::Turkey),
+            Federation::TurkeyUA => Some(Country::Turkey),
             Federation::UAEPL => Some(Country::UAE),
             Federation::UAEUA => Some(Country::UAE),
             Federation::UDFPF => Some(Country::Ukraine),
@@ -3342,6 +3349,7 @@ impl Federation {
             Federation::THSPA => None,
             Federation::THSWPA => None,
             Federation::TPSSF => Some(Federation::IPF),
+            Federation::TurkeyUA => None,
             Federation::UAEPL => Some(Federation::IPF),
             Federation::UAEUA => None,
             Federation::UDFPF => Some(Federation::WDFPF),
@@ -3909,6 +3917,7 @@ impl Federation {
             Federation::THSPA => PointsSystem::Wilks,
             Federation::THSWPA => PointsSystem::Wilks,
             Federation::TPSSF => Federation::ipf_rules_on(date),
+            Federation::TurkeyUA => Federation::ipf_rules_on(date),
             Federation::UAEPL => Federation::ipf_rules_on(date),
             Federation::UAEUA => PointsSystem::Dots,
             Federation::UDFPF => PointsSystem::Wilks,

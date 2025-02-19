@@ -646,6 +646,7 @@
 <optgroup label="{{strings.country.turkey}}">
   <option value="all-turkey" {% if selection.federation == "AllTurkey" %}selected{% endif %}>{{strings.selectors.fed.all_turkey}}</option>
   <option value="tpssf" {% if selection.federation == "TPSSF" %}selected{% endif %}>TPSSF [IPF]</option>
+  <option value="turkey-ua" {% if selection.federation == "Turkey-UA" %}selected{% endif %}>Turkey-UA [Unaffiliated]</option>
 </optgroup>
 <optgroup label="{{strings.country.uae}}">
   <option value="all-uae" {% if selection.federation == "AllUAE" %}selected{% endif %}>All UAE Lifters</option>
