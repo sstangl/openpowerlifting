@@ -2355,22 +2355,25 @@ pub fn do_check<R: io::Read>(
         }
 
         // Try narrowing the BirthYearRange based on surrounding information.
-        if let Some(birthdate) = entry.birthdate {
-            entry.birthyearrange = BirthYearRange::from_birthyear(birthdate.year());
-        } else {
-            // Try using the AgeRange.
-            entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
-                entry.agerange.min,
-                entry.agerange.max,
-                meet.date,
-            ));
+        match entry.birthdate {
+            Some(birthdate) => {
+                entry.birthyearrange = BirthYearRange::from_birthyear(birthdate.year());
+            }
+            _ => {
+                // Try using the AgeRange.
+                entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
+                    entry.agerange.min,
+                    entry.agerange.max,
+                    meet.date,
+                ));
 
-            // Try using division information.
-            entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
-                division_age_min,
-                division_age_max,
-                meet.date,
-            ));
+                // Try using division information.
+                entry.birthyearrange = entry.birthyearrange.intersect(BirthYearRange::from_range(
+                    division_age_min,
+                    division_age_max,
+                    meet.date,
+                ));
+            }
         }
 
         // Infer the BirthYearClass.

@@ -1166,7 +1166,7 @@ impl MetaFederation {
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
-            MetaFederation::POSK=> affiliation!(meet, entry, POSK, IPF, AsianPF),
+            MetaFederation::POSK => affiliation!(meet, entry, POSK, IPF, AsianPF),
             MetaFederation::PS => affiliation!(meet, entry, PS, IPF, AsianPF),
             MetaFederation::PWFL => affiliation!(meet, entry, PWFL, IPF, EPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
