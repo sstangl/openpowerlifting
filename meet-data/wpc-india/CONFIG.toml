@@ -13,7 +13,7 @@
     morwpc = {name ="M_OR_WPC",min=0,max=999,equipment="Raw",sex="M"}
     mocrwpc = {name ="M_OCR_WPC",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
     moswpc = {name ="M_OES_WPC",min=0,max=999,equipment="Single-ply",sex="M"}
-    momwpc = {name ="M_OEM_WPC",min=0,max=999,equipment="Multi-ply",sex="M"}
+    momwpc = {name ="M_OEM_WPC",min=0,max=999,equipment=["Multi-ply","Unlimited","Wraps"],sex="M"}
     mmr1wpc = {name ="M_MR_1_WPC",min=40,max=44,equipment="Raw",sex="M"}
     mmcr1wpc = {name ="M_MCR_1_WPC",min=40,max=44,equipment=["Raw","Wraps"],sex="M"}
     mms1wpc = {name ="M_MES_1_WPC",min=40,max=44,equipment="Single-ply",sex="M"}
