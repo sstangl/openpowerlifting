@@ -2,6 +2,16 @@
     require_manual_disambiguation = true
 
 [divisions]
+    open = {name ="Open",min=0,max=999}
+    pro = {name ="Pro",min=0,max=999}
+    proam = {name ="Pro-Am",min=0,max=999}
+    masters = {name ="Masters",min=40,max=99}  
+    division1 = {name ="Division 1",min=0,max=999} 
+    division2 = {name ="Division 2",min=0,max=999}
+    teen = {name ="Teen",min=13,max=19}
+    u21 = {name ="U21",min=13,max=21}
+    u23 = {name ="U23",min=13,max=23}
+    guest = {name ="Guest",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -14,4 +24,39 @@
     sex = "F"
 
 [exemptions]
-    1901 = ["ExemptWeightClassConsistency"] # Heavyweight/Lightweight classes.
+    1801 = ["ExemptWeightClassConsistency"]
+    1802 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    1901 = ["ExemptWeightClassConsistency","ExemptDivision"] # Heavyweight/Lightweight classes.#
+    1902 = ["ExemptWeightClassConsistency"]
+    1903 = ["ExemptWeightClassConsistency"]
+    1904 = ["ExemptWeightClassConsistency"]
+    2001 = ["ExemptWeightClassConsistency"]
+    2002 = ["ExemptWeightClassConsistency"]
+    2101 = ["ExemptWeightClassConsistency"]
+    2102 = ["ExemptWeightClassConsistency"]
+    2103 = ["ExemptWeightClassConsistency"]
+    2104 = ["ExemptWeightClassConsistency"]
+    2201 = ["ExemptWeightClassConsistency"]
+    2202 = ["ExemptWeightClassConsistency"]
+    2203 = ["ExemptWeightClassConsistency"]
+    2204 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2205 = ["ExemptWeightClassConsistency"]
+    2206 = ["ExemptWeightClassConsistency"]
+    2207 = ["ExemptWeightClassConsistency"]
+    2208 = ["ExemptWeightClassConsistency"]
+    2300 = ["ExemptWeightClassConsistency"]
+    2301 = ["ExemptWeightClassConsistency"]
+    2302 = ["ExemptWeightClassConsistency"]
+    2303 = ["ExemptWeightClassConsistency"]
+    2401 = ["ExemptWeightClassConsistency"]
+    2402 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2403 = ["ExemptWeightClassConsistency"]
+    2404 = ["ExemptWeightClassConsistency"]
+    2405 = ["ExemptWeightClassConsistency"]
+    2406 = ["ExemptWeightClassConsistency"]
+    2407 = ["ExemptWeightClassConsistency"]
+    2408 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2409 = ["ExemptWeightClassConsistency"]
+    2410 = ["ExemptWeightClassConsistency"]
+    2501 = ["ExemptWeightClassConsistency"]
+
