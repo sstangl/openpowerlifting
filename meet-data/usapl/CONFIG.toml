@@ -714,6 +714,8 @@
     NJ-2024-10 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
     TX-2024-48 = ["ExemptWeightClassConsistency"] # Meet was scored by formula.
     PA-2024-10 = ["ExemptWeightClassConsistency"] # No weight classes reported.
+    TX-2024-56 = ["ExemptWeightClassConsistency"] # Pro Series Finals (scored by formula)
+    MA-2024-11 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Carnage at the Coluseum (scored by formula)
 
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
