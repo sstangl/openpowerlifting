@@ -717,6 +717,12 @@
     TX-2024-56 = ["ExemptWeightClassConsistency"] # Pro Series Finals (scored by formula)
     MA-2024-11 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Carnage at the Coluseum (scored by formula)
 
+    # 2025 exemptions
+    PA-2025-06 = ["ExemptWeightClassConsistency"] # Looks to be scored by formula
+    PA-2025-07 = ["ExemptWeightClassConsistency","ExemptDivision"] # No weight classes reported
+    GA-2025-02 = ["ExemptWeightClassConsistency","ExemptDivision"] # No weight classes reported
+    LA-2025-01 = ["ExemptWeightClassConsistency"] # No weight classes reported
+
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     IA-2014-01 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
@@ -830,3 +836,16 @@
     AUS-2024-22 = ["ExemptDivision"]
     TN-2024-03 = ["ExemptDivision"]
     IA-2025-01 = ["ExemptDivision"]
+    NE-2025-01 = ["ExemptDivision"]
+    IL-2025-05 = ["ExemptDivision"]
+    SC-2025-01 = ["ExemptDivision"]
+    KOR-2025-01 = ["ExemptDivision"]
+    KS-2025-03 = ["ExemptDivision"]
+    GA-2025-01 = ["ExemptDivision"]
+    WA-2025-01 = ["ExemptDivision"]
+    AR-2025-01 = ["ExemptDivision"]
+    PA-2025-05 = ["ExemptDivision"]
+    WI-2025-01 = ["ExemptDivision"] 
+
+
+
