@@ -725,6 +725,7 @@
     PA-2025-02 = ["ExemptWeightClassConsistency"] # No weight classes reported
     KS-2025-01 = ["ExemptWeightClassConsistency"] # No weight classes reported
 
+
     # Miscellaneous exemptions.
     AK-2014-04 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
     IA-2014-01 = ["ExemptWeightClassConsistency"] # Unknown bodyweights and classes.
@@ -855,7 +856,8 @@
     CA-2025-02 = ["ExemptDivision"]
     CO-2025-01 = ["ExemptDivision"]
     NY-2025-04 = ["ExemptDivision"]
-
+    TX-2025-09 = ["ExemptDivision"]
+    VA-2025-17 = ["ExemptDivision"]
 
 
 
