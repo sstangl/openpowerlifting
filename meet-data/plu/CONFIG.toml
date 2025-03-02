@@ -60,8 +60,47 @@ require_manual_disambiguation = true
     m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
 
     # Non-existent divisions that nevertheless got used.
+    y10_12 = {name="Y10-12", min=10, max=12}
+    y10_12t = {name="Y10-12T", min=10, max=12, tested="Yes"}
     j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
     j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
+
+    # Parasports Drug Tested divisions.
+    paraopent = {name = "Parasports OpenT", min = 0, max = 999, tested="Yes"}
+    paray10_12t = {name="Parasports Y10-12T", min=10, max=12, tested="Yes"}
+    paraj13_15t = {name="Parasports J13-15T", min=13, max=15, tested="Yes"}
+    paraj16_17t = {name="Parasports J16-17T", min=16, max=17, tested="Yes"}
+    paraj18_19t = {name="Parasports J18-19T", min=18, max=19, tested="Yes"}
+    paraj20_23t = {name="Parasports J20-23T", min=20, max=23, tested="Yes"}
+    paras35_39t = {name="Parasports S35-39T", min=35, max=39, tested="Yes"}
+    param40_44t = {name="Parasports M40-44T", min=40, max=44, tested="Yes"}
+    param45_49t = {name="Parasports M45-49T", min=45, max=49, tested="Yes"}
+    param50_54t = {name="Parasports M50-54T", min=50, max=54, tested="Yes"}
+    param55_59t = {name="Parasports M55-59T", min=55, max=59, tested="Yes"}
+    param60_64t = {name="Parasports M60-64T", min=60, max=64, tested="Yes"}
+    param65_69t = {name="Parasports M65-69T", min=65, max=69, tested="Yes"}
+    param70_74t = {name="Parasports M70-74T", min=70, max=74, tested="Yes"}
+    param75_79t = {name="Parasports M75-79T", min=75, max=79, tested="Yes"}
+    param80pt = {name="Parasports M80+T", min=80, max=999, tested="Yes"}
+
+    # Parasports divisions, but not tested.
+    paraopen = {name="Parasports Open", min=0, max=999}
+    paray10_12 = {name="Parasports Y10-12", min=10, max=12}
+    paraj13_15 = {name="Parasports J13-15", min=13, max=15}
+    paraj16_17 = {name="Parasports J16-17", min=16, max=17}
+    paraj18_19 = {name="Parasports J18-19", min=18, max=19}
+    paraj20_23 = {name="Parasports J20-23", min=20, max=23}
+    paras35_39 = {name="Parasports S35-39", min=35, max=39}
+    param40_44 = {name="Parasports M40-44", min=40, max=44}
+    param45_49 = {name="Parasports M45-49", min=45, max=49}
+    param50_54 = {name="Parasports M50-54", min=50, max=54}
+    param55_59 = {name="Parasports M55-59", min=55, max=59}
+    param60_64 = {name="Parasports M60-64", min=60, max=64}
+    param65_69 = {name="Parasports M65-69", min=65, max=69}
+    param70_74 = {name="Parasports M70-74", min=70, max=74}
+    param75_79 = {name="Parasports M75-79", min=75, max=79}
+    param80p = {name="ParasportsM80+", min=80, max=999}
+
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
@@ -72,5 +111,10 @@ require_manual_disambiguation = true
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
     sex = "F"
+
+[weightclasses.default_Mx]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "Mx"
 
 [exemptions]
