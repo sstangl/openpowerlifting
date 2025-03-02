@@ -1,6 +1,6 @@
 Name,Team,Sex,BirthDate,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Place,Event,Equipment
 Manon Sene,Maromme,F,2002-09-26,F-T2,59.3,63,85,90,96,96,-100,,,,,,,,,,,96,1,S,Raw
-Stéphanie Lagrange,Beauvoir,F,1976-05-21,F-M1,61.2,63,107.5,112.5,120,120,,,,,,,,,,,,120,1,S,Raw
+Stéphanie Lagrange,Beauvoir,F,1976-05-21,F-M1,61.2,63,107.5,112.5,120,120,,,,,,,,,,,,120,1,S,Single-ply
 Charles Maheust,Lisieux,M,2000-02-22,M-T3,57.9,60,120,-125,-125,120,,,,,,,,,,,,120,1,S,Raw
 Yohann Jacquemard,Rioz,M,1994-01-10,M-O,73.5,75,157.5,-165,,157.5,,,,,,,,,,,,157.5,1,S,Raw
 Patrick Metayer,Saint Aubin,M,1964-08-26,M-M3,74.8,75,135,145,151,151,,,,,,,,,,,,151,1,S,Raw
@@ -21,7 +21,7 @@ Paul Reiners,Yerres,M,1993-10-22,M-O,73.8,75,,,,,,,,,,,202.5,212.5,220,220,,220,
 Ibrahim Dem,Saint Aubin,M,1990-08-04,M-O,73.6,75,,,,,,,,,,,190,202.5,-217.5,202.5,,202.5,2,D,Raw
 Jean-Claude D'Heilly,,M,1958-05-29,M-M5,73.9,75,,,,,,,,,,,192.5,206,210,210,,210,2,D,Raw
 Daniel Delaporte,Maromme,M,1948-05-21,M-M7,74.2,75,,,,,,,,,,,150,170,181,181,-182.5,181,1,D,Raw
-Jean-Claude D'Heilly,,M,1958-05-29,M-M5,73.9,75,,,,,,,,,,,205,221,-230,221,,221,1,D,Raw
+Jean-Claude D'Heilly,,M,1958-05-29,M-M5,73.9,75,,,,,,,,,,,205,221,-230,221,,221,1,D,Single-ply
 Julien Samyn,Lisieux,M,2001-06-14,M-T2,79.2,82.5,,,,,,,,,,,160,-175,,160,,160,1,D,Raw
 Nicolas Fanni,Evreux,M,1990-02-11,M-O,81.8,82.5,,,,,,,,,,,220,230,-240,230,,230,1,D,Raw
 Manu Faber,Rioz,M,1978-07-07,M-M1,81,82.5,,,,,,,,,,,222.5,232.5,242.5,242.5,,242.5,1,D,Raw
@@ -149,7 +149,7 @@ Dimitri Pluss,Castelnau,M,1998-02-27,M-JR,81.9,82.5,175,185,192.5,192.5,,127.5,1
 Benjamin Cannessant,Saint Aubin,M,1988-04-24,M-O,82.5,82.5,195,202.5,207.5,207.5,,130,135,140,140,,190,202.5,210,210,,557.5,2,SBD,Raw
 Nicolas Fanni,Evreux,M,1990-02-11,M-O,81,82.5,170,180,190,190,,125,130,-135,130,,210,225,237.5,237.5,,557.5,1,SBD,Raw
 David Perroud,,M,1969-02-23,M-M3,81.2,82.5,145,-155,,145,,90,100,-105,100,,190,-200,,190,,435,2,SBD,Raw
-Pascal Costa,Vitry,M,1967-01-04,M-M3,79,82.5,147.5,160,-170,160,,-117.5,117.5,127.5,127.5,,147.5,-160,-160,147.5,,435,1,SBD,Raw
+Pascal Costa,Vitry,M,1967-01-04,M-M3,79,82.5,147.5,160,-170,160,,-117.5,117.5,127.5,127.5,,147.5,-160,-160,147.5,,435,1,SBD,Single-ply
 Pascal Mauhourat,Tarbes,M,1958-09-04,M-M5,81.7,82.5,170,180,182.5,182.5,,90,-95,95,95,,230,240,242.5,242.5,,520,1,SBD,Raw
 Antonio Carbone,Yerres,M,1956-02-14,M-M5,81.7,82.5,145,152.5,160,160,,85,90,,90,,185,-200,200,200,,450,3,SBD,Raw
 Daniel Fortier,Evreux,M,1958-12-11,M-M5,80.6,82.5,157.5,165,170,170,,115,120,125,125,,195,210,222.5,222.5,,517.5,2,SBD,Raw
@@ -159,6 +159,6 @@ Denis Handala,Yerres,M,1970-04-03,M-M2,85.6,90,200,210,,210,,120,125,130,130,,21
 Rémi Cortot,Paray,M,1954-07-29,M-M5,85.6,90,150,165,172.5,172.5,,100,110,-117.5,110,,180,195,205,205,,487.5,1,SBD,Raw
 Fabien Pollet,Gournay,M,1984-06-22,M-O,99.2,100,205,220,-230,220,,150,-160,-160,150,,245,265,,265,,635,1,SBD,Raw
 Patrice Baumel,Paray,M,1975-10-21,M-M1,98.5,100,217.5,230,-240,230,,132.5,140,145,145,,230,247.5,-255,247.5,,622.5,1,SBD,Raw
-François Kalic,Trilport,M,1965-06-12,M-M3,98.2,100,200,210,,210,,160,165,172.5,172.5,177.5,215,230,245,245,,627.5,1,SBD,Raw
+François Kalic,Trilport,M,1965-06-12,M-M3,98.2,100,200,210,,210,,160,165,172.5,172.5,177.5,215,230,245,245,,627.5,1,SBD,Single-ply
 Serge Bustreel,Trilport,M,1946-05-24,M-M7,98.6,100,-190,-200,,,,110,115,-120,115,,215,-220,225,225,,,DQ,SBD,Raw
 Julien Villin,Castelnau,M,1989-09-08,M-O,107.2,110,205,215,220,220,,150,155,160,160,,265,285,290,290,,670,1,SBD,Raw
