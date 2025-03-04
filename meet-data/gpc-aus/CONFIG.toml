@@ -4,9 +4,15 @@
     require_manual_disambiguation = true
 
 
-[rulesets.default]
+[rulesets.pre_2020503]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
-    date_range = ["0000-01-01", "9999-01-01"]
+    date_range = ["0000-01-01", "2025-03-01"]
+
+# Sleeves introduced as separate division as of 2025-03-02
+[rulesets.default]
+    ruleset = ["CombineSingleAndMulti"]
+    date_range = ["2025-03-02", "9999-12-31"]
+ 
 
 [divisions]
 
