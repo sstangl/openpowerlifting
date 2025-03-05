@@ -488,6 +488,8 @@
   <option value="gpc-nz" {% if selection.federation == "GPC-NZ" %}selected{% endif %}>GPC-NZ - GPC New Zealand [GPC]</option>
   <option value="ipl-nz" {% if selection.federation == "IPL-NZ" %}selected{% endif %}>IPL-NZ - IPL New Zealand [IPL]</option>
   <option value="nzpf" {% if selection.federation == "NZPF" %}selected{% endif %}>NZPF - New Zealand Powerlifting Federation [IPF]</option>
+  <option value="nzpu" {% if selection.federation == "NZPU" %}selected{% endif %}>NZPU - New Zealand Powerlifting United</option>
+  <option value="nzpu-tested" {% if selection.federation == "NZPUTested" %}selected{% endif %}>NZPU Tested</option>
   <option value="wp-nz" {% if selection.federation == "WP-NZ" %}selected{% endif %}>WP-NZ - World Powerlifting NZ [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.nicaragua}}">

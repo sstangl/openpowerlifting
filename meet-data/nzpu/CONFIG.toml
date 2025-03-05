@@ -1,0 +1,32 @@
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    # OpenLifter-style divisions.
+
+    # Teen
+    teen_16_19 = {name="T16-19", min=16, max=19}
+
+    # Junior
+    j20_23 = {name="J20-23", min=20, max=23}
+
+    # Masters
+    m40_49 = {name="M40-49", min=40, max=49}
+    m50_59 = {name="M50-59", min=50, max=59}
+    m60_69 = {name="M60-69", min=60, max=69}
+    m70p = {name="M70+", min=70, max=999}
+
+    open = {name = "Open", min = 0, max = 999}
+    youth = {name = "Youth", min = 0, max = 15}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","110+"]
+    date_range = ["2022-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]

@@ -573,6 +573,10 @@ pub enum MetaFederation {
     #[strum(to_string = "nzpf")]
     NZPF,
 
+    /// NZPU tested
+    #[strum(to_string = "nzpu-tested")]
+    NZPUTested,
+
     /// OCWP, but with international results also.
     #[strum(to_string = "ocwp")]
     OCWP,
@@ -991,6 +995,7 @@ impl MetaFederation {
             }
             MetaFederation::AusPLTested => meet.federation == Federation::AusPL && entry.tested,
             MetaFederation::UKPUTested => meet.federation == Federation::UKPU && entry.tested,
+            MetaFederation::NZPUTested => meet.federation == Federation::NZPU && entry.tested,
             MetaFederation::AWPC => meet.federation == Federation::WPC && entry.tested,
             MetaFederation::BelPF => affiliation!(meet, entry, BelPF, IPF, EPF),
             MetaFederation::BP => {
