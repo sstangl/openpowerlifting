@@ -118,3 +118,5 @@ require_manual_disambiguation = true
     sex = "Mx"
 
 [exemptions]
+
+    2511 = ["ExemptLiftOrder"] # misloaded bench results updated with corrected attempts
