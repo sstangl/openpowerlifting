@@ -725,6 +725,13 @@
     PA-2025-02 = ["ExemptWeightClassConsistency"] # No weight classes reported
     KS-2025-01 = ["ExemptWeightClassConsistency"] # No weight classes reported
     NY-2025-10 =  ["ExemptWeightClassConsistency"] # No weight classes reported - scored by formula
+    NS-2025-06-F = ["ExemptWeightClassConsistency"] # scored by formula
+    NS-2025-06-B = ["ExemptWeightClassConsistency"] # scored by formula
+    NS-2025-06-E = ["ExemptWeightClassConsistency"] # scored by formula
+    IL-2025-03 = ["ExemptWeightClassConsistency"] # scored by formula
+    NS-2025-06 = ["ExemptWeightClassConsistency"] # scored by formula
+    NS-2025-06-D = ["ExemptWeightClassConsistency"] # scored by formula
+    NS-2025-06-C = ["ExemptWeightClassConsistency"] # scored by formula
 
 
     # Miscellaneous exemptions.
@@ -860,6 +867,7 @@
     TX-2025-09 = ["ExemptDivision"]
     VA-2025-17 = ["ExemptDivision"]
     HI-2025-01 = ["ExemptDivision"]
+    NC-2025-01 = ["ExemptDivision"]
 
 
 
