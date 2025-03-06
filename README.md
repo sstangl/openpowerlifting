@@ -61,6 +61,7 @@ Build the project and run the server:
 
 ```bash
 make
+cd server # this is where the server.env file lives
 cargo run --release --bin server
 ```
 
