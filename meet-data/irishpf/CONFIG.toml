@@ -6,6 +6,7 @@
 [divisions]
     # Men's Raw.
     mo = {name="M-O", min=0, max=999, equipment="Raw", sex="M"}
+    mn = {name="M-N", min=0, max=999, equipment="Raw", sex="M"}
     mg = {name="M-G", min=0, max=999, equipment="Raw", sex="M", place="G"}
     msj = {name="M-SJ", min=0, max=17.5, equipment="Raw", sex="M"}
     mjr = {name="M-JR", min=18.5, max=22.5, equipment="Raw", sex="M"}
@@ -24,6 +25,7 @@
 
     # Women's Raw.
     fo = {name="F-O", min=0, max=999, equipment="Raw", sex="F"}
+    fn = {name="F-N", min=0, max=999, equipment="Raw", sex="F"}
     fg = {name="F-G", min=0, max=999, equipment="Raw", sex="F", place="G"}
     fsj = {name="F-SJ", min=0, max=17.5, equipment="Raw", sex="F"}
     fjr = {name="F-JR", min=18.5, max=22.5, equipment="Raw", sex="F"}
