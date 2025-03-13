@@ -1080,7 +1080,7 @@ impl MetaFederation {
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF, AsianPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
             MetaFederation::FULP => affiliation!(meet, entry, FULP, IPF, FESUPO, NAPF),
-            MetaFederation::GAPLF => affiliation!(meet, entry, GAPLF, IPF, FESUPO, NAPF),
+            MetaFederation::GAPLF => affiliation!(meet, entry, GAPLF, IPF, FESUPO, NAPF, CommonwealthPF),
             MetaFederation::GPCAff => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC)
             }
@@ -1167,7 +1167,7 @@ impl MetaFederation {
             MetaFederation::PA => affiliation!(meet, entry, PA, WP),
             MetaFederation::PAP => affiliation!(meet, entry, PAP, IPF, AsianPF),
             MetaFederation::PFBD => affiliation!(meet, entry, PFBD, IPF, AsianPF),
-            MetaFederation::PI => affiliation!(meet, entry, PI, IPF, AsianPF),
+            MetaFederation::PI => affiliation!(meet, entry, PI, IPF, AsianPF, CommonwealthPF),
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
@@ -1180,7 +1180,7 @@ impl MetaFederation {
             MetaFederation::SAFP => affiliation!(meet, entry, SAFP, IPF, AsianPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
             MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
-            MetaFederation::SLPF => affiliation!(meet, entry, SLPF, IPF, AsianPF),
+            MetaFederation::SLPF => affiliation!(meet, entry, SLPF, IPF, AsianPF, CommonwealthPF),
             MetaFederation::SSAU => {
                 affiliation!(meet, entry, SSAU, WDFPF) && meet.date.year() >= 2024
             }
