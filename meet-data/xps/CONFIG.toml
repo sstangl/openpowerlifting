@@ -54,6 +54,7 @@
     # Pro variants.
     pro_open = {name = "Pro Open", min = 0, max = 999}
     pro_teen_11_19 = {name = "Pro Teen 11-19", min = 11, max = 19}
+    pro_teen_16_17 = {name = "Pro Teen 16-17", min = 16, max = 17}
     pro_junior = {name = "Pro Juniors 20-23", min = 20, max = 23}
     pro_submaster = {name = "Pro Submasters 35-39", min = 35, max = 39}
     pro_master_40 = {name = "Pro Masters 40-44", min = 40, max = 44}
