@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
-# USAPL has unfortunately stopped posting individual meet result spreadsheets,
-# and now uploads everything to this usapl.liftingdatabase.com service.
 # This script taken a liftingdatabase.com URL and converts the results to
 # the OpenPowerlifting internal format. It also creates the directory.
 #
@@ -107,7 +105,6 @@ states = {
     'Nationals': '',  # No information provided.
     'Regionals': '',  # No information provided.
     'NATIONAL OFFICE': '',
-    'Australia': 'AUS',
 }
 
 
@@ -118,19 +115,19 @@ def parsedivision(div):
     else:
         eq = 'Single-ply'
 
-    # If only USAPL would report Age.
-    # Sometimes the divisions are just "M1", when they really mean
-    # "both M1a and M1b", and it's impossible to distinguish the two.
     s = div
-    s = s.replace('Raw ', 'R-')  # As in "Raw Master 1a"
+    s = s.replace('Raw ', 'R-')  # As in "Raw Master 1"
     s = s.replace('Teen and Junior', 'TJ')
-    s = s.replace('Master ', 'M')  # As in "Master 1a"
-    s = s.replace('Master', 'M')  # As in "Master1a"
+    s = s.replace('Master ', 'M')  # As in "Master 1"
+    s = s.replace('Master', 'M')  # As in "Master1"
     s = s.replace('Teen', 'T')  # As in "Teen 1"
     s = s.replace('High School', 'HS')
     s = s.replace('Collegiate', 'C')
+    s = s.replace('University', 'Uni')
     s = s.replace('Special Olympian', 'SO')
+    s = s.replace('Sports for All', 'SA')
     s = s.replace('Sub Junior', 'Sj')
+    s = s.replace('Pre-Sub-Junior', 'PS')
     s = s.replace('Open', 'O')
     s = s.replace('Junior', 'Jr')
     s = s.replace('Youth', 'Y')
@@ -141,7 +138,7 @@ def parsedivision(div):
     s = s.replace('Female - ', 'F-')
     s = s.replace('Male-', 'M-')
     s = s.replace('Male - ', 'M-')
-    s = s.replace('GuestLifter', 'G')
+    s = s.replace('Guest Lifter', 'G')
     s = s.replace('Varsity', 'V')
 
     # Fix Some common mistakes that crop up.
@@ -219,7 +216,7 @@ def makeentriescsv(soup):
                 elif 'Male' in s:
                     state_sex = 'M'
 
-        elif k == 20:
+        elif k == 21:
             # This is a results row.
             assert state_event is not None
             assert state_division is not None
@@ -438,9 +435,7 @@ def makemeetcsv(soup):
     meetname = content.find('h3').text
 
     # Remove federation information from the meet name.
-    meetname = meetname.replace('USAPL', '')
     meetname = meetname.replace('Powerlifting America', '')
-    meetname = meetname.replace('2022', '')
     meetname = meetname.strip()
 
     table = content.find('table')
@@ -505,7 +500,7 @@ def main(url, importdir):
     inferequipment(entriescsv)
     markdrugtest(entriescsv)
 
-    # Since USAPL only provides BirthYear info, and we keep having to add
+    # Since AMP only provides BirthYear info, and we keep having to add
     # Age and BirthDate columns by lifter request after importation,
     # just add blank column pre-emptively to avoid large file rewrites.
     if 'Age' not in entriescsv.fieldnames:
