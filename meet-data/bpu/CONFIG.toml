@@ -251,6 +251,7 @@
     mmt3crabpu = {name ="M_TCR_3_ABPU",min=18,max=19,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mmt3sabpu = {name ="M_TES_3_ABPU",min=18,max=19,equipment="Single-ply",sex="M",tested="Yes"}
     mmt3mabpu = {name ="M_TEM_3_ABPU",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    mmt3abpu = {name ="M_TEU_3_ABPU",min=18,max=19,equipment="Unlimited",sex="M",tested="Yes"}
     mjrabpu = {name ="M_JR_ABPU",min=20,max=23,equipment="Raw",sex="M",tested="Yes"}
     mjcrabpu = {name ="M_JCR_ABPU",min=20,max=23,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mjsabpu = {name ="M_JES_ABPU",min=20,max=23,equipment="Single-ply",sex="M",tested="Yes"}
