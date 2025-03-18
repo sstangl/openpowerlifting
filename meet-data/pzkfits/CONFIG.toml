@@ -27,6 +27,7 @@
 
     masters40p_m = {name = "Weterani +40 lat",min=39.5,max=999,sex='M'}
     masters50p_m = {name = "Weterani +50 lat",min=49.5,max=999,sex='M'}
+    masters60p_m = {name = "Weterani +60 lat",min=59.5,max=999,sex='M'}
     masters = {name = "Weterani",min=39.5,max=999}
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -94,15 +95,20 @@
     1901 = ["ExemptWeightClassConsistency"]  # Lowest Juniors class was -52kg.
     1902 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs
     1903 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
+    1905 = ["ExemptWeightClassConsistency"]  # No weightclasses
+    2003 = ["ExemptWeightClassConsistency"]  # No weightclasses
     2102 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
+    2104 = ["ExemptWeightClassConsistency"]  # No weightclasses
     2201 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2202 = ["ExemptWeightClassConsistency"]  # No 47kg womens
     2204 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
+    2205 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2304 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2305 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2307 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2308 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2309 = ["ExemptWeightClassConsistency"]  # No 47kg womens or 66kg men
+    2310 = ["ExemptWeightClassConsistency"]  # No weightclasses
     2401 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2402 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2406 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
