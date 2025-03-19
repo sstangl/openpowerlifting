@@ -1,4 +1,4 @@
-﻿Name,Age,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Team,Equipment,BirthDate,Sex,Event
+Name,Age,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Team,Equipment,BirthDate,Sex,Event
 Svetlana Svjatnaja,63,F-M5,56.7,60,75,80,85,,85,45,47.5,-50,,47.5,100,105,112.5,,112.5,245,1,PowerLab,Wraps,,F,SBD
 Karīna Beta,18,F-T3,65.3,67.5,90,-95,95,,95,37.5,42.5,-45,,42.5,95,102.5,-107.5,,102.5,240,1,Forte Iecava,Wraps,,F,SBD
 Katrīna Klāsupa,18,F-T3,82.5,82.5,-100,-107.5,107.5,,107.5,35,40,-42.5,,40,120,-130,,,120,267.5,1,Forte Iecava,Wraps,,F,SBD
@@ -50,20 +50,20 @@ Mihails Rekaikins,48,M-M2,97.3,100,,,,,,160,-165,-165,,160,,,,,,160,2,Atlanti,Ra
 Maksims Gordejevs,40,M-M1,109.2,110,,,,,,210,220,230,,230,,,,,,230,1,Step Up Fitness,Raw,,M,B
 Igors Gluskovs,43,M-M1,105.3,110,,,,,,170,-175,-175,,170,,,,,,170,2,Olymp,Raw,,M,B
 Gatis Lepste,42,M-M1,126,140,,,,,,255,265,270,,270,,,,,,270,1,Ventspils,Raw,,M,B
-Pēteris Isajevs,40,M-M1,140.2,140+,,,,,,245,260,270,-280,270,,,,,,270,1,Olymp,Raw,,M,B
+Pēteris Isājevs,40,M-M1,140.2,140+,,,,,,245,260,270,-280,270,,,,,,270,1,Olymp,Raw,,M,B
 Timofejs Blūms,19,M-T3,64.7,67.5,,,,,,90,-95,95,,95,,,,,,95,1,Atlanti,Raw,,M,B
 Dāvids Kusiņš,16,M-T2,84.1,90,,,,,,-65,70,72.5,,72.5,,,,,,72.5,1,Forte Iecava,Raw,,M,B
 Iļja Ionašku,16,M-T2,97.9,100,,,,,,95,100,-102.5,,100,,,,,,100,1,Kuldīga,Raw,,M,B
 Trevor Toomiste,13,M-T1,59,60,,,,,,-45,45,55,,55,,,,,,55,1,Kover Kang,Raw,,M,B
 Valentīns Morozovs,36,M-O,74.9,75,,,,,,165,170,-175,,170,,,,,,170,1,Step Up Fitness,Raw,,M,B
 Sander Pikk,29,M-O,88.2,90,,,,,,165,-175,-175,,165,,,,,,165,1,Kover Kang,Raw,,M,B
-Edgars Peterlevics,38,M-O,90.3,100,,,,,,180,-187.5,-187.5,,180,,,,,,180,1,Kuldīga,Raw,,M,B
+Edgars Peterlēvics,38,M-O,90.3,100,,,,,,180,-187.5,-187.5,,180,,,,,,180,1,Kuldīga,Raw,,M,B
 Sandijs Raikstiņš,36,M-O,97.9,100,,,,,,135,140,-145,,140,,,,,,140,2,Kuldīga,Raw,,M,B
 Giedrius Kaleckas,36,M-O,102.8,110,,,,,,205,212.5,217.5,,217.5,,,,,,217.5,1,Lithuania,Raw,,M,B
 Dāvis Bečs,29,M-O,107,110,,,,,,200,210,215,,215,,,,,,215,2,Indiv,Raw,,M,B
 Rytis Veverskis,25,M-O,110,110,,,,,,190,202.5,-212.5,,202.5,,,,,,202.5,3,Lithuania,Raw,,M,B
 Kārlis Devits,36,M-O,109.2,110,,,,,,145,155,-160,,155,,,,,,155,4,Kuldīga,Raw,,M,B
-Konstantins Sobolevs,34,M-O,120,125,,,,,,220,230,237.5,,237.5,,,,,,237.5,1,Olymp,Raw,,M,B
+Konstantīns Soboļevs,34,M-O,120,125,,,,,,220,230,237.5,,237.5,,,,,,237.5,1,Olymp,Raw,,M,B
 Ardo Lilleorg,34,M-O,117.3,125,,,,,,220,225,230,,230,,,,,,230,2,Kover Kang,Raw,,M,B
 Aleksandrs Krasutins,32,M-O,121.2,125,,,,,,212.5,-225,225,,225,,,,,,225,3,Step Up Fitness,Raw,,M,B
 Serhii Yermachuk,35,M-O,112.1,125,,,,,,210,220,-227.5,,220,,,,,,220,4,Step Up Fitness,Raw,,M,B
@@ -76,7 +76,7 @@ Triin Raudoja,41,F-M1,98.8,110,,,,,,65,67.5,-70,,67.5,140,150,-157.5,,150,217.5,
 Ance Pšečenko,24,F-O,69,75,,,,,,50,55,-60,,55,90,100,110,,110,165,1,Kuldīga,Raw,,F,BD
 Līga Motte,39,F-O,99.7,110,,,,,,85,90,95,,95,180,190,200,,200,295,1,Olymp,Raw,,F,BD
 Modestas Beinoravičius,47,M-M2,109,110,,,,,,160,-170,170,,170,260,280,-290,,280,450,1,Lithuania,Raw,,M,BD
-Guntars Erkškis,49,M-M2,109.4,110,,,,,,145,-152.5,-152.5,,145,250,260,,,260,405,2,Ventspils,Raw,,M,BD
+Guntars Ērkšķis,49,M-M2,109.4,110,,,,,,145,-152.5,-152.5,,145,250,260,,,260,405,2,Ventspils,Raw,,M,BD
 Jānis Ilgavižs,41,M-M1,126.3,140,,,,,,175,190,200,,200,-320,325,340,,340,540,1,Pilsrundāle,Raw,,M,BD
 Deniss Berezovskis,16,M-T2,86,90,,,,,,-105,110,115,,115,205,215,-222.5,,215,330,1,Līvāni,Raw,,M,BD
 Edgars Gercāns,17,M-T2,87,90,,,,,,115,-120,-125,,115,150,165,-175,,165,280,2,Forte Iecava,Raw,,M,BD
@@ -87,7 +87,7 @@ Jānis Ratnieks,39,M-O,88.6,90,,,,,,150,160,,,160,270,280,-291,,280,440,1,Step U
 Raivo Feldmanis,27,M-O,86.7,90,,,,,,140,147.5,155,,155,250,260,270,,270,425,2,Forte Iecava,Raw,,M,BD
 Kalvis Birze,26,M-O,82.7,90,,,,,,100,110,120,,120,240,260,280,,280,400,3,Step Up Fitness,Raw,,M,BD
 Dāvis Grīns,31,M-O,99.9,100,,,,,,160,-170,170,,170,260,275,-285,,275,445,1,Saldus Atlēti,Raw,,M,BD
-Edgars Peterlevics,38,M-O,90.3,100,,,,,,180,-187.5,-187.5,,180,250,-260,-260,,250,430,2,Kuldīga,Raw,,M,BD
+Edgars Peterlēvics,38,M-O,90.3,100,,,,,,180,-187.5,-187.5,,180,250,-260,-260,,250,430,2,Kuldīga,Raw,,M,BD
 Vitalii Kochkurkin,37,M-O,99.5,100,,,,,,145,152.5,157.5,,157.5,220,227.5,-232.5,,227.5,385,3,Step Up Fitness,Raw,,M,BD
 Paul-Eerik Rosenberg,32,M-O,107.4,110,,,,,,182.5,192.5,,,192.5,310,330,350,,350,542.5,1,Kover Kang,Raw,,M,BD
 Jaak Ruusmaa,46,M-O,118.2,125,,,,,,175,180,,,180,255,280,300,,300,480,1,Kover Kang,Raw,,M,BD
