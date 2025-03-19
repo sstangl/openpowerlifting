@@ -68,3 +68,4 @@
     2003 = ["ExemptDivision", "ExemptWeightClassConsistency"] # Made divisions up as they went along, lifters missing bodyweight
     2004 = ["ExemptDivision"] # Amateur/Elite divisions.
     2401 = ["ExemptDivision"] # children in teen division
+    2501 = ["ExemptDivision", "ExemptWeightClassConsistency"] # children in teen, presumably grouped lighter weight classes
