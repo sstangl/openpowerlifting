@@ -65,7 +65,7 @@ require_manual_disambiguation = true
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","90+","100+","110+"]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","90+","100+","110+","125+"]
     date_range = ["2023-01-01", "9999-01-01"]
     sex = "F"
 
@@ -87,3 +87,4 @@ require_manual_disambiguation = true
     2303 = ["ExemptDivision"] #Different classes
     2308 = ["ExemptDivision"] #12yo in Youth
     2404 = ["ExemptDivision"] #12yo in Youth
+    2501 = ["ExemptWeightClassConsistency"] # Ommitted weight classes for some
