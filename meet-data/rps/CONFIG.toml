@@ -22,6 +22,7 @@ require_manual_disambiguation = true
     elite_masters_40_44 = {name = "Elite Masters 40-44", min = 40, max = 44, tested="Yes"}
     elite_masters_45_49 = {name = "Elite Masters 45-49", min = 45, max = 49, tested="Yes"}
     elite_masters_50_54 = {name = "Elite Masters 50-54", min = 50, max = 54, tested="Yes"}
+    elite_masters_60_64 = {name = "Elite Masters 60-64", min = 60, max = 64, tested="Yes"}
 
     # Youth -- Amateur only.
     ama_youth = {name = "Amateur Youth", min = 5, max = 13, tested="Yes"}
