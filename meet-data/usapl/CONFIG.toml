@@ -734,6 +734,7 @@
     NS-2025-06-C = ["ExemptWeightClassConsistency"] # scored by formula
     PA-2025-09 = ["ExemptWeightClassConsistency"] # scored by formula
     NY-2025-17 = ["ExemptWeightClassConsistency"] # scored by formula
+    WI-2025-14 = ["ExemptWeightClassConsistency"]
 
 
     # Miscellaneous exemptions.
@@ -873,6 +874,7 @@
     SC-2025-03 = ["ExemptDivision"]
     FL-2025-09 = ["ExemptDivision"]
     NY-2025-01 = ["ExemptDivision"]
+    IL-2025-06 = ["ExemptDivision"]
 
 
 
