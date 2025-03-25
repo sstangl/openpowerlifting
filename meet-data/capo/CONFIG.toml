@@ -10,6 +10,8 @@
 [divisions]
     mobk   = {name ="MO-BK",min=0,max=999,sex="M",equipment="Bare"}
     fobk   = {name ="FO-BK",min=0,max=999,sex="F",equipment="Bare"}
+    msmbk   = {name ="MSM-BK",min=33,max=39,sex="M",equipment="Bare"}
+    fsmbk   = {name ="FSM-BK",min=33,max=39,sex="F",equipment="Bare"}
     mmbk   = {name ="MM-BK",min=40,max=999,sex="M",equipment="Bare"}
     fmbk   = {name ="FM-BK",min=40,max=999,sex="F",equipment="Bare"}
     mtbk   = {name ="MT-BK",min=13,max=19,sex="M",equipment="Bare"}
@@ -18,8 +20,10 @@
     fjbk   = {name ="FJ-BK",min=20,max=23,sex="F",equipment="Bare"}
     mybk   = {name ="MY-BK",min=0,max=12,sex="M",equipment="Bare"}
     fybk   = {name ="FY-BK",min=0,max=12,sex="F",equipment="Bare"}
-
-
+    mm1bk   = {name ="MM1-BK",min=40,max=44,sex="M",equipment="Bare"}
+    fm3bk   = {name ="FM3-BK",min=50,max=54,sex="F",equipment="Bare"}
+    fm6bk   = {name ="FM6-BK",min=65,max=69,sex="F",equipment="Bare"}
+    ft1bk   = {name ="FT1-BK",min=13,max=15,sex="F",equipment="Bare"}
     ft2bk   = {name ="FT2-BK",min=16,max=17,sex="F",equipment="Bare"}
     mt1bk   = {name ="MT1-BK",min=13,max=15,sex="M",equipment="Bare"}
     mm5bk   = {name ="MM5-BK",min=60,max=64,sex="M",equipment="Bare"}
@@ -154,13 +158,13 @@
     # for bench-only, in 2024
     mjul = {name="MJ-UL", min=20, max=23, sex="M", equipment="Unlimited", event="B"}
     moul = {name="MO-UL", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
+    msmul = {name="MSM-UL", min=33, max=39, sex="M", equipment="Unlimited", event="B"}
     mmul = {name="MM-UL", min=40, max=999, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
     mm5ul = {name="MM5-UL", min=60, max=64, sex="M", equipment="Unlimited", event="B"}
     foul = {name="FO-UL", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
     fm2ul = {name="FM2-UL", min=45, max=49, sex="F", equipment="Unlimited", event="B"}
     fm3ul = {name="FM3-UL", min=50, max=54, sex="F", equipment="Unlimited", event="B"}
-
 
     # Some CAPO meets use 10 year Masters
     mm4049r = {name="MM40-49-R",min=40,max=49,sex="M",equipment="Raw"}
