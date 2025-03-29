@@ -109,7 +109,7 @@ def run_dos2unix(filepath):
     try:
         subprocess.run(["dos2unix", filepath], check=True, capture_output=True)
     except subprocess.CalledProcessError as e:
-        print(f"Warning: dos2unix failed for {filepath}: {e}", file=sys.stderr)
+        print(f"Error: dos2unix failed for {filepath}: {e}", file=sys.stderr)
 
 
 def map_equipment(equipment_str):
@@ -121,52 +121,77 @@ def map_equipment(equipment_str):
         return "Raw"
     elif "single" in equipment_str or "eq" in equipment_str:
         return "Single-ply"
-    return ""
+    print(f"Error: Could not detect equipment from '{equipment_str}', defaulted to Raw")
+    return "Raw"
 
 
 def get_division(division_str):
     """
     Get standardized division from LiftingCast format.
     """
-    # Correct age divisions
-    divisions = {
-        "subjunior": "Sub-Junior",
-        "subjnr": "Sub-Junior",
-        "junior": "Junior",
-        "jnr": "Junior",
-        "open": "Open",
-        "master1": "Masters 1",
-        "masters1": "Masters 1",
-        "m1": "Masters 1",
-        "master2": "Masters 2",
-        "masters2": "Masters 2",
-        "m2": "Masters 2",
-        "master3": "Masters 3",
-        "masters3": "Masters 3",
-        "m3": "Masters 3",
-        "master4": "Masters 4",
-        "masters4": "Masters 4",
-        "m4": "Masters 4",
-    }
-
-    # Convert to lowercase and remove punctuation and spaces for matching
+    # Clean the input string
     div_clean = (
         division_str.lower()
         .replace("'", "")
         .replace("-", "")
         .replace(" ", "")
+        .replace("womens", "")
         .replace("women", "")
+        .replace("woman", "")
+        .replace("female", "")
+        .replace("males", "")
+        .replace("male", "")
+        .replace("mens", "")
         .replace("men", "")
+        .replace("man", "")
     )
 
-    # Try to match against known divisions
-    for key, value in divisions.items():
-        if key in div_clean:
-            return value
+    # Check for Sub-Junior
+    if any(term in div_clean for term in ["subjunior", "subjnr", "subj", "sub", "sj"]):
+        return "Sub-Junior"
 
-    # If no match found, return default
-    print(f"Warning: Could not identify division from '{division_str}', leaving blank!")
-    return ""
+    # Check for Junior
+    if any(term in div_clean for term in ["junior", "jnr", "jr", "jnior", "j"]):
+        return "Junior"
+
+    # Check for Masters with roman numerals or digits
+    if (
+        "master" in div_clean
+        or "m" == div_clean
+        or "m" in div_clean
+        and any(c.isdigit() for c in div_clean)
+    ):
+        # Try to find a digit or roman numeral
+        if "iv" in div_clean:
+            return "Masters 4"
+        elif "iii" in div_clean:
+            return "Masters 3"
+        elif "ii" in div_clean:
+            return "Masters 2"
+        elif "i" in div_clean:
+            return "Masters 1"
+        elif "4" in div_clean:
+            return "Masters 4"
+        elif "3" in div_clean:
+            return "Masters 3"
+        elif "2" in div_clean:
+            return "Masters 2"
+        elif "1" in div_clean:
+            return "Masters 1"
+        # If just "masters" or "master" with no number, default to Open
+        else:
+            print(f"Error: No number found in '{division_str}', defaulted to Open")
+            return "Open"
+
+    # Check for Open
+    if "open" in div_clean:
+        return "Open"
+
+    # If no match found for any division, return Open
+    print(
+        f"Error: Could not identify division from '{division_str}', defaulted to Open"
+    )
+    return "Open"
 
 
 def convert_meet_csv(input_file, output_dir):
@@ -255,7 +280,7 @@ def convert_meet_csv(input_file, output_dir):
                 if col in entries_headers:
                     column_indices[col] = entries_headers.index(col)
             except ValueError:
-                print(f"Warning: Column {col} not found in input file")
+                print(f"Error: Column {col} not found in input file")
 
         # Write entries.csv
         entries_csv = Csv()
