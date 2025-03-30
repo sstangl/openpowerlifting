@@ -7,6 +7,7 @@
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
     teen_13_19 = {name = "Teen 13-19", min = 13, max = 19} # Seldom used.
+    juniors_10_12 = {name = "Juniors 10-12", min = 10, max = 12} # New in 2025.
     juniors_13_15 = {name = "Juniors 13-15", min = 13, max = 15}
     juniors_16_17 = {name = "Juniors 16-17", min = 16, max = 17}
     juniors_18_19 = {name = "Juniors 18-19", min = 18, max = 19}

@@ -111,6 +111,7 @@ def integrate_4ths(csv):
 DIVISION_MAP = {
     "Jr": "Youth",
     "JR": "Youth",
+    "Jr 10-12": "Juniors 10-12",
     "Jr 13-15": "Juniors 13-15",
     "Jr 16-17": "Juniors 16-17",
     "Junior 16-17": "Juniors 16-17",
