@@ -65,8 +65,9 @@
     pm80p = {name = "PM80+", min=80, max=999}
 
     # Misc divisions.
-    pro_open = {name = "Pro Open", min = 0, max = 999}
-    pro_j20_23 = {name = "Pro J20-23", min=20, max=23}
+    pro_open = {name="Pro Open", min=0, max=999}
+    pro_topen = {name="Pro TOpen", min=0, max=999, tested="Yes"}
+    pro_j20_23 = {name="Pro J20-23", min=20, max=23}
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
