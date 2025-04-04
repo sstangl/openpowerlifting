@@ -133,14 +133,18 @@ def getresults(soup):
     divstate = None
     sexstate = None
 
-    #Used to lookup weight classes to infer sex
-    #where there are no division rows
+    # Used to lookup weight classes to infer sex
+    # where there are no division rows
     division_headers = True
-    divisions = {'-59': 'M', '-66': 'M', '-74': 'M', '-83':'M', '-93': 'M', '-105': 'M', '-120': 'M', '120+': 'M', '-47': 'F', '-52': 'F', '-57': 'F', '-63': 'F', '-69': 'F', '-76': 'F', '-84': 'F', '84+': 'F'}
+    divisions = {
+        '-59': 'M', '-66': 'M', '-74': 'M', '-83': 'M', '-93': 'M', '-105': 'M',
+        '-120': 'M', '120+': 'M', '-47': 'F', '-52': 'F', '-57': 'F', '-63': 'F',
+        '-69': 'F', '-76': 'F', '-84': 'F', '84+': 'F'
+    }
     firstrow = True
     for tr in trs[1:]:
         row = [x.text for x in tr.find_all('td')]
-        
+
         # Rows of length >1 are actual results, of length 1 are categories.
         if firstrow and len(row) > 1:
             firstrow = False
@@ -178,7 +182,7 @@ def getresults(soup):
             print(row)
             if not division_headers:
                 sexstate = divisions[row[1]]
-                #Assume open for now
+                # Assume open for now
                 divstate = 'Open'
             assert divstate
             assert sexstate
