@@ -478,6 +478,17 @@ def markdrugtest(csv):
             row[eventidx] = 'SBD'  # Good enough, who cares?
 
 
+# Given a column ending in "Kg", transforms "123.0" to "123".
+#
+# This avoids unnecessary git churn in the future, because spreadsheet editors tend
+# to perform that conversion automatically when saving.
+def removepointzeros(csv):
+    for kgfield in [f for f in csv.fieldnames if f.endswith('Kg')]:
+        idx = csv.index(kgfield)
+        for row in csv.rows:
+            row[idx] = row[idx].rstrip('.0')
+
+
 def makemeetcsv(soup):
     content = soup.find('div', {'id': 'content'})
 
@@ -558,6 +569,7 @@ def main(url, importdir):
     fixupdivisions(entriescsv)
     inferequipment(entriescsv)
     markdrugtest(entriescsv)
+    removepointzeros(entriescsv)
 
     # Since USAPL only provides BirthYear info, and we keep having to add
     # Age and BirthDate columns by lifter request after importation,
