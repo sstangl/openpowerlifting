@@ -65,6 +65,13 @@
     mm9r = {name ="M-M9R", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
     fm9r = {name ="F-M9R", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
 
+    # sometimes, catchall masters is used
+    mmr = {name ="M-MR", min=40, max=999, sex="M", equipment=["Raw","Wraps"]}
+    fmr = {name ="F-MR", min=40, max=999, sex="F", equipment=["Raw","Wraps"]}
+
+    # F8 bench shirt divisions
+    mof8 = {name ="M-OF8", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
+    fof8 = {name ="F-OF8", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
 
 
 
