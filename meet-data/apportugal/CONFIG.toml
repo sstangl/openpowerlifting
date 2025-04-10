@@ -23,3 +23,4 @@
     sex = "F"
 
 [exemptions]
+    2502 = ["ExemptWeightClassConsistency"] # reduced classes
