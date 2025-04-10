@@ -108,6 +108,8 @@
     24108 = ["ExemptDivision", "ExemptWeightClassConsistency"] # SBD Showdown - North Qualification
     2505 = ["ExemptDivision", "ExemptWeightClassConsistency"] # SBD Showdown - South Qualification
     2516 = ["ExemptWeightClassConsistency"] # This meet was scored by IPF GL points
+    2534 = ["ExemptWeightClassConsistency"] # SBD Showdown
+    2535 = ["ExemptDuplicates"] # The Test Match for Worlds ran within the SBD Showdown
 
     # Challenge Villenave (no weight classes)
     1792 = ["ExemptWeightClassConsistency"]
