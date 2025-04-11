@@ -486,7 +486,8 @@ def removepointzeros(csv):
     for kgfield in [f for f in csv.fieldnames if f.endswith('Kg')]:
         idx = csv.index(kgfield)
         for row in csv.rows:
-            row[idx] = row[idx].rstrip('.0')
+            if row[idx].endswith(".0"):
+                row[idx] = row[idx][:-2]
 
 
 def makemeetcsv(soup):
