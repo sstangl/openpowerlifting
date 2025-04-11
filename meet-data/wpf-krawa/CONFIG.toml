@@ -19,6 +19,8 @@
     masters_80p = {name = "M9", min = 80, max = 999}
     submasters = {name = "MS", min = 33, max = 39}
 
+    pro = {name = "Pro", min = 0, max = 999}
+    amateur = {name = "Amateur", min = 0, max = 999}
 
 [weightclasses.default_M]
     classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
