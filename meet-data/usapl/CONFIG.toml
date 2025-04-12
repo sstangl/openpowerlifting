@@ -353,10 +353,13 @@
     # Collegiate.
     mrc = {name="MR-C", min=0, max=999, sex="M", equipment="Raw"}
     frc = {name="FR-C", min=0, max=999, sex="F", equipment="Raw"}
+    xrc = {name="XR-C", min=0, max=999, sex="Mx", equipment="Raw"}
     mc = {name="M-C", min=0, max=999, sex="M", equipment="Single-ply"}
     fc = {name="F-C", min=0, max=999, sex="F", equipment="Single-ply"}
+    xc = {name="X-C", min=0, max=999, sex="Mx", equipment="Single-ply"}
     mwc = {name="MW-C", min=0, max=999, sex="M", equipment="Wraps"}
     fwc = {name="FW-C", min=0, max=999, sex="F", equipment="Wraps"}
+    xwc = {name="XW-C", min=0, max=999, sex="Mx", equipment="Wraps"}
 
     # Military.
     mrmo = {name="MR-MO", min=0, max=999, sex="M", equipment="Raw"}
