@@ -1951,6 +1951,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-UK", serialize = "wrpf-uk")]
     WRPFUK,
 
+    /// Venezuelan WRPF affiliate.
+    #[serde(rename = "WRPF-Venezuela")]
+    #[strum(to_string = "WRPF-Venezuela", serialize = "wrpf-venezuela")]
+    WRPFVenezuela,    
+    
     /// Vietnamese WRPF affiliate.
     #[serde(rename = "WRPF-Vietnam")]
     #[strum(to_string = "WRPF-Vietnam", serialize = "wrpf-vietnam")]
@@ -2480,6 +2485,7 @@ impl Federation {
             Federation::WRPFSRB => false,
             Federation::WRPFSweden => false,
             Federation::WRPFUK => false,
+            Federation::WRPFVenezuela => false,
             Federation::WRPFVietnam => false,
             Federation::WSHSPL => false,
             Federation::WUAP => false,
@@ -2935,6 +2941,7 @@ impl Federation {
             Federation::WRPFSRB => Some(Country::Serbia),
             Federation::WRPFSweden => Some(Country::Sweden),
             Federation::WRPFUK => Some(Country::UK),
+            Federation::WRPFVenezuela => Some(Country::Venezuela),
             Federation::WRPFVietnam => Some(Country::Vietnam),
             Federation::WSHSPL => Some(Country::USA),
             Federation::WUAP => None,
@@ -3507,6 +3514,7 @@ impl Federation {
             Federation::WRPFSRB => Some(Federation::WRPF),
             Federation::WRPFSweden => Some(Federation::WRPF),
             Federation::WRPFUK => Some(Federation::WRPF),
+            Federation::WRPFVenezuela => Some(Federation::WRPF),
             Federation::WRPFVietnam => Some(Federation::WRPF),
             Federation::WSHSPL => None,
             Federation::WUAP => Some(Federation::WUAP),
@@ -4075,6 +4083,7 @@ impl Federation {
             Federation::WRPFSRB => PointsSystem::Wilks,
             Federation::WRPFSweden => PointsSystem::Wilks,
             Federation::WRPFUK => PointsSystem::Wilks,
+            Federation::WRPFVenezuela => PointsSystem::Wilks,
             Federation::WRPFVietnam => PointsSystem::Wilks,
             Federation::WSHSPL => PointsSystem::Wilks,
             Federation::WUAP => PointsSystem::Wilks,

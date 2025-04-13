@@ -690,6 +690,7 @@
 <optgroup label="{{strings.country.venezuela}}">
   <option value="all-venezuela" {% if selection.federation == "AllVenezuela" %}selected{% endif %}>{{strings.selectors.fed.all_venezuela}}</option>
   <option value="fevepo" {% if selection.federation == "FEVEPO" %}selected{% endif %}>FEVEPO - Federación Venezolana de Potencia [IPF]</option>
+  <option value="wrpf-venezuela" {% if selection.federation == "WRPF-Venezuela" %}selected{% endif %}>WRPF Venezuela</option>
 </optgroup>
 <optgroup label="{{strings.country.vietnam}}">
   <option value="all-vietnam" {% if selection.federation == "AllVietnam" %}selected{% endif %}>{{strings.selectors.fed.all_vietnam}}</option>
