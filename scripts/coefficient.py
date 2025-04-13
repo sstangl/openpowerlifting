@@ -277,8 +277,6 @@ IPF_COEFFICIENTS = {
 
 
 def ipf(sex, equipment, event, bodyweightKg, totalKg):
-    global IPF_COEFFICIENTS
-
     # The IPF set lower bounds beyond which points are undefined.
     if bodyweightKg < 40 or totalKg <= 0:
         return 0

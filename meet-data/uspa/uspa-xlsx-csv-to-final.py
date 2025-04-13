@@ -43,7 +43,6 @@ FIELDNAME_MAP = {
 
 
 def fixup_fieldnames(csv):
-    global FIELDNAME_MAP
     for (i, field) in enumerate(csv.fieldnames):
         csv.fieldnames[i] = FIELDNAME_MAP[field]
     csv.fieldnames[0] = 'Place'
@@ -134,7 +133,6 @@ DIVISION_MAP = {
 
 
 def integrate_stateful_data(csv):
-    global DIVISION_MAP
     csv.append_columns(["Event", "Equipment", "Sex", "Division"])
 
     state_event = ''

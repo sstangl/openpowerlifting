@@ -67,7 +67,6 @@ def remove_common_elements(division):
 def standardize_division_csv(csv):
     '''Standardizes the Division column.
        Returns true iff something was changed.'''
-    global DIVISION_MAP
 
     if 'Division' not in csv.fieldnames:
         return False

@@ -337,7 +337,6 @@ COUNTRY_MAP = {
 def standardize_country_csv(csv):
     '''Standardizes the Country column.
        Returns true iff something was changed.'''
-    global COUNTRY_MAP
 
     if 'Country' not in csv.fieldnames:
         return False

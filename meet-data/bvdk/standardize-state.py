@@ -21,7 +21,6 @@ STATE_MAP = {
 def standardize_state_csv(csv):
     '''Standardizes the State column.
        Returns true iff something was changed.'''
-    global STATE_MAP
 
     if 'State' not in csv.fieldnames:
         return False

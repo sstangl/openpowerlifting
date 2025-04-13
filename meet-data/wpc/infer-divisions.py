@@ -54,8 +54,6 @@ EQPMAP = {
 
 
 def main(filename):
-    global DIVMAP
-
     csv = oplcsv.Csv(filename)
     csv.append_column('NewDivision')
 

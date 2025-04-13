@@ -174,8 +174,6 @@ def check_name_corrections(names):
 
 
 def main():
-    global hitError
-
     # Get a list of all the Name entries throughout the whole project.
     names = get_database_nameset()
 
