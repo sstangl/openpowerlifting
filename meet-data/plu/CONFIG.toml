@@ -120,3 +120,4 @@ require_manual_disambiguation = true
 [exemptions]
 
     2511 = ["ExemptLiftOrder"] # misloaded bench results updated with corrected attempts
+    2528 = ["ExemptLiftOrder"] # misloaded 3rd attempt squat for athlete took same weight twice
