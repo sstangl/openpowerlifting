@@ -5,6 +5,7 @@ require_manual_disambiguation = true
 
 [divisions]
 	open = {name="Open", min=0, max=999}
+    guest = {name="Guest", min=0, max=999}
 
 	# OpenLifter-style divisions.
 	j13_15 = {name="J13-15", min=13, max=15}
