@@ -739,6 +739,7 @@
     NY-2025-17 = ["ExemptWeightClassConsistency"] # scored by formula
     WI-2025-14 = ["ExemptWeightClassConsistency"]
     ME-2025-01 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    PA-2025-21 = ["ExemptWeightClassConsistency"]
 
 
     # Miscellaneous exemptions.
@@ -882,6 +883,10 @@
     CA-2025-04 = ["ExemptDivision"]
     MO-2025-01 = ["ExemptDivision"]
     MI-2025-02 = ["ExemptDivision"]
+    KOR-2025-04 = ["ExemptDivision"]
+    NY-2025-11 = ["ExemptDivision"]
+    UT-2025-02 = ["ExemptDivision"]
+    FL-2025-10 = ["ExemptDivision"]
 
 
 
