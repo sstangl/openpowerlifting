@@ -42,6 +42,22 @@
 
     nauru_open = {name="Nauru Open", min=0, max=999}
 
+    # OL style age divisions
+    y14_18 = {name="Y14-18", min=13.5, max=17.5}
+    j19_23 = {name="J19-23", min=18.5, max=22.5}
+    m40_44 = {name="M40-44", min=39.5, max=43.5}
+    m45_49 = {name="M45-49", min=44.5, max=48.5}
+    m50_54 = {name="M50-54", min=49.5, max=53.5}
+    m55_59 = {name="M55-59", min=54.5, max=58.5}
+    m60_64 = {name="M60-64", min=59.5, max=63.5}
+    m65_69 = {name="M65-69", min=64.5, max=68.5}
+    m70_74 = {name="M70-74", min=69.5, max=73.5}
+    m75_79 = {name="M75-79", min=74.5, max=78.5}
+    m80p = {name="M80+", min=79.5, max=999}
+
+
+
+
 [weightclasses.WP_M]
     classes = ["62","69","77","85","94","105","120","120+"]
     date_range=["2018-08-25","9999-01-01"]
