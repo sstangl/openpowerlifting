@@ -15,7 +15,7 @@
     moe = {name ="M-OE", min=0, max=999, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     foe = {name ="F-OE", min=0, max=999, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mtr = {name ="M-TR", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
-    mte = {name ="M-TE", min=13, max=19, sex="M", equipment=["Single-ply", "Multi-ply"]}
+    mte = {name ="M-TE", min=13, max=19, sex="M", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mt1r = {name ="M-T1R", min=13, max=15, sex="M", equipment=["Raw","Wraps"]}
     mt1e = {name ="M-T1E", min=13, max=15, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mt2r = {name ="M-T2R", min=16, max=17, sex="M", equipment=["Raw","Wraps"]}
@@ -23,35 +23,35 @@
     mt3r = {name ="M-T3R", min=18, max=19, sex="M", equipment=["Raw","Wraps"]}
     mt3e = {name ="M-T3E", min=18, max=19, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     ftr = {name ="F-TR", min=13, max=19, sex="F", equipment=["Raw","Wraps"]}
-    fte = {name ="F-TE", min=13, max=19, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fte = {name ="F-TE", min=13, max=19, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     ft1r = {name ="F-T1R", min=13, max=15, sex="F", equipment=["Raw","Wraps"]}
-    ft1e = {name ="F-T1E", min=13, max=15, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    ft1e = {name ="F-T1E", min=13, max=15, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     ft2r = {name ="F-T2R", min=16, max=17, sex="F", equipment=["Raw","Wraps"]}
-    ft2e = {name ="F-T2E", min=16, max=17, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    ft2e = {name ="F-T2E", min=16, max=17, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     ft3r = {name ="F-T3R", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
-    ft3e = {name ="F-T3E", min=18, max=19, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    ft3e = {name ="F-T3E", min=18, max=19, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mjr = {name ="M-JR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
     mje = {name ="M-JE", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fjr = {name ="F-JR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
-    fje = {name ="F-JE", min=20, max=23, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fje = {name ="F-JE", min=20, max=23, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     msr = {name ="M-SR", min=33, max=39, sex="M", equipment=["Raw","Wraps"]}
     mse = {name ="M-SE", min=33, max=39, sex="M", equipment=["Single-ply","Multi-ply"]}
     fsr = {name ="F-SR", min=33, max=39, sex="F", equipment=["Raw","Wraps"]}
-    fse = {name ="F-SE", min=33, max=39, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fse = {name ="F-SE", min=33, max=39, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm1r = {name ="M-M1R", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
     mm1e = {name ="M-M1E", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fm1r = {name ="F-M1R", min=40, max=44, sex="F", equipment=["Raw","Wraps"]}
-    fm1e = {name ="F-M1E", min=40, max=44, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm1e = {name ="F-M1E", min=40, max=44, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm2r = {name ="M-M2R", min=45, max=49, sex="M", equipment=["Raw","Wraps"]}
     mm2e = {name ="M-M2E", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fm2r = {name ="F-M2R", min=45, max=49, sex="F", equipment=["Raw","Wraps"]}
-    fm2e = {name ="F-M2E", min=45, max=49, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm2e = {name ="F-M2E", min=45, max=49, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm3r = {name ="M-M3R", min=50, max=54, sex="M", equipment=["Raw","Wraps"]}
-    mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply", "Multi-ply"]}
+    mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     fm3r = {name ="F-M3R", min=50, max=54, sex="F", equipment=["Raw","Wraps"]}
-    fm3e = {name ="F-M3E", min=50, max=54, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm3e = {name ="F-M3E", min=50, max=54, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm4r = {name ="M-M4R", min=55, max=59, sex="M", equipment=["Raw","Wraps"]}
-    mm4e = {name ="M-M4E", min=55, max=59, sex="M", equipment=["Single-ply", "Multi-ply"]}
+    mm4e = {name ="M-M4E", min=55, max=59, sex="M", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     fm4r = {name ="F-M4R", min=55, max=59, sex="F", equipment=["Raw","Wraps"]}
     fm4e = {name ="F-M4E", min=55, max=59, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mm5r = {name ="M-M5R", min=60, max=64, sex="M", equipment=["Raw","Wraps"]}
@@ -61,19 +61,19 @@
     mm6r = {name ="M-M6R", min=65, max=69, sex="M", equipment=["Raw","Wraps"]}
     mm6e = {name ="M-M6E", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fm6r = {name ="F-M6R", min=65, max=69, sex="F", equipment=["Raw","Wraps"]}
-    fm6e = {name ="F-M6E", min=65, max=69, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm6e = {name ="F-M6E", min=65, max=69, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm7r = {name ="M-M7R", min=70, max=74, sex="M", equipment=["Raw","Wraps"]}
-    mm7e = {name ="M-M7E", min=70, max=74, sex="M", equipment=["Single-ply", "Multi-ply"]}
+    mm7e = {name ="M-M7E", min=70, max=74, sex="M", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     fm7r = {name ="F-M7R", min=70, max=74, sex="F", equipment=["Raw","Wraps"]}
-    fm7e = {name ="F-M7E", min=70, max=74, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm7e = {name ="F-M7E", min=70, max=74, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm8r = {name ="M-M8R", min=75, max=79, sex="M", equipment=["Raw","Wraps"]}
-    mm8e = {name ="M-M8E", min=75, max=79, sex="M", equipment=["Single-ply", "Multi-ply"]}
+    mm8e = {name ="M-M8E", min=75, max=79, sex="M", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     fm8r = {name ="F-M8R", min=75, max=79, sex="F", equipment=["Raw","Wraps"]}
-    fm8e = {name ="F-M8E", min=75, max=79, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm8e = {name ="F-M8E", min=75, max=79, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     mm9r = {name ="M-M9R", min=80, max=999, sex="M", equipment=["Raw","Wraps"]}
-    mm9e = {name ="M-M9E", min=80, max=999, sex="M", equipment=["Single-ply", "Multi-ply"]}
+    mm9e = {name ="M-M9E", min=80, max=999, sex="M", equipment=["Single-ply", "Multi-ply","Unlimited"]}
     fm9r = {name ="F-M9R", min=80, max=999, sex="F", equipment=["Raw","Wraps"]}
-    fm9e = {name ="F-M9E", min=80, max=999, sex="F", equipment=["Single-ply", "Multi-ply"]}
+    fm9e = {name ="F-M9E", min=80, max=999, sex="F", equipment=["Single-ply", "Multi-ply","Unlimited"]}
 
     # Paralympics.
     para = {name="Para", min=0, max=999}
