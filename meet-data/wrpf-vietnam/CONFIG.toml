@@ -15,6 +15,7 @@
     masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
     masters_80_89 = {name = "Masters 80-89", min = 80, max = 89}
     guest = {name = "Guest", min = 0, max = 999} 
+    amateur = {name = "Amateur", min = 0, max = 999}
 
 
 	# OpenLifter-style divisions.
@@ -83,3 +84,4 @@
 
 [exemptions]
     2402 = ["ExemptWeightClassConsistency"]  # miscellaneous grouping
+    2501 = ["ExemptWeightClassConsistency"]  # miscellaneous grouping
