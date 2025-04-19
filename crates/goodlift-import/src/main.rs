@@ -203,7 +203,7 @@ fn main() -> Result<()> {
     let url = format!("{BASE_URL}{cid}");
     println!("Downloading content from {url}");
 
-    let content = ureq::get(&url).call()?.into_string()?;
+    let content: String = ureq::get(&url).call()?.body_mut().read_to_string()?;
 
     println!("Writing original data to '{ORIGINAL_FILENAME}'");
     std::fs::write(ORIGINAL_FILENAME, &content)?;

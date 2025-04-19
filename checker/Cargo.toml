@@ -16,7 +16,7 @@ jemalloc = ["jemallocator", "jemalloc-ctl"]
 coefficients = { path = "../crates/coefficients/" }
 opltypes = { path = "../crates/opltypes/" }
 chrono = "0.4"
-colored = "2.1"
+colored = "3.0"
 csv = { workspace = true }
 fxhash = "0.2"
 itertools = "0.11"
