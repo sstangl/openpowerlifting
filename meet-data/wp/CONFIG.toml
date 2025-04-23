@@ -5,6 +5,8 @@
     # Over 14 years on the day of competition (assuming they meant >=).
     open = {name="Open", min=14, max=999}
 
+    paralympics = {name ="Paralympics",min=0,max=999}
+
     # 7 years or more on the day of competition, up to (including) year turning 18.
     youth = {name="Youth", min=7, max=17.5}
 
