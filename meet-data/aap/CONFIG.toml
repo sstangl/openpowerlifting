@@ -40,6 +40,9 @@
     m8084 = {name ="M80-84",min=80,max=84}
     m8589 = {name ="M85-89",min=85,max=89}
     m90p = {name ="M90+",min=90,max=999}
+    t1315 = {name ="T13-15",min=13,max=15}
+    t1617 = {name ="T16-17",min=16,max=17}
+    t1819 = {name ="T18-19",min=18,max=19}
     tn1315 = {name ="Tn13-15",min=13,max=15}
     tn1617 = {name ="Tn16-17",min=16,max=17}
     tn1819 = {name ="Tn18-19",min=18,max=19}
