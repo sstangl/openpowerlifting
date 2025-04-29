@@ -299,3 +299,4 @@
 
 [exemptions]
     2305 = ["ExemptDivision"] 
+	2503 = ["ExemptDivision"] # exemption to allow Unlimited division instead of configuring them
