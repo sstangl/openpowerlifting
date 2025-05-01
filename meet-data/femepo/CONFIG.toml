@@ -15,6 +15,7 @@
 
     special_olympics = {name ="Special Olympics",min=0,max=999}
     wheelchair = {name ="Wheelchair",min=0,max=999}
+    guest = {name ="Guest",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
@@ -65,3 +66,4 @@
     1701 = ["ExemptWeightClassConsistency"] # Wheelchair athlete in 53kg class
     1101 = ["ExemptWeightClassConsistency"] # Special Olympics athletes in 53kg class
     1201 = ["ExemptWeightClassConsistency"] # Under 53kg Junior in 59kg class
+    2501 = ["ExemptWeightClassConsistency"] # guests without classes
