@@ -276,6 +276,7 @@
 <optgroup label="{{strings.country.ecuador}}">
   <option value="all-ecuador" {% if selection.federation == "AllEcuador" %}selected{% endif %}>{{strings.selectors.fed.all_ecuador}}</option>
   <option value="feficulp" {% if selection.federation == "FEFICULP" %}selected{% endif %}>FEFICULP - Federación Ecuatoriana de Fisicoculturismo y Potencia [IPF]</option>
+  <option value="wrpf-ecuador" {% if selection.federation == "WRPF-Ecuador" %}selected{% endif %}>WRPF Ecuador</option>
 </optgroup>
 <optgroup label="{{strings.country.egypt}}">
   <option value="all-egypt" {% if selection.federation == "AllEgypt" %}selected{% endif %}>All Egyptian Lifters</option>
