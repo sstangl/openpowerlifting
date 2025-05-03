@@ -711,7 +711,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     }
 
     // Populate std::env with the contents of any .env file.
-    dotenv::from_filename("server.env").expect("Unable to find server.env in current directory");
+    dotenvy::from_filename("server.env").expect("Unable to find server.env in current directory");
 
     // Ensure that "STATICDIR" is set.
     env::var("STATICDIR").expect("STATICDIR envvar not set");

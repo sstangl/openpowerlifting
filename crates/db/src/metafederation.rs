@@ -1080,7 +1080,9 @@ impl MetaFederation {
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF, AsianPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),
             MetaFederation::FULP => affiliation!(meet, entry, FULP, IPF, FESUPO, NAPF),
-            MetaFederation::GAPLF => affiliation!(meet, entry, GAPLF, IPF, FESUPO, NAPF, CommonwealthPF),
+            MetaFederation::GAPLF => {
+                affiliation!(meet, entry, GAPLF, IPF, FESUPO, NAPF, CommonwealthPF)
+            }
             MetaFederation::GPCAff => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::GPC)
             }

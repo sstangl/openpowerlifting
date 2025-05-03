@@ -13,7 +13,7 @@ use super::Device;
 
 static OPLDB_GLOBAL: LazyLock<OplDb> = LazyLock::new(|| {
     // This isn't really the place for it, but preload the environment.
-    dotenv::from_filename("server.env").unwrap();
+    dotenvy::from_filename("server.env").unwrap();
 
     OplDb::from_csv(
         Path::new("../build/lifters.csv"),

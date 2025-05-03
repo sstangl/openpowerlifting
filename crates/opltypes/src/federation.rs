@@ -1959,8 +1959,8 @@ pub enum Federation {
     /// Venezuelan WRPF affiliate.
     #[serde(rename = "WRPF-Venezuela")]
     #[strum(to_string = "WRPF-Venezuela", serialize = "wrpf-venezuela")]
-    WRPFVenezuela,    
-    
+    WRPFVenezuela,
+
     /// Vietnamese WRPF affiliate.
     #[serde(rename = "WRPF-Vietnam")]
     #[strum(to_string = "WRPF-Vietnam", serialize = "wrpf-vietnam")]

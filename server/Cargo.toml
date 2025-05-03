@@ -15,7 +15,7 @@ opltypes = { path = "../crates/opltypes/" }
 search = { path = "../crates/search" }
 accept-language = "3.1"
 csv = { workspace = true }
-dotenv = "0.15"
+dotenvy = "0.15"
 itertools = "0.11"
 serde = { workspace = true }
 serde_derive = { workspace = true }
