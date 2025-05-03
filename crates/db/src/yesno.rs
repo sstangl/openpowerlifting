@@ -7,7 +7,7 @@ use std::fmt;
 /// Empty type for deserializing Yes/No fields to `bool`.
 struct YesNo;
 
-impl<'de> Visitor<'de> for YesNo {
+impl Visitor<'_> for YesNo {
     type Value = bool;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

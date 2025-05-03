@@ -307,7 +307,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Get handles to various parts of the project.
     let project_root = if let Some(path_str) = args.project_root {
-        PathBuf::try_from(path_str)?
+        PathBuf::from(path_str)
     } else {
         project_root()?
     };

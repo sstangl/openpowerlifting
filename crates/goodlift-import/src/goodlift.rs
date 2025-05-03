@@ -77,7 +77,7 @@ impl WeightClass {
 
 struct WeightClassVisitor;
 
-impl<'de> Visitor<'de> for WeightClassVisitor {
+impl Visitor<'_> for WeightClassVisitor {
     type Value = WeightClass;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
@@ -141,10 +141,7 @@ impl<'de> Visitor<'de> for WeightClassVisitor {
 }
 
 impl<'de> Deserialize<'de> for WeightClass {
-    fn deserialize<D>(deserializer: D) -> Result<WeightClass, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
+    fn deserialize<D: Deserializer<'de>>(deserializer: D) -> Result<WeightClass, D::Error> {
         deserializer.deserialize_str(WeightClassVisitor)
     }
 }

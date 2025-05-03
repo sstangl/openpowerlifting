@@ -66,7 +66,7 @@ impl FromStr for Place {
 
 struct PlaceVisitor;
 
-impl<'de> Visitor<'de> for PlaceVisitor {
+impl Visitor<'_> for PlaceVisitor {
     type Value = Place;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

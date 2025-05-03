@@ -92,8 +92,8 @@ pub enum FederationFilter {
 ///
 /// 1. When showing rankings and records, we want the MetaFederation::USPA.
 /// 2. When showing the meet list, we want the Federation::USPA. Otherwise, it
-/// gets cluttered with international events. This is particularly bad for
-/// IPF affiliates.
+///    gets cluttered with international events. This is particularly bad for
+///    IPF affiliates.
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum FedPreference {
     PreferMetaFederation,

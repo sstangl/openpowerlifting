@@ -243,7 +243,7 @@ impl FromStr for Event {
 
 struct EventVisitor;
 
-impl<'de> Visitor<'de> for EventVisitor {
+impl Visitor<'_> for EventVisitor {
     type Value = Event;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

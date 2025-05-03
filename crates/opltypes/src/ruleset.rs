@@ -117,7 +117,7 @@ impl FromStr for RuleSet {
 
 struct RuleSetVisitor;
 
-impl<'de> Visitor<'de> for RuleSetVisitor {
+impl Visitor<'_> for RuleSetVisitor {
     type Value = RuleSet;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

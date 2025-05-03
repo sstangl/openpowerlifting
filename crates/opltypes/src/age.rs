@@ -308,7 +308,7 @@ impl Serialize for Age {
 
 struct AgeVisitor;
 
-impl<'de> Visitor<'de> for AgeVisitor {
+impl Visitor<'_> for AgeVisitor {
     type Value = Age;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

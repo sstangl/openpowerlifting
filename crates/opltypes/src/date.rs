@@ -58,7 +58,7 @@ impl Date {
     /// ```
     #[inline(always)]
     pub const fn from_parts(year: u32, month: u32, day: u32) -> Date {
-        Date(year << Self::YEAR_SHIFT | month << Self::MONTH_SHIFT | day << Self::DAY_SHIFT)
+        Date((year << Self::YEAR_SHIFT) | (month << Self::MONTH_SHIFT) | (day << Self::DAY_SHIFT))
     }
 
     /// Returns the year as an integer.
@@ -325,7 +325,7 @@ impl FromStr for Date {
 
 struct DateVisitor;
 
-impl<'de> Visitor<'de> for DateVisitor {
+impl Visitor<'_> for DateVisitor {
     type Value = Date;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

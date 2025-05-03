@@ -1406,7 +1406,7 @@ fn check_attempt_consistency(
 fn check_equipment_year(entry: &Entry, meet: &Meet, line: u64, report: &mut Report) {
     // Helper function for checking equipped status.
     fn is_equipped(e: Option<Equipment>) -> bool {
-        e.map_or(false, |eq| match eq {
+        e.is_some_and(|eq| match eq {
             Equipment::Raw | Equipment::Wraps | Equipment::Straps => false,
             Equipment::Single | Equipment::Multi | Equipment::Unlimited => true,
         })
@@ -1488,7 +1488,7 @@ fn check_weightclass_consistency(
     // Configuration files covering directories with results from
     // several federations, such as meet-data/plusa, can omit
     // the list of divisions to effectively cause full exemption.
-    if config.map_or(false, |c| c.divisions.is_empty()) {
+    if config.is_some_and(|c| c.divisions.is_empty()) {
         return;
     }
 
@@ -1995,7 +1995,7 @@ pub fn do_check<R: io::Read>(
     };
 
     // Should pending disambiguations be errors?
-    let report_disambiguations = config.map_or(false, |c| c.does_require_manual_disambiguation());
+    let report_disambiguations = config.is_some_and(|c| c.does_require_manual_disambiguation());
 
     let fourths_may_lower: bool = meet.ruleset.contains(Rule::FourthAttemptsMayLower);
 
@@ -2004,18 +2004,16 @@ pub fn do_check<R: io::Read>(
         let parent_folder = &report.parent_folder()?;
         config.and_then(|c| c.exemptions_for(parent_folder))
     };
-    let exempt_lift_order: bool = exemptions.map_or(false, |el| {
-        el.iter().any(|&e| e == Exemption::ExemptLiftOrder)
-    });
-    let exempt_division: bool = exemptions.map_or(false, |el| {
-        el.iter().any(|&e| e == Exemption::ExemptDivision)
-    });
-    let exempt_weightclass_consistency: bool = exemptions.map_or(false, |el| {
+    let exempt_lift_order: bool =
+        exemptions.is_some_and(|el| el.iter().any(|&e| e == Exemption::ExemptLiftOrder));
+    let exempt_division: bool =
+        exemptions.is_some_and(|el| el.iter().any(|&e| e == Exemption::ExemptDivision));
+    let exempt_weightclass_consistency: bool = exemptions.is_some_and(|el| {
         el.iter()
             .any(|&e| e == Exemption::ExemptWeightClassConsistency)
     });
     let exempt_age: bool =
-        exemptions.map_or(false, |el| el.iter().any(|&e| e == Exemption::ExemptAge));
+        exemptions.is_some_and(|el| el.iter().any(|&e| e == Exemption::ExemptAge));
 
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, meet, config, &mut report);
     if !report.messages.is_empty() {

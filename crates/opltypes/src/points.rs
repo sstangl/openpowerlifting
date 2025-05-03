@@ -121,7 +121,7 @@ impl Serialize for Points {
 
 struct PointsVisitor;
 
-impl<'de> Visitor<'de> for PointsVisitor {
+impl Visitor<'_> for PointsVisitor {
     type Value = Points;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

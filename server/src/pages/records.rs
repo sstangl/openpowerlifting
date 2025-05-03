@@ -216,7 +216,7 @@ impl<'db> SingleRecordCollector<'db> {
         // The incoming entry is compared to the last element in the accumulator,
         // which is the Nth-highest-seen value. If it compares favorably, then
         // it replaces that Entry, and the accumulator is re-sorted.
-        if self.accumulator[last].map_or(true, |e| compare(meets, entry, e) == Ordering::Less) {
+        if self.accumulator[last].is_none_or(|e| compare(meets, entry, e) == Ordering::Less) {
             // This entry matched.
             // Since each lifter is only to be counted once in each category,
             // scan through the accumulator and look to replace an existing entry.

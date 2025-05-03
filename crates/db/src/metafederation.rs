@@ -936,12 +936,9 @@ impl MetaFederation {
                 if meet.federation == Federation::IrishPF {
                     false
                 } else {
-                    entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                    entry.lifter_country.is_some_and(|c| c.is_in_uk())
                         || (entry.lifter_country.is_none()
-                            && meet
-                                .federation
-                                .home_country()
-                                .map_or(false, |c| c.is_in_uk()))
+                            && meet.federation.home_country().is_some_and(|c| c.is_in_uk()))
                 }
             }
             MetaFederation::AllUAE => is_from(Country::UAE, entry, meet),
@@ -961,7 +958,7 @@ impl MetaFederation {
                 entry.tested
                     && (meet.federation == Federation::BPU
                         || (meet.federation == Federation::WPC
-                            && entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                            && entry.lifter_country.is_some_and(|c| c.is_in_uk())
                             && meet.date.year() >= 2013))
             }
             MetaFederation::AEP => affiliation!(meet, entry, AEP, IPF, EPF),
@@ -1008,7 +1005,7 @@ impl MetaFederation {
                     || meet.federation == Federation::ManxPL
 
                     // British lifters expect their international results included.
-                    || (entry.lifter_country.map_or(false, |c| c.is_in_uk()) &&
+                    || (entry.lifter_country.is_some_and(|c| c.is_in_uk()) &&
                         (meet.federation == Federation::IPF
                          || meet.federation == Federation::EPF
                          || meet.federation == Federation::CommonwealthPF))
@@ -1016,18 +1013,18 @@ impl MetaFederation {
             MetaFederation::BDFPA => {
                 meet.federation == Federation::BDFPA
                     || (meet.federation == Federation::WDFPF
-                        && entry.lifter_country.map_or(false, |c| c.is_in_uk()))
+                        && entry.lifter_country.is_some_and(|c| c.is_in_uk()))
             }
             MetaFederation::BPC => {
                 meet.federation == Federation::BPC
                     || (meet.federation == Federation::WPC
-                        && entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                        && entry.lifter_country.is_some_and(|c| c.is_in_uk())
                         && meet.date.year() <= 2012)
             }
             MetaFederation::BPU => {
                 meet.federation == Federation::BPU
                     || (meet.federation == Federation::WPC
-                        && entry.lifter_country.map_or(false, |c| c.is_in_uk())
+                        && entry.lifter_country.is_some_and(|c| c.is_in_uk())
                         && meet.date.year() >= 2013)
             }
             MetaFederation::BulgarianPF => affiliation!(meet, entry, BulgarianPF, IPF, EPF),

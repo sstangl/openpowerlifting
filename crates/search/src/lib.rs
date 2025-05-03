@@ -67,7 +67,7 @@ pub fn search_rankings(
                 || lifter
                     .instagram
                     .as_ref()
-                    .map_or(false, |ig| ig.contains(&normalized_latin)))
+                    .is_some_and(|ig| ig.contains(&normalized_latin)))
         {
             return Some(i);
         }

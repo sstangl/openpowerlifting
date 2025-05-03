@@ -19,7 +19,7 @@ impl Attempt {
 
 struct AttemptVisitor;
 
-impl<'de> Visitor<'de> for AttemptVisitor {
+impl Visitor<'_> for AttemptVisitor {
     type Value = Attempt;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
@@ -57,19 +57,13 @@ impl<'de> Visitor<'de> for AttemptVisitor {
 }
 
 impl<'de> Deserialize<'de> for Attempt {
-    fn deserialize<D>(deserializer: D) -> Result<Attempt, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
+    fn deserialize<D: Deserializer<'de>>(deserializer: D) -> Result<Attempt, D::Error> {
         deserializer.deserialize_str(AttemptVisitor)
     }
 }
 
 impl Serialize for Attempt {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: Serializer,
-    {
+    fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         match self {
             Attempt::Success(value) => serializer.serialize_f32(*value),
             Attempt::Failure(value) => {
@@ -89,17 +83,14 @@ pub enum Placing {
 
 struct PlacingVisitor;
 
-impl<'de> Visitor<'de> for PlacingVisitor {
+impl Visitor<'_> for PlacingVisitor {
     type Value = Placing;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
         formatter.write_str("a valid placing")
     }
 
-    fn visit_str<E>(self, value: &str) -> Result<Self::Value, E>
-    where
-        E: serde::de::Error,
-    {
+    fn visit_str<E: serde::de::Error>(self, value: &str) -> Result<Self::Value, E> {
         if value == "DSQ" {
             return Ok(Placing::Disqualified);
         }
@@ -112,19 +103,13 @@ impl<'de> Visitor<'de> for PlacingVisitor {
 }
 
 impl<'de> Deserialize<'de> for Placing {
-    fn deserialize<D>(deserializer: D) -> Result<Placing, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
+    fn deserialize<D: Deserializer<'de>>(deserializer: D) -> Result<Placing, D::Error> {
         deserializer.deserialize_str(PlacingVisitor)
     }
 }
 
 impl Serialize for Placing {
-    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: Serializer,
-    {
+    fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         match self {
             Placing::Disqualified => serializer.serialize_str("DQ"),
             Placing::Rank(value) => serializer.serialize_u16(*value),

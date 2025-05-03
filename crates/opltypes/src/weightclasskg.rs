@@ -265,7 +265,7 @@ impl FromStr for WeightClassLbs {
 
 struct WeightClassKgVisitor;
 
-impl<'de> Visitor<'de> for WeightClassKgVisitor {
+impl Visitor<'_> for WeightClassKgVisitor {
     type Value = WeightClassKg;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {

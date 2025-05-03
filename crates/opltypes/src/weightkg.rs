@@ -398,7 +398,7 @@ impl FromStr for WeightLbs {
 
 struct WeightKgVisitor;
 
-impl<'de> Visitor<'de> for WeightKgVisitor {
+impl Visitor<'_> for WeightKgVisitor {
     type Value = WeightKg;
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
         formatter.write_str("a number or numeric string")

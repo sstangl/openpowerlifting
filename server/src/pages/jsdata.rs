@@ -46,7 +46,7 @@ pub struct JsEntryRow<'db> {
 
 /// Serialize to a compact but definitely less-helpful format
 /// for JS interchange.
-impl<'db> Serialize for JsEntryRow<'db> {
+impl Serialize for JsEntryRow<'_> {
     fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
         let mut seq = serializer.serialize_seq(None)?;
 

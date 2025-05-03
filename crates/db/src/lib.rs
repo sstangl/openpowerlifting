@@ -276,7 +276,7 @@ impl OplDb {
         // Therefore, for usernames without a digit, it cannot be assumed that they are
         // *not* a disambiguation.
         let is_already_disambiguated: bool =
-            base.chars().last().map_or(false, |c| c.is_ascii_digit());
+            base.chars().last().is_some_and(|c| c.is_ascii_digit());
         if is_already_disambiguated {
             if let Some(id) = self.lifter_id(base) {
                 return vec![id]; // The input base was an exact lifter.
@@ -402,9 +402,12 @@ impl OplDb {
 
         // Scan forwards to find the last.
         let mut last_index = found_index;
-        for index in (found_index + 1)..entry_ids_sorted_by_meet_id.len() {
-            let entry_id = entry_ids_sorted_by_meet_id[index];
-            if self.entry(entry_id).meet_id == meet_id {
+        for (index, entry_id) in entry_ids_sorted_by_meet_id
+            .iter()
+            .enumerate()
+            .skip(found_index + 1)
+        {
+            if self.entry(*entry_id).meet_id == meet_id {
                 last_index = index;
             } else {
                 break;

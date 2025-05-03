@@ -259,10 +259,8 @@ pub fn lifter(
     // Some lifters may have failed to be merged with their disambiguated username.
     // Therefore, for usernames without a digit, it cannot be assumed that they are
     // *not* a disambiguation.
-    let is_definitely_disambiguation: bool = username
-        .chars()
-        .last()
-        .map_or(false, |c| c.is_ascii_digit());
+    let is_definitely_disambiguation: bool =
+        username.chars().last().is_some_and(|c| c.is_ascii_digit());
 
     let lifter_ids: Vec<u32> = if is_definitely_disambiguation {
         if let Some(id) = opldb.lifter_id(username) {

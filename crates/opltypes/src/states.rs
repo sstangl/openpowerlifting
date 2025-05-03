@@ -218,7 +218,7 @@ impl Serialize for State {
 /// The checker uses from_str_and_country().
 struct StateVisitor;
 
-impl<'de> Visitor<'de> for StateVisitor {
+impl Visitor<'_> for StateVisitor {
     type Value = State;
 
     fn expecting(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
