@@ -398,4 +398,4 @@
 
 [exemptions]
     2403 = ["ExemptDivision"] # Some SP used in MP divisions
-   
+    2502 = ["ExemptDivision"] # Allow single-ply in multi-ply division.   
