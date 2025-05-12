@@ -14,7 +14,7 @@ Place,Name,BirthDate,Sex,BodyweightKg,WeightClassKg,Division,Equipment,Event,Bes
 1,Flóra Kosztin,1955-10-17,F,66.1,67.5,FO,Raw,B,,120,,120
 2,Krisztina Szoboszlai,1994-10-04,F,63,67.5,FO,Raw,B,,77.5,,77.5
 1,Edit Gombos-Borka,1980-01-09,F,67.9,75,FM1,Raw,B,,75,,75
-1,Beáta Pusztai,1967-10-08,F,69.4,75,FEM2,Single-ply,B,,72.5,,72.5
+1,Beáta Pusztai,1967-10-08,F,69.4,75,FEM2,Multi-ply,B,,72.5,,72.5
 1,Zsuzsanna Jónás,1955-07-21,F,70,75,FM3,Raw,B,,42.5,,42.5
 1,Gyöngyi Herczeg,1992-11-23,F,73.3,75,FO,Raw,B,,105,,105
 2,Boglarka Vona,2001-04-20,F,69.8,75,FO,Raw,B,,62.5,,62.5
@@ -85,7 +85,7 @@ Place,Name,BirthDate,Sex,BodyweightKg,WeightClassKg,Division,Equipment,Event,Bes
 3,Petra Csoma,1991-11-11,F,75.2,82.5,FO,Wraps,SBD,70,57.5,87.5,215
 1,Petra Szőcs,2004-09-22,F,85.3,90,FJ,Wraps,SBD,130,57.5,140,327.5
 1,Andrea Györki,1976-05-22,F,90.4,90+,FM1,Wraps,SBD,145,80,185,410
-1,Beáta Pusztai,1967-10-08,F,69.4,75,FEM2,Single-ply,B,,100,,100
+1,Beáta Pusztai,1967-10-08,F,69.4,75,FEM2,Multi-ply,B,,100,,100
 1,Klaudia Savanyu,2005-04-30,F,59.7,60,FET,Unlimited,B,,90,,90
 1,Katalin Ménesné Szele,1982-10-06,F,74.1,75,FEM1,Unlimited,B,,85,,85
 1,István Szeifert,1977-01-13,M,99.6,100,MM1,Raw,B,,190,,190
@@ -368,23 +368,23 @@ Place,Name,BirthDate,Sex,BodyweightKg,WeightClassKg,Division,Equipment,Event,Bes
 7,László Dominik Szigedi,1997-07-10,M,88.4,90,MO,Wraps,SBD,115,92.5,202.5,410
 1,Milán Jánvári,2008-11-30,M,87.4,90,MT,Wraps,SBD,187.5,85,185,457.5
 2,Zénó Czinkó,2009-09-09,M,85.9,90,MT,Wraps,SBD,150,100,200,450
-1,Zsolt Mohácsi,1966-03-12,M,97.1,100,MEM2,Single-ply,B,,167.5,,167.5
-1,Dávid Kökényesy,2000-05-17,M,93.6,100,MOE,Single-ply,B,,130,,130
-1,Zsolt Nándor Oláh,1995-06-10,M,102.1,110,MOE,Single-ply,B,,170,,170
-1,István Dávid,1981-09-27,M,130.6,140,MEM1,Single-ply,B,,215,,215
-1,István Dávid,1981-09-27,M,130.6,140,MOE,Single-ply,B,,215,,215
-1,Tibor Tóth,1979-12-25,M,72.6,75,MEM1,Single-ply,B,,100,,100
-1,Norbert Deli,1981-06-27,M,82.3,82.5,MEM1,Single-ply,B,,185,,185
-1,Szilárd Andrási,1997-06-09,M,97.5,100,MOE,Single-ply,D,,,330,330
-1,Mátyás Sándor Mészáros,1995-02-18,M,100.4,110,MOE,Single-ply,D,,,300,300
-1,Norbert Hablicsek,1974-01-15,M,115.1,125,MEM2,Single-ply,D,,,270,270
-1,Dávid Mader,1994-03-09,M,115.2,125,MOE,Single-ply,D,,,197.5,197.5
-1,Huba Hablicsek,1998-01-06,M,63.6,67.5,MOE,Single-ply,D,,,180,180
-1,Hunor Hablicsek,2007-08-08,M,69.2,75,MET,Single-ply,D,,,172.5,172.5
-1,László Posnyák,1993-01-14,M,79.3,82.5,MOE,Single-ply,D,,,180,180
-1,József Török,1970-06-29,M,86.9,90,MEM2,Single-ply,D,,,185,185
-1,József Török,1970-06-29,M,86.9,90,MOE,Single-ply,D,,,185,185
-2,Ádám Hunor Paczuk,1998-11-30,M,85.1,90,MOE,Single-ply,D,,,182.5,182.5
+1,Zsolt Mohácsi,1966-03-12,M,97.1,100,MEM2,Multi-ply,B,,167.5,,167.5
+1,Dávid Kökényesy,2000-05-17,M,93.6,100,MOE,Multi-ply,B,,130,,130
+1,Zsolt Nándor Oláh,1995-06-10,M,102.1,110,MOE,Multi-ply,B,,170,,170
+1,István Dávid,1981-09-27,M,130.6,140,MEM1,Multi-ply,B,,215,,215
+1,István Dávid,1981-09-27,M,130.6,140,MOE,Multi-ply,B,,215,,215
+1,Tibor Tóth,1979-12-25,M,72.6,75,MEM1,Multi-ply,B,,100,,100
+1,Norbert Deli,1981-06-27,M,82.3,82.5,MEM1,Multi-ply,B,,185,,185
+1,Szilárd Andrási,1997-06-09,M,97.5,100,MOE,Multi-ply,D,,,330,330
+1,Mátyás Sándor Mészáros,1995-02-18,M,100.4,110,MOE,Multi-ply,D,,,300,300
+1,Norbert Hablicsek,1974-01-15,M,115.1,125,MEM2,Multi-ply,D,,,270,270
+1,Dávid Mader,1994-03-09,M,115.2,125,MOE,Multi-ply,D,,,197.5,197.5
+1,Huba Hablicsek,1998-01-06,M,63.6,67.5,MOE,Multi-ply,D,,,180,180
+1,Hunor Hablicsek,2007-08-08,M,69.2,75,MET,Multi-ply,D,,,172.5,172.5
+1,László Posnyák,1993-01-14,M,79.3,82.5,MOE,Multi-ply,D,,,180,180
+1,József Török,1970-06-29,M,86.9,90,MEM2,Multi-ply,D,,,185,185
+1,József Török,1970-06-29,M,86.9,90,MOE,Multi-ply,D,,,185,185
+2,Ádám Hunor Paczuk,1998-11-30,M,85.1,90,MOE,Multi-ply,D,,,182.5,182.5
 1,Zoltán Győri,1975-05-27,M,98.7,100,MEM1,Unlimited,B,,300,,300
 2,Róbert Csetényi,1977-01-15,M,97.5,100,MEM1,Unlimited,B,,275,,275
 1,Ferenc Balázs,1970-06-18,M,100.6,110,MEM2,Unlimited,B,,292.5,,292.5
