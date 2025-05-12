@@ -95,6 +95,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPA as usize].status = complete;
     statuses[USPC as usize].status = complete;
     statuses[WP as usize].status = complete;
+    statuses[WRPFUK as usize].status = complete;
     statuses[WUAPCRO as usize].status = complete;
     statuses[XPS as usize].status = complete;
 
@@ -243,6 +244,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPNZ as usize].format = jpg;
     statuses[WRPFAUS as usize].format = openlifter;
     statuses[WRPFCRO as usize].format = database;
+    statuses[WRPFUK as usize].format = openlifter;
     statuses[WUAP as usize].format = pdf_structured;
     statuses[WUAPCRO as usize].format = database;
 
@@ -316,6 +318,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WPNZ as usize].ease = difficult;
     statuses[WRPFAUS as usize].ease = easy;
     statuses[WRPFCRO as usize].ease = easy;
+    statuses[WRPFUK as usize].ease = easy;
     statuses[WUAP as usize].ease = difficult;
     statuses[WUAPCRO as usize].ease = easy;
 
@@ -484,6 +487,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WRPFSlovenia as usize].instagram = "wrpfslovenia";
     statuses[WRPFSpain as usize].instagram = "wrpfspain";
     statuses[WRPFSweden as usize].instagram = "wrpf.sweden";
+    statuses[WRPFUK as usize].instagram = "wrpf_uk";
     statuses[WUAP as usize].instagram = "wuapusa";
     statuses[WUAPUSA as usize].instagram = "wuapusa";
 }
