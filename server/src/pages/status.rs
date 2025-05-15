@@ -332,7 +332,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_jo = "<a href=\"mailto:jo@openpowerlifting.org\">jo@</a>";
     let email_laszlo = "<a href=\"mailto:laszlopota00@gmail.com\">laszlo@</a>";
     let email_laura = "<a href=\"mailto:rettigx+opl@gmail.com\">laura@</a>";
-    let email_mayed = "<a href=\"mailto:mayed.alredha@gmail.com\">Mayed Alredha</a>";
+    let ig_mayed = "<a href=\"https://www.instagram.com/mayedpowerlifting\">Mayed Alredha</a>";
     let email_mbeelen = "<a href=\"mailto:mbeelen@openpowerlifting.org\">mbeelen@</a>";
     let email_milena = "<a href=\"mailto:milena@openpowerlifting.org\">milena@</a>";
     let email_robby = "<a href=\"mailto:ramasson@hotmail.co.uk\">Robby Masson</a>";
@@ -362,6 +362,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[CPU as usize].maintainers = email_sean;
     statuses[CroatiaUA as usize].maintainers = email_alan;
     statuses[DBKV as usize].maintainers = email_romi;
+    statuses[EgyptPF as usize].maintainers = ig_mayed;
     statuses[EPA as usize].maintainers = email_jo;
     statuses[EPF as usize].maintainers = email_jo;
     statuses[GPCAUS as usize].maintainers = email_james;
@@ -377,7 +378,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[KBGV as usize].maintainers = email_stefanie;
     statuses[KDKS as usize].maintainers = email_laura;
     statuses[KNKFSP as usize].maintainers = email_mbeelen;
-    statuses[KPC as usize].maintainers = email_mayed;
+    statuses[KPC as usize].maintainers = ig_mayed;
     statuses[LFPH as usize].maintainers = email_stefanie;
     statuses[MMAUS as usize].maintainers = email_james;
     statuses[NASA as usize].maintainers = email_boris;
@@ -388,14 +389,14 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[ORPF as usize].maintainers = email_rosie;
     statuses[PA as usize].maintainers = email_james;
     statuses[ProRaw as usize].maintainers = email_james;
-    statuses[PS as usize].maintainers = email_mayed;
-    statuses[QatarPL as usize].maintainers = email_mayed;
+    statuses[PS as usize].maintainers = ig_mayed;
+    statuses[QatarPL as usize].maintainers = ig_mayed;
     statuses[RPS as usize].maintainers = email_sean;
     statuses[ScottishPL as usize].maintainers = email_robby;
     statuses[SPF as usize].maintainers = email_sean;
-    statuses[SSSC as usize].maintainers = email_mayed;
+    statuses[SSSC as usize].maintainers = ig_mayed;
     statuses[SwissPL as usize].maintainers = email_laura;
-    statuses[UAEPL as usize].maintainers = email_mayed;
+    statuses[UAEPL as usize].maintainers = ig_mayed;
     statuses[USAPL as usize].maintainers = email_sean;
     statuses[USPA as usize].maintainers = email_sean;
     statuses[USPC as usize].maintainers = email_sean;
@@ -434,6 +435,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[CBLB as usize].instagram = "powerliftingbrazil_ipf";
     statuses[ChinaPA as usize].instagram = "gpachina";
     statuses[DSF as usize].instagram = "danskstyrkeloeftforbund";
+    statuses[EgyptPF as usize].instagram = "egyptplfed";
     statuses[FFForce as usize].instagram = "ffforce__";
     statuses[FPO as usize].instagram = "fpo.ry";
     statuses[GPCAUS as usize].instagram = "gpcaustralia";
@@ -455,6 +457,8 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[NIPF as usize].instagram = "nipowerlifting";
     statuses[NZPF as usize].instagram = "newzealandpowerlifting";
     statuses[ProRaw as usize].instagram = "prorawpowerlifting";
+    statuses[PS as usize].instagram = "powerliftingsingapore";
+    statuses[QatarPL as usize].instagram = "qatarpowerliftingfederation";
     statuses[RawIronPL as usize].instagram = "rawironpowerliftingleague";
     statuses[RAWUKR as usize].instagram = "raw100power";
     statuses[RPS as usize].instagram = "rps_powerlifting";
@@ -465,7 +469,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[SSSC as usize].instagram = "ksa_strength";
     statuses[SwissPL as usize].instagram = "swiss_powerlifting";
     statuses[ThaiPF as usize].instagram = "thaipowerlifting";
-    statuses[UAEPL as usize].instagram = "powerlifting_uae";
+    statuses[UAEPL as usize].instagram = "powerliftinguae";
     statuses[UPA as usize].instagram = "upa_events_";
     statuses[UPC as usize].instagram = "powerliftingupc";
     statuses[USAPL as usize].instagram = "usapowerlifting";
