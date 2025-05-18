@@ -74,12 +74,15 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[DSF as usize].status = complete;
     statuses[GPACRO as usize].status = complete;
     statuses[GPCAUS as usize].status = complete;
+    statuses[GPCGB as usize].status = complete;
     statuses[GPCCRO as usize].status = complete;
+    statuses[GPCPortugal as usize].status = complete;
     statuses[HPLS as usize].status = complete;
     statuses[HPLSUA as usize].status = complete;
     statuses[HPO as usize].status = complete;
     statuses[IPF as usize].status = complete;
     statuses[IrishPF as usize].status = complete;
+    statuses[IrishPO as usize].status = complete;
     statuses[KDKS as usize].status = complete;
     statuses[KPC as usize].status = complete;
     statuses[LGBT as usize].status = complete;
@@ -95,6 +98,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPA as usize].status = complete;
     statuses[USPC as usize].status = complete;
     statuses[WP as usize].status = complete;
+    statuses[WRPFEIRE as usize].status = complete;
     statuses[WRPFUK as usize].status = complete;
     statuses[WUAPCRO as usize].status = complete;
     statuses[XPS as usize].status = complete;
@@ -110,7 +114,6 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[APU as usize].has_probe = yes;
     statuses[AusPL as usize].has_probe = yes;
     statuses[BP as usize].has_probe = yes;
-    statuses[BPU as usize].has_probe = yes;
     statuses[CAPO as usize].has_probe = yes;
     statuses[CommonwealthPF as usize].has_probe = yes;
     statuses[CPA as usize].has_probe = yes;
@@ -160,6 +163,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPF as usize].has_probe = yes;
     statuses[WABDL as usize].has_probe = yes;
     statuses[WPAU as usize].has_probe = yes;
+    statuses[WPC as usize].has_probe = yes;
     statuses[WPCRUS as usize].has_probe = yes;
     statuses[WRPFAUS as usize].has_probe = yes;
     statuses[WRPFCAN as usize].has_probe = yes;
@@ -190,7 +194,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[BDFPA as usize].format = jpg;
     statuses[BP as usize].format = pdf_unstructured;
     statuses[BPF as usize].format = xls_unstructured;
-    statuses[BPU as usize].format = xls_unstructured;
+    statuses[BPU as usize].format = openlifter;
     statuses[BVDG as usize].format = magazines;
     statuses[BVDK as usize].format = pdf_unstructured;
     statuses[CAPO as usize].format = openlifter;
@@ -240,10 +244,12 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPC as usize].format = openlifter;
     statuses[WelshPA as usize].format = pdf_unstructured;
     statuses[WPC as usize].format = xls_unstructured;
+    statuses[WPCFrance as usize].format = xls_unstructured;
     statuses[WPCItaly as usize].format = jpg;
     statuses[WPNZ as usize].format = jpg;
     statuses[WRPFAUS as usize].format = openlifter;
     statuses[WRPFCRO as usize].format = database;
+    statuses[WRPFEIRE as usize].format = xls_unstructured;
     statuses[WRPFUK as usize].format = openlifter;
     statuses[WUAP as usize].format = pdf_structured;
     statuses[WUAPCRO as usize].format = database;
@@ -278,7 +284,9 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[EPA as usize].ease = medium;
     statuses[EPF as usize].ease = easy;
     statuses[GPCAUS as usize].ease = easy;
+    statuses[GPCGB as usize].ease = easy;
     statuses[GPCCRO as usize].ease = easy;
+    statuses[GPCPortgual as usize].ease = easy;
     statuses[HPLS as usize].ease = medium;
     statuses[HPLSUA as usize].ease = difficult;
     statuses[HPO as usize].ease = medium;
@@ -314,10 +322,13 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USPA as usize].ease = easy;
     statuses[USPC as usize].ease = easy;
     statuses[WPC as usize].ease = medium;
+    statuses[WPCFrance as usize].ease = easy;
     statuses[WPCItaly as usize].ease = difficult;
+    statuses[WPCPortugal as usize].ease = easy;
     statuses[WPNZ as usize].ease = difficult;
     statuses[WRPFAUS as usize].ease = easy;
     statuses[WRPFCRO as usize].ease = easy;
+    statuses[WRPFEIRE as usize].ease = easy;
     statuses[WRPFUK as usize].ease = easy;
     statuses[WUAP as usize].ease = difficult;
     statuses[WUAPCRO as usize].ease = easy;
