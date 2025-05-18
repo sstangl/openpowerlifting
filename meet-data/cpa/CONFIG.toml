@@ -27,3 +27,4 @@
 
 [exemptions]
     1801 = ["ExemptWeightClassConsistency"] # Lifters with no BW or WC.
+    2501 = ["ExemptDivision"]
