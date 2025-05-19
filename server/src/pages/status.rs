@@ -286,7 +286,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[GPCAUS as usize].ease = easy;
     statuses[GPCGB as usize].ease = easy;
     statuses[GPCCRO as usize].ease = easy;
-    statuses[GPCPortgual as usize].ease = easy;
+    statuses[GPCPortugal as usize].ease = easy;
     statuses[HPLS as usize].ease = medium;
     statuses[HPLSUA as usize].ease = difficult;
     statuses[HPO as usize].ease = medium;
