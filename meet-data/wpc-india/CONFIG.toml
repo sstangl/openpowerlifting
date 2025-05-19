@@ -79,7 +79,7 @@
     msswpc = {name ="M_SES_WPC",min=33,max=39,equipment="Single-ply",sex="M"}
     msmwpc = {name ="M_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="M"}
     myrwpc = {name ="M_YR_WPC",min=0,max=12,equipment="Raw",sex="M"} #Youth
-    mycrwpc = {name ="M_YCR_WPC",min=0,max=12,equipment="Wraps",sex="M"} #Youth
+    mycrwpc = {name ="M_YCR_WPC",min=0,max=12,equipment=["Raw","Wraps"],sex="M"} #Youth
     myeswpc = {name ="M_YES_WPC",min=0,max=12,equipment="Single-ply",sex="M"} #Youth
     myemwpc = {name ="M_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="M"} #Youth
     mpfrwpc = {name ="M_PFR_WPC",min=0,max=999,equipment="Raw",sex="M"} #Police/Fire
@@ -154,7 +154,7 @@
     fsswpc = {name ="F_SES_WPC",min=33,max=39,equipment="Single-ply",sex="F"}
     fsmwpc = {name ="F_SEM_WPC",min=33,max=39,equipment="Multi-ply",sex="F"}
     fyrwpc = {name ="F_YR_WPC",min=0,max=12,equipment="Raw",sex="F"} #Youth
-    fycrwpc = {name ="F_YCR_WPC",min=0,max=12,equipment="Wraps",sex="F"} #Youth
+    fycrwpc = {name ="F_YCR_WPC",min=0,max=12,equipment=["Raw","Wraps"],sex="F"} #Youth
     fyeswpc = {name ="F_YES_WPC",min=0,max=12,equipment="Single-ply",sex="F"} #Youth
     fyemwpc = {name ="F_YEM_WPC",min=0,max=12,equipment="Multi-ply",sex="F"} #Youth
 
