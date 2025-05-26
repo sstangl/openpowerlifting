@@ -223,7 +223,7 @@ impl<'db> SingleRecordCollector<'db> {
             let same_lifter: Option<usize> = self
                 .accumulator
                 .iter()
-                .position(|opt| opt.map_or(false, |e| e.lifter_id == entry.lifter_id));
+                .position(|opt| opt.is_some_and(|e| e.lifter_id == entry.lifter_id));
             match same_lifter {
                 None => {
                     self.accumulator[last] = Some(entry);

@@ -1509,10 +1509,7 @@ fn check_weightclass_consistency(
     // If there's nothing configured, we can still do some basic checks.
     if config.is_none() {
         // Check that the weightclass appears in the list of known defaults.
-        if !DEFAULT_WEIGHTCLASSES
-            .iter()
-            .any(|c| *c == entry.weightclasskg)
-        {
+        if !DEFAULT_WEIGHTCLASSES.contains(&entry.weightclasskg) {
             report.error_on(
                 line,
                 format!(
@@ -2005,15 +2002,12 @@ pub fn do_check<R: io::Read>(
         config.and_then(|c| c.exemptions_for(parent_folder))
     };
     let exempt_lift_order: bool =
-        exemptions.is_some_and(|el| el.iter().any(|&e| e == Exemption::ExemptLiftOrder));
+        exemptions.is_some_and(|el| el.contains(&Exemption::ExemptLiftOrder));
     let exempt_division: bool =
-        exemptions.is_some_and(|el| el.iter().any(|&e| e == Exemption::ExemptDivision));
-    let exempt_weightclass_consistency: bool = exemptions.is_some_and(|el| {
-        el.iter()
-            .any(|&e| e == Exemption::ExemptWeightClassConsistency)
-    });
-    let exempt_age: bool =
-        exemptions.is_some_and(|el| el.iter().any(|&e| e == Exemption::ExemptAge));
+        exemptions.is_some_and(|el| el.contains(&Exemption::ExemptDivision));
+    let exempt_weightclass_consistency: bool =
+        exemptions.is_some_and(|el| el.contains(&Exemption::ExemptWeightClassConsistency));
+    let exempt_age: bool = exemptions.is_some_and(|el| el.contains(&Exemption::ExemptAge));
 
     let headers: HeaderIndexMap = check_headers(rdr.headers()?, meet, config, &mut report);
     if !report.messages.is_empty() {
