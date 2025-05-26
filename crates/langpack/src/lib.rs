@@ -640,6 +640,8 @@ pub struct AgeClassSelectorTranslations {
     pub masters65_69: &'static str,
     pub masters70_74: &'static str,
     pub masters75_79: &'static str,
+    pub masters80_84: &'static str,
+    pub masters85_89: &'static str,
     pub masters80p: &'static str,
     pub masters40_49: &'static str,
     pub masters50_59: &'static str,

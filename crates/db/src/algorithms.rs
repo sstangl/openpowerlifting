@@ -372,7 +372,9 @@ pub fn entry_indices_for<'db>(
                         Masters6569 => class == Class65_69,
                         Masters7074 => class == Class70_74,
                         Masters7579 => class == Class75_79,
-                        MastersOver80 => class == Class80_999,
+                        Masters8084 => class == Class80_84,
+                        Masters8589 => class == Class85_89,
+                        MastersOver80 => matches!(class, Class80_84 | Class85_89 | Class90_999),
 
                         // BirthYear-based classes.
                         SubJuniorsY14Y18 => byclass == BirthYearClass::ClassY14Y18,

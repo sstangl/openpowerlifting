@@ -16,6 +16,8 @@
     <option value="65-69" {% if selection.ageclass == "Masters6569" %}selected{% endif %}>{{strings.selectors.ageclass.masters65_69}}</option>
     <option value="70-74" {% if selection.ageclass == "Masters7074" %}selected{% endif %}>{{strings.selectors.ageclass.masters70_74}}</option>
     <option value="75-79" {% if selection.ageclass == "Masters7579" %}selected{% endif %}>{{strings.selectors.ageclass.masters75_79}}</option>
+    <option value="80-84" {% if selection.ageclass == "Masters8084" %}selected{% endif %}>{{strings.selectors.ageclass.masters80_84}}</option>
+    <option value="85-89" {% if selection.ageclass == "Masters8589" %}selected{% endif %}>{{strings.selectors.ageclass.masters85_89}}</option>
   </optgroup>
   <optgroup label="{{strings.selectors.ageclass.label_masters_by_10s}}">
     <option value="40-49" {% if selection.ageclass == "Masters4049" %}selected{% endif %}>{{strings.selectors.ageclass.masters40_49}}</option>

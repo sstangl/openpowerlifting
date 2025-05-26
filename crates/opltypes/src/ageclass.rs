@@ -50,9 +50,15 @@ pub enum AgeClass {
     #[serde(rename = "75-79")]
     #[strum(serialize = "75-79")]
     Class75_79,
-    #[serde(rename = "80-999")]
-    #[strum(serialize = "80-999")]
-    Class80_999,
+    #[serde(rename = "80-84")]
+    #[strum(serialize = "80-84")]
+    Class80_84,
+    #[serde(rename = "85-89")]
+    #[strum(serialize = "85-89")]
+    Class85_89,
+    #[serde(rename = "90-999")]
+    #[strum(serialize = "90-999")]
+    Class90_999,
     #[serde(rename = "")]
     #[strum(serialize = "")]
     None,
@@ -94,7 +100,9 @@ impl From<Age> for AgeClass {
                 65..=69 => AgeClass::Class65_69,
                 70..=74 => AgeClass::Class70_74,
                 75..=79 => AgeClass::Class75_79,
-                80..=255 => AgeClass::Class80_999,
+                80..=84 => AgeClass::Class80_84,
+                85..=89 => AgeClass::Class85_89,
+                90..=255 => AgeClass::Class90_999,
                 _ => AgeClass::None,
             }
         }
