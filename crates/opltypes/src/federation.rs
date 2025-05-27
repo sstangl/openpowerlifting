@@ -712,6 +712,11 @@ pub enum Federation {
     #[strum(to_string = "IBSA", serialize = "ibsa")]
     IBSA,
 
+    /// International Drug Free Powerlifting Association.
+    #[serde(rename = "INTDFPA")]
+    #[strum(to_string = "IntDFPA", serialize = "intdfpa")]
+    IntDFPA,
+
     /// Irish Drug-Free Powerlifting Association.
     #[strum(to_string = "IDFPA", serialize = "idfpa")]
     IDFPA,
@@ -1423,7 +1428,7 @@ pub enum Federation {
     #[strum(to_string = "USA-UA", serialize = "usa-ua")]
     USAUA,
 
-    /// USA Powerlifting, IPF from 1997-2021, currently unaffiliated.
+    /// USA Powerlifting, IPF from 1997-2021, IntDFPA from May 2025.
     ///
     /// - On 2021-11-07, the IPF voted to remove USAPL, effective immediately.
     #[strum(to_string = "USAPL", serialize = "usapl")]
@@ -2211,6 +2216,7 @@ impl Federation {
                 }
             }
             Federation::INSA => false,
+            Federation::IntDFPA => FULLY_TESTED,
             Federation::IPA => false,
             Federation::IPAAZE => false,
             Federation::IPC => false,
@@ -2675,6 +2681,7 @@ impl Federation {
             Federation::ILPA => Some(Country::Israel),
             Federation::ILPF => Some(Country::Israel),
             Federation::INSA => Some(Country::USA),
+            Federation::IntDFPA => None,
             Federation::IPA => Some(Country::USA),
             Federation::IPAAZE => Some(Country::Azerbaijan),
             Federation::IPC => Some(Country::Israel),
@@ -3199,6 +3206,7 @@ impl Federation {
                 }
             }
             Federation::INSA => None,
+            Federation::IntDFPA => None,
             Federation::IPA => None,
             Federation::IPAAZE => Some(Federation::IPA),
             Federation::IPC => None,
@@ -3763,6 +3771,7 @@ impl Federation {
             Federation::ILPA => PointsSystem::Wilks,
             Federation::ILPF => Federation::ipf_rules_on(date),
             Federation::INSA => PointsSystem::Wilks,
+            Federation::IntDFPA => PointsSystem::Dots,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPAAZE => PointsSystem::Wilks,
             Federation::IPC => PointsSystem::Wilks,

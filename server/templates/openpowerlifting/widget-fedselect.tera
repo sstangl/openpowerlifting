@@ -9,6 +9,7 @@
   <option value="gpcaff" {% if selection.federation == "GPCAff" %}selected{% endif %}>GPC and affiliates</option>
   <option value="gpf" {% if selection.federation == "GPF" %}selected{% endif %}>GPF - Global Powerlifting Federation</option>
   <option value="ibsa" {% if selection.federation == "IBSA" %}selected{% endif %}>IBSA - International Blind Sports Association</option>
+  <option value="intdfpa" {% if selection.federation == "IntDFPA" %}selected{% endif %}>IntDFPA - International Drug Free Powerlifting Association</option>
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF - International Powerlifting Federation</option>
   <option value="ipl" {% if selection.federation == "IPL" %}selected{% endif %}>IPL - International Powerlifting League</option>
   <option value="irp" {% if selection.federation == "IRP" %}selected{% endif %}>IRP - International RAW Powerlifting</option>
@@ -75,7 +76,7 @@
   <option value="thspa" {% if selection.federation == "THSPA" %}selected{% endif %}>THSPA - Texas High School Powerlifting Assocation (Single-ply)</option>
   <option value="thswpa" {% if selection.federation == "THSWPA" %}selected{% endif %}>THSWPA - Texas High School Women's Powerlifting Assocation (Single-ply)</option>
   <option value="upa" {% if selection.federation == "UPA" %}selected{% endif %}>UPA - United Powerlifting Association</option>
-  <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL - USA Powerlifting (2014+)</option>
+  <option value="usapl" {% if selection.federation == "USAPL" %}selected{% endif %}>USAPL - USA Powerlifting (2014+) [IntDFPA]</option>
   <option value="uspa" {% if selection.federation == "USPA" %}selected{% endif %}>USPA - United States Powerlifting Association [IPL]</option>
   <option value="uspa-tested" {% if selection.federation == "USPATested" %}selected{% endif %}>USPA Tested - United States Powerlifting Association Tested [IPL]</option>
   <option value="uspc" {% if selection.federation == "USPC" %}selected{% endif %}>USPC - United States Powerlifting Coalition</option>
