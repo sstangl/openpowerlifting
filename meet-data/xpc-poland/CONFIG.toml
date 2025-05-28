@@ -72,3 +72,5 @@
     2404 = ["ExemptWeightClassConsistency"]
     2405 = ["ExemptWeightClassConsistency"] # Some divisions group all classes together.
     2501 = ["ExemptDuplicates"]
+    2502 = ["ExemptWeightClassConsistency"]
+    2503 = ["ExemptDivision","ExemptWeightClassConsistency"]
