@@ -50,6 +50,7 @@
     pro_masters_65p = {name="Pro Masters 65+", min=65, max=999}
     pro_masters_80p = {name="Pro Masters 80+", min=80, max=999}
     pro_police = {name="Pro Police", min=0, max=999}
+    pro_first_responders = {name="Pro First Responders", min=0, max=999}
 
     # Elite Amateur divisions. These aren't in the rulebook but are used occasionally.
     eama_teen_14_15 = {name="Elite Amateur Teen 14-15", min=14, max=15, tested="Yes"}
