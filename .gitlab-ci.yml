@@ -35,6 +35,9 @@ build-checker-image:
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile.checker"
       --destination "${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest"
   rules:
+    # Do not build on main branch in forks.
+    - if: $CI_PROJECT_NAMESPACE != "openpowerlifting"
+      when: never
     # Only build a new checker on the main branch. This means that changes to
     # Rust code may result in CI failures for yet-to-merge branches.
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
