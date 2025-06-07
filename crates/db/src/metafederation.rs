@@ -141,6 +141,8 @@ pub enum MetaFederation {
     AllMoldova,
     #[strum(to_string = "all-mongolia")]
     AllMongolia,
+    #[strum(to_string = "all-morocco")]
+    AllMorocco,
     #[strum(to_string = "all-nauru")]
     AllNauru,
     #[strum(to_string = "all-nepal")]
@@ -396,6 +398,10 @@ pub enum MetaFederation {
     /// FIPL, but with international results also.
     #[strum(to_string = "fipl")]
     FIPL,
+
+    /// FMPB, but with international results also.
+    #[strum(to_string = "fmpb")]
+    FMPB,
 
     /// FPP, but with international results also.
     #[strum(to_string = "fpp")]
@@ -891,6 +897,7 @@ impl MetaFederation {
             MetaFederation::AllMexico => is_from(Country::Mexico, entry, meet),
             MetaFederation::AllMoldova => is_from(Country::Moldova, entry, meet),
             MetaFederation::AllMongolia => is_from(Country::Mongolia, entry, meet),
+            MetaFederation::AllMorocco => is_from(Country::Morocco, entry, meet),
             MetaFederation::AllNauru => is_from(Country::Nauru, entry, meet),
             MetaFederation::AllNepal => is_from(Country::Nepal, entry, meet),
             MetaFederation::AllNetherlands => is_from(Country::Netherlands, entry, meet),
@@ -1073,6 +1080,7 @@ impl MetaFederation {
             }
             MetaFederation::FIPL => affiliation!(meet, entry, FIPL, IPF, EPF),
             MetaFederation::FPP => affiliation!(meet, entry, FPP, IPF, NAPF),
+            MetaFederation::FMPB => affiliation!(meet, entry, FMPB, AfricanPF, IPF),
             MetaFederation::FPPR => affiliation!(meet, entry, FPPR, IPF, NAPF),
             MetaFederation::FPR => affiliation!(meet, entry, FPR, IPF, EPF, AsianPF),
             MetaFederation::FRPL => affiliation!(meet, entry, FRPL, IPF, EPF),

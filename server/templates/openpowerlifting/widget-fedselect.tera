@@ -469,6 +469,10 @@
   <option value="all-mongolia" {% if selection.federation == "AllMongolia" %}selected{% endif %}>All Mongolian Lifters</option>
   <option value="mupf" {% if selection.federation == "MUPF" %}selected{% endif %}>MUPF - Mongolian United Powerlifting Federation [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.morocco}}">
+  <option value="all-morocco" {% if selection.federation == "AllMorocco" %}selected{% endif %}>All Moroccan Lifters</option>
+  <option value="fmpb" {% if selection.federation == "FMPB" %}selected{% endif %}>FMPB - Moroccan Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.nauru}}">
   <option value="all-nauru" {% if selection.federation == "AllNauru" %}selected{% endif %}>{{strings.selectors.fed.all_nauru}}</option>
   <option value="naurupf" {% if selection.federation == "NauruPF" %}selected{% endif %}>NauruPF - Nauru Powerlifting Federation [IPF]</option>
