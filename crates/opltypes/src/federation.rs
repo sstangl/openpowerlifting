@@ -3711,7 +3711,7 @@ impl Federation {
             Federation::FIAP => Federation::ipf_rules_on(date),
             Federation::FinlandUA => PointsSystem::Wilks,
             Federation::FIPL => Federation::ipf_rules_on(date),
-            Federation::FPO => PointsSystem::Wilks,
+            Federation::FPO => PointsSystem::Dots,
             Federation::FPP => Federation::ipf_rules_on(date),
             Federation::FPPR => Federation::ipf_rules_on(date),
             Federation::FPR => Federation::ipf_rules_on(date),
