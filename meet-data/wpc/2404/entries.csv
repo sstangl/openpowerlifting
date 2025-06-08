@@ -1,0 +1,590 @@
+﻿Sex,Event,Division,Equipment,Place,Name,WeightClassKg,Country,BirthDate,Age,BodyweightKg,Squat4Kg,Best3SquatKg,Bench4Kg,Best3BenchKg,Deadlift4Kg,Best3DeadliftKg,TotalKg
+F,B,F_JES_WPC,Single-ply,1,Habiba Ahmed Khater,75,Egypt,2000-10-01,23,75,,,,70,,,70
+F,B,F_TES_3_WPC,Single-ply,1,Mira Talaat,82.5,Egypt,2005-06-17,18,80.7,,,70,67.5,,,67.5
+M,B,M_TES_2_WPC,Single-ply,1,Mohamed Magdy,60,Egypt,2006-08-06,17,60,,,,90,,,90
+M,B,M_TES_2_WPC,Single-ply,1,Abdullah Zaki,67.5,Egypt,2008-01-01,16,65.9,,,,100,,,100
+M,B,M_OES_WPC,Single-ply,1,Abdelfadeel Abdalla,75,Egypt,1987-09-13,36,73.6,,,,145,,,145
+M,B,M_TES_3_WPC,Single-ply,1,Selim Salem,82.5,Egypt,2004-12-28,19,79.4,,,,135,,,135
+M,B,M_TES_3_WPC,Single-ply,2,Nabil Mohamed,82.5,Egypt,2005-12-12,18,81.4,,,,95,,,95
+M,B,M_MES_1_WPC,Single-ply,1,Khaled Mohamed,82.5,Egypt,1980-05-20,43,77.4,,,,135,,,135
+M,B,M_TES_3_WPC,Single-ply,1,Mohand Emad,90,Egypt,2005-07-16,18,89.4,,,,125,,,125
+M,B,M_MES_4_WPC,Single-ply,1,Sallam Gaber,90,Egypt,1966-08-09,57,89,,,,125,,,125
+M,B,M_OES_WPC,Single-ply,1,Safwat Roshdy,90,Egypt,1989-01-23,35,90,,,,220,,,220
+M,B,M_OES_WPC,Single-ply,2,Mohamed Mahmoud Abdo,90,Egypt,1998-05-15,25,88,,,,125,,,125
+M,B,M_MES_1_WPC,Single-ply,1,Islam Abd Alah,100,Egypt,1979-04-30,44,94.6,,,,165,,,165
+M,B,M_MES_4_WPC,Single-ply,1,Megahed Ali Hassan Mohamed,100,Egypt,1965-11-07,58,95.4,,,,87.5,,,87.5
+M,B,M_MES_5_WPC,Single-ply,1,Živorad Marković,100,Serbia,1960-09-29,63,92.3,,,,170,,,170
+M,B,M_OES_WPC,Single-ply,1,Ahmed Arafa,100,Egypt,1988-11-20,35,95.7,,,,165,,,165
+M,B,M_OES_WPC,Single-ply,2,Omar Eltahawy,100,Egypt,1999-06-19,24,96,,,,160,,,160
+M,B,M_OES_WPC,Single-ply,DQ,Waleed Adel,100,Egypt,1994-08-01,29,96.7,,,,,,,
+M,B,M_JES_WPC,Single-ply,1,Asser Gamal,110,Egypt,2000-05-22,23,100.9,,,,200,,,200
+M,B,M_MES_2_WPC,Single-ply,1,Elsaeed Eid,110,Egypt,1978-07-04,45,109.5,,,,140,,,140
+M,B,M_MES_3_WPC,Single-ply,1,Mohamed Elghamry,110,Egypt,1973-07-08,50,106.1,,,,200,,,200
+M,B,M_OES_WPC,Single-ply,1,Agostino Vaccaro,110,Italy,1991-02-13,32,102.09,,,,185,,,185
+M,B,M_MES_1_WPC,Single-ply,1,Eslam Moussa,125,Egypt,1981-12-01,42,124.3,,,,185,,,185
+M,B,M_MES_3_WPC,Single-ply,1,Dmitry Gorbachev,125,Russia,1970-03-06,53,116.2,,,,275,,,275
+M,B,M_OES_WPC,Single-ply,1,Dmitry Gorbachev,125,Russia,1970-03-06,53,116.2,,,,275,,,275
+M,B,M_OES_WPC,Single-ply,2,Shehab Mohamed,125,Egypt,1998-12-08,25,115.3,,,,210,,,210
+M,B,M_MES_2_WPC,Single-ply,1,Rabih El Sakka,140,Lebanon,1976-05-08,47,137.2,,,315,310,,,310
+M,B,M_MES_2_WPC,Single-ply,2,Ahmed Foad,140,Egypt,1976-06-01,47,135,,,,155,,,155
+F,D,F_TR_2_AWPC,Raw,1,Basmala Hamdi,67.5,Egypt,2006-06-05,17,64.5,,,,,,140,140
+M,D,M_JR_AWPC,Raw,1,Mammadov Faig,52,Azerbaijan,2003-03-05,20,51.1,,,,,,160,160
+M,D,M_TR_1_AWPC,Raw,1,Ayman Walid,60,Egypt,2009-04-18,14,58.7,,,,,,125,125
+M,D,M_TR_1_AWPC,Raw,1,Abdelrahman Mansour,67.5,Egypt,2008-05-01,15,65.9,,,,,,170,170
+M,D,M_TR_2_AWPC,Raw,1,Islam Atef,67.5,Egypt,2006-07-31,17,64.6,,,,,,175,175
+M,D,M_TR_2_AWPC,Raw,1,Saif Eldin Walid,75,Egypt,2008-01-03,16,74,,,,,,170,170
+M,D,M_OR_AWPC,Raw,1,Mohamed Abd ELrahman,82.5,Egypt,1994-11-06,29,82.4,,,,,,235,235
+M,D,M_OR_AWPC,Raw,DQ,Grigor Harutyunyan,100,Armenia,1997-04-19,26,97.4,,,,,,,
+M,D,M_OR_AWPC,Raw,DQ,Artur Arakelyan,110,Armenia,1986-08-20,37,108,,,,,,,
+F,SBD,F_OR_AWPC,Raw,1,Hager Kandeel,67.5,Egypt,1995-07-01,28,67.2,,105,,62.5,,135,302.5
+M,SBD,M_OR_AWPC,Raw,1,Medjahed Sid Ahmed,75,Algeria,1997-08-30,26,73.4,,190,,130,,230,550
+M,SBD,M_OR_AWPC,Raw,DQ,Mahmoud Abd Alazeem,100,Egypt,1996-06-24,27,98.5,,,,,,,
+M,SBD,M_OR_AWPC,Raw,1,Mohamad El Hossainy,110,Lebanon,1998-09-22,25,109.7,,225,,140,,292.5,657.5
+M,SBD,M_OES_AWPC,Single-ply,1,Sakhr Mohsen Qasem Ali,82.5,Yemen,1987-04-14,36,77.1,,160,,125,,200,485
+M,SBD,M_OES_AWPC,Single-ply,DQ,Mohammed AbdoYahya,82.5,Yemen,1987-06-01,36,78.4,,,,,,,
+M,SBD,M_MES_2_AWPC,Single-ply,DQ,Mohamed Samir,90,Egypt,1977-09-28,46,89,,210,,,,,
+M,SBD,M_OES_AWPC,Single-ply,1,Amr Gamal Mohammed Nasser,110,Yemen,1994-11-26,29,104,,160,,110,,210,480
+M,D,M_JES_AWPC,Single-ply,1,Mohamed Fawzy,82.5,Egypt,2002-03-09,21,82.1,,,,,,230,230
+M,D,M_OES_AWPC,Single-ply,1,Sakhr Mohsen Qasem Ali,82.5,Yemen,1987-04-14,36,77.1,,,,,,200,200
+M,D,M_MES_2_AWPC,Single-ply,1,Mohamed Samir,90,Egypt,1977-09-28,46,89,,,,,,225,225
+M,D,M_OES_AWPC,Single-ply,1,Nadeer Al Dossary,100,Saudi Arabia,1988-10-12,35,97.6,,,,,,120,120
+M,D,M_TES_1_AWPC,Single-ply,1,Seyf Ibrahim,110,Egypt,2008-09-24,15,101.5,,,,,,122.5,122.5
+M,D,M_OES_AWPC,Single-ply,1,Amr Gamal Mohammed Nasser,110,Yemen,1994-11-26,29,104,,,,,,180,180
+F,SBD,F_OCR_AWPC,Wraps,1,Fatma Hossam,67.5,Egypt,2004-12-10,19,67.1,,152.5,107.5,102.5,,165,420
+M,SBD,M_OCR_AWPC,Wraps,1,Medjahed Sid Ahmed,75,Algeria,1997-08-30,26,73.1,,220,,140,,220,580
+M,SBD,M_JCR_AWPC,Wraps,1,Haidar Safiedine,90,Lebanon,2001-08-28,22,89.5,,240,,160,,215,615
+M,SBD,M_MCR_2_AWPC,Wraps,1,Mohamed Samir,90,Egypt,1977-09-28,46,89.8,,170,,132.5,,200,502.5
+M,SBD,M_OCR_AWPC,Wraps,1,Artur Arakelyan,110,Armenia,1986-08-20,37,108,,230,,165,,250,645
+M,SBD,M_OCR_AWPC,Wraps,1,Ahmed Tawfek,125,Egypt,1994-12-19,29,115.2,,340,,180,,295,815
+F,SBD,F_TR_1_WPC,Raw,1,Rawda Ragab,48,Egypt,2008-08-18,15,48,,80,,45,,90,215
+F,SBD,F_TR_2_WPC,Raw,1,Habiba Said,52,Egypt,2007-08-06,16,51.2,117.5,115,67.5,65,,125,305
+F,SBD,F_TR_2_WPC,Raw,1,Triviana Raymon,56,Egypt,2007-09-29,16,55.5,,65,,42.5,,92.5,200
+F,SBD,F_OR_WPC,Raw,1,Ulia Zhuk,56,Russia,1986-04-01,37,55.7,,130,,62.5,,155,347.5
+F,SBD,F_TR_1_WPC,Raw,1,Roqia Mohamed,60,Egypt,2009-03-10,14,59.5,85.5,85,57.5,55,,112.5,252.5
+F,SBD,F_TR_1_WPC,Raw,DQ,Yasmin Mohamed,60,Egypt,2008-05-07,15,60,,,,,,,
+F,SBD,F_TR_2_WPC,Raw,1,Sondos El Nahas,60,Egypt,2008-01-13,16,57.8,,100,,57.5,,115,272.5
+F,SBD,F_TR_2_WPC,Raw,2,Mena Ali,60,Egypt,2007-07-11,16,59.9,,70,,45,,105,220
+F,SBD,F_TR_3_WPC,Raw,1,Jana Khafaga,60,Egypt,2005-09-23,18,59.3,,80,,55,,115,250
+F,SBD,F_OR_WPC,Raw,1,Viktoriya Ustinova,60,Russia,1990-01-14,34,60,,115,,72.5,,157.5,345
+F,SBD,F_TR_3_WPC,Raw,1,Mariam Zaky,75,Egypt,2004-02-26,19,74.8,,90,,52.5,,130,272.5
+F,SBD,F_OR_WPC,Raw,DQ,Adel Assar,75,Egypt,2000-01-15,24,73.3,,,,,,,
+M,SBD,M_TR_1_WPC,Raw,1,Patrick Mina Samy,52,Egypt,2008-12-25,15,51.6,,105,75,72.5,170,165,342.5
+M,SBD,M_TR_1_WPC,Raw,2,Omar Shalaby,52,Egypt,2010-01-17,14,51.1,,95,,57.5,,122.5,275
+M,SBD,M_TR_1_WPC,Raw,3,Mahmoud El Nahas,52,Egypt,2008-09-01,15,48.9,,80,,65,,105,250
+M,SBD,M_TR_2_WPC,Raw,1,Mohamed Bebo,52,Egypt,2007-10-01,16,50.5,,115,,65,,130,310
+M,SBD,M_TR_2_WPC,Raw,2,Asser Nassar,52,Egypt,2006-03-22,17,49.7,,100,,55,,135,290
+M,SBD,M_TR_2_WPC,Raw,DQ,Amar Abd Alatef,52,Egypt,2006-06-01,17,49.5,,,,,,,
+M,SBD,M_TR_1_WPC,Raw,1,Mohamed AL Ayashy,56,Egypt,2008-03-26,15,53.3,,77.5,,45,,110,232.5
+M,SBD,M_TR_1_WPC,Raw,DQ,Mohamed Ramdan,56,Egypt,2008-09-01,15,55,,,,,,,
+M,SBD,M_TR_2_WPC,Raw,1,Abdlrahim Hamdy,56,Egypt,2006-10-14,17,54,,120,,70,,170,360
+M,SBD,M_TR_2_WPC,Raw,2,Yassen Mohamed,56,Egypt,2006-09-24,17,55,,120,,80,,157.5,357.5
+M,SBD,M_TR_2_WPC,Raw,3,Mohamed Alsohagy,56,Egypt,2007-05-03,16,53.3,,90,,45,165,160,295
+M,SBD,M_TR_3_WPC,Raw,1,Nofear Atef,56,Egypt,2005-12-23,18,55,122.5,120,,75,182.5,180,375
+M,SBD,M_TR_3_WPC,Raw,2,Ahmed Elsaadany,56,Egypt,2004-07-29,19,56,,120,93,90,167.5,165,375
+M,SBD,M_TR_3_WPC,Raw,3,Omar Massoud,56,Egypt,2005-10-20,18,55.8,,115,,65,,150,330
+M,SBD,M_TR_1_WPC,Raw,1,Yahya Ali,60,Egypt,2008-10-23,15,59.8,,120,,70,,160,350
+M,SBD,M_TR_1_WPC,Raw,2,Mohamed Khaled,60,Egypt,2008-12-07,15,59.4,,92.5,,57.5,,125,275
+M,SBD,M_TR_1_WPC,Raw,DQ,Yehya Ali,60,Egypt,2008-10-23,15,59.5,,,,,,,
+M,SBD,M_TR_2_WPC,Raw,1,Ahmed Tarek,60,Egypt,2006-04-02,17,59.6,,117.5,,80,,170,367.5
+M,SBD,M_TR_1_WPC,Raw,1,Shady Mohamed,67.5,Egypt,2008-02-18,15,65,,145,,75,190,187.5,407.5
+M,SBD,M_TR_1_WPC,Raw,2,Yousif Algeoshy,67.5,Egypt,2008-07-24,15,66.7,,140,,85,,175,400
+M,SBD,M_TR_1_WPC,Raw,3,Abdulah Mohamed,67.5,Egypt,2010-03-10,13,63.6,,100,,60,,100,260
+M,SBD,M_TR_2_WPC,Raw,1,Mohamed Mahmod Adwy,67.5,Egypt,2006-05-25,17,64.2,,190,,107.5,,192.5,490
+M,SBD,M_TR_2_WPC,Raw,2,Faris Elsayed,67.5,Egypt,2006-11-04,17,67.2,,120,,100,,200,420
+M,SBD,M_TR_2_WPC,Raw,3,Mohamed Elsaid,67.5,Egypt,2008-01-01,16,65.8,,117.5,,80,,145,342.5
+M,SBD,M_TR_3_WPC,Raw,DQ,Youssf Ahmed,67.5,Egypt,2005-11-09,18,64.7,,130,,,,,
+M,SBD,M_TR_3_WPC,Raw,1,Abd Elhamed Soror,67.5,Egypt,2004-08-06,19,65.9,,142.5,,105,,190,437.5
+M,SBD,M_JR_WPC,Raw,1,Mohamed Youssef,67.5,Egypt,2003-04-16,20,66.7,,170,,100,,220,490
+M,SBD,M_JR_WPC,Raw,2,Antonio Recupero,67.5,Italy,2000-11-18,23,65.6,,130,,92.5,,170,392.5
+M,SBD,M_JR_WPC,Raw,DQ,Abdalla Mostafa Mohamed,67.5,Egypt,2002-03-02,21,65.4,,,,,,,
+M,SBD,M_TR_1_WPC,Raw,1,Faris Mimi Anwar,75,Egypt,2008-07-05,15,72.1,,160,,95,,210,465
+M,SBD,M_TR_2_WPC,Raw,1,Momen Ali,75,Egypt,2006-04-01,17,73.8,,170,,100,,210,480
+M,SBD,M_TR_3_WPC,Raw,1,Yahya Ashraf,75,Egypt,2006-01-02,18,74.7,,195,,145,,215,555
+M,SBD,M_TR_3_WPC,Raw,2,Shady Radwan,75,Egypt,2006-01-15,18,74.9,,185,,117.5,,232.5,535
+M,SBD,M_TR_3_WPC,Raw,3,Ahmed Asawy,75,Egypt,2005-05-28,18,73.9,,170,,102.5,,205,477.5
+M,SBD,M_JR_WPC,Raw,1,Abdalaziz Mohamed,75,Egypt,2003-07-30,20,75,,195,,127.5,,275,597.5
+M,SBD,M_JR_WPC,Raw,2,Ammar Zaki,75,Egypt,2002-04-05,21,69.1,,200,,140,,235,575
+M,SBD,M_MR_5_WPC,Raw,1,Hashem Issa,75,Egypt,1960-05-05,63,71.7,,100,,90,,130,320
+M,SBD,M_OR_WPC,Raw,1,Girgis Mondy,75,Egypt,1994-10-07,29,75,,205,,140,,250,595
+M,SBD,M_OR_WPC,Raw,2,Hassan Bekhiet,75,Egypt,2000-03-21,23,74,,180,,130,,225,535
+M,SBD,M_OR_WPC,Raw,3,Hatem Elnesr,75,Egypt,1995-09-02,28,71.4,,150,,122.5,,190,462.5
+M,SBD,M_TR_1_WPC,Raw,1,Omar Talat,82.5,Egypt,2008-07-27,15,76.6,,140,,87.5,,170,397.5
+M,SBD,M_JR_WPC,Raw,1,Ahmed Abdallah,82.5,Egypt,2000-12-02,23,79.8,,205,,155,,232.5,592.5
+M,SBD,M_MR_1_WPC,Raw,1,Basem Gamal,82.5,Egypt,1979-02-26,44,80.6,,220,,130,,225,575
+M,SBD,M_MR_6_WPC,Raw,1,Mohamed Ahmed,82.5,Egypt,1955-07-14,68,80.1,,90,,90,,160,340
+M,SBD,M_OR_WPC,Raw,1,Mohamed Abo Elsoud,82.5,Egypt,1993-04-03,30,80.6,,180,,130,,220,530
+M,SBD,M_OR_WPC,Raw,2,Adel Abaza,82.5,Egypt,1986-08-29,37,77.8,,150,,125,,200,475
+M,SBD,M_TR_3_WPC,Raw,1,Seif Eadin Tarek,90,Egypt,2005-03-31,18,89.8,,205,,122.5,,230,557.5
+M,SBD,M_TR_3_WPC,Raw,2,Mohamed Waleed,90,Egypt,2005-09-09,18,89.6,,205,,132.5,,215,552.5
+M,SBD,M_JR_WPC,Raw,1,Azaz Medhat Azaz,90,Egypt,2002-08-01,21,83.8,,232.5,,150,,307.5,690
+M,SBD,M_JR_WPC,Raw,2,Mohamed Salah,90,Egypt,2001-10-31,22,90,,245,,170,,265,680
+M,SBD,M_JR_WPC,Raw,DQ,Mahmoud Samir,90,Egypt,2003-06-05,20,86.1,,,,,,,
+M,SBD,M_JR_WPC,Raw,DQ,Mostafa Said,90,Egypt,2002-01-25,22,89.7,,,,,,,
+M,SBD,M_MR_1_WPC,Raw,1,Yasser Naguib,90,Egypt,1983-08-12,40,86.9,,190,,150,,240,580
+M,SBD,M_MR_4_WPC,Raw,1,Emam Elawady,90,Egypt,1965-09-02,58,82.7,,130,,85,,150,365
+M,SBD,M_OR_WPC,Raw,1,Suren Arakelyan,90,Armenia,1997-02-24,26,90,,170,,80,,220,470
+M,SBD,M_TR_2_WPC,Raw,1,Amir Goorge,100,Egypt,2007-01-01,17,97.7,,215,,140,,220,575
+M,SBD,M_MR_2_WPC,Raw,1,Mohamed Abd Elaal,100,Egypt,1977-11-08,46,97.4,,215,,130,,200,545
+M,SBD,M_OR_WPC,Raw,1,Mahmoud Abd Alazeem,100,Egypt,1996-06-24,27,98.5,,242.5,,165,,287.5,695
+M,SBD,M_OR_WPC,Raw,2,Grigor Harutyunyan,100,Armenia,1997-04-19,26,97.4,,237.5,,152.5,,280,670
+M,SBD,M_OR_WPC,Raw,3,Mohamed Elozzy,100,Egypt,1995-04-01,28,99.3,,225,,140,,270,635
+M,SBD,M_TR_3_WPC,Raw,1,Ahmed Salah,110,Egypt,2005-01-15,19,108.6,,200,,145,,215,560
+M,SBD,M_OR_WPC,Raw,1,Mohamed Ezzat Elashry,110,Egypt,1990-06-19,33,109.3,,262.5,,187.5,,270,720
+M,SBD,M_OR_WPC,Raw,2,Hassan Ali,110,Egypt,1999-11-05,24,108.8,,210,,150,,292.5,652.5
+M,SBD,M_OR_WPC,Raw,3,Mohamed Samer,110,Egypt,1999-01-20,25,101.9,,220,,162.5,,250,632.5
+M,SBD,M_OR_WPC,Raw,DQ,Amir Abdou,110,Egypt,1999-05-05,24,110,,,,,,,
+M,SBD,M_MR_1_WPC,Raw,1,Ahmed Shokdaf,125,Egypt,1981-01-25,43,114.1,,160,,140,,210,510
+M,SBD,M_OR_WPC,Raw,1,Ahmed Maher,125,Egypt,1995-06-01,28,121.6,,260,,165,,280,705
+M,SBD,M_OR_WPC,Raw,DQ,Ahmed Tawfek,125,Egypt,1994-12-19,29,115.2,,,,,,,
+M,SBD,M_OR_WPC,Raw,1,Hossam Eldin Ashraf,140,Egypt,1989-10-18,34,130.3,,290,,172.5,,305,767.5
+M,SBD,M_MEM_3_WPC,Multi-ply,1,Mohamed Mazen Jomaa,82.5,Syria,1973-08-13,50,82.5,,140,,107.5,,165,412.5
+F,SBD,F_JCR_WPC,Wraps,1,Kholoud Ibrahim,52,Egypt,2001-05-20,22,51.7,,145,,87.5,157.5,155,387.5
+F,SBD,F_OCR_WPC,Wraps,1,Somaia Shaban,56,Egypt,1987-10-04,36,55.4,,100,,55,,127.5,282.5
+F,SBD,F_TCR_2_WPC,Wraps,1,Haidy Shawkat,60,Egypt,2006-11-18,17,59.8,,117.5,,45,,100,262.5
+F,SBD,F_TCR_3_WPC,Wraps,1,Mariam Waleed,60,Egypt,2004-08-02,19,59.8,128,125,,65,,132.5,322.5
+F,SBD,F_JCR_WPC,Wraps,1,Elisa Azzalin,60,Italy,2003-07-27,20,58.9,,112.5,,45,,100,257.5
+F,SBD,F_OCR_WPC,Wraps,1,Alaa Tarek,60,Egypt,2005-10-26,18,59.8,,180,,100,,180,460
+F,SBD,F_TCR_1_WPC,Wraps,1,Yasmin Mohamed,67.5,Egypt,2009-04-24,14,66.8,,142.5,,75,,127.5,345
+F,SBD,F_TCR_2_WPC,Wraps,1,Mariam Khairy,67.5,Egypt,2006-05-30,17,66.6,,115,,45,,120,280
+F,SBD,F_TCR_3_WPC,Wraps,1,Salma Abd Elghfar,67.5,Egypt,2004-09-01,19,61.5,,115,,65,,115,295
+F,SBD,F_TCR_3_WPC,Wraps,2,Mbacke Thiam,67.5,Italy,2005-06-17,18,61.6,,95,,40,,105,240
+F,SBD,F_OCR_WPC,Wraps,1,Amany Ahmed Rabi,67.5,Egypt,1961-12-01,62,66.9,,145,,72.5,,160,377.5
+F,SBD,F_JCR_WPC,Wraps,1,Reem Gamal,75,Egypt,2002-05-01,21,74.6,,182.5,,82.5,,192.5,457.5
+F,SBD,F_OCR_WPC,Wraps,1,Nassma Mahmoud,75,Egypt,1986-10-01,37,75,,145,,50,,150,345
+F,SBD,F_OCR_WPC,Wraps,2,Asaar Ahmed,75,Egypt,2000-01-15,24,73.3,,100,,70,,145,315
+F,SBD,F_OCR_WPC,Wraps,DQ,Nevine Mohamed,75,Egypt,1983-09-22,40,73.7,,,,,,,
+F,SBD,F_TCR_1_WPC,Wraps,1,Habiba Sameh,82.5,Egypt,2008-05-25,15,81,,140,,70,,145,355
+F,SBD,F_OCR_WPC,Wraps,1,Marehn Mohamed,90,Egypt,1999-05-17,24,89.5,,165,,90,,170,425
+F,SBD,F_OCR_WPC,Wraps,1,Gehan Elseawrkiy,100,Egypt,2001-10-05,22,99.6,215,210,,107.5,,190,507.5
+F,SBD,F_TCR_2_WPC,Wraps,1,Jassmen Eldeeb,110,Egypt,2006-03-22,17,103.8,,120,,50,,150,320
+F,SBD,F_OCR_WPC,Wraps,1,Amira Sakr,110,Egypt,1997-03-22,26,106.5,,100,,50,,165,315
+F,SBD,F_TCR_2_WPC,Wraps,1,Amal Ali,110+,Egypt,2007-04-09,16,134.5,,190,,90,,187.5,467.5
+F,SBD,F_OCR_WPC,Wraps,1,Menna Alla Abdelrouf,110+,Egypt,2004-09-24,19,124.9,,180,,65,,150,395
+M,SBD,M_TCR_2_WPC,Wraps,DQ,Khaled Elsese,52,Egypt,2006-05-04,17,50.8,,,,,,,
+M,SBD,M_TCR_1_WPC,Wraps,1,Tomas Medhat,56,Egypt,2008-12-20,15,55,,85,,62.5,,125,272.5
+M,SBD,M_TCR_2_WPC,Wraps,1,Youssf Elghandour,56,Egypt,2007-02-22,16,53.5,,125,,65,172.5,170,360
+M,SBD,M_TCR_2_WPC,Wraps,2,Mohamed Hazem,56,Egypt,2006-08-15,17,55.8,,125,,67.5,,155,347.5
+M,SBD,M_TCR_1_WPC,Wraps,1,Yehya Ali,60,Egypt,2008-10-23,15,59.5,,125,,72.5,,160,357.5
+M,SBD,M_TCR_3_WPC,Wraps,1,Youssef Badawi Ali,60,Egypt,2004-05-01,19,59,,175,,90,,180,445
+M,SBD,M_OCR_WPC,Wraps,1,Youssef Badawi,60,Egypt,2004-05-01,19,59.3,,180,,90,,197.5,467.5
+M,SBD,M_TCR_2_WPC,Wraps,1,Eslam Sabry Elsayed,67.5,Egypt,2007-04-14,16,67,,190,,125,,210,525
+M,SBD,M_TCR_2_WPC,Wraps,2,Anas Elsaed,67.5,Egypt,2007-11-14,16,65.4,,165,,110,,212.5,487.5
+M,SBD,M_TCR_2_WPC,Wraps,3,Ahmed Ramy,67.5,Egypt,2007-10-23,16,62.2,,165,,85,,185,435
+M,SBD,M_TCR_2_WPC,Wraps,DQ,Youssef Abdallah,67.5,Egypt,2006-02-20,17,64.9,,,,,,,
+M,SBD,M_OCR_WPC,Wraps,1,Ahmed Ali,67.5,Egypt,1998-09-06,25,67.1,,220,,152.5,280,270,642.5
+M,SBD,M_TCR_1_WPC,Wraps,1,Yehei Mohamed,75,Egypt,2008-06-08,15,74.1,,215,100.5,97.5,,220,532.5
+M,SBD,M_TCR_2_WPC,Wraps,1,Nour Eldein Ahmed,75,Egypt,2007-07-10,16,69.9,,170,,107.5,,190,467.5
+M,SBD,M_TCR_3_WPC,Wraps,1,Sayed Sabry Elsayed,75,Egypt,2004-07-28,19,73.6,,220,,170,,232.5,622.5
+M,SBD,M_TCR_3_WPC,Wraps,DQ,Ahmed Elmorsey,75,Egypt,2005-07-11,18,73.7,,200,,125,,,
+M,SBD,M_JCR_WPC,Wraps,1,Mohmed Maher,75,Egypt,2003-02-28,20,74.4,,220,,140,,307.5,667.5
+M,SBD,M_JCR_WPC,Wraps,2,Ahmed Ali,75,Egypt,2003-10-18,20,75,,250,,150,,260,660
+M,SBD,M_MCR_4_WPC,Wraps,1,Mauro Casola,75,Italy,1968-03-08,55,74.3,,120,,105,,145,370
+M,SBD,M_MCR_4_WPC,Wraps,2,Mohamed Mohamed,75,Egypt,1965-07-19,58,72.3,,120,,82.5,,160,362.5
+M,SBD,M_OCR_WPC,Wraps,1,Omar Ashraf,75,Egypt,1999-03-16,24,74,,275,,180,,305,760
+M,SBD,M_OCR_WPC,Wraps,2,Ashraf Hamed Awadh Saleh,75,Yemen,1997-01-26,27,72.8,,180,,120,,190,490
+M,SBD,M_TCR_3_WPC,Wraps,1,Omar El Mohtady,82.5,Egypt,2004-06-23,19,82,,240,,172.5,310,302.5,715
+M,SBD,M_TCR_3_WPC,Wraps,2,Ramy Mahmoud,82.5,Egypt,2004-10-16,19,79.1,,200,,115,,230,545
+M,SBD,M_TCR_3_WPC,Wraps,3,Bahaa El Shami,82.5,Lebanon,2005-11-24,18,79.9,,150,,140,,230,520
+M,SBD,M_JCR_WPC,Wraps,1,Karim Ibrahim,82.5,Egypt,2000-03-23,23,82.5,310,305,178,172.5,305.5,280,757.5
+M,SBD,M_MCR_1_WPC,Wraps,1,Mohamed Abo Khoder,82.5,Egypt,1979-12-18,44,82.5,,210,,125,,240,575
+M,SBD,M_MCR_5_WPC,Wraps,1,Mohamed Abdelhady,82.5,Egypt,1963-07-18,60,82,,140,,140,,150,430
+M,SBD,M_MCR_6_WPC,Wraps,1,Soliman Khalaf,82.5,Egypt,1957-10-02,66,77,,110,,85,,120,315
+M,SBD,M_MCR_7_WPC,Wraps,1,Elsayed El Badway,82.5,Egypt,1949-07-13,74,80.4,,100,,95,,140,335
+M,SBD,M_OCR_WPC,Wraps,1,Ahmed Said,82.5,Egypt,1999-09-28,24,82.3,,280,,165,,320,765
+M,SBD,M_TCR_1_WPC,Wraps,1,Mostafa Mohamed,90,Egypt,2008-11-25,15,88.7,240,232.5,,120,235,225,577.5
+M,SBD,M_TCR_3_WPC,Wraps,1,Mahmoud Nosair,90,Egypt,2005-04-03,18,86.3,,257.5,,147.5,,252.5,657.5
+M,SBD,M_TCR_3_WPC,Wraps,2,Mazen Mostafa,90,Egypt,2005-05-15,18,89.9,,250,,112.5,,295,657.5
+M,SBD,M_JCR_WPC,Wraps,1,Mohamed Saber,90,Egypt,2002-01-19,22,89.6,,320,,190,315,310,820
+M,SBD,M_MCR_1_WPC,Wraps,1,Mahmoud Shaker,90,Egypt,1983-10-01,40,86.7,,240,,165,,240,645
+M,SBD,M_MCR_2_WPC,Wraps,1,Mohamed Samir,90,Egypt,1977-09-28,46,89.8,,170,,132.5,,200,502.5
+M,SBD,M_MCR_2_WPC,Wraps,2,Waleed Kamel,90,Egypt,1978-01-01,46,88.5,,170,,120,,170,460
+M,SBD,M_TCR_2_WPC,Wraps,1,Kariem Alaa Hatab,100,Egypt,2007-05-14,16,90.4,,225,,130,272.5,260,615
+M,SBD,M_JCR_WPC,Wraps,1,Mohamed Nashat,100,Egypt,2001-01-23,23,99.8,,330,,170,,315,815
+M,SBD,M_JCR_WPC,Wraps,2,Mohamed Allam,100,Egypt,2000-12-10,23,100,,300,,160,,330,790
+M,SBD,M_MCR_1_WPC,Wraps,1,Islam Abd Alah,100,Egypt,1979-04-30,44,94.9,,245,,165,,245,655
+M,SBD,M_MCR_2_WPC,Wraps,1,Mahmoud Zaky,100,Egypt,1976-07-20,47,98.1,,200,,135,,240,575
+M,SBD,M_MCR_3_WPC,Wraps,1,Ashraf Mostafa,100,Egypt,1972-01-28,52,97.8,,165,,140,,185,490
+M,SBD,M_OCR_WPC,Wraps,DQ,Mohamed Rabie,100,Egypt,1995-05-10,28,98.8,,,,,,,
+M,SBD,M_OCR_WPC,Wraps,DQ,Hossam Khallaf,100,Egypt,1997-10-01,26,99.2,,312.5,,,,,
+M,SBD,M_TCR_3_WPC,Wraps,1,George Samy Nabih,110,Egypt,2004-07-17,19,109.3,,240,,115,,270,625
+M,SBD,M_JCR_WPC,Wraps,1,Mohamed Khallf,110,Egypt,2000-12-15,23,103.7,,260,,140,,230,630
+M,SBD,M_OCR_WPC,Wraps,1,Amir Mohamed,110,Egypt,1999-05-05,24,109,,360,,200,,315,875
+M,SBD,M_MCR_3_WPC,Wraps,1,Mohamed Yahya,125,Egypt,1972-08-05,51,123.1,,210,,127.5,,220,557.5
+M,SBD,M_OCR_WPC,Wraps,1,Moustafa El Eraky,125,Egypt,1993-11-28,30,110.8,,300,,192.5,,310,802.5
+M,SBD,M_TCR_3_WPC,Wraps,1,Ahmed Shetewi,140,Egypt,2005-05-14,18,139.9,,337.5,,195,,300,832.5
+M,SBD,M_JCR_WPC,Wraps,1,Tomas Lewis,140,Egypt,2001-11-03,22,126,,310,,195,,340,845
+M,SBD,M_MCR_1_WPC,Wraps,1,Aleksandr Zaytsev,140,Russia,1980-04-06,43,127.8,,350,,180,,310,840
+M,SBD,M_MCR_1_WPC,Wraps,2,Adham Badr Masood Marzoq,140,Yemen,1980-11-11,43,130.8,,220,,130,,230,580
+M,SBD,M_MCR_3_WPC,Wraps,1,Alexey Ermakov,140,Russia,1973-07-03,50,137.1,,305,,192.5,,260,757.5
+M,SBD,M_OCR_WPC,Wraps,1,Adham Badr Masood Marzoq,140,Yemen,1980-11-11,43,130.2,,240,,140,,245,625
+M,SBD,M_OCR_WPC,Wraps,1,Hamed Khallaf,140+,Egypt,1988-11-27,35,142.3,,390,,190,,340,920
+F,B,F_MR_4_AWPC,Raw,1,Elena Prokopova,67.5,Russia,1966-03-07,57,66.7,,,,82.5,,,82.5
+M,B,M_OR_AWPC,Raw,1,Abdalaziz Ahmed,75,Egypt,1998-09-15,25,74.1,,,,110,,,110
+M,B,M_OR_AWPC,Raw,1,Sakhr Mohsen Qasem Ali,82.5,Yemen,1987-04-14,36,77.2,,,,135,,,135
+M,B,M_OR_AWPC,Raw,1,Vladimir Agasaryan,90,Lithuania,1990-10-09,33,89.3,,,,175,,,175
+M,B,M_OR_AWPC,Raw,2,Islam Zubailov,90,Russia,1994-01-06,30,86.9,,,,152.5,,,152.5
+M,B,M_OR_AWPC,Raw,3,György Vigh,90,Hungary,1996-02-28,27,88.6,,,,120,,,120
+M,B,M_OR_AWPC,Raw,1,Balázs Hadházi,100,Hungary,1989-10-18,34,92.4,,,,175,,,175
+M,B,M_MR_2_AWPC,Raw,1,Abdelmenaem Ibrahim,125,Egypt,1978-11-15,45,112.9,,,,160,,,160
+M,B,M_OES_AWPC,Single-ply,1,Mohammed AbdoYahya,82.5,Yemen,1987-06-01,36,78.4,,,,110,,,110
+M,B,M_MES_2_AWPC,Single-ply,1,Mohamed Samir,90,Egypt,1977-09-28,46,89,,,,125,,,125
+M,B,M_OES_AWPC,Single-ply,1,Amr Gamal Mohammed Nasser,110,Yemen,1994-11-26,29,104,,,,120,,,120
+F,B,F_TR_2_WPC,Raw,1,Sondos El Nahas,60,Egypt,2008-01-13,16,57,,,,60,,,60
+F,B,F_JR_WPC,Raw,1,Elisa Azzalin,60,Italy,2003-07-27,20,58.4,,,,57.5,,,57.5
+F,B,F_JR_WPC,Raw,DQ,Hager Gamal,60,Egypt,2002-04-01,21,59.1,,,,,,,
+F,B,F_TR_1_WPC,Raw,1,Yasmin Mohamed,67.5,Egypt,2008-05-07,15,65.7,,,77.5,75,,,75
+F,B,F_TR_3_WPC,Raw,1,Mbacke Thiam,67.5,Italy,2005-06-17,18,62.2,,,,50,,,50
+F,B,F_MR_3_WPC,Raw,1,Natalya Gorbacheva,75,Russia,1973-02-28,50,75,,,,70,,,70
+F,B,F_OR_WPC,Raw,1,Natalya Gorbacheva,75,Russia,1973-02-28,50,75,,,,70,,,70
+F,B,F_TR_1_WPC,Raw,1,Habiba Sameh,82.5,Egypt,2008-05-25,15,81.3,,,,70,,,70
+F,B,F_MR_4_WPC,Raw,1,Svetlana Sinacheva,82.5,Russia,1966-12-15,57,82.1,,,,120,,,120
+F,B,F_OR_WPC,Raw,1,Svetlana Sinacheva,82.5,Russia,1966-12-15,57,82.1,,,,120,,,120
+M,B,M_TR_1_WPC,Raw,1,Mahmoud El Nahas,52,Egypt,2008-09-01,15,48.5,,,,62.5,,,62.5
+M,B,M_TR_2_WPC,Raw,1,Omar Alaa,52,Egypt,2007-07-14,16,49.9,,,,85,,,85
+M,B,M_TR_2_WPC,Raw,2,Khaled Elsese,52,Egypt,2006-05-04,17,50.2,,,,70,,,70
+M,B,M_OR_WPC,Raw,1,Hassan Yehia,52,Egypt,1989-10-10,34,51.3,,,,105,,,105
+M,B,M_TR_1_WPC,Raw,1,Mohamed Ramdan,56,Egypt,2008-09-01,15,55.2,,,,65,,,65
+M,B,M_TR_1_WPC,Raw,2,Omar Shalaby,56,Egypt,2010-01-17,14,52.8,,,,60,,,60
+M,B,M_OR_WPC,Raw,1,Abanoub Magdy,56,Egypt,1997-08-26,26,56,,,,90,,,90
+M,B,M_TR_3_WPC,Raw,1,Mohamed Taha,60,Egypt,2005-01-15,19,58.9,,,,102.5,,,102.5
+M,B,M_TR_3_WPC,Raw,2,Mohamed Mahmoud,60,Egypt,2005-07-26,18,57.7,,,,70,,,70
+M,B,M_JR_WPC,Raw,1,Omar Soliman,60,Egypt,2003-07-03,20,59.4,,,120,115,,,115
+M,B,M_TR_2_WPC,Raw,1,George Philip,67.5,Egypt,2006-08-06,17,65,,,,110,,,110
+M,B,M_TR_3_WPC,Raw,1,Eslam Ahmed,67.5,Egypt,2004-10-01,19,66.2,,,,120,,,120
+M,B,M_TR_3_WPC,Raw,2,Raeed Eismail,67.5,Egypt,2004-08-15,19,66.6,,,,115,,,115
+M,B,M_JR_WPC,Raw,1,Youssef Gamal Hamed,67.5,Egypt,2001-10-26,22,61.6,,,,105,,,105
+M,B,M_MR_6_WPC,Raw,1,Mohamed Gamal,67.5,Egypt,1956-06-03,67,66,,,,150,,,150
+M,B,M_OR_WPC,Raw,1,Maksim Povetkin,67.5,Russia,1991-02-09,32,66.4,,,,142.5,,,142.5
+M,B,M_OR_WPC,Raw,2,Walid Riad,67.5,Egypt,1985-08-04,38,66,,,,130,,,130
+M,B,M_TR_1_WPC,Raw,1,Marawan Sayed,75,Egypt,2008-02-28,15,69.4,,,,95,,,95
+M,B,M_TR_2_WPC,Raw,1,Taha Mohamed,75,Egypt,2006-03-27,17,72.2,,,,120,,,120
+M,B,M_TR_2_WPC,Raw,2,Amr Sherif,75,Egypt,2007-02-03,17,73.9,,,,112.5,,,112.5
+M,B,M_TR_3_WPC,Raw,1,Zead Rabie Farig,75,Egypt,2005-02-17,18,72.1,,,,115,,,115
+M,B,M_MR_1_WPC,Raw,1,Dmitry Aleksandrov,75,Russia,1979-12-27,44,75,,,,180,,,180
+M,B,M_MR_2_WPC,Raw,1,Tarek Aman,75,Egypt,1978-04-05,45,72.1,,,,140,,,140
+M,B,M_MR_5_WPC,Raw,1,Hashem Issa,75,Egypt,1960-05-05,63,71.4,,,,90,,,90
+M,B,M_OR_WPC,Raw,1,Dmitry Aleksandrov,75,Russia,1979-12-27,44,75,,,,180,,,180
+M,B,M_OR_WPC,Raw,2,Ashraf Hamed Awadh Saleh,75,Yemen,1997-01-26,27,74,,,,120,,,120
+M,B,M_OR_WPC,Raw,DQ,Momen Elsaeed,75,Egypt,1997-01-01,27,74.5,,,,,,,
+M,B,M_OR_WPC,Raw,DQ,Medjahed Sid Ahmed,75,Algeria,1997-08-30,26,73.4,,,,,,,
+M,B,M_TR_2_WPC,Raw,1,Abdelrahman Ibrahim,82.5,Egypt,2006-07-28,17,81.9,,,,122.5,,,122.5
+M,B,M_TR_2_WPC,Raw,2,Ibrahim Mohsen,82.5,Egypt,2007-07-27,16,81.6,,,,120,,,120
+M,B,M_TR_2_WPC,Raw,3,Mohamed Gomaa,82.5,Egypt,2006-06-17,17,79.6,,,,115,,,115
+M,B,M_TR_3_WPC,Raw,1,Mohamed Hamdy,82.5,Egypt,2005-03-31,18,81.5,,,,137.5,,,137.5
+M,B,M_TR_3_WPC,Raw,2,Ahmed Medaht Azaz,82.5,Egypt,2005-02-01,19,81.5,,,,125,,,125
+M,B,M_TR_2_WPC,Raw,DQ,Mohamed Gomaa,82.5,Egypt,2006-06-17,17,78,,,,,,,
+M,B,M_JR_WPC,Raw,1,Mohamed Fawzy,82.5,Egypt,2002-03-09,21,80,,,,145,,,145
+M,B,M_JR_WPC,Raw,2,DC Hussien Ahmed,82.5,Egypt,2000-11-18,23,81,,,,120,,,120
+M,B,M_MR_1_WPC,Raw,1,Mohamed Abdelhakem,82.5,Egypt,1979-12-09,44,81.5,,,,140,,,140
+M,B,M_MR_1_WPC,Raw,2,Khaled Mohamed,82.5,Egypt,1980-05-20,43,79.4,,,,110,,,110
+M,B,M_MR_2_WPC,Raw,1,Mostafa Abohashema,82.5,Egypt,1978-04-09,45,78,,,,130,,,130
+M,B,M_MR_3_WPC,Raw,1,János Aranyász,82.5,Hungary,1972-01-11,52,81.5,,,,150,,,150
+M,B,M_MR_4_WPC,Raw,1,Sabry Ahmed,82.5,Egypt,1968-06-13,55,81.3,,,,125,,,125
+M,B,M_MR_4_WPC,Raw,2,István Bara,82.5,Hungary,1968-12-05,55,77.5,,,,120,,,120
+M,B,M_MR_4_WPC,Raw,3,Mauro Casola,82.5,Italy,1968-03-08,55,75.3,,,,100,,,100
+M,B,M_MR_5_WPC,Raw,1,Mohamed Abdelhady,82.5,Egypt,1963-07-18,60,81.5,,,,145,,,145
+M,B,M_OR_WPC,Raw,1,Amir Helal,82.5,Egypt,1998-01-01,26,81.1,,,,170,,,170
+M,B,M_OR_WPC,Raw,2,Adel Abaza,82.5,Egypt,1986-08-29,37,78.1,,,,130,,,130
+M,B,M_TR_2_WPC,Raw,1,Kamal Nasr,90,Egypt,2007-01-28,17,89.6,,,,132.5,,,132.5
+M,B,M_TR_2_WPC,Raw,2,Ziad Magdy Ismat,90,Egypt,2006-04-29,17,87.7,,,,90,,,90
+M,B,M_TR_3_WPC,Raw,1,Amir Mohamed Elsaid,90,Egypt,2005-05-02,18,87.5,,,,170,,,170
+M,B,M_JR_WPC,Raw,1,Mahmoud Samir,90,Egypt,2003-06-05,20,88,,,,180,,,180
+M,B,M_MR_2_WPC,Raw,1,Krisztián Szenás,90,Hungary,1975-05-01,48,88,,,,140,,,140
+M,B,M_MR_2_WPC,Raw,2,Mosalm Mahmoud,90,Egypt,1976-01-29,48,87.5,,,,130,,,130
+M,B,M_MR_2_WPC,Raw,3,Hossam Esmat,90,Egypt,1978-04-06,45,84.8,,,,115,,,115
+M,B,M_MR_6_WPC,Raw,1,Mohamed Amin,90,Egypt,1958-04-15,65,90,,,,100,,,100
+M,B,M_OR_WPC,Raw,1,Safwat Roshdy,90,Egypt,1989-01-23,35,89.2,,,,202.5,,,202.5
+M,B,M_OR_WPC,Raw,2,Eslam Abd Elnaser,90,Egypt,1993-10-04,30,88.6,,,,150,,,150
+M,B,M_OR_WPC,Raw,3,Mohamed Refaat Abdelalem,90,Egypt,1986-01-12,38,85.9,,,,80,,,80
+M,B,M_MR_1_WPC,Raw,1,Francesco Scandurra,100,Italy,1981-03-28,42,99.7,,,,200,,,200
+M,B,M_MR_1_WPC,Raw,2,Mohamed Saad,100,Egypt,1980-10-09,43,98.9,,,,170,,,170
+M,B,M_MR_1_WPC,Raw,3,Saleh Bahnasy,100,Egypt,1983-03-28,40,97.5,,,,165,,,165
+M,B,M_MR_2_WPC,Raw,1,Mahmoud Zaki,100,Egypt,1976-07-20,47,98.1,,,,137.5,,,137.5
+M,B,M_MR_3_WPC,Raw,1,Amro Ali Elsawah,100,Egypt,1971-02-22,52,98.4,,,,160,,,160
+M,B,M_MR_3_WPC,Raw,2,Mohamed Ragheb Mohamed,100,Egypt,1970-09-02,53,97.2,,,,140,,,140
+M,B,M_MR_4_WPC,Raw,1,Elbdrawy Abdelrahman,100,Egypt,1968-08-17,55,94.3,,,,120,,,120
+M,B,M_MR_5_WPC,Raw,1,Živorad Marković,100,Serbia,1960-09-29,63,90.9,,,,150,,,150
+M,B,M_OR_WPC,Raw,1,Ahmed Hassan,100,Egypt,1994-10-21,29,99.2,,,,195,,,195
+M,B,M_OR_WPC,Raw,2,Mohamed Metwally,100,Egypt,1987-04-14,36,97.9,,,,187.5,,,187.5
+M,B,M_OR_WPC,Raw,3,Mina Tallat Gamil,100,Egypt,1999-02-09,24,92.3,,,,175,,,175
+M,B,M_TR_2_WPC,Raw,1,Abdelrahman Ahmed,110,Egypt,2006-04-26,17,101.2,,,,140,,,140
+M,B,M_JR_WPC,Raw,1,Ahmed Wael,110,Egypt,2001-09-30,22,100.2,,,,150,,,150
+M,B,M_MR_1_WPC,Raw,1,Ayman Said Mohamed,110,Egypt,1983-09-29,40,101.2,,,,120,,,120
+M,B,M_MR_2_WPC,Raw,1,András Sebők,110,Hungary,1977-05-01,46,105.8,,,,170,,,170
+M,B,M_MR_2_WPC,Raw,2,Talaat Harb Mohamed,110,Egypt,1977-04-04,46,102.5,,,,155,,,155
+M,B,M_MR_3_WPC,Raw,1,Mohamed Soliman,110,Egypt,1972-09-22,51,105.8,,,,120,,,120
+M,B,M_MR_4_WPC,Raw,1,Nasser Ahmed,110,Egypt,1966-12-23,57,106.9,,,,120,,,120
+M,B,M_MR_5_WPC,Raw,1,Ayman Mazhar,110,Egypt,1959-11-22,64,105.6,,,,115,,,115
+M,B,M_OR_WPC,Raw,1,Inal Kilyarov,110,Russia,1994-02-13,29,104.5,,,,217.5,,,217.5
+M,B,M_OR_WPC,Raw,2,Waleed Rafaat,110,Egypt,1986-01-18,38,106.5,,,,212.5,,,212.5
+M,B,M_OR_WPC,Raw,3,Ahmed Mohamed,110,Egypt,1999-07-23,24,108,,,,180,,,180
+M,B,M_OR_WPC,Raw,DQ,Amir Mohamed,110,Egypt,1999-05-05,24,109,,,,,,,
+M,B,M_TR_3_WPC,Raw,1,Abd Elmonem Ahmed,125,Egypt,2004-11-25,19,121.9,,,,170,,,170
+M,B,M_TR_3_WPC,Raw,2,Youssef Ihab,125,Egypt,2004-08-17,19,115.6,,,,112.5,,,112.5
+M,B,M_JR_WPC,Raw,1,Youssef Shdeed,125,Egypt,2001-02-08,22,119,,,,177.5,,,177.5
+M,B,M_JR_WPC,Raw,2,Osama Ahmed,125,Egypt,2002-06-20,21,122.2,,,,170,,,170
+M,B,M_MR_1_WPC,Raw,1,Mohamed Ahmed,125,Egypt,1980-10-04,43,119.4,,,,175,,,175
+M,B,M_MR_2_WPC,Raw,1,Artavazd Arakelyan,125,Armenia,1975-09-09,48,121.7,,,,152.5,,,152.5
+M,B,M_OR_WPC,Raw,1,Moustafa El Eraky,125,Egypt,1993-11-28,30,111.8,,,,185,,,185
+M,B,M_OR_WPC,Raw,DQ,Shehab Khalil,125,Egypt,1998-12-08,25,114.6,,,,,,,
+M,B,M_OR_WPC,Raw,DQ,Shehab Mohamed,125,Egypt,1998-12-08,25,115.3,,,,,,,
+M,B,M_MR_1_WPC,Raw,1,Adham Badr Masood Marzoq,140,Yemen,1980-11-11,43,129.4,,,,145,,,145
+M,B,M_OR_WPC,Raw,1,Mohamed Anwar Nassar,140,Egypt,1985-05-21,38,128.7,,,,210,,,210
+M,B,M_OR_WPC,Raw,2,Adham Badr Masood Marzoq,140,Yemen,1980-11-11,43,129.4,,,,145,,,145
+F,D,F_TR_3_WPC,Raw,1,Shahd Sayd Nageh,48,Egypt,2005-11-17,18,45,,,,,,90,90
+F,D,F_TR_1_WPC,Raw,1,Mariam El Hlam,52,Egypt,2009-07-15,14,51.2,,,,,,97.5,97.5
+F,D,F_TR_2_WPC,Raw,1,Triviana Raymon,56,Egypt,2007-09-29,16,55.8,,,,,,92.5,92.5
+F,D,F_TR_1_WPC,Raw,1,Yasmin Mohamed,60,Egypt,2008-05-07,15,60,,,,,,110,110
+F,D,F_TR_2_WPC,Raw,1,Sondos El Nahas,60,Egypt,2008-01-13,16,57,,,,,127.5,125,125
+F,D,F_JR_WPC,Raw,1,Elisa Azzalin,60,Italy,2003-07-27,20,58.4,,,,,,120,120
+F,D,F_JR_WPC,Raw,2,Hager Gamal,60,Egypt,2002-04-01,21,59.1,,,,,,50,50
+F,D,F_TR_1_WPC,Raw,1,Yasmin Mohamed,67.5,Egypt,2009-04-24,14,66.4,,,,,,130,130
+F,D,F_TR_3_WPC,Raw,1,Mbacke Thiam,67.5,Italy,2005-06-17,18,62.2,,,,,,120,120
+F,D,F_OR_WPC,Raw,1,Ana Petkovic,67.5,Serbia,1995-01-12,29,60.9,,,,,,60,60
+F,D,F_TR_3_WPC,Raw,1,Mariam Zaky,75,Egypt,2004-02-26,19,74.2,,,,,,115,115
+F,D,F_MR_1_WPC,Raw,1,Anna Tripi,75,Italy,1979-03-28,44,71.3,,,,,,162.5,162.5
+F,D,F_OR_WPC,Raw,1,Anna Tripi,75,Italy,1979-03-28,44,71.3,,,,,,162.5,162.5
+F,D,F_OR_WPC,Raw,2,Ridersa Shevroja,75,Italy,1986-07-26,37,70.5,,,,,,132.5,132.5
+F,D,F_TR_1_WPC,Raw,1,Habiba Sameh,82.5,Egypt,2008-05-25,15,81.6,,,,,,150,150
+F,D,F_MR_1_WPC,Raw,1,Mona Abdelzaher,82.5,Egypt,1979-11-22,44,77.2,,,,,,112.5,112.5
+F,D,F_OR_WPC,Raw,1,Aya Mohamed,82.5,Egypt,1992-08-15,31,80,,,,,,135,135
+F,D,F_TR_3_WPC,Raw,1,Joyce Samer,100,Egypt,2005-08-02,18,96.9,,,,,,160,160
+F,D,F_TR_2_WPC,Raw,1,Jassmen Eldeeb,110,Egypt,2006-03-22,17,104.3,,,,,,145,145
+F,D,F_TR_2_WPC,Raw,1,Amal Elsaid,110+,Egypt,2007-04-09,16,136.3,,,,,,192.5,192.5
+M,D,M_TR_1_WPC,Raw,1,Patrick Mina Samy,52,Egypt,2008-12-25,15,51.7,,,,,167.5,165,165
+M,D,M_TR_1_WPC,Raw,DQ,Yasser Alaa,52,Egypt,2009-01-27,15,49.8,,,,,,,
+M,D,M_TR_2_WPC,Raw,1,Amar Abd Alatef,52,Egypt,2006-06-01,17,49.5,,,,,,140,140
+M,D,M_TR_3_WPC,Raw,1,Mohamed Elsayed,52,Egypt,2005-08-08,18,50.7,,,,,,150,150
+M,D,M_TR_1_WPC,Raw,1,Mohamed Ramdan,56,Egypt,2008-09-01,15,55.2,,,,,,150,150
+M,D,M_TR_1_WPC,Raw,2,Omar Shalaby,56,Egypt,2010-01-17,14,52.8,,,,,,120,120
+M,D,M_TR_1_WPC,Raw,3,Ziad Sameh,56,Egypt,2009-09-29,14,56,,,,,,120,120
+M,D,M_TR_2_WPC,Raw,1,Abdalrhim Hamdy,56,Egypt,2006-10-14,17,54,,,,,175,170,170
+M,D,M_TR_2_WPC,Raw,2,Mahmoud Emad,56,Egypt,2007-01-06,17,55.4,,,,,172.5,170,170
+M,D,M_TR_2_WPC,Raw,3,Yassen Mohamed,56,Egypt,2006-09-24,17,54.6,,,,,,150,150
+M,D,M_TR_3_WPC,Raw,1,Nofear Atef,56,Egypt,2005-12-23,18,54.6,,,,,,180,180
+M,D,M_OR_WPC,Raw,1,Abanoub Magdy,56,Egypt,1997-08-26,26,56,,,,,,140,140
+M,D,M_TR_1_WPC,Raw,1,Hamza Gamal,60,Egypt,2008-02-17,15,60,,,,,,140,140
+M,D,M_TR_2_WPC,Raw,1,Abdelrahman Salama,60,Egypt,2006-04-11,17,59.7,,,,,190,182.5,182.5
+M,D,M_TR_2_WPC,Raw,2,Elsied Ahmed,60,Egypt,2006-06-06,17,59,,,,,,175,175
+M,D,M_TR_3_WPC,Raw,1,Mohamed Fahmey,60,Egypt,2004-04-04,19,57.5,,,,,,165,165
+M,D,M_TR_3_WPC,Raw,2,Youssef Ahmed,60,Egypt,2005-07-19,18,56.6,,,,,,152.5,152.5
+M,D,M_TR_3_WPC,Raw,3,Mohamed Mahmoud,60,Egypt,2005-07-26,18,57.7,,,,,,145,145
+M,D,M_TR_3_WPC,Raw,DQ,Mohamed Elsaied,60,Egypt,2006-01-01,18,59.4,,,,,,,
+M,D,M_JR_WPC,Raw,1,Mohamed Badran,60,Egypt,2003-02-27,20,58.2,,,,,,170,170
+M,D,M_JR_WPC,Raw,2,Baraa Ahmed,60,Egypt,2001-08-01,22,59.7,,,,,,155,155
+M,D,M_OR_WPC,Raw,1,Mahmoud Mastoor,60,Egypt,1989-10-26,34,58.5,,,,,,182.5,182.5
+M,D,M_OR_WPC,Raw,2,Hamed Abdalmongy,60,Egypt,1993-05-26,30,59.7,,,,,,170,170
+M,D,M_TR_1_WPC,Raw,1,Mostafa Nabil,67.5,Egypt,2008-02-28,15,67.1,,,,,,172.5,172.5
+M,D,M_TR_1_WPC,Raw,2,Yahya Ali,67.5,Egypt,2008-10-23,15,63.2,,,,,,170,170
+M,D,M_TR_2_WPC,Raw,1,Ahmed Ramy,67.5,Egypt,2007-10-23,16,65.4,,,,,,190,190
+M,D,M_TR_2_WPC,Raw,2,George Philip,67.5,Egypt,2006-08-06,17,65.5,,,,,,187.5,187.5
+M,D,M_TR_2_WPC,Raw,3,Mohamed Salah,67.5,Egypt,2006-05-25,17,66.8,,,,,,180,180
+M,D,M_TR_3_WPC,Raw,1,Mostafa Abdalla,67.5,Egypt,2004-05-05,19,62.8,,,,,,210,210
+M,D,M_TR_3_WPC,Raw,2,Hamza Mohamed,67.5,Egypt,2004-03-27,19,66.1,,,,,,195,195
+M,D,M_TR_3_WPC,Raw,3,Sayed Emam,67.5,Egypt,2005-11-12,18,67.2,,,,,,190,190
+M,D,M_JR_WPC,Raw,1,Mohamed Youssef,67.5,Egypt,2003-04-16,20,66.3,,,,,,227.5,227.5
+M,D,M_JR_WPC,Raw,2,Abdalla Mostafa Mohamed,67.5,Egypt,2002-03-02,21,65.4,,,,,,200,200
+M,D,M_JR_WPC,Raw,3,Alaa Abdelmomen,67.5,Egypt,2003-07-01,20,65,,,,,,190,190
+M,D,M_MR_5_WPC,Raw,1,Kamal Said Morsy,67.5,Egypt,1960-11-01,63,63.5,,,,,,170,170
+M,D,M_OR_WPC,Raw,1,Youssef Abdallah,67.5,Egypt,2006-02-20,17,64.9,,,,,,320,320
+M,D,M_OR_WPC,Raw,2,Youssef Gamal Hamed,67.5,Egypt,2001-10-26,22,61.6,,,,,,187.5,187.5
+M,D,M_OR_WPC,Raw,3,Nasheat Fakrey,67.5,Egypt,1987-12-22,36,61.1,,,,,,180,180
+M,D,M_TR_1_WPC,Raw,DQ,Marawan Sayed,75,Egypt,2008-02-28,15,69.4,,,,,,,
+M,D,M_TR_2_WPC,Raw,1,Momen Ali,75,Egypt,2006-04-01,17,73.4,,,,,235,230,230
+M,D,M_TR_2_WPC,Raw,2,Mahmoud Ahmed,75,Egypt,2006-05-27,17,72.8,,,,,,200,200
+M,D,M_TR_3_WPC,Raw,1,Mohamed Khaled,75,Egypt,2004-06-01,19,74.7,,,,,,225,225
+M,D,M_TR_3_WPC,Raw,2,Yahia Hafiz,75,Egypt,2005-11-16,18,70.4,,,,,,192.5,192.5
+M,D,M_JR_WPC,Raw,1,Husain Osman,75,Egypt,2002-01-01,22,74,,,,,,280,280
+M,D,M_JR_WPC,Raw,2,Mahmoud Hamdy Tawfik,75,Egypt,2003-02-06,20,72,,,,,,235,235
+M,D,M_MR_5_WPC,Raw,1,Hashem Issa,75,Egypt,1960-05-05,63,71.4,,,,,,125,125
+M,D,M_OR_WPC,Raw,1,Ibrahim Shaker,75,Egypt,1998-08-01,25,74.7,,,,,,240,240
+M,D,M_OR_WPC,Raw,2,Elsayed Metwaly,75,Egypt,1994-10-01,29,73.4,,,,,,237.5,237.5
+M,D,M_OR_WPC,Raw,3,Ashraf Hamed Awadh Saleh,75,Yemen,1997-01-26,27,74,,,,,,200,200
+M,D,M_TR_2_WPC,Raw,1,Ahmed Adel,82.5,Egypt,2007-01-20,17,75.5,,,,,,195,195
+M,D,M_TR_2_WPC,Raw,2,Ahmed Hamada,82.5,Egypt,2007-12-20,16,81,,,,,,195,195
+M,D,M_TR_3_WPC,Raw,1,Yousef Hassan,82.5,Egypt,2005-01-10,19,81.1,,,,,,220,220
+M,D,M_TR_3_WPC,Raw,2,Hassan Ali Hassan,82.5,Egypt,2005-05-24,18,75.06,,,,,,190,190
+M,D,M_JR_WPC,Raw,1,DC Hussien Ahmed,82.5,Egypt,2000-11-18,23,81,,,,,,237.5,237.5
+M,D,M_JR_WPC,Raw,2,Ali Elzain,82.5,Egypt,2002-08-08,21,79,,,,,,235,235
+M,D,M_JR_WPC,Raw,3,Mohamed Soliman,82.5,Egypt,2001-04-14,22,77.5,,,,,,220,220
+M,D,M_JR_WPC,Raw,4,Ahmed Mostafa,82.5,Egypt,2003-08-08,20,81.4,,,,,,210,210
+M,D,M_MR_1_WPC,Raw,1,Antonio Giordano,82.5,Italy,1982-08-13,41,78,,,,,,205,205
+M,D,M_MR_2_WPC,Raw,1,Walled Abbas,82.5,Egypt,1975-01-05,49,82.2,,,,,,220,220
+M,D,M_MR_4_WPC,Raw,1,Mauro Casola,82.5,Italy,1968-03-08,55,75.3,,,,,,150,150
+M,D,M_MR_4_WPC,Raw,2,Sabry Ahmed,82.5,Egypt,1968-06-13,55,81.3,,,,,,135,135
+M,D,M_OR_WPC,Raw,1,Abdelrahman Elfeky,82.5,Egypt,1998-07-14,25,80,,,,,,252.5,252.5
+M,D,M_OR_WPC,Raw,2,Adel Abaza,82.5,Egypt,1986-08-29,37,78.1,,,,,,215,215
+M,D,M_TR_1_WPC,Raw,1,Mostafa Khalaf,90,Egypt,2009-08-06,14,85.5,,,,,,170,170
+M,D,M_TR_2_WPC,Raw,DQ,Atef Elgoushy,90,Egypt,2006-08-20,17,87.3,,,,,,,
+M,D,M_TR_3_WPC,Raw,1,Mohamed Waleed,90,Egypt,2005-09-09,18,88.7,,,,,,210,210
+M,D,M_TR_3_WPC,Raw,2,Zeyad Alam,90,Egypt,2006-01-10,18,88.6,,,,,,190,190
+M,D,M_JR_WPC,Raw,1,Azaz Medhat Azaz,90,Egypt,2002-08-01,21,86.8,,,,,,292.5,292.5
+M,D,M_JR_WPC,Raw,2,Ahmed Saleh,90,Egypt,2002-11-08,21,88.7,,,,,,270,270
+M,D,M_JR_WPC,Raw,3,Abanoub Medhat,90,Egypt,2001-11-17,22,88.4,,,,,,242.5,242.5
+M,D,M_JR_WPC,Raw,4,Mahmoud Samir,90,Egypt,2003-06-05,20,88,,,,,,230,230
+M,D,M_MR_1_WPC,Raw,1,Mohamed Abo Khoder,90,Egypt,1979-12-18,44,85.1,,,,,,240,240
+M,D,M_MR_2_WPC,Raw,1,Mosalm Mahmoud,90,Egypt,1976-01-29,48,87.5,,,,,,230,230
+M,D,M_MR_2_WPC,Raw,2,Mahmoud Saed Ebrahem,90,Egypt,1979-01-14,45,86.5,,,,,,200,200
+M,D,M_MR_4_WPC,Raw,1,Emad Saad,90,Egypt,1966-12-16,57,87.4,,,,,,200,200
+M,D,M_OR_WPC,Raw,1,Mohamed Ahmed Zaki,90,Egypt,1994-10-02,29,85.3,,,,,,240,240
+M,D,M_OR_WPC,Raw,2,Mohamed Refaat Abdelalem,90,Egypt,1986-01-12,38,85.9,,,,,,170,170
+M,D,M_TR_1_WPC,Raw,1,Rohaum Sayed,100,Egypt,2008-04-13,15,98,,,,,,172.5,172.5
+M,D,M_TR_1_WPC,Raw,2,Habib Ehab,100,Egypt,2008-12-27,15,97.6,,,,,,170,170
+M,D,M_TR_2_WPC,Raw,1,Omar Said,100,Egypt,2007-10-24,16,97.2,,,,,,250,250
+M,D,M_TR_2_WPC,Raw,2,Ahmed Tamer,100,Egypt,2006-08-20,17,99.9,,,,,,222.5,222.5
+M,D,M_TR_2_WPC,Raw,3,Yassin Mostafa,100,Egypt,2007-01-23,17,95.4,,,,,,215,215
+M,D,M_TR_3_WPC,Raw,1,Omar Gamal Mostafa,100,Egypt,2004-02-19,19,94.5,,,,,,285,285
+M,D,M_JR_WPC,Raw,1,Mostafa Said,100,Egypt,2002-01-25,22,92.3,,,,,,282.5,282.5
+M,D,M_JR_WPC,Raw,2,Mohamed Mohsen,100,Egypt,2000-12-08,23,97.4,,,,,,280,280
+M,D,M_MR_1_WPC,Raw,1,Mohamed Saad,100,Egypt,1980-10-09,43,98.9,,,,,,260,260
+M,D,M_MR_1_WPC,Raw,2,Saleh Bahnasy,100,Egypt,1983-03-28,40,97.5,,,,,,237.5,237.5
+M,D,M_MR_2_WPC,Raw,1,Mahmoud Zaki,100,Egypt,1976-07-20,47,98.1,,,,,,240,240
+M,D,M_MR_2_WPC,Raw,2,Abdalla Azazy,100,Egypt,1977-07-13,46,99.5,,,,,,237.5,237.5
+M,D,M_MR_2_WPC,Raw,3,Sayed Fouad,100,Egypt,1978-05-07,45,99.4,,,,,,210,210
+M,D,M_MR_3_WPC,Raw,1,Mohamed Ragheb Mohamed,100,Egypt,1970-09-02,53,97.2,,,,,,180,180
+M,D,M_OR_WPC,Raw,1,Mohamed Elozzy,100,Egypt,1995-04-01,28,99.7,,,,,,272.5,272.5
+M,D,M_OR_WPC,Raw,2,Ahmed Abdelfattah,100,Egypt,1998-10-20,25,93.1,,,,,,270,270
+M,D,M_OR_WPC,Raw,3,Antonino Scilipoti,100,Italy,1988-08-06,35,95.9,,,,,,262.5,262.5
+M,D,M_OR_WPC,Raw,4,Abdallah Abdelmged,100,Egypt,1990-12-17,33,90.5,,,,,,205,205
+M,D,M_TR_3_WPC,Raw,1,Amar Mohamed Rashed,110,Egypt,2005-08-15,18,107.6,,,,,,265,265
+M,D,M_MR_1_WPC,Raw,1,Amr Hashem,110,Egypt,1984-01-24,40,101.5,,,,,,232.5,232.5
+M,D,M_MR_2_WPC,Raw,1,Wael Ramadan,110,Egypt,1978-07-15,45,107.3,,,,,,220,220
+M,D,M_MR_5_WPC,Raw,1,Ayman Mazhar,110,Egypt,1959-11-22,64,105.6,,,,,,200,200
+M,D,M_OR_WPC,Raw,1,Hossam Khallaf,110,Egypt,1997-10-01,26,101.5,,,,,,295,295
+M,D,M_OR_WPC,Raw,2,Ezzat Elsayd,110,Egypt,1987-09-28,36,107.3,,,,,,270,270
+M,D,M_OR_WPC,Raw,3,Mahmoud Mohamed Saleh,110,Egypt,1990-07-04,33,102,,,,,,240,240
+M,D,M_TR_3_WPC,Raw,1,Youssef Ihab,125,Egypt,2004-08-17,19,115.8,,,,,,190,190
+M,D,M_JR_WPC,Raw,1,Youssef Shdeed,125,Egypt,2001-02-08,22,119,,,,,,277.5,277.5
+M,D,M_MR_1_WPC,Raw,1,Waleed Mohamed Safty,125,Egypt,1983-07-01,40,111.7,,,,,,210,210
+M,D,M_MR_2_WPC,Raw,1,Yasser Arafa,125,Egypt,1977-01-24,47,118.2,,,,,,260,260
+M,D,M_MR_2_WPC,Raw,2,Hossam Eldin Alafifi,125,Egypt,1975-04-10,48,114.2,,,,,,252.5,252.5
+M,D,M_OR_WPC,Raw,1,Moustafa El Eraky,125,Egypt,1993-11-28,30,111.8,,,,,,280,280
+M,D,M_JR_WPC,Raw,1,Tomas Lewis,140,Egypt,2001-11-03,22,126.1,,,,,,330,330
+M,D,M_MR_1_WPC,Raw,1,Adham Badr Masood Marzoq,140,Yemen,1980-11-11,43,129.4,,,,,,260,260
+M,D,M_MR_3_WPC,Raw,1,Ahmed Soliman,140,Egypt,1972-11-11,51,127.3,,,,,,190,190
+M,D,M_OR_WPC,Raw,1,Adham Badr Masood Marzoq,140,Yemen,1980-11-11,43,129.4,,,,,,260,260
+M,D,M_OR_WPC,Raw,1,Hamed Khallaf,140+,Egypt,1988-11-27,35,141.2,,,,,,320,320
+F,SBD,F_TES_2_WPC,Single-ply,1,Nada Okab,60,Egypt,2006-09-30,17,60,,100,,60,,130,290
+F,SBD,F_MES_5_WPC,Single-ply,1,Amany Ahmed Rabi,67.5,Egypt,1961-12-01,62,66,,150,,75,,185,410
+F,SBD,F_OES_WPC,Single-ply,1,Aya Mohamed,67.5,Egypt,1998-11-04,25,64,,100,,52.5,,142.5,295
+F,SBD,F_JES_WPC,Single-ply,1,Habiba Ahmed Khater,75,Egypt,2000-10-01,23,75,,115,,70,,140,325
+M,SBD,M_TES_2_WPC,Single-ply,1,Abdelrahman Hesham,52,Egypt,2007-10-30,16,51.2,,115,,60,,125,300
+M,SBD,M_TES_2_WPC,Single-ply,2,Adham Mohamed,52,Egypt,2007-01-15,17,50.5,,100,,60,,132.5,292.5
+M,SBD,M_TES_2_WPC,Single-ply,1,Youssef Zakaria,56,Egypt,2007-04-13,16,55.3,,100,,57.5,,135,292.5
+M,SBD,M_TES_2_WPC,Single-ply,1,George Philip,67.5,Egypt,2006-08-06,17,65,,140,,110,205,195,445
+M,SBD,M_TES_2_WPC,Single-ply,2,Marawan Hany,67.5,Egypt,2006-05-10,17,67.1,,145,,80,,175,400
+M,SBD,M_OES_WPC,Single-ply,1,Ibrahim Rezk,67.5,Egypt,1992-09-11,31,66.7,,230,,145,,240,615
+M,SBD,M_TES_2_WPC,Single-ply,1,Abdelrahman Ahmed,75,Egypt,2006-09-11,17,69.5,,140,,77.5,,167.5,385
+M,SBD,M_TES_3_WPC,Single-ply,1,Omar Hesham,75,Egypt,2004-12-14,19,73.7,,170,,115,,200,485
+M,SBD,M_JES_WPC,Single-ply,DQ,Hassan Bekhiet,75,Egypt,2000-03-21,23,73.2,,240,,132.5,,,
+M,SBD,M_TES_3_WPC,Single-ply,1,Mohamed Mahmoud,82.5,Egypt,2004-07-01,19,82.1,,220,,117.5,,220,557.5
+M,SBD,M_TES_3_WPC,Single-ply,2,Fares Mohamed,82.5,Egypt,2004-11-03,19,80.4,,210,,100,,225,535
+M,SBD,M_TES_3_WPC,Single-ply,3,Fares Yosef,82.5,Egypt,2004-07-17,19,81,,165,,120,,205,490
+M,SBD,M_JES_WPC,Single-ply,1,Abdalla Mohamed Fawzy,82.5,Egypt,2003-04-25,20,80.9,,230,,130,,210,570
+M,SBD,M_OES_WPC,Single-ply,1,Hazem Hany,82.5,Egypt,1987-09-19,36,82.5,,290,,165,,305,760
+M,SBD,M_OES_WPC,Single-ply,2,Mostafa Farouk,82.5,Egypt,1991-05-08,32,81.4,,290,,197.5,,270,757.5
+M,SBD,M_OES_WPC,Single-ply,DQ,Mohamed Mansuor,82.5,Egypt,1990-01-30,34,82.3,,,,,,,
+M,SBD,M_TES_3_WPC,Single-ply,1,Mazen Ismail,90,Egypt,2006-01-14,18,89.7,,242.5,,125,,200,567.5
+M,SBD,M_MES_1_WPC,Single-ply,1,Charbel Hallak,90,Lebanon,1981-04-14,42,89.3,,280,,175,,270,725
+M,SBD,M_OES_WPC,Single-ply,1,Mohamed Adel,90,Egypt,1999-08-02,24,88.8,,260,,160,,305,725
+M,SBD,M_OES_WPC,Single-ply,2,Charbel Hallak,90,Lebanon,1981-04-14,42,89.3,,280,,175,,270,725
+M,SBD,M_OES_WPC,Single-ply,3,Kareem Mokhtar,90,Egypt,2000-02-01,24,89.4,,260,,160,,260,680
+M,SBD,M_OES_WPC,Single-ply,4,Mohamed Mahmoud Abdo,90,Egypt,1998-05-15,25,88,,250,,125,,240,615
+M,SBD,M_TES_2_WPC,Single-ply,1,Omar Said,100,Egypt,2007-10-24,16,97,,215,,125,,235,575
+M,SBD,M_TES_3_WPC,Single-ply,1,Ahmed Shawkat,100,Egypt,2004-03-22,19,92.6,,165,,75,,270,510
+M,SBD,M_TES_3_WPC,Single-ply,DQ,Mrawan Abd Aziz,100,Egypt,2004-12-19,19,96.6,,,,,,,
+M,SBD,M_MES_1_WPC,Single-ply,1,Islam Abd Alah,100,Egypt,1979-04-30,44,94.6,,275,,165,,245,685
+M,SBD,M_OES_WPC,Single-ply,1,Mohamed Rabie,100,Egypt,1995-05-10,28,99.5,,330,,180,,275,785
+M,SBD,M_OES_WPC,Single-ply,2,Waleed Adel,100,Egypt,1994-08-01,29,96.7,,310,,170,,247.5,727.5
+M,SBD,M_OES_WPC,Single-ply,3,Ahmed Arafa,100,Egypt,1988-11-20,35,95.7,,255,,165,,282.5,702.5
+M,SBD,M_OES_WPC,Single-ply,4,Omar Eltahawy,100,Egypt,1999-06-19,24,96,,265,,160,,250,675
+M,SBD,M_TES_3_WPC,Single-ply,1,Ziad Ahmed,110,Egypt,2005-12-09,18,101.3,,200,,120,,230,550
+M,SBD,M_MES_1_WPC,Single-ply,1,Alexander Polfuntikov,110,Russia,1982-12-06,41,103,,355,208,200,,290,845
+M,SBD,M_OES_WPC,Single-ply,2,Tarek Ragab,110,Egypt,1984-02-05,39,108.3,,345,,170,,262.5,777.5
+M,SBD,M_MES_3_WPC,Single-ply,1,Mohamed Elghamry,110,Egypt,1973-07-08,50,106.1,,270,,200,,250,720
+M,SBD,M_OES_WPC,Single-ply,1,Alexander Polfuntikov,110,Russia,1982-12-06,41,103,,355,208,200,,290,845
+M,SBD,M_OES_WPC,Single-ply,2,Ibram Lewis,110,Egypt,1999-08-28,24,107.9,,310,,190,,320,820
+M,SBD,M_OES_WPC,Single-ply,3,Mahmoud Masoud,110,Egypt,1997-09-10,26,107.7,,255,,185,,285,725
+M,SBD,M_OES_WPC,Single-ply,4,Mohamed Elghamry,110,Egypt,1973-07-08,50,106.1,,270,,200,,250,720
+M,SBD,M_TES_3_WPC,Single-ply,1,Youssef Ihab,125,Egypt,2004-08-17,19,118.5,,160,,105,,200,465
+M,SBD,M_OES_WPC,Single-ply,DQ,Ahmed Maher,125,Egypt,1995-06-01,28,118.8,,,,,,,
+M,SBD,M_OES_WPC,Single-ply,DQ,Mohannad El Chami,125,Lebanon,1987-01-29,37,122.3,,,,,,,
+M,D,M_MEM_3_WPC,Multi-ply,1,Mohamed Mazen Jomaa,82.5,Syria,1973-08-13,50,82.5,,,,,,165,165
+M,D,M_OEM_WPC,Multi-ply,1,Alaa Abdelaheem,90,Egypt,1987-01-13,37,89.7,,,,,,242.5,242.5
+M,D,M_OEM_WPC,Multi-ply,1,Hamada Fawzy,100,Egypt,1989-08-30,34,94.9,,,,,,245,245
+M,D,M_MEM_2_WPC,Multi-ply,1,Hossam Eldin Alafifi,125,Egypt,1975-04-10,48,113.5,,,,,,250,250
+F,D,F_TES_1_WPC,Single-ply,1,Arwa Abdelghany,67.5,Egypt,2009-09-06,14,64.6,,,,,,90,90
+F,D,F_JES_WPC,Single-ply,1,Asmaa Ahmed,67.5,Egypt,2002-03-02,21,67.3,,,,,,117.5,117.5
+F,D,F_MES_5_WPC,Single-ply,1,Amany Ahmed Rabi,67.5,Egypt,1961-12-01,62,66.9,,,,,,185,185
+F,D,F_OES_WPC,Single-ply,1,Aya Mohamed,67.5,Egypt,1998-11-04,25,64,,,,,,142.5,142.5
+F,D,F_JES_WPC,Single-ply,1,Habiba Ahmed Khater,75,Egypt,2000-10-01,23,75,,,,,,140,140
+F,D,F_OES_WPC,Single-ply,DQ,Nevine Mohamed,75,Egypt,1983-09-22,40,73.7,,,,,,,
+M,D,M_TES_1_WPC,Single-ply,1,Marwan Fekry,52,Egypt,2010-07-26,13,51.2,,,,,,125,125
+M,D,M_TES_2_WPC,Single-ply,1,Youssef Zakaria,56,Egypt,2007-04-13,16,55.3,,,,,,135,135
+M,D,M_TES_2_WPC,Single-ply,1,Mohamed Magdy,60,Egypt,2006-08-06,17,60,,,,,,140,140
+M,D,M_TES_2_WPC,Single-ply,1,George Philip,67.5,Egypt,2006-08-06,17,65,,,,,205,195,195
+M,D,M_TES_2_WPC,Single-ply,2,Marawan Hany,67.5,Egypt,2006-05-10,17,67.1,,,,,,175,175
+M,D,M_TES_2_WPC,Single-ply,3,Mohamed Abdelrahman Mostafa,67.5,Egypt,2006-08-02,17,66.7,,,,,,145,145
+M,D,M_JES_WPC,Single-ply,1,Fares Gamal,67.5,Egypt,2003-04-23,20,65.1,,,,,,187.5,187.5
+M,D,M_JES_WPC,Single-ply,2,Mohamed Kamal,67.5,Egypt,2003-06-16,20,66.2,,,,,,180,180
+M,D,M_OES_WPC,Single-ply,1,Mohamed Ashmawy,67.5,Egypt,1999-08-15,24,64.4,,,,,,185,185
+M,D,M_OES_WPC,Single-ply,2,Mohamed Ali #3,67.5,Egypt,2000-01-11,24,66.5,,,,,,180,180
+M,D,M_TES_1_WPC,Single-ply,1,Kirolos Ekramy,75,Egypt,2008-08-31,15,72.2,,,,,,152.5,152.5
+M,D,M_TES_1_WPC,Single-ply,2,Yaseen Farghl,75,Egypt,2009-01-01,15,73.7,,,,,,142.5,142.5
+M,D,M_TES_2_WPC,Single-ply,1,Yousef Assem,75,Egypt,2007-01-23,17,72.2,,,,,,200,200
+M,D,M_TES_2_WPC,Single-ply,2,Omar Ibrahim,75,Egypt,2007-12-23,16,72.7,,,,,,170,170
+M,D,M_TES_2_WPC,Single-ply,3,Abdelrahman Ahmed,75,Egypt,2006-09-11,17,69.5,,,,,,167.5,167.5
+M,D,M_TES_3_WPC,Single-ply,1,Yehia Salah,75,Egypt,2004-02-25,19,75,,,,,,220,220
+M,D,M_TES_3_WPC,Single-ply,2,Omar Hesham,75,Egypt,2004-12-14,19,73.7,,,,,,212.5,212.5
+M,D,M_TES_3_WPC,Single-ply,3,Zead Rabie Farig,75,Egypt,2005-02-17,18,70.3,,,,,,205,205
+M,D,M_TES_3_WPC,Single-ply,4,Hassan Ali Hassan,75,Egypt,2005-05-24,18,75,,,,,,200,200
+M,D,M_TES_3_WPC,Single-ply,5,Yahia Hafiz,75,Egypt,2005-11-16,18,70,,,,,,195,195
+M,D,M_TES_3_WPC,Single-ply,6,Ahmed Ismail,75,Egypt,2004-09-29,19,72.4,,,,,,195,195
+M,D,M_JES_WPC,Single-ply,1,Abdelrahman Elgzery,75,Egypt,2001-05-20,22,74.9,,,,,,220,220
+M,D,M_JES_WPC,Single-ply,2,Hassan Bekhiet,75,Egypt,2000-03-21,23,73.2,,,,,,190,190
+M,D,M_MES_2_WPC,Single-ply,1,Mohamed Zaki,75,Egypt,1977-09-12,46,75,,,,,,200,200
+M,D,M_OES_WPC,Single-ply,1,Ahmed Eladl,75,Egypt,1997-11-24,26,74.8,,,,,,250,250
+M,D,M_OES_WPC,Single-ply,2,Abdelfadeel Abdalla,75,Egypt,1987-09-13,36,73.6,,,,,,215,215
+M,D,M_TES_1_WPC,Single-ply,1,Ibrahim Eslam,82.5,Egypt,2010-07-28,13,82.5,,,,,,120,120
+M,D,M_TES_3_WPC,Single-ply,1,Fares Mohamed,82.5,Egypt,2004-11-03,19,80.4,,,,,,225,225
+M,D,M_TES_3_WPC,Single-ply,2,Mohamed Mahmoud,82.5,Egypt,2004-07-01,19,82.1,,,,,,220,220
+M,D,M_TES_3_WPC,Single-ply,3,Nabil Mohamed,82.5,Egypt,2005-12-12,18,81.4,,,,,,192.5,192.5
+M,D,M_TES_3_WPC,Single-ply,4,Selim Salem,82.5,Egypt,2004-12-28,19,79.4,,,,,,185,185
+M,D,M_JES_WPC,Single-ply,1,Mohamed Ahmed,82.5,Egypt,2002-04-20,21,81.3,,,,,,230,230
+M,D,M_JES_WPC,Single-ply,2,Ebrahem Saad,82.5,Egypt,2001-01-01,23,81,,,,,,220,220
+M,D,M_OES_WPC,Single-ply,1,Mohamed Mansuor,82.5,Egypt,1990-01-30,34,82.3,,,,,,265,265
+M,D,M_TES_3_WPC,Single-ply,1,Mazen El Mashad,90,Egypt,2004-03-11,19,88.7,,,,,,170,170
+M,D,M_TES_3_WPC,Single-ply,DQ,Mohand Emad,90,Egypt,2005-07-16,18,89.4,,,,,,,
+M,D,M_JES_WPC,Single-ply,1,Ahmed Ali,90,Egypt,2002-09-15,21,88.8,,,,,,225,225
+M,D,M_MES_3_WPC,Single-ply,1,Mohanad Alhadadin,90,Syria,1970-04-22,53,83.4,,,,,,90,90
+M,D,M_MES_4_WPC,Single-ply,1,Sallam Gaber,90,Egypt,1966-08-09,57,89,,,,,,200,200
+M,D,M_OES_WPC,Single-ply,1,Mohamed Shaban,90,Egypt,1991-08-16,32,86.7,,,,,,260,260
+M,D,M_OES_WPC,Single-ply,2,Mohamed Ahmed Zaki,90,Egypt,1994-10-02,29,85.5,,,,,,245,245
+M,D,M_OES_WPC,Single-ply,3,Alaa Abdelaheem,90,Egypt,1987-01-13,37,89.7,,,,,,242.5,242.5
+M,D,M_OES_WPC,Single-ply,4,Mohamed Mahmoud Abdo,90,Egypt,1998-05-15,25,88,,,,,,240,240
+M,D,M_TES_2_WPC,Single-ply,1,Mohamed Aiman,100,Egypt,2006-06-06,17,93.2,,,,,,190,190
+M,D,M_TES_3_WPC,Single-ply,1,Ahmed Shawkat,100,Egypt,2004-03-22,19,92.6,,,,,,270,270
+M,D,M_TES_3_WPC,Single-ply,2,Mrawan Abd Aziz,100,Egypt,2004-12-19,19,96.6,,,,,,245,245
+M,D,M_MES_1_WPC,Single-ply,1,Islam Abd Alah,100,Egypt,1979-04-30,44,94.6,,,,,,245,245
+M,D,M_MES_4_WPC,Single-ply,1,Megahed Ali Hassan Mohamed,100,Egypt,1965-11-07,58,95.4,,,,,,182.5,182.5
+M,D,M_OES_WPC,Single-ply,1,Ahmed Arafa,100,Egypt,1988-11-20,35,95.7,,,,,,282.5,282.5
+M,D,M_OES_WPC,Single-ply,2,Ramadan Ahmed,100,Egypt,1985-06-01,38,99.3,,,,,,265,265
+M,D,M_OES_WPC,Single-ply,3,Omar Eltahawy,100,Egypt,1999-06-19,24,96,,,,,,250,250
+M,D,M_TES_1_WPC,Single-ply,1,Yaseen Razk,110,Egypt,2009-09-09,14,109,,,,,,160,160
+M,D,M_TES_3_WPC,Single-ply,1,Ziad Ahmed,110,Egypt,2005-12-09,18,101.3,,,,,,230,230
+M,D,M_MES_2_WPC,Single-ply,1,Elsaeed Eid,110,Egypt,1978-07-04,45,109.5,,,,,,220,220
+M,D,M_MES_3_WPC,Single-ply,1,Mohamed Elghamry,110,Egypt,1973-07-08,50,106.1,,,,,,250,250
+M,D,M_MES_3_WPC,Single-ply,2,Tamer Saeed,110,Egypt,1973-08-01,50,109.3,,,,,,220,220
+M,D,M_OES_WPC,Single-ply,1,Ibram Lewis,110,Egypt,1999-08-28,24,107.9,,,,,,320,320
+M,D,M_OES_WPC,Single-ply,2,Hassan Ali Maged,110,Egypt,1992-07-30,31,107.6,,,,,,252.5,252.5
+M,D,M_OES_WPC,Single-ply,3,Khaled Shaban,110,Egypt,1994-01-13,30,104,,,,,,250,250
+M,D,M_OES_WPC,Single-ply,4,Agostino Vaccaro,110,Italy,1991-02-13,32,102.09,,,,,,210,210
+M,D,M_OES_WPC,Single-ply,DQ,Hassan Ali,110,Egypt,1999-11-05,24,108.8,,,,,,,
+M,D,M_TES_3_WPC,Single-ply,1,Fares Fareed,125,Egypt,2004-02-11,19,116.7,,,,,,210,210
+M,D,M_MES_2_WPC,Single-ply,1,Hossam Eldin Alafifi,125,Egypt,1975-04-10,48,113.5,,,,,,250,250
+M,D,M_OES_WPC,Single-ply,1,Mohannad El Chami,125,Lebanon,1987-01-29,37,122.3,,,,,,270,270
+M,D,M_JES_WPC,Single-ply,1,Ahmed Aziz,140,Egypt,2003-10-23,20,126.1,,,,,,290,290
+M,D,M_MES_2_WPC,Single-ply,1,Ahmed Foad,140,Egypt,1976-06-01,47,135,,,,,,240,240
+M,B,M_MEM_5_WPC,Unlimited,1,Mohmed Monier Mahmuod,60,Egypt,1963-02-14,60,58.8,,,,90,,,90
+M,B,M_MEM_3_WPC,Multi-ply,1,Mohamed Mazen Jomaa,82.5,Syria,1973-08-13,50,82.5,,,,107.5,,,107.5
+M,B,M_MEM_5_WPC,Multi-ply,DQ,Živorad Marković,100,Serbia,1960-09-29,63,92.3,,,,,,,
