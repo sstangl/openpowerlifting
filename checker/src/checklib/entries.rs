@@ -895,7 +895,7 @@ fn check_weight_kg(s: &str, line: u64, header: Header, report: &mut Report) -> W
     match s.parse::<WeightKg>() {
         Ok(kg) => {
             // Check for weights that are far beyond what's ever been lifted.
-            const MAX_KG: i32 = 650;
+            const MAX_KG: i32 = 700;
             if header != Header::TotalKg
                 && (kg > WeightKg::from_i32(MAX_KG) || kg < WeightKg::from_i32(-MAX_KG))
             {
