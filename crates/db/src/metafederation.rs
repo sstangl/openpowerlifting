@@ -752,6 +752,11 @@ pub enum MetaFederation {
     #[strum(to_string = "wrpf-and-affiliates")]
     WRPFAndAffiliates,
 
+    /// WRPF-Latam including South American countries.
+    #[strum(to_string = "wrpf-latam")]
+    #[serde(rename = "WRPF-LATAM")]
+    WRPFLatam,
+
     /// WRPF-CAN, but only for Tested entries.
     #[strum(to_string = "wrpf-can-tested")]
     #[serde(rename = "WRPF-CAN-Tested")]
@@ -1253,6 +1258,18 @@ impl MetaFederation {
             MetaFederation::WRPFUSATested => {
                 entry.tested && MetaFederation::WRPFUSA.contains(entry, meets)
             }
+            MetaFederation::WRPFLatam => matches!(
+                meet.federation,
+                Federation::WRPFLatam
+                    | Federation::WRPFMEX
+                    | Federation::WRPFNIC
+                    | Federation::WRPFArgentina
+                    | Federation::WRPFBrazil
+                    | Federation::WRPFChile
+                    | Federation::WRPFColombia
+                    | Federation::WRPFEcuador
+                    | Federation::WRPFVenezuela
+            ),
             MetaFederation::WUAPCRO => {
                 (meet.federation == Federation::WUAPCRO || meet.federation == Federation::HPO)
                     && (entry.lifter_country.is_none()

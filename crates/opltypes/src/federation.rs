@@ -1900,6 +1900,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-KAZ", serialize = "wrpf-kaz")]
     WRPFKAZ,
 
+    /// Latin American WRPF.
+    #[serde(rename = "WRPF-LATAM")]
+    #[strum(to_string = "WRPF-Latam", serialize = "wrpf-latam")]
+    WRPFLatam,
+
     /// Latvian WRPF affiliate.
     #[serde(rename = "WRPF-Latvia")]
     #[strum(to_string = "WRPF-Latvia", serialize = "wrpf-latvia")]
@@ -2489,6 +2494,7 @@ impl Federation {
             Federation::WRPFIreland => false,
             Federation::WRPFItaly => false,
             Federation::WRPFKAZ => false,
+            Federation::WRPFLatam => false,
             Federation::WRPFLatvia => false,
             Federation::WRPFLithuania => false,
             Federation::WRPFMEX => false,
@@ -2948,6 +2954,7 @@ impl Federation {
             Federation::WRPFIreland => Some(Country::Ireland),
             Federation::WRPFItaly => Some(Country::Italy),
             Federation::WRPFKAZ => Some(Country::Kazakhstan),
+            Federation::WRPFLatam => None,
             Federation::WRPFLatvia => Some(Country::Latvia),
             Federation::WRPFLithuania => Some(Country::Lithuania),
             Federation::WRPFMEX => Some(Country::Mexico),
@@ -3524,6 +3531,7 @@ impl Federation {
             Federation::WRPFIreland => Some(Federation::WRPF),
             Federation::WRPFItaly => Some(Federation::WRPF),
             Federation::WRPFKAZ => Some(Federation::WRPF),
+            Federation::WRPFLatam => Some(Federation::WRPF),
             Federation::WRPFLatvia => Some(Federation::WRPF),
             Federation::WRPFLithuania => Some(Federation::WRPF),
             Federation::WRPFMEX => Some(Federation::WRPF),
@@ -4096,6 +4104,7 @@ impl Federation {
             Federation::WRPFIreland => PointsSystem::Wilks,
             Federation::WRPFItaly => PointsSystem::Wilks,
             Federation::WRPFKAZ => PointsSystem::Wilks,
+            Federation::WRPFLatam => PointsSystem::Wilks,
             Federation::WRPFLatvia => PointsSystem::Wilks,
             Federation::WRPFLithuania => PointsSystem::Wilks,
             Federation::WRPFMEX => PointsSystem::Wilks,
