@@ -35,7 +35,7 @@
   <option value="nordicpf" {% if selection.federation == "NordicPF" %}selected{% endif %}>NordicPF - Nordic Powerlifting Federation [IPF]</option>
   <option value="oceaniapf" {% if selection.federation == "OceaniaPF" %}selected{% endif %}>OceaniaPF - Oceania Powerlifting Federation [WP]</option>
   <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF - Oceania Regional Powerlifting Federation [IPF]</option>
-  <option value="wrpflatam" {% if selection.federation == "WRPFLatam" %}selected{% endif %}>WRPFLatam [WRPF]</option>
+  <option value="wrpf-latam" {% if selection.federation == "WRPF-Latam" %}selected{% endif %}>WRPF-Latam [WRPF Latin America]</option>
 </optgroup>
 <optgroup label="{{strings.country.usa}}">
   <option value="all-usa" {% if selection.federation == "AllUSA" %}selected{% endif %}>{{strings.selectors.fed.all_usa}}</option>
