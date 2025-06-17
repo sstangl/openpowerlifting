@@ -15,85 +15,137 @@
 #
 #
 # NEW! Now handles GreekName.
-#
+
+# NEW! Now with error handling for missing files or erroneous lifter names.
 
 import oplcsv
 import os
 
+RED = "\u001b[31m"
+RESET = "\u001b[0m"
+
 
 # Creates a hashmap keyed on misspellings.
 def load_names(datafilepath):
-    h = {}
-    with open(datafilepath, 'r', encoding='utf-8') as fd:
-        for line in fd.readlines():
-            names = line.split(',')
-            assert len(names) >= 2
+    try:
+        h = {}
 
-            correct_name = names[0].strip()
-            assert correct_name
+        with open(datafilepath, "r", encoding="utf-8") as fd:
+            for line in fd.readlines():
+                names = line.split(",")
+                if len(names) < 2:
+                    print(RED + f"error: invalid format in {datafilepath}:"
+                          "each line must have at least two names" + RESET)
+                    continue
 
-            for incorrect_name in names[1:]:
-                incorrect_name = incorrect_name.strip()
-                assert incorrect_name
-                assert incorrect_name not in h
-                h[incorrect_name] = correct_name
+                correct_name = names[0].strip()
+                if not correct_name:
+                    print(RED + f"error: empty correct name in {datafilepath}" + RESET)
+                    continue
 
-    return h
+                for incorrect_name in names[1:]:
+                    incorrect_name = incorrect_name.strip()
+                    if not incorrect_name:
+                        print(RED + f"error: empty incorrect name in {datafilepath}"
+                              + RESET)
+                        continue
+
+                    if incorrect_name in h:
+                        print(
+                            f"error: duplicate incorrect name '{incorrect_name}'"
+                            f" in {datafilepath}"
+                            + RESET)
+                        continue
+
+                    h[incorrect_name] = correct_name
+        return h
+
+    except FileNotFoundError:
+        print(RED + f"error: could not find file {datafilepath}" + RESET)
+        return {}
+
+    except Exception as error:
+        print(RED + f"error: could not load names from {datafilepath}: {error}" + RESET)
+        return {}
 
 
 def correct_names(namehash, cyrhash, greekhash, entriespath):
-    csv = oplcsv.Csv(entriespath)
-    if 'Name' not in csv.fieldnames:
-        RED = '\u001b[31m'
-        RESET = '\u001b[0m'
-        print(RED + entriespath + RESET)
-        print(RED + "error: 'Name' column starts with an invisible character" + RESET)
-    assert 'Name' in csv.fieldnames
+    try:
+        if not all(isinstance(h, dict) for h in (namehash, cyrhash, greekhash)):
+            print(RED + f"error: invalid name correction data for {entriespath}" + RESET)
+            return
 
-    nameidx = csv.index('Name')
-    cyridx = csv.index(
-        'CyrillicName') if 'CyrillicName' in csv.fieldnames else None
-    greekidx = csv.index(
-        'GreekName') if 'GreekName' in csv.fieldnames else None
+        csv = oplcsv.Csv(entriespath)
 
-    changed = False
-    for row in csv.rows:
-        if row[nameidx] in namehash:
-            changed = True
-            row[nameidx] = namehash[row[nameidx]]
-        if cyridx is not None and row[cyridx] in cyrhash:
-            changed = True
-            row[cyridx] = cyrhash[row[cyridx]]
-        if greekidx is not None and row[greekidx] in greekhash:
-            changed = True
-            row[greekidx] = greekhash[row[greekidx]]
-    if changed:
-        with open(entriespath, 'w', encoding='utf-8', newline='\n') as fd:
-            csv.write(fd)
+        if "Name" not in csv.fieldnames:
+            print(RED + entriespath + RESET)
+            print(RED + "error: 'Name' column missing or malformed" + RESET)
+            return
+
+        nameidx = csv.index("Name")
+        cyridx = csv.index("CyrillicName") if "CyrillicName" in csv.fieldnames else None
+        greekidx = csv.index("GreekName") if "GreekName" in csv.fieldnames else None
+        changed = False
+
+        for row in csv.rows:
+            if row[nameidx] in namehash:
+                changed = True
+                row[nameidx] = namehash[row[nameidx]]
+            if cyridx is not None and row[cyridx] in cyrhash:
+                changed = True
+                row[cyridx] = cyrhash[row[cyridx]]
+            if greekidx is not None and row[greekidx] in greekhash:
+                changed = True
+                row[greekidx] = greekhash[row[greekidx]]
+
+        if changed:
+            with open(entriespath, "w", encoding="utf-8", newline="\n") as fd:
+                csv.write(fd)
+
+    except Exception as error:
+        print(RED + f"error: could not correct names in {entriespath}: {error}" + RESET)
 
 
 def main():
-    scriptsdir = os.path.dirname(os.path.realpath(__file__))
-    projectdir = os.path.dirname(scriptsdir)
-    liftersdir = projectdir + os.sep + "lifter-data"
+    try:
+        scriptsdir = os.path.dirname(os.path.realpath(__file__))
+        projectdir = os.path.dirname(scriptsdir)
+        liftersdir = os.path.join(projectdir, "lifter-data")
+        if not os.path.isdir(liftersdir):
+            print(RED + f"error: lifter data folder not found at {liftersdir}" + RESET)
+            return
 
-    namehash = load_names(liftersdir + os.sep + "name-corrections.dat")
-    cyrhash = load_names(liftersdir + os.sep + "cyrillic-name-corrections.dat")
-    greekhash = load_names(liftersdir + os.sep + "greek-name-corrections.dat")
+        print(f"Standardizing names using lifter data from {liftersdir}")
 
-    # Standardize names only for files under the current subtree.
-    #
-    # This is a performance optimization for people adding new meets while
-    # running on Windows Subsystem for Linux, which has very slow file operations.
-    recursedir = os.getcwd()
+        namehash = load_names(os.path.join(liftersdir, "name-corrections.dat"))
+        cyrhash = load_names(os.path.join(liftersdir, "cyrillic-name-corrections.dat"))
+        greekhash = load_names(os.path.join(liftersdir, "greek-name-corrections.dat"))
+        if not all(isinstance(h, dict) for h in (namehash, cyrhash, greekhash)):
+            print(RED + "error: failed to load name corrections from "
+                  "lifter-data .dat files" + RESET)
+            return
 
-    for dirname, subdirs, files in os.walk(recursedir):
-        if "meet-data" in subdirs:
-            subdirs[:] = ['meet-data']
-        if 'entries.csv' in files:
-            entriespath = dirname + os.sep + 'entries.csv'
-            correct_names(namehash, cyrhash, greekhash, entriespath)
+        # Standardize names only for files under the current subtree.
+        #
+        # This is a performance optimization for people adding new meets while
+        # running on Windows Subsystem for Linux, which has very slow file operations.
+        recursedir = os.getcwd()
+
+        files_processed = 0
+        for dirname, subdirs, files in os.walk(recursedir):
+            if "meet-data" in subdirs:
+                subdirs[:] = ["meet-data"]
+
+            if "entries.csv" in files:
+                entriespath = os.path.join(dirname, "entries.csv")
+                correct_names(namehash, cyrhash, greekhash, entriespath)
+                files_processed += 1
+
+        print(f"Standardized names for {files_processed} entries.csv file(s)")
+
+    except Exception as error:
+        print(RED + f"error: could not run name standardization script: {error}" + RESET)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
