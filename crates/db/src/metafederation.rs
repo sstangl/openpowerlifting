@@ -1054,7 +1054,7 @@ impl MetaFederation {
             MetaFederation::CyprusPF => affiliation!(meet, entry, CyprusPF, IPF, EPF),
             MetaFederation::DPL => affiliation!(meet, entry, DPL, IPL),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
-            MetaFederation::EgyptPF => affiliation!(meet, entry, EgyptPF, IPF, AfricanPF),
+            MetaFederation::EgyptPF => affiliation!(meet, entry, EgyptPF, IPF, AfricanPF, UAEPL, SSSC, KPC, QatarPL), //Egypt use gulf meets for Team and Records
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO, NAPF),
