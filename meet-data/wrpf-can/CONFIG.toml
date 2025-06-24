@@ -33,6 +33,10 @@
     m65_69 = {name="M65-69", min=65, max=69}
     m70_74 = {name="M70-74", min=70, max=74}
     m75_79 = {name="M75-79", min=75, max=79}
+    m40_49 = {name="M40-49", min=40, max=49}
+    m50_59 = {name="M50-59", min=50, max=59}
+    m60_69 = {name="M60-69", min=60, max=69}
+    m70_79 = {name="M70-79", min=70, max=79}
     m80p = {name="M80+", min=80, max=999}
 
     # OpenLifter-style divisions, but tested.
@@ -51,6 +55,10 @@
     tm65_69 = {name="TM65-69", min=65, max=69, tested="Yes"}
     tm70_74 = {name="TM70-74", min=70, max=74, tested="Yes"}
     tm75_79 = {name="TM75-79", min=75, max=79, tested="Yes"}
+    tm40_49 = {name="TM40-49", min=40, max=49, tested="Yes"}
+    tm50_59 = {name="TM50-59", min=50, max=59, tested="Yes"}
+    tm60_69 = {name="TM60-69", min=60, max=69, tested="Yes"}
+    tm70_79 = {name="TM70-79", min=70, max=79, tested="Yes"}
     tm80p = {name="TM80+", min=80, max=999, tested="Yes"}
 
     # OpenLifter-style divisions, but tested as suffix.
