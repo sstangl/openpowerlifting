@@ -76,7 +76,7 @@ pub fn goodlift(
     }
 
     // A - B * e^(-C * Bwt).
-    let e_pow = (-1.0 * c * f64::from(bodyweight)).exp();
+    let e_pow = (-c * f64::from(bodyweight)).exp();
     let denominator = a - (b * e_pow);
 
     // Prevent division by zero.
