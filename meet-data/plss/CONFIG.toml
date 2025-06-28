@@ -58,5 +58,6 @@
     sex = "F"
 
 [exemptions]
+    1801 = ["ExemptWeightClassConsistency"]
     2304 = ["ExemptWeightClassConsistency"]
     2405 = ["ExemptWeightClassConsistency"]
