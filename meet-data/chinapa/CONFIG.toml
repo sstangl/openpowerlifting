@@ -47,3 +47,4 @@
     sex = "F"
 
 [exemptions]
+    2506 = ["ExemptWeightClassConsistency"] # uses IPF weightclasses
