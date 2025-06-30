@@ -448,8 +448,8 @@
 </optgroup>
 <optgroup label="{{strings.country.malaysia}}">
   <option value="all-malaysia" {% if selection.federation == "AllMalaysia" %}selected{% endif %}>{{strings.selectors.fed.all_malaysia}}</option>
-  <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MAP - Malaysian Powerlifting Alliance [GPA]</option>
-  <option value="map" {% if selection.federation == "MAP" %}selected{% endif %}>MPA - Malaysian Association for Powerlifting [IPF]</option>
+  <option value="mpa" {% if selection.federation == "MPA" %}selected{% endif %}>MPA - Malaysian Powerlifting Alliance [GPA]</option>
+  <option value="map" {% if selection.federation == "MAP" %}selected{% endif %}>MAP - Malaysian Association for Powerlifting [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.malta}}">
   <option value="maltapa" {% if selection.federation == "MaltaPA" %}selected{% endif %}>MaltaPA - Malta Powerlifting Association [IPF]</option>
