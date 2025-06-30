@@ -13,6 +13,7 @@
 
 
 [exemptions]
+	2202 = ["ExemptWeightClassConsistency"] # IWF categories instead of IPF ones
     2403 = ["ExemptWeightClassConsistency"] # Limited categories.
     2404 = ["ExemptWeightClassConsistency"] # Limited categories.
     2406 = ["ExemptWeightClassConsistency"] # Limited categories.
