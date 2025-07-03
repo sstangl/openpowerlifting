@@ -1213,10 +1213,6 @@ pub enum Federation {
     #[strum(to_string = "RhinoPC", serialize = "rhinopc")]
     RhinoPC,
 
-    /// Unaffiliated meets held in the Taiwan.
-    #[strum(to_string = "Taiwan-UA", serialize = "taiwan-ua")]
-    TaiwanUA,
-
     /// Revolution Powerlifting Syndicate.
     #[strum(to_string = "RPS", serialize = "rps")]
     RPS,
@@ -1332,6 +1328,10 @@ pub enum Federation {
     /// New IPF affiliate for Thailand as of 2023
     #[strum(to_string = "TAAP", serialize = "taap")]
     TAAP,
+
+    /// Unaffiliated meets held in the Taiwan.
+    #[strum(to_string = "Taiwan-UA", serialize = "taiwan-ua")]
+    TaiwanUA,
 
     /// Ex-Thai IPF affiliate.
     #[strum(to_string = "ThaiPF", serialize = "thaipf")]
