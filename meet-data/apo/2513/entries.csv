@@ -1,37 +1,37 @@
-Name,Division,Equipment,Sex,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthDate,Event,Place
-Vincent Cortinas,T13-15T,Wraps,M,67.5,120,65,132.5,317.5,,SBD,1
-Anthony Scalese,T16-17T,Single-ply,M,82.5,205,120,205,530,,SBD,1
-Joseph Carovillano,Open,Multi-ply,M,110,327.5,192.5,242.5,762.5,,SBD,3
-Chris Robinson #14,Open,Multi-ply,M,100,285,225,237.5,747.5,,SBD,2
-Jordan Hensley,Open,Multi-ply,M,90,292.5,167.5,245,705,,SBD,1
-Steven Cortinas,Open,Wraps,M,100,232.5,135,250,617.5,,SBD,1
-Andrew Lyna,J20-23T,Multi-ply,M,67.5,212.5,120,182.5,515,,SBD,1
-Luke Moyers,T16-17T,Single-ply,M,67.5,175,110,200,485,,SBD,1
-Bobby Green,T16-17T,Single-ply,M,67.5,165,110,197.5,472.5,,SBD,2
-Nathan Gill,Open,Wraps,M,125,242.5,175,255,672.5,,SBD,1
-Jake Leighton,Open,Multi-ply,M,140,365,230,282.5,877.5,,SBD,2
-Noah Weincek,Open,Wraps,M,110,260,147.5,272.5,680,,SBD,1
-Joseph Mackie,T16-17,Multi-ply,M,100,327.5,222.5,265,815,,SBD,1
-Grant Hoff,Open,Multi-ply,M,125,370,227.5,297.5,895,,SBD,4
-Mason Lester,Open,Multi-ply,M,110,387.5,210,285,882.5,,SBD,2
-Eric Hubbs,M60-64T,Wraps,M,140,187.5,138,183,508.5,,SBD,1
-Nasean Green,T16-17T,Wraps,M,100,220,157.5,242.5,620,,SBD,1
-Santiago Vasquez,Open,Multi-ply,M,140+,382.5,277.5,322.5,982.5,,SBD,2
-Bobby Ritter,Open,Multi-ply,M,140,392.5,275,275,942.5,,SBD,1
-Lee Nash,Open,Multi-ply,M,125,365,267.5,305,937.5,,SBD,3
-Rene Bernier,Open,Multi-ply,M,140+,387.5,320,292.5,1000,,SBD,1
-Gabe Johnson #1,Open,Multi-ply,M,125,400,260,290,950,,SBD,2
-Corey Ford #1,Open,Multi-ply,M,125,382.5,242.5,352.5,977.5,,SBD,1
-Justin Perez,OpenT,Multi-ply,M,110,410,230,230,870,,SBD,2
-Conner Delaney,J20-23,Multi-ply,M,125,412.5,240,365,1017.5,,SBD,1
-Tyler E Roy,Open,Multi-ply,M,100,417.5,255,272.5,945,,SBD,1
-Josh Larner,Open,Multi-ply,M,110,410,242.5,337.5,990,,SBD,1
-Richard Bloom,M40-44T,Raw,M,67.5,182.5,155,188,525.5,,SBD,1
-Cooper Brooks,OpenT,Multi-ply,M,110,365,292.5,305,962.5,,SBD,1
-Terese Market,M40-44,Wraps,F,67.5,105,67.5,127.5,300,,SBD,1
-Ella Sles,T16-17T,Single-ply,F,48,87.5,55,105,247.5,,SBD,1
-Sandy Harp,M45-49,Wraps,F,110,125,87.5,143,355.5,,SBD,1
-Val Oliveira,OpenT,Multi-ply,F,110,310,165,185,660,,SBD,1
-Cameron Neely,SOT,Raw,M,125,140,67.5,115,322.5,,SBD,1
-Jackson Ware,SOT,Raw,M,90,120,75,175,370,,SBD,2
-Tyler Chambers,SOT,Raw,M,90,195,123,187.5,505.5,,SBD,1
+Name,Division,Equipment,Sex,WeightClassKg,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,BirthDate,Event,Place,BodyweightKg
+Vincent Cortinas,T13-15T,Wraps,M,67.5,120,65,132.5,317.5,,SBD,1,65
+Anthony Scalese,T16-17T,Single-ply,M,82.5,205,120,205,530,,SBD,1,78.6
+Joseph Carovillano,Open,Multi-ply,M,110,327.5,192.5,242.5,762.5,,SBD,3,107.9
+Chris Robinson #14,Open,Multi-ply,M,100,285,225,237.5,747.5,,SBD,2,99.4
+Jordan Hensley,Open,Multi-ply,M,90,292.5,167.5,245,705,,SBD,1,84
+Steven Cortinas,Open,Wraps,M,100,232.5,135,250,617.5,,SBD,1,97.3
+Andrew Lyna,J20-23T,Multi-ply,M,67.5,212.5,120,182.5,515,,SBD,1,62.9
+Luke Moyers,T16-17T,Single-ply,M,67.5,175,110,200,485,,SBD,1,64.4
+Bobby Green,T16-17T,Single-ply,M,67.5,165,110,197.5,472.5,,SBD,2,61.2
+Nathan Gill,Open,Wraps,M,125,242.5,175,255,672.5,,SBD,1,112.7
+Jake Leighton,Open,Multi-ply,M,140,365,230,282.5,877.5,,SBD,2,132
+Noah Weincek,Open,Wraps,M,110,260,147.5,272.5,680,,SBD,1,107.6
+Joseph Mackie,T16-17,Multi-ply,M,100,327.5,222.5,265,815,,SBD,1,95.7
+Grant Hoff,Open,Multi-ply,M,125,370,227.5,297.5,895,,SBD,4,116.2
+Mason Lester,Open,Multi-ply,M,110,387.5,210,285,882.5,,SBD,2,104.7
+Eric Hubbs,M60-64T,Wraps,M,140,187.5,138,183,508.5,,SBD,1,137
+Nasean Green,T16-17T,Wraps,M,100,220,157.5,242.5,620,,SBD,1,94.4
+Santiago Vasquez,Open,Multi-ply,M,140+,382.5,277.5,322.5,982.5,,SBD,2,152.3
+Bobby Ritter,Open,Multi-ply,M,140,392.5,275,275,942.5,,SBD,1,125.5
+Lee Nash,Open,Multi-ply,M,125,365,267.5,305,937.5,,SBD,3,118.3
+Rene Bernier,Open,Multi-ply,M,140+,387.5,320,292.5,1000,,SBD,1,151.7
+Gabe Johnson #1,Open,Multi-ply,M,125,400,260,290,950,,SBD,2,114.2
+Corey Ford #1,Open,Multi-ply,M,125,382.5,242.5,352.5,977.5,,SBD,1,120.4
+Justin Perez,OpenT,Multi-ply,M,110,410,230,230,870,,SBD,2,109.1
+Conner Delaney,J20-23,Multi-ply,M,125,412.5,240,365,1017.5,,SBD,1,121.8
+Tyler E Roy,Open,Multi-ply,M,100,417.5,255,272.5,945,,SBD,1,96.2
+Josh Larner,Open,Multi-ply,M,110,410,242.5,337.5,990,,SBD,1,108.5
+Richard Bloom,M40-44T,Raw,M,67.5,182.5,155,188,525.5,,SBD,1,66.3
+Cooper Brooks,OpenT,Multi-ply,M,110,365,292.5,305,962.5,,SBD,1,103.9
+Terese Market,M40-44,Wraps,F,67.5,105,67.5,127.5,300,,SBD,1,65
+Ella Sles,T16-17T,Single-ply,F,48,87.5,55,105,247.5,,SBD,1,45.2
+Sandy Harp,M45-49,Wraps,F,110,125,87.5,143,355.5,,SBD,1,106.9
+Val Oliveira,OpenT,Multi-ply,F,110,310,165,185,660,,SBD,1,102.3
+Cameron Neely,SOT,Raw,M,125,140,67.5,115,322.5,,SBD,1,118
+Jackson Ware,SOT,Raw,M,90,120,75,175,370,,SBD,2,87.8
+Tyler Chambers,SOT,Raw,M,90,195,123,187.5,505.5,,SBD,1,88.8
