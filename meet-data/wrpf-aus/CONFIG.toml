@@ -86,3 +86,4 @@
 
 [exemptions]
     2214 = ["ExemptDivision"] # Weird divisions.
+    2503 = ["ExemptDivision"] # Weird divisions.
