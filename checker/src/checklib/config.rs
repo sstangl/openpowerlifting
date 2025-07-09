@@ -1,7 +1,7 @@
 //! Checks for CONFIG.toml files.
 
 use opltypes::*;
-use toml::{self, Value};
+use toml::{self, Table, Value};
 
 use std::error::Error;
 use std::fs::File;
@@ -618,19 +618,7 @@ fn parse_exemptions(value: &Value, report: &mut Report) -> Vec<ExemptionConfig> 
     acc
 }
 
-fn parse_config(root: &Value, mut report: Report) -> Result<CheckResult, Box<dyn Error>> {
-    // The highest-level Value must be a table.
-    let table = match root.as_table() {
-        Some(t) => t,
-        None => {
-            report.error("Root value must be a Table");
-            return Ok(CheckResult {
-                report,
-                config: None,
-            });
-        }
-    };
-
+fn parse_config(table: &Table, mut report: Report) -> Result<CheckResult, Box<dyn Error>> {
     // Parse the "options" table.
     let options = table
         .get("options")
@@ -709,6 +697,6 @@ pub fn check_config(config: PathBuf) -> Result<CheckResult, Box<dyn Error>> {
     file.read_to_string(&mut config_str)?;
 
     // Parse the entire string into TOML Value types.
-    let root = config_str.parse::<Value>()?;
+    let root = config_str.parse::<Table>()?;
     parse_config(&root, report)
 }

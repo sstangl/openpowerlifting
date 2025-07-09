@@ -30,6 +30,6 @@ serde_derive = { workspace = true }
 smartstring = "1.0"
 strum = { workspace = true }
 strum_macros = { workspace = true }
-toml = "0.8"
+toml = "0.9"
 unicode-normalization = "0.1.23"
 walkdir = "2"
