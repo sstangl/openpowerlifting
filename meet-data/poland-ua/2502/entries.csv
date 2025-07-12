@@ -1,0 +1,537 @@
+Place,Name,BirthDate,Sex,BirthYear,Age,Equipment,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
+1,Aleksandra Szymczykowska,,F,1998,27,Raw,K S WL Open,66.9,,110,115,117.5,117.5,120,,,,,,117.5,B
+2,Anita Gradzka-Brynczak,,F,1984,41,Raw,K S WL Open,48.3,,80,87.5,91,91,,,,,,,91,B
+3,Daria Walczykiewicz,,F,1982,42,Raw,K S WL Open,67.2,,80,85,-90,85,,,,,,,85,B
+4,Aleksandra Łukasik,,F,1998,27,Raw,K S WL Open,69.2,,75,80,85,85,,,,,,,85,B
+5,Karolina Warchał,,F,1998,27,Raw,K S WL Open,75.8,,80,85,90,90,,,,,,,90,B
+6,Emilia Wójtowicz,,F,1993,31,Raw,K S WL Open,57.7,,52.5,60,65,65,,,,,,,65,B
+7,Julia Drozdowska,,F,2001,24,Raw,K S WL Open,58.5,,60,62.5,65,65,,,,,,,65,B
+8,Aleksandra Dziewiczkiewicz,,F,1979,46,Raw,K S WL Open,68.8,,57.5,62.5,65,65,,,,,,,65,B
+9,Anna Zwolak-Gniot,,F,1968,57,Raw,K S WL Open,55.9,,52.5,55,-57.5,55,,,,,,,55,B
+10,Estera Kołodziej,,F,1987,37,Raw,K S WL Open,80.6,,65,-67.5,67.5,67.5,,,,,,,67.5,B
+11,Julia Masniakk,,F,2000,24,Raw,K S WL Open,57.9,,50,52.5,-57.5,52.5,,,,,,,52.5,B
+12,Agnieszka Zaroślinska,,F,1997,27,Raw,K S WL Open,66.3,,47.5,52.5,55,55,,,,,,,55,B
+13,Malwina Czajkowska,,F,2010,15,Raw,K S WL Open,59.6,,45,50,-55,50,,,,,,,50,B
+14,Klaudia Mikos,,F,1995,29,Raw,K S WL Open,57.44,,42.5,47.5,-50,47.5,,,,,,,47.5,B
+15,Małgorzata Kowalik-Ozga,,F,1987,37,Raw,K S WL Open,84.8,,-45,45,47.5,47.5,,,,,,,47.5,B
+1,Anita Gradzka-Brynczak,,F,1984,41,Raw,K+40 WL,48.3,,80,87.5,91,91,,,,,,,91,B
+2,Daria Walczykiewicz,,F,1982,42,Raw,K+40 WL,67.2,,80,85,-90,85,,,,,,,85,B
+3,Aleksandra Dziewiczkiewicz,,F,1979,46,Raw,K+40 WL,68.8,,57.5,62.5,65,65,,,,,,,65,B
+4,Anna Zwolak-Gniot,,F,1968,57,Raw,K+40 WL,55.9,,52.5,55,-57.5,55,,,,,,,55,B
+1,Anita Gradzka-Brynczak,,F,1984,41,Raw,K-Open WL,48.3,60,80,87.5,91,91,,,,,,,91,B
+2,Emilia Wójtowicz,,F,1993,31,Raw,K-Open WL,57.7,60,52.5,60,65,65,,,,,,,65,B
+3,Julia Drozdowska,,F,2001,24,Raw,K-Open WL,58.5,60,60,62.5,65,65,,,,,,,65,B
+4,Anna Zwolak-Gniot,,F,1968,57,Raw,K-Open WL,55.9,60,52.5,55,-57.5,55,,,,,,,55,B
+5,Julia Masniakk,,F,2000,24,Raw,K-Open WL,57.9,60,50,52.5,-57.5,52.5,,,,,,,52.5,B
+6,Klaudia Mikos,,F,1995,29,Raw,K-Open WL,57.44,60,42.5,47.5,-50,47.5,,,,,,,47.5,B
+1,Aleksandra Szymczykowska,,F,1998,27,Raw,K-Open WL,66.9,67.5,110,115,117.5,117.5,120,,,,,,117.5,B
+2,Daria Walczykiewicz,,F,1982,42,Raw,K-Open WL,67.2,67.5,80,85,-90,85,,,,,,,85,B
+3,Agnieszka Zaroślinska,,F,1997,27,Raw,K-Open WL,66.3,67.5,47.5,52.5,55,55,,,,,,,55,B
+1,Aleksandra Łukasik,,F,1998,27,Raw,K-Open WL,69.2,67.5+,75,80,85,85,,,,,,,85,B
+2,Karolina Warchał,,F,1998,27,Raw,K-Open WL,75.8,67.5+,80,85,90,90,,,,,,,90,B
+3,Aleksandra Dziewiczkiewicz,,F,1979,46,Raw,K-Open WL,68.8,67.5+,57.5,62.5,65,65,,,,,,,65,B
+4,Estera Kołodziej,,F,1987,37,Raw,K-Open WL,80.6,67.5+,65,-67.5,67.5,67.5,,,,,,,67.5,B
+5,Małgorzata Kowalik-Ozga,,F,1987,37,Raw,K-Open WL,84.8,67.5+,-45,45,47.5,47.5,,,,,,,47.5,B
+1,Emilia Wójtowicz,,F,1993,31,Raw,K-SM WL,57.7,,52.5,60,65,65,,,,,,,65,B
+2,Kornelia Pakulska,,F,2004,20,Raw,K-SM WL,49.2,,35,40,42.5,42.5,,,,,,,42.5,B
+3,Natalia Trębicka,,F,2004,21,Raw,K-SM WL,74.1,,50,55,57.5,57.5,,,,,,,57.5,B
+1,Monika Król,,F,2007,17,Raw,K18 WL,63.4,,65,67.5,-70,67.5,,,,,,,67.5,B
+2,Emilia Bryńczak,,F,2010,14,Raw,K18 WL,54.2,,50,57.5,-62.5,57.5,,,,,,,57.5,B
+3,Maria Sykut,,F,2011,13,Raw,K18 WL,46.6,,-45,45,-50,45,,,,,,,45,B
+4,Malwina Czajkowska,,F,2010,15,Raw,K18 WL,59.6,,45,50,-55,50,,,,,,,50,B
+5,Julia Szostak,,F,2006,18,Raw,K18 WL,90.2,,42.5,47.5,-50,47.5,,,,,,,47.5,B
+6,Blanka Kotlarska,,F,2007,17,Raw,K18 WL,47.8,,30,-35,-35,30,,,,,,,30,B
+1,Wiktoria Dankowsk,,F,2004,21,Raw,K23 WL,60.7,67.5,70,75,78,78,80,,,,,,78,B
+2,Magdalena Bielska,,F,2001,23,Raw,K23 WL,60.2,67.5,65,70,-72.5,70,,,,,,,70,B
+3,Aleksandra Kloc,,F,2001,23,Raw,K23 WL,67.3,67.5,70,-75,-75,70,,,,,,,70,B
+4,Małgorzata Kupras,,F,2004,20,Raw,K23 WL,67.4,67.5,65,-67.5,-67.5,65,,,,,,,65,B
+5,Julia Lis,,F,2006,19,Raw,K23 WL,56.5,67.5,52.5,55,-57.5,55,,,,,,,55,B
+6,Oliwia Cieślak,,F,2005,19,Raw,K23 WL,49.8,67.5,42.5,45,47.5,47.5,,,,,,,47.5,B
+7,Kornelia Pakulska,,F,2004,20,Raw,K23 WL,49.2,67.5,35,40,42.5,42.5,,,,,,,42.5,B
+8,Emilia Pędzierska,,F,2002,22,Raw,K23 WL,63,67.5,47.5,50,-52.5,50,,,,,,,50,B
+1,Weronika Waligóra,,F,2002,22,Raw,K23 WL,72.4,67.5+,-95,95,102.5,102.5,-108,,,,,,102.5,B
+2,Aleksandra Opioł,,F,2003,21,Raw,K23 WL,91.6,67.5+,95,102.5,107.5,107.5,109,,,,,,107.5,B
+3,Wiktoria Jóźwik,,F,2006,19,Raw,K23 WL,85.9,67.5+,85,90,-92.5,90,,,,,,,90,B
+4,Natalia Trębicka,,F,2004,21,Raw,K23 WL,74.1,67.5+,50,55,57.5,57.5,,,,,,,57.5,B
+1,Weronika Waligóra,,F,2002,22,Raw,K23 WL Open,72.4,,-95,95,102.5,102.5,-108,,,,,,102.5,B
+2,Aleksandra Opioł,,F,2003,21,Raw,K23 WL Open,91.6,,95,102.5,107.5,107.5,109,,,,,,107.5,B
+3,Wiktoria Dankowsk,,F,2004,21,Raw,K23 WL Open,60.7,,70,75,78,78,80,,,,,,78,B
+4,Wiktoria Jóźwik,,F,2006,19,Raw,K23 WL Open,85.9,,85,90,-92.5,90,,,,,,,90,B
+5,Magdalena Bielska,,F,2001,23,Raw,K23 WL Open,60.2,,65,70,-72.5,70,,,,,,,70,B
+6,Monika Król,,F,2007,17,Raw,K23 WL Open,63.4,,65,67.5,-70,67.5,,,,,,,67.5,B
+7,Aleksandra Kloc,,F,2001,23,Raw,K23 WL Open,67.3,,70,-75,-75,70,,,,,,,70,B
+8,Emilia Bryńczak,,F,2010,14,Raw,K23 WL Open,54.2,,50,57.5,-62.5,57.5,,,,,,,57.5,B
+9,Małgorzata Kupras,,F,2004,20,Raw,K23 WL Open,67.4,,65,-67.5,-67.5,65,,,,,,,65,B
+10,Julia Lis,,F,2006,19,Raw,K23 WL Open,56.5,,52.5,55,-57.5,55,,,,,,,55,B
+11,Oliwia Cieślak,,F,2005,19,Raw,K23 WL Open,49.8,,42.5,45,47.5,47.5,,,,,,,47.5,B
+12,Maria Sykut,,F,2011,13,Raw,K23 WL Open,46.6,,-45,45,-50,45,,,,,,,45,B
+13,Kornelia Pakulska,,F,2004,20,Raw,K23 WL Open,49.2,,35,40,42.5,42.5,,,,,,,42.5,B
+14,Natalia Trębicka,,F,2004,21,Raw,K23 WL Open,74.1,,50,55,57.5,57.5,,,,,,,57.5,B
+15,Emilia Pędzierska,,F,2002,22,Raw,K23 WL Open,63,,47.5,50,-52.5,50,,,,,,,50,B
+16,Julia Szostak,,F,2006,18,Raw,K23 WL Open,90.2,,42.5,47.5,-50,47.5,,,,,,,47.5,B
+17,Blanka Kotlarska,,F,2007,17,Raw,K23 WL Open,47.8,,30,-35,-35,30,,,,,,,30,B
+1,Przemysław Gogułka,,M,2008,16,Raw,J16 WL,69.3,74,120,140,-150,140,,,,,,,140,B
+2,Filip Cyniak,,M,2009,16,Raw,J16 WL,72.2,74,107.5,115,120,120,,,,,,,120,B
+3,Oliwier Kłos,,M,2009,16,Raw,J16 WL,73.5,74,-110,115,120,120,,,,,,,120,B
+4,Franciszek Paciorek,,M,2009,15,Raw,J16 WL,74,74,115,120,-125,120,,,,,,,120,B
+5,Adam Szczygielski,,M,2008,16,Raw,J16 WL,58.2,74,90,-97.5,97.5,97.5,,,,,,,97.5,B
+6,Konrad Urban,,M,2009,16,Raw,J16 WL,71.4,74,105,115,-117.5,115,,,,,,,115,B
+7,Bartosz Łukasik,,M,2009,16,Raw,J16 WL,72.5,74,100,110,-115,110,,,,,,,110,B
+8,Michał Pawłowski,,M,2011,14,Raw,J16 WL,57.9,74,-55,65,-70,65,,,,,,,65,B
+1,Maksymilian Andryś,,M,2009,15,Raw,J16 WL,93.4,74+,140,147.5,155,155,160,,,,,,155,B
+2,Jakub Kosiński,,M,2009,16,Raw,J16 WL,89.7,74+,135,-137.5,-137.5,135,,,,,,,135,B
+3,Paweł Kamiński,,M,2009,15,Raw,J16 WL,90.5,74+,120,125,130,130,,,,,,,130,B
+4,Franciszek Zloch,,M,2009,16,Raw,J16 WL,78.2,74+,95,102.5,107.5,107.5,,,,,,,107.5,B
+5,Maciej Fogel,,M,2008,16,Raw,J16 WL,80.9,74+,97.5,105,-112.5,105,,,,,,,105,B
+6,Szymon Molenda,,M,2011,13,Raw,J16 WL,85.7,74+,60,65,70,70,,,,,,,70,B
+1,Przemysław Gogułka,,M,2008,16,Raw,J16 WL Open,69.3,,120,140,-150,140,,,,,,,140,B
+2,Maksymilian Andryś,,M,2009,15,Raw,J16 WL Open,93.4,,140,147.5,155,155,160,,,,,,155,B
+3,Filip Cyniak,,M,2009,16,Raw,J16 WL Open,72.2,,107.5,115,120,120,,,,,,,120,B
+4,Oliwier Kłos,,M,2009,16,Raw,J16 WL Open,73.5,,-110,115,120,120,,,,,,,120,B
+5,Jakub Kosiński,,M,2009,16,Raw,J16 WL Open,89.7,,135,-137.5,-137.5,135,,,,,,,135,B
+6,Franciszek Paciorek,,M,2009,15,Raw,J16 WL Open,74,,115,120,-125,120,,,,,,,120,B
+7,Adam Szczygielski,,M,2008,16,Raw,J16 WL Open,58.2,,90,-97.5,97.5,97.5,,,,,,,97.5,B
+8,Konrad Urban,,M,2009,16,Raw,J16 WL Open,71.4,,105,115,-117.5,115,,,,,,,115,B
+9,Paweł Kamiński,,M,2009,15,Raw,J16 WL Open,90.5,,120,125,130,130,,,,,,,130,B
+10,Bartosz Łukasik,,M,2009,16,Raw,J16 WL Open,72.5,,100,110,-115,110,,,,,,,110,B
+11,Tobiasz Mizera,,M,2007,18,Raw,J16 WL Open,86.6,,115,122.5,-130,122.5,,,,,,,122.5,B
+12,Krzysztof Przybylski,,M,2006,18,Raw,J16 WL Open,73.35,,100,-110,110,110,,,,,,,110,B
+13,Franciszek Zloch,,M,2009,16,Raw,J16 WL Open,78.2,,95,102.5,107.5,107.5,,,,,,,107.5,B
+14,Maciej Fogel,,M,2008,16,Raw,J16 WL Open,80.9,,97.5,105,-112.5,105,,,,,,,105,B
+15,Michał Pawłowski,,M,2011,14,Raw,J16 WL Open,57.9,,-55,65,-70,65,,,,,,,65,B
+16,Szymon Molenda,,M,2011,13,Raw,J16 WL Open,85.7,,60,65,70,70,,,,,,,70,B
+1,Marcel Kedra,,M,2006,18,Raw,J18 WL,72.6,74,132.5,140,-150,140,,,,,,,140,B
+2,Krzysztof Sołtys,,M,2007,17,Raw,J18 WL,72.5,74,120,-127.5,127.5,127.5,,,,,,,127.5,B
+3,Artur Martyna,,M,2007,17,Raw,J18 WL,73.1,74,-120,125,-130,125,,,,,,,125,B
+4,Bartosz Karczmarz,,M,2007,17,Raw,J18 WL,72.7,74,105,110,-112.5,110,,,,,,,110,B
+5,Krzysztof Przybylski,,M,2006,18,Raw,J18 WL,73.35,74,100,-110,110,110,,,,,,,110,B
+6,Tomasz Kowalik,,M,2008,17,Raw,J18 WL,73.45,74,95,100,-107.5,100,,,,,,,100,B
+1,Adrian Iwaniuk,,M,2007,18,Raw,J18 WL,87.6,93,155,162.5,167.5,167.5,170,,,,,,167.5,B
+2,Mikołaj Gębura,,M,2008,17,Raw,J18 WL,90.65,93,155,-162.5,162.5,162.5,,,,,,,162.5,B
+3,Kacper Komisarski,,M,2008,17,Raw,J18 WL,88.85,93,145,152.5,157.5,157.5,,,,,,,157.5,B
+4,Damian Juzakowski,,M,2007,17,Raw,J18 WL,87.9,93,127.5,140,145,145,,,,,,,145,B
+5,Tobiasz Mizera,,M,2007,18,Raw,J18 WL,86.6,93,115,122.5,-130,122.5,,,,,,,122.5,B
+6,Bartłomiej Ścibisz,,M,2007,18,Raw,J18 WL,81.5,93,110,117.5,-122.5,117.5,,,,,,,117.5,B
+7,Patryk Szeląg,,M,2007,17,Raw,J18 WL,85,93,82.5,90,-92.5,90,,,,,,,90,B
+1,Piotr Cenkiel,,M,2008,17,Raw,J18 WL,105.8,93+,135,145,152.5,152.5,,,,,,,152.5,B
+2,Antoni Kozak,,M,2007,17,Raw,J18 WL,103.5,93+,120,130,135,135,,,,,,,135,B
+3,Karol Mielnik,,M,2006,18,Raw,J18 WL,104.2,93+,130,135,-140,135,,,,,,,135,B
+4,Aleks Rudko,,M,2007,17,Raw,J18 WL,141.9,93+,117.5,127.5,-135,127.5,,,,,,,127.5,B
+5,Cyprian Górecki,,M,2008,17,Raw,J18 WL,99.7,93+,105,110,-117.5,110,,,,,,,110,B
+1,Adrian Iwaniuk,,M,2007,18,Raw,J18 WL Open,87.6,,155,162.5,167.5,167.5,170,,,,,,167.5,B
+2,Mikołaj Gębura,,M,2008,17,Raw,J18 WL Open,90.65,,155,-162.5,162.5,162.5,,,,,,,162.5,B
+3,Marcel Kedra,,M,2006,18,Raw,J18 WL Open,72.6,,132.5,140,-150,140,,,,,,,140,B
+4,Kacper Komisarski,,M,2008,17,Raw,J18 WL Open,88.85,,145,152.5,157.5,157.5,,,,,,,157.5,B
+5,Damian Juzakowski,,M,2007,17,Raw,J18 WL Open,87.9,,127.5,140,145,145,,,,,,,145,B
+6,Krzysztof Sołtys,,M,2007,17,Raw,J18 WL Open,72.5,,120,-127.5,127.5,127.5,,,,,,,127.5,B
+7,Piotr Cenkiel,,M,2008,17,Raw,J18 WL Open,105.8,,135,145,152.5,152.5,,,,,,,152.5,B
+8,Artur Martyna,,M,2007,17,Raw,J18 WL Open,73.1,,-120,125,-130,125,,,,,,,125,B
+9,Antoni Kozak,,M,2007,17,Raw,J18 WL Open,103.5,,120,130,135,135,,,,,,,135,B
+10,Karol Mielnik,,M,2006,18,Raw,J18 WL Open,104.2,,130,135,-140,135,,,,,,,135,B
+11,Bartosz Karczmarz,,M,2007,17,Raw,J18 WL Open,72.7,,105,110,-112.5,110,,,,,,,110,B
+12,Bartłomiej Ścibisz,,M,2007,18,Raw,J18 WL Open,81.5,,110,117.5,-122.5,117.5,,,,,,,117.5,B
+13,Tomasz Kowalik,,M,2008,17,Raw,J18 WL Open,73.45,,95,100,-107.5,100,,,,,,,100,B
+14,Aleks Rudko,,M,2007,17,Raw,J18 WL Open,141.9,,117.5,127.5,-135,127.5,,,,,,,127.5,B
+15,Cyprian Górecki,,M,2008,17,Raw,J18 WL Open,99.7,,105,110,-117.5,110,,,,,,,110,B
+16,Patryk Szeląg,,M,2007,17,Raw,J18 WL Open,85,,82.5,90,-92.5,90,,,,,,,90,B
+1,Michał Daniel,,M,2002,23,Raw,J23 WL,90.9,93,175,183,-190,183,,,,,,,183,B
+2,Kacper Ponder,,M,2002,23,Raw,J23 WL,90.3,93,160,167.5,175,175,,,,,,,175,B
+3,Piotr Szewczyk,,M,2001,23,Raw,J23 WL,92.7,93,157.5,165,172.5,172.5,,,,,,,172.5,B
+4,Mateusz Wasilewski,,M,2005,19,Raw,J23 WL,86.5,93,160,165,-170,165,,,,,,,165,B
+5,Adam Bielejewski,,M,2006,19,Raw,J23 WL,91.9,93,145,152.5,160,160,,,,,,,160,B
+6,Karol Dziurka,,M,2005,20,Raw,J23 WL,76.3,93,-130,130,135,135,,,,,,,135,B
+7,Kacper Madej,,M,2003,22,Raw,J23 WL,87.3,93,130,137.5,142.5,142.5,,,,,,,142.5,B
+8,Albert Papliński,,M,2004,21,Raw,J23 WL,79.7,93,127.5,135,-140,135,,,,,,,135,B
+9,Mateusz Dudzikowski,,M,2004,20,Raw,J23 WL,89.6,93,130,137.5,142.5,142.5,,,,,,,142.5,B
+10,Maks Rabiega,,M,2004,20,Raw,J23 WL,86,93,110,115,-120,115,,,,,,,115,B
+1,Mateusz Wnorowski,,M,2003,21,Raw,J23 WL,102.1,105,-160,167.5,175,175,,,,,,,175,B
+2,Sylwester Wołosz,,M,2005,19,Raw,J23 WL,98.6,105,157.5,165,170,170,,,,,,,170,B
+3,Patryk Sobieraj,,M,2004,21,Raw,J23 WL,95.1,105,165,-172.5,-172.5,165,,,,,,,165,B
+4,Szymon Rogowski,,M,2005,20,Raw,J23 WL,104.2,105,140,147.5,152.5,152.5,,,,,,,152.5,B
+5,Matthew Kuc,,M,2006,19,Raw,J23 WL,96.4,105,130,132.5,-135,132.5,,,,,,,132.5,B
+6,Kamil Supryn,,M,2005,19,Raw,J23 WL,102.2,105,125,132.5,-140,132.5,,,,,,,132.5,B
+7,Konrad Dziedzic,,M,2002,22,Raw,J23 WL,93.25,105,125,-130,-130,125,,,,,,,125,B
+1,Jakub Golianek,,M,2006,19,Raw,J23 WL,108.6,105+,200,210,215.5,215.5,,,,,,,215.5,B
+2,Jakub Mazurek,,M,2002,23,Raw,J23 WL,116.1,105+,195,205,212.5,212.5,,,,,,,212.5,B
+3,Maciek Skórka,,M,2005,20,Raw,J23 WL,126.5,105+,190,197.5,-200,197.5,,,,,,,197.5,B
+4,Emil Golebiowski,,M,2004,20,Raw,J23 WL,119.5,105+,165,175,180,180,,,,,,,180,B
+5,Karol Dzugan,,M,2004,20,Raw,J23 WL,124.9,105+,165,172.5,180,180,,,,,,,180,B
+6,Jakub Gąsak,,M,2001,23,Raw,J23 WL,121.7,105+,150,160,165,165,,,,,,,165,B
+1,Jakub Golianek,,M,2006,19,Raw,J23 WL Open,108.6,,200,210,215.5,215.5,,,,,,,215.5,B
+2,Jakub Mazurek,,M,2002,23,Raw,J23 WL Open,116.1,,195,205,212.5,212.5,,,,,,,212.5,B
+3,Michał Daniel,,M,2002,23,Raw,J23 WL Open,90.9,,175,183,-190,183,,,,,,,183,B
+4,Maciek Skórka,,M,2005,20,Raw,J23 WL Open,126.5,,190,197.5,-200,197.5,,,,,,,197.5,B
+5,Kacper Ponder,,M,2002,23,Raw,J23 WL Open,90.3,,160,167.5,175,175,,,,,,,175,B
+6,Piotr Szewczyk,,M,2001,23,Raw,J23 WL Open,92.7,,157.5,165,172.5,172.5,,,,,,,172.5,B
+7,Mateusz Wasilewski,,M,2005,19,Raw,J23 WL Open,86.5,,160,165,-170,165,,,,,,,165,B
+8,Mateusz Wnorowski,,M,2003,21,Raw,J23 WL Open,102.1,,-160,167.5,175,175,,,,,,,175,B
+9,Sylwester Wołosz,,M,2005,19,Raw,J23 WL Open,98.6,,157.5,165,170,170,,,,,,,170,B
+10,Emil Golebiowski,,M,2004,20,Raw,J23 WL Open,119.5,,165,175,180,180,,,,,,,180,B
+11,Patryk Łobacz,,M,2003,22,Raw,J23 WL Open,73.3,,135,142.5,-145,142.5,,,,,,,142.5,B
+12,Karol Dzugan,,M,2004,20,Raw,J23 WL Open,124.9,,165,172.5,180,180,,,,,,,180,B
+13,Patryk Sobieraj,,M,2004,21,Raw,J23 WL Open,95.1,,165,-172.5,-172.5,165,,,,,,,165,B
+14,Adam Bielejewski,,M,2006,19,Raw,J23 WL Open,91.9,,145,152.5,160,160,,,,,,,160,B
+15,Karol Dziurka,,M,2005,20,Raw,J23 WL Open,76.3,,-130,130,135,135,,,,,,,135,B
+16,Jakub Gąsak,,M,2001,23,Raw,J23 WL Open,121.7,,150,160,165,165,,,,,,,165,B
+17,Kacper Madej,,M,2003,22,Raw,J23 WL Open,87.3,,130,137.5,142.5,142.5,,,,,,,142.5,B
+18,Albert Papliński,,M,2004,21,Raw,J23 WL Open,79.7,,127.5,135,-140,135,,,,,,,135,B
+19,Szymon Rogowski,,M,2005,20,Raw,J23 WL Open,104.2,,140,147.5,152.5,152.5,,,,,,,152.5,B
+20,Mateusz Dudzikowski,,M,2004,20,Raw,J23 WL Open,89.6,,130,137.5,142.5,142.5,,,,,,,142.5,B
+21,Maciej Szypuła,,M,2006,19,Raw,J23 WL Open,67.1,,102.5,110,-115,110,,,,,,,110,B
+22,Matthew Kuc,,M,2006,19,Raw,J23 WL Open,96.4,,130,132.5,-135,132.5,,,,,,,132.5,B
+23,Kamil Supryn,,M,2005,19,Raw,J23 WL Open,102.2,,125,132.5,-140,132.5,,,,,,,132.5,B
+24,Konrad Dziedzic,,M,2002,22,Raw,J23 WL Open,93.25,,125,-130,-130,125,,,,,,,125,B
+25,Maks Rabiega,,M,2004,20,Raw,J23 WL Open,86,,110,115,-120,115,,,,,,,115,B
+26,Michał Buczyński,,M,2006,19,Raw,J23 WL Open,55.3,,65,70,-75,70,,,,,,,70,B
+1,Michał Buczyński,,M,2006,19,Raw,M-N WL,55.3,,65,70,-75,70,,,,,,,70,B
+2,Patryk Szeląg,,M,2007,17,Raw,M-N WL,85,,82.5,90,-92.5,90,,,,,,,90,B
+1,Patryk Łobacz,,M,2003,22,Raw,Open -74 WL,73.3,,135,142.5,-145,142.5,,,,,,,142.5,B
+2,Dominik Mrozowski,,M,1998,27,Raw,Open -74 WL,72.7,,130,135,-142.5,135,,,,,,,135,B
+3,Bartłomiej Przybyło,,M,1998,26,Raw,Open -74 WL,70.7,,115,122.5,127.5,127.5,,,,,,,127.5,B
+4,Marcin Cieślik,,M,1979,45,Raw,Open -74 WL,73.4,,117.5,122.5,-125,122.5,,,,,,,122.5,B
+5,Maciej Szypuła,,M,2006,19,Raw,Open -74 WL,67.1,,102.5,110,-115,110,,,,,,,110,B
+6,Michał Buczyński,,M,2006,19,Raw,Open -74 WL,55.3,,65,70,-75,70,,,,,,,70,B
+1,Borys Gardecki,,M,1987,37,Raw,S WL,82.3,83,167.5,175,180,180,182.5,,,,,,180,B
+2,Jakub Bociański,,M,1991,34,Raw,S WL,83,83,170,175,-182.5,175,,,,,,,175,B
+3,Michał Mazurek,,M,1994,30,Raw,S WL,82.8,83,157.5,162.5,-167.5,162.5,,,,,,,162.5,B
+4,Mateusz Wójtowicz,,M,1994,30,Raw,S WL,82.8,83,152.5,157.5,162.5,162.5,,,,,,,162.5,B
+5,Paweł Mazowiecki,,M,1989,35,Raw,S WL,78.8,83,157.5,-165,-170,157.5,,,,,,,157.5,B
+6,Dariusz Susfał,,M,1997,28,Raw,S WL,82.25,83,145,155,-160,155,,,,,,,155,B
+7,Marek Siedlec,,M,1990,35,Raw,S WL,77,83,135,140,142.5,142.5,,,,,,,142.5,B
+8,Krystian Trześniak,,M,1999,26,Raw,S WL,82.2,83,110,120,127.5,127.5,,,,,,,127.5,B
+9,Krystian Jasik,,M,2000,24,Raw,S WL,82.3,83,112.5,122.5,-125,122.5,,,,,,,122.5,B
+10,Mateusz Podkoń,,M,1998,27,Raw,S WL,76.7,83,102.5,112.5,-117.5,112.5,,,,,,,112.5,B
+1,Radosław Borowy,,M,1995,30,Raw,S WL,90.2,93,195,200,-202.5,200,,,,,,,200,B
+2,Dzmitry Abakumov,,M,1985,39,Raw,S WL,91.1,93,180,190,-202.5,190,,,,,,,190,B
+3,Daniel Wiacek,,M,1994,31,Raw,S WL,90.45,93,165,170,175,175,,,,,,,175,B
+4,Arkadiusz Adamczyk,,M,1993,32,Raw,S WL,87.9,93,160,165,-170,165,,,,,,,165,B
+5,Marcin Tarkowski,,M,1987,37,Raw,S WL,88.25,93,140,150,155,155,,,,,,,155,B
+6,Mateusz Jaszczuk,,M,2000,25,Raw,S WL,92,93,125,135,137.5,137.5,,,,,,,137.5,B
+7,Bartłomiej Stachyra,,M,1997,28,Raw,S WL,91.9,93,117.5,125,132.5,132.5,,,,,,,132.5,B
+8,Mateusz Chudzik,,M,1999,25,Raw,S WL,88.75,93,125,130,-135,130,,,,,,,130,B
+9,Mateusz Brodecki,,M,1998,27,Raw,S WL,89.15,93,105,110,117.5,117.5,,,,,,,117.5,B
+10,Dariusz Cetner,,M,1988,36,Raw,S WL,90.3,93,117.5,-125,-125,117.5,,,,,,,117.5,B
+11,Przemysław Budek,,M,1995,29,Raw,S WL,92.25,93,105,115,-120,115,,,,,,,115,B
+12,Filip Nowak,,M,2000,25,Raw,S WL,92.3,93,107.5,-115,115,115,,,,,,,115,B
+1,Wojciech Borsuk,,M,1987,38,Raw,S WL,97.5,105,182.5,192.5,195,195,-200,,,,,,195,B
+2,Marek Żytka,,M,1989,35,Raw,S WL,93.1,105,175,185,190,190,,,,,,,190,B
+3,Łukasz Wyskwar,,M,1988,36,Raw,S WL,99.1,105,175,182.5,190,190,,,,,,,190,B
+4,Przemysław Oleszczyński,,M,1997,27,Raw,S WL,100.7,105,-180,190,-195,190,,,,,,,190,B
+5,Michał Pacwa,,M,1997,28,Raw,S WL,95.5,105,170,180,185,185,,,,,,,185,B
+6,Artur Boruszczak,,M,1995,30,Raw,S WL,101.2,105,160,170,175,175,,,,,,,175,B
+7,Paweł Mikucki,,M,2000,25,Raw,S WL,93.5,105,150,155,-160,155,,,,,,,155,B
+8,Michał Księski,,M,1995,30,Raw,S WL,100.4,105,147.5,155,-160,155,,,,,,,155,B
+1,Krystian Weryński,,M,1994,31,Raw,S WL,127.9,105+,215,225,230,230,232.5,,,,,,230,B
+2,Piotr Kulczak,,M,1997,27,Raw,S WL,113,105+,200,210,220,220,,,,,,,220,B
+3,Damian Chudy,,M,1999,26,Raw,S WL,119.3,105+,205,215,-217.5,215,,,,,,,215,B
+4,Patryk Naumowicz,,M,1988,36,Raw,S WL,128.1,105+,200,210,-212.5,210,,,,,,,210,B
+5,Bartłomiej Szacmajer,,M,1997,28,Raw,S WL,121.3,105+,190,200,205,205,,,,,,,205,B
+6,Paweł Dulko,,M,1998,27,Raw,S WL,113.3,105+,180,190,-200,190,,,,,,,190,B
+7,Tomasz Kopania,,M,1992,33,Raw,S WL,111.1,105+,175,180,-190,180,,,,,,,180,B
+8,Jakub Sołoducha,,M,2000,24,Raw,S WL,117,105+,162.5,170,175,175,,,,,,,175,B
+9,Krystian Mazurek,,M,1988,36,Raw,S WL,108.3,105+,-130,135,-142.5,135,,,,,,,135,B
+10,Kamil Wojcik,,M,1991,34,Raw,S WL,151.2,105+,135,142.5,-147.5,142.5,,,,,,,142.5,B
+11,Piotr Mikos,,M,1988,36,Raw,S WL,110.4,105+,107.5,117.5,-125,117.5,,,,,,,117.5,B
+1,Krystian Weryński,,M,1994,31,Raw,Senior Open WL,127.9,,215,225,230,230,232.5,,,,,,230,B
+2,Piotr Kulczak,,M,1997,27,Raw,Senior Open WL,113,,200,210,220,220,,,,,,,220,B
+3,Radosław Borowy,,M,1995,30,Raw,Senior Open WL,90.2,,195,200,-202.5,200,,,,,,,200,B
+4,Damian Chudy,,M,1999,26,Raw,Senior Open WL,119.3,,205,215,-217.5,215,,,,,,,215,B
+5,Borys Gardecki,,M,1987,37,Raw,Senior Open WL,82.3,,167.5,175,180,180,182.5,,,,,,180,B
+6,Dzmitry Abakumov,,M,1985,39,Raw,Senior Open WL,91.1,,180,190,-202.5,190,,,,,,,190,B
+7,Wojciech Borsuk,,M,1987,38,Raw,Senior Open WL,97.5,,182.5,192.5,195,195,-200,,,,,,195,B
+8,Marek Żytka,,M,1989,35,Raw,Senior Open WL,93.1,,175,185,190,190,,,,,,,190,B
+9,Patryk Naumowicz,,M,1988,36,Raw,Senior Open WL,128.1,,200,210,-212.5,210,,,,,,,210,B
+10,Bartłomiej Szacmajer,,M,1997,28,Raw,Senior Open WL,121.3,,190,200,205,205,,,,,,,205,B
+11,Jakub Bociański,,M,1991,34,Raw,Senior Open WL,83,,170,175,-182.5,175,,,,,,,175,B
+12,Łukasz Wyskwar,,M,1988,36,Raw,Senior Open WL,99.1,,175,182.5,190,190,,,,,,,190,B
+13,Przemysław Oleszczyński,,M,1997,27,Raw,Senior Open WL,100.7,,-180,190,-195,190,,,,,,,190,B
+14,Michał Pacwa,,M,1997,28,Raw,Senior Open WL,95.5,,170,180,185,185,,,,,,,185,B
+15,Daniel Wiacek,,M,1994,31,Raw,Senior Open WL,90.45,,165,170,175,175,,,,,,,175,B
+16,Paweł Dulko,,M,1998,27,Raw,Senior Open WL,113.3,,180,190,-200,190,,,,,,,190,B
+17,Michał Mazurek,,M,1994,30,Raw,Senior Open WL,82.8,,157.5,162.5,-167.5,162.5,,,,,,,162.5,B
+18,Mateusz Wójtowicz,,M,1994,30,Raw,Senior Open WL,82.8,,152.5,157.5,162.5,162.5,,,,,,,162.5,B
+19,Paweł Mazowiecki,,M,1989,35,Raw,Senior Open WL,78.8,,157.5,-165,-170,157.5,,,,,,,157.5,B
+20,Arkadiusz Adamczyk,,M,1993,32,Raw,Senior Open WL,87.9,,160,165,-170,165,,,,,,,165,B
+21,Artur Boruszczak,,M,1995,30,Raw,Senior Open WL,101.2,,160,170,175,175,,,,,,,175,B
+22,Tomasz Kopania,,M,1992,33,Raw,Senior Open WL,111.1,,175,180,-190,180,,,,,,,180,B
+23,Dariusz Susfał,,M,1997,28,Raw,Senior Open WL,82.25,,145,155,-160,155,,,,,,,155,B
+24,Jakub Sołoducha,,M,2000,24,Raw,Senior Open WL,117,,162.5,170,175,175,,,,,,,175,B
+25,Marcin Tarkowski,,M,1987,37,Raw,Senior Open WL,88.25,,140,150,155,155,,,,,,,155,B
+26,Marek Siedlec,,M,1990,35,Raw,Senior Open WL,77,,135,140,142.5,142.5,,,,,,,142.5,B
+27,Dominik Mrozowski,,M,1998,27,Raw,Senior Open WL,72.7,,130,135,-142.5,135,,,,,,,135,B
+28,Paweł Mikucki,,M,2000,25,Raw,Senior Open WL,93.5,,150,155,-160,155,,,,,,,155,B
+29,Bartłomiej Przybyło,,M,1998,26,Raw,Senior Open WL,70.7,,115,122.5,127.5,127.5,,,,,,,127.5,B
+30,Michał Księski,,M,1995,30,Raw,Senior Open WL,100.4,,147.5,155,-160,155,,,,,,,155,B
+31,Marcin Cieślik,,M,1979,45,Raw,Senior Open WL,73.4,,117.5,122.5,-125,122.5,,,,,,,122.5,B
+32,Mateusz Jaszczuk,,M,2000,25,Raw,Senior Open WL,92,,125,135,137.5,137.5,,,,,,,137.5,B
+33,Krystian Trześniak,,M,1999,26,Raw,Senior Open WL,82.2,,110,120,127.5,127.5,,,,,,,127.5,B
+34,Bartłomiej Stachyra,,M,1997,28,Raw,Senior Open WL,91.9,,117.5,125,132.5,132.5,,,,,,,132.5,B
+35,Mateusz Chudzik,,M,1999,25,Raw,Senior Open WL,88.75,,125,130,-135,130,,,,,,,130,B
+36,Krystian Jasik,,M,2000,24,Raw,Senior Open WL,82.3,,112.5,122.5,-125,122.5,,,,,,,122.5,B
+37,Krystian Mazurek,,M,1988,36,Raw,Senior Open WL,108.3,,-130,135,-142.5,135,,,,,,,135,B
+38,Mateusz Podkoń,,M,1998,27,Raw,Senior Open WL,76.7,,102.5,112.5,-117.5,112.5,,,,,,,112.5,B
+39,Kamil Wojcik,,M,1991,34,Raw,Senior Open WL,151.2,,135,142.5,-147.5,142.5,,,,,,,142.5,B
+40,Mateusz Brodecki,,M,1998,27,Raw,Senior Open WL,89.15,,105,110,117.5,117.5,,,,,,,117.5,B
+41,Dariusz Cetner,,M,1988,36,Raw,Senior Open WL,90.3,,117.5,-125,-125,117.5,,,,,,,117.5,B
+42,Przemysław Budek,,M,1995,29,Raw,Senior Open WL,92.25,,105,115,-120,115,,,,,,,115,B
+43,Filip Nowak,,M,2000,25,Raw,Senior Open WL,92.3,,107.5,-115,115,115,,,,,,,115,B
+44,Piotr Mikos,,M,1988,36,Raw,Senior Open WL,110.4,,107.5,117.5,-125,117.5,,,,,,,117.5,B
+1,Jakub Mazurek,,M,2002,23,Raw,SM WL,116.1,,195,205,212.5,212.5,,,,,,,212.5,B
+2,Paweł Dulko,,M,1998,27,Raw,SM WL,113.3,,180,190,-200,190,,,,,,,190,B
+3,Mateusz Wójtowicz,,M,1994,30,Raw,SM WL,82.8,,152.5,157.5,162.5,162.5,,,,,,,162.5,B
+4,Arkadiusz Adamczyk,,M,1993,32,Raw,SM WL,87.9,,160,165,-170,165,,,,,,,165,B
+5,Edward Pawłowski,,M,1977,47,Raw,SM WL,86.7,,-145,150,160,160,,,,,,,160,B
+6,Dariusz Susfał,,M,1997,28,Raw,SM WL,82.25,,145,155,-160,155,,,,,,,155,B
+7,Marcin Tarkowski,,M,1987,37,Raw,SM WL,88.25,,140,150,155,155,,,,,,,155,B
+8,Mariusz Milcarz,,M,1970,54,Raw,SM WL,112.2,,140,145,150,150,,,,,,,150,B
+9,Mateusz Chudzik,,M,1999,25,Raw,SM WL,88.75,,125,130,-135,130,,,,,,,130,B
+10,Matthew Kuc,,M,2006,19,Raw,SM WL,96.4,,130,132.5,-135,132.5,,,,,,,132.5,B
+11,Krystian Mazurek,,M,1988,36,Raw,SM WL,108.3,,-130,135,-142.5,135,,,,,,,135,B
+1,Rafał Oljasz,,M,1981,43,Raw,W I WL,106.9,,220,230,235,235,-240,,,,,,235,B
+2,Edward Pawłowski,,M,1977,47,Raw,W I WL,86.7,,-145,150,160,160,,,,,,,160,B
+3,Przemysław Paciorek,,M,1979,46,Raw,W I WL,104.2,,160,-165,165,165,,,,,,,165,B
+4,Piotr Sołtys,,M,1983,42,Raw,W I WL,91.3,,140,147.5,152.5,152.5,,,,,,,152.5,B
+5,Marcin Jeliński,,M,1976,49,Raw,W I WL,109.7,,140,147.5,150,150,,,,,,,150,B
+6,Tomasz Bryńczak,,M,1982,42,Raw,W I WL,87.1,,127.5,-135,135,135,,,,,,,135,B
+1,Janusz Kobus,,M,1970,55,Raw,W II WL,91,,152.5,157.5,160,160,162.5,,,,,,160,B
+2,Mariusz Milcarz,,M,1970,54,Raw,W II WL,112.2,,140,145,150,150,,,,,,,150,B
+3,Włodzimierz Kokociński,,M,1962,62,Raw,W II WL,82.45,,75,80,85,85,,,,,,,85,B
+1,Aleksandra Łukasik,,F,1998,27,Raw,K Open Seniorki,69.2,,,,,,,190,200,210,210,-212.5,210,D
+2,Oksana Onyshchenko,,F,1993,31,Raw,K Open Seniorki,51.4,,,,,,,150,157.5,-160,157.5,,157.5,D
+3,Inga Dynowska,,F,1996,28,Raw,K Open Seniorki,62.25,,,,,,,170,180,-185,180,,180,D
+4,Paulina Pizoń-Łosek,,F,1999,25,Raw,K Open Seniorki,57.2,,,,,,,137.5,145,150,150,,150,D
+5,Natalia Cwykiel,,F,1995,30,Raw,K Open Seniorki,54.1,,,,,,,125,132.5,142.5,142.5,,142.5,D
+6,Anita Gradzka-Brynczak,,F,1984,41,Raw,K Open Seniorki,48.3,,,,,,,117.5,125,130,130,,130,D
+7,Gabriela Naprawa,,F,1999,25,Raw,K Open Seniorki,68,,,,,,,150,160,-165,160,,160,D
+8,Katarzyna Nowak,,F,2000,25,Raw,K Open Seniorki,66.4,,,,,,,135,145,152.5,152.5,,152.5,D
+9,Emilia Wójtowicz,,F,1993,31,Raw,K Open Seniorki,57.7,,,,,,,-110,120,135,135,,135,D
+10,Julia Masniakk,,F,2000,24,Raw,K Open Seniorki,57.9,,,,,,,120,130,-135,130,,130,D
+11,Emilia Bryńczak,,F,2010,14,Raw,K Open Seniorki,54.2,,,,,,,105,115,122.5,122.5,,122.5,D
+12,Agnieszka Zaroślinska,,F,1997,27,Raw,K Open Seniorki,66.3,,,,,,,135,142.5,-150,142.5,,142.5,D
+13,Magdalena Jagnicka,,F,1997,28,Raw,K Open Seniorki,76.35,,,,,,,140,150,155,155,,155,D
+14,Anna Zwolak-Gniot,,F,1968,57,Raw,K Open Seniorki,55.9,,,,,,,120,-130,-130,120,,120,D
+15,Emilia Matrejek,,F,2000,25,Raw,K Open Seniorki,65.95,,,,,,,125,132.5,-135,132.5,,132.5,D
+16,Beata Polewacz,,F,1985,39,Raw,K Open Seniorki,65.4,,,,,,,-125,130,-137.5,130,,130,D
+17,Martyna Sulima,,F,1999,25,Raw,K Open Seniorki,74.85,,,,,,,135,142.5,-147.5,142.5,,142.5,D
+18,Klaudia Mikos,,F,1995,29,Raw,K Open Seniorki,57.4,,,,,,,100,110,115,115,,115,D
+19,Aleksandra Dziewiczkiewicz,,F,1979,46,Raw,K Open Seniorki,68.8,,,,,,,105,115,125,125,,125,D
+20,Alina Marczuk,,F,1955,70,Raw,K Open Seniorki,75.15,,,,,,,90,97.5,105,105,,105,D
+DQ,Estera Kołodziej,,F,1987,37,Raw,K Open Seniorki,80.6,,,,,,,,,,,,,D
+DQ,Oliwia Zawiślak,,F,2006,18,Raw,K Open Seniorki,59.5,,,,,,,-147.5,-147.5,-147.5,,,,D
+1,Anita Gradzka-Brynczak,,F,1984,41,Raw,K+40 MC,48.3,,,,,,,117.5,125,130,130,,130,D
+2,Anna Zwolak-Gniot,,F,1968,57,Raw,K+40 MC,55.9,,,,,,,120,-130,-130,120,,120,D
+3,Aleksandra Dziewiczkiewicz,,F,1979,46,Raw,K+40 MC,68.8,,,,,,,105,115,125,125,,125,D
+4,Alina Marczuk,,F,1955,70,Raw,K+40 MC,75.15,,,,,,,90,97.5,105,105,,105,D
+1,Oksana Onyshchenko,,F,1993,31,Raw,K- Open MC,51.4,60,,,,,,150,157.5,-160,157.5,,157.5,D
+2,Paulina Pizoń-Łosek,,F,1999,25,Raw,K- Open MC,57.2,60,,,,,,137.5,145,150,150,,150,D
+3,Natalia Cwykiel,,F,1995,30,Raw,K- Open MC,54.1,60,,,,,,125,132.5,142.5,142.5,,142.5,D
+4,Anita Gradzka-Brynczak,,F,1984,41,Raw,K- Open MC,48.3,60,,,,,,117.5,125,130,130,,130,D
+5,Emilia Wójtowicz,,F,1993,31,Raw,K- Open MC,57.7,60,,,,,,-110,120,135,135,,135,D
+6,Julia Masniakk,,F,2000,24,Raw,K- Open MC,57.9,60,,,,,,120,130,-135,130,,130,D
+7,Anna Zwolak-Gniot,,F,1968,57,Raw,K- Open MC,55.9,60,,,,,,120,-130,-130,120,,120,D
+8,Klaudia Mikos,,F,1995,29,Raw,K- Open MC,57.4,60,,,,,,100,110,115,115,,115,D
+1,Inga Dynowska,,F,1996,28,Raw,K- Open MC,62.25,67.5,,,,,,170,180,-185,180,,180,D
+2,Katarzyna Nowak,,F,2000,25,Raw,K- Open MC,66.4,67.5,,,,,,135,145,152.5,152.5,,152.5,D
+3,Agnieszka Zaroślinska,,F,1997,27,Raw,K- Open MC,66.3,67.5,,,,,,135,142.5,-150,142.5,,142.5,D
+4,Emilia Matrejek,,F,2000,25,Raw,K- Open MC,65.95,67.5,,,,,,125,132.5,-135,132.5,,132.5,D
+5,Beata Polewacz,,F,1985,39,Raw,K- Open MC,65.4,67.5,,,,,,-125,130,-137.5,130,,130,D
+1,Aleksandra Łukasik,,F,1998,27,Raw,K- Open MC,69.2,67.5+,,,,,,190,200,210,210,-212.5,210,D
+2,Gabriela Naprawa,,F,1999,25,Raw,K- Open MC,68,67.5+,,,,,,150,160,-165,160,,160,D
+3,Magdalena Jagnicka,,F,1997,28,Raw,K- Open MC,76.35,67.5+,,,,,,140,150,155,155,,155,D
+4,Martyna Sulima,,F,1999,25,Raw,K- Open MC,74.85,67.5+,,,,,,135,142.5,-147.5,142.5,,142.5,D
+5,Aleksandra Dziewiczkiewicz,,F,1979,46,Raw,K- Open MC,68.8,67.5+,,,,,,105,115,125,125,,125,D
+6,Alina Marczuk,,F,1955,70,Raw,K- Open MC,75.15,67.5+,,,,,,90,97.5,105,105,,105,D
+DQ,Estera Kołodziej,,F,1987,37,Raw,K- Open MC,80.6,67.5+,,,,,,,,,,,,D
+1,Emilia Wójtowicz,,F,1993,31,Raw,K-SM MC,57.7,,,,,,,-110,120,135,135,,135,D
+2,Kornelia Pakulska,,F,2004,20,Raw,K-SM MC,49.2,,,,,,,80,92.5,102.5,102.5,,102.5,D
+3,Natalia Trębicka,,F,2004,21,Raw,K-SM MC,74.1,,,,,,,115,125,132.5,132.5,,132.5,D
+4,Justyna Trębicka,,F,2004,21,Raw,K-SM MC,65.95,,,,,,,80,90,100,100,,100,D
+1,Emilia Bryńczak,,F,2010,14,Raw,K18 MC,54.2,,,,,,,105,115,122.5,122.5,,122.5,D
+2,Malwina Czajkowska,,F,2010,15,Raw,K18 MC,59.6,,,,,,,110,120,127.5,127.5,,127.5,D
+3,Weronika Siennicka,,F,2007,17,Raw,K18 MC,62.6,,,,,,,95,-97.5,-97.5,95,,95,D
+DQ,Oliwia Zawiślak,,F,2006,18,Raw,K18 MC,59.5,,,,,,,-147.5,-147.5,-147.5,,,,D
+1,Małgorzata Kupras,,F,2004,20,Raw,K23 MC,67.4,67.5,,,,,,150,162.5,-167.5,162.5,,162.5,D
+2,Anastasiia Reutova,,F,2006,19,Raw,K23 MC,61.55,67.5,,,,,,-100,115,145,145,,145,D
+3,Oliwia Cieślak,,F,2005,19,Raw,K23 MC,49.8,67.5,,,,,,110,120,-127.5,120,,120,D
+4,Aleksandra Kloc,,F,2001,23,Raw,K23 MC,67.3,67.5,,,,,,137.5,145,-150,145,,145,D
+5,Kornelia Pakulska,,F,2004,20,Raw,K23 MC,49.2,67.5,,,,,,80,92.5,102.5,102.5,,102.5,D
+6,Emilia Pędzierska,,F,2002,22,Raw,K23 MC,63,67.5,,,,,,105,-112.5,-112.5,105,,105,D
+7,Justyna Trębicka,,F,2004,21,Raw,K23 MC,65.95,67.5,,,,,,80,90,100,100,,100,D
+1,Wiktoria Jóźwik,,F,2005,20,Raw,K23 MC,85.9,67.5+,,,,,,180,190,195,195,,195,D
+2,Aleksandra Opioł,,F,2003,21,Raw,K23 MC,91.6,67.5+,,,,,,172.5,185,197.5,197.5,-202.5,197.5,D
+3,Klaudia Kurdzialek,,F,2005,19,Raw,K23 MC,76,67.5+,,,,,,125,132.5,137.5,137.5,,137.5,D
+4,Natalia Trębicka,,F,2004,21,Raw,K23 MC,74.1,67.5+,,,,,,115,125,132.5,132.5,,132.5,D
+1,Wiktoria Jóźwik,,F,2005,20,Raw,K23 Open MC,85.9,,,,,,,180,190,195,195,,195,D
+2,Aleksandra Opioł,,F,2003,21,Raw,K23 Open MC,91.6,,,,,,,172.5,185,197.5,197.5,-202.5,197.5,D
+3,Małgorzata Kupras,,F,2004,20,Raw,K23 Open MC,67.4,,,,,,,150,162.5,-167.5,162.5,,162.5,D
+4,Anastasiia Reutova,,F,2006,19,Raw,K23 Open MC,61.55,,,,,,,-100,115,145,145,,145,D
+5,Oliwia Cieślak,,F,2005,19,Raw,K23 Open MC,49.8,,,,,,,110,120,-127.5,120,,120,D
+6,Aleksandra Kloc,,F,2001,23,Raw,K23 Open MC,67.3,,,,,,,137.5,145,-150,145,,145,D
+7,Malwina Czajkowska,,F,2010,15,Raw,K23 Open MC,59.6,,,,,,,110,120,127.5,127.5,,127.5,D
+8,Kornelia Pakulska,,F,2004,20,Raw,K23 Open MC,49.2,,,,,,,80,92.5,102.5,102.5,,102.5,D
+9,Klaudia Kurdzialek,,F,2005,19,Raw,K23 Open MC,76,,,,,,,125,132.5,137.5,137.5,,137.5,D
+10,Natalia Trębicka,,F,2004,21,Raw,K23 Open MC,74.1,,,,,,,115,125,132.5,132.5,,132.5,D
+11,Emilia Pędzierska,,F,2002,22,Raw,K23 Open MC,63,,,,,,,105,-112.5,-112.5,105,,105,D
+12,Justyna Trębicka,,F,2004,21,Raw,K23 Open MC,65.95,,,,,,,80,90,100,100,,100,D
+13,Weronika Siennicka,,F,2007,17,Raw,K23 Open MC,62.6,,,,,,,95,-97.5,-97.5,95,,95,D
+1,Bartosz Łukasik,,M,2009,16,Raw,J16 MC,72.5,74,,,,,,180,192.5,197.5,197.5,,197.5,D
+2,Konrad Urban,,M,2009,16,Raw,J16 MC,71.4,74,,,,,,160,180,185,185,,185,D
+3,Przemysław Gogułka,,M,2008,16,Raw,J16 MC,69.3,74,,,,,,180,-210,-210,180,,180,D
+4,Adam Wiejak,,M,2008,16,Raw,J16 MC,72,74,,,,,,170,185,-190,185,,185,D
+5,Franciszek Paciorek,,M,2009,15,Raw,J16 MC,74,74,,,,,,150,160,-170,160,,160,D
+6,Michał Pawłowski,,M,2011,14,Raw,J16 MC,57.9,74,,,,,,105,115,-125,115,,115,D
+1,Mateusz Jaje,,M,2008,16,Raw,J16 MC,87.65,74+,,,,,,240,255,265,265,-275,265,D
+2,Jan Gałkowski,,M,2008,16,Raw,J16 MC,80.1,74+,,,,,,205,220,232.5,232.5,,232.5,D
+3,Maciej Bielejewski,,M,2008,16,Raw,J16 MC,79.7,74+,,,,,,210,222.5,230,230,,230,D
+4,Maciej Fogel,,M,2008,16,Raw,J16 MC,80.9,74+,,,,,,200,212.5,-222.5,212.5,,212.5,D
+5,Jakub Zdun,,M,2009,16,Raw,J16 MC,87.05,74+,,,,,,200,-220,-227.5,200,,200,D
+6,Jaromir Szponar,,M,2008,16,Raw,J16 MC,87.75,74+,,,,,,150,160,165,165,,165,D
+7,Franciszek Zloch,,M,2009,16,Raw,J16 MC,78.2,74+,,,,,,140,-152.5,-152.5,140,,140,D
+8,Szymon Molenda,,M,2011,13,Raw,J16 MC,85.7,74+,,,,,,115,125,-132.5,125,,125,D
+1,Mateusz Jaje,,M,2008,16,Raw,J16 Open,87.65,,,,,,,240,255,265,265,-275,265,D
+2,Jan Gałkowski,,M,2008,16,Raw,J16 Open,80.1,,,,,,,205,220,232.5,232.5,,232.5,D
+3,Maciej Bielejewski,,M,2008,16,Raw,J16 Open,79.7,,,,,,,210,222.5,230,230,,230,D
+4,Paweł Baran,,M,2008,16,Raw,J16 Open,80.9,,,,,,,202.5,215,-222.5,215,,215,D
+5,Bartosz Łukasik,,M,2009,16,Raw,J16 Open,72.5,,,,,,,180,192.5,197.5,197.5,,197.5,D
+6,Maciej Fogel,,M,2008,16,Raw,J16 Open,80.9,,,,,,,200,212.5,-222.5,212.5,,212.5,D
+7,Konrad Urban,,M,2009,16,Raw,J16 Open,71.4,,,,,,,160,180,185,185,,185,D
+8,Przemysław Gogułka,,M,2008,16,Raw,J16 Open,69.3,,,,,,,180,-210,-210,180,,180,D
+9,Adam Wiejak,,M,2008,16,Raw,J16 Open,72,,,,,,,170,185,-190,185,,185,D
+10,Jakub Zdun,,M,2009,16,Raw,J16 Open,87.05,,,,,,,200,-220,-227.5,200,,200,D
+11,Franciszek Paciorek,,M,2009,15,Raw,J16 Open,74,,,,,,,150,160,-170,160,,160,D
+12,Michał Pawłowski,,M,2011,14,Raw,J16 Open,57.9,,,,,,,105,115,-125,115,,115,D
+13,Franciszek Zloch,,M,2009,16,Raw,J16 Open,78.2,,,,,,,140,-152.5,-152.5,140,,140,D
+14,Szymon Molenda,,M,2011,13,Raw,J16 Open,85.7,,,,,,,115,125,-132.5,125,,125,D
+1,Patryk Kopec,,M,2007,18,Raw,J18 MC,73.2,93,,,,,,220,-235,-235,220,,220,D
+2,Bartosz Karczmarz,,M,2007,17,Raw,J18 MC,72.7,93,,,,,,195,210,-215,210,,210,D
+3,Krzysztof Przybysz,,M,2006,18,Raw,J18 MC,84.55,93,,,,,,210,225,-240,225,,225,D
+4,Maciej Lis,,M,2008,17,Raw,J18 MC,70.1,93,,,,,,160,170,180,180,,180,D
+5,Bartłomiej Ścibisz,,M,2007,18,Raw,J18 MC,81.5,93,,,,,,185,197.5,-205,197.5,,197.5,D
+6,Adrian Iwaniuk,,M,2007,17,Raw,J18 MC,87.6,93,,,,,,180,190,-200,190,,190,D
+7,Kacper Komisarski,,M,2008,17,Raw,J18 MC,88.85,93,,,,,,160,170,180,180,,180,D
+1,Oskar Buchała,,M,2007,17,Raw,J18 MC,103.1,93+,,,,,,242.5,260,272.5,272.5,280,272.5,D
+2,Dawid Kierszka,,M,2008,17,Raw,J18 MC,134.5,93+,,,,,,240,260,-275,260,,260,D
+3,Antoni Kozak,,M,2007,17,Raw,J18 MC,103.5,93+,,,,,,215,230,242.5,242.5,,242.5,D
+4,Aleks Rudko,,M,2007,17,Raw,J18 MC,141.9,93+,,,,,,205,217.5,230,230,,230,D
+1,Oskar Buchała,,M,2007,17,Raw,J18 Open,103.1,,,,,,,242.5,260,272.5,272.5,280,272.5,D
+2,Patryk Kopec,,M,2007,18,Raw,J18 Open,73.2,,,,,,,220,-235,-235,220,,220,D
+3,Bartosz Karczmarz,,M,2007,17,Raw,J18 Open,72.7,,,,,,,195,210,-215,210,,210,D
+4,Krzysztof Przybysz,,M,2006,18,Raw,J18 Open,84.55,,,,,,,210,225,-240,225,,225,D
+5,Dawid Kierszka,,M,2008,17,Raw,J18 Open,134.5,,,,,,,240,260,-275,260,,260,D
+6,Antoni Kozak,,M,2007,17,Raw,J18 Open,103.5,,,,,,,215,230,242.5,242.5,,242.5,D
+7,Maciej Lis,,M,2008,17,Raw,J18 Open,70.1,,,,,,,160,170,180,180,,180,D
+8,Bartłomiej Ścibisz,,M,2007,18,Raw,J18 Open,81.5,,,,,,,185,197.5,-205,197.5,,197.5,D
+9,Aleks Rudko,,M,2007,17,Raw,J18 Open,141.9,,,,,,,205,217.5,230,230,,230,D
+10,Adrian Iwaniuk,,M,2007,17,Raw,J18 Open,87.6,,,,,,,180,190,-200,190,,190,D
+11,Kacper Komisarski,,M,2008,17,Raw,J18 Open,88.85,,,,,,,160,170,180,180,,180,D
+1,Mateusz Dudzikowski,,M,2004,20,Raw,J23 MC,89.6,93,,,,,,265,277.5,-285,277.5,,277.5,D
+2,Adam Bielejewski,,M,2006,19,Raw,J23 MC,91.9,93,,,,,,252.5,270,280,280,-285,280,D
+3,Dawid Błaszczuk,,M,2002,22,Raw,J23 MC,89.85,93,,,,,,240,260,270,270,,270,D
+4,Albert Papliński,,M,2004,21,Raw,J23 MC,79.7,93,,,,,,235,242.5,250,250,,250,D
+5,Dawid Łach,,M,2003,22,Raw,J23 MC,85.65,93,,,,,,245,260,-265,260,,260,D
+6,Kacper Krawczyk,,M,2006,19,Raw,J23 MC,69.55,93,,,,,,220,-232.5,-232.5,220,,220,D
+7,Tymoteusz Karwacki,,M,2003,21,Raw,J23 MC,80.75,93,,,,,,-220,225,235,235,,235,D
+8,Piotr Szewczyk,,M,2001,23,Raw,J23 MC,92.7,93,,,,,,235,247.5,252.5,252.5,,252.5,D
+9,Wojciech Suchorowski,,M,2005,20,Raw,J23 MC,82.3,93,,,,,,210,217.5,225,225,,225,D
+10,Pablo Jacek-Miranda,,M,2005,19,Raw,J23 MC,89.45,93,,,,,,180,192.5,202.5,202.5,,202.5,D
+1,Jakub Stankiewicz,,M,2002,23,Raw,J23 MC,110.3,93+,,,,,,310,320,325,325,,325,D
+2,Jakub Gąsak,,M,2001,23,Raw,J23 MC,121.7,93+,,,,,,285,300,310,310,,310,D
+3,Karol Dzugan,,M,2004,20,Raw,J23 MC,124.9,93+,,,,,,290,305,-315,305,,305,D
+4,Jakub Golianek,,M,2006,19,Raw,J23 MC,108.6,93+,,,,,,275,-290,-290,275,,275,D
+5,Hubert Krawczyk,,M,2002,23,Raw,J23 MC,101.9,93+,,,,,,235,250,-260,250,,250,D
+6,Kamil Supryn,,M,2005,19,Raw,J23 MC,102.2,93+,,,,,,210,222.5,230,230,,230,D
+7,Arkadiusz Wojdyla,,M,2004,21,Raw,J23 MC,96.95,93+,,,,,,170,-180,185,185,,185,D
+8,Konrad Dziedzic,,M,2002,22,Raw,J23 MC,93.25,93+,,,,,,160,172.5,-180,172.5,,172.5,D
+1,Jakub Stankiewicz,,M,2002,23,Raw,J23 Open,110.3,,,,,,,310,320,325,325,,325,D
+2,Jakub Gąsak,,M,2001,23,Raw,J23 Open,121.7,,,,,,,285,300,310,310,,310,D
+3,Mateusz Dudzikowski,,M,2004,20,Raw,J23 Open,89.6,,,,,,,265,277.5,-285,277.5,,277.5,D
+4,Adam Bielejewski,,M,2006,19,Raw,J23 Open,91.9,,,,,,,252.5,270,280,280,-285,280,D
+5,Karol Dzugan,,M,2004,20,Raw,J23 Open,124.9,,,,,,,290,305,-315,305,,305,D
+6,Dawid Błaszczuk,,M,2002,22,Raw,J23 Open,89.85,,,,,,,240,260,270,270,,270,D
+7,Albert Papliński,,M,2004,21,Raw,J23 Open,79.7,,,,,,,235,242.5,250,250,,250,D
+8,Dawid Łach,,M,2003,22,Raw,J23 Open,85.65,,,,,,,245,260,-265,260,,260,D
+9,Kacper Krawczyk,,M,2006,19,Raw,J23 Open,69.55,,,,,,,220,-232.5,-232.5,220,,220,D
+10,Jakub Golianek,,M,2006,19,Raw,J23 Open,108.6,,,,,,,275,-290,-290,275,,275,D
+11,Tymoteusz Karwacki,,M,2003,21,Raw,J23 Open,80.75,,,,,,,-220,225,235,235,,235,D
+12,Piotr Szewczyk,,M,2001,23,Raw,J23 Open,92.7,,,,,,,235,247.5,252.5,252.5,,252.5,D
+13,Hubert Krawczyk,,M,2002,23,Raw,J23 Open,101.9,,,,,,,235,250,-260,250,,250,D
+14,Wojciech Suchorowski,,M,2005,20,Raw,J23 Open,82.3,,,,,,,210,217.5,225,225,,225,D
+15,Kamil Supryn,,M,2005,19,Raw,J23 Open,102.2,,,,,,,210,222.5,230,230,,230,D
+16,Pablo Jacek-Miranda,,M,2005,19,Raw,J23 Open,89.45,,,,,,,180,192.5,202.5,202.5,,202.5,D
+17,Arkadiusz Wojdyla,,M,2004,21,Raw,J23 Open,96.95,,,,,,,170,-180,185,185,,185,D
+18,Konrad Dziedzic,,M,2002,22,Raw,J23 Open,93.25,,,,,,,160,172.5,-180,172.5,,172.5,D
+1,Jakub Stankiewicz,,M,2002,23,Raw,M-SM MC,110.3,,,,,,,310,320,325,325,,325,D
+2,Mateusz Wójtowicz,,M,1994,30,Raw,M-SM MC,82.8,,,,,,,250,270,-280,270,,270,D
+3,Dariusz Susfał,,M,1997,28,Raw,M-SM MC,82.25,,,,,,,235,245,-250,245,,245,D
+4,Mateusz Chudzik,,M,1999,25,Raw,M-SM MC,88.75,,,,,,,242.5,255,-260,255,,255,D
+5,Krystian Mazurek,,M,1988,36,Raw,M-SM MC,108.3,,,,,,,220,230,235,235,,235,D
+6,Mateusz Brodecki,,M,1998,27,Raw,M-SM MC,89.15,,,,,,,175,187.5,200,200,,200,D
+1,Bartłomiej Stania,,M,1993,31,Raw,S MC,60.8,83,,,,,,222.5,-232.5,-232.5,222.5,,222.5,D
+2,Mateusz Wójtowicz,,M,1994,30,Raw,S MC,82.8,83,,,,,,250,270,-280,270,,270,D
+3,Tomasz Bernat,,M,2001,24,Raw,S MC,73.45,83,,,,,,220,230,235,235,,235,D
+4,Dariusz Susfał,,M,1997,28,Raw,S MC,82.25,83,,,,,,235,245,-250,245,,245,D
+5,Krystian Jasik,,M,2000,24,Raw,S MC,82.3,83,,,,,,230,240,-250,240,,240,D
+6,Michał Mazurek,,M,1994,30,Raw,S MC,82.8,83,,,,,,210,225,230,230,,230,D
+7,Mateusz Podkoń,,M,1998,27,Raw,S MC,76.7,83,,,,,,192.5,-205,-205,192.5,,192.5,D
+8,Krystian Trześniak,,M,1999,26,Raw,S MC,82.3,83,,,,,,175,190,200,200,,200,D
+1,Mateusz Chudzik,,M,1999,25,Raw,S MC,88.75,93,,,,,,242.5,255,-260,255,,255,D
+2,Jakub Jarczewski,,M,2001,24,Raw,S MC,89.95,93,,,,,,227.5,240,-262.5,240,,240,D
+3,Przemysław Budek,,M,1995,29,Raw,S MC,92.25,93,,,,,,222.5,232.5,237.5,237.5,,237.5,D
+4,Dawid Dźwięga,,M,2001,24,Raw,S MC,85.9,93,,,,,,190,202.5,215,215,,215,D
+5,Filip Nowak,,M,2000,25,Raw,S MC,92.3,93,,,,,,217.5,-222.5,222.5,222.5,,222.5,D
+6,Bartłomiej Stachyra,,M,1997,28,Raw,S MC,91.9,93,,,,,,205,217.5,-227.5,217.5,,217.5,D
+7,Dariusz Cetner,,M,1988,36,Raw,S MC,90.3,93,,,,,,195,205,215,215,,215,D
+8,Mateusz Brodecki,,M,1998,27,Raw,S MC,89.15,93,,,,,,175,187.5,200,200,,200,D
+9,Mateusz Jaszczuk,,M,2000,25,Raw,S MC,92,93,,,,,,175,190,200,200,,200,D
+1,Artur Boruszczak,,M,1995,30,Raw,S MC,101.2,105,,,,,,250,265,272.5,272.5,280,272.5,D
+2,Michał Księski,,M,1995,30,Raw,S MC,100.4,105,,,,,,240,252.5,257.5,257.5,,257.5,D
+3,Łukasz Wyskwar,,M,1988,36,Raw,S MC,99.1,105,,,,,,235,247.5,255,255,,255,D
+4,Szymon Mrowca,,M,1995,30,Raw,S MC,93.65,105,,,,,,215,227.5,-240,227.5,,227.5,D
+5,Mariusz Nowak,,M,1994,30,Raw,S MC,103.2,105,,,,,,210,-225,225,225,,225,D
+1,Bartosz Rainko,,M,1997,27,Raw,S MC,111.8,105+,,,,,,305,330,-340,330,,330,D
+2,Szymon Borowy,,M,1997,27,Raw,S MC,117.6,105+,,,,,,300,317.5,-332.5,317.5,,317.5,D
+3,Rafał Sarnecki,,M,1998,26,Raw,S MC,113.9,105+,,,,,,260,280,-290,280,,280,D
+4,Jakub Sołoducha,,M,2000,24,Raw,S MC,117,105+,,,,,,265,280,-290,280,,280,D
+5,Jakub Szczur,,M,2001,24,Raw,S MC,111.8,105+,,,,,,255,267.5,-282.5,267.5,,267.5,D
+6,Paweł Dawidziuk,,M,1996,29,Raw,S MC,110.8,105+,,,,,,260,-280,-290,260,,260,D
+7,Krystian Mazurek,,M,1988,36,Raw,S MC,108.3,105+,,,,,,220,230,235,235,,235,D
+8,Kamil Wojcik,,M,1991,34,Raw,S MC,151.2,105+,,,,,,220,232.5,-240,232.5,,232.5,D
+9,Piotr Mikos,,M,1988,36,Raw,S MC,110.4,105+,,,,,,185,197.5,210,210,,210,D
+1,Bartosz Rainko,,M,1997,27,Raw,Senior Open,111.8,,,,,,,305,330,-340,330,,330,D
+2,Bartłomiej Stania,,M,1993,31,Raw,Senior Open,60.8,,,,,,,222.5,-232.5,-232.5,222.5,,222.5,D
+3,Szymon Borowy,,M,1997,27,Raw,Senior Open,117.6,,,,,,,300,317.5,-332.5,317.5,,317.5,D
+4,Mateusz Wójtowicz,,M,1994,30,Raw,Senior Open,82.8,,,,,,,250,270,-280,270,,270,D
+5,Grzegorz Mikuła,,M,1984,40,Raw,Senior Open,103.7,,,,,,,270,285,-300,285,,285,D
+6,Tomasz Bernat,,M,2001,24,Raw,Senior Open,73.45,,,,,,,220,230,235,235,,235,D
+7,Artur Boruszczak,,M,1995,30,Raw,Senior Open,101.2,,,,,,,250,265,272.5,272.5,280,272.5,D
+8,Dariusz Susfał,,M,1997,28,Raw,Senior Open,82.25,,,,,,,235,245,-250,245,,245,D
+9,Mateusz Chudzik,,M,1999,25,Raw,Senior Open,88.75,,,,,,,242.5,255,-260,255,,255,D
+10,Rafał Sarnecki,,M,1998,26,Raw,Senior Open,113.9,,,,,,,260,280,-290,280,,280,D
+11,Jakub Sołoducha,,M,2000,24,Raw,Senior Open,117,,,,,,,265,280,-290,280,,280,D
+12,Krystian Jasik,,M,2000,24,Raw,Senior Open,82.3,,,,,,,230,240,-250,240,,240,D
+13,Jakub Szczur,,M,2001,24,Raw,Senior Open,111.8,,,,,,,255,267.5,-282.5,267.5,,267.5,D
+14,Michał Księski,,M,1995,30,Raw,Senior Open,100.4,,,,,,,240,252.5,257.5,257.5,,257.5,D
+15,Łukasz Wyskwar,,M,1988,36,Raw,Senior Open,99.1,,,,,,,235,247.5,255,255,,255,D
+16,Michał Mazurek,,M,1994,30,Raw,Senior Open,82.8,,,,,,,210,225,230,230,,230,D
+17,Jakub Jarczewski,,M,2001,24,Raw,Senior Open,89.95,,,,,,,227.5,240,-262.5,240,,240,D
+18,Paweł Dawidziuk,,M,1996,29,Raw,Senior Open,110.8,,,,,,,260,-280,-290,260,,260,D
+19,Przemysław Budek,,M,1995,29,Raw,Senior Open,92.25,,,,,,,222.5,232.5,237.5,237.5,,237.5,D
+20,Szymon Mrowca,,M,1995,30,Raw,Senior Open,93.65,,,,,,,215,227.5,-240,227.5,,227.5,D
+21,Dawid Dźwięga,,M,2001,24,Raw,Senior Open,85.9,,,,,,,190,202.5,215,215,,215,D
+22,Filip Nowak,,M,2000,25,Raw,Senior Open,92.3,,,,,,,217.5,-222.5,222.5,222.5,,222.5,D
+23,Krystian Mazurek,,M,1988,36,Raw,Senior Open,108.3,,,,,,,220,230,235,235,,235,D
+24,Bartłomiej Stachyra,,M,1997,28,Raw,Senior Open,91.9,,,,,,,205,217.5,-227.5,217.5,,217.5,D
+25,Dariusz Cetner,,M,1988,36,Raw,Senior Open,90.3,,,,,,,195,205,215,215,,215,D
+26,Edward Pawłowski,,M,1977,47,Raw,Senior Open,86.7,,,,,,,200,210,-225,210,,210,D
+27,Mariusz Nowak,,M,1994,30,Raw,Senior Open,103.2,,,,,,,210,-225,225,225,,225,D
+28,Mateusz Podkoń,,M,1998,27,Raw,Senior Open,76.7,,,,,,,192.5,-205,-205,192.5,,192.5,D
+29,Tomasz Bryńczak,,M,1982,42,Raw,Senior Open,87.1,,,,,,,185,195,202.5,202.5,,202.5,D
+30,Kamil Wojcik,,M,1991,34,Raw,Senior Open,151.2,,,,,,,220,232.5,-240,232.5,,232.5,D
+31,Mateusz Brodecki,,M,1998,27,Raw,Senior Open,89.15,,,,,,,175,187.5,200,200,,200,D
+32,Mateusz Jaszczuk,,M,2000,25,Raw,Senior Open,92,,,,,,,175,190,200,200,,200,D
+33,Piotr Mikos,,M,1988,36,Raw,Senior Open,110.4,,,,,,,185,197.5,210,210,,210,D
+34,Przemysław Paciorek,,M,1979,46,Raw,Senior Open,104.2,,,,,,,160,-165,-165,160,,160,D
+1,Grzegorz Mikuła,,M,1984,40,Raw,W MC,103.7,,,,,,,270,285,-300,285,,285,D
+2,Edward Pawłowski,,M,1977,47,Raw,W MC,86.7,,,,,,,200,210,-225,210,,210,D
+3,Tomasz Bryńczak,,M,1982,42,Raw,W MC,87.1,,,,,,,185,195,202.5,202.5,,202.5,D
+4,Przemysław Paciorek,,M,1979,46,Raw,W MC,104.2,,,,,,,160,-165,-165,160,,160,D

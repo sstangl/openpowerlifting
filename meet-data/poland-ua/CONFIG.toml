@@ -5,3 +5,4 @@
 # Intentionally left blank.
 
 [exemptions]
+    2502 = ["ExemptWeightClassConsistency"]
