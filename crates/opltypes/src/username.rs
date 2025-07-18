@@ -88,6 +88,10 @@ impl Username {
             return Ok(Username(s.into_ascii_string().unwrap()));
         }
 
+        if writing_system == WritingSystem::Greek {
+            return convert_greek_to_ascii(name);
+        }
+
         // Otherwise, the name only has characters that can be converted to ASCII.
         convert_to_ascii(name)
     }
@@ -177,6 +181,63 @@ impl<'de> Deserialize<'de> for Username {
     }
 }
 
+/// Converts Greek characters into Latin characters following ISO 843, but ASCII.
+///
+/// <https://en.wikipedia.org/wiki/ISO_843>
+fn convert_greek_to_ascii(greek_name: &str) -> Result<Username, String> {
+    let mut ascii_name = AsciiString::with_capacity(greek_name.len());
+
+    for letter in greek_name.to_lowercase().chars() {
+        if is_exception(letter) {
+            continue;
+        }
+
+        // Push ASCII characters. This accounts for disambiguation numbers.
+        if let Ok(ascii) = letter.to_ascii_char() {
+            if ascii.is_alphanumeric() {
+                ascii_name.push(ascii);
+                continue;
+            }
+        }
+
+        let s: &str = match letter {
+            'α' | 'ά' => "a",
+            'β' => "v",
+            'γ' => "g",
+            'δ' => "d",
+            'ε' => "e",
+            'ζ' => "z",
+            'η' => "i",
+            'θ' => "th",
+            'ι' | 'ί' | 'ϊ' | 'ΐ' => "i",
+            'κ' => "k",
+            'λ' => "l",
+            'μ' => "m",
+            'ν' => "n",
+            'ξ' => "x",
+            'ο' | 'ό' => "o",
+            'π' => "p",
+            'ρ' => "r",
+            'σ' | 'ς' => "s",
+            'τ' => "t",
+            'υ' | 'ύ' | 'ϋ' | 'ΰ' => "y",
+            'φ' => "f",
+            'χ' => "ch",
+            'ψ' => "ps",
+            'ω' | 'ώ' => "o",
+            _ => {
+                return Err(format!(
+                    "Unknown Greek character '{letter}' ({letter:?}) in '{}'",
+                    greek_name.to_lowercase()
+                ));
+            }
+        };
+        // Safe: the limited set of ASCII targets above are indeed ASCII chars.
+        ascii_name.push_str(unsafe { AsciiStr::from_ascii_unchecked(s.as_bytes()) });
+    }
+    Ok(Username(ascii_name))
+}
+
 /// Calculates the ASCII equivalent of a Name.
 fn convert_to_ascii(name: &str) -> Result<Username, String> {
     let mut ascii_name = AsciiString::with_capacity(name.len());
@@ -190,6 +251,7 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
             continue;
         }
 
+        // Push ASCII characters. This accounts for disambiguation numbers.
         if let Ok(ascii) = letter.to_ascii_char() {
             if ascii.is_alphanumeric() {
                 ascii_name.push(ascii);
@@ -227,7 +289,7 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
             '\u{307}' => "", // A Turkish critical mark.
             _ => {
                 return Err(format!(
-                    "Unknown character '{letter}' ({letter:?}) in '{}'",
+                    "Unknown Latin character '{letter}' ({letter:?}) in '{}'",
                     name.to_lowercase()
                 ));
             }
@@ -298,6 +360,22 @@ mod tests {
         );
     }
 
+    /// Tests the conversion of valid GreekName column values to Username.
+    #[test]
+    fn greek_name() {
+        assert_eq!(
+            Username::from_name("Αθανασιος Τριαντης").unwrap().as_str(),
+            "athanasiostriantis"
+        );
+        assert_eq!(
+            Username::from_name("Νικολαος Χριστοφορακης")
+                .unwrap()
+                .as_str(),
+            "nikolaoschristoforakis"
+        );
+    }
+
+    /// Tests the conversion of valid JapaneseName column values to Username.
     #[test]
     fn japanese_name() {
         assert_eq!(

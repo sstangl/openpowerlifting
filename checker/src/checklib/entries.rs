@@ -2388,6 +2388,11 @@ pub fn do_check<R: io::Read>(
                 entry.name = record[idx].into();
             }
         }
+        if entry.name.is_empty() {
+            if let Some(idx) = headers.get(Header::GreekName) {
+                entry.name = record[idx].into();
+            }
+        }
 
         // Create the username if applicable.
         if !entry.name.is_empty() {
