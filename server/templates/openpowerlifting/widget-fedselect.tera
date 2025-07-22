@@ -232,6 +232,7 @@
 <optgroup label="{{strings.country.china}}">
   <option value="all-china" {% if selection.federation == "AllChina" %}selected{% endif %}>{{strings.selectors.fed.all_china}}</option>
   <option value="chinapa" {% if selection.federation == "ChinaPA" %}selected{% endif %}>ChinaPA - Chinese Powerlifting Association [GPA/IPO]</option>
+  <option value="chnpl" {% if selection.federation == "CHNPL" %}selected{% endif %}>CHNPL - CHN Powerlifting [IDFPA]</option>
   <option value="htpl" {% if selection.federation == "HTPL" %}selected{% endif %}>HTPL - Hantang Powerlifting</option>
   <option value="ipf-china" {% if selection.federation == "IPF-China" %}selected{% endif %}>IPF-China - IPF China</option>
   <option value="ipl-china" {% if selection.federation == "IPLChina" %}selected{% endif %}>IPL-China - IPL China</option>

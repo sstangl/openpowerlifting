@@ -1,0 +1,43 @@
+# 2025 rules: https://idfpa.org/wp-content/uploads/2025/07/IDFPA-Rulebook-v2025.pdf
+
+[divisions]
+    # OpenLifter-style divisions.
+    open = {name="Open", min=14, max=999}
+    y8_9 = {name="Y8-9", min=8, max=9}
+    y10_11 = {name="Y10-11", min=10, max=11}
+    y12_13 = {name="Y12-13", min=12, max=13}
+    t14_15 = {name="T14-15", min=14, max=15}
+    t16_17 = {name="T16-17", min=16, max=17}
+    t18_19 = {name="T18-19", min=18, max=19}
+    j20_23 = {name="J20-23", min=20, max=23}
+    m40_49 = {name="M40-49", min=40, max=49}
+    m50_59 = {name="M50-59", min=50, max=59}
+    m60_69 = {name="M60-69", min=60, max=69}
+    m70_79 = {name="M70-79", min=70, max=79}
+    m80_89 = {name="M80-89", min=80, max=89}
+    m90_99 = {name="M90-99", min=90, max=99}
+    m100_109 = {name="M100-109", min=100, max=109}
+
+[weightclasses.2025_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2025-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.2025_F]
+    classes = ["44","48","52","56","60","65","70","75","82.5","90","100","100+"]
+    date_range = ["2025-01-01", "9999-01-01"]
+    sex = "F"
+
+[weightclasses.2025_M_youth]
+    classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2025-01-01", "9999-01-01"]
+    divisions = ["Y8-9","Y10-11","Y12-13"]
+    sex = "M"
+
+[weightclasses.2025_F_youth]
+    classes = ["30","35","40","44","48","52","56","60","65","70","75","82.5","90","100","100+"]
+    date_range = ["2025-01-01", "9999-01-01"]
+    divisions = ["Y8-9","Y10-11","Y12-13"]
+    sex = "F"
+
+[exemptions]

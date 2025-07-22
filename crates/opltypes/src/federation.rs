@@ -261,6 +261,10 @@ pub enum Federation {
     #[strum(to_string = "ChinaPA", serialize = "chinapa")]
     ChinaPA,
 
+    /// CHN Powerlifting, a Chinese IDFPA affiliate, formerly USAPL-China.
+    #[strum(to_string = "CHNPL", serialize = "chnpl")]
+    CHNPL,
+
     /// Comite National de Force Athletique, old french IPF affiliate.
     #[strum(to_string = "CNFA", serialize = "cnfa")]
     CNFA,
@@ -2119,6 +2123,7 @@ impl Federation {
             Federation::CBLB => FULLY_TESTED,
             Federation::CBPL => false,
             Federation::ChinaPA => false,
+            Federation::CHNPL => FULLY_TESTED,
             Federation::CNFA => FULLY_TESTED,
             Federation::ColPF => FULLY_TESTED,
             Federation::CommonwealthPF => FULLY_TESTED,
@@ -2595,6 +2600,7 @@ impl Federation {
             Federation::CBLB => Some(Country::Brazil),
             Federation::CBPL => Some(Country::USA),
             Federation::ChinaPA => Some(Country::China),
+            Federation::CHNPL => Some(Country::China),
             Federation::CNFA => Some(Country::France),
             Federation::ColPF => Some(Country::Colombia),
             Federation::CommonwealthPF => None,
@@ -3097,6 +3103,7 @@ impl Federation {
             Federation::CBLB => Some(Federation::IPF),
             Federation::CBPL => None,
             Federation::ChinaPA => Some(Federation::GPA),
+            Federation::CHNPL => Some(Federation::IDFPA),
             Federation::CNFA => Some(Federation::IPF),
             Federation::ColPF => Some(Federation::IPF),
             Federation::CommonwealthPF => Some(Federation::IPF),
@@ -3693,6 +3700,7 @@ impl Federation {
             Federation::CBLB => Federation::ipf_rules_on(date),
             Federation::CBPL => PointsSystem::Wilks,
             Federation::ChinaPA => PointsSystem::Wilks,
+            Federation::CHNPL => PointsSystem::Wilks,
             Federation::CNFA => Federation::ipf_rules_on(date),
             Federation::ColPF => Federation::ipf_rules_on(date),
             Federation::CommonwealthPF => Federation::ipf_rules_on(date),
