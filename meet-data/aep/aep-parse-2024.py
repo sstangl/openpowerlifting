@@ -72,8 +72,9 @@ def get_meet_xls_urls(urls: list[str]):
         response = requests.get(url)
         meet_page = response.text
         soup = BeautifulSoup(meet_page, "html.parser")
+        xls_extensions = ("xls", "xlsx")
         xls_urls = [link.get("href") for link in soup.select(selector="h3>a")
-                    if link.get("href").endswith(".xls")]
+                    if link.get("href").endswith(xls_extensions)]
     return xls_urls
 
 
@@ -335,6 +336,13 @@ def process_names_in_df(df: df_type):
     df["Name"] = df["Name"].apply(switch_firstname_order_to_beginning)
 
 
+def process_guests(df: df_type):
+    """
+    Replace AI encoding ('guest athlete') to the standard G encoding ('guest')
+    """
+    df["Place"] = df["Place"].replace("AI", "G")
+
+
 def insert_fixed_column_into_df(df: df_type, position: int, col_name: str, value):
     """
     Insert a column into the df in "position" with some common value
@@ -377,7 +385,7 @@ def populate_sex_weightclass(df: df_type, sheet_name: str):
         insert_fixed_column_into_df(df, 5, 'Sex', 'M')
         insert_fixed_column_into_df(df, 6, 'WeightClassKg',
                                     [str(weight_class_limits_m[0])
-                                     if weight <= weight_class_limits_f[0]
+                                     if weight <= weight_class_limits_m[0]
                                      else (
                                          str(weight_class_limits_m[1]))
                                      if weight <= weight_class_limits_m[1]
@@ -504,6 +512,9 @@ for sheet in xl.sheet_names:
 
     # Process name field, moving name from the end to the beginning
     process_names_in_df(dfs[sheet])
+
+    # Process Guest athlets that do not qualify
+    process_guests(dfs[sheet])
 
     # Add Open as a Division field, position 4
     insert_fixed_column_into_df(dfs[sheet], 4, 'Division', 'Open')
