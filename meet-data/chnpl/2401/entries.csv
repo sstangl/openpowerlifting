@@ -1,24 +1,24 @@
-Place,ChineseName,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Tested
-1,牛朗朗,LangLang Niu,,F,1999,24,,,Raw,Women's Raw Open,59.9,60,-70,-80,80,80,,35,37.5,-40,37.5,,100,110,120,120,,237.5,SBD,
-1,郭奕乐,YiLe Guo,,F,2003,20,,,Raw,Women's Raw Open Deadlift Only,47.05,48,,,,,,,,,,,87.5,97.5,100,100,,100,D,
-1,王正健,ZhengJian Wang,,M,2002,21,,,Raw,Men's Raw Open,67.1,67.5,140,150,-155,150,,110,117.5,122.5,122.5,,160,175,182.5,182.5,,455,SBD,
-1,殷瑞颉,RuiJie Yin,,M,2003,20,,,Raw,Men's Raw Open,73.4,75,160,170,180,180,,107.5,115,120,120,,205,225,230,230,,530,SBD,
-2,陈宏磊,HongLei Chen,,M,1995,28,,,Raw,Men's Raw Open,72.55,75,165,175,,175,,110,120,-125,120,,145,160,-170,160,,455,SBD,
-1,窦大同,DaTong Dou,,M,1997,26,,,Raw,Men's Raw Open,81.3,82.5,175,190,200,200,,105,115,-120,115,,195,210,220,220,,535,SBD,
-2,李昊原,HaoYuan Li,,M,1982,41,,,Raw,Men's Raw Open,81.15,82.5,175,185,-190,185,,105,-112.5,112.5,112.5,,180,195,202.5,202.5,,500,SBD,
-1,李斌,Bin Li,,M,1996,27,,,Raw,Men's Raw Open,88.95,90,280,300,-305,300,,165,175,180,180,,270,290,300,300,,780,SBD,Yes
-2,肖力铭,LiMing Xiao,,M,1990,34,,,Raw,Men's Raw Open,82.55,90,170,-180,180,180,,70,-77.5,-77.5,70,,160,175,185,185,,435,SBD,
-1,吴昊,Hao Wu,,M,1995,28,,,Raw,Men's Raw Open,98.5,100,260,270,280,280,,140,152.5,157.5,157.5,,275,-300,-300,275,,712.5,SBD,
-2,芶昕瑞,XinRui Gou,,M,2001,22,,,Raw,Men's Raw Open,92.05,100,200,210,-215,210,,120,130,140,140,,200,210,-215,210,,560,SBD,
-3,杨家林,JiaLin Yang,,M,2004,20,,,Raw,Men's Raw Open,92,100,160,167.5,175,175,,80,85,-92.5,85,,180,192.5,205,205,,465,SBD,
-1,王昊然,HaoRan Wang,,M,1987,36,,,Raw,Men's Raw Open,104.3,110,225,235,250,250,,125,-137.5,-142.5,125,,215,227.5,235,235,,610,SBD,Yes
-2,韩任骏杰,RenJunJie Han,,M,2001,22,,,Raw,Men's Raw Open,100.7,110,200,-207.5,207.5,207.5,,132.5,142.5,-150,142.5,,205,225,235,235,,585,SBD,
-3,楚原昌,YuanChang Chu,,M,1995,28,,,Raw,Men's Raw Open,108.3,110,180,-200,-200,180,,100,107.5,-112.5,107.5,,170,185,-200,185,,472.5,SBD,
-1,肖峰,Feng Xiao,,M,2001,22,,,Raw,Men's Raw Open,116.9,125,205,215,225,225,,92.5,100,105,105,,200,220,230,230,,560,SBD,
-DQ,王可汗,KeHan Wang,,M,2006,17,,,Raw,Men's Raw Open Bench Only,81.85,82.5,,,,,,-110,-120,-130,,,,,,,,,B,
-DQ,马劲博,JinBo Ma,,M,1998,25,,,Raw,Men's Raw Open Bench Only,59.1,60,,,,,,-120,-125,-125,,,,,,,,,B,Yes
-1,庞博,Bo Pang,,M,2002,21,,,Raw,Men's Raw Open Bench Only,64.85,67.5,,,,,,132.5,140,-142.5,140,,,,,,,140,B,
-DQ,陈齐笙,QiSheng Chen,,M,2007,16,,,Raw,Men's Raw Open Bench Only,72.8,75,,,,,,-140,-140,-140,,,,,,,,,B,
-1,段兴旺,XingWang Duan,,M,2009,14,,,Raw,Men's Raw Open Deadlift Only,63.95,67.5,,,,,,,,,,,-195,195,-200,195,,195,D,
-2,秦浩元,HaoYuan Qin,,M,2004,19,,,Raw,Men's Raw Open Deadlift Only,62.1,67.5,,,,,,,,,,,180,190,-192.5,190,,190,D,
-1,殷瑞颉,RuiJie Yin,,M,2003,20,,,Raw,Men's Raw Open Deadlift Only,73.4,75,,,,,,,,,,,205,225,230,230,,230,D,
+Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Tested
+1,Langlang Niu,,F,1999,24,,,Raw,Women's Raw Open,59.9,60,-70,-80,80,80,,35,37.5,-40,37.5,,100,110,120,120,,237.5,SBD,
+1,Yile Guo,,F,2003,20,,,Raw,Women's Raw Open Deadlift Only,47.05,48,,,,,,,,,,,87.5,97.5,100,100,,100,D,
+1,Zhengjian Wang,,M,2002,21,,,Raw,Men's Raw Open,67.1,67.5,140,150,-155,150,,110,117.5,122.5,122.5,,160,175,182.5,182.5,,455,SBD,
+1,Ruijie Yin,,M,2003,20,,,Raw,Men's Raw Open,73.4,75,160,170,180,180,,107.5,115,120,120,,205,225,230,230,,530,SBD,
+2,Honglei Chen,,M,1995,28,,,Raw,Men's Raw Open,72.55,75,165,175,,175,,110,120,-125,120,,145,160,-170,160,,455,SBD,
+1,Datong Dou,,M,1997,26,,,Raw,Men's Raw Open,81.3,82.5,175,190,200,200,,105,115,-120,115,,195,210,220,220,,535,SBD,
+2,Haoyuan Li,,M,1982,41,,,Raw,Men's Raw Open,81.15,82.5,175,185,-190,185,,105,-112.5,112.5,112.5,,180,195,202.5,202.5,,500,SBD,
+1,Bin Li,,M,1996,27,,,Raw,Men's Raw Open,88.95,90,280,300,-305,300,,165,175,180,180,,270,290,300,300,,780,SBD,Yes
+2,Liming Xiao,,M,1990,34,,,Raw,Men's Raw Open,82.55,90,170,-180,180,180,,70,-77.5,-77.5,70,,160,175,185,185,,435,SBD,
+1,Hao Wu,,M,1995,28,,,Raw,Men's Raw Open,98.5,100,260,270,280,280,,140,152.5,157.5,157.5,,275,-300,-300,275,,712.5,SBD,
+2,Xinrui Gou,,M,2001,22,,,Raw,Men's Raw Open,92.05,100,200,210,-215,210,,120,130,140,140,,200,210,-215,210,,560,SBD,
+3,Jialin Yang,,M,2004,20,,,Raw,Men's Raw Open,92,100,160,167.5,175,175,,80,85,-92.5,85,,180,192.5,205,205,,465,SBD,
+1,Haoran Wang,,M,1987,36,,,Raw,Men's Raw Open,104.3,110,225,235,250,250,,125,-137.5,-142.5,125,,215,227.5,235,235,,610,SBD,Yes
+2,Renjunjie Han,,M,2001,22,,,Raw,Men's Raw Open,100.7,110,200,-207.5,207.5,207.5,,132.5,142.5,-150,142.5,,205,225,235,235,,585,SBD,
+3,Yuanchang Chu,,M,1995,28,,,Raw,Men's Raw Open,108.3,110,180,-200,-200,180,,100,107.5,-112.5,107.5,,170,185,-200,185,,472.5,SBD,
+1,Feng Xiao,,M,2001,22,,,Raw,Men's Raw Open,116.9,125,205,215,225,225,,92.5,100,105,105,,200,220,230,230,,560,SBD,
+DQ,Kehan Wang,,M,2006,17,,,Raw,Men's Raw Open Bench Only,81.85,82.5,,,,,,-110,-120,-130,,,,,,,,,B,
+DQ,Jinbo Ma,,M,1998,25,,,Raw,Men's Raw Open Bench Only,59.1,60,,,,,,-120,-125,-125,,,,,,,,,B,Yes
+1,Bo Pang,,M,2002,21,,,Raw,Men's Raw Open Bench Only,64.85,67.5,,,,,,132.5,140,-142.5,140,,,,,,,140,B,
+DQ,Qisheng Chen,,M,2007,16,,,Raw,Men's Raw Open Bench Only,72.8,75,,,,,,-140,-140,-140,,,,,,,,,B,
+1,Xingwang Duan,,M,2009,14,,,Raw,Men's Raw Open Deadlift Only,63.95,67.5,,,,,,,,,,,-195,195,-200,195,,195,D,
+2,Haoyuan Qin,,M,2004,19,,,Raw,Men's Raw Open Deadlift Only,62.1,67.5,,,,,,,,,,,180,190,-192.5,190,,190,D,
+1,Ruijie Yin,,M,2003,20,,,Raw,Men's Raw Open Deadlift Only,73.4,75,,,,,,,,,,,205,225,230,230,,230,D,
