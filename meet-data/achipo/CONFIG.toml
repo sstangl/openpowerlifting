@@ -15,6 +15,9 @@
     
     youth = {name ="Youth",min=0,max=14} #Not a real division, just defined for lifters < 15
 
+    guest = {name ="Guest",min=0,max=999,place="G"}
+
+
 
     # Old divisions
     jun = {name ="Junior",min=20,max=23}
