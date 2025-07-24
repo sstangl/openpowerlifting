@@ -648,6 +648,9 @@
 <optgroup label="{{strings.country.taiwan}}">
   <option value="all-taiwan" {% if selection.federation == "AllTaiwan" %}selected{% endif %}>{{strings.selectors.fed.all_taiwan}}</option>
 </optgroup>
+<optgroup label="{{strings.country.trinidadandtobago}}">
+  <option value="ttpf" {% if selection.federation == "TTPF" %}selected{% endif %}>TTPF - Trinidad and Tobago Powerlifting Federation [IPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.thailand}}">
   <option value="all-thailand" {% if selection.federation == "AllThailand" %}selected{% endif %}>{{strings.selectors.fed.all_thailand}}</option>
   <option value="thaipf" {% if selection.federation == "ThaiPF" %}selected{% endif %}>ThaiPF - Thai Powerlifting Federation [IPF]</option>
