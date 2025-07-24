@@ -2,7 +2,7 @@
 
 [options]
     require_manual_disambiguation = true
-    
+
 [divisions]
     open = {name="Open", min=0, max=999}
     juniors = {name="Juniors", min=0, max=22.5}
@@ -56,4 +56,4 @@
 
 [exemptions]
     1405 = ["ExemptWeightClassConsistency"]
-	
+    2512 = ["ExemptWeightClassConsistency"] # Euro Muscle Show with "World Games" classes
