@@ -31,6 +31,7 @@
     f7074 = {name ="F 70-74", min=70, max=74, sex="F", equipment = ["Raw","Wraps"]}
     m7579 = {name ="M 75-79", min=75, max=79, sex="M", equipment = ["Raw","Wraps"]}
     f7579 = {name ="F 75-79", min=75, max=79, sex="F", equipment = ["Raw","Wraps"]}
+    m80 = {name ="M 80+", min=80, max=99, sex="M", equipment = ["Raw","Wraps"]}
 
     m4080 = {name ="M 40-80", min=40, max=80, sex="M", equipment = ["Raw","Wraps"]}
     f4080 = {name ="F 40-80", min=40, max=80, sex="F", equipment = ["Raw","Wraps"]}
