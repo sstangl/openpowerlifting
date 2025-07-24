@@ -3700,7 +3700,7 @@ impl Federation {
             Federation::CBLB => Federation::ipf_rules_on(date),
             Federation::CBPL => PointsSystem::Wilks,
             Federation::ChinaPA => PointsSystem::Wilks,
-            Federation::CHNPL => PointsSystem::Wilks,
+            Federation::CHNPL => PointsSystem::Dots,
             Federation::CNFA => Federation::ipf_rules_on(date),
             Federation::ColPF => Federation::ipf_rules_on(date),
             Federation::CommonwealthPF => Federation::ipf_rules_on(date),
