@@ -21,6 +21,7 @@
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84,tested="No"}
     masters_80p = {name = "Masters 80+", min = 80, max = 999,tested="No"}
     pro = {name = "Pro", min = 0, max = 999,tested="No"}
+    m40_49para = {name = "M40-49-Para", min = 40, max = 49,tested="No"}
 
     #Tested
     opendt = {name = "Open-DT", min = 0, max = 999,tested="Yes"}
@@ -58,3 +59,4 @@
     2415 = ["ExemptWeightClassConsistency","ExemptDivision"]
     2511 = ["ExemptWeightClassConsistency","ExemptDivision"]
     2512 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2514 = ["ExemptDivision"]
