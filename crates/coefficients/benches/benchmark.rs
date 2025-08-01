@@ -1,7 +1,9 @@
 //! Simple benchmarks to assess the speed of coefficient calculation.
 
-use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 use opltypes::*;
+
+use std::hint::black_box;
 
 pub fn coefficient_benchmarks(c: &mut Criterion) {
     let mut group = c.benchmark_group("coefficients");

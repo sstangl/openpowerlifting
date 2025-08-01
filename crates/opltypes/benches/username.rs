@@ -1,7 +1,9 @@
 //! Simple benchmarks to assess the speed of username generation.
 
-use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 use opltypes::Username;
+
+use std::hint::black_box;
 
 pub fn username_benchmarks(c: &mut Criterion) {
     let mut group = c.benchmark_group("username");

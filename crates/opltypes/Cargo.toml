@@ -15,7 +15,7 @@ strum = { workspace = true }
 strum_macros = { workspace = true }
 
 [dev-dependencies]
-criterion = { version = "0.5", features = ["html_reports"] }
+criterion = { workspace = true }
 serde_json = { workspace = true }
 
 [[bench]]

@@ -21,7 +21,7 @@ strum_macros = { workspace = true }
 symbol_table = { version = "0.4", features = ["global", "serde"] }
 
 [dev-dependencies]
-criterion = { version = "0.5", features = ["html_reports"] }
+criterion = { workspace = true }
 
 [[bench]]
 name = "loading"

@@ -1,9 +1,10 @@
 //! Benchmarks loading the database from data files.
 
-use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 use opldb::query::direct::*;
 use opldb::{MetaFederation, OplDb};
 
+use std::hint::black_box;
 use std::path::Path;
 use std::sync::LazyLock;
 
