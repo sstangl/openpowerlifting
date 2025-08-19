@@ -77,10 +77,11 @@
     ft3mp  = {name ="FT3-MP",min=18,max=19,sex="F", equipment="Multi-ply"}
     ftsp   = {name ="FT-SP",min=13,max=19,sex="F", equipment="Single-ply"}
     ftmp   = {name ="FT-MP",min=13,max=19,sex="F", equipment="Multi-ply"}
-    mmr    = {name ="MM-R",min=40,max=999,sex="M", equipment="Raw"}
-    mmrp   = {name ="MM-RP",min=40,max=999,sex="M", equipment=["Raw","Wraps"]}
-    mmsp   = {name ="MM-SP",min=40,max=999,sex="M", equipment="Single-ply"}
-    mmmp   = {name ="MM-MP",min=40,max=999,sex="M", equipment="Multi-ply"}
+    # these all inclusive masters divisions sometimes include submasters
+    mmr    = {name ="MM-R",min=33,max=999,sex="M", equipment="Raw"}
+    mmrp   = {name ="MM-RP",min=33,max=999,sex="M", equipment=["Raw","Wraps"]}
+    mmsp   = {name ="MM-SP",min=33,max=999,sex="M", equipment="Single-ply"}
+    mmmp   = {name ="MM-MP",min=33,max=999,sex="M", equipment="Multi-ply"}
     mm1r   = {name ="MM1-R",min=40,max=44,sex="M", equipment="Raw"}
     mm1rp  = {name ="MM1-RP",min=40,max=44,sex="M", equipment=["Raw","Wraps"]}
     mm1sp  = {name ="MM1-SP",min=40,max=44,sex="M", equipment="Single-ply"}
@@ -116,8 +117,9 @@
     # CAPO uses a Masters 10 for 85-89yos which isn't in the WPC rulebook
     mm10r  = {name ="MM10-R",min=85,max=89,sex="M", equipment="Raw"}
     mm10rp  = {name ="MM10-RP",min=85,max=89,sex="M", equipment=["Raw","Wraps"]}
-    fmr    = {name ="FM-R",min=40,max=999,sex="F", equipment="Raw"}
-    fmrp   = {name ="FM-RP",min=40,max=999,sex="F", equipment=["Raw","Wraps"]}
+    # these "all masters" divisions sometimes include submasters 
+    fmr    = {name ="FM-R",min=33,max=999,sex="F", equipment="Raw"}
+    fmrp   = {name ="FM-RP",min=33,max=999,sex="F", equipment=["Raw","Wraps"]}
     fm1r   = {name ="FM1-R",min=40,max=44,sex="F", equipment="Raw"}
     fm1rp  = {name ="FM1-RP",min=40,max=44,sex="F", equipment=["Raw","Wraps"]}
     fm1sp  = {name ="FM1-SP",min=40,max=44,sex="F", equipment="Single-ply"}
@@ -142,8 +144,9 @@
     fm8r   = {name ="FM8-R",min=75,max=79,sex="F", equipment="Raw"}
     fm8rp   = {name ="FM8-RP",min=75,max=79,sex="F", equipment=["Raw","Wraps"]}
     fm9r   = {name ="FM9-R",min=80,max=999,sex="F", equipment="Raw"}
-    fmsp   = {name ="FM-SP",min=40,max=999,sex="F", equipment="Single-ply"}
-    fmmp   = {name ="FM-MP",min=40,max=999,sex="F", equipment="Multi-ply"}
+    # these all inclusive masters divisions sometimes include submasters
+    fmsp   = {name ="FM-SP",min=33,max=999,sex="F", equipment="Single-ply"}
+    fmmp   = {name ="FM-MP",min=33,max=999,sex="F", equipment="Multi-ply"}
     msmr   = {name ="MSM-R",min=33,max=39,sex="M", equipment="Raw"}
     msmrp  = {name ="MSM-RP",min=33,max=39,sex="M", equipment=["Raw","Wraps"]}
     msmsp  = {name ="MSM-SP",min=33,max=39,sex="M", equipment="Single-ply"}
@@ -160,7 +163,8 @@
     mjul = {name="MJ-UL", min=20, max=23, sex="M", equipment="Unlimited", event="B"}
     moul = {name="MO-UL", min=0, max=999, sex="M", equipment="Unlimited", event="B"}
     msmul = {name="MSM-UL", min=33, max=39, sex="M", equipment="Unlimited", event="B"}
-    mmul = {name="MM-UL", min=40, max=999, sex="M", equipment="Unlimited", event="B"}
+    # these all inclusive masters divisions sometimes include submasters
+    mmul = {name="MM-UL", min=33, max=999, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
     mm5ul = {name="MM5-UL", min=60, max=64, sex="M", equipment="Unlimited", event="B"}
     foul = {name="FO-UL", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
@@ -175,7 +179,9 @@
     mm6069r = {name="MM60-69-R",min=60,max=69,sex="M",equipment="Raw"}
     mm6069rp = {name="MM60-69-RP",min=60,max=69,sex="M",equipment=["Raw","Wraps"]}
     mm7079r = {name="MM70-79-R",min=70,max=79,sex="M",equipment="Raw"}
-    mm7057rp = {name="MM70-79-RP",min=70,max=79,sex="M",equipment=["Raw","Wraps"]}
+    mm7079rp = {name="MM70-79-RP",min=70,max=79,sex="M",equipment=["Raw","Wraps"]}
+    mm8089r = {name="MM80-89-R",min=80,max=89,sex="M",equipment="Raw"}
+    mm8089rp = {name="MM80-89-RP",min=80,max=89,sex="M",equipment=["Raw","Wraps"]}
     mm80pr = {name="MM80+-R",min=80,max=999,sex="M",equipment="Raw"}
     mm80prp = {name="MM80+-RP",min=80,max=999,sex="M",equipment=["Raw","Wraps"]}
 
@@ -186,7 +192,9 @@
     fm6069r = {name="FM60-69-R",min=60,max=69,sex="F",equipment="Raw"}
     fm6069rp = {name="FM60-69-RP",min=60,max=69,sex="F",equipment=["Raw","Wraps"]}
     fm7079r = {name="FM70-79-R",min=70,max=79,sex="F",equipment="Raw"}
-    fm7057rp = {name="FM70-79-RP",min=70,max=79,sex="F",equipment=["Raw","Wraps"]}
+    fm7079rp = {name="FM70-79-RP",min=70,max=79,sex="F",equipment=["Raw","Wraps"]}
+    fm8089r = {name="FM80-89-R",min=80,max=89,sex="F",equipment="Raw"}
+    fm8089rp = {name="FM80-89-RP",min=80,max=89,sex="F",equipment=["Raw","Wraps"]}
     fm80pr = {name="FM80+-R",min=80,max=999,sex="F",equipment="Raw"}
     fm80prp = {name="FM80+-RP",min=80,max=999,sex="F",equipment=["Raw","Wraps"]}
 
