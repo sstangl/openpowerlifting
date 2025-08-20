@@ -9,7 +9,7 @@ WeightClassKg,Sex,Name,Age,BodyweightKg,Division,Equipment,Squat1Kg,Squat2Kg,Squ
 67.5,M,Martin Beastall,47,66.4,M-M2,Raw,135,145,155,,155,,,,,,,,,,,155,S,2
 67.5,M,Cliff Haynes,51,67.5,M-M3,Raw,155,165,173,,173,,,,,,,,,,,173,S,1
 75,M,Seb Madronal,37,74.5,M-O,Raw,165,175,182.5,,182.5,,,,,,,,,,,182.5,S,1
-75,M,Tommy Meredith,55,72.4,M-M4,Raw,170,175.5,180,182.5,180,,,,,,,,,,,180,S,1
+75,M,Thomas Meredith,55,72.4,M-M4,Raw,170,175.5,180,182.5,180,,,,,,,,,,,180,S,1
 82.5,M,Darren Adams,19,78.8,M-T3,Raw,160,-182.5,-182.5,,160,,,,,,,,,,,160,S,1
 82.5,M,Richard Crossland #1,37,82.5,M-O,Raw,200,210.5,212.5,,212.5,,,,,,,,,,,212.5,S,1
 82.5,M,Glen Danbury,33,80.3,M-O,Raw,180,-200,205,,205,,,,,,,,,,,205,S,2
@@ -48,7 +48,7 @@ WeightClassKg,Sex,Name,Age,BodyweightKg,Division,Equipment,Squat1Kg,Squat2Kg,Squ
 75,M,Andris Sliseris,25,73.9,M-O,Raw,,,,,,115,125,-132.5,,125,,,,,,125,B,2
 75,M,Gary Lovett,38,73.5,M-O,Raw,,,,,,100,-102.5,102.5,,102.5,,,,,,102.5,B,3
 75,M,Mike Joseph #1,40,74.8,M-M1,Raw,,,,,,165.5,173,180,,180,,,,,,180,B,1
-75,M,Tommy Meredith,55,72.4,M-M4,Raw,,,,,,110,115,120.5,,120.5,,,,,,120.5,B,1
+75,M,Thomas Meredith,55,72.4,M-M4,Raw,,,,,,110,115,120.5,,120.5,,,,,,120.5,B,1
 82.5,M,John Aled,17,75.6,M-T2,Raw,,,,,,92.5,97.5,-100,,97.5,,,,,,97.5,B,1
 82.5,M,Ben Parker,19,80.2,M-T3,Raw,,,,,,110,120,-127.5,,120,,,,,,120,B,1
 82.5,M,Danny Groom,20,81.5,M-JR,Raw,,,,,,110,115,120,,120,,,,,,120,B,1
@@ -78,7 +78,7 @@ WeightClassKg,Sex,Name,Age,BodyweightKg,Division,Equipment,Squat1Kg,Squat2Kg,Squ
 110,M,Neil Thomas,39,107.8,M-O,Raw,,,,,,165,175,-182.5,,175,,,,,,175,B,1
 110,M,Alistair Murdoch,44,108.1,M-M1,Raw,,,,,,210,222.5,-225,,222.5,,,,,,222.5,B,1
 110,M,Andy Rigby,49,105,M-M2,Raw,,,,,,205,217.5,-222.5,,217.5,,,,,,217.5,B,1
-110,M,Peter Gaskin,49,109,M-M2,Raw,,,,,,145,152.5,-160,,152.5,,,,,,152.5,B,2
+110,M,Pete Gaskin,49,109,M-M2,Raw,,,,,,145,152.5,-160,,152.5,,,,,,152.5,B,2
 110,M,Ronald Burden,65,104,M-M6,Raw,,,,,,120,130,-135,,130,,,,,,130,B,1
 125,M,Dominic McDermott,28,118.5,M-O,Raw,,,,,,160,167.5,175,,175,,,,,,175,B,1
 125,M,Gary Dada,41,118.8,M-M1,Raw,,,,,,200,210,-215.5,,210,,,,,,210,B,1
@@ -110,7 +110,7 @@ WeightClassKg,Sex,Name,Age,BodyweightKg,Division,Equipment,Squat1Kg,Squat2Kg,Squ
 75,M,Dean Piggott,17,73.6,M-T2,Raw,,,,,,,,,,,152.5,162.5,170,,170,170,D,1
 75,M,Andris Sliseris,25,73.9,M-O,Raw,,,,,,,,,,,190,205,220,,220,220,D,1
 75,M,Jonathan Sachon,24,71,M-O,Raw,,,,,,,,,,,150,180,-200,,180,180,D,2
-75,M,Tommy Meredith,55,72.4,M-M4,Raw,,,,,,,,,,,200,-210.5,210.5,-215,210.5,210.5,D,1
+75,M,Thomas Meredith,55,72.4,M-M4,Raw,,,,,,,,,,,200,-210.5,210.5,-215,210.5,210.5,D,1
 75,M,Ian King #2,61,74.5,M-M5,Raw,,,,,,,,,,,130,-140,140,,140,140,D,1
 82.5,M,Ben Parker,19,80.2,M-T3,Raw,,,,,,,,,,,-200,,,,,,D,DQ
 82.5,M,Nicolas May,21,80.2,M-JR,Raw,,,,,,,,,,,190,205,210,,210,210,D,1
@@ -137,7 +137,7 @@ WeightClassKg,Sex,Name,Age,BodyweightKg,Division,Equipment,Squat1Kg,Squat2Kg,Squ
 110,M,Brett Le Cras,23,101.4,M-JR,Raw,,,,,,,,,,,280.5,290,300.5,,300.5,300.5,D,1
 110,M,Robert Cooper,30,103.8,M-O,Raw,,,,,,,,,,,250,270,292.5,,292.5,292.5,D,1
 110,M,Alistair Murdoch,44,108.1,M-M1,Raw,,,,,,,,,,,240,265,-277.5,,265,265,D,1
-110,M,Peter Gaskin,49,109,M-M2,Raw,,,,,,,,,,,230,-240,-242.5,,230,230,D,1
+110,M,Pete Gaskin,49,109,M-M2,Raw,,,,,,,,,,,230,-240,-242.5,,230,230,D,1
 110,M,Steven Lambert,51,104.7,M-M3,Raw,,,,,,,,,,,230,245,255,,255,255,D,1
 110,M,Ronald Burden,65,104,M-M6,Raw,,,,,,,,,,,190,210,220,,220,220,D,1
 125,M,Chris Burford,41,123,M-M1,Raw,,,,,,,,,,,260,290,305,,305,305,D,1
