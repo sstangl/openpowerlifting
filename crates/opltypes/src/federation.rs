@@ -1402,6 +1402,11 @@ pub enum Federation {
     #[strum(to_string = "UkrainePO", serialize = "ukrainepo")]
     UkrainePO,
 
+    /// Unaffiliated meets held in UK.
+    #[serde(rename = "UK-UA")]
+    #[strum(to_string = "UK-UA", serialize = "uk-ua")]
+    UKUA,
+
     /// Unified Strength Alliance, short-lived NorthEastern MP fed.
     #[strum(to_string = "UnifiedSA", serialize = "unifiedsa")]
     UnifiedSA,
@@ -2401,6 +2406,7 @@ impl Federation {
             Federation::UKPU => false,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
+            Federation::UKUA => false,
             Federation::UnifiedSA => false,
             Federation::UPA => false,
             Federation::UPC => false,
@@ -2869,6 +2875,7 @@ impl Federation {
             Federation::UPCGermany => Some(Country::Germany),
             Federation::UKPU => Some(Country::UK),
             Federation::UkrainePF => Some(Country::Ukraine),
+            Federation::UKUA => Some(Country::UK),
             Federation::UPL => Some(Country::Ukraine),
             Federation::URPF => Some(Country::Ukraine),
             Federation::USABA => Some(Country::USA),
@@ -3427,6 +3434,7 @@ impl Federation {
             Federation::UPCGermany => Some(Federation::UPC),
             Federation::UKPU => None,
             Federation::UkrainePF => Some(Federation::IPF),
+            Federation::UKUA => None,
             Federation::UPL => Some(Federation::IPL),
             Federation::URPF => Some(Federation::WRPF),
             Federation::USABA => Some(Federation::IBSA),
@@ -3998,6 +4006,7 @@ impl Federation {
             Federation::UgandaPF => Federation::wp_rules_on(date),
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
+            Federation::UKUA => PointsSystem::Wilks,
             Federation::UnifiedSA => PointsSystem::Wilks,
             Federation::UPA => PointsSystem::Wilks,
             Federation::UPC => PointsSystem::Wilks,
