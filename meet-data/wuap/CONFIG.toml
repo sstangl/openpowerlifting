@@ -6,6 +6,7 @@
     t_13_15 = {name = "T 13-15", min = 13, max = 15}
     t_16_17 = {name = "T 16-17", min = 16, max = 17}
     t_18_19 = {name = "T 18-19", min = 18, max = 19}
+    t_16_19 = {name = "T 16-19", min = 16, max = 19}
     tenn = {name = "Teen", min = 13, max = 19}   
     juniors = {name = "Juniors", min = 20, max = 23}
     submasters = {name = "Submasters", min = 35, max = 39}
@@ -47,4 +48,3 @@
     2202 = ["ExemptDivision"] # Eduard Khanjyan was a Guest
     2301 = ["ExemptDivision"] # Used 10 year Masters categories
     2302 = ["ExemptWeightClassConsistency", "ExemptDivision"] # Used 10 year Masters categories
-    
