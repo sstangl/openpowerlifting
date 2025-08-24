@@ -16,6 +16,7 @@
     m3 = {name = "M3", min = 60, max = 69}
     m4 = {name = "M4", min = 70, max = 79}
     m5 = {name = "M5", min = 80, max = 89}
+    guest = {name = "Guest", min = 0, max = 999}
 
     # OpenLifter-style divisions.
     j8_9 = {name="J8-9", min=8, max=9}
