@@ -1,0 +1,26 @@
+# Configuration for WRPF-Peru
+
+[options]
+    require_manual_disambiguation = true
+
+[divisions]
+    open = {name="Open", min=0, max=999}
+    teens1416 = {name="T14-16", min=14, max=16}
+    teens1719 = {name="T17-19", min=17, max=19}
+    juniors = {name="J20-23", min=20, max=23}
+    m4049 = {name=" M40-49", min=40, max=49}
+    m5059 = {name=" M50-59", min=50, max=59}
+    m6069 = {name=" M60-69", min=60, max=69}
+    m7079 = {name=" M70-79", min=70, max=79}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["1990-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["2022-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]

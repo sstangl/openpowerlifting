@@ -532,6 +532,7 @@
 <optgroup label="{{strings.country.peru}}">
   <option value="all-peru" {% if selection.federation == "AllPeru" %}selected{% endif %}>{{strings.selectors.fed.all_peru}}</option>
   <option value="fdnlp" {% if selection.federation == "FDNLP" %}selected{% endif %}>FDNLP - Federación Deportiva Nacional de Levantamiento de Potencia [IPF]</option>
+  <option value="fdnlp" {% if selection.federation == "WRPF-Peru" %}selected{% endif %}>WRPF-Peru [WRPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.philippines}}">
   <option value="all-philippines" {% if selection.federation == "AllPhilippines" %}selected{% endif %}>{{strings.selectors.fed.all_philippines}}</option>

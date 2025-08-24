@@ -1273,6 +1273,7 @@ impl MetaFederation {
                     | Federation::WRPFChile
                     | Federation::WRPFColombia
                     | Federation::WRPFEcuador
+                    | Federation::WRPFPeru
                     | Federation::WRPFVenezuela
             ),
             MetaFederation::WUAPCRO => {
