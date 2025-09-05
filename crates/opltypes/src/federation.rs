@@ -3231,7 +3231,14 @@ impl Federation {
             Federation::GPCCRO => Some(Federation::GPC),
             Federation::GPF => None,
             Federation::GPL => Some(Federation::IPL),
-            Federation::GPU => Some(Federation::WPU),
+            Federation::GPU => {
+                // German IPL affiliate from 2022
+                if date.year() >= 2022 {
+                    Some(Federation::IPL)
+                } else {
+                    Some(Federation::WPU)
+                }
+            }
             Federation::GRAWA => Some(Federation::IRP),
             Federation::GSFBelarus => None,
             Federation::Hardcore => None,
@@ -3811,7 +3818,14 @@ impl Federation {
             Federation::GPCCRO => PointsSystem::Glossbrenner,
             Federation::GPF => PointsSystem::Wilks,
             Federation::GPL => PointsSystem::Dots,
-            Federation::GPU => PointsSystem::Wilks,
+            Federation::GPU => {
+                // German IPL affiliate from 2022
+                if date.year() >= 2022 {
+                    Federation::ipl_rules_on(date)
+                } else {
+                    PointsSystem::Wilks
+                }
+            }
             Federation::GRAWA => PointsSystem::Wilks,
             Federation::GSFBelarus => PointsSystem::Wilks,
             Federation::Hardcore => PointsSystem::Wilks,

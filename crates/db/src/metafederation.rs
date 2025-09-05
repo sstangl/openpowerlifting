@@ -1058,7 +1058,9 @@ impl MetaFederation {
             MetaFederation::CyprusPF => affiliation!(meet, entry, CyprusPF, IPF, EPF),
             MetaFederation::DPL => affiliation!(meet, entry, DPL, IPL),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
-            MetaFederation::EgyptPF => affiliation!(meet, entry, EgyptPF, IPF, AfricanPF, UAEPL, SSSC, KPC, QatarPL), //Egypt use gulf meets for Team and Records
+            MetaFederation::EgyptPF => {
+                affiliation!(meet, entry, EgyptPF, IPF, AfricanPF, UAEPL, SSSC, KPC, QatarPL)
+            } //Egypt use gulf meets for Team and Records
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO, NAPF),
@@ -1217,7 +1219,9 @@ impl MetaFederation {
             MetaFederation::TAAP => affiliation!(meet, entry, TAAP, IPF, AsianPF),
             MetaFederation::ThaiPF => affiliation!(meet, entry, ThaiPF, IPF, AsianPF),
             MetaFederation::TPSSF => affiliation!(meet, entry, TPSSF, IPF, EPF),
-            MetaFederation::TTPF => affiliation!(meet, entry, TTPF, IPF, NAPF, FESUPO, CommonwealthPF),
+            MetaFederation::TTPF => {
+                affiliation!(meet, entry, TTPF, IPF, NAPF, FESUPO, CommonwealthPF)
+            }
             MetaFederation::UAEPL => affiliation!(meet, entry, UAEPL, IPF, AsianPF, OceaniaPF),
             MetaFederation::UgandaPF => affiliation!(meet, entry, UgandaPF, WP),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
