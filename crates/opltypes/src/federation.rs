@@ -1568,6 +1568,11 @@ pub enum Federation {
     #[strum(to_string = "WP-Niue", serialize = "wp-niue")]
     WPNiue,
 
+    /// World Powerlifting Sri Lanka
+    #[serde(rename = "WP-SL")]
+    #[strum(to_string = "WP-SL", serialize = "wp-sl")]
+    WPSL,
+
     /// WP-USA, the drug-tested half of the USPC.
     #[serde(rename = "WP-USA")]
     #[strum(to_string = "WP-USA", serialize = "wp-usa")]
@@ -2449,6 +2454,7 @@ impl Federation {
             Federation::WPIndia => FULLY_TESTED,
             Federation::WPNauru => FULLY_TESTED,
             Federation::WPNiue => FULLY_TESTED,
+            Federation::WPSL => FULLY_TESTED,
             Federation::WPUSA => FULLY_TESTED,
             Federation::WPA => false,
             Federation::WPAGEO => false,
@@ -2914,6 +2920,7 @@ impl Federation {
             Federation::WPIndia => Some(Country::India),
             Federation::WPNauru => Some(Country::Nauru),
             Federation::WPNiue => Some(Country::Niue),
+            Federation::WPSL => Some(Country::SriLanka),
             Federation::WPUSA => Some(Country::USA),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Country::Georgia),
@@ -3496,6 +3503,7 @@ impl Federation {
             Federation::WPIndia => Some(Federation::WP),
             Federation::WPNauru => Some(Federation::WP),
             Federation::WPNiue => Some(Federation::WP),
+            Federation::WPSL => Some(Federation::WP),
             Federation::WPUSA => Some(Federation::WP),
             Federation::WPA => None,
             Federation::WPAGEO => Some(Federation::WPA),
@@ -4068,6 +4076,7 @@ impl Federation {
             Federation::WPIndia => Federation::wp_rules_on(date),
             Federation::WPNauru => Federation::wp_rules_on(date),
             Federation::WPNiue => Federation::wp_rules_on(date),
+            Federation::WPSL => Federation::wp_rules_on(date),
             Federation::WPUSA => Federation::wp_rules_on(date),
             Federation::WPA => PointsSystem::Wilks,
             Federation::WPAGEO => PointsSystem::Wilks,
