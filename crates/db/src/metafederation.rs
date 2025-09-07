@@ -703,6 +703,14 @@ pub enum MetaFederation {
     #[strum(to_string = "ugandapf")]
     UgandaPF,
 
+    /// UKIPL
+    #[strum(to_string = "ukipl")]
+    UKIPL,
+
+    /// UKIPL Tested
+    #[strum(to_string = "ukipl-tested")]
+    UKIPLTested,
+
     /// UKPU Tested
     #[strum(to_string = "ukpu-tested")]
     UKPUTested,
@@ -1144,6 +1152,10 @@ impl MetaFederation {
             MetaFederation::IPLChina => affiliation!(meet, entry, IPLChina, IPL),
             MetaFederation::IPLChinaTested => {
                 entry.tested && MetaFederation::IPLChina.contains(entry, meets)
+            }
+            MetaFederation::UKIPL => affiliation!(meet, entry, UKIPL, IPL),
+            MetaFederation::UKIPLTested => {
+                entry.tested && MetaFederation::UKIPL.contains(entry, meets)
             }
             MetaFederation::IranBBF => affiliation!(meet, entry, IranBBF, IPF, AsianPF),
             MetaFederation::IraqPF => affiliation!(meet, entry, IraqPF, IPF, AsianPF),
