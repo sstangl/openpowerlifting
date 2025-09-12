@@ -762,6 +762,7 @@
     PA-2025-14 = ["ExemptWeightClassConsistency"]
     NLD-2025-02 = ["ExemptWeightClassConsistency"]
     FL-2025-06 = ["ExemptWeightClassConsistency"]
+    PA-2025-25 = ["ExemptWeightClassConsistency","ExemptDivision"]
 
     
 
@@ -966,6 +967,8 @@
     CO-2025-06 = ["ExemptDivision"]
     NJ-2025-07 = ["ExemptDivision"]
     CA-2025-21 = ["ExemptDivision"]
+    TN-2025-05 = ["ExemptDivision"]
+    IN-2025-05 = ["ExemptDivision"]
 
     
 
