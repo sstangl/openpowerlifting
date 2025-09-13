@@ -774,6 +774,11 @@ pub enum MetaFederation {
     #[serde(rename = "WRPF-CAN-Tested")]
     WRPFCANTested,
 
+    /// WRPF-UK, but only for Tested entries.
+    #[strum(to_string = "wrpf-uk-tested")]
+    #[serde(rename = "WRPF-UK-Tested")]
+    WRPFUKTested,
+
     /// WRPF-USA.
     #[strum(to_string = "wrpf-usa")]
     #[serde(rename = "WRPF-USA")]
@@ -1268,6 +1273,7 @@ impl MetaFederation {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::WRPF)
             }
             MetaFederation::WRPFCANTested => meet.federation == Federation::WRPFCAN && entry.tested,
+            MetaFederation::WRPFUKTested => meet.federation == Federation::WRPFUK && entry.tested,
             MetaFederation::WRPFUSA => match meet.federation {
                 Federation::WRPF => match entry.lifter_country {
                     Some(Country::USA) => true,

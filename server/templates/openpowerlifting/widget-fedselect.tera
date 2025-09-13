@@ -120,6 +120,7 @@
   <option value="uk-ua" {% if selection.federation == "UK-UA" %}selected{% endif %}>UK-UA [Unaffiliated]</option>
   <option value="welshpa" {% if selection.federation == "WelshPA" %}selected{% endif %}>WelshPA - Welsh Powerlifting Association [IPF]</option>
   <option value="wrpf-uk" {% if selection.federation == "WRPF-UK" %}selected{% endif %}>WRPF UK</option>
+    <option value="wrpf-uk-tested" {% if selection.federation == "WRPF-UK Tested" %}selected{% endif %}>WRPF UK Tested</option>
 </optgroup>
 <optgroup label="{{strings.country.algeria}}">
   <option value="all-algeria" {% if selection.federation == "AllAlgeria" %}selected{% endif %}>All Algerian Lifters</option>
