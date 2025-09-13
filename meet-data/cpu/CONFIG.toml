@@ -18,6 +18,7 @@
     para = {name = "Para",min=0,max=999}
     blind = {name = "Blind",min=0,max=999}
     disabled = {name = "Disabled",min=0,max=999}
+    guest = {name ="Guest",min=0,max=999}
 
     youth1 = {name ="Youth 1",min=8,max=9}
     youth2 = {name ="Youth 2",min=10,max=11}
