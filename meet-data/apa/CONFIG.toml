@@ -60,6 +60,7 @@
     youth910 = {name = "Youth 9-10",min=9,max=10}
     youth1112 = {name = "Youth 11-12",min=11,max=12}
     exhibition = {name ="Exhibition",min=0,max=999}
+    guest = {name ="Guest",min=0,max=999}
 
     #APA has two ways of numbering masters: 40,45,50,... or 40,50,60,...
     masters40 = {name ="Masters 40+",min=40,max=999} #Masters 1
@@ -131,6 +132,8 @@
     8902 = ["ExemptWeightClassConsistency"]  # Unreported.
     8904 = ["ExemptWeightClassConsistency"]  # Unreported.
     8905 = ["ExemptWeightClassConsistency"]  # Unreported.
+    0002 = ["ExemptWeightClassConsistency"]  # Unreported.
+    0101 = ["ExemptWeightClassConsistency"]  # Unreported.
     0202 = ["ExemptWeightClassConsistency"]  # Non open lifters don't have weightclasses
     0203 = ["ExemptWeightClassConsistency"]  # Non open lifters don't have weightclasses
     0504 = ["ExemptDivision"]
