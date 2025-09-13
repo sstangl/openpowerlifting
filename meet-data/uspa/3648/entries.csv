@@ -47,7 +47,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 2,Vincent Crapello,PA,75,75,,37,192.5,205,212.5,212.5,112.5,120,127.5,127.5,220,230,237.5,237.5,577.5,,,SBD,Raw,M,Open,Yes
 3,Austin Willis,GA,75,68.6,,20,157.5,165,-175,165,110,120,-130,120,200,210,-222.5,210,495,,,SBD,Raw,M,Open,Yes
 1,Nigel Blackburn,FL,82.5,80.6,,30,220,235,247.5,247.5,132.5,137.5,142.5,142.5,245,260,-272.5,260,650,,,SBD,Raw,M,Open,Yes
-2,Daniel Austin #3,VA,82.5,81.3,,42,200,213,220,220,135,140.5,-143,140.5,222.5,237.5,245,245,605.5,,,SBD,Raw,M,Open,Yes
+2,Daniel Austin #3,VA,82.5,81.3,,42,200,213,220,220,135,140.5,-143,140.5,222.5,237.5,-245,237.5,598,,,SBD,Raw,M,Open,Yes
 3,Jeff Williams,FL,82.5,82.2,,33,-207.5,207.5,217.5,217.5,132.5,140,-147.5,140,215,225,232.5,232.5,590,,,SBD,Raw,M,Open,Yes
 4,Brandon Greene #1,FL,82.5,82.5,,28,180,192.5,205,205,122.5,130,135,135,220,237.5,250,250,590,,,SBD,Raw,M,Open,Yes
 5,Keshawn Dixon,FL,82.5,82.5,,24,145,160,167.5,167.5,90,97.5,-107.5,97.5,175,190,202.5,202.5,467.5,,,SBD,Raw,M,Open,Yes
@@ -71,7 +71,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 1,Kendall Monroe,FL,140+,147.9,,28,165,175,182.5,182.5,125,135,150,150,200,217.5,227.5,227.5,560,,,SBD,Raw,M,Open,Yes
 1,Vincent Crapello,PA,75,75,,37,192.5,205,212.5,212.5,112.5,120,127.5,127.5,220,230,237.5,237.5,577.5,,,SBD,Raw,M,Submasters 35-39,Yes
 1,Nick Squires,CA,110,107.6,,39,282.5,-292.5,295,295,170,175,-182.5,175,282.5,300,310,310,780,,,SBD,Raw,M,Submasters 35-39,Yes
-1,Daniel Austin #3,VA,82.5,81.3,,42,200,213,220,220,135,140.5,-143,140.5,222.5,237.5,245,245,605.5,,,SBD,Raw,M,Masters 40-44,Yes
+1,Daniel Austin #3,VA,82.5,81.3,,42,200,213,220,220,135,140.5,-143,140.5,222.5,237.5,-245,237.5,598,,,SBD,Raw,M,Masters 40-44,Yes
 2,Giovanni Cruz,FL,82.5,81.7,,41,-180,180,200,200,110,120,125,125,200,220,240,240,565,,,SBD,Raw,M,Masters 40-44,Yes
 1,Clashous Witherspoon,FL,125,121.3,,65,145,155,162.5,162.5,137.5,145,151,151,160,175,182.5,182.5,496,152.5,,SBD,Raw,M,Masters 65-69,Yes
 1,Ndem Nkem,OR,140,129.9,,41,,,,,160,165,170,170,,,,,170,,,B,Raw,M,Masters 40-44,Yes
@@ -95,7 +95,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 1,Ndem Nkem,OR,140,129.9,,41,,,,,160,165,170,170,,,,,170,,,B,Raw,M,Masters 40-44,Yes
 1,Tabitha Shumate,FL,75,74.2,,17,,,,,,,,,92.5,105,-110,105,105,,,D,Raw,F,Juniors 16-17,Yes
 1,Vincent Crapello,PA,75,75,,37,,,,,,,,,220,230,237.5,237.5,237.5,,,D,Raw,M,Open,Yes
-1,Daniel Austin #3,VA,82.5,81.3,,42,,,,,,,,,222.5,237.5,245,245,245,,,D,Raw,M,Open,Yes
+1,Daniel Austin #3,VA,82.5,81.3,,42,,,,,,,,,222.5,237.5,-245,237.5,237.5,,,D,Raw,M,Open,Yes
 2,Alexander Rodriguez,FL,82.5,81.7,,32,,,,,,,,,142.5,145,150,150,150,,,D,Raw,M,Open,Yes
 1,Nick Squires,CA,110,107.6,,39,,,,,,,,,282.5,300,310,310,310,,,D,Raw,M,Open,Yes
 1,Jerry Stanley,OK,125,120.7,,38,,,,,,,,,295,-307.5,-307.5,295,295,,,D,Raw,M,Open,Yes
@@ -103,7 +103,7 @@ DQ,Ndem Nkem,OR,140,129.9,,41,,,,,,,,,,,,,,,,D,Raw,M,Open,Yes
 1,Vincent Crapello,PA,75,75,,37,,,,,,,,,220,230,237.5,237.5,237.5,,,D,Raw,M,Submasters 35-39,Yes
 1,Nick Squires,CA,110,107.6,,39,,,,,,,,,282.5,300,310,310,310,,,D,Raw,M,Submasters 35-39,Yes
 1,Jerry Stanley,OK,125,120.7,,38,,,,,,,,,295,-307.5,-307.5,295,295,,,D,Raw,M,Submasters 35-39,Yes
-1,Daniel Austin #3,VA,82.5,81.3,,42,,,,,,,,,222.5,237.5,245,245,245,,,D,Raw,M,Masters 40-44,Yes
+1,Daniel Austin #3,VA,82.5,81.3,,42,,,,,,,,,222.5,237.5,-245,237.5,237.5,,,D,Raw,M,Masters 40-44,Yes
 1,Lowell Davis,FL,125,114,,53,,,,,,,,,212.5,225,230,230,230,,235,D,Raw,M,Masters 50-54,Yes
 DQ,Ndem Nkem,OR,140,129.9,,41,,,,,,,,,,,,,,,,D,Raw,M,Masters 40-44,Yes
 1,Jerry Stanley,OK,125,120.7,,38,,,,,167.5,172.5,182.5,182.5,295,-307.5,-307.5,295,477.5,,,BD,Raw,M,Open,Yes
