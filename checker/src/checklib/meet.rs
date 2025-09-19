@@ -134,17 +134,29 @@ pub fn check_meetpath(report: &mut Report) -> Option<String> {
 }
 
 /// Checks the Federation column.
-pub fn check_federation(s: &str, report: &mut Report) -> Option<Federation> {
-    match s.parse::<Federation>() {
-        Ok(f) => Some(f),
-        Err(_) => {
+pub fn check_federation(
+    s: &str,
+    config: Option<&Config>,
+    report: &mut Report,
+) -> Option<Federation> {
+    let Ok(fed) = s.parse::<Federation>() else {
+        report.error(format!(
+            "Unknown federation '{s}'. \
+             Add to crates/opltypes/src/federation.rs?",
+        ));
+        return None;
+    };
+
+    if let Some(options) = config.and_then(|c| c.options.as_ref()) {
+        if !options.valid_federations.is_empty() && !options.valid_federations.contains(&fed) {
             report.error(format!(
-                "Unknown federation '{s}'. \
-                 Add to crates/opltypes/src/federation.rs?",
+                "Federation '{s}' disallowed by 'valid_federations' in the CONFIG.toml"
             ));
-            None
+            return None;
         }
     }
+
+    Some(fed)
 }
 
 /// Checks the Date column.
@@ -392,7 +404,7 @@ pub fn do_check<R: io::Read>(
     }
 
     // Check the required columns.
-    let federation = check_federation(&record[0], &mut report);
+    let federation = check_federation(&record[0], config, &mut report);
     let date = check_date(&record[1], &mut report);
     let country = check_meetcountry(&record[2], &mut report);
     let state = check_meetstate(&record[3], &mut report, country);

@@ -1,6 +1,7 @@
 # USPA uses exact birthdays for their age classes.
 
 [options]
+    valid_federations = ["USPA", "USPF", "IPL", "CPL"]
     require_manual_disambiguation = true
 
 [divisions]

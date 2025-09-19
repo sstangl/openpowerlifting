@@ -1,6 +1,7 @@
 # Configuration for WRPF-AUS (Australia).
 
 [options]
+    valid_federations = ["WRPF-AUS"]
     require_manual_disambiguation = true
 
 [divisions]

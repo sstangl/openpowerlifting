@@ -27,6 +27,13 @@ pub struct Config {
 
 #[derive(Debug, Default)]
 pub struct OptionConfig {
+    /// Specifies the federations allowed for this config file.
+    ///
+    /// This is used to sanity-check the meet.csv federation data. For example,
+    /// many affiliates will submit meet results using the name of their parent
+    /// federation. This will catch the discrepancy.
+    pub valid_federations: Vec<Federation>,
+
     /// Option that specifies the config only affects meets after a certain
     /// Date, allowing for partial federation configuration.
     pub valid_since: Option<Date>,
@@ -144,13 +151,37 @@ impl Config {
 }
 
 fn parse_options(value: &Value, report: &mut Report) -> Option<OptionConfig> {
-    let table = match value.as_table() {
-        Some(t) => t,
-        None => {
-            report.error("Section 'options' must be a Table");
-            return None;
-        }
+    let Some(table) = value.as_table() else {
+        report.error("Section 'options' must be a Table");
+        return None;
     };
+
+    let mut valid_federations: Vec<Federation> = Vec::new();
+    if let Some(v) = table.get("valid_federations") {
+        let Some(arr) = v.as_array() else {
+            report.error("Value 'valid_federations' must be an array");
+            return None;
+        };
+
+        for value in arr {
+            let Some(s) = value.as_str() else {
+                report.error("All values in 'valid_federations' must be strings");
+                return None;
+            };
+
+            let Ok(fed) = Federation::try_from(s) else {
+                report.error("Unknown federation in 'valid_federations'");
+                return None;
+            };
+
+            if valid_federations.contains(&fed) {
+                report.error("Duplicate federation in 'valid_federations'");
+                return None;
+            }
+
+            valid_federations.push(fed);
+        }
+    }
 
     let valid_since: Option<Date> = if let Some(v) = table.get("valid_since") {
         match v.as_str().and_then(|s| s.parse::<Date>().ok()) {
@@ -164,19 +195,19 @@ fn parse_options(value: &Value, report: &mut Report) -> Option<OptionConfig> {
         None
     };
 
-    let mut require_manual_disambiguation = false;
-    if let Some(v) = table.get("require_manual_disambiguation") {
-        match v.as_bool() {
-            Some(b) => {
-                require_manual_disambiguation = b;
-            }
+    let require_manual_disambiguation = match table.get("require_manual_disambiguation") {
+        Some(v) => match v.as_bool() {
+            Some(b) => b,
             None => {
                 report.error("Value 'require_manual_disambiguation' must be a boolean");
+                return None;
             }
-        }
-    }
+        },
+        None => false,
+    };
 
     Some(OptionConfig {
+        valid_federations,
         valid_since,
         require_manual_disambiguation,
     })
@@ -185,12 +216,9 @@ fn parse_options(value: &Value, report: &mut Report) -> Option<OptionConfig> {
 fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
     let mut acc = vec![];
 
-    let table = match value.as_table() {
-        Some(t) => t,
-        None => {
-            report.error("Section 'divisions' must be a Table");
-            return acc;
-        }
+    let Some(table) = value.as_table() else {
+        report.error("Section 'divisions' must be a Table");
+        return acc;
     };
 
     for (key, division) in table {
