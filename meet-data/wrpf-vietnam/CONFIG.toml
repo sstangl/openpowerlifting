@@ -1,6 +1,7 @@
 # Configuration for WRPF-Vietnam, copied from WRPF-USA.
 
 [options]
+    valid_federations = ["WRPF-Vietnam"]
     require_manual_disambiguation = true
 
 [divisions]

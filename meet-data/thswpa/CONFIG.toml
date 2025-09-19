@@ -1,3 +1,6 @@
+[options]
+    valid_federations = ["THSWPA"]
+
 [divisions]
     # The main division used for almost everything.
     girls = {name="Girls", min=13, max=19, sex="F"}

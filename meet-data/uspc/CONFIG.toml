@@ -1,6 +1,7 @@
 # Configuration for the USPC.
 
 [options]
+    valid_federations = ["USPC"]
     require_manual_disambiguation = true
 
 [divisions]

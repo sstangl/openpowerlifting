@@ -1,6 +1,7 @@
 # 365Strong configuration.
 
 [options]
+    valid_federations = ["365Strong"]
     require_manual_disambiguation = true
 
 [divisions]
