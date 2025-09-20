@@ -796,6 +796,11 @@ pub enum Federation {
     #[strum(to_string = "IPL-NZ", serialize = "ipl-nz")]
     IPLNZ,
 
+    /// International Powerlifting League, Russia
+    #[serde(rename = "IPL-Russia")]
+    #[strum(to_string = "IPL-Russia", serialize = "ipl-russia")]
+    IPLRussia,
+
     /// International Powerlifting League, Spain
     #[serde(rename = "IPL-Spain")]
     #[strum(to_string = "IPL-Spain", serialize = "ipl-spain")]
@@ -2265,6 +2270,7 @@ impl Federation {
             Federation::IPLChina => false,
             Federation::IPLItaly => false,
             Federation::IPLNZ => false,
+            Federation::IPLRussia => false,
             Federation::IPLSpain => false,
             Federation::UKIPL => false,
             Federation::IranBBF => FULLY_TESTED,
@@ -2738,6 +2744,7 @@ impl Federation {
             Federation::IPLChina => Some(Country::China),
             Federation::IPLItaly => Some(Country::Italy),
             Federation::IPLNZ => Some(Country::NewZealand),
+            Federation::IPLRussia => Some(Country::Russia),
             Federation::IPLSpain => Some(Country::Spain),
             Federation::UKIPL => Some(Country::UK),
             Federation::IranBBF => Some(Country::Iran),
@@ -3278,6 +3285,7 @@ impl Federation {
             Federation::IPLChina => Some(Federation::IPL),
             Federation::IPLItaly => Some(Federation::IPL),
             Federation::IPLNZ => Some(Federation::IPL),
+            Federation::IPLRussia => Some(Federation::IPL),
             Federation::IPLSpain => Some(Federation::IPL),
             Federation::UKIPL => {
                 // UK IPL affiliate from 2024
@@ -3858,6 +3866,7 @@ impl Federation {
             Federation::IPLChina => Federation::ipl_rules_on(date),
             Federation::IPLItaly => Federation::ipl_rules_on(date),
             Federation::IPLNZ => Federation::ipl_rules_on(date),
+            Federation::IPLRussia => Federation::ipl_rules_on(date),
             Federation::IPLSpain => Federation::ipl_rules_on(date),
             Federation::UKIPL => Federation::ipl_rules_on(date),
             Federation::IranBBF => Federation::ipf_rules_on(date),

@@ -578,6 +578,8 @@
   <option value="rpu" {% if selection.federation == "RPU" %}selected{% endif %}>RPU - Russian Powerlifting Union</option>
   <option value="sct" {% if selection.federation == "SCT" %}selected{% endif %}>SCT - Super-Cup of Titans (Single-ply)</option>
   <option value="spss" {% if selection.federation == "SPSS" %}selected{% endif %}>SPSS - Societatem Potentis Species Sports</option>
+  <option value="ipl-russia" {% if selection.federation == "IPLRussia" %}selected{% endif %}>IPL-Russia - IPL Russia</option>
+  <option value="iplrussia-tested" {% if selection.federation == "IPLRussiaTested" %}selected{% endif %}>IPL-Russia Tested - IPL Russia Tested [IPL]</option>
   <option value="vityaz" {% if selection.federation == "Vityaz" %}selected{% endif %}>Vityaz - Vityaz</option>
   <option value="wpa-rus" {% if selection.federation == "WPA-RUS" %}selected{% endif %}>WPA-RUS - WPA Russia</option>
   <option value="wpc-rus" {% if selection.federation == "WPC-RUS" %}selected{% endif %}>WPC-RUS - WPC Russia</option>
