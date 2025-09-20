@@ -138,6 +138,7 @@
     0203 = ["ExemptWeightClassConsistency"]  # Non open lifters don't have weightclasses
     0204 = ["ExemptWeightClassConsistency"]
     0206 = ["ExemptDivision"]
+    0207 = ["ExemptWeightClassConsistency"]
     0504 = ["ExemptDivision"]
     0601 = ["ExemptDivision"]  
     0805 = ["ExemptDivision"]  
