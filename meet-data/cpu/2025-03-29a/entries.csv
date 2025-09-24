@@ -1,4 +1,4 @@
-﻿Place,Name,Event,Sex,State,Division,BirthDate,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment
+Place,Name,Event,Sex,State,Division,BirthDate,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment
 DQ,Megg Turner,B,F,AB,Open,,62.02,63,,,,,-105,-107.5,-107.5,,,,,,,Single-ply
 1,Kendall Clyne,B,F,AB,Juniors,,66.86,69,,,,,82.5,87.5,-90,87.5,,,,,87.5,Raw
 1,Jacqueline Colbourne,B,F,AB,Masters 1,,82.1,84,,,,,-65,65,67.5,67.5,,,,,67.5,Raw
@@ -47,8 +47,8 @@ DQ,Stacy Harper,SBD,F,AB,Masters 2,,75.39,76,-75,-75,-75,,47.5,50,-52.5,50,,,,,,
 3,Jennifer Butts,SBD,F,AB,Open,,129.55,84+,127.5,142.5,150,150,65,72.5,77.5,77.5,140,150,160,160,387.5,Raw
 4,Morgan Wawryk,SBD,F,AB,Open,,99.49,84+,-140,140,145,145,60,67.5,70,70,150,157.5,165,165,380,Raw
 5,Aimee Langer,SBD,F,AB,Open,,120.7,84+,102.5,110,120,120,55,-62.5,-62.5,55,107.5,115,120,120,295,Raw
-1,Justin Flores,SBD,M,AB,Juniors,,80.84,83,230,240,250,250,140,-150,-150,140,250,260,272.5,272.5,662.5,Raw
-2,Jesse Kim,SBD,M,AB,Juniors,,81.9,83,175,187.5,195,195,92.5,100,-105,100,200,-212.5,212.5,212.5,507.5,Raw
+DD,Justin Flores,SBD,M,AB,Juniors,,80.84,83,230,240,250,250,140,-150,-150,140,250,260,272.5,272.5,,Raw
+1,Jesse Kim,SBD,M,AB,Juniors,,81.9,83,175,187.5,195,195,92.5,100,-105,100,200,-212.5,212.5,212.5,507.5,Raw
 1,Teagan Slapman,SBD,M,AB,Juniors,,91.84,93,182.5,-195,200,200,95,102.5,105,105,205,220,232.5,232.5,537.5,Raw
 1,Patrick Engreso,SBD,M,AB,Juniors,,102.55,105,195,205,-212.5,205,92.5,97.5,100,100,227.5,237.5,-242.5,237.5,542.5,Raw
 1,Kelvin Chan #1,SBD,M,AB,Open,,64.91,66,170,177.5,-182.5,177.5,105,110,112.5,112.5,-195,-195,195,195,485,Raw
