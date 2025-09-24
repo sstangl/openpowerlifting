@@ -1171,11 +1171,6 @@ impl MetaFederation {
                 entry.tested && MetaFederation::IPLRussia.contains(entry, meets)
             }
             MetaFederation::IranBBF => affiliation!(meet, entry, IranBBF, IPF, AsianPF),
-            MetaFederation::UKIPL => affiliation!(meet, entry, UKIPL, IPL),
-            MetaFederation::UKIPLTested => {
-                entry.tested && MetaFederation::UKIPL.contains(entry, meets)
-            }
-            MetaFederation::IranBBF => affiliation!(meet, entry, IranBBF, IPF, AsianPF),
             MetaFederation::IraqPF => affiliation!(meet, entry, IraqPF, IPF, AsianPF),
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
@@ -1255,6 +1250,10 @@ impl MetaFederation {
             MetaFederation::UAEPL => affiliation!(meet, entry, UAEPL, IPF, AsianPF, OceaniaPF),
             MetaFederation::UgandaPF => affiliation!(meet, entry, UgandaPF, WP),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
+            MetaFederation::UKIPL => affiliation!(meet, entry, UKIPL, IPL),
+            MetaFederation::UKIPLTested => {
+                entry.tested && MetaFederation::UKIPL.contains(entry, meets)
+            }
 
             // Only include USA entries for meets directly affiliated with USAPL at any time,
             // or USA entries for NAPF/IPF meets after USAPL became IPF affiliate on 5 Dec 1997
