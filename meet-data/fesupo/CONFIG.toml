@@ -14,6 +14,7 @@
     masters2 = {name = "Masters 2",min=49.5,max=58.5}
     masters3 = {name = "Masters 3",min=59.5,max=68.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
+    university = {name = "University",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
@@ -34,13 +35,13 @@
     classes = ["53","59","66","74","83","93","105","120","105+","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","University"]
 
 [weightclasses.juniornew_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Juniors","Sub-Juniors"]
+    divisions = ["Juniors","Sub-Juniors","University"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
