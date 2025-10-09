@@ -1,6 +1,7 @@
 # Configuration for the APO.
 
 [options]
+    valid_federations = ["APO"]
     require_manual_disambiguation = true
 
 [divisions]
