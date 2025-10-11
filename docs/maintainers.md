@@ -2,7 +2,7 @@
 
 This file provides documentation for common tasks performed by project maintainers. It's intended to serve as an introduction for new maintainers, and to serve as memory for the project about how some things are currently done.
 
-The current project maintainers are (alphabetically) Gem Lucas, Jo Whiteley, Julien Comte, Laura Rettig, Matt Pearce, and Sean Stangl.
+The current project maintainers are (alphabetically) Gem Lucas, James Wakefield, Jo Whiteley, Johan Frisk, Julien Comte, Laura Rettig, Matt Pearce, and Sean Stangl.
 
 ## What's a Project Maintainer?
 
