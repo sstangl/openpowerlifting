@@ -1,6 +1,7 @@
 # Configuration for the EPA.
 
 [options]
+    valid_federations = ["EPA", "BAWLA"]
     require_manual_disambiguation = true
 
 [divisions]
