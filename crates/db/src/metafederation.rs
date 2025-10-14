@@ -1083,7 +1083,7 @@ impl MetaFederation {
                 affiliation!(meet, entry, EgyptPF, IPF, AfricanPF, UAEPL, SSSC, KPC, QatarPL)
             } //Egypt use gulf meets for Team and Records
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
-            MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP),
+            MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP, CommonwealthPF),
             MetaFederation::FALPO => affiliation!(meet, entry, FALPO, IPF, FESUPO, NAPF),
             MetaFederation::FAPL => affiliation!(meet, entry, FAPL, IPF, AfricanPF),
             MetaFederation::FCLP => affiliation!(meet, entry, FCLP, IPF, FESUPO, NAPF),
@@ -1188,11 +1188,11 @@ impl MetaFederation {
             MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF, UAEPL), // Kuwait often use UAE meets for team selection
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
-            MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA),
+            MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA, CommonwealthPF),
             MetaFederation::MAP => affiliation!(meet, entry, MAP, IPF, AsianPF),
             MetaFederation::MUPF => affiliation!(meet, entry, MUPF, IPF, AsianPF),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
-            MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP),
+            MetaFederation::NIPF => affiliation!(meet, entry, NIPF, IPF, EPF, BP, CommonwealthPF),
             MetaFederation::NPAJ => affiliation!(meet, entry, NPAJ, IPF, NAPF),
             MetaFederation::NSF => affiliation!(meet, entry, NSF, IPF, EPF, NordicPF),
             MetaFederation::NZPF => {
@@ -1222,7 +1222,7 @@ impl MetaFederation {
             MetaFederation::SAFKST => affiliation!(meet, entry, SAFKST, IPF, EPF),
             MetaFederation::SAFP => affiliation!(meet, entry, SAFP, IPF, AsianPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
-            MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP),
+            MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP, CommonwealthPF),
             MetaFederation::SLPF => affiliation!(meet, entry, SLPF, IPF, AsianPF, CommonwealthPF),
             MetaFederation::SSAU => {
                 affiliation!(meet, entry, SSAU, WDFPF) && meet.date.year() >= 2024
@@ -1278,7 +1278,7 @@ impl MetaFederation {
             MetaFederation::USPCTested => meet.federation == Federation::USPC && entry.tested,
             MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF, KBGV),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
-            MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP),
+            MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP, CommonwealthPF),
             MetaFederation::WPNauru => affiliation!(meet, entry, WPNauru, WP),
             MetaFederation::WPUSA => affiliation!(meet, entry, WPUSA, WP),
             MetaFederation::WRPFAndAffiliates => {
