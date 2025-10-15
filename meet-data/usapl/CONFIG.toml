@@ -408,6 +408,13 @@
     mrpro = {name="MR-PRO", min=0, max=999, sex="M", equipment="Raw"}
     frpro = {name="FR-PRO", min=0, max=999, sex="F", equipment="Raw"}
 
+    #EmpowerID
+    mrei = {name="MR-EI", min=0, max=999, sex="M", equipment="Raw"}
+    frei = {name="FR-EI", min=0, max=999, sex="F", equipment="Raw"}
+    mei = {name="M-EI", min=0, max=999, sex="M", equipment="Single-ply"}
+    fei = {name="F-EI", min=0, max=999, sex="F", equipment="Single-ply"}
+
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range=["2022-01-01","9999-01-01"]
@@ -766,6 +773,7 @@
     PA-2025-25 = ["ExemptWeightClassConsistency","ExemptDivision"]
     IL-2025-11 = ["ExemptWeightClassConsistency"]
     PA-2025-29 = ["ExemptWeightClassConsistency"]
+    MO-2025-07 = ["ExemptWeightClassConsistency"]
 
     
 
@@ -976,6 +984,7 @@
     SC-2025-09 = ["ExemptDivision"]
     FL-2025-21 = ["ExemptDivision"]
     NC-2025-07 = ["ExemptDivision"]
+    CT-2025-04 = ["ExemptDivision"]
 
 
     
