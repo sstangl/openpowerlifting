@@ -14,6 +14,7 @@ import os
 import sys
 from urllib.request import Request, urlopen
 
+
 try:
     from oplcsv import Csv
 except ImportError:
@@ -169,6 +170,9 @@ def parsedivision(div):
     s = s.replace('Guest Lifter', 'G')
     s = s.replace('Varsity', 'V')
     s = s.replace('Adaptive Athletes', 'AA')
+    s = s.replace('EmpowerID', 'EI')
+    s = s.replace('MX - ', 'X')
+    s = s.replace('MX- ', 'X')
 
     # Fix Some common mistakes that crop up.
     s = s.replace('SJr', 'SJ')
@@ -240,6 +244,8 @@ def makeentriescsv(soup):
                     state_sex = 'F'
                 elif 'Male' in s:
                     state_sex = 'M'
+                elif 'MX' in s:
+                    state_sex = 'Mx'
 
         elif k == 21:
             # This is a results row.
@@ -450,7 +456,8 @@ def fixupdivisions(csv):
     # Add sex information to the division.
     for row in csv.rows:
         div = row[dividx]
-        if not div.startswith('M') and not div.startswith('F'):
+        if not div.startswith('M') and not div.startswith('F') and \
+           not div.startswith('X'):
             div = row[sexidx] + "-" + div
             div = div.replace('-R', 'R')
             row[dividx] = div
