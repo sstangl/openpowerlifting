@@ -1893,6 +1893,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Ecuador", serialize = "wrpf-ecuador")]
     WRPFEcuador,
 
+    /// Honduran WRPF affiliate.
+    #[serde(rename = "WRPF-HON")]
+    #[strum(to_string = "WRPF-HON", serialize = "wrpf-hon")]
+    WRPFHON,
+
     /// Hungarian WRPF affiliate.
     #[serde(rename = "WRPF-HUN")]
     #[strum(to_string = "WRPF-HUN", serialize = "wrpf-hun")]
@@ -2532,6 +2537,7 @@ impl Federation {
             Federation::WRPFCRO => false,
             Federation::WRPFEcuador => false,
             Federation::WRPFEIRE => false,
+            Federation::WRPFHON => false,
             Federation::WRPFHUN => false,
             Federation::WRPFIceland => false,
             Federation::WRPFIndia => false,
@@ -3000,6 +3006,7 @@ impl Federation {
             Federation::WRPFCRO => Some(Country::Croatia),
             Federation::WRPFEcuador => Some(Country::Ecuador),
             Federation::WRPFEIRE => Some(Country::Ireland),
+            Federation::WRPFHON => Some(Country::Honduras),
             Federation::WRPFHUN => Some(Country::Hungary),
             Federation::WRPFIceland => Some(Country::Iceland),
             Federation::WRPFIndia => Some(Country::India),
@@ -3592,6 +3599,7 @@ impl Federation {
             Federation::WRPFCRO => Some(Federation::WRPF),
             Federation::WRPFEcuador => Some(Federation::WRPF),
             Federation::WRPFEIRE => Some(Federation::WRPF),
+            Federation::WRPFHON => Some(Federation::WRPF),
             Federation::WRPFHUN => Some(Federation::WRPF),
             Federation::WRPFIceland => Some(Federation::WRPF),
             Federation::WRPFIndia => Some(Federation::WRPF),
@@ -4180,6 +4188,7 @@ impl Federation {
             Federation::WRPFCRO => PointsSystem::Wilks,
             Federation::WRPFEcuador => PointsSystem::Wilks,
             Federation::WRPFEIRE => PointsSystem::Wilks,
+            Federation::WRPFHON => PointsSystem::Wilks,
             Federation::WRPFHUN => PointsSystem::Wilks,
             Federation::WRPFIceland => PointsSystem::Wilks,
             Federation::WRPFIndia => PointsSystem::Wilks,

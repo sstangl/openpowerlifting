@@ -336,6 +336,10 @@
   <option value="all-guyana" {% if selection.federation == "AllGuyana" %}selected{% endif %}>{{strings.selectors.fed.all_guyana}}</option>
   <option value="gaplf" {% if selection.federation == "GAPLF" %}selected{% endif %}>GAPLF - Guyana Amateur Powerlifting Federation [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.honduras}}">
+  <option value="all-honduras" {% if selection.federation == "AllHonduras" %}selected{% endif %}>{{strings.selectors.fed.all_honduras}}</option>
+  <option value="wrpf-hon" {% if selection.federation == "WRPF-HON" %}selected{% endif %}>WRPF Honduras</option>
+</optgroup>
 <optgroup label="{{strings.country.hongkong}}">
   <option value="all-hongkong" {% if selection.federation == "AllHongKong" %}selected{% endif %}>{{strings.selectors.fed.all_hongkong}}</option>
   <option value="hkpf" {% if selection.federation == "HKPF" %}selected{% endif %}>HKPF - Hong Kong Powerlifting Federation [WP]</option>
