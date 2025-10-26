@@ -1188,7 +1188,9 @@ impl MetaFederation {
             MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF, UAEPL), // Kuwait often use UAE meets for team selection
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
-            MetaFederation::ManxPL => affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA, CommonwealthPF),
+            MetaFederation::ManxPL => {
+                affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA, CommonwealthPF)
+            }
             MetaFederation::MAP => affiliation!(meet, entry, MAP, IPF, AsianPF),
             MetaFederation::MUPF => affiliation!(meet, entry, MUPF, IPF, AsianPF),
             MetaFederation::NauruPF => affiliation!(meet, entry, NauruPF, IPF, ORPF),
@@ -1222,7 +1224,9 @@ impl MetaFederation {
             MetaFederation::SAFKST => affiliation!(meet, entry, SAFKST, IPF, EPF),
             MetaFederation::SAFP => affiliation!(meet, entry, SAFP, IPF, AsianPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
-            MetaFederation::ScottishPL => affiliation!(meet, entry, ScottishPL, IPF, EPF, BP, CommonwealthPF),
+            MetaFederation::ScottishPL => {
+                affiliation!(meet, entry, ScottishPL, IPF, EPF, BP, CommonwealthPF)
+            }
             MetaFederation::SLPF => affiliation!(meet, entry, SLPF, IPF, AsianPF, CommonwealthPF),
             MetaFederation::SSAU => {
                 affiliation!(meet, entry, SSAU, WDFPF) && meet.date.year() >= 2024
@@ -1278,7 +1282,9 @@ impl MetaFederation {
             MetaFederation::USPCTested => meet.federation == Federation::USPC && entry.tested,
             MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF, KBGV),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
-            MetaFederation::WelshPA => affiliation!(meet, entry, WelshPA, IPF, EPF, BP, CommonwealthPF),
+            MetaFederation::WelshPA => {
+                affiliation!(meet, entry, WelshPA, IPF, EPF, BP, CommonwealthPF)
+            }
             MetaFederation::WPNauru => affiliation!(meet, entry, WPNauru, WP),
             MetaFederation::WPUSA => affiliation!(meet, entry, WPUSA, WP),
             MetaFederation::WRPFAndAffiliates => {
@@ -1307,7 +1313,7 @@ impl MetaFederation {
                     | Federation::WRPFChile
                     | Federation::WRPFColombia
                     | Federation::WRPFEcuador
-                    | Federation::WRPFHonduras
+                    | Federation::WRPFHON
                     | Federation::WRPFPeru
                     | Federation::WRPFVenezuela
             ),
