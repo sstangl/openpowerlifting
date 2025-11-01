@@ -3,6 +3,7 @@
 
 [divisions]
     open = {name = "Open", min=14, max=999}
+    soi = {name = "SOI", min=14, max=999}
     junior2 = {name = "Junior II", min=12, max=17.5}
     junior1 = {name = "Junior I", min=18.5, max=22.5}
     master1 = {name = "Master I", min=39.5, max=48.5}
