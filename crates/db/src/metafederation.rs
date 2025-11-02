@@ -1312,6 +1312,7 @@ impl MetaFederation {
                     | Federation::WRPFBrazil
                     | Federation::WRPFChile
                     | Federation::WRPFColombia
+                    | Federation::WRPFCosta
                     | Federation::WRPFEcuador
                     | Federation::WRPFHON
                     | Federation::WRPFPeru
