@@ -1,6 +1,10 @@
 # Configuration for World Powerlifting.
 # https://cdn.worldpowerlifting.com/wp-content/uploads/2019/07/world-powerlifting-rules.pdf
 
+[options]
+    valid_federations = ["WP"]
+    require_manual_disambiguation = true
+
 [divisions]
     # Over 14 years on the day of competition (assuming they meant >=).
     open = {name="Open", min=14, max=999}

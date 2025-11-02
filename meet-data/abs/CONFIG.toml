@@ -1,4 +1,5 @@
 [options]
+    valid_federations = ["ABS"]
     require_manual_disambiguation = true
 
 [divisions]

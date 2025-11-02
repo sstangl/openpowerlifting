@@ -1,6 +1,7 @@
 # Configuration for the BVDK.
 
 [options]
+    valid_federations = ["BVDK"]
     require_manual_disambiguation = true
 
 

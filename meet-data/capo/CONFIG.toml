@@ -1,6 +1,7 @@
 # Configuration for CAPO.
 
 [options]
+    valid_federations = ["CAPO", "CAPO-NZ"]
     require_manual_disambiguation = true
 
 # NOTE - as of 202409, CAPO denotes separate divisions for sleeves and bare knees
