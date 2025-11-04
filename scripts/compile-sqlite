@@ -61,7 +61,7 @@ CREATE TABLE entries (
   BirthYearClass TEXT,
   Division TEXT,
   BodyweightKg FLOAT,
-  WeightClassKg FLOAT,
+  WeightClassKg TEXT,
   Squat1Kg FLOAT,
   Squat2Kg FLOAT,
   Squat3Kg FLOAT,
@@ -151,6 +151,13 @@ UPDATE entries SET totalkg = NULL WHERE totalkg = '';
 UPDATE entries SET place = NULL WHERE place = '';
 UPDATE entries SET wilks = NULL WHERE wilks = '';
 UPDATE entries SET mcculloch = NULL WHERE mcculloch = '';
+UPDATE entries SET glossbrenner = NULL WHERE glossbrenner = '';
+UPDATE entries SET goodlift = NULL WHERE goodlift = '';
+UPDATE entries SET wilks2020 = NULL WHERE wilks2020 = '';
+UPDATE entries SET dots = NULL WHERE dots = '';
+UPDATE entries SET tested = NULL WHERE tested = '';
+UPDATE entries SET country = NULL WHERE country = '';
+UPDATE entries SET state = NULL WHERE state = '';
 
 vacuum;
 "
