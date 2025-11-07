@@ -30,6 +30,7 @@
   <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB / {{strings.country.brazil}}</option>
   <option value="cpu" {% if selection.federation == "CPU" %}selected{% endif %}>CPU / {{strings.country.canada}}</option>
   <option value="csst" {% if selection.federation == "CSST" %}selected{% endif %}>CSST / {{strings.country.czechia}}</option>
+  <option value="ctpa" {% if selection.federation == "CTPA" %}selected{% endif %}>CTPA / {{strings.country.taiwan}}</option>
   <option value="cypruspf" {% if selection.federation == "CyprusPF" %}selected{% endif %}>CyprusPF / {{strings.country.cyprus}}</option>
   <option value="dsf" {% if selection.federation == "DSF" %}selected{% endif %}>DSF / {{strings.country.denmark}}</option>
   <option value="egyptpf" {% if selection.federation == "EgyptPF" %}selected{% endif %}>EgyptPF / {{strings.country.egypt}}</option>

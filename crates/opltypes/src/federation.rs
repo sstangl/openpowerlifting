@@ -325,6 +325,10 @@ pub enum Federation {
     #[strum(to_string = "CSST", serialize = "csst")]
     CSST,
 
+    /// Chinese Taipei Powerlifting Association, Taiwan IPF affiliate.
+    #[strum(to_string = "CTPA", serialize = "ctpa")]
+    CTPA,
+
     /// Cyrpus Powerlifting Federation, Cyprus IPF affiliate.
     #[strum(to_string = "CyprusPF", serialize = "cypruspf")]
     CyprusPF,
@@ -2172,6 +2176,7 @@ impl Federation {
             Federation::CroatiaUA => false,
             Federation::CRPL => false,
             Federation::CSST => FULLY_TESTED,
+            Federation::CTPA => FULLY_TESTED,
             Federation::DBKV => false,
             Federation::DFPFNL => FULLY_TESTED,
             Federation::DPL => false,
@@ -2655,6 +2660,7 @@ impl Federation {
             Federation::CPU => Some(Country::Canada),
             Federation::CRPL => Some(Country::CostaRica),
             Federation::CSST => Some(Country::Czechia),
+            Federation::CTPA => Some(Country::Taiwan),
             Federation::DBKV => Some(Country::Germany),
             Federation::DFPFNL => Some(Country::Netherlands),
             Federation::DPL => Some(Country::Netherlands),
@@ -3171,6 +3177,7 @@ impl Federation {
             Federation::CPU => Some(Federation::IPF),
             Federation::CRPL => None,
             Federation::CSST => Some(Federation::IPF),
+            Federation::CTPA => Some(Federation::IPF),
             Federation::CyprusPF => Some(Federation::IPF),
             Federation::CzechiaUA => None,
             Federation::DBKV => None,
@@ -3776,6 +3783,7 @@ impl Federation {
             Federation::CPU => Federation::ipf_rules_on(date),
             Federation::CRPL => PointsSystem::Wilks,
             Federation::CSST => PointsSystem::Wilks,
+            Federation::CTPA => Federation::ipf_rules_on(date),
             Federation::DBKV => PointsSystem::Wilks,
             Federation::DFPFNL => PointsSystem::Wilks,
             Federation::DPL => PointsSystem::Dots,
