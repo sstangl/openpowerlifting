@@ -640,7 +640,7 @@
 <optgroup label="{{strings.country.srilanka}}">
   <option value="all-srilanka" {% if selection.federation == "AllSriLanka" %}selected{% endif %}>All Sri Lankan Lifters</option>
   <option value="slpf" {% if selection.federation == "SLPF" %}selected{% endif %}>SLPF - Sri Lanka Powerlifting Federation [IPF]</option>
-  <option value="wp-sl" {% if selection.federation == "WP-SL" %}selected{% endif %}>WP-SL - World Powerlifting Sri Lanka [WP]</option>
+  <option value="wp-lanka" {% if selection.federation == "WP-Lanka" %}selected{% endif %}>WP-Lanka - World Powerlifting Lanka [WP]</option>
 </optgroup>
 <optgroup label="{{strings.country.sweden}}">
   <option value="all-sweden" {% if selection.federation == "AllSweden" %}selected{% endif %}>{{strings.selectors.fed.all_sweden}}</option>
