@@ -2022,6 +2022,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-UK", serialize = "wrpf-uk")]
     WRPFUK,
 
+    /// United Arab Emirates affiliate.
+    #[serde(rename = "WRPF-UAE")]
+    #[strum(to_string = "WRPF-UAE", serialize = "wrpf-uae")]
+    WRPFUAE,
+
     /// Venezuelan WRPF affiliate.
     #[serde(rename = "WRPF-Venezuela")]
     #[strum(to_string = "WRPF-Venezuela", serialize = "wrpf-venezuela")]
@@ -2570,6 +2575,7 @@ impl Federation {
             Federation::WRPFSpain => false,
             Federation::WRPFSRB => false,
             Federation::WRPFSweden => false,
+            Federation::WRPFUAE => false,
             Federation::WRPFUK => false,
             Federation::WRPFVenezuela => false,
             Federation::WRPFVietnam => false,
@@ -3041,6 +3047,7 @@ impl Federation {
             Federation::WRPFSpain => Some(Country::Spain),
             Federation::WRPFSRB => Some(Country::Serbia),
             Federation::WRPFSweden => Some(Country::Sweden),
+            Federation::WRPFUAE => Some(Country::UAE),
             Federation::WRPFUK => Some(Country::UK),
             Federation::WRPFVenezuela => Some(Country::Venezuela),
             Federation::WRPFVietnam => Some(Country::Vietnam),
@@ -3636,6 +3643,7 @@ impl Federation {
             Federation::WRPFSpain => Some(Federation::WRPF),
             Federation::WRPFSRB => Some(Federation::WRPF),
             Federation::WRPFSweden => Some(Federation::WRPF),
+            Federation::WRPFUAE => Some(Federation::WRPF),
             Federation::WRPFUK => Some(Federation::WRPF),
             Federation::WRPFVenezuela => Some(Federation::WRPF),
             Federation::WRPFVietnam => Some(Federation::WRPF),
@@ -4227,6 +4235,7 @@ impl Federation {
             Federation::WRPFSpain => PointsSystem::Wilks,
             Federation::WRPFSRB => PointsSystem::Wilks,
             Federation::WRPFSweden => PointsSystem::Wilks,
+            Federation::WRPFUAE => PointsSystem::Wilks,
             Federation::WRPFUK => PointsSystem::Wilks,
             Federation::WRPFVenezuela => PointsSystem::Wilks,
             Federation::WRPFVietnam => PointsSystem::Wilks,
