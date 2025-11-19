@@ -322,6 +322,7 @@
   <option value="upc-germany" {% if selection.federation == "UPC-Germany" %}selected{% endif %}>UPC-Germany - United Powerlifting Congress [WPC/GPC/WUAP]</option>
   <option value="wuap-germany" {% if selection.federation == "WUAP-Germany" %}selected{% endif %}>WUAP Germany</option>
   <option value="wpc-germany" {% if selection.federation == "WPC-Germany" %}selected{% endif %}>WPC Germany</option>
+  <option value="wrpf-de" {% if selection.federation == "WRPF-DE" %}selected{% endif %}>WRPF Germany</option>
 </optgroup>
 <optgroup label="{{strings.country.greece}}">
   <option value="all-greece" {% if selection.federation == "AllGreece" %}selected{% endif %}>{{strings.selectors.fed.all_greece}}</option>
