@@ -1,5 +1,8 @@
 # IPL config, copied from the USPA.
 
+[options]
+    valid_federations = ["IPL", "UPL"] # UPL is probably mis-filed.
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
