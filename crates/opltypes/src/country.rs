@@ -93,6 +93,14 @@ pub enum Country {
     Fiji,
     Finland,
     France,
+    /// Gained autonomy and country status in 2004.
+    //
+    // Commonly referred to as Tahiti,
+    // the most populous island, but
+    // comprises 121 islands and atolls.
+    #[serde(rename = "French Polynesia")]
+    #[strum(to_string = "French Polynesia")]
+    FrenchPolynesia,
     Gabon,
     Georgia,
     Germany,
@@ -243,6 +251,7 @@ pub enum Country {
     Sweden,
     Syria,
     Switzerland,
+    /// Recognised as major island of French Polynesia.
     Tahiti,
     Taiwan,
     Tajikistan,
