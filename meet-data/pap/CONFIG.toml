@@ -12,6 +12,7 @@
     high_school = {name = "High School", min=14,max=25}
     college = {name = "College", min=14,max=25}
     novice = {name = "Novice",min=14,max=999}
+    guest = {name = "Guest",min=0,max=999}
 
 
 [weightclasses.default_M]
