@@ -51,6 +51,7 @@
     # Since WPC affiliation: Youth division removed and no minimum age limit for T13-15.
     opend = {name ="Open-D",min=0,max=999,tested="Yes"}
     juniorsd = {name ="Juniors 20-23-D",min=20,max=23,tested="Yes"}
+    youthd = {name ="Youth-D",min=4,max=12,tested="Yes"}
     teend = {name ="Teen-D",min=13,max=19,tested="Yes"}
     teen1315d = {name ="Teen 13-15-D",min=13,max=15,tested="Yes"}
     teen1617d = {name ="Teen 16-17-D",min=16,max=17,tested="Yes"}
