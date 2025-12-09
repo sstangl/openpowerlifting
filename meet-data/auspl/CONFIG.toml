@@ -130,6 +130,9 @@
     momp = {name = "M-OMP", min=0, max=999, sex="M", equipment="Multi-ply"}
     fm1mp = {name = "F-M1MP", min = 40, max = 44, sex='F', equipment = 'Multi-ply'}
 
+    # some meets combine all masters because fuck you
+    m = {name = "Masters", min=40, max=999}
+
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range = ["1990-01-01", "9999-01-01"]
