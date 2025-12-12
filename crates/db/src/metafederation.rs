@@ -299,6 +299,10 @@ pub enum MetaFederation {
     #[strum(to_string = "bp")]
     BP,
 
+    /// BPA, but with international results also.
+    #[strum(to_string = "bpa")]
+    BPA,
+
     /// BPC, but with international results also.
     #[strum(to_string = "bpc")]
     BPC,
@@ -382,6 +386,10 @@ pub enum MetaFederation {
     /// FECHIPO, but with international results also.
     #[strum(to_string = "fechipo")]
     FECHIPO,
+
+    /// Fedepotencia, but with international results also.
+    #[strum(to_string = "fedepotencia")]
+    Fedepotencia,
 
     /// FEFICULP, but with international results also.
     #[strum(to_string = "feficulp")]
@@ -559,6 +567,10 @@ pub enum MetaFederation {
     #[strum(to_string = "lpf")]
     LPF,
 
+    /// MaltaPA, but with international results also.
+    #[strum(to_string = "maltapa")]
+    MaltaPA,
+
     /// ManxPL, but with BP and international results also.
     #[strum(to_string = "manxpl")]
     ManxPL,
@@ -618,6 +630,10 @@ pub enum MetaFederation {
     /// PI, but with international results also.
     #[strum(to_string = "pi")]
     PI,
+
+    /// PLRD, but with international results also.
+    #[strum(to_string = "plrd")]
+    PLRD,
 
     /// PLSS, but with international results also.
     #[strum(to_string = "plss")]
@@ -1068,6 +1084,7 @@ impl MetaFederation {
                         && entry.lifter_country.is_some_and(|c| c.is_in_uk())
                         && meet.date.year() >= 2013)
             }
+            MetaFederation::BPA => affiliation!(meet, entry, BPA, IPF, NAPF),           
             MetaFederation::BulgarianPF => affiliation!(meet, entry, BulgarianPF, IPF, EPF),
             MetaFederation::BVDK => match meet.federation {
                 // BVDG is the precursor to the BVDK.
@@ -1096,6 +1113,7 @@ impl MetaFederation {
             MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO, NAPF),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO, NAPF),
+            MetaFederation::Fedepotencia => affiliation!(meet, entry, Fedepotencia, IPF, FESUPO, NAPF),
             MetaFederation::FEFICULP => affiliation!(meet, entry, FEFICULP, IPF, FESUPO, NAPF),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
             MetaFederation::FEVEPO => affiliation!(meet, entry, FEVEPO, IPF, FESUPO, NAPF),
@@ -1193,6 +1211,7 @@ impl MetaFederation {
             MetaFederation::KPC => affiliation!(meet, entry, KPC, IPF, AsianPF, UAEPL), // Kuwait often use UAE meets for team selection
             MetaFederation::KPF => affiliation!(meet, entry, KPF, IPF, AsianPF),
             MetaFederation::KRAFT => affiliation!(meet, entry, KRAFT, IPF, EPF, NordicPF),
+            MetaFederation::MaltaPA => affiliation!(meet, entry, MaltaPA, IPF, EPF),
             MetaFederation::ManxPL => {
                 affiliation!(meet, entry, ManxPL, IPF, EPF, BP, EPA, CommonwealthPF)
             }
@@ -1216,13 +1235,14 @@ impl MetaFederation {
             MetaFederation::OEVK => affiliation!(meet, entry, OEVK, IPF, EPF),
             MetaFederation::PA => affiliation!(meet, entry, PA, WP),
             MetaFederation::PAP => affiliation!(meet, entry, PAP, IPF, AsianPF),
-            MetaFederation::PFBD => affiliation!(meet, entry, PFBD, IPF, AsianPF),
+            MetaFederation::PFBD => affiliation!(meet, entry, PFBD, IPF, AsianPF, CommonwealthPF),
             MetaFederation::PI => affiliation!(meet, entry, PI, IPF, AsianPF, CommonwealthPF),
+            MetaFederation::PLRD => affiliation!(meet, entry, PLRD, IPF, NAPF),
             MetaFederation::PLSS => affiliation!(meet, entry, PLSS, IPF, EPF),
             MetaFederation::PLZS => affiliation!(meet, entry, PLZS, IPF, EPF),
             MetaFederation::PNGPF => affiliation!(meet, entry, PNGPF, IPF, ORPF),
             MetaFederation::POSK => affiliation!(meet, entry, POSK, IPF, AsianPF),
-            MetaFederation::PS => affiliation!(meet, entry, PS, IPF, AsianPF),
+            MetaFederation::PS => affiliation!(meet, entry, PS, IPF, AsianPF, CommonwealthPF),
             MetaFederation::PWFL => affiliation!(meet, entry, PWFL, IPF, EPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
             MetaFederation::QatarPL => affiliation!(meet, entry, QatarPL, IPF, AsianPF),
