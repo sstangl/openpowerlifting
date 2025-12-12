@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Place,Name,BirthYear,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,WeightClassKg,Sex,Equipment,Event,Division,BirthDate
 1,Aleksandra Dajka,2004,45.50,80.0,-85.0,85.0,85.0,35.0,40.0,-42.5,40.0,90.0,95.0,-100.0,95.0,220.0,47,F,Raw,SBD,Seniorki,
 1,Eliza Gerlach,1998,51.70,150.0,155.0,160.0,160.0,85.0,90.0,-93.0,90.0,150.0,160.0,165.0,165.0,415.0,52,F,Raw,SBD,Seniorki,
@@ -136,3 +137,344 @@ DQ,Jakub Zdun,2009,91.00,205.0,-212.5,212.5,212.5,-130.0,130.0,-140.0,130.0,-225
 9,Kacper Jaskulski,1998,131.92,210.0,-225.0,225.0,225.0,150.0,157.5,-160.0,157.5,250.0,-255.0,-255.0,250.0,632.5,120+,M,Raw,SBD,Seniorzy,
 10,Jan Tuszyński,2006,130.30,210.0,230.0,240.0,240.0,120.0,130.0,-137.5,130.0,210.0,230.0,250.0,250.0,620.0,120+,M,Raw,SBD,Seniorzy,
 11,Jakub Myjak,2001,120.05,192.5,-202.5,207.5,207.5,117.5,125.0,132.5,132.5,210.0,-222.5,232.5,232.5,572.5,120+,M,Raw,SBD,Seniorzy,
+=======
+Place,Name,BirthDate,Sex,BirthYear,Age,Country,Equipment,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,TotalKg,Event
+1,Martyna Chodera,,F,,,,Raw,Juniorki do lat 16,44.79,47,-35,35,-37.5,35,,35,B
+2,Marietta Struck,,F,,,,Raw,Juniorki do lat 16,46.11,47,25,27.5,-30,27.5,,27.5,B
+1,Julia Zyskowska,,F,,,,Raw,Juniorki do lat 16,51.37,52,45,50,52.5,52.5,,52.5,B
+1,Honorata Lisakowska,,F,,,,Raw,Juniorki do lat 16,56.05,57,40,45,50,50,,50,B
+2,Hanna Jackowska,,F,,,,Raw,Juniorki do lat 16,55.19,57,-27.5,27.5,32.5,32.5,,32.5,B
+1,Alicja Wilk,,F,,,,Raw,Juniorki do lat 16,61.48,63,-50,50,52.5,52.5,,52.5,B
+2,Maria Rakoczy,,F,,,,Raw,Juniorki do lat 16,60.05,63,47.5,50,-52.5,50,,50,B
+3,Zuzanna Nowak,,F,,,,Raw,Juniorki do lat 16,61.44,63,40,45,-50,45,,45,B
+1,Marta Monica,,F,,,,Raw,Juniorki do lat 16,67.1,69,65,70,-75,70,,70,B
+1,Iga Krzyżanowska,,F,,,,Raw,Juniorki do lat 16,69.7,76,73.5,80,-85,80,,80,B
+2,Agnieszka Chruścicka,,F,,,,Raw,Juniorki do lat 16,70.3,76,30,32.5,-37.5,32.5,,32.5,B
+1,Bernadeta Lisakowska,,F,,,,Raw,Juniorki do lat 16,89.8,84+,40,50,-57.5,50,,50,B
+1,Zuzanna Znojek,,F,,,,Raw,Juniorki do lat 18,51.61,52,55,-57.5,-57.5,55,,55,B
+1,Karolina Kosecka,,F,,,,Raw,Juniorki do lat 18,55.77,57,40,45,-50,45,,45,B
+1,Liliana Tomczyńska,,F,,,,Raw,Juniorki do lat 18,59.6,63,67.5,72.5,77.5,77.5,,77.5,B
+2,Sandra Dzieżok,,F,,,,Raw,Juniorki do lat 18,60.41,63,55,60,,60,,60,B
+3,Oliwia Górny,,F,,,,Raw,Juniorki do lat 18,61.84,63,-47.5,50,52.5,52.5,,52.5,B
+1,Liwia Kobrzyńska,,F,,,,Raw,Juniorki do lat 18,67.9,69,65,-70,-70,65,,65,B
+1,Natalia Ardeli,,F,,,,Raw,Juniorki do lat 18,74.3,76,60,65,-67.5,65,,65,B
+1,Weronika Kamińska,,F,,,,Raw,Juniorki do lat 18,76.8,84,92.5,-97.5,-97.5,92.5,,92.5,B
+2,Antonina Konieczna,,F,,,,Raw,Juniorki do lat 18,83.3,84,62.5,67.5,-70,67.5,,67.5,B
+1,Wiktoria Pijanowska,,F,,,,Raw,Juniorki do lat 18,97.1,84+,55,60,-65,60,,60,B
+1,Wiktoria Kontek,,F,,,,Raw,Juniorki do lat 20,49.7,52,70,-75,-75,70,,70,B
+2,Katarzyna Pietrucha,,F,,,,Raw,Juniorki do lat 20,51.22,52,40,-45,45,45,,45,B
+1,Nadia Demiańczuk,,F,,,,Raw,Juniorki do lat 20,56.83,57,-85,85,-87.5,85,,85,B
+2,Julia Bandurska,,F,,,,Raw,Juniorki do lat 20,55.8,57,75,80,-82.5,80,,80,B
+3,Martyna Janaszek,,F,,,,Raw,Juniorki do lat 20,55.63,57,67.5,75,-77.5,75,,75,B
+1,Natalia Nowak,,F,,,,Raw,Juniorki do lat 20,68.7,69,90,-92.5,-92.5,90,,90,B
+2,Julia Bubrowska,,F,,,,Raw,Juniorki do lat 20,68.4,69,75,-80,,75,,75,B
+3,Julia Nowik,,F,,,,Raw,Juniorki do lat 20,65.5,69,60,70,-75,70,,70,B
+1,Lena Szachmytowska,,F,,,,Raw,Juniorki do lat 20,69.6,76,55,60,65,65,,65,B
+2,Lilianna Krawczyk,,F,,,,Raw,Juniorki do lat 20,75.2,76,55,60,-65,60,,60,B
+1,Beata Ulewińska,,F,,,,Raw,Juniorki do lat 20,79.4,84,57.5,60,62.5,62.5,,62.5,B
+2,Małgorzata Celińska,,F,,,,Raw,Juniorki do lat 20,81.1,84,-55,55,-62.5,55,,55,B
+1,Justyna Pietrykowska,,F,,,,Raw,Juniorki do lat 20,93,84+,75,82.5,-87.5,82.5,,82.5,B
+2,Julia Mejka,,F,,,,Raw,Juniorki do lat 20,106.9,84+,72.5,77.5,80,80,,80,B
+3,Zofia Załuska-Noui,,F,,,,Raw,Juniorki do lat 20,101.8,84+,62.5,-67.5,67.5,67.5,,67.5,B
+1,Aleksandra Dajka,,F,,,,Raw,Juniorki do lat 23,45.76,47,37.5,42.5,-45,42.5,,42.5,B
+1,Natalia Wasilewska,,F,,,,Raw,Juniorki do lat 23,51.36,52,57.5,-60,60,60,,60,B
+1,Monika Skowrońska,,F,,,,Raw,Juniorki do lat 23,56.83,57,45,55,65,65,,65,B
+1,Wiktoria Zapotoczna,,F,,,,Raw,Juniorki do lat 23,60.1,63,90,-95,-95,90,,90,B
+2,Wiktoria Dankowska,,F,,,,Raw,Juniorki do lat 23,60.6,63,67.5,72.5,75,75,,75,B
+1,Anastasiia Pashko,,F,,,,Raw,Juniorki do lat 23,68,69,90,95,-100,95,,95,B
+2,Milena Duklas,,F,,,,Raw,Juniorki do lat 23,64.7,69,57.5,62.5,65,65,,65,B
+1,Nina Bartl,,F,,,,Raw,Juniorki do lat 23,75.9,76,105,-112.5,112.5,112.5,,112.5,B
+2,Julia Kuberska,,F,,,,Raw,Juniorki do lat 23,74.4,76,102.5,-105,-105,102.5,,102.5,B
+1,Aleksandra Opioła,,F,,,,Raw,Juniorki do lat 23,90.6,84+,107.5,-112.5,-112.5,107.5,,107.5,B
+1,Justyna Kozdryk,,F,,,,Raw,Weteranki 40-49 lat,45.63,47,85,90,95,95,,95,B
+2,Gabriela Kokot Drzyzga,,F,,,,Raw,Weteranki 40-49 lat,46.08,47,37.5,-40,-40,37.5,,37.5,B
+1,Agnieszka Dąbrowska-Posała,,F,,,,Raw,Weteranki 40-49 lat,51.53,52,42.5,45,-47.5,45,,45,B
+2,Aleksandra Świerc,,F,,,,Raw,Weteranki 40-49 lat,51.39,52,40,42.5,-45,42.5,,42.5,B
+3,Anna Ucińska,,F,,,,Raw,Weteranki 40-49 lat,51.65,52,37.5,40,-42.5,40,,40,B
+1,Aleksandra Szostak,,F,,,,Raw,Weteranki 40-49 lat,56.12,57,72.5,77.5,-80,77.5,,77.5,B
+2,Anna Frankiewicz,,F,,,,Raw,Weteranki 40-49 lat,56.44,57,50,52.5,-55,52.5,,52.5,B
+3,Joanna Kołodziejczyk,,F,,,,Raw,Weteranki 40-49 lat,53.39,57,40,45,-47.5,45,,45,B
+1,Anna Włodarczyk,,F,,,,Raw,Weteranki 40-49 lat,62.46,63,37.5,40,-42.5,40,,40,B
+1,Daria Walczykewicz,,F,,,,Raw,Weteranki 40-49 lat,68.6,69,82.5,85,88,88,,88,B
+DQ,Anna Romańska,,F,,,,Raw,Weteranki 40-49 lat,,69,,,,,,,B
+1,Magdalena Gładysz,,F,,,,Raw,Weteranki 40-49 lat,70.8,76,62.5,67.5,70,70,,70,B
+2,Hanna Majorczyk,,F,,,,Raw,Weteranki 40-49 lat,74.9,76,47.5,50,52.5,52.5,,52.5,B
+1,Aleksandra Buczek,,F,,,,Raw,Weteranki 40-49 lat,81.2,84,75,-77.5,77.5,77.5,,77.5,B
+2,Katarzyna Karus-Wysocka,,F,,,,Raw,Weteranki 40-49 lat,78.7,84,65,67.5,-70,67.5,,67.5,B
+3,Anna Morawiec,,F,,,,Raw,Weteranki 40-49 lat,82.8,84,47.5,50,52.5,52.5,,52.5,B
+1,Patrycja Janoszka,,F,,,,Raw,Weteranki 40-49 lat,,84+,-50,50,52.5,52.5,55,52.5,B
+1,Magdalena Piktel-Brzeska,,F,,,,Raw,Weteranki 50-59 lat,50.88,52,50,-55,-55,50,,50,B
+1,Jadwiga Radwańska',,F,,,,Raw,Weteranki 50-59 lat,55.94,57,75,77.5,-80,77.5,,77.5,B
+1,Elżbieta Ferdynus,,F,,,,Raw,Weteranki 50-59 lat,58.25,63,-42.5,45,47.5,47.5,,47.5,B
+1,Justyna Koszuta,,F,,,,Raw,Weteranki 50-59 lat,67.9,69,50,52.5,-55,52.5,,52.5,B
+2,Beata Kamińska,,F,,,,Raw,Weteranki 50-59 lat,67.2,69,35,-37.5,-37.5,35,,35,B
+1,Maria Szymkowiak,,F,,,,Raw,Weteranki 60-69 lat,71.7,76,50,52.5,55,55,,55,B
+1,Justyna Kozdryk,,F,,,,Raw,Seniorki,45.63,47,85,90,95,95,,95,B
+2,Agnieszka Zimmermann,,F,,,,Raw,Seniorki,46.54,47,-65,65,70,70,,70,B
+3,Aleksandra Dajka,,F,,,,Raw,Seniorki,45.76,47,37.5,42.5,-45,42.5,,42.5,B
+1,Natalia Wasilewska,,F,,,,Raw,Seniorki,51.36,52,57.5,-60,60,60,,60,B
+2,Wiktoria Nadolna,,F,,,,Raw,Seniorki,49.32,52,40,42.5,45,45,,45,B
+1,Dominika Cichecka,,F,,,,Raw,Seniorki,55.6,57,80,-85,-85,80,,80,B
+2,Jadwiga Radwańska',,F,,,,Raw,Seniorki,55.94,57,75,77.5,-80,77.5,,77.5,B
+3,Aleksandra Szostak,,F,,,,Raw,Seniorki,56.12,57,72.5,77.5,-80,77.5,,77.5,B
+4,Martyna Janaszek,,F,,,,Raw,Seniorki,55.63,57,67.5,75,-77.5,75,,75,B
+1,Nina Tomczak,,F,,,,Raw,Seniorki,61.23,63,87.5,92.5,95,95,,95,B
+2,Wiktoria Zapotoczna,,F,,,,Raw,Seniorki,60.1,63,90,-95,-95,90,,90,B
+3,Karolina Majerska,,F,,,,Raw,Seniorki,61.7,63,75,77.5,80,80,,80,B
+4,Katarzyna Rzemieniak,,F,,,,Raw,Seniorki,58.09,63,60,65,-70,65,,65,B
+5,Oliwia Górny,,F,,,,Raw,Seniorki,61.84,63,-47.5,50,52.5,52.5,,52.5,B
+DQ,Broź Julia,,F,,,,Raw,Seniorki,,63,,,,,,,B
+1,Anastasiia Pashko,,F,,,,Raw,Seniorki,68,69,90,95,-100,95,,95,B
+2,Natalia Świstara,,F,,,,Raw,Seniorki,69,69,90,-95,-97.5,90,,90,B
+3,Daria Walczykewicz,,F,,,,Raw,Seniorki,68.6,69,82.5,85,88,88,,88,B
+4,Julia Kacprzyk,,F,,,,Raw,Seniorki,63.6,69,67.5,72.5,-75,72.5,,72.5,B
+1,Justyna Szarek,,F,,,,Raw,Seniorki,75.4,76,105,-107.5,-107.5,105,,105,B
+2,Julia Kuberska,,F,,,,Raw,Seniorki,74.4,76,102.5,-105,-105,102.5,,102.5,B
+3,Iga Krzyżanowska,,F,,,,Raw,Seniorki,69.7,76,73.5,80,-85,80,,80,B
+1,Weronika Kamińska,,F,,,,Raw,Seniorki,76.8,84,92.5,-97.5,-97.5,92.5,,92.5,B
+2,Aleksandra Buczek,,F,,,,Raw,Seniorki,81.2,84,75,-77.5,77.5,77.5,,77.5,B
+3,Katarzyna Karus-Wysocka,,F,,,,Raw,Seniorki,78.7,84,65,67.5,-70,67.5,,67.5,B
+1,Aleksandra Opioła,,F,,,,Raw,Seniorki,90.6,84+,107.5,-112.5,-112.5,107.5,,107.5,B
+2,Agata Kowalska,,F,,,,Raw,Seniorki,101,84+,82.5,87.5,-90,87.5,,87.5,B
+3,Justyna Pietrykowska,,F,,,,Raw,Seniorki,93,84+,75,82.5,-87.5,82.5,,82.5,B
+4,Julia Mejka,,F,,,,Raw,Seniorki,106.9,84+,72.5,77.5,80,80,,80,B
+1,Wiktor Okoń,,M,,,,Raw,Juniorzy do lat 16,52.5,53,37.5,45,50,50,,50,B
+2,Mikołaj Struck,,M,,,,Raw,Juniorzy do lat 16,43.96,53,27.5,35,-40,35,,35,B
+1,Sebastian Paszkiel,,M,,,,Raw,Juniorzy do lat 16,56.9,59,95,97.5,100,100,,100,B
+2,Klaudiusz Gajdziński,,M,,,,Raw,Juniorzy do lat 16,58.25,59,90,95,-97.5,95,,95,B
+3,Nikoś Czarnota,,M,,,,Raw,Juniorzy do lat 16,58.8,59,82.5,87.5,-90,87.5,,87.5,B
+4,Antoni Król,,M,,,,Raw,Juniorzy do lat 16,57.32,59,65,70,-75,70,,70,B
+1,Dawid Tymczyszyn,,M,,,,Raw,Juniorzy do lat 16,64.88,66,125,-130,-130,125,,125,B
+2,Franciszek Kohnke,,M,,,,Raw,Juniorzy do lat 16,64.85,66,80,85,90,90,,90,B
+3,Wiktor Bartnik,,M,,,,Raw,Juniorzy do lat 16,66,66,85,-90,-92.5,85,,85,B
+4,Antoni Winiarski,,M,,,,Raw,Juniorzy do lat 16,63.23,66,70,77.5,-85,77.5,,77.5,B
+5,Igor Partyka,,M,,,,Raw,Juniorzy do lat 16,65.11,66,65,70,-75,70,,70,B
+1,Oliwier Kłos,,M,,,,Raw,Juniorzy do lat 16,72.1,74,110,117.5,-122.5,117.5,,117.5,B
+2,Kacper Kotelnicki,,M,,,,Raw,Juniorzy do lat 16,70.89,74,95,102.5,-107.5,102.5,,102.5,B
+3,Mikołaj Olbiński,,M,,,,Raw,Juniorzy do lat 16,70.82,74,87.5,92.5,-97.5,92.5,,92.5,B
+4,Michał Hermann,,M,,,,Raw,Juniorzy do lat 16,71.59,74,80,85,87.5,87.5,,87.5,B
+5,Dawid Śmietana,,M,,,,Raw,Juniorzy do lat 16,72.85,74,80,85,87.5,87.5,,87.5,B
+6,Ksawery Lenc,,M,,,,Raw,Juniorzy do lat 16,73.41,74,77.5,85,-90,85,,85,B
+1,Konrad Sokołek,,M,,,,Raw,Juniorzy do lat 16,79.65,83,120,127.5,132.5,132.5,,132.5,B
+2,Tobiasz Baranowski,,M,,,,Raw,Juniorzy do lat 16,77.67,83,122.5,127.5,-132.5,127.5,,127.5,B
+3,Jan Rasz,,M,,,,Raw,Juniorzy do lat 16,80.67,83,110,117.5,122.5,122.5,,122.5,B
+4,Daniel Berger,,M,,,,Raw,Juniorzy do lat 16,80.25,83,-110,112.5,117.5,117.5,,117.5,B
+5,Krystian Witczak,,M,,,,Raw,Juniorzy do lat 16,77.47,83,-95,95,105,105,,105,B
+6,Łukasz Botor,,M,,,,Raw,Juniorzy do lat 16,78.35,83,90,97.5,105,105,,105,B
+7,Michał Stradomski,,M,,,,Raw,Juniorzy do lat 16,82.08,83,97.5,102.5,-112.5,102.5,,102.5,B
+8,Mutsyn Vadym,,M,,,,Raw,Juniorzy do lat 16,74.45,83,85,95,-102.5,95,,95,B
+9,Jan Noga,,M,,,,Raw,Juniorzy do lat 16,79.16,83,95,-102.5,-102.5,95,,95,B
+10,Mieszko Ekiel,,M,,,,Raw,Juniorzy do lat 16,80.6,83,90,95,-102.5,95,,95,B
+11,Franciszek Juras,,M,,,,Raw,Juniorzy do lat 16,74.45,83,60,65,-70,65,,65,B
+1,Wiktor Kokoszka,,M,,,,Raw,Juniorzy do lat 16,89.34,93,160,167.5,-170,167.5,,167.5,B
+2,Mateusz Basaj,,M,,,,Raw,Juniorzy do lat 16,89.05,93,120,125,-130,125,,125,B
+3,Stanisław Topór-Huciański,,M,,,,Raw,Juniorzy do lat 16,89.52,93,125,-130,-130,125,,125,B
+4,Dawid Orłów,,M,,,,Raw,Juniorzy do lat 16,88,93,-65,70,72.5,72.5,,72.5,B
+DQ,Składoń Adam,,M,,,,Raw,Juniorzy do lat 16,,93,,,,,,,B
+1,Matthew Michon,,M,,,,Raw,Juniorzy do lat 16,100.45,105,132.5,140,-145,140,,140,B
+2,Marek Mierzejewski,,M,,,,Raw,Juniorzy do lat 16,93.2,105,115,125,-127.5,125,,125,B
+3,Igor Maćkowski,,M,,,,Raw,Juniorzy do lat 16,101.27,105,100,107.5,-112.5,107.5,,107.5,B
+4,Paweł Piwoński,,M,,,,Raw,Juniorzy do lat 16,103.43,105,80,87.5,90,90,,90,B
+1,Krzysztof Omasta,,M,,,,Raw,Juniorzy do lat 16,105.79,120,130,132.5,135,135,,135,B
+2,Dawid Bem,,M,,,,Raw,Juniorzy do lat 16,115.61,120,127.5,-130,-130,127.5,,127.5,B
+3,Marcel Kubica,,M,,,,Raw,Juniorzy do lat 16,105.1,120,112.5,117.5,122.5,122.5,,122.5,B
+4,Wojciech Zinek,,M,,,,Raw,Juniorzy do lat 16,119.26,120,115,120,-122.5,120,,120,B
+5,Mateusz Kołnacki,,M,,,,Raw,Juniorzy do lat 16,113.93,120,90,100,105,105,,105,B
+1,Władysław Nakwacki,,M,,,,Raw,Juniorzy do lat 16,131.83,120+,135,140,-145,140,,140,B
+2,Franciszek Konkel,,M,,,,Raw,Juniorzy do lat 16,122.4,120+,72.5,80,82.5,82.5,,82.5,B
+3,Adam Kohnke,,M,,,,Raw,Juniorzy do lat 16,127.46,120+,60,70,75,75,,75,B
+1,Mateusz Pietrzyk,,M,,,,Raw,Juniorzy do lat 18,56.63,59,100,107.5,112.5,112.5,,112.5,B
+2,Dominik Skrzypczak,,M,,,,Raw,Juniorzy do lat 18,56.08,59,85,90,-92.5,90,,90,B
+1,Filip Wilewski,,M,,,,Raw,Juniorzy do lat 18,65.29,66,110,115,-117.5,115,,115,B
+2,Kacper Skowroński,,M,,,,Raw,Juniorzy do lat 18,65.23,66,112.5,-115,-115,112.5,,112.5,B
+3,Michał Ślęk,,M,,,,Raw,Juniorzy do lat 18,64.37,66,105,-110,-112.5,105,,105,B
+4,Szymon Kozłowski,,M,,,,Raw,Juniorzy do lat 18,60.86,66,80,85,90,90,,90,B
+1,Kamil Dubiński,,M,,,,Raw,Juniorzy do lat 18,73.56,74,130,135,-140,135,,135,B
+2,Stanisław Budziszewski,,M,,,,Raw,Juniorzy do lat 18,66.06,74,100,105,107.5,107.5,,107.5,B
+3,Piotr Leśnowolski,,M,,,,Raw,Juniorzy do lat 18,73.03,74,-105,107.5,-110,107.5,,107.5,B
+4,Bartosz Sokołowski,,M,,,,Raw,Juniorzy do lat 18,73.54,74,100,105,-110,105,,105,B
+5,Grzegorz Gajewski,,M,,,,Raw,Juniorzy do lat 18,68.51,74,95,102.5,-110,102.5,,102.5,B
+6,Bartłomiej Drążkiewicz,,M,,,,Raw,Juniorzy do lat 18,71.34,74,-87.5,87.5,92.5,92.5,,92.5,B
+1,Jan Gawlak-Socka,,M,,,,Raw,Juniorzy do lat 18,82.79,83,155,-160,160,160,,160,B
+2,Iwo Michałowicz,,M,,,,Raw,Juniorzy do lat 18,80.69,83,157.5,-165,-165,157.5,,157.5,B
+3,Jakub Trzciałkowski,,M,,,,Raw,Juniorzy do lat 18,82.11,83,150,-157.5,157.5,157.5,,157.5,B
+4,Jakub Habros,,M,,,,Raw,Juniorzy do lat 18,82.16,83,132.5,137.5,142.5,142.5,,142.5,B
+5,Jan Jankowski,,M,,,,Raw,Juniorzy do lat 18,79.96,83,125,130,-135,130,,130,B
+6,Igor Wąsacz,,M,,,,Raw,Juniorzy do lat 18,82.19,83,120,130,-132.5,130,,130,B
+7,Michał Szczęśniak,,M,,,,Raw,Juniorzy do lat 18,78.61,83,-115,120,-125,120,,120,B
+8,Natan Białach,,M,,,,Raw,Juniorzy do lat 18,80.71,83,110,120,-130,120,,120,B
+9,Jakub Rataj,,M,,,,Raw,Juniorzy do lat 18,81.05,83,105,110,-112.5,110,,110,B
+10,Mateusz Gołyś,,M,,,,Raw,Juniorzy do lat 18,80.61,83,-100,100,105,105,,105,B
+1,Adrian Iwaniuk,,M,,,,Raw,Juniorzy do lat 18,90.67,93,162.5,170,-175,170,,170,B
+2,Kacper Komisarski,,M,,,,Raw,Juniorzy do lat 18,89.57,93,152.5,160,-167.5,160,,160,B
+3,Piotr Kania,,M,,,,Raw,Juniorzy do lat 18,90,93,140,142.5,-147.5,142.5,,142.5,B
+4,Piotr Cenkiel,,M,,,,Raw,Juniorzy do lat 18,91.49,93,142.5,-147.5,-147.5,142.5,,142.5,B
+5,Mateusz Smoliński,,M,,,,Raw,Juniorzy do lat 18,88.32,93,127.5,-135,135,135,,135,B
+6,Oliwier Siemieniewski,,M,,,,Raw,Juniorzy do lat 18,86.44,93,127.5,-132.5,-135,127.5,,127.5,B
+7,Piotr Mularczyk,,M,,,,Raw,Juniorzy do lat 18,89.56,93,120,125,-130,125,,125,B
+8,Kacper Majchrzyk,,M,,,,Raw,Juniorzy do lat 18,90.26,93,117.5,-125,125,125,,125,B
+9,Kuba Kalbarczyk,,M,,,,Raw,Juniorzy do lat 18,84.83,93,-120,120,122.5,122.5,,122.5,B
+10,Grzegorz Dadas,,M,,,,Raw,Juniorzy do lat 18,90.04,93,110,115,-120,115,,115,B
+11,Sebastian Grabowski,,M,,,,Raw,Juniorzy do lat 18,90.24,93,115,-122.5,-122.5,115,,115,B
+DQ,Kluczewski Jakub,,M,,,,Raw,Juniorzy do lat 18,,93,,,,,,,B
+1,Piotr Staniszewski,,M,,,,Raw,Juniorzy do lat 18,100.31,105,155,165,-172.5,165,,165,B
+2,Wiktor Płatek,,M,,,,Raw,Juniorzy do lat 18,96.6,105,127.5,135,-140,135,,135,B
+3,Stanisław Beśka,,M,,,,Raw,Juniorzy do lat 18,93.68,105,110,115,-120,115,,115,B
+4,Kacper Kępka,,M,,,,Raw,Juniorzy do lat 18,93.4,105,105,107.5,-110,107.5,,107.5,B
+1,Mikołaj Kawecki,,M,,,,Raw,Juniorzy do lat 18,116.22,120,-175,180,183.5,183.5,,183.5,B
+2,Jakub Olszewski,,M,,,,Raw,Juniorzy do lat 18,118.15,120,155,162.5,167.5,167.5,,167.5,B
+3,Piotr Małek,,M,,,,Raw,Juniorzy do lat 18,110.37,120,145,152.5,-155,152.5,,152.5,B
+4,Karol Balicki,,M,,,,Raw,Juniorzy do lat 18,106.26,120,110,120,-127.5,120,,120,B
+1,Patryk Kuśka,,M,,,,Raw,Juniorzy do lat 20,58.25,59,110,-115,115,115,,115,B
+1,Stanisław Bałchanowski,,M,,,,Raw,Juniorzy do lat 20,65.78,66,-122.5,122.5,132.5,132.5,,132.5,B
+2,Konrad Met,,M,,,,Raw,Juniorzy do lat 20,65.43,66,120,125,130,130,,130,B
+3,Jakub Mermer,,M,,,,Raw,Juniorzy do lat 20,63.54,66,-117.5,117.5,-125,117.5,,117.5,B
+1,Eryk Gargas,,M,,,,Raw,Juniorzy do lat 20,73.29,74,120,125,127.5,127.5,,127.5,B
+2,Bartosz Zawadzki,,M,,,,Raw,Juniorzy do lat 20,71.01,74,112.5,117.5,125,125,,125,B
+1,Hubert Mateusiak,,M,,,,Raw,Juniorzy do lat 20,79.6,83,165,170,-172.5,170,,170,B
+2,Paweł Włoch,,M,,,,Raw,Juniorzy do lat 20,82.1,83,140,150,152.5,152.5,,152.5,B
+3,Szymon Lewandowski,,M,,,,Raw,Juniorzy do lat 20,79.9,83,137.5,145,150,150,,150,B
+DQ,Trzos Karol,,M,,,,Raw,Juniorzy do lat 20,,83,,,,,,,B
+1,Michał Serba,,M,,,,Raw,Juniorzy do lat 20,91.64,93,160,167.5,-175,167.5,,167.5,B
+2,Przemysław Spyra,,M,,,,Raw,Juniorzy do lat 20,88.14,93,150,160,-170,160,,160,B
+3,Michał Kasprzak,,M,,,,Raw,Juniorzy do lat 20,91.55,93,147.5,155,-160,155,,155,B
+4,Wiktor Łydek,,M,,,,Raw,Juniorzy do lat 20,89.96,93,145,152.5,-155,152.5,,152.5,B
+5,Adam Szlaga,,M,,,,Raw,Juniorzy do lat 20,89.59,93,-140,-140,140,140,,140,B
+6,Patryk Zomer,,M,,,,Raw,Juniorzy do lat 20,88.06,93,125,-132.5,-132.5,125,,125,B
+7,Arkadiusz Mroczkowski,,M,,,,Raw,Juniorzy do lat 20,85.79,93,110,115,-120,115,,115,B
+DQ,Kryśkiewicz Konrad,,M,,,,Raw,Juniorzy do lat 20,87.83,93,-150,-150,-150,,,,B
+1,Mikołaj Zając,,M,,,,Raw,Juniorzy do lat 20,103.25,105,172.5,180,-182.5,180,,180,B
+2,Maciej Łach,,M,,,,Raw,Juniorzy do lat 20,104.95,105,155,-162.5,-162.5,155,,155,B
+3,Sebastian Matusiak,,M,,,,Raw,Juniorzy do lat 20,99.25,105,117.5,125,130,130,,130,B
+4,Adam Matusiewicz,,M,,,,Raw,Juniorzy do lat 20,99.06,105,115,122.5,-130,122.5,,122.5,B
+5,Bartek Białek,,M,,,,Raw,Juniorzy do lat 20,103.67,105,105,-107.5,-107.5,105,,105,B
+DQ,Rosiński Konrad,,M,,,,Raw,Juniorzy do lat 20,103.53,105,-160,-160,-160,,,,B
+1,Kamil Malanowicz,,M,,,,Raw,Juniorzy do lat 20,117.52,120,200,207.5,-215,207.5,,207.5,B
+2,Dawid Zybura,,M,,,,Raw,Juniorzy do lat 20,113.87,120,155,160,165,165,,165,B
+1,Kacper Białas,,M,,,,Raw,Juniorzy do lat 23,57.99,59,100,105,,105,,105,B
+1,Oskar Stepien,,M,,,,Raw,Juniorzy do lat 23,65.51,66,125,132.5,-135,132.5,,132.5,B
+1,Michał Kołodziejczyk,,M,,,,Raw,Juniorzy do lat 23,73.7,74,162.5,170,-175,170,,170,B
+2,Szymon Bierowiec,,M,,,,Raw,Juniorzy do lat 23,74,74,137.5,142.5,-147.5,142.5,,142.5,B
+3,Maciej Burghardt,,M,,,,Raw,Juniorzy do lat 23,72.1,74,140,-145,,140,,140,B
+4,Mikołaj Lemieszek,,M,,,,Raw,Juniorzy do lat 23,72.9,74,105,110,-115,110,,110,B
+5,Dawid Setniewski,,M,,,,Raw,Juniorzy do lat 23,73.9,74,95,102.5,-107.5,102.5,,102.5,B
+1,Daniel Wasilewski,,M,,,,Raw,Juniorzy do lat 23,82.9,83,165,172.5,-182.5,172.5,,172.5,B
+2,Krzysztof Perlik,,M,,,,Raw,Juniorzy do lat 23,82.2,83,145,-150,-150,145,,145,B
+1,Damian Różański,,M,,,,Raw,Juniorzy do lat 23,90.58,93,170,177.5,-180,177.5,,177.5,B
+2,Jakub Mońka,,M,,,,Raw,Juniorzy do lat 23,87.72,93,155,162.5,-170,162.5,,162.5,B
+3,Paweł Zbroszczyk,,M,,,,Raw,Juniorzy do lat 23,89.62,93,155,162.5,-165,162.5,,162.5,B
+4,Jakub Badoń,,M,,,,Raw,Juniorzy do lat 23,89.96,93,142.5,147.5,-150,147.5,,147.5,B
+5,Sergiusz Kuśmierski,,M,,,,Raw,Juniorzy do lat 23,92.41,93,130,-142.5,-142.5,130,,130,B
+1,Michał Kuc,,M,,,,Raw,Juniorzy do lat 23,103.76,105,187.5,195,-202.5,195,,195,B
+2,Aleksander Koszewski,,M,,,,Raw,Juniorzy do lat 23,104.09,105,180,190,-197.5,190,,190,B
+3,Maciej Różycki,,M,,,,Raw,Juniorzy do lat 23,98.69,105,135,142.5,147.5,147.5,,147.5,B
+4,Bartosz Kulpanowski,,M,,,,Raw,Juniorzy do lat 23,99.19,105,135,140,-145,140,,140,B
+5,Krystian Rosiński,,M,,,,Raw,Juniorzy do lat 23,103.91,105,127.5,135,-140,135,,135,B
+DQ,Sitek Nikodem,,M,,,,Raw,Juniorzy do lat 23,94.67,105,-175,-185,-185,,,,B
+1,Aleksander Chowaniak,,M,,,,Raw,Juniorzy do lat 23,113.53,120,200,210,-220.5,210,,210,B
+2,Leonard Drewniak,,M,,,,Raw,Juniorzy do lat 23,109.36,120,170,180,-190,180,,180,B
+3,Krystian Klarowski,,M,,,,Raw,Juniorzy do lat 23,107.46,120,155,162.5,-167.5,162.5,,162.5,B
+4,Jakub Racewicz,,M,,,,Raw,Juniorzy do lat 23,105.16,120,140,150,-162.5,150,,150,B
+5,Eryk Borowski,,M,,,,Raw,Juniorzy do lat 23,112.88,120,135,142.5,-150,142.5,,142.5,B
+1,Jakub Mazurek,,M,,,,Raw,Juniorzy do lat 23,120.35,120+,200,215.5,,215.5,,215.5,B
+2,Dawid Pietrykowski,,M,,,,Raw,Juniorzy do lat 23,130.07,120+,155,162.5,167.5,167.5,,167.5,B
+1,Sławomir Szymański,,M,,,,Raw,Weterani 40-49 lat,56.09,59,130,137.5,-145,137.5,,137.5,B
+2,Piotr Plesiewicz,,M,,,,Raw,Weterani 40-49 lat,49.9,59,70,80,92.5,92.5,,92.5,B
+1,Adam Balawejder,,M,,,,Raw,Weterani 40-49 lat,73.5,74,170,-175,177.5,177.5,,177.5,B
+2,Bartłomiej Wirek,,M,,,,Raw,Weterani 40-49 lat,72.5,74,172.5,175,-178.5,175,,175,B
+3,Marcin Cieślik,,M,,,,Raw,Weterani 40-49 lat,73,74,120,125,-127.5,125,,125,B
+1,Tomasz Gawron,,M,,,,Raw,Weterani 40-49 lat,82.2,83,177.5,185,-190.5,185,,185,B
+2,Gabriel Wierzchowski,,M,,,,Raw,Weterani 40-49 lat,82,83,135,140,145,145,,145,B
+3,Paweł Łukasik,,M,,,,Raw,Weterani 40-49 lat,79.1,83,135,-140,-140,135,,135,B
+1,Sławomir Jasica,,M,,,,Raw,Weterani 40-49 lat,92.9,93,177.5,180,185,185,,185,B
+2,Wawrzyniec Latus,,M,,,,Raw,Weterani 40-49 lat,86.59,93,-170,170,-180,170,,170,B
+DQ,Winiarski Adam,,M,,,,Raw,Weterani 40-49 lat,91.48,93,-160,-160,-160,,,,B
+1,Mariusz Marciniak,,M,,,,Raw,Weterani 40-49 lat,103.78,105,190,197.5,202.5,202.5,,202.5,B
+2,Damian Kocot,,M,,,,Raw,Weterani 40-49 lat,94.07,105,130,140,-150,140,,140,B
+3,Łukasz Przybyłek,,M,,,,Raw,Weterani 40-49 lat,95.36,105,130,135,140,140,,140,B
+1,Arkadiusz Domański,,M,,,,Raw,Weterani 40-49 lat,111.75,120,-185,-185,185,185,,185,B
+2,Sebastian Kot,,M,,,,Raw,Weterani 40-49 lat,106.88,120,175,-182.5,-185,175,,175,B
+3,Bartosz Mroczek,,M,,,,Raw,Weterani 40-49 lat,109.4,120,160,-167.5,-167.5,160,,160,B
+4,Marcin Jeliński,,M,,,,Raw,Weterani 40-49 lat,112.84,120,150,-157.5,-157.5,150,,150,B
+1,Robert Wiejas,,M,,,,Raw,Weterani 40-49 lat,147.96,120+,175,182.5,187.5,187.5,,187.5,B
+2,Paweł Zbrowski,,M,,,,Raw,Weterani 40-49 lat,125.01,120+,172.5,180,-182.5,180,,180,B
+3,Tomasz Bocionek,,M,,,,Raw,Weterani 40-49 lat,127.43,120+,170,180,-185,180,,180,B
+4,Rafał Stefańczyk,,M,,,,Raw,Weterani 40-49 lat,128.74,120+,145,-147.5,147.5,147.5,,147.5,B
+1,Bartosz Żelazko,,M,,,,Raw,Weterani 50-59 lat,73.8,74,140,,,140,,140,B
+1,Dariusz Janus,,M,,,,Raw,Weterani 50-59 lat,81.9,83,140,145,150,150,,150,B
+2,Tomasz Dębicki,,M,,,,Raw,Weterani 50-59 lat,82,83,140,145,,145,,145,B
+1,Janusz Kobus,,M,,,,Raw,Weterani 50-59 lat,89.92,93,155,160,162.5,162.5,,162.5,B
+2,Krzysztof Lis,,M,,,,Raw,Weterani 50-59 lat,92.34,93,152.5,160,-165,160,,160,B
+3,Dariusz Berta,,M,,,,Raw,Weterani 50-59 lat,91.31,93,-135,135,145,145,,145,B
+1,Waldemar Woźniak,,M,,,,Raw,Weterani 50-59 lat,98.14,105,170,175,,175,,175,B
+2,Robert Kuć,,M,,,,Raw,Weterani 50-59 lat,101.19,105,130,142.5,150,150,,150,B
+3,Jarosław Makowski,,M,,,,Raw,Weterani 50-59 lat,103.68,105,130,140,-150,140,,140,B
+4,Tomasz Woliński,,M,,,,Raw,Weterani 50-59 lat,102.61,105,110,115,-120,115,,115,B
+1,Mikołaj Kowalik,,M,,,,Raw,Weterani 50-59 lat,113.55,120,170,175,180,180,,180,B
+2,Arkadiusz Bembenek,,M,,,,Raw,Weterani 50-59 lat,118.86,120,165,172.5,175,175,,175,B
+3,Jacek Steiner,,M,,,,Raw,Weterani 50-59 lat,107.07,120,-167.5,167.5,-172.5,167.5,,167.5,B
+4,Mirosław Malec,,M,,,,Raw,Weterani 50-59 lat,117.32,120,140,152.5,-170,152.5,,152.5,B
+1,Włodzimierz Soliwodzki,,M,,,,Raw,Weterani 60-69 lat,72.2,74,107.5,-112.5,115,115,,115,B
+1,Adam Rajtar,,M,,,,Raw,Weterani 60-69 lat,81.1,83,-110,110,-115,110,,110,B
+2,Włodzimierz Kokociński,,M,,,,Raw,Weterani 60-69 lat,81.5,83,75,80,85,85,,85,B
+1,Jan Wegiera,,M,,,,Raw,Weterani 60-69 lat,91.86,93,187.5,192.5,-197.5,192.5,,192.5,B
+1,Krzysztof Wieczorek,,M,,,,Raw,Weterani 60-69 lat,105.97,120,130,140,147.5,147.5,,147.5,B
+2,Mariusz Szymański,,M,,,,Raw,Weterani 60-69 lat,111.93,120,120,,,120,,120,B
+1,Ryszard Bieńczyk,,M,,,,Raw,Weterani +70 lat,71.6,74,90,95,100,100,,100,B
+1,Marian Gottfired,,M,,,,Raw,Weterani +70 lat,87.34,93,70,80,82.5,82.5,,82.5,B
+1,Stanisław Mentel,,M,,,,Raw,Weterani +70 lat,100.66,105,175,-192.5,192.5,192.5,,192.5,B
+1,Sławomir Szymański,,M,,,,Raw,Seniorzy,56.09,59,130,137.5,-145,137.5,,137.5,B
+2,Dariusz Wszoła,,M,,,,Raw,Seniorzy,58.83,59,130,137.5,-145,137.5,,137.5,B
+3,Klaudiusz Gajdziński,,M,,,,Raw,Seniorzy,58.25,59,90,95,-97.5,95,,95,B
+4,Piotr Plesiewicz,,M,,,,Raw,Seniorzy,49.9,59,70,80,92.5,92.5,,92.5,B
+1,Mariusz Grotkowski,,M,,,,Raw,Seniorzy,65.52,66,135,140,-142.5,140,,140,B
+2,Michał Łysoń,,M,,,,Raw,Seniorzy,65.89,66,127.5,132.5,-142.5,132.5,,132.5,B
+3,Sławomir Szymura,,M,,,,Raw,Seniorzy,65.75,66,115,122.5,127.5,127.5,,127.5,B
+4,Igor Włodarczyk,,M,,,,Raw,Seniorzy,65.21,66,110,115,-120,115,,115,B
+5,Filip Wilewski,,M,,,,Raw,Seniorzy,65.29,66,110,115,-117.5,115,,115,B
+1,Adam Balawejder,,M,,,,Raw,Seniorzy,73.5,74,170,-175,177.5,177.5,,177.5,B
+2,Bartłomiej Wirek,,M,,,,Raw,Seniorzy,72.5,74,172.5,175,-178.5,175,,175,B
+3,Michał Kołodziejczyk,,M,,,,Raw,Seniorzy,73.7,74,162.5,170,-175,170,,170,B
+4,Maciej Koloch,,M,,,,Raw,Seniorzy,73.5,74,140,147.5,150,150,,150,B
+5,Szymon Bierowiec,,M,,,,Raw,Seniorzy,74,74,137.5,142.5,-147.5,142.5,,142.5,B
+6,Marcin Cieślik,,M,,,,Raw,Seniorzy,73,74,120,125,-127.5,125,,125,B
+DQ,Michałowski Łukasz,,M,,,,Raw,Seniorzy,,74,,,,,,,B
+1,Tomasz Gawron,,M,,,,Raw,Seniorzy,82.2,83,177.5,185,-190.5,185,,185,B
+2,Daniel Wasilewski,,M,,,,Raw,Seniorzy,82.9,83,165,172.5,-182.5,172.5,,172.5,B
+3,Kacper Błotko,,M,,,,Raw,Seniorzy,,83,160,-165,-165,160,,160,B
+4,Paweł Włoch,,M,,,,Raw,Seniorzy,82.1,83,140,150,152.5,152.5,,152.5,B
+5,Szymon Lewandowski,,M,,,,Raw,Seniorzy,79.9,83,137.5,145,150,150,,150,B
+6,Daniel Grzelak,,M,,,,Raw,Seniorzy,82.5,83,105,110,-112.5,110,,110,B
+1,Jan Wegiera,,M,,,,Raw,Seniorzy,91.86,93,187.5,192.5,-197.5,192.5,,192.5,B
+2,Jakub Bociański,,M,,,,Raw,Seniorzy,91.12,93,185,-187.5,-187.5,185,,185,B
+3,Sławomir Jasica,,M,,,,Raw,Seniorzy,92.9,93,177.5,180,185,185,,185,B
+4,Mateusz Ząbek,,M,,,,Raw,Seniorzy,92.3,93,170,180,182.5,182.5,,182.5,B
+5,Damian Różański,,M,,,,Raw,Seniorzy,90.58,93,170,177.5,-180,177.5,,177.5,B
+6,Wawrzyniec Latus,,M,,,,Raw,Seniorzy,86.59,93,-170,170,-180,170,,170,B
+7,Wiktor Kokoszka,,M,,,,Raw,Seniorzy,89.34,93,160,167.5,-170,167.5,,167.5,B
+8,Piotr Szewczyk,,M,,,,Raw,Seniorzy,92.43,93,160,-165,165,165,,165,B
+9,Jakub Mońka,,M,,,,Raw,Seniorzy,87.72,93,155,162.5,-170,162.5,,162.5,B
+10,Maciej Urban,,M,,,,Raw,Seniorzy,89.15,93,-130,130,-132.5,130,,130,B
+DQ,Kwietniewski Konrad,,M,,,,Raw,Seniorzy,,93,,,,,,,B
+DQ,Grzelak Jakub,,M,,,,Raw,Seniorzy,90.77,93,-150,-150,-150,,,,B
+1,Mariusz Kunka,,M,,,,Raw,Seniorzy,103.45,105,202.5,210,212.5,212.5,,212.5,B
+2,Tomasz Dobras,,M,,,,Raw,Seniorzy,99.24,105,192.5,200,202.5,202.5,,202.5,B
+3,Mariusz Marciniak,,M,,,,Raw,Seniorzy,103.78,105,190,197.5,202.5,202.5,,202.5,B
+4,Michał Kuc,,M,,,,Raw,Seniorzy,103.76,105,187.5,195,-202.5,195,,195,B
+5,Stanisław Mentel,,M,,,,Raw,Seniorzy,100.66,105,175,-192.5,192.5,192.5,,192.5,B
+6,Robert Kuć,,M,,,,Raw,Seniorzy,101.19,105,130,142.5,150,150,,150,B
+7,Damian Kocot,,M,,,,Raw,Seniorzy,94.07,105,130,140,-150,140,,140,B
+8,Jarosław Makowski,,M,,,,Raw,Seniorzy,103.68,105,130,140,-150,140,,140,B
+DQ,Sitek Nikodem,,M,,,,Raw,Seniorzy,94.67,105,-175,-185,-185,,,,B
+DQ,Rosiński Konrad,,M,,,,Raw,Seniorzy,103.53,105,-160,-160,-160,,,,B
+1,Mateusz Grzesik,,M,,,,Raw,Seniorzy,119.66,120,205,212.5,-217.5,212.5,,212.5,B
+2,Aleksander Chowaniak,,M,,,,Raw,Seniorzy,113.53,120,200,210,-220.5,210,,210,B
+3,Arkadiusz Domański,,M,,,,Raw,Seniorzy,111.75,120,-185,-185,185,185,,185,B
+4,Sebastian Kot,,M,,,,Raw,Seniorzy,106.88,120,175,-182.5,-185,175,,175,B
+5,Krzysztof Stangret,,M,,,,Raw,Seniorzy,112.18,120,155,162.5,-167.5,162.5,,162.5,B
+6,Bartosz Mroczek,,M,,,,Raw,Seniorzy,109.4,120,160,-167.5,-167.5,160,,160,B
+7,Przemysław Śmiłek,,M,,,,Raw,Seniorzy,112.75,120,150,157.5,-165,157.5,,157.5,B
+DQ,Powichrowski Marcin,,M,,,,Raw,Seniorzy,117.91,120,-180,-180,-180,,,,B
+1,Piotr Sadowski,,M,,,,Raw,Seniorzy,137.35,120+,225,242.5,-253,242.5,,242.5,B
+2,Szymon Stawiarski,,M,,,,Raw,Seniorzy,123.34,120+,205,212.5,-215,212.5,,212.5,B
+>>>>>>> ad8f6111ec (Added pzkfits bench nats, closes #26680)
