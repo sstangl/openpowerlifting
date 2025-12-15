@@ -6,6 +6,7 @@
 [divisions]
 #old style divisions
     open = {name ="Open",min=0,max=999}
+    soi = {name ="SOI",min=0,max=999}
     juniors = {name = "Juniors",min=0,max=23}
     subjuniors = {name = "Sub-Juniors",min=0,max=18}
     masters1 = {name = "Masters 1",min=39.5,max=48.5}
