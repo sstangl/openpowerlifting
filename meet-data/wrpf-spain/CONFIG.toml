@@ -35,6 +35,18 @@
     masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
     masters_80_89 = {name = "Masters 80-89", min = 80, max = 89}
 
+    # Tested divisions.
+    opendt = {name = "Open-DT", min = 0, max = 999,tested="Yes"}
+    youthdt = {name = "Youth-DT", min = 5, max = 13,tested="Yes"}
+    teen_14_16dt = {name = "Teen 14-16-DT", min = 14, max = 16,tested="Yes"}
+    subjunior_17_19dt = {name = "Sub-Juniors 17-19-DT", min = 17, max = 19,tested="Yes"}
+    juniors_20_23dt = {name = "Juniors 20-23-DT", min = 20, max = 23,tested="Yes"}
+    masters_40_49dt = {name = "Masters 40-49-DT", min = 40, max = 49,tested="Yes"}
+    masters_50_59dt = {name = "Masters 50-59-DT", min = 50, max = 59,tested="Yes"}
+    masters_60_69dt = {name = "Masters 60-69-DT", min = 60, max = 69,tested="Yes"}
+    masters_70_79dt = {name = "Masters 70-79-DT", min = 70, max = 79,tested="Yes"}
+    masters_80_89dt = {name = "Masters 80-89-DT", min = 80, max = 89,tested="Yes"}
+
     # Other permutations.
     masters_40_44 = {name = "Masters 40-44", min = 40, max = 44}
     masters_45_49 = {name = "Masters 45-49", min = 45, max = 49}
