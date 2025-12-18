@@ -73,6 +73,7 @@
     # These are used sometimes, also not in rulebook
     master = {name = "Master", min=40, max=999}
     teen = {name = "Teen", min=12, max=19}
+    youth = {name = "Youth", min=0, max=7}
 
 
 [weightclasses.M]
