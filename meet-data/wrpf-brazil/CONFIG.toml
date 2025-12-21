@@ -34,6 +34,7 @@
     masters_60_69 = {name = "Masters 60-69", min = 60, max = 69}
     masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
     masters_80_89 = {name = "Masters 80-89", min = 80, max = 89}
+    Guest = {name = "Guest", min = 0, max = 999}
 
     #Other permutations
     submasters_35_39 = {name = "Submasters 35-39", min = 35, max = 39}  # WRPF-USA
