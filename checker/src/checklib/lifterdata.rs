@@ -11,25 +11,6 @@ use std::path::Path;
 
 use crate::Report;
 
-/// Sex consistency exemptions, in the `[sex]` table of `exemptions.toml`.
-#[derive(Deserialize)]
-pub struct SexExemptions {
-    usernames: Vec<Username>,
-}
-
-/// Bodyweight consistency exemptions, in the `[bodyweight]` table of `exemptions.toml`.
-#[derive(Deserialize)]
-pub struct BodyweightExemptions {
-    usernames: Vec<Username>,
-}
-
-/// Deserialization target for `lifter-data/exemptions.toml`.
-#[derive(Deserialize)]
-pub struct ExemptionConfig {
-    sex: SexExemptions,
-    bodyweight: BodyweightExemptions,
-}
-
 #[derive(Debug)]
 pub struct LifterDataCheckResult {
     pub reports: Vec<Report>,
@@ -67,6 +48,25 @@ pub struct LifterData {
 /// Helper function to look for common whitespace errors.
 fn has_whitespace_errors(s: &str) -> bool {
     s.contains("  ") || s.starts_with(' ') || s.ends_with(' ')
+}
+
+/// Sex consistency exemptions, in the `[sex]` table of `exemptions.toml`.
+#[derive(Deserialize)]
+struct SexExemptions {
+    usernames: Vec<Username>,
+}
+
+/// Bodyweight consistency exemptions, in the `[bodyweight]` table of `exemptions.toml`.
+#[derive(Deserialize)]
+struct BodyweightExemptions {
+    usernames: Vec<Username>,
+}
+
+/// Deserialization target for `lifter-data/exemptions.toml`.
+#[derive(Deserialize)]
+struct ExemptionConfig {
+    sex: SexExemptions,
+    bodyweight: BodyweightExemptions,
 }
 
 /// Specifies CSS classes for when the server renders the lifter's Name.

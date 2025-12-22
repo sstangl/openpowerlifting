@@ -370,11 +370,11 @@ fn main() -> Result<(), Box<dyn Error>> {
         let warnings = report_count.warnings();
 
         if errors > 0 {
-            error_count.fetch_add(errors, Ordering::SeqCst);
+            error_count.fetch_add(errors, Ordering::Relaxed);
         }
 
         if warnings > 0 {
-            warning_count.fetch_add(warnings, Ordering::SeqCst);
+            warning_count.fetch_add(warnings, Ordering::Relaxed);
         }
 
         // Pretty-print any messages.
@@ -419,10 +419,10 @@ fn main() -> Result<(), Box<dyn Error>> {
 
                     // Update the global error and warning counts.
                     if local_errors > 0 {
-                        error_count.fetch_add(local_errors, Ordering::SeqCst);
+                        error_count.fetch_add(local_errors, Ordering::Relaxed);
                     }
                     if local_warnings > 0 {
-                        warning_count.fetch_add(local_warnings, Ordering::SeqCst);
+                        warning_count.fetch_add(local_warnings, Ordering::Relaxed);
                     }
 
                     // Emit reports all together.
@@ -441,7 +441,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     }
                 }
                 Err(e) => {
-                    internal_error_count.fetch_add(1, Ordering::SeqCst);
+                    internal_error_count.fetch_add(1, Ordering::Relaxed);
                     let stderr = io::stderr();
                     let mut handle = stderr.lock();
                     let _ = handle.write_fmt(format_args!("{}\n", dir.path().to_str().unwrap()));
@@ -461,11 +461,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Move out of atomics.
     let mut report_count = ReportCount::new(
-        error_count.load(Ordering::SeqCst),
-        warning_count.load(Ordering::SeqCst),
+        error_count.load(Ordering::Relaxed),
+        warning_count.load(Ordering::Relaxed),
     );
 
-    let internal_error_count = internal_error_count.load(Ordering::SeqCst);
+    let internal_error_count = internal_error_count.load(Ordering::Relaxed);
 
     // Group entries by lifter.
     let timing = instant_if(args.debug_timing);
