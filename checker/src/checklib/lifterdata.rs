@@ -113,18 +113,7 @@ fn check_donator_colors(
             report.error_on(line, format!("Whitespace error in '{}'", &row.color));
         }
 
-        match map.get_mut(&username) {
-            Some(data) => {
-                data.color = Some(row.color);
-            }
-            None => {
-                let data = LifterData {
-                    color: Some(row.color),
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        }
+        map.entry(username).or_default().color = Some(row.color);
     }
 
     Ok(())
@@ -145,34 +134,12 @@ pub fn load_exemptions(report: &mut Report, map: &mut LifterDataMap) -> Result<(
 
     // Handle the [sex] section.
     for username in exemptions.sex.usernames.into_iter() {
-        match map.get_mut(&username) {
-            Some(data) => {
-                data.exempt_sex = true;
-            }
-            None => {
-                let data = LifterData {
-                    exempt_sex: true,
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        }
+        map.entry(username).or_default().exempt_sex = true;
     }
 
     // Handle the [bodyweight] section.
     for username in exemptions.bodyweight.usernames.into_iter() {
-        match map.get_mut(&username) {
-            Some(data) => {
-                data.exempt_bodyweight = true;
-            }
-            None => {
-                let data = LifterData {
-                    exempt_bodyweight: true,
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        }
+        map.entry(username).or_default().exempt_bodyweight = true;
     }
 
     Ok(())
@@ -217,18 +184,7 @@ fn check_privacy(
             report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
 
-        match map.get_mut(&username) {
-            Some(data) => {
-                data.privacy = true;
-            }
-            None => {
-                let data = LifterData {
-                    privacy: true,
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        }
+        map.entry(username).or_default().privacy = true;
     }
 
     Ok(())
@@ -367,22 +323,15 @@ fn check_name_disambiguation(
             report.error_on(line, "Count must be >= 2");
         }
 
-        match map.get_mut(&username) {
-            Some(data) => {
-                if data.disambiguation_count > 0 {
-                    report.error_on(line, format!("Lifter '{}' is duplicated", &row.name));
-                } else {
-                    data.disambiguation_count = row.count;
-                }
-            }
-            None => {
-                let data = LifterData {
-                    disambiguation_count: row.count,
-                    ..Default::default()
-                };
-                map.insert(username, data);
-            }
-        };
+        let entry = map.entry(username).or_default();
+        if entry.disambiguation_count > 0 {
+            let msg = format!(
+                "Lifter '{}' appears multiple times in name-disambiguation.csv",
+                &row.name
+            );
+            report.error_on(line, msg);
+        }
+        entry.disambiguation_count = row.count;
     }
 
     Ok(())

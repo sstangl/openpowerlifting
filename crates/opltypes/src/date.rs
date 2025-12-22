@@ -152,7 +152,8 @@ impl Date {
             //  except for years that are exactly divisible by 100,
             //  but these centurial years are leap years if they are exactly
             //  divisible by 400.
-            let is_leap = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
+            let is_leap =
+                year.is_multiple_of(400) || (year.is_multiple_of(4) && !year.is_multiple_of(100));
 
             if is_leap {
                 max_days += 1;
