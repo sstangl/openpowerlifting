@@ -1,4 +1,9 @@
-# Configuration for the IntDFPA.
+# Configuration for the IntDFPA, the international branch of the USAPL.
+# Internally they call it "IDFPA", but that was already taken.
+
+[options]
+    valid_federations = ["IntDFPA"]
+    require_manual_disambiguation = true
 
 [divisions]
     # Official division names are as described in an email from the USAPL
