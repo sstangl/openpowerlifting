@@ -1,16 +1,16 @@
-Place,WeightClassKg,Name,BirthDate,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event
-DQ,63,Idunn Bøe Qviller,,Raw,IL Kraftsport,58.52,115.0,125.0,132.5,132.5,55.0,57.5,60.0,60.0,115.0,125.0,130.0,130.0,,Teen 14-18,F,SBD
-DQ,69,Anna Pauline Ouff Grøthe,,Raw,Drammen SI,65.36,117.5,127.5,135.0,135.0,77.5,85.0,90.0,90.0,150.0,162.5,170.0,170.0,,Juniors 19-23,F,SBD
-DQ,76,Tonje Teig,,Raw,Nes SIL,75.1,110.0,115.0,120.0,120.0,67.5,70.0,72.5,72.5,130.0,140.0,150.0,150.0,,Open,F,SBD
-DQ,76,Torun Fretheim,,Raw,Christiania AK,73.34,107.5,115.0,120.0,120.0,67.5,72.5,75.0,75.0,115.0,125.0,130.0,130.0,,Masters,F,SBD
-DQ,76,Liv Caspersen,,Raw,Christiania AK,74.84,117.5,122.5,127.5,127.5,60.0,62.5,-65.0,62.5,132.5,137.5,-142.5,137.5,,Masters,F,SBD
-DQ,84,Hege Braathen,,Raw,Frogner AK,84.0,115.0,-122.5,122.5,122.5,67.5,72.5,-75.0,72.5,130.0,140.0,-147.5,140.0,,Masters,F,SBD
-DQ,84,Liv Kreken,,Raw,Christiania AK,78.34,85.0,90.0,95.0,95.0,45.0,47.5,50.0,50.0,110.0,120.0,125.0,125.0,,Masters,F,SBD
-DQ,93,Jonatan Høgnes Jensson,,Raw,Høland IUL,88.7,,,,,85.0,92.5,-97.5,92.5,,,,,,Teen 14-18,M,B
-DQ,93,Petter Johan Reppe Thomassen,,Raw,Høland IUL,91.9,,,,,67.5,75.0,82.5,82.5,,,,,,Teen 14-18,M,B
-DQ,83,Morten Storvik,,Raw,IL Kraftsport,82.75,220.0,232.5,240.0,240.0,142.5,150.0,155.0,155.0,230.0,242.5,250.0,250.0,,Juniors 19-23,M,SBD
-DQ,120,John Anders Terland,,Raw,Turn og IL National,115.8,210.0,220.0,227.5,227.5,165.0,172.5,177.5,177.5,270.0,280.0,-287.5,280.0,,Open,M,SBD
-DQ,120,Fredrik Søberg,,Raw,Oslo SK,114.86,,,,,170.0,177.5,-182.5,177.5,,,,,,Open,M,B
-DQ,120+,Erik Røen,,Raw,Sjøholt AK,163.2,,,,,205.0,220.0,-227.5,220.0,,,,,,Open,M,B
-DQ,105,Cato Andrè Eide,,Raw,IL Kraftsport,104.0,,,,,167.5,180.0,-200.0,180.0,,,,,,Masters,M,B
-DQ,105,Knut Bakken,,Raw,Nes SIL,100.8,,,,,142.5,147.5,150.0,150.0,,,,,,Masters,M,B
+WeightClassKg,Name,BirthDate,Equipment,Team,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Division,Sex,Event,Place
+63,Idunn Bøe Qviller,,Raw,IL Kraftsport,58.52,115,125,132.5,132.5,55,57.5,60,60,115,125,130,130,322.5,Teen 14-18,F,SBD,1
+69,Anna Pauline Ouff Grøthe,,Raw,Drammen SI,65.36,117.5,127.5,135,135,77.5,85,90,90,150,162.5,170,170,395,Juniors 19-23,F,SBD,1
+76,Tonje Teig,,Raw,Nes SIL,75.1,110,115,120,120,67.5,70,72.5,72.5,130,140,150,150,342.5,Open,F,SBD,1
+76,Torun Fretheim,,Raw,Christiania AK,73.34,107.5,115,120,120,67.5,72.5,75,75,115,125,130,130,325,Masters,F,SBD,2
+76,Liv Caspersen,,Raw,Christiania AK,74.84,117.5,122.5,127.5,127.5,60,62.5,-65,62.5,132.5,137.5,-142.5,137.5,327.5,Masters,F,SBD,1
+84,Hege Braathen,,Raw,Frogner AK,84,115,-122.5,122.5,122.5,67.5,72.5,-75,72.5,130,140,-147.5,140,335,Masters,F,SBD,1
+84,Liv Kreken,,Raw,Christiania AK,78.34,85,90,95,95,45,47.5,50,50,110,120,125,125,270,Masters,F,SBD,2
+93,Jonatan Høgnes Jensson,,Raw,Høland IUL,88.7,,,,,85,92.5,-97.5,92.5,,,,,92.5,Teen 14-18,M,B,1
+93,Petter Johan Reppe Thomassen,,Raw,Høland IUL,91.9,,,,,67.5,75,82.5,82.5,,,,,82.5,Teen 14-18,M,B,2
+83,Morten Storvik,,Raw,IL Kraftsport,82.75,220,232.5,240,240,142.5,150,155,155,230,242.5,250,250,645,Juniors 19-23,M,SBD,1
+120,John Anders Terland,,Raw,Turn og IL National,115.8,210,220,227.5,227.5,165,172.5,177.5,177.5,270,280,-287.5,280,685,Open,M,SBD,1
+120,Fredrik Søberg,,Raw,Oslo SK,114.86,,,,,170,177.5,-182.5,177.5,,,,,177.5,Open,M,B,1
+120+,Erik Røen,,Raw,Sjøholt AK,163.2,,,,,205,220,-227.5,220,,,,,220,Open,M,B,1
+105,Cato Andrè Eide,,Raw,IL Kraftsport,104,,,,,167.5,180,-200,180,,,,,180,Masters,M,B,1
+105,Knut Bakken,,Raw,Nes SIL,100.8,,,,,142.5,147.5,150,150,,,,,150,Masters,M,B,2
