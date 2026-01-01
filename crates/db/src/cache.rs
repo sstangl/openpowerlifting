@@ -385,6 +385,9 @@ impl LogLinearTimeCache {
             male: Self::filter_entries(entries, meets, |e| e.sex == Sex::M),
             female: Self::filter_entries(entries, meets, |e| e.sex == Sex::F),
 
+            year2026: Self::filter_entries(entries, meets, |e| {
+                meets[e.meet_id as usize].date.year() == 2026
+            }),
             year2025: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2025
             }),
