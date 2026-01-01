@@ -150,6 +150,11 @@ pub enum Federation {
     #[strum(to_string = "ARPL", serialize = "arpl")]
     ARPL,
 
+    /// Unaffiliated meets held in Argentina.
+    #[serde(rename = "Argentina-UA")]
+    #[strum(to_string = "Argentina-UA", serialize = "argentina-ua")]
+    ArgentinaUA,
+
     /// Asian Powerlifting Federation, IPF.
     #[strum(to_string = "AsianPF", serialize = "asianpf")]
     AsianPF,
@@ -2144,6 +2149,7 @@ impl Federation {
             Federation::APPortugal => FULLY_TESTED,
             Federation::APU => FULLY_TESTED,
             Federation::APUA => FULLY_TESTED,
+            Federation::ArgentinaUA => false,
             Federation::ARPL => false,
             Federation::AsianPF => FULLY_TESTED,
             Federation::AusDFPF => FULLY_TESTED,
@@ -2631,6 +2637,7 @@ impl Federation {
             Federation::APPortugal => Some(Country::Portugal),
             Federation::APU => Some(Country::Australia),
             Federation::APUA => Some(Country::Argentina),
+            Federation::ArgentinaUA => Some(Country::Argentina),
             Federation::ARPL => Some(Country::Argentina),
             Federation::AsianPF => None,
             Federation::AusDFPF => Some(Country::Australia),
@@ -3117,6 +3124,7 @@ impl Federation {
                 }
             }
             Federation::APUA => Some(Federation::WABDL),
+            Federation::ArgentinaUA => None,
             Federation::ARPL => Some(Federation::IPL),
             Federation::AsianPF => Some(Federation::IPF),
             Federation::AusDFPF => Some(Federation::WDFPF),
@@ -3745,6 +3753,7 @@ impl Federation {
             Federation::APPortugal => Federation::ipf_rules_on(date),
             Federation::APU => Federation::ipf_rules_on(date),
             Federation::APUA => PointsSystem::Wilks,
+            Federation::ArgentinaUA => PointsSystem::Wilks,
             Federation::ARPL => Federation::ipl_rules_on(date),
             Federation::AsianPF => Federation::ipf_rules_on(date),
             Federation::AusDFPF => PointsSystem::SchwartzMalone,
