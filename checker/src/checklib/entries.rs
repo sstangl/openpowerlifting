@@ -2419,6 +2419,11 @@ pub fn do_check<R: io::Read>(
         entries.push(entry);
     }
 
+    // Disallow empty entries.csv files: database logic expects at least one entry per meet.
+    if entries.is_empty() {
+        report.error("At least one entry must be recorded");
+    }
+
     Ok(EntriesCheckResult {
         report,
         entries: Some(entries.into_boxed_slice()),
