@@ -2,8 +2,8 @@ Place,Name,Sex,BirthDate,State,Equipment,Division,BodyweightKg,WeightClassKg,Squ
 1,Luciane Cropolato,F,1977-08-23,PR,Sleeves,M45-49,66,67.5,50,70,100,100,50,60,-65,,60,130,140,-150,,140,300,SBD,
 1,Ellen Gonçalves Freitas Silva,F,2002-07-29,PR,Wraps,J20-23,58,60,155,160,175,175,55,65,-75,,65,-190,200,210,215,210,450,SBD,EDREY
 1,Ellen Gonçalves Freitas Silva,F,2002-07-29,PR,Wraps,Open,58,60,155,160,175,175,55,65,-75,,65,-190,200,210,215,210,450,SBD,EDREY
-1,Viviane Maris Brites Cardoso,F,1982-04-26,PR,Wraps,Open,74.3,75,160,165,170,170,90,95,-100,,95,195,207.5,-212.5,,207.5,472.5,SBD,BRUTUS GYM
-1,Viviane Maris Brites Cardoso,F,1982-04-26,PR,Bare,Open,74.3,75,,,,,90,95,-100,,95,,,,,,95,B,BRUTUS GYM
+DQ,Viviane Maris Brites Cardoso,F,1982-04-26,PR,Wraps,Open,74.3,75,160,165,170,170,90,95,-100,,95,195,207.5,-212.5,,207.5,,SBD,BRUTUS GYM
+DQ,Viviane Maris Brites Cardoso,F,1982-04-26,PR,Bare,Open,74.3,75,,,,,90,95,-100,,95,,,,,,,B,BRUTUS GYM
 1,Luan Vieira Leviski,M,2008-04-03,PR,Sleeves,J17-19,79.9,82.5,140,-147.5,-150,140,-75.5,75.5,-80,,75.5,180,-190,200,-202.5,200,415.5,SBD,Dogteam
 1,Douglas Diogo Tscha,M,2005-12-05,PR,Sleeves,J17-19,88.8,90,-180,182.5,-192.5,182.5,110,120,-127.5,,120,190,210,-225,,210,512.5,SBD,
 1,Rodrigo Lopes De Castro,M,2006-09-20,PR,Sleeves,J17-19,104.8,110,160,-175,180,180,-110,120,130,,130,210,225,235,,235,545,SBD,
@@ -21,7 +21,7 @@ Place,Name,Sex,BirthDate,State,Equipment,Division,BodyweightKg,WeightClassKg,Squ
 1,Davyd Martiliano De Souza,M,1996-12-27,,Sleeves,Open,122.4,125,140,160,-180,160,160,-170,-170,,160,250,-260,-260,,250,570,SBD,
 1,Luiz Felipe Barbosa Dos Santos,M,2006-08-21,PR,Wraps,J17-19,73.9,75,165,180,,180,-90,100,,,100,180,210,225,,225,505,SBD,
 1,Jhon Eduardo Oliveira Silva,M,2005-06-21,PR,Wraps,J17-19,105.7,110,190,-207.5,-207.5,190,110,117.5,125,,125,-245,245,252.5,,252.5,567.5,SBD,Goat Powerlifting
-1,Carlos Alberto Rodrigues,M,1979-04-07,PR,Wraps,M45-49,112.6,125,240,250,255,255,140,150,157.5,,157.5,-260,260,-270,,260,672.5,SBD,Brutus Gyn
+DQ,Carlos Alberto Rodrigues,M,1979-04-07,PR,Wraps,M45-49,112.6,125,240,250,255,255,140,150,157.5,,157.5,-260,260,-270,,260,,SBD,Brutus Gyn
 1,Rodrigo Kramer,M,1986-05-13,SC,Wraps,Open,58.3,60,120,135,140,140,70,75,80,,80,185,197.5,200,,200,420,SBD,BRUTOS POWER TEAM
 1,Neemias Ferreira da Silva,M,1978-07-04,RO,Wraps,Open,74.1,75,155,160,167.5,167.5,70,-77.5,80,,80,190,200,207.5,,207.5,455,SBD,
 1,André Matheus Vieira,M,1994-06-16,PR,Wraps,Open,101,110,230,237.5,250,250,155,162.5,-175,,162.5,265,275,-300,,275,687.5,SBD,
@@ -29,15 +29,15 @@ Place,Name,Sex,BirthDate,State,Equipment,Division,BodyweightKg,WeightClassKg,Squ
 1,Adryan Andriguetto Maoski,M,2007-09-21,PR,Bare,J17-19,77.6,82.5,,,,,150,155,162.5,-165,162.5,,,,,,162.5,B,
 1,Pablo Rhenan Silva Da Rocha,M,2007-06-09,PR,Bare,J17-19,82.6,90,,,,,130,140,-145,,140,,,,,,140,B,Brutus power team
 1,Wagner Wuicik,M,1977-06-11,,Bare,M45-49,86,90,,,,,-155,157.5,160,,160,,,,,,160,B,BRUTUS TEAM
-1,Alan Da Silva De Ramos,M,1995-09-03,PR,Bare,Open,69,75,,,,,90,95,100,,100,,,,,,100,B,Team Aforja
+DQ,Alan Da Silva De Ramos,M,1995-09-03,PR,Bare,Open,69,75,,,,,90,95,100,,100,,,,,,,B,Team Aforja
 1,Heber Artigas Machado Vieira,M,1982-11-22,PR,Bare,Open,81.3,82.5,,,,,160,167.5,175,-177.5,175,,,,,,175,B,
 2,Adryan Andriguetto Maoski,M,2007-09-21,PR,Bare,Open,77.6,82.5,,,,,150,155,162.5,-165,162.5,,,,,,162.5,B,
 1,Livoney Candido,M,1996-07-10,PR,Bare,Open,94.5,100,,,,,150,160,-170,,160,,,,,,160,B,
 1,Gilson Glaudi Ignacio Jr,M,1981-07-16,PR,Bare,Open,107.7,110,,,,,180,190,195,,195,,,,,,195,B,
 2,Vagner Da Silva Dos Santos,M,1989-09-07,MT,Bare,Open,102.3,110,,,,,165,175,187.5,190.5,187.5,,,,,,187.5,B,VF Power
 3,Willian Silva Dos Santos,M,1987-07-03,SC,Bare,Open,102,110,,,,,170,180,-192.5,,180,,,,,,180,B,
-1,Deivid Charles Lourenço da Rocha,M,1986-11-28,PR,Bare,Open,134.9,140,,,,,-250,250,,,250,,,,,,250,B,
-2,Donizete Aparecido Buscatti Junior,M,1990-03-02,SP,Bare,Open,137.5,140,,,,,227,237,-247,,237,,,,,,237,B,
+DQ,Deivid Charles Lourenço da Rocha,M,1986-11-28,PR,Bare,Open,134.9,140,,,,,-250,250,,,250,,,,,,,B,
+1,Donizete Aparecido Buscatti Junior,M,1990-03-02,SP,Bare,Open,137.5,140,,,,,227,237,-247,,237,,,,,,237,B,
 1,Neemias Ferreira da Silva,M,1978-07-04,RO,Bare,Open,74.1,75,,,,,70,-77.5,80,,80,,,,,,80,B,
 1,Divonsir Pereira,M,1973-05-06,PR,Single-ply,M50-54,83.5,90,,,,,160,-170,-172.5,,160,,,,,,160,B,
 DQ,Oleg Novikov,M,1992-02-27,PR,Single-ply,Open,97.5,100,,,,,-220,-220,-220,,,,,,,,,B,
