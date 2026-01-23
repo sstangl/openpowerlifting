@@ -204,8 +204,10 @@ def enterdivision(csv, divurl):
         # The federation is mostly single-ply but including band shirts.
         # However, they introduced raw in 2026
         event = 'SBD'
-        equipment = cells[10].text.replace('', 'Unlimited').replace
-        ('UnlimitedUUnlimitednUnlimitedeUnlimitedqUnlimiteduUnlimitediUnlimitedpUnlimitedpUnlimitedeUnlimiteddUnlimited', 'Raw').strip()
+        equipment = (
+            'Unlimited' if not cells[10].text.strip()
+            else cells[10].text.strip().replace('Unequipped', 'Raw')
+        )
         csv.rows.append([division, weightclass, place, name, team,
                          bw, squat, bench, deadlift, total,
                          equipment, event, sex])
