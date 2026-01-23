@@ -201,10 +201,11 @@ def enterdivision(csv, divurl):
         deadlift = strtokg(cells[8].text)
         total = strtokg(cells[9].text)
 
-        # The whole federation appears to be single-ply. Now includes band shirts
-        equipment = 'Unlimited'
+        # The federation is mostly single-ply but including band shirts.
+        # However, they introduced raw in 2026
         event = 'SBD'
-
+        equipment = cells[10].text.replace('', 'Unlimited').replace
+        ('UnlimitedUUnlimitednUnlimitedeUnlimitedqUnlimiteduUnlimitediUnlimitedpUnlimitedpUnlimitedeUnlimiteddUnlimited', 'Raw').strip()
         csv.rows.append([division, weightclass, place, name, team,
                          bw, squat, bench, deadlift, total,
                          equipment, event, sex])
