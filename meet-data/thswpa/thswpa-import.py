@@ -210,10 +210,12 @@ def enterdivision(csv, divurl):
         deadlift = strtokg(cells[8].text)
         total = strtokg(cells[9].text)
 
-        # The federation does not specify canvas-only equipment.
-        equipment = 'Unlimited'
+        # As of 2026, THSWPA recognise Raw and Unlimited.
         event = 'SBD'
-
+        equipment = (
+            'Unlimited' if not cells[10].text.strip()
+            else cells[10].text.strip().replace('Unequipped', 'Raw')
+        )
         csv.rows.append([division, weightclass, place, name, team,
                          bw, squat, bench, deadlift, total,
                          equipment, event, sex])
