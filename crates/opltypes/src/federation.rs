@@ -1533,6 +1533,10 @@ pub enum Federation {
     #[strum(to_string = "Vityaz", serialize = "vityaz")]
     Vityaz,
 
+    /// Viet Nam Powerlifting, a Vietnamese IDFPA affiliate, formerly USAPL-Vietnam.
+    #[strum(to_string = "VNPL", serialize = "vnpl")]
+    VNPL,
+
     /// Vietnam Powerlifting Federation, IPF.
     #[strum(to_string = "VPF", serialize = "vpf")]
     VPF,
@@ -2485,6 +2489,7 @@ impl Federation {
             Federation::VietnamPA => false,
             Federation::VietnamUA => false,
             Federation::Vityaz => false,
+            Federation::VNPL => FULLY_TESTED,
             Federation::VPF => FULLY_TESTED,
             Federation::WABDL => FULLY_TESTED,
             Federation::WAIA => false,
@@ -2959,6 +2964,7 @@ impl Federation {
             Federation::VietnamPA => Some(Country::Vietnam),
             Federation::VietnamUA => Some(Country::Vietnam),
             Federation::Vityaz => Some(Country::Russia),
+            Federation::VNPL => Some(Country::Vietnam),
             Federation::VPF => Some(Country::Vietnam),
             Federation::WABDL => Some(Country::USA),
             Federation::WAIA => Some(Country::USA),
@@ -3557,6 +3563,7 @@ impl Federation {
             Federation::VietnamPA => Some(Federation::GPA),
             Federation::VietnamUA => None,
             Federation::Vityaz => None,
+            Federation::VNPL => Some(Federation::IntDFPA),
             Federation::VPF => Some(Federation::IPF),
             Federation::WABDL => None,
             Federation::WAIA => None,
@@ -4145,6 +4152,7 @@ impl Federation {
             Federation::VietnamPA => PointsSystem::Wilks,
             Federation::VietnamUA => PointsSystem::Dots,
             Federation::Vityaz => PointsSystem::Wilks,
+            Federation::VNPL => PointsSystem::Dots,
             Federation::VPF => Federation::ipf_rules_on(date),
             Federation::WABDL => PointsSystem::Wilks,
             Federation::WAIA => PointsSystem::Wilks,
