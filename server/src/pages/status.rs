@@ -486,6 +486,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[USAPL as usize].instagram = "usapowerlifting";
     statuses[USPA as usize].instagram = "uspapower";
     statuses[USPC as usize].instagram = "uspc.pl";
+    statuses[VNPL as usize].instagram = "vietnampowerlifting";
     statuses[WelshPA as usize].instagram = "welsh_powerlifting";
     statuses[WNPF as usize].instagram = "wnpf_powerlifting";
     statuses[WPAU as usize].instagram = "wpaukraine";
