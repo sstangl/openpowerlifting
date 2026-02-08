@@ -101,6 +101,7 @@
     wbpm2 = {name="wbpm2", min=50, max=59, sex='F'}
     wbpm3 = {name="wbpm3", min=60, max=69, sex='F'}
     wbpm4 = {name="wbpm4", min=70, max=999, sex='F'}
+    wbpm5 = {name="wbpm5", min=80, max=999, sex='F'}
     wbpnov = {name="wbpnov", min=0, max=999, sex='F'}
     wbppf = {name="wbpp+f", min=0, max=999, sex='F'}
     wbppure = {name="wbppure", min=0, max=999, sex='F'}
