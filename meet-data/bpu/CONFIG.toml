@@ -263,6 +263,7 @@
     mscrabpu = {name ="M_SCR_ABPU",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mssabpu = {name ="M_SES_ABPU",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmabpu = {name ="M_SEM_ABPU",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    moradabpu = {name ="M_OR_AD_ABPU",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Adaptive
 
     forabpu = {name ="F_OR_ABPU",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrabpu = {name ="F_OCR_ABPU",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}
