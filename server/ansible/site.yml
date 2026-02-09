@@ -5,4 +5,4 @@
     - nginx
     - openpl-app
     - goaccess
-    - sysupdate
+    # - sysupdate  # Disabled temporarily: DigitalOcean's do-agent doesn't work on Fedora 43.
