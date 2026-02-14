@@ -353,7 +353,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
     let email_stefanie = "<a href=\"mailto:stefanie@openpowerlifting.org\">stefanie@</a>";
     let email_victor = "<a href=\"mailto:victorbegha.dev@gmail.com\">Victor Begha</a>";
-    let email_afonso = "<a href=\"mailto:afonso@hackclub.com\">@whatbeatoo</a>"
+    let email_afonso = "<a href=\"mailto:afonso@hackclub.com\">@whatbeatoo</a>";
 
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
