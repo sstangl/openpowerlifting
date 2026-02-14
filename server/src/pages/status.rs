@@ -188,6 +188,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[APA as usize].format = openlifter;
     statuses[APF as usize].format = xls_unstructured;
     statuses[APLA as usize].format = xls_structured;
+    statuses[APPortugal as usize].format = xls_structured;
     statuses[APU as usize].format = html;
     statuses[AusPL as usize].format = openlifter;
     statuses[BB as usize].format = xls_unstructured;
@@ -352,6 +353,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     let email_sean = "<a href=\"mailto:sean@openpowerlifting.org\">sean@</a>";
     let email_stefanie = "<a href=\"mailto:stefanie@openpowerlifting.org\">stefanie@</a>";
     let email_victor = "<a href=\"mailto:victorbegha.dev@gmail.com\">Victor Begha</a>";
+    let email_afonso = "<a href=\"mailto:afonso@hackclub.com\">@whatbeatoo</a>"
 
     // Maintainership information.
     statuses[_365Strong as usize].maintainers = email_sean;
@@ -359,6 +361,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[APF as usize].maintainers = email_gem;
     statuses[APA as usize].maintainers = email_sean;
     statuses[APLA as usize].maintainers = email_rosie;
+    statuses[APPortugal as usize].maintainers = email_afonso;
     statuses[APU as usize].maintainers = email_rosie;
     statuses[AusPL as usize].maintainers = email_james;
     statuses[BAWLA as usize].maintainers = email_jo;
