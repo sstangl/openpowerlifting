@@ -1,7 +1,7 @@
 //! Tests search functionality.
 
 use opldb::query::direct::RankingsQuery;
-use opldb::{algorithms, OplDb};
+use opldb::{OplDb, algorithms};
 use search::*;
 
 use std::path::Path;

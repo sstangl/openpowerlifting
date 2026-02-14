@@ -8,9 +8,9 @@ use langpack::{Language, Locale};
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
+use rocket::State;
 use rocket::http::CookieJar;
 use rocket::response::Redirect;
-use rocket::State;
 use rocket_dyn_templates::Template;
 
 use server::pages;
@@ -18,8 +18,8 @@ use server::referring_path::ReferringPath;
 
 use std::path::PathBuf;
 
-use crate::common::*;
 use crate::CsvFile;
+use crate::common::*;
 
 /// URL prefix used when accessing OpenIPF through OpenPowerlifting.org or
 /// localhost.

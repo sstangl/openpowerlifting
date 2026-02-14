@@ -6,7 +6,7 @@ use serde::ser::Serialize;
 
 use std::fmt;
 
-use crate::writing_system::{infer_writing_system, WritingSystem};
+use crate::writing_system::{WritingSystem, infer_writing_system};
 
 /// A lifter's username.
 ///
@@ -193,11 +193,11 @@ fn convert_greek_to_ascii(greek_name: &str) -> Result<Username, String> {
         }
 
         // Push ASCII characters. This accounts for disambiguation numbers.
-        if let Ok(ascii) = letter.to_ascii_char() {
-            if ascii.is_alphanumeric() {
-                ascii_name.push(ascii);
-                continue;
-            }
+        if let Ok(ascii) = letter.to_ascii_char()
+            && ascii.is_alphanumeric()
+        {
+            ascii_name.push(ascii);
+            continue;
         }
 
         let s: &str = match letter {
@@ -252,11 +252,11 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
         }
 
         // Push ASCII characters. This accounts for disambiguation numbers.
-        if let Ok(ascii) = letter.to_ascii_char() {
-            if ascii.is_alphanumeric() {
-                ascii_name.push(ascii);
-                continue;
-            }
+        if let Ok(ascii) = letter.to_ascii_char()
+            && ascii.is_alphanumeric()
+        {
+            ascii_name.push(ascii);
+            continue;
         }
 
         // A single UTF-8 char can expand to multiple ASCII chars.

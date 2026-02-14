@@ -53,7 +53,7 @@ mod federation;
 pub use self::federation::Federation;
 
 mod meetpath;
-pub use self::meetpath::{dir_to_meetpath, file_to_meetpath, MeetPathError};
+pub use self::meetpath::{MeetPathError, dir_to_meetpath, file_to_meetpath};
 
 mod place;
 pub use self::place::Place;
@@ -79,7 +79,7 @@ mod weightclasskg;
 pub use self::weightclasskg::{WeightClassAny, WeightClassKg, WeightClassLbs};
 
 mod writing_system;
-pub use self::writing_system::{infer_writing_system, writing_system, WritingSystem};
+pub use self::writing_system::{WritingSystem, infer_writing_system, writing_system};
 
 /// Units of weight.
 #[derive(Copy, Clone, Debug, EnumString, Serialize, Deserialize)]

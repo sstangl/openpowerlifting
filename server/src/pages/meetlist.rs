@@ -165,10 +165,10 @@ impl<'db> Context<'db> {
                     .iter()
                     .filter(|m| {
                         // Filter by year.
-                        if let Some(year) = year {
-                            if m.date.year() != year {
-                                return false;
-                            }
+                        if let Some(year) = year
+                            && m.date.year() != year
+                        {
+                            return false;
                         }
 
                         m.federation == fed

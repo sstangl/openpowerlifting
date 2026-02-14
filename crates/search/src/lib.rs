@@ -1,7 +1,7 @@
 //! Search engine for all of powerlifting.
 
 use opldb::query::direct::RankingsQuery;
-use opldb::{algorithms, OplDb};
+use opldb::{OplDb, algorithms};
 use opltypes::*;
 
 /// Searches the given rankings by lifter information.
@@ -84,10 +84,10 @@ pub fn search_rankings(
             WritingSystem::Latin => Some(&lifter.name),
         };
 
-        if let Some(name) = localized_name {
-            if name.contains(&query) || name.contains(&backwards_with_space) {
-                return Some(i);
-            }
+        if let Some(name) = localized_name
+            && (name.contains(&query) || name.contains(&backwards_with_space))
+        {
+            return Some(i);
         }
     }
 

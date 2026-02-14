@@ -1084,7 +1084,7 @@ impl MetaFederation {
                         && entry.lifter_country.is_some_and(|c| c.is_in_uk())
                         && meet.date.year() >= 2013)
             }
-            MetaFederation::BPA => affiliation!(meet, entry, BPA, IPF, NAPF),           
+            MetaFederation::BPA => affiliation!(meet, entry, BPA, IPF, NAPF),
             MetaFederation::BulgarianPF => affiliation!(meet, entry, BulgarianPF, IPF, EPF),
             MetaFederation::BVDK => match meet.federation {
                 // BVDG is the precursor to the BVDK.
@@ -1102,7 +1102,9 @@ impl MetaFederation {
             MetaFederation::DPL => affiliation!(meet, entry, DPL, IPL),
             MetaFederation::DSF => affiliation!(meet, entry, DSF, IPF, EPF, NordicPF),
             MetaFederation::EgyptPF => {
-                affiliation!(meet, entry, EgyptPF, IPF, AfricanPF, UAEPL, SSSC, KPC, QatarPL)
+                affiliation!(
+                    meet, entry, EgyptPF, IPF, AfricanPF, UAEPL, SSSC, KPC, QatarPL
+                )
             } //Egypt use gulf meets for Team and Records
             MetaFederation::EJTL => affiliation!(meet, entry, EJTL, IPF, EPF, NordicPF),
             MetaFederation::EPA => affiliation!(meet, entry, EPA, IPF, EPF, BP, CommonwealthPF),
@@ -1113,7 +1115,9 @@ impl MetaFederation {
             MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO, NAPF),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO, NAPF),
-            MetaFederation::Fedepotencia => affiliation!(meet, entry, Fedepotencia, IPF, FESUPO, NAPF),
+            MetaFederation::Fedepotencia => {
+                affiliation!(meet, entry, Fedepotencia, IPF, FESUPO, NAPF)
+            }
             MetaFederation::FEFICULP => affiliation!(meet, entry, FEFICULP, IPF, FESUPO, NAPF),
             MetaFederation::FEMEPO => affiliation!(meet, entry, FEMEPO, IPF, NAPF),
             MetaFederation::FEVEPO => affiliation!(meet, entry, FEVEPO, IPF, FESUPO, NAPF),

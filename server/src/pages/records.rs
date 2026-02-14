@@ -1,8 +1,8 @@
 //! Logic for the display of the records page, like a rankings summary.
 
-use langpack::{localized_name, Language, Locale, LocalizeNumber};
+use langpack::{Language, Locale, LocalizeNumber, localized_name};
 use opldb::query::direct::*;
-use opldb::{algorithms, Entry, Lifter, Meet, OplDb};
+use opldb::{Entry, Lifter, Meet, OplDb, algorithms};
 
 use opltypes::states::*;
 use opltypes::*;

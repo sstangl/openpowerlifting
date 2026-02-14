@@ -1,7 +1,7 @@
 //! Checks CSV data files for validity.
 
 use checker::report_count::ReportCount;
-use checker::{compiler, disambiguator, AllMeetData, Severity, SingleMeetData};
+use checker::{AllMeetData, Severity, SingleMeetData, compiler, disambiguator};
 use colored::*;
 use opltypes::Username;
 use rayon::prelude::*;
@@ -164,11 +164,7 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, ReportCount> {
         entry.ok().and_then(|e| {
             let mut path = e.into_path();
             path.push("CONFIG.toml");
-            if path.is_file() {
-                Some(path)
-            } else {
-                None
-            }
+            if path.is_file() { Some(path) } else { None }
         })
     });
 

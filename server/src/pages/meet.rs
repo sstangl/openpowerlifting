@@ -1,7 +1,7 @@
 //! Logic for each meet's individual results page.
 
-use langpack::{localized_name, Language, Locale, LocalizeNumber};
-use opldb::{self, algorithms, Entry};
+use langpack::{Language, Locale, LocalizeNumber, localized_name};
+use opldb::{self, Entry, algorithms};
 use opltypes::states::State;
 use opltypes::*;
 

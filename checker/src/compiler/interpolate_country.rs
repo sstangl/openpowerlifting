@@ -147,8 +147,8 @@ pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::checklib::{Entry, Meet};
     use crate::SingleMeetData;
+    use crate::checklib::{Entry, Meet};
 
     /// Helper function to generate a single-meet AllMeetData struct
     /// from a list of entries.

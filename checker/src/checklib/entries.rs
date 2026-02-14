@@ -228,21 +228,22 @@ impl Entry {
     pub fn age_on(&self, date: Date) -> Age {
         // If the age is provided explicitly, just use that.
         if self.age != Age::None {
+            // XXX FIXME: This does not calculate the age on the given date!
             return self.age;
         }
 
         // If the BirthDate is provided, calculate an exact age.
-        if let Some(birthdate) = self.birthdate {
-            if let Ok(age) = birthdate.age_on(date) {
-                return age;
-            }
+        if let Some(birthdate) = self.birthdate
+            && let Ok(age) = birthdate.age_on(date)
+        {
+            return age;
         }
 
         // If the BirthYear is provided, calculate an approximate age.
-        if let Some(birthyear) = self.birthyearrange.exact_birthyear() {
-            if date.year() >= birthyear {
-                return Age::from_birthyear_on_date(birthyear, date);
-            }
+        if let Some(birthyear) = self.birthyearrange.exact_birthyear()
+            && date.year() >= birthyear
+        {
+            return Age::from_birthyear_on_date(birthyear, date);
         }
 
         Age::None
@@ -1140,42 +1141,42 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     }
 
     // Check that the SquatEquipment makes sense.
-    if let Some(squat_eq) = entry.squat_equipment {
-        if squat_eq > equipment {
-            report.error_on(
-                line,
-                format!(
-                    "SquatEquipment '{squat_eq}' can't be more supportive \
+    if let Some(squat_eq) = entry.squat_equipment
+        && squat_eq > equipment
+    {
+        report.error_on(
+            line,
+            format!(
+                "SquatEquipment '{squat_eq}' can't be more supportive \
                      than the Equipment '{equipment}'"
-                ),
-            );
-        }
+            ),
+        );
     }
 
     // Check that the BenchEquipment makes sense.
-    if let Some(bench_eq) = entry.bench_equipment {
-        if bench_eq > equipment {
-            report.error_on(
-                line,
-                format!(
-                    "BenchEquipment '{bench_eq}' can't be more supportive \
+    if let Some(bench_eq) = entry.bench_equipment
+        && bench_eq > equipment
+    {
+        report.error_on(
+            line,
+            format!(
+                "BenchEquipment '{bench_eq}' can't be more supportive \
                      than the Equipment '{equipment}'"
-                ),
-            );
-        }
+            ),
+        );
     }
 
     // Check that the DeadliftEquipment makes sense.
-    if let Some(deadlift_eq) = entry.deadlift_equipment {
-        if deadlift_eq > equipment {
-            report.error_on(
-                line,
-                format!(
-                    "DeadliftEquipment '{deadlift_eq}' can't be more supportive \
+    if let Some(deadlift_eq) = entry.deadlift_equipment
+        && deadlift_eq > equipment
+    {
+        report.error_on(
+            line,
+            format!(
+                "DeadliftEquipment '{deadlift_eq}' can't be more supportive \
                      than the Equipment '{equipment}'"
-                ),
-            );
-        }
+            ),
+        );
     }
 
     // If the lifter wasn't DQ'd, they should have data from each lift.
@@ -1703,42 +1704,43 @@ fn check_division_age_consistency(
         }
 
         // Pairwise check BirthYear and BirthDate.
-        if let Some(birthdate) = entry.birthdate {
-            if birthdate.year() != birthyear {
-                report.error_on(
-                    line,
-                    format!("BirthDate '{birthdate}' doesn't match BirthYear '{birthyear}'"),
-                );
-            }
+        if let Some(birthdate) = entry.birthdate
+            && birthdate.year() != birthyear
+        {
+            report.error_on(
+                line,
+                format!("BirthDate '{birthdate}' doesn't match BirthYear '{birthyear}'"),
+            );
         }
     }
 
     // Pairwise check Age and BirthDate.
     match entry.age {
         Age::Exact(age) => {
-            if let Some(Age::Exact(bd_age)) = age_from_birthdate {
-                if age != bd_age {
-                    let s = format!(
-                        "Age '{}' doesn't match BirthDate '{}', expected '{}'",
-                        entry.age,
-                        entry.birthdate.unwrap(),
-                        bd_age
-                    );
-                    report.error_on(line, s);
-                }
+            if let Some(Age::Exact(bd_age)) = age_from_birthdate
+                && age != bd_age
+            {
+                let s = format!(
+                    "Age '{}' doesn't match BirthDate '{}', expected '{}'",
+                    entry.age,
+                    entry.birthdate.unwrap(),
+                    bd_age
+                );
+                report.error_on(line, s);
             }
         }
         Age::Approximate(age) => {
-            if let Some(Age::Exact(bd_age)) = age_from_birthdate {
-                if age != bd_age && age != bd_age + 1 {
-                    let s = format!(
-                        "Age '{}' doesn't match BirthDate '{}, expected '{}'",
-                        entry.age,
-                        entry.birthdate.unwrap(),
-                        bd_age
-                    );
-                    report.error_on(line, s);
-                }
+            if let Some(Age::Exact(bd_age)) = age_from_birthdate
+                && age != bd_age
+                && age != bd_age + 1
+            {
+                let s = format!(
+                    "Age '{}' doesn't match BirthDate '{}, expected '{}'",
+                    entry.age,
+                    entry.birthdate.unwrap(),
+                    bd_age
+                );
+                report.error_on(line, s);
             }
         }
         Age::None => (),
@@ -1797,34 +1799,33 @@ fn check_division_age_consistency(
     // and therefore allow Age::Approximate(18), since that is not definitely
     // lower than 19.5. That allows lifters to be in *either* T3 or Juniors,
     // even though federation rules would only allow one.
-    if let Age::Approximate(min) = min_age {
-        if let Age::Approximate(max) = max_age {
-            if let Some(Age::Approximate(age)) = age_from_birthyear {
-                // Compare approximate age values exactly.
-                if age < min {
-                    report.error_on(
-                        line,
-                        format!(
-                            "BirthYear Age {} too young for division '{}': min age {}",
-                            age_from_birthyear.unwrap(),
-                            entry.division,
-                            min_age
-                        ),
-                    );
-                }
+    if let Age::Approximate(min) = min_age
+        && let Age::Approximate(max) = max_age
+        && let Some(Age::Approximate(age)) = age_from_birthyear
+    {
+        // Compare approximate age values exactly.
+        if age < min {
+            report.error_on(
+                line,
+                format!(
+                    "BirthYear Age {} too young for division '{}': min age {}",
+                    age_from_birthyear.unwrap(),
+                    entry.division,
+                    min_age
+                ),
+            );
+        }
 
-                if age > max {
-                    report.error_on(
-                        line,
-                        format!(
-                            "BirthYear Age {} too old for division '{}': max age {}",
-                            age_from_birthyear.unwrap(),
-                            entry.division,
-                            max_age
-                        ),
-                    );
-                }
-            }
+        if age > max {
+            report.error_on(
+                line,
+                format!(
+                    "BirthYear Age {} too old for division '{}': max age {}",
+                    age_from_birthyear.unwrap(),
+                    entry.division,
+                    max_age
+                ),
+            );
         }
     }
 
@@ -1964,10 +1965,10 @@ fn tested_from_division_config(entry: &Entry, config: Option<&Config>) -> bool {
 /// Determines whether this meet falls in the valid range for a
 /// partially-configured federation.
 fn should_ignore_config(meet: &Meet, config: Option<&Config>) -> bool {
-    if let Some(config) = config {
-        if let Some(valid_since) = config.valid_since() {
-            return meet.date < valid_since;
-        }
+    if let Some(config) = config
+        && let Some(valid_since) = config.valid_since()
+    {
+        return meet.date < valid_since;
     }
     false
 }
@@ -2213,10 +2214,10 @@ pub fn do_check<R: io::Read>(
 
         // If no bodyweight is given but there is a bounded weightclass,
         // assume the pessimal case of the lifter at the top of the class.
-        if entry.bodyweightkg.is_zero() {
-            if let WeightClassKg::UnderOrEqual(w) = entry.weightclasskg {
-                entry.bodyweightkg = w;
-            }
+        if entry.bodyweightkg.is_zero()
+            && let WeightClassKg::UnderOrEqual(w) = entry.weightclasskg
+        {
+            entry.bodyweightkg = w;
         }
 
         // Set the Tested column early for federations that are fully-Tested.
@@ -2237,10 +2238,10 @@ pub fn do_check<R: io::Read>(
         if let Some(idx) = headers.get(Header::Country) {
             entry.country = check_column_country(&record[idx], line, &mut report);
         }
-        if let Some(idx) = headers.get(Header::EntryDate) {
-            if let Some(date) = check_column_entrydate(&record[idx], line, &mut report) {
-                entry.entrydate = date;
-            }
+        if let Some(idx) = headers.get(Header::EntryDate)
+            && let Some(date) = check_column_entrydate(&record[idx], line, &mut report)
+        {
+            entry.entrydate = date;
         }
         if let Some(idx) = headers.get(Header::State) {
             let c = entry.country;
@@ -2274,10 +2275,10 @@ pub fn do_check<R: io::Read>(
         if let Some(idx) = headers.get(Header::KoreanName) {
             entry.koreanname = check_column_koreanname(&record[idx], line, &mut report);
         }
-        if let Some(idx) = headers.get(Header::BirthYear) {
-            if let Some(y) = check_column_birthyear(&record[idx], meet, line, &mut report) {
-                entry.birthyearrange = BirthYearRange::from_birthyear(y);
-            }
+        if let Some(idx) = headers.get(Header::BirthYear)
+            && let Some(y) = check_column_birthyear(&record[idx], meet, line, &mut report)
+        {
+            entry.birthyearrange = BirthYearRange::from_birthyear(y);
         }
         if let Some(idx) = headers.get(Header::BirthDate) {
             entry.birthdate = check_column_birthdate(&record[idx], meet, line, &mut report);
@@ -2321,10 +2322,7 @@ pub fn do_check<R: io::Read>(
         if entry.age == Age::None {
             if let Some(birthdate) = entry.birthdate {
                 entry.age = birthdate.age_on(meet.date).unwrap_or(Age::None);
-            }
-        }
-        if entry.age == Age::None {
-            if let Some(birthyear) = entry.birthyearrange.exact_birthyear() {
+            } else if let Some(birthyear) = entry.birthyearrange.exact_birthyear() {
                 entry.age = Age::from_birthyear_on_date(birthyear, meet.date);
             }
         }
@@ -2374,22 +2372,15 @@ pub fn do_check<R: io::Read>(
         // If the Name isn't provided, but there is an international name,
         // just use the international name.
         if entry.name.is_empty() {
-            if let Some(idx) = headers.get(Header::JapaneseName) {
+            if let Some(idx) = headers.get(Header::CyrillicName) {
                 entry.name = record[idx].into();
-            }
-        }
-        if entry.name.is_empty() {
-            if let Some(idx) = headers.get(Header::ChineseName) {
+            } else if let Some(idx) = headers.get(Header::GreekName) {
                 entry.name = record[idx].into();
-            }
-        }
-        if entry.name.is_empty() {
-            if let Some(idx) = headers.get(Header::KoreanName) {
+            } else if let Some(idx) = headers.get(Header::JapaneseName) {
                 entry.name = record[idx].into();
-            }
-        }
-        if entry.name.is_empty() {
-            if let Some(idx) = headers.get(Header::GreekName) {
+            } else if let Some(idx) = headers.get(Header::ChineseName) {
+                entry.name = record[idx].into();
+            } else if let Some(idx) = headers.get(Header::KoreanName) {
                 entry.name = record[idx].into();
             }
         }
@@ -2403,13 +2394,13 @@ pub fn do_check<R: io::Read>(
         }
 
         // If requested, report if the username requires disambiguation.
-        if report_disambiguations && !entry.username.as_str().is_empty() {
-            if let Some(data) = lifterdata.and_then(|map| map.get(&entry.username)) {
-                if data.disambiguation_count > 0 {
-                    let url = format!("https://www.openpowerlifting.org/u/{}", entry.username);
-                    report.error_on(line, format!("Disambiguate {} ({})", entry.name, url));
-                }
-            }
+        if report_disambiguations
+            && !entry.username.as_str().is_empty()
+            && let Some(data) = lifterdata.and_then(|map| map.get(&entry.username))
+            && data.disambiguation_count > 0
+        {
+            let url = format!("https://www.openpowerlifting.org/u/{}", entry.username);
+            report.error_on(line, format!("Disambiguate {} ({})", entry.name, url));
         }
 
         if entry.name.is_empty() {

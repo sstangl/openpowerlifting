@@ -1,6 +1,6 @@
 //! Simple benchmarks to assess the speed of username generation.
 
-use criterion::{criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{Criterion, Throughput, criterion_group, criterion_main};
 use opltypes::Username;
 
 use std::hint::black_box;

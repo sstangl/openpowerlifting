@@ -1,8 +1,8 @@
 use std::io::Cursor;
 use std::path::Path;
 
-use color_eyre::eyre::eyre;
 use color_eyre::Result;
+use color_eyre::eyre::eyre;
 use serde::Serialize;
 
 use crate::types::Attempt;
@@ -55,7 +55,7 @@ impl Meet {
             _ => {
                 return Err(eyre!(
                     "Invalid/unknown federation {federation} found in file"
-                ))
+                ));
             }
         };
 

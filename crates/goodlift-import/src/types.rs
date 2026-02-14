@@ -120,8 +120,8 @@ impl Serialize for Placing {
 #[cfg(test)]
 mod tests {
     use color_eyre::eyre::Result;
-    use serde::de::value::Error as SerdeError;
     use serde::de::Visitor;
+    use serde::de::value::Error as SerdeError;
 
     use crate::types::Attempt;
 

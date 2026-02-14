@@ -272,12 +272,11 @@ fn parse_divisions(value: &Value, report: &mut Report) -> Vec<DivisionConfig> {
         // TODO: This fixes the case of {9.5, 10.5}, where is_definitely_less_than
         // fails. TODO: But it could be less of a hack. Maybe define PartialOrd?
         let mut valid_approximate_ages = false;
-        if let Age::Approximate(a) = min_age {
-            if let Age::Approximate(b) = max_age {
-                if a < b {
-                    valid_approximate_ages = true;
-                }
-            }
+        if let Age::Approximate(a) = min_age
+            && let Age::Approximate(b) = max_age
+            && a < b
+        {
+            valid_approximate_ages = true;
         }
 
         // The age range must be nonmonotonically increasing.

@@ -414,11 +414,7 @@ pub fn entry_indices_for<'db>(
                         EventFilter::BenchOnly => ev.is_bench_only(),
                         EventFilter::DeadliftOnly => ev.is_deadlift_only(),
                     };
-                    if matches {
-                        Some(i)
-                    } else {
-                        None
-                    }
+                    if matches { Some(i) } else { None }
                 })
                 .collect(),
         );
@@ -441,12 +437,11 @@ pub fn entry_indices_for<'db>(
                     }
 
                     // Handle SHW classes with unspecified bodyweight.
-                    if upper == WeightKg::MAX {
-                        if let WeightClassKg::Over(over) = e.weightclasskg {
-                            if over >= lower {
-                                return Some(i);
-                            }
-                        }
+                    if upper == WeightKg::MAX
+                        && let WeightClassKg::Over(over) = e.weightclasskg
+                        && over >= lower
+                    {
+                        return Some(i);
                     }
 
                     None

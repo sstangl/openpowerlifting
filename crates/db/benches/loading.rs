@@ -1,6 +1,6 @@
 //! Benchmarks loading the database from data files.
 
-use criterion::{criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{Criterion, Throughput, criterion_group, criterion_main};
 use opldb::OplDb;
 
 use std::path::Path;

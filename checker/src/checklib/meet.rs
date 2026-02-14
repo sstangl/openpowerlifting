@@ -8,8 +8,8 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
-use crate::checklib::config::Config;
 use crate::Report;
+use crate::checklib::config::Config;
 
 /// Product of a successful parse.
 pub struct Meet {
@@ -147,13 +147,14 @@ pub fn check_federation(
         return None;
     };
 
-    if let Some(options) = config.and_then(|c| c.options.as_ref()) {
-        if !options.valid_federations.is_empty() && !options.valid_federations.contains(&fed) {
-            report.error(format!(
-                "Federation '{s}' disallowed by 'valid_federations' in the CONFIG.toml"
-            ));
-            return None;
-        }
+    if let Some(options) = config.and_then(|c| c.options.as_ref())
+        && !options.valid_federations.is_empty()
+        && !options.valid_federations.contains(&fed)
+    {
+        report.error(format!(
+            "Federation '{s}' disallowed by 'valid_federations' in the CONFIG.toml"
+        ));
+        return None;
     }
 
     Some(fed)

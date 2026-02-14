@@ -8,8 +8,8 @@ use rocket::local::blocking::Client;
 use std::path::Path;
 use std::sync::LazyLock;
 
-use super::rocket;
 use super::Device;
+use super::rocket;
 
 static OPLDB_GLOBAL: LazyLock<OplDb> = LazyLock::new(|| {
     // This isn't really the place for it, but preload the environment.

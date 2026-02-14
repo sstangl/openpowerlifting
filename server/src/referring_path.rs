@@ -1,8 +1,8 @@
 use std::ops::Deref;
 
+use rocket::http::Status;
 use rocket::http::hyper::header::REFERER;
 use rocket::http::uri::Absolute;
-use rocket::http::Status;
 use rocket::request::{FromRequest, Outcome, Request};
 
 /// Extracts the path specified in the `referer` header.
