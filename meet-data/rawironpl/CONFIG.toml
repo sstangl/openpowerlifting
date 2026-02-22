@@ -1,6 +1,7 @@
 # Configuration for RawIronPL.
 
 [options]
+    valid_federations = ["RawIronPL"]
     require_manual_disambiguation = true
 
 [rulesets.default]
@@ -24,6 +25,7 @@
 
     # New-style tested divisions
     dt_open = {name="DT Open", min=0, max=999, tested="Yes"}
+    dt_youth = {name="DT Youth", min=0, max=12, tested="Yes"}
     dt_teen = {name="DT Teen", min=13, max=19, tested="Yes"}
     dt_submaster = {name="DT Sub Master", min=33, max=39, tested="Yes"}
     dt_master = {name="DT Master", min=40, max=999, tested="Yes"}
