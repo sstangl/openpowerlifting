@@ -63,6 +63,7 @@
   <option value="npl" {% if selection.federation == "NPL" %}selected{% endif %}>NPL - National Powerlifting League</option>
   <option value="nasa" {% if selection.federation == "NASA" %}selected{% endif %}>NASA - Natural Athlete Strength Association (2016+)</option>
   <option value="nextgenpf" {% if selection.federation == "NextGenPF" %}selected{% endif %}>Next Generation Powerlifting Federation</option>
+  <option value="nmaa" {% if selection.federation == "NMAA" %}selected{% endif %}>NMAA - New Mexico Activities Association</option>
   <option value="norcal" {% if selection.federation == "NORCAL" %}selected{% endif %}>NORCAL - NorCal Powerlifting</option>
   <option value="plu" {% if selection.federation == "PLU" %}selected{% endif %}>PLU - Powerlifting United</option>
   <option value="pride" {% if selection.federation == "PRIDE" %}selected{% endif %}>PRIDE - Pride Powerlifting</option>

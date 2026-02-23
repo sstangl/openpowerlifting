@@ -1018,6 +1018,10 @@ pub enum Federation {
     #[strum(to_string = "NIPF", serialize = "nipf")]
     NIPF,
 
+    /// New Mexico Activities Association.
+    #[strum(to_string = "NMAA", serialize = "nmaa")]
+    NMAA,
+
     /// Northern California Powerlifting Federation.
     #[strum(to_string = "NORCAL", serialize = "norcal")]
     NORCAL,
@@ -2360,6 +2364,7 @@ impl Federation {
             Federation::NetherlandsUA => false,
             Federation::NextGenPF => false,
             Federation::NIPF => FULLY_TESTED,
+            Federation::NMAA => FULLY_TESTED,
             Federation::NORCAL => FULLY_TESTED,
             Federation::NordicPF => FULLY_TESTED,
             Federation::NOVA => false,
@@ -2841,6 +2846,7 @@ impl Federation {
             Federation::NauruPF => Some(Country::Nauru),
             Federation::NetherlandsUA => Some(Country::Netherlands),
             Federation::NextGenPF => Some(Country::USA),
+            Federation::NMAA => Some(Country::USA),
             Federation::NORCAL => Some(Country::USA),
             Federation::NIPF => Some(Country::NorthernIreland),
             Federation::NordicPF => None,
@@ -3399,6 +3405,7 @@ impl Federation {
             Federation::NextGenPF => None,
             Federation::NIPF => Some(Federation::IPF),
             Federation::NORCAL => None,
+            Federation::NMAA => None,
             Federation::NordicPF => Some(Federation::IPF),
             Federation::NOVA => None,
             Federation::NPA => None,
@@ -3993,6 +4000,7 @@ impl Federation {
             Federation::NauruPF => Federation::ipf_rules_on(date),
             Federation::NetherlandsUA => PointsSystem::Dots,
             Federation::NextGenPF => PointsSystem::Wilks,
+            Federation::NMAA => PointsSystem::Dots,
             Federation::NORCAL => PointsSystem::Wilks,
             Federation::NIPF => Federation::ipf_rules_on(date),
             Federation::NordicPF => Federation::ipf_rules_on(date),
