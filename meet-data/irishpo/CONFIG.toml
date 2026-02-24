@@ -1,5 +1,8 @@
 # Configuration for the IPO.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # IPO divisions
     moripo = {name ="M_OR_IPO",min=0,max=999,equipment="Raw",sex="M",tested="No"}
