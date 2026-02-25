@@ -1,5 +1,8 @@
 # Configuration for the BPF.
 
+[options]
+    valid_federations = ["BPF"]
+
 [divisions]
     # OpenLifter-style divisions.
     open = {name="Open", min=0, max=999}

@@ -1,5 +1,8 @@
 # http://hercpowerlifting.com/rules.html
 
+[options]
+    valid_federations = ["XPS"]
+
 [rulesets.default]
     ruleset = ["CombineRawAndWraps"]
     date_range = ["0000-01-01", "9999-01-01"]

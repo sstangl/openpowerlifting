@@ -1,3 +1,6 @@
+[options]
+    valid_federations = ["NSF"]
+
 [divisions]
     open = {name ="Open",min=0,max=999}
     juniors = {name = "Juniors 19-23",min=18.5,max=22.5}

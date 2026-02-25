@@ -1,7 +1,8 @@
-# Configuration for XPC-Poland.
+# Configuration for XPC.
 
 [options]
-require_manual_disambiguation = true
+    valid_federations = ["XPC"]
+    require_manual_disambiguation = true
 
 [divisions]
     open = {name = "Open", min = 0, max = 999}

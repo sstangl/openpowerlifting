@@ -1,5 +1,8 @@
 # Configuration for the SAPF
 
+[options]
+    valid_federations = ["SAPF"]
+
 [divisions]
 	# Old divisions (pre-2019 or so).
     open = {name ="Open",min=0,max=999}

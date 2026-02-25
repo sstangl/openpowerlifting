@@ -1,3 +1,6 @@
+[options]
+    valid_federations = ["ACHIPO"]
+
 [divisions]
     #IPL Divisions
     ipl_open = {name ="Open",min=0,max=999}
@@ -14,10 +17,7 @@
     ipl_subm = {name ="Submaster 33-39",min=33,max=39} 
     
     youth = {name ="Youth",min=0,max=14} #Not a real division, just defined for lifters < 15
-
     guest = {name ="Guest",min=0,max=999,place="G"}
-
-
 
     # Old divisions
     jun = {name ="Junior",min=20,max=23}

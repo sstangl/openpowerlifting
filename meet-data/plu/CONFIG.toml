@@ -1,7 +1,8 @@
 # Configuration for Powerlifting United, forked from WRPF-USA.
 
 [options]
-require_manual_disambiguation = true
+    valid_federations = ["PLU"]
+    require_manual_disambiguation = true
 
 [divisions]
 	open = {name="Open", min=0, max=999}
