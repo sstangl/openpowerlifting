@@ -483,6 +483,10 @@ pub enum Federation {
     #[strum(to_string = "Finland-UA", serialize = "finland-ua")]
     FinlandUA,
 
+    /// Federazione Italiana Pesistica.
+    #[strum(to_string = "FIPE", serialize = "fipe")]
+    FIPE,
+
     /// Federazione Italiana Powerlifting, IPF.
     #[strum(to_string = "FIPL", serialize = "fipl")]
     FIPL,
@@ -2236,6 +2240,7 @@ impl Federation {
             Federation::FHSAA => FULLY_TESTED,
             Federation::FIAP => FULLY_TESTED,
             Federation::FinlandUA => false,
+            Federation::FIPE => FULLY_TESTED,
             Federation::FIPL => FULLY_TESTED,
             Federation::FMPB => FULLY_TESTED,
             Federation::FPO => false,
@@ -2725,6 +2730,7 @@ impl Federation {
             Federation::FHSAA => Some(Country::USA),
             Federation::FIAP => Some(Country::Italy),
             Federation::FinlandUA => Some(Country::Finland),
+            Federation::FIPE => Some(Country::Italy),
             Federation::FIPL => Some(Country::Italy),
             Federation::FMPB => Some(Country::Morocco),
             Federation::FPO => Some(Country::Finland),
@@ -3254,6 +3260,7 @@ impl Federation {
             Federation::FHSAA => None,
             Federation::FIAP => None,
             Federation::FinlandUA => None,
+            Federation::FIPE => None,
             Federation::FIPL => Some(Federation::IPF),
             Federation::FMPB => Some(Federation::IPF),
             Federation::FPO => Some(Federation::IPA),
@@ -3858,6 +3865,7 @@ impl Federation {
             Federation::FHSAA => PointsSystem::Wilks,
             Federation::FIAP => Federation::ipf_rules_on(date),
             Federation::FinlandUA => PointsSystem::Wilks,
+            Federation::FIPE => Federation::ipf_rules_on(date),
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FMPB => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Dots,
