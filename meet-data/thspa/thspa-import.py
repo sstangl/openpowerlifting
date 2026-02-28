@@ -275,12 +275,9 @@ def fix_noshows(csv):
 
 def makemeetcsv(soup):
     heading = soup.find('span', {'id': 'lblHeading'}).text
-    heading = heading.replace("THSPA", "")
     heading = heading.replace(',', ' ')
     # replace multiple spaces (or tabs) with single spaces
     heading = re.sub("\\s+", " ", heading)
-    # remove years preceding spaces or end of line, year is assumed 2000-2099
-    heading = re.sub("20\\d{2}(\\s+|$)", "", heading).strip()
 
     if heading.count(' - ') == 2:
         [meetname, location, origdate] = [x.strip()
@@ -307,12 +304,9 @@ def makemeetcsv(soup):
     location = location.replace('High School', '').strip()
 
     meetname = meetname.replace('#', '')
-    meetname = meetname.replace('2019', '')
-    meetname = meetname.replace('2018', '')
-    meetname = meetname.replace('2017', '')
-    meetname = meetname.replace('2016', '')
-    meetname = meetname.replace('2015', '')
-    meetname = meetname.replace('2014', '').strip()
+    # remove years preceding spaces or end of line, year is assumed 2000-2099
+    meetname = re.sub("20\\d{2}(\\s+|$)", "", meetname).strip()
+    meetname = meetname.replace("THSPA", "")
 
     location = location.replace('  ', ' ')
 
