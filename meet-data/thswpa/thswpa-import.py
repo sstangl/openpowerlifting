@@ -310,12 +310,12 @@ def makemeetcsv(soup):
     location = location.replace('High School', '').strip()
 
     meetname = meetname.replace('#', '')
-    meetname = meetname.replace('2019', '')
-    meetname = meetname.replace('2018', '')
-    meetname = meetname.replace('2017', '')
-    meetname = meetname.replace('2016', '')
-    meetname = meetname.replace('2015', '')
-    meetname = meetname.replace('2014', '').strip()
+    meetname = meetname.replace('2026', '')
+    meetname = meetname.replace('2025', '')
+    meetname = meetname.replace('2024', '')
+    meetname = meetname.replace('2023', '')
+    meetname = meetname.replace('2022', '')
+    meetname = meetname.replace('2021', '').strip()
 
     location = location.replace('  ', ' ')
 
