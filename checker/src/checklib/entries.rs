@@ -1463,7 +1463,6 @@ fn check_weightclass_consistency(
     entry: &Entry,
     meet: &Meet,
     config: Option<&Config>,
-    exempt_weightclass_consistency: bool,
     line: u64,
     report: &mut Report,
 ) {
@@ -1479,11 +1478,6 @@ fn check_weightclass_consistency(
                 entry.bodyweightkg, entry.weightclasskg
             ),
         );
-    }
-
-    // If the configuration exempts consistency checking, stop here.
-    if exempt_weightclass_consistency {
-        return;
     }
 
     // Configuration files covering directories with results from
@@ -2294,14 +2288,9 @@ pub fn do_check<R: io::Read>(
             &mut report,
         );
         check_equipment_year(&entry, meet, line, &mut report);
-        check_weightclass_consistency(
-            &entry,
-            meet,
-            config,
-            exempt_weightclass_consistency,
-            line,
-            &mut report,
-        );
+        if !exempt_weightclass_consistency {
+            check_weightclass_consistency(&entry, meet, config, line, &mut report);
+        }
 
         let (division_age_min, division_age_max) = check_division_age_consistency(
             &entry,
