@@ -12,6 +12,7 @@ import errno
 import os
 import sys
 import urllib.request
+import re
 
 try:
     from oplcsv import Csv
@@ -274,8 +275,12 @@ def fix_noshows(csv):
 
 def makemeetcsv(soup):
     heading = soup.find('span', {'id': 'lblHeading'}).text
+    heading = heading.replace("THSPA", "")
     heading = heading.replace(',', ' ')
-    heading = heading.replace('  ', ' ')
+    # replace multiple spaces (or tabs) with single spaces
+    heading = re.sub("\\s+", " ", heading)
+    # remove years preceding spaces or end of line, year is assumed 2000-2099
+    heading = re.sub("20\\d{2}(\\s+|$)", "", heading).strip()
 
     if heading.count(' - ') == 2:
         [meetname, location, origdate] = [x.strip()
