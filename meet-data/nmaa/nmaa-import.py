@@ -141,7 +141,7 @@ def enterdivision(csv, divurl):
     division = heading.split(' - ')[-1].replace('NMAA', '').strip()
     division = division.replace('  ', ' ')
 
-    # THSPA is only for boys.
+    # NMAA has boys and girls
     division_lower = division.lower()
     if 'girls' in division_lower:
         sex = 'F'
@@ -220,10 +220,11 @@ def enterdivision(csv, divurl):
         # However, they introduced raw in 2026
         event = 'SBD'
         equipment = 'Raw'
-        csv.rows.append([division, weightclass, place, name, team,
+        division_output = 'Boys' if sex == 'M' else 'Girls'
+
+        csv.rows.append([division_output, weightclass, place, name, team,
                          bw, squat, bench, deadlift, total,
                          equipment, event, sex])
-
 
 # The CSV isn't quite in our format yet. Some post-processing is required.
 def removeemptycolumns(csv):
@@ -315,12 +316,12 @@ def makemeetcsv(soup):
 
     meetname = meetname.replace('#', '')
     meetname = meetname.replace('2026', '')
-    meetname = meetname.replace('2019', '')
-    meetname = meetname.replace('2018', '')
-    meetname = meetname.replace('2017', '')
-    meetname = meetname.replace('2016', '')
-    meetname = meetname.replace('2015', '')
-    meetname = meetname.replace('2014', '').strip()
+    meetname = meetname.replace('2025', '')
+    meetname = meetname.replace('2024', '')
+    meetname = meetname.replace('2023', '')
+    meetname = meetname.replace('2022', '')
+    meetname = meetname.replace('2021', '')
+    meetname = meetname.replace('2020', '').strip()
 
     location = location.replace('  ', ' ')
 
