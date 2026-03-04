@@ -1,4 +1,4 @@
-# Configuration for THSPA.
+# Configuration for NMAA.
 
 [options]
     valid_federations = ["NMAA"]
@@ -136,7 +136,9 @@
     7388 = ["ExemptWeightClassConsistency"]
     7393 = ["ExemptWeightClassConsistency"]
     7411 = ["ExemptWeightClassConsistency"]
-    7412 = ["ExemptWeightClassConsistency"]
+	7412 = ["ExemptWeightClassConsistency"]
+	7477 = ["ExemptWeightClassConsistency"]
+	7478 = ["ExemptWeightClassConsistency"]
     7192 = ["ExemptWeightClassConsistency"]
     7194 = ["ExemptWeightClassConsistency"]
     7195 = ["ExemptWeightClassConsistency"]
