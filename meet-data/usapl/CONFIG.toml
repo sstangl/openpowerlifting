@@ -802,6 +802,8 @@
     IA-2026-01 = ["ExemptWeightClassConsistency"]
     MN-2026-02 = ["ExemptWeightClassConsistency"]
     MA-2026-06 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    PA-2026-01 = ["ExemptWeightClassConsistency"]
+    WI-2026-09 = ["ExemptWeightClassConsistency","ExemptDivision"]
 
 
 
@@ -1043,6 +1045,9 @@
     TX-2026-06 = ["ExemptDivision"]
     CO-2026-01 = ["ExemptDivision"]
     NY-2026-04 = ["ExemptDivision"]
+    SC-2026-01 = ["ExemptDivision"]
+    NC-2026-02 = ["ExemptDivision"]
+    
 
 
 
