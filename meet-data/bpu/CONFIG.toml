@@ -25,6 +25,7 @@
     mm4crbpu = {name ="M_MCR_4_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm4sbpu = {name ="M_MES_4_BPU",min=55,max=59,equipment="Single-ply",sex="M",tested="No"}
     mm4mbpu = {name ="M_MEM_4_BPU",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mm4ubpu = {name ="M_MEU_4_BPU",min=55,max=59,equipment="Unlimited",sex="M",tested="No"}
     mm5rbpu = {name ="M_MR_5_BPU",min=60,max=64,equipment="Raw",sex="M",tested="No"}
     mm5crbpu = {name ="M_MCR_5_BPU",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm5sbpu = {name ="M_MES_5_BPU",min=60,max=64,equipment="Single-ply",sex="M",tested="No"}
