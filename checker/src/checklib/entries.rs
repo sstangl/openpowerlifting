@@ -1230,7 +1230,9 @@ fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Repo
     {
         let calculated = entry.best3squatkg + entry.best3benchkg + entry.best3deadliftkg;
 
-        if (calculated - entry.totalkg).abs() > WeightKg::from_f32(0.5) {
+        // Allow conversion rounding errors of less than 0.5kg.  Most are
+        // 0.1kg, some are 0.2 - 0.4kg.
+        if (calculated - entry.totalkg).abs() >= WeightKg::from_f32(0.5) {
             let s = format!(
                 "Calculated TotalKg '{calculated}', but meet recorded '{}'",
                 entry.totalkg
