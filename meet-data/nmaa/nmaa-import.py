@@ -227,8 +227,9 @@ def enterdivision(csv, divurl):
                          equipment, event, sex])
 
 # The CSV isn't quite in our format yet. Some post-processing is required.
-def removeemptycolumns(csv):
 
+
+def removeemptycolumns(csv):
     def getemptycol(csv):
         for i in range(0, len(csv.fieldnames)):
             hasdata = False
