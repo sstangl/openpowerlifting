@@ -309,6 +309,7 @@
   <option value="fsfa" {% if selection.federation == "FSFA" %}selected{% endif %}>FSFA - Fédération Sportive de Force Athlétique [WDFPF]</option>
   <option value="gpc-france" {% if selection.federation == "GPC-France" %}selected{% endif %}>GPC France</option>
   <option value="wpc-france" {% if selection.federation == "WPC-France" %}selected{% endif %}>WPC France</option>
+  <option value="wrpf-france" {% if selection.federation == "WRPF-France" %}selected{% endif %}>WRPF France</option>
 </optgroup>
 <optgroup label="{{strings.country.georgia}}">
   <option value="all-georgia" {% if selection.federation == "AllGeorgia" %}selected{% endif %}>{{strings.selectors.fed.all_georgia}}</option>
