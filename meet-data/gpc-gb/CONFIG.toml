@@ -1,6 +1,7 @@
 # Configuration for GPC-GB.
 
 [options]
+    valid_federations = ["GPC-GB"]
     require_manual_disambiguation = true
 
 [rulesets.default]

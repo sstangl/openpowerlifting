@@ -1,5 +1,8 @@
 # Configuration for the FIPE.
 
+[options]
+    valid_federations = ["FIPE"]
+
 [divisions]
     open = {name = "Open",min=0,max=999}
     senior = {name = "Senior",min=0,max=999}

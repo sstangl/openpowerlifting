@@ -1,4 +1,7 @@
-# Configuration fo GPC-NZ.
+# Configuration fo GPC-ISR.
+
+[options]
+    valid_federations = ["GPC-ISR"]
 
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]

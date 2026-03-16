@@ -1,6 +1,7 @@
 # Configuration for GPC-NZ.
 
 [options]
+    valid_federations = ["GPC-NZ"]
     require_manual_disambiguation = true
 
 [rulesets.default]

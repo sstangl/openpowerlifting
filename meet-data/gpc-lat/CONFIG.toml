@@ -1,5 +1,8 @@
 # Configuration for GPC-LAT.
 
+[options]
+    valid_federations = ["GPC-LAT"]
+
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
     date_range = ["0000-01-01", "9999-01-01"]
