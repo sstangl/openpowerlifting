@@ -40,7 +40,7 @@ for (entries_file, fixes,) in fix_map.items():
                 else:
                     fixed_entry["TotalKg"] = fixes[0]["calc_total"]
                     print(
-                        f'Fixed {fixed_entry["Name"]} - {fixes[0]["rec_total"]}'
+                        f'Fixed {fixed_entry["Name"]} - {fixes[0]["rec_total"]} '
                         f'to {fixed_entry["TotalKg"]}'
                     )
                     fixes.pop(0)
