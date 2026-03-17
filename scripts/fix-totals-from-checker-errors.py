@@ -31,16 +31,21 @@ for (entries_file, fixes,) in fix_map.items():
             # 0th entry happens on line 2
             if len(fixes) > 0 and (entry_i + 2) == fixes[0]["line_num"]:
                 fixed_entry = dict(entry)
-                if fixed_entry["TotalKg"] != fixes[0]["rec_total"]:
+                # sometimes there's a trailing 0 or .0
+                if all((
+                    entry["TotalKg"] != fixes[0]["rec_total"],
+                    entry["TotalKg"] != f'{fixes[0]["rec_total"]}.0',
+                    entry["TotalKg"] != f'{fixes[0]["rec_total"]}0',
+                )):
                     print(
                         f'Expected to see {fixes[0]["rec_total"]} '
-                        f'but saw {fixed_entry["TotalKg"]} on line {entry_i}'
+                        f'but saw {entry["TotalKg"]} on line {entry_i}'
                     )
                     continue
                 else:
                     fixed_entry["TotalKg"] = fixes[0]["calc_total"]
                     print(
-                        f'Fixed {fixed_entry["Name"]} - {fixes[0]["rec_total"]} '
+                        f'Fixed {fixed_entry["Name"]} - {entry["TotalKg"]} '
                         f'to {fixed_entry["TotalKg"]}'
                     )
                     fixes.pop(0)
