@@ -33,7 +33,7 @@ for (entries_file, fixes,) in fix_map.items():
                 fixed_entry = dict(entry)
                 if fixed_entry["TotalKg"] != fixes[0]["rec_total"]:
                     print(
-                        f'Expected to see {fixes[0]["rec_total"]}'
+                        f'Expected to see {fixes[0]["rec_total"]} '
                         f'but saw {fixed_entry["TotalKg"]} on line {entry_i}'
                     )
                     continue
