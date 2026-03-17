@@ -15,7 +15,7 @@ Place,Name,BirthYear,Country,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatK
 4,Karel Ruso,1965,Czechia,67,240,250,-255,250,110,-115,-115,110,-220,220,237.5,237.5,597.5,67.5,Masters 1,SBD,M,Single-ply
 5,Thomas Vareed,1961,India,66.85,200,-225,-225,200,110,-122.5,-130,110,200,215,230,230,540,67.5,Masters 1,SBD,M,Single-ply
 6,Ephraim Khandinise,1961,South Africa,64,140,155,170,170,67.5,-75,75,75,170,-180,180,180,425,67.5,Masters 1,SBD,M,Single-ply
-1,Pekka Anttila,1965,Finland,74.75,-270,270,283,283,150,160,-165,160,230,240,260,260,702.5,75,Masters 1,SBD,M,Single-ply
+1,Pekka Anttila,1965,Finland,74.75,-270,270,283,283,150,160,-165,160,230,240,260,260,703,75,Masters 1,SBD,M,Single-ply
 2,Mani Khosravi,1960,Iran,73.95,235,250,255,255,-160,167.5,175,175,250,260,-270,260,690,75,Masters 1,SBD,M,Single-ply
 3,Walter Schmidt,1958,South Africa,74.6,230,240,245,245,155,160,162.5,162.5,260,272.5,277.5,277.5,685,75,Masters 1,SBD,M,Single-ply
 4,Joe Braca,1962,USA,74.9,215,237.5,-245,237.5,-155,155,-160,155,260,-277.5,-277.5,260,652.5,75,Masters 1,SBD,M,Single-ply
@@ -131,7 +131,7 @@ DQ,William Pakoti,1953,New Zealand,121.55,-250,-250,-250,,152.5,-160,-160,152.5,
 2,Wietze Steyn,1948,South Africa,128.95,280,295,-307.5,295,150,160,172.5,172.5,270,280,282.5,282.5,750,125+,Masters 2,SBD,M,Single-ply
 3,William Tau,1952,New Zealand,139.25,260,275,-292.5,275,-100,170,175,175,140,200,220,220,670,125+,Masters 2,SBD,M,Single-ply
 1,R.K. Surati,1945,India,51.1,110,130,135,135,70,85,90,90,130,150,160,160,385,52,Masters 3,SBD,M,Single-ply
-1,Shinjun Oshiro,1943,Japan,55.8,155,170,175.5,175.5,122.5,-127.5,-127.5,122.5,160,-170,-170,160,457.5,56,Masters 3,SBD,M,Single-ply
+1,Shinjun Oshiro,1943,Japan,55.8,155,170,175.5,175.5,122.5,-127.5,-127.5,122.5,160,-170,-170,160,458,56,Masters 3,SBD,M,Single-ply
 1,Toshiaki Aita,1941,Japan,59.55,-170,170,-180,170,95,-105,-105,95,180,190,195,195,460,60,Masters 3,SBD,M,Single-ply
 2,Marcel Nivault,1933,France,60,150,160,170,170,50,55,-60,55,175,190,200,200,425,60,Masters 3,SBD,M,Single-ply
 1,Horst Diter,1943,Denmark,66.35,187.5,-202.5,202.5,202.5,85,90,100,100,190,200,210,210,512.5,67.5,Masters 3,SBD,M,Single-ply
@@ -170,7 +170,7 @@ DQ,Boris Burlakov,1940,Russia,81.75,-150,-150,-150,,-110,110,-115,110,-140,140,1
 1,Raimo Sandelin,1940,Finland,128.05,175,190,202.5,202.5,130,-175,180,180,170,180,190,190,572.5,125+,Masters 3,SBD,M,Single-ply
 2,Harry Heyman,1942,USA,130.65,195,205,210,210,105,-115,115,115,195,205,210,210,535,125+,Masters 3,SBD,M,Single-ply
 1,Sylviane Bechar,1959,France,45.85,112.5,120,125,125,67.5,72.5,75,75,125,130,137.5,137.5,337.5,48,Masters 1,SBD,F,Single-ply
-2,Marion Friedrich,1965,Germany,45.15,127.5,130,-132.5,130,82.5,-85.5,85.5,85.5,112.5,117.5,120,120,335,48,Masters 1,SBD,F,Single-ply
+2,Marion Friedrich,1965,Germany,45.15,127.5,130,-132.5,130,82.5,-85.5,85.5,85.5,112.5,117.5,120,120,335.5,48,Masters 1,SBD,F,Single-ply
 3,Svetlana Eremenko,1957,Russia,47.25,115,125,130,130,52.5,57.5,62.5,62.5,125,-135,-135,125,317.5,48,Masters 1,SBD,F,Single-ply
 DQ,Shoko Tanaka,1964,Japan,47.3,-105,-105,-105,,62.5,67.5,-70,67.5,110,-120,-120,110,,48,Masters 1,SBD,F,Single-ply
 1,Natalia Ivanova,1964,Russia,51.05,125,135,-142.5,135,65,70,72.5,72.5,125,130,135,135,342.5,52,Masters 1,SBD,F,Single-ply
@@ -200,8 +200,8 @@ DQ,Magali Garnier,1962,France,58.2,132.5,-140,-140,132.5,-67.5,-67.5,-67.5,,137.
 3,Sandhe Kude,1958,India,84.4,-55,55,-70,55,30,-35,-35,30,80,100,-120,100,185,90,Masters 1,SBD,F,Single-ply
 1,Sue Hallen,1957,USA,112.75,140,-150,150,150,105,120,-132.5,120,140,155,162.5,162.5,432.5,90+,Masters 1,SBD,F,Single-ply
 DQ,Liliane Boulle,1946,France,43.4,-90,-90,-90,,-52.5,52.5,-55,52.5,90,100,105,105,,44,Masters 2,SBD,F,Single-ply
-1,Vuokko Viitasaari,1954,Finland,47.65,120,135.5,,135.5,67.5,72.5,75,75,140,145,150,150,360,48,Masters 2,SBD,F,Single-ply
-2,Seija Turunen,1947,Finland,47.85,75,85,-90,85,53,60,63,63,95,100,-115,100,247.5,48,Masters 2,SBD,F,Single-ply
+1,Vuokko Viitasaari,1954,Finland,47.65,120,135.5,,135.5,67.5,72.5,75,75,140,145,150,150,360.5,48,Masters 2,SBD,F,Single-ply
+2,Seija Turunen,1947,Finland,47.85,75,85,-90,85,53,60,63,63,95,100,-115,100,248,48,Masters 2,SBD,F,Single-ply
 1,Marie-Françoise Guinard,1942,France,50.2,87.5,90,95,95,47.5,50,52.5,52.5,125,130,-140,130,277.5,52,Masters 2,SBD,F,Single-ply
 2,Eila Kumpuniemi,1942,Finland,51.1,-85,85,-95,85,55,60,62.5,62.5,105,-115,117.5,117.5,265,52,Masters 2,SBD,F,Single-ply
 1,Lucienne Daumas,1955,France,55.2,122.5,130,135,135,-72.5,75,77.5,77.5,145,150,152.5,152.5,365,56,Masters 2,SBD,F,Single-ply
@@ -221,4 +221,4 @@ DQ,Liliane Boulle,1946,France,43.4,-90,-90,-90,,-52.5,52.5,-55,52.5,90,100,105,1
 4,Chowdary Ratan Moni Roy,1955,India,69.7,100,110,-115,110,45,-55,-55,45,100,122.5,-132.5,122.5,277.5,75,Masters 2,SBD,F,Single-ply
 1,Sue Hollands,1951,UK,81.5,170,180,182.5,182.5,80,85,87.5,87.5,160,170,177.5,177.5,447.5,82.5,Masters 2,SBD,F,Single-ply
 2,Susanne Diter,1952,Denmark,82.5,-110,-120,120,120,57.5,62.5,65,65,110,-122.5,122.5,122.5,307.5,82.5,Masters 2,SBD,F,Single-ply
-1,Eva Speth,1954,Germany,87.8,110,120,125,125,117.5,120.5,-122.5,120.5,130,140,145,145,390,90,Masters 2,SBD,F,Single-ply
+1,Eva Speth,1954,Germany,87.8,110,120,125,125,117.5,120.5,-122.5,120.5,130,140,145,145,390.5,90,Masters 2,SBD,F,Single-ply

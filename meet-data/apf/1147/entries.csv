@@ -2,7 +2,7 @@ Place,Name,Sex,BirthDate,Country,Division,Equipment,BodyweightKg,WeightClassKg,S
 1,Natal'ja Konchakova,F,1977-08-14,Russia,F_OR_AWPC,Raw,47.5,48,85,92.5,-98,,92.5,40,45,47.5,,47.5,85,100,-110,,100,240,Yes,SBD
 1,Svetlana Maletskaja,F,1983-06-04,Russia,F_OR_AWPC,Raw,56,56,95,100,102.5,,102.5,57.5,60,62.5,-65,62.5,122.5,127.5,132.5,,132.5,297.5,Yes,SBD
 2,Marija Pustovit,F,1985-07-30,Russia,F_OR_AWPC,Raw,55.5,56,80,87.5,92.5,,92.5,50,-55,55,,55,105,115,-120,,115,262.5,Yes,SBD
-1,Valerija Bukina,F,1990-05-07,Russia,F_JR_AWPC,Raw,59.55,60,80,90,95.5,,95.5,70,75.5,77.5,,77.5,130,140,150,,150,322.5,Yes,SBD
+1,Valerija Bukina,F,1990-05-07,Russia,F_JR_AWPC,Raw,59.55,60,80,90,95.5,,95.5,70,75.5,77.5,,77.5,130,140,150,,150,323,Yes,SBD
 1,Galina Kalinina,F,1981-10-29,Russia,F_OR_AWPC,Raw,65.4,67.5,105,112.5,115,,115,60,-62.5,-65,,60,140,-150,-157.5,,140,315,Yes,SBD
 1,Elizaveta Sprogis,F,1977-08-24,Russia,F_OR_AWPC,Raw,76.4,82.5,90,105,115,,115,65,70,-75,,70,130,140,150,,150,335,Yes,SBD
 1,Maksim Sukhobok,M,1965-01-01,Russia,M_MR_2_AWPC,Raw,59.1,60,140,150,155,,155,97.5,102.5,-105,,102.5,185,195,-200,,195,452.5,Yes,SBD
@@ -28,7 +28,7 @@ DQ,Mikhail Zhuravlev,M,1943-10-29,Russia,M_MR_6_AWPC,Raw,80.8,82.5,-150,,-150,,,
 5,Vasilij Lopukhov,M,1985-12-31,Russia,M_OR_AWPC,Raw,79.5,82.5,165,170,-175,,170,115,-125,-125,,115,200,210,-220,,210,495,Yes,SBD
 1,Aleksandr Berezhnoj,M,1994-05-18,Russia,M_TR_2_AWPC,Raw,87.5,90,170,180,190,,190,110,120,130,,130,190,200,-210,,200,520,Yes,SBD
 1,Evgenij Pivovarov,M,1988-09-01,Russia,M_JR_AWPC,Raw,85.5,90,190,200,205,,205,-155,-165,165,,165,210,215,-225,,215,585,Yes,SBD
-1,Dmitrij Gorelikov,M,1968-06-20,Russia,M_MR_1_AWPC,Raw,86.2,90,160,170,178,,178,110,115,-117.5,,115,180,200,-213,,200,492.5,Yes,SBD
+1,Dmitrij Gorelikov,M,1968-06-20,Russia,M_MR_1_AWPC,Raw,86.2,90,160,170,178,,178,110,115,-117.5,,115,180,200,-213,,200,493,Yes,SBD
 1,Valerij Litovchenko,M,1948-06-23,Ukraine,M_MR_5_AWPC,Raw,86.9,90,-150,-150,150,155.5,150,75,80.5,82.5,,82.5,175,185,,,185,417.5,Yes,SBD
 1,Vasilij Sidorov,M,1981-03-29,Russia,M_OR_AWPC,Raw,82.6,90,135,145,-150,,145,90,95,-97.5,,95,185,-195,-195,,185,425,Yes,SBD
 2,Andrej Mikhajlov,M,1983-07-18,Russia,M_OR_AWPC,Raw,86,90,125,-135,135,,135,-115,115,-120,,115,150,175,-185,,175,425,Yes,SBD
@@ -66,7 +66,7 @@ DQ,Ernest Gazarjan,M,1979-09-27,Russia,M_OEM_AWPC,Multi-ply,82.4,82.5,-250,,-250
 1,Alla Pugovkina,F,1975-12-12,Russia,F_OR_AWPC,Raw,80.5,82.5,,,,,,80,85,87.5,,87.5,,,,,,87.5,Yes,B
 1,Daniil Umerenkov,M,,Russia,M_TR_1_AWPC,Raw,30,52,,,,,,20,,,,20,,,,,,20,Yes,B
 1,Ivan Gorelkin,M,1994-02-08,Russia,M_TR_2_AWPC,Raw,51.5,52,,,,,,75,85,-95,,85,,,,,,85,Yes,B
-1,Oleg Kaschavtsev,M,1987-06-11,Russia,M_OR_AWPC,Raw,56,56,,,,,,122.5,127.5,130.5,,130.5,,,,,,130,Yes,B
+1,Oleg Kaschavtsev,M,1987-06-11,Russia,M_OR_AWPC,Raw,56,56,,,,,,122.5,127.5,130.5,,130.5,,,,,,130.5,Yes,B
 1,Aleksej Betiov,M,1989-03-22,Russia,M_JR_AWPC,Raw,58.7,60,,,,,,115,-122.5,-122.5,,115,,,,,,115,Yes,B
 1,Sergej Tarasov,M,1986-06-29,Russia,M_OR_AWPC,Raw,66.3,67.5,,,,,,60,65,70,,70,,,,,,70,Yes,B
 1,Vladimir Podgornyj,M,1990-03-31,Russia,M_JR_AWPC,Raw,66.8,67.5,,,,,,102.5,107.5,-110,,107.5,,,,,,107.5,Yes,B
@@ -144,7 +144,7 @@ DQ,Evgeniy Uvarov,M,1977-02-03,Russia,M_OEM_AWPC,Multi-ply,92.4,100,,,,,,-215,-2
 1,Andrey Fedoseev,M,1974-03-03,Russia,M_OEM_AWPC,Multi-ply,109.6,110,,,,,,215,225,235,,235,,,,,,235,Yes,B
 1,Lev Pankov,M,1979-10-05,Russia,M_OEM_AWPC,Multi-ply,124.8,125,,,,,,230,240,247.5,,247.5,,,,,,247.5,Yes,B
 2,Pavel Scheglov,M,1978-07-18,Russia,M_OEM_AWPC,Multi-ply,123.7,125,,,,,,185,200,-210,,200,,,,,,200,Yes,B
-1,Elena Povolotskaya,F,1978-02-16,Russia,F_OR_WPC,Raw,80,82.5,150,160,-170,,160,100,110,115,,115,200,210,218,,218,492.5,,SBD
+1,Elena Povolotskaya,F,1978-02-16,Russia,F_OR_WPC,Raw,80,82.5,150,160,-170,,160,100,110,115,,115,200,210,218,,218,493,,SBD
 2,Tat'jana Merezhko,F,1978-07-05,Russia,F_OR_WPC,Raw,81.1,82.5,-175,-180,182.5,,182.5,95,97.5,100,,100,190,200,-207.5,,200,482.5,,SBD
 1,Radik Akhatov,M,1984-01-30,Russia,M_OR_WPC,Raw,67,67.5,-180,-180,180,,180,130,135,-137.5,,135,215,-235,-235,,215,530,,SBD
 2,Mushfig Aliyev,M,1977-11-20,Azerbaijan,M_OR_WPC,Raw,67.5,67.5,-180,180,190,,190,130,-140,-140,,130,180,-185,,,180,500,,SBD
@@ -228,7 +228,7 @@ DQ,Sergej Mironov,M,1987-07-18,Russia,M_OEM_WPC,Multi-ply,89.2,90,-275,-280,-280
 1,Ruslan Pikuza,M,1979-08-02,Russia,M_OEM_WPC,Multi-ply,132.8,140,280,310,330,,330,-225,225,-235,,225,250,-280,-300,,250,805,,SBD
 DQ,Igor Nastynov,M,1961-09-14,Russia,M_OEM_WPC,Multi-ply,144.8,140+,-315,-360,-360,,,200,,,,200,300,,,,300,,,SBD
 DQ,Igor Kuimov,M,1962-07-28,Russia,M_MEM_2_WPC,Multi-ply,74.6,75,,,,,,-210,-210,-210,,,,,,,,,,B
-1,JUrij Sokolov,M,1983-07-08,Russia,M_OEM_WPC,Multi-ply,75,75,,,,,,240,-250.5,250.5,,250.5,,,,,,250,,B
+1,JUrij Sokolov,M,1983-07-08,Russia,M_OEM_WPC,Multi-ply,75,75,,,,,,240,-250.5,250.5,,250.5,,,,,,250.5,,B
 DQ,Sergej Druzhkov,M,1950-01-01,Russia,M_MEM_5_WPC,Multi-ply,81.3,82.5,,,,,,,,,,,,,,,,,,B
 1,Pavel Dvorjadkin,M,1986-07-17,Russia,M_OEM_WPC,Multi-ply,80.3,82.5,,,,,,150,162.5,175,,175,,,,,,175,,B
 2,Dmitrij Osipov,M,1987-05-31,Russia,M_OEM_WPC,Multi-ply,80.8,82.5,,,,,,175,-190,,,175,,,,,,175,,B

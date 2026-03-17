@@ -3,7 +3,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3
 2,Paola Alfieri,1966,44,43.5,Italy,105,110,-115,110,55,60,62.5,62.5,122.5,127.5,135,135,307.5,SBD,Single-ply,F,Open
 3,Ela Kleszczynska,1979,44,43.9,Poland,100,115,120,120,65,70,75,75,100,105,-110,105,300,SBD,Single-ply,F,Open
 4,Aneta Rutka,1982,44,41.2,Poland,105,112.5,117.5,117.5,37.5,40,42.5,42.5,110,120,-130,120,280,SBD,Single-ply,F,Open
-1,Elena Yamskich,1974,48,47.6,Russia,142.5,150,155,155,80,87.5,95,95,155,165,178,178,427.5,SBD,Single-ply,F,Open
+1,Elena Yamskich,1974,48,47.6,Russia,142.5,150,155,155,80,87.5,95,95,155,165,178,178,428,SBD,Single-ply,F,Open
 2,Raija Koskinen-Jurkko,1963,48,47.7,Finland,165,-175,-175,165,77.5,80,82.5,82.5,155,-170,,155,402.5,SBD,Single-ply,F,Open
 3,Sabine Guillaume,1963,48,45.8,France,115,122.5,125,125,60,62.5,65,65,140,150,-155,150,340,SBD,Single-ply,F,Open
 4,Christian Guingal,1955,48,46.8,France,117.5,125,130,130,55,57.5,-62.5,57.5,130,137.5,-140,137.5,325,SBD,Single-ply,F,Open
@@ -19,7 +19,7 @@ Place,Name,BirthYear,WeightClassKg,BodyweightKg,Country,Squat1Kg,Squat2Kg,Squat3
 9,Marta Kleszczynska,1979,52,51.8,Poland,125,-132.5,-132.5,125,80,-85,85,85,125,130,-135,130,340,SBD,Single-ply,F,Open
 10,Justyna Florczyk,1984,52,51.2,Poland,122.5,130,-137.5,130,60,62.5,65,65,122.5,130,135,135,330,SBD,Single-ply,F,Open
 11,Teresa Sawyer,1963,52,51,UK,115,122.5,-127.5,122.5,67.5,-70,-70,67.5,-135,135,-140,135,325,SBD,Single-ply,F,Open
-1,Valentina Nelyubova,1966,56,55.6,Russia,165,175,180,180,115,122.5,128,128,165,172.5,-182.5,172.5,480,SBD,Single-ply,F,Open
+1,Valentina Nelyubova,1966,56,55.6,Russia,165,175,180,180,115,122.5,128,128,165,172.5,-182.5,172.5,480.5,SBD,Single-ply,F,Open
 2,Pirjo Savola,1968,56,55.6,Finland,175,-180,-180,175,80,85,87.5,87.5,180,-201,-210,180,442.5,SBD,Single-ply,F,Open
 3,Carole Wagner,1976,56,54.8,Luxembourg,150,157.5,162.5,162.5,85,90,-92.5,90,150,157.5,-162.5,157.5,410,SBD,Single-ply,F,Open
 4,Sandra Korte,1970,56,54.6,Germany,142.5,147.5,152.5,152.5,72.5,77.5,-80,77.5,165,-172.5,-172.5,165,395,SBD,Single-ply,F,Open
@@ -60,7 +60,7 @@ DQ,Monica Porter,1967,75,74.3,UK,182.5,-190,190,190,-95,-95,-95,,,,,,,SBD,Single
 4,Nikoletta Nánási,1982,82.5,76.9,Hungary,160,170,180,180,100,105,110,110,160,170,182.5,182.5,472.5,SBD,Single-ply,F,Open
 5,Aleksandra Dziewiczkiewicz,1979,82.5,77.6,Poland,155,-165,-165,155,-90,95,97.5,97.5,165,-172.5,,165,417.5,SBD,Single-ply,F,Open
 DQ,Timea Závodszky,1971,82.5,81,Hungary,220,227.5,-232.5,227.5,,,,,,,,,,SBD,Single-ply,F,Open
-1,Natalya Zotova-Payusova,1975,90,83.1,Russia,210,225,235,235,135,145,155.5,155.5,210,230,237.5,237.5,627.5,SBD,Single-ply,F,Open
+1,Natalya Zotova-Payusova,1975,90,83.1,Russia,210,225,235,235,135,145,155.5,155.5,210,230,237.5,237.5,628,SBD,Single-ply,F,Open
 2,Viktoria Posmitna,1966,90,83.1,Ukraine,200,-210,-210,200,110,115,-117.5,115,180,192.5,202.5,202.5,517.5,SBD,Single-ply,F,Open
 3,Inna Orobets,1971,90,88.6,Ukraine,190,197.5,-207.5,197.5,-112.5,112.5,-117.5,112.5,185,192.5,-195,192.5,502.5,SBD,Single-ply,F,Open
 4,Katariina Nokua,1973,90,89.3,Finland,190,210,-217.5,210,95,100,-102.5,100,187.5,-200,-202.5,187.5,497.5,SBD,Single-ply,F,Open
@@ -70,5 +70,5 @@ DQ,Timea Závodszky,1971,82.5,81,Hungary,220,227.5,-232.5,227.5,,,,,,,,,,SBD,Sin
 8,Brenda van der Meulen,1978,90,86.7,Netherlands,147.5,-157.5,157.5,157.5,95,102.5,107.5,107.5,150,157.5,167.5,167.5,432.5,SBD,Single-ply,F,Open
 9,Marzena Zieba,1981,90,82.7,Poland,170,-180,180,180,-75,75,82.5,82.5,150,157.5,162.5,162.5,425,SBD,Single-ply,F,Open
 1,Anastasia Pavlova,1968,90+,112.9,Russia,230,-240,250,250,135,142.5,147.5,147.5,220,242.5,-247.5,242.5,640,SBD,Single-ply,F,Open
-2,Ganna Ganenko,1975,90+,91.9,Ukraine,180,-190,-190,180,135,150,158,158,120,,,120,457.5,SBD,Single-ply,F,Open
+2,Ganna Ganenko,1975,90+,91.9,Ukraine,180,-190,-190,180,135,150,158,158,120,,,120,458,SBD,Single-ply,F,Open
 3,Sophia Hellersteth,1973,90+,113.7,Sweden,155,165,-180,165,75,80,-90,80,145,160,,160,405,SBD,Single-ply,F,Open
