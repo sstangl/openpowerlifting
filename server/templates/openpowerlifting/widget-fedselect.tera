@@ -355,6 +355,7 @@
   <option value="all-hungary" {% if selection.federation == "AllHungary" %}selected{% endif %}>{{strings.selectors.fed.all_hungary}}</option>
   <option value="hpc" {% if selection.federation == "HPC" %}selected{% endif %}>HPC - Hungarian Powerlifting Congress [WPC]</option>
   <option value="hunpower" {% if selection.federation == "Hunpower" %}selected{% endif %}>Hunpower - Magyar Erőemelő Szövetség [IPF]</option>
+  <option value="ipl-hungary" {% if selection.federation == "IPL-Hungary" %}selected{% endif %}>IPL Hungary</option>
   <option value="wrpf-hun" {% if selection.federation == "WRPF-HUN" %}selected{% endif %}>WRPF Hungary</option>
   <option value="hungary-ua" {% if selection.federation == "Hungary-UA" %}selected{% endif %}>Hungary-UA - Hungary [Unaffiliated]</option>
 </optgroup>

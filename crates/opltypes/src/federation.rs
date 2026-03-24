@@ -809,6 +809,11 @@ pub enum Federation {
     #[strum(to_string = "IPL-Colombia", serialize = "ipl-Colombia")]
     IPLColombia,
 
+    /// International Powerlifting League, Hungary
+    #[serde(rename = "IPL-Hungary")]
+    #[strum(to_string = "IPL-Hungary", serialize = "ipl-hungary")]
+    IPLHungary,
+
     /// International Powerlifting League, Italy
     #[serde(rename = "IPL-Italy")]
     #[strum(to_string = "IPL-Italy", serialize = "ipl-italy")]
@@ -2329,6 +2334,7 @@ impl Federation {
             Federation::IPL => false,
             Federation::IPLChina => false,
             Federation::IPLColombia => false,
+            Federation::IPLHungary => false,
             Federation::IPLItaly => false,
             Federation::IPLNZ => false,
             Federation::IPLRussia => false,
@@ -2815,6 +2821,7 @@ impl Federation {
             Federation::IPL => None,
             Federation::IPLChina => Some(Country::China),
             Federation::IPLColombia => Some(Country::China),
+            Federation::IPLHungary => Some(Country::Hungary),
             Federation::IPLItaly => Some(Country::Italy),
             Federation::IPLNZ => Some(Country::NewZealand),
             Federation::IPLRussia => Some(Country::Russia),
@@ -3368,6 +3375,7 @@ impl Federation {
             Federation::IPL => Some(Federation::IPL),
             Federation::IPLChina => Some(Federation::IPL),
             Federation::IPLColombia => Some(Federation::IPL),
+            Federation::IPLHungary => Some(Federation::IPL),
             Federation::IPLItaly => Some(Federation::IPL),
             Federation::IPLNZ => Some(Federation::IPL),
             Federation::IPLRussia => Some(Federation::IPL),
@@ -3961,6 +3969,7 @@ impl Federation {
             Federation::IPL => Federation::ipl_rules_on(date),
             Federation::IPLChina => Federation::ipl_rules_on(date),
             Federation::IPLColombia => Federation::ipl_rules_on(date),
+            Federation::IPLHungary => Federation::ipl_rules_on(date),
             Federation::IPLItaly => Federation::ipl_rules_on(date),
             Federation::IPLNZ => Federation::ipl_rules_on(date),
             Federation::IPLRussia => Federation::ipl_rules_on(date),
