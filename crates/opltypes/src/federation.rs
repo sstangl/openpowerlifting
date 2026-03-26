@@ -799,6 +799,11 @@ pub enum Federation {
     #[strum(to_string = "IPL", serialize = "ipl")]
     IPL,
 
+    /// International Powerlifting League, Chile
+    #[serde(rename = "IPL-Chile")]
+    #[strum(to_string = "IPL-Chile", serialize = "ipl-chile")]
+    IPLChile,
+
     /// International Powerlifting League, China
     #[serde(rename = "IPL-China")]
     #[strum(to_string = "IPL-China", serialize = "ipl-china")]
@@ -2332,6 +2337,7 @@ impl Federation {
             Federation::IPF => FULLY_TESTED,
             Federation::IPFChina => FULLY_TESTED,
             Federation::IPL => false,
+            Federation::IPLChile => false,
             Federation::IPLChina => false,
             Federation::IPLColombia => false,
             Federation::IPLHungary => false,
@@ -2819,6 +2825,7 @@ impl Federation {
             Federation::IPF => None,
             Federation::IPFChina => Some(Country::China),
             Federation::IPL => None,
+            Federation::IPLChile => Some(Country::Chile),
             Federation::IPLChina => Some(Country::China),
             Federation::IPLColombia => Some(Country::China),
             Federation::IPLHungary => Some(Country::Hungary),
@@ -3373,6 +3380,7 @@ impl Federation {
             Federation::IPF => Some(Federation::IPF),
             Federation::IPFChina => Some(Federation::IPF),
             Federation::IPL => Some(Federation::IPL),
+            Federation::IPLChile => Some(Federation::IPL),
             Federation::IPLChina => Some(Federation::IPL),
             Federation::IPLColombia => Some(Federation::IPL),
             Federation::IPLHungary => Some(Federation::IPL),
@@ -3967,6 +3975,7 @@ impl Federation {
             Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPFChina => Federation::ipf_rules_on(date),
             Federation::IPL => Federation::ipl_rules_on(date),
+            Federation::IPLChile => Federation::ipl_rules_on(date),
             Federation::IPLChina => Federation::ipl_rules_on(date),
             Federation::IPLColombia => Federation::ipl_rules_on(date),
             Federation::IPLHungary => Federation::ipl_rules_on(date),

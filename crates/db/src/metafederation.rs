@@ -486,6 +486,14 @@ pub enum MetaFederation {
     #[strum(to_string = "ipf-china")]
     IPFChina,
 
+    /// IPL-Chile
+    #[strum(to_string = "iplchile")]
+    IPLChile,
+
+    /// IPL-Chile Tested
+    #[strum(to_string = "iplchile-tested")]
+    IPLChileTested,
+
     /// IPL-China, plus IPL results for Chinese lifters.
     #[strum(to_string = "ipl-china")]
     IPLChina,
