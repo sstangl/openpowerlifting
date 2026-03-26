@@ -1197,6 +1197,10 @@ impl MetaFederation {
                     | Federation::CommonwealthPF
             ),
             MetaFederation::IPFChina => affiliation!(meet, entry, IPFChina, IPF, AsianPF),
+            MetaFederation::IPLChile => affiliation!(meet, entry, IPLChile, IPL),
+            MetaFederation::IPLChileTested => {
+                entry.tested && MetaFederation::IPLChile.contains(entry, meets)
+            }
             MetaFederation::IPLChina => affiliation!(meet, entry, IPLChina, IPL),
             MetaFederation::IPLChinaTested => {
                 entry.tested && MetaFederation::IPLChina.contains(entry, meets)
