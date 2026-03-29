@@ -360,6 +360,13 @@
   background-image: linear-gradient(to right, $neongreen, $lightgray);
 }
 
+.green_to_pink {
+  $green: #51DA27;
+  $pink: #FF69B4;
+  @include gradient-prereqs($green);
+  background-image: linear-gradient(to right, $green, $pink);
+}
+
 .green_to_white {
   $green: #51DA27;
   $white: #EDF2F4;
