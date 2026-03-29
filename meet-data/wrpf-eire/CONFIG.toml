@@ -51,3 +51,4 @@
     sex = "F"
 
 [exemptions]
+    2602 = ["ExemptDuplicates"] # Nationals combined with irishpo/2601

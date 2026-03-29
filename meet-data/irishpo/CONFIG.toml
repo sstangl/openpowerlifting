@@ -403,4 +403,4 @@
 [exemptions]
     2403 = ["ExemptDivision"] # Some SP used in MP divisions
     2502 = ["ExemptDivision"] # Allow single-ply in multi-ply division.   
-    2602 = ["ExemptDivision", "ExemptDuplicates"] # Nationals and Pro held in the same meet, with 2403.
+    2602 = ["ExemptDivision", "ExemptDuplicates"] # Nationals and Pro held in the same meet, with 2603.
