@@ -424,8 +424,8 @@
 }
 
 .orange_to_blue {
-  $blue: #507CFF;
-  $orange: #FFA200;
+  $blue: #004EFF; // Chosen by ralkid on Zulip.
+  $orange: #FF7600; // Chosen by ralkid on Zulip.
   @include gradient-prereqs($orange);
   background-image: linear-gradient(to right, $orange, $blue);
 }
