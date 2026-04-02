@@ -811,6 +811,7 @@
     NS-2026-07-A = ["ExemptWeightClassConsistency","ExemptDuplicates"]
     NS-2026-07-B = ["ExemptWeightClassConsistency"]
     ME-2026-01 = ["ExemptWeightClassConsistency"]
+    PA-2026-06 = ["ExemptWeightClassConsistency"]
 
 
 
@@ -1058,6 +1059,9 @@
     WI-2026-04 = ["ExemptDivision"]
     CA-2026-08 = ["ExemptDivision"]
     OR-2026-01 = ["ExemptDivision"]
+    NY-2026-01 = ["ExemptDivision"]
+    NJ-2026-04 = ["ExemptDivision"]
+    MD-2026-01 = ["ExemptDivision"]
     
 
 
