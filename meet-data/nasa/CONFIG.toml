@@ -9,6 +9,7 @@
     open = {name="open", min=0, max=999, sex='M'}
     youth = {name="youth", min=5, max=12, sex='M'}
     hs = {name="hs", min=13, max=19, sex='M'}
+    jhigh = {name="jhigh", min=11, max=14, sex='M'}
     fs = {name="fs", min=13, max=19, sex='M'}
     js = {name="js", min=13, max=19, sex='M'}
     hsp = {name="hsp", min=13, max=19, sex='M'}
@@ -37,6 +38,7 @@
     wopen = {name="wopen", min=0, max=999, sex='F'}
     wyouth = {name="wyouth", min=5, max=12, sex='F'}
     whs = {name="whs", min=13, max=19, sex='F'}
+    wjhigh = {name="wjhigh", min=11, max=14, sex='F'}
     whsp = {name="whsp", min=13, max=19, sex='F'}
     wfs = {name="wfs", min=13, max=19, sex='F'}
     wjs = {name="wjs", min=13, max=19, sex='F'}
