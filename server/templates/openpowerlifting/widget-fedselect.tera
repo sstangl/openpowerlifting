@@ -562,6 +562,7 @@
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS - Polski Związek Kulturystyki Fitness [IPF]</option>
   <option value="wpc-poland" {% if selection.federation == "WPC-Poland" %}selected{% endif %}>WPC Poland</option>
   <option value="wrpf-pol" {% if selection.federation == "WRPF-POL" %}selected{% endif %}>WRPF-POL - WRPF Poland</option>
+  <option value="wuap-poland" {% if selection.federation == "WUAP-Poland" %}selected{% endif %}>WUAP-Poland - WUAP Poland</option>
   <option value="xpc-poland" {% if selection.federation == "XPC-Poland" %}selected{% endif %}>XPC Poland</option>
 </optgroup>
 <optgroup label="{{strings.country.portugal}}">

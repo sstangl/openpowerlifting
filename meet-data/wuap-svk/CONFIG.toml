@@ -36,8 +36,24 @@
     sex = "F"
 
 [exemptions]
+    1601 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    1701 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    1702 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    1801 = ["ExemptWeightClassConsistency","ExemptDivision"]
     2401 = ["ExemptWeightClassConsistency"] # data is a mess
     2402 = ["ExemptWeightClassConsistency"] # data is a mess
     2403 = ["ExemptWeightClassConsistency"] # data is a mess
+    2203 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2204 = ["ExemptWeightClassConsistency","ExemptDivision"]
     2301 = ["ExemptWeightClassConsistency","ExemptDivision"] # data is a mess
     2302 = ["ExemptWeightClassConsistency","ExemptDivision"] # data is a mess
+    2303 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2305 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2304 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2405 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2406 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2407 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2502 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2503 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2504 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2505 = ["ExemptWeightClassConsistency","ExemptDivision"]
