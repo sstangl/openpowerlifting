@@ -343,6 +343,14 @@
     mv = {name="M-V", min=0, max=999, sex="M", equipment="Single-ply"}
     fv = {name="F-V", min=0, max=999, sex="F", equipment="Single-ply"}
 
+    # Junior High School.
+    mrjh = {name="MR-JH", min=0, max=999, sex="M", equipment="Raw"}
+    frjh = {name="FR-JH", min=0, max=999, sex="F", equipment="Raw"}
+    mjh = {name="M-JH", min=0, max=999, sex="M", equipment="Single-ply"}
+    fjh = {name="F-JH", min=0, max=999, sex="F", equipment="Single-ply"}
+    mwjh = {name="MW-JH", min=0, max=999, sex="M", equipment="Wraps"}
+    fwjh = {name="FW-JH", min=0, max=999, sex="F", equipment="Wraps"}
+
     # High School.
     mrhs = {name="MR-HS", min=0, max=999, sex="M", equipment="Raw"}
     frhs = {name="FR-HS", min=0, max=999, sex="F", equipment="Raw"}
