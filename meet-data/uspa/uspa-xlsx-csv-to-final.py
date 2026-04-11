@@ -48,7 +48,7 @@ def fixup_fieldnames(csv):
     csv.fieldnames[0] = 'Place'
 
 
-def fixup_lifts(csv):
+def fixup_values(csv):
     for row in csv.rows:
         for (j, cell) in enumerate(row):
             # Skipped lifts have a bunch of dashes, usually 5 or 6.
@@ -60,7 +60,11 @@ def fixup_lifts(csv):
 
             # Remove unnecessary ".0"
             elif cell.endswith(".0"):
-                row[j] = cell[:-2]
+                row[j] = cell[:-2].strip()
+
+            # Remove erroneous whitespace.
+            else:
+                row[j] = cell.strip()
 
 
 # Removes textual info often added by meet directors to the bottom of the spreadsheet
@@ -234,7 +238,7 @@ def main(filename):
 
     # Simple processing.
     fixup_fieldnames(csv)
-    fixup_lifts(csv)
+    fixup_values(csv)
     remove_extra_info(csv)
     integrate_4ths(csv)
 
