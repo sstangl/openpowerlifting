@@ -55,7 +55,7 @@ def fixup_values(csv):
             if cell.startswith('---'):
                 row[j] = ''
 
-            elif cell == '0' or cell == '0.0' or cell == '0.00':
+            elif cell == '0' or cell == '0.0' or cell == '0.00' or cell == '-9999':
                 row[j] = ''
 
             # Remove unnecessary ".0"
