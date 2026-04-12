@@ -19,6 +19,7 @@
 
 	# USAPL-style divisions.
 	mro = {name="MR-O", min=0, max=999, sex="M", equipment="Raw"}
+        mry = {name="MR-Y", min=0, max=13, sex="M", equipment="Raw"}
 	mrsj = {name="MR-SJ", min=0, max=17.5, sex="M", equipment="Raw"}
 	mrjr = {name="MR-Jr", min=0, max=22.5, sex="M", equipment="Raw"}
 	mrm1 = {name="MR-M1", min=39.5, max=48.5, sex="M", equipment="Raw"}
