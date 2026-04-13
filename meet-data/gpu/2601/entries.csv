@@ -1,5 +1,5 @@
 Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event
-1,Marcos Pinto,,M,,,,,Wraps,League 1,108.6,,255,282.5,302.5,302.5,185,202.5,217.5,217.5,300,330,357.5,357.5,877.5,SBD
+1,Marcos Pinto,,M,,,Portugal,,Bare,League 1,108.6,,255,282.5,302.5,302.5,185,202.5,217.5,217.5,300,330,357.5,357.5,877.5,SBD
 2,Marcel Rothauszky,,M,,,,,Wraps,League 1,111.9,,325,340,350,350,200,212.5,-220,212.5,290,310,315,315,877.5,SBD
 3,Nikita Galenko,,M,,,,,Wraps,League 1,126.3,,310,335,345,345,195,-205,205,205,300,320,337.5,337.5,887.5,SBD
 4,Henry Reger,,M,,,,,Wraps,League 1,106.8,,290,320,-330,320,180,190,200,200,270,290,300,300,820,SBD
@@ -27,7 +27,7 @@ Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,Bodyweig
 1,Bas Keppel,,M,,,,,Wraps,League 2,94.2,,230,240,-250,240,145,152.5,-155,152.5,285,300,-310,300,692.5,SBD
 2,Bruno Frijn,,M,,,,,Wraps,League 2,95.1,,225,245,255,255,135,142.5,147.5,147.5,265,282.5,-292.5,282.5,685,SBD
 3,Michael Block,,M,,,,,Wraps,League 2,105.7,,230,240,250,250,140,150,160,160,260,280,-285,280,690,SBD
-4,Marcel Hagmann,,M,,,,,Wraps,League 2,98,,195,215,225,225,155,165,170,170,250,265,272.5,272.5,667.5,SBD
+4,Marcel Hagmann,,M,,,,,Sleeves,League 2,98,,195,215,225,225,155,165,170,170,250,265,272.5,272.5,667.5,SBD
 5,Marc Hufnagel,,M,,,,,Wraps,League 2,94.2,,205,220,230,230,130,137.5,142.5,142.5,250,270,-280,270,642.5,SBD
 6,Michael Ndukwe,,M,,,,,Wraps,League 2,134.6,,227.5,235,245,245,177.5,192.5,,192.5,275,285,295,295,732.5,SBD
 7,Daniel Babin,,M,,,,,Wraps,League 2,92.5,,215,225,230,230,127.5,137.5,-145,137.5,250,265,-275,265,632.5,SBD
@@ -41,7 +41,7 @@ Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,Bodyweig
 15,Oliver Barna,,M,,,,,Wraps,League 2,71.1,,165,175,180,180,105,-112.5,-112.5,105,210,220,225,225,510,SBD
 16,Andreas Auhorn,,M,,,,,Wraps,League 2,99,,190,200,210,210,142.5,147.5,150,150,235,250,-260,250,610,SBD
 17,Ewald Kunstmann,,M,,,,,Wraps,League 2,100.8,,180,200,-210,200,120,-130,-135,120,250,275,-290,275,595,SBD
-18,Hendrik Gill,,M,,,,,Wraps,League 2,100,,185,205,-210,205,130,142.5,147.5,147.5,210,235,-252.5,235,587.5,SBD
+18,Hendrik Gill,,M,,22,,,Sleeves,League 2,100,,185,205,-210,205,130,142.5,147.5,147.5,210,235,-252.5,235,587.5,SBD
 19,Jochen Holder,,M,,,,,Wraps,League 2,100.7,,192.5,202.5,210,210,130,-135,-135,130,230,240,-245,240,580,SBD
 20,Merlin Sammetinger,,M,,,,,Wraps,League 2,106.1,,200,210,-215,210,-140,140,-145,140,230,240,-250,240,590,SBD
 21,Sirin Can,,M,,,,,Wraps,League 2,109.2,,200,215,225,225,145,155,-165,155,195,205,215,215,595,SBD
@@ -69,7 +69,7 @@ DQ,Marianna Gasparyan,,F,,,,,Wraps,Prime,58.6,,-245,-245,-245,,127.5,-132.5,,127
 5,Lukas Pfeilschifter,,M,,,,,Wraps,League 3,87.9,,180,195,-210,195,120,127.5,135,135,230,245,262.5,262.5,592.5,SBD
 6,Moritz Rademacher,,M,,,,,Wraps,League 3,91.2,,190,210,220,220,115,122.5,-127.5,122.5,240,260,-285,260,602.5,SBD
 7,Alexander Shimaylo,,M,,,,,Wraps,League 3,93.7,,195,-210,-215,195,150,-157.5,-157.5,150,212.5,230,240,240,585,SBD
-8,Mario Calabrese,,M,,,,,Wraps,League 3,81.4,,190,200,-210,200,110,120,132.5,132.5,190,200,207.5,207.5,540,SBD
+8,Mario Calabrese,,M,,,,,Sleeves,League 3,81.4,,190,200,-210,200,110,120,132.5,132.5,190,200,207.5,207.5,540,SBD
 9,Marcel Jauch,,M,,,,,Wraps,League 3,100.2,,202.5,212.5,222.5,222.5,115,122.5,127.5,127.5,202.5,215,222.5,222.5,572.5,SBD
 10,Mischa Gerbersagen,,M,,,,,Wraps,League 3,70.3,,-150,-155,155,155,105,112.5,-117.5,112.5,175,190,200,200,467.5,SBD
 11,Dennis Kropf,,M,,,,,Wraps,League 3,102.3,,180,195,-205,195,125,132.5,-137.5,132.5,210,225,235,235,562.5,SBD
