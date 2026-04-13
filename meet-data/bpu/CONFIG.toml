@@ -228,6 +228,7 @@
     mm5crabpu = {name ="M_MCR_5_ABPU",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm5sabpu = {name ="M_MES_5_ABPU",min=60,max=64,equipment="Single-ply",sex="M",tested="Yes"}
     mm5mabpu = {name ="M_MEM_5_ABPU",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    mm5uabpu = {name ="M_MEU_5_ABPU",min=60,max=64,equipment="Unlimited",sex="M",tested="Yes"}
     mm6rabpu = {name ="M_MR_6_ABPU",min=65,max=69,equipment="Raw",sex="M",tested="Yes"}
     mm6crabpu = {name ="M_MCR_6_ABPU",min=65,max=69,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm6sabpu = {name ="M_MES_6_ABPU",min=65,max=69,equipment="Single-ply",sex="M",tested="Yes"}
