@@ -1395,11 +1395,6 @@ impl MetaFederationCache {
         let mut ret: Vec<Vec<u32>> = Vec::with_capacity(num_metafeds);
         ret.resize(num_metafeds, vec![]);
 
-        // Vector of whether each meet has a match for the
-        // given MetaFederation (accessed via index).
-        let mut contains: Vec<bool> = Vec::with_capacity(num_metafeds);
-        contains.resize(num_metafeds, false);
-
         let mut last_meet_id = 0;
 
         // Iterate by grouping entries from the same Meet.
@@ -1408,22 +1403,17 @@ impl MetaFederationCache {
             assert!(last_meet_id <= meet_id);
             last_meet_id = meet_id;
 
-            // Check whether any entries are part of each MetaFederation.
-            for entry in meet_entries {
-                for meta in MetaFederation::iter() {
+            // Despite this collection, total importation time is about 12% lower when
+            // the inner loop below can early-exit on positive results.
+            let meet_entries: Vec<&Entry> = meet_entries.collect();
+
+            for meta in MetaFederation::iter() {
+                for entry in &meet_entries {
                     if meta.contains(entry, meets) {
-                        contains[meta as usize] = true;
+                        ret[meta as usize].push(meet_id);
+                        break;
                     }
                 }
-            }
-
-            // If any match, add to that MetaFederation's meet list.
-            for i in 0..num_metafeds {
-                if contains[i] {
-                    ret[i].push(meet_id);
-                }
-                // Reset the vector for the next iteration.
-                contains[i] = false;
             }
         }
 
