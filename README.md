@@ -81,6 +81,37 @@ Follow the instructions for Fedora, but use this alternate command for installin
 sudo pacman -S cargo rust curl make npm python-beautifulsoup4 flake8 ansible parallel uglify-js jemalloc
 ```
 
+### MacOS
+
+Follow the instructions for Fedora, but first these steps for installing dependencies:
+
+1. Install the XCode development suite:
+
+```bash
+xcode-select --install
+```
+
+Click "Accept" in the pop-up to allow installation to proceed.
+
+2. Install the Homebrew package manager:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+3. Install project dependencies from Homebrew:
+
+```bash
+brew install git rust make npm python flake8 ansible parallel jemalloc
+PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/python/libexec/bin:$PATH"
+```
+
+5. Install project dependencies from npm
+
+```bash
+npm install uglify-js -g
+```
+
 ### Windows 10 (Native)
 
 1. Download and install the [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
