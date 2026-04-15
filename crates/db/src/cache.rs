@@ -1,8 +1,8 @@
 //! Precalculated cache of data, such as sorts.
 
-use fxhash::{FxBuildHasher, FxHashMap};
 use itertools::Itertools;
 use opltypes::*;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 use smartstring::alias::CompactString;
 
 use std::cmp::Ordering;

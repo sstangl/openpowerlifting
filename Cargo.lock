@@ -211,12 +211,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c8efb64bd706a16a1bdde310ae86b351e4d21550d98d056f22f8a7f7a2183fec"
 
 [[package]]
-name = "byteorder"
-version = "1.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
-
-[[package]]
 name = "bytes"
 version = "1.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -258,7 +252,6 @@ dependencies = [
  "coefficients",
  "colored",
  "csv",
- "fxhash",
  "itertools 0.11.0",
  "itertools-num",
  "jemalloc-ctl",
@@ -266,6 +259,7 @@ dependencies = [
  "opltypes",
  "pico-args",
  "rayon",
+ "rustc-hash",
  "serde",
  "serde_derive",
  "smartstring",
@@ -815,15 +809,6 @@ dependencies = [
  "memchr",
  "pin-project-lite",
  "slab",
-]
-
-[[package]]
-name = "fxhash"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c31b6d751ae2c7f11320402d34e41349dd1016f8d5d45e48c4312bc8625af50c"
-dependencies = [
- "byteorder",
 ]
 
 [[package]]
@@ -1549,9 +1534,9 @@ dependencies = [
  "coefficients",
  "criterion",
  "csv",
- "fxhash",
  "itertools 0.11.0",
  "opltypes",
+ "rustc-hash",
  "serde",
  "serde_derive",
  "smartstring",
@@ -2087,6 +2072,12 @@ name = "rustc-demangle"
 version = "0.1.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b50b8869d9fc858ce7266cce0194bd74df58b9d0e3f6df3a9fc8eb470d95c09d"
+
+[[package]]
+name = "rustc-hash"
+version = "2.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "94300abf3f1ae2e2b8ffb7b58043de3d399c73fa6f4b73826402a5c457614dbe"
 
 [[package]]
 name = "rustix"

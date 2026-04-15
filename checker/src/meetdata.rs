@@ -1,8 +1,8 @@
 //! Defines MeetData, the owner of all meet-related data produced by the
 //! Checker.
 
-use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::Username;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 
 use crate::checklib::{Entry, Meet};
 

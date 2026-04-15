@@ -1,7 +1,7 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
-use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::Username;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 use serde_derive::Deserialize;
 use toml::de;
 

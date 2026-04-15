@@ -2,9 +2,9 @@
 
 use coefficients::{dots, glossbrenner, goodlift, mcculloch, wilks, wilks2020};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
-use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::states::*;
 use opltypes::*;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 
 use std::path::Path;
 
