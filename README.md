@@ -103,7 +103,8 @@ Click "Accept" in the pop-up to allow installation to proceed.
 
 ```bash
 brew install git rust make npm python flake8 ansible parallel jemalloc
-PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/python/libexec/bin:$PATH"
+echo 'PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 ```
 
 5. Install project dependencies from npm
