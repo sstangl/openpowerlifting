@@ -1,7 +1,7 @@
 //! Benchmarks loading the database from data files.
 
 use criterion::{Criterion, Throughput, criterion_group, criterion_main};
-use opldb::OplDb;
+use opldb::{Entry, Meet, OplDb, import_meets_csv};
 
 use std::path::Path;
 
@@ -38,5 +38,35 @@ pub fn loading_benchmarks(c: &mut Criterion) {
     });
 }
 
-criterion_group!(benches, loading_benchmarks);
+pub fn metafed_benchmarks(c: &mut Criterion) {
+    let mut group = c.benchmark_group("metafederation");
+
+    // Meet data is needed for processing the entries data.
+    let meets: Vec<Meet> = import_meets_csv(Path::new(MEETS_CSV)).unwrap();
+
+    // Open-code about half of import_entries_csv, prior to making the cache.
+    let entries: Vec<Entry> = {
+        let mut vec = Vec::with_capacity(5_000_000);
+
+        let mut rdr = csv::ReaderBuilder::new()
+            .quoting(false)
+            .from_path(Path::new(ENTRIES_CSV))
+            .unwrap();
+        for entry in rdr.deserialize() {
+            let entry: Entry = entry.expect("failed to deserialize Entry");
+            vec.push(entry);
+        }
+        vec
+    };
+
+    // Making the MetaFederation cache takes about 5s (out of ~21s).
+    group.sample_size(10);
+
+    group.throughput(Throughput::Elements(entries.len() as u64));
+    group.bench_function("make_cache", |b| {
+        b.iter(|| opldb::MetaFederationCache::make(&meets, &entries))
+    });
+}
+
+criterion_group!(benches, loading_benchmarks, metafed_benchmarks);
 criterion_main!(benches);

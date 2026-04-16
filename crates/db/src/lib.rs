@@ -71,7 +71,7 @@ fn import_lifters_csv(file: &Path) -> Result<Vec<Lifter>, Box<dyn Error>> {
 }
 
 /// Reads the `meet.csv` file into a Vec<Meet>.
-fn import_meets_csv(file: &Path) -> Result<Vec<Meet>, Box<dyn Error>> {
+pub fn import_meets_csv(file: &Path) -> Result<Vec<Meet>, Box<dyn Error>> {
     let mut vec = Vec::with_capacity(50_000);
 
     let mut rdr = csv::ReaderBuilder::new().quoting(false).from_path(file)?;
