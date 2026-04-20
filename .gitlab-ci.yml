@@ -92,6 +92,17 @@ line-endings:
         paths: # Note that this doesn't run if the checker itself changes.
           - "meet-data/**/*"
 
+# Checks that all files are within the default size limit.
+file-sizes:
+  stage: check
+  image: ${CI_REGISTRY}/openpowerlifting/opl-data/opl-checker:latest
+  before_script:
+    - cd ${CI_PROJECT_DIR}
+  script:
+    - tests/check-file-sizes
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+
 # Checks that Python scripts have an enforced style.
 python-style:
   stage: check
