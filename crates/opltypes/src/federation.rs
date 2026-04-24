@@ -767,6 +767,10 @@ pub enum Federation {
     #[strum(to_string = "ILPF", serialize = "ilpf")]
     ILPF,
 
+    /// Israeli National Powerlifting Federation.
+    #[strum(to_string = "INPF", serialize = "inpf")]
+    INPF,
+
     /// International Nova Strength Association, tiny Texas "fed".
     ///
     /// <https://web.archive.org/web/20040807073200/http://www.novafitness.com/insa_fronts/index.htm>
@@ -2334,6 +2338,7 @@ impl Federation {
                     false
                 }
             }
+            Federation::INPF => false,
             Federation::INSA => false,
             Federation::IntDFPA => FULLY_TESTED,
             Federation::IPA => false,
@@ -2823,6 +2828,7 @@ impl Federation {
             Federation::IKF => Some(Country::Iceland),
             Federation::ILPA => Some(Country::Israel),
             Federation::ILPF => Some(Country::Israel),
+            Federation::INPF => Some(Country::Israel),
             Federation::INSA => Some(Country::USA),
             Federation::IntDFPA => None,
             Federation::IPA => Some(Country::USA),
@@ -3379,6 +3385,7 @@ impl Federation {
                     None
                 }
             }
+            Federation::INPF => None,
             Federation::INSA => None,
             Federation::IntDFPA => None,
             Federation::IPA => None,
@@ -3975,6 +3982,7 @@ impl Federation {
             Federation::IKF => PointsSystem::Wilks,
             Federation::ILPA => PointsSystem::Wilks,
             Federation::ILPF => Federation::ipf_rules_on(date),
+            Federation::INPF => PointsSystem::Glossbrenner,
             Federation::INSA => PointsSystem::Wilks,
             Federation::IntDFPA => PointsSystem::Dots,
             Federation::IPA => PointsSystem::Wilks,

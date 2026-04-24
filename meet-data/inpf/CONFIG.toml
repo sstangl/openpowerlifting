@@ -1,0 +1,79 @@
+# Configuration for INPF (Israeli National Powerlifting Federation).
+# Rules source: https://www.fitnessland.co.il/_files/ugd/aed7ff_a6224071a37c4bc7bdff8e87eda0b0fe.docx?dn=rules-heb.docx
+
+[divisions]
+    # INPF uses a mix of long-form divisions (e.g. "Open", "Teen 1") and
+    # legacy short codes from older PDFs (e.g. "MO", "FOR", "MT1R").
+    # The suffix "R" in legacy codes indicates "raw" (raw was previously with wraps)
+    # in the source sheets, but equipment is still enforced via Equipment.
+    open = {name = "Open", min = 0, max = 999}
+    o = {name = "O", min = 0, max = 999}
+    mo = {name = "MO", min = 0, max = 999}
+    fo = {name = "FO", min = 0, max = 999}
+    mor = {name = "MOR", min = 0, max = 999}
+    for = {name = "FOR", min = 0, max = 999}
+
+    submasters = {name = "Submasters", min = 33, max = 39}
+
+    # Youth and teen classes.
+    youth = {name = "Y", min = 0, max = 12}
+    teen1 = {name = "Teen 1", min = 13, max = 15}
+    teen2 = {name = "Teen 2", min = 16, max = 17}
+    teen3 = {name = "Teen 3", min = 18, max = 19}
+    t1 = {name = "T1", min = 13, max = 15}
+    t2 = {name = "T2", min = 16, max = 17}
+    t3 = {name = "T3", min = 18, max = 19}
+    mt1r = {name = "MT1R", min = 13, max = 15}
+    mt1 = {name = "MT1", min = 13, max = 15}
+    mt2 = {name = "MT2", min = 16, max = 17}
+    mt3r = {name = "MT3R", min = 18, max = 19}
+    ft2r = {name = "FT2R", min = 16, max = 17}
+    ft1 = {name = "FT1", min = 13, max = 15}
+
+    # Juniors (20-23) and legacy codes.
+    juniors = {name = "Juniors", min = 20, max = 23}
+    j = {name = "J", min = 20, max = 23}
+    mjr = {name = "MJR", min = 20, max = 23}
+    fj = {name = "FJ", min = 20, max = 23}
+
+    # Submasters (33-39) and Masters 1-9 (40+), plus legacy short codes.
+    masters1 = {name = "Masters 1", min = 40, max = 44}
+    masters2 = {name = "Masters 2", min = 45, max = 49}
+    masters3 = {name = "Masters 3", min = 50, max = 54}
+    masters4 = {name = "Masters 4", min = 55, max = 59}
+    masters5 = {name = "Masters 5", min = 60, max = 64}
+    masters6 = {name = "Masters 6", min = 65, max = 69}
+    masters7 = {name = "Masters 7", min = 70, max = 74}
+    masters8 = {name = "Masters 8", min = 75, max = 79}
+    masters9 = {name = "Masters 9", min = 80, max = 999}
+
+    m1 = {name = "M1", min = 40, max = 44}
+    m2 = {name = "M2", min = 45, max = 49}
+    m3 = {name = "M3", min = 50, max = 54}
+    m4 = {name = "M4", min = 55, max = 59}
+    m5 = {name = "M5", min = 60, max = 64}
+    m6 = {name = "M6", min = 65, max = 69}
+    m7 = {name = "M7", min = 70, max = 74}
+    m8 = {name = "M8", min = 75, max = 79}
+    m9 = {name = "M9", min = 80, max = 999}
+
+    mm1 = {name = "MM1", min = 40, max = 44}
+    mm2 = {name = "MM2", min = 45, max = 49}
+    mm4 = {name = "MM4", min = 55, max = 59}
+    mm4r = {name = "MM4R", min = 55, max = 59}
+    mm5 = {name = "MM5", min = 60, max = 64}
+    mm8r = {name = "MM8R", min = 75, max = 79}
+    mm9 = {name = "MM9", min = 80, max = 999}
+    fm1 = {name = "FM1", min = 40, max = 44}
+
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
+    date_range = ["0000-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","90+"]
+    date_range = ["0000-01-01", "9999-01-01"]
+    sex = "F"
+
+[exemptions]

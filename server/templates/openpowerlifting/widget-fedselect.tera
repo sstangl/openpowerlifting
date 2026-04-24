@@ -405,6 +405,7 @@
   <option value="gpc-isr" {% if selection.federation == "GPC-ISR" %}selected{% endif %}>GPC Israel</option>
   <option value="ilpa" {% if selection.federation == "ILPA" %}selected{% endif %}>ILPA - Israel Powerlifting Federation [GPA]</option>
   <option value="ilpf" {% if selection.federation == "ILPF" %}selected{% endif %}>ILPF - Israeli Powerlifting Federation</option>
+  <option value="inpf" {% if selection.federation == "INPF" %}selected{% endif %}>INPF - Israeli National Powerlifting Federation</option>
   <option value="ipc" {% if selection.federation == "IPC" %}selected{% endif %}>IPC - Israel Powerlifting Community [IPO]</option>
   <option value="npa" {% if selection.federation == "NPA" %}selected{% endif %}>NPA - National Powerlifting Association of Israel [IPA]</option>
   <option value="wpc-israel" {% if selection.federation == "WPC-Israel" %}selected{% endif %}>WPC Israel</option>
