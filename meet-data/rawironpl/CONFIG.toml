@@ -71,3 +71,4 @@
     2004 = ["ExemptDivision"] # Amateur/Elite divisions.
     2401 = ["ExemptDivision"] # children in teen division
     2501 = ["ExemptDivision", "ExemptWeightClassConsistency"] # children in teen, presumably grouped lighter weight classes
+    2602 = ["ExemptDivision", "ExemptWeightClassConsistency", "ExemptAge"] # children in teen, lifters below division age minimums
