@@ -22,6 +22,7 @@
     masters_75_79 = {name = "Masters 75-79", min = 75, max = 79,tested="No"}
     masters_80_84 = {name = "Masters 80-84", min = 80, max = 84,tested="No"}
     masters_80p = {name = "Masters 80+", min = 80, max = 999,tested="No"}
+    guest = {name = "Guest", min = 0, max = 999,tested="No"}
 
     #Tested divisions
     opent = {name = "OpenT", min = 0, max = 999,tested="Yes"}
@@ -55,4 +56,5 @@
 
 
 [exemptions]
+    2601 = ["ExemptDivision"] # Sub-Jr 15-19 used for placings
     
