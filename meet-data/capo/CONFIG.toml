@@ -170,6 +170,7 @@
     mmul = {name="MM-UL", min=33, max=999, sex="M", equipment="Unlimited", event="B"}
     mm1ul = {name="MM1-UL", min=40, max=44, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
+    mm4ul = {name="MM4-UL", min=55, max=59, sex="M", equipment="Unlimited", event="B"}
     mm5ul = {name="MM5-UL", min=60, max=64, sex="M", equipment="Unlimited", event="B"}
     foul = {name="FO-UL", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
     fmul = {name="FM-UL", min=33, max=999, sex="F", equipment="Unlimited", event="B"}
