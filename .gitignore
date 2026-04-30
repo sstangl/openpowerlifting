@@ -58,3 +58,6 @@ geckodriver.log
 *.exe
 *.stackdump
 .vscode/
+
+# LLM skills
+.claude/
