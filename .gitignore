@@ -65,3 +65,6 @@ geckodriver.log
 # autoenv
 .env
 .env.leave
+# Python virtual environments
+env/
+venv/

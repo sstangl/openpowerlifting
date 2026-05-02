@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Produce meet.csv and entries.csv from .xlsx for NAP as of 2026
+
+#TODO
+
+# convert excel to csv - expect one file output based on what I've seen so far
+
+# translate Russian terms to english with new translation script
+
+# run new conversion Python script to produce meet.csv and entries.csv,
+# names go in CyrillicName
+
+# run calc-latin-names to transliterate CyrillicNames into Name
