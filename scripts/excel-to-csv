@@ -2,7 +2,8 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 #
 # Converts an Excel (.xlsx) file to CSV with two transformations:
-#   1. Numeric strings using commas as decimal separators are converted to use decimal points.
+#   1. Numeric strings using commas as decimal separators are converted
+#      to use decimal points.
 #   2. Numeric values with strikethrough formatting are negated.
 #
 # Usage: excel-to-csv <input.xlsx> <output.csv>
@@ -13,7 +14,8 @@ import sys
 try:
     import openpyxl
 except ImportError:
-    print("Error: openpyxl is required. Install it with: pip install openpyxl", file=sys.stderr)
+    print("Error: openpyxl is required. Install it with: pip install openpyxl",
+          file=sys.stderr)
     sys.exit(1)
 
 
@@ -43,16 +45,16 @@ def convert_sheet(ws):
     return rows
 
 
-def convert(input_path, output_path):
+def convert(input_path, out_path):
     wb = openpyxl.load_workbook(input_path, data_only=True)
     sheets = wb.worksheets
 
     if len(sheets) == 1:
         rows = convert_sheet(sheets[0])
-        with open(output_path, 'w', newline='', encoding='utf-8') as f:
+        with open(out_path, 'w', newline='', encoding='utf-8') as f:
             csv.writer(f).writerows(rows)
     else:
-        base, ext = output_path.rsplit('.', 1) if '.' in output_path else (output_path, '')
+        base, ext = out_path.rsplit('.', 1) if '.' in out_path else (out_path, '')
         suffix = f'.{ext}' if ext else ''
         for i, ws in enumerate(sheets):
             rows = convert_sheet(ws)
