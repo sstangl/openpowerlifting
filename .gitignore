@@ -61,3 +61,7 @@ geckodriver.log
 
 # LLM skills
 .claude/
+
+# autoenv
+.env
+.env.leave
