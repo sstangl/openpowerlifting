@@ -347,6 +347,10 @@ pub enum Federation {
     #[strum(to_string = "DBKV", serialize = "dbkv")]
     DBKV,
 
+    /// Dutch Drug Free Powerlifting Association.
+    #[strum(to_string = "DDFPA", serialize = "ddfpa")]
+    DDFPA,
+
     /// Drug Free Powerlifting Federation Netherlands.
     #[strum(to_string = "DFPFNL", serialize = "dfpfnl")]
     DFPFNL,
@@ -2239,6 +2243,7 @@ impl Federation {
             Federation::DPL => false,
             Federation::CyprusPF => FULLY_TESTED,
             Federation::CzechiaUA => false,
+            Federation::DDFPA => FULLY_TESTED,
             Federation::DSF => FULLY_TESTED,
             Federation::EgyptPF => FULLY_TESTED,
             Federation::EJTL => FULLY_TESTED,
@@ -2731,6 +2736,7 @@ impl Federation {
             Federation::CSST => Some(Country::Czechia),
             Federation::CTPA => Some(Country::Taiwan),
             Federation::DBKV => Some(Country::Germany),
+            Federation::DDFPA => Some(Country::Netherlands),
             Federation::DFPFNL => Some(Country::Netherlands),
             Federation::DPL => Some(Country::Netherlands),
             Federation::CyprusPF => Some(Country::Cyprus),
@@ -3263,6 +3269,7 @@ impl Federation {
             Federation::CzechiaUA => None,
             Federation::DBKV => None,
             Federation::DFPFNL => Some(Federation::WDFPF),
+			Federation::DDFPA => Some(Federation::IntDFPA),
             Federation::DPL => Some(Federation::IPL),
             Federation::DSF => Some(Federation::IPF),
             Federation::EgyptPF => Some(Federation::IPF),
@@ -3878,6 +3885,7 @@ impl Federation {
             Federation::CSST => PointsSystem::Wilks,
             Federation::CTPA => Federation::ipf_rules_on(date),
             Federation::DBKV => PointsSystem::Wilks,
+			Federation::DDFPA => PointsSystem::Dots,
             Federation::DFPFNL => PointsSystem::Wilks,
             Federation::DPL => PointsSystem::Dots,
             Federation::CyprusPF => Federation::ipf_rules_on(date),
