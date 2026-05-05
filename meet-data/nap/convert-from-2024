@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Produce meet.csv and entries.csv from .xlsx for NAP as of 2024
+
+set -e
+
+if [ $# -ne 1 ]; then
+	echo " Usage: $0 meet_dir_with_original_xlsx"
+	exit 1
+fi
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+MEETDATADIR=$1
+
+# convert excel to csv - expect one file output based on what I've seen so far
+${REPOSCRIPTDIR}/excel-to-csv ${MEETDATADIR}/original.xlsx ${MEETDATADIR}/original.csv
+
+# translate Russian terms to english with new translation script
+python ${REPOSCRIPTDIR}/translate-terms/translate.py ru ${MEETDATADIR}/original.csv ${MEETDATADIR}/original_translate.csv
+
+# run new conversion Python script to produce meet.csv and entries.csv,
+# names go in CyrillicName
+# set PYTHONPATH so we can import oplcsv
+PYTHONPATH="${REPOSCRIPTDIR}" python ${SCRIPTDIR}/convert-translated-csv-from-2024.py ${MEETDATADIR}/original_translated.csv
+
+# run calc-latin-names to transliterate CyrillicNames into Name
+#TODO
