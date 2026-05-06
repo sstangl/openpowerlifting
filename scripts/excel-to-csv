@@ -56,9 +56,10 @@ def convert(input_path, out_path):
     else:
         base, ext = out_path.rsplit('.', 1) if '.' in out_path else (out_path, '')
         suffix = f'.{ext}' if ext else ''
-        for i, ws in enumerate(sheets):
+        for ws in sheets:
             rows = convert_sheet(ws)
-            path = f'{base}{i}{suffix}'
+            sheet_title = ws.title.replace("/", "_")
+            path = f'{base}_{sheet_title}{suffix}'
             with open(path, 'w', newline='', encoding='utf-8') as f:
                 csv.writer(f).writerows(rows)
 
