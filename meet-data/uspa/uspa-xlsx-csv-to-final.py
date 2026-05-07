@@ -48,6 +48,7 @@ def fixup_fieldnames(csv):
     csv.fieldnames[0] = 'Place'
 
 
+# Operates on the values of the 'original.csv'.
 def fixup_values(csv):
     for row in csv.rows:
         for (j, cell) in enumerate(row):
@@ -55,7 +56,7 @@ def fixup_values(csv):
             if cell.startswith('---'):
                 row[j] = ''
 
-            elif cell == '0' or cell == '0.0' or cell == '0.00' or cell == '-9999':
+            elif cell in ['0', '0.0', '0.00', '00.0', '-9999']:
                 row[j] = ''
 
             # Remove unnecessary ".0"
