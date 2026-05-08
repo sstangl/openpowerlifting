@@ -437,6 +437,10 @@ pub enum Federation {
     #[strum(to_string = "FECHIPO", serialize = "fechipo")]
     FECHIPO,
 
+    /// Costa Rican Powerlifting Federation, IPF.
+    #[strum(to_string = "FEDELEPO", serialize = "fedelepo")]
+    FEDELEPO,
+
     /// Federación Nacional de Levantamiento de Potencia, Guatemalan IPF affiliate.
     #[strum(to_string = "Fedepotencia", serialize = "fedepotencia")]
     Fedepotencia,
@@ -2262,6 +2266,7 @@ impl Federation {
             Federation::FDNLP => FULLY_TESTED,
             Federation::FECAPOLIF => FULLY_TESTED,
             Federation::FECHIPO => FULLY_TESTED,
+            Federation::FEDELEPO => FULLY_TESTED,
             Federation::Fedepotencia => FULLY_TESTED,
             Federation::FEFICULP => FULLY_TESTED,
             Federation::FELIPOME => FULLY_TESTED,
@@ -2759,6 +2764,7 @@ impl Federation {
             Federation::FDNLP => Some(Country::Peru),
             Federation::FECAPOLIF => Some(Country::Cameroon),
             Federation::FECHIPO => Some(Country::Chile),
+            Federation::FEDELEPO => Some(Country::CostaRica),
             Federation::Fedepotencia => Some(Country::Guatemala),
             Federation::FEFICULP => Some(Country::Ecuador),
             Federation::FELIPOME => Some(Country::Mexico),
@@ -3296,6 +3302,7 @@ impl Federation {
             Federation::FDNLP => Some(Federation::IPF),
             Federation::FECAPOLIF => Some(Federation::IPF),
             Federation::FECHIPO => Some(Federation::IPF),
+            Federation::FEDELEPO => Some(Federation::IPF),
             Federation::Fedepotencia => Some(Federation::IPF),
             Federation::FEFICULP => Some(Federation::IPF),
             Federation::FELIPOME => Some(Federation::WP),
@@ -3908,6 +3915,7 @@ impl Federation {
             Federation::FDNLP => Federation::ipf_rules_on(date),
             Federation::FECAPOLIF => Federation::ipf_rules_on(date),
             Federation::FECHIPO => Federation::ipf_rules_on(date),
+            Federation::FEDELEPO => Federation::ipf_rules_on(date),
             Federation::Fedepotencia => Federation::ipf_rules_on(date),
             Federation::FEFICULP => Federation::ipf_rules_on(date),
             Federation::FELIPOME => Federation::wp_rules_on(date),

@@ -254,8 +254,9 @@
   <option value="wrpf-colombia" {% if selection.federation == "WRPF-Colombia" %}selected{% endif %}>WRPF-Colombia</option>
 </optgroup>
 <optgroup label="{{strings.country.costarica}}">
-  <option value="wrpf-costa" {% if selection.federation == "WRPF Costa Rica" %}selected{% endif %}>WRPF Costa Rica</option>
   <option value="crpl" {% if selection.federation == "CRPL" %}selected{% endif %}>CRPL - Costa Rica Powerlifting</option>
+  <option value="fedelepo" {% if selection.federation == "FEDELEPO" %}selected{% endif %}>FEDELEPO - Costa Rica Powerlifting Federation [IPF]</option>
+  <option value="wrpf-costa" {% if selection.federation == "WRPF Costa Rica" %}selected{% endif %}>WRPF Costa Rica</option>
   </optgroup>
 <optgroup label="{{strings.country.croatia}}">
   <option value="all-croatia" {% if selection.federation == "AllCroatia" %}selected{% endif %}>{{strings.selectors.fed.all_croatia}}</option>

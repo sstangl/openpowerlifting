@@ -387,6 +387,10 @@ pub enum MetaFederation {
     #[strum(to_string = "fechipo")]
     FECHIPO,
 
+    /// FEDELEPO, but with international results also.
+    #[strum(to_string = "fedelepo")]
+    FEDELEPO,
+
     /// Fedepotencia, but with international results also.
     #[strum(to_string = "fedepotencia")]
     Fedepotencia,
@@ -1123,6 +1127,7 @@ impl MetaFederation {
             MetaFederation::FDNLP => affiliation!(meet, entry, FDNLP, IPF, FESUPO, NAPF),
             MetaFederation::FECAPOLIF => affiliation!(meet, entry, FECAPOLIF, IPF, AfricanPF),
             MetaFederation::FECHIPO => affiliation!(meet, entry, FECHIPO, IPF, FESUPO, NAPF),
+            MetaFederation::FEDELEPO => affiliation!(meet, entry, FEDELEPO, IPF, FESUPO, NAPF),
             MetaFederation::Fedepotencia => {
                 affiliation!(meet, entry, Fedepotencia, IPF, FESUPO, NAPF)
             }
