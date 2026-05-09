@@ -61,7 +61,7 @@ Approximate ages occur because some federations only provide us with birth year 
 The `Age` column is defined by [crates/opltypes/src/age.rs](https://gitlab.com/openpowerlifting/opl-data/blob/main/crates/opltypes/src/age.rs).
 
 ### AgeClass
-Optional. The age class in which the filter falls, for example `40-45`. These classes are based on exact age of the lifter on the day of competition.
+Optional. The age class in which the filter falls, for example `40-44`. These classes are based on exact age of the lifter on the day of competition.
 
 AgeClass is mostly useful because sometimes a federation will report that a lifter competed in the 50-54 divison without providing any further age information. This way, we can still tag them as 50-54, even if the `Age` column is empty.
 
