@@ -711,8 +711,11 @@ dependencies = [
 name = "disambig"
 version = "0.1.0"
 dependencies = [
+ "csv",
  "datatest-stable",
  "opltypes",
+ "serde",
+ "serde_derive",
 ]
 
 [[package]]

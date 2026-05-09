@@ -10,7 +10,10 @@ edition = "2024"
 opltypes = { path = "../opltypes/" }
 
 [dev-dependencies]
+csv = { workspace = true }
 datatest-stable = "0.3"
+serde = { workspace = true }
+serde_derive = { workspace = true }
 
 [[test]]
 name = "csvtests"

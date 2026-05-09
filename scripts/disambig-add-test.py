@@ -3,6 +3,8 @@
 # Creates a test case in `crates/disambig/tests/` for the given lifter's data.
 #
 # Usage: disambig-add-test.py "Lifter Name" (without disambiguation info)
+#
+# TODO: Complain (or be helpful and convert) if some meets are in Lbs.
 
 import os
 import pathlib
