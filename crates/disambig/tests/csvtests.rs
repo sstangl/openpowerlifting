@@ -13,7 +13,7 @@
 //! These tests can be run in parallel using `cargo-nextest`.
 
 use opltypes::*;
-use serde::{Deserialize, de::Error};
+use serde::de::Error;
 use serde_derive::Deserialize;
 
 use std::path::Path;
@@ -99,6 +99,7 @@ struct TestRow {
 ///
 /// This is useful to make sure that AssertGroup is non-empty.
 fn disallow_empty_string<'de, D: serde::Deserializer<'de>>(de: D) -> Result<String, D::Error> {
+    use serde::Deserialize;
     match String::deserialize(de) {
         Ok(s) if s.is_empty() => Err(D::Error::custom("value must be non-empty")),
         other => other,
