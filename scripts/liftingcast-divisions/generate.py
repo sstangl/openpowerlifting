@@ -27,34 +27,35 @@ def gen_divisions(config_d):
                         wtcls_l = config_d["f_wtcls"]
                     else:
                         raise ValueError(f"Unknown sex:{sex}")
-                    # for each division also generate a division for guest lifters
-                    for guest in [False, True]:
-                        for (i, wtcls,) in enumerate(wtcls_l):
-                            div_d = {
-                                "name": "",
-                                "gender": "",
-                                "rawOrEquipped": "",
-                                "lifts": "",
-                                "scoreBy": "",
-                                "weightClassName": wtcls,
-                                "maxWeight": "9999" if wtcls.endswith("+") else wtcls,
-                                "usaplDivisionCode": "",
-                                "hideOnBoard": ""
-                            }
-                            if i == 0:
-                                div_d.update({
-                                    "name": (
-                                        f"{sex} {age} {eq_d['show']} {event}"
-                                        f"{' GUEST' if guest else ''}"
-                                    ),
-                                    "gender": "Male" if sex == "M" else "Female",
-                                    "rawOrEquipped": eq_d["lc"],
-                                    "lifts": lifts_str(event),
-                                    "scoreBy": "Total",
-                                    # TODO - confirm this does nothing
-                                    "usaplDivisionCode": "G" if guest else "O",
-                                })
-                            yield div_d
+                    for tested in config_d["tested"]:
+                        # for each division also generate a division for guest lifters
+                        for guest in [False, True]:
+                            for (i, wtcls,) in enumerate(wtcls_l):
+                                div_d = {
+                                    "name": "",
+                                    "gender": "",
+                                    "rawOrEquipped": "",
+                                    "lifts": "",
+                                    "scoreBy": "",
+                                    "weightClassName": wtcls,
+                                    "maxWeight": "9999" if wtcls.endswith("+") else wtcls,
+                                    "usaplDivisionCode": "",
+                                    "hideOnBoard": ""
+                                }
+                                if i == 0:
+                                    div_d.update({
+                                        "name": (
+                                            f"{sex} {age} {eq_d['show']} {event}"
+                                            f" {tested} {' GUEST' if guest else ''}"
+                                        ),
+                                        "gender": "Male" if sex == "M" else "Female",
+                                        "rawOrEquipped": eq_d["lc"],
+                                        "lifts": lifts_str(event),
+                                        "scoreBy": "Total",
+                                        # TODO - confirm this does nothing
+                                        "usaplDivisionCode": "G" if guest else "O",
+                                    })
+                                yield div_d
 
 
 if __name__ == "__main__":

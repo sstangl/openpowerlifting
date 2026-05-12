@@ -102,7 +102,7 @@ Click "Accept" in the pop-up to allow installation to proceed.
 3. Install project dependencies from Homebrew:
 
 ```bash
-brew install git rust make npm python flake8 ansible parallel jemalloc
+brew install git rust make npm python flake8 ansible parallel jemalloc awk
 echo 'PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
