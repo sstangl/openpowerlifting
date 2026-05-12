@@ -19,6 +19,8 @@ from oplcsv import Csv
 
 def get_section_header(input_csv_row):
     # section headers have field 1 populated and no others
+    if len(input_csv_row < 1):
+        return False
     for input_field_i, input_field in enumerate(input_csv_row):
         if input_field_i == 1 and input_field.strip() == "":
             return False
@@ -26,23 +28,61 @@ def get_section_header(input_csv_row):
             return False 
     return input_csv_row[1].strip()
 
+def is_blank_row(input_row):
+    for field in input_row:
+        if len(field) > 0:
+            return False
+    return True
+
 def gen_section_csvs(input_csv):
     # iterate over the rows in the input csv and yield a csv
     # from the rows under each section header, and the section header
     # skip past the first two rows, which is meet data
     include_section = False
+    section_csv = None
     for input_row in input_csv.rows[2:]:
-        section_header = get_section_header(input_row)
-        if section_header:
-            if "Press bench" in section_header or "Bench press" in section_header:
-                include_section = True
-                #TODO record other details from section header
-            if "Squat" in section_header:
-                #TODO record other details from section header
-            #TODO other headers
-        elif include_section:
-            #TODO we're including this section, make a csv out of it, then yield it
-
+        new_section_header = get_section_header(input_row)
+        if new_section_header:
+            # if we had a section CSV from the previous section, yield it now
+            if section_csv and section_header:
+                yield section_csv, section_header
+                section_csv = None
+            section_header = new_section_header
+            lc_section_header = section_header.lower()
+            include_section = False
+            exclude_section = False
+            csv_header_row = None
+            # don't include "people's bench press" etc or "paired deadlift"
+            # anything related to curl or military press
+            # any "Russian" variant on an event (Russian press, Russian deadlift)
+            # any streetlifting event (pullups etc)
+            # overall winners standings
+            # coaches standings
+            for exclude_term in [
+                "people", "paired", "curl", "military", "russian", "streetlifting",
+                "overall", "coaches"
+            ]:
+                if exclude_term in lc_section_header:
+                    exclude_section = True
+                    break
+            if not exclude_section:
+                for include_term in [
+                    "press bench", "bench press", "squat", "deadlift", "powerlifting"
+                ]:
+                    if include_term in lc_section_header:
+                        include_section = True
+                        break
+        # got the section header, next one is CSV header
+        # place, name (cyrillic), and sex aren't labelled, but they're the first three
+        if include_section and not csv_header_row:
+            csv_header_row = ["Place", "CyrillicName", "Sex"] + input_row
+            section_csv = Csv()
+            section_csv.append_columns(csv_header_row)
+        # we're in the body of the section, accumulate rows
+        if include_section and section_csv:
+            # don't include blank rows
+            if not is_blank_row(input_row):
+                section_csv.rows.append(input_row)
 
 
 def make_opl_section_csv(section_csv, section_header):
