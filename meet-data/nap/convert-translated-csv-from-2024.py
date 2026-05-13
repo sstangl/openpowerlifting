@@ -58,9 +58,11 @@ def gen_section_csvs(input_csv):
             # any streetlifting event (pullups etc)
             # overall winners standings
             # coaches standings
+            # "bench+deadlift" isn't actually push/pull, it's some kind of max single
+            # plus reps event
             for exclude_term in [
                 "people", "paired", "curl", "military", "russian", "streetlifting",
-                "overall", "coaches"
+                "overall", "coaches", "bench+deadlift"
             ]:
                 if exclude_term in lc_section_header:
                     exclude_section = True
@@ -84,11 +86,65 @@ def gen_section_csvs(input_csv):
             if not is_blank_row(input_row):
                 section_csv.rows.append(input_row)
 
+def parse_born(born):
+    [orig_dob, age] = born.split("/")
+    [dd, mm, yyyy] = orig_dob.split(".")
+    opl_dob = f"{yyyy}-{mm}-{dd}"
+    return opl_dob, age
 
 def make_opl_section_csv(section_csv, section_header):
-    #TODO - return a csv with the OPL schema, from the data in the section
+    # return a csv with the OPL schema, from the data in the section
     # csv, and section header
-    pass
+    lc_section_header = section_header.lower()
+    div_performance_class = None
+    for pc in ["amateur", "pro", "elite"]:
+        if pc in lc_section_header:
+            div_performance_class = pc.title()
+            break
+    if "press bench" in lc_section_header or "bench press" in lc_section_header:
+        event = "B"
+        bench_columns = ["Bench1Kg", "Bench2Kg" "Bench3Kg", "Bench4Kg", "Best3BenchKg"]
+        event_columns = bench_columns
+    if "squat" in lc_section_header:
+        event = "S"
+        squat_columns = ["Squat1Kg", "Squat2Kg" "Squat3Kg", "Squat4Kg", "Best3SquatKg"]
+        event_columns = squat_columns
+    if "deadlift" in lc_section_header:
+        event = "D"
+        deadlift_columns = [
+            "Deadlift1Kg", "Deadlift2Kg" "Deadlift3Kg", "Deadlift4Kg", "Best3DeadliftKg"
+        ]
+        event_columns = deadlift_columns
+    if "powerlifting" in lc_section_header:
+        event = "SBD"
+        event_columns = squat_columns + bench_columns + deadlift_columns
+    if "without equipment" in lc_section_header:
+        equipment = "Raw"
+    if "single-layer equipment" in lc_section_header:
+        equipment = "Single-ply"
+    if "multi-layer equipment" in lc_section_header:
+        equipment = "Multi-ply"
+    if "soft-equipment" in lc_section_header:
+        if event == "S" or event == "SBD":
+            equipment = "Wraps"
+        else:
+            equipment = "Unlimited"
+    opl_csv = Csv()
+    opl_csv.append_columns([
+        "Place", "CyrillicName", "Sex", "BirthDate", "Age", "Equipment", "Division",
+        "WeightClassKg", "BodyweightKg" 
+    ] + event_columns + ["TotalKg"]
+    )
+    for sr in section_csv.rows:
+        birth_date, age = parse_born(sr[section_csv.index("Born")])
+        age_div = sr[section_csv.index("Age Division")]
+        division = f"{div_performance_class} {age_div}"
+        #TODO - lift columns
+        opl_row = [
+            sr[section_csv.index("Place")], sr[section_csv.index("CyrillicName")],
+            sr[section_csv.index("Sex")], birth_date, age, equipment, division
+        ]
+
 
 def make_meet_csv():
     # return a meet csv with the data common to all meets.  The rest will need
