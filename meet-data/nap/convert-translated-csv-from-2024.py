@@ -1,7 +1,10 @@
 from pathlib import Path
+# oplcsv isn't suitable for this because it doesn't handle quoted commas
+from csv import DictReader, DictWriter
 import sys
 
-from oplcsv import Csv
+#TODO - change oplcsv usage to mainstream csv
+
 
 # this takes an original.csv translated to English, having previously been
 # converted from the original.xlsx
@@ -41,11 +44,24 @@ def gen_section_csvs(input_csv):
     # skip past the first two rows, which is meet data
     include_section = False
     section_csv = None
+    section_header = None
     for input_row in input_csv.rows[2:]:
         new_section_header = get_section_header(input_row)
         if new_section_header:
+
+            #DEBUG
+            print(f"new section header:{new_section_header}")
+            print(f"section_csv:{section_csv}")
+            if section_csv:
+                print(f"section_csv:{section_csv} has {len(section_csv)} entries")
+            print(f"section header:{section_header}")
+
             # if we had a section CSV from the previous section, yield it now
             if section_csv and section_header:
+
+                #DEBUG
+                print(f"about to yield csv with {len(section_csv)} entries")
+
                 yield section_csv, section_header
                 section_csv = None
             section_header = new_section_header
@@ -66,6 +82,10 @@ def gen_section_csvs(input_csv):
                 "overall", "coaches", "bench+deadlift"
             ]:
                 if exclude_term in lc_section_header:
+
+                    #DEBUG
+                    print(f"Matched exclude term {exclude_term}")
+
                     exclude_section = True
                     break
             if not exclude_section:
@@ -73,22 +93,45 @@ def gen_section_csvs(input_csv):
                     "press bench", "bench press", "squat", "deadlift", "powerlifting"
                 ]:
                     if include_term in lc_section_header:
+
+                        #DEBUG
+                        print(f"Matched include term {include_term}")
+
                         include_section = True
                         break
-        #DEBUG
-        # got the section header, next one is CSV header
-        # place, name (cyrillic), and sex aren't labelled, but they're the first three
-        if include_section and not csv_header_row:
-            csv_header_row = ["Place", "CyrillicName", "Sex"] + input_row
-            section_csv = Csv()
-            section_csv.append_columns(csv_header_row)
-        # we're in the body of the section, accumulate rows
-        if include_section and section_csv:
-            # don't include blank rows
-            if not is_blank_row(input_row):
-                section_csv.rows.append(input_row)
+        elif include_section:
+
+            #DEBUG
+            print(f"include section, section_csv:{section_csv}")
+
+            # got the section header, next one is CSV header
+            # place, name (cyrillic), and sex aren't labelled, but they're the first three
+            if section_csv is None:
+                csv_header_row = ["Place", "CyrillicName", "Sex"] + input_row[3:]
+                section_csv = Csv()
+                section_csv.append_columns(csv_header_row)
+
+                #DEBUG
+                print("Created section CSV")
+
+            # we're in the body of the section, accumulate rows
+            elif section_csv is not None:
+                # don't include blank rows
+
+                #DEBUG
+                print("including section and we have section CSV")
+
+                if not is_blank_row(input_row):
+                    section_csv.rows.append(input_row)
+
+                    #DBEUG
+                    print(f"Added row to section CSV {input_row}")
 
 def parse_born(born):
+
+    #DEBUG
+    print(f"born: {born}")
+
     [orig_dob, age] = born.split("/")
     [dd, mm, yyyy] = orig_dob.split(".")
     opl_dob = f"{yyyy}-{mm}-{dd}"
@@ -140,7 +183,15 @@ def make_opl_section_csv(section_csv, section_header):
         "WeightClassKg", "BodyweightKg" 
     ] + event_columns + ["TotalKg"]
     )
+
+    #DEBUG
+    print(f"section_csv.fieldnames: {section_csv.fieldnames}")
+
     for sr in section_csv.rows:
+
+        #DEBUG
+        print(f"row: {sr}")
+
         birth_date, age = parse_born(sr[section_csv.index("Born")])
         age_div = sr[section_csv.index("Age Division")]
         division = f"{div_performance_class} {age_div}"

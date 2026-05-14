@@ -22,8 +22,7 @@ python ${REPOSCRIPTDIR}/translate-terms/translate.py ru ${MEETDATADIR}/original.
 
 # run new conversion Python script to produce meet.csv and entries.csv,
 # names go in CyrillicName
-# set PYTHONPATH so we can import oplcsv
-PYTHONPATH="${REPOSCRIPTDIR}" python ${SCRIPTDIR}/convert-translated-csv-from-2024.py ${MEETDATADIR}/original_translated.csv
+python ${SCRIPTDIR}/convert-translated-csv-from-2024.py ${MEETDATADIR}/original_translated.csv
 
 # run calc-latin-names to transliterate CyrillicNames into Name
 #TODO
