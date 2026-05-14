@@ -1,3 +1,4 @@
+from pathlib import Path
 import sys
 
 from oplcsv import Csv
@@ -19,7 +20,7 @@ from oplcsv import Csv
 
 def get_section_header(input_csv_row):
     # section headers have field 1 populated and no others
-    if len(input_csv_row < 1):
+    if len(input_csv_row) < 1:
         return False
     for input_field_i, input_field in enumerate(input_csv_row):
         if input_field_i == 1 and input_field.strip() == "":
@@ -74,6 +75,7 @@ def gen_section_csvs(input_csv):
                     if include_term in lc_section_header:
                         include_section = True
                         break
+        #DEBUG
         # got the section header, next one is CSV header
         # place, name (cyrillic), and sex aren't labelled, but they're the first three
         if include_section and not csv_header_row:
@@ -91,6 +93,9 @@ def parse_born(born):
     [dd, mm, yyyy] = orig_dob.split(".")
     opl_dob = f"{yyyy}-{mm}-{dd}"
     return opl_dob, age
+
+def lift(weight):
+    return weight if weight != "-" else ""
 
 def make_opl_section_csv(section_csv, section_header):
     # return a csv with the OPL schema, from the data in the section
@@ -139,12 +144,32 @@ def make_opl_section_csv(section_csv, section_header):
         birth_date, age = parse_born(sr[section_csv.index("Born")])
         age_div = sr[section_csv.index("Age Division")]
         division = f"{div_performance_class} {age_div}"
-        #TODO - lift columns
         opl_row = [
             sr[section_csv.index("Place")], sr[section_csv.index("CyrillicName")],
-            sr[section_csv.index("Sex")], birth_date, age, equipment, division
+            sr[section_csv.index("Sex")], birth_date, age, equipment, division,
+            sr[section_csv.index("Weight Class")], sr[section_csv.index("Bodyweight")],
         ]
-
+        if event == "S" or event == "SBD":
+            opl_row += [
+                lift(sr[section_csv.index("A1")]), lift(sr[section_csv.index("A2")]),
+                lift(sr[section_csv.index("A3")]), lift(sr[section_csv.index("A4(R)")]),
+                lift(sr[section_csv.index("Squats")])
+            ]
+        if event == "B" or event == "SBD":
+            opl_row += [
+                lift(sr[section_csv.index("B1")]), lift(sr[section_csv.index("B2")]),
+                lift(sr[section_csv.index("B3")]), lift(sr[section_csv.index("B4(R)")]),
+                lift(sr[section_csv.index("Press bench")])
+            ]
+        if event == "D" or event == "SBD":
+            opl_row += [
+                lift(sr[section_csv.index("C1")]), lift(sr[section_csv.index("C2")]),
+                lift(sr[section_csv.index("C3")]), lift(sr[section_csv.index("C4(R)")]),
+                lift(sr[section_csv.index("Deadlift pull")])
+            ]
+        opl_row += ["Total"]
+        opl_csv.rows.append(opl_row)
+    return opl_csv
 
 def make_meet_csv():
     # return a meet csv with the data common to all meets.  The rest will need
@@ -163,11 +188,12 @@ if __name__ == "__main__":
         print(f"Usage: {sys.argv[0]} translated_original_csv", file=sys.stderr)
         sys.exit(1)
     input_path_str = sys.argv[1]
+    input_dir_path = Path(input_path_str).parent
     input_csv = Csv(input_path_str)
     entries_csv = Csv()
     for section_csv, section_header in gen_section_csvs(input_csv):
-        section_entries_csv = make_opl_section_csv(section_csv, section_header)
-        entries_csv.cat(section_entries_csv)
+        section_opl_entries_csv = make_opl_section_csv(section_csv, section_header)
+        entries_csv.cat(section_opl_entries_csv)
     meet_csv = make_meet_csv()
-    #TODO - output entries csv filename is entries.csv in same dir
-    #TODO - write meet.csv in same dir
+    meet_csv.write_filename(str(input_dir_path / "meet.csv"))
+    entries_csv.write_filename(str(input_dir_path / "entries.csv"))
