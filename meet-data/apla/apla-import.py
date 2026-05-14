@@ -24,9 +24,7 @@ DEFAULT_FEDERATION = "APLA"
 
 
 def get_meet_number(base_dir: Path) -> str:
-    """
-    Finds the next available meet number for the current year.
-    """
+    """Finds the next available meet number for the current year."""
     current_year = str(datetime.now().year)[2:]  # Get last 2 digits of current year
     existing_dirs = [
         d.name
@@ -44,149 +42,142 @@ def get_meet_number(base_dir: Path) -> str:
     return f"{current_year}{last_number + 1:02d}"
 
 
-def clean_meet_name(name: str, year: int) -> str:
-    """
-    Standardises meet name.
+def clean_meet_name(meet_name: str, year: int) -> str:
+    """Standardises meet name."""
 
-    e.g. "2025 APA National Championships " ??? "National Championships"
-    """
-    if not name:
+    if not meet_name:
         return ""
 
-    # Remove the year if it appears anywhere
-    cleaned_name = name.replace(str(year), "").replace(str(year)[2:], "")
+    # Remove characters that are not letters, digits, hyphens, apostrophes, or whitespace
+    cleaned = re.sub(r"[^a-zA-Z0-9'\s-]", "", meet_name)
 
-    # Remove federation references if they appear
-    cleaned_name = (
-        cleaned_name.replace("APA", "").replace("APLA", "").replace("IPF", "")
-    )
-
-    # Clean up extra spaces
-    cleaned_name = " ".join(cleaned_name.split())
+    # Remove the current year and federation name if they appear anywhere
+    common_errs = [str(year), str(year)[2:], "APA", "APLA", "IPF", "ORPF"]
+    for err in common_errs:
+        cleaned = cleaned.replace(err, "")
 
     # Convert to title case if required
-    if cleaned_name.islower() or cleaned_name.isupper():
-        cleaned_name = cleaned_name.title()
+    if cleaned.islower() or cleaned.isupper():
+        cleaned = cleaned.title()
 
-    return cleaned_name.strip()
+    # Strip leading/trailing and collapse extraneous whitespace
+    return " ".join(cleaned.split())
 
 
-def clean_lifter_name(name: str) -> str:
-    """
-    Standardises lifter name.
+def clean_lifter_name(lifter_name: str) -> str:
+    """Standardises lifter name."""
 
-    e.g. "john  smith." ??? "John Smith"
-    """
-    if not name:
+    if not lifter_name:
         return ""
 
     # Remove characters that are not letters, hyphens, apostrophes, or whitespace
-    cleaned_name = re.sub(r"[^a-zA-Z'\s-]", "", name)
+    cleaned = re.sub(r"[^a-zA-Z'\s-]", "", lifter_name)
 
-    # Convert to title case if required
-    if cleaned_name.islower() or cleaned_name.isupper():
-        cleaned_name = cleaned_name.title()
+    # Only convert to title case if all lower or all upper case to preserve
+    # intentional mixed case e.g. "McCloy"
+    if cleaned.islower() or cleaned.isupper():
+        cleaned = cleaned.title()
 
-    return cleaned_name.strip()
+    return " ".join(cleaned.split())
 
 
-def clean_equipment(equipment_str: str) -> str:
-    """
-    Standardises lifter equipment.
+def clean_equipment(equipment: str) -> str:
+    """Standardises lifter equipment type."""
 
-    e.g. "equipped" ??? "Single-ply"
-    """
-    equipment_str = equipment_str.lower().replace(" ", "")
+    if not equipment:
+        return ""
 
-    if equipment_str in {"raw", "classic"}:
+    cleaned = equipment.lower()
+
+    # Remove anything that is not a letter
+    cleaned = re.sub(r"[^a-z]", "", cleaned)
+
+    if any(eq in cleaned for eq in ["raw", "classic"]):
         return "Raw"
 
-    elif "single" in equipment_str or "eq" in equipment_str:
+    elif any(eq in cleaned for eq in ["single", "eq"]):
         return "Single-ply"
 
-    else:
-        print(f"Error: Could not detect equipment from '{equipment_str}'")
+    print(f"Error: Could not detect equipment from '{equipment}'")
+    return ""
+
+
+def clean_division(division: str) -> str:
+    """Standardises lifter division."""
+
+    if not division:
         return ""
 
+    cleaned = division.lower()
 
-def clean_division(division_str: str) -> str:
-    """
-    Standardises lifter division.
-
-    e.g. "SUB JUNIOR WOMEN" ??? "Sub-Junior"
-    """
-    if not division_str or not isinstance(division_str, str):
-        return ""
-
-    # Clean the input string
-    div_clean = division_str.strip().lower()
-
-    # Remove all punctuation and spaces
-    div_clean = re.sub(r"[^a-z0-9]", "", div_clean)
+    # Remove anything that is not a letter or number
+    cleaned = re.sub(r"[^a-z0-9]", "", cleaned)
 
     # Remove common erroneous words
-    div_clean = re.sub(
-        r"(best|lifter|wom[ae]n[s]?|females?|m[ae]n[s]?|\
-            males?|3lift|class|classic|raw|equipped|singleply)",
-        "",
-        div_clean,
+    common_errs = (
+        r"(best|lifter|wom[ae]n[s]?|females?|m[ae]n[s]?|males?"
+        r"|3lift|threelift|benchonly|class|classic|raw|equipped|singleply)"
     )
+    cleaned = re.sub(common_errs, "", cleaned)
 
-    # Match divisions
-    if any(
-        div in div_clean
-        for div in ["subjunior", "subjnr", "subjr", "subj", "sub", "sj", "sbjr", "sbj"]
-    ):
+    # Match divisions with some waterfall string-matching logic.
+    #
+    # NOTE: The catch-alls sometimes fall through to a false positive for a
+    # match on "j" for non-junior or "m" and "i" for a non-masters lifter (e.g.
+    # "primetime" would return Masters 1) which is why the order is important:
+    # Sub-Junior is matched before Junior, Masters III is matched before
+    # Masters II, etc., but overall the parsing is robust enough for ~99% of
+    # APLA meets and a quick glance at the original.csv is enough to catch any
+    # divisions that are populated incorrectly for an atypical meet structure
+    # or other rare happenstance.
+
+    if any(div in cleaned for div in ["sub", "sb", "sj"]):
         return "Sub-Junior"
 
-    elif any(div in div_clean for div in ["junior", "jnr", "jr", "jnior", "j"]):
+    elif any(div in cleaned for div in ["jun", "jn", "jr", "j"]):
         return "Junior"
 
-    elif any(div in div_clean for div in ["special", "olympic", "so"]):
+    elif any(div in cleaned for div in ["special", "olympic", "so"]):
         return "Special Olympics"
 
-    elif "open" in div_clean:
+    elif "open" in cleaned:
         return "Open"
 
-    elif any(div in div_clean for div in ["master", "m"]):
-        if "iv" in div_clean or "4" in div_clean:
+    elif any(div in cleaned for div in ["master", "m"]):
+        if any(num in cleaned for num in ["iv", "4"]):
             return "Masters 4"
-        elif "iii" in div_clean or "3" in div_clean:
+        elif any(num in cleaned for num in ["iii", "3"]):
             return "Masters 3"
-        elif "ii" in div_clean or "2" in div_clean:
+        elif any(num in cleaned for num in ["ii", "2"]):
             return "Masters 2"
-        elif "i" in div_clean or "1" in div_clean:
+        elif any(num in cleaned for num in ["i", "1"]):
             return "Masters 1"
         else:
-            print(f"Error: No number found in '{division_str}'")
+            print(f"Error: No number found in '{division}'")
             return ""
 
-    else:
-        print(f"Error: Could not identify division from '{division_str}'")
+    print(f"Error: Could not identify division from '{division}'")
+    return ""
+
+
+def clean_weightclass(weightclass: str) -> str:
+    """Standardises lifter weight class."""
+
+    if not weightclass:
         return ""
 
+    cleaned = " ".join(weightclass.split())
 
-def clean_weightclass(bw: str) -> str:
-    """
-    Standardises lifter weight class.
+    # Strip leading erroneous characters separately to avoid incorrectly
+    # removing "+" from permitted weight classes e.g. "84+" or "120+"
+    cleaned = cleaned.lstrip("Uu>-<+")
 
-    e.g. "U84 KG" ??? "84"
-    """
-    if not bw:
-        return ""
-
-    # Strip leading and trailing erroneous characters separately to avoid
-    # incorrectly removing + from permitted weight classes e.g. 84+, 120+
-    cleaned_wc = bw.strip().lstrip("Uu>-<+")
-    cleaned_wc = re.sub(r"\s*kg$", "", cleaned_wc, flags=re.IGNORECASE).strip()
-
-    return cleaned_wc
+    # Remove "kg" and any remaining whitespace e.g. "84 kg" to "84 " to "84"
+    return re.sub(r"\s*kg$", "", cleaned, flags=re.IGNORECASE).strip()
 
 
 def run_dos2unix(filepath: Path):
-    """
-    Runs dos2unix on a file.
-    """
+    """Runs dos2unix on a file."""
     try:
         subprocess.run(["dos2unix", filepath], check=True, capture_output=True)
 
@@ -198,13 +189,7 @@ def run_dos2unix(filepath: Path):
 
 
 def process_single_meet(input_file: Path, output_dir: Path) -> None:
-    """
-    Converts a LiftingCast CSV to OpenPowerlifting format:
-
-    - Saves input file to original.csv
-    - Maps meet data to meet.csv
-    - Maps entry data to entries.csv
-    """
+    """Converts a single LiftingCast CSV to OpenPowerlifting format."""
     try:
         # Read input file
         csv_input = Csv(input_file)
@@ -349,13 +334,11 @@ def process_single_meet(input_file: Path, output_dir: Path) -> None:
     except (FileNotFoundError, PermissionError) as e:
         raise ValueError(f"File access error: {e}")
     except Exception as e:
-        raise ValueError(f"Error processing meet file: {e}")
+        raise RuntimeError(f"Error processing meet file: {e}")
 
 
 def process_all_meets(import_dir: Path, base_dir: Path) -> list[str]:
-    """
-    Processes all meets in the import directory.
-    """
+    """Processes all meets in the provided directory."""
     processed_meets = []
     failed_meets = []
 
@@ -396,7 +379,7 @@ def process_all_meets(import_dir: Path, base_dir: Path) -> list[str]:
         raise
 
 
-def main():
+if __name__ == "__main__":
     if len(sys.argv) != 2:
         print(f"Usage: python {__file__} <import_directory>")
         sys.exit(1)
@@ -417,7 +400,3 @@ def main():
     except Exception as e:
         print(f"Error: {str(e)}", file=sys.stderr)
         sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()

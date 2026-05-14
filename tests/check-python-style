@@ -1,7 +1,13 @@
 #!/bin/sh
 
-# From https://unix.stackexchange.com/questions/66097/find-all-files-with-a-python-shebang
-PYTHONFILES=$(find . \( -type f -o -name "*.py" \) -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} + | grep -Ev "(node_modules|target)/")
+# Finds all files with a Python shebang.
+#
+# Reference: https://unix.stackexchange.com/questions/66097/find-all-files-with-a-python-shebang
+#
+# Excludes directories such as compilation targets, project dependencies, etc.,
+# and file extensions which logically should not be used for Python scripts.
 
-# Invoking flake8 once is much faster.
-flake8 --show-source --max-line-length=89 ${PYTHONFILES}
+MATCHES=$(find . \( -path "*/node_modules" -o -path "*/target" -o -path "*/.git" \) -prune -o -type f -not -name "*.csv" -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} +)
+
+# Invoking flake8 once with all found files is much faster than once per file.
+flake8 --show-source --max-line-length=89 ${MATCHES}
