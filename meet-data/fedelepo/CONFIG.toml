@@ -14,6 +14,8 @@
     masters4 = {name = "Masters 4",min=69.5,max=999}
 
     youth = {name = "Youth",min=0,max=19.5}
+    para = {name ="Para",min=0,max=999}
+    so = {name ="SO",min=0,max=999} # Special Olympics
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -59,3 +61,5 @@
     sex = "F"
 
 [exemptions]
+    2504 = ["ExemptWeightClassConsistency"] # no Youth weight classes
+    2506 = ["ExemptWeightClassConsistency"]
