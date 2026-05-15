@@ -1,6 +1,8 @@
 from pathlib import Path
+from io import StringIO
 # oplcsv isn't suitable for this because it doesn't handle quoted commas
 from csv import DictReader, DictWriter
+
 import sys
 
 #TODO - change oplcsv usage to mainstream csv
@@ -21,8 +23,9 @@ import sys
 # when we find a relevant one, produce a Csv with the entries in that section
 # and transform them based on the header and concatenate them together
 
-def get_section_header(input_csv_row):
+def get_section_header(input_line):
     # section headers have field 1 populated and no others
+    input_csv_row = input_line.split(",")
     if len(input_csv_row) < 1:
         return False
     for input_field_i, input_field in enumerate(input_csv_row):
@@ -38,6 +41,91 @@ def is_blank_row(input_row):
             return False
     return True
 
+def get_section_metadata(section_header_str):
+    lc_section_header = section_header_str.lower()
+    div_performance_class = None
+    for pc in ["amateur", "pro", "elite"]:
+        if pc in lc_section_header:
+            div_performance_class = pc.title()
+            break
+    if "press bench" in lc_section_header or "bench press" in lc_section_header:
+        event = "B"
+    if "squat" in lc_section_header:
+        event = "S"
+    if "deadlift" in lc_section_header:
+        event = "D"
+    if "powerlifting" in lc_section_header:
+        event = "SBD"
+    if "without equipment" in lc_section_header:
+        equipment = "Raw"
+    if "single-layer equipment" in lc_section_header:
+        equipment = "Single-ply"
+    if "multi-layer equipment" in lc_section_header:
+        equipment = "Multi-ply"
+    if "soft-equipment" in lc_section_header:
+        if event == "S" or event == "SBD":
+            equipment = "Wraps"
+        else:
+            equipment = "Unlimited"
+    return {
+        "div_performance_class": div_performance_class,
+        "event": event,
+        "equipment": equipment,
+    }
+
+def make_opl_entry(section_entry_d, section_metadata_d):
+    #TODO
+    pass
+
+def gen_entries(input_f):
+    # iterate over the rows in the input csv and yield
+    # dicts in OPL entries file schema. We don't pass a DictReader
+    # because each section has its own schema
+    include_section = False
+    section_csv_lines = []
+    section_header = None
+    for input_line in input_f:
+        input_line = input_line.strip()
+        new_section_header = get_section_header(input_line)
+        if new_section_header:
+            # new section header and we've already accumulated lines in this section
+            if len(section_csv_lines) > 0:
+                section_io = StringIO((section_header + section_csv_lines).join("\n"))
+                section_dr = DictReader(section_io)
+                section_metadata_d = get_section_metadata(section_header)
+                for section_entry_d in section_dr:
+                    yield make_opl_entry(section_entry_d, section_metadata_d)
+            section_header = new_section_header
+            section_csv_lines = []
+            include_section = False
+            lc_section_header = section_header.lower()
+            # don't include "people's bench press" etc or "paired deadlift"
+            # anything related to curl or military press
+            # any "Russian" variant on an event (Russian press, Russian deadlift)
+            # any streetlifting event (pullups etc)
+            # overall winners standings
+            # coaches standings
+            # "bench+deadlift" isn't actually push/pull, it's some kind of max single
+            # plus reps event
+            for exclude_term in [
+                "people", "paired", "curl", "military", "russian", "streetlifting",
+                "overall", "coaches", "bench+deadlift"
+            ]:
+                if exclude_term in lc_section_header:
+                    exclude_section = True
+                    break
+            if not exclude_section:
+                for include_term in [
+                    "press bench", "bench press", "squat", "deadlift", "powerlifting"
+                ]:
+                    if include_term in lc_section_header:
+                        include_section = True
+                        break
+        # we're accumulating lines in a relevant section                
+        if not new_section_header and include_section:
+            section_csv_lines.append(input_line)
+
+#OLD
 def gen_section_csvs(input_csv):
     # iterate over the rows in the input csv and yield a csv
     # from the rows under each section header, and the section header
@@ -140,6 +228,7 @@ def parse_born(born):
 def lift(weight):
     return weight if weight != "-" else ""
 
+#OLD
 def make_opl_section_csv(section_csv, section_header):
     # return a csv with the OPL schema, from the data in the section
     # csv, and section header
@@ -222,29 +311,51 @@ def make_opl_section_csv(section_csv, section_header):
         opl_csv.rows.append(opl_row)
     return opl_csv
 
-def make_meet_csv():
-    # return a meet csv with the data common to all meets.  The rest will need
-    # to be filled in manually from original_translated.csv
-    meet_csv = Csv()
-    meet_csv.append_columns([
-        "Federation","Date","MeetCountry","MeetState","MeetTown","MeetName"
-    ])
-    meet_csv.rows.append([
-        "NAP","","Russia","","",""
-    ])
-    return meet_csv
-
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print(f"Usage: {sys.argv[0]} translated_original_csv", file=sys.stderr)
         sys.exit(1)
     input_path_str = sys.argv[1]
     input_dir_path = Path(input_path_str).parent
-    input_csv = Csv(input_path_str)
-    entries_csv = Csv()
-    for section_csv, section_header in gen_section_csvs(input_csv):
-        section_opl_entries_csv = make_opl_section_csv(section_csv, section_header)
-        entries_csv.cat(section_opl_entries_csv)
-    meet_csv = make_meet_csv()
-    meet_csv.write_filename(str(input_dir_path / "meet.csv"))
-    entries_csv.write_filename(str(input_dir_path / "entries.csv"))
+    meet_path_str = str(input_dir_path / "meet.csv")
+    entries_path_str = str(input_dir_path / "entries.csv")
+
+    with open(meet_path_str, "wt") as meet_f:
+        # make a meet CSV with data common to all meets.  The rest of
+        # the fields will need to be filled in manually from
+        # original_translated.csv
+        meet_d = {
+            "Federation": "NAP", "Date": "", "MeetCountry": "Russia", "MeetState": "",
+            "MeetTown": "", "MeetName": ""
+        }
+        meet_dw = DictWriter(meet_f, meet_d.keys())
+        meet_dw.writeheader()
+        meet_dw.writerow(meet_d)
+
+    #TODO - use DictReader and DictWriter, generate OPL entries rather than oplcsvs
+    with open(input_path_str, "rt") as input_f:
+        with open(entries_path_str, "wt") as entries_f:
+            entries_dw = DictWriter(
+                entries_f,
+                [
+                    "Place", "CyrillicName", "Sex", "BirthDate", "Age", "Equipment",
+                    "Division", "WeightClassKg", "BodyweightKg", "Squat1Kg",
+                    "Squat2Kg", "Squat3Kg", "Squat4Kg", "Best3SquatKg",
+                    "Bench1Kg", "Bench2Kg", "Bench3Kg", "Bench4Kg", "Best3BenchKg",
+                    "Deadlift1Kg", "Deadlift2Kg", "Deadlift3Kg", "Deadlift4Kg",
+                    "Best3DeadliftKg", "TotalKg"
+                ]
+            )
+            entries_dw.writeheader()
+            for entry_d in gen_entries(input_f):
+                entries_dw.writerow(entry_d)
+
+    # OLD
+    #input_csv = Csv(input_path_str)
+    #entries_csv = Csv()
+    #for section_csv, section_header in gen_section_csvs(input_csv):
+    #    section_opl_entries_csv = make_opl_section_csv(section_csv, section_header)
+    #    entries_csv.cat(section_opl_entries_csv)
+    #meet_csv = make_meet_csv()
+    #meet_csv.write_filename(str(input_dir_path / "meet.csv"))
+    #entries_csv.write_filename(str(input_dir_path / "entries.csv"))
