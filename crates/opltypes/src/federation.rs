@@ -1916,6 +1916,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Bulgaria", serialize = "wrpf-bulgaria")]
     WRPFBulgaria,
 
+        /// Cameroon WRPF affiliate.
+    #[serde(rename = "WRPF-Cameroon")]
+    #[strum(to_string = "WRPF-Cameroon", serialize = "wrpf-cameroon")]
+    WRPFCameroon,
+
     /// Canadian WRPF affiliate.
     #[serde(rename = "WRPF-CAN")]
     #[strum(to_string = "WRPF-CAN", serialize = "wrpf-can")]
@@ -2015,6 +2020,11 @@ pub enum Federation {
     #[serde(rename = "WRPF-MEX")]
     #[strum(to_string = "WRPF-MEX", serialize = "wrpf-mex")]
     WRPFMEX,
+
+    /// Nepalese WRPF affiliate.
+    #[serde(rename = "WRPF-Nepal")]
+    #[strum(to_string = "WRPF-Nepal", serialize = "wrpf-nepal")]
+    WRPFNEPAL,
 
     /// Nicaraguan WRPF affiliate.
     #[serde(rename = "WRPF-NIC")]
@@ -2615,6 +2625,7 @@ impl Federation {
             Federation::WRPFBolivia => false,
             Federation::WRPFBrazil => false,
             Federation::WRPFBulgaria => false,
+            Federation::WRPFCameroon => false,
             Federation::WRPFCAN => false,
             Federation::WRPFChile => false,
             Federation::WRPFColombia => false,
@@ -2635,6 +2646,7 @@ impl Federation {
             Federation::WRPFLatvia => false,
             Federation::WRPFLithuania => false,
             Federation::WRPFMEX => false,
+            Federation::WRPFNEPAL => false,
             Federation::WRPFNIC => false,
             Federation::WRPFPOL => false,
             Federation::WRPFQatar => false,
@@ -3100,6 +3112,7 @@ impl Federation {
             Federation::WRPFBolivia => Some(Country::Bolivia),
             Federation::WRPFBrazil => Some(Country::Brazil),
             Federation::WRPFBulgaria => Some(Country::Bulgaria),
+            Federation::WRPFCameroon => Some(Country::Cameroon),
             Federation::WRPFCAN => Some(Country::Canada),
             Federation::WRPFChile => Some(Country::Chile),
             Federation::WRPFColombia => Some(Country::Colombia),
@@ -3120,6 +3133,7 @@ impl Federation {
             Federation::WRPFLatvia => Some(Country::Latvia),
             Federation::WRPFLithuania => Some(Country::Lithuania),
             Federation::WRPFMEX => Some(Country::Mexico),
+            Federation::WRPFNEPAL => Some(Country::Nepal),
             Federation::WRPFNIC => Some(Country::Nicaragua),
             Federation::WRPFPeru => Some(Country::Peru),
             Federation::WRPFPOL => Some(Country::Poland),
@@ -3709,6 +3723,7 @@ impl Federation {
             Federation::WRPFBolivia => Some(Federation::WRPF),
             Federation::WRPFBrazil => Some(Federation::WRPF),
             Federation::WRPFBulgaria => Some(Federation::WRPF),
+            Federation::WRPFCameroon => Some(Federation::WRPF),
             Federation::WRPFCAN => Some(Federation::WRPF),
             Federation::WRPFChile => Some(Federation::WRPF),
             Federation::WRPFColombia => Some(Federation::WRPF),
@@ -3729,6 +3744,7 @@ impl Federation {
             Federation::WRPFLatvia => Some(Federation::WRPF),
             Federation::WRPFLithuania => Some(Federation::WRPF),
             Federation::WRPFMEX => Some(Federation::WRPF),
+            Federation::WRPFNEPAL => Some(Federation::WRPF),
             Federation::WRPFNIC => Some(Federation::WRPF),
             Federation::WRPFPeru => Some(Federation::WRPF),
             Federation::WRPFPOL => Some(Federation::WRPF),
@@ -4314,6 +4330,7 @@ impl Federation {
             Federation::WRPFBolivia => PointsSystem::Wilks,
             Federation::WRPFBrazil => PointsSystem::Wilks,
             Federation::WRPFBulgaria => PointsSystem::Wilks,
+            Federation::WRPFCameroon => PointsSystem::Wilks,
             Federation::WRPFCAN => PointsSystem::Wilks,
             Federation::WRPFChile => PointsSystem::Wilks,
             Federation::WRPFColombia => PointsSystem::Wilks,
@@ -4334,6 +4351,7 @@ impl Federation {
             Federation::WRPFLatvia => PointsSystem::Wilks,
             Federation::WRPFLithuania => PointsSystem::Wilks,
             Federation::WRPFMEX => PointsSystem::Wilks,
+            Federation::WRPFNEPAL => PointsSystem::Wilks,
             Federation::WRPFNIC => PointsSystem::Wilks,
             Federation::WRPFPeru => PointsSystem::Wilks,
             Federation::WRPFPOL => PointsSystem::Wilks,

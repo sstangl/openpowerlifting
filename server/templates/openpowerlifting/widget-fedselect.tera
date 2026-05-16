@@ -213,6 +213,9 @@
   <option value="wrpf-bulgaria" {% if selection.federation == "WRPF-Bulgaria" %}selected{% endif %}>WRPF Bulgaria</option>
   <option value="bulgarianpf" {% if selection.federation == "BulgarianPF" %}selected{% endif %}>BulgarianPF [IPF]</option>
 </optgroup>
+<optgroup label="{{strings.country.cameroon}}">
+  <option value="wrpf-cameroon" {% if selection.federation == "WRPF-Cameroon" %}selected{% endif %}>WRPF Cameroon [WRPF]</option>
+</optgroup>
 <optgroup label="{{strings.country.canada}}">
   <option value="all-canada" {% if selection.federation == "AllCanada" %}selected{% endif %}>{{strings.selectors.fed.all_canada}}</option>
   <option value="cpa" {% if selection.federation == "CPA" %}selected{% endif %}>CPA - Canadian Powerlifting Association [WPA]</option>
@@ -502,6 +505,7 @@
 <optgroup label="{{strings.country.nepal}}">
   <option value="all-nepal" {% if selection.federation == "AllNepal" %}selected{% endif %}>{{strings.selectors.fed.all_nepal}}</option>
   <option value="nyfc" {% if selection.federation == "NYFC" %}selected{% endif %}>NYFC - Nepal Youth Fitness & Calisthenics [WP]</option>
+  <option value="wrpf-nepal" {% if selection.federation == "WRPF-Nepal" %}selected{% endif %}>WPRF Nepal [WRPF]</option>
 </optgroup>  
 <optgroup label="{{strings.country.netherlands}}">
   <option value="all-netherlands" {% if selection.federation == "AllNetherlands" %}selected{% endif %}>{{strings.selectors.fed.all_netherlands}}</option>
