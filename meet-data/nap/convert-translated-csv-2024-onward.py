@@ -7,8 +7,8 @@ import sys
 import logging
 import os
 
-log_level = os.getenv("LOG_LEVEL").upper() or "INFO"
-logging.basicConfig(level=log_level)
+log_level = os.getenv("LOG_LEVEL") or "INFO"
+logging.basicConfig(level=log_level.upper())
 logger = logging.getLogger(__name__)
 
 # this takes an original.csv translated to English, having previously been
@@ -83,7 +83,7 @@ def get_section_metadata(section_header_str):
     logger.debug(f"Determined section metadata:{section_d}") 
     return section_d
 
-def lifter_name(cyrillic_name):
+def transform_lifter_name(cyrillic_name):
     # expect "family given [patronymic]", return "given family"
     # "DC-" is either "Defending Champion" or "Doping Control"
     # either way, we're stripping it for now
@@ -92,6 +92,12 @@ def lifter_name(cyrillic_name):
     if len(elements) < 2:
         return cyrillic_name
     return f"{elements[1]} {elements[0]}"
+
+def fix_weight_class(weight_class):
+    # turn "+x" into "x+"
+    if weight_class.startswith("+"):
+        return f"{weight_class[1:]}+"
+    return weight_class
 
 def make_opl_entry(section_entry_d, section_metadata_d):
     logger.debug(f"Original entry:{section_entry_d}")
@@ -102,10 +108,10 @@ def make_opl_entry(section_entry_d, section_metadata_d):
         f'{section_metadata_d["div_performance_class"]} {section_entry_d["Age Division"]}'
     opl_entry_d["Place"] = \
         section_entry_d["Place"] if section_entry_d["Place"] != "-" else "DQ"
-    opl_entry_d["CyrillicName"] = lifter_name(section_entry_d["CyrillicName"])
+    opl_entry_d["CyrillicName"] = transform_lifter_name(section_entry_d["CyrillicName"])
     opl_entry_d["Sex"] = section_entry_d["Sex"]
     opl_entry_d["Equipment"] = section_metadata_d["equipment"]
-    opl_entry_d["WeightClassKg"] = section_entry_d["Weight Class"]
+    opl_entry_d["WeightClassKg"] = fix_weight_class(section_entry_d["Weight Class"])
     opl_entry_d["BodyweightKg"] = section_entry_d["Weight"]
     if section_metadata_d["event"] in ["S", "SBD"]:
         opl_entry_d["Squat1Kg"] = lift(section_entry_d["A1"])
@@ -129,6 +135,7 @@ def make_opl_entry(section_entry_d, section_metadata_d):
         opl_entry_d["Deadlift4Kg"] = lift(section_entry_d["C4(R)"])
         opl_entry_d["Best3DeadliftKg"] = lift(section_entry_d["Deadlift pull"])
     opl_entry_d["TotalKg"] = section_entry_d["Total"]
+    opl_entry_d["Event"] = section_metadata_d["event"]
     logger.debug(f"OPL entry:{opl_entry_d}")
     return opl_entry_d
 
@@ -230,7 +237,7 @@ if __name__ == "__main__":
             "Federation": "NAP", "Date": "", "MeetCountry": "Russia", "MeetState": "",
             "MeetTown": "", "MeetName": ""
         }
-        meet_dw = DictWriter(meet_f, meet_d.keys())
+        meet_dw = DictWriter(meet_f, meet_d.keys(), lineterminator="\n")
         meet_dw.writeheader()
         meet_dw.writerow(meet_d)
         logger.info("Wrote default meet.csv file, this will need manual filling-in")
@@ -245,8 +252,9 @@ if __name__ == "__main__":
                     "Squat2Kg", "Squat3Kg", "Squat4Kg", "Best3SquatKg",
                     "Bench1Kg", "Bench2Kg", "Bench3Kg", "Bench4Kg", "Best3BenchKg",
                     "Deadlift1Kg", "Deadlift2Kg", "Deadlift3Kg", "Deadlift4Kg",
-                    "Best3DeadliftKg", "TotalKg"
-                ]
+                    "Best3DeadliftKg", "TotalKg", "Event"
+                ],
+                lineterminator="\n"
             )
             entries_dw.writeheader()
             entry_i = None
