@@ -41,20 +41,15 @@ impl Default for EntryFilter {
 }
 
 /// Limits a query to specific equipment.
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq, Serialize)]
 pub enum EquipmentFilter {
     Raw,
     Wraps,
+    #[default]
     RawAndWraps,
     Single,
     Multi,
     Unlimited,
-}
-
-impl Default for EquipmentFilter {
-    fn default() -> Self {
-        Self::RawAndWraps
-    }
 }
 
 impl FromStr for EquipmentFilter {
@@ -692,23 +687,18 @@ impl FromStr for EventFilter {
 }
 
 /// The sort selector widget.
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize)]
+#[derive(Copy, Clone, Debug, Default, PartialEq, Eq, Serialize)]
 pub enum OrderBy {
     Squat,
     Bench,
     Deadlift,
     Total,
+    #[default]
     Dots,
     Glossbrenner,
     Goodlift,
     McCulloch,
     Wilks,
-}
-
-impl Default for OrderBy {
-    fn default() -> Self {
-        Self::Dots
-    }
 }
 
 impl FromStr for OrderBy {

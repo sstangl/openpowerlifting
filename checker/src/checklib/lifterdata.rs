@@ -339,7 +339,7 @@ fn check_name_disambiguation(
 
 pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> LifterDataCheckResult {
     let mut reports: Vec<Report> = vec![];
-    let mut map = LifterDataMap::with_hasher(FxBuildHasher::default());
+    let mut map = LifterDataMap::with_hasher(FxBuildHasher);
 
     // Check donator-colors.csv.
     // Always create the report in order to catch internal errors.

@@ -115,7 +115,7 @@ impl AllMeetData {
     /// so that the Entry can know its `SingleMeetData` context.
     pub fn create_liftermap(&mut self) -> LifterMap {
         // Initialize the LifterMap to be fairly large to avoid reallocation.
-        let mut map = LifterMap::with_capacity_and_hasher(1_000_000, FxBuildHasher::default());
+        let mut map = LifterMap::with_capacity_and_hasher(1_000_000, FxBuildHasher);
 
         for (meet_index, singlemeet) in self.meets.iter_mut().enumerate() {
             for (entry_index, entry) in singlemeet.entries.iter_mut().enumerate() {

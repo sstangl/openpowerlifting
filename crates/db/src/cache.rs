@@ -210,7 +210,7 @@ pub struct StaticCache {
 impl StaticCache {
     pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
         // Calculate the map from Username to ID.
-        let mut username_map = FxHashMap::with_hasher(FxBuildHasher::default());
+        let mut username_map = FxHashMap::with_hasher(FxBuildHasher);
         for (i, lifter) in lifters.iter().enumerate() {
             let cloned = CompactString::from(lifter.username.as_str());
             username_map.insert(cloned, i as u32);

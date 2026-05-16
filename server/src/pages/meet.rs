@@ -432,7 +432,7 @@ fn finish_table<'db>(
     entries: &mut [&'db Entry],
     use_ipf_equipment: bool,
 ) -> Table<'db> {
-    entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
+    entries.sort_unstable_by_key(|a| a.place);
 
     let units = locale.units;
     let format = locale.number_format;
