@@ -54,7 +54,8 @@ fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
             ageclass: AgeClassFilter::AllAges,
             year: YearFilter::AllYears,
             event: EventFilter::FullPower,
-            state: None,
+            home_country: None,
+            home_state: None,
         },
         order_by: OrderBy::Goodlift,
     }
@@ -202,7 +203,8 @@ pub fn records(
         classkind: pages::records::ClassKind::IPF,
         ageclass: default_rankings.filter.ageclass,
         year: default_rankings.filter.year,
-        state: None,
+        home_country: None,
+        home_state: None,
     };
 
     let selection = if let Some(sel) = selections {

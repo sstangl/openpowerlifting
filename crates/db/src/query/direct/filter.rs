@@ -20,7 +20,8 @@ pub struct EntryFilter {
     pub ageclass: AgeClassFilter,
     pub year: YearFilter,
     pub event: EventFilter,
-    pub state: Option<State>,
+    pub home_country: Option<Country>,
+    pub home_state: Option<State>,
 }
 
 impl Default for EntryFilter {
@@ -33,7 +34,8 @@ impl Default for EntryFilter {
             ageclass: AgeClassFilter::AllAges,
             year: YearFilter::AllYears,
             event: EventFilter::AllEvents,
-            state: None,
+            home_country: None,
+            home_state: None,
         }
     }
 }

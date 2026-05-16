@@ -15,6 +15,8 @@ use std::str::FromStr;
 use super::FromPathError;
 
 /// Query selection descriptor, corresponding to HTML widgets.
+///
+/// The serialization is directly passed to the client-side script for updating widgets.
 #[derive(Copy, Clone, PartialEq, Eq, Serialize)]
 pub struct RecordsQuery {
     pub equipment: EquipmentFilter,
@@ -23,7 +25,10 @@ pub struct RecordsQuery {
     pub classkind: ClassKind,
     pub ageclass: AgeClassFilter,
     pub year: YearFilter,
-    pub state: Option<State>,
+
+    #[serde(serialize_with = "Country::serialize_opt_as_url_segment")]
+    pub home_country: Option<Country>,
+    pub home_state: Option<State>,
 }
 
 impl Default for RecordsQuery {
@@ -35,7 +40,8 @@ impl Default for RecordsQuery {
             classkind: ClassKind::Traditional,
             ageclass: AgeClassFilter::AllAges,
             year: YearFilter::AllYears,
-            state: None,
+            home_country: None,
+            home_state: None,
         }
     }
 }
@@ -50,7 +56,8 @@ impl RecordsQuery {
                 sex: self.sex,
                 ageclass: self.ageclass,
                 year: self.year,
-                state: self.state,
+                home_country: self.home_country,
+                home_state: self.home_state,
                 ..default.filter
             },
             ..*default
@@ -78,6 +85,7 @@ impl RecordsQuery {
         let mut parsed_classkind: bool = false;
         let mut parsed_ageclass: bool = false;
         let mut parsed_year: bool = false;
+        let mut parsed_country: bool = false;
         let mut parsed_state: bool = false;
 
         // Iterate over each path component, attempting to determine
@@ -130,11 +138,19 @@ impl RecordsQuery {
                 }
                 ret.year = y;
                 parsed_year = true;
-            } else if let Ok(s) = State::from_full_code(segment) {
-                if parsed_state {
+            // Check whether this is country information.
+            } else if let Some(c) = Country::from_url_segment(segment) {
+                if parsed_country || parsed_state {
                     return Err(FromPathError::ConflictingComponent);
                 }
-                ret.state = Some(s);
+                ret.home_country = Some(c);
+                parsed_country = true;
+            // Check whether this is state information.
+            } else if let Ok(s) = State::from_full_code(segment) {
+                if parsed_country || parsed_state {
+                    return Err(FromPathError::ConflictingComponent);
+                }
+                ret.home_state = Some(s);
                 parsed_state = true;
             // Unknown string, therefore malformed URL.
             } else {

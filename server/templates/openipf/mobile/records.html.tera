@@ -32,8 +32,11 @@
       </select>
       {% include "openipf/widget-ageselect" %}
       {% include "widget-yearselect" %}
+      <select id="countryselect" style="display: none">
+        <option value="{{selection.home_country}}" selected></option>
+      </select>
       <select id="stateselect" style="display: none">
-        <option value="{{selection.state}}" selected></option>
+        <option value="{{selection.home_state}}" selected></option>
       </select>
     </div>
 

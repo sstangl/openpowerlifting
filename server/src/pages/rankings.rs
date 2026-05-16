@@ -2,7 +2,7 @@
 
 use langpack::Language;
 use opldb::query::direct::*;
-use opltypes::states::State;
+use opltypes::{Country, states::State};
 
 use crate::pages::api_rankings::query_slice;
 
@@ -18,7 +18,10 @@ pub struct RankingsWidgets {
     pub ageclass: AgeClassFilter,
     pub year: YearFilter,
     pub event: EventFilter,
-    pub state: Option<State>,
+
+    #[serde(serialize_with = "Country::serialize_opt_as_url_segment")]
+    pub home_country: Option<Country>,
+    pub home_state: Option<State>,
     pub sort: OrderBy,
 }
 
@@ -32,7 +35,8 @@ impl From<&RankingsQuery> for RankingsWidgets {
             ageclass: q.filter.ageclass,
             year: q.filter.year,
             event: q.filter.event,
-            state: q.filter.state,
+            home_country: q.filter.home_country,
+            home_state: q.filter.home_state,
             sort: q.order_by,
         }
     }

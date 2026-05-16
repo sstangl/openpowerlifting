@@ -293,15 +293,30 @@ pub fn entry_indices_for<'db>(
         }
     };
 
-    // Filter by State manually.
-    if selection.state.is_some() {
+    // Filter by State and Country manually, preferring State.
+    if selection.home_state.is_some() {
         let filter = NonSortedNonUnique(
             cur.0
                 .iter()
-                .filter_map(|&i| match opldb.entry(i).lifter_state == selection.state {
-                    true => Some(i),
-                    false => None,
-                })
+                .filter_map(
+                    |&i| match opldb.entry(i).lifter_state == selection.home_state {
+                        true => Some(i),
+                        false => None,
+                    },
+                )
+                .collect(),
+        );
+        cur = Cow::Owned(filter);
+    } else if selection.home_country.is_some() {
+        let filter = NonSortedNonUnique(
+            cur.0
+                .iter()
+                .filter_map(
+                    |&i| match opldb.entry(i).lifter_country == selection.home_country {
+                        true => Some(i),
+                        false => None,
+                    },
+                )
                 .collect(),
         );
         cur = Cow::Owned(filter);
@@ -470,7 +485,8 @@ pub fn full_sorted_uniqued<'db>(
         && query.filter.year == YearFilter::AllYears
         && query.filter.ageclass == AgeClassFilter::AllAges
         && query.filter.event == EventFilter::AllEvents
-        && query.filter.state.is_none()
+        && query.filter.home_country.is_none()
+        && query.filter.home_state.is_none()
     {
         let by_sort = match query.order_by {
             OrderBy::Squat => &cache.constant_time.squat,
