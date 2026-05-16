@@ -1916,7 +1916,7 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Bulgaria", serialize = "wrpf-bulgaria")]
     WRPFBulgaria,
 
-        /// Cameroon WRPF affiliate.
+    /// Cameroon WRPF affiliate.
     #[serde(rename = "WRPF-Cameroon")]
     #[strum(to_string = "WRPF-Cameroon", serialize = "wrpf-cameroon")]
     WRPFCameroon,
@@ -2024,7 +2024,7 @@ pub enum Federation {
     /// Nepalese WRPF affiliate.
     #[serde(rename = "WRPF-Nepal")]
     #[strum(to_string = "WRPF-Nepal", serialize = "wrpf-nepal")]
-    WRPFNEPAL,
+    WRPFNepal,
 
     /// Nicaraguan WRPF affiliate.
     #[serde(rename = "WRPF-NIC")]
@@ -2646,7 +2646,7 @@ impl Federation {
             Federation::WRPFLatvia => false,
             Federation::WRPFLithuania => false,
             Federation::WRPFMEX => false,
-            Federation::WRPFNEPAL => false,
+            Federation::WRPFNepal => false,
             Federation::WRPFNIC => false,
             Federation::WRPFPOL => false,
             Federation::WRPFQatar => false,
@@ -3133,7 +3133,7 @@ impl Federation {
             Federation::WRPFLatvia => Some(Country::Latvia),
             Federation::WRPFLithuania => Some(Country::Lithuania),
             Federation::WRPFMEX => Some(Country::Mexico),
-            Federation::WRPFNEPAL => Some(Country::Nepal),
+            Federation::WRPFNepal => Some(Country::Nepal),
             Federation::WRPFNIC => Some(Country::Nicaragua),
             Federation::WRPFPeru => Some(Country::Peru),
             Federation::WRPFPOL => Some(Country::Poland),
@@ -3289,7 +3289,7 @@ impl Federation {
             Federation::CzechiaUA => None,
             Federation::DBKV => None,
             Federation::DFPFNL => Some(Federation::WDFPF),
-			Federation::DDFPA => Some(Federation::IntDFPA),
+            Federation::DDFPA => Some(Federation::IntDFPA),
             Federation::DPL => Some(Federation::IPL),
             Federation::DSF => Some(Federation::IPF),
             Federation::EgyptPF => Some(Federation::IPF),
@@ -3744,7 +3744,7 @@ impl Federation {
             Federation::WRPFLatvia => Some(Federation::WRPF),
             Federation::WRPFLithuania => Some(Federation::WRPF),
             Federation::WRPFMEX => Some(Federation::WRPF),
-            Federation::WRPFNEPAL => Some(Federation::WRPF),
+            Federation::WRPFNepal => Some(Federation::WRPF),
             Federation::WRPFNIC => Some(Federation::WRPF),
             Federation::WRPFPeru => Some(Federation::WRPF),
             Federation::WRPFPOL => Some(Federation::WRPF),
@@ -3908,7 +3908,7 @@ impl Federation {
             Federation::CSST => PointsSystem::Wilks,
             Federation::CTPA => Federation::ipf_rules_on(date),
             Federation::DBKV => PointsSystem::Wilks,
-			Federation::DDFPA => PointsSystem::Dots,
+            Federation::DDFPA => PointsSystem::Dots,
             Federation::DFPFNL => PointsSystem::Wilks,
             Federation::DPL => PointsSystem::Dots,
             Federation::CyprusPF => Federation::ipf_rules_on(date),
@@ -4351,7 +4351,7 @@ impl Federation {
             Federation::WRPFLatvia => PointsSystem::Wilks,
             Federation::WRPFLithuania => PointsSystem::Wilks,
             Federation::WRPFMEX => PointsSystem::Wilks,
-            Federation::WRPFNEPAL => PointsSystem::Wilks,
+            Federation::WRPFNepal => PointsSystem::Wilks,
             Federation::WRPFNIC => PointsSystem::Wilks,
             Federation::WRPFPeru => PointsSystem::Wilks,
             Federation::WRPFPOL => PointsSystem::Wilks,
