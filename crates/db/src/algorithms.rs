@@ -311,15 +311,12 @@ pub fn entry_indices_for<'db>(
         let filter = NonSortedNonUnique(
             cur.0
                 .iter()
-                .filter_map(|&i| {
-                    match opldb.entry(i).lifter_country == selection.home_country
-                        || opldb.meet(opldb.entry(i).meet_id).federation.home_country()
-                            == selection.home_country
-                    {
+                .filter_map(
+                    |&i| match opldb.entry(i).lifter_country == selection.home_country {
                         true => Some(i),
                         false => None,
-                    }
-                })
+                    },
+                )
                 .collect(),
         );
         cur = Cow::Owned(filter);
