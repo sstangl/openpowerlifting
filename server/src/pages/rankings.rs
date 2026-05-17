@@ -21,6 +21,7 @@ pub struct RankingsWidgets {
 
     #[serde(serialize_with = "Country::serialize_opt_as_url_segment")]
     pub home_country: Option<Country>,
+    #[serde(serialize_with = "State::serialize_opt_as_url_segment")]
     pub home_state: Option<State>,
     pub sort: OrderBy,
 }

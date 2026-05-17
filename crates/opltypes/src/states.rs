@@ -139,12 +139,11 @@ impl State {
     /// Constructs a State given a URL segment, formatted like "usa-ny".
     pub fn from_url_segment(s: &str) -> Option<State> {
         // Split from the back, since countries may have '-' when encoded for URLs.
-        let Some((country_str, state_str)) = s.rsplit_once('-') else {
-            return None;
-        };
+        let (country_str, state_str) = s.rsplit_once('-')?;
 
         let country = Country::from_url_segment(country_str)?;
         let state_str_uppercase = state_str.to_ascii_uppercase();
+
         State::from_str_and_country(&state_str_uppercase, country).ok()
     }
 
@@ -409,7 +408,7 @@ pub enum BrazilState {
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, Display, EnumString, EnumIter, PartialEq, Eq, Serialize)]
 pub enum CanadaState {
-    AB, BC, MB, NB, NL, NT, NS, NU, ON, PE, QC, SK, YT
+    AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT
 }
 
 /// A state in Chile.
@@ -1125,9 +1124,9 @@ pub enum UAEState {
 #[rustfmt::skip]
 #[derive(Copy, Clone, Debug, Display, EnumString, EnumIter, PartialEq, Eq, Serialize)]
 pub enum USAState {
-    AL, AK, AZ, AR, CA, CO, CT, DE, DC, FL, GA, HI, ID, IL, IN, IA, KS,
-    KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC,
-    ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY,
+    AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS,
+    KY, LA, MA, MD, ME, MI, MN, MO, MS, MT, NC, ND, NE, NH, NJ, NM, NV,
+    NY, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WI, WV, WY,
 
     /// Guam is an unincorporated territory of the USA.
     GU,

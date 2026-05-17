@@ -7,6 +7,7 @@
     const default_equipment = "raw";
     const default_classkind = "ipf-classes";
     const default_fed = "ipf-and-affiliates";
+    const default_nationality = "all";
     const default_sex = "men";
     const default_ageclass = "all";
     const default_year = "all";
@@ -25,6 +26,9 @@
   <div id="controls">
     <div id="controls-left">
       {% include "openipf/widget-fedselect" %}
+      <select id="nationalityselect" style="display: none">
+        <option value="all" selected></option>
+      </select>
       {% include "openipf/widget-equipmentselect" %}
       <select id="sexselect">
         <option value="men" {% if selection.sex == "Men" %}selected{% endif %}>{{strings.selectors.sex.m}}</option>

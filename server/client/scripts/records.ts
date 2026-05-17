@@ -26,6 +26,7 @@ declare const urlprefix: string;
 declare const default_equipment: string;
 declare const default_classkind: string | undefined;
 declare const default_fed: string;
+declare const default_nationality: string;
 declare const default_sex: string;
 declare const default_ageclass: string;
 declare const default_year: string;
@@ -33,11 +34,10 @@ declare const default_year: string;
 let selEquipment: HTMLSelectElement;
 let selClassKind: HTMLSelectElement | null; // OpenIPF doesn't use this.
 let selSex: HTMLSelectElement;
+let selNationality: HTMLSelectElement;
 let selFederation: HTMLSelectElement;
 let selAgeClass: HTMLSelectElement;
 let selRecordsYear: HTMLSelectElement;
-let selCountry: HTMLSelectElement;
-let selState: HTMLSelectElement;
 
 // Returns a string like "/women/uspa", or the empty string
 // for the default selection.
@@ -52,6 +52,9 @@ function records_selection_to_path(): string {
     if (selFederation.value !== default_fed) {
         url += "/" + selFederation.value;
     }
+    if (selNationality.value !== default_nationality) {
+        url += "/" + selNationality.value;
+    }
     if (selSex.value !== default_sex) {
         url += "/" + selSex.value;
     }
@@ -60,12 +63,6 @@ function records_selection_to_path(): string {
     }
     if (selRecordsYear.value !== default_year) {
         url += "/" + selRecordsYear.value;
-    }
-    if (selCountry.value !== "") {
-        url += "/" + selCountry.value;
-    }
-    if (selState.value !== "") {
-        url += "/" + selState.value;
     }
     return url;
 }
@@ -126,18 +123,15 @@ function renderSelectedFilters(): void {
         label = label.split(" - ")[0];
         newFilter(div, label);
     }
+    if (selNationality.value !== "") {
+        newFilter(div, selNationality.selectedOptions[0].label);
+    }
 
     if (selAgeClass.value !== default_ageclass) {
         newFilter(div, selAgeClass.selectedOptions[0].label);
     }
     if (selRecordsYear.value !== default_year) {
         newFilter(div, selRecordsYear.selectedOptions[0].label);
-    }
-    if (selCountry.value !== "") {
-        newFilter(div, selCountry.selectedOptions[0].label);
-    }
-    if (selState.value !== "") {
-        newFilter(div, selState.selectedOptions[0].label);
     }
 }
 
@@ -146,19 +140,17 @@ function initRecords() {
     selClassKind = document.getElementById("classkindselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;
     selFederation = document.getElementById("fedselect") as HTMLSelectElement;
+    selNationality = document.getElementById("nationalityselect") as HTMLSelectElement;
     selAgeClass = document.getElementById("ageselect") as HTMLSelectElement;
     selRecordsYear = document.getElementById("yearselect") as HTMLSelectElement;
-    selCountry = document.getElementById("countryselect") as HTMLSelectElement;
-    selState = document.getElementById("stateselect") as HTMLSelectElement;
 
     records_addSelectorListeners(selEquipment);
     records_addSelectorListeners(selClassKind);
     records_addSelectorListeners(selSex);
     records_addSelectorListeners(selFederation);
+    records_addSelectorListeners(selNationality);
     records_addSelectorListeners(selAgeClass);
     records_addSelectorListeners(selRecordsYear);
-    // Intentionally missing selCountry: it's a hidden element.
-    // Intentionally missing selState: it's a hidden element.
 
     renderSelectedFilters();
 }

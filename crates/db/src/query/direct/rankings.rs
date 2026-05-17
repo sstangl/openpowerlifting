@@ -1,6 +1,7 @@
 //! Interface for efficiently querying rankings.
 
 use opltypes::Country;
+use opltypes::states::State;
 
 use std::ffi::OsStr;
 use std::path::Path;
@@ -129,8 +130,8 @@ impl RankingsQuery {
                 }
                 ret.filter.home_country = Some(c);
                 parsed_country = true;
-            // Check whether this is a Country-State code.
-            } else if let Ok(s) = opltypes::states::State::from_full_code(segment) {
+            // Check whether this is a Country-State code formatted like "usa-ny".
+            } else if let Some(s) = State::from_url_segment(segment) {
                 if parsed_country || parsed_state {
                     return Err(FromPathError::ConflictingComponent);
                 }

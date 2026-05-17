@@ -7,6 +7,7 @@
     const default_equipment = "raw_wraps";
     const default_classkind = "traditional-classes";
     const default_fed = "all";
+    const default_nationality = "all";
     const default_sex = "men";
     const default_ageclass = "all";
     const default_year = "all";
@@ -25,6 +26,7 @@
   <div id="controls">
     <div id="controls-left">
       {% include "openpowerlifting/widget-fedselect" %}
+      {% include "openpowerlifting/widget-nationalityselect" %}
       {% include "openpowerlifting/widget-equipmentselect" %}
       <select id="classkindselect">
         <option value="traditional-classes" {% if selection.classkind == "Traditional" %}selected{% endif %}>{{strings.selectors.weightclass.traditional}}</option>
@@ -39,12 +41,6 @@
       </select>
       {% include "openpowerlifting/widget-ageselect" %}
       {% include "widget-yearselect" %}
-      <select id="countryselect" style="display: none">
-        <option value="{{selection.home_country}}" selected></option>
-      </select>
-      <select id="stateselect" style="display: none">
-        <option value="{{selection.home_state}}" selected></option>
-      </select>
     </div>
   </div>
 {% endblock controls %}

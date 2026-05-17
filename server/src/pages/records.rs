@@ -28,6 +28,7 @@ pub struct RecordsQuery {
 
     #[serde(serialize_with = "Country::serialize_opt_as_url_segment")]
     pub home_country: Option<Country>,
+    #[serde(serialize_with = "State::serialize_opt_as_url_segment")]
     pub home_state: Option<State>,
 }
 
@@ -145,8 +146,18 @@ impl RecordsQuery {
                 }
                 ret.home_country = Some(c);
                 parsed_country = true;
-            // Check whether this is state information.
+            // Check whether this is a Country-State code formatted like "USA-NY".
+            //
+            // Although the URL-encoded form ("usa-ny") is preferred, some organizations
+            // have hardcoded links using the old format, and we don't want to break their URLs.
             } else if let Ok(s) = State::from_full_code(segment) {
+                if parsed_country || parsed_state {
+                    return Err(FromPathError::ConflictingComponent);
+                }
+                ret.home_state = Some(s);
+                parsed_state = true;
+            // Check whether this is a Country-State code formatted like "usa-ny".
+            } else if let Some(s) = State::from_url_segment(segment) {
                 if parsed_country || parsed_state {
                     return Err(FromPathError::ConflictingComponent);
                 }
