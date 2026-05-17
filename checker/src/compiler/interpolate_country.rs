@@ -67,38 +67,68 @@ fn consistent_country(
     indices: &[EntryIndex],
     debug: bool,
 ) -> Option<Country> {
-    let mut acc: Option<Country> = None;
+    // There are two common arrangements for reporting a lifter's country:
+    //  1. When a lifter competes domestically, it is typical to not mark their country,
+    //     since it is obvious from context.
+    //  2. When a lifter competes internationally, it is typical to mark their country.
+    let mut explicit_acc: Option<Country> = None; // Where the Country is marked explicitly.
+    let mut implicit_acc: Option<Country> = None; // Where the Country is implicit from the fed.
+    let mut found_implicit_conflict = false;
 
+    // First, check for any entries where the lifter's country is explicitly marked.
     for &index in indices {
-        // Get the MeetPath for more helpful debugging output.
-        let path: Option<String> = if debug {
-            Some(meetdata.meet(index).path.clone())
-        } else {
-            None
-        };
-
+        let meet = meetdata.meet(index);
         let entry = meetdata.entry(index);
 
-        match (entry.country, acc) {
-            (Some(country), None) => {
-                trace_found_initial(debug, country, &path);
-                acc = Some(country);
-            }
-            (Some(country), Some(acc_country)) => {
+        // Get the MeetPath for more helpful debugging output.
+        let path: Option<String> = debug.then(|| meet.path.clone());
+
+        // Check for consistency with the explicit results.
+        if let Some(country) = entry.country {
+            if let Some(acc_country) = explicit_acc {
                 if country == acc_country || country.contains(acc_country) {
                     trace_matched(debug, country, &path);
                 } else if acc_country.contains(country) {
                     trace_matched(debug, country, &path);
-                    acc = Some(country);
+                    explicit_acc = Some(country); // This country is more specific.
                 } else {
                     trace_conflict(debug, country, &path);
-                    return None;
+                    return None; // Two explicit results contradict: can't be fixed.
                 }
+            } else {
+                trace_found_initial(debug, country, &path);
+                explicit_acc = Some(country);
             }
-            (None, _) => (),
+        }
+
+        // Check for consistency with the implicit results.
+        if !found_implicit_conflict && let Some(country) = meet.federation.home_country() {
+            if let Some(acc_country) = implicit_acc {
+                if country == acc_country || country.contains(acc_country) {
+                    continue;
+                } else if acc_country.contains(country) {
+                    implicit_acc = Some(country);
+                } else {
+                    found_implicit_conflict = true;
+                    implicit_acc = None;
+                }
+            } else {
+                implicit_acc = Some(country);
+            }
         }
     }
-    acc
+
+    // Prefer explicit data when returning.
+    if explicit_acc.is_some() {
+        return explicit_acc;
+    }
+
+    // But if there is no explicit data, prefer consistent implicit data.
+    if debug && found_implicit_conflict {
+        println!("{}", "No consistent federation.home_country()".bold().red());
+        return None;
+    }
+    implicit_acc
 }
 
 /// Country interpolation for a single lifter's entries.
@@ -159,7 +189,7 @@ mod tests {
         AllMeetData::from(vec![singlemeetdata])
     }
 
-    /// If no entries have a set Country, interpolation should not do anything.
+    /// If no entries have a set Country, interpolation should take the host country.
     #[test]
     fn all_none() {
         let entries = vec![Entry::default(), Entry::default()];
@@ -167,8 +197,8 @@ mod tests {
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
-        assert_eq!(meetdata.entry_at(0, 0).country, None);
-        assert_eq!(meetdata.entry_at(0, 1).country, None);
+        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::Russia));
+        assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::Russia));
     }
 
     /// If only one entry has a set Country, propagate that Country.
