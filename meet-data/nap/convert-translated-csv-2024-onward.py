@@ -6,6 +6,7 @@ from csv import DictReader, DictWriter
 import sys
 import logging
 import os
+import re
 
 log_level = os.getenv("LOG_LEVEL") or "INFO"
 logging.basicConfig(level=log_level.upper())
@@ -99,13 +100,26 @@ def fix_weight_class(weight_class):
         return f"{weight_class[1:]}+"
     return weight_class
 
+def make_division(perf_class, age_div):
+    # for eg: Pro, Masters M1(40-44) -> Pro Masters 40-44
+    # Amateur, Juniors(20-23) -> Amateur Juniors 20-23
+    logger.debug(f"Making division for perf class:{perf_class} and age div:{age_div}")
+    # Note that the un-translated original uses Cyrillic М not latin M
+    age_div = re.sub(r" M\d+", "", age_div)    
+    age_div = re.sub(r"\((\d+-\d+)\)", r" \1", age_div)
+    div = f"{perf_class} {age_div}"
+    logger.debug(f"Made division:{div}")
+    return div
+
 def make_opl_entry(section_entry_d, section_metadata_d):
     logger.debug(f"Original entry:{section_entry_d}")
     logger.debug(f"Section metadata:{section_metadata_d}")
     opl_entry_d = {}
     opl_entry_d["BirthDate"], opl_entry_d["Age"] = parse_born(section_entry_d["Born"])
-    opl_entry_d["Division"] = \
-        f'{section_metadata_d["div_performance_class"]} {section_entry_d["Age Division"]}'
+    opl_entry_d["Division"] = make_division(
+        section_metadata_d["div_performance_class"],
+        section_entry_d["Age Division"]
+    )
     opl_entry_d["Place"] = \
         section_entry_d["Place"] if section_entry_d["Place"] != "-" else "DQ"
     opl_entry_d["CyrillicName"] = transform_lifter_name(section_entry_d["CyrillicName"])
