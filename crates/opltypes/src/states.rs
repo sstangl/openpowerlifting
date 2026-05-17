@@ -136,6 +136,18 @@ impl State {
         Self::from_str_and_country(parts[1], country)
     }
 
+    /// Constructs a State given a URL segment, formatted like "usa-ny".
+    pub fn from_url_segment(s: &str) -> Option<State> {
+        // Split from the back, since countries may have '-' when encoded for URLs.
+        let Some((country_str, state_str)) = s.rsplit_once('-') else {
+            return None;
+        };
+
+        let country = Country::from_url_segment(country_str)?;
+        let state_str_uppercase = state_str.to_ascii_uppercase();
+        State::from_str_and_country(&state_str_uppercase, country).ok()
+    }
+
     /// Returns the Country for the given State.
     ///
     /// # Examples
@@ -199,6 +211,28 @@ impl State {
             State::InSouthAfrica(s) => s.to_string(),
             State::InUAE(s) => s.to_string(),
             State::InUSA(s) => s.to_string(),
+        }
+    }
+
+    /// Returns a fully-qualified State formatted for inclusion in a URL.
+    ///
+    /// For example, `USA-NY` will be rendered as `usa-ny`.
+    pub fn as_url_segment(self) -> String {
+        let country_segment = self.to_country().as_url_segment();
+        let state_segment = self.to_state_string().to_ascii_lowercase();
+        format!("{country_segment}-{state_segment}")
+    }
+
+    /// Serializes as optional fully-qualified state for inclusion in URLs.
+    ///
+    /// Helper function for use with the `#serde[serialize_with]` attribute.
+    pub fn serialize_opt_as_url_segment<S>(v: &Option<Self>, s: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        match v {
+            None => s.serialize_none(),
+            Some(state) => s.serialize_str(&state.as_url_segment()),
         }
     }
 }
@@ -1096,5 +1130,90 @@ pub enum USAState {
     ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY,
 
     /// Guam is an unincorporated territory of the USA.
-    Guam,
+    GU,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Asserts that all state names are fully-capitalized.
+    ///
+    /// The URL segment parsing code depends on this behavior: it converts to uppercase
+    /// and then passes the state through the normal parsing logic.
+    #[test]
+    fn all_states_are_uppercase_ascii() {
+        for state in ArgentinaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in AustraliaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in BrazilState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in CanadaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in ChileState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in ChinaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in EnglandState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in GermanyState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in GreeceState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in IndiaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in MexicoState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in NetherlandsState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in NewZealandState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in RomaniaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in RussiaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in SouthAfricaState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in UAEState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+        for state in USAState::iter() {
+            assert!(state.to_string().is_ascii());
+            assert_eq!(state.to_string(), state.to_string().to_uppercase());
+        }
+    }
 }
