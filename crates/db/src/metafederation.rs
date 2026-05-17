@@ -27,212 +27,20 @@ pub enum MetaFederation {
     #[strum(to_string = "all-tested")]
     AllTested,
 
-    #[strum(to_string = "all-algeria")]
-    AllAlgeria,
-    #[strum(to_string = "all-argentina")]
-    AllArgentina,
-    #[strum(to_string = "all-australia")]
-    AllAustralia,
-    #[strum(to_string = "all-australia-tested")]
-    AllAustraliaTested,
-    #[strum(to_string = "all-austria")]
-    AllAustria,
-    #[strum(to_string = "all-azerbaijan")]
-    AllAzerbaijan,
-    #[strum(to_string = "all-belarus")]
-    AllBelarus,
-    #[strum(to_string = "all-belgium")]
-    AllBelgium,
     /// Results for all Belgian IPF Affiliates.
     #[strum(to_string = "all-ipf-belgium")]
     AllIPFBelgium,
-    #[strum(to_string = "all-belize")]
-    AllBelize,
-    #[strum(to_string = "all-bolivia")]
-    AllBolivia,
-    #[strum(to_string = "all-bosnia-and-herzegovina")]
-    AllBosniaAndHerzegovina,
-    #[strum(to_string = "all-brazil")]
-    AllBrazil,
-    #[strum(to_string = "all-brunei")]
-    AllBrunei,
-    #[strum(to_string = "all-bulgaria")]
-    AllBulgaria,
-    #[strum(to_string = "all-canada")]
-    AllCanada,
-    #[strum(to_string = "all-chile")]
-    AllChile,
-    #[strum(to_string = "all-china")]
-    AllChina,
-    #[strum(to_string = "all-colombia")]
-    AllColombia,
-    #[strum(to_string = "all-croatia")]
-    AllCroatia,
-    #[strum(to_string = "all-cyprus")]
-    AllCyprus,
-    #[strum(to_string = "all-czechia")]
-    AllCzechia,
-    #[strum(to_string = "all-denmark")]
-    AllDenmark,
-    #[strum(to_string = "all-egypt")]
-    AllEgypt,
-    #[strum(to_string = "all-ecuador")]
-    AllEcuador,
-    #[strum(to_string = "all-estonia")]
-    AllEstonia,
-    #[strum(to_string = "all-finland")]
-    AllFinland,
-    #[strum(to_string = "all-france")]
-    AllFrance,
-    #[strum(to_string = "all-georgia")]
-    AllGeorgia,
-    #[strum(to_string = "all-germany")]
-    AllGermany,
-    #[strum(to_string = "all-greece")]
-    AllGreece,
-    #[strum(to_string = "all-guatemala")]
-    AllGuatemala,
-    #[strum(to_string = "all-guyana")]
-    AllGuyana,
-    #[strum(to_string = "all-hongkong")]
-    AllHongKong,
-    #[strum(to_string = "all-hungary")]
-    AllHungary,
-    #[strum(to_string = "all-iceland")]
-    AllIceland,
-    #[strum(to_string = "all-india")]
-    AllIndia,
-    #[strum(to_string = "all-indonesia")]
-    AllIndonesia,
     /// Results for the relevant US IPF Affiliate at the time.
     #[strum(to_string = "all-ipf-usa")]
     AllIPFUSA,
-    #[strum(to_string = "all-iran")]
-    AllIran,
-    #[strum(to_string = "all-iraq")]
-    AllIraq,
-    #[strum(to_string = "all-ireland")]
-    AllIreland,
-    #[strum(to_string = "all-israel")]
-    AllIsrael,
-    #[strum(to_string = "all-italy")]
-    AllItaly,
-    #[strum(to_string = "all-japan")]
-    AllJapan,
-    #[strum(to_string = "all-kazakhstan")]
-    AllKazakhstan,
-    #[strum(to_string = "all-kuwait")]
-    AllKuwait,
-    #[strum(to_string = "all-kyrgyzstan")]
-    AllKyrgyzstan,
-    #[strum(to_string = "all-latvia")]
-    AllLatvia,
-    #[strum(to_string = "all-lebanon")]
-    AllLebanon,
-    #[strum(to_string = "all-libya")]
-    AllLibya,
-    #[strum(to_string = "all-lithuania")]
-    AllLithuania,
-    #[strum(to_string = "all-malaysia")]
-    AllMalaysia,
-    #[strum(to_string = "all-mexico")]
-    AllMexico,
-    #[strum(to_string = "all-moldova")]
-    AllMoldova,
-    #[strum(to_string = "all-mongolia")]
-    AllMongolia,
-    #[strum(to_string = "all-morocco")]
-    AllMorocco,
-    #[strum(to_string = "all-nauru")]
-    AllNauru,
-    #[strum(to_string = "all-nepal")]
-    AllNepal,
-    #[strum(to_string = "all-netherlands")]
-    AllNetherlands,
-    #[strum(to_string = "all-newzealand")]
-    AllNewZealand,
-    #[strum(to_string = "all-nicaragua")]
-    AllNicaragua,
-    #[strum(to_string = "all-niue")]
-    AllNiue,
-    #[strum(to_string = "all-norway")]
-    AllNorway,
-    #[strum(to_string = "all-papuanewguinea")]
-    AllPapuaNewGuinea,
-    #[strum(to_string = "all-oman")]
-    AllOman,
-    #[strum(to_string = "all-panama")]
-    AllPanama,
-    #[strum(to_string = "all-paraguay")]
-    AllParaguay,
-    #[strum(to_string = "all-peru")]
-    AllPeru,
-    #[strum(to_string = "all-philippines")]
-    AllPhilippines,
-    #[strum(to_string = "all-poland")]
-    AllPoland,
-    #[strum(to_string = "all-portugal")]
-    AllPortugal,
-    #[strum(to_string = "all-qatar")]
-    AllQatar,
-    #[strum(to_string = "all-romania")]
-    AllRomania,
-    #[strum(to_string = "all-russia")]
-    AllRussia,
-    #[strum(to_string = "all-saudiarabia")]
-    AllSaudiArabia,
-    #[strum(to_string = "all-scotland")]
-    AllScotland,
-    #[strum(to_string = "all-serbia")]
-    AllSerbia,
-    #[strum(to_string = "all-singapore")]
-    AllSingapore,
-    #[strum(to_string = "all-slovakia")]
-    AllSlovakia,
-    #[strum(to_string = "all-slovenia")]
-    AllSlovenia,
-    #[strum(to_string = "all-spain")]
-    AllSpain,
-    #[strum(to_string = "all-southafrica")]
-    AllSouthAfrica,
-    #[strum(to_string = "all-southkorea")]
-    AllSouthKorea,
-    #[strum(to_string = "all-srilanka")]
-    AllSriLanka,
-    #[strum(to_string = "all-sweden")]
-    AllSweden,
-    #[strum(to_string = "all-switzerland")]
-    AllSwitzerland,
-    #[strum(to_string = "all-syria")]
-    AllSyria,
-    #[strum(to_string = "all-taiwan")]
-    AllTaiwan,
-    #[strum(to_string = "all-thailand")]
-    AllThailand,
-    #[strum(to_string = "all-turkey")]
-    AllTurkey,
-    #[strum(to_string = "all-uae")]
-    AllUAE,
-    #[strum(to_string = "all-uganda")]
-    AllUganda,
+
+    /// Has some strange logic beyond just country inclusion.
+    #[strum(to_string = "all-canada")]
+    AllCanada,
     #[strum(to_string = "all-uk")]
     AllUK,
     #[strum(to_string = "all-uk-tested")]
     AllUKTested,
-    #[strum(to_string = "all-ukraine")]
-    AllUkraine,
-    #[strum(to_string = "all-uruguay")]
-    AllUruguay,
-    #[strum(to_string = "all-venezuela")]
-    AllVenezuela,
-    #[strum(to_string = "all-vietnam")]
-    AllVietnam,
-    #[strum(to_string = "all-usa")]
-    AllUSA,
-    #[strum(to_string = "all-usa-tested")]
-    AllUSATested,
-    #[strum(to_string = "all-usvirginislands")]
-    AllUSVirginIslands,
 
     /// WPC, but only Tested entries.
     #[strum(to_string = "awpc")]
@@ -879,16 +687,7 @@ impl MetaFederation {
                 entry.tested && meet.federation.is_fully_tested(meet.date)
             }
             MetaFederation::AllTested => entry.tested,
-            MetaFederation::AllAlgeria => is_from(Country::Algeria, entry, meet),
-            MetaFederation::AllArgentina => is_from(Country::Argentina, entry, meet),
-            MetaFederation::AllAustralia => is_from(Country::Australia, entry, meet),
-            MetaFederation::AllAustraliaTested => {
-                entry.tested && is_from(Country::Australia, entry, meet)
-            }
-            MetaFederation::AllAustria => is_from(Country::Austria, entry, meet),
-            MetaFederation::AllAzerbaijan => is_from(Country::Azerbaijan, entry, meet),
-            MetaFederation::AllBelarus => is_from(Country::Belarus, entry, meet),
-            MetaFederation::AllBelgium => is_from(Country::Belgium, entry, meet),
+
             MetaFederation::AllIPFBelgium => {
                 is_from(Country::Belgium, entry, meet)
                     && (meet.federation == Federation::KBGV
@@ -897,42 +696,12 @@ impl MetaFederation {
                         || meet.federation == Federation::IPF
                         || meet.federation == Federation::EPF)
             }
-            MetaFederation::AllBelize => is_from(Country::Belize, entry, meet),
-            MetaFederation::AllBolivia => is_from(Country::Bolivia, entry, meet),
-            MetaFederation::AllBosniaAndHerzegovina => {
-                is_from(Country::BosniaAndHerzegovina, entry, meet)
-            }
-            MetaFederation::AllBrazil => is_from(Country::Brazil, entry, meet),
-            MetaFederation::AllBrunei => is_from(Country::Brunei, entry, meet),
-            MetaFederation::AllBulgaria => is_from(Country::Bulgaria, entry, meet),
             MetaFederation::AllCanada => {
                 entry.lifter_country == Some(Country::Canada)
                     || (entry.lifter_country.is_none()
                         && (meet.federation.home_country() == Some(Country::Canada)
                             || MetaFederation::IPACAN.contains(entry, meets)))
             }
-            MetaFederation::AllChile => is_from(Country::Chile, entry, meet),
-            MetaFederation::AllChina => is_from(Country::China, entry, meet),
-            MetaFederation::AllColombia => is_from(Country::Colombia, entry, meet),
-            MetaFederation::AllCroatia => is_from(Country::Croatia, entry, meet),
-            MetaFederation::AllCyprus => is_from(Country::Cyprus, entry, meet),
-            MetaFederation::AllCzechia => is_from(Country::Czechia, entry, meet),
-            MetaFederation::AllDenmark => is_from(Country::Denmark, entry, meet),
-            MetaFederation::AllEcuador => is_from(Country::Ecuador, entry, meet),
-            MetaFederation::AllEgypt => is_from(Country::Egypt, entry, meet),
-            MetaFederation::AllEstonia => is_from(Country::Estonia, entry, meet),
-            MetaFederation::AllFinland => is_from(Country::Finland, entry, meet),
-            MetaFederation::AllFrance => is_from(Country::France, entry, meet),
-            MetaFederation::AllGeorgia => is_from(Country::Georgia, entry, meet),
-            MetaFederation::AllGermany => is_from(Country::Germany, entry, meet),
-            MetaFederation::AllGreece => is_from(Country::Greece, entry, meet),
-            MetaFederation::AllGuatemala => is_from(Country::Guatemala, entry, meet),
-            MetaFederation::AllGuyana => is_from(Country::Guyana, entry, meet),
-            MetaFederation::AllHongKong => is_from(Country::HongKong, entry, meet),
-            MetaFederation::AllHungary => is_from(Country::Hungary, entry, meet),
-            MetaFederation::AllIceland => is_from(Country::Iceland, entry, meet),
-            MetaFederation::AllIndia => is_from(Country::India, entry, meet),
-            MetaFederation::AllIndonesia => is_from(Country::Indonesia, entry, meet),
             // Results for USA lifters in the IPF affiliate at the given time.
             MetaFederation::AllIPFUSA => {
                 is_from(Country::USA, entry, meet)
@@ -942,60 +711,6 @@ impl MetaFederation {
                         || meet.federation == IPF)
                         || (meet.federation == USPF && meet.date < date!(1997-12-05)))
             }
-            MetaFederation::AllIran => is_from(Country::Iran, entry, meet),
-            MetaFederation::AllIraq => is_from(Country::Iraq, entry, meet),
-            MetaFederation::AllIreland => is_from(Country::Ireland, entry, meet),
-            MetaFederation::AllIsrael => is_from(Country::Israel, entry, meet),
-            MetaFederation::AllItaly => is_from(Country::Italy, entry, meet),
-            MetaFederation::AllJapan => is_from(Country::Japan, entry, meet),
-            MetaFederation::AllKazakhstan => is_from(Country::Kazakhstan, entry, meet),
-            MetaFederation::AllKuwait => is_from(Country::Kuwait, entry, meet),
-            MetaFederation::AllKyrgyzstan => is_from(Country::Kyrgyzstan, entry, meet),
-            MetaFederation::AllLatvia => is_from(Country::Latvia, entry, meet),
-            MetaFederation::AllLebanon => is_from(Country::Lebanon, entry, meet),
-            MetaFederation::AllLibya => is_from(Country::Libya, entry, meet),
-            MetaFederation::AllLithuania => is_from(Country::Lithuania, entry, meet),
-            MetaFederation::AllMalaysia => is_from(Country::Malaysia, entry, meet),
-            MetaFederation::AllMexico => is_from(Country::Mexico, entry, meet),
-            MetaFederation::AllMoldova => is_from(Country::Moldova, entry, meet),
-            MetaFederation::AllMongolia => is_from(Country::Mongolia, entry, meet),
-            MetaFederation::AllMorocco => is_from(Country::Morocco, entry, meet),
-            MetaFederation::AllNauru => is_from(Country::Nauru, entry, meet),
-            MetaFederation::AllNepal => is_from(Country::Nepal, entry, meet),
-            MetaFederation::AllNetherlands => is_from(Country::Netherlands, entry, meet),
-            MetaFederation::AllNewZealand => is_from(Country::NewZealand, entry, meet),
-            MetaFederation::AllNicaragua => is_from(Country::Nicaragua, entry, meet),
-            MetaFederation::AllNiue => is_from(Country::Niue, entry, meet),
-            MetaFederation::AllNorway => is_from(Country::Norway, entry, meet),
-            MetaFederation::AllOman => is_from(Country::Oman, entry, meet),
-            MetaFederation::AllPanama => is_from(Country::Panama, entry, meet),
-            MetaFederation::AllPapuaNewGuinea => is_from(Country::PapuaNewGuinea, entry, meet),
-            MetaFederation::AllParaguay => is_from(Country::Paraguay, entry, meet),
-            MetaFederation::AllPeru => is_from(Country::Peru, entry, meet),
-            MetaFederation::AllPhilippines => is_from(Country::Philippines, entry, meet),
-            MetaFederation::AllPoland => is_from(Country::Poland, entry, meet),
-            MetaFederation::AllPortugal => is_from(Country::Portugal, entry, meet),
-            MetaFederation::AllQatar => is_from(Country::Qatar, entry, meet),
-            MetaFederation::AllRomania => is_from(Country::Romania, entry, meet),
-            MetaFederation::AllRussia => is_from(Country::Russia, entry, meet),
-            MetaFederation::AllSaudiArabia => is_from(Country::SaudiArabia, entry, meet),
-            MetaFederation::AllScotland => is_from(Country::Scotland, entry, meet),
-            MetaFederation::AllSerbia => is_from(Country::Serbia, entry, meet),
-            MetaFederation::AllSingapore => is_from(Country::Singapore, entry, meet),
-            MetaFederation::AllSlovakia => is_from(Country::Slovakia, entry, meet),
-            MetaFederation::AllSlovenia => is_from(Country::Slovenia, entry, meet),
-            MetaFederation::AllSpain => is_from(Country::Spain, entry, meet),
-            MetaFederation::AllSriLanka => is_from(Country::SriLanka, entry, meet),
-            MetaFederation::AllSouthAfrica => is_from(Country::SouthAfrica, entry, meet),
-            MetaFederation::AllSouthKorea => is_from(Country::SouthKorea, entry, meet),
-            MetaFederation::AllSweden => is_from(Country::Sweden, entry, meet),
-            MetaFederation::AllSyria => is_from(Country::Syria, entry, meet),
-            MetaFederation::AllSwitzerland => is_from(Country::Switzerland, entry, meet),
-            MetaFederation::AllTaiwan => is_from(Country::Taiwan, entry, meet),
-            MetaFederation::AllThailand => is_from(Country::Thailand, entry, meet),
-            MetaFederation::AllTurkey => is_from(Country::Turkey, entry, meet),
-            MetaFederation::AllUSVirginIslands => is_from(Country::USVirginIslands, entry, meet),
-            MetaFederation::AllVenezuela => is_from(Country::Venezuela, entry, meet),
             MetaFederation::AllUK => {
                 // UK lifters sometimes switch country affiliation from UK to Ireland
                 // when they compete IrishPF.
@@ -1010,18 +725,10 @@ impl MetaFederation {
                             && meet.federation.home_country().is_some_and(|c| c.is_in_uk()))
                 }
             }
-            MetaFederation::AllUAE => is_from(Country::UAE, entry, meet),
-            MetaFederation::AllUganda => is_from(Country::Uganda, entry, meet),
             MetaFederation::AllUKTested => {
                 entry.tested && MetaFederation::AllUK.contains(entry, meets)
             }
-            MetaFederation::AllUkraine => is_from(Country::Ukraine, entry, meet),
-            MetaFederation::AllUruguay => is_from(Country::Uruguay, entry, meet),
-            MetaFederation::AllUSA => is_from(Country::USA, entry, meet),
-            MetaFederation::AllUSATested => {
-                entry.tested && MetaFederation::AllUSA.contains(entry, meets)
-            }
-            MetaFederation::AllVietnam => is_from(Country::Vietnam, entry, meet),
+
             MetaFederation::AAPF => entry.tested && affiliation!(meet, entry, APF, WPC),
             MetaFederation::ABPU => {
                 entry.tested
