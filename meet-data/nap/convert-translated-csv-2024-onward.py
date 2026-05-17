@@ -103,10 +103,12 @@ def fix_weight_class(weight_class):
 def make_division(perf_class, age_div):
     # for eg: Pro, Masters M1(40-44) -> Pro Masters 40-44
     # Amateur, Juniors(20-23) -> Amateur Juniors 20-23
+    # Teen 0-13 -> Teen 13
     logger.debug(f"Making division for perf class:{perf_class} and age div:{age_div}")
     # Note that the un-translated original uses Cyrillic М not latin M
     age_div = re.sub(r" M\d+", "", age_div)    
     age_div = re.sub(r"\((\d+-\d+)\)", r" \1", age_div)
+    age_div = age_div.replace("0-13", "13")
     div = f"{perf_class} {age_div}"
     logger.debug(f"Made division:{div}")
     return div
