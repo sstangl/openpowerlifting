@@ -69,19 +69,7 @@
   <option value="ecuador"{% if selection.home_country == "ecuador" %} selected{% endif %}>{{strings.country.ecuador}}</option>
   <option value="egypt"{% if selection.home_country == "egypt" %} selected{% endif %}>{{strings.country.egypt}}</option>
   <option value="el-salvador"{% if selection.home_country == "el-salvador" %} selected{% endif %}>{{strings.country.elsalvador}}</option>
-  <optgroup label="{{strings.country.england}}">
-    <option value="england"{% if selection.home_country == "england" %} selected{% endif %}>{{strings.country.england}}</option>
-    <option value="england-em"{% if selection.home_state == "england-em" %} selected{% endif %}>{{strings.country.england}}-EM</option>
-    <option value="england-gl"{% if selection.home_state == "england-gl" %} selected{% endif %}>{{strings.country.england}}-GL</option>
-    <option value="england-nm"{% if selection.home_state == "england-nm" %} selected{% endif %}>{{strings.country.england}}-NM</option>
-    <option value="england-nw"{% if selection.home_state == "england-nw" %} selected{% endif %}>{{strings.country.england}}-NW</option>
-    <option value="england-se"{% if selection.home_state == "england-se" %} selected{% endif %}>{{strings.country.england}}-SE</option>
-    <option value="england-sm"{% if selection.home_state == "england-sm" %} selected{% endif %}>{{strings.country.england}}-SM</option>
-    <option value="england-sw"{% if selection.home_state == "england-sw" %} selected{% endif %}>{{strings.country.england}}-SW</option>
-    <option value="england-wm"{% if selection.home_state == "england-wm" %} selected{% endif %}>{{strings.country.england}}-WM</option>
-    <option value="england-yne"{% if selection.home_state == "england-yne" %} selected{% endif %}>{{strings.country.england}}-YNE</option>
-  </optgroup>
-
+  <option value="england"{% if selection.home_country == "england" %} selected{% endif %}>{{strings.country.england}}</option>
   <option value="estonia"{% if selection.home_country == "estonia" %} selected{% endif %}>{{strings.country.estonia}}</option>
   <option value="eswatini"{% if selection.home_country == "eswatini" %} selected{% endif %}>{{strings.country.eswatini}}</option>
   <option value="ethiopia"{% if selection.home_country == "ethiopia" %} selected{% endif %}>{{strings.country.ethiopia}}</option>
