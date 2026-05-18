@@ -1,5 +1,14 @@
 #!/bin/sh
 
+which ruff > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo
+    echo "------------------------------"
+    echo 'Unable to find ruff.  Please run `pip install ruff`'
+    echo "------------------------------"
+    exit 1
+fi
+
 # Finds all files with a Python shebang.
 #
 # Reference: https://unix.stackexchange.com/questions/66097/find-all-files-with-a-python-shebang
@@ -9,5 +18,12 @@
 
 MATCHES=$(find . \( -path "*/node_modules" -o -path "*/target" -o -path "*/.git" \) -prune -o -type f -not -name "*.csv" -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} +)
 
-# Invoking flake8 once with all found files is much faster than once per file.
-flake8 --show-source --max-line-length=89 ${MATCHES}
+# pass any additional arguments through to ruff, eg --fix
+RUFFOPTS="$*"
+ruff check ${RUFFOPTS} ${MATCHES}
+if [ $? != 0 ]; then
+    echo
+    echo "------------------------------"
+    echo 'To automatically fix these problems, `make check-and-fix-python`'
+    echo "------------------------------"
+fi

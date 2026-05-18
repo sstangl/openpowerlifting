@@ -140,7 +140,7 @@ def check_social_media(names):
             instagrams.add(row[instagramidx])
 
         # Make sure that every name occurs in the 'names' set.
-        if not row[nameidx] in names:
+        if row[nameidx] not in names:
             perror("%s: Lifter does not exist in database: '%s'."
                    % (filename, row[nameidx]))
 

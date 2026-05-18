@@ -107,7 +107,7 @@ file-sizes:
 python-style:
   stage: check
   image:
-    name: alpine/flake8
+    name: jauderho/ruff
     entrypoint: [""]
   script:
     - tests/check-python-style

@@ -54,7 +54,7 @@ the changes back so the entire powerlifting community may benefit.
 Install dependencies:
 
 ```bash
-sudo dnf install cargo rust make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js jemalloc
+sudo dnf install cargo rust make npm python3-beautifulsoup4 python3-ansible parallel uglify-js jemalloc
 ```
 
 Build the project and run the server:
@@ -70,7 +70,7 @@ cargo run --release --bin server
 Follow the instructions for Fedora, but use this alternate command for installing dependencies:
 
 ```bash
-sudo apt-get install cargo rust curl make npm python3-bs4 flake8 ansible parallel uglifyjs jemalloc
+sudo apt-get install cargo rust curl make npm python3-bs4 ansible parallel uglifyjs jemalloc
 ```
 
 ### Arch Linux
@@ -78,7 +78,7 @@ sudo apt-get install cargo rust curl make npm python3-bs4 flake8 ansible paralle
 Follow the instructions for Fedora, but use this alternate command for installing dependencies:
 
 ```bash
-sudo pacman -S cargo rust curl make npm python-beautifulsoup4 flake8 ansible parallel uglify-js jemalloc
+sudo pacman -S cargo rust curl make npm python-beautifulsoup4 ansible parallel uglify-js jemalloc
 ```
 
 ### MacOS
@@ -102,7 +102,7 @@ Click "Accept" in the pop-up to allow installation to proceed.
 3. Install project dependencies from Homebrew:
 
 ```bash
-brew install git rust make npm python flake8 ansible parallel jemalloc awk
+brew install git rust make npm python ansible parallel jemalloc awk
 echo 'PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```

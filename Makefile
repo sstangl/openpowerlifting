@@ -50,6 +50,10 @@ check:
 check-all: check
 	tests/check-python-style
 
+.PHONY: check-and-fix-python
+check-and-fix-python:
+	tests/check-python-style --fix
+
 # Runs all probes in a quick mode that only shows a few pending meets.
 .PHONY: probe-quick
 probe-quick:
