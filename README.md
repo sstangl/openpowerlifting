@@ -54,7 +54,7 @@ the changes back so the entire powerlifting community may benefit.
 Install dependencies:
 
 ```bash
-sudo dnf install cargo rust make npm python3-beautifulsoup4 python3-ansible parallel uglify-js jemalloc
+sudo dnf install cargo rust make npm python3-beautifulsoup4 python3-ansible parallel uglify-js jemalloc ruff
 ```
 
 Build the project and run the server:
