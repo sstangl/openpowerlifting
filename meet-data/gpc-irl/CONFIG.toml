@@ -2,6 +2,7 @@
 
 [options]
     valid_federations = ["GPC-IRL"]
+    require_manual_disambiguation = true
 
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
