@@ -16,6 +16,7 @@
     teen2 = {name = "Teen 2",min=13.5,max=15.5}
     menores =  {name ="Menores",min=0,max=11.5}
     olimpiadasespeciales = {name ="Olimpiadas Especiales",min=0,max=999}
+    universitario = {name ="Universitario",min=0,max=999}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","105+","120+"]
