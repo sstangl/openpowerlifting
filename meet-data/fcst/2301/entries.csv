@@ -1,4 +1,4 @@
-﻿Sex,Division,WeightClassKg,Equipment,Name,BirthYear,BodyweightKg,Team,Country,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Event,BirthDate,Place
+Sex,Division,WeightClassKg,Equipment,Name,BirthYear,BodyweightKg,Team,Country,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Event,BirthDate,Place
 F,T13-16,60,Multi-ply,Marie Lipovská,2007,59.2,SK Metalpower Nový Bor,Czechia,100,110,-120,,110,110,D,,1
 F,T13-16,60,Raw,Elen Kanalošová,2007,59.7,,Czechia,110,120,-125,,120,120,D,,1
 F,T13-16,75,Raw,Magdaléna Pšornová,2008,74.95,,Czechia,100,110,-120,-120,110,110,D,,1
@@ -135,7 +135,7 @@ M,M40-49,100,Raw,Zdeněk Tyl,1976,98.2,Scout Powerlifting,Czechia,240,255,-265,,
 M,M40-49,100,Raw,Jan Sztefek,1983,96.55,Spartak Trutnov,Czechia,240,,,,240,240,D,,3
 M,M40-49,100,Raw,Bohuslav Šimek,1979,99.55,LOKO Trutnov,Czechia,200,220,,,220,220,D,,4
 M,M40-49,110,Multi-ply,Petr Mikula,1976,104.8,Powerlifting Vrchlabí,Czechia,190,210,220,,220,220,D,,1
-M,M40-49,110,Raw,Jan Suda,1979,109.1,Powerlifting Suda,Czechia,275,,,,275,275,D,,1
+M,M40-49,110,Raw,Jan Suda #1,1979,109.1,Powerlifting Suda,Czechia,275,,,,275,275,D,,1
 M,M40-49,110,Raw,Aleš Korba,1983,100.8,Powerlifting Mělník,Czechia,210,225,230,,230,230,D,,2
 M,M40-49,110,Raw,Petr Mikula,1976,104.8,Powerlifting Vrchlabí,Czechia,180,195,205,,205,205,D,,3
 M,M40-49,125,Raw,Vlastimil Kalaš,1979,116.5,Powerlifting Trutnov,Czechia,280,290,-300,,290,290,D,,1
@@ -149,7 +149,7 @@ M,M50-59,110,Raw,František Nováček,1964,108.7,Extrifit Power Team,Czechia,240
 M,M50-59,110,Raw,Radek Liška,1971,107.8,,Czechia,240,257.5,-265,,257.5,257.5,D,,2
 M,M60-64,100,Raw,Peter Herák,1960,92.4,KTA Golem Nové Mesto nad Váhom,Slovakia,220,232.5,242.5,,242.5,242.5,D,,1
 M,M60-64,110,Raw,Jiří Barnet,1960,105.1,,Czechia,190,210,-220,,210,210,D,,1
-M,M65-69,100,Raw,Jan Suda,1956,91.1,Powerlifting Suda,Czechia,145,152.5,160,,160,160,D,,1
+M,M65-69,100,Raw,Jan Suda #2,1956,91.1,Powerlifting Suda,Czechia,145,152.5,160,,160,160,D,,1
 M,M70-74,67.5,Raw,Steffen Burkhard,1950,66.95,Sport Loitsche,Germany,110,120,130,,130,130,D,,1
 M,M70-74,82.5,Raw,Lothar Willy Schultze,1950,81.55,,Germany,160,175,185,,185,185,D,,1
 M,M70-74,100,Raw,Pavel Erban,1952,92.2,Sport Břehy,Czechia,125,135,145,,145,145,D,,1
