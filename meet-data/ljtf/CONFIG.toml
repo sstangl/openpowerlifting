@@ -20,6 +20,7 @@
 
     # USAPL-style divisions, women.
     fro = {name="FR-O", min=0, max=999, sex="F", equipment="Raw"}
+    fro2603 = {name="FR-O-2603", min=0, max=999, sex="F", equipment="Raw"}
     frsj = {name="FR-Sj", min=0, max=17.5, sex="F", equipment="Raw"}
     frjr = {name="FR-Jr", min=0, max=22.5, sex="F", equipment="Raw"}
     frm1 = {name="FR-M1", min=39.5, max=48.5, sex="F", equipment="Raw"}
@@ -66,7 +67,7 @@
 	
 	
 [weightclasses.default_M]
-    classes = ["59","66","74","83","93","105","120","83+","105+","120+"]
+    classes = ["59","66","74","83","93","105","120","83+","93+","105+","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"	
 
@@ -94,11 +95,23 @@
     sex = "M"
     divisions = ["MR-M2", "M-M2", "Master II"]	
 
-[weightclasses.masterIII_new_M]
+[weightclasses.masterIII_2021_2025_M]
     classes = ["74","83","83+"]
-    date_range=["2021-01-01","9999-12-31"]
+    date_range = ["2021-01-01","2025-12-31"]
     sex = "M"
-    divisions = ["MR-M3", "M-M3", "Master III"]	
+    divisions = ["MR-M3", "M-M3", "Master III"]
+
+[weightclasses.masterIII_2026_M]
+    classes = ["83","83+"]
+    date_range = ["2026-01-01","9999-12-31"]
+    sex = "M"
+    divisions = ["MR-M3", "M-M3", "Master III"]
+
+[weightclasses.new_F_2603]
+    classes = ["63","63+"]
+    date_range = ["2026-01-01","2026-12-31"]
+    sex = "F"
+    divisions = ["FR-O-2603"]
 	
 	
 	
@@ -201,3 +214,4 @@
     2505 = ["ExemptWeightClassConsistency"] # Reduced classes
     2506 = ["ExemptWeightClassConsistency"] # Reduced classes    
     2507 = ["ExemptWeightClassConsistency"] # Reduced classes
+    2601 = ["ExemptWeightClassConsistency"] # Reduced classes
