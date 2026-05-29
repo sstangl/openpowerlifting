@@ -102,7 +102,10 @@ fn consistent_country(
         }
 
         // Check for consistency with the implicit results.
-        if !found_implicit_conflict && let Some(country) = meet.federation.home_country() {
+        if !found_implicit_conflict
+            && let Some(country) = meet.federation.home_country()
+            && country == meet.country
+        {
             if let Some(acc_country) = implicit_acc {
                 if country == acc_country || country.contains(acc_country) {
                     continue;
@@ -167,10 +170,7 @@ pub fn interpolate_country_debug_for(
 /// Attempts to infer a Country for a lifter from surrounding Entry data.
 pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
     for indices in liftermap.values() {
-        // Interpolation requires multiple entries.
-        if indices.len() >= 2 {
-            interpolate_country_single_lifter(meetdata, indices, false);
-        }
+        interpolate_country_single_lifter(meetdata, indices, false);
     }
 }
 
@@ -179,6 +179,8 @@ mod tests {
     use super::*;
     use crate::SingleMeetData;
     use crate::checklib::{Entry, Meet};
+
+    use opltypes::Federation;
 
     /// Helper function to generate a single-meet AllMeetData struct
     /// from a list of entries.
@@ -197,8 +199,30 @@ mod tests {
         let liftermap = meetdata.create_liftermap();
         interpolate_country(&mut meetdata, &liftermap);
 
-        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::Russia));
-        assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::Russia));
+        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::USA));
+        assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::USA));
+    }
+
+    /// If there is a single entry in a regional affiliate but no explicit
+    /// country, infer that the lifter is from that affiliate's country.
+    #[test]
+    fn one_entry_implied_country() {
+        let meet = Meet {
+            federation: Federation::AusPL,
+            country: Country::Australia,
+            ..Meet::test_default()
+        };
+        let entry = Entry::default();
+
+        let mut meetdata = AllMeetData::from(vec![SingleMeetData {
+            meet,
+            entries: vec![entry].into(),
+        }]);
+        let liftermap = meetdata.create_liftermap();
+
+        assert_eq!(meetdata.entry_at(0, 0).country, None);
+        interpolate_country(&mut meetdata, &liftermap);
+        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::Australia));
     }
 
     /// If only one entry has a set Country, propagate that Country.
@@ -216,6 +240,28 @@ mod tests {
         assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::USA));
         assert_eq!(meetdata.entry_at(0, 1).country, Some(Country::USA));
         assert_eq!(meetdata.entry_at(0, 2).country, Some(Country::USA));
+    }
+
+    /// If a regional fed inexplicitly holds a meet in another country,
+    /// don't infer that the lifter is necessarily from the fed's country.
+    #[test]
+    fn fed_home_meet_mismatch() {
+        let meet = Meet {
+            federation: Federation::AusPL,
+            country: Country::Norway,
+            ..Meet::test_default()
+        };
+        let entry = Entry::default();
+
+        let mut meetdata = AllMeetData::from(vec![SingleMeetData {
+            meet,
+            entries: vec![entry].into(),
+        }]);
+        let liftermap = meetdata.create_liftermap();
+
+        assert_eq!(meetdata.entry_at(0, 0).country, None);
+        interpolate_country(&mut meetdata, &liftermap);
+        assert_eq!(meetdata.entry_at(0, 0).country, None);
     }
 
     /// If two entries conflict, don't propagate a Country.

@@ -41,7 +41,7 @@ impl Meet {
     pub fn test_default() -> Meet {
         Meet {
             path: "test/1901".to_string(),
-            federation: Federation::WRPF,
+            federation: Federation::USAPL,
             date: Date::from_parts(2019, 03, 01),
             country: opltypes::Country::USA,
             state: None,
