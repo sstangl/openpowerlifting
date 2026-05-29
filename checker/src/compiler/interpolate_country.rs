@@ -103,20 +103,20 @@ fn consistent_country(
 
         // Check for consistency with the implicit results.
         if !found_implicit_conflict
-            && let Some(country) = meet.federation.home_country()
-            && country == meet.country
+            && let Some(fed_country) = meet.federation.home_country()
+            && (fed_country == meet.country || fed_country.contains(meet.country))
         {
             if let Some(acc_country) = implicit_acc {
-                if country == acc_country || country.contains(acc_country) {
+                if fed_country == acc_country || fed_country.contains(acc_country) {
                     continue;
-                } else if acc_country.contains(country) {
-                    implicit_acc = Some(country);
+                } else if acc_country.contains(fed_country) {
+                    implicit_acc = Some(fed_country);
                 } else {
                     found_implicit_conflict = true;
                     implicit_acc = None;
                 }
             } else {
-                implicit_acc = Some(country);
+                implicit_acc = Some(fed_country);
             }
         }
     }
@@ -223,6 +223,27 @@ mod tests {
         assert_eq!(meetdata.entry_at(0, 0).country, None);
         interpolate_country(&mut meetdata, &liftermap);
         assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::Australia));
+    }
+
+    /// BP lifters should be marked as UK if the MeetCountry is England.
+    #[test]
+    fn allow_england_in_uk() {
+        let meet = Meet {
+            federation: Federation::BP, // home_country() == UK.
+            country: Country::England,  // Is in the UK.
+            ..Meet::test_default()
+        };
+        let entry = Entry::default();
+
+        let mut meetdata = AllMeetData::from(vec![SingleMeetData {
+            meet,
+            entries: vec![entry].into(),
+        }]);
+        let liftermap = meetdata.create_liftermap();
+
+        assert_eq!(meetdata.entry_at(0, 0).country, None);
+        interpolate_country(&mut meetdata, &liftermap);
+        assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::UK));
     }
 
     /// If only one entry has a set Country, propagate that Country.
