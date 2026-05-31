@@ -119,3 +119,4 @@
    2603 = ["ExemptDivision"] # Age divisions mismatches for Teen divisions
    2604 = ["ExemptDivision"] # Age divisions mismatches for Teen divisions
    2605 = ["ExemptDivision"] # Tested divisions
+   2606 = ["ExemptWeightClassConsistency","ExemptDivision"] # Placed by age category and not very well
