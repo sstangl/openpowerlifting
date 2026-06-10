@@ -367,6 +367,7 @@
     fgraapf = {name ="F_GR_AAPF",min=0,max=999,equipment="Raw",sex="F",place="G",tested="Yes"} #Guest
     fpfemapf = {name ="F_PFEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F"} #Police/Fire
     fpfraapf = {name ="F_PFR_AAPF",min=0,max=999,equipment="Raw",sex="F",tested="Yes"} #Police/Fire
+    fpfcraapf = {name ="F_PFCR_AAPF",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"} #Police/Fire
     fsotr1aapf = {name ="F_SOTR_1_AAPF",min=13,max=15,equipment="Raw",sex="F"} #Special Olympics
     fsoemaapf = {name ="F_SOEM_AAPF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F",tested="Yes"} #Special Olympics
     fsojraapf = {name ="F_SOJR_AAPF",min=20,max=23,equipment="Raw",sex="F"} #Special Olympics
