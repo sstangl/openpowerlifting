@@ -8,7 +8,8 @@
     senior = {name = "Senior",min=0,max=999}
 
     # New-style, no plurals. This is what the IPF uses.
-    subjunior = {name = "Sub-Junior",min=14,max=17.5}
+    subjunior = {name = "Sub-Junior",min=12,max=17.5}
+	# Modified subjunior min age from 14 to 12 to allow some meets with 12 years old.
     junior = {name = "Junior",min=18.5,max=22.5}
     master1 = {name = "Master I",min=39.5,max=48.5}
     master2 = {name = "Master II",min=49.5,max=58.5}
