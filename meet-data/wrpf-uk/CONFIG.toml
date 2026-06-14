@@ -15,6 +15,7 @@
     masters_70_79 = {name = "Masters 70-79", min = 70, max = 79,tested="No"}
     masters_80p = {name = "Masters 80+", min = 80, max = 999,tested="No"}
     pro = {name = "Pro", min = 0, max = 999,tested="No"}
+    openpara = {name = "Open-Para", min = 0, max = 999,tested="No"}
     m40_49para = {name = "M40-49-Para", min = 40, max = 49,tested="No"}
 
     #Tested
@@ -52,3 +53,4 @@
     2525 = ["ExemptWeightClassConsistency","ExemptDivision"] #Novice comp
     2604 = ["ExemptDivision"] #Novice comp
     2610 = ["ExemptWeightClassConsistency","ExemptDivision"] #Novice comp
+    2617 = ["ExemptDivision"] #Novice comp
