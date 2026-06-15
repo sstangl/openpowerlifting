@@ -15,3 +15,5 @@
     sex = "F"
 
 [exemptions]
+   2506 = ["ExemptDuplicates"] # Dual-sanctioned with wrpf/2617
+   2507 = ["ExemptDuplicates"] # Dual-sanctioned with wrpf/2618
