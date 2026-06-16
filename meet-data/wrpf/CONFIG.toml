@@ -120,3 +120,13 @@
    2604 = ["ExemptDivision"] # Age divisions mismatches for Teen divisions
    2605 = ["ExemptDivision"] # Tested divisions
    2606 = ["ExemptWeightClassConsistency","ExemptDivision"] # Placed by age category and not very well
+   2607 = ["ExemptDivision"] # Young lifters placed in Teen 14-16
+   2608 = ["ExemptDivision"] # Age division mismatches
+   2609 = ["ExemptDivision"] # Young lifters placed in Teen 14-16
+   2610 = ["ExemptDivision"] # Age division mismatches
+   2611 = ["ExemptDivision"] # Young lifters placed in Teen 14-16
+   2613 = ["ExemptDivision"] # Young lifters placed in Teen 14-16
+   2614 = ["ExemptDivision"] # Young lifters placed in Teen 14-16
+   2615 = ["ExemptDivision"] # Young lifters placed in Teen 14-16
+   2617 = ["ExemptDuplicates"] # Dual-sanctioned with iplrussia/2506
+   2618 = ["ExemptDivision","ExemptDuplicates"] # Young lifters placed in Teen 14-16; dual-sanctioned with iplrussia/2507
