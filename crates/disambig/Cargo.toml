@@ -12,6 +12,7 @@ opltypes = { path = "../opltypes/" }
 [dev-dependencies]
 csv = { workspace = true }
 datatest-stable = "0.3"
+rustc-hash = { workspace = true }
 serde = { workspace = true }
 serde_derive = { workspace = true }
 

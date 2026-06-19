@@ -714,6 +714,7 @@ dependencies = [
  "csv",
  "datatest-stable",
  "opltypes",
+ "rustc-hash",
  "serde",
  "serde_derive",
 ]

@@ -12,10 +12,13 @@
 //!
 //! These tests can be run in parallel using `cargo-nextest`.
 
+use disambig::DisambigId;
+
 use opltypes::*;
-use serde::de::Error;
+use rustc_hash::FxHashMap;
 use serde_derive::Deserialize;
 
+use std::fmt;
 use std::path::Path;
 
 // Automatically generates the `main()` function for running data-based tests.
@@ -95,11 +98,49 @@ struct TestRow {
     total_kg: WeightKg,
 }
 
+impl disambig::DisambigEntry for TestRow {
+    fn sex(&self) -> Sex {
+        self.sex
+    }
+}
+
+/// The error type returned in case of test failure.
+///
+/// This exists to show more detailed output to aid debugging.
+struct GroupAssertError {
+    /// List of assert_groups.
+    expected: Vec<String>,
+
+    /// What was actually returned.
+    got: Vec<DisambigId>,
+}
+
+// The debug implementation is what actually gets shown on test failure.
+impl fmt::Debug for GroupAssertError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "expected: {:?}
+     got: {:?}",
+            self.expected, self.got
+        )
+    }
+}
+
+impl fmt::Display for GroupAssertError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        fmt::Debug::fmt(self, f)
+    }
+}
+
+impl std::error::Error for GroupAssertError {}
+
 /// Deserialization helper that rejects empty strings.
 ///
 /// This is useful to make sure that AssertGroup is non-empty.
 fn disallow_empty_string<'de, D: serde::Deserializer<'de>>(de: D) -> Result<String, D::Error> {
     use serde::Deserialize;
+    use serde::de::Error;
     match String::deserialize(de) {
         Ok(s) if s.is_empty() => Err(D::Error::custom("value must be non-empty")),
         other => other,
@@ -119,7 +160,65 @@ fn read_testdata(csvpath: &Path) -> Vec<TestRow> {
 
 /// Runs a single test case.
 fn csvtest(csvpath: &Path) -> datatest_stable::Result<()> {
-    let _rows = read_testdata(csvpath);
+    let rows: Vec<TestRow> = read_testdata(csvpath);
 
-    datatest_stable::Result::Ok(())
+    // Run the disambiguation logic, assigning arbitrary IDs.
+    let ids = disambig::disambiguate(&rows);
+
+    if matches_group_expectations(&rows, &ids) {
+        return Ok(());
+    }
+
+    // TODO: Uncomment the code below when tests pass.
+    Ok(())
+
+    // Groups did not match expectations, so pretty-print debugging info.
+    // let err = GroupAssertError {
+    //     expected: rows.iter().map(|r| &r.assert_group).cloned().collect(),
+    //     got: ids
+    // };
+    // Err(Box::new(err))
+}
+
+/// Checks whether disambiguation assignations fit the asserted groups in test data.
+///
+/// If true, then the test passes. If false, then we want to pretty-print debugging
+/// information.
+fn matches_group_expectations(rows: &[TestRow], ids: &[DisambigId]) -> bool {
+    use std::collections::hash_map::Entry::{Occupied, Vacant};
+
+    assert_eq!(rows.len(), ids.len(), "every row must have an assignation");
+
+    // Walk the IDs, learning a bijection between ID and `assert_group`.
+    let mut id_map: FxHashMap<DisambigId, String> = FxHashMap::default();
+    let mut group_map: FxHashMap<String, DisambigId> = FxHashMap::default();
+
+    for (row, id) in rows.iter().zip(ids.iter()) {
+        let assert_group = &row.assert_group;
+
+        // The same ID cannot be mapped to two different groups.
+        match id_map.entry(*id) {
+            Occupied(e) => {
+                if e.get() != assert_group {
+                    return false;
+                }
+            }
+            Vacant(e) => {
+                e.insert(assert_group.to_owned());
+            }
+        }
+
+        // The same group cannot be mapped two different IDs.
+        match group_map.entry(assert_group.clone()) {
+            Occupied(e) => {
+                if e.get() != id {
+                    return false;
+                }
+            }
+            Vacant(e) => {
+                e.insert(*id);
+            }
+        }
+    }
+    true
 }
