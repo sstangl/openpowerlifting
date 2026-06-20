@@ -56,6 +56,7 @@ struct TestRow {
     event: Event,
     sex: Sex,
     equipment: Equipment,
+    #[serde(default)]
     age: Age,
     division: String,
     #[serde(default)]

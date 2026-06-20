@@ -156,7 +156,7 @@ fn score_federation<E: DisambigEntry>(a: &E, b: &E) -> Score {
     if a_fed.sanctioning_body(a.date()).is_some()
         && a_fed.sanctioning_body(a.date()) == b_fed.sanctioning_body(b.date())
     {
-        return Score(20);
+        return Score(50);
     }
 
     // Otherwise the federations are distinct, mildly negative.
@@ -179,9 +179,18 @@ fn score_location<E: DisambigEntry>(a: &E, b: &E) -> Score {
         return Score(50);
     }
 
+    if a.meet_country().contains(b.meet_country()) || b.meet_country().contains(a.meet_country()) {
+        return Score(50);
+    }
+
+    // If one of the federations is international, ignore this.
+    if a.federation().home_country().is_none() || b.federation().home_country().is_none() {
+        return Score::NO_CONTRADICTION;
+    }
+
     // TODO: US state logic, maybe with distances.
 
-    // Otherwise, in different countries.
+    // Otherwise, in different countries and non-international.
     Score(-50)
 }
 
