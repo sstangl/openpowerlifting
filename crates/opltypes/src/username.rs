@@ -151,6 +151,26 @@ impl Username {
         let variant = self.0.as_str()[start..].parse::<u32>().unwrap_or(0);
         (&self.0[0..start], Some(variant))
     }
+
+    /// Returns whether the username has a disambiguation variant.
+    pub fn has_variant(&self) -> bool {
+        let (_base, maybe_variant) = self.to_parts();
+        maybe_variant.is_some()
+    }
+
+    /// Returns the username without the disambiguation variant, if present.
+    ///
+    /// For example, `lifter2` becomes `lifter`.
+    pub fn without_variant(&self) -> Username {
+        let (base, _maybe_variant) = self.to_parts();
+        Username(base.to_ascii_string())
+    }
+
+    /// Returns the username with the specified disambiguation variant.
+    pub fn with_variant(&self, variant: u32) -> Username {
+        let (base, _maybe_old_variant) = self.to_parts();
+        Username::from_str(&format!("{base}{variant}")).unwrap()
+    }
 }
 
 impl Serialize for Username {
@@ -451,5 +471,35 @@ mod tests {
             let kata_scalar = scalar + (KATAKANA_START - HIRAGANA_START);
             assert!(std::char::from_u32(kata_scalar).is_some());
         }
+    }
+
+    /// Basic test for variant detection.
+    #[test]
+    fn has_variant() {
+        let johnsmith = Username::from_name("John Smith").unwrap();
+        let johnsmith2 = Username::from_name("John Smith #2").unwrap();
+
+        assert!(!johnsmith.has_variant());
+        assert!(johnsmith2.has_variant());
+    }
+
+    /// Tests that the `without_variant` function successfully removes variant info.
+    #[test]
+    fn without_variant() {
+        let johnsmith = Username::from_name("John Smith").unwrap();
+        let johnsmith2 = Username::from_name("John Smith #2").unwrap();
+
+        assert_eq!(johnsmith.without_variant().as_str(), "johnsmith");
+        assert_eq!(johnsmith2.without_variant().as_str(), "johnsmith");
+    }
+
+    /// Tests that the `with_variant` function successfully adds variant info.
+    #[test]
+    fn with_variant() {
+        let johnsmith = Username::from_name("John Smith").unwrap();
+        let johnsmith2 = Username::from_name("John Smith #2").unwrap();
+
+        assert_eq!(johnsmith.with_variant(3).as_str(), "johnsmith3");
+        assert_eq!(johnsmith2.with_variant(3).as_str(), "johnsmith3");
     }
 }

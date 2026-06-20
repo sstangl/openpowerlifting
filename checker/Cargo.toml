@@ -14,6 +14,7 @@ jemalloc = ["jemallocator", "jemalloc-ctl"]
 
 [dependencies]
 coefficients = { path = "../crates/coefficients/" }
+disambig = { path = "../crates/disambig/" }
 opltypes = { path = "../crates/opltypes/" }
 chrono = "0.4"
 colored = "3.0"

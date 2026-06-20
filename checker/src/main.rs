@@ -39,6 +39,9 @@ struct Args {
     /// Prints debug info for a single lifter's Country.
     debug_country_username: Option<String>,
 
+    /// Prints debug info for a single username base (without disambig number).
+    debug_disambig_username: Option<String>,
+
     /// Prints timing info for various phases of compilation or checking.
     debug_timing: bool,
 
@@ -265,6 +268,7 @@ OPTIONS:
         --age <username>        Prints age debug info for the given username
         --age-group <username>  Prints disambugation age debug info for the given username
         --country <username>    Prints country debug info for the given username
+        --disambig <username>   Prints disambiguation info for the given username base
         --timing                Prints timing information for compiler phases
         --allow-crlf            Allows Windows-style CRLF line endings in CSV files
 
@@ -286,6 +290,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         debug_age_username: args.opt_value_from_str("--age")?,
         debug_age_group_username: args.opt_value_from_str("--age-group")?,
         debug_country_username: args.opt_value_from_str("--country")?,
+        debug_disambig_username: args.opt_value_from_str("--disambig")?,
         debug_timing: args.contains("--timing"),
         compile: args.contains(["-c", "--compile"]),
         compile_onefile: args.contains(["-1", "--compile-onefile"]),
@@ -334,7 +339,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let is_compiling: bool = args.compile || args.compile_onefile;
     let is_debugging: bool = args.debug_age_username.is_some()
         || args.debug_country_username.is_some()
-        || args.debug_age_group_username.is_some();
+        || args.debug_age_group_username.is_some()
+        || args.debug_disambig_username.is_some();
     let is_partial: bool = !search_root.ends_with("meet-data");
 
     let timing = instant_if(args.debug_timing);
@@ -518,6 +524,12 @@ fn main() -> Result<(), Box<dyn Error>> {
             let u = Username::from_name(&u).unwrap();
             disambiguator::group_age_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
+        }
+
+        // Report suggested disambiguation groupings.
+        if let Some(u) = args.debug_disambig_username {
+            let u = Username::from_name(&u).unwrap().without_variant();
+            disambiguator::disambiguate_debug_for(&meetdata, &liftermap, &u);
         }
 
         let timing = instant_if(args.debug_timing);
