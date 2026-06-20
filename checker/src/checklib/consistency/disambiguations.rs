@@ -20,10 +20,9 @@ pub fn check_disambiguations_all(
 
     // Check that all variant usernames are marked for disambiguation.
     for username in liftermap.keys() {
-        let (base, variant) = username.to_parts();
-        if variant == 0 {
+        let (base, Some(variant)) = username.to_parts() else {
             continue;
-        }
+        };
 
         let base_username = Username::from_name(base.into()).unwrap();
 

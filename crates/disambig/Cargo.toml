@@ -8,11 +8,11 @@ edition = "2024"
 
 [dependencies]
 opltypes = { path = "../opltypes/" }
+rustc-hash = { workspace = true }
 
 [dev-dependencies]
 csv = { workspace = true }
 datatest-stable = "0.3"
-rustc-hash = { workspace = true }
 serde = { workspace = true }
 serde_derive = { workspace = true }
 

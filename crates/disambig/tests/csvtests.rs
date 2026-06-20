@@ -99,8 +99,29 @@ struct TestRow {
 }
 
 impl disambig::DisambigEntry for TestRow {
+    fn federation(&self) -> Federation {
+        self.federation
+    }
+    fn date(&self) -> Date {
+        self.date
+    }
+    fn meet_country(&self) -> Country {
+        self.meet_country
+    }
+    fn username(&self) -> Username {
+        Username::from_name(&self.name).expect("could not form username")
+    }
     fn sex(&self) -> Sex {
         self.sex
+    }
+    fn birth_date(&self) -> Option<Date> {
+        self.birth_date
+    }
+    fn birth_year(&self) -> Option<u32> {
+        self.birth_year
+    }
+    fn age(&self) -> Age {
+        self.age
     }
 }
 
@@ -169,15 +190,12 @@ fn csvtest(csvpath: &Path) -> datatest_stable::Result<()> {
         return Ok(());
     }
 
-    // TODO: Uncomment the code below when tests pass.
-    Ok(())
-
     // Groups did not match expectations, so pretty-print debugging info.
-    // let err = GroupAssertError {
-    //     expected: rows.iter().map(|r| &r.assert_group).cloned().collect(),
-    //     got: ids
-    // };
-    // Err(Box::new(err))
+    let err = GroupAssertError {
+        expected: rows.iter().map(|r| &r.assert_group).cloned().collect(),
+        got: ids,
+    };
+    Err(Box::new(err))
 }
 
 /// Checks whether disambiguation assignations fit the asserted groups in test data.

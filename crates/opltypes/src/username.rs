@@ -103,9 +103,6 @@ impl Username {
 
     /// Returns the base name and variant of a [Username], if applicable.
     ///
-    /// Since variant numbers begin at 1, zero is used to indicate the
-    /// absence of variant information.
-    ///
     /// # Examples
     ///
     /// ```
@@ -113,21 +110,21 @@ impl Username {
     /// let u = Username::from_name("John Doe").unwrap();
     /// let (base, variant) = u.to_parts();
     /// assert_eq!(base.as_str(), "johndoe");
-    /// assert_eq!(variant, 0);
+    /// assert_eq!(variant, None);
     ///
     /// let u = Username::from_name("John Doe #1").unwrap();
     /// let (base, variant) = u.to_parts();
     /// assert_eq!(base.as_str(), "johndoe");
-    /// assert_eq!(variant, 1);
+    /// assert_eq!(variant, Some(1));
     /// ```
-    pub fn to_parts(&self) -> (&AsciiStr, u32) {
+    pub fn to_parts(&self) -> (&AsciiStr, Option<u32>) {
         // Common case first: if no digit at end, it's not a variant.
         if let Some(ascii_char) = self.0.last() {
             if !ascii_char.is_ascii_digit() {
-                return (&self.0, 0);
+                return (&self.0, None);
             }
         } else {
-            return (&self.0, 0); // Username was the empty string.
+            return (&self.0, None); // Username was the empty string.
         }
 
         // Slow case: the username ends with a digit.
@@ -135,7 +132,7 @@ impl Username {
         // If the username begins with "ea-", then it's an East Asian name
         // that is numerically encoded and cannot be disambiguated.
         if self.0.as_str().starts_with("ea-") {
-            return (&self.0, 0);
+            return (&self.0, None);
         }
 
         // Definitely a variant.
@@ -152,7 +149,7 @@ impl Username {
         }
 
         let variant = self.0.as_str()[start..].parse::<u32>().unwrap_or(0);
-        (&self.0[0..start], variant)
+        (&self.0[0..start], Some(variant))
     }
 }
 
