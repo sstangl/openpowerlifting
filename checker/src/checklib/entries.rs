@@ -224,26 +224,25 @@ impl Entry {
     }
 
     /// Uses `Age`, `BirthYear`, and `BirthDate` columns to calculate
-    /// the lifter's `Age` on a given date.
-    pub fn age_on(&self, date: Date) -> Age {
+    /// the lifter's `Age` on the date the age was recorded.
+    pub fn age_on(&self, meet_date: Date) -> Age {
         // If the age is provided explicitly, just use that.
         if self.age != Age::None {
-            // XXX FIXME: This does not calculate the age on the given date!
             return self.age;
         }
 
         // If the BirthDate is provided, calculate an exact age.
         if let Some(birthdate) = self.birthdate
-            && let Ok(age) = birthdate.age_on(date)
+            && let Ok(age) = birthdate.age_on(meet_date)
         {
             return age;
         }
 
         // If the BirthYear is provided, calculate an approximate age.
         if let Some(birthyear) = self.birthyearrange.exact_birthyear()
-            && date.year() >= birthyear
+            && meet_date.year() >= birthyear
         {
-            return Age::from_birthyear_on_date(birthyear, date);
+            return Age::from_birthyear_on_date(birthyear, meet_date);
         }
 
         Age::None

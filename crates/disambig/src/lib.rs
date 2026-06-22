@@ -210,7 +210,7 @@ fn score_sex<E: DisambigEntry>(a: &E, b: &E) -> Score {
 }
 
 fn score_age<E: DisambigEntry>(a: &E, b: &E) -> Score {
-    // Birthdates.
+    // Do both have birthdates?
     if let (Some(a_birth_date), Some(b_birth_date)) = (a.birth_date(), b.birth_date()) {
         if a_birth_date == b_birth_date {
             return Score::STRONGLY_POSITIVE;
@@ -219,7 +219,7 @@ fn score_age<E: DisambigEntry>(a: &E, b: &E) -> Score {
         }
     }
 
-    // Birth years.
+    // Do both have birth years?
     if let (Some(a_birth_year), Some(b_birth_year)) = (a.birth_year(), b.birth_year()) {
         if a_birth_year == b_birth_year {
             return Score::MODERATELY_POSITIVE;
@@ -228,7 +228,18 @@ fn score_age<E: DisambigEntry>(a: &E, b: &E) -> Score {
         }
     }
 
-    // TODO: Age is more complicated because of date logic.
+    // Do both contain age information?
+    // If so, that can be reduced down to BirthYearRanges and intersected.
+    if let (Some(a_byr), Some(b_byr)) = (
+        a.age().to_birthyearrange(a.date()),
+        b.age().to_birthyearrange(b.date()),
+    ) {
+        if a_byr.intersect(b_byr) == BirthYearRange::default() {
+            return Score::DEFINITE_MISMATCH;
+        } else {
+            return Score::MODERATELY_POSITIVE;
+        }
+    }
 
     Score(0)
 }

@@ -9,7 +9,7 @@ use std::fmt::{self, Write};
 use std::num;
 use std::str::FromStr;
 
-use crate::Date;
+use crate::{BirthYearRange, Date};
 
 /// The reported age of the lifter at a given meet.
 /// In the CSV file, approximate ages are reported with '.5' added.
@@ -94,6 +94,14 @@ impl Age {
             Ordering::Less => Age::None,
             Ordering::Greater => Age::Approximate((on_year - birthyear - 1) as u8),
             Ordering::Equal => Age::Approximate(0),
+        }
+    }
+
+    /// Given the date on which this age was recorded, calculates possible birth years.
+    pub fn to_birthyearrange(self, on_date: Date) -> Option<BirthYearRange> {
+        match self {
+            Age::None => None,
+            _ => Some(BirthYearRange::from_range(self, self, on_date)),
         }
     }
 
