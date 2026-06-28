@@ -65,6 +65,9 @@
     pm80_84 = {name = "PM80-84", min=80, max=84}
     pm80p = {name = "PM80+", min=80, max=999}
 
+    # Unsure.
+    fopen = {name = "FOpen", min = 0, max = 999}
+
     # Misc divisions.
     pro_open = {name="Pro Open", min=0, max=999}
     pro_topen = {name="Pro TOpen", min=0, max=999, tested="Yes"}
