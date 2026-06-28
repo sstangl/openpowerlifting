@@ -572,6 +572,11 @@ pub enum Federation {
     #[strum(to_string = "GPA-Finland", serialize = "gpa-finland")]
     GPAFinland,
 
+    /// Mexican branch of the GPA.
+    #[serde(rename = "GPA-Mexico")]
+    #[strum(to_string = "GPA-Mexico", serialize = "gpa-mexico")]
+    GPAMex,
+
     /// Russian branch of the GPA.
     #[serde(rename = "GPA-Russia")]
     #[strum(to_string = "GPA-Russia", serialize = "gpa-russia")]
@@ -2309,6 +2314,7 @@ impl Federation {
             Federation::GPACOL => false,
             Federation::GPACRO => false,
             Federation::GPAFinland => false,
+            Federation::GPAMex => false,
             Federation::GPARussia => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
@@ -2809,6 +2815,7 @@ impl Federation {
             Federation::GPACOL => Some(Country::Colombia),
             Federation::GPACRO => Some(Country::Croatia),
             Federation::GPAFinland => Some(Country::Finland),
+            Federation::GPAMex => Some(Country::Mexico),
             Federation::GPARussia => Some(Country::Russia),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
@@ -3356,6 +3363,7 @@ impl Federation {
             Federation::GPACOL => Some(Federation::GPA),
             Federation::GPACRO => Some(Federation::GPA),
             Federation::GPAFinland => Some(Federation::GPA),
+            Federation::GPAMex => Some(Federation::GPA),
             Federation::GPARussia => Some(Federation::GPA),
             Federation::GPC => Some(Federation::GPC),
             Federation::GPCAUS => Some(Federation::GPC),
@@ -3964,6 +3972,7 @@ impl Federation {
             Federation::GPACOL => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
             Federation::GPAFinland => PointsSystem::Wilks,
+            Federation::GPAMex => PointsSystem::Wilks,
             Federation::GPARussia => PointsSystem::Wilks,
             Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
