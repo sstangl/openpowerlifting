@@ -62,3 +62,8 @@
 
 [exemptions]
     2509 = ["ExemptWeightClassConsistency"] # Used a 150kg class.
+    1803 = ["ExemptWeightClassConsistency"] # IPF-era weightclasses (pre-2018-08-01 cutoff)
+    1903 = ["ExemptDivision"]   # Uses 'M80-84' and empty DQ divisions
+    2103 = ["ExemptWeightClassConsistency", "ExemptDivision"]  # IPF-class suggestions + Sub-Juniors divs + age .5 boundaries
+    2203 = ["ExemptDivision"]   # Age .5 boundaries + 'Masters 80-84'
+    2204 = ["ExemptDivision"]   # WP-USA divisions: 'S35-39', 'J13-15', Open min-age
