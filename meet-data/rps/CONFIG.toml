@@ -86,10 +86,12 @@ require_manual_disambiguation = true
     pro_master = {name = "Pro Masters", min = 40, max = 999}
     pro_master_40 = {name = "Pro Masters 40+", min = 40, max = 999}
     pro_master_50 = {name = "Pro Masters 50+", min = 50, max = 999}
+    pro_submaster = {name = "Pro Submasters", min = 33, max = 39}
     ama_master = {name = "Amateur Masters", min = 40, max = 999, tested="Yes"}
     ama_master_50 = {name = "Amateur Masters 50+", min = 50, max = 999, tested="Yes"}
     ama_teen = {name = "Amateur Teen", min = 14, max = 19, tested="Yes"}
     ama_teen_13_15 = {name = "Amateur Teen 13-15", min = 13, max = 15, tested="Yes"}
+    ama_junior = {name = "Amateur Juniors", min = 20, max = 23, tested="Yes"}
 
 
     # Occupation-based divisions, limited to only Open and Master 50+.
