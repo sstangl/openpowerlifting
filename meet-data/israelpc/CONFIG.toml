@@ -1,3 +1,6 @@
+[options]
+    valid_federations = ["IsraelPC"]
+
 [divisions]
     open = {name = "O", min = 0, max = 999}
     youth = {name = "Y", min = 0, max = 12}

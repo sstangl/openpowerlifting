@@ -799,10 +799,6 @@ pub enum Federation {
     #[strum(to_string = "IPA-AZE", serialize = "ipa-aze")]
     IPAAZE,
 
-    /// Israel Powerlifting Community.
-    #[strum(to_string = "IPC", serialize = "ipc")]
-    IPC,
-
     /// International Powerlifting Federation.
     #[strum(to_string = "IPF", serialize = "ipf")]
     IPF,
@@ -889,6 +885,10 @@ pub enum Federation {
     /// International RAW Powerlifting.
     #[strum(to_string = "IRP", serialize = "irp")]
     IRP,
+
+    /// Israel Powerlifting Community.
+    #[strum(to_string = "IsraelPC", serialize = "israelpc")]
+    IsraelPC,
 
     /// Unaffiliated meets held in Italy.
     #[serde(rename = "Italy-UA")]
@@ -2369,7 +2369,6 @@ impl Federation {
             Federation::IntDFPA => FULLY_TESTED,
             Federation::IPA => false,
             Federation::IPAAZE => false,
-            Federation::IPC => false,
             Federation::IPF => FULLY_TESTED,
             Federation::IPFChina => FULLY_TESTED,
             Federation::IPL => false,
@@ -2381,7 +2380,6 @@ impl Federation {
             Federation::IPLNZ => false,
             Federation::IPLRussia => false,
             Federation::IPLSpain => false,
-            Federation::UKIPL => false,
             Federation::IranBBF => FULLY_TESTED,
             Federation::IraqPF => FULLY_TESTED,
             Federation::IrelandUA => false,
@@ -2389,6 +2387,7 @@ impl Federation {
             Federation::IrishPO => false,
             Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
+            Federation::IsraelPC => false,
             Federation::ItalyUA => false,
             Federation::JPA => FULLY_TESTED,
             Federation::KBGV => FULLY_TESTED,
@@ -2529,6 +2528,7 @@ impl Federation {
             Federation::UDFPF => FULLY_TESTED,
             Federation::UgandaPA => false,
             Federation::UgandaPF => FULLY_TESTED,
+            Federation::UKIPL => false,
             Federation::UKPU => false,
             Federation::UkrainePA => false,
             Federation::UkrainePO => false,
@@ -2864,7 +2864,6 @@ impl Federation {
             Federation::IntDFPA => None,
             Federation::IPA => Some(Country::USA),
             Federation::IPAAZE => Some(Country::Azerbaijan),
-            Federation::IPC => Some(Country::Israel),
             Federation::IPF => None,
             Federation::IPFChina => Some(Country::China),
             Federation::IPL => None,
@@ -2884,6 +2883,7 @@ impl Federation {
             Federation::IrishPO => Some(Country::Ireland),
             Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
+            Federation::IsraelPC => Some(Country::Israel),
             Federation::ItalyUA => Some(Country::Italy),
             Federation::JPA => Some(Country::Japan),
             Federation::KBGV => Some(Country::Belgium),
@@ -3426,7 +3426,6 @@ impl Federation {
             Federation::IntDFPA => None,
             Federation::IPA => None,
             Federation::IPAAZE => Some(Federation::IPA),
-            Federation::IPC => None,
             Federation::IPF => Some(Federation::IPF),
             Federation::IPFChina => Some(Federation::IPF),
             Federation::IPL => Some(Federation::IPL),
@@ -3438,14 +3437,6 @@ impl Federation {
             Federation::IPLNZ => Some(Federation::IPL),
             Federation::IPLRussia => Some(Federation::IPL),
             Federation::IPLSpain => Some(Federation::IPL),
-            Federation::UKIPL => {
-                // UK IPL affiliate from 2024
-                if date.year() >= 2024 {
-                    Some(Federation::IPL)
-                } else {
-                    None
-                }
-            }
             Federation::IranBBF => Some(Federation::IPF),
             Federation::IraqPF => Some(Federation::IPF),
             Federation::IrelandUA => None,
@@ -3453,6 +3444,7 @@ impl Federation {
             Federation::IrishPO => Some(Federation::WPC),
             Federation::IronBoy => None,
             Federation::IRP => None,
+            Federation::IsraelPC => None,
             Federation::ItalyUA => None,
             Federation::JPA => Some(Federation::IPF),
             Federation::KBGV => Some(Federation::IPF),
@@ -3607,6 +3599,14 @@ impl Federation {
             Federation::UDFPF => Some(Federation::WDFPF),
             Federation::UgandaPA => Some(Federation::WPA),
             Federation::UgandaPF => Some(Federation::WP),
+            Federation::UKIPL => {
+                // UK IPL affiliate from 2024
+                if date.year() >= 2024 {
+                    Some(Federation::IPL)
+                } else {
+                    None
+                }
+            }
             Federation::UkrainePA => None,
             Federation::UkrainePO => None,
             Federation::UnifiedSA => None,
@@ -4028,7 +4028,6 @@ impl Federation {
             Federation::IntDFPA => PointsSystem::Dots,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPAAZE => PointsSystem::Wilks,
-            Federation::IPC => PointsSystem::Wilks,
             Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPFChina => Federation::ipf_rules_on(date),
             Federation::IPL => Federation::ipl_rules_on(date),
@@ -4040,7 +4039,6 @@ impl Federation {
             Federation::IPLNZ => Federation::ipl_rules_on(date),
             Federation::IPLRussia => Federation::ipl_rules_on(date),
             Federation::IPLSpain => Federation::ipl_rules_on(date),
-            Federation::UKIPL => Federation::ipl_rules_on(date),
             Federation::IranBBF => Federation::ipf_rules_on(date),
             Federation::IraqPF => Federation::ipf_rules_on(date),
             Federation::IrelandUA => PointsSystem::Wilks,
@@ -4055,6 +4053,7 @@ impl Federation {
             Federation::IrishPO => PointsSystem::Glossbrenner,
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
+            Federation::IsraelPC => PointsSystem::Wilks,
             Federation::ItalyUA => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
             Federation::KBGV => Federation::ipf_rules_on(date),
@@ -4216,6 +4215,7 @@ impl Federation {
             Federation::UDFPF => PointsSystem::Wilks,
             Federation::UgandaPA => PointsSystem::Wilks,
             Federation::UgandaPF => Federation::wp_rules_on(date),
+            Federation::UKIPL => Federation::ipl_rules_on(date),
             Federation::UkrainePA => PointsSystem::Wilks,
             Federation::UkrainePO => PointsSystem::Wilks,
             Federation::UKUA => PointsSystem::Wilks,
