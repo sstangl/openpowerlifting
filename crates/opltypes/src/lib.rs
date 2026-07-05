@@ -68,6 +68,7 @@ mod sex;
 pub use self::sex::Sex;
 
 pub mod states;
+pub use self::states::State;
 
 mod username;
 pub use self::username::Username;

@@ -3,10 +3,14 @@
 //! Disambiguation distinguishes lifters with the same name by grouping them
 //! and applying a label to each group.
 
+use opltypes::states::*;
 use opltypes::*;
 use rustc_hash::FxHashMap;
 
 use std::fmt;
+
+mod latlong;
+use latlong::Coordinates;
 
 /// Accessor for all disambiguation information needed for a single entry.
 ///
@@ -17,6 +21,7 @@ pub trait DisambigEntry {
     fn federation(&self) -> Federation;
     fn date(&self) -> Date;
     fn meet_country(&self) -> Country;
+    fn meet_state(&self) -> Option<State>;
 
     // Entry information.
     fn username(&self) -> Username;
@@ -174,6 +179,22 @@ fn score_date<E: DisambigEntry>(a: &E, b: &E) -> Score {
 }
 
 fn score_location<E: DisambigEntry>(a: &E, b: &E) -> Score {
+    // If this is in the USA, give extra points to meets within reasonable driving distance.
+    // TODO: This doesn't really help the score much, it's mostly here to test it out.
+    if a.meet_country() == Country::USA
+        && b.meet_country() == Country::USA
+        && let (Some(State::InUSA(a_state)), Some(State::InUSA(b_state))) =
+            (a.meet_state(), b.meet_state())
+    {
+        let km = a_state.latlong().km_to(b_state.latlong());
+        let driving_distance: f64 = 1000.0;
+
+        if km <= driving_distance {
+            let fraction: f64 = (driving_distance - km) / 1000.0;
+            return Score(50 + (25.0 * fraction).trunc() as i32);
+        }
+    }
+
     // If in the same country, mildly positive evidence.
     if a.meet_country() == b.meet_country() {
         return Score(50);
@@ -187,8 +208,6 @@ fn score_location<E: DisambigEntry>(a: &E, b: &E) -> Score {
     if a.federation().home_country().is_none() || b.federation().home_country().is_none() {
         return Score::NO_CONTRADICTION;
     }
-
-    // TODO: US state logic, maybe with distances.
 
     // Otherwise, in different countries and non-international.
     Score(-50)

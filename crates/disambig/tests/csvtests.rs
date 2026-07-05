@@ -40,7 +40,7 @@ struct TestRow {
     federation: Federation,
     date: Date,
     meet_country: Country,
-    // meet_state: State, TODO, needs deserialization help, stateful with country
+    meet_state: String,
     // meet_town: String, TODO, empty string should be None.
     meet_name: String,
     // sanctioned: String,
@@ -108,6 +108,9 @@ impl disambig::DisambigEntry for TestRow {
     }
     fn meet_country(&self) -> Country {
         self.meet_country
+    }
+    fn meet_state(&self) -> Option<State> {
+        State::from_str_and_country(&self.meet_state, self.meet_country).ok()
     }
     fn username(&self) -> Username {
         Username::from_name(&self.name).expect("could not form username")

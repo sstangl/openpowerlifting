@@ -37,6 +37,9 @@ impl<'a> disambig::DisambigEntry for DisambigRow<'a> {
     fn meet_country(&self) -> Country {
         self.meet.country
     }
+    fn meet_state(&self) -> Option<State> {
+        self.meet.state
+    }
     fn username(&self) -> Username {
         self.entry.username.clone() // TODO: Reference OK in trait?
     }
