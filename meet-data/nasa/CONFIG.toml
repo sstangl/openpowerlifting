@@ -234,6 +234,13 @@
     retrowsmp = {name="retrowsmp", min=40, max=999, sex='F', equipment='Raw'}
     retrowmp = {name="retrowmp", min=40, max=999, sex='F', equipment='Raw'}
 
+    # Unlimited divisions
+
+    unlm2 = {name="unlm2", min=50, max=59, sex='M', equipment='Unlimited'}
+    unlmp = {name="unlmp", min=40, max=999, sex='M', equipment='Unlimited'}
+    unlpure = {name="unlpure", min=0, max=999, sex='M', equipment='Unlimited'}
+
+
     # Misc divisions
     light = {name="light", min=0, max=999, sex='M'}
     middle = {name="middle", min=0, max=999, sex='M'}
