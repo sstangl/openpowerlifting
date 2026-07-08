@@ -20,7 +20,7 @@ use std::time::Instant;
 
 #[cfg(feature = "jemalloc")]
 #[global_allocator]
-static GLOBAL: jemallocator::Jemalloc = jemallocator::Jemalloc;
+static GLOBAL: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
 
 /// Stores user-specified arguments from the command line.
 struct Args {
@@ -566,8 +566,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     if args.debug_timing {
         /// Takes a reading of jemalloc's internal "active bytes" counter.
         fn measure_bytes() -> usize {
-            let epoch_handle = jemalloc_ctl::epoch::mib().unwrap();
-            let active_handle = jemalloc_ctl::stats::active::mib().unwrap();
+            let epoch_handle = tikv_jemalloc_ctl::epoch::mib().unwrap();
+            let active_handle = tikv_jemalloc_ctl::stats::active::mib().unwrap();
 
             // Advancing the epoch updates statistics.
             epoch_handle.advance().unwrap();

@@ -10,7 +10,7 @@ license = "AGPL-3.0-or-later"
 default = []
 
 # Uses jemalloc as the global allocator instead of the system allocator.
-jemalloc = ["jemallocator", "jemalloc-ctl"]
+jemalloc = ["tikv-jemallocator", "tikv-jemalloc-ctl"]
 
 [dependencies]
 coefficients = { path = "../crates/coefficients/" }
@@ -21,8 +21,6 @@ colored= { workspace = true }
 csv = { workspace = true }
 itertools = "0.11"
 itertools-num = "0.1"
-jemallocator = { version = "0.5", optional = true }
-jemalloc-ctl = { version = "0.5", optional = true }
 pico-args = "0.5"
 rayon = "1.10"
 rustc-hash = { workspace = true }
@@ -31,6 +29,8 @@ serde_derive = { workspace = true }
 smartstring = "1.0"
 strum = { workspace = true }
 strum_macros = { workspace = true }
+tikv-jemallocator = { workspace = true, optional = true }
+tikv-jemalloc-ctl = { workspace = true, optional = true }
 toml = "1.0"
 unicode-normalization = "0.1.23"
 walkdir = "2"
