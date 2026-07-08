@@ -291,11 +291,9 @@ impl FromStr for Age {
             return Ok(Age::Exact(u8::MAX));
         }
 
-        let v: Vec<&str> = s.split('.').collect();
-        if v.len() == 1 {
-            v[0].parse::<u8>().map(Age::Exact)
-        } else {
-            v[0].parse::<u8>().map(Age::Approximate)
+        match s.split_once('.') {
+            Some((whole, _)) => whole.parse::<u8>().map(Age::Approximate),
+            None => s.parse::<u8>().map(Age::Exact)
         }
     }
 }
