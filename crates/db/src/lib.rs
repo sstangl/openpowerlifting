@@ -12,6 +12,7 @@ extern crate strum_macros;
 use csv::StringRecord;
 use itertools::Itertools;
 use opltypes::*;
+use smartstring::alias::CompactString;
 use std::str::FromStr;
 
 use std::error::Error;
@@ -64,8 +65,96 @@ fn import_lifters_csv(file: &Path) -> Result<Vec<Lifter>, Box<dyn Error>> {
     let mut vec = Vec::with_capacity(1_000_000);
 
     let mut rdr = csv::ReaderBuilder::new().quoting(false).from_path(file)?;
-    for lifter in rdr.deserialize() {
-        let lifter: Lifter = lifter?;
+
+    // Using `csv`' crate's deserialize() which delegates to serde is totally a decent approach
+    // to parsing this, however, based on a flamegraph analysis, the serde visitor callstack ended
+    // up taking around 0.1 seconds for the entries CSV.
+    // To explain this, we'll use the `csv` row read, that's constant between the 2 impls`, as a relative measurement:
+    // 1. using deserialize() - the read took 30% of the time of the whole parsing.
+    // 2. using the raw parsing - the read took 47% of the time of the whole parsing.
+    // By using this, we managed to get a 64% speed improvement in this fn impl.
+    let headers = rdr.headers()?.clone();
+    let idx = |name: &str| {
+        headers
+            .iter()
+            .position(|item| item == name)
+            .unwrap_or_else(|| panic!("missing column: {name}"))
+    };
+
+    let name_idx = idx("Name");
+    let cyrillic_name_idx = idx("CyrillicName");
+    let chinese_name_idx = idx("ChineseName");
+    let greek_name_idx = idx("GreekName");
+    let japanese_name_idx = idx("JapaneseName");
+    let korean_name_idx = idx("KoreanName");
+    let username_idx = idx("Username");
+    let instagram_idx = idx("Instagram");
+    let color_idx = idx("Color");
+
+    // We are using a mutable record to avoid allocating StringRecord + ByteRecord every row.
+    let mut record = StringRecord::new();
+    while rdr.read_record(&mut record)? {
+        let lifter: Lifter = Lifter {
+            name: CompactString::from(&record[name_idx]),
+            username: Username::from_trusted_str(&record[username_idx])
+                .map_err(|e| e.to_string())?,
+            chinese_name: {
+                let tmp_name = &record[chinese_name_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+            cyrillic_name: {
+                let tmp_name = &record[cyrillic_name_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+            greek_name: {
+                let tmp_name = &record[greek_name_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+            japanese_name: {
+                let tmp_name = &record[japanese_name_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+            korean_name: {
+                let tmp_name = &record[korean_name_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+            instagram: {
+                let tmp_name = &record[instagram_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+            color: {
+                let tmp_name = &record[color_idx];
+                if tmp_name.is_empty() {
+                    None
+                } else {
+                    Some(Box::from(tmp_name))
+                }
+            },
+        };
         vec.push(lifter);
     }
 

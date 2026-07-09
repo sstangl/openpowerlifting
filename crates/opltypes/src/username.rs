@@ -97,7 +97,9 @@ impl Username {
     }
 
     /// Interprets a [&str] as a [Username]. Used in deserialization.
-    pub(crate) fn from_str(s: &str) -> Result<Self, ascii::FromAsciiError<&str>> {
+    ///
+    /// This constructor does not perform any validation that the username is well-formed.
+    pub fn from_trusted_str(s: &str) -> Result<Self, ascii::FromAsciiError<&str>> {
         Ok(Username(s.into_ascii_string()?))
     }
 
@@ -169,7 +171,7 @@ impl Username {
     /// Returns the username with the specified disambiguation variant.
     pub fn with_variant(&self, variant: u32) -> Username {
         let (base, _maybe_old_variant) = self.to_parts();
-        Username::from_str(&format!("{base}{variant}")).unwrap()
+        Username::from_trusted_str(&format!("{base}{variant}")).unwrap()
     }
 }
 
@@ -188,7 +190,7 @@ impl Visitor<'_> for UsernameVisitor {
     }
 
     fn visit_str<E: de::Error>(self, value: &str) -> Result<Username, E> {
-        Username::from_str(value).map_err(E::custom)
+        Username::from_trusted_str(value).map_err(E::custom)
     }
 }
 
