@@ -9,7 +9,10 @@ extern crate serde_derive;
 #[macro_use]
 extern crate strum_macros;
 
+use csv::StringRecord;
 use itertools::Itertools;
+use opltypes::*;
+use std::str::FromStr;
 
 use std::error::Error;
 use std::mem;
@@ -91,12 +94,129 @@ fn import_entries_csv(
     file: &Path,
     meets: &mut [Meet],
 ) -> Result<(Vec<Entry>, MetaFederationCache), Box<dyn Error>> {
-    let mut vec = Vec::with_capacity(3_000_000);
+    let mut rdr = csv::ReaderBuilder::new()
+        .quoting(false)
+        .from_path(file)?;
 
-    let mut rdr = csv::ReaderBuilder::new().quoting(false).from_path(file)?;
-    for entry in rdr.deserialize() {
-        let entry: Entry = entry?;
-        vec.push(entry);
+
+    // Using `csv`' crate's deserialize() which delegates to serde is totally a decent approach
+    // to parsing this, however, based on a flamegraph analysis, the serde visitor callstack ended
+    // up taking around 0.5 seconds for the entries CSV.
+    // To explain this, we'll use the `csv` row read, that's constant between the 2 impls`, as a relative measurement:
+    // 1. using deserialize() - the read took 31% of the time of the whole parsing.
+    // 2. using the raw parsing - the read took 42% of the time of the whole parsing.
+    // By using this, we managed to get a 23% speed improvement in this fn impl.
+    // The graphics can be found here: https://gitlab.com/openpowerlifting/opl-data/-/merge_requests/13575
+    let headers = rdr.headers()?.clone();
+    let idx = |name: &str| {
+        headers
+            .iter()
+            .position(|h| h == name)
+            .unwrap_or_else(|| panic!("missing column: {name}"))
+    };
+
+    let meet_id_idx = idx("MeetID");
+    let lifter_id_idx = idx("LifterID");
+    let sex_idx = idx("Sex");
+    let event_idx = idx("Event");
+    let equipment_idx = idx("Equipment");
+    let age_idx = idx("Age");
+    let ageclass_idx = idx("AgeClass");
+    let birthyearclass_idx = idx("BirthYearClass");
+    let division_idx = idx("Division");
+    let bodyweightkg_idx = idx("BodyweightKg");
+    let weightclasskg_idx = idx("WeightClassKg");
+    let squat1kg_idx = idx("Squat1Kg");
+    let squat2kg_idx = idx("Squat2Kg");
+    let squat3kg_idx = idx("Squat3Kg");
+    let squat4kg_idx = idx("Squat4Kg");
+    let best3squatkg_idx = idx("Best3SquatKg");
+    let bench1kg_idx = idx("Bench1Kg");
+    let bench2kg_idx = idx("Bench2Kg");
+    let bench3kg_idx = idx("Bench3Kg");
+    let bench4kg_idx = idx("Bench4Kg");
+    let best3benchkg_idx = idx("Best3BenchKg");
+    let deadlift1kg_idx = idx("Deadlift1Kg");
+    let deadlift2kg_idx = idx("Deadlift2Kg");
+    let deadlift3kg_idx = idx("Deadlift3Kg");
+    let deadlift4kg_idx = idx("Deadlift4Kg");
+    let best3deadliftkg_idx = idx("Best3DeadliftKg");
+    let totalkg_idx = idx("TotalKg");
+    let place_idx = idx("Place");
+    let wilks_idx = idx("Wilks");
+    let mcculloch_idx = idx("McCulloch");
+    let glossbrenner_idx = idx("Glossbrenner");
+    let goodlift_idx = idx("Goodlift");
+    let dots_idx = idx("Dots");
+    let tested_idx = idx("Tested");
+    let country_idx = idx("Country");
+    let state_idx = idx("State");
+
+    let mut vec: Vec<Entry> = Vec::with_capacity(4_000_000);
+
+    // We are using a mutable record to avoid allocating StringRecord + ByteRecord every row.
+    let mut record = StringRecord::new();
+    while rdr.read_record(&mut record)? {
+            let entry = Entry {
+                meet_id: record[meet_id_idx].parse::<u32>()?,
+                lifter_id: record[lifter_id_idx].parse::<u32>()?,
+                sex: match &record[sex_idx] {
+                    "M" => Sex::M,
+                    "F" => Sex::F,
+                    "Mx" => Sex::Mx,
+                    _ => Sex::default()
+                },
+                event: Event::from_str(&record[event_idx])?,
+                equipment: Equipment::from_str(&record[equipment_idx])?,
+                age: Age::from_str(&record[age_idx])?,
+                division: if record[division_idx].is_empty() {
+                    None
+                } else {
+                    Some(record[division_idx].into())
+                },
+                bodyweightkg: WeightKg::from_str(&record[bodyweightkg_idx])?,
+                weightclasskg: WeightClassKg::from_str(&record[weightclasskg_idx])?,
+                squat1kg: WeightKg::from_str(&record[squat1kg_idx])?,
+                squat2kg: WeightKg::from_str(&record[squat2kg_idx])?,
+                squat3kg: WeightKg::from_str(&record[squat3kg_idx])?,
+                squat4kg: WeightKg::from_str(&record[squat4kg_idx])?,
+                best3squatkg: WeightKg::from_str(&record[best3squatkg_idx])?,
+                bench1kg: WeightKg::from_str(&record[bench1kg_idx])?,
+                bench2kg: WeightKg::from_str(&record[bench2kg_idx])?,
+                bench3kg: WeightKg::from_str(&record[bench3kg_idx])?,
+                bench4kg: WeightKg::from_str(&record[bench4kg_idx])?,
+                best3benchkg: WeightKg::from_str(&record[best3benchkg_idx])?,
+                deadlift1kg: WeightKg::from_str(&record[deadlift1kg_idx])?,
+                deadlift2kg: WeightKg::from_str(&record[deadlift2kg_idx])?,
+                deadlift3kg: WeightKg::from_str(&record[deadlift3kg_idx])?,
+                deadlift4kg: WeightKg::from_str(&record[deadlift4kg_idx])?,
+                best3deadliftkg: WeightKg::from_str(&record[best3deadliftkg_idx])?,
+                totalkg: WeightKg::from_str(&record[totalkg_idx])?,
+                place: Place::from_str(&record[place_idx])?,
+                wilks: Points::from_str(&record[wilks_idx])?,
+                mcculloch: Points::from_str(&record[mcculloch_idx])?,
+                glossbrenner: Points::from_str(&record[glossbrenner_idx])?,
+                goodlift: Points::from_str(&record[goodlift_idx])?,
+                dots: Points::from_str(&record[dots_idx])?,
+                tested: match &record[tested_idx] {
+                    "Yes" => true,
+                    _ => false,
+                },
+                ageclass: AgeClass::from_str(&record[ageclass_idx])?,
+                birthyearclass: BirthYearClass::from_str(&record[birthyearclass_idx])?,
+                lifter_country: if record[country_idx].is_empty() {
+                    None
+                } else {
+                    Some(Country::from_str(&record[country_idx])?)
+                },
+                lifter_state: if record[state_idx].is_empty() {
+                    None
+                } else {
+                    Some(State::from_full_code(&record[state_idx])?)
+                },
+            };
+
+            vec.push(entry);
     }
 
     // Initially, the entries CSV is sorted by meet_id.
