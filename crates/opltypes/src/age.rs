@@ -293,7 +293,7 @@ impl FromStr for Age {
 
         match s.split_once('.') {
             Some((whole, _)) => whole.parse::<u8>().map(Age::Approximate),
-            None => s.parse::<u8>().map(Age::Exact)
+            None => s.parse::<u8>().map(Age::Exact),
         }
     }
 }
