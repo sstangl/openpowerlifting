@@ -22,3 +22,7 @@ serde_json = { workspace = true }
 [[bench]]
 name = "username"
 harness = false
+
+[[bench]]
+name = "weightkg"
+harness = false

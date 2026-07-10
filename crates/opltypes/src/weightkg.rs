@@ -378,18 +378,62 @@ impl fmt::Display for WeightAny {
 }
 
 impl FromStr for WeightKg {
-    type Err = num::ParseFloatError;
+    type Err = num::ParseIntError;
 
+    #[inline]
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         if s.is_empty() {
-            Ok(WeightKg(0))
-        } else {
-            Ok(WeightKg::from_f32(s.parse::<f32>()?))
+            return Ok(WeightKg(0));
         }
+
+        // Fast path for integers.
+        let Some((int_str, fractional_str)) = s.split_once('.') else {
+            return Ok(WeightKg((s.parse::<i16>()? as i32).wrapping_mul(100)));
+        };
+
+        let int_parse: i32 = match int_str.parse::<i16>() {
+            Ok(int) => int as i32,
+            Err(err) => {
+                // Unlikely.
+                if int_str.is_empty() {
+                    0
+                } else {
+                    return Err(err);
+                }
+            }
+        };
+        let sign_mask = int_parse >> 31; // 0xFFFF_FFFF if neg, 0x0000_0000 if pos.
+
+        // Secondary fast-path for ".5" fractional values, which are very common.
+        if fractional_str == "5" {
+            return Ok(WeightKg(
+                int_parse
+                    .wrapping_mul(100)
+                    .wrapping_add((50 ^ sign_mask).wrapping_sub(sign_mask)), // Match sign of int_parse.
+            ));
+        }
+
+        // This will intentionally reject the empty fractional string, disallowing "123.".
+        let fractional_parse = fractional_str.parse::<u64>()?;
+
+        let fractional_rounded: u32 = match fractional_str.len() {
+            // Zero is unreachable.
+            1 => (fractional_parse as u32).wrapping_mul(10),
+            2 => fractional_parse as u32,
+            _ => {
+                let power_of_ten = fractional_str.len() - 2;
+                let divisor = 10_u64.pow(power_of_ten as u32);
+                ((fractional_parse + (divisor / 2)) / divisor) as u32
+            }
+        };
+
+        Ok(WeightKg(int_parse.wrapping_mul(100).wrapping_add(
+            ((fractional_rounded as i32) ^ sign_mask).wrapping_sub(sign_mask), // Match sign of int_parse.
+        )))
     }
 }
 impl FromStr for WeightLbs {
-    type Err = num::ParseFloatError;
+    type Err = num::ParseIntError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         WeightKg::from_str(s).map(|kg| WeightLbs(kg.0)) // Cast to pounds without conversion.
@@ -443,43 +487,55 @@ mod tests {
     #[test]
     fn basic() {
         let w = "".parse::<WeightKg>().unwrap();
-        assert!(w.0 == 0);
+        assert_eq!(w.0, 0);
 
         let w = "789".parse::<WeightKg>().unwrap();
-        assert!(w.0 == 78900);
+        assert_eq!(w.0, 78900);
 
         let w = "123.45".parse::<WeightKg>().unwrap();
-        assert!(w.0 == 12345);
+        assert_eq!(w.0, 12345);
 
         let w = "-123.45".parse::<WeightKg>().unwrap();
-        assert!(w.0 == -12345);
+        assert_eq!(w.0, -12345);
     }
 
+    /// Test some special f32 values.
     #[test]
     fn f32_edgecases() {
-        // Test some special f32 values.
         let w = "-0".parse::<WeightKg>().unwrap();
-        assert!(w.0 == 0);
+        assert_eq!(w.0, 0);
 
-        let w = "NaN".parse::<WeightKg>().unwrap();
-        assert!(w.0 == 0);
+        // This should be accepted: it may be generated in JSON output.
+        let w = ".42".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 42);
 
-        let w = format!("{}", f32::INFINITY).parse::<WeightKg>().unwrap();
-        assert!(w.0 == 0);
+        // This should be rejected: there's never a need to generate it.
+        let res = "0.".parse::<WeightKg>();
+        assert!(res.is_err());
 
-        let w = format!("{}", f32::NEG_INFINITY)
-            .parse::<WeightKg>()
-            .unwrap();
-        assert!(w.0 == 0);
+        // We don't waste time trying to parse special values.
+        let res = "NaN".parse::<WeightKg>();
+        assert!(res.is_err());
     }
 
     #[test]
     fn rounding() {
         // If extra decimal numbers are reported, round appropriately.
         let w = "123.456".parse::<WeightKg>().unwrap();
-        assert!(w.0 == 12346);
+        assert_eq!(w.0, 12346);
+        let w = "123.451".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 12345);
         let w = "-123.456".parse::<WeightKg>().unwrap();
-        assert!(w.0 == -12346);
+        assert_eq!(w.0, -12346);
+        let w = "-123.451".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, -12345);
+
+        // Long values. These show up in actual data.
+        let w = "914.918379".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 91492);
+
+        let w = "247.210378299918".parse::<WeightKg>().unwrap();
+        assert_eq!(w.0, 24721);
     }
 
     /// Some results that are initially reported in LBS wind
@@ -520,6 +576,13 @@ mod tests {
         assert!("123.45.6".parse::<WeightKg>().is_err());
         assert!("notafloat".parse::<WeightKg>().is_err());
         assert!("--123".parse::<WeightKg>().is_err());
+        assert!("NaN".parse::<WeightKg>().is_err());
+        assert!(format!("{}", f32::INFINITY).parse::<WeightKg>().is_err());
+        let ninf = f32::NEG_INFINITY;
+        assert!(format!("{}", ninf).parse::<WeightKg>().is_err());
+        assert!("5.".parse::<WeightKg>().is_err());
+        assert!(".".parse::<WeightKg>().is_err());
+        assert!("100.133713371337133713371337".parse::<WeightKg>().is_err());
     }
 
     #[test]
