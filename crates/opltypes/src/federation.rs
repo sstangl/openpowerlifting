@@ -917,6 +917,10 @@ pub enum Federation {
     #[strum(to_string = "Korea-UA", serialize = "korea-ua")]
     KoreaUA,
 
+    /// Korean Powerlifting Association.
+    #[strum(to_string = "KPA", serialize = "kpa")]
+    KPA,
+
     /// Kazakhstan IPF affiliate.
     #[strum(to_string = "KPF", serialize = "kpf")]
     KPF,
@@ -2399,6 +2403,7 @@ impl Federation {
             Federation::KDKS => FULLY_TESTED,
             Federation::KNKFSP => FULLY_TESTED,
             Federation::KoreaUA => false,
+            Federation::KPA => false,
             Federation::KPF => FULLY_TESTED,
             Federation::KRAFT => FULLY_TESTED,
             Federation::KPC => FULLY_TESTED,
@@ -2896,6 +2901,7 @@ impl Federation {
             Federation::KDKS => Some(Country::Switzerland),
             Federation::KNKFSP => Some(Country::Netherlands),
             Federation::KoreaUA => Some(Country::SouthKorea),
+            Federation::KPA => Some(Country::SouthKorea),
             Federation::KPF => Some(Country::Kazakhstan),
             Federation::KRAFT => Some(Country::Iceland),
             Federation::KPC => Some(Country::Kuwait),
@@ -3458,6 +3464,7 @@ impl Federation {
             Federation::KDKS => Some(Federation::IPF),
             Federation::KNKFSP => Some(Federation::IPF),
             Federation::KoreaUA => None,
+            Federation::KPA => None,
             Federation::KPF => Some(Federation::IPF),
             Federation::KRAFT => Some(Federation::IPF),
             Federation::KPC => Some(Federation::IPF),
@@ -4068,6 +4075,7 @@ impl Federation {
             Federation::KDKS => PointsSystem::Dots,
             Federation::KNKFSP => Federation::ipf_rules_on(date),
             Federation::KoreaUA => PointsSystem::Dots,
+            Federation::KPA => PointsSystem::Dots,
             Federation::KPF => Federation::ipf_rules_on(date),
             Federation::KRAFT => {
                 // On 2020-03-04, KRAFT announced that they voted for Dots since 02-29.
