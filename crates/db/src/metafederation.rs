@@ -274,6 +274,10 @@ pub enum MetaFederation {
     #[strum(to_string = "hkwpa")]
     HKWPA,
 
+    /// HPF, but with international results also.
+    #[strum(to_string = "hpf")]
+    HPF,
+
     /// HPLS, but excluding non-Croatian lifters.
     #[strum(to_string = "hpls")]
     HPLS,
@@ -566,6 +570,10 @@ pub enum MetaFederation {
     /// UkrainePF, but with international results also.
     #[strum(to_string = "ukrainepf")]
     UkrainePF,
+
+    /// USVIPF, but with international results also.
+    #[strum(to_string = "usvipf")]
+    USVIPF,
 
     /// USAPL, but with international results also.
     #[strum(to_string = "usapl")]
@@ -889,6 +897,7 @@ impl MetaFederation {
                         || entry.lifter_country == Some(Country::Croatia))
             }
             MetaFederation::HKWPA => affiliation!(meet, entry, HKWPA, IPF, AsianPF),
+            MetaFederation::HPF => affiliation!(meet, entry, HPF, IPF, EPF),
             MetaFederation::HPLS => affiliation!(meet, entry, HPLS, IPF, EPF),
             MetaFederation::Hunpower => affiliation!(meet, entry, Hunpower, IPF, EPF),
             MetaFederation::IPACAN => {
@@ -1007,6 +1016,7 @@ impl MetaFederation {
             MetaFederation::UAEPL => affiliation!(meet, entry, UAEPL, IPF, AsianPF, OceaniaPF),
             MetaFederation::UgandaPF => affiliation!(meet, entry, UgandaPF, WP),
             MetaFederation::UkrainePF => affiliation!(meet, entry, UkrainePF, IPF, EPF),
+            MetaFederation::USVIPF => affiliation!(meet, entry, USVIPF, IPF, NAPF),
             MetaFederation::UKIPL => affiliation!(meet, entry, UKIPL, IPL),
             MetaFederation::UKIPLTested => {
                 entry.tested && MetaFederation::UKIPL.contains(entry, meets)
