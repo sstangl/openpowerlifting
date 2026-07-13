@@ -1,4 +1,7 @@
 new_id,old_id,name,date
+1248,3523,DM i Styrkelyft klassisk,2021-10-16
+1309,3600,DM Utrustad Styrkelyft senior,2022-11-12
+1534,1533,SM Klassisk bänkpress,2025-02-06
 1547,3842,2025 SM UJV Klassisk bänkpress,2025-03-08
 1548,3843,2025 SM UJSV Utrustad bänkpress,2025-03-09
 1549,3844,2025 SM Parabänkpress,2025-03-08
@@ -143,12 +146,14 @@ new_id,old_id,name,date
 1740,4035,2025 VGSF DM Klassisk Styrkelyft,2025-11-15
 1743,4038,2025 - Serie 3 - Stockholms AK,2025-09-21
 1746,4041,2025 EM bänkpress,2025-09-22
+1747,4042,2026 SM & RM bänkpress,2026-01-23
 1749,4044,2025 - Serie 4 - Sundsvalls AK,2025-11-05
 1751,4046,2025 - Lidingö Atletklubb Serie 4,2025-11-15
 1752,4047,2025 - Serie 4 - Westbo AK,2025-10-08
 1753,4048,2025 - Serie 4 - UpsalaTK,2025-11-09
 1756,4051,2025 Serie 4 Södertälje Ak,2025-11-15
 1757,4052,Tunaspelen Parabänkpress 2025,2025-10-04
+1758,4053,2026 RM Utrustad styrkelyft,2026-02-28
 1759,4054,2025 Lag SM Klassisk Styrkelyft,2025-12-13
 1760,4055,2025 - Serie 4 - Sundbybergs TK,2025-11-08
 1761,4056,2025 serie 4 Vedum,2025-11-01
@@ -157,13 +162,23 @@ new_id,old_id,name,date
 1765,4060,2025 - Serie 4 - Täby AK,2025-11-15
 1766,4061,2025 - Serie 4 - Stockholms AK,2025-11-16
 1767,4062,2025 - VM Utrustad styrkelyft,2025-11-10
+1768,4140,2026 UJ-SM Klassisk SL,2026-04-02
 1769,4064,2025 - Serie 4 - Luleå AK,2025-11-22
 1770,4065,2025 Serie 4 TK Trossö Enbart bänk,2025-11-18
+1771,4066,2026 - Serie 1 - Lunds TK (LTK),2026-01-31
 1772,4067,2025 Ungdoms Junior EM Klassisk styrkelyft,2025-11-28
+1773,4068,2026 - Serie 1 - IKSU,2026-02-07
+1774,4069,2026 - Serie 1 - Sundbybergs TK,2026-02-07
+1775,4070,2026 - Serie 1 - Huddinge SK,2026-01-31
+1776,4071,2026 Serie 1 Södertälje Ak,2026-02-21
+1777,4072,2026 Serie 2 Södertälje Ak,2026-05-16
+1778,4073,2026 - Serie 1 - Nynäshamns AK,2026-02-21
+1780,4075,2026 - Serie 2 - Nynäshamns AK,2026-05-23
 1783,4078,2025 Lag-SM Klassisk Bänkpress,2025-12-14
 1784,4079,2026 - Serie 1 - Westbo Atletklubb,2026-02-07
 1785,4080,2026 - Håbo AK & Järfälla AK Serie 1,2026-02-21
 1786,4081,2026 - Serie 1 - Borlänge AK,2026-01-31
+1787,4082,2026 Götalands - Kl SL Kl/Utr BP,2026-05-22
 1788,4083,2026 Serie 1 Örebro KK,2026-01-31
 1789,4084,2026 - Serie 1 - Hallsbergs AK,2026-03-14
 1790,4085,2026 - Serie 1 - Göteborg KK,2026-02-14
@@ -184,22 +199,36 @@ new_id,old_id,name,date
 1807,4102,2026- Serie 1 - Karlstads AK,2026-02-21
 1808,4103,2026 - Serie 1 - Vedums AIS,2026-01-21
 1809,4104,2026 - Serie 1 - Stockholms AK,2026-02-01
+1812,4107,2026 SM Veteran Klassisk styrkelyft,2026-05-15
 1814,4109,Serie 1 Falkenberg,2026-02-14
 1816,4111,2026 Serie 1 Skövde KK,2026-03-07
+1819,4114,2026 -Serie 2 - Forshaga Atletklubb,2026-05-02
+1821,4116,2026 - Norrlandsmästerskapen - Kl/Utr SL/BP,2026-05-09
 1823,4118,2026 Lidingö Atletklubb Serie 1,2026-02-21
 1829,4124,2026-serie 1 Finspångs Atletklubb,2026-03-20
+1830,4125,2026 Serie 2 TK Trossö,2026-05-09
+1832,4127,2026 DM ÖSSF Kl/Utr SL - Senior,2026-05-09
+1833,4128,2026 Serie 2 Ask Eskilstuna,2026-06-06
+1834,4129,2026 - Serie 2 - Sundbybergs TK,2026-05-30
 1836,4131,2026 - Serie 2 omgång 1 - HAK Greppet,2026-04-11
 1837,4132,2026 - Serie 2 - Huddinge SK,2026-04-18
 1838,4133,2026 - Serie 2 - Sundsvalls AK,2026-04-11
+1839,4134,2026 DM VGSF - Utr SL/BP,2026-04-11
+1840,4135,2026 - Serie 2 Linköpings AK,2026-05-09
+1841,4136,2026 - Serie 2 - Visby SK,2026-05-02
 1844,4139,2026 Serie 2 - NNSF Luleå,2026-04-18
+1845,4175,2026 - Serie 2 Extrainsatt - TK Trossö,2026-04-25
 1846,4141,2026 - Lidingö AK Serie 2,2026-05-30
 1847,4142,2026 - Serie 2 - Göteborgs SK,2026-05-30
 1848,4143,2026 - Serie 2 - Varbergs KK,2026-05-09
+1849,4144,2026 - Serie 2 - Göteborg KK,2026-05-09
 1852,4147,2026 Serie 2 Järfälla och Täby,2026-05-30
 1853,4148,2026 - Serie 2 - Hallsbergs AK,2026-06-13
 1855,4150,2026 - Serie 2 - Stockholms AK,2026-04-26
 1859,4154,2026 - Serie 2 - Vedums AIS,2026-06-13
 1860,4155,2026 - Serie 2 - Sundsvalls AK,2026-05-26
 1865,4160,2026 serie 2 Finspångs Atletklubb,2026-05-29
+1866,4161,Summertime Benchpress 2026,2026-06-27
+1871,4166,Serie 2 2026 TK Trossö,2026-06-04
 1876,4171,2026 - Serie 2 - UpsalaTK,2026-06-07
 1879,4174,2026 - Serie 2 - Westbo Atletklubb,2026-06-16
