@@ -507,6 +507,11 @@ pub enum Federation {
     #[strum(to_string = "FMPB", serialize = "fmpb")]
     FMPB,
 
+    /// Unaffiliated meets held in the Faroe Islands.
+    #[serde(rename = "FRO-UA")]
+    #[strum(to_string = "FRO-UA", serialize = "fro-ua")]
+    FROUA,
+
     /// Finland Powerlifting Organization, IPA.
     #[strum(to_string = "FPO", serialize = "fpo")]
     FPO,
@@ -2311,6 +2316,7 @@ impl Federation {
             Federation::FIPE => FULLY_TESTED,
             Federation::FIPL => FULLY_TESTED,
             Federation::FMPB => FULLY_TESTED,
+            Federation::FROUA => false,
             Federation::FPO => false,
             Federation::FPP => FULLY_TESTED,
             Federation::FPPR => FULLY_TESTED,
@@ -2815,6 +2821,7 @@ impl Federation {
             Federation::FIPE => Some(Country::Italy),
             Federation::FIPL => Some(Country::Italy),
             Federation::FMPB => Some(Country::Morocco),
+            Federation::FROUA => Some(Country::FaroeIslands),
             Federation::FPO => Some(Country::Finland),
             Federation::FPP => Some(Country::Panama),
             Federation::FPPR => Some(Country::PuertoRico),
@@ -3359,6 +3366,7 @@ impl Federation {
             Federation::FIPE => None,
             Federation::FIPL => Some(Federation::IPF),
             Federation::FMPB => Some(Federation::IPF),
+            Federation::FROUA => None,
             Federation::FPO => Some(Federation::IPA),
             Federation::FPP => Some(Federation::IPF),
             Federation::FPPR => Some(Federation::IPF),
@@ -3978,6 +3986,7 @@ impl Federation {
             Federation::FIPE => Federation::ipf_rules_on(date),
             Federation::FIPL => Federation::ipf_rules_on(date),
             Federation::FMPB => Federation::ipf_rules_on(date),
+            Federation::FROUA => Federation::ipf_rules_on(date),
             Federation::FPO => PointsSystem::Dots,
             Federation::FPP => Federation::ipf_rules_on(date),
             Federation::FPPR => Federation::ipf_rules_on(date),

@@ -94,6 +94,9 @@ pub enum Country {
     /// Previously Swaziland: renamed itself in 2018.
     Eswatini,
     Ethiopia,
+    #[serde(rename = "Faroe Islands")]
+    #[strum(to_string = "Faroe Islands")]
+    FaroeIslands,
     Fiji,
     Finland,
     France,
@@ -366,6 +369,7 @@ static COUNTRY_AS_URL_SEGMENT: phf::Map<&'static str, Country> = phf_map! {
     "estonia" => Country::Estonia,
     "eswatini" => Country::Eswatini,
     "ethiopia" => Country::Ethiopia,
+    "faroe-islands" => Country::FaroeIslands,
     "fiji" => Country::Fiji,
     "finland" => Country::Finland,
     "france" => Country::France,

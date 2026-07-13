@@ -275,6 +275,9 @@
 <optgroup label="{{strings.country.estonia}}">
   <option value="ejtl" {% if selection.federation == "EJTL" %}selected{% endif %}>EJTL - Eesti jõutõsteliit [IPF]</option>
 </optgroup>
+<optgroup label="Faroe Islands">
+  <option value="fro-ua" {% if selection.federation == "FRO-UA" %}selected{% endif %}>FRO-UA - Faroe Islands [Unaffiliated]</option>
+</optgroup>
 <optgroup label="{{strings.country.finland}}">
   <option value="fpo" {% if selection.federation == "FPO" %}selected{% endif %}>FPO - Finland Powerlifting Organization [IPA/WABDL]</option>
   <option value="svnl" {% if selection.federation == "SVNL" %}selected{% endif %}>SVNL - Suomen Voimanostoliitto ry [IPF]</option>
