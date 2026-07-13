@@ -110,6 +110,10 @@ pub enum Federation {
     #[strum(to_string = "ANPPC", serialize = "anppc")]
     ANPPC,
 
+    /// Aotearoa Powerlifting, formerly IPL-NZ.
+    #[strum(to_string = "AotearoaPL", serialize = "aotearoapl")]
+    AotearoaPL,
+
     /// American Powerlifting Association, WPA.
     #[strum(to_string = "APA", serialize = "apa")]
     APA,
@@ -2213,6 +2217,7 @@ impl Federation {
             Federation::AMP => FULLY_TESTED,
             Federation::AmPU => false,
             Federation::ANPPC => false,
+            Federation::AotearoaPL => false,
             Federation::APA => false,
             Federation::APC => false,
             Federation::APF => false,
@@ -2717,6 +2722,7 @@ impl Federation {
             Federation::AMP => Some(Country::USA),
             Federation::AmPU => Some(Country::USA),
             Federation::ANPPC => Some(Country::USA),
+            Federation::AotearoaPL => Some(Country::NewZealand),
             Federation::APA => Some(Country::USA),
             Federation::APC => Some(Country::USA),
             Federation::APF => Some(Country::USA),
@@ -3213,6 +3219,7 @@ impl Federation {
             Federation::AMP => Some(Federation::IPF),
             Federation::AmPU => None,
             Federation::ANPPC => None,
+            Federation::AotearoaPL => None,
             Federation::APA => Some(Federation::WPA),
             Federation::APC => Some(Federation::WUAP),
             Federation::APF => Some(Federation::WPC),
@@ -3865,6 +3872,7 @@ impl Federation {
             Federation::AMP => Federation::ipf_rules_on(date),
             Federation::AmPU => PointsSystem::Wilks,
             Federation::ANPPC => PointsSystem::Wilks,
+            Federation::AotearoaPL => PointsSystem::Dots,
             Federation::APA => PointsSystem::Wilks,
             Federation::APC => PointsSystem::Wilks,
             Federation::APF => PointsSystem::Glossbrenner,

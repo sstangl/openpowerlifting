@@ -70,6 +70,10 @@ pub enum MetaFederation {
     #[strum(to_string = "amp")]
     AMP,
 
+    /// AotearoaPL, but with old IPL-NZ results.
+    #[strum(to_string = "aotearoapl")]
+    AotearoaPL,
+
     /// APF, buf with international results.
     #[strum(to_string = "apf")]
     APF,
@@ -755,6 +759,11 @@ impl MetaFederation {
             MetaFederation::AIWBPA => affiliation!(meet, entry, AIWBPA, IPF, AsianPF),
             MetaFederation::AMP => {
                 affiliation!(meet, entry, AMP, IPF, NAPF) && meet.date.year() >= 2022
+            }
+            MetaFederation::AotearoaPL => {
+                // AotearoaPL is IPLNZ after dropping affiliation with the IPL.
+                meet.federation == Federation::AotearoaPL
+                    || (meet.federation == IPLNZ && meet.date <= date!(2026-03-01))
             }
             MetaFederation::APF => affiliation!(meet, entry, APF, WPC),
 

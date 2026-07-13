@@ -455,6 +455,7 @@
   <option value="plh" {% if selection.federation == "PLH" %}selected{% endif %}>PLH - Powerlifting Holland [WPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.newzealand}}">
+  <option value="aotearoapl" {% if selection.federation == "AotearoaPL" %}selected{% endif %}>Aotearoa Powerlifting</option>
   <option value="capo-nz" {% if selection.federation == "CAPO-NZ" %}selected{% endif %}>CAPO-NZ - CAPO New Zealand [WPC/GPA/IPO]</option>
   <option value="gpc-nz" {% if selection.federation == "GPC-NZ" %}selected{% endif %}>GPC-NZ - GPC New Zealand [GPC]</option>
   <option value="ipl-nz" {% if selection.federation == "IPL-NZ" %}selected{% endif %}>IPL-NZ - IPL New Zealand [IPL]</option>
