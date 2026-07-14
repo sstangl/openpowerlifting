@@ -4425,6 +4425,25 @@ impl Federation {
             Federation::XPS => PointsSystem::Wilks,
         }
     }
+
+    /// Whether the federation is for a regional school.
+    ///
+    /// This is useful to know for purposes of disambiguation, because youth lifters
+    /// tend to not move across countries or states, and also tend to not participate
+    /// in powerlifting after leaving school.
+    pub fn is_school(self) -> bool {
+        use Federation::*;
+        match self {
+            FHSAA => true,          // Florida.
+            IHSPLA => true,         // Illinois.
+            LHSPLA => true,         // Louisiana.
+            MHSAA => true,          // Mississippi.
+            MHSPLA => true,         // Michigan.
+            THSPA | THSWPA => true, // Texas.
+            WSHSPL => true,         // Washington.
+            _ => false,
+        }
+    }
 }
 #[cfg(test)]
 mod tests {
