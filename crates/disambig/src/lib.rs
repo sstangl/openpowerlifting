@@ -164,6 +164,16 @@ fn score_federation<E: DisambigEntry>(a: &E, b: &E) -> Score {
         return Score(50);
     }
 
+    // School federations only match with the same school federation.
+    // If a lifter competes in a different federation after school, that needs
+    // manual specification.
+    if a_fed.is_school() || b_fed.is_school() {
+        if a_fed == b_fed {
+            return Score(50);
+        }
+        return Score(-100); // School federations are islands unto themselves.
+    }
+
     // Otherwise the federations are distinct, mildly negative.
     Score(-20)
 }
