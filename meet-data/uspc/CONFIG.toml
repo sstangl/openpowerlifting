@@ -85,6 +85,26 @@
     fm80_84 = {name = "FM80-84", min=80, max=84}
     fm80p = {name = "FM80+", min=80, max=999}
 
+    # No idea.
+    bopen = {name = "BOpen", min = 0, max = 999}
+    by5_9 = {name = "BY5-9", min = 5, max = 9}
+    bj10_12 = {name = "BJ10-12", min=10, max=12}
+    bj13_15 = {name = "BJ13-15", min=13, max=15}
+    bj16_17 = {name = "BJ16-17", min=16, max=17}
+    bj18_19 = {name = "BJ18-19", min=18, max=19}
+    bj20_23 = {name = "BJ20-23", min=20, max=23}
+    bs35_39 = {name = "BS35-39", min=35, max=39}
+    bm40_44 = {name = "BM40-44", min=40, max=44}
+    bm45_49 = {name = "BM45-49", min=45, max=49}
+    bm50_54 = {name = "BM50-54", min=50, max=54}
+    bm55_59 = {name = "BM55-59", min=55, max=59}
+    bm60_64 = {name = "BM60-64", min=60, max=64}
+    bm65_69 = {name = "BM65-69", min=65, max=69}
+    bm70_74 = {name = "BM70-74", min=70, max=74}
+    bm75_79 = {name = "BM75-79", min=75, max=79}
+    bm80_84 = {name = "BM80-84", min=80, max=84}
+    bm80p = {name = "BM80+", min=80, max=999}
+
     # Misc divisions.
     pro_open = {name="Pro Open", min=0, max=999}
     pro_topen = {name="Pro TOpen", min=0, max=999, tested="Yes"}
