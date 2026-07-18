@@ -294,6 +294,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ipa-can")]
     IPACAN,
 
+    /// IPC, but seeded from USPA nationals.
+    #[strum(to_string = "ipc")]
+    IPC,
+
     /// IPF including all affiliates, local and regional.
     #[strum(to_string = "ipf-and-affiliates")]
     IPFAndAffiliates,
@@ -595,6 +599,10 @@ pub enum MetaFederation {
     /// USPA MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspa-tested")]
     USPATested,
+
+    /// USPC, plus IPC results for American lifters.
+    #[strum(to_string = "uspc")]
+    USPC,
 
     /// USPC MetaFederation, but only for Tested entries.
     #[strum(to_string = "uspc-tested")]
@@ -912,6 +920,12 @@ impl MetaFederation {
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
             }
+            MetaFederation::IPC => {
+                meet.federation == Federation::IPC
+                    || (meet.federation == USPC
+                        && meet.date <= date!(2026-01-01)
+                        && meet.name.starts_with("Americas Championship"))
+            }
             MetaFederation::IPFAndAffiliates => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
             }
@@ -1051,7 +1065,10 @@ impl MetaFederation {
             MetaFederation::USPATested => {
                 entry.tested && MetaFederation::USPA.contains(entry, meets)
             }
-            MetaFederation::USPCTested => meet.federation == Federation::USPC && entry.tested,
+            MetaFederation::USPC => affiliation!(meet, entry, USPC, IPC),
+            MetaFederation::USPCTested => {
+                entry.tested && MetaFederation::USPC.contains(entry, meets)
+            }
             MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF, KBGV),
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
             MetaFederation::WelshPA => {

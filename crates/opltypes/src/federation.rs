@@ -808,6 +808,10 @@ pub enum Federation {
     #[strum(to_string = "IPA-AZE", serialize = "ipa-aze")]
     IPAAZE,
 
+    /// International Powerlifting Coalition, USPC.
+    #[strum(to_string = "IPC", serialize = "ipc")]
+    IPC,
+
     /// International Powerlifting Federation.
     #[strum(to_string = "IPF", serialize = "ipf")]
     IPF,
@@ -2389,6 +2393,7 @@ impl Federation {
             Federation::IntDFPA => FULLY_TESTED,
             Federation::IPA => false,
             Federation::IPAAZE => false,
+            Federation::IPC => false,
             Federation::IPF => FULLY_TESTED,
             Federation::IPFChina => FULLY_TESTED,
             Federation::IPL => false,
@@ -2888,6 +2893,7 @@ impl Federation {
             Federation::IntDFPA => None,
             Federation::IPA => Some(Country::USA),
             Federation::IPAAZE => Some(Country::Azerbaijan),
+            Federation::IPC => None,
             Federation::IPF => None,
             Federation::IPFChina => Some(Country::China),
             Federation::IPL => None,
@@ -3454,6 +3460,7 @@ impl Federation {
             Federation::IntDFPA => None,
             Federation::IPA => None,
             Federation::IPAAZE => Some(Federation::IPA),
+            Federation::IPC => Some(Federation::IPC),
             Federation::IPF => Some(Federation::IPF),
             Federation::IPFChina => Some(Federation::IPF),
             Federation::IPL => Some(Federation::IPL),
@@ -4060,6 +4067,7 @@ impl Federation {
             Federation::IntDFPA => PointsSystem::Dots,
             Federation::IPA => PointsSystem::Wilks,
             Federation::IPAAZE => PointsSystem::Wilks,
+            Federation::IPC => PointsSystem::Dots,
             Federation::IPF => Federation::ipf_rules_on(date),
             Federation::IPFChina => Federation::ipf_rules_on(date),
             Federation::IPL => Federation::ipl_rules_on(date),

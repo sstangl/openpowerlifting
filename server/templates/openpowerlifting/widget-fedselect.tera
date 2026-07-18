@@ -10,6 +10,7 @@
   <option value="gpf" {% if selection.federation == "GPF" %}selected{% endif %}>GPF - Global Powerlifting Federation</option>
   <option value="ibsa" {% if selection.federation == "IBSA" %}selected{% endif %}>IBSA - International Blind Sports Association</option>
   <option value="intdfpa" {% if selection.federation == "IntDFPA" %}selected{% endif %}>IntDFPA - International Drug Free Powerlifting Association</option>
+  <option value="ipc" {% if selection.federation == "IPC" %}selected{% endif %}>IPC - International Powerlifting Coalition</option>
   <option value="ipf" {% if selection.federation == "IPF" %}selected{% endif %}>IPF - International Powerlifting Federation</option>
   <option value="ipl" {% if selection.federation == "IPL" %}selected{% endif %}>IPL - International Powerlifting League</option>
   <option value="irp" {% if selection.federation == "IRP" %}selected{% endif %}>IRP - International RAW Powerlifting</option>
