@@ -201,6 +201,7 @@
     retrohs = {name="retrohs", min=13, max=19, sex='M', equipment='Raw'}
     retroteen = {name="retroteen", min=13, max=19, sex='M', equipment='Raw'}
     retrojr = {name="retrojr", min=20, max=23, sex='M', equipment='Raw'}
+    retrojrhigh = {name="retrojrhigh", min=0, max=999, sex='M', equipment='Raw'}
     retroint = {name="retroint", min=24, max=29, sex='M', equipment='Raw'}
     retrosm1 = {name="retrosm1", min=30, max=35, sex='M', equipment='Raw'}
     retrosm2 = {name="retrosm2", min=35, max=39, sex='M', equipment='Raw'}
@@ -240,6 +241,18 @@
     unlmp = {name="unlmp", min=40, max=999, sex='M', equipment='Unlimited'}
     unlpure = {name="unlpure", min=0, max=999, sex='M', equipment='Unlimited'}
 
+    # High School Nationals divisions
+
+    wfr-so = {name="wfr-so", min=0, max=999, sex='F'} # Women Freshman-Sophomore?
+    wjr-sr = {name="wjr-sr", min=0, max=999, sex='F'} # Women Junior-Senior?
+    wbpjr-sr = {name="wbpjr-sr", min=0, max=999, sex='F'} 
+    wretrofr-so = {name="wretrofr-so", min=0, max=999, sex='F', equipment='Raw'}
+    wretrojr-sr = {name="wretrojr-sr", min=0, max=999, sex='F', equipment='Raw'}
+    fr-so = {name="fr-so", min=0, max=999, sex='M'}
+    jr-sr = {name="jr-sr", min=0, max=999, sex='M'}
+    bpjr-sr = {name="bpjr-sr", min=0, max=999, sex='M'}
+    retrofr-so = {name="retrofr-so", min=0, max=999, sex='M'}
+    retrojr-sr = {name="retrojr-sr", min=0, max=999, sex='M'}
 
     # Misc divisions
     light = {name="light", min=0, max=999, sex='M'}
@@ -298,3 +311,4 @@
     2307 = ["ExemptDivision"] # Non-standard divisions.
     2321 = ["ExemptWeightClassConsistency"]  # uses some other weight classes for youth
     2401 = ["ExemptDuplicates"]  # With rawironpl/2401, false positive for one lifter, I think.
+    2611 = ["ExemptWeightClassConsistency"]
