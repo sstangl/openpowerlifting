@@ -290,6 +290,10 @@ pub enum MetaFederation {
     #[strum(to_string = "hunpower")]
     Hunpower,
 
+    /// ILPF, but with international results also.
+    #[strum(to_string = "ilpf")]
+    ILPF,
+
     /// IPA, but only counting meets held in Canada.
     #[strum(to_string = "ipa-can")]
     IPACAN,
@@ -917,6 +921,7 @@ impl MetaFederation {
             MetaFederation::HPF => affiliation!(meet, entry, HPF, IPF, EPF),
             MetaFederation::HPLS => affiliation!(meet, entry, HPLS, IPF, EPF),
             MetaFederation::Hunpower => affiliation!(meet, entry, Hunpower, IPF, EPF),
+            MetaFederation::ILPF => affiliation!(meet, entry, ILPF, IPF, EPF),
             MetaFederation::IPACAN => {
                 meet.federation == Federation::IPA && meet.country == Country::Canada
             }
