@@ -1,5 +1,8 @@
 # Configuration for World Powerlifting China.
 
+[options]
+valid_federations = ["WP-China"]
+
 [divisions]
 open = { name="Open", min=0, max=999 }
 j18-23 = { name="J18-23", min=18, max=23 }
