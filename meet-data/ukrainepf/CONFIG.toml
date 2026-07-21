@@ -47,7 +47,7 @@
     classes = ["53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Sub-Juniors","Teen 12-14","Teen 15-16","Teen 17-18"]
+    divisions = ["Sub-Juniors","Teen 12-14","Teen 14-15","Teen 15-16","Teen 16-18","Teen 17-18"]
 
 [weightclasses.junior_F]
     classes = ["43","47","52","57","63","69","76","84","84+"]
@@ -65,14 +65,25 @@
     classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2021-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["Sub-Juniors","Teen 12-14","Teen 15-16","Teen 17-18"]
+    divisions = ["Sub-Juniors","Teen 12-14","Teen 14-15","Teen 15-16","Teen 16-18","Teen 17-18"]
+
+[weightclasses.youth_M]
+    classes = ["46","49","53","59","66","74","83","93","105","120","105+","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Youth 11-13","Youth 12-15"]
+
+[weightclasses.youth_F]
+    classes = ["40","43","47","52","57","63","69","72","76","84","76+","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Youth 11-13","Youth 12-15"]
 
 [weightclasses.year2020_subjunior_F]
     classes = ["43","47","52","57","63","72","84","84+"]
     date_range=["2011-01-01","2020-12-31"]
     sex = "F"
     divisions = ["Sub-Juniors","Teen 12-14","Teen 15-16","Teen 17-18"]
-
 
 [weightclasses.old_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
@@ -109,6 +120,16 @@
     divisions = ["Sub-Juniors"]
 
 [exemptions]
+    # Source evidence is maintained in UKRAINEPF_UPLOAD_AUDIT.md, including the
+    # affected rows and the official protocol table/page or XLS sheet.
+    2413 = ["ExemptWeightClassConsistency"] # Kyiv 2024 XLS: M Juniors Babych Oleksandr 64.1 kg in 74; M SJ 46 and F SJ 40 classes.
+    2010 = ["ExemptWeightClassConsistency"] # Donetsk DYuSSh equipped: F Youth 12-15 Artomova Anastasiia 66.6 kg in 72.
+    2115 = ["ExemptWeightClassConsistency"] # Donetsk DYuSSh classic: F Youth Berezovska A. 69.2/69.3 in 76; M Youth 12-15 Lugin Kyrylo 49.4 in 46.
+    2114 = ["ExemptWeightClassConsistency"] # Donetsk junior men: Shcherbyna Illia 118.1 kg in 120+.
+    2111 = ["ExemptWeightClassConsistency"] # Donetsk open women: Borshchevska Alona 76.1 kg in 76.
+    2109 = ["ExemptWeightClassConsistency"] # Donetsk junior women: Rakhuba Anna 53.8 in 52; Pinionzh Kateryna 67.4 in 76.
+    2108 = ["ExemptWeightClassConsistency"] # Donetsk classic SJ women: Dubina Mariia in the published 40 kg class.
+    2205 = ["ExemptWeightClassConsistency"] # Donetsk bench junior men: Sivakov Dmytro 73.2 kg in 83.
     9101 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
     9205 = ["ExemptWeightClassConsistency"] # 44kg & 48kg men
     9305 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
@@ -171,3 +192,5 @@
     1606 = ["ExemptWeightClassConsistency"] # 46 & 49kg men
     1609 = ["ExemptWeightClassConsistency"] # 43kg men
     1704 = ["ExemptWeightClassConsistency"] # Extra SJ Classes
+    2202 = ["ExemptDivision"] # Official 2022 classic-bench Masters 2 table places DQ Bartash Vitalii (born 1978) in Masters 2.
+    2406 = ["ExemptDivision","ExemptWeightClassConsistency"] # Official 2024 DYuSSh tables include a 2000-born junior and historical youth classes.
