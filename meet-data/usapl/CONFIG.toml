@@ -833,6 +833,7 @@
     PA-2026-17 = ["ExemptWeightClassConsistency"]
     LA-2026-06 = ["ExemptWeightClassConsistency"]
     FL-2026-09 = ["ExemptWeightClassConsistency"]
+    PA-2026-10 = ["ExemptWeightClassConsistency","ExemptDivision"]
 
 
 
@@ -1116,3 +1117,6 @@
     NS-2026-02A = ["ExemptDivision"]
     CO-2026-05 = ["ExemptDivision"]
     PA-2026-23 = ["ExemptDivision"]
+    NE-2026-04 = ["ExemptDivision"]
+    WI-2026-14 = ["ExemptDivision"]
+
