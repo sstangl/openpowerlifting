@@ -29,6 +29,9 @@ pub trait DisambigEntry {
     fn birth_date(&self) -> Option<Date>;
     fn birth_year(&self) -> Option<u32>;
     fn age(&self) -> Age;
+
+    // TODO: We only really need a bad hash of the team name, to save memory.
+    fn team(&self) -> Option<&str>;
 }
 
 /// A disambiguation group ID assigned to a particular entry.
@@ -145,6 +148,7 @@ fn calculate_heuristic_score<E: DisambigEntry>(a: &E, b: &E) -> Score {
     score += score_date(a, b);
     score += score_location(a, b);
     score += score_sex(a, b);
+    score += score_team(a, b);
     score += score_age(a, b);
     score
 }
@@ -236,6 +240,30 @@ fn score_sex<E: DisambigEntry>(a: &E, b: &E) -> Score {
 
     // A mismatch otherwise is strong negative information.
     Score::DEFINITE_MISMATCH
+}
+
+/// For THSPA and THSWPA, lifters are similar only if they have the same Team.
+///
+/// THSPA etc uses the Team column to give school information. This is useful because lifters
+/// often have the same name, compete at the same time, reside in the same region,
+/// and have similar weightclass information.
+fn score_team<E: DisambigEntry>(a: &E, b: &E) -> Score {
+    // Must be a high school federation.
+    //
+    // Note that as of this writing, the checker only adds team info for THSPA and THSWPA,
+    // so if more federations are added here, the checker needs to be updated too.
+    if ![Federation::THSPA, Federation::THSWPA].contains(&a.federation())
+        || a.federation() != b.federation()
+    {
+        return Score::NO_CONTRADICTION;
+    }
+
+    // The two entries are from different schools, so they're not the same lifter.
+    if a.team() != b.team() {
+        return Score::DEFINITE_MISMATCH;
+    }
+
+    Score::NO_CONTRADICTION
 }
 
 fn score_age<E: DisambigEntry>(a: &E, b: &E) -> Score {

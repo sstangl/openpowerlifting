@@ -55,6 +55,9 @@ impl<'a> disambig::DisambigEntry for DisambigRow<'a> {
     fn age(&self) -> Age {
         self.entry.age
     }
+    fn team(&self) -> Option<&str> {
+        self.entry.team.as_deref()
+    }
 }
 
 /// Debug wrapper around the `disambig` crate.

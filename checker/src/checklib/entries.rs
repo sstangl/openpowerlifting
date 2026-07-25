@@ -184,6 +184,7 @@ pub struct Entry {
 
     pub country: Option<Country>,
     pub state: Option<State>,
+    pub team: Option<Box<str>>, // Set only for THSPA and THSWPA, to help with disambiguations.
 
     /// The index of this `Entry` in the `AllMeetData`.
     ///
@@ -271,7 +272,14 @@ enum Header {
     Tested,
     AgeRange,
     Country,
+    State,
     EntryDate,
+
+    // Membership informaiton columns, useful for disambiguation.
+    Team,
+    #[strum(serialize = "College/University")]
+    CollegeUniversity,
+    School,
 
     // Weights in kilograms.
     WeightClassKg,
@@ -318,13 +326,6 @@ enum Header {
     Deadlift2Lbs,
     Deadlift3Lbs,
     Deadlift4Lbs,
-
-    // Columns below this point are ignored.
-    Team,
-    State,
-    #[strum(serialize = "College/University")]
-    CollegeUniversity,
-    School,
 }
 
 /// Checks that the headers are valid.
@@ -1111,6 +1112,25 @@ fn check_column_state(
         report.error_on(line, msg);
     }
     state
+}
+
+/// Checks the "Team" column.
+///
+/// This is only useful for disambiguations, and doesn't show up in the compiled data.
+/// At present, it's only used to disambiguate within THSPA and THSWPA.
+///
+/// THSPA+THSWPA team string data occupies about 12MiB. Tracking the column itself
+/// as `Option<String>` takes about 116MiB at time of writing.
+fn check_column_team(s: &str, meet: &Meet, _line: u64, _report: &mut Report) -> Option<Box<str>> {
+    if s.is_empty() {
+        return None;
+    }
+
+    if meet.federation != Federation::THSPA && meet.federation != Federation::THSWPA {
+        return None;
+    }
+
+    Some(s.into())
 }
 
 fn check_event_and_total_consistency(entry: &Entry, line: u64, report: &mut Report) {
@@ -2247,6 +2267,9 @@ pub fn do_check<R: io::Read>(
             if entry.country.is_none() {
                 entry.country = entry.state.map(|s| s.to_country());
             }
+        }
+        if let Some(idx) = headers.get(Header::Team) {
+            entry.team = check_column_team(&record[idx], meet, line, &mut report);
         }
 
         if let Some(idx) = headers.get(Header::Tested) {

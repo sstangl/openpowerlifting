@@ -97,6 +97,8 @@ struct TestRow {
     best3_deadlift_kg: WeightKg,
     #[serde(default)]
     total_kg: WeightKg,
+
+    team: Option<Box<str>>,
 }
 
 impl disambig::DisambigEntry for TestRow {
@@ -126,6 +128,9 @@ impl disambig::DisambigEntry for TestRow {
     }
     fn age(&self) -> Age {
         self.age
+    }
+    fn team(&self) -> Option<&str> {
+        self.team.as_deref()
     }
 }
 
