@@ -105,7 +105,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     // Check optional headers.
     for header in headers.iter().skip(REQUIRED_HEADERS.len()) {
         if !OPTIONAL_HEADERS.contains(&header) {
-            report.error(format!("Unknown optional column '{}'", &header));
+            report.error(format!("Unknown optional column '{}'", header));
         }
     }
 }

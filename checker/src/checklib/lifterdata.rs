@@ -110,7 +110,7 @@ fn check_donator_colors(
             report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
         if has_whitespace_errors(&row.color) {
-            report.error_on(line, format!("Whitespace error in '{}'", &row.color));
+            report.error_on(line, format!("Whitespace error in '{}'", row.color));
         }
 
         map.entry(username).or_default().color = Some(row.color);
@@ -327,7 +327,7 @@ fn check_name_disambiguation(
         if entry.disambiguation_count > 0 {
             let msg = format!(
                 "Lifter '{}' appears multiple times in name-disambiguation.csv",
-                &row.name
+                row.name
             );
             report.error_on(line, msg);
         }

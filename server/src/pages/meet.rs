@@ -214,7 +214,7 @@ impl<'a> MeetInfo<'a> {
         MeetInfo {
             path: &meet.path,
             federation: meet.federation,
-            date: format!("{}", &meet.date),
+            date: format!("{}", meet.date),
             country: strings.translate_country(meet.country),
             state: meet.state.as_ref().map(|s| s as _),
             town: meet.town.as_ref().map(|t| t as _),

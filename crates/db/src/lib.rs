@@ -284,10 +284,7 @@ fn import_entries_csv(
             glossbrenner: Points::from_str(&record[glossbrenner_idx])?,
             goodlift: Points::from_str(&record[goodlift_idx])?,
             dots: Points::from_str(&record[dots_idx])?,
-            tested: match &record[tested_idx] {
-                "Yes" => true,
-                _ => false,
-            },
+            tested: matches!(&record[tested_idx], "Yes"),
             ageclass: AgeClass::from_str(&record[ageclass_idx])?,
             birthyearclass: BirthYearClass::from_str(&record[birthyearclass_idx])?,
             lifter_country: if record[country_idx].is_empty() {

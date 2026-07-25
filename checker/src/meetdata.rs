@@ -138,7 +138,7 @@ impl AllMeetData {
 
         // Sort EntryIndex vectors by EntryDate.
         // Consistency-enforcing code depends on this ordering.
-        for (_key, indices) in map.iter_mut() {
+        for indices in map.values_mut() {
             if indices.len() >= 2 {
                 indices.sort_unstable_by_key(|ei| self.entry(*ei).entrydate);
             }
