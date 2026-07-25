@@ -174,14 +174,8 @@ impl WeightKg {
         WeightKg(i.saturating_mul(100))
     }
 
-    // This only exists because from_f32() can't be const fn at the moment.
     #[inline]
-    pub const fn from_raw(i: i32) -> WeightKg {
-        WeightKg(i)
-    }
-
-    #[inline]
-    pub fn from_f32(f: f32) -> WeightKg {
+    pub const fn from_f32(f: f32) -> WeightKg {
         if f.is_finite() {
             WeightKg((f * 100.0).round() as i32)
         } else {
@@ -190,7 +184,7 @@ impl WeightKg {
     }
 
     #[inline]
-    pub fn from_f64(f: f64) -> WeightKg {
+    pub const fn from_f64(f: f64) -> WeightKg {
         if f.is_finite() {
             WeightKg((f * 100.0).round() as i32)
         } else {
