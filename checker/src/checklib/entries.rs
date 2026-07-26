@@ -130,11 +130,11 @@ pub struct Entry {
     pub username: Username,
 
     // These should not be made `CompactString`: that massively *increases* memory.
-    pub chinesename: Option<String>,
-    pub cyrillicname: Option<String>,
-    pub greekname: Option<String>,
-    pub japanesename: Option<String>,
-    pub koreanname: Option<String>,
+    pub chinesename: Option<Box<str>>,
+    pub cyrillicname: Option<Box<str>>,
+    pub greekname: Option<Box<str>>,
+    pub japanesename: Option<Box<str>>,
+    pub koreanname: Option<Box<str>>,
 
     pub sex: Sex,
     pub place: Place,
@@ -546,7 +546,7 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> CompactStrin
     canonicalize_name_utf8(name).into()
 }
 
-fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
+fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<Box<str>> {
     if s.is_empty() {
         return None;
     }
@@ -561,7 +561,7 @@ fn check_column_chinesename(s: &str, line: u64, report: &mut Report) -> Option<S
     Some(canonicalize_name_utf8(s).into())
 }
 
-fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<String> {
+fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<Box<str>> {
     if s.is_empty() {
         return None;
     }
@@ -576,7 +576,7 @@ fn check_column_cyrillicname(s: &str, line: u64, report: &mut Report) -> Option<
     Some(canonicalize_name_utf8(s).into())
 }
 
-fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<String> {
+fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<Box<str>> {
     if s.is_empty() {
         return None;
     }
@@ -594,7 +594,7 @@ fn check_column_japanesename(s: &str, line: u64, report: &mut Report) -> Option<
     Some(canonicalize_name_utf8(s).into())
 }
 
-fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<String> {
+fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<Box<str>> {
     if s.is_empty() {
         return None;
     }
@@ -609,7 +609,7 @@ fn check_column_greekname(s: &str, line: u64, report: &mut Report) -> Option<Str
     Some(canonicalize_name_utf8(s).into())
 }
 
-fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<String> {
+fn check_column_koreanname(s: &str, line: u64, report: &mut Report) -> Option<Box<str>> {
     if s.is_empty() {
         return None;
     }
