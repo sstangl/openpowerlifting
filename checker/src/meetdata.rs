@@ -26,7 +26,7 @@ pub struct AllMeetData {
 ///
 /// These indices are used to create the equivalent of a singly-linked list
 /// of `Entry` structs referring to the same lifter.
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Default)]
 pub struct EntryIndex {
     /// Index of the parent `SingleMeetData` within the `AllMeetData.meets`
     /// vector.
@@ -121,7 +121,7 @@ impl AllMeetData {
             for (entry_index, entry) in singlemeet.entries.iter_mut().enumerate() {
                 // Tell each Entry its EntryIndex in the AllMeetData.
                 let index = EntryIndex::at(meet_index, entry_index);
-                entry.index = Some(index);
+                entry.index = index;
 
                 // Add the EntryIndex to the appropriate vector.
                 if let Some(vec) = map.get_mut(&entry.username) {

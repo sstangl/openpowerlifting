@@ -190,7 +190,7 @@ pub struct Entry {
     ///
     /// Because this refers to vector indices in the final `AllMeetData`,
     /// it can only be constructed after the checker is completely finished.
-    pub index: Option<EntryIndex>,
+    pub index: EntryIndex,
 }
 
 impl Entry {
