@@ -78,6 +78,7 @@
 
 [exemptions]
     1001 = ["ExemptWeightClassConsistency"]  # 44Kg women in 48
+    1102 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters; Dawid Pelc too old for division 'Juniorzy do lat 20' but competed
     1202 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
     1401 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
     1403 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
