@@ -87,6 +87,8 @@
 
     # No idea.
     bopen = {name = "BOpen", min = 0, max = 999}
+    btopen = {name = "BTOpen", min = 0, max = 999, tested="Yes"}
+    btm40_44 = {name = "BTM40-44", min=40, max=44, tested="Yes"}
     by5_9 = {name = "BY5-9", min = 5, max = 9}
     bj10_12 = {name = "BJ10-12", min=10, max=12}
     bj13_15 = {name = "BJ13-15", min=13, max=15}
