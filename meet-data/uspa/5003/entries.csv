@@ -1,7 +1,7 @@
 Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Deadlift4Kg,Event,Equipment,Sex,Division,Tested
 1,Carly Pokorny,CA,75,68.8,,21,130,140,150,150,90,-102.5,-102.5,90,162.5,177.5,185,185,425,,SBD,Raw,F,Juniors 20-23,Yes
 2,Sandra Hurtado,CA,75,70.1,,23,92.5,100,102.5,102.5,47.5,50,52.5,52.5,-105,112.5,-115,112.5,267.5,,SBD,Raw,F,Juniors 20-23,Yes
-1,Jennifer Genato,CA,52,52,,40,112.5,120,125,125,57.5,62.5,65,65,155,162.5,167.5,167.5,357.5,,SBD,Raw,F,Open,Yes
+1,Jennifer Genato,CA,52,48.7,,40,112.5,120,125,125,57.5,62.5,65,65,155,162.5,167.5,167.5,357.5,,SBD,Raw,F,Open,Yes
 1,Annie Pigulski,CA,56,55,,37,70,77.5,-82.5,77.5,40,45,47.5,47.5,90,97.5,102.5,102.5,227.5,,SBD,Raw,F,Open,Yes
 1,Carly Pokorny,CA,75,68.8,,21,130,140,150,150,90,-102.5,-102.5,90,162.5,177.5,185,185,425,,SBD,Raw,F,Open,Yes
 2,Nicole Stathatos,CA,75,74.4,,33,132.5,142.5,-150,142.5,57.5,60,-62.5,60,175,182.5,190,190,392.5,,SBD,Raw,F,Open,Yes
@@ -14,7 +14,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 1,Catherine Young,CA,110,107.7,,27,-140,140,-150,140,65,70,75,75,142.5,152.5,-160,152.5,367.5,,SBD,Raw,F,Open,Yes
 1,Annie Pigulski,CA,56,55,,37,70,77.5,-82.5,77.5,40,45,47.5,47.5,90,97.5,102.5,102.5,227.5,,SBD,Raw,F,Submasters 35-39,Yes
 1,Brittainy Chown-Munafo,CA,100,97,,35,190,202.5,207.5,207.5,105,110,112.5,112.5,190,205,-215,205,525,,SBD,Raw,F,Submasters 35-39,Yes
-1,Jennifer Genato,CA,52,52,,40,112.5,120,125,125,57.5,62.5,65,65,155,162.5,167.5,167.5,357.5,,SBD,Raw,F,Masters 40-44,Yes
+1,Jennifer Genato,CA,52,48.7,,40,112.5,120,125,125,57.5,62.5,65,65,155,162.5,167.5,167.5,357.5,,SBD,Raw,F,Masters 40-44,Yes
 1,Carolina Aleman Franco,CA,56,54.6,,45,82.5,87.5,92.5,92.5,47.5,52.5,-57.5,52.5,122.5,130,132.5,132.5,277.5,,SBD,Raw,F,Masters 45-49,Yes
 1,Deb Vaughanzuppan,CA,56,54.2,,64,67.5,75,-0.00,75,-47.5,47.5,-52.5,47.5,62.5,,,62.5,185,,SBD,Raw,F,Masters 60-64,Yes
 1,Peggy O'Brien,CA,60,58.3,,53,52.5,57.5,62.5,62.5,42.5,-47.5,-47.5,42.5,92.5,97.5,102.5,102.5,207.5,,SBD,Raw,F,Masters 50-54,Yes
@@ -66,9 +66,9 @@ DQ,Cameron Tucker,CA,100,95.6,,28,-160,-160,-160,,110,117.5,-125,117.5,182.5,190
 DQ,Linda Halliday,CA,60,57.1,,66,,,,,-57.5,-60,-60,,,,,,,,B,Raw,F,Masters 65-69,Yes
 1,Grant Bobeda,CA,82.5,77.6,,22,,,,,137.5,147.5,155,155,,,,,155,,B,Raw,M,Juniors 20-23,Yes
 1,Jose Ramal,CA,125,112.1,,37,,,,,125,-135,-135,125,,,,,125,,B,Raw,M,Submasters 35-39,Yes
-1,Jennifer Genato,CA,52,52,,40,,,,,,,,,155,162.5,167.5,167.5,167.5,,D,Raw,F,Open,Yes
+1,Jennifer Genato,CA,52,48.7,,40,,,,,,,,,155,162.5,167.5,167.5,167.5,,D,Raw,F,Open,Yes
 1,Catherine Young,CA,110,107.7,,27,,,,,,,,,142.5,152.5,-160,152.5,152.5,,D,Raw,F,Open,Yes
-1,Jennifer Genato,CA,52,52,,40,,,,,,,,,155,162.5,167.5,167.5,167.5,,D,Raw,F,Masters 40-44,Yes
+1,Jennifer Genato,CA,52,48.7,,40,,,,,,,,,155,162.5,167.5,167.5,167.5,,D,Raw,F,Masters 40-44,Yes
 1,Miriam Bucks,CA,56,53.9,,65,,,,,,,,,100,107.5,-110,107.5,107.5,,D,Raw,F,Masters 65-69,Yes
 1,Charlene Muscio,CA,82.5,75.9,,76,,,,,,,,,-97.5,100,-105,100,100,,D,Raw,F,Masters 75-79,Yes
 1,Cameron Tucker,CA,100,95.6,,28,,,,,,,,,182.5,190,200,200,200,,D,Raw,M,Open,Yes
