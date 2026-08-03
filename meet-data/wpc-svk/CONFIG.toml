@@ -1,6 +1,7 @@
 # Configuration for the WPC-Slovakia.
 
 [options]
+    valid_federations = ["WPC-SVK"]
     require_manual_disambiguation = true
 
 # APF specifies equipment in the division.
