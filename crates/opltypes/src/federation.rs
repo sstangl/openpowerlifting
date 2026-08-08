@@ -903,6 +903,11 @@ pub enum Federation {
     #[strum(to_string = "IsraelPC", serialize = "israelpc")]
     IsraelPC,
 
+    /// Unaffiliated meets held in Israel.
+    #[serde(rename = "Israel-UA")]
+    #[strum(to_string = "Israel-UA", serialize = "israel-ua")]
+    IsraelUA,
+
     /// Unaffiliated meets held in Italy.
     #[serde(rename = "Italy-UA")]
     #[strum(to_string = "Italy-UA", serialize = "italy-ua")]
@@ -2413,6 +2418,7 @@ impl Federation {
             Federation::IronBoy => FULLY_TESTED,
             Federation::IRP => false,
             Federation::IsraelPC => false,
+            Federation::IsraelUA => false,
             Federation::ItalyUA => false,
             Federation::JPA => FULLY_TESTED,
             Federation::KBGV => FULLY_TESTED,
@@ -2914,6 +2920,7 @@ impl Federation {
             Federation::IronBoy => Some(Country::USA),
             Federation::IRP => None,
             Federation::IsraelPC => Some(Country::Israel),
+            Federation::IsraelUA => Some(Country::Israel),
             Federation::ItalyUA => Some(Country::Italy),
             Federation::JPA => Some(Country::Japan),
             Federation::KBGV => Some(Country::Belgium),
@@ -3480,6 +3487,7 @@ impl Federation {
             Federation::IronBoy => None,
             Federation::IRP => None,
             Federation::IsraelPC => None,
+            Federation::IsraelUA => None,
             Federation::ItalyUA => None,
             Federation::JPA => Some(Federation::IPF),
             Federation::KBGV => Some(Federation::IPF),
@@ -4094,6 +4102,7 @@ impl Federation {
             Federation::IronBoy => PointsSystem::Wilks,
             Federation::IRP => PointsSystem::Wilks,
             Federation::IsraelPC => PointsSystem::Wilks,
+            Federation::IsraelUA => PointsSystem::Wilks,
             Federation::ItalyUA => PointsSystem::Wilks,
             Federation::JPA => Federation::ipf_rules_on(date),
             Federation::KBGV => Federation::ipf_rules_on(date),
