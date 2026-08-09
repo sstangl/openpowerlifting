@@ -130,3 +130,4 @@
 
 [exemptions]
     2118 = ["ExemptDuplicates"] # With wp-usa/2103.
+    2630 = ["ExemptWeightClassConsistency"] # Didn't use the 110kg class, likely a mistake.
