@@ -22,6 +22,7 @@
     mybk   = {name ="MY-BK",min=0,max=12,sex="M",equipment="Bare"}
     fybk   = {name ="FY-BK",min=0,max=12,sex="F",equipment="Bare"}
     mm1bk   = {name ="MM1-BK",min=40,max=44,sex="M",equipment="Bare"}
+    mm3bk   = {name ="MM3-BK",min=50,max=54,sex="M",equipment="Bare"}
     fm3bk   = {name ="FM3-BK",min=50,max=54,sex="F",equipment="Bare"}
     fm6bk   = {name ="FM6-BK",min=65,max=69,sex="F",equipment="Bare"}
     ft1bk   = {name ="FT1-BK",min=13,max=15,sex="F",equipment="Bare"}
