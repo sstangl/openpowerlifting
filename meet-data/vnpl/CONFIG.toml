@@ -213,6 +213,74 @@
     xm7 = {name="X-M7", min=99.5, max=999, sex="Mx", equipment="Single-ply"}
     xg = {name="X-G", min=0, max=999, sex="Mx", equipment="Single-ply", place="G"}
 
+    # Novice divisions, Raw Men.
+    mron = {name="MR-O-N", min=14, max=999, sex="M", equipment="Raw"}
+    mryn = {name="MR-Y-N", min=8, max=13, sex="M", equipment="Raw"}
+    mry1n = {name="MR-Y1-N", min=8, max=9, sex="M", equipment="Raw"}
+    mry2n = {name="MR-Y2-N", min=10, max=11, sex="M", equipment="Raw"}
+    mry3n = {name="MR-Y3-N", min=12, max=13, sex="M", equipment="Raw"}
+    mrtn = {name="MR-T-N", min=14, max=19, sex="M", equipment="Raw"}
+    mrt1n = {name="MR-T1-N", min=14, max=15, sex="M", equipment="Raw"}
+    mrt2n = {name="MR-T2-N", min=16, max=17, sex="M", equipment="Raw"}
+    mrt3n = {name="MR-T3-N", min=18, max=19, sex="M", equipment="Raw"}
+    mrtjn = {name="MR-TJ-N", min=14, max=23, sex="M", equipment="Raw"}
+    mrsjn = {name="MR-SJ-N", min=14, max=19, sex="M", equipment="Raw"}
+    mrjrn = {name="MR-Jr-N", min=20, max=23, sex="M", equipment="Raw"}
+    mrm1an = {name="MR-M1a-N", min=39.5, max=43.5, sex="M", equipment="Raw"}
+    mrm1bn = {name="MR-M1b-N", min=44.5, max=48.5, sex="M", equipment="Raw"}
+    mrm2an = {name="MR-M2a-N", min=49.5, max=53.5, sex="M", equipment="Raw"}
+    mrm2bn = {name="MR-M2b-N", min=54.5, max=58.5, sex="M", equipment="Raw"}
+    mrm3an = {name="MR-M3a-N", min=59.5, max=63.5, sex="M", equipment="Raw"}
+    mrm3bn = {name="MR-M3b-N", min=64.5, max=68.5, sex="M", equipment="Raw"}
+    mrm4an = {name="MR-M4a-N", min=69.5, max=73.5, sex="M", equipment="Raw"}
+    mrm4bn = {name="MR-M4b-N", min=74.5, max=78.5, sex="M", equipment="Raw"}
+    mrm5an = {name="MR-M5a-N", min=79.5, max=83.5, sex="M", equipment="Raw"}
+    mrm5bn = {name="MR-M5b-N", min=84.5, max=88.5, sex="M", equipment="Raw"}
+    mrm6an = {name="MR-M6a-N", min=89.5, max=93.5, sex="M", equipment="Raw"}
+    mrm6bn = {name="MR-M6b-N", min=94.5, max=98.5, sex="M", equipment="Raw"}
+    mrmn = {name="MR-M-N", min=39.5, max=999, sex="M", equipment="Raw"}
+    mrm1n = {name="MR-M1-N", min=39.5, max=48.5, sex="M", equipment="Raw"}
+    mrm2n = {name="MR-M2-N", min=49.5, max=58.5, sex="M", equipment="Raw"}
+    mrm3n = {name="MR-M3-N", min=59.5, max=68.5, sex="M", equipment="Raw"}
+    mrm4n = {name="MR-M4-N", min=69.5, max=78.5, sex="M", equipment="Raw"}
+    mrm5n = {name="MR-M5-N", min=79.5, max=88.5, sex="M", equipment="Raw"}
+    mrm6n = {name="MR-M6-N", min=89.5, max=98.5, sex="M", equipment="Raw"}
+    mrm7n = {name="MR-M7-N", min=99.5, max=999, sex="M", equipment="Raw"}
+
+    # Novice divisions, Raw Women.
+    fron = {name="FR-O-N", min=14, max=999, sex="F", equipment="Raw"}
+    fryn = {name="FR-Y-N", min=8, max=13, sex="F", equipment="Raw"}
+    fry1n = {name="FR-Y1-N", min=8, max=9, sex="F", equipment="Raw"}
+    fry2n = {name="FR-Y2-N", min=10, max=11, sex="F", equipment="Raw"}
+    fry3n = {name="FR-Y3-N", min=12, max=13, sex="F", equipment="Raw"}
+    frtn = {name="FR-T-N", min=14, max=19, sex="F", equipment="Raw"}
+    frt1n = {name="FR-T1-N", min=14, max=15, sex="F", equipment="Raw"}
+    frt2n = {name="FR-T2-N", min=16, max=17, sex="F", equipment="Raw"}
+    frt3n = {name="FR-T3-N", min=18, max=19, sex="F", equipment="Raw"}
+    frtjn = {name="FR-TJ-N", min=14, max=23, sex="F", equipment="Raw"}
+    frsjn = {name="FR-SJ-N", min=14, max=19, sex="F", equipment="Raw"}
+    frjrn = {name="FR-Jr-N", min=20, max=23, sex="F", equipment="Raw"}
+    frm1an = {name="FR-M1a-N", min=39.5, max=43.5, sex="F", equipment="Raw"}
+    frm1bn = {name="FR-M1b-N", min=44.5, max=48.5, sex="F", equipment="Raw"}
+    frm2an = {name="FR-M2a-N", min=49.5, max=53.5, sex="F", equipment="Raw"}
+    frm2bn = {name="FR-M2b-N", min=54.5, max=59.5, sex="F", equipment="Raw"}
+    frm3an = {name="FR-M3a-N", min=59.5, max=63.5, sex="F", equipment="Raw"}
+    frm3bn = {name="FR-M3b-N", min=64.5, max=68.5, sex="F", equipment="Raw"}
+    frm4an = {name="FR-M4a-N", min=69.5, max=73.5, sex="F", equipment="Raw"}
+    frm4bn = {name="FR-M4b-N", min=74.5, max=78.5, sex="F", equipment="Raw"}
+    frm5an = {name="FR-M5a-N", min=79.5, max=83.5, sex="F", equipment="Raw"}
+    frm5bn = {name="FR-M5b-N", min=84.5, max=88.5, sex="F", equipment="Raw"}
+    frm6an = {name="FR-M6a-N", min=89.5, max=93.5, sex="F", equipment="Raw"}
+    frm6bn = {name="FR-M6b-N", min=94.5, max=98.5, sex="F", equipment="Raw"}
+    frmn = {name="FR-M-N", min=39.5, max=999, sex="F", equipment="Raw"}
+    frm1n = {name="FR-M1-N", min=39.5, max=48.5, sex="F", equipment="Raw"}
+    frm2n = {name="FR-M2-N", min=49.5, max=58.5, sex="F", equipment="Raw"}
+    frm3n = {name="FR-M3-N", min=59.5, max=68.5, sex="F", equipment="Raw"}
+    frm4n = {name="FR-M4-N", min=69.5, max=78.5, sex="F", equipment="Raw"}
+    frm5n = {name="FR-M5-N", min=79.5, max=88.5, sex="F", equipment="Raw"}
+    frm6n = {name="FR-M6-N", min=89.5, max=98.5, sex="F", equipment="Raw"}
+    frm7n = {name="FR-M7-N", min=99.5, max=999, sex="F", equipment="Raw"}
+
     # Junior Varsity.
     mrjv = {name="MR-JV", min=0, max=999, sex="M", equipment="Raw"}
     frjv = {name="FR-JV", min=0, max=999, sex="F", equipment="Raw"}
@@ -282,6 +350,7 @@
     sex = "M"
     divisions = [
         "MR-T", "MR-T1", "MR-T2", "MR-T3", "MR-TJ", "MR-Jr",
+        "MR-T-N", "MR-T1-N", "MR-T2-N", "MR-T3-N", "MR-TJ-N", "MR-Jr-N",
         "M-T", "M-T1", "M-T2", "M-T3", "M-TJ", "M-Jr",
         "MR-JV", "M-JV", "MR-V", "M-V", "MR-HS", "M-HS", "MR-C", "M-C"
     ]
@@ -292,6 +361,7 @@
     sex = "F"
     divisions = [
         "FR-T", "FR-T1", "FR-T2", "FR-T3", "FR-TJ", "FR-Jr",
+        "FR-T-N", "FR-T1-N", "FR-T2-N", "FR-T3-N", "FR-TJ-N", "FR-Jr-N",
         "F-T", "F-T1", "F-T2", "F-T3", "F-TJ", "F-Jr",
         "FR-JV", "F-JV", "FR-V", "F-V", "FR-HS", "F-HS", "FR-C", "F-C"
     ]
@@ -300,12 +370,12 @@
     classes = ["30","35","40","44","48","52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
     date_range=["2025-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["MR-Y", "MR-Y1", "MR-Y2", "MR-Y3", "M-Y", "M-Y1", "M-Y2", "M-Y3"]
+    divisions = ["MR-Y", "MR-Y1", "MR-Y2", "MR-Y3", "MR-Y-N", "MR-Y1-N", "MR-Y2-N", "MR-Y3-N", "M-Y", "M-Y1", "M-Y2", "M-Y3"]
 
 [weightclasses.youth_F]
     classes = ["30","35","40","44","48","52","56","60","65","70","75","82.5","90","100","100+"]
     date_range=["2025-01-01","9999-01-01"]
     sex = "F"
-    divisions = ["FR-Y", "FR-Y1", "FR-Y2", "FR-Y3", "F-Y", "F-Y1", "F-Y2", "F-Y3"]
+    divisions = ["FR-Y", "FR-Y1", "FR-Y2", "FR-Y3", "FR-Y-N", "FR-Y1-N", "FR-Y2-N", "FR-Y3-N", "F-Y", "F-Y1", "F-Y2", "F-Y3"]
 
 [exemptions]
