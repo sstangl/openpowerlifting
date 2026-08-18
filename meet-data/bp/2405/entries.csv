@@ -14,7 +14,7 @@ Place,Name,Sex,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Be
 3,Amy Middlemas,F,FR-O,56.9,57,120,125,127.5,127.5,67.5,-70,-70,67.5,-160,-162.5,162.5,162.5,357.5,University of East Anglia,SBD,,Raw
 4,Annabelle Cox,F,FR-O,56.6,57,130,137.5,142.5,142.5,60,65,-67.5,65,135,142.5,-147.5,142.5,350,University of Exeter,SBD,,Raw
 5,Laila Baig,F,FR-O,55.9,57,-130,137.5,145,145,50,60,62.5,62.5,125,135,140,140,347.5,University of Manchester,SBD,,Raw
-6,Alice Lane,F,FR-O,56.5,57,107.5,115,-117.5,115,55,57.5,60,60,157.5,170,-182.5,170,345,Durham University,SBD,,Raw
+6,Alice Lane #1,F,FR-O,56.5,57,107.5,115,-117.5,115,55,57.5,60,60,157.5,170,-182.5,170,345,Durham University,SBD,,Raw
 7,Isabel Shaw-Smith,F,FR-O,56.7,57,117.5,125,130,130,65,-70,-70,65,135,-142.5,147.5,147.5,342.5,Cambridge,SBD,,Raw
 8,Geneva Ponnou,F,FR-O,56.8,57,107.5,115,120,120,62.5,67.5,-70,67.5,140,-152.5,152.5,152.5,340,Loughborough University,SBD,,Raw
 9,Alisha Varia,F,FR-O,56.2,57,115,122.5,127.5,127.5,62.5,-67.5,67.5,67.5,125,-135,135,135,330,University of Liverpool,SBD,,Raw
@@ -112,7 +112,7 @@ G,Guangnan Zhai,F,FR-O,57.1,63,-90,90,100,100,40,45,50,50,105,115,122.5,122.5,27
 29,Lizzy Olowe,F,FR-O,69,69,-127.5,127.5,-132.5,127.5,75,-80,-80,75,140,-147.5,-147.5,140,342.5,University of Edinburgh,SBD,,Raw
 30,Megan Falconer,F,FR-O,66.1,69,122.5,130,-132.5,130,52.5,57.5,60,60,140,150,-160,150,340,Glasgow Caledonian University,SBD,,Raw
 31,Isabella Henry,F,FR-O,67.2,69,-130,130,135,135,65,70,-72.5,70,127.5,135,-140,135,340,York,SBD,,Raw
-32,Megan Young,F,FR-O,67.9,69,100,110,115,115,70,-75,77.5,77.5,127.5,137.5,147.5,147.5,340,Manchester Metropolitan University,SBD,,Raw
+32,Megan Young #1,F,FR-O,67.9,69,100,110,115,115,70,-75,77.5,77.5,127.5,137.5,147.5,147.5,340,Manchester Metropolitan University,SBD,,Raw
 33,Hannah Thompson,F,FR-O,67.3,69,-115,115,-122.5,115,67.5,70,72.5,72.5,132.5,137.5,142.5,142.5,330,Newcastle University,SBD,,Raw
 34,Sophie Gowers,F,FR-O,66.6,69,110,115,120,120,62.5,65,-67.5,65,130,137.5,142.5,142.5,327.5,University of Liverpool,SBD,,Raw
 35,Alba Pinillos Fernand,F,FR-O,67.6,69,120,125,-132.5,125,57.5,-60,60,60,-140,140,142.5,142.5,327.5,University of Bristol,SBD,,Raw
@@ -259,7 +259,7 @@ G,Conor Eede,M,MR-O,66.1,74,217.5,230,237.5,237.5,120,125,-130,125,245,-262.5,-2
 24,Jamie Jones #4,M,MR-O,81.2,83,197.5,205,215,215,125,132.5,-137.5,132.5,232.5,247.5,-255,247.5,595,Portsmouth University,SBD,,Raw
 25,Levi Walker,M,MR-O,81.4,83,185,202.5,212.5,212.5,130,135,-142.5,135,217.5,232.5,242.5,242.5,590,Bournemouth University,SBD,,Raw
 26,Daniel Dyszkant,M,MR-O,82.1,83,200,212.5,220,220,137.5,-147.5,150,150,205,220,-230,220,590,Loughborough,SBD,,Raw
-27,Daniel Owen,M,MR-O,82.1,83,180,190,195,195,135,140,145,145,225,240,250,250,590,University of Exeter,SBD,,Raw
+27,Daniel Owen #1,M,MR-O,82.1,83,180,190,195,195,135,140,145,145,225,240,250,250,590,University of Exeter,SBD,,Raw
 28,Ellis Bushell,M,MR-O,80.6,83,202.5,215,220,220,120,125,127.5,127.5,240,-260,-265,240,587.5,Cardiff University,SBD,,Raw
 29,Kofi Anarfi,M,MR-O,82.1,83,200,212.5,217.5,217.5,125,130,-132.5,130,220,230,240,240,587.5,University of Birmingham,SBD,,Raw
 30,Benjamin Chan,M,MR-O,82.3,83,205,215,222.5,222.5,112.5,117.5,120,120,225,235,245,245,587.5,University of Oxford,SBD,,Raw
@@ -280,7 +280,7 @@ G,Conor Eede,M,MR-O,66.1,74,217.5,230,237.5,237.5,120,125,-130,125,245,-262.5,-2
 45,Ben Hayton,M,MR-O,82.2,83,-195,195,-205,195,125,130,-135,130,210,225,235,235,560,University of Liverpool,SBD,,Raw
 46,Adedotun Ogunjimi,M,MR-O,82.7,83,170,-182.5,-190,170,-115,122.5,-130,122.5,250,265,-275,265,557.5,University of Bristol,SBD,,Raw
 47,Mitchell Young,M,MR-O,78.5,83,175,182.5,-190,182.5,117.5,125,-127.5,125,230,240,-250,240,547.5,University of Southampton,SBD,,Raw
-48,Thomas Horn,M,MR-O,82.6,83,197.5,-205,-205,197.5,-137.5,-137.5,137.5,137.5,205,,,205,540,University of Liverpool,SBD,,Raw
+48,Thomas Horn #1,M,MR-O,82.6,83,197.5,-205,-205,197.5,-137.5,-137.5,137.5,137.5,205,,,205,540,University of Liverpool,SBD,,Raw
 G,Sebastian Smith,M,MR-O,74.7,83,170,180,-190,180,100,107.5,-110,107.5,195,205,-215,205,492.5,University of Nottingham,SBD,,Raw
 1,Emmanuel Olatunji,M,MR-O,92.5,93,240,252.5,262.5,262.5,150,157.5,162.5,162.5,-300,315,325,325,750,Bedfordshire,SBD,,Raw
 1,Harris Hammam,M,MR-O,92.4,93,220,227.5,-232.5,227.5,140,147.5,-150,147.5,270,285,-300,285,660,Newcastle university,SBD,,Raw
@@ -336,7 +336,7 @@ G,Sebastian Smith,M,MR-O,74.7,83,170,180,-190,180,100,107.5,-110,107.5,195,205,-
 28,Tom Stapley,M,MR-O,92.7,93,207.5,217.5,222.5,222.5,147.5,155,157.5,157.5,245,255,-265,255,635,University of East Anglia,SBD,,Raw
 29,Mitchell Guppy,M,MR-O,92.6,93,217.5,-227.5,-230,217.5,142.5,147.5,150,150,240,260,265,265,632.5,Newcastle University,SBD,,Raw
 30,Huangwei Gao,M,MR-O,90.8,93,-210,215,225,225,137.5,142.5,-145,142.5,235,-255,260,260,627.5,Cardiff University,SBD,,Raw
-31,Billy Jones,M,MR-O,91.7,93,202.5,217.5,-232.5,217.5,125,132.5,135,135,240,260,275,275,627.5,Nottingham Trent,SBD,,Raw
+31,Billy Jones #3,M,MR-O,91.7,93,202.5,217.5,-232.5,217.5,125,132.5,135,135,240,260,275,275,627.5,Nottingham Trent,SBD,,Raw
 32,Aubtin Yazdiha,M,MR-O,92.5,93,215,230,-237.5,230,132.5,140,-142.5,140,240,255,-265,255,625,Loughborough University,SBD,,Raw
 33,Joe Hart-Stevens,M,MR-O,92.9,93,180,190,200,200,150,155,160,160,240,250,262.5,262.5,622.5,Liverpool John Moores university,SBD,,Raw
 34,Jin Zheng,M,MR-O,91.8,93,207.5,220,-225,220,130,135,140,140,235,-252.5,260,260,620,University of Oxford,SBD,,Raw

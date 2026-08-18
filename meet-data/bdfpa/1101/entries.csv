@@ -1,7 +1,7 @@
 Place,Equipment,Sex,WeightClassKg,Name,Division,Country,Age,BodyweightKg,Best3SquatKg,Squat4Kg,Best3BenchKg,Bench4Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
 1,Raw,F,44,Imelda Flanagan,F-M3,England,50,41.6,70,,37.5,,105,,212.5,SBD
 1,Raw,F,44,Judy Gedney,F-M7,USA,71,43.9,65,,50,51,95,,210,SBD
-1,Raw,F,47.5,Hayley Rutherford,F-T1,Scotland,15,46.8,62.5,,35.5,,82.5,,180,SBD
+1,Raw,F,47.5,Hayley Rutherford,F-T1,Scotland,15,46.8,62.5,,35.5,,82.5,,180.5,SBD
 1,Raw,F,50.5,Sharon McGee,F-M4,UK,55,48.6,37.5,,40,,87.5,,165,SBD
 1,Raw,F,53,Maruska Bertoli,F-O,Italy,32,51.2,105,,60,,125,,290,SBD
 1,Raw,F,55.5,Louise Fox,F-O,England,39,53.4,106,,70,,160,,336,SBD
@@ -16,12 +16,12 @@ Place,Equipment,Sex,WeightClassKg,Name,Division,Country,Age,BodyweightKg,Best3Sq
 1,Raw,F,70,Louise Mather,F-O,Scotland,27,68.2,115,,62.5,,167.5,173,345,SBD
 2,Raw,F,70,Evelyn Stevenson,F-O,England,24,68.4,120,,72.5,,140,,332.5,SBD
 1,Raw,F,70,Jo Gaskin,F-M1,Scotland,41,67.3,105,,47.5,,140,,292.5,SBD
-1,Raw,F,70,Teresa Loi,F-MPF,Italy,49,64.8,87.5,,68,,132.5,,287.5,SBD
-1,Raw,F,70,Teresa Loi,F-M2,Italy,49,64.8,87.5,,68,,132.5,,287.5,SBD
+1,Raw,F,70,Teresa Loi,F-MPF,Italy,49,64.8,87.5,,68,,132.5,,288,SBD
+1,Raw,F,70,Teresa Loi,F-M2,Italy,49,64.8,87.5,,68,,132.5,,288,SBD
 3,Raw,F,70,Deniz Akin,F-O,England,30,63.9,90,,65,,105,,260,SBD
 1,Raw,F,70,Amy Broomhead,F-T1,England,14,64.2,90,95,47.5,,105,110,242.5,SBD
 1,Raw,F,80,Mary Anderson,F-M1,Scotland,44,75.4,147.5,,92.5,,190,196,430,SBD
-1,Raw,F,80,Shachar Head,F-T1,England,15,78.5,125.5,,75,,145,150,345,SBD
+1,Raw,F,80,Shachar Head,F-T1,England,15,78.5,125.5,,75,,145,150,345.5,SBD
 1,Raw,F,80,Shasha Bowers,F-O,England,26,72.1,82.5,,45,,107.5,,235,SBD
 1,Raw,F,90,Gabrielle Bennett,F-T3,England,18,85.3,122.5,,60,,150,,332.5,SBD
 1,Raw,M,52,Johnathan Wrenn,M-T3,USA,19,50.8,142.5,,90,,160,,392.5,SBD
@@ -81,7 +81,7 @@ DQ,Raw,M,75,Mark Fleming,M-O,England,28,74.5,202.5,,,,,,,SBD
 2,Raw,M,82.5,Frances Spiteri,M-M5,Malta,62,79.1,142.5,,70,,180,,392.5,SBD
 4,Raw,M,82.5,Richard Hill,M-O,England,25,80.8,212.5,,127.5,,247.5,,587.5,SBD
 1,Raw,M,90,Joanathan Mogford,M-O,Wales,33,88.3,200,,140,,260,,600,SBD
-1,Raw,M,90,Julian Fernandez,M-JR,England,21,89.3,205,,115,,280.5,,600,SBD
+1,Raw,M,90,Julian Fernandez,M-JR,England,21,89.3,205,,115,,280.5,,600.5,SBD
 1,Raw,M,90,Artjom Korotkov,M-T3,Estonia,19,89.4,180,,140,,240,,560,SBD
 2,Raw,M,90,David Shamhalyan,M-JR,Turkmenistan,22,88.7,160,,152.5,,225,,537.5,SBD
 1,Raw,M,90,Vladimir Toropov,M-M1,Estonia,41,87,190,,130,,210,,530,SBD
@@ -100,7 +100,7 @@ DQ,Raw,M,90,Stephen Howard,M-JR,Ireland,22,86.7,185,,,,,,,SBD
 3,Raw,M,100,Michael Goodwin,M-JR,England,23,97.5,217.5,,160,,240,,617.5,SBD
 2,Raw,M,100,Gilles Rondeaux,M-M1,France,41,95.1,215,,165,,232.5,,612.5,SBD
 4,Raw,M,100,Aleksei Zuravljov,M-O,Estonia,30,94.4,195,,140,,250,,585,SBD
-1,Raw,M,100,Dave Mansfield,M-M6,USA,65,97.5,205,,105,,243,,552.5,SBD
+1,Raw,M,100,Dave Mansfield,M-M6,USA,65,97.5,205,,105,,243,,553,SBD
 2,Raw,M,100,Nathan Simmons #3,M-MPF,England,18,92,160,,105,,200,,465,SBD
 1,Raw,M,100,Nathan Simmons #3,M-T3,England,18,92,160,,105,,200,,465,SBD
 1,Raw,M,100,Evgenii Tverdovskii,M-M5,Russia,62,94.1,140,,95,,165,,400,SBD
@@ -127,20 +127,20 @@ DQ,Raw,M,125,Bulejani Gubianuri,M-O,Georgia,35,123,150,,,,,,,SBD
 1,Single-ply,F,44,Judy Gedney,F-M7,USA,71,44,80,85,52.5,,107.5,,240,SBD
 1,Single-ply,F,58.5,Helen Wuyts,F-JR,Belgium,20,56.6,150,,85,,182.5,,417.5,SBD
 1,Single-ply,F,58.5,Rosimery Lima Gallo,F-O,England,34,58.3,155,160,87.5,,160,,402.5,SBD
-1,Single-ply,F,58.5,Janet Scott,F-M3,England,50,55.8,92.5,,53,,115,,260,SBD
+1,Single-ply,F,58.5,Janet Scott,F-M3,England,50,55.8,92.5,,53,,115,,260.5,SBD
 1,Single-ply,F,80,Mary Anderson,F-M1,Scotland,44,76.6,195,200.5,115,,217.5,,527.5,SBD
 1,Single-ply,F,80,Shasha Bowers,F-O,England,26,72,125,,50,,110,,285,SBD
 DQ,Single-ply,F,90,Bernadette Cuninghame,F-O,Scotland,32,84.9,,,,,,,,SBD
 DQ,Single-ply,F,90,Bernadette Cuninghame,F-MPF,Scotland,32,84.9,,,,,,,,SBD
 1,Single-ply,M,60,Ted Brown,M-M9,England,81,59.8,107.5,,85,,145,,337.5,SBD
-1,Single-ply,M,67.5,Paul Rutherford,M-M1,Scotland,41,67.1,190,,128,,200,,517.5,SBD
+1,Single-ply,M,67.5,Paul Rutherford,M-M1,Scotland,41,67.1,190,,128,,200,,518,SBD
 1,Single-ply,M,67.5,Scott Mc Arthur,M-O,England,29,67.4,160,,120,,220,,500,SBD
 2,Single-ply,M,67.5,Serghei Teliucov,M-O,Moldova,25,65.4,170,,105,,175,,450,SBD
 1,Single-ply,M,67.5,Vincenzo Tidona,M-M9,France,81,66.6,150,155,90,92.5,170,,410,SBD
 1,Single-ply,M,75,Indra Sudarminto,M-JR,Belgium,20,74.1,265,,150,,270,,685,SBD
 1,Single-ply,M,75,Dean Mikosz,M-M1,England,43,74,255,,162.5,,215,,632.5,SBD
 2,Single-ply,M,75,Bernie McGurk,M-M1,Scotland,43,73.9,220,,135,,250,,605,SBD
-1,Single-ply,M,75,Ahmet Gurbanov,M-T3,Turkmenistan,19,71.7,235.5,,140,,210,,585,SBD
+1,Single-ply,M,75,Ahmet Gurbanov,M-T3,Turkmenistan,19,71.7,235.5,,140,,210,,585.5,SBD
 1,Single-ply,M,75,Andy Shipway,M-O,England,28,74.7,205,,145,,200,,550,SBD
 2,Single-ply,M,75,Daniel McKeen,M-O,,24,72.6,180,,132.5,,217.5,,530,SBD
 1,Single-ply,M,75,Henry Clark,M-M7,England,71,74,135,,55,,150,,340,SBD
@@ -160,7 +160,7 @@ DQ,Single-ply,M,82.5,Rick Meldon,M-M2,England,47,82.4,290,,,,,,,SBD
 1,Single-ply,M,100,Stephen Welch,M-O,USA,37,98.2,277.5,,172.5,,250,,700,SBD
 2,Single-ply,M,100,Martin Russel,M-O,England,29,96.3,200,,175,,255,,630,SBD
 1,Single-ply,M,100,James Bell,M-M4,USA,56,99.1,237.5,,132.5,,220,,590,SBD
-1,Single-ply,M,110,Simon Marshall,M-O,USA,39,105.8,310,,245.5,,312.5,,867.5,SBD
+1,Single-ply,M,110,Simon Marshall,M-O,USA,39,105.8,310,,245.5,,312.5,,868,SBD
 2,Single-ply,M,110,Alexey Kashirin,M-O,Russia,38,104.1,320,,235,,300,,855,SBD
 1,Single-ply,M,110,Mark Norton,M-M2,England,47,107.4,327.5,,232.5,,265,,825,SBD
 1,Single-ply,M,110,Leslie Pilling,M-M4,England,56,110,260.5,,155,,280.5,,696,SBD

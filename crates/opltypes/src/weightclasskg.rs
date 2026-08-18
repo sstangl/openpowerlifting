@@ -232,7 +232,7 @@ impl fmt::Display for WeightClassAny {
 }
 
 impl FromStr for WeightClassKg {
-    type Err = num::ParseFloatError;
+    type Err = num::ParseIntError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         if s.is_empty() {
@@ -248,7 +248,7 @@ impl FromStr for WeightClassKg {
 }
 
 impl FromStr for WeightClassLbs {
-    type Err = num::ParseFloatError;
+    type Err = num::ParseIntError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         if s.is_empty() {

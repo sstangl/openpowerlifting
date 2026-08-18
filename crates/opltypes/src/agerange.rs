@@ -113,10 +113,10 @@ impl AgeRange {
     /// assert_eq!(range.distance(), None);
     /// ```
     pub fn distance(self) -> Option<u8> {
-        if let Age::Exact(min) = self.min {
-            if let Age::Exact(max) = self.max {
-                return Some(max - min);
-            }
+        if let Age::Exact(min) = self.min
+            && let Age::Exact(max) = self.max
+        {
+            return Some(max - min);
         }
         None
     }

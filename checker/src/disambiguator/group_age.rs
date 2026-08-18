@@ -8,11 +8,11 @@
 use itertools_num::linspace;
 use opltypes::*;
 
-use crate::compiler::interpolate_age::trace_conflict;
-use crate::compiler::interpolate_age::BirthDateRange;
-use crate::compiler::interpolate_age::NarrowResult;
 use crate::compiler::interpolate_age::BDR_DEFAULT_MAX;
 use crate::compiler::interpolate_age::BDR_DEFAULT_MIN;
+use crate::compiler::interpolate_age::BirthDateRange;
+use crate::compiler::interpolate_age::NarrowResult;
+use crate::compiler::interpolate_age::trace_conflict;
 use crate::{AllMeetData, EntryIndex, LifterMap};
 
 fn calc_distance(bd_range1: &BirthDateRange, x: f32) -> f32 {
@@ -314,10 +314,10 @@ fn group_lifter_data(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: 
         let entry = meetdata.entry(index);
 
         // Narrow by BirthDate.
-        if let Some(birthdate) = entry.birthdate {
-            if range.narrow_by_birthdate(birthdate) == NarrowResult::Conflict {
-                trace_conflict(debug, &range, mdate, "BirthDate", &birthdate, &path);
-            }
+        if let Some(birthdate) = entry.birthdate
+            && range.narrow_by_birthdate(birthdate) == NarrowResult::Conflict
+        {
+            trace_conflict(debug, &range, mdate, "BirthDate", &birthdate, &path);
         }
 
         // Narrow by BirthYearRange.

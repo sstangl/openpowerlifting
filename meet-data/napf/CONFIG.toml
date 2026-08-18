@@ -1,6 +1,7 @@
 # Configuration for NAPF.
 
 [options]
+    valid_federations = ["NAPF"]
     require_manual_disambiguation = true
 
 [divisions]

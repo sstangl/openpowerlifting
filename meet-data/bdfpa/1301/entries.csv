@@ -1,7 +1,7 @@
 WeightClassKg,BodyweightKg,Division,Equipment,Sex,Team,Country,Name,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Place,Event
 50.5,50.1,F-O,Raw,F,EM,England,Charlotte Lewis,75,80,-85,,80,37.5,40,-45,,40,90,100.5,102.5,107.5,102.5,222.5,1,SBD
 50.5,49.2,F-M6,Raw,F,EC,England,Patricia Tombs,65,70,72.5,,72.5,40,-42.5,42.5,,42.5,85,90,92.5,95,92.5,207.5,2,SBD
-50.5,48.9,F-T2,Raw,F,,Scotland,Hayley Rutherford,62.5,68,-70,,68,35,37.5,-40,,37.5,82.5,-90,90,,90,195,3,SBD
+50.5,48.9,F-T2,Raw,F,,Scotland,Hayley Rutherford,62.5,68,-70,,68,35,37.5,-40,,37.5,82.5,-90,90,,90,195.5,3,SBD
 53,53,F-T3,Raw,F,WM,England,Bobbie Butters,85,95,-110,,95,-50,-55,55,,55,105,115,126.5,,126.5,276.5,1,SBD
 53,51.9,F-O,Raw,F,SE,England,Lesley Laver,60,65,67.5,,67.5,42.5,-47.5,-47.5,,42.5,105,115,117.5,-127,117.5,227.5,2,SBD
 55.5,54.9,F-T1,Raw,F,SC,England,Lucy Rayner,80,85,-90,,85,55,-60,-60,,55,105,-107.5,,,105,245,1,SBD
@@ -24,7 +24,7 @@ WeightClassKg,BodyweightKg,Division,Equipment,Sex,Team,Country,Name,Squat1Kg,Squ
 67.5,60.5,M-T2,Raw,M,SC,England,Jack Suljevic,112.5,120,-122.5,,120,70,72.5,-77.5,,72.5,125,135,142.5,,142.5,335,2,SBD
 60,58.6,M-M9,Raw,M,EM,England,Ted Brown,70,80,82.5,,82.5,65,72.5,77.5,,77.5,120,125,127.5,,127.5,287.5,3,SBD
 67.5,66.9,M-M2,Raw,M,WM,England,David Gray #1,165,177.5,180,,180,125,135,140,,140,205,225,240,253,240,560,1,SBD
-67.5,64.2,M-T2,Raw,M,SC,England,Mark Green #1,150,161,165,170,165,-120,125,130,-135,130,160,170,185,-201.5,185,480,2,SBD
+67.5,64.2,M-T2,Raw,M,SC,England,Mark Green #3,150,161,165,170,165,-120,125,130,-135,130,160,170,185,-201.5,185,480,2,SBD
 67.5,65.5,M-O,Raw,M,NW,England,Danny MacDonald,-180,180,-191,,180,-90,-90,90,,90,190,-200,-200,,190,460,3,SBD
 67.5,67,M-O,Raw,M,WM,England,David Probert,135,147.5,152.5,,152.5,90,100,105,,105,180,190,200,,200,457.5,4,SBD
 67.5,66.6,M-O,Raw,M,EM,England,Sean Maloney,140,145,150,,150,90,95,100,,100,172.5,182.5,190,,190,440,5,SBD
@@ -46,7 +46,7 @@ WeightClassKg,BodyweightKg,Division,Equipment,Sex,Team,Country,Name,Squat1Kg,Squ
 75,74.9,M-M7,Raw,M,EM,England,Henry Clark,110,115,-120,,115,50,-52.5,52.5,,52.5,135,145,150,,150,317.5,11,SBD
 82.5,82,M-O,Raw,M,SW,England,Sam Dew,210,220,230,,230,150,155,160,,160,220,230,-240,,230,620,1,SBD
 82.5,81.3,M-JR,Raw,M,SW,England,Reece Meakin,190,205,-210,,205,145,-150,150,,150,217.5,-230,247.5,,247.5,602.5,2,SBD
-82.5,80.8,M-JR,Raw,M,SC,England,Alistair Cannings,210,217.5,223,,223,127.5,135,140,,140,215,230,237.5,-260.5,237.5,600,3,SBD
+82.5,80.8,M-JR,Raw,M,SC,England,Alistair Cannings,210,217.5,223,,223,127.5,135,140,,140,215,230,237.5,-260.5,237.5,600.5,3,SBD
 82.5,81.9,M-O,Raw,M,WM,England,Alex Tosh,180,190,-195,,190,145,155,-165,,155,235,255,-260,,255,600,4,SBD
 82.5,81.8,M-O,Raw,M,SW,England,Martin Smith #1,180,190,195,,195,140,147.5,152.5,,152.5,230,240,247.5,,247.5,595,5,SBD
 82.5,82.1,M-O,Raw,M,SE,England,Jean-Pierre Ulldemolins,-210,210,-220,,210,125,135,-145,,135,220,235,245,,245,590,6,SBD
@@ -55,7 +55,7 @@ WeightClassKg,BodyweightKg,Division,Equipment,Sex,Team,Country,Name,Squat1Kg,Squ
 82.5,82,M-O,Raw,M,SW,England,Will Badenoch,160,180,190,,190,135,145,-150,,145,240,-260,-260,,240,575,9,SBD
 82.5,79.9,M-JR,Raw,M,SC,England,Terrance Minty,180,190,,,190,110,117.5,125,,125,235,245,-252.5,,245,560,10,SBD
 82.5,81.1,M-JR,Raw,M,SC,England,Jack Kuhnert,165,175,-185,,175,117.5,122.5,125,,125,190,200,210,,210,510,11,SBD
-82.5,81.3,M-M3,Raw,M,EM,England,Michael Round,160,-170,170,,170,135,142.5,-145,,142.5,175,190,195,,195,507.5,12,SBD
+82.5,81.3,M-M3,Raw,M,EM,England,Michael Round #2,160,-170,170,,170,135,142.5,-145,,142.5,175,190,195,,195,507.5,12,SBD
 82.5,79.8,M-O,Raw,M,SC,England,Jamie Sinclair,152.5,162.5,-172.5,,162.5,135,142.5,-147.5,,142.5,190,195,200,,200,505,13,SBD
 82.5,80.2,M-M3,Raw,M,EM,England,Grant Sugarman,-165,165,-175,,165,110,-120,-120,,110,200,220,-232.5,,220,495,14,SBD
 82.5,82.3,M-JR,Raw,M,,Wales,Nicolas May,160,170,175,,175,107.5,115,-117.5,,115,205,-215,-215,,205,495,15,SBD
@@ -113,7 +113,7 @@ WeightClassKg,BodyweightKg,Division,Equipment,Sex,Team,Country,Name,Squat1Kg,Squ
 125,123,M-M2,Raw,M,,Wales,Peter Sutton #2,190,210,230,,230,175,190,200,,200,265,290,292.5,,292.5,722.5,4,SBD
 125,122,M-M2,Raw,M,SE,England,Mike Adams #1,230,-240,240,,240,180,187.5,190,,190,280,285,-290,,285,715,5,SBD
 125,113.3,M-JR,Raw,M,SC,England,Scott McBlain,-210,210,220,,220,140,145,150,,150,230,235,-240,,235,605,6,SBD
-125,111.9,M-T2,Raw,M,,Scotland,James McDonald,160,-180,-180,,160,110,117.5,120,,120,200,-210,-210,,200,480,7,SBD
+125,111.9,M-T2,Raw,M,,Scotland,James McDonald #1,160,-180,-180,,160,110,117.5,120,,120,200,-210,-210,,200,480,7,SBD
 145,130,M-O,Raw,M,,Wales,Hywel Adams,210,230,240,,240,135,-145,-145,,135,240,-252.2,-252.5,,240,615,1,SBD
 145,137.6,M-M4,Raw,M,SW,England,Iain Boyde,150,160,170,,170,130,140,,,140,210,225,230,,230,540,2,SBD
 145+,159,M-O,Raw,M,SC,England,Tom Kelly,275,312.5,-317.5,,312.5,200,212.5,-215,,212.5,300,-330,-330,,300,825,1,SBD

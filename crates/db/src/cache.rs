@@ -1,8 +1,8 @@
 //! Precalculated cache of data, such as sorts.
 
-use fxhash::{FxBuildHasher, FxHashMap};
 use itertools::Itertools;
 use opltypes::*;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 use smartstring::alias::CompactString;
 
 use std::cmp::Ordering;
@@ -210,7 +210,7 @@ pub struct StaticCache {
 impl StaticCache {
     pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
         // Calculate the map from Username to ID.
-        let mut username_map = FxHashMap::with_hasher(FxBuildHasher::default());
+        let mut username_map = FxHashMap::with_hasher(FxBuildHasher);
         for (i, lifter) in lifters.iter().enumerate() {
             let cloned = CompactString::from(lifter.username.as_str());
             username_map.insert(cloned, i as u32);
@@ -336,6 +336,7 @@ pub struct LogLinearTimeCache {
     /// List of all non-DQ Female entry indices by LifterID.
     pub female: NonSortedNonUnique,
 
+    pub year2026: NonSortedNonUnique,
     pub year2025: NonSortedNonUnique,
     pub year2024: NonSortedNonUnique,
     pub year2023: NonSortedNonUnique,
@@ -384,6 +385,9 @@ impl LogLinearTimeCache {
             male: Self::filter_entries(entries, meets, |e| e.sex == Sex::M),
             female: Self::filter_entries(entries, meets, |e| e.sex == Sex::F),
 
+            year2026: Self::filter_entries(entries, meets, |e| {
+                meets[e.meet_id as usize].date.year() == 2026
+            }),
             year2025: Self::filter_entries(entries, meets, |e| {
                 meets[e.meet_id as usize].date.year() == 2025
             }),
@@ -423,6 +427,7 @@ impl LogLinearTimeCache {
     /// Looks up a year cache by integer.
     pub fn year_cache(&self, year: u32) -> Option<&NonSortedNonUnique> {
         match year {
+            2026 => Some(&self.year2026),
             2025 => Some(&self.year2025),
             2024 => Some(&self.year2024),
             2023 => Some(&self.year2023),

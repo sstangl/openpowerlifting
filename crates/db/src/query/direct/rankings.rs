@@ -1,5 +1,8 @@
 //! Interface for efficiently querying rankings.
 
+use opltypes::Country;
+use opltypes::states::State;
+
 use std::ffi::OsStr;
 use std::path::Path;
 
@@ -53,6 +56,7 @@ impl RankingsQuery {
         let mut parsed_year: bool = false;
         let mut parsed_sort: bool = false;
         let mut parsed_event: bool = false;
+        let mut parsed_country: bool = false;
         let mut parsed_state: bool = false;
 
         // Iterate over each path component, attempting to determine
@@ -119,12 +123,19 @@ impl RankingsQuery {
                 }
                 ret.filter.event = e;
                 parsed_event = true;
-            // Check whether this is a Country-State code.
-            } else if let Ok(s) = opltypes::states::State::from_full_code(segment) {
-                if parsed_state {
+            // Check whether this is Country information.
+            } else if let Some(c) = Country::from_url_segment(segment) {
+                if parsed_country || parsed_state {
                     return Err(FromPathError::ConflictingComponent);
                 }
-                ret.filter.state = Some(s);
+                ret.filter.home_country = Some(c);
+                parsed_country = true;
+            // Check whether this is a Country-State code formatted like "usa-ny".
+            } else if let Some(s) = State::from_url_segment(segment) {
+                if parsed_country || parsed_state {
+                    return Err(FromPathError::ConflictingComponent);
+                }
+                ret.filter.home_state = Some(s);
                 parsed_state = true;
             // Unknown string, therefore malformed URL.
             } else {

@@ -1,6 +1,6 @@
 //! Types for raw data interchange from Rust to JS.
 
-use langpack::{localized_name, Locale, LocalizeNumber};
+use langpack::{Locale, LocalizeNumber, localized_name};
 use opldb::{Entry, OplDb};
 use opltypes::states::State;
 use opltypes::*;

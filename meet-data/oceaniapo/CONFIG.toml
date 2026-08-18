@@ -1,5 +1,6 @@
 # Configuration for the OPO
 [options]
+    valid_federations = ["OceaniaPO"]
     require_manual_disambiguation = true
 
 # OPO specifies equipment in the division.

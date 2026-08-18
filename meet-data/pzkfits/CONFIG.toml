@@ -1,5 +1,8 @@
 # Configuration for PZKFiTS.
 
+[options]
+    valid_federations = ["PZKFiTS"]
+
 [divisions]
     open_f = {name = "Seniorki",min=0,max=999,sex='F'}
     juniors16_f = {name = "Juniorki do lat 16",min=0,max=15.5,sex='F'}
@@ -29,6 +32,7 @@
     masters50p_m = {name = "Weterani +50 lat",min=49.5,max=999,sex='M'}
     masters60p_m = {name = "Weterani +60 lat",min=59.5,max=999,sex='M'}
     masters = {name = "Weterani",min=39.5,max=999}
+
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
@@ -74,19 +78,24 @@
 
 [exemptions]
     1001 = ["ExemptWeightClassConsistency"]  # 44Kg women in 48
+    1102 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters; Dawid Pelc too old for division 'Juniorzy do lat 20' but competed
     1202 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
+    1302 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     1401 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
     1403 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Masters
     1404 = ["ExemptWeightClassConsistency"]  # Different weightclasses for Juniors
+    1408 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
     1501 = ["ExemptWeightClassConsistency"]  # Uses 93+.
     1503 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
     1502 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
     1504 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
     1506 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
     1508 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
+    1509 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     1601 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
     1602 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters
-    1604 = ["ExemptWeightClassConsistency"]  # No weightclasses for Masters or Juniors     
+    1604 = ["ExemptWeightClassConsistency","ExemptDuplicates"]  # No weightclasses for Masters or Juniors, 1604 and 1605 are two meets held at same place and day
+    1605 = ["ExemptWeightClassConsistency","ExemptDuplicates"]  # No weightclasses for Masters or Juniors, 1604 and 1605 are two meets held at same place and day
     1702 = ["ExemptWeightClassConsistency"]  # No weightclasses for Juniors
     1703 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     1704 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
@@ -109,9 +118,14 @@
     2308 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2309 = ["ExemptWeightClassConsistency"]  # No 47kg womens or 66kg men
     2310 = ["ExemptWeightClassConsistency"]  # No weightclasses
+    2312 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2401 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2402 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses for Jrs & Masters
     2406 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2502 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
     2507 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
+    2601 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
+    2509 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
+    2603 = ["ExemptWeightClassConsistency"]  # No 47kg class
+    2606 = ["ExemptWeightClassConsistency"]  # Reduced weightclasses
 	

@@ -1,7 +1,7 @@
 //! Implements the /api/search endpoints.
 
-use opldb::query::direct::RankingsQuery;
 use opldb::OplDb;
+use opldb::query::direct::RankingsQuery;
 
 /// JSON return from the /api/search/rankings/ endpoint.
 #[derive(Serialize)]

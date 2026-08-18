@@ -28,3 +28,5 @@
     sex = "F"
 
 [exemptions]
+    2503 = ["ExemptWeightClassConsistency"] 
+    2602 = ["ExemptDivision"] # Youth in Teen division

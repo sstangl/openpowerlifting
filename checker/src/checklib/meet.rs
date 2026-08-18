@@ -8,8 +8,8 @@ use std::error::Error;
 use std::io;
 use std::path::PathBuf;
 
-use crate::checklib::config::Config;
 use crate::Report;
+use crate::checklib::config::Config;
 
 /// Product of a successful parse.
 pub struct Meet {
@@ -41,7 +41,7 @@ impl Meet {
     pub fn test_default() -> Meet {
         Meet {
             path: "test/1901".to_string(),
-            federation: Federation::WRPF,
+            federation: Federation::USAPL,
             date: Date::from_parts(2019, 03, 01),
             country: opltypes::Country::USA,
             state: None,
@@ -105,7 +105,7 @@ fn check_headers(headers: &csv::StringRecord, report: &mut Report) {
     // Check optional headers.
     for header in headers.iter().skip(REQUIRED_HEADERS.len()) {
         if !OPTIONAL_HEADERS.contains(&header) {
-            report.error(format!("Unknown optional column '{}'", &header));
+            report.error(format!("Unknown optional column '{}'", header));
         }
     }
 }
@@ -147,13 +147,14 @@ pub fn check_federation(
         return None;
     };
 
-    if let Some(options) = config.and_then(|c| c.options.as_ref()) {
-        if !options.valid_federations.is_empty() && !options.valid_federations.contains(&fed) {
-            report.error(format!(
-                "Federation '{s}' disallowed by 'valid_federations' in the CONFIG.toml"
-            ));
-            return None;
-        }
+    if let Some(options) = config.and_then(|c| c.options.as_ref())
+        && !options.valid_federations.is_empty()
+        && !options.valid_federations.contains(&fed)
+    {
+        report.error(format!(
+            "Federation '{s}' disallowed by 'valid_federations' in the CONFIG.toml"
+        ));
+        return None;
     }
 
     Some(fed)

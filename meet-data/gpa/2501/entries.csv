@@ -52,7 +52,7 @@ Place,Name,Sex,BirthDate,Age,Country,Equipment,Division,BodyweightKg,WeightClass
 2,Mauricio Vazquez,M,2007-08-09,,Paraguay,Sleeves,Open,66.6,67.5,200,210,-220,210,100,,-110,100,200,-220,-220,200,510,SBD
 1,Matías González,M,1995-12-20,,Argentina,Sleeves,Open,73.7,75,235,245,-252.5,245,130,137.5,140,140,250,260,265,265,650,SBD
 2,Matias Saenz,M,1999-05-21,,Argentina,Sleeves,Open,74.4,75,200,215,222.5,222.5,127.5,135,-140,135,260,280,-290,280,637.5,SBD
-1,Pedro Gomez,M,1985-10-24,,Argentina,Sleeves,Open,80.6,82.5,250,262.5,270,270,150,160,-165,160,240,,,240,670,SBD
+1,Pedro Daniel Gomez,M,1985-10-24,,Argentina,Sleeves,Open,80.6,82.5,250,262.5,270,270,150,160,-165,160,240,,,240,670,SBD
 2,Adrián Martín Greco,M,1989-06-01,,Argentina,Sleeves,Open,81.2,82.5,-235,245,250,250,135,140,-142.5,140,245,255,-262.5,255,645,SBD
 3,Felipe Milategua Sanhueza,M,1998-04-03,,,Sleeves,Open,81.9,82.5,-202.5,-202.5,202.5,202.5,110,115,117.5,117.5,200,220,-240,220,540,SBD
 1,John Rodrigues,M,1991-12-21,,Brazil,Sleeves,Open,87.75,90,270,282.5,292.5,292.5,172.5,-180,-180,172.5,255,270,,270,735,SBD
@@ -103,7 +103,7 @@ Place,Name,Sex,BirthDate,Age,Country,Equipment,Division,BodyweightKg,WeightClass
 1,Roberto Guzman,M,1996-02-16,,Bolivia,Wraps,Open,80.95,82.5,280,295,-305,295,142.5,147.5,-152.5,147.5,270,285,-300,285,727.5,SBD
 2,Lenin La Rosa,M,1985-05-23,,Venezuela,Wraps,Open,77.65,82.5,257.5,270,-280,270,150,-165,165,165,260,270,-275,270,705,SBD
 3,Ivan Bladimir Gonzales Gonzales,M,1993-08-13,,Bolivia,Wraps,Open,79.9,82.5,250,-265,265,265,120,130,-137.5,130,250,262.5,-272.5,262.5,657.5,SBD
-4,Marco Salina Castro,M,1992-05-23,,Bolivia,Wraps,Open,80.8,82.5,200,220,235,235,140,150,160,160,240,260,-270,260,655,SBD
+4,Marco Salinas Castro,M,1992-05-23,,Bolivia,Wraps,Open,80.8,82.5,200,220,235,235,140,150,160,160,240,260,-270,260,655,SBD
 5,Facundo Ledesma,M,2001-01-21,,Argentina,Wraps,Open,80.75,82.5,210,-230,230,230,125,132.5,140,140,225,240,-255,240,610,SBD
 6,Paulo Zorso Da Rosa,M,1988-05-10,,Brazil,Wraps,Open,80.7,82.5,182.5,192.5,205,205,135,142.5,-150,142.5,190,-207.5,207.5,207.5,555,SBD
 DQ,Facundo Orfo,M,1987-06-01,,Argentina,Wraps,Open,81.3,82.5,265,280,-290,280,132.5,142.5,-150,142.5,-260,-270,-270,,,SBD
@@ -111,7 +111,7 @@ DQ,Facundo Orfo,M,1987-06-01,,Argentina,Wraps,Open,81.3,82.5,265,280,-290,280,13
 2,Iñaki Rey,M,1989-06-24,,Argentina,Wraps,Open,87.9,90,280,290,-300,290,152.5,155,157.5,157.5,250,260,-267.5,260,707.5,SBD
 3,Lautarto Allassia,M,1997-09-16,,Argentina,Wraps,Open,89.8,90,275,285,295,295,135,142.5,-147.5,142.5,247.5,260,267.5,267.5,705,SBD
 1,Mauricio Mesarra,M,1992-12-08,,Argentina,Wraps,Open,98.9,100,275,290,300,300,135,145,150,150,275,290,-300,290,740,SBD
-2,Jose Oviedo,M,1993-09-23,,Paraguay,Wraps,Open,93.4,100,265,-285,-285,265,145,155,160,160,220,,,220,645,SBD
+2,José Luis Oviedo,M,1993-09-23,,Paraguay,Wraps,Open,93.4,100,265,-285,-285,265,145,155,160,160,220,,,220,645,SBD
 3,Jack Douglas Borges Da Silva,M,1993-06-25,,Brazil,Wraps,Open,97.9,100,215,225,240,240,105,115,122.5,122.5,210,220,232.5,232.5,595,SBD
 DQ,Youri Yeshua,M,1992-04-27,,Mexico,Wraps,Open,96,100,-205,-205,-205,,,,,,-220,-220,-220,,,SBD
 1,Ricardo Cardozo,M,1995-05-07,,Paraguay,Wraps,Open,105.6,110,270,290,-300,290,142.5,150,155,155,310,330,340,340,785,SBD
@@ -136,10 +136,10 @@ DQ,Matias Ramos,M,2008-03-04,,Argentina,Wraps,Teen 16-17,133.2,140,-305,-305,-30
 1,Everson De Morais,M,,,Brazil,Bare,Open,88,90,,,,,142.5,147.5,152.5,152.5,240,252.5,255,255,407.5,BD
 1,Marcelo Sheneider,M,1967-02-25,,Brazil,Bare,Open,116.5,125,,,,,-140,140,150,150,205,215,-222.5,215,365,BD
 1,Pedro Tadeu Leal,M,1982-10-24,,Brazil,Bare,Masters 40-44,99,100,,,,,177.5,187.5,192.5,192.5,,,,,192.5,B
-2,Carlos Cabral,M,1982-03-29,,Paraguay,Bare,Masters 40-44,94.9,100,,,,,160,175,190,190,,,,,190,B
+2,Carlos Cabral Barreto,M,1982-03-29,,Paraguay,Bare,Masters 40-44,94.9,100,,,,,160,175,190,190,,,,,190,B
 3,Rodrigo Sarmiento,M,1984-11-16,,Argentina,Bare,Masters 40-44,100,100,,,,,-117.5,117.5,127.5,127.5,,,,,127.5,B
 1,Gustavo Molinas,M,1983-10-20,,Paraguay,Bare,Masters 40-44,116.1,125,,,,,170,180,187.5,187.5,,,,,187.5,B
-2,Javier Melgar,M,1982-01-21,,Bolivia,Bare,Masters 40-44,116.5,125,,,,,165,172.5,180,180,,,,,180,B
+2,Javier Melgar Henrich,M,1982-01-21,,Bolivia,Bare,Masters 40-44,116.5,125,,,,,165,172.5,180,180,,,,,180,B
 1,Rodney Martinez,M,1981-02-02,,Paraguay,Bare,Masters 40-44,125.1,140,,,,,165,-175,175,175,,,,,175,B
 1,Jose Souto,M,,45,Argentina,Bare,Masters 45-49,97.6,100,,,,,160,170,175,175,,,,,175,B
 1,Roque Gallardo,M,1972-03-01,,Argentina,Bare,Masters 50-54,73,75,,,,,90,92.5,,92.5,,,,,92.5,B
@@ -148,7 +148,7 @@ DQ,Matias Ramos,M,2008-03-04,,Argentina,Wraps,Teen 16-17,133.2,140,-305,-305,-30
 1,Clotário Portugal Neto,M,,72,Brazil,Bare,Masters 70-74,72,75,,,,,90,92.5,95,95,,,,,95,B
 1,Natael Pereira Dos Santos,M,1992-06-25,,Brazil,Bare,Open,90,90,,,,,150,165,-180,165,,,,,165,B
 1,Pedro Tadeu Leal,M,1982-10-24,,Brazil,Bare,Open,99,100,,,,,177.5,187.5,192.5,192.5,,,,,192.5,B
-2,Carlos Cabral,M,1982-03-29,,Paraguay,Bare,Open,94.9,100,,,,,160,175,190,190,,,,,190,B
+2,Carlos Cabral Barreto,M,1982-03-29,,Paraguay,Bare,Open,94.9,100,,,,,160,175,190,190,,,,,190,B
 3,Youri Yeshua,M,1992-04-27,,Mexico,Bare,Open,95,100,,,,,-130,140,150,150,,,,,150,B
 1,Adriano Leite Costa,M,1986-08-19,,Brazil,Bare,Open,109,110,,,,,120,127.5,132.5,132.5,,,,,132.5,B
 1,Gustavo Molinas,M,1983-10-20,,Paraguay,Bare,Open,116.1,125,,,,,170,180,187.5,187.5,,,,,187.5,B

@@ -1,5 +1,8 @@
 # Configuration for GPC-CAN.
 
+[options]
+    valid_federations = ["GPC-CAN"]
+
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
     date_range = ["0000-01-01", "9999-01-01"]
@@ -48,7 +51,7 @@
     fte3 = {name ="FT-E3", min=18, max=19, sex="F", equipment=["Single-ply","Multi-ply"]}
     mem1 = {name ="M-E1", min=40, max=44, sex="M", equipment=["Single-ply","Multi-ply"]}
     fem1 = {name ="F-E1", min=40, max=44, sex="F", equipment=["Single-ply","Multi-ply"]}
-    mem2 = {name ="M-E2", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply"]}
+    mem2 = {name ="M-E2", min=45, max=49, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fem2 = {name ="F-E2", min=45, max=49, sex="F", equipment=["Single-ply","Multi-ply"]}
     mem3 = {name ="M-E3", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     fem3 = {name ="F-E3", min=50, max=54, sex="F", equipment=["Single-ply","Multi-ply"]}
@@ -65,7 +68,7 @@
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["44","48","52","56","60","67.5","75","82.5","90","110","110+"]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100","110","110+"]
     date_range = ["2016-01-01","9999-01-01"]
     sex = "F"
 

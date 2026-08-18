@@ -1,7 +1,7 @@
 Place,Name,School,Sex,BirthDate,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Team
 1,Alejandra Barrera Supino,alejandrabarrera78,F,1978-10-25,,Brazil,RS,Raw,Masters 40-44,54.8,56,72.5,,82.5,82.5,,,,,82.5,B,team jhon
 1,Francieli Cristina Emídio dos Santos,franric,F,1990-09-24,30,Brazil,PR,Raw,Open,66.4,67.5,45,50,-55,50,,,,,50,B,A Caverna Gym
-1,Viviane Maris Brites Cardoso,,F,1982-04-26,38,Brazil,PR,Raw,Open,75.3,82.5,65,70,-72.5,70,,,,,70,B,A Caverna gym
+DQ,Viviane Maris Brites Cardoso,,F,1982-04-26,38,Brazil,PR,Raw,Open,75.3,82.5,65,70,-72.5,70,,,,,,B,A Caverna gym
 1,Andressa Lazzarotto,andressatank,F,1986-05-16,34,Brazil,SC,Raw,Open,86.3,90,50,-70,77.5,77.5,,,,,77.5,B,
 1,Edicleia Gabriela Das Almas,edicleia_gabriela,F,1997-07-28,23,Brazil,PR,Raw,Juniors 20-23,68.3,75,,,,,120,132.5,140,140,140,D,TRIBO X
 1,Alejandra Barrera Garcia,alejandrabarrera78,F,1978-10-25,42,Brazil,RS,Raw,Masters 40-44,54.8,56,,,,,-117.5,120,127.5,127.5,127.5,D,Team John
@@ -17,13 +17,11 @@ DQ,Francieli Cristina Emídio dos Santos,franric,F,1990-09-24,30,Brazil,PR,Raw,O
 1,Estevam Thomaz Fullan Fadel,estvmm,M,1999-08-20,21,Brazil,PR,Raw,Juniors 20-23,95.6,100,-110,-120,130,130,,,,,130,B,
 1,Lucas Barilli Barbosa,lucas_barille,M,1998-10-27,22,Brazil,PR,Raw,Juniors 20-23,102,110,100,115,130,130,,,,,130,B,A Caverna GYM
 1,Doralício Alves,doralicios,M,1978-11-08,42,Brazil,PR,Raw,Masters 40-44,84.8,90,120,125,-130,125,,,,,125,B,GLADIADORES
-1,Carlos Alberto Rodrigues,,M,1979-04-07,41,Brazil,PR,Raw,Masters 40-44,96.5,100,115,-120,125,125,,,,,125,B,A Caverna Gym
+DQ,Carlos Alberto Rodrigues,,M,1979-04-07,41,Brazil,PR,Raw,Masters 40-44,96.5,100,115,-120,125,125,,,,,,B,A Caverna Gym
 1,Luciano Cruz,,M,1971-10-15,49,Brazil,PR,Raw,Masters 45-49,74.1,75,140,145,150,150,,,,,150,B,
 2,André Luiz de Souza,,M,1972-07-03,48,Brazil,PR,Raw,Masters 45-49,69.8,75,100,-110,112.5,112.5,,,,,112.5,B,
 1,Eduardo Grumann,treinadorgrumann,M,1967-06-28,53,Brazil,PR,Raw,Masters 50-54,96.5,100,150,160,165,165,,,,,165,B,TEAM JOHN
 1,Serafim Rocha,serafim_rocha,M,1948-04-27,72,Brazil,PR,Raw,Masters 70-74,105.9,110,90,100,105,105,,,,,105,B,
-NS,André Matheus Vieira,,M,1994-06-16,26,Brazil,PR,Raw,Open,,,,,,,,,,,,B,
-NS,Juliano Silvestre,,M,1992-08-16,28,Brazil,PR,Raw,Open,,,,,,,,,,,,B,TRIBO X
 1,José Calazans Stresser Júnior,juniorcalazanscoach,M,1993-05-06,27,Brazil,PR,Raw,Open,67.5,67.5,115,-127.5,-127.5,115,,,,,115,B,TRIBO X
 1,Luciano Cruz,,M,1971-10-15,49,Brazil,PR,Raw,Open,74.1,75,140,145,150,150,,,,,150,B,
 2,Guilherme Martim Branco,,M,1982-10-05,38,Brazil,PR,Raw,Open,74.3,75,132.5,137.5,142.5,142.5,,,,,142.5,B,TEAM JOHN
@@ -48,12 +46,10 @@ DQ,Wellington Gil Soares,,M,1985-08-30,35,Brazil,PR,Raw,Open,94.6,100,-150,-150,
 1,Estevam Thomaz Fullan Fadel,estvmm,M,1999-08-20,21,Brazil,PR,Raw,Juniors 20-23,95.6,100,,,,,200,210,220,220,220,D,
 DQ,Lucas Barilli Barbosa,lucas_barille,M,1998-10-27,22,Brazil,PR,Raw,Juniors 20-23,102,110,,,,,,,,,,D,A Caverna GYM
 1,Doralício Alves,doralicios,M,1978-11-08,42,Brazil,PR,Raw,Masters 40-44,84.8,90,,,,,230,240,-250,240,240,D,GLADIADORES
-1,Carlos Alberto Rodrigues,,M,1979-04-07,41,Brazil,PR,Raw,Masters 40-44,96.5,100,,,,,210,-215,-215,210,210,D,A Caverna Gym
+DQ,Carlos Alberto Rodrigues,,M,1979-04-07,41,Brazil,PR,Raw,Masters 40-44,96.5,100,,,,,210,-215,-215,210,,D,A Caverna Gym
 1,André Luiz de Souza,,M,1972-07-03,48,Brazil,PR,Raw,Masters 45-49,69.8,75,,,,,180,-190,-190,180,180,D,
 1,Eduardo Grumann,treinadorgrumann,M,1967-06-28,53,Brazil,PR,Raw,Masters 50-54,96.5,100,,,,,245,255,260,260,260,D,TEAM JOHN
 1,Serafim Rocha,serafim_rocha,M,1948-04-27,72,Brazil,PR,Raw,Masters 70-74,105.9,110,,,,,120,130,140,140,140,D,
-NS,André Matheus Vieira,,M,1994-06-16,26,Brazil,PR,Raw,Open,,,,,,,,,,,,D,
-NS,Juliano Silvestre,,M,1992-08-16,28,Brazil,PR,Raw,Open,,,,,,,,,,,,D,TRIBO X
 1,Patrick Oliveira,,M,1993-07-29,27,Brazil,PR,Raw,Open,53.3,56,,,,,75,80,90,90,90,D,A caverna Gym
 1,Rodrigo Kramer Pereira,camilarodrigo204,M,1986-05-13,34,Brazil,PR,Raw,Open,56.5,60,,,,,160,170,180,180,180,D,NAO
 DQ,José Calazans Stresser Júnior,juniorcalazanscoach,M,1993-05-06,27,Brazil,PR,Raw,Open,67.5,67.5,,,,,,,,,,D,TRIBO X

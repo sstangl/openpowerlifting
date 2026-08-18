@@ -3,7 +3,6 @@
 # When called in a directory with an 'original.csv' file, auto-processes that file
 # into 'entries.csv' and 'meet.csv' files.
 
-import codecs
 from oplcsv import Csv
 
 
@@ -42,7 +41,7 @@ def separate_original(
         # blank line, then meet.csv content
         _ = input_f.readline()
 
-        with codecs.open(meet_output_path, 'w', encoding='utf-8') as meet_output_f:
+        with open(meet_output_path, 'w', encoding='utf-8') as meet_output_f:
             meet_header = strip_dblquote(readline_skip_blank(input_f))
             meet_output_f.write(f"{meet_header}\n")
 
@@ -52,7 +51,7 @@ def separate_original(
         # blank line, then entries.csv content
         _ = input_f.readline()
 
-        with codecs.open(entries_output_path, 'w', encoding='utf-8') as entries_output_f:
+        with open(entries_output_path, 'w', encoding='utf-8') as entries_output_f:
             entries_header = strip_dblquote(readline_skip_blank(input_f))
             entries_output_f.write(f"{entries_header}\n")
 

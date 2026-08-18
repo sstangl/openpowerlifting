@@ -1,7 +1,7 @@
 //! Logic for each meet's individual results page.
 
-use langpack::{localized_name, Language, Locale, LocalizeNumber};
-use opldb::{self, algorithms, Entry};
+use langpack::{Language, Locale, LocalizeNumber, localized_name};
+use opldb::{self, Entry, algorithms};
 use opltypes::states::State;
 use opltypes::*;
 
@@ -214,7 +214,7 @@ impl<'a> MeetInfo<'a> {
         MeetInfo {
             path: &meet.path,
             federation: meet.federation,
-            date: format!("{}", &meet.date),
+            date: format!("{}", meet.date),
             country: strings.translate_country(meet.country),
             state: meet.state.as_ref().map(|s| s as _),
             town: meet.town.as_ref().map(|t| t as _),
@@ -432,7 +432,7 @@ fn finish_table<'db>(
     entries: &mut [&'db Entry],
     use_ipf_equipment: bool,
 ) -> Table<'db> {
-    entries.sort_unstable_by(|a, b| a.place.cmp(&b.place));
+    entries.sort_unstable_by_key(|a| a.place);
 
     let units = locale.units;
     let format = locale.number_format;

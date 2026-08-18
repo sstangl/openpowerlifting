@@ -1,5 +1,8 @@
 # Configuration for the BPU.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # BPU divisions
     morbpu = {name ="M_OR_BPU",min=0,max=999,equipment="Raw",sex="M",tested="No"}
@@ -25,6 +28,7 @@
     mm4crbpu = {name ="M_MCR_4_BPU",min=55,max=59,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm4sbpu = {name ="M_MES_4_BPU",min=55,max=59,equipment="Single-ply",sex="M",tested="No"}
     mm4mbpu = {name ="M_MEM_4_BPU",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mm4ubpu = {name ="M_MEU_4_BPU",min=55,max=59,equipment="Unlimited",sex="M",tested="No"}
     mm5rbpu = {name ="M_MR_5_BPU",min=60,max=64,equipment="Raw",sex="M",tested="No"}
     mm5crbpu = {name ="M_MCR_5_BPU",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mm5sbpu = {name ="M_MES_5_BPU",min=60,max=64,equipment="Single-ply",sex="M",tested="No"}
@@ -224,6 +228,7 @@
     mm5crabpu = {name ="M_MCR_5_ABPU",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm5sabpu = {name ="M_MES_5_ABPU",min=60,max=64,equipment="Single-ply",sex="M",tested="Yes"}
     mm5mabpu = {name ="M_MEM_5_ABPU",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    mm5uabpu = {name ="M_MEU_5_ABPU",min=60,max=64,equipment="Unlimited",sex="M",tested="Yes"}
     mm6rabpu = {name ="M_MR_6_ABPU",min=65,max=69,equipment="Raw",sex="M",tested="Yes"}
     mm6crabpu = {name ="M_MCR_6_ABPU",min=65,max=69,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mm6sabpu = {name ="M_MES_6_ABPU",min=65,max=69,equipment="Single-ply",sex="M",tested="Yes"}
@@ -263,6 +268,10 @@
     mscrabpu = {name ="M_SCR_ABPU",min=33,max=39,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mssabpu = {name ="M_SES_ABPU",min=33,max=39,equipment="Single-ply",sex="M",tested="Yes"}
     msmabpu = {name ="M_SEM_ABPU",min=33,max=39,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
+    moradabpu = {name ="M_OR_AD_ABPU",min=0,max=999,equipment="Raw",sex="M",tested="Yes"} #Adaptive
+    m1radabpu = {name ="M_MR1_AD_ABPU",min=40,max=44,equipment="Raw",sex="M",tested="Yes"} #Adaptive
+    m3radabpu = {name ="M_MR3_AD_ABPU",min=50,max=54,equipment="Raw",sex="M",tested="Yes"} #Adaptive
+    m4radabpu = {name ="M_MR4_AD_ABPU",min=55,max=59,equipment="Raw",sex="M",tested="Yes"} #Adaptive
 
     forabpu = {name ="F_OR_ABPU",min=0,max=999,equipment="Raw",sex="F",tested="Yes"}
     focrabpu = {name ="F_OCR_ABPU",min=0,max=999,equipment=["Raw","Wraps"],sex="F",tested="Yes"}

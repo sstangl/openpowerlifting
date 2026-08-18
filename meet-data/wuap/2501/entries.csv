@@ -15,7 +15,7 @@ Place,Name,Country,Sex,Equipment,BirthDate,Age,BodyweightKg,Division,WeightClass
 1,Mariann Zsanett Korcsok,Hungary,F,Wraps,,27,113.8,Open,82.5+,-107.5,-107.5,107.5,107.5,,47.5,50,-52.5,50,,135,137.5,140,140,,297.5,SBD
 1,Iryna Kriukova,Ukraine,F,Wraps,,45,59.2,M 40-49,60,75,85,-90,85,,40,-42.5,-42.5,40,,100,-112.5,112.5,112.5,,237.5,SBD
 2,Daniela Barteková,Slovakia,F,Wraps,,43,59.5,M 40-49,60,85,-95,-95,85,,40,42.5,-45,42.5,,65,,,65,,192.5,SBD
-1,Anna Zita Maria Gugel,Germany,F,Wraps,,42,63.1,M 40-49,67.5,100,105,107.5,107.5,,70,-75,75,75,,110,120,125,125,,307.5,SBD
+1,Anna Zita Maria Rösch,Germany,F,Wraps,,42,63.1,M 40-49,67.5,100,105,107.5,107.5,,70,-75,75,75,,110,120,125,125,,307.5,SBD
 2,Marianna Ráczné Seres,Hungary,F,Wraps,,44,64.3,M 40-49,67.5,-90,-95,95,95,,45,50,-55,50,,125,132.5,137.5,137.5,,282.5,SBD
 3,Bożena Porada,Poland,F,Wraps,,49,61.5,M 40-49,67.5,-100,100,-110,100,,45,50,-52.5,50,,100,105,110,110,,260,SBD
 1,Zeljka Terzo,Bosnia and Herzegovina,F,Wraps,,48,84.6,M 40-49,82.5+,-160,160,-170,160,,105,115,-120,115,,175,-195,-195,175,,450,SBD
@@ -51,7 +51,7 @@ Place,Name,Country,Sex,Equipment,BirthDate,Age,BodyweightKg,Division,WeightClass
 5,Martin Tóvaj,Hungary,M,Wraps,,25,93.3,Open,95,185,-192.5,-192.5,185,,125,135,-137.5,135,,200,212.5,-220,212.5,,532.5,SBD
 6,Rafał Ślusarczyk,Poland,M,Wraps,,31,92.7,Open,95,180,-190,-190,180,,125,130,-132.5,130,,210,-230,-242.5,210,,520,SBD
 1,Róbert Tumpek,Hungary,M,Wraps,,32,106.1,Open,110,340.5,360,-370.5,360,,190,197.5,202.5,202.5,,320,345,358,358,,920.5,SBD
-2,Dávid Kulcsár,Hungary,M,Wraps,,29,104.1,Open,110,315,332.5,337.5,337.5,,200,210,-215,210,,315,-330,,315,,862.5,SBD
+2,Dávid Kulcsár #1,Hungary,M,Wraps,,29,104.1,Open,110,315,332.5,337.5,337.5,,200,210,-215,210,,315,-330,,315,,862.5,SBD
 3,András Kiss,Hungary,M,Wraps,,30,106.3,Open,110,240,250,260,260,,177.5,190,-192.5,190,,255,270,280,280,,730,SBD
 4,Roman Salbrechter,Austria,M,Wraps,,36,108.6,Open,110,-270,270,-280,270,,165,170,,170,,270,280,-295,280,,720,SBD
 5,Kálmán Szabó,Hungary,M,Wraps,,40,99.6,Open,110,235,-250,255,255,,-180,182.5,-190,182.5,,250,257.5,-262.5,257.5,,695,SBD
@@ -224,7 +224,7 @@ DQ,Erwin Loritsch,Austria,M,Multi-ply,,64,89,M 60-69,95,,,,,,,,,,,-185,-185,-185
 1,Tifani Wittman,Slovakia,F,Raw,,25,86.9,Open,82.5+,,,,,,120,130,140,140,,,,,,,140,B
 2,Rebeka Makkai,Hungary,F,Raw,,24,136.2,Open,82.5+,,,,,,75,82.5,-85,82.5,,,,,,,82.5,B
 3,Zuzana Marcinkó,Slovakia,F,Raw,,35,117.2,Open,82.5+,,,,,,65,75,77.5,77.5,,,,,,,77.5,B
-1,Gőz Erika Rékásiné,Hungary,F,Raw,,49,56.6,M 40-49,60,,,,,,57.5,62.5,-65,62.5,,,,,,,62.5,B
+1,Erika Rékásiné Gőz,Hungary,F,Raw,,49,56.6,M 40-49,60,,,,,,57.5,62.5,-65,62.5,,,,,,,62.5,B
 1,Daniela Poláková,Czechia,F,Raw,,48,60.9,M 40-49,67.5,,,,,,95,100,102.5,102.5,,,,,,,102.5,B
 1,Tatiana Magulová,Slovakia,F,Raw,,43,74.9,M 40-49,82.5,,,,,,90,95,100,100,,,,,,,100,B
 1,Tímea Ujvári,Hungary,F,Raw,,45,84.9,M 40-49,82.5+,,,,,,90,95,-100,95,,,,,,,95,B
@@ -261,12 +261,12 @@ DQ,Ámon Dárius Gaál,Hungary,M,Raw,,19,103.6,T 16-19,110,,,,,,-155,-160,-160,,
 4,Šmarda Jakub,Czechia,M,Raw,,21,75.7,Juniors,82.5,,,,,,120,130,-132.5,130,,,,,,,130,B
 1,Ferenc Márk Mata,Hungary,M,Raw,,23,93.9,Juniors,95,,,,,,175,180,187.5,187.5,,,,,,,187.5,B
 2,Adam Gyurcsi,Slovakia,M,Raw,,22,93,Juniors,95,,,,,,145,152.5,-155,152.5,,,,,,,152.5,B
-1,Zdenek Franc,Czechia,M,Raw,,22,113.5,Juniors,125,,,,,,180,-190,-190,180,,,,,,,180,B
+1,Zdeněk Franc,Czechia,M,Raw,,22,113.5,Juniors,125,,,,,,180,-190,-190,180,,,,,,,180,B
 2,Ádám Róbert Zsombok,Hungary,M,Raw,,20,121.9,Juniors,125,,,,,,150,155,160,160,,,,,,,160,B
 1,Márk Attila Saceanu,Hungary,M,Raw,,23,126.3,Juniors,125+,,,,,,145,152.5,160,160,,,,,,,160,B
 1,Dániel Ökrös,Hungary,M,Raw,,29,65.5,Open,67.5,,,,,,115,125,-127.5,125,,,,,,,125,B
 1,Bálint Száraz,Hungary,M,Raw,,26,81.6,Open,82.5,,,,,,175,190,-200,190,,,,,,,190,B
-2,Ödön Takács,Hungary,M,Raw,,42,80.6,Open,82.5,,,,,,125,135,,135,,,,,,,135,B
+2,Péter Ödön Takács,Hungary,M,Raw,,42,80.6,Open,82.5,,,,,,125,135,,135,,,,,,,135,B
 3,Milán Sipos,Hungary,M,Raw,,36,77.9,Open,82.5,,,,,,115,125,-132.5,125,,,,,,,125,B
 1,Tomáš Ryšavý,Slovakia,M,Raw,,33,89.9,Open,95,,,,,,200,215,222.5,222.5,,,,,,,222.5,B
 2,Benjamin Móricz,Hungary,M,Raw,,29,93.2,Open,95,,,,,,212.5,222.5,-231.5,222.5,,,,,,,222.5,B
@@ -282,7 +282,7 @@ DQ,Ámon Dárius Gaál,Hungary,M,Raw,,19,103.6,T 16-19,110,,,,,,-155,-160,-160,,
 2,Adam Kekelák,Slovakia,M,Raw,,30,139.9,Open,125+,,,,,,190,-200,-200,190,,,,,,,190,B
 3,Ramón Szeifert,Slovakia,M,Raw,,24,127.2,Open,125+,,,,,,185,-200,-200,185,,,,,,,185,B
 1,Vladim Kuko Kúdelka,Slovakia,M,Raw,,44,81,M 40-49,82.5,,,,,,155,162.5,-167.5,162.5,,,,,,,162.5,B
-2,Ödön Takács,Hungary,M,Raw,,42,80.6,M 40-49,82.5,,,,,,147.5,152.5,,152.5,,,,,,,152.5,B
+2,Péter Ödön Takács,Hungary,M,Raw,,42,80.6,M 40-49,82.5,,,,,,147.5,152.5,,152.5,,,,,,,152.5,B
 3,Attila Róbert Szenti,Hungary,M,Raw,,44,79.5,M 40-49,82.5,,,,,,-120,120,-125,120,,,,,,,120,B
 1,Rafał Makowski,Poland,M,Raw,,46,89.5,M 40-49,95,,,,,,200,207.5,-215,207.5,,,,,,,207.5,B
 2,László Németh,Hungary,M,Raw,,45,94.3,M 40-49,95,,,,,,180,190,-192.5,190,,,,,,,190,B
@@ -339,7 +339,7 @@ DQ,Stroebke Christian,Germany,M,Raw,,48,87.7,M 40-49,95,,,,,,-142.5,-142.5,,,,,,
 1,Erika Molnár,Hungary,F,Unlimited,,48,68.8,M 40-49,82.5,,,,,,110,120,125,125,127.5,,,,,,125,B
 2,Dóra Bokrossy,Hungary,F,Unlimited,,49,77.5,M 40-49,82.5,,,,,,90,110,125,125,126,,,,,,125,B
 3,Szele Katalin Ménesné,Hungary,F,Unlimited,,42,71.8,M 40-49,82.5,,,,,,85,-90,-90,85,,,,,,,85,B
-1,Szaniszló Szilvia Psóráné,Hungary,F,Unlimited,,47,86.5,M 40-49,82.5+,,,,,,80,85,90,90,,,,,,,90,B
+1,Szilvia Szaniszló Psóráné,Hungary,F,Unlimited,,47,86.5,M 40-49,82.5+,,,,,,80,85,90,90,,,,,,,90,B
 1,Beáta Pusztai,Hungary,F,Unlimited,,57,66.4,M 50-59,67.5,,,,,,90,-100,100,100,,,,,,,100,B
 1,Tál Lívia Némethné,Hungary,F,Unlimited,,53,72.5,M 50-59,82.5,,,,,,85,100,105,105,,,,,,,105,B
 1,Fehr Astrid,Germany,F,Unlimited,,72,55.3,M 70-74,60,,,,,,47.5,50,-53,50,,,,,,,50,B
@@ -363,7 +363,7 @@ DQ,Stroebke Christian,Germany,M,Raw,,48,87.7,M 40-49,95,,,,,,-142.5,-142.5,,,,,,
 4,Stroebke Christian,Germany,M,Unlimited,,48,87.7,M 40-49,95,,,,,,-137.5,137.5,-140,137.5,,,,,,,137.5,B
 1,Andrej Smutný,Slovakia,M,Unlimited,,47,107.6,M 40-49,110,,,,,,280,-300,-300,280,,,,,,,280,B
 2,Ján Šiska,Slovakia,M,Unlimited,,45,109.4,M 40-49,110,,,,,,220,240,-282.5,240,,,,,,,240,B
-3,Jozef Völgyák,Slovakia,M,Unlimited,,42,108.1,M 40-49,110,,,,,,195,205,215,215,,,,,,,215,B
+3,Jozef Völgyák #2,Slovakia,M,Unlimited,,42,108.1,M 40-49,110,,,,,,195,205,215,215,,,,,,,215,B
 1,Marco Regensberger,Austria,M,Unlimited,,46,119.8,M 40-49,125,,,,,,-337.5,337.5,-345,337.5,,,,,,,337.5,B
 2,Peter Funtík,Slovakia,M,Unlimited,,46,111.1,M 40-49,125,,,,,,260,275,-280,275,,,,,,,275,B
 3,Péter Juhász-Ilyés,Hungary,M,Unlimited,,42,116.6,M 40-49,125,,,,,,190,205,220,220,,,,,,,220,B

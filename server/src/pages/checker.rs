@@ -78,7 +78,7 @@ fn check_entries(
                     if lifter.name != entry.name {
                         report.error(format!(
                             "Conflict for '{}': '{}' vs '{}'",
-                            &entry.username, lifter.name, &entry.name
+                            entry.username, lifter.name, entry.name
                         ));
                     }
                 }

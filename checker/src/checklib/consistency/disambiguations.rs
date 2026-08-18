@@ -20,10 +20,9 @@ pub fn check_disambiguations_all(
 
     // Check that all variant usernames are marked for disambiguation.
     for username in liftermap.keys() {
-        let (base, variant) = username.to_parts();
-        if variant == 0 {
+        let (base, Some(variant)) = username.to_parts() else {
             continue;
-        }
+        };
 
         let base_username = Username::from_name(base.into()).unwrap();
 
@@ -71,11 +70,11 @@ pub fn check_disambiguations_all(
                 report.error(msg);
             }
 
-            if let Ok(u) = Username::from_name(&scratch) {
-                if liftermap.get(&u).is_none() {
-                    let msg = format!("{} missing for {}", u.as_str(), username.as_str());
-                    report.error(msg);
-                }
+            if let Ok(u) = Username::from_name(&scratch)
+                && liftermap.get(&u).is_none()
+            {
+                let msg = format!("{} missing for {}", u.as_str(), username.as_str());
+                report.error(msg);
             }
         }
     }

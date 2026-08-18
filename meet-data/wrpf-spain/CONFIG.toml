@@ -1,5 +1,8 @@
 # Configuration for WRPF-Spain.
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
     # OpenLifter-style divisions.
     j8_9 = {name="J8-9", min=8, max=9}

@@ -54,17 +54,31 @@ pub fn check(
     lifterdata: &LifterDataMap,
     is_partial: bool,
 ) -> Vec<Report> {
+    let mut reports_sex: Vec<Report> = Vec::new();
+    let mut reports_name: Vec<Report> = Vec::new();
+    let mut reports_dup: Vec<Report> = Vec::new();
+    let mut reports_dis: Vec<Report> = Vec::new();
+
+    // Execute checks in parallel.
+    rayon::scope(|s| {
+        s.spawn(|_| sex::check_sex_all(liftermap, meetdata, lifterdata, &mut reports_sex));
+        s.spawn(|_| name::check_name_all(liftermap, meetdata, &mut reports_name));
+        s.spawn(|_| duplicates::check_duplicates_all(liftermap, meetdata, &mut reports_dup));
+
+        // bodyweight::check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
+
+        // The checks below require the full meet-data tree, not a subset.
+        if !is_partial {
+            s.spawn(|_| {
+                disambiguations::check_disambiguations_all(liftermap, lifterdata, &mut reports_dis)
+            });
+        }
+    });
+
     let mut reports = Vec::new();
-
-    sex::check_sex_all(liftermap, meetdata, lifterdata, &mut reports);
-    name::check_name_all(liftermap, meetdata, &mut reports);
-    // bodyweight::check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
-    duplicates::check_duplicates_all(liftermap, meetdata, &mut reports);
-
-    // The checks below require the full meet-data tree, not a subset.
-    if !is_partial {
-        disambiguations::check_disambiguations_all(liftermap, lifterdata, &mut reports);
-    }
-
+    reports.append(&mut reports_sex);
+    reports.append(&mut reports_name);
+    reports.append(&mut reports_dup);
+    reports.append(&mut reports_dis);
     reports
 }

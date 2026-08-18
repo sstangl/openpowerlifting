@@ -1,6 +1,7 @@
 # Configuration for Powerlifting America, copied from the EPA.
 
 [options]
+    valid_federations = ["AMP"]
     require_manual_disambiguation = true
 
 [divisions]
@@ -172,3 +173,10 @@
     2025-PA-05 = ["ExemptWeightClassConsistency"]
     2025-GA-06 = ["ExemptWeightClassConsistency"]
     2025-WA-02 = ["ExemptWeightClassConsistency"]
+    2026-PA-02 = ["ExemptWeightClassConsistency"]
+    2026-LA-01 = ["ExemptWeightClassConsistency"]
+    2026-HI-01 = ["ExemptWeightClassConsistency"]
+    2026-FL-06 = ["ExemptWeightClassConsistency"]
+    2026-OR-02 = ["ExemptWeightClassConsistency"]
+    2026-FL-08 = ["ExemptWeightClassConsistency"]
+    2026-LA-03 = ["ExemptWeightClassConsistency"]

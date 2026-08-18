@@ -1,5 +1,9 @@
 # Configuration for the AEP.
 
+[options]
+    valid_federations = ["AEP"]
+    require_manual_disambiguation = true
+
 [divisions]
 	open = {name="Open", min=0, max=999}
     seniors = {name ="SNR",min=0,max=999}

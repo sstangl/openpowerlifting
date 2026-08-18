@@ -5,7 +5,7 @@ use serde::de::{self, Deserialize, Visitor};
 use serde::ser::Serialize;
 
 use std::fmt::{self, Write};
-use std::num;
+use std::num::{self, NonZeroU32};
 use std::ops;
 use std::str::FromStr;
 
@@ -19,7 +19,7 @@ use crate::Age;
 ///
 /// YEAR_SHIFT > MONTH_SHIFT > DAY_SHIFT, so that dates are properly ordered.
 #[derive(Copy, Clone, Debug, PartialEq, PartialOrd, Ord, Eq)]
-pub struct Date(u32);
+pub struct Date(NonZeroU32);
 
 impl Default for Date {
     fn default() -> Self {
@@ -58,7 +58,11 @@ impl Date {
     /// ```
     #[inline(always)]
     pub const fn from_parts(year: u32, month: u32, day: u32) -> Date {
-        Date((year << Self::YEAR_SHIFT) | (month << Self::MONTH_SHIFT) | (day << Self::DAY_SHIFT))
+        let layout =
+            (year << Self::YEAR_SHIFT) | (month << Self::MONTH_SHIFT) | (day << Self::DAY_SHIFT);
+
+        let value = if layout != 0 { layout } else { 1 }; // Avoid zero.
+        Date(NonZeroU32::new(value).unwrap()) // Infallible.
     }
 
     /// Returns the year as an integer.
@@ -72,7 +76,7 @@ impl Date {
     /// ```
     #[inline(always)]
     pub const fn year(self) -> u32 {
-        (self.0 >> Self::YEAR_SHIFT) & Self::YEAR_MASK
+        (self.0.get() >> Self::YEAR_SHIFT) & Self::YEAR_MASK
     }
 
     /// Returns the month as an integer.
@@ -86,7 +90,7 @@ impl Date {
     /// ```
     #[inline(always)]
     pub const fn month(self) -> u32 {
-        (self.0 >> Self::MONTH_SHIFT) & Self::MONTH_MASK
+        (self.0.get() >> Self::MONTH_SHIFT) & Self::MONTH_MASK
     }
 
     /// Returns the day as an integer.
@@ -100,7 +104,7 @@ impl Date {
     /// ```
     #[inline(always)]
     pub const fn day(self) -> u32 {
-        (self.0 >> Self::DAY_SHIFT) & Self::DAY_MASK
+        (self.0.get() >> Self::DAY_SHIFT) & Self::DAY_MASK
     }
 
     /// Returns the month and day as a combined integer.
@@ -372,6 +376,13 @@ macro_rules! date {
 mod test {
     use super::*;
 
+    /// Asserts that `Option<Date>` and `Date` both occupy the same size.
+    #[test]
+    fn size_of() {
+        assert_eq!(std::mem::size_of::<Date>(), 4);
+        assert_eq!(std::mem::size_of::<Option<Date>>(), 4);
+    }
+
     #[test]
     fn basic() {
         let date = "2017-03-04".parse::<Date>().unwrap();
@@ -397,6 +408,9 @@ mod test {
         assert!("2017-03-32".parse::<Date>().is_err());
         assert!("2017-00-04".parse::<Date>().is_err());
         assert!("2017-03-00".parse::<Date>().is_err());
+
+        // Zero is an error (invalid month, invalid day).
+        assert!("0000-00-00".parse::<Date>().is_err());
     }
 
     #[test]

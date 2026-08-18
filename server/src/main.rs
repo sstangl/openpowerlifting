@@ -24,12 +24,12 @@ mod tests;
 use langpack::{Language, Locale};
 use opltypes::Username;
 
+use rocket::State;
 use rocket::fs::NamedFile;
 use rocket::http::{ContentType, CookieJar, Status};
 use rocket::request::Request;
 use rocket::response::{Redirect, Responder, Response};
 use rocket::serde::json::Json;
-use rocket::State;
 use rocket::{Build, Rocket};
 use rocket_dyn_templates::Template;
 use server::referring_path::ReferringPath;
@@ -66,10 +66,10 @@ impl<'r> Responder<'r, 'static> for StaticFile {
             StaticFile::Gzipped(p, f) => {
                 let mut r = f.respond_to(req)?;
                 r.set_raw_header("Content-Encoding", "gzip");
-                if let Some(ext) = p.extension() {
-                    if let Some(ct) = ContentType::from_extension(&ext.to_string_lossy()) {
-                        r.set_header(ct);
-                    }
+                if let Some(ext) = p.extension()
+                    && let Some(ct) = ContentType::from_extension(&ext.to_string_lossy())
+                {
+                    r.set_header(ct);
                 }
                 r
             }

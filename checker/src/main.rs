@@ -1,7 +1,7 @@
 //! Checks CSV data files for validity.
 
 use checker::report_count::ReportCount;
-use checker::{compiler, disambiguator, AllMeetData, Severity, SingleMeetData};
+use checker::{AllMeetData, Severity, SingleMeetData, compiler, disambiguator};
 use colored::*;
 use opltypes::Username;
 use rayon::prelude::*;
@@ -20,7 +20,7 @@ use std::time::Instant;
 
 #[cfg(feature = "jemalloc")]
 #[global_allocator]
-static GLOBAL: jemallocator::Jemalloc = jemallocator::Jemalloc;
+static GLOBAL: tikv_jemallocator::Jemalloc = tikv_jemallocator::Jemalloc;
 
 /// Stores user-specified arguments from the command line.
 struct Args {
@@ -38,6 +38,9 @@ struct Args {
 
     /// Prints debug info for a single lifter's Country.
     debug_country_username: Option<String>,
+
+    /// Prints debug info for a single username base (without disambig number).
+    debug_disambig_username: Option<String>,
 
     /// Prints timing info for various phases of compilation or checking.
     debug_timing: bool,
@@ -164,11 +167,7 @@ fn configurations(meet_data_root: &Path) -> Result<ConfigMap, ReportCount> {
         entry.ok().and_then(|e| {
             let mut path = e.into_path();
             path.push("CONFIG.toml");
-            if path.is_file() {
-                Some(path)
-            } else {
-                None
-            }
+            if path.is_file() { Some(path) } else { None }
         })
     });
 
@@ -269,6 +268,7 @@ OPTIONS:
         --age <username>        Prints age debug info for the given username
         --age-group <username>  Prints disambugation age debug info for the given username
         --country <username>    Prints country debug info for the given username
+        --disambig <username>   Prints disambiguation info for the given username base
         --timing                Prints timing information for compiler phases
         --allow-crlf            Allows Windows-style CRLF line endings in CSV files
 
@@ -290,6 +290,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         debug_age_username: args.opt_value_from_str("--age")?,
         debug_age_group_username: args.opt_value_from_str("--age-group")?,
         debug_country_username: args.opt_value_from_str("--country")?,
+        debug_disambig_username: args.opt_value_from_str("--disambig")?,
         debug_timing: args.contains("--timing"),
         compile: args.contains(["-c", "--compile"]),
         compile_onefile: args.contains(["-1", "--compile-onefile"]),
@@ -338,7 +339,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let is_compiling: bool = args.compile || args.compile_onefile;
     let is_debugging: bool = args.debug_age_username.is_some()
         || args.debug_country_username.is_some()
-        || args.debug_age_group_username.is_some();
+        || args.debug_age_group_username.is_some()
+        || args.debug_disambig_username.is_some();
     let is_partial: bool = !search_root.ends_with("meet-data");
 
     let timing = instant_if(args.debug_timing);
@@ -524,6 +526,12 @@ fn main() -> Result<(), Box<dyn Error>> {
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
 
+        // Report suggested disambiguation groupings.
+        if let Some(u) = args.debug_disambig_username {
+            let u = Username::from_name(&u).unwrap().without_variant();
+            disambiguator::disambiguate_debug_for(&meetdata, &liftermap, &u);
+        }
+
         let timing = instant_if(args.debug_timing);
         compiler::interpolate_age(&mut meetdata, &liftermap);
         maybe_print_elapsed_for("interpolate_age", timing);
@@ -558,8 +566,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     if args.debug_timing {
         /// Takes a reading of jemalloc's internal "active bytes" counter.
         fn measure_bytes() -> usize {
-            let epoch_handle = jemalloc_ctl::epoch::mib().unwrap();
-            let active_handle = jemalloc_ctl::stats::active::mib().unwrap();
+            let epoch_handle = tikv_jemalloc_ctl::epoch::mib().unwrap();
+            let active_handle = tikv_jemalloc_ctl::stats::active::mib().unwrap();
 
             // Advancing the epoch updates statistics.
             epoch_handle.advance().unwrap();

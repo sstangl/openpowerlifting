@@ -58,5 +58,4 @@
     sex = "F"
 
 [exemptions]
-
-
+	2603 = ["ExemptDuplicates"] # Subset of 2602.

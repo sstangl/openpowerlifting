@@ -56,3 +56,4 @@
     sex = "F"
 
 [exemptions]
+    2602 = ["ExemptWeightClassConsistency"] # M4 not in weight classes

@@ -10,16 +10,16 @@ extern crate serde_derive; // Provides struct serialization and deserialization.
 extern crate strum_macros; // Used for iterating over enums.
 
 pub mod checklib;
-pub use crate::checklib::config::{check_config, Config};
+pub use crate::checklib::CheckResult;
+pub use crate::checklib::config::{Config, check_config};
 pub use crate::checklib::consistency;
 pub use crate::checklib::entries::{
-    check_entries, check_entries_from_string, EntriesCheckResult, Entry,
+    EntriesCheckResult, Entry, check_entries, check_entries_from_string,
 };
 pub use crate::checklib::lifterdata::{
-    check_lifterdata, LifterData, LifterDataCheckResult, LifterDataMap,
+    LifterData, LifterDataCheckResult, LifterDataMap, check_lifterdata,
 };
-pub use crate::checklib::meet::{check_meet, check_meet_from_string, Meet, MeetCheckResult};
-pub use crate::checklib::CheckResult;
+pub use crate::checklib::meet::{Meet, MeetCheckResult, check_meet, check_meet_from_string};
 
 pub mod compiler;
 pub mod disambiguator;
@@ -132,12 +132,11 @@ fn is_invalid_entry(entry: &walkdir::DirEntry) -> bool {
     }
 
     // Allow files containing the name "original", such as "original1.txt", in textual formats.
-    if let Some(utf8) = filename.to_str() {
-        if utf8.starts_with("original")
-            && (utf8.ends_with(".csv") || utf8.ends_with(".txt") || utf8.ends_with(".html"))
-        {
-            return false;
-        }
+    if let Some(utf8) = filename.to_str()
+        && utf8.starts_with("original")
+        && (utf8.ends_with(".csv") || utf8.ends_with(".txt") || utf8.ends_with(".html"))
+    {
+        return false;
     }
 
     // The entry didn't match any known pattern, and therefore should raise an error.

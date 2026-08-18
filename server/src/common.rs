@@ -3,7 +3,7 @@
 use rocket::http::{CookieJar, Status};
 use rocket::outcome::Outcome;
 use rocket::request::{self, FromRequest, Request};
-use rocket::response::{self, content, Responder};
+use rocket::response::{self, Responder, content};
 
 use langpack::{Language, Locale};
 use opltypes::WeightUnits;
@@ -128,10 +128,10 @@ pub fn select_display_language(languages: &AcceptLanguage, cookies: &CookieJar<'
 
     // The user may explicitly override the language choice by using
     // a cookie named "lang".
-    if let Some(cookie) = cookies.get("lang") {
-        if let Ok(lang) = cookie.value().parse::<Language>() {
-            return lang;
-        }
+    if let Some(cookie) = cookies.get("lang")
+        && let Ok(lang) = cookie.value().parse::<Language>()
+    {
+        return lang;
     }
 
     // If a language was not explicitly selected, the Accept-Language HTTP
@@ -152,20 +152,20 @@ pub fn select_weight_units(
 ) -> WeightUnits {
     // The user may explicitly override the weight unit choice by using
     // a cookie named "units".
-    if let Some(cookie) = cookies.get("units") {
-        if let Ok(units) = cookie.value().parse::<WeightUnits>() {
-            return units;
-        }
+    if let Some(cookie) = cookies.get("units")
+        && let Ok(units) = cookie.value().parse::<WeightUnits>()
+    {
+        return units;
     }
 
     // Check the Accept-Language header for regional variants of English,
     // to decide whether to change from Kg to Lbs.
-    if language == Language::en {
-        if let Some(s) = &languages.0 {
-            // This should handle the majority of pounds-preferring speakers.
-            if s.starts_with("en-US") || s.starts_with("en-CA") {
-                return WeightUnits::Lbs;
-            }
+    if language == Language::en
+        && let Some(s) = &languages.0
+    {
+        // This should handle the majority of pounds-preferring speakers.
+        if s.starts_with("en-US") || s.starts_with("en-CA") {
+            return WeightUnits::Lbs;
         }
     }
 

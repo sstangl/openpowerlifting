@@ -7,7 +7,7 @@ Place,CyrillicName,Name,BirthDate,BodyweightKg,Best3SquatKg,Best3BenchKg,Best3De
 2,Оксана Заброцька,Oksana Zabrotska,1982-09-18,51.38,105.0,65.0,150.0,320.0,F,52,Open,Raw,SBD
 3,Ілона Горофлюк,Ilona Horoflyuk,2004-07-16,51.31,120.0,65.0,120.0,305.0,F,52,Open,Raw,SBD
 4,Богдана Семенова,Bogdana Semenova,2001-05-04,50.59,117.5,57.5,127.5,302.5,F,52,Open,Raw,SBD
-5,Оксана Олійник,Oksana Oliynyk,1986-10-12,51.84,112.5,52.5,117.5,282.5,F,52,Open,Raw,SBD
+5,Оксана Олийник,Oksana Oliynyk,1986-10-12,51.84,112.5,52.5,117.5,282.5,F,52,Open,Raw,SBD
 6,Марія Іваницька,Maria Ivanytska,2006-01-29,52.00,100.0,62.5,115.0,277.5,F,52,Open,Raw,SBD
 7,Іванна Ляховець,Ivanna Lyakhovets,1989-02-11,50.23,85.0,60.0,130.0,275.0,F,52,Open,Raw,SBD
 8,Діана Лаврусь,Diana Lavrus,2007-11-01,51.81,95.0,50.0,117.5,262.5,F,52,Open,Raw,SBD
@@ -100,7 +100,7 @@ DQ,Артем Циганкін,Artem Tsygankin,1986-12-21,66.00,205.0,,,,M,66,Op
 17,Андрій Колесніков,Andriy Kolesnikov,1996-12-05,92.60,242.5,150.0,262.5,655.0,M,93,Open,Raw,SBD
 18,Павло Семкович,Pavlo Semkovich,1980-05-12,92.60,220.0,165.0,260.0,645.0,M,93,Open,Raw,SBD
 19,Олександр Найда,Oleksandr Naida,1988-05-04,92.00,240.0,155.0,240.0,635.0,M,93,Open,Raw,SBD
-20,Анатолій Клим'юк,Anatoliy Klymiuk,1992-07-22,93.00,220.0,155.0,260.0,635.0,M,93,Open,Raw,SBD
+20,Анатолий Климюк,Anatoliy Klymiuk,1992-07-22,93.00,220.0,155.0,260.0,635.0,M,93,Open,Raw,SBD
 21,Владислав Кривий,Vladyslav Kryvyi,2003-12-30,88.37,255.0,132.5,230.0,617.5,M,93,Open,Raw,SBD
 22,Павло Мисник,Pavlo Mysnyk,1995-07-17,92.70,200.0,187.5,227.5,615.0,M,93,Open,Raw,SBD
 23,Дмитро Тхорук,Dmytro Toruk,2001-08-26,91.95,240.0,122.5,240.0,602.5,M,93,Open,Raw,SBD
@@ -197,3 +197,45 @@ DQ,Андрій Погоріляк,Andriy Pohorilyak,2006-10-23,80.92,157.5,132.
 3,Олег Головатюк,Oleg Holovatiuk,2006-05-29,111.60,185.0,135.0,217.5,537.5,M,120,Student,Raw,SBD
 4,Павел Куликов,Pavel Kulikov,2006-11-15,113.60,200.0,122.5,215.0,537.5,M,120,Student,Raw,SBD
 1,Прохор Фетисов,Prokhor Fetisov,2006-12-13,147.50,250.0,127.5,240.0,617.5,M,120+,Student,Raw,SBD
+1,Світлана Миронова,Svitlana Mironova,1976-01-19,49.11,75,40,77.5,192.5,F,52,Masters 1,Raw,SBD
+1,Ольга Рєзнікова,Olga Reznikova,1975-06-01,56.99,55,40,85,180,F,57,Masters 1,Raw,SBD
+1,Уляна Лютник,Ulyana Lyutnik,1984-02-03,62.61,110,60,130,300,F,63,Masters 1,Raw,SBD
+2,Анна Саланжій,Anna Salanzhiy,1984-06-07,62.44,110,60,127.5,297.5,F,63,Masters 1,Raw,SBD
+3,Наталія Ахременко,Nataliya Akhremenko,1984-05-05,60.92,97.5,65,120,282.5,F,63,Masters 1,Raw,SBD
+1,Світлана Харламова,Svitlana Kharlamova,1978-12-14,68.58,122.5,55,138,315.5,F,69,Masters 1,Raw,SBD
+2,Світлана Євченко,Svitlana Evchenko,1977-06-07,68.71,123,57.5,132.5,313,F,69,Masters 1,Raw,SBD
+1,Тетяна Маслянчук,Tetyana Maslyanchuk,1984-04-14,69.8,150,85,145,380,F,76,Masters 1,Raw,SBD
+2,Олена Таран,Olena Taran,1980-09-15,70.14,77.5,45,100,222.5,F,76,Masters 1,Raw,SBD
+3,Тетяна Черненко,Tetyana Chernenko,1979-06-02,74.15,50,32.5,70,152.5,F,76,Masters 1,Raw,SBD
+1,Наталія Зінчук,Nataliya Zinchuk,1980-06-13,89.53,142.5,87.5,157.5,387.5,F,84+,Masters 1,Raw,SBD
+1,Галія Агішева,Galiya Agisheva,1970-12-12,55.1,86,35,96,217,F,57,Masters 2,Raw,SBD
+1,Оксана Радченко,Oksana Radchenko,1973-08-17,66.6,70,42.5,112.5,225,F,69,Masters 2,Raw,SBD
+1,Світлана Жадан,Svitlana Zhadan,1964-04-06,50.13,65,42.5,90,197.5,F,52,Masters 3,Raw,SBD
+1,Людмила Іщенко,Lyudmila Ishchenko,1961-02-18,74.73,80,55,102.5,237.5,F,76,Masters 3,Raw,SBD
+1,Сергій Бовконюк,Sergiy Bovkonyuk,1983-04-02,63.28,125,95,155,375,M,66,Masters 1,Raw,SBD
+1,Євгеній Черніков,Evgeniy Chernikov,1978-10-05,73.01,175,105,190,470,M,74,Masters 1,Raw,SBD
+2,Руслан Колесников,Ruslan Kolesnikov,1975-11-29,71.72,110,80,120,310,M,74,Masters 1,Raw,SBD
+3,Віктор Боярський,Viktor Boyarskiy,1981-10-19,70.82,95,70,137.5,302.5,M,74,Masters 1,Raw,SBD
+1,Олександр Горбенко,Oleksandr Gorbenko,1977-06-22,81.75,202.5,145,230,577.5,M,83,Masters 1,Raw,SBD
+1,Костянтин Стаханов,Kostyantin Stakhanov,1982-03-29,92.03,260,165,275,700,M,93,Masters 1,Raw,SBD
+2,Володимир Замихівський,Volodimir Zamikhivskiy,1979-01-31,92.07,250,155,270,675,M,93,Masters 1,Raw,SBD
+3,Сергій Сиротченко,Sergiy Sirotchenko,1978-12-25,91.74,250,137.5,272.5,660,M,93,Masters 1,Raw,SBD
+4,Євгеній Ус,Evgeniy Us,1977-09-16,89.66,210,170,225,605,M,93,Masters 1,Raw,SBD
+5,Олексій Томищ,Oleksiy Tomishch,1976-05-28,91.99,200,115,200,515,M,93,Masters 1,Raw,SBD
+1,Дмитро Рудніцький,Dmitro Rudnitskiy,1978-10-20,104.86,275,167.5,275,717.5,M,105,Masters 1,Raw,SBD
+2,Євген Константінов,Evgen Konstantinov,1977-11-24,104.66,270,155,290,715,M,105,Masters 1,Raw,SBD
+1,Ігор Мотрук,Igor Motruk,1983-12-27,115.96,260,160,270,690,M,120,Masters 1,Raw,SBD
+1,Денис Шевчук,Denis Shevchuk,1983-08-17,144.7,222.5,120,240,582.5,M,120+,Masters 1,Raw,SBD
+1,Олександр Соломко,Oleksandr Solomko,1974-02-23,56.57,110,70,145,325,M,59,Masters 2,Raw,SBD
+1,Сергій Зайцев,Sergiy Zaytsev,1968-10-18,73.92,173,117.5,180,470.5,M,74,Masters 2,Raw,SBD
+1,Володимир Шлапак,Volodimir Shlapak,1968-08-30,82.48,180,127.5,190,497.5,M,83,Masters 2,Raw,SBD
+2,Олександр Смотрич,Oleksandr Smotrich,1967-11-17,82.43,160,133,170,463,M,83,Masters 2,Raw,SBD
+1,Віталій Місютинський,Vitaliy Misyutinskiy,1967-09-02,94.65,232.5,150,245,627.5,M,105,Masters 2,Raw,SBD
+2,Вадим Ліханов,Vadim Likhanov,1967-05-19,93.7,160,125,170,455,M,105,Masters 2,Raw,SBD
+3,Олег Туляков,Oleg Tulyakov,1970-01-24,101.76,147.5,97.5,185,430,M,105,Masters 2,Raw,SBD
+1,Юрій Хміль,Yuriy Khmil,1968-02-25,118.03,190,150,240,580,M,120,Masters 2,Raw,SBD
+1,Игорь Корчагин,Igor Korchagin,1972-12-12,126.24,233,120,250.5,603.5,M,120+,Masters 2,Raw,SBD
+1,Михайло Гірич,Mikhaylo Girich,1958-03-08,82.06,130,105,170,405,M,83,Masters 3,Raw,SBD
+1,Анатолій Баранов,Anatoliy Baranov #1,1960-06-10,92.68,120,120,150,390,M,93,Masters 3,Raw,SBD
+1,Сергій Денисов,Sergiy Denisov,1956-03-14,97.55,161.5,100,155,416.5,M,105,Masters 3,Raw,SBD
+1,Микола Писаненко,Mikola Pisanenko,1954-08-07,91.38,145,105,160,410,M,93,Masters 4,Raw,SBD

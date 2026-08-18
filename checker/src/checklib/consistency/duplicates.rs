@@ -1,6 +1,6 @@
 //! Checks for duplicate meets.
 
-use crate::checklib::consistency::{self, date, ConsistencyResult};
+use crate::checklib::consistency::{self, ConsistencyResult, date};
 use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Meet, Report};
 
 /// Checks for duplicate meets with different MeetPaths for one lifter.

@@ -32,6 +32,7 @@ declare const urlprefix: string; // For navigation only, not for API calls.
 declare const default_equipment: string;
 declare const default_weightclass: string;
 declare const default_fed: string;
+declare const default_nationality: string;
 declare const default_sex: string;
 declare const default_ageclass: string;
 declare const default_year: string;
@@ -81,6 +82,7 @@ let searchInfo = {laststr: ''};
 let selEquipment: HTMLSelectElement;
 let selWeightClass: HTMLSelectElement;
 let selFed: HTMLSelectElement;
+let selNationality: HTMLSelectElement;
 let selAgeClass: HTMLSelectElement;
 let selYear: HTMLSelectElement;
 let selSex: HTMLSelectElement;
@@ -215,6 +217,9 @@ function selection_to_path(): string {
     if (selFed.value !== default_fed) {
         url += "/" + selFed.value;
     }
+    if (selNationality.value !== default_nationality) {
+        url += "/" + selNationality.value;
+    }
 
     // In certain situations, the WeightClass selector is allowed to assign Sex.
     // It looks for a tag like sex="men" or sex="women" on the <option>.
@@ -275,6 +280,9 @@ function renderSelectedFilters(): void {
         label = label.split(" - ")[0];
         newFilter(div, label);
     }
+    if (selNationality.value !== default_nationality) {
+        newFilter(div, selNationality.selectedOptions[0].label);
+    }
     if (selSex.value !== default_sex) {
         newFilter(div, selSex.selectedOptions[0].label);
     }
@@ -298,6 +306,7 @@ function saveSelectionState() {
         "equipment": selEquipment.value,
         "weightclass": selWeightClass.value,
         "federation": selFed.value,
+        "nationality": selNationality.value,
         "sex": selSex.value,
         "ageclass": selAgeClass.value,
         "year": selYear.value,
@@ -315,6 +324,7 @@ function restoreSelectionState(state: any) {
     selEquipment.value = state["equipment"];
     selWeightClass.value = state["weightclass"];
     selFed.value = state["federation"];
+    selNationality.value = state["nationality"];
     selSex.value = state["sex"];
     selAgeClass.value = state["ageclass"];
     selYear.value = state["year"];
@@ -373,6 +383,7 @@ function addAllSelectorListeners() {
     addSelectorListeners(selEquipment);
     addSelectorListeners(selWeightClass);
     addSelectorListeners(selFed);
+    addSelectorListeners(selNationality);
     addSelectorListeners(selAgeClass);
     addSelectorListeners(selYear);
     addSelectorListeners(selSex);
@@ -384,6 +395,7 @@ function removeAllSelectorListeners() {
     removeSelectorListeners(selEquipment);
     removeSelectorListeners(selWeightClass);
     removeSelectorListeners(selFed);
+    removeSelectorListeners(selNationality);
     removeSelectorListeners(selAgeClass);
     removeSelectorListeners(selYear);
     removeSelectorListeners(selSex);
@@ -395,6 +407,7 @@ function initializeEventListeners() {
     selEquipment = document.getElementById("equipmentselect") as HTMLSelectElement;
     selWeightClass = document.getElementById("weightclassselect") as HTMLSelectElement;
     selFed = document.getElementById("fedselect") as HTMLSelectElement;
+    selNationality = document.getElementById("nationalityselect") as HTMLSelectElement;
     selAgeClass = document.getElementById("ageselect") as HTMLSelectElement;
     selYear = document.getElementById("yearselect") as HTMLSelectElement;
     selSex = document.getElementById("sexselect") as HTMLSelectElement;

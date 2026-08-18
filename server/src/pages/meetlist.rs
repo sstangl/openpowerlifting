@@ -110,7 +110,7 @@ impl<'db> MeetInfo<'db> {
         MeetInfo {
             path: &meet.path,
             federation: meet.federation,
-            date: format!("{}", &meet.date),
+            date: format!("{}", meet.date),
             country: strings.translate_country(meet.country),
             state: meet.state.as_ref().map(|s| s as _),
             town: meet.town.as_ref().map(|t| t as _),
@@ -165,10 +165,10 @@ impl<'db> Context<'db> {
                     .iter()
                     .filter(|m| {
                         // Filter by year.
-                        if let Some(year) = year {
-                            if m.date.year() != year {
-                                return false;
-                            }
+                        if let Some(year) = year
+                            && m.date.year() != year
+                        {
+                            return false;
                         }
 
                         m.federation == fed

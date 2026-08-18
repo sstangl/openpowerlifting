@@ -42,6 +42,7 @@
   <option value="fdnlp" {% if selection.federation == "FDNLP" %}selected{% endif %}>FDNLP / {{strings.country.peru}}</option>
   <option value="fecapolif" {% if selection.federation == "FECAPOLIF" %}selected{% endif %}>FECAPOLIF / {{strings.country.cameroon}}</option>
   <option value="fechipo" {% if selection.federation == "FECHIPO" %}selected{% endif %}>FECHIPO / {{strings.country.chile}}</option>
+  <option value="fedelepo" {% if selection.federation == "FEDELEPO" %}selected{% endif %}>FEDELEPO / {{strings.country.costarica}}</option>
   <option value="fedepotencia" {% if selection.federation == "Fedepotencia" %}selected{% endif %}>Fedepotencia / {{strings.country.guatemala}}</option>
   <option value="feficulp" {% if selection.federation == "FEFICULP" %}selected{% endif %}>FEFICULP / {{strings.country.ecuador}}</option>
   <option value="femepo" {% if selection.federation == "FEMEPO" %}selected{% endif %}>FEMEPO / {{strings.country.mexico}}</option>

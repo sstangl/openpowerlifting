@@ -1,6 +1,6 @@
 Place,Name,BirthDate,Sex,BirthYear,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
 1,Alysa Viviana Cruz Figueroa,,F,2006,,,Raw,Sub-Juniors,42,43,65,72.5,75,75,,40,-45,-50,40,,85,92.5,95,95,,210,SBD
-1,Tessa Roberts Patiño,,F,2007,,,Raw,Sub-Juniors,46.9,47,90,97.5,105,105,,-40,43,46,46,,105,115,120,120,,271,SBD
+1,Tessa Roberts,,F,2007,,,Raw,Sub-Juniors,46.9,47,90,97.5,105,105,,-40,43,46,46,,105,115,120,120,,271,SBD
 1,Nelly Rodríguez Guerrero,,F,2006,,,Raw,Sub-Juniors,51.5,52,82.5,90,-97.5,90,,45,-52.5,-52.5,45,,85,95,-97.5,95,,230,SBD
 1,María Fernanda Villalobos López,,F,2006,,,Raw,Sub-Juniors,56.6,57,110,120,125,125,,50,55,60,60,,130,-140,140,140,,325,SBD
 2,Iliana Estefanía Rubio Pérez,,F,2006,,,Raw,Sub-Juniors,53.7,57,107.5,115,-120,115,,52.5,55,57.5,57.5,,125,132.5,137.5,137.5,,310,SBD
@@ -19,7 +19,7 @@ Place,Name,BirthDate,Sex,BirthYear,Country,State,Equipment,Division,BodyweightKg
 3,Daniela Sophia Garcia De León,,F,2007,,,Raw,Sub-Juniors,74.8,76,115,-120,120,120,,52.5,57.5,-62.5,57.5,,130,135,137.5,137.5,,315,SBD
 4,Raquel González García,,F,2005,,,Raw,Sub-Juniors,75.6,76,105,-115,115,115,,55,-60,-60,55,,120,130,-140,130,,300,SBD
 1,Alysa Viviana Cruz Figueroa,,F,2006,,,Raw,Sub-Juniors,42,43,,,,,,40,-45,-50,40,,,,,,,40,B
-1,Tessa Roberts Patiño,,F,2007,,,Raw,Sub-Juniors,46.9,47,,,,,,-40,43,46,46,,,,,,,46,B
+1,Tessa Roberts,,F,2007,,,Raw,Sub-Juniors,46.9,47,,,,,,-40,43,46,46,,,,,,,46,B
 1,Nelly Rodríguez Guerrero,,F,2006,,,Raw,Sub-Juniors,51.5,52,,,,,,45,-52.5,-52.5,45,,,,,,,45,B
 1,Vanessa Lavón,,F,2007,,,Raw,Sub-Juniors,53.4,57,,,,,,62.5,67.5,-69.5,67.5,,,,,,,67.5,B
 2,Maylene Lizárraga,,F,2007,,,Raw,Sub-Juniors,54.1,57,,,,,,57.5,62.5,-65,62.5,,,,,,,62.5,B
@@ -38,7 +38,7 @@ Place,Name,BirthDate,Sex,BirthYear,Country,State,Equipment,Division,BodyweightKg
 3,Raquel González García,,F,2005,,,Raw,Sub-Juniors,75.6,76,,,,,,55,-60,-60,55,,,,,,,55,B
 4,Karen Lizbeth Espino Calderon,,F,2005,,,Raw,Sub-Juniors,74,76,,,,,,47.5,52.5,-60,52.5,,,,,,,52.5,B
 1,Alysa Viviana Cruz Figueroa,,F,2006,,,Raw,Sub-Juniors,42,43,,,,,,,,,,,85,92.5,95,95,,95,D
-1,Tessa Roberts Patiño,,F,2007,,,Raw,Sub-Juniors,46.9,47,,,,,,,,,,,105,115,120,120,,120,D
+1,Tessa Roberts,,F,2007,,,Raw,Sub-Juniors,46.9,47,,,,,,,,,,,105,115,120,120,,120,D
 1,Nelly Rodríguez Guerrero,,F,2006,,,Raw,Sub-Juniors,51.5,52,,,,,,,,,,,85,95,-97.5,95,,95,D
 1,María Fernanda Villalobos López,,F,2006,,,Raw,Sub-Juniors,56.6,57,,,,,,,,,,,130,-140,140,140,,140,D
 2,Iliana Estefanía Rubio Pérez,,F,2006,,,Raw,Sub-Juniors,53.7,57,,,,,,,,,,,125,132.5,137.5,137.5,,137.5,D
@@ -57,7 +57,7 @@ Place,Name,BirthDate,Sex,BirthYear,Country,State,Equipment,Division,BodyweightKg
 3,Daniela Sophia Garcia De León,,F,2007,,,Raw,Sub-Juniors,74.8,76,,,,,,,,,,,130,135,137.5,137.5,,137.5,D
 4,Raquel González García,,F,2005,,,Raw,Sub-Juniors,75.6,76,,,,,,,,,,,120,130,-140,130,,130,D
 1,Alysa Viviana Cruz Figueroa,,F,2006,,,Raw,Sub-Juniors,42,43,65,72.5,75,75,,,,,,,,,,,,75,S
-1,Tessa Roberts Patiño,,F,2007,,,Raw,Sub-Juniors,46.9,47,90,97.5,105,105,,,,,,,,,,,,105,S
+1,Tessa Roberts,,F,2007,,,Raw,Sub-Juniors,46.9,47,90,97.5,105,105,,,,,,,,,,,,105,S
 1,Nelly Rodríguez Guerrero,,F,2006,,,Raw,Sub-Juniors,51.5,52,82.5,90,-97.5,90,,,,,,,,,,,,90,S
 1,María Fernanda Villalobos López,,F,2006,,,Raw,Sub-Juniors,56.6,57,110,120,125,125,,,,,,,,,,,,125,S
 2,Sara Maria Camacho,,F,2006,,,Raw,Sub-Juniors,56.8,57,102.5,110,117.5,117.5,,,,,,,,,,,,117.5,S
@@ -84,8 +84,8 @@ DQ,Johant Felix,,M,2006,,,Raw,Sub-Juniors,52,53,-150,-150,-150,,,85,90,-95,90,,1
 1,Kevin Alejandro Velarde Aguirre,,M,2006,,,Raw,Sub-Juniors,64.8,66,195,207.5,215,215,,95,107.5,112.5,112.5,,205,221.5,-230,221.5,,549,SBD
 2,Jose Maciel,,M,2007,,,Raw,Sub-Juniors,65.3,66,-167.5,175,185,185,,107.5,118,125.5,125.5,,-190,207.5,222,222,,532.5,SBD
 3,Héctor Sánchez #6,,M,2006,,,Raw,Sub-Juniors,65.7,66,160,170,175,175,,90,97.5,105,105,,185,197.5,-202.5,197.5,,477.5,SBD
-4,Gabriel Diaz,,M,2007,,,Raw,Sub-Juniors,64.8,66,160,170,180,180,,95,105,-107.5,105,,185,-200,-202.5,185,,470,SBD
-5,Gabriel Torres,,M,2007,,,Raw,Sub-Juniors,64.2,66,155,162.5,170,170,,100,107.5,-115,107.5,,175,185,190,190,,467.5,SBD
+4,Gabriel Diaz #6,,M,2007,,,Raw,Sub-Juniors,64.8,66,160,170,180,180,,95,105,-107.5,105,,185,-200,-202.5,185,,470,SBD
+5,Gabriel Torres #4,,M,2007,,,Raw,Sub-Juniors,64.2,66,155,162.5,170,170,,100,107.5,-115,107.5,,175,185,190,190,,467.5,SBD
 6,Iker Ibarra,,M,2007,,,Raw,Sub-Juniors,63.8,66,140,-150,150,150,,100,105,-110,105,,192.5,205,-210,205,,460,SBD
 7,Adolfo Ibarra,,M,2006,,,Raw,Sub-Juniors,64.4,66,-155,155,160,160,,-67.5,72.5,77.5,77.5,,187.5,202.5,-215,202.5,,440,SBD
 8,Luis Roberto Jaime Hernández,,M,2006,,,Raw,Sub-Juniors,64.2,66,137.5,142.5,-150,142.5,,72.5,77.5,-82.5,77.5,,155,157.5,162.5,162.5,,382.5,SBD
@@ -130,9 +130,9 @@ DQ,Santiago Salyano Miller,,M,2007,,,Raw,Sub-Juniors,112.6,120,-170,170,-180,170
 4,César Arredondo,,M,2006,,,Raw,Sub-Juniors,56.5,59,,,,,,45,60,-75,60,,,,,,,60,B
 1,Jose Maciel,,M,2007,,,Raw,Sub-Juniors,65.3,66,,,,,,107.5,118,125.5,125.5,,,,,,,125.5,B
 2,Kevin Alejandro Velarde Aguirre,,M,2006,,,Raw,Sub-Juniors,64.8,66,,,,,,95,107.5,112.5,112.5,,,,,,,112.5,B
-3,Gabriel Torres,,M,2007,,,Raw,Sub-Juniors,64.2,66,,,,,,100,107.5,-115,107.5,,,,,,,107.5,B
+3,Gabriel Torres #4,,M,2007,,,Raw,Sub-Juniors,64.2,66,,,,,,100,107.5,-115,107.5,,,,,,,107.5,B
 4,Iker Ibarra,,M,2007,,,Raw,Sub-Juniors,63.8,66,,,,,,100,105,-110,105,,,,,,,105,B
-5,Gabriel Diaz,,M,2007,,,Raw,Sub-Juniors,64.8,66,,,,,,95,105,-107.5,105,,,,,,,105,B
+5,Gabriel Diaz #6,,M,2007,,,Raw,Sub-Juniors,64.8,66,,,,,,95,105,-107.5,105,,,,,,,105,B
 6,Héctor Sánchez #6,,M,2006,,,Raw,Sub-Juniors,65.7,66,,,,,,90,97.5,105,105,,,,,,,105,B
 7,Luis Roberto Jaime Hernández,,M,2006,,,Raw,Sub-Juniors,64.2,66,,,,,,72.5,77.5,-82.5,77.5,,,,,,,77.5,B
 8,Adolfo Ibarra,,M,2006,,,Raw,Sub-Juniors,64.4,66,,,,,,-67.5,72.5,77.5,77.5,,,,,,,77.5,B
@@ -181,8 +181,8 @@ DQ,Santiago Salyano Miller,,M,2007,,,Raw,Sub-Juniors,112.6,120,,,,,,-82.5,-87.5,
 3,Iker Ibarra,,M,2007,,,Raw,Sub-Juniors,63.8,66,,,,,,,,,,,192.5,205,-210,205,,205,D
 4,Adolfo Ibarra,,M,2006,,,Raw,Sub-Juniors,64.4,66,,,,,,,,,,,187.5,202.5,-215,202.5,,202.5,D
 5,Héctor Sánchez #6,,M,2006,,,Raw,Sub-Juniors,65.7,66,,,,,,,,,,,185,197.5,-202.5,197.5,,197.5,D
-6,Gabriel Torres,,M,2007,,,Raw,Sub-Juniors,64.2,66,,,,,,,,,,,175,185,190,190,,190,D
-7,Gabriel Diaz,,M,2007,,,Raw,Sub-Juniors,64.8,66,,,,,,,,,,,185,-200,-202.5,185,,185,D
+6,Gabriel Torres #4,,M,2007,,,Raw,Sub-Juniors,64.2,66,,,,,,,,,,,175,185,190,190,,190,D
+7,Gabriel Diaz #6,,M,2007,,,Raw,Sub-Juniors,64.8,66,,,,,,,,,,,185,-200,-202.5,185,,185,D
 8,Luis Roberto Jaime Hernández,,M,2006,,,Raw,Sub-Juniors,64.2,66,,,,,,,,,,,155,157.5,162.5,162.5,,162.5,D
 9,Daniel Velazquez Seseña,,M,,,,Raw,Sub-Juniors,59.1,66,,,,,,,,,,,70,75,77.5,77.5,,77.5,D
 DQ,André Alcaraz Villarreal,,M,2005,,,Raw,Sub-Juniors,64.3,66,,,,,,,,,,,-170,-170,-170,,,,D
@@ -226,9 +226,9 @@ DQ,Johant Felix,,M,2006,,,Raw,Sub-Juniors,52,53,-150,-150,-150,,,,,,,,,,,,,,S
 4,Diego Francisco De Jesús,,M,2008,,,Raw,Sub-Juniors,58,59,110,117.5,122.5,122.5,,,,,,,,,,,,122.5,S
 1,Kevin Alejandro Velarde Aguirre,,M,2006,,,Raw,Sub-Juniors,64.8,66,195,207.5,215,215,,,,,,,,,,,,215,S
 2,Jose Maciel,,M,2007,,,Raw,Sub-Juniors,65.3,66,-167.5,175,185,185,,,,,,,,,,,,185,S
-3,Gabriel Diaz,,M,2007,,,Raw,Sub-Juniors,64.8,66,160,170,180,180,,,,,,,,,,,,180,S
+3,Gabriel Diaz #6,,M,2007,,,Raw,Sub-Juniors,64.8,66,160,170,180,180,,,,,,,,,,,,180,S
 4,Héctor Sánchez #6,,M,2006,,,Raw,Sub-Juniors,65.7,66,160,170,175,175,,,,,,,,,,,,175,S
-5,Gabriel Torres,,M,2007,,,Raw,Sub-Juniors,64.2,66,155,162.5,170,170,,,,,,,,,,,,170,S
+5,Gabriel Torres #4,,M,2007,,,Raw,Sub-Juniors,64.2,66,155,162.5,170,170,,,,,,,,,,,,170,S
 6,Adolfo Ibarra,,M,2006,,,Raw,Sub-Juniors,64.4,66,-155,155,160,160,,,,,,,,,,,,160,S
 7,Iker Ibarra,,M,2007,,,Raw,Sub-Juniors,63.8,66,140,-150,150,150,,,,,,,,,,,,150,S
 8,Luis Roberto Jaime Hernández,,M,2006,,,Raw,Sub-Juniors,64.2,66,137.5,142.5,-150,142.5,,,,,,,,,,,,142.5,S
@@ -287,7 +287,7 @@ DQ,Johant Felix,,M,2006,,,Raw,Sub-Juniors,52,53,-150,-150,-150,,,,,,,,,,,,,,S
 10,Vania Zuñiga,,F,2001,,,Raw,Juniors,51.7,52,-80,80,-87.5,80,,45,47.5,-50,47.5,,100,110,-117.5,110,,237.5,SBD
 DQ,Grecia Morales,,F,2001,,,Raw,Juniors,50.9,52,-115,-120,-120,,,50,-55,-55,50,,120,125,132.5,132.5,,,SBD
 1,Michelle Guirado,,F,2001,,,Raw,Juniors,56.9,57,145,152.5,-160,152.5,,90,96,98,98,,167.5,180,192.5,192.5,,443,SBD
-2,Cristy Sim,,F,2001,,,Raw,Juniors,56.7,57,142.5,151,-162,151,,70,75,77.5,77.5,,140,152.5,157.5,157.5,,386,SBD
+2,Cristina Simental,,F,2001,,,Raw,Juniors,56.7,57,142.5,151,-162,151,,70,75,77.5,77.5,,140,152.5,157.5,157.5,,386,SBD
 3,Victoria Elizabeth González Franco,,F,2004,,,Raw,Juniors,55.1,57,120,127.5,130,130,,62.5,67.5,70,70,,125,132.5,140,140,,340,SBD
 4,Priyanka Julia Rivera,,F,2005,,,Raw,Juniors,56.5,57,127.5,-137.5,-137.5,127.5,,60,65,-70,65,,132.5,142.5,-150,142.5,,335,SBD
 5,Aleidi Vargas,,F,2003,,,Raw,Juniors,56.3,57,110,120,-132.5,120,,65,-67.5,-67.5,65,,130,-140,-140,130,,315,SBD
@@ -312,7 +312,7 @@ DQ,Grecia Morales,,F,2001,,,Raw,Juniors,50.9,52,-115,-120,-120,,,50,-55,-55,50,,
 10,Vania Zuñiga,,F,2001,,,Raw,Juniors,51.7,52,,,,,,45,47.5,-50,47.5,,,,,,,47.5,B
 11,Aranxa Montserrat Rueda Figueroa,,F,2004,,,Raw,Juniors,51.9,52,,,,,,37.5,40,-42.5,40,,,,,,,40,B
 1,Michelle Guirado,,F,2001,,,Raw,Juniors,56.9,57,,,,,,90,96,98,98,,,,,,,98,B
-2,Cristy Sim,,F,2001,,,Raw,Juniors,56.7,57,,,,,,70,75,77.5,77.5,,,,,,,77.5,B
+2,Cristina Simental,,F,2001,,,Raw,Juniors,56.7,57,,,,,,70,75,77.5,77.5,,,,,,,77.5,B
 3,Victoria Elizabeth González Franco,,F,2004,,,Raw,Juniors,55.1,57,,,,,,62.5,67.5,70,70,,,,,,,70,B
 4,Aleidi Vargas,,F,2003,,,Raw,Juniors,56.3,57,,,,,,65,-67.5,-67.5,65,,,,,,,65,B
 5,Priyanka Julia Rivera,,F,2005,,,Raw,Juniors,56.5,57,,,,,,60,65,-70,65,,,,,,,65,B
@@ -337,7 +337,7 @@ DQ,Grecia Morales,,F,2001,,,Raw,Juniors,50.9,52,-115,-120,-120,,,50,-55,-55,50,,
 10,Aranxa Montserrat Rueda Figueroa,,F,2004,,,Raw,Juniors,51.9,52,,,,,,,,,,,107.5,115,125,125,,125,D
 11,Vania Zuñiga,,F,2001,,,Raw,Juniors,51.7,52,,,,,,,,,,,100,110,-117.5,110,,110,D
 1,Michelle Guirado,,F,2001,,,Raw,Juniors,56.9,57,,,,,,,,,,,167.5,180,192.5,192.5,,192.5,D
-2,Cristy Sim,,F,2001,,,Raw,Juniors,56.7,57,,,,,,,,,,,140,152.5,157.5,157.5,,157.5,D
+2,Cristina Simental,,F,2001,,,Raw,Juniors,56.7,57,,,,,,,,,,,140,152.5,157.5,157.5,,157.5,D
 3,Priyanka Julia Rivera,,F,2005,,,Raw,Juniors,56.5,57,,,,,,,,,,,132.5,142.5,-150,142.5,,142.5,D
 4,Victoria Elizabeth González Franco,,F,2004,,,Raw,Juniors,55.1,57,,,,,,,,,,,125,132.5,140,140,,140,D
 5,Aleidi Vargas,,F,2003,,,Raw,Juniors,56.3,57,,,,,,,,,,,130,-140,-140,130,,130,D
@@ -361,7 +361,7 @@ DQ,Grecia Morales,,F,2001,,,Raw,Juniors,50.9,52,-115,-120,-120,,,50,-55,-55,50,,
 10,Vania Zuñiga,,F,2001,,,Raw,Juniors,51.7,52,-80,80,-87.5,80,,,,,,,,,,,,80,S
 DQ,Grecia Morales,,F,2001,,,Raw,Juniors,50.9,52,-115,-120,-120,,,,,,,,,,,,,,S
 1,Michelle Guirado,,F,2001,,,Raw,Juniors,56.9,57,145,152.5,-160,152.5,,,,,,,,,,,,152.5,S
-2,Cristy Sim,,F,2001,,,Raw,Juniors,56.7,57,142.5,151,-162,151,,,,,,,,,,,,151,S
+2,Cristina Simental,,F,2001,,,Raw,Juniors,56.7,57,142.5,151,-162,151,,,,,,,,,,,,151,S
 3,Victoria Elizabeth González Franco,,F,2004,,,Raw,Juniors,55.1,57,120,127.5,130,130,,,,,,,,,,,,130,S
 4,Priyanka Julia Rivera,,F,2005,,,Raw,Juniors,56.5,57,127.5,-137.5,-137.5,127.5,,,,,,,,,,,,127.5,S
 5,Abigail Catalina Sánchez Calderón,,F,2004,,,Raw,Juniors,57,57,112.5,120,125,125,,,,,,,,,,,,125,S

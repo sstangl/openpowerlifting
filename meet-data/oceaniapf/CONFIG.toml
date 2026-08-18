@@ -1,4 +1,5 @@
 [options]
+    valid_federations = ["OceaniaPF"]
     require_manual_disambiguation = true
 
 [divisions]

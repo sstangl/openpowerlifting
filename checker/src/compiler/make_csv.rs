@@ -2,9 +2,9 @@
 
 use coefficients::{dots, glossbrenner, goodlift, mcculloch, wilks, wilks2020};
 use csv::{QuoteStyle, Terminator, WriterBuilder};
-use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::states::*;
 use opltypes::*;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 
 use std::path::Path;
 
@@ -311,7 +311,7 @@ pub fn make_csv(
         .from_path(buildpath.join("meets.csv"))?;
 
     // For remembering consistent lifter information across multiple Entries.
-    let mut lifter_hash = EntryLifterDataMap::with_hasher(FxBuildHasher::default());
+    let mut lifter_hash = EntryLifterDataMap::with_hasher(FxBuildHasher);
     lifter_hash.insert("seanstangl", EntryLifterData::seanstangl());
 
     // Data structures for assigning globally-unique IDs.

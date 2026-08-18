@@ -1,0 +1,21 @@
+[package]
+name = "disambig"
+version = "0.1.0"
+authors = ["Sean Stangl <sean.stangl@gmail.com>"]
+description = "Automatic disambiguation for a set of entries."
+license = "AGPL-3.0-or-later"
+edition = "2024"
+
+[dependencies]
+opltypes = { path = "../opltypes/" }
+rustc-hash = { workspace = true }
+
+[dev-dependencies]
+csv = { workspace = true }
+datatest-stable = "0.3"
+serde = { workspace = true }
+serde_derive = { workspace = true }
+
+[[test]]
+name = "csvtests"
+harness = false

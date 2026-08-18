@@ -16,10 +16,10 @@ pub fn check_sex_one(
 
     // Allow manually excluding lifters through `lifter-data/sex-exemptions.csv`.
     let username = &meetdata.entry(indices[0]).username;
-    if let Some(data) = lifterdata.get(username) {
-        if data.exempt_sex {
-            return ConsistencyResult::Skipped;
-        }
+    if let Some(data) = lifterdata.get(username)
+        && data.exempt_sex
+    {
+        return ConsistencyResult::Skipped;
     }
 
     // Check that all the Sex values are identical.

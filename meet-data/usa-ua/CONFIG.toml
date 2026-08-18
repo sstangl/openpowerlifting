@@ -17,3 +17,4 @@
 
 [exemptions]
     1902 = ["ExemptWeightClassConsistency"] # Uses very weird weightclasses.
+    2603 = ["ExemptWeightClassConsistency"] # no weight classes given

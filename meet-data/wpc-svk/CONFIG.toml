@@ -1,6 +1,7 @@
 # Configuration for the WPC-Slovakia.
 
 [options]
+    valid_federations = ["WPC-SVK"]
     require_manual_disambiguation = true
 
 # APF specifies equipment in the division.
@@ -47,6 +48,7 @@
 
 [exemptions]
    1601 = ["ExemptWeightClassConsistency"] #Fewer weightclasses
+   1701 = ["ExemptWeightClassConsistency"] #Reduced weightclasses
    2202 = ["ExemptWeightClassConsistency", "ExemptDivision"]
    2203 = ["ExemptWeightClassConsistency", "ExemptDivision"]
    2301 = ["ExemptWeightClassConsistency", "ExemptDivision"]

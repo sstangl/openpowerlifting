@@ -22,6 +22,7 @@
     mybk   = {name ="MY-BK",min=0,max=12,sex="M",equipment="Bare"}
     fybk   = {name ="FY-BK",min=0,max=12,sex="F",equipment="Bare"}
     mm1bk   = {name ="MM1-BK",min=40,max=44,sex="M",equipment="Bare"}
+    mm3bk   = {name ="MM3-BK",min=50,max=54,sex="M",equipment="Bare"}
     fm3bk   = {name ="FM3-BK",min=50,max=54,sex="F",equipment="Bare"}
     fm6bk   = {name ="FM6-BK",min=65,max=69,sex="F",equipment="Bare"}
     ft1bk   = {name ="FT1-BK",min=13,max=15,sex="F",equipment="Bare"}
@@ -32,6 +33,7 @@
     fm2bk   = {name ="FM2-BK",min=45,max=49,sex="F",equipment="Bare"}
     mm2bk   = {name ="MM2-BK",min=45,max=49,sex="M",equipment="Bare"}
     mm4bk   = {name ="MM4-BK",min=55,max=59,sex="M",equipment="Bare"}
+    mm8bk   = {name ="MM8-BK",min=75,max=79,sex="M",equipment="Bare"}
 
     mor    = {name ="MO-R",min=0,max=999,sex="M", equipment="Raw"}
     morp   = {name ="MO-RP",min=0,max=999,sex="M", equipment=["Raw","Wraps"]}
@@ -167,9 +169,12 @@
     msmul = {name="MSM-UL", min=33, max=39, sex="M", equipment="Unlimited", event="B"}
     # these all inclusive masters divisions sometimes include submasters
     mmul = {name="MM-UL", min=33, max=999, sex="M", equipment="Unlimited", event="B"}
+    mm1ul = {name="MM1-UL", min=40, max=44, sex="M", equipment="Unlimited", event="B"}
     mm3ul = {name="MM3-UL", min=50, max=54, sex="M", equipment="Unlimited", event="B"}
+    mm4ul = {name="MM4-UL", min=55, max=59, sex="M", equipment="Unlimited", event="B"}
     mm5ul = {name="MM5-UL", min=60, max=64, sex="M", equipment="Unlimited", event="B"}
     foul = {name="FO-UL", min=0, max=999, sex="F", equipment="Unlimited", event="B"}
+    fmul = {name="FM-UL", min=33, max=999, sex="F", equipment="Unlimited", event="B"}
     fm2ul = {name="FM2-UL", min=45, max=49, sex="F", equipment="Unlimited", event="B"}
     fm3ul = {name="FM3-UL", min=50, max=54, sex="F", equipment="Unlimited", event="B"}
 

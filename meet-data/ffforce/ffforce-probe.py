@@ -17,7 +17,7 @@ except ImportError:
 
 RESULTS_URL = ("https://www.ffforce.fr/fr/force-athletique-ffforce/"
                "regional-force-athletique/competitions-force-athletique/"
-               "saison-2025-regional.html")
+               "force-athletique-regional-saison-2026.html")
 BASEURL = "https://www.ffforce.fr"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 

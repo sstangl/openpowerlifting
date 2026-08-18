@@ -1,6 +1,6 @@
 Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Sex,Division,Tested
 1,Johanne Gibbs,LA,82.5,80.6,,23,120,130,-135,130,72.5,80,-85,80,147.5,157.5,160,160,370,SBD,Raw,F,Juniors 20-23,Yes
-1,Angel Snyder,TX,60,59.8,,38,130,-140,-140.5,130,-70,70,-75,70,-140,150,162.5,162.5,362.5,SBD,Raw,F,Open,Yes
+1,Angel Carlson,TX,60,59.8,,38,130,-140,-140.5,130,-70,70,-75,70,-140,150,162.5,162.5,362.5,SBD,Raw,F,Open,Yes
 1,Emily Garza #1,TX,67.5,65.9,,34,-115,117.5,120,120,60,-62.5,-62.5,60,145,150,155,155,335,SBD,Raw,F,Open,Yes
 2,Nyla Delapaz,TX,67.5,64.5,,25,-100,115,-122.5,115,40,45,47.5,47.5,125,-142.5,-142.5,125,287.5,SBD,Raw,F,Open,Yes
 1,Megan Kenrick,TX,75,69.2,,30,110,117.5,125,125,62.5,-70,-70,62.5,145,160,170,170,357.5,SBD,Raw,F,Open,Yes
@@ -9,7 +9,7 @@ Place,Name,State,WeightClassKg,BodyweightKg,BirthDate,Age,Squat1Kg,Squat2Kg,Squa
 1,Johanne Gibbs,LA,82.5,80.6,,23,120,130,-135,130,72.5,80,-85,80,147.5,157.5,160,160,370,SBD,Raw,F,Open,Yes
 1,Jessica Mendoza,TX,90,84.1,,40,112.5,117.5,-125,117.5,55,-60,62.5,62.5,117.5,127.5,137.5,137.5,317.5,SBD,Raw,F,Open,Yes
 1,Hilary Chambers,TX,52,51.8,,38,-90,90,-97.5,90,55,57.5,60,60,127.5,132.5,137.5,137.5,287.5,SBD,Raw,F,Submasters 35-39,Yes
-1,Angel Snyder,TX,60,59.8,,38,130,-140,-140.5,130,-70,70,-75,70,-140,150,162.5,162.5,362.5,SBD,Raw,F,Submasters 35-39,Yes
+1,Angel Carlson,TX,60,59.8,,38,130,-140,-140.5,130,-70,70,-75,70,-140,150,162.5,162.5,362.5,SBD,Raw,F,Submasters 35-39,Yes
 1,Octavia Robinson,TX,110+,142.6,,36,125,137.5,145,145,90,-97.5,102.5,102.5,135,145,152.5,152.5,400,SBD,Raw,F,Submasters 35-39,Yes
 1,Nadia Lobato,TX,75,72.4,,45,95,-105,105,105,50,55,-62.5,55,112.5,130,-142.5,130,290,SBD,Raw,F,Masters 45-49,Yes
 1,Jessica Mendoza,TX,90,84.1,,40,112.5,117.5,-125,117.5,55,-60,62.5,62.5,117.5,127.5,137.5,137.5,317.5,SBD,Raw,F,Masters 40-44,Yes
@@ -37,13 +37,13 @@ DQ,Cody Cofer,TX,100,97.8,,42,-170,-177.5,-177.5,,,,,,,,,,,SBD,Raw,M,Masters 40-
 DQ,Erika Peralta,TX,67.5,64.4,,23,-120,-125,-130,,60,-65,65,65,135,142.5,152.5,152.5,,SBD,Wraps,F,Juniors 20-23,Yes
 1,Matt Huey,TX,100,99.3,,42,175,-182.5,182.5,182.5,140,-145,-145,140,200,205,207.5,207.5,530,SBD,Wraps,M,Open,Yes
 1,Matt Huey,TX,100,99.3,,42,175,-182.5,182.5,182.5,140,-145,-145,140,200,205,207.5,207.5,530,SBD,Wraps,M,Masters 40-44,Yes
-1,Angel Snyder,TX,60,59.8,,38,,,,,-70,70,-75,70,,,,,70,B,Raw,F,Open,Yes
-1,Angel Snyder,TX,60,59.8,,38,,,,,-70,70,-75,70,,,,,70,B,Raw,F,Submasters 35-39,Yes
+1,Angel Carlson,TX,60,59.8,,38,,,,,-70,70,-75,70,,,,,70,B,Raw,F,Open,Yes
+1,Angel Carlson,TX,60,59.8,,38,,,,,-70,70,-75,70,,,,,70,B,Raw,F,Submasters 35-39,Yes
 1,Garrett Carlson,TX,67.5,66.6,,38,,,,,112.5,-115.5,-115.5,112.5,,,,,112.5,B,Raw,M,Open,Yes
 1,Garrett Carlson,TX,67.5,66.6,,38,,,,,112.5,-115.5,-115.5,112.5,,,,,112.5,B,Raw,M,Submasters 35-39,Yes
 1,Robert Lindsey,TX,125,116.8,,36,,,,,172.5,182.5,-185,182.5,,,,,182.5,B,Raw,M,Submasters 35-39,Yes
-1,Angel Snyder,TX,60,59.8,,38,,,,,,,,,-140,150,162.5,162.5,162.5,D,Raw,F,Open,Yes
-1,Angel Snyder,TX,60,59.8,,38,,,,,,,,,-140,150,162.5,162.5,162.5,D,Raw,F,Submasters 35-39,Yes
+1,Angel Carlson,TX,60,59.8,,38,,,,,,,,,-140,150,162.5,162.5,162.5,D,Raw,F,Open,Yes
+1,Angel Carlson,TX,60,59.8,,38,,,,,,,,,-140,150,162.5,162.5,162.5,D,Raw,F,Submasters 35-39,Yes
 1,Rylan Brenish,TX,90,84.8,,19,,,,,,,,,275,290,297.5,297.5,297.5,D,Raw,M,Juniors 18-19,Yes
 1,Garrett Carlson,TX,67.5,66.6,,38,,,,,,,,,190,197.5,,197.5,197.5,D,Raw,M,Open,Yes
 1,Rylan Brenish,TX,90,84.8,,19,,,,,,,,,275,290,297.5,297.5,297.5,D,Raw,M,Open,Yes

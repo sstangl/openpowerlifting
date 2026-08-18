@@ -3,7 +3,7 @@
 //! This happens for "/u/johndoe", when there exist "/u/johndoe1" and
 //! "/u/johndoe2".
 
-use langpack::{localized_name, Language, Locale};
+use langpack::{Language, Locale, localized_name};
 use opltypes::*;
 
 use crate::pages::lifter::MeetResultsRow;

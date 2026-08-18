@@ -12,7 +12,8 @@
     masters2 = {name = "Masters 2",min=49.5,max=59.5}
     masters3 = {name = "Masters 3",min=59.5,max=69.5}
     masters4 = {name = "Masters 4",min=69.5,max=999}
-
+    powerkids = {name ="PowerKids",min=0,max=999}
+    powerstars = {name ="PowerStars",min=0,max=999}
     special_olympics = {name ="Special Olympics",min=0,max=999}
     wheelchair = {name ="Wheelchair",min=0,max=999}
     guest = {name ="Guest",min=0,max=999}
@@ -67,3 +68,4 @@
     1101 = ["ExemptWeightClassConsistency"] # Special Olympics athletes in 53kg class
     1201 = ["ExemptWeightClassConsistency"] # Under 53kg Junior in 59kg class
     2501 = ["ExemptWeightClassConsistency"] # guests without classes
+    2601 = ["ExemptWeightClassConsistency"] # some divisions don't have weight classes

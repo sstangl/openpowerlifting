@@ -3,7 +3,7 @@
 
 use opltypes::Date;
 
-use crate::checklib::consistency::{self, date, ConsistencyResult};
+use crate::checklib::consistency::{self, ConsistencyResult, date};
 use crate::{AllMeetData, Entry, EntryIndex, LifterDataMap, LifterMap, Report};
 
 /// Get the average change in bodyweight from `a` to `b` as a percentage per
@@ -43,10 +43,10 @@ pub fn check_bodyweight_one(
 
     // Allow manually excluding lifters through `lifter-data/bw-exemptions.csv`.
     let username = &meetdata.entry(indices[0]).username;
-    if let Some(data) = lifterdata.get(username) {
-        if data.exempt_bodyweight {
-            return ConsistencyResult::Skipped;
-        }
+    if let Some(data) = lifterdata.get(username)
+        && data.exempt_bodyweight
+    {
+        return ConsistencyResult::Skipped;
     }
 
     // Entries in the LifterMap are already sorted by date.

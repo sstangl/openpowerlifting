@@ -6,7 +6,7 @@ use serde::ser::Serialize;
 
 use std::fmt;
 
-use crate::writing_system::{infer_writing_system, WritingSystem};
+use crate::writing_system::{WritingSystem, infer_writing_system};
 
 /// A lifter's username.
 ///
@@ -97,14 +97,13 @@ impl Username {
     }
 
     /// Interprets a [&str] as a [Username]. Used in deserialization.
-    pub(crate) fn from_str(s: &str) -> Result<Self, ascii::FromAsciiError<&str>> {
+    ///
+    /// This constructor does not perform any validation that the username is well-formed.
+    pub fn from_trusted_str(s: &str) -> Result<Self, ascii::FromAsciiError<&str>> {
         Ok(Username(s.into_ascii_string()?))
     }
 
     /// Returns the base name and variant of a [Username], if applicable.
-    ///
-    /// Since variant numbers begin at 1, zero is used to indicate the
-    /// absence of variant information.
     ///
     /// # Examples
     ///
@@ -113,21 +112,21 @@ impl Username {
     /// let u = Username::from_name("John Doe").unwrap();
     /// let (base, variant) = u.to_parts();
     /// assert_eq!(base.as_str(), "johndoe");
-    /// assert_eq!(variant, 0);
+    /// assert_eq!(variant, None);
     ///
     /// let u = Username::from_name("John Doe #1").unwrap();
     /// let (base, variant) = u.to_parts();
     /// assert_eq!(base.as_str(), "johndoe");
-    /// assert_eq!(variant, 1);
+    /// assert_eq!(variant, Some(1));
     /// ```
-    pub fn to_parts(&self) -> (&AsciiStr, u32) {
+    pub fn to_parts(&self) -> (&AsciiStr, Option<u32>) {
         // Common case first: if no digit at end, it's not a variant.
         if let Some(ascii_char) = self.0.last() {
             if !ascii_char.is_ascii_digit() {
-                return (&self.0, 0);
+                return (&self.0, None);
             }
         } else {
-            return (&self.0, 0); // Username was the empty string.
+            return (&self.0, None); // Username was the empty string.
         }
 
         // Slow case: the username ends with a digit.
@@ -135,7 +134,7 @@ impl Username {
         // If the username begins with "ea-", then it's an East Asian name
         // that is numerically encoded and cannot be disambiguated.
         if self.0.as_str().starts_with("ea-") {
-            return (&self.0, 0);
+            return (&self.0, None);
         }
 
         // Definitely a variant.
@@ -152,7 +151,27 @@ impl Username {
         }
 
         let variant = self.0.as_str()[start..].parse::<u32>().unwrap_or(0);
-        (&self.0[0..start], variant)
+        (&self.0[0..start], Some(variant))
+    }
+
+    /// Returns whether the username has a disambiguation variant.
+    pub fn has_variant(&self) -> bool {
+        let (_base, maybe_variant) = self.to_parts();
+        maybe_variant.is_some()
+    }
+
+    /// Returns the username without the disambiguation variant, if present.
+    ///
+    /// For example, `lifter2` becomes `lifter`.
+    pub fn without_variant(&self) -> Username {
+        let (base, _maybe_variant) = self.to_parts();
+        Username(base.to_ascii_string())
+    }
+
+    /// Returns the username with the specified disambiguation variant.
+    pub fn with_variant(&self, variant: u32) -> Username {
+        let (base, _maybe_old_variant) = self.to_parts();
+        Username::from_trusted_str(&format!("{base}{variant}")).unwrap()
     }
 }
 
@@ -171,7 +190,7 @@ impl Visitor<'_> for UsernameVisitor {
     }
 
     fn visit_str<E: de::Error>(self, value: &str) -> Result<Username, E> {
-        Username::from_str(value).map_err(E::custom)
+        Username::from_trusted_str(value).map_err(E::custom)
     }
 }
 
@@ -193,11 +212,11 @@ fn convert_greek_to_ascii(greek_name: &str) -> Result<Username, String> {
         }
 
         // Push ASCII characters. This accounts for disambiguation numbers.
-        if let Ok(ascii) = letter.to_ascii_char() {
-            if ascii.is_alphanumeric() {
-                ascii_name.push(ascii);
-                continue;
-            }
+        if let Ok(ascii) = letter.to_ascii_char()
+            && ascii.is_alphanumeric()
+        {
+            ascii_name.push(ascii);
+            continue;
         }
 
         let s: &str = match letter {
@@ -252,11 +271,11 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
         }
 
         // Push ASCII characters. This accounts for disambiguation numbers.
-        if let Ok(ascii) = letter.to_ascii_char() {
-            if ascii.is_alphanumeric() {
-                ascii_name.push(ascii);
-                continue;
-            }
+        if let Ok(ascii) = letter.to_ascii_char()
+            && ascii.is_alphanumeric()
+        {
+            ascii_name.push(ascii);
+            continue;
         }
 
         // A single UTF-8 char can expand to multiple ASCII chars.
@@ -454,5 +473,35 @@ mod tests {
             let kata_scalar = scalar + (KATAKANA_START - HIRAGANA_START);
             assert!(std::char::from_u32(kata_scalar).is_some());
         }
+    }
+
+    /// Basic test for variant detection.
+    #[test]
+    fn has_variant() {
+        let johnsmith = Username::from_name("John Smith").unwrap();
+        let johnsmith2 = Username::from_name("John Smith #2").unwrap();
+
+        assert!(!johnsmith.has_variant());
+        assert!(johnsmith2.has_variant());
+    }
+
+    /// Tests that the `without_variant` function successfully removes variant info.
+    #[test]
+    fn without_variant() {
+        let johnsmith = Username::from_name("John Smith").unwrap();
+        let johnsmith2 = Username::from_name("John Smith #2").unwrap();
+
+        assert_eq!(johnsmith.without_variant().as_str(), "johnsmith");
+        assert_eq!(johnsmith2.without_variant().as_str(), "johnsmith");
+    }
+
+    /// Tests that the `with_variant` function successfully adds variant info.
+    #[test]
+    fn with_variant() {
+        let johnsmith = Username::from_name("John Smith").unwrap();
+        let johnsmith2 = Username::from_name("John Smith #2").unwrap();
+
+        assert_eq!(johnsmith.with_variant(3).as_str(), "johnsmith3");
+        assert_eq!(johnsmith2.with_variant(3).as_str(), "johnsmith3");
     }
 }

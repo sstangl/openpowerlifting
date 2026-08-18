@@ -1,7 +1,7 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
-use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::Username;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 use serde_derive::Deserialize;
 use toml::de;
 
@@ -110,7 +110,7 @@ fn check_donator_colors(
             report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
         if has_whitespace_errors(&row.color) {
-            report.error_on(line, format!("Whitespace error in '{}'", &row.color));
+            report.error_on(line, format!("Whitespace error in '{}'", row.color));
         }
 
         map.entry(username).or_default().color = Some(row.color);
@@ -327,7 +327,7 @@ fn check_name_disambiguation(
         if entry.disambiguation_count > 0 {
             let msg = format!(
                 "Lifter '{}' appears multiple times in name-disambiguation.csv",
-                &row.name
+                row.name
             );
             report.error_on(line, msg);
         }
@@ -339,7 +339,7 @@ fn check_name_disambiguation(
 
 pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> LifterDataCheckResult {
     let mut reports: Vec<Report> = vec![];
-    let mut map = LifterDataMap::with_hasher(FxBuildHasher::default());
+    let mut map = LifterDataMap::with_hasher(FxBuildHasher);
 
     // Check donator-colors.csv.
     // Always create the report in order to catch internal errors.

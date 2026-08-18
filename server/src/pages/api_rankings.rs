@@ -3,7 +3,7 @@
 
 use langpack::Locale;
 use opldb::query::direct::RankingsQuery;
-use opldb::{algorithms, OplDb};
+use opldb::{OplDb, algorithms};
 use opltypes::PointsSystem;
 
 use crate::pages::jsdata::JsEntryRow;

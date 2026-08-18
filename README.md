@@ -54,7 +54,7 @@ the changes back so the entire powerlifting community may benefit.
 Install dependencies:
 
 ```bash
-sudo dnf install cargo rust make npm python3-beautifulsoup4 python3-flake8 ansible parallel uglify-js jemalloc
+sudo dnf install cargo rust make npm python3-beautifulsoup4 python3-ansible parallel uglify-js jemalloc ruff
 ```
 
 Build the project and run the server:
@@ -70,7 +70,7 @@ cargo run --release --bin server
 Follow the instructions for Fedora, but use this alternate command for installing dependencies:
 
 ```bash
-sudo apt-get install cargo rust curl make npm python3-bs4 flake8 ansible parallel uglifyjs jemalloc
+sudo apt-get install cargo rust curl make npm python3-bs4 ansible parallel uglifyjs jemalloc
 ```
 
 ### Arch Linux
@@ -78,7 +78,39 @@ sudo apt-get install cargo rust curl make npm python3-bs4 flake8 ansible paralle
 Follow the instructions for Fedora, but use this alternate command for installing dependencies:
 
 ```bash
-sudo pacman -S cargo rust curl make npm python-beautifulsoup4 flake8 ansible parallel uglify-js jemalloc
+sudo pacman -S cargo rust curl make npm python-beautifulsoup4 ansible parallel uglify-js jemalloc
+```
+
+### MacOS
+
+Follow the instructions for Fedora, but first these steps for installing dependencies:
+
+1. Install the XCode development suite:
+
+```bash
+xcode-select --install
+```
+
+Click "Accept" in the pop-up to allow installation to proceed.
+
+2. Install the Homebrew package manager:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+3. Install project dependencies from Homebrew:
+
+```bash
+brew install git rust make npm python ansible parallel jemalloc awk
+echo 'PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+5. Install project dependencies from npm
+
+```bash
+npm install uglify-js -g
 ```
 
 ### Windows 10 (Native)

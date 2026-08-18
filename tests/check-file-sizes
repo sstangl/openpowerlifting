@@ -1,0 +1,56 @@
+#!/bin/sh
+#
+# Checks that no file in the repository exceeds the maximum permitted size.
+#
+# Large files (e.g. core dumps, binary blobs) should not be committed to
+# the repository, however .gitignore does not remove files that were previously 
+# committed to history, nor does it remove files once tracked.
+#
+# This check is most useful in CI to catch large files from old commits.
+#
+# Files and directories which do not constitute a failed script run:
+# - Compilation targets, project dependencies, etc. which should be excluded 
+#   from tracking by .gitignore (and therefore not present in a clean checkout)
+# - Contributor docs, large competition CSVs, etc. which are known and 
+#   explicitly allowed to exceed the size limit
+
+# NB: The maximum permitted size uses bytes to avoid deviation from expected 
+# behaviour for units (or blocksizes).
+
+FOUND_ERROR=0
+LIMIT=1048576
+LIMIT_MB=$(( LIMIT / 1024 / 1024 ))
+
+ROOT="$(dirname "$(cd "$(dirname "$0")" && pwd)")"
+
+IGNORE_LIST="
+.git
+build
+target
+server/build
+server/client
+server/target
+"
+
+ALLOW_LIST="
+docs/Adding_a_meet_to_OpenPowerlfting.pdf
+docs/Simple-changes-easy-method.pdf
+docs/WebIDE-upload-instructions.pdf
+"
+
+EXCLUDES=""
+for path in $IGNORE_LIST $ALLOW_LIST; do
+    EXCLUDES="${EXCLUDES} -path ${ROOT}/${path} -prune -o"
+done
+
+MATCHES=$(find ${ROOT} $EXCLUDES -size +${LIMIT}c -print)
+
+for file in $MATCHES; do
+    FOUND_ERROR=1
+    echo "Error: ${file} exceeds ${LIMIT_MB} MB"
+done
+
+if [ "${FOUND_ERROR}" -eq 1 ]; then
+    echo "Error: Some files exceed the ${LIMIT_MB} MB size limit!"
+    exit 1
+fi

@@ -1,4 +1,4 @@
-﻿Place,Name,Event,Sex,State,BirthDate,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment
+Place,Name,Event,Sex,State,BirthDate,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Equipment
 1,Nathalie Hasiuk,B,F,AB,,Masters 2,74.71,76,,,,,60,65,72.5,72.5,,,,,72.5,Single-ply
 1,Kendall Clyne,B,F,AB,,Juniors,67.82,69,,,,,90,95,97.5,97.5,,,,,97.5,Raw
 2,Reagan Bandola,B,F,AB,,Juniors,65.53,69,,,,,70,75,-80,75,,,,,75,Raw
@@ -24,10 +24,10 @@ DQ,Vince Barcelos,B,M,AB,,Juniors,90.38,93,,,,,-195,-197.5,-203,,,,,,,Single-ply
 1,Lars Veldhuis,B,M,AB,,Juniors,80.83,83,,,,,140,142.5,-145,142.5,,,,,142.5,Raw
 1,Caiden Thompson,B,M,AB,,Juniors,92.29,93,,,,,175,185,-193.5,185,,,,,185,Raw
 2,Myers Thio,B,M,AB,,Juniors,83.93,93,,,,,117.5,-125,-125,117.5,,,,,117.5,Raw
-1,Connor Webb,B,M,AB,,Juniors,99.14,105,,,,,152.5,160,-162.5,160,,,,,160,Raw
+1,Connor Webb #1,B,M,AB,,Juniors,99.14,105,,,,,152.5,160,-162.5,160,,,,,160,Raw
 1,Barry Wade,B,M,AB,,Masters 2,79.11,83,,,,,-122.5,122.5,-127.5,122.5,,,,,122.5,Raw
 1,Michael Wade,B,M,AB,,Masters 2,103.43,105,,,,,145,150,155,155,,,,,155,Raw
-2,Leroy Scott,B,M,AB,,Masters 2,97.65,105,,,,,125,130,135,135,,,,,135,Raw
+2,Leroy Scott #2,B,M,AB,,Masters 2,97.65,105,,,,,125,130,135,135,,,,,135,Raw
 1,Adam Price,B,M,AB,,Masters 2,121.71,120+,,,,,207.5,217.5,220,220,,,,,220,Raw
 1,Jake Chandler Jalea,B,M,AB,,Open,79.57,83,,,,,125,130,-132.5,130,,,,,130,Raw
 1,Amirhossein Mohammadi,B,M,AB,,Open,92.43,93,,,,,150,155,-160,155,,,,,155,Raw
@@ -74,12 +74,12 @@ DQ,Emeren Conde,SBD,F,AB,,Juniors,86.07,84+,185,192.5,-200,192.5,-90,-90,-97.5,,
 2,Adrian Solano,SBD,M,AB,,Masters 1,91.4,93,145,155,162.5,162.5,95,102.5,-107.5,102.5,195,210,-220,210,475,Raw
 1,Jeffrey Lastuka,SBD,M,AB,,Masters 1,102.05,105,265,277.5,285.5,285.5,157.5,162.5,165,165,270,290,294,294,744.5,Raw
 2,Ryan Thomsen,SBD,M,AB,,Masters 1,103.29,105,185,200,207.5,207.5,-115,115,120,120,275,290,302.5,302.5,630,Raw
-3,Matthew French,SBD,M,AB,,Masters 1,100.04,105,190,202.5,212.5,212.5,137.5,145,152.5,152.5,222.5,237.5,250,250,615,Raw
+3,Matthew Neil French,SBD,M,AB,,Masters 1,100.04,105,190,202.5,212.5,212.5,137.5,145,152.5,152.5,222.5,237.5,250,250,615,Raw
 1,Matthew Fotty,SBD,M,AB,,Masters 1,118.71,120,175,185,192.5,192.5,165,-172.5,-180,165,225,-240,-250,225,582.5,Raw
 1,Travis Wylie,SBD,M,AB,,Masters 1,133.62,120+,200,210,220,220,165,175,180,180,227.5,242.5,255,255,655,Raw
 1,Alex Sagatov,SBD,M,AB,,Masters 2,81.7,83,170,177.5,185,185,90,97.5,100,100,180,190,200,200,485,Raw
 1,Liam Cusack,SBD,M,AB,,Masters 2,103.34,105,-185,195,-200,195,112.5,117.5,-120,117.5,207.5,220,230,230,542.5,Raw
-2,Leroy Scott,SBD,M,AB,,Masters 2,97.39,105,160,165,-175,165,125,130,-137.5,130,170,177.5,182.5,182.5,477.5,Raw
+2,Leroy Scott #2,SBD,M,AB,,Masters 2,97.39,105,160,165,-175,165,125,130,-137.5,130,170,177.5,182.5,182.5,477.5,Raw
 1,Darcy Morin,SBD,M,AB,,Masters 2,118.82,120,250,-262.5,262.5,262.5,170,-177.5,-177.5,170,210,227.5,240,240,672.5,Raw
 2,Jim Derksen,SBD,M,AB,,Masters 2,118.52,120,190,205,212.5,212.5,115,127.5,132.5,132.5,230,250,-272.5,250,595,Raw
 3,Brian Matchett,SBD,M,AB,,Masters 2,110.78,120,195,200,-205,200,107.5,-112.5,-112.5,107.5,217.5,222.5,230,230,537.5,Raw
@@ -114,7 +114,7 @@ DQ,Emeren Conde,SBD,F,AB,,Juniors,86.07,84+,185,192.5,-200,192.5,-90,-90,-97.5,,
 1,Nam Nguyen #1,SBD,M,AB,,Juniors,67.11,74,185,195,202.5,202.5,117.5,-125,125,125,215,-230,-230,215,542.5,Raw
 2,Carlos Dimapasoc,SBD,M,AB,,Juniors,68.89,74,150,-160,162.5,162.5,112.5,115,-117.5,115,170,182.5,-195,182.5,460,Raw
 DQ,Kobe Dapar,SBD,M,AB,,Juniors,73.23,74,200,-215,215,215,115,-122.5,122.5,122.5,-220,-235,,,,Raw
-1,Ethan Thomas,SBD,M,AB,,Juniors,78.25,83,215,-227.5,227.5,227.5,142.5,-145,147.5,147.5,260,272.5,-280,272.5,647.5,Raw
+1,Ethan Thomas #1,SBD,M,AB,,Juniors,78.25,83,215,-227.5,227.5,227.5,142.5,-145,147.5,147.5,260,272.5,-280,272.5,647.5,Raw
 2,Marcus Budden,SBD,M,AB,,Juniors,80.23,83,-225,235,240,240,145,150,-155,150,235,240,-250,240,630,Raw
 3,Isaac Terte,SBD,M,AB,,Juniors,81.05,83,212.5,220,-225,220,140,-145,-145,140,240,255,270,270,630,Raw
 4,Terrill Moyo IV,SBD,M,AB,,Juniors,80.51,83,220,-232.5,235,235,127.5,132.5,-137.5,132.5,230,247.5,260,260,627.5,Raw
@@ -192,7 +192,7 @@ DQ,Ahsan Elahi,SBD,M,AB,,Open,66.81,74,-140,140,150,150,-115,-115,115,115,-175,-
 8,Zach Morrow #1,SBD,M,AB,,Open,104.55,105,247.5,-265,-265,247.5,155,160,162.5,162.5,262.5,272.5,-277.5,272.5,682.5,Raw
 10,Andrew Crompton-Nicholas,SBD,M,AB,,Open,101.63,105,220,230,-240,230,120,125,-130,125,285,295,-305,295,650,Raw
 11,Thomas Phillips #1,SBD,M,AB,,Open,100,105,210,230,242.5,242.5,145,-155,-155,145,240,252.5,260,260,647.5,Raw
-12,Brett Peters,SBD,M,AB,,Open,104.76,105,240,252.5,260,260,135,142.5,-147.5,142.5,245,-262.5,-270,245,647.5,Raw
+12,Brett Peters #1,SBD,M,AB,,Open,104.76,105,240,252.5,260,260,135,142.5,-147.5,142.5,245,-262.5,-270,245,647.5,Raw
 13,Samuel Doty,SBD,M,AB,,Open,97.82,105,212.5,220,230,230,130,137.5,-142.5,137.5,230,242.5,250,250,617.5,Raw
 14,Jordan Samoil,SBD,M,AB,,Open,97.2,105,215,225,232.5,232.5,127.5,135,142.5,142.5,222.5,235,-250,235,610,Raw
 15,Ayden Valkenburg,SBD,M,AB,,Open,98.47,105,200,210,220,220,130,140,-150,140,220,240,250,250,610,Raw
@@ -209,13 +209,13 @@ DQ,Steven Bennett,SBD,M,AB,,Open,103.73,105,-207.5,,,,,,,,,,,,,Raw
 2,Alleana Dabilbil,SBD,F,AB,,Open,75.95,76,132.5,140,147.5,147.5,62.5,-67.5,67.5,67.5,135,145,152.5,152.5,367.5,Raw
 3,Erica Penner,SBD,F,AB,,Open,69.61,76,110,-120,125,125,60,65,-70,65,145,-160,162.5,162.5,352.5,Raw
 4,Patricia Mosca,SBD,F,AB,,Open,71.63,76,110,117.5,125,125,60,65,-70,65,145,155,-170,155,345,Raw
-1,Christine Chan,SBD,F,AB,,Open,82.84,84,-185,185,200.5,200.5,92.5,97.5,100,100,190,202.5,210.5,210.5,511,Raw
+1,Christine Castro Chan,SBD,F,AB,,Open,82.84,84,-185,185,200.5,200.5,92.5,97.5,100,100,190,202.5,210.5,210.5,511,Raw
 2,Kimberlee Vroom,SBD,F,AB,,Open,79.45,84,150,160,170,170,95,100,-105,100,172.5,187.5,195,195,465,Raw
 3,Janelle Martens,SBD,F,AB,,Open,76.51,84,160,170,-177.5,170,85,87.5,90,90,172.5,185,-195,185,445,Raw
 4,Emily Ford,SBD,F,AB,,Open,83.58,84,132.5,140,145,145,70,-75,-80,70,155,165,-175,165,380,Raw
 5,Madison Hartos,SBD,F,AB,,Open,83.08,84,127.5,132.5,137.5,137.5,77.5,80,-82.5,80,150,160,-165,160,377.5,Raw
 DQ,Mhairi Klingspohn,SBD,F,AB,,Open,82.53,84,135,145,147.5,147.5,-70,-70,-70,,150,162.5,170,170,,Raw
-1,Ashley Webber,SBD,F,AB,,Open,118.09,84+,170,-180,190,190,70,80,85,85,170,180,195,195,470,Raw
+1,Ashley Webber #1,SBD,F,AB,,Open,118.09,84+,170,-180,190,190,70,80,85,85,170,180,195,195,470,Raw
 2,Johanna York,SBD,F,AB,,Open,138.17,84+,145,152.5,162.5,162.5,85,95,97.5,97.5,145,160,170,170,430,Raw
 3,Zrinna Mallock,SBD,F,AB,,Open,115.01,84+,150,162.5,172.5,172.5,70,75,-80,75,157.5,170,177.5,177.5,425,Raw
 4,Kaitlyn Fercho,SBD,F,AB,,Open,89.79,84+,160,170,-175,170,60,65,-67.5,65,175,182.5,-187.5,182.5,417.5,Raw

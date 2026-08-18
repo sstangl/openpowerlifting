@@ -40,6 +40,7 @@ proptest-regressions/
 /package.json
 /package-lock.json
 install.Unix.sh
+core
 
 # Temporary files.
 /server/probebot/*.tmp
@@ -57,3 +58,13 @@ geckodriver.log
 *.exe
 *.stackdump
 .vscode/
+
+# LLM skills
+.claude/
+
+# autoenv
+.env
+.env.leave
+# Python virtual environments
+env/
+venv/

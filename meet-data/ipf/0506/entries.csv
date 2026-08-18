@@ -1,5 +1,5 @@
 Place,Division,Sex,Name,BirthYear,Country,WeightClassKg,BodyweightKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment
-1,Light,M,Ravil Kazakov,1982,Russia,67.5,61.2,295,305,312.5,312.5,200,210,215.5,215.5,225,230,,230,757.5,SBD,Single-ply
+1,Light,M,Ravil Kazakov,1982,Russia,67.5,61.2,295,305,312.5,312.5,200,210,215.5,215.5,225,230,,230,758,SBD,Single-ply
 2,Light,M,Tsung-Ting Hsieh,1982,Taiwan,67.5,59.75,240,252.5,-257.5,252.5,170,175,180,180,260,270,277.5,277.5,710,SBD,Single-ply
 3,Light,M,Dariusz Wszoła,1978,Poland,67.5,55.85,230,240,245,245,145,150,-155,150,190,200,205,205,600,SBD,Single-ply
 4,Light,M,Amit Selberg,1976,Sweden,67.5,67.25,265,272.5,-277.5,272.5,-187.5,187.5,-192.5,187.5,230,-240,-250,230,690,SBD,Single-ply
@@ -11,7 +11,7 @@ DQ,Light,M,Hiroyuki Isagawa,1953,Japan,67.5,59.6,215,222.5,227.5,227.5,-190,-190
 DQ,Light,M,Eric Oishi,1979,Brazil,67.5,66.15,230,245,-252.5,245,-155,-155,-155,,,,,,,SBD,Single-ply
 1,Middle,M,Andrey Tarasenko,1975,Russia,90,89.1,330,350,365,365,225,240,247.5,247.5,310,330,345,345,957.5,SBD,Single-ply
 2,Middle,M,Viktor Furazhkin,1969,Russia,90,74.9,-320,320,-330,320,210,217.5,-225,217.5,310,317.5,322.5,322.5,860,SBD,Single-ply
-3,Middle,M,Jan Wegiera,1965,Poland,90,84.75,320,330,340,340,245,255,263,263,280,295,300,300,902.5,SBD,Single-ply
+3,Middle,M,Jan Wegiera,1965,Poland,90,84.75,320,330,340,340,245,255,263,263,280,295,300,300,903,SBD,Single-ply
 4,Middle,M,Wade Hooper,1971,USA,90,74.8,320,335,-340,335,-222.5,222.5,232.5,232.5,-260,260,-272.5,260,827.5,SBD,Single-ply
 5,Middle,M,Michał Wilk,1981,Poland,90,89.8,340,355,-365,355,-230,230,-240,230,300,310,-320,310,895,SBD,Single-ply
 6,Middle,M,Davran Turakhanov,1974,Kazakhstan,90,76.55,290,302.5,310,310,170,180,185,185,292.5,305,312.5,312.5,807.5,SBD,Single-ply
@@ -57,7 +57,7 @@ DQ,Middle,F,Carly Nogle,1986,USA,67.5,65.3,-162.5,-162.5,-162.5,,,,,,,,,,,SBD,Si
 DQ,Middle,F,Antonietta Orsini,1964,Italy,67.5,66.4,200,210,-215,210,-135,-135,-135,,,,,,,SBD,Single-ply
 1,Heavy,F,Marina Kudinova,1977,Russia,67.5+,67.7,225,240,247.5,247.5,135,145,150,150,200,215,225,225,622.5,SBD,Single-ply
 2,Heavy,F,Galina Karpova,1968,Russia,67.5+,123.45,280,295,305,305,170,180,192.5,192.5,220,235,240,240,737.5,SBD,Single-ply
-3,Heavy,F,Iryna Yavorska,1981,Ukraine,67.5+,87.55,-250,250,262.5,262.5,-165,165,173,173,232.5,-250,-250,232.5,667.5,SBD,Single-ply
+3,Heavy,F,Iryna Yavorska,1981,Ukraine,67.5+,87.55,-250,250,262.5,262.5,-165,165,173,173,232.5,-250,-250,232.5,668,SBD,Single-ply
 4,Heavy,F,Inger Blikra,1961,Norway,67.5+,74.3,210,222.5,230,230,122.5,130,-135,130,210,220,-222.5,220,580,SBD,Single-ply
 5,Heavy,F,Tamara Bahriy,1970,Ukraine,67.5+,73.1,-200,200,-210,200,130,-137.5,137.5,137.5,220,232.5,-237.5,232.5,570,SBD,Single-ply
 6,Heavy,F,Ielja Strik,1973,Netherlands,67.5+,85.45,230,240,245,245,155,165,-170,165,200,212.5,-217.5,212.5,622.5,SBD,Single-ply

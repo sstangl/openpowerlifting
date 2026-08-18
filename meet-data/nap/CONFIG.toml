@@ -86,6 +86,7 @@
     elite_open = {name="Elite Open", min=0, max=999}
     elite_teen_16_17 = {name="Elite Teen 16-17", min=16, max=17}
     elite_juniors = {name="Elite Juniors 20-23", min=20, max=23}
+    elite_submasters = {name="Elite Submasters 33-39", min=33, max=39}
     elite_masters_40_44 = {name="Elite Masters 40-44", min=40, max=44}
     elite_masters_45_49 = {name="Elite Masters 45-49", min=45, max=49}
     elite_masters_50_54 = {name="Elite Masters 50-54", min=50, max=54}

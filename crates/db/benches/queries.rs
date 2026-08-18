@@ -1,6 +1,6 @@
 //! Benchmarks loading the database from data files.
 
-use criterion::{criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{Criterion, Throughput, criterion_group, criterion_main};
 use opldb::query::direct::*;
 use opldb::{MetaFederation, OplDb};
 
@@ -36,7 +36,8 @@ pub fn query_benchmarks(c: &mut Criterion) {
                 ageclass: AgeClassFilter::AllAges,
                 year: YearFilter::AllYears,
                 event: EventFilter::FullPower,
-                state: None,
+                home_country: None,
+                home_state: None,
             },
             order_by: OrderBy::Goodlift,
         };

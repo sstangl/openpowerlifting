@@ -1,8 +1,8 @@
 //! Defines MeetData, the owner of all meet-related data produced by the
 //! Checker.
 
-use fxhash::{FxBuildHasher, FxHashMap};
 use opltypes::Username;
+use rustc_hash::{FxBuildHasher, FxHashMap};
 
 use crate::checklib::{Entry, Meet};
 
@@ -26,7 +26,7 @@ pub struct AllMeetData {
 ///
 /// These indices are used to create the equivalent of a singly-linked list
 /// of `Entry` structs referring to the same lifter.
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Default)]
 pub struct EntryIndex {
     /// Index of the parent `SingleMeetData` within the `AllMeetData.meets`
     /// vector.
@@ -115,13 +115,13 @@ impl AllMeetData {
     /// so that the Entry can know its `SingleMeetData` context.
     pub fn create_liftermap(&mut self) -> LifterMap {
         // Initialize the LifterMap to be fairly large to avoid reallocation.
-        let mut map = LifterMap::with_capacity_and_hasher(1_000_000, FxBuildHasher::default());
+        let mut map = LifterMap::with_capacity_and_hasher(1_000_000, FxBuildHasher);
 
         for (meet_index, singlemeet) in self.meets.iter_mut().enumerate() {
             for (entry_index, entry) in singlemeet.entries.iter_mut().enumerate() {
                 // Tell each Entry its EntryIndex in the AllMeetData.
                 let index = EntryIndex::at(meet_index, entry_index);
-                entry.index = Some(index);
+                entry.index = index;
 
                 // Add the EntryIndex to the appropriate vector.
                 if let Some(vec) = map.get_mut(&entry.username) {
@@ -138,7 +138,7 @@ impl AllMeetData {
 
         // Sort EntryIndex vectors by EntryDate.
         // Consistency-enforcing code depends on this ordering.
-        for (_key, indices) in map.iter_mut() {
+        for indices in map.values_mut() {
             if indices.len() >= 2 {
                 indices.sort_unstable_by_key(|ei| self.entry(*ei).entrydate);
             }

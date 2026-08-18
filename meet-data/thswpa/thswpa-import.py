@@ -210,10 +210,12 @@ def enterdivision(csv, divurl):
         deadlift = strtokg(cells[8].text)
         total = strtokg(cells[9].text)
 
-        # The federation does not specify canvas-only equipment.
-        equipment = 'Unlimited'
+        # As of 2026, THSWPA recognise Raw and Unlimited.
         event = 'SBD'
-
+        equipment = (
+            'Unlimited' if not cells[10].text.strip()
+            else cells[10].text.strip().replace('Unequipped', 'Raw')
+        )
         csv.rows.append([division, weightclass, place, name, team,
                          bw, squat, bench, deadlift, total,
                          equipment, event, sex])
@@ -308,12 +310,12 @@ def makemeetcsv(soup):
     location = location.replace('High School', '').strip()
 
     meetname = meetname.replace('#', '')
-    meetname = meetname.replace('2019', '')
-    meetname = meetname.replace('2018', '')
-    meetname = meetname.replace('2017', '')
-    meetname = meetname.replace('2016', '')
-    meetname = meetname.replace('2015', '')
-    meetname = meetname.replace('2014', '').strip()
+    meetname = meetname.replace('2026', '')
+    meetname = meetname.replace('2025', '')
+    meetname = meetname.replace('2024', '')
+    meetname = meetname.replace('2023', '')
+    meetname = meetname.replace('2022', '')
+    meetname = meetname.replace('2021', '').strip()
 
     location = location.replace('  ', ' ')
 

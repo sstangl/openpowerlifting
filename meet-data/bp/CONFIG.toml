@@ -71,6 +71,8 @@
     mm4 = {name ="M-M4",min=69.5,max=999,equipment="Single-ply",sex="M"}
     mrm5 = {name ="MR-M5",min=79.5,max=999,equipment="Raw",sex="M"}
     mm5 = {name ="M-M5",min=79.5,max=999,equipment="Single-ply",sex="M"}
+	mrsoi = {name ="MR-SOI",min=0,max=999,equipment="Raw",sex="M"}
+    msoi = {name ="M-SOI",min=0,max=999,equipment="Single-ply",sex="M"}
 
     #Women's divisions
     fropen = {name ="FR-O",min=0,max=999,equipment="Raw",sex="F"}
@@ -89,6 +91,8 @@
     fm4 = {name ="F-M4",min=69.5,max=999,equipment="Single-ply",sex="F"}
     frm5 = {name ="FR-M5",min=79.5,max=999,equipment="Raw",sex="F"}
     fm5 = {name ="F-M5",min=79.5,max=999,equipment="Single-ply",sex="F"}
+	frsoi = {name ="FR-SOI",min=0,max=999,equipment="Raw",sex="F"}
+    fsoi = {name ="F-SOI",min=0,max=999,equipment="Single-ply",sex="F"}
 
     #Misc divisions
     mrg = {name ="MR-G",min=0,max=999,equipment="Raw",place="G",sex="M"}

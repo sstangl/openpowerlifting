@@ -1,7 +1,29 @@
 #!/bin/sh
 
-# From https://unix.stackexchange.com/questions/66097/find-all-files-with-a-python-shebang
-PYTHONFILES=$(find . \( -type f -o -name "*.py" \) -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} + | grep -Ev "(node_modules|target)/")
+which ruff > /dev/null 2>&1
+if [ $? != 0 ]; then
+    echo
+    echo "------------------------------"
+    echo 'Unable to find ruff.  Please run `pip install ruff`'
+    echo "------------------------------"
+    exit 1
+fi
 
-# Invoking flake8 once is much faster.
-flake8 --show-source --max-line-length=89 ${PYTHONFILES}
+# Finds all files with a Python shebang.
+#
+# Reference: https://unix.stackexchange.com/questions/66097/find-all-files-with-a-python-shebang
+#
+# Excludes directories such as compilation targets, project dependencies, etc.,
+# and file extensions which logically should not be used for Python scripts.
+
+MATCHES=$(find . \( -path "*/node_modules" -o -path "*/target" -o -path "*/.git" \) -prune -o -type f -not -name "*.csv" -exec awk '/^#!.*python/{print FILENAME} {nextfile}' {} +)
+
+# pass any additional arguments through to ruff, eg --fix
+RUFFOPTS="$*"
+ruff check ${RUFFOPTS} ${MATCHES}
+if [ $? != 0 ]; then
+    echo
+    echo "------------------------------"
+    echo 'To automatically fix these problems, `make check-and-fix-python`'
+    echo "------------------------------"
+fi

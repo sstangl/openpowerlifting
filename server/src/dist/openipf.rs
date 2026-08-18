@@ -8,9 +8,9 @@ use langpack::{Language, Locale};
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
+use rocket::State;
 use rocket::http::CookieJar;
 use rocket::response::Redirect;
-use rocket::State;
 use rocket_dyn_templates::Template;
 
 use server::pages;
@@ -18,8 +18,8 @@ use server::referring_path::ReferringPath;
 
 use std::path::PathBuf;
 
-use crate::common::*;
 use crate::CsvFile;
+use crate::common::*;
 
 /// URL prefix used when accessing OpenIPF through OpenPowerlifting.org or
 /// localhost.
@@ -54,7 +54,8 @@ fn default_openipf_rankings_query() -> opldb::query::direct::RankingsQuery {
             ageclass: AgeClassFilter::AllAges,
             year: YearFilter::AllYears,
             event: EventFilter::FullPower,
-            state: None,
+            home_country: None,
+            home_state: None,
         },
         order_by: OrderBy::Goodlift,
     }
@@ -202,7 +203,8 @@ pub fn records(
         classkind: pages::records::ClassKind::IPF,
         ageclass: default_rankings.filter.ageclass,
         year: default_rankings.filter.year,
-        state: None,
+        home_country: None,
+        home_state: None,
     };
 
     let selection = if let Some(sel) = selections {

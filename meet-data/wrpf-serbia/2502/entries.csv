@@ -2,8 +2,8 @@ Name,BodyweightKg,WeightClassKg,Age,Division,Country,Bench1Kg,Bench2Kg,Bench3Kg,
 Martina Stracinski,88,90,44,Masters 40-49,Serbia,60,-70,-70,60,,,,,60,Raw,B,,F,1
 Ana Božović,78.9,82.5,45,Masters 40-49,Serbia,65,70,-73,70,,,,,70,Raw,B,,F,1
 Vesna Burmazovic,66,67.5,50,Masters 50-59,Serbia,40,45,50,50,,,,,50,Raw,B,,F,1
-Selma Korjenic,65,67.5,27,Open,Bosnia and Herzegovina,-55,55,-57.5,55,,,,,55,Raw,B,,F,2
-Julijana Kovacić,66,67.5,32,Open,Serbia,60,67.5,70,70,,,,,70,Raw,B,,F,1
+Selma Korjenić,65,67.5,27,Open,Bosnia and Herzegovina,-55,55,-57.5,55,,,,,55,Raw,B,,F,2
+Julijana Kovačić,66,67.5,32,Open,Serbia,60,67.5,70,70,,,,,70,Raw,B,,F,1
 Hana Joha,63,67.5,18,Teen 17-19,Montenegro,-40,40,-45,40,,,,,40,Raw,B,,F,1
 Nemanja Kurtesanin,60,60,15,Teen 14-16,Serbia,40,50,52.5,52.5,,,,,52.5,Raw,B,,M,1
 Diar Abdo,72,75,15,Teen 14-16,Bosnia and Herzegovina,70,75,80,80,,,,,80,Raw,B,,M,2
@@ -21,9 +21,9 @@ Adam Pletikoszity,75,75,18,Teen 17-19,Serbia,100,110,-120,110,,,,,110,Raw,B,,M,4
 Milos Nesic,88,90,17,Teen 17-19,Serbia,85,105,107.5,107.5,,,,,107.5,Raw,B,,M,3
 Lazar Djuran,90,90,19,Teen 17-19,Serbia,-100,100,-107.5,100,,,,,100,Raw,B,,M,4
 Damjan Blagojevic,86,90,17,Teen 17-19,Serbia,140,-147.5,147.5,147.5,,,,,147.5,Raw,B,,M,1
-Luka Miskovic,90,90,18,Teen 17-19,Serbia,120,130,-140,130,,,,,130,Raw,B,,M,2
+Luka Mišković,90,90,18,Teen 17-19,Serbia,120,130,-140,130,,,,,130,Raw,B,,M,2
 Adham Elsayed,103,110,20,Juniors 20-23,Bosnia and Herzegovina,-140,140,-155,140,,,,,140,Raw,B,,M,1
-Pavel-Martin Jaso,105,110,20,Juniors 20-23,Serbia,130,-140,140,140,,,,,140,Raw,B,,M,2
+Pavel Martin Jašo,105,110,20,Juniors 20-23,Serbia,130,-140,140,140,,,,,140,Raw,B,,M,2
 Filip Prekpalaj,125,125,21,Juniors 20-23,Serbia,120,130,-150,130,,,,,130,Raw,B,,M,2
 Todorov Borisov,117,125,23,Juniors 20-23,Bulgaria,150,160,170,170,,,,,170,Raw,B,,M,1
 Dusan Pavlovic,75,75,22,Juniors 20-23,Serbia,100,-110,-110,100,,,,,100,Raw,B,,M,2
@@ -50,7 +50,7 @@ Danko Ćulibrk,105,110,40,Masters 40-49,Serbia,170,180,190,190,,,,,190,Raw,B,,M,
 Bogdan Vukoicic,107,110,27,Open,Serbia,160,170,-175,170,,,,,170,Raw,B,,M,2
 Bakir Gežo,142,140+,30,Open,Bosnia and Herzegovina,160,170,177.5,177.5,,,,,177.5,Raw,B,,M,2
 Srećko Spasić,118,125,44,Masters 40-49,Serbia,180,-190,190,190,,,,,190,Raw,B,,M,1
-Zujovic Nemanja,125,125,29,Open,Montenegro,170,180,-182.5,180,,,,,180,Raw,B,,M,3
+Nemanja Žujović,125,125,29,Open,Montenegro,170,180,-182.5,180,,,,,180,Raw,B,,M,3
 Nikola Radosavljević,108,110,35,Open,Serbia,180,-190,190,190,,,,,190,Raw,B,,M,1
 Uroš Lekić,117,125,35,Open,Serbia,200,212.5,-217.5,212.5,,,,,212.5,Raw,B,,M,2
 Jovan Mastilović,120,125,29,Open,Serbia,215,230,240,240,,,,,240,Raw,B,,M,1
@@ -63,9 +63,9 @@ Dunja Ucur,56,56,18,Teen 17-19,Serbia,,,,,70,77.5,82.5,82.5,82.5,Raw,D,,F,1
 Anastasija Kostic,60,60,14,Teen 14-16,Serbia,,,,,50,57.5,62.5,62.5,62.5,Raw,D,,F,1
 Nemanja Kurtesanin,60,60,15,Teen 14-16,Serbia,,,,,70,90,100,100,100,Raw,D,,M,1
 Olivera Maksimovic,62,67.5,14,Teen 14-16,Serbia,,,,,40,45,50,50,50,Raw,D,,F,1
-Selma Korjenic,65,67.5,27,Open,Bosnia and Herzegovina,,,,,110,120,125,125,125,Raw,D,,F,2
+Selma Korjenić,65,67.5,27,Open,Bosnia and Herzegovina,,,,,110,120,125,125,125,Raw,D,,F,2
 Hana Joha,67,67.5,18,Teen 17-19,Montenegro,,,,,130,140,-150,140,140,Raw,D,,F,1
-Julijana Kovacić,66,67.5,33,Open,Serbia,,,,,145,160,170,170,170,Raw,D,,F,1
+Julijana Kovačić,66,67.5,33,Open,Serbia,,,,,145,160,170,170,170,Raw,D,,F,1
 Uros Lukac,73,75,16,Teen 14-16,Serbia,,,,,110,130,145,145,145,Raw,D,,M,3
 Diar Abdo,72,75,15,Teen 14-16,Bosnia and Herzegovina,,,,,162.5,-175,-175,162.5,162.5,Raw,D,,M,2
 Vuk Roncevic,73,75,15,Teen 14-16,Serbia,,,,,160,180,200,200,200,Raw,D,,M,1
@@ -89,7 +89,7 @@ Rajko Sukno,90,90,21,Juniors 20-23,Serbia,,,,,190,-205,222.5,222.5,222.5,Raw,D,,
 Vladimir Prokic,90,90,22,Juniors 20-23,Serbia,,,,,220,230,237.5,237.5,237.5,Raw,D,,M,2
 Lazar Stojmirović,90,90,22,Juniors 20-23,Serbia,,,,,240,-260,270,270,270,Raw,D,,M,1
 Marko Horvatovic,88,90,19,Teen 17-19,Serbia,,,,,155,170,,170,170,Raw,D,,M,3
-Luka Miskovic,86,90,18,Teen 17-19,Bosnia and Herzegovina,,,,,180,195,-200,195,195,Raw,D,,M,2
+Luka Mišković,86,90,18,Teen 17-19,Bosnia and Herzegovina,,,,,180,195,-200,195,195,Raw,D,,M,2
 Boris Belos,100,100,28,Open,Serbia,,,,,170,182.5,192.5,192.5,192.5,Raw,D,,M,4
 Aleksa Mircetic,92,100,28,Open,Bosnia and Herzegovina,,,,,-210,210,220,220,220,Raw,D,,M,2
 Marcel Nermesan,,100,25,Open,Serbia,,,,,212.5,217.5,220,220,220,Raw,D,,M,3
@@ -114,5 +114,5 @@ Lazar Belošević,106,110,32,Open,Serbia,,,,,320,-350,,320,320,Raw,D,,M,1
 Miroslav Kevensky,107,110,44,Masters 40-49,Slovenia,,,,,190,205,220,220,220,Raw,D,,M,1
 Nikola Lazović,122,125,43,Masters 40-49,Montenegro,,,,,220,250,270,270,270,Raw,D,,M,1
 Jovan Mastilović,120,125,29,Open,Serbia,,,,,262.5,287.5,300,300,300,Raw,D,,M,1
-Zujovic Nemanja,125,125,29,Open,Montenegro,,,,,205,225,-240,225,225,Raw,D,,M,2
+Nemanja Žujović,125,125,29,Open,Montenegro,,,,,205,225,-240,225,225,Raw,D,,M,2
 Jan Pauliny,124,125,54,Masters 50-59,Slovenia,,,,,100,,,100,100,Raw,D,,M,1

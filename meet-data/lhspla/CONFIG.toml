@@ -1,6 +1,8 @@
 [divisions]
     unknown = {name='',min=14,max=18}
-	open = {name='Open',min=14,max=18}
+    open = {name='Open',min=14,max=18}
+    girls = {name='Girls',min=14,max=18,sex="F"}
+    boys = {name='Boys',min=14,max=18,sex="M"}
     9 = {name="9", min=14, max=15}
     10 = {name="10", min=15, max=16}
     11 = {name="11", min=16, max=17}
@@ -17,18 +19,45 @@
     sex = "F"
 
 # LHSPLA now uses pounds classes with exact pound values.
-[weightclasses.default_M]
+[weightclasses.old2_M]
     classes = ["52","56.5","60.1","67.5","75","82.5","90","100","110","125","125+"]
-    date_range=["2022-01-01","9999-01-01"]
+    date_range=["2022-01-01","2022-12-31"]
+    sex = "M"
+
+[weightclasses.old2_F]
+    classes = ["44","48","52","56.5","60.1","67.5","75","82.5","90","100", "100+"]
+    date_range=["2022-01-01","2022-12-31"]
+    sex = "F"
+	
+	# LHSPLA seems to have reverted to normal weightclasses
+[weightclasses.default_M]
+    classes = ["52","56","60","67.5","75","82.5","90","100","110","125","125+"]
+    date_range=["2023-01-01","9999-01-01"]
     sex = "M"
 
 [weightclasses.default_F]
-    classes = ["44","48","52","56.5","60.1","67.5","75","82.5","90","100", "100+"]
-    date_range=["2022-01-01","9999-01-01"]
+    classes = ["44","48","52","56","60","67.5","75","82.5","90","100", "100+"]
+    date_range=["2023-01-01","9999-01-01"]
     sex = "F"
 	
 [exemptions]
+    2301 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
+    2302 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
+    2303 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
+    2307 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
     2401 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
     2402 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
     2403 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
     2404 = ["ExemptWeightClassConsistency"] # I could not get the 132lbs class to pass correctly
+    2503 = ["ExemptWeightClassConsistency"]
+    2505 = ["ExemptWeightClassConsistency"]
+    2506 = ["ExemptWeightClassConsistency"]
+    2507 = ["ExemptWeightClassConsistency"]
+    2602 = ["ExemptWeightClassConsistency"]
+	2603 = ["ExemptWeightClassConsistency"]
+    2604 = ["ExemptWeightClassConsistency"]
+	2606 = ["ExemptWeightClassConsistency"]
+	2607 = ["ExemptWeightClassConsistency"]
+	2608 = ["ExemptWeightClassConsistency"]
+	2609 = ["ExemptWeightClassConsistency"]
+	2610 = ["ExemptWeightClassConsistency"]

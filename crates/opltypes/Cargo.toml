@@ -4,11 +4,12 @@ version = "0.2.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>", "Matt Pearce <matt@openpowerlifting.org>"]
 description = "Datatypes for the OpenPowerlifting database format."
 license = "AGPL-3.0-or-later"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 arrayvec = "0.7"
 ascii = "1.1"
+phf = { version = "0.14", features = ["macros"] }
 serde = { workspace = true }
 serde_derive = { workspace = true }
 strum = { workspace = true }
@@ -20,4 +21,8 @@ serde_json = { workspace = true }
 
 [[bench]]
 name = "username"
+harness = false
+
+[[bench]]
+name = "weightkg"
 harness = false

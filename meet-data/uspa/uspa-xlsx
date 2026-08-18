@@ -1,7 +1,10 @@
 #!/bin/bash
+#
 # Main driver for parsing an XLSX file into entries.csv.
 # Steve Denison sends in these files. Don't know why they don't just upload
 # them to the website, but it skips all the PDF -> CSV parsing fuzziness.
+#
+# This script should be run from within the new meet's empty directory.
 
 set -e
 
@@ -12,6 +15,11 @@ fi
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 REPOSCRIPTDIR="${SCRIPTDIR}/../../scripts"
+
+# If there is no meet.csv, create an empty one to save some typing.
+if [ ! -f "meet.csv" ]; then
+	cp "${SCRIPTDIR}/../meet.template" meet.csv
+fi
 
 # Convert the XLSX to CSV. Note that this only works if it has a ".xls" extension.
 if [ "$1" != "original.xls" ]; then

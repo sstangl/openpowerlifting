@@ -216,11 +216,11 @@
     ]
 
 [weightclasses.junior_F]
-    classes = ["43","47","52","57","63","72","84","84+"]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
     date_range=["2015-01-01","9999-01-01"]
     sex = "F"
     divisions = [
-        "FR-T", "FR-T1", "FR-T2", "FR-T3", "FR-TJ", "FR-Jr",
+        "FR-T", "FR-T1", "FR-T2", "FR-T3", "FR-TJ", "FR-Jr", "FR-SJ",
         "F-T", "F-T1", "F-T2", "F-T3", "F-TJ", "F-Jr",
 	"FR-JV", "F-JV", "FR-V", "F-V", "FR-HS", "F-HS", "FR-C", "F-C"
     ]

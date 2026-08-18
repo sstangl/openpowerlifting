@@ -7,6 +7,9 @@ fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut R
     let first_entry: &Entry = meetdata.entry(indices[0]);
 
     let name = &first_entry.name;
+    let username = &first_entry.username;
+
+    let mut chinesename = &first_entry.chinesename;
     let mut cyrillicname = &first_entry.cyrillicname;
     let mut greekname = &first_entry.greekname;
     let mut japanesename = &first_entry.japanesename;
@@ -18,13 +21,16 @@ fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut R
         // The Name field must exactly match for the same username.
         if name != &entry.name {
             let msg = format!(
-                "Name conflict for '{}': '{}' vs '{}'",
-                entry.username, name, entry.name
+                "Name conflict for '{username}': '{name}' vs '{}'",
+                entry.name
             );
             report.error(msg);
         }
 
         // If this is the first time seeing an optional name field, remember it.
+        if chinesename.is_none() && entry.chinesename.is_some() {
+            chinesename = &entry.chinesename;
+        }
         if cyrillicname.is_none() && entry.cyrillicname.is_some() {
             cyrillicname = &entry.cyrillicname;
         }
@@ -38,56 +44,55 @@ fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut R
             koreanname = &entry.koreanname;
         }
 
+        // Check ChineseName consistency.
+        // TODO: Re-enable after fixing data.
+        // if let Some(entry_zh_name) = &entry.chinesename
+        //     && let Some(zh_name) = chinesename
+        //     && zh_name != entry_zh_name
+        // {
+        //     let msg =
+        //         format!("ChineseName conflict for {username}: '{zh_name}' vs '{entry_zh_name}'",);
+        //     report.error(msg);
+        // }
+
         // Check CyrillicName consistency.
-        if let Some(entry_cr_name) = &entry.cyrillicname {
-            if let Some(cr_name) = cyrillicname {
-                if cr_name != entry_cr_name {
-                    let msg = format!(
-                        "CyrillicName conflict for {}: '{}' vs '{}'",
-                        entry.username, cr_name, entry_cr_name
-                    );
-                    report.error(msg);
-                }
-            }
+        if let Some(entry_cr_name) = &entry.cyrillicname
+            && let Some(cr_name) = cyrillicname
+            && cr_name != entry_cr_name
+        {
+            let msg =
+                format!("CyrillicName conflict for {username}: '{cr_name}' vs '{entry_cr_name}'",);
+            report.error(msg);
         }
 
         // Check GreekName consistency.
-        if let Some(entry_el_name) = &entry.greekname {
-            if let Some(el_name) = greekname {
-                if el_name != entry_el_name {
-                    let msg = format!(
-                        "GreekName conflict for {}: '{}' vs '{}'",
-                        entry.username, el_name, entry_el_name
-                    );
-                    report.error(msg);
-                }
-            }
+        if let Some(entry_el_name) = &entry.greekname
+            && let Some(el_name) = greekname
+            && el_name != entry_el_name
+        {
+            let msg =
+                format!("GreekName conflict for {username}: '{el_name}' vs '{entry_el_name}'",);
+            report.error(msg);
         }
 
         // Check JapaneseName consistency.
-        if let Some(entry_jp_name) = &entry.japanesename {
-            if let Some(jp_name) = japanesename {
-                if jp_name != entry_jp_name {
-                    let msg = format!(
-                        "JapaneseName conflict for {}: '{}' vs '{}'",
-                        entry.username, jp_name, entry_jp_name
-                    );
-                    report.error(msg);
-                }
-            }
+        if let Some(entry_jp_name) = &entry.japanesename
+            && let Some(jp_name) = japanesename
+            && jp_name != entry_jp_name
+        {
+            let msg =
+                format!("JapaneseName conflict for {username}: '{jp_name}' vs '{entry_jp_name}'",);
+            report.error(msg);
         }
 
         // Check KoreanName consistency.
-        if let Some(entry_ko_name) = &entry.koreanname {
-            if let Some(ko_name) = koreanname {
-                if ko_name != entry_ko_name {
-                    let msg = format!(
-                        "KoreanName conflict for {}: '{}' vs '{}'",
-                        entry.username, ko_name, entry_ko_name
-                    );
-                    report.error(msg);
-                }
-            }
+        if let Some(entry_ko_name) = &entry.koreanname
+            && let Some(ko_name) = koreanname
+            && ko_name != entry_ko_name
+        {
+            let msg =
+                format!("KoreanName conflict for {username}: '{ko_name}' vs '{entry_ko_name}'",);
+            report.error(msg);
         }
     }
 }

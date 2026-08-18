@@ -44,7 +44,7 @@ WeightClassKg,Sex,Event,Place,Name,Country,Division,BirthYear,Equipment,Bodyweig
 82.5,M,D,1,Alexander Papir,,M_MES_6_WPC,1945,Single-ply,79.6,,,,,,,,,,,160,170,177.5,,177.5,177.5
 90,M,B,1,Alexander Petrov,,M_MR_3_WPC,1960,Raw,89.1,,,,,,190,200,-205,,200,,,,,,200
 110,M,D,3,Alexander Siljestromer,,M_OR_WPC,1984,Raw,107.3,,,,,,,,,,,280,302.5,-310,,302.5,302.5
-75,M,B,3,Alexandr Bark,,M_MR_3_WPC,1963,Raw,74.2,,,,,,105,110,-112.5,,110,,,,,,110
+75,M,B,3,Alexander Bark,,M_MR_3_WPC,1963,Raw,74.2,,,,,,105,110,-112.5,,110,,,,,,110
 140,M,B,5,Alexey Brazhkin,,M_MR_1_WPC,1971,Raw,129.9,,,,,,170,180,200,,200,,,,,,200
 140,M,B,2,Alexey Brazhkin,,M_MEM_1_WPC,1971,Multi-ply,131.8,,,,,,230,250,270,,270,,,,,,270
 60,F,SBD,1,Alina Sazonova,,F_OR_WPC,,Raw,58,90,100,110,,110,55,60,-65,,60,100,110,120,,120,290
@@ -149,7 +149,7 @@ WeightClassKg,Sex,Event,Place,Name,Country,Division,BirthYear,Equipment,Bodyweig
 90,M,SBD,1,Eric Conway,,M_MR_3_WPC,,Raw,88.7,145,150,155,,155,100,110,112.5,,112.5,190,205,212.5,,212.5,480
 110,M,B,4,Eric Platel,,M_MR_1_WPC,1971,Raw,107.8,,,,,,180,192.5,-200,,192.5,,,,,,192.5
 110,M,B,DQ,Eric Platel,,M_MEM_1_WPC,1971,Multi-ply,109.4,,,,,,-260,-260,-260,,,,,,,,
-140,M,B,2,Erik Susztay,,M_MR_1_WPC,1972,Raw,132.3,,,,,,-215,215,-222.5,,215,,,,,,215
+140,M,B,2,Erik Susztay #1,,M_MR_1_WPC,1972,Raw,132.3,,,,,,-215,215,-222.5,,215,,,,,,215
 75,M,SBD,1,Ēriks Silovs,,M_TR_2_WPC,,Raw,75,200,205,210,-215,210,100,110,-112.5,,110,200,210,215,,215,535
 75,M,D,1,Ēriks Silovs,,M_TR_2_WPC,1997,Raw,74.6,,,,,,,,,,,200,207.5,212.5,,212.5,212.5
 67.5,M,SBD,1,Ernest Ruzin,,M_MR_8_WPC,,Raw,61.7,120,125,127.5,,127.5,72.5,77.5,,,77.5,150,155,,,155,360
@@ -220,7 +220,7 @@ WeightClassKg,Sex,Event,Place,Name,Country,Division,BirthYear,Equipment,Bodyweig
 140+,M,B,1,Jerzy Maciej Kot,,M_MR_2_WPC,1968,Raw,145.1,,,,,,160,170,-175,,170,,,,,,170
 110,M,D,1,Johannes Hermundsen,,M_JR_WPC,1992,Raw,106,,,,,,,,,,,250,260,270,,270,270
 100,M,D,1,José Teixeira,,M_MES_1_WPC,1970,Single-ply,98.7,,,,,,,,,,,280,287.5,-295,,287.5,287.5
-100,M,SBD,1,Jose Teixeira Fuentes,,M_MR_1_WPC,,Raw,97.6,200,215,225,,225,125,135,145,,145,260,275,-280,,275,645
+100,M,SBD,1,José Teixeira,,M_MR_1_WPC,,Raw,97.6,200,215,225,,225,125,135,145,,145,260,275,-280,,275,645
 82.5,M,B,6,Jurijs Bosovs,,M_OR_WPC,1984,Raw,80.9,,,,,,130,140,147.5,,147.5,,,,,,147.5
 140,M,SBD,1,Justīns Petinens,,M_TR_3_WPC,,Raw,133.9,-250,250,-260,,250,160,170,-180,,170,290,-300,300,,300,720
 140,M,D,1,Justīns Petinens,,M_TR_3_WPC,1996,Raw,132,,,,,,,,,,,-290,290,300,305,300,300
@@ -278,7 +278,7 @@ WeightClassKg,Sex,Event,Place,Name,Country,Division,BirthYear,Equipment,Bodyweig
 140,M,B,1,Mikhail Nikolaev,,M_MR_3_WPC,1961,Raw,129.4,,,,,,200,212.5,-217.5,,212.5,,,,,,212.5
 90,M,B,1,Miroslav Adamove,,M_TEM_3_WPC,1997,Multi-ply,87.9,,,,,,240,260,-270,,260,,,,,,260
 90,M,B,1,Miroslav Čaba,,M_JEM_WPC,1993,Multi-ply,86.3,,,,,,220,-240,-240,,220,,,,,,220
-100,M,B,1,Miroslaw Orłowski,,M_MR_7_WPC,1943,Raw,97.4,,,,,,130,135,140,,140,,,,,,140
+100,M,B,1,Mirosław Orłowski,,M_MR_7_WPC,1943,Raw,97.4,,,,,,130,135,140,,140,,,,,,140
 67.5,M,SBD,2,Mushfig Aliyev,,M_OR_WPC,,Raw,67.5,200,210,215,,215,145,-150,-150,,145,200,-230,-230,,200,560
 60,F,B,1,Nadezhda Vlasova,,F_OR_WPC,1982,Raw,59.8,,,,,,100,102.5,-105,,102.5,,,,,,102.5
 67.5,F,D,1,Nadine Pedraza,,F_TR_2_WPC,1998,Raw,61.6,,,,,,,,,,,95,105,112.5,,112.5,112.5
@@ -438,7 +438,7 @@ WeightClassKg,Sex,Event,Place,Name,Country,Division,BirthYear,Equipment,Bodyweig
 90,M,B,1,Volodymyr Starchenko,,M_MEM_1_WPC,1975,Multi-ply,89.4,,,,,,200,210,-220,,210,,,,,,210
 100,M,SBD,1,Vusal Aghaparov,,M_JR_WPC,,Raw,96.2,250,-270,-270,,250,190,-200,,,190,270,-285,-285,,270,710
 67.5,F,D,1,Yuliya Pilipchatina,,F_OEM_WPC,1984,Multi-ply,67.5,,,,,,,,,,,150,160,170,,170,170
-125,M,SBD,1,Yuriy Zakharov,,M_MR_1_WPC,,Raw,123.7,260,285,303,,303,190,200,205,,205,280,300,307.5,,307.5,815
+125,M,SBD,1,Yuriy Zakharov,,M_MR_1_WPC,,Raw,123.7,260,285,303,,303,190,200,205,,205,280,300,307.5,,307.5,815.5
 125,M,D,1,Yuriy Zakharov,,M_MR_1_WPC,1972,Raw,124.8,,,,,,,,,,,250,275,-300,,275,275
 56,F,SBD,1,Žanna Korosteļova,,F_MR_2_WPC,,Raw,54.5,80,85,87.5,,87.5,60,65,-70,,65,110,120,-125,,120,272.5
 56,F,B,1,Žanna Korosteļova,,F_MR_2_WPC,1966,Raw,55.3,,,,,,60,65,67.5,,67.5,,,,,,67.5

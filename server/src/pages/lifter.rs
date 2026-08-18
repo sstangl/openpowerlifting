@@ -1,6 +1,6 @@
 //! Logic for each lifter's personal page.
 
-use langpack::{localized_name, Language, Locale, LocalizeNumber};
+use langpack::{Language, Locale, LocalizeNumber, localized_name};
 use opldb::{self, Entry};
 use opltypes::*;
 

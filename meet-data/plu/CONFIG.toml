@@ -1,7 +1,8 @@
 # Configuration for Powerlifting United, forked from WRPF-USA.
 
 [options]
-require_manual_disambiguation = true
+    valid_federations = ["PLU"]
+    require_manual_disambiguation = true
 
 [divisions]
 	open = {name="Open", min=0, max=999}
@@ -68,6 +69,12 @@ require_manual_disambiguation = true
     y10_12t = {name="Y10-12T", min=10, max=12, tested="Yes"}
     j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
     j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
+    y8 = {name="Y8", min=8, max=8}
+    y8t = {name="Y8T", min=8, max=8, tested="Yes"}
+    y9_10 = {name="Y9-10", min=9, max=10}
+    y9_10t = {name="Y9-10T", min=9, max=10, tested="Yes"}
+    y11_12 = {name="Y11-12", min=11, max=12}
+    y11_12t = {name="Y11-12T", min=11, max=12, tested="Yes"}
 
     # Parasports Drug Tested divisions.
     paraopent = {name = "Parasports OpenT", min = 0, max = 999, tested="Yes"}
@@ -126,3 +133,5 @@ require_manual_disambiguation = true
     2511 = ["ExemptLiftOrder"] # misloaded bench results updated with corrected attempts
     2528 = ["ExemptLiftOrder"] # misloaded 3rd attempt squat for athlete took same weight twice
     2563 = ["ExemptLiftOrder"] # misloaded 3rd attempt deadlift
+    2626 = ["ExemptLiftOrder"] # Cleveland Classic - Take 2
+    2628 = ["ExemptLiftOrder"] # South Carolina Power Bar Showdown (special olympians)

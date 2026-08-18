@@ -164,6 +164,7 @@
     mm3e = {name ="M-M3E", min=50, max=54, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mm4e = {name ="M-M4E", min=55, max=59, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
     mm5e = {name ="M-M5E", min=60, max=64, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
+    mm6e = {name ="M-M6E", min=65, max=69, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"]}
 
         # New-style divisions, Equipped Tested
     mjea = {name ="M-JE-A", min=20, max=23, sex="M", equipment=["Single-ply","Multi-ply","Unlimited"],tested="Yes"}

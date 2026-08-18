@@ -22,6 +22,7 @@
     mmcr2wpc = {name ="M_MCR_2_WPC",min=45,max=49,equipment=["Raw","Wraps"],sex="M"}
     mms2wpc = {name ="M_MES_2_WPC",min=45,max=49,equipment="Single-ply",sex="M"}
     mmm2wpc = {name ="M_MEM_2_WPC",min=45,max=49,equipment="Multi-ply",sex="M"}
+    mmu2wpc = {name ="M_MEU_2_WPC",min=45,max=49,equipment="Unlimited",sex="M"}
     mmr3wpc = {name ="M_MR_3_WPC",min=50,max=54,equipment="Raw",sex="M"}
     mmcr3wpc = {name ="M_MCR_3_WPC",min=50,max=54,equipment=["Raw","Wraps"],sex="M"}
     mms3wpc = {name ="M_MES_3_WPC",min=50,max=54,equipment="Single-ply",sex="M"}
@@ -77,6 +78,7 @@
     mjcrwpc = {name ="M_JCR_WPC",min=20,max=23,equipment=["Raw","Wraps"],sex="M"}
     mjswpc = {name ="M_JES_WPC",min=20,max=23,equipment="Single-ply",sex="M"}
     mjmwpc = {name ="M_JEM_WPC",min=20,max=23,equipment="Multi-ply",sex="M"}
+    mjuwpc = {name ="M_JEU_WPC",min=20,max=23,equipment="Unlimited",sex="M"}
     msrwpc = {name ="M_SR_WPC",min=33,max=39,equipment="Raw",sex="M"}
     mscrwpc = {name ="M_SCR_WPC",min=33,max=39,equipment=["Raw","Wraps"],sex="M"}
     msswpc = {name ="M_SES_WPC",min=33,max=39,equipment="Single-ply",sex="M"}

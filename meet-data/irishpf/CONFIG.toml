@@ -10,6 +10,7 @@
     mg = {name="M-G", min=0, max=999, equipment="Raw", sex="M", place="G"}
     msj = {name="M-SJ", min=0, max=17.5, equipment="Raw", sex="M"}
     mjr = {name="M-JR", min=18.5, max=22.5, equipment="Raw", sex="M"}
+    mj = {name="M-J", min=18.5, max=22.5, equipment="Raw", sex="M"}
     msr = {name="M-SR", min=0, max=999, equipment="Raw", sex="M"}
     mm1 = {name="M-M1", min=39.5, max=48.5, equipment="Raw", sex="M"}
     mm2 = {name="M-M2", min=49.5, max=58.5, equipment="Raw", sex="M"}
@@ -30,6 +31,7 @@
     fg = {name="F-G", min=0, max=999, equipment="Raw", sex="F", place="G"}
     fsj = {name="F-SJ", min=0, max=17.5, equipment="Raw", sex="F"}
     fjr = {name="F-JR", min=18.5, max=22.5, equipment="Raw", sex="F"}
+    fj = {name="F-J", min=18.5, max=22.5, equipment="Raw", sex="F"}
     fsr = {name="F-SR", min=0, max=999, equipment="Raw", sex="F"}
     fm1 = {name="F-M1", min=39.5, max=48.5, equipment="Raw", sex="F"}
     fm2 = {name="F-M2", min=49.5, max=58.5, equipment="Raw", sex="F"}

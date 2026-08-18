@@ -4,21 +4,21 @@ version = "0.1.0"
 authors = ["Sean Stangl <sean.stangl@gmail.com>"]
 description = "The OpenPowerlifting in-memory database."
 license = "AGPL-3.0-or-later"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 arrayvec = "0.7"
 coefficients = { path = "../coefficients/" }
 opltypes = { path = "../opltypes/" }
 csv = { workspace = true }
-fxhash = "0.2.1"
 itertools = "0.11"
+rustc-hash = { workspace = true }
 serde = { workspace = true }
 serde_derive = { workspace = true }
 smartstring = { version = "1.0", features = ["serde"] }
 strum = { workspace = true }
 strum_macros = { workspace = true }
-symbol_table = { version = "0.4", features = ["global", "serde"] }
+symbol_table = { version = "0.5", features = ["global", "serde"] }
 
 [dev-dependencies]
 criterion = { workspace = true }

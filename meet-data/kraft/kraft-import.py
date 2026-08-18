@@ -269,7 +269,8 @@ def addequipment(csv, meetcsv):
     meet_name = meetcsv.rows[0][5]
 
     raw_meet = False
-    if any(classic in meet_name.lower() for classic in ['klassískum', 'klassískri']):
+    if any(classic in meet_name.lower() for classic in
+           ['klassískum', 'klassískri', 'klassík', 'klassisk']):
         raw_meet = True
 
     if 'Equipment' not in csv.fieldnames:
