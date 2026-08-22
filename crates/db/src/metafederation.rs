@@ -1090,12 +1090,11 @@ impl MetaFederation {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::WRPF)
             }
             MetaFederation::WRPFCANTested => meet.federation == Federation::WRPFCAN && entry.tested,
-                        }
             MetaFederation::WRPFEurope => matches!(
                 meet.federation,
                 Federation::WRPFEurope
                     | Federation::WRPFAUS
-                    | Federation::WRPFBEL
+                    | Federation::WRPFBelarus
                     | Federation::WRPFBolivia
                     | Federation::WRPFBulgaria
                     | Federation::WRPFCRO
@@ -1107,7 +1106,7 @@ impl MetaFederation {
                     | Federation::WRPFIreland
                     | Federation::WRPFItaly
                     | Federation::WRPFLatvia
-                    | Federation::WRPFLithunia
+                    | Federation::WRPFLithuania
                     | Federation::WRPFPOL
                     | Federation::WRPFPortugal
                     | Federation::WRPFSerbia
