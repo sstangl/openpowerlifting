@@ -1093,7 +1093,6 @@ impl MetaFederation {
             MetaFederation::WRPFEurope => matches!(
                 meet.federation,
                 Federation::WRPFEurope
-                    | Federation::WRPFAUS
                     | Federation::WRPFBelarus
                     | Federation::WRPFBolivia
                     | Federation::WRPFBulgaria
