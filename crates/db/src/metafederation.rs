@@ -1094,7 +1094,6 @@ impl MetaFederation {
                 meet.federation,
                 Federation::WRPFEurope
                     | Federation::WRPFBelarus
-                    | Federation::WRPFBolivia
                     | Federation::WRPFBulgaria
                     | Federation::WRPFCRO
                     | Federation::WRPFDE
