@@ -1106,6 +1106,7 @@ impl MetaFederation {
                     | Federation::WRPFItaly
                     | Federation::WRPFLatvia
                     | Federation::WRPFLithuania
+                    | Federation::PLTRAW
                     | Federation::WRPFPOL
                     | Federation::WRPFPortugal
                     | Federation::WRPFSerbia
