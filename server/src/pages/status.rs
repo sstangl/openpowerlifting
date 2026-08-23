@@ -502,7 +502,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WRPF as usize].instagram = "wrp_official";
     statuses[WRPFAUS as usize].instagram = "wrpfaustralia";
     statuses[WRPFBelarus as usize].instagram = "wrpf_belarus";
-    statuses[WRPFEire as usize].instagram = "wrpfeire";
+    statuses[WRPFEIRE as usize].instagram = "wrpfeire";
     statuses[WRPFEurope as usize].instagram = "wrpf_europe";
     statuses[WRPFKAZ as usize].instagram = "wrpfkazakhstan";
     statuses[WRPFLithuania as usize].instagram = "wrpf_lithuania";
