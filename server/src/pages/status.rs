@@ -419,6 +419,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[VGPF as usize].maintainers = email_stefanie;
     statuses[WelshPA as usize].maintainers = email_jo;
     statuses[WPC as usize].maintainers = email_gem;
+    statuses[WRPFEurope as usize].maintainers = email_gem;
     statuses[WPCFinland as usize].maintainers = email_gem;
     statuses[WPCFrance as usize].maintainers = email_gem;
     statuses[WPCItaly as usize].maintainers = email_gem;
@@ -501,7 +502,8 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[WRPF as usize].instagram = "wrp_official";
     statuses[WRPFAUS as usize].instagram = "wrpfaustralia";
     statuses[WRPFBelarus as usize].instagram = "wrpf_belarus";
-    statuses[WRPFIreland as usize].instagram = "wrpfireland";
+    statuses[WRPFEire as usize].instagram = "wrpfeire";
+    statuses[WRPFEurope as usize].instagram = "wrpf_europe";
     statuses[WRPFKAZ as usize].instagram = "wrpfkazakhstan";
     statuses[WRPFLithuania as usize].instagram = "wrpf_lithuania";
     statuses[WRPFSlovenia as usize].instagram = "wrpfslovenia";
