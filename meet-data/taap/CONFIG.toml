@@ -1,5 +1,8 @@
 # Configuration for TAAP.
 
+[options]
+    valid_federations = ["TAAP"]
+
 [divisions]
     # Expanded-name divisions.
     open = {name ="Open",min=0,max=999}
