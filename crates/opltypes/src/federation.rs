@@ -2182,9 +2182,9 @@ pub enum Federation {
     WUAPRUS,
 
     /// Slovakian WUAP affiliate.
-    #[serde(rename = "WUAP-SVK")]
-    #[strum(to_string = "WUAP-SVK", serialize = "wuap-svk")]
-    WUAPSVK,
+    #[serde(rename = "AWPC-SVK")]
+    #[strum(to_string = "AWPC-SVK", serialize = "awpc-svk")]
+    AWPCSVK,
 
     /// US WUAP affiliate.
     #[serde(rename = "WUAP-USA")]
@@ -2721,7 +2721,7 @@ impl Federation {
             Federation::WUAPIreland => false,
             Federation::WUAPPoland => false,
             Federation::WUAPRUS => false,
-            Federation::WUAPSVK => false,
+            Federation::AWPCSVK => false,
             Federation::WUAPUSA => false,
             Federation::XPC => false,
             Federation::XPCPoland => false,
@@ -3217,7 +3217,7 @@ impl Federation {
             Federation::WUAPIreland => Some(Country::Ireland),
             Federation::WUAPPoland => Some(Country::Poland),
             Federation::WUAPRUS => Some(Country::Russia),
-            Federation::WUAPSVK => Some(Country::Slovakia),
+            Federation::AWPCSVK => Some(Country::Slovakia),
             Federation::WUAPUSA => Some(Country::USA),
             Federation::XPC => Some(Country::USA),
             Federation::XPCPoland => Some(Country::Poland),
@@ -3837,7 +3837,7 @@ impl Federation {
             Federation::WUAPIreland => Some(Federation::WUAP),
             Federation::WUAPPoland => Some(Federation::WUAP),
             Federation::WUAPRUS => Some(Federation::WUAP),
-            Federation::WUAPSVK => Some(Federation::WUAP),
+            Federation::AWPCSVK => Some(Federation::WUAP),
             Federation::WUAPUSA => Some(Federation::WUAP),
             Federation::XPC => Some(Federation::XPC),
             Federation::XPCPoland => Some(Federation::XPC),
@@ -4453,7 +4453,7 @@ impl Federation {
             Federation::WUAPIreland => PointsSystem::Wilks,
             Federation::WUAPPoland => PointsSystem::Wilks,
             Federation::WUAPRUS => PointsSystem::Wilks,
-            Federation::WUAPSVK => PointsSystem::Wilks,
+            Federation::AWPCSVK => PointsSystem::Wilks,
             Federation::WUAPUSA => PointsSystem::Wilks,
             Federation::XPC => PointsSystem::Wilks,
             Federation::XPCPoland => PointsSystem::Wilks,
