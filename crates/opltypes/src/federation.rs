@@ -204,6 +204,10 @@ pub enum Federation {
     #[strum(to_string = "BelPF", serialize = "belpf")]
     BelPF,
 
+    /// Bermuda Powerlifting Association, NAPF.
+    #[strum(to_string = "BermudaPA", serialize = "bermudapa")]
+    BermudaPA,
+
     /// British Powerlifting, IPF. Formerly named GBPF.
     #[strum(to_string = "BP", serialize = "bp")]
     BP,
@@ -2264,6 +2268,7 @@ impl Federation {
             Federation::BDFPA => FULLY_TESTED,
             Federation::BDFPF => FULLY_TESTED,
             Federation::BelPF => FULLY_TESTED,
+            Federation::BermudaPA => FULLY_TESTED,
             Federation::BP => FULLY_TESTED,
             Federation::BPA => FULLY_TESTED,
             Federation::BPC => false,
@@ -2774,6 +2779,7 @@ impl Federation {
             Federation::BDFPA => Some(Country::UK),
             Federation::BDFPF => Some(Country::Belgium),
             Federation::BelPF => Some(Country::Belarus),
+            Federation::BermudaPA => Some(Country::Bermuda),
             Federation::BP => Some(Country::UK),
             Federation::BPA => Some(Country::Belize),
             Federation::BPC => Some(Country::UK),
@@ -3290,6 +3296,7 @@ impl Federation {
             Federation::BDFPA => Some(Federation::WDFPF),
             Federation::BDFPF => Some(Federation::WDFPF),
             Federation::BelPF => Some(Federation::IPF),
+            Federation::BermudaPA => Some(Federation::NAPF),
             Federation::BP => Some(Federation::IPF),
             Federation::BPA => Some(Federation::IPF),
             Federation::BPC => {
@@ -3934,6 +3941,7 @@ impl Federation {
             Federation::BDFPA => PointsSystem::Wilks,
             Federation::BDFPF => PointsSystem::Wilks,
             Federation::BelPF => Federation::ipf_rules_on(date),
+            Federation::BermudaPA => Federation::ipf_rules_on(date),
             Federation::BP => Federation::ipf_rules_on(date),
             Federation::BPA => Federation::ipf_rules_on(date),
             Federation::BPC => PointsSystem::Wilks,

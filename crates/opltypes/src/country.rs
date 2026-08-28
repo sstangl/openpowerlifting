@@ -28,6 +28,7 @@ pub enum Country {
     Belgium,
     Belize,
     Benin,
+    Bermuda,
     Bolivia,
     #[serde(rename = "Bosnia and Herzegovina")]
     #[strum(to_string = "Bosnia and Herzegovina")]
@@ -331,6 +332,7 @@ static COUNTRY_AS_URL_SEGMENT: phf::Map<&'static str, Country> = phf_map! {
     "belgium" => Country::Belgium,
     "belize" => Country::Belize,
     "benin" => Country::Benin,
+    "bermuda" => Country::Bermuda,
     "bolivia" => Country::Bolivia,
     "bosnia-and-herzegovina" => Country::BosniaAndHerzegovina,
     "botswana" => Country::Botswana,
