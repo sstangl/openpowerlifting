@@ -491,3 +491,4 @@ require_manual_disambiguation = true
     2127 = ["ExemptWeightClassConsistency"] # Lifter missing any weight info.
     2237 = ["ExemptDivision"] # Divisions need simplifying 
     2238 = ["ExemptDivision"] # Divisions need simplifying 
+    2628 = ["ExemptWeightClassConsistency"] # Youth lifters didn't weigh-in.
