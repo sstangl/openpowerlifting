@@ -9,10 +9,10 @@
     guest = {name="Guest", min=0, max=999}
 
 	# OpenLifter-style divisions.
-	j8_9 = {name="J8-9", min=8, max=9}
-	j10_11 = {name="J10-11", min=10, max=11}
-	j12_13 = {name="J12-13", min=12, max=13}
-	j13_15 = {name="J13-15", min=13, max=15}
+	y8 = {name="Y8", min=8, max=8}
+        y9_10 = {name="Y9-10", min=9, max=10}
+        y11_12 = {name="Y11-12", min=11, max=12}
+        j13_15 = {name="J13-15", min=13, max=15}
 	j16_17 = {name="J16-17", min=16, max=17}
 	j18_19 = {name="J18-19", min=18, max=19}
 	j20_23 = {name="J20-23", min=20, max=23}
@@ -46,11 +46,11 @@
 
 	# OpenLifter-style divisions, but tested.
     opent = {name = "OpenT", min = 0, max = 999, tested="Yes"}
-    j8_9t = {name="J8-9T", min=8, max=9, tested="Yes"}
-    j10_11t = {name="J10-11T", min=10, max=11, tested="Yes"}
-    j12_13t = {name="J12-13T", min=12, max=13, tested="Yes"}
-    j14_16t = {name="J14-16T", min=14, max=16, tested="Yes"}
-    j17_19t = {name="J17-19T", min=17, max=19, tested="Yes"}
+    y8t = {name="Y8T", min=8, max=8, tested="Yes"}
+    y9_10t = {name="Y9-10T", min=9, max=10, tested="Yes"}
+    y11_12t = {name="Y11-12T", min=11, max=12, tested="Yes"}
+    j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
+    j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
     j18_19t = {name="J18-19T", min=18, max=19, tested="Yes"}
     j20_23t = {name="J20-23T", min=20, max=23, tested="Yes"}
     s35_39t = {name="S35-39T", min=35, max=39, tested="Yes"}
@@ -65,20 +65,27 @@
     m80pt = {name="M80+T", min=80, max=999, tested="Yes"}
 
     # Non-existent divisions that nevertheless got used.
-    y10_12 = {name="Y10-12", min=10, max=12}
+    j8_9t = {name="J8-9T", min=8, max=9, tested="Yes"}
+    j10_11t = {name="J10-11T", min=10, max=11, tested="Yes"}
+    j12_13t = {name="J12-13T", min=12, max=13, tested="Yes"}
+    j14_16t = {name="J14-16T", min=14, max=16, tested="Yes"}
+    j17_19t = {name="J17-19T", min=17, max=19, tested="Yes"}    
     y10_12t = {name="Y10-12T", min=10, max=12, tested="Yes"}
-    j13_15t = {name="J13-15T", min=13, max=15, tested="Yes"}
-    j16_17t = {name="J16-17T", min=16, max=17, tested="Yes"}
-    y8 = {name="Y8", min=8, max=8}
-    y8t = {name="Y8T", min=8, max=8, tested="Yes"}
-    y9_10 = {name="Y9-10", min=9, max=10}
-    y9_10t = {name="Y9-10T", min=9, max=10, tested="Yes"}
-    y11_12 = {name="Y11-12", min=11, max=12}
-    y11_12t = {name="Y11-12T", min=11, max=12, tested="Yes"}
+    y10_12 = {name="Y10-12", min=10, max=12}
+    j8_9 = {name="J8-9", min=8, max=9}
+    j10_11 = {name="J10-11", min=10, max=11}
+    j12_13 = {name="J12-13", min=12, max=13}
+    paray10_12t = {name="Parasports Y10-12T", min=10, max=12, tested="Yes"}
+    paray10_12 = {name="Parasports Y10-12", min=10, max=12}
+
+
+
 
     # Parasports Drug Tested divisions.
     paraopent = {name = "Parasports OpenT", min = 0, max = 999, tested="Yes"}
-    paray10_12t = {name="Parasports Y10-12T", min=10, max=12, tested="Yes"}
+    paray8t = {name="Parasports Y8T", min=8, max=8, tested="Yes"}
+    paray9_10t = {name="Parasports Y9-10T", min=9, max=10, tested="Yes"}
+    paray11_12t = {name="Parasports Y11-12T", min=11, max=12, tested="Yes"}    
     paraj13_15t = {name="Parasports J13-15T", min=13, max=15, tested="Yes"}
     paraj16_17t = {name="Parasports J16-17T", min=16, max=17, tested="Yes"}
     paraj18_19t = {name="Parasports J18-19T", min=18, max=19, tested="Yes"}
@@ -96,7 +103,9 @@
 
     # Parasports divisions, but not tested.
     paraopen = {name="Parasports Open", min=0, max=999}
-    paray10_12 = {name="Parasports Y10-12", min=10, max=12}
+    paray8 = {name="Parasports Y8", min=8, max=8}
+    paray9_10 = {name="Parasports Y9-10", min=9, max=10}
+    paray11_12 = {name="Parasports Y11-12", min=11, max=12}
     paraj13_15 = {name="Parasports J13-15", min=13, max=15}
     paraj16_17 = {name="Parasports J16-17", min=16, max=17}
     paraj18_19 = {name="Parasports J18-19", min=18, max=19}

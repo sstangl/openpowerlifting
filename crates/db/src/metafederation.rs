@@ -636,6 +636,11 @@ pub enum MetaFederation {
     #[strum(to_string = "wrpf-and-affiliates")]
     WRPFAndAffiliates,
 
+    /// WRPF-Europe including European countries.
+    #[strum(to_string = "wrpf-europe")]
+    #[serde(rename = "WRPF-EUROPE")]
+    WRPFEurope,
+
     /// WRPF-Latam including South American countries.
     #[strum(to_string = "wrpf-latam")]
     #[serde(rename = "WRPF-LATAM")]
@@ -1085,6 +1090,31 @@ impl MetaFederation {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::WRPF)
             }
             MetaFederation::WRPFCANTested => meet.federation == Federation::WRPFCAN && entry.tested,
+            MetaFederation::WRPFEurope => matches!(
+                meet.federation,
+                Federation::WRPFEurope
+                    | Federation::WRPFBelarus
+                    | Federation::WRPFBulgaria
+                    | Federation::WRPFCRO
+                    | Federation::WRPFDE
+                    | Federation::WRPFEIRE
+                    | Federation::WRPFFrance
+                    | Federation::WRPFHUN
+                    | Federation::WRPFIceland
+                    | Federation::WRPFIreland
+                    | Federation::WRPFItaly
+                    | Federation::WRPFLatvia
+                    | Federation::WRPFLithuania
+                    | Federation::PLTRAW
+                    | Federation::WRPFPOL
+                    | Federation::WRPFPortugal
+                    | Federation::WRPFSerbia
+                    | Federation::WRPFSlovakia
+                    | Federation::WRPFSlovenia
+                    | Federation::WRPFSpain
+                    | Federation::WRPFSweden
+                    | Federation::WRPFUK
+            ),
             MetaFederation::WRPFUKTested => meet.federation == Federation::WRPFUK && entry.tested,
             MetaFederation::WRPFUSA => match meet.federation {
                 Federation::WRPF => match entry.lifter_country {

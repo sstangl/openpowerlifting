@@ -36,6 +36,7 @@
   <option value="nordicpf" {% if selection.federation == "NordicPF" %}selected{% endif %}>NordicPF - Nordic Powerlifting Federation [IPF]</option>
   <option value="oceaniapf" {% if selection.federation == "OceaniaPF" %}selected{% endif %}>OceaniaPF - Oceania Powerlifting Federation [WP]</option>
   <option value="orpf" {% if selection.federation == "ORPF" %}selected{% endif %}>ORPF - Oceania Regional Powerlifting Federation [IPF]</option>
+    <option value="wrpf-europe" {% if selection.federation == "WRPF-Europe" %}selected{% endif %}>WRPF-Europe [WRPF Europe]</option>
   <option value="wrpf-latam" {% if selection.federation == "WRPF-Latam" %}selected{% endif %}>WRPF-Latam [WRPF Latin America]</option>
 </optgroup>
 <optgroup label="{{strings.country.usa}}">
@@ -557,7 +558,7 @@
   <option value="sast" {% if selection.federation == "SAST" %}selected{% endif %}>SAST - Slovenská asociásia silového trojboja [GPC]</option>
   <option value="wpc-svk" {% if selection.federation == "WPC-SVK" %}selected{% endif %}>WPC-SVK - WPC Slovakia</option>
   <option value="wrpf-svk" {% if selection.federation == "WRPF-SVK" %}selected{% endif %}>WRPF Slovakia</option>
-  <option value="wuap-svk" {% if selection.federation == "WUAP-SVK" %}selected{% endif %}>WUAP-SVK - WUAP Slovakia</option>
+  <option value="awpc-svk" {% if selection.federation == "AWPC-SVK" %}selected{% endif %}>AWPC-SVK - AWPC-Slovakia</option>
 </optgroup>
 <optgroup label="{{strings.country.slovenia}}">
   <option value="plzs" {% if selection.federation == "PLZS" %}selected{% endif %}>PLZS - Powerlifting zveza Slovenije [IPF]</option>
