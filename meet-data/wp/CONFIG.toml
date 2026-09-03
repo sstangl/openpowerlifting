@@ -67,3 +67,4 @@
     2103 = ["ExemptWeightClassConsistency", "ExemptDivision"]  # IPF-class suggestions + Sub-Juniors divs + age .5 boundaries
     2203 = ["ExemptDivision"]   # Age .5 boundaries + 'Masters 80-84'
     2204 = ["ExemptDivision"]   # WP-USA divisions: 'S35-39', 'J13-15', Open min-age
+    1804 = ["ExemptDivision", "ExemptWeightClassConsistency"]   # OceaniaPF-era 'Sub-Juniors' divisions + 84+/105+ classes (moved from oceaniapf/1801)
