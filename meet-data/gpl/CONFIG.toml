@@ -1,6 +1,52 @@
-# DPL config, copied from IPL
+# GPL config, copied from IPL.
+
+[options]
+    valid_federations = ["GPL", "HPF"] # HPF is probably mis-filed.
 
 [divisions]
+    # New style, which makes it easier to combine Tested and Untested.
+    # Untested.
+    j10_12 = {name = "J10-12", min=10, max=12}
+    j13_15 = {name = "J13-15", min=13, max=15}
+    j16_17 = {name = "J16-17", min=16, max=17}
+    j18_19 = {name = "J18-19", min=18, max=19}
+    j20_23 = {name = "J20-23", min=20, max=23}
+    s35_39 = {name = "S35-39", min=35, max=39}
+    m40_44 = {name = "M40-44", min=40, max=44}
+    m45_49 = {name = "M45-49", min=45, max=49}
+    m50_54 = {name = "M50-54", min=50, max=54}
+    m55_59 = {name = "M55-59", min=55, max=59}
+    m60_64 = {name = "M60-64", min=60, max=64}
+    m65_69 = {name = "M65-69", min=65, max=69}
+    m70_74 = {name = "M70-74", min=70, max=74}
+    m75_79 = {name = "M75-79", min=75, max=79}
+    m80_84 = {name = "M80-84", min=80, max=84}
+    m80p = {name = "M80+", min=80, max=999}
+
+    # Tested.
+    opent = {name = "OpenT", min=0, max=999, tested="Yes"}
+    j10_12t = {name = "J10-12T", min=10, max=12, tested="Yes"}
+    j13_15t = {name = "J13-15T", min=13, max=15, tested="Yes"}
+    j16_17t = {name = "J16-17T", min=16, max=17, tested="Yes"}
+    j18_19t = {name = "J18-19T", min=18, max=19, tested="Yes"}
+    j20_23t = {name = "J20-23T", min=20, max=23, tested="Yes"}
+    s35_39t = {name = "S35-39T", min=35, max=39, tested="Yes"}
+    m40_44t = {name = "M40-44T", min=40, max=44, tested="Yes"}
+    m45_49t = {name = "M45-49T", min=45, max=49, tested="Yes"}
+    m50_54t = {name = "M50-54T", min=50, max=54, tested="Yes"}
+    m55_59t = {name = "M55-59T", min=55, max=59, tested="Yes"}
+    m60_64t = {name = "M60-64T", min=60, max=64, tested="Yes"}
+    m65_69t = {name = "M65-69T", min=65, max=69, tested="Yes"}
+    m70_74t = {name = "M70-74T", min=70, max=74, tested="Yes"}
+    m75_79t = {name = "M75-79T", min=75, max=79, tested="Yes"}
+    m80_84t = {name = "M80-84T", min=80, max=84, tested="Yes"}
+    m80pt = {name = "M80+T", min=80, max=999, tested="Yes"}
+
+    # Odd divisions.
+    j15_19t = {name = "J15-19T", min=15, max=19, tested="Yes"}
+    j15_19 = {name = "J15-19", min=15, max=19}
+
+    # Old divisions.
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
     teen_13_19 = {name = "Teen 13-19", min = 13, max = 19} # Seldom used.
