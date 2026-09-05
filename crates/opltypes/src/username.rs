@@ -281,7 +281,7 @@ fn convert_to_ascii(name: &str) -> Result<Username, String> {
         // A single UTF-8 char can expand to multiple ASCII chars.
         let s: &str = match letter {
             'á' | 'ä' | 'å' | 'ą' | 'ã' | 'à' | 'â' | 'ā' | 'ắ' | 'ấ' | 'ầ' | 'ặ' | 'ạ' | 'ă'
-            | 'ả' | 'ậ' | 'ằ' | 'ẩ' => "a",
+            | 'ả' | 'ậ' | 'ằ' | 'ẩ' | 'ẫ' => "a",
             'æ' => "ae",
             'ć' | 'ç' | 'č' | 'ĉ' | 'ċ' => "c",
             'đ' | 'ð' | 'ď' => "d",
