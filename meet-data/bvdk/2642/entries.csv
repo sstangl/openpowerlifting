@@ -1,32 +1,37 @@
-Name,Team,Sex,BodyweightKg,BirthYear,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Division,WeightClassKg,Place,BirthDate
-Jonte Smolczyk,,M,61.66,,,,,,,,,,125,140,152.5,152.5,152.5,D,Raw,Youth B,66,1,
-Dmytro Stepanchuk,,M,61.2,,,,,,,,,,95,100,-105,100,100,D,Raw,Youth B,66,2,
-Carlo Bukowski,,F,73.84,,,,,,,,,,100,110,120,120,120,D,Raw,Juniors,76,1,
-Serhii Perfiliev,,M,73.3,,,,,,,,,,-170,180,-182.5,180,180,D,Raw,Juniors,74,1,
-Jan Tarek Puls,,M,98.76,,,,,,,,,,260,280,-300,280,280,D,Raw,Juniors,105,1,
-Frederik Köster,,M,117.7,,,,,,,,,,225,240,-262.5,240,240,D,Raw,Juniors,120,1,
-Maik Junge,,M,72.54,,,,,,,,,,155,170,185,185,185,D,Raw,Masters 1,74,1,
-Benjamin Blumenthal,,M,111.36,,,,,,,,,,230,245,-255,245,245,D,Raw,Masters 1,120,1,
-Reza Alipour,,M,108.1,,,,,,,,,,180,192.5,-210,192.5,192.5,D,Raw,Masters 1,120,2,
-Olga Dell,,F,83.7,,,,,,,,,,140,150,-160,150,150,D,Raw,Masters 2,84,1,
-Jan Andreas Smolczyk,,M,83.1,,,,,,,,,,175,195,210,210,210,D,Raw,Masters 2,93,1,
-Olaf Meulenberg,,M,91.78,,,,,,,,,,190,200,210,210,210,D,Raw,Masters 2,93,2,
-Beate Marszallek,,F,47.43,,,,,,,,,,75,80,85,85,85,D,Raw,Masters 3,52,1,
-Susanne Meulenberg,,F,69.1,,,,,,,,,,-110,110,115,115,115,D,Raw,Masters 3,76,1,
-Krystian Jusczyk,,M,96.78,,,,,,,,,,200,-210,210,210,210,D,Raw,Masters 3,105,1,
-Otto Sallamon,,M,94.28,,,,,,,,,,170,180,190,190,190,D,Raw,Masters 3,105,2,
-Klaus Uwe Klobedantz,,M,111.64,,,,,,,,,,170,177.5,185,185,185,D,Raw,Masters 3,120,1,
-Ralf Schäfer,,M,82.02,,,,,,,,,,160,181,185,185,185,D,Raw,Masters 4,83,1,
-Vivien Zrelli,,F,52.5,,,,,,,,,,120,125,-130,125,125,D,Raw,Open,57,1,
-Emilia Lamik,,F,79.18,,,,,,,,,,152.5,165,170,170,170,D,Raw,Open,84,1,
-Marcel Epmeier,,M,75.26,,,,,,,,,,215,230,240,240,240,D,Raw,Open,83,1,
-Lennart Niewendick,,M,90.92,,,,,,,,,,230,250,260,260,260,D,Raw,Open,93,1,
-Nils Möllmann,,M,91.92,,,,,,,,,,230,247.5,252.5,252.5,252.5,D,Raw,Open,93,2,
-Maxim Lutz,,M,91.22,,,,,,,,,,205,225,-240,225,225,D,Raw,Open,93,3,
-Serhed Cakmak,,M,86.24,,,,,,,,,,180,190,-202.5,190,190,D,Raw,Open,93,4,
-Peranavan Vinayagamoorthy,,M,90.9,,,,,,,,,,180,190,-200,190,190,D,Raw,Open,93,5,
-Julian Vogt,,M,98.8,,,,,,,,,,220,237.5,245,245,245,D,Raw,Open,105,1,
-Markus Gummersbach,,M,111.2,,,,,,,,,,230,250,265,265,265,D,Raw,Open,120,1,
-Ervin Imeri,,M,156,,,,,,,,,,285,300,-320,300,300,D,Raw,Open,120+,1,
-Milad Saghi,,M,124.44,,,,,,,,,,255,270,-285,270,270,D,Raw,Open,120+,2,
-Patrick Hirsch,,M,124,,,,,,,,,,215,237.5,252.5,252.5,252.5,D,Raw,Open,120+,3,
+Name,Team,Sex,BodyweightKg,BirthDate,BirthYear,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Event,Equipment,Division,WeightClassKg,Place
+Konstantin Schäfer,Kraftsport Colonia,M,87.08,,1994,,,,,,,,,240.0,-260.0,-300.0,240.0,240.0,D,Single-ply,Open,93,1
+Susanne Holzweiler,KSV Essen 1888 e.V.,F,70.72,,1993,,,,,,,,,130.0,137.5,145.0,145.0,145.0,D,Single-ply,Open,76,1
+Tymofii Motora,KSV Essen 1888 e.V.,M,65.02,,2008,,,,,,,,,220.0,231.0,235.5,235.5,235.5,D,Single-ply,Youth A,66,1
+Klaus-Peter Schiffer,KSV Essen 1888 e.V.,M,96.22,,1989,,,,,,,,,225.0,-252.5,-252.5,225.0,225.0,D,Single-ply,Open,105,1
+Thomas Boiar,SV 14/19 Westerholt e.V.,M,84.28,,1983,,,,,,,,,245.0,263.5,-265.0,263.5,263.5,D,Single-ply,Masters 1,93,1
+Lennart Niewendick,KSV Essen 1888 e.V.,M,90.92,,1990,,,,,,,,,230.0,250.0,260.0,260.0,260.0,D,Raw,Open,93,1
+Beate Marszallek,KSV Essen 1888 e.V.,F,47.43,,1963,,,,,,,,,75.0,80.0,85.0,85.0,85.0,D,Raw,Masters 3,52,1
+Milad Saghi,KSV Essen 1888 e.V.,M,124.44,,1999,,,,,,,,,255.0,270.0,-285.0,270.0,270.0,D,Raw,Open,120+,2
+Krystian Jusczyk,Gewichtheberabt. VfB 48/64 Hüls e.V.,M,96.78,,1966,,,,,,,,,200.0,-210.0,210.0,210.0,210.0,D,Raw,Masters 3,105,1
+Peranavan Vinayagamoorthy,KSV Fitnesskreis,M,90.90,,2002,,,,,,,,,180.0,190.0,-200.0,190.0,190.0,D,Raw,Open,93,5
+Frederik Köster,Athletik Club Bochum e.V.,M,117.70,,2003,,,,,,,,,225.0,240.0,-262.5,240.0,240.0,D,Raw,Juniors,120,1
+Ervin Imeri,KSV Fitnesskreis,M,156.00,,1999,,,,,,,,,285.0,300.0,-320.0,300.0,300.0,D,Raw,Open,120+,1
+Klaus Uwe Klobedantz,KSV Fitnesskreis,M,111.64,,1966,,,,,,,,,170.0,177.5,185.0,185.0,185.0,D,Raw,Masters 3,120,1
+Dmytro Stepanchuk,AC Goliath 20 e.V. Mengede,M,61.20,,2011,,,,,,,,,95.0,100.0,-105.0,100.0,100.0,D,Raw,Youth B,66,2
+Maik Junge,AC Goliath 20 e.V. Mengede,M,72.54,,1985,,,,,,,,,155.0,170.0,185.0,185.0,185.0,D,Raw,Masters 1,74,1
+Nils Möllmann,SV 14/19 Westerholt e.V.,M,91.92,,1997,,,,,,,,,230.0,247.5,252.5,252.5,252.5,D,Raw,Open,93,2
+Emilia Lamik,SV 14/19 Westerholt e.V.,F,79.18,,2002,,,,,,,,,152.5,165.0,170.0,170.0,170.0,D,Raw,Open,84,1
+Otto Sallamon,SV 14/19 Westerholt e.V.,M,94.28,,1963,,,,,,,,,170.0,180.0,190.0,190.0,190.0,D,Raw,Masters 3,105,2
+Olaf Meulenberg,SV 14/19 Westerholt e.V.,M,91.78,,1967,,,,,,,,,190.0,200.0,210.0,210.0,210.0,D,Raw,Masters 2,93,2
+Susanne Meulenberg,SV 14/19 Westerholt e.V.,F,69.10,,1962,,,,,,,,,-110.0,110.0,115.0,115.0,115.0,D,Raw,Masters 3,76,1
+Carlo Bukowski,KSV Bochum 1898 e.V.,F,73.84,,2005,,,,,,,,,100.0,110.0,120.0,120.0,120.0,D,Raw,Juniors,76,1
+Maxim Lutz,Kraftsport Colonia,M,91.22,,2002,,,,,,,,,205.0,225.0,-240.0,225.0,225.0,D,Raw,Open,93,3
+Olga Dell,Kraftsport Colonia,F,83.70,,1972,,,,,,,,,140.0,150.0,-160.0,150.0,150.0,D,Raw,Masters 2,84,1
+Serhii Perfiliev,Athletik Club Bochum e.V.,M,73.30,,2003,,,,,,,,,-170.0,180.0,-182.5,180.0,180.0,D,Raw,Juniors,74,1
+Marcel Epmeier,KSV Essen 1888 e.V.,M,75.26,,1990,,,,,,,,,215.0,230.0,240.0,240.0,240.0,D,Raw,Open,83,1
+Vivien Zrelli,Athletik Club Bochum e.V.,F,52.50,,1999,,,,,,,,,120.0,125.0,-130.0,125.0,125.0,D,Raw,Open,57,1
+Benjamin Blumenthal,SV 14/19 Westerholt e.V.,M,111.36,,1985,,,,,,,,,230.0,245.0,-255.0,245.0,245.0,D,Raw,Masters 1,120,1
+Serhed Cakmak,KSV-Lippe-Bad-Salzuflen,M,86.24,,1996,,,,,,,,,180.0,190.0,-202.5,190.0,190.0,D,Raw,Open,93,4
+Patrick Hirsch,KSV-Lippe-Bad-Salzuflen,M,124.00,,2002,,,,,,,,,215.0,237.5,252.5,252.5,252.5,D,Raw,Open,120+,3
+Markus Gummersbach,KSV-Lippe-Bad-Salzuflen,M,111.20,,1988,,,,,,,,,230.0,250.0,265.0,265.0,265.0,D,Raw,Open,120,1
+Julian Vogt,Gütersloher Schwerathletik e.V.,M,98.80,,1995,,,,,,,,,220.0,237.5,245.0,245.0,245.0,D,Raw,Open,105,1
+Ralf Schäfer,SV 14/19 Westerholt e.V.,M,82.02,,1956,,,,,,,,,160.0,181.0,185.0,185.0,185.0,D,Raw,Masters 4,83,1
+Reza Alipour,Athletik Club Bochum e.V.,M,108.10,,1979,,,,,,,,,180.0,192.5,-210.0,192.5,192.5,D,Raw,Masters 1,120,2
+Jonte Smolczyk,Powerlifting Duisburg e.V.,M,61.66,,2010,,,,,,,,,125.0,140.0,152.5,152.5,152.5,D,Raw,Youth B,66,1
+Jan Tarek Puls,Gütersloher Schwerathletik e.V.,M,98.76,,2003,,,,,,,,,260.0,280.0,-300.0,280.0,280.0,D,Raw,Juniors,105,1
+Jan Andreas Smolczyk,Powerlifting Duisburg e.V.,M,83.10,,1970,,,,,,,,,175.0,195.0,210.0,210.0,210.0,D,Raw,Masters 2,93,1
