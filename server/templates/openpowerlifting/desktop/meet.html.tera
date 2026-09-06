@@ -92,7 +92,7 @@
         {% endif %}
       {% for this in table.rows %}
         <tr class="{% if this.lifter.username == referring_username %} highlighted {% endif %}">
-          {% if use_rank_column == false or this.place == "DQ" or this.place == "DD" %}
+          {% if use_rank_column == false or this.place == "DQ" or this.place == "DD" or this.place == "G" %}
             <td>{{this.place}}</td>
           {% else %}
             <td>{{this.rank}}</td>

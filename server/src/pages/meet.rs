@@ -619,11 +619,23 @@ fn make_tables_by_points<'db>(
         }
     };
 
-    let rows: Vec<ResultsRow> = entries
-        .into_iter()
-        .zip(1..)
-        .map(|(e, i)| ResultsRow::from(opldb, locale, display_points_system, e, i))
-        .collect();
+    // Build a list of results. Guest lifters keep their position but aren't counted
+    // in the ranking enumeration: the template will render them as "G".
+    let rows: Vec<ResultsRow> = {
+        let mut acc = Vec::with_capacity(entries.len());
+        let mut rank_acc: u32 = 0;
+        for entry in entries {
+            let rank = if entry.place != Place::G {
+                rank_acc += 1;
+                rank_acc
+            } else {
+                0 // The value is irrelevant, as the template won't render it.
+            };
+            let row = ResultsRow::from(opldb, locale, display_points_system, entry, rank);
+            acc.push(row);
+        }
+        acc
+    };
 
     vec![Table { title: None, rows }]
 }
