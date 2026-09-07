@@ -1,6 +1,7 @@
 # Configuration for WPC South Africa.
 
 [options]
+    valid_federations = ["WPC-SA"]
     require_manual_disambiguation = true
 
 [divisions]
@@ -47,8 +48,10 @@
     # APF Divisions.
     morapf = {name ="M_OR_APF",min=0,max=999,equipment="Raw",sex="M"}
     mocrapf = {name ="M_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
+    mocrmilapf = {name ="M_OCR_MIL_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="M"}
     mosapf = {name ="M_OES_APF",min=0,max=999,equipment="Single-ply",sex="M"}
     momapf = {name ="M_OEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"}
+    mommilapf = {name ="M_OEM_MIL_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr1apf = {name ="M_MR_1_APF",min=40,max=44,equipment="Raw",sex="M"}
     mmcr1apf = {name ="M_MCR_1_APF",min=40,max=44,equipment=["Raw","Wraps"],sex="M"}
     mms1apf = {name ="M_MES_1_APF",min=40,max=44,equipment="Single-ply",sex="M"}
@@ -59,14 +62,18 @@
     mmm2apf = {name ="M_MEM_2_APF",min=45,max=49,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr3apf = {name ="M_MR_3_APF",min=50,max=54,equipment="Raw",sex="M"}
     mmcr3apf = {name ="M_MCR_3_APF",min=50,max=54,equipment=["Raw","Wraps"],sex="M"}
+    mmcr3milapf = {name ="M_MCR_3_MIL_APF",min=50,max=54,equipment=["Raw","Wraps"],sex="M"}
     mms3apf = {name ="M_MES_3_APF",min=50,max=54,equipment="Single-ply",sex="M"}
     mmm3apf = {name ="M_MEM_3_APF",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr4apf = {name ="M_MR_4_APF",min=55,max=59,equipment="Raw",sex="M"}
     mmcr4apf = {name ="M_MCR_4_APF",min=55,max=59,equipment=["Raw","Wraps"],sex="M"}
+    mmcr4milapf = {name ="M_MCR_4_MIL_APF",min=55,max=59,equipment=["Raw","Wraps"],sex="M"}
     mms4apf = {name ="M_MES_4_APF",min=55,max=59,equipment="Single-ply",sex="M"}
     mmm4apf = {name ="M_MEM_4_APF",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M"}
+    mmm4milapf = {name ="M_MEM_4_MIL_APF",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr5apf = {name ="M_MR_5_APF",min=60,max=64,equipment="Raw",sex="M"}
     mmcr5apf = {name ="M_MCR_5_APF",min=60,max=64,equipment=["Raw","Wraps"],sex="M"}
+    mmcr5milapf = {name ="M_MCR_5_MIL_APF",min=60,max=64,equipment=["Raw","Wraps"],sex="M"}
     mms5apf = {name ="M_MES_5_APF",min=60,max=64,equipment="Single-ply",sex="M"}
     mmm5apf = {name ="M_MEM_5_APF",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M"}
     mmr6apf = {name ="M_MR_6_APF",min=65,max=69,equipment="Raw",sex="M"}
@@ -144,6 +151,7 @@
 
     forapf = {name ="F_OR_APF",min=0,max=999,equipment="Raw",sex="F"}
     focrapf = {name ="F_OCR_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
+    focrmilapf = {name ="F_OCR_MIL_APF",min=0,max=999,equipment=["Raw","Wraps"],sex="F"}
     fosapf = {name ="F_OES_APF",min=0,max=999,equipment="Single-ply",sex="F"}
     fomapf = {name ="F_OEM_APF",min=0,max=999,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr1apf = {name ="F_MR_1_APF",min=40,max=44,equipment="Raw",sex="F"}
@@ -160,6 +168,7 @@
     fmm3apf = {name ="F_MEM_3_APF",min=50,max=54,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr4apf = {name ="F_MR_4_APF",min=55,max=59,equipment="Raw",sex="F"}
     fmcr4apf = {name ="F_MCR_4_APF",min=55,max=59,equipment=["Raw","Wraps"],sex="F"}
+    fmcr4milapf = {name ="F_MCR_4_MIL_APF",min=55,max=59,equipment=["Raw","Wraps"],sex="F"}
     fms4apf = {name ="F_MES_4_APF",min=55,max=59,equipment="Single-ply",sex="F"}
     fmm4apf = {name ="F_MEM_4_APF",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="F"}
     fmr5apf = {name ="F_MR_5_APF",min=60,max=64,equipment="Raw",sex="F"}
