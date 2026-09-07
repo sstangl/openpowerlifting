@@ -261,6 +261,7 @@
     mmm4aapf = {name ="M_MEM_4_AAPF",min=55,max=59,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr5aapf = {name ="M_MR_5_AAPF",min=60,max=64,equipment="Raw",sex="M",tested="Yes"}
     mmcr5aapf = {name ="M_MCR_5_AAPF",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
+    mmcr5milaapf = {name ="M_MCR_5_MIL_AAPF",min=60,max=64,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms5aapf = {name ="M_MES_5_AAPF",min=60,max=64,equipment="Single-ply",sex="M",tested="Yes"}
     mmm5aapf = {name ="M_MEM_5_AAPF",min=60,max=64,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr6aapf = {name ="M_MR_6_AAPF",min=65,max=69,equipment="Raw",sex="M",tested="Yes"}
@@ -269,6 +270,7 @@
     mmm6aapf = {name ="M_MEM_6_AAPF",min=65,max=69,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr7aapf = {name ="M_MR_7_AAPF",min=70,max=74,equipment="Raw",sex="M",tested="Yes"}
     mmcr7aapf = {name ="M_MCR_7_AAPF",min=70,max=74,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
+    mmcr7soaapf = {name ="M_MCR_7_SO_AAPF",min=70,max=74,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
     mms7aapf = {name ="M_MES_7_AAPF",min=70,max=74,equipment="Single-ply",sex="M",tested="Yes"}
     mmm7aapf = {name ="M_MEM_7_AAPF",min=70,max=74,equipment=["Multi-ply","Unlimited"],sex="M",tested="Yes"}
     mmr8aapf = {name ="M_MR_8_AAPF",min=75,max=79,equipment="Raw",sex="M",tested="Yes"}
