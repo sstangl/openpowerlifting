@@ -183,6 +183,7 @@
 <optgroup label="{{strings.country.bolivia}}">
   <option value="wrpf-bolivia" {% if selection.federation == "WRPF-Bolivia" %}selected{% endif %}>WRPF Bolivia</option>
   <option value="abp" {% if selection.federation == "ABP" %}selected{% endif %}>ABP - Alianza Boliviana Powerlifting [GPA/IPO]</option>
+  <option value="boliviapl" {% if selection.federation == "BoliviaPL" %}selected{% endif %}>Bolivia Powerlifting</option>
 </optgroup>
 <optgroup label="{{strings.country.brazil}}">
   <option value="cblb" {% if selection.federation == "CBLB" %}selected{% endif %}>CBLB - Confederação Brasileira de Levantamentos Básicos [IPF]</option>
