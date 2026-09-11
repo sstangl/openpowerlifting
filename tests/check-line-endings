@@ -15,9 +15,9 @@ FOUND_ERROR=0
 
 # If available use ripgrep as it's faster.
 if command -v "rg" >/dev/null 2>&1; then
-    MATCHES=$(rg -l '\r' meet-data/)
+    MATCHES=$(rg -l '\r' meet-data/ lifter-data/)
 else
-    MATCHES=$(grep -Ilr $'\r' meet-data/)
+    MATCHES=$(grep -Ilr $'\r' meet-data/ lifter-data/)
 fi
 
 # Loop over matches.
