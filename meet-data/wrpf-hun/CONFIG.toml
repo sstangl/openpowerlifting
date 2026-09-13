@@ -1,4 +1,27 @@
 [divisions]
+
+    #Official WRPF divisions
+    open = {name = "Open", min = 0, max = 999}
+    youth = {name = "Youth", min = 5, max = 13}
+    teen_14_16 = {name = "Teen 14-16", min = 14, max = 16}
+    subjunior_17_19 = {name = "Sub-Juniors 17-19", min = 17, max = 19}
+    juniors_20_23 = {name = "Juniors 20-23", min = 20, max = 23}
+    masters_40_49 = {name = "Masters 40-49", min = 40, max = 49}
+    masters_50_59 = {name = "Masters 50-59", min = 50, max = 59}
+    masters_60_69 = {name = "Masters 60-69", min = 60, max = 69}
+    masters_70_79 = {name = "Masters 70-79", min = 70, max = 79}
+    masters_80_89 = {name = "Masters 80-89", min = 80, max = 89}
+    dis_open = {name = "Disabled Open", min = 0, max = 999}
+    dis_juniors_20_23 = {name = "Disabled Juniors 20-23", min = 20, max = 23}
+    dis_teen = {name = "Disabled Teen", min = 13, max = 19}
+    dis_masters_40_44 = {name = "Disabled Masters 40-44", min = 40, max = 44}
+    dis_masters_45_49 = {name = "Disabled Masters 45-49", min = 45, max = 49}
+    dis_masters_40_49 = {name = "Disabled Masters 40-49", min = 40, max = 49}
+    dis_masters_50_59 = {name = "Disabled Masters 50-59", min = 50, max = 59}
+    dis_masters_60_69 = {name = "Disabled Masters 60-69", min = 60, max = 69}
+    dis_masters_70_79 = {name = "Disabled Masters 70-79", min = 70, max = 79}
+
+    #Other permutations
     mor = {name ="MO", min=0, max=999, sex="M", equipment=["Raw","Wraps"]}
     for = {name ="FO", min=0, max=999, sex="F", equipment=["Raw","Wraps"]}
     mtr = {name ="MT", min=13, max=19, sex="M", equipment=["Raw","Wraps"]}
