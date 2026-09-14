@@ -326,7 +326,12 @@
     # Miscellaneous divisions.
     msoawpc = {name="M_SO_AWPC", min=0, max=999, tested="Yes"} # Special Olympics
     morawpcdis = {name ="M_OR_AWPC_Disabled",min=0,max=999,equipment="Raw",sex="M",tested="Yes"}
+    mocrawpcdis = {name ="M_OCR_AWPC_Disabled",min=0,max=999,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
+    mmr1awpcdis = {name ="M_MR_1_AWPC_Disabled",min=40,max=44,equipment="Raw",sex="M",tested="Yes"}
     mmr2awpcdis = {name ="M_MR_2_AWPC_Disabled",min=45,max=49,equipment="Raw",sex="M",tested="Yes"}
+    mmcr2awpcdis = {name ="M_MCR_2_AWPC_Disabled",min=45,max=49,equipment=["Raw","Wraps"],sex="M",tested="Yes"}
+    mmr3awpcdis = {name ="M_MR_3_AWPC_Disabled",min=50,max=54,equipment="Raw",sex="M",tested="Yes"}
+    mmr4awpcdis = {name ="M_MR_4_AWPC_Disabled",min=55,max=59,equipment="Raw",sex="M",tested="Yes"}
 
 
     # Russian style divisions.
