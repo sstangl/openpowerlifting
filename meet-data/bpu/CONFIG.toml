@@ -64,6 +64,7 @@
     mmt3crbpu = {name ="M_TCR_3_BPU",min=18,max=19,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mmt3sbpu = {name ="M_TES_3_BPU",min=18,max=19,equipment="Single-ply",sex="M",tested="No"}
     mmt3mbpu = {name ="M_TEM_3_BPU",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mmt3ubpu = {name ="M_TEU_3_BPU",min=18,max=19,equipment="Unlimited",sex="M",tested="No"}
     mjrbpu = {name ="M_JR_BPU",min=20,max=23,equipment="Raw",sex="M",tested="No"}
     mjcrbpu = {name ="M_JCR_BPU",min=20,max=23,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mjsbpu = {name ="M_JES_BPU",min=20,max=23,equipment="Single-ply",sex="M",tested="No"}
