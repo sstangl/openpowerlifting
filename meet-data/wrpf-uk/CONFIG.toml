@@ -31,6 +31,7 @@
     masters_70_79dt = {name = "Masters 70-79-DT", min = 70, max = 79,tested="Yes"}
     masters_80pdt = {name = "Masters 80+-DT", min = 80, max = 999,tested="Yes"}
     prodt = {name = "Pro-DT", min = 0, max = 999,tested="Yes"}
+    openparadt = {name = "Open-DT-Para", min = 0, max = 999,tested="Yes"}
 
 
 [weightclasses.default_M]
