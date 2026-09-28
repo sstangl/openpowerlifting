@@ -1053,9 +1053,14 @@ pub enum RussiaState {
     VOR,
     /// Yaroslavl.
     YAR,
+    /// Autonomous Jewish Oblast.
+    YEV,
 
     // Okrugs.
     /// Aga Buryatia.
+    ///
+    /// Also called Agin-Buryat Autonomous Okrug.
+    /// Merged with Chita Oblast to form Zabaykalsky Krai on 2008-03-01.
     AGB,
     /// Nenetsia,
     NEN,
@@ -1069,13 +1074,10 @@ pub enum RussiaState {
     YAN,
 
     // Federal cities.
-    /// St. Petersburg.
-    SPE,
     /// Moscow (city).
     MOW,
-
-    /// Autonomous Jewish Province.
-    YEV,
+    /// St. Petersburg.
+    SPE,
 }
 
 /// A province in South Africa, using conventional acronyms (non-ISO).
@@ -1101,23 +1103,23 @@ pub enum SouthAfricaState {
     WC,
 }
 
-/// AN Emirate in the UAE (non-ISO).
+/// An Emirate in the UAE (non-ISO).
 #[derive(Copy, Clone, Debug, Display, EnumString, EnumIter, PartialEq, Eq, Serialize)]
 pub enum UAEState {
     /// Abu Dhabi.
     AD,
-    /// Dubai.
-    DXB,
-    /// Sharjah.
-    SHJ,
     /// Ajman.
     AJM,
-    /// Umm Al Quwain.
-    UAQ,
-    /// Ras Al Khaima.
-    RAK,
+    /// Dubai.
+    DXB,
     /// Fujairah.
     FUJ,
+    /// Ras Al-Khaima.
+    RAK,
+    /// Sharjah.
+    SHJ,
+    /// Umm Al Quwain.
+    UAQ,
 }
 
 /// A state in the USA.
