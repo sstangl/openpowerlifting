@@ -581,14 +581,17 @@ fn find_records<'db>(
 #[derive(Serialize)]
 pub struct Table<'db> {
     pub title: String,
+    /// The CSS class to use for styling lift colors, like "squat" "bench" "deadlift" "total".
+    pub lift_css: &'static str,
     pub weight_column_label: &'db str,
     pub rows: Vec<RecordsRow<'db>>,
 }
 
 impl<'db> Table<'db> {
-    pub fn new(title: String, weight_column_label: &'db str) -> Table<'db> {
+    pub fn new(title: String, lift_css: &'static str, weight_column_label: &'db str) -> Table<'db> {
         Table {
             title,
+            lift_css,
             weight_column_label,
             rows: vec![],
         }
@@ -677,24 +680,24 @@ fn prettify_records<'db>(
     let all = &strings.selectors.event.all;
 
     let fullpower_squat_str = format!("{} ({})", strings.columns.squat, full_power);
-    let mut fullpower_squat = Table::new(fullpower_squat_str, squat_str);
+    let mut fullpower_squat = Table::new(fullpower_squat_str, "squat", squat_str);
 
     let fullpower_bench_str = format!("{} ({})", strings.columns.bench, full_power);
-    let mut fullpower_bench = Table::new(fullpower_bench_str, bench_str);
+    let mut fullpower_bench = Table::new(fullpower_bench_str, "bench", bench_str);
 
     let fullpower_deadlift_str = format!("{} ({})", strings.columns.deadlift, full_power);
-    let mut fullpower_deadlift = Table::new(fullpower_deadlift_str, deadlift_str);
+    let mut fullpower_deadlift = Table::new(fullpower_deadlift_str, "deadlift", deadlift_str);
 
-    let mut fullpower_total = Table::new(strings.columns.total.to_string(), total_str);
+    let mut fullpower_total = Table::new(strings.columns.total.to_string(), "total", total_str);
 
     let any_squat_str = format!("{} ({})", strings.columns.squat, all);
-    let mut any_squat = Table::new(any_squat_str, squat_str);
+    let mut any_squat = Table::new(any_squat_str, "squat", squat_str);
 
     let any_bench_str = format!("{} ({})", strings.columns.bench, all);
-    let mut any_bench = Table::new(any_bench_str, bench_str);
+    let mut any_bench = Table::new(any_bench_str, "bench", bench_str);
 
     let any_deadlift_str = format!("{} ({})", strings.columns.deadlift, all);
-    let mut any_deadlift = Table::new(any_deadlift_str, deadlift_str);
+    let mut any_deadlift = Table::new(any_deadlift_str, "deadlift", deadlift_str);
 
     // Collectors are ordered by weight class, ascending.
     for collector in records {
