@@ -24,7 +24,7 @@ stages:
 build-checker-image:
   stage: build
   image:
-    name: gcr.io/kaniko-project/executor:debug
+    name: ghcr.io/osscontainertools/kaniko:v1.28.5-debug
     entrypoint: [""]
   script:
     - mkdir -p /kaniko/.docker
