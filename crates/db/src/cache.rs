@@ -2,13 +2,12 @@
 
 use itertools::Itertools;
 use opltypes::*;
-use rustc_hash::{FxBuildHasher, FxHashMap};
-use smartstring::alias::CompactString;
 
 use std::cmp::Ordering;
 
 use crate::algorithms::*;
-use crate::{Entry, Lifter, Meet};
+use crate::username_map::UsernameMap;
+use crate::{Entry, Meet};
 
 /// List of indices into the opldb.entries vector,
 /// in no particular order, but such that entries from the same
@@ -192,14 +191,14 @@ impl NonSortedNonUnique {
 }
 
 /// Owning structure of all precomputed data.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug)]
 pub struct StaticCache {
     // Precalculated data for Rankings.
     pub constant_time: ConstantTimeCache,
     pub log_linear_time: LogLinearTimeCache,
 
     /// Precalculated map of Lifter Username to Lifter ID.
-    pub username_map: FxHashMap<CompactString, u32>,
+    pub username_map: UsernameMap,
 
     /// Precalculated table of EntryIDs sorted by their underlying MeetID.
     ///
@@ -208,15 +207,7 @@ pub struct StaticCache {
 }
 
 impl StaticCache {
-    pub fn new(lifters: &[Lifter], meets: &[Meet], entries: &[Entry]) -> StaticCache {
-        // Calculate the map from Username to ID.
-        let mut username_map = FxHashMap::with_hasher(FxBuildHasher);
-        for (i, lifter) in lifters.iter().enumerate() {
-            let cloned = CompactString::from(lifter.username.as_str());
-            username_map.insert(cloned, i as u32);
-        }
-        username_map.shrink_to_fit();
-
+    pub fn new(meets: &[Meet], entries: &[Entry], username_map: UsernameMap) -> StaticCache {
         // Calculate Entry IDs sorted by Meet ID, for quick entries-in-meet lookup.
         let mut entry_ids_sorted_by_meet_id: Vec<u32> = Vec::with_capacity(entries.len());
         for i in 0..entries.len() {

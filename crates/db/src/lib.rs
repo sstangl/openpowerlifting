@@ -27,11 +27,13 @@ mod cache;
 mod data;
 mod metafederation;
 pub mod query;
+pub mod username_map;
 mod yesno;
 
 // Re-exports.
 pub use crate::data::{Entry, Lifter, Meet};
 pub use crate::metafederation::*;
+use crate::username_map::UsernameMap;
 
 /// The collection of data stores that constitute the complete dataset.
 ///
@@ -366,12 +368,14 @@ impl OplDb {
         lifters_csv: &Path,
         meets_csv: &Path,
         entries_csv: &Path,
+        username_map_fst: &Path,
     ) -> Result<OplDb, Box<dyn Error>> {
         let lifters = import_lifters_csv(lifters_csv)?;
         let mut meets = import_meets_csv(meets_csv)?;
         let (entries, metafed_cache) = import_entries_csv(entries_csv, &mut meets)?;
+        let username_map = UsernameMap::new(username_map_fst)?;
 
-        let cache = StaticCache::new(&lifters, &meets, &entries);
+        let cache = StaticCache::new(&meets, &entries, username_map);
 
         Ok(OplDb {
             lifters,
@@ -465,7 +469,7 @@ impl OplDb {
 
     /// Look up the lifter_id by username.
     pub fn lifter_id(&self, username: &str) -> Option<u32> {
-        self.cache.username_map.get(username).cloned()
+        self.cache.username_map.get(username)
     }
 
     /// Get a list of all lifters that have the same username base,

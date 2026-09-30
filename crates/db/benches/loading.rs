@@ -8,6 +8,7 @@ use std::path::Path;
 const LIFTERS_CSV: &str = "../../build/lifters.csv";
 const MEETS_CSV: &str = "../../build/meets.csv";
 const ENTRIES_CSV: &str = "../../build/entries.csv";
+const USERNAME_MAP_FST: &str = "../../build/username_map.fst";
 
 /// Counts the number of lines in a file, for establishing throughput.
 fn count_lines_in(path: &str) -> usize {
@@ -32,6 +33,7 @@ pub fn loading_benchmarks(c: &mut Criterion) {
                 Path::new(LIFTERS_CSV),
                 Path::new(MEETS_CSV),
                 Path::new(ENTRIES_CSV),
+                Path::new(USERNAME_MAP_FST),
             )
             .unwrap();
         });

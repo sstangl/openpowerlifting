@@ -28,6 +28,7 @@ data: builddir client
 	cp ../build/lifters.csv "${BUILDDIR}/data/opldb/lifters.csv"
 	cp ../build/meets.csv "${BUILDDIR}/data/opldb/meets.csv"
 	cp ../build/entries.csv "${BUILDDIR}/data/opldb/entries.csv"
+	cp ../build/username_map.fst "${BUILDDIR}/data/opldb/username_map.fst"
 
 config: builddir
 	cp server-production.env "${BUILDDIR}/data/server.env"

@@ -366,12 +366,31 @@ pub fn make_csv(
     let mut lifters: Vec<&EntryLifterData> = lifter_hash.values().collect();
     lifters.sort_by_key(|x| x.id);
 
-    for lifter in lifters {
+    for lifter in &lifters {
         let default = LifterData::default();
         let data = lifterdata
             .get(&Username::from_name(lifter.username).unwrap())
             .unwrap_or(&default);
         lifters_wtr.serialize(LiftersRow::from(lifter, data))?;
+    }
+
+    // Now create a Finite State Transducer of Username -> LifterID.
+    //
+    // This has two benefits over a HashMap<Username, LifterId>:
+    //  1. The representation is much more compact.
+    //  2. Usernames in a disambiguation group do not require consecutive numbering.
+    {
+        let wtr = std::io::BufWriter::new(
+            std::fs::File::create(buildpath.join("username_map.fst")).unwrap(),
+        );
+        let mut build = fst::MapBuilder::new(wtr).unwrap();
+
+        // Constructing an FST requires inserting all entries in sorted order.
+        lifters.sort_by_key(|x| x.username);
+        for lifter in &lifters {
+            build.insert(lifter.username, lifter.id.into()).unwrap();
+        }
+        build.finish().unwrap();
     }
 
     Ok(())

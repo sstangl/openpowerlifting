@@ -19,6 +19,7 @@ static OPLDB_GLOBAL: LazyLock<OplDb> = LazyLock::new(|| {
         Path::new("../build/lifters.csv"),
         Path::new("../build/meets.csv"),
         Path::new("../build/entries.csv"),
+        Path::new("../build/username_map.fst"),
     )
     .unwrap()
 });

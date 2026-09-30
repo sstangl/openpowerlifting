@@ -721,11 +721,13 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let lifters_csv = env::var("LIFTERS_CSV").expect("LIFTERS_CSV not set");
     let meets_csv = env::var("MEETS_CSV").expect("MEETS_CSV not set");
     let entries_csv = env::var("ENTRIES_CSV").expect("ENTRIES_CSV not set");
+    let username_map_fst = env::var("USERNAME_MAP_FST").expect("USERNAMP_MAP_FST not set");
 
     let opldb = opldb::OplDb::from_csv(
         Path::new(&lifters_csv),
         Path::new(&meets_csv),
         Path::new(&entries_csv),
+        Path::new(&username_map_fst),
     )?;
 
     println!(

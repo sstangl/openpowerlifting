@@ -19,6 +19,7 @@ opltypes = { path = "../crates/opltypes/" }
 chrono = "0.4"
 colored= { workspace = true }
 csv = { workspace = true }
+fst = { workspace = true }
 itertools = "0.11"
 itertools-num = "0.1"
 pico-args = "0.5"
