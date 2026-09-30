@@ -3,6 +3,7 @@
 use criterion::{Criterion, Throughput, criterion_group, criterion_main};
 use opldb::query::direct::*;
 use opldb::{MetaFederation, OplDb};
+use opltypes::Username;
 
 use std::hint::black_box;
 use std::path::Path;
@@ -72,12 +73,14 @@ pub fn lifter_info(c: &mut Criterion) {
     let mut group = c.benchmark_group("lifter_info");
     let db = db();
 
+    let joserodriguez = Username::from_name("joserodriguez").unwrap();
     group.bench_function("lifters_under_username_base (many lifters)", |b| {
-        b.iter(|| black_box(db.lifters_under_username_base("joserodriguez")))
+        b.iter(|| black_box(db.lifters_under_username_base(black_box(&joserodriguez))))
     });
 
+    let seanstangl = Username::from_name("seanstangl").unwrap();
     group.bench_function("lifters_under_username_base (one lifter)", |b| {
-        b.iter(|| black_box(db.lifters_under_username_base("seanstangl")))
+        b.iter(|| black_box(db.lifters_under_username_base(black_box(&seanstangl))))
     });
 }
 

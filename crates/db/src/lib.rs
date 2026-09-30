@@ -477,39 +477,19 @@ impl OplDb {
     ///
     /// For example, "johndoe" matches "johndoe" and "johndoe1",
     /// but does not match "johndoenut".
-    pub fn lifters_under_username_base(&self, base: &str) -> Vec<u32> {
-        // Disambiguations end with a digit.
-        // Some lifters may have failed to be merged with their disambiguated username.
-        // Therefore, for usernames without a digit, it cannot be assumed that they are
-        // *not* a disambiguation.
-        let is_already_disambiguated: bool =
-            base.chars().last().is_some_and(|c| c.is_ascii_digit());
-        if is_already_disambiguated {
-            if let Some(id) = self.lifter_id(base) {
-                return vec![id]; // The input base was an exact lifter.
-            }
-            return vec![]; // The input base was exact, but with no matches.
-        }
-
-        let mut acc = vec![];
-
-        // Look up the name directly.
-        if let Some(id) = self.lifter_id(base) {
-            acc.push(id);
-        }
-
-        // Look up each possible disambiguation value, stopping when one is missing.
+    pub fn lifters_under_username_base(&self, username: &Username) -> Vec<u32> {
+        // If a username cannot be a base for disambiguations, just look it up directly.
         //
-        // FIXME(sstangl): This logic does not account for redacted lifters.
-        for i in 1.. {
-            let disambig = format!("{base}{i}");
-            if let Some(id) = self.lifter_id(&disambig) {
-                acc.push(id);
-            } else {
-                break;
+        // This check is important for server stability: without it, a search for "ea-" would
+        // wind up searching the UsernameMap for every CJK name, which is a lot of data.
+        if !username.can_be_disambiguation_base() {
+            if let Some(id) = self.cache.username_map.get(username.as_str()) {
+                return vec![id];
             }
+            return vec![];
         }
-        acc
+
+        self.cache.username_map.get_with_base(username.as_str())
     }
 
     /// Looks up the meet_id by MeetPath.

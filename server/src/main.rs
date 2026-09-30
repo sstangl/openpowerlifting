@@ -177,9 +177,9 @@ fn records_default(
     records(None, lang, opldb, languages, device, cookies)
 }
 
-#[get("/u/<username>?<lang>")]
+#[get("/u/<username_str>?<lang>")]
 fn lifter(
-    username: &str,
+    username_str: &str,
     lang: Option<&str>,
     opldb: &State<ManagedOplDb>,
     languages: AcceptLanguage,
@@ -188,14 +188,27 @@ fn lifter(
 ) -> Option<Result<Template, Redirect>> {
     let locale = make_locale(lang, languages, cookies);
 
-    let lifter_ids: Vec<u32> = opldb.lifters_under_username_base(username);
+    // Username conversion can fail when an unknown UTF-8 character is encountered.
+    let Ok(username) = Username::from_name(username_str) else {
+        return None;
+    };
+
+    // Disallow empty usernames to avoid streaming the whole username map FST.
+    //
+    // TODO: We could probably enforce a minimum number of characters.
+    if username.is_empty() {
+        return None;
+    }
+
+    // Format names properly.
+    if username.as_str() != username_str {
+        let fixed = username.as_str();
+        return Some(Err(Redirect::permanent(format!("/u/{fixed}"))));
+    }
+
+    let lifter_ids: Vec<u32> = opldb.lifters_under_username_base(&username);
     match lifter_ids.len() {
-        // If no LifterID was found, maybe the name just needs to be lowercased.
-        0 => {
-            let lowercase = username.to_ascii_lowercase();
-            let _guard = opldb.lifter_id(&lowercase)?;
-            Some(Err(Redirect::permanent(format!("/u/{lowercase}"))))
-        }
+        0 => None,
 
         // If a specific lifter was referenced, return the lifter's unique page.
         1 => {
@@ -222,7 +235,7 @@ fn lifter(
                 opltypes::PointsSystem::from(
                     opldb::query::direct::RankingsQuery::default().order_by,
                 ),
-                username,
+                username.as_str(),
                 &lifter_ids,
             );
             Some(Ok(match device {

@@ -54,6 +54,32 @@ impl Username {
         self.0.is_empty()
     }
 
+    /// Returns whether the username supports further disambiguation.
+    ///
+    /// For example "johndoe" can be a disambiguation base, but "johndoe1" cannot.
+    ///
+    /// Names that cannot be converted to ASCII (so CJK characters) are already
+    /// represented by numbers, and cannot be further disambiguated.
+    pub fn can_be_disambiguation_base(&self) -> bool {
+        // CJK names cannot be disambiguated.
+        if self.0.as_str().starts_with("ea-") {
+            return false;
+        }
+
+        // Names that are already disambiguated cannot function as a base.
+        if self
+            .0
+            .as_str()
+            .chars()
+            .last()
+            .is_some_and(|c| c.is_ascii_digit())
+        {
+            return false;
+        }
+
+        true
+    }
+
     /// Given a UTF-8 Name, create the corresponding ASCII Username.
     ///
     /// Usernames are used throughout the project as unique identifiers
@@ -70,6 +96,17 @@ impl Username {
         // Empty names should be invalid, but can occur from user input.
         if name.is_empty() {
             return Ok(Username::default());
+        }
+
+        // For the server, we need to enforce the property that
+        // `Username::from_name(Username::from_name(x)) == Username::from_name(x)`
+        //
+        // This works for everything but CJK names, which contain an otherwise-disallowed `-` char.
+        if name.starts_with("ea-") {
+            if name.is_ascii() {
+                return Ok(Username(name.into_ascii_string().unwrap()));
+            }
+            return Err("Non-ASCII characters found in 'ea-' username".to_string());
         }
 
         // CJK characters have no canonical ASCII representation, so we use a number.
