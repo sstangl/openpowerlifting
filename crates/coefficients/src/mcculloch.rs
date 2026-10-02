@@ -208,17 +208,17 @@ mod tests {
     #[test]
     fn bounds_check() {
         // Don't panic.
-        age_coeff(Age::Exact(u8::min_value()));
+        age_coeff(Age::Exact(u8::MIN));
         age_coeff(Age::Exact(AGE_COEFFICIENTS.len() as u8 - 1));
         age_coeff(Age::Exact(AGE_COEFFICIENTS.len() as u8));
         age_coeff(Age::Exact(AGE_COEFFICIENTS.len() as u8 + 1));
-        age_coeff(Age::Exact(u8::max_value()));
+        age_coeff(Age::Exact(u8::MAX));
 
-        age_coeff(Age::Approximate(u8::min_value()));
+        age_coeff(Age::Approximate(u8::MIN));
         age_coeff(Age::Approximate(AGE_COEFFICIENTS.len() as u8 - 1));
         age_coeff(Age::Approximate(AGE_COEFFICIENTS.len() as u8));
         age_coeff(Age::Approximate(AGE_COEFFICIENTS.len() as u8 + 1));
-        age_coeff(Age::Approximate(u8::max_value()));
+        age_coeff(Age::Approximate(u8::MAX));
 
         age_coeff(Age::None);
     }
