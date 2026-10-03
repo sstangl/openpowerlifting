@@ -545,6 +545,10 @@ pub enum Federation {
     #[strum(to_string = "FRPL", serialize = "frpl")]
     FRPL,
 
+    /// Fédération Tunisienne du Culturisme Fitness et Powerlifting, Tunisian IPF affiliate.
+    #[strum(to_string = "FTFCP", serialize = "ftfcp")]
+    FTFCP,
+    
     /// Federación Uruguaya de Levantamiento de Potencia, Uruguay IPF affiliate.
     #[strum(to_string = "FULP", serialize = "fulp")]
     FULP,
@@ -2353,6 +2357,7 @@ impl Federation {
             Federation::FranceUA => false,
             Federation::FRPL => FULLY_TESTED,
             Federation::FSFA => FULLY_TESTED,
+            Federation::FTFCP => FULLY_TESTED,
             Federation::FULP => FULLY_TESTED,
             Federation::GAPLF => FULLY_TESTED,
             Federation::GDFPF => FULLY_TESTED,
@@ -2864,6 +2869,7 @@ impl Federation {
             Federation::FranceUA => Some(Country::France),
             Federation::FRPL => Some(Country::Romania),
             Federation::FSFA => Some(Country::France),
+            Federation::FTFCP => Some(Country::Tunisia),
             Federation::FULP => Some(Country::Uruguay),
             Federation::GAPLF => Some(Country::Guyana),
             Federation::GDFPF => Some(Country::Germany),
@@ -3422,6 +3428,7 @@ impl Federation {
             Federation::FranceUA => None,
             Federation::FRPL => Some(Federation::IPF),
             Federation::FSFA => Some(Federation::WDFPF),
+            Federation::FTFCP => Some(Federation::IPF),
             Federation::FULP => Some(Federation::IPF),
             Federation::GAPLF => Some(Federation::IPF),
             Federation::GDFPF => Some(Federation::WDFPF),
@@ -4041,6 +4048,7 @@ impl Federation {
             Federation::FranceUA => PointsSystem::Wilks,
             Federation::FRPL => Federation::ipf_rules_on(date),
             Federation::FSFA => PointsSystem::Wilks,
+            Federation::FTFCP => Federation::ipf_rules_on(date),
             Federation::FULP => Federation::ipf_rules_on(date),
             Federation::GAPLF => Federation::ipf_rules_on(date),
             Federation::GDFPF => PointsSystem::Wilks,
