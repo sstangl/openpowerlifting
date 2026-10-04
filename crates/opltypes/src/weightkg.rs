@@ -373,7 +373,6 @@ impl fmt::Display for WeightAny {
 impl FromStr for WeightKg {
     type Err = num::ParseIntError;
 
-    #[inline]
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         if s.is_empty() {
             return Ok(WeightKg(0));
