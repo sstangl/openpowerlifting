@@ -81,3 +81,4 @@
     sex = "M"
 
 [exemptions]
+    2603 = ["ExemptDivision","ExemptWeightClassConsistency"]  # combined Divisions and WeightClasses
