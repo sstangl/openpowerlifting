@@ -6,11 +6,12 @@
 #
 
 
-from bs4 import BeautifulSoup
-import sys
-import os
 import datetime
-from os.path import join, realpath, dirname
+import os
+import sys
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -21,8 +22,11 @@ except ImportError:
 
 
 # URL needs updating every year.
-MEETSURL = "http://meets.revolutionpowerlifting.com/results/2024-meet-results/"
-if datetime.datetime.now().strftime("%Y") != "2024":
+MEETSURLS = [
+    "http://meets.revolutionpowerlifting.com/results/2025-meet-results/",
+    "http://meets.revolutionpowerlifting.com/results/2026-meet-results/",
+]
+if datetime.datetime.now(datetime.timezone.utc).strftime("%Y") != "2026":
     print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -49,13 +53,13 @@ def getmeetlist(html):
 
 
 def main():
-    meetlist = []
-
-    html = oplprobe.gethtml(MEETSURL)
-    meetlist = meetlist + getmeetlist(html)
-
     entered = oplprobe.getenteredurls(FEDDIR)
-    unentered = oplprobe.getunenteredurls(meetlist, entered)
+
+    unentered = []
+    for url in MEETSURLS:
+        html = oplprobe.gethtml(url)
+        meetlist = getmeetlist(html)
+        unentered += oplprobe.getunenteredurls(meetlist, entered)
 
     oplprobe.print_meets(color('[RPS]'), unentered)
 
