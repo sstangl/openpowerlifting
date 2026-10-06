@@ -22,6 +22,7 @@ pub struct Context<'db> {
     pub referring_username: Option<String>,
     pub units: WeightUnits,
     pub points_column_title: &'db str,
+    pub show_attempts: bool,
 
     /// Whether to use Rank instead of Place.
     pub use_rank_column: bool,
@@ -58,6 +59,7 @@ pub struct Context<'db> {
 pub struct Table<'db> {
     pub title: Option<String>,
     pub rows: Vec<ResultsRow<'db>>,
+    pub has_attempts: bool,
 }
 
 /// A sort selection widget just for the meet page.
@@ -241,11 +243,25 @@ pub struct ResultsRow<'a> {
     pub lifter_country: Option<&'a str>,
     pub lifter_state: Option<State>,
 
-    pub squat: langpack::LocalizedWeightAny,
-    pub bench: langpack::LocalizedWeightAny,
-    pub deadlift: langpack::LocalizedWeightAny,
+    pub best3squat: langpack::LocalizedWeightAny,
+    pub best3bench: langpack::LocalizedWeightAny,
+    pub best3deadlift: langpack::LocalizedWeightAny,
     pub total: langpack::LocalizedWeightAny,
     pub points: langpack::LocalizedPoints,
+
+    // Attempts, if present, otherwise zero.
+    pub squat1: langpack::LocalizedWeightAny,
+    pub squat2: langpack::LocalizedWeightAny,
+    pub squat3: langpack::LocalizedWeightAny,
+    pub squat4: langpack::LocalizedWeightAny,
+    pub bench1: langpack::LocalizedWeightAny,
+    pub bench2: langpack::LocalizedWeightAny,
+    pub bench3: langpack::LocalizedWeightAny,
+    pub bench4: langpack::LocalizedWeightAny,
+    pub deadlift1: langpack::LocalizedWeightAny,
+    pub deadlift2: langpack::LocalizedWeightAny,
+    pub deadlift3: langpack::LocalizedWeightAny,
+    pub deadlift4: langpack::LocalizedWeightAny,
 }
 
 impl<'a> ResultsRow<'a> {
@@ -276,20 +292,33 @@ impl<'a> ResultsRow<'a> {
             lifter_country: entry.lifter_country.map(|c| strings.translate_country(c)),
             lifter_state: entry.lifter_state,
 
-            squat: entry
+            best3squat: entry
                 .highest_squatkg()
                 .as_type(units)
                 .in_format(number_format),
-            bench: entry
+            best3bench: entry
                 .highest_benchkg()
                 .as_type(units)
                 .in_format(number_format),
-            deadlift: entry
+            best3deadlift: entry
                 .highest_deadliftkg()
                 .as_type(units)
                 .in_format(number_format),
             total: entry.totalkg.as_type(units).in_format(number_format),
             points: entry.points(points_system, units).in_format(number_format),
+
+            squat1: entry.squat1kg.as_type(units).in_format(number_format),
+            squat2: entry.squat2kg.as_type(units).in_format(number_format),
+            squat3: entry.squat3kg.as_type(units).in_format(number_format),
+            squat4: entry.squat4kg.as_type(units).in_format(number_format),
+            bench1: entry.bench1kg.as_type(units).in_format(number_format),
+            bench2: entry.bench2kg.as_type(units).in_format(number_format),
+            bench3: entry.bench3kg.as_type(units).in_format(number_format),
+            bench4: entry.bench4kg.as_type(units).in_format(number_format),
+            deadlift1: entry.deadlift1kg.as_type(units).in_format(number_format),
+            deadlift2: entry.deadlift2kg.as_type(units).in_format(number_format),
+            deadlift3: entry.deadlift3kg.as_type(units).in_format(number_format),
+            deadlift4: entry.deadlift4kg.as_type(units).in_format(number_format),
         }
     }
 }
@@ -484,13 +513,18 @@ fn finish_table<'db>(
     };
 
     let title = Some(format!("{sex} {equip} {class} {div}{event}"));
+    let has_attempts = entries.iter().any(|e| e.has_attempts());
 
     let rows: Vec<ResultsRow> = entries
         .iter()
         .map(|e| ResultsRow::from(opldb, locale, points_system, e, 0))
         .collect();
 
-    Table { title, rows }
+    Table {
+        title,
+        rows,
+        has_attempts,
+    }
 }
 
 fn make_tables_by_division<'db>(
@@ -506,6 +540,7 @@ fn make_tables_by_division<'db>(
         return vec![Table {
             title: None,
             rows: vec![],
+            has_attempts: false,
         }];
     }
 
@@ -619,6 +654,8 @@ fn make_tables_by_points<'db>(
         }
     };
 
+    let has_attempts = entries.iter().any(|e| e.has_attempts());
+
     // Build a list of results. Guest lifters keep their position but aren't counted
     // in the ranking enumeration: the template will render them as "G".
     let rows: Vec<ResultsRow> = {
@@ -637,7 +674,11 @@ fn make_tables_by_points<'db>(
         acc
     };
 
-    vec![Table { title: None, rows }]
+    vec![Table {
+        title: None,
+        rows,
+        has_attempts,
+    }]
 }
 
 impl<'db> Context<'db> {
@@ -767,6 +808,7 @@ impl<'db> Context<'db> {
             units: locale.units,
             referring_username,
             points_column_title: sort.column_title(locale, default_points),
+            show_attempts: tables.iter().any(|t| t.has_attempts),
             sortselection: sort.resolve_fed_default(default_points),
             meet: MeetInfo::from(meet, locale.strings),
             year: meet.date.year(),

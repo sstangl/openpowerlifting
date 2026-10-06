@@ -168,6 +168,23 @@ impl Entry {
         self.best3deadliftkg.max(self.deadlift4kg)
     }
 
+    /// Returns `true` if individual attempts are reported, not just best weights.
+    #[inline]
+    pub fn has_attempts(&self) -> bool {
+        self.squat1kg.is_non_zero()
+            || self.bench1kg.is_non_zero()
+            || self.deadlift1kg.is_non_zero()
+            || self.squat2kg.is_non_zero()
+            || self.squat3kg.is_non_zero()
+            || self.squat4kg.is_non_zero()
+            || self.bench2kg.is_non_zero()
+            || self.bench3kg.is_non_zero()
+            || self.bench4kg.is_non_zero()
+            || self.deadlift2kg.is_non_zero()
+            || self.deadlift3kg.is_non_zero()
+            || self.deadlift4kg.is_non_zero()
+    }
+
     /// Borrows the Division string.
     #[inline]
     pub fn division(&self) -> Option<&str> {
