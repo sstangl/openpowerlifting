@@ -50,7 +50,15 @@
       </select>
     </div>
     <div id="controls-right">
-      <button onclick="location.href='https://gitlab.com/openpowerlifting/opl-data/tree/main/meet-data/{{meet.path}}'" type="button">Edit Meet</button>
+      <a href="https://gitlab.com/openpowerlifting/opl-data/-/commits/main/meet-data/{{meet.path}}" rel="noopener" target="_blank" style="text-decoration:none">
+        <button>View Changes</button>
+      </a>
+      <a href="https://gitlab.com/openpowerlifting/opl-data/tree/main/meet-data/{{meet.path}}/entries.csv" rel="noopener" target="_blank" style="text-decoration:none">
+        <button>Edit Meet</button>
+      </a>
+      <a href="/api/meetcsv/{{meet.path}}" style="text-decoration:none">
+        <button>{{strings.buttons.download_as_csv}}</button>
+      </a>
     </div>
   </div>
 {% endblock controls %}
@@ -58,11 +66,7 @@
 {% block body %}
   <div class="mixed-content-with-controls">
     <h1 id="meet">{{year}} {{meet.federation}} {{meet.name}}</h1>
-    <p>{{meet.date}}, {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}
-      <a href="/api/meetcsv/{{meet.path}}" style="float: right; margin-right: 20px;">
-        <button style="width: 120px">{{strings.buttons.download_as_csv}}</button>
-      </a>
-    </p>
+    <p>{{meet.date}}, {{meet.country}}{% if meet.state %}-{{meet.state}}{% endif %}{% if meet.town %}, {{meet.town}}{% endif %}</p>
 
     <table>
       <thead><tr>
