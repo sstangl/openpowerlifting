@@ -1357,6 +1357,11 @@ pub enum Federation {
     #[strum(to_string = "SAST", serialize = "sast")]
     SAST,
 
+    /// Unaffiliated meets held in Slovakia, Slovenský zväz silového trojboja (SZST).
+    #[serde(rename = "Slovakia-UA")]
+    #[strum(to_string = "Slovakia-UA", serialize = "slovakia-ua")]
+    SlovakiaUA,
+
     /// Scottish Powerlifting, IPF.
     #[strum(to_string = "ScottishPL", serialize = "scottishpl")]
     ScottishPL,
@@ -2562,6 +2567,7 @@ impl Federation {
             Federation::SCI => false,
             Federation::SCT => false,
             Federation::SDFPF => FULLY_TESTED,
+            Federation::SlovakiaUA => FULLY_TESTED,
             Federation::SLP => false,
             Federation::SLPF => FULLY_TESTED,
             Federation::SPA => false,
@@ -3062,6 +3068,7 @@ impl Federation {
             Federation::SCI => Some(Country::USA),
             Federation::SCT => Some(Country::Russia),
             Federation::SDFPF => Some(Country::Switzerland),
+            Federation::SlovakiaUA => Some(Country::Slovakia),
             Federation::SLP => Some(Country::USA),
             Federation::SLPF => Some(Country::SriLanka),
             Federation::SPA => Some(Country::Singapore),
@@ -3648,6 +3655,7 @@ impl Federation {
             Federation::SCI => None,
             Federation::SCT => None,
             Federation::SDFPF => Some(Federation::WDFPF),
+            Federation::SlovakiaUA => None,
             Federation::SLP => None,
             Federation::SLPF => Some(Federation::IPF),
             Federation::SPA => None,
@@ -4275,6 +4283,7 @@ impl Federation {
             Federation::SCI => PointsSystem::Wilks,
             Federation::SCT => PointsSystem::Wilks,
             Federation::SDFPF => PointsSystem::Wilks,
+            Federation::SlovakiaUA => Federation::ipf_rules_on(date),
             Federation::SLP => PointsSystem::Wilks,
             Federation::SLPF => Federation::ipf_rules_on(date),
             Federation::SPA => PointsSystem::Wilks,
