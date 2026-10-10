@@ -24,15 +24,26 @@
     m75_79 = {name = "M75-79", min=74.5, max=78.5}
     m80p = {name = "M80+", min=79.5, max=999}
 
-# These are trimmed down from the WP weight classes
+# Legacy trimmed WP weight classes (pre-2025 meets: 2301, 2401).
 [weightclasses.default_M]
     classes = ["62", "69", "77", "85", "85+"]
-    date_range = ["2018-08-01", "9999-01-01"]
+    date_range = ["2018-08-01", "2024-12-31"]
     sex = "M"
 
 [weightclasses.default_F]
     classes = ["58", "64", "64+"]
-    date_range = ["2018-08-01", "9999-01-01"]
+    date_range = ["2018-08-01", "2024-12-31"]
+    sex = "F"
+
+# Full WP-style weight classes, from 2025 onward.
+[weightclasses.wp_M]
+    classes = ["62", "69", "77", "85", "94", "105", "120", "120+"]
+    date_range = ["2025-01-01", "9999-01-01"]
+    sex = "M"
+
+[weightclasses.wp_F]
+    classes = ["48", "53", "58", "64", "72", "84", "100", "100+"]
+    date_range = ["2025-01-01", "9999-01-01"]
     sex = "F"
 
 [exemptions]
