@@ -413,9 +413,7 @@ impl<'a> Context<'a> {
         locale: &'a Locale,
         lifter_id: u32,
         points_system: PointsSystem,
-        entry_filter: Option<fn(&'a opldb::OplDb, &'a Entry) -> bool>, /* For use by
-                                                                        * distributions.
-                                                                        */
+        entry_filter: Option<fn(&'a opldb::OplDb, &'a Entry) -> bool>, // For OpenIPF etc.
     ) -> Context<'a> {
         let lifter = opldb.lifter(lifter_id);
         let mut entries = opldb.entries_for_lifter(lifter_id);

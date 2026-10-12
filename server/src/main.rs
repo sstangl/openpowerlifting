@@ -298,7 +298,7 @@ fn meetlist(
         Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
     let locale = make_locale(lang, languages, cookies);
-    let cx = pages::meetlist::Context::new(opldb, &locale, &mselection);
+    let cx = pages::meetlist::Context::new(opldb, &locale, &mselection, None);
 
     Some(match device {
         Device::Desktop => Template::render("openpowerlifting/desktop/meetlist", &cx),

@@ -5,6 +5,7 @@
 //! with Nginx rewriting URLs based on domain.
 
 use langpack::{Language, Locale};
+use opldb::Meet;
 use opldb::{self, Entry, MetaFederation};
 use opltypes::*;
 
@@ -239,10 +240,22 @@ pub fn records_default(
     records(None, lang, opldb, languages, host, device, cookies)
 }
 
-/// Used to show only IPF-sanctioned meets.
-fn ipf_only_filter(opldb: &opldb::OplDb, e: &Entry) -> bool {
+/// Used to show only IPF-sanctioned entries.
+fn ipf_entry_filter(opldb: &opldb::OplDb, e: &Entry) -> bool {
     let meet = opldb.meet(e.meet_id);
     meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
+}
+
+/// Used to show only IPF-sanctioned meets.
+fn ipf_meet_filter(_opldb: &opldb::OplDb, m: &Meet) -> bool {
+    m.federation.sanctioning_body(m.date) == Some(Federation::IPF)
+}
+
+/// Used to show only IPF-sanctioned federations.
+fn ipf_fed_filter(fed: Federation) -> bool {
+    // Using a maximum date causes the sanctioning_body() logic to return the most
+    // current sanctioning information.
+    fed.sanctioning_body(Date::MAX) == Some(Federation::IPF)
 }
 
 #[get("/u/<username_str>?<lang>")]
@@ -287,7 +300,7 @@ pub fn lifter(
                 &locale,
                 lifter_ids[0],
                 PointsSystem::from(default_openipf_rankings_query().order_by),
-                Some(ipf_only_filter),
+                Some(ipf_entry_filter),
             );
             cx.urlprefix = local_prefix(&host);
 
@@ -337,7 +350,8 @@ pub fn lifter(
 #[get("/api/liftercsv/<username>")]
 pub fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let lifter_id = opldb.lifter_id(username)?;
-    let content = pages::api_liftercsv::export_csv(opldb, lifter_id, Some(ipf_only_filter)).ok()?;
+    let content =
+        pages::api_liftercsv::export_csv(opldb, lifter_id, Some(ipf_entry_filter)).ok()?;
     let filename = format!("{username}.csv");
     Some(CsvFile { filename, content })
 }
@@ -347,7 +361,7 @@ pub fn lifter_csv(username: &str, opldb: &State<ManagedOplDb>) -> Option<CsvFile
 pub fn meet_csv(meetpath: PathBuf, opldb: &State<ManagedOplDb>) -> Option<CsvFile> {
     let meet_path_str = meetpath.to_str()?;
     let meet_id = opldb.meet_id(meet_path_str)?;
-    let content = pages::api_meetcsv::export_csv(opldb, meet_id, Some(ipf_only_filter)).ok()?;
+    let content = pages::api_meetcsv::export_csv(opldb, meet_id, Some(ipf_entry_filter)).ok()?;
     let filename = format!("{meet_path_str}.csv");
     Some(CsvFile { filename, content })
 }
@@ -373,7 +387,7 @@ pub fn meetlist(
         Some(p) => pages::meetlist::MeetListQuery::from_path(&p, defaults).ok()?,
     };
     let locale = make_locale(lang, languages, cookies);
-    let mut cx = pages::meetlist::Context::new(opldb, &locale, &mselection);
+    let mut cx = pages::meetlist::Context::new(opldb, &locale, &mselection, Some(ipf_meet_filter));
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
@@ -421,6 +435,10 @@ pub fn meet(
         referring_path.and_then(|s| s.strip_prefix("/u/").map(ToString::to_string));
 
     let meet_id = opldb.meet_id(meetpath_str)?;
+    if !ipf_meet_filter(opldb, opldb.meet(meet_id)) {
+        return None;
+    }
+
     let locale = make_locale(lang, languages, cookies);
     let use_ipf_equipment = true;
     let mut cx = pages::meet::Context::new(
@@ -450,14 +468,6 @@ pub fn meet(
         Device::Desktop => Template::render("openipf/desktop/meet", &cx),
         Device::Mobile => Template::render("openipf/mobile/meet", &cx),
     })
-}
-
-/// Used to show only IPF-sanctioned federations.
-fn ipf_fed_filter(fed: Federation) -> bool {
-    // Using a maximum date causes the sanctioning_body() logic to return the most
-    // current sanctioning information.
-    let latest = Date::from_parts(9999, 01, 01);
-    fed.sanctioning_body(latest) == Some(Federation::IPF)
 }
 
 #[get("/status?<lang>")]

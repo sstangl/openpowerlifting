@@ -28,6 +28,9 @@ impl Default for Date {
 }
 
 impl Date {
+    /// The largest date that can be represented.
+    pub const MAX: Date = Date::from_parts(9999, 12, 31);
+
     // The day occupies the rightmost 5 bits: ceil(log2(31)) = 5.
     const DAY_SHIFT: usize = 0;
     const DAY_MASK: u32 = 0x1f;

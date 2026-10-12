@@ -143,6 +143,7 @@ impl<'db> Context<'db> {
         opldb: &'db opldb::OplDb,
         locale: &'db Locale,
         mselection: &'db MeetListQuery,
+        meet_filter: Option<fn(&'db opldb::OplDb, &'db Meet) -> bool>, // For OpenIPF etc.
     ) -> Context<'db> {
         // Maximum number of meets to send at once. ~200kb HTML.
         const PAGE_SIZE: usize = 1000;
@@ -186,6 +187,12 @@ impl<'db> Context<'db> {
                 })
                 .collect(),
         };
+
+        // This filter is used to prevent rendering pages like
+        // https://www.openipf.org/mlist/wrpf if entered manually.
+        if let Some(meet_filter) = meet_filter {
+            meets.retain(|m| meet_filter(opldb, m));
+        }
 
         meets.sort_unstable_by(|a, b|
             // First sort by date, latest first.
