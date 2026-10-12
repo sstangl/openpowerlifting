@@ -560,7 +560,7 @@
   <option value="wpc-svk" {% if selection.federation == "WPC-SVK" %}selected{% endif %}>WPC-SVK - WPC Slovakia</option>
   <option value="wrpf-svk" {% if selection.federation == "WRPF-SVK" %}selected{% endif %}>WRPF Slovakia</option>
   <option value="awpc-svk" {% if selection.federation == "AWPC-SVK" %}selected{% endif %}>AWPC-SVK - AWPC-Slovakia</option>
-  <option value="slovakia-ua" {% if selection.federation == "Slovakia-UA" %}selected{% endif %}>Slovakia-UA [Unaffiliated]</option>
+  <option value="szst" {% if selection.federation == "SZST" %}selected{% endif %}>SZST - Slovenský zväz silového trojboja [Unaffiliated]</option>
 </optgroup>
 <optgroup label="{{strings.country.slovenia}}">
   <option value="plzs" {% if selection.federation == "PLZS" %}selected{% endif %}>PLZS - Powerlifting zveza Slovenije [IPF]</option>
