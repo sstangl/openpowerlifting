@@ -1,30 +1,30 @@
-Place,WeightClassKg,Sex,Name,BirthYear,BodyweightKg,Team,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event,Equipment,Division
-1,110,M,Andreas Reiz,,104.7,SV Motor Barth,,,,300.0,,,,190.0,,,,300.0,,790.0,SBD,Single-ply,Juniors
-2,110,M,Mirko Knaak,,100.5,SV Motor Barth,,,,275.0,,,,240.0,,,,235.0,,750.0,SBD,Single-ply,Juniors
-2,100,M,Christoph Stürmer,,91.1,SV Motor Barth,,,,215.0,,,,150.0,,,,267.5,,632.5,SBD,Single-ply,Juniors
-1,82.5,M,Andreas Höfert,,76.8,SV Motor Barth,,,,205.0,,,,130.0,,,,220.0,,555.0,SBD,Single-ply,Juniors
-10,82.5,F,Franziska Schümann,,76.2,SV Motor Barth,,,,125.0,,,,92.5,,,,125.0,,342.5,SBD,Single-ply,Juniors
-2,75,M,Thomas Korell,,68.3,VfB Klötze 07,,,,212.5,,,,127.5,,,,222.5,,562.5,SBD,Single-ply,Juniors
-2,67.5,M,Tino Bohneberg,,67.0,VfB Klötze 07,,,,177.5,,,,120.0,,,,212.5,,510.0,SBD,Single-ply,Juniors
-1,100,M,Marcel Kujawski,,99.5,VfB Klötze 07,,,,265.0,,,,147.5,,,,235.0,,647.5,SBD,Single-ply,Juniors
-2,90,M,Maik Schulz,,87.1,VfB Klötze 07,,,,205.0,,,,150.0,,,,240.0,,595.0,SBD,Single-ply,Juniors
-3,82.5,M,Ronny Harnisch,,82.1,VfB Klötze 07,,,,190.0,,,,115.0,,,,220.0,,525.0,SBD,Single-ply,Juniors
-1,90,M,André Hentschel,,83.8,SV Union Groß Ilsede,,,,270.0,,,,202.5,,,,250.0,,722.5,SBD,Single-ply,Juniors
-1,125,M,Eugen Schneider,,115.0,SV Union Groß Ilsede,,,,250.0,,,,150.0,,,,250.0,,650.0,SBD,Single-ply,Juniors
-3,90,M,Kamal Amer,,86.2,SV Union Groß Ilsede,,,,215.0,,,,100.0,,,,200.0,,515.0,SBD,Single-ply,Juniors
-5,82.5,M,Andreas Jekel,,77.1,SV Union Groß Ilsede,,,,195.0,,,,112.5,,,,170.0,,477.5,SBD,Single-ply,Juniors
-6,82.5,M,Christoph Mrasek,,78.3,SV Union Groß Ilsede,,,,167.5,,,,107.5,,,,200.0,,475.0,SBD,Single-ply,Juniors
-2,67.5,M,Alexander Zuch,,61.0,AC Lauchhammer,,,,200.0,,,,120.0,,,,190.0,,510.0,SBD,Single-ply,Juniors
-1,125+,M,Thomas Bindernagel,,130.1,AC Lauchhammer,,,,230.0,,,,180.0,,,,290.0,,700.0,SBD,Single-ply,Juniors
-2,82.5,M,Tobias Reichardt,,77.9,AC Lauchhammer,,,,192.5,,,,127.5,,,,232.5,,552.5,SBD,Single-ply,Juniors
-8,82.5,M,Rob Weber,,78.1,AC Lauchhammer,,,,162.5,,,,100.0,,,,160.0,,422.5,SBD,Single-ply,Juniors
-4,100,M,Marcus Böttger,,90.6,AC Lauchhammer,,,,155.0,,,,107.5,,,,160.0,,422.5,SBD,Single-ply,Juniors
-1,67.5,M,Marc Polster,,66.8,Herrnburger AV 77,,,,217.5,,,,122.5,,,,210.0,,550.0,SBD,Single-ply,Juniors
-3,75,M,Christian Schmidt,,68.9,Herrnburger AV 77,,,,190.0,,,,107.5,,,,210.0,,507.5,SBD,Single-ply,Juniors
-3,100,M,Sebastian Römer,,92.1,Herrnburger AV 77,,,,172.5,,,,170.0,,,,205.0,,547.5,SBD,Single-ply,Juniors
-4,75,M,André Tareilus,,71.3,Herrnburger AV 77,,,,175.0,,,,95.0,,,,182.5,,452.5,SBD,Single-ply,Juniors
-1,75,M,Nando Stoll,,75.0,Herrnburger AV 77,,,,250.0,,,,145.0,,,,255.0,,650.0,SBD,Single-ply,Juniors
-4,82.5,M,Martin Blichmann,,81.0,FAC Sangerhausen,,,,180.0,,,,110.0,,,,210.0,,500.0,SBD,Single-ply,Juniors
-7,82.5,M,Juri Kunz,,78.6,FAC Sangerhausen,,,,175.0,,,,120.0,,,,175.0,,470.0,SBD,Single-ply,Juniors
-4,90,M,Marco Schenke,,82.8,FAC Sangerhausen,,,,165.0,,,,110.0,,,,205.0,,480.0,SBD,Single-ply,Juniors
-9,82.5,M,Dennis Neuwirth,,82.3,FAC Sangerhausen,,,,150.0,,,,100.0,,,,170.0,,420.0,SBD,Single-ply,Juniors
+Place,WeightClassKg,Sex,Name,BirthYear,BodyweightKg,Team,Best3SquatKg,Best3BenchKg,Best3DeadliftKg,TotalKg,Event,Equipment,Division
+1,110,M,Andreas Reiz,1984,104.7,SV Motor Barth,300,190,300,790,SBD,Single-ply,Juniors
+2,110,M,Mirko Knaak,1985,100.5,SV Motor Barth,275,240,235,750,SBD,Single-ply,Juniors
+2,100,M,Christoph Stürmer,1986,91.1,SV Motor Barth,215,150,267.5,632.5,SBD,Single-ply,Juniors
+1,82.5,M,Andreas Höfert,1984,76.8,SV Motor Barth,205,130,220,555,SBD,Single-ply,Juniors
+1,82.5,F,Franziska Schümann,1982,76.2,SV Motor Barth,125,92.5,125,342.5,SBD,Single-ply,Juniors
+1,75,M,Thomas Korell,1983,68.3,VfB Klötze 07,212.5,127.5,222.5,562.5,SBD,Single-ply,Juniors
+1,67.5,M,Tino Bohneberg,1988,67,VfB Klötze 07,177.5,120,212.5,510,SBD,Single-ply,Youth
+1,100,M,Marcel Kujawski,1985,99.5,VfB Klötze 07,265,147.5,235,647.5,SBD,Single-ply,Juniors
+2,90,M,Maik Schulz,1984,87.1,VfB Klötze 07,205,150,240,595,SBD,Single-ply,Juniors
+1,82.5,M,Ronny Harnisch,1987,82.1,VfB Klötze 07,190,115,220,525,SBD,Single-ply,Youth
+1,90,M,André Hentschel,1984,83.8,SV Union Groß Ilsede,270,202.5,250,722.5,SBD,Single-ply,Juniors
+1,125,M,Eugen Schneider,1986,115,SV Union Groß Ilsede,250,150,250,650,SBD,Single-ply,Juniors
+1,90,M,Kamal Amer,1988,86.2,SV Union Groß Ilsede,215,100,200,515,SBD,Single-ply,Youth
+4,82.5,M,Andreas Jekel,1986,77.1,SV Union Groß Ilsede,195,112.5,170,477.5,SBD,Single-ply,Juniors
+5,82.5,M,Christoph Mrasek,1986,78.3,SV Union Groß Ilsede,167.5,107.5,200,475,SBD,Single-ply,Juniors
+2,67.5,M,Alexander Zuch,1982,61,AC Lauchhammer,200,120,190,510,SBD,Single-ply,Juniors
+1,125+,M,Thomas Bindernagel,1982,130.1,AC Lauchhammer,230,180,290,700,SBD,Single-ply,Juniors
+2,82.5,M,Tobias Reichardt,1986,77.9,AC Lauchhammer,192.5,127.5,232.5,552.5,SBD,Single-ply,Juniors
+3,82.5,M,Rob Weber,1988,78.1,AC Lauchhammer,162.5,100,160,422.5,SBD,Single-ply,Youth
+1,100,M,Marcus Böttger,1990,90.6,AC Lauchhammer,155,107.5,160,422.5,SBD,Single-ply,Youth
+1,67.5,M,Marc Polster,1986,66.8,Herrnburger AV 77,217.5,122.5,210,550,SBD,Single-ply,Juniors
+2,75,M,Christian Schmidt,1982,68.9,Herrnburger AV 77,190,107.5,210,507.5,SBD,Single-ply,Juniors
+3,100,M,Sebastian Römer,1986,92.1,Herrnburger AV 77,172.5,170,205,547.5,SBD,Single-ply,Juniors
+1,75,M,André Tareilus,1988,71.3,Herrnburger AV 77,175,95,182.5,452.5,SBD,Single-ply,Youth
+DQ,75,M,Nando Stoll,1987,75,Herrnburger AV 77,250,145,255,,SBD,Single-ply,Youth
+3,82.5,M,Martin Blichmann,1986,81,FAC Sangerhausen,180,110,210,500,SBD,Single-ply,Juniors
+2,82.5,M,Juri Kunz,1987,78.6,FAC Sangerhausen,175,120,175,470,SBD,Single-ply,Youth
+3,90,M,Marco Schenke,1986,82.8,FAC Sangerhausen,165,110,205,480,SBD,Single-ply,Juniors
+6,82.5,M,Dennis Neuwirth,1984,82.3,FAC Sangerhausen,150,100,170,420,SBD,Single-ply,Juniors
