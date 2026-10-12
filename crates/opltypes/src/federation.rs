@@ -548,7 +548,7 @@ pub enum Federation {
     /// Fédération Tunisienne du Culturisme Fitness et Powerlifting, Tunisian IPF affiliate.
     #[strum(to_string = "FTFCP", serialize = "ftfcp")]
     FTFCP,
-    
+
     /// Federación Uruguaya de Levantamiento de Potencia, Uruguay IPF affiliate.
     #[strum(to_string = "FULP", serialize = "fulp")]
     FULP,
@@ -1357,9 +1357,8 @@ pub enum Federation {
     #[strum(to_string = "SAST", serialize = "sast")]
     SAST,
 
-    /// Unaffiliated meets held in Slovakia, Slovenský zväz silového trojboja (SZST).
-    #[serde(rename = "SZST")]
-    #[strum(to_string = "SZST", serialize = "SZST")]
+    /// Slovenský zväz silového trojboja, unaffiliated.
+    #[strum(to_string = "SZST", serialize = "szst")]
     SZST,
 
     /// Scottish Powerlifting, IPF.
@@ -2567,7 +2566,6 @@ impl Federation {
             Federation::SCI => false,
             Federation::SCT => false,
             Federation::SDFPF => FULLY_TESTED,
-            Federation::SZST => FULLY_TESTED,
             Federation::SLP => false,
             Federation::SLPF => FULLY_TESTED,
             Federation::SPA => false,
@@ -2580,6 +2578,7 @@ impl Federation {
             Federation::SSSC => FULLY_TESTED,
             Federation::SVNL => FULLY_TESTED,
             Federation::SwissPL => false,
+            Federation::SZST => FULLY_TESTED,
             Federation::TAAP => FULLY_TESTED,
             Federation::ThaiPF => FULLY_TESTED,
             Federation::THSPA => FULLY_TESTED,
@@ -3068,7 +3067,6 @@ impl Federation {
             Federation::SCI => Some(Country::USA),
             Federation::SCT => Some(Country::Russia),
             Federation::SDFPF => Some(Country::Switzerland),
-            Federation::SZST => Some(Country::Slovakia),
             Federation::SLP => Some(Country::USA),
             Federation::SLPF => Some(Country::SriLanka),
             Federation::SPA => Some(Country::Singapore),
@@ -3081,6 +3079,7 @@ impl Federation {
             Federation::SSSC => Some(Country::SaudiArabia),
             Federation::SVNL => Some(Country::Finland),
             Federation::SwissPL => Some(Country::Switzerland),
+            Federation::SZST => Some(Country::Slovakia),
             Federation::TAAP => Some(Country::Thailand),
             Federation::ThaiPF => Some(Country::Thailand),
             Federation::THSPA => Some(Country::USA),
@@ -3655,7 +3654,6 @@ impl Federation {
             Federation::SCI => None,
             Federation::SCT => None,
             Federation::SDFPF => Some(Federation::WDFPF),
-            Federation::SZST => None,
             Federation::SLP => None,
             Federation::SLPF => Some(Federation::IPF),
             Federation::SPA => None,
@@ -3675,6 +3673,7 @@ impl Federation {
                     None
                 }
             }
+            Federation::SZST => None,
             Federation::TAAP => Some(Federation::IPF),
             Federation::ThaiPF => Some(Federation::IPF),
             Federation::THSPA => None,
