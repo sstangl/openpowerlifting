@@ -1,3 +1,6 @@
+[options]
+    valid_federations = ["WUAP-Ireland"]
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     guest = {name = "Guest", min = 0, max = 999}

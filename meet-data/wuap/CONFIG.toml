@@ -1,5 +1,8 @@
 # Configuration for the WUAP.
 
+[options]
+    valid_federations = ["WUAP"]
+
 [divisions]
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 0, max = 12} #Not an official division
