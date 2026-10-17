@@ -119,6 +119,7 @@ DIVISION_MAP = {
     "Jr": "Youth",
     "JR": "Youth",
     "Jr 10-12": "J10-12",
+    "Jr youth-10-12": "J10-12",
     "Jr 13-15": "J13-15",
     "Jr 16-17": "J16-17",
     "Junior 16-17": "J16-17",
