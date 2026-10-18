@@ -1,5 +1,8 @@
 # Configuration for the WPO, intentionally left blank for now
 
+[options]
+    require_manual_disambiguation = true
+
 [divisions]
 
 [weightclasses]
