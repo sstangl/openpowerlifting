@@ -25,6 +25,9 @@
     youth1 = {name ="Youth 1",min=8,max=9}
     youth2 = {name ="Youth 2",min=10,max=11}
     youth3 = {name ="Youth 3",min=12,max=13}
+    specialolympicsy1 = {name ="SO Youth 1",min=14,max=15}  
+    specialolympicsy2 = {name ="SO Youth 2",min=24,max=25}
+    specialolympicsy3 = {name ="SO Youth 3",min=34,max=35}
 
 [weightclasses.default_M]
     classes = ["59","66","74","83","93","105","120","120+"]
@@ -51,7 +54,7 @@
     classes = ["30","35","40","44","48","53","59","66","74","83","93","105","120","120+"]
     date_range=["2011-01-01","9999-01-01"]
     sex = "M"
-    divisions = ["Youth 1","Youth 2","Youth 3"]
+    divisions = ["Youth 1","Youth 2","Youth 3","SO Youth 1","SO Youth 2","SO Youth 3"]
 
 [weightclasses.youth_F]
     classes = ["30","35","40","43","47","52","57","63","69","76","84","84+"]
