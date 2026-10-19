@@ -98,7 +98,7 @@
       <tbody>
       {% for table in tables %}
         {% if table.title %}
-          <td colspan="12" class="divheader">{{table.title}}</td>
+          <td {% if show_attempts %}colspan="21"{% else %}colspan="12"{% endif %} class="divheader">{{table.title}}</td>
         {% endif %}
       {% for this in table.rows %}
         <tr class="{% if this.lifter.username == referring_username %} highlighted {% endif %}">
