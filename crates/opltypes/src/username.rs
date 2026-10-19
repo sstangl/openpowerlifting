@@ -191,6 +191,11 @@ impl Username {
         (&self.0[0..start], Some(variant))
     }
 
+    /// Returns the disambiguation variant if present.
+    pub fn get_variant(&self) -> Option<u32> {
+        self.to_parts().1
+    }
+
     /// Returns whether the username has a disambiguation variant.
     pub fn has_variant(&self) -> bool {
         let (_base, maybe_variant) = self.to_parts();

@@ -16,6 +16,7 @@ pub use group_age::{group_age_debug_for, group_by_age};
 struct DisambigRow<'a> {
     meet: &'a Meet,
     entry: &'a Entry,
+    index: EntryIndex,
 }
 
 impl<'a> DisambigRow<'a> {
@@ -23,6 +24,7 @@ impl<'a> DisambigRow<'a> {
         DisambigRow {
             meet: meetdata.meet(index),
             entry: meetdata.entry(index),
+            index,
         }
     }
 }
@@ -65,14 +67,15 @@ impl<'a> disambig::DisambigEntry for DisambigRow<'a> {
 /// This allows executing that crate's logic on the real data of a single
 /// lifter. This shows what automatic disambiguation would do in the future
 /// when implemented for real. It's useful for feedback during development.
-pub fn disambiguate_one(
+///
+/// Returns a list of each disambiguation group with its entries,
+/// with groups sorted by earliest EntryDate.
+fn disambiguate_one(
     meetdata: &AllMeetData,
     entrymap: &EntryMap,
     username: &Username,
-    is_debug: bool,
-) {
-    let manual_variants: Vec<Username> = entrymap.get_variants_of(username);
-
+    manual_variants: &[Username],
+) -> Vec<Vec<EntryIndex>> {
     // Gather variants matching this username base.
     let rows: Vec<DisambigRow> = {
         let mut acc = Vec::new();
@@ -82,7 +85,7 @@ pub fn disambiguate_one(
                 acc.push(DisambigRow::from_index(*index, meetdata));
             }
         }
-        for variant in &manual_variants {
+        for variant in manual_variants {
             for index in entrymap.get(variant).unwrap() {
                 acc.push(DisambigRow::from_index(*index, meetdata));
             }
@@ -90,49 +93,180 @@ pub fn disambiguate_one(
         acc
     };
 
+    // Disambiguation returns a list like [0, 1, 0, 2, ...], mapping each row to a number.
+    // Rows mapped to the same number belong to the same disambiguation group.
     let ids: Vec<DisambigId> = disambig::disambiguate(&rows);
 
     // Collect each group into a list.
-    let groups: FxHashMap<DisambigId, Vec<DisambigRow<'_>>> = {
-        let mut map: FxHashMap<DisambigId, Vec<DisambigRow<'_>>> = FxHashMap::default();
+    let groups: Vec<Vec<EntryIndex>> = {
+        // Group by DisambigId.
+        let mut map: FxHashMap<DisambigId, Vec<EntryIndex>> = FxHashMap::default();
         for (row, id) in rows.iter().zip(ids.iter()) {
-            map.entry(*id).or_default().push(*row);
+            map.entry(*id).or_default().push(row.index);
         }
-        map
-    };
 
-    // Sort the IDs and remove duplicates.
-    let sorted_ids: Vec<DisambigId> = {
-        let mut acc = ids.clone();
-        acc.sort();
-        acc.dedup();
+        // Forget about DisambigId, since that was arbitrary.
+        let mut acc: Vec<Vec<EntryIndex>> = map.into_values().collect();
+
+        // Try to make the groups semi-stable (unless historical results are added)
+        // by sorting all groups by lowest EntryDate within each group.
+        acc.sort_by_cached_key(|entries| {
+            entries
+                .iter()
+                .min_by_key(|&idx| meetdata.entry(*idx).entrydate)
+                .map_or_default(|&idx| meetdata.entry(idx).entrydate)
+        });
         acc
     };
 
-    // For debug output, print each group one by one.
-    if is_debug {
-        for (i, id) in sorted_ids.iter().enumerate() {
-            let group: &[DisambigRow] = groups.get(id).unwrap();
+    groups
+}
 
-            // Vertical whitespace between sections for readability.
-            if i > 0 {
-                println!();
+/// Information about how to label all the lifters in a single group.
+struct GroupLabel {
+    variant: Option<u32>,
+}
+
+/// Calculates labels for the given groups.
+///
+/// The input list of groups must be sorted in order by EntryDate for this to be stable.
+fn make_labels(
+    meetdata: &AllMeetData,
+    entrymap: &EntryMap,
+    groups: &[Vec<EntryIndex>],
+    username: &Username,
+    manual_variants: &[Username],
+) -> Vec<GroupLabel> {
+    // The next variant to try. Variants may not be dense, so we will probe before assigning.
+    let mut next_variant: u32 = (manual_variants.len() as u32) + 1;
+    let base_username = username.without_variant();
+
+    let mut labels = Vec::with_capacity(groups.len());
+
+    for group in groups {
+        // Does the group already have a variant manually set? If so, then use that.
+        if let Some(&with_variant) = group
+            .iter()
+            .find(|&&idx| meetdata.entry(idx).username.has_variant())
+        {
+            let variant = meetdata.entry(with_variant).username.get_variant();
+            labels.push(GroupLabel { variant });
+            continue;
+        }
+
+        // If there's only one group, and there's no manually-assigned variant, don't add a variant.
+        if groups.len() == 1 {
+            labels.push(GroupLabel { variant: None });
+            break;
+        }
+
+        // Otherwise, use the next free variant.
+        loop {
+            // If the variant exists in the EntryMap, it already exists, skip it.
+            let variant_str = format!("{}{}", base_username.as_str(), next_variant);
+            let variant_username = Username::from_trusted_str(&variant_str).unwrap();
+
+            if entrymap.get(&variant_username).is_some() {
+                next_variant += 1;
+                continue;
             }
 
-            // Is there any hardcoded variant in this group? Use that name if so.
-            if let Some(with_variant) = group.iter().find(|row| row.entry.username.has_variant()) {
-                println!("{}", with_variant.entry.name.bold());
+            // It doesn't exist, so we can create it.
+            labels.push(GroupLabel {
+                variant: Some(next_variant),
+            });
+            next_variant += 1;
+            break;
+        }
+    }
+
+    labels
+}
+
+/// Modifies meet data to reflect the new disambiguation groupings.
+fn apply_labels(
+    meetdata: &mut AllMeetData,
+    entrymap: &mut EntryMap,
+    groups: &[Vec<EntryIndex>],
+    labels: &[GroupLabel],
+    username: &Username,
+) {
+    // Shouldn't happen, but just for safety.
+    if groups.len() <= 1 {
+        return;
+    }
+
+    for (group, label) in groups.iter().zip(labels.iter()) {
+        for &idx in group {
+            let entry = meetdata.entry_mut(idx);
+
+            // If a variant is manually assigned, assert that it hasn't changed.
+            if let Some(variant) = entry.username.get_variant() {
+                assert!(variant == label.variant.unwrap());
+                continue;
+            }
+
+            // If the label doesn't assign a variant, don't do anything.
+            // This should be unreachable, but just for local completeness.
+            let Some(label_variant) = label.variant else {
+                continue;
+            };
+
+            // We need to assign a variant. The username is the base username.
+            let variant_username = entry.username.with_variant(label_variant);
+            entry.username = variant_username.clone();
+            entry.name = format!("{} #{label_variant}", entry.name).into();
+
+            // Drop the mutable reference onto meetdata, then update the entrymap.
+            entrymap.insert_entry_for(variant_username, idx, &meetdata);
+        }
+    }
+
+    // The base username should now never be part of the entrymap. Its entries were spread out.
+    entrymap.remove(username);
+}
+
+/// Disambiguates all lifters sharing the same base username, emitting debug output.
+///
+/// This allows executing that crate's logic on the real data of a single
+/// lifter. This shows what automatic disambiguation would do in the future
+/// when implemented for real. It's useful for feedback during development.
+pub fn disambiguate_username_debug(
+    meetdata: &AllMeetData,
+    entrymap: &EntryMap,
+    username: &Username,
+) {
+    // Perform the same calculation as the main disambiguation function.
+    let variants: Vec<Username> = entrymap.get_variants_of(username);
+    let groups: Vec<Vec<EntryIndex>> = disambiguate_one(meetdata, entrymap, username, &variants);
+    let labels: Vec<GroupLabel> = make_labels(meetdata, entrymap, &groups, username, &variants);
+
+    // Figure out a good print order for the labels.
+    let mut sorted_indexes: Vec<usize> = (0..labels.len()).collect();
+    sorted_indexes.sort_by_key(|&i| labels[i].variant);
+
+    // Output the groups using debug output.
+    for index in sorted_indexes {
+        let label = &labels[index];
+        let group = &groups[index];
+
+        // Vertical whitespace between sections for readability.
+        println!();
+
+        // Print the name.
+        if let Some(variant) = label.variant {
+            println!("{} ({variant})", meetdata.entry(group[0]).name);
+        } else {
+            println!("{}", meetdata.entry(group[0]).name);
+        }
+
+        // Print the matching meets, colorizing the new ones.
+        for &idx in group {
+            let meet = meetdata.meet(idx);
+            if meetdata.entry(idx).username.has_variant() {
+                println!("  {}", meet.path.purple());
             } else {
-                println!("{} {:?}", group[0].entry.name.bold(), id);
-            }
-
-            // Beneath, print the matching meets, colorizing the new ones.
-            for row in group {
-                if row.entry.username.has_variant() {
-                    println!("  {}", row.meet.path.purple());
-                } else {
-                    println!("  {}", row.meet.path.bold().green());
-                }
+                println!("  {}", meet.path.bold().green());
             }
         }
     }
@@ -153,8 +287,12 @@ pub fn disambiguate_marked(
         if data.disambiguation_count == 0 {
             continue;
         }
-        disambiguate_one(meetdata, entrymap, username, false);
 
-        // TODO: Apply the results of the disambiguation.
+        let variants: Vec<Username> = entrymap.get_variants_of(username);
+        let groups: Vec<Vec<EntryIndex>> =
+            disambiguate_one(meetdata, entrymap, username, &variants);
+        let labels: Vec<GroupLabel> = make_labels(meetdata, entrymap, &groups, username, &variants);
+
+        apply_labels(meetdata, entrymap, &groups, &labels, username);
     }
 }

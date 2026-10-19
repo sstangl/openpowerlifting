@@ -114,6 +114,22 @@ impl EntryMap {
             .map(|ascii| Username::from_trusted_str(ascii.as_str()).unwrap())
             .collect()
     }
+
+    /// Inserts an entry, maintaining sorted order.
+    ///
+    /// This is used by the disambiguation code. It's inefficient to do it like this, but it's fine
+    /// for an initial version.
+    ///
+    /// TODO: Many lookups and redundant sorting can be avoided.
+    pub fn insert_entry_for(&mut self, u: Username, e: EntryIndex, meetdata: &AllMeetData) {
+        if u.has_variant() && !self.variants.contains(u.as_ascii_str()) {
+            self.variants.insert(u.as_ascii_str().to_owned());
+        }
+
+        let indices = self.map.entry(u).or_default();
+        indices.push(e);
+        indices.sort_unstable_by_key(|ei| meetdata.entry(*ei).entrydate);
+    }
 }
 
 impl From<Vec<SingleMeetData>> for AllMeetData {

@@ -508,7 +508,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         // decisions should not act on inferred information.
         if let Some(u) = args.debug_disambig_username {
             let u = Username::from_name(&u).unwrap().without_variant();
-            disambiguator::disambiguate_one(&meetdata, &liftermap, &u, true);
+            disambiguator::disambiguate_username_debug(&meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
         let timing = instant_if(args.debug_timing);
