@@ -9,7 +9,7 @@ pub mod meet;
 
 pub use crate::Report;
 pub use entries::Entry;
-pub use lifterdata::{LifterData, LifterDataMap};
+pub use lifterdata::{LifterData, UsernameData};
 pub use meet::Meet;
 
 /// Returns the generated structures and any associated reports.

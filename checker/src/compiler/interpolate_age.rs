@@ -3,7 +3,7 @@
 use colored::*;
 use opltypes::*;
 
-use crate::{AllMeetData, EntryIndex, LifterMap};
+use crate::{AllMeetData, EntryIndex, EntryMap};
 
 use std::cmp;
 use std::fmt;
@@ -455,7 +455,7 @@ fn interpolate_age_single_lifter(meetdata: &mut AllMeetData, indices: &[EntryInd
 /// Public-facing entry point for debugging a single lifter's interpolation.
 pub fn interpolate_age_debug_for(
     meetdata: &mut AllMeetData,
-    liftermap: &LifterMap,
+    liftermap: &EntryMap,
     username: &Username,
 ) {
     match liftermap.get(username) {
@@ -466,7 +466,7 @@ pub fn interpolate_age_debug_for(
 
 /// Attempts to infer BirthDate range for each lifter, used to assign Age
 /// values.
-pub fn interpolate_age(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
+pub fn interpolate_age(meetdata: &mut AllMeetData, liftermap: &EntryMap) {
     for indices in liftermap.values() {
         // Interpolation requires multiple entries.
         if indices.len() >= 2 {

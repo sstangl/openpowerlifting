@@ -1,7 +1,7 @@
 //! Checks for duplicate meets.
 
 use crate::checklib::consistency::{self, ConsistencyResult, date};
-use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Meet, Report};
+use crate::{AllMeetData, Entry, EntryIndex, EntryMap, Meet, Report};
 
 /// Checks for duplicate meets with different MeetPaths for one lifter.
 pub fn check_duplicates_one(
@@ -80,7 +80,7 @@ pub fn check_duplicates_one(
 
 /// Checks for duplicate meets with different MeetPaths for all lifters.
 pub fn check_duplicates_all(
-    liftermap: &LifterMap,
+    liftermap: &EntryMap,
     meetdata: &AllMeetData,
     reports: &mut Vec<Report>,
 ) {

@@ -1,13 +1,13 @@
 //! Checks for Sex consistency errors.
 
 use crate::checklib::consistency::{self, ConsistencyResult};
-use crate::{AllMeetData, EntryIndex, LifterDataMap, LifterMap, Report};
+use crate::{AllMeetData, EntryIndex, EntryMap, LifterData, Report};
 
 /// Checks sex consistency for a single lifter.
 pub fn check_sex_one(
     indices: &[EntryIndex],
     meetdata: &AllMeetData,
-    lifterdata: &LifterDataMap,
+    lifterdata: &LifterData,
     report: &mut Report,
 ) -> ConsistencyResult {
     if consistency::should_skip_lifter(meetdata.entry(indices[0])) {
@@ -39,9 +39,9 @@ pub fn check_sex_one(
 
 /// Checks sex consistency for all lifters.
 pub fn check_sex_all(
-    liftermap: &LifterMap,
+    liftermap: &EntryMap,
     meetdata: &AllMeetData,
-    lifterdata: &LifterDataMap,
+    lifterdata: &LifterData,
     reports: &mut Vec<Report>,
 ) {
     let mut report = Report::new("[Sex Consistency]".into());

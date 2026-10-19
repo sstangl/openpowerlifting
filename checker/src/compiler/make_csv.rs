@@ -8,7 +8,7 @@ use rustc_hash::{FxBuildHasher, FxHashMap};
 
 use std::path::Path;
 
-use crate::checklib::{Entry, LifterData, LifterDataMap, Meet};
+use crate::checklib::{Entry, LifterData, Meet, UsernameData};
 use crate::{AllMeetData, SingleMeetData};
 
 /// Serialization source for the meets.csv.
@@ -230,7 +230,10 @@ struct LiftersRow<'md, 'ld> {
 }
 
 impl<'md, 'ld> LiftersRow<'md, 'ld> {
-    fn from(entrydata: &'md EntryLifterData, lifterdata: &'ld LifterData) -> LiftersRow<'md, 'ld> {
+    fn from(
+        entrydata: &'md EntryLifterData,
+        lifterdata: &'ld UsernameData,
+    ) -> LiftersRow<'md, 'ld> {
         LiftersRow {
             id: entrydata.id,
             name: entrydata.name,
@@ -293,7 +296,7 @@ type EntryLifterDataMap<'md> = FxHashMap<&'md str, EntryLifterData<'md>>;
 
 pub fn make_csv(
     meetdata: &AllMeetData,
-    lifterdata: &LifterDataMap,
+    lifterdata: &LifterData,
     buildpath: &Path,
 ) -> Result<(), csv::Error> {
     // Create CSV writers.
@@ -367,7 +370,7 @@ pub fn make_csv(
     lifters.sort_by_key(|x| x.id);
 
     for lifter in &lifters {
-        let default = LifterData::default();
+        let default = UsernameData::default();
         let data = lifterdata
             .get(&Username::from_name(lifter.username).unwrap())
             .unwrap_or(&default);

@@ -17,7 +17,7 @@ pub use crate::checklib::entries::{
     EntriesCheckResult, Entry, check_entries, check_entries_from_string,
 };
 pub use crate::checklib::lifterdata::{
-    LifterData, LifterDataCheckResult, LifterDataMap, check_lifterdata,
+    LifterData, LifterDataCheckResult, UsernameData, check_lifterdata,
 };
 pub use crate::checklib::meet::{Meet, MeetCheckResult, check_meet, check_meet_from_string};
 
@@ -26,7 +26,7 @@ pub mod disambiguator;
 
 mod meetdata;
 use meetdata::EntryIndex;
-pub use meetdata::{AllMeetData, LifterMap, SingleMeetData};
+pub use meetdata::{AllMeetData, EntryMap, SingleMeetData};
 
 mod report;
 pub use report::{Message, Report, Severity};
@@ -42,7 +42,7 @@ pub fn check(
     reader: &csv::ReaderBuilder,
     meetdir: &Path,
     config: Option<&Config>,
-    lifterdata: Option<&LifterDataMap>,
+    lifterdata: Option<&LifterData>,
 ) -> Result<CheckResult, Box<dyn Error>> {
     let mut acc = Vec::new();
 

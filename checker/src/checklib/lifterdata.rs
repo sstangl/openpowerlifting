@@ -1,7 +1,7 @@
 //! Generates Username maps from files in the lifter-data/ directory.
 
 use opltypes::Username;
-use rustc_hash::{FxBuildHasher, FxHashMap};
+use rustc_hash::FxHashMap;
 use serde_derive::Deserialize;
 use toml::de;
 
@@ -14,22 +14,27 @@ use crate::Report;
 #[derive(Debug)]
 pub struct LifterDataCheckResult {
     pub reports: Vec<Report>,
-    pub map: LifterDataMap,
+    pub partial_data: LifterData,
 }
 
-/// Map from `Username` to `LifterData`.
-pub type LifterDataMap = FxHashMap<Username, LifterData>;
+#[derive(Debug)]
+pub struct LifterData {
+    /// Map from `Username` to `UsernameData`.
+    map: FxHashMap<Username, UsernameData>,
+}
 
 /// A struct containing all `lifter-data/` metadata for a single Username.
 #[derive(Debug, Default)]
-pub struct LifterData {
+pub struct UsernameData {
     /// CSS class, for lifters who donate to the project.
     pub color: Option<Box<str>>,
 
     /// The lifter's Instagram.
     pub instagram: Option<Box<str>>,
 
-    /// Number of known lifters sharing the same username.
+    /// Number of manually-specified lifters sharing the same username.
+    ///
+    /// Automatic disambiguation may produce a number higher than this amount.
     pub disambiguation_count: u32,
 
     /// True iff a sex conflict with this username is expected.
@@ -43,6 +48,30 @@ pub struct LifterData {
 
     /// True iff the lifter requested that their name be redacted on the website.
     pub privacy: bool,
+}
+
+impl LifterData {
+    /// Returns lifter data for the given username.
+    pub fn get(&self, u: &Username) -> Option<&UsernameData> {
+        self.map.get(u)
+    }
+
+    /// Mutably returns lifter data for the given username.
+    pub fn get_mut(&mut self, u: &Username) -> Option<&mut UsernameData> {
+        self.map.get_mut(u)
+    }
+
+    /// Returns an iterator over all usernames with lifter data.
+    pub fn iter_usernames(&self) -> std::collections::hash_map::Iter<'_, Username, UsernameData> {
+        self.map.iter()
+    }
+
+    /// Renames the given username if present in the lifter data.
+    pub fn rename(&mut self, old: &Username, new: Username) {
+        if let Some(udata) = self.map.remove(old) {
+            self.map.insert(new, udata);
+        }
+    }
 }
 
 /// Helper function to look for common whitespace errors.
@@ -84,7 +113,7 @@ struct DonatorColorsRow {
 fn check_donator_colors(
     reader: &csv::ReaderBuilder,
     report: &mut Report,
-    map: &mut LifterDataMap,
+    data: &mut LifterData,
 ) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
@@ -113,7 +142,7 @@ fn check_donator_colors(
             report.error_on(line, format!("Whitespace error in '{}'", row.color));
         }
 
-        map.entry(username).or_default().color = Some(row.color);
+        data.map.entry(username).or_default().color = Some(row.color);
     }
 
     Ok(())
@@ -123,7 +152,7 @@ fn check_donator_colors(
 ///
 /// This allows specifying a bunch of exemptions in a single place.
 /// There should only be one such file, in `lifter-data/`.
-pub fn load_exemptions(report: &mut Report, map: &mut LifterDataMap) -> Result<(), Box<dyn Error>> {
+pub fn load_exemptions(report: &mut Report, data: &mut LifterData) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
         return Ok(());
@@ -134,12 +163,12 @@ pub fn load_exemptions(report: &mut Report, map: &mut LifterDataMap) -> Result<(
 
     // Handle the [sex] section.
     for username in exemptions.sex.usernames.into_iter() {
-        map.entry(username).or_default().exempt_sex = true;
+        data.map.entry(username).or_default().exempt_sex = true;
     }
 
     // Handle the [bodyweight] section.
     for username in exemptions.bodyweight.usernames.into_iter() {
-        map.entry(username).or_default().exempt_bodyweight = true;
+        data.map.entry(username).or_default().exempt_bodyweight = true;
     }
 
     Ok(())
@@ -158,7 +187,7 @@ struct PrivacyRow {
 fn check_privacy(
     reader: &csv::ReaderBuilder,
     report: &mut Report,
-    map: &mut LifterDataMap,
+    data: &mut LifterData,
 ) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
@@ -184,7 +213,7 @@ fn check_privacy(
             report.error_on(line, format!("Whitespace error in '{}'", username.as_str()));
         }
 
-        map.entry(username).or_default().privacy = true;
+        data.map.entry(username).or_default().privacy = true;
     }
 
     Ok(())
@@ -205,7 +234,7 @@ struct InstagramRow {
 fn check_social_instagram(
     reader: &csv::ReaderBuilder,
     report: &mut Report,
-    map: &mut LifterDataMap,
+    data: &mut LifterData,
 ) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
@@ -246,7 +275,7 @@ fn check_social_instagram(
             report.error_on(line, format!("'{ig}' has invalid characters"));
         }
 
-        match map.get_mut(&username) {
+        match data.get_mut(&username) {
             Some(data) => {
                 if data.instagram.is_some() {
                     report.error_on(line, format!("Lifter '{name}' has multiple Instagrams."));
@@ -254,20 +283,17 @@ fn check_social_instagram(
                 data.instagram = Some(row.instagram);
             }
             None => {
-                let data = LifterData {
+                let udata = UsernameData {
                     instagram: Some(row.instagram),
                     ..Default::default()
                 };
-                map.insert(username, data);
+                data.map.insert(username, udata);
             }
         }
     }
 
     Ok(())
 }
-
-/// Map from `Username` to a count of disambiguations for that username.
-pub type DisambiguationMap = FxHashMap<String, u32>;
 
 /// Specifies a Name (which is translated into a Username) and a Count of the
 /// number of disambiguations for people sharing that same Username.
@@ -288,7 +314,7 @@ struct NameDisambiguationRow {
 fn check_name_disambiguation(
     reader: &csv::ReaderBuilder,
     report: &mut Report,
-    map: &mut LifterDataMap,
+    data: &mut LifterData,
 ) -> Result<(), Box<dyn Error>> {
     if !report.path.exists() {
         report.error("File does not exist");
@@ -323,7 +349,7 @@ fn check_name_disambiguation(
             report.error_on(line, "Count must be >= 2");
         }
 
-        let entry = map.entry(username).or_default();
+        let entry = data.map.entry(username).or_default();
         if entry.disambiguation_count > 0 {
             let msg = format!(
                 "Lifter '{}' appears multiple times in name-disambiguation.csv",
@@ -339,12 +365,14 @@ fn check_name_disambiguation(
 
 pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> LifterDataCheckResult {
     let mut reports: Vec<Report> = vec![];
-    let mut map = LifterDataMap::with_hasher(FxBuildHasher);
+    let mut data = LifterData {
+        map: Default::default(),
+    };
 
     // Check donator-colors.csv.
     // Always create the report in order to catch internal errors.
     let mut report = Report::new(lifterdir.join("donator-colors.csv"));
-    match check_donator_colors(reader, &mut report, &mut map) {
+    match check_donator_colors(reader, &mut report, &mut data) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -356,7 +384,7 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
 
     // Load exemptions from exemptions.toml.
     let mut report = Report::new(lifterdir.join("exemptions.toml"));
-    match load_exemptions(&mut report, &mut map) {
+    match load_exemptions(&mut report, &mut data) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -368,7 +396,7 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
 
     // Check privacy.csv.
     let mut report = Report::new(lifterdir.join("privacy.csv"));
-    match check_privacy(reader, &mut report, &mut map) {
+    match check_privacy(reader, &mut report, &mut data) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -380,7 +408,7 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
 
     // Check social-instagram.csv.
     let mut report = Report::new(lifterdir.join("social-instagram.csv"));
-    match check_social_instagram(reader, &mut report, &mut map) {
+    match check_social_instagram(reader, &mut report, &mut data) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -392,7 +420,7 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
 
     // Check name-disambiguation.csv and produce a `HashMap<Username, Count>`.
     let mut report = Report::new(lifterdir.join("name-disambiguation.csv"));
-    match check_name_disambiguation(reader, &mut report, &mut map) {
+    match check_name_disambiguation(reader, &mut report, &mut data) {
         Ok(()) => (),
         Err(e) => {
             report.error(e);
@@ -402,5 +430,8 @@ pub fn check_lifterdata(reader: &csv::ReaderBuilder, lifterdir: &Path) -> Lifter
         reports.push(report)
     }
 
-    LifterDataCheckResult { reports, map }
+    LifterDataCheckResult {
+        reports,
+        partial_data: data,
+    }
 }

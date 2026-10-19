@@ -1,6 +1,6 @@
 //! Checks for consistency errors across entries per lifter.
 
-use crate::{AllMeetData, Entry, LifterDataMap, LifterMap, Report};
+use crate::{AllMeetData, Entry, EntryMap, LifterData, Report};
 use opltypes::Date;
 
 mod bodyweight;
@@ -49,9 +49,9 @@ pub fn should_skip_lifter(entry: &Entry) -> bool {
 /// from the chosen subtree. Therefore, full-tree disambiguation consistency
 /// checks must be disabled.
 pub fn check(
-    liftermap: &LifterMap,
+    liftermap: &EntryMap,
     meetdata: &AllMeetData,
-    lifterdata: &LifterDataMap,
+    lifterdata: &LifterData,
     is_partial: bool,
 ) -> Vec<Report> {
     let mut reports_sex: Vec<Report> = Vec::new();

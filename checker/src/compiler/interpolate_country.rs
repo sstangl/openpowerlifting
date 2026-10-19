@@ -3,7 +3,7 @@
 use colored::*;
 use opltypes::{Country, Username};
 
-use crate::{AllMeetData, EntryIndex, LifterMap};
+use crate::{AllMeetData, EntryIndex, EntryMap};
 
 /// Helper function for debug-mode printing to keep the code legible.
 #[inline]
@@ -158,7 +158,7 @@ fn interpolate_country_single_lifter(
 /// Public-facing entry point for debugging a single lifter's interpolation.
 pub fn interpolate_country_debug_for(
     meetdata: &mut AllMeetData,
-    liftermap: &LifterMap,
+    liftermap: &EntryMap,
     username: &Username,
 ) {
     match liftermap.get(username) {
@@ -168,7 +168,7 @@ pub fn interpolate_country_debug_for(
 }
 
 /// Attempts to infer a Country for a lifter from surrounding Entry data.
-pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &LifterMap) {
+pub fn interpolate_country(meetdata: &mut AllMeetData, liftermap: &EntryMap) {
     for indices in liftermap.values() {
         interpolate_country_single_lifter(meetdata, indices, false);
     }
@@ -196,7 +196,7 @@ mod tests {
     fn all_none() {
         let entries = vec![Entry::default(), Entry::default()];
         let mut meetdata = meetdata_from_vec(entries);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
         interpolate_country(&mut meetdata, &liftermap);
 
         assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::USA));
@@ -218,7 +218,7 @@ mod tests {
             meet,
             entries: vec![entry].into(),
         }]);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
 
         assert_eq!(meetdata.entry_at(0, 0).country, None);
         interpolate_country(&mut meetdata, &liftermap);
@@ -239,7 +239,7 @@ mod tests {
             meet,
             entries: vec![entry].into(),
         }]);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
 
         assert_eq!(meetdata.entry_at(0, 0).country, None);
         interpolate_country(&mut meetdata, &liftermap);
@@ -255,7 +255,7 @@ mod tests {
         };
 
         let mut meetdata = meetdata_from_vec(vec![Entry::default(), usa, Entry::default()]);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
         interpolate_country(&mut meetdata, &liftermap);
 
         assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::USA));
@@ -278,7 +278,7 @@ mod tests {
             meet,
             entries: vec![entry].into(),
         }]);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
 
         assert_eq!(meetdata.entry_at(0, 0).country, None);
         interpolate_country(&mut meetdata, &liftermap);
@@ -298,7 +298,7 @@ mod tests {
         };
 
         let mut meetdata = meetdata_from_vec(vec![Entry::default(), usa, Entry::default(), russia]);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
         interpolate_country(&mut meetdata, &liftermap);
 
         assert_eq!(meetdata.entry_at(0, 0).country, None);
@@ -321,7 +321,7 @@ mod tests {
 
         let mut meetdata =
             meetdata_from_vec(vec![Entry::default(), uk, Entry::default(), scotland]);
-        let liftermap = meetdata.create_liftermap();
+        let liftermap = meetdata.create_entrymap();
         interpolate_country(&mut meetdata, &liftermap);
 
         assert_eq!(meetdata.entry_at(0, 0).country, Some(Country::Scotland));

@@ -25,6 +25,7 @@ lto = "fat"
 codegen-units = 1
 
 [workspace.dependencies]
+ascii = "1.1"
 colored = "3.0"
 criterion = { version = "0.8", features = ["html_reports"] }
 csv = "1.3"

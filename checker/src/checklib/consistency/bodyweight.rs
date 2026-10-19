@@ -4,7 +4,7 @@
 use opltypes::Date;
 
 use crate::checklib::consistency::{self, ConsistencyResult, date};
-use crate::{AllMeetData, Entry, EntryIndex, LifterDataMap, LifterMap, Report};
+use crate::{AllMeetData, Entry, EntryIndex, EntryMap, LifterData, Report};
 
 /// Get the average change in bodyweight from `a` to `b` as a percentage per
 /// day.
@@ -34,7 +34,7 @@ fn calc_average_percentage_change(a: &Entry, b: &Entry, a_date: Date, b_date: Da
 pub fn check_bodyweight_one(
     indices: &[EntryIndex],
     meetdata: &AllMeetData,
-    lifterdata: &LifterDataMap,
+    lifterdata: &LifterData,
     report: &mut Report,
 ) -> ConsistencyResult {
     if consistency::should_skip_lifter(meetdata.entry(indices[0])) {
@@ -88,14 +88,14 @@ pub fn check_bodyweight_one(
 
 /// Checks bodyweight consistency for all lifters.
 pub fn check_bodyweight_all(
-    liftermap: &LifterMap,
+    entrymap: &EntryMap,
     meetdata: &AllMeetData,
-    lifterdata: &LifterDataMap,
+    lifterdata: &LifterData,
     reports: &mut Vec<Report>,
 ) {
     let mut report = Report::new("[Bodyweight Consistency]".into());
 
-    for lifter_indices in liftermap.values() {
+    for lifter_indices in entrymap.values() {
         check_bodyweight_one(lifter_indices, meetdata, lifterdata, &mut report);
     }
 

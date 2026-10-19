@@ -1,6 +1,12 @@
 //! Defines MeetData, the owner of all meet-related data produced by the
 //! Checker.
 
+use std::{
+    collections::BTreeSet,
+    ops::Bound::{Excluded, Included},
+};
+
+use ascii::{AsciiString, IntoAsciiString};
 use opltypes::Username;
 use rustc_hash::{FxBuildHasher, FxHashMap};
 
@@ -49,6 +55,8 @@ impl EntryIndex {
 /// Map from Username to a vector of EntryIndex references, representing all
 /// Entries corresponding to the same lifter.
 ///
+/// Each vector of indices is ordered by date.
+///
 /// The original intention was to use a doubly-linked list with memory in each
 /// Entry, but unfortunately Rust makes it basically impossible to mutably
 /// iterate over the meet data while simultaneously mutating external meet data.
@@ -59,7 +67,54 @@ impl EntryIndex {
 ///
 /// Note that because internal self-references are disallowed, this map
 /// must maintain a copy of the String and EntryIndex.
-pub type LifterMap = FxHashMap<Username, Vec<EntryIndex>>;
+pub struct EntryMap {
+    map: FxHashMap<Username, Vec<EntryIndex>>,
+
+    /// The set of all username variants with disambiguation numbers.
+    ///
+    /// A BTreeSet is used to be able to do range queries, for querying string prefixes.
+    /// Although this contains Usernames, it's stored as AsciiString for range queries.
+    ///
+    /// It's preferable to split out the HashMap and BTreeMap for speed: using just a
+    /// BTreeSet instead of two data structures causes building the data structure to increase
+    /// 4x, from 0.8s to 3.2s, which is unacceptably slow.
+    variants: BTreeSet<AsciiString>,
+}
+
+impl EntryMap {
+    // HashMap-like read-only interface.
+    pub fn get(&self, u: &Username) -> Option<&Vec<EntryIndex>> {
+        self.map.get(u)
+    }
+    pub fn keys(&self) -> std::collections::hash_map::Keys<'_, Username, Vec<EntryIndex>> {
+        self.map.keys()
+    }
+    pub fn values(&self) -> std::collections::hash_map::Values<'_, Username, Vec<EntryIndex>> {
+        self.map.values()
+    }
+
+    pub fn insert(&mut self, u: Username, entries: Vec<EntryIndex>) -> Option<Vec<EntryIndex>> {
+        if u.has_variant() {
+            self.variants.insert(u.as_ascii_str().to_owned());
+        }
+        self.map.insert(u, entries)
+    }
+    pub fn remove(&mut self, u: &Username) -> Option<Vec<EntryIndex>> {
+        self.variants.remove(u.as_ascii_str());
+        self.map.remove(u)
+    }
+
+    /// Looks up all lifters sharing the same disambiguation base.
+    pub fn get_variants_of(&self, u: &Username) -> Vec<Username> {
+        let low_inclusive = format!("{u}0").into_ascii_string().unwrap(); // >= all numbers.
+        let high_exclusive = format!("{u}:").into_ascii_string().unwrap(); // <= all numbers (`:` is the next ASCII char after `9`).
+
+        self.variants
+            .range((Included(low_inclusive), Excluded(high_exclusive)))
+            .map(|ascii| Username::from_trusted_str(ascii.as_str()).unwrap())
+            .collect()
+    }
+}
 
 impl From<Vec<SingleMeetData>> for AllMeetData {
     fn from(v: Vec<SingleMeetData>) -> AllMeetData {
@@ -109,13 +164,16 @@ impl AllMeetData {
         &mut self.meets[index.meetdata_index as usize].entries[index.entry_index as usize]
     }
 
-    /// Generates a LifterMap for grouping Entries for the same lifter.
+    /// Generates an EntryMap for grouping Entries for the same lifter.
     ///
     /// As a side-effect, also stores each Entry's EntryIndex within itself,
     /// so that the Entry can know its `SingleMeetData` context.
-    pub fn create_liftermap(&mut self) -> LifterMap {
+    pub fn create_entrymap(&mut self) -> EntryMap {
         // Initialize the LifterMap to be fairly large to avoid reallocation.
-        let mut map = LifterMap::with_capacity_and_hasher(1_000_000, FxBuildHasher);
+        let mut entrymap = EntryMap {
+            map: FxHashMap::with_capacity_and_hasher(1_500_000, FxBuildHasher),
+            variants: BTreeSet::new(),
+        };
 
         for (meet_index, singlemeet) in self.meets.iter_mut().enumerate() {
             for (entry_index, entry) in singlemeet.entries.iter_mut().enumerate() {
@@ -124,26 +182,30 @@ impl AllMeetData {
                 entry.index = index;
 
                 // Add the EntryIndex to the appropriate vector.
-                if let Some(vec) = map.get_mut(&entry.username) {
+                if let Some(vec) = entrymap.map.get_mut(&entry.username) {
                     vec.push(index);
                 } else {
                     // TODO: Because the username Strings are cloned, this takes about
                     // 400ms. If we could use a Symbol-like interface, we would get O(1)
                     // comparison and would save quite a lot of memory.
-                    let username = entry.username.clone();
-                    map.insert(username, vec![index]);
+                    if entry.username.has_variant() {
+                        entrymap
+                            .variants
+                            .insert(entry.username.as_ascii_str().to_owned());
+                    }
+                    entrymap.map.insert(entry.username.clone(), vec![index]);
                 }
             }
         }
 
         // Sort EntryIndex vectors by EntryDate.
         // Consistency-enforcing code depends on this ordering.
-        for indices in map.values_mut() {
+        for indices in entrymap.map.values_mut() {
             if indices.len() >= 2 {
                 indices.sort_unstable_by_key(|ei| self.entry(*ei).entrydate);
             }
         }
 
-        map
+        entrymap
     }
 }

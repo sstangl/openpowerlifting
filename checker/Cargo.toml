@@ -13,6 +13,7 @@ default = []
 jemalloc = ["tikv-jemallocator", "tikv-jemalloc-ctl"]
 
 [dependencies]
+ascii = { workspace = true }
 coefficients = { path = "../crates/coefficients/" }
 disambig = { path = "../crates/disambig/" }
 opltypes = { path = "../crates/opltypes/" }

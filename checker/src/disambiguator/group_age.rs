@@ -13,7 +13,7 @@ use crate::compiler::interpolate_age::BDR_DEFAULT_MIN;
 use crate::compiler::interpolate_age::BirthDateRange;
 use crate::compiler::interpolate_age::NarrowResult;
 use crate::compiler::interpolate_age::trace_conflict;
-use crate::{AllMeetData, EntryIndex, LifterMap};
+use crate::{AllMeetData, EntryIndex, EntryMap};
 
 fn calc_distance(bd_range1: &BirthDateRange, x: f32) -> f32 {
     if bd_range1.min.count_days() as f32 > x {
@@ -359,7 +359,7 @@ fn group_lifter_data(meetdata: &mut AllMeetData, indices: &[EntryIndex], debug: 
 }
 
 /// Public-facing entry point for debugging a single lifter's interpolation.
-pub fn group_age_debug_for(meetdata: &mut AllMeetData, liftermap: &LifterMap, username: &Username) {
+pub fn group_age_debug_for(meetdata: &mut AllMeetData, liftermap: &EntryMap, username: &Username) {
     match liftermap.get(username) {
         Some(indices) => group_lifter_data(meetdata, indices, true),
         None => println!("Username '{username}' not found"),

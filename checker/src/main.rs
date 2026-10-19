@@ -386,7 +386,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             write_report(&mut handle, report);
         }
     }
-    let mut lifterdata = result.map;
+    let mut lifterdata = result.partial_data;
     maybe_print_elapsed_for("Validated the state of `lifter-data`", timing);
 
     // Build a list of every directory containing meet results.
@@ -471,7 +471,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Group entries by lifter.
     let timing = instant_if(args.debug_timing);
-    let mut liftermap = meetdata.create_liftermap();
+    let mut liftermap = meetdata.create_entrymap();
     maybe_print_elapsed_for("Created the map of lifters", timing);
 
     // Check for consistency errors for individual lifters.
@@ -502,6 +502,19 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Perform cross-Entry data interpolation.
     if is_compiling || is_debugging {
+        // Perform automatic disambiguation.
+        //
+        // Disambiguation is performed before age/country/etc interpolation because disambiguation
+        // decisions should not act on inferred information.
+        if let Some(u) = args.debug_disambig_username {
+            let u = Username::from_name(&u).unwrap().without_variant();
+            disambiguator::disambiguate_one(&meetdata, &liftermap, &u, true);
+            process::exit(0); // TODO: Complain if someone passes --compile.
+        }
+        let timing = instant_if(args.debug_timing);
+        disambiguator::disambiguate_marked(&mut meetdata, &mut liftermap, &lifterdata);
+        maybe_print_elapsed_for("disambig", timing);
+
         // Perform country interpolation.
         if let Some(u) = args.debug_country_username {
             let u = Username::from_name(&u).unwrap();
@@ -518,23 +531,18 @@ fn main() -> Result<(), Box<dyn Error>> {
             compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
+        let timing = instant_if(args.debug_timing);
+        compiler::interpolate_age(&mut meetdata, &liftermap);
+        maybe_print_elapsed_for("interpolate_age", timing);
 
         // Find age groupings.
+        //
+        // TODO: This is unused and can be deleted.
         if let Some(u) = args.debug_age_group_username {
             let u = Username::from_name(&u).unwrap();
             disambiguator::group_age_debug_for(&mut meetdata, &liftermap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
-
-        // Report suggested disambiguation groupings.
-        if let Some(u) = args.debug_disambig_username {
-            let u = Username::from_name(&u).unwrap().without_variant();
-            disambiguator::disambiguate_debug_for(&meetdata, &liftermap, &u);
-        }
-
-        let timing = instant_if(args.debug_timing);
-        compiler::interpolate_age(&mut meetdata, &liftermap);
-        maybe_print_elapsed_for("interpolate_age", timing);
     }
 
     // Perform final compilation if requested.

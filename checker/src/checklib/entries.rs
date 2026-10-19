@@ -12,7 +12,7 @@ use std::io;
 use std::path::PathBuf;
 
 use crate::checklib::config::{Config, Exemption, WeightClassConfig};
-use crate::checklib::lifterdata::LifterDataMap;
+use crate::checklib::lifterdata::LifterData;
 use crate::checklib::meet::Meet;
 use crate::{EntryIndex, Report};
 
@@ -1996,7 +1996,7 @@ pub fn do_check<R: io::Read>(
     rdr: &mut csv::Reader<R>,
     meet: &Meet,
     config: Option<&Config>,
-    lifterdata: Option<&LifterDataMap>,
+    lifterdata: Option<&LifterData>,
     mut report: Report,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     // If the federation is only partially configured and this meet doesn't fall in
@@ -2451,7 +2451,7 @@ pub fn check_entries(
     entries_csv: PathBuf,
     meet: &Meet,
     config: Option<&Config>,
-    lifterdata: Option<&LifterDataMap>,
+    lifterdata: Option<&LifterData>,
 ) -> Result<EntriesCheckResult, Box<dyn Error>> {
     // Allow the pending Report to own the PathBuf.
     let mut report = Report::new(entries_csv);

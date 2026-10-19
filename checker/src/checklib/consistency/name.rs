@@ -1,6 +1,6 @@
 //! Checks for consistency errors across entries per lifter.
 
-use crate::{AllMeetData, Entry, EntryIndex, LifterMap, Report};
+use crate::{AllMeetData, Entry, EntryIndex, EntryMap, Report};
 
 /// Checks that Name fields are consistent for this lifter.
 fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut Report) {
@@ -98,7 +98,7 @@ fn check_name_one(indices: &[EntryIndex], meetdata: &AllMeetData, report: &mut R
 }
 
 /// Checks Name consistency for all lifters.
-pub fn check_name_all(liftermap: &LifterMap, meetdata: &AllMeetData, reports: &mut Vec<Report>) {
+pub fn check_name_all(liftermap: &EntryMap, meetdata: &AllMeetData, reports: &mut Vec<Report>) {
     let mut report = Report::new("[Name Consistency]".into());
 
     for lifter_indices in liftermap.values() {

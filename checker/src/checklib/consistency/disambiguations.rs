@@ -4,7 +4,7 @@ use opltypes::Username;
 
 use std::fmt::Write;
 
-use crate::{LifterDataMap, LifterMap, Report};
+use crate::{EntryMap, LifterData, Report};
 
 /// Checks disambiguation consistency for all disambiguated lifters.
 ///
@@ -12,14 +12,14 @@ use crate::{LifterDataMap, LifterMap, Report};
 /// all present, there are none above that number, and there are no
 /// missing numbers between 1 and the maximum.
 pub fn check_disambiguations_all(
-    liftermap: &LifterMap,
-    lifterdatamap: &LifterDataMap,
+    entrymap: &EntryMap,
+    lifterdata: &LifterData,
     reports: &mut Vec<Report>,
 ) {
     let mut report = Report::new("[Disambiguation Consistency]".into());
 
     // Check that all variant usernames are marked for disambiguation.
-    for username in liftermap.keys() {
+    for username in entrymap.keys() {
         let (base, Some(variant)) = username.to_parts() else {
             continue;
         };
@@ -27,7 +27,7 @@ pub fn check_disambiguations_all(
         let base_username = Username::from_name(base.into()).unwrap();
 
         let mut marked = false;
-        if let Some(data) = lifterdatamap.get(&base_username) {
+        if let Some(data) = lifterdata.get(&base_username) {
             if data.disambiguation_count != 0 {
                 marked = true;
             }
@@ -53,7 +53,7 @@ pub fn check_disambiguations_all(
 
     // Check that usernames marked for disambiguation appear in the liftermap.
     let mut scratch = String::with_capacity(128);
-    for (username, data) in lifterdatamap.iter() {
+    for (username, data) in lifterdata.iter_usernames() {
         if data.disambiguation_count == 0 {
             continue;
         }
@@ -71,7 +71,7 @@ pub fn check_disambiguations_all(
             }
 
             if let Ok(u) = Username::from_name(&scratch)
-                && liftermap.get(&u).is_none()
+                && entrymap.get(&u).is_none()
             {
                 let msg = format!("{} missing for {}", u.as_str(), username.as_str());
                 report.error(msg);

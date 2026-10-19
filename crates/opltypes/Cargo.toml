@@ -8,7 +8,7 @@ edition = "2024"
 
 [dependencies]
 arrayvec = "0.7"
-ascii = "1.1"
+ascii = { workspace = true }
 phf = { version = "0.14", features = ["macros"] }
 serde = { workspace = true }
 serde_derive = { workspace = true }
