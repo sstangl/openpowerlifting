@@ -39,14 +39,14 @@ pub fn check_sex_one(
 
 /// Checks sex consistency for all lifters.
 pub fn check_sex_all(
-    liftermap: &EntryMap,
+    entrymap: &EntryMap,
     meetdata: &AllMeetData,
     lifterdata: &LifterData,
     reports: &mut Vec<Report>,
 ) {
     let mut report = Report::new("[Sex Consistency]".into());
 
-    for lifter_indices in liftermap.values() {
+    for lifter_indices in entrymap.values() {
         check_sex_one(lifter_indices, meetdata, lifterdata, &mut report);
     }
 

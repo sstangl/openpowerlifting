@@ -80,14 +80,14 @@ pub fn check_duplicates_one(
 
 /// Checks for duplicate meets with different MeetPaths for all lifters.
 pub fn check_duplicates_all(
-    liftermap: &EntryMap,
+    entrymap: &EntryMap,
     meetdata: &AllMeetData,
     reports: &mut Vec<Report>,
 ) {
     let mut report = Report::new("[Duplicate Meets]".into());
     let mut scratch: Vec<EntryIndex> = Vec::new();
 
-    for lifter_indices in liftermap.values() {
+    for lifter_indices in entrymap.values() {
         check_duplicates_one(lifter_indices, meetdata, &mut report, &mut scratch);
     }
 

@@ -44,12 +44,12 @@ pub fn should_skip_lifter(entry: &Entry) -> bool {
 /// Check entries for per-lifter consistency.
 ///
 /// The `is_partial` argument is true iff only a subtree of the meet data
-/// is being checked. In that case, the `liftermap` does not contain
+/// is being checked. In that case, the `entrymap` does not contain
 /// full information from the database: it only contains information
 /// from the chosen subtree. Therefore, full-tree disambiguation consistency
 /// checks must be disabled.
 pub fn check(
-    liftermap: &EntryMap,
+    entrymap: &EntryMap,
     meetdata: &AllMeetData,
     lifterdata: &LifterData,
     is_partial: bool,
@@ -61,16 +61,16 @@ pub fn check(
 
     // Execute checks in parallel.
     rayon::scope(|s| {
-        s.spawn(|_| sex::check_sex_all(liftermap, meetdata, lifterdata, &mut reports_sex));
-        s.spawn(|_| name::check_name_all(liftermap, meetdata, &mut reports_name));
-        s.spawn(|_| duplicates::check_duplicates_all(liftermap, meetdata, &mut reports_dup));
+        s.spawn(|_| sex::check_sex_all(entrymap, meetdata, lifterdata, &mut reports_sex));
+        s.spawn(|_| name::check_name_all(entrymap, meetdata, &mut reports_name));
+        s.spawn(|_| duplicates::check_duplicates_all(entrymap, meetdata, &mut reports_dup));
 
-        // bodyweight::check_bodyweight_all(liftermap, meetdata, lifterdata, &mut reports);
+        // bodyweight::check_bodyweight_all(entrymap, meetdata, lifterdata, &mut reports);
 
         // The checks below require the full meet-data tree, not a subset.
         if !is_partial {
             s.spawn(|_| {
-                disambiguations::check_disambiguations_all(liftermap, lifterdata, &mut reports_dis)
+                disambiguations::check_disambiguations_all(entrymap, lifterdata, &mut reports_dis)
             });
         }
     });

@@ -469,10 +469,10 @@ fn interpolate_age_single_lifter(meetdata: &mut AllMeetData, indices: &[EntryInd
 /// Public-facing entry point for debugging a single lifter's interpolation.
 pub fn interpolate_age_debug_for(
     meetdata: &mut AllMeetData,
-    liftermap: &EntryMap,
+    entrymap: &EntryMap,
     username: &Username,
 ) {
-    match liftermap.get(username) {
+    match entrymap.get(username) {
         Some(indices) => interpolate_age_single_lifter(meetdata, indices, true),
         None => println!("Username '{username}' not found"),
     }
@@ -480,8 +480,8 @@ pub fn interpolate_age_debug_for(
 
 /// Attempts to infer BirthDate range for each lifter, used to assign Age
 /// values.
-pub fn interpolate_age(meetdata: &mut AllMeetData, liftermap: &EntryMap) {
-    for indices in liftermap.values() {
+pub fn interpolate_age(meetdata: &mut AllMeetData, entrymap: &EntryMap) {
+    for indices in entrymap.values() {
         // Interpolation requires multiple entries.
         if indices.len() >= 2 {
             interpolate_age_single_lifter(meetdata, indices, false);

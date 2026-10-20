@@ -51,7 +51,7 @@ pub fn check_disambiguations_all(
         }
     }
 
-    // Check that usernames marked for disambiguation appear in the liftermap.
+    // Check that usernames marked for disambiguation appear in the entrymap.
     let mut scratch = String::with_capacity(128);
     for (username, data) in lifterdata.iter_usernames() {
         if data.disambiguation_count == 0 {

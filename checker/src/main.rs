@@ -466,12 +466,12 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Group entries by lifter.
     let timing = instant_if(args.debug_timing);
-    let mut liftermap = meetdata.create_entrymap();
+    let mut entrymap = meetdata.create_entrymap();
     maybe_print_elapsed_for("Created the map of lifters", timing);
 
     // Check for consistency errors for individual lifters.
     let timing = instant_if(args.debug_timing);
-    for report in checker::consistency::check(&liftermap, &meetdata, &lifterdata, is_partial) {
+    for report in checker::consistency::check(&entrymap, &meetdata, &lifterdata, is_partial) {
         report_count += report.count_messages();
 
         if report.has_messages() {
@@ -503,31 +503,31 @@ fn main() -> Result<(), Box<dyn Error>> {
         // decisions should not act on inferred information.
         if let Some(u) = args.debug_disambig_username {
             let u = Username::from_name(&u).unwrap().without_variant();
-            disambiguator::disambiguate_username_debug(&meetdata, &liftermap, &u);
+            disambiguator::disambiguate_username_debug(&meetdata, &entrymap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
         let timing = instant_if(args.debug_timing);
-        disambiguator::disambiguate_marked(&mut meetdata, &mut liftermap, &lifterdata);
+        disambiguator::disambiguate_marked(&mut meetdata, &mut entrymap, &lifterdata);
         maybe_print_elapsed_for("disambig", timing);
 
         // Perform country interpolation.
         if let Some(u) = args.debug_country_username {
             let u = Username::from_name(&u).unwrap();
-            compiler::interpolate_country_debug_for(&mut meetdata, &liftermap, &u);
+            compiler::interpolate_country_debug_for(&mut meetdata, &entrymap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
         let timing = instant_if(args.debug_timing);
-        compiler::interpolate_country(&mut meetdata, &liftermap);
+        compiler::interpolate_country(&mut meetdata, &entrymap);
         maybe_print_elapsed_for("interpolate_country", timing);
 
         // Perform age interpolation.
         if let Some(u) = args.debug_age_username {
             let u = Username::from_name(&u).unwrap();
-            compiler::interpolate_age_debug_for(&mut meetdata, &liftermap, &u);
+            compiler::interpolate_age_debug_for(&mut meetdata, &entrymap, &u);
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
         let timing = instant_if(args.debug_timing);
-        compiler::interpolate_age(&mut meetdata, &liftermap);
+        compiler::interpolate_age(&mut meetdata, &entrymap);
         maybe_print_elapsed_for("interpolate_age", timing);
     }
 
@@ -539,7 +539,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
 
         // Right before compilation, perform privacy redaction.
-        compiler::redact(&mut meetdata, &mut liftermap, &mut lifterdata);
+        compiler::redact(&mut meetdata, &mut entrymap, &mut lifterdata);
 
         if args.compile {
             let timing = instant_if(args.debug_timing);
@@ -589,8 +589,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         let lifterdata_bytes = measure_bytes_by_consuming(lifterdata);
         println!(" lifterdata: {}MiB", lifterdata_bytes / 1024 / 1024);
 
-        let liftermap_bytes = measure_bytes_by_consuming(liftermap);
-        println!(" liftermap: {}MiB", liftermap_bytes / 1024 / 1024);
+        let entrymap_bytes = measure_bytes_by_consuming(entrymap);
+        println!(" entrymap: {}MiB", entrymap_bytes / 1024 / 1024);
 
         let unaccounted_bytes = measure_bytes();
         println!(" unaccounted: {}MiB", unaccounted_bytes / 1024 / 1024);
