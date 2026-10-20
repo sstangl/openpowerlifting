@@ -218,7 +218,7 @@ fn apply_labels(
             entry.name = format!("{} #{label_variant}", entry.name).into();
 
             // Drop the mutable reference onto meetdata, then update the entrymap.
-            entrymap.insert_entry_for(variant_username, idx, &meetdata);
+            entrymap.insert_entry_for(variant_username, idx, meetdata);
         }
     }
 

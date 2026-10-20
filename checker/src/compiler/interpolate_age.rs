@@ -390,6 +390,20 @@ fn infer_from_range(
         let entry_had_exact_age = entry.age.is_exact();
         let age_on_date = range.age_on(mdate);
 
+        // Avoid inferring very young ages.
+        //
+        // These are almost always cases that need disambiguation.
+        // FIXME: This is a temporary stopgap to make the Single-ply McCulloch
+        // rankings manageable.
+        match age_on_date {
+            Age::Exact(n) | Age::Approximate(n) => {
+                if n <= 10 {
+                    continue;
+                }
+            }
+            Age::None => (),
+        };
+
         // Update the lifter's Age.
         match age_on_date {
             Age::Exact(_) | Age::Approximate(_) => {
