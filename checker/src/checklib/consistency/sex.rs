@@ -15,9 +15,12 @@ pub fn check_sex_one(
     }
 
     // Allow manually excluding lifters through `lifter-data/sex-exemptions.csv`.
+    //
+    // Also skip lifters marked for disambiguation, since automatic disambiguation
+    // will resolve that conflict.
     let username = &meetdata.entry(indices[0]).username;
     if let Some(data) = lifterdata.get(username)
-        && data.exempt_sex
+        && (data.exempt_sex || data.disambiguation_count > 0)
     {
         return ConsistencyResult::Skipped;
     }
