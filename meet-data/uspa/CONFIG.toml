@@ -2,7 +2,7 @@
 
 [options]
     valid_federations = ["USPA", "USPF", "IPL", "CPL"]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false  # Use automatic disambiguation.
 
 [divisions]
     # New style, which makes it easier to combine Tested and Untested.
