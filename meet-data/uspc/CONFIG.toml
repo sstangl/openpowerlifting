@@ -2,7 +2,7 @@
 
 [options]
     valid_federations = ["USPC"]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions]
     open = {name = "Open", min = 0, max = 999}
