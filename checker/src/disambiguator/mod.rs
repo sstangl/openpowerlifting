@@ -8,9 +8,6 @@ use rustc_hash::FxHashMap;
 use crate::meetdata::EntryIndex;
 use crate::{AllMeetData, Entry, EntryMap, LifterData, Meet};
 
-mod group_age;
-pub use group_age::{group_age_debug_for, group_by_age};
-
 /// This crate's wrapper for combined entry and meet information for an entry.
 #[derive(Copy, Clone)]
 struct DisambigRow<'a> {

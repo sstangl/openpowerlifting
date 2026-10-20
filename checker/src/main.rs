@@ -33,9 +33,6 @@ struct Args {
     /// Prints debug info for a single lifter's Age.
     debug_age_username: Option<String>,
 
-    /// Prints age data for a username grouped by consistency
-    debug_age_group_username: Option<String>,
-
     /// Prints debug info for a single lifter's Country.
     debug_country_username: Option<String>,
 
@@ -288,7 +285,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         help: args.contains(["-h", "--help"]),
         project_root: args.opt_value_from_str("--project-root")?,
         debug_age_username: args.opt_value_from_str("--age")?,
-        debug_age_group_username: args.opt_value_from_str("--age-group")?,
         debug_country_username: args.opt_value_from_str("--country")?,
         debug_disambig_username: args.opt_value_from_str("--disambig")?,
         debug_timing: args.contains("--timing"),
@@ -339,7 +335,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let is_compiling: bool = args.compile || args.compile_onefile;
     let is_debugging: bool = args.debug_age_username.is_some()
         || args.debug_country_username.is_some()
-        || args.debug_age_group_username.is_some()
         || args.debug_disambig_username.is_some();
     let is_partial: bool = !search_root.ends_with("meet-data");
 
@@ -534,15 +529,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         let timing = instant_if(args.debug_timing);
         compiler::interpolate_age(&mut meetdata, &liftermap);
         maybe_print_elapsed_for("interpolate_age", timing);
-
-        // Find age groupings.
-        //
-        // TODO: This is unused and can be deleted.
-        if let Some(u) = args.debug_age_group_username {
-            let u = Username::from_name(&u).unwrap();
-            disambiguator::group_age_debug_for(&mut meetdata, &liftermap, &u);
-            process::exit(0); // TODO: Complain if someone passes --compile.
-        }
     }
 
     // Perform final compilation if requested.
