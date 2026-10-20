@@ -76,7 +76,8 @@
     highschool_junior_senior_v = {name = "Junior/Senior Varsity", min = 15.5, max = 18}
 
     police_fire = {name = "Police/Fire", min = 0, max = 999}
-    special_olympian= {name = "Special Olympian", min = 0, max = 999}
+    special_olympian = {name = "Special Olympian", min = 0, max = 999}
+    adaptive = {name = "Adaptive", min = 0, max = 999} 
 
     # Old divisions. No longer in use.
     natural = {name = "Natural", min = 0, max = 999, tested = "Yes"}
