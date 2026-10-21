@@ -2410,7 +2410,7 @@ pub fn do_check<R: io::Read>(
         if report_disambiguations
             && !entry.username.as_str().is_empty()
             && let Some(data) = lifterdata.and_then(|map| map.get(&entry.username))
-            && data.disambiguation_count > 0
+            && data.disambiguation_count.is_some()
         {
             let url = format!("https://www.openpowerlifting.org/u/{}", entry.username);
             report.error_on(line, format!("Disambiguate {} ({})", entry.name, url));

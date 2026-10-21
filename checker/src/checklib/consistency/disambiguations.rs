@@ -28,18 +28,18 @@ pub fn check_disambiguations_all(
 
         let mut marked = false;
         if let Some(data) = lifterdata.get(&base_username) {
-            if data.disambiguation_count != 0 {
+            if data.disambiguation_count.is_some() {
                 marked = true;
             }
 
             // While we're here, also check that the variant does not
             // overflow the maximum number.
-            if data.disambiguation_count < variant {
+            if let Some(count) = data.disambiguation_count
+                && count < variant
+            {
                 let msg = format!(
-                    "{} is variant {}, but only {} variants are defined",
+                    "{} is variant {variant}, but only {count} variants are defined",
                     username.as_str(),
-                    variant,
-                    data.disambiguation_count
                 );
                 report.error(msg);
             }
@@ -54,16 +54,16 @@ pub fn check_disambiguations_all(
     // Check that usernames marked for disambiguation appear in the entrymap.
     let mut scratch = String::with_capacity(128);
     for (username, data) in lifterdata.iter_usernames() {
-        if data.disambiguation_count == 0 {
+        let Some(disambiguation_count) = data.disambiguation_count else {
             continue;
-        }
+        };
 
         // The previous loop already checked each username to guarantee that
         // variants above the maximum do not occur.
         //
         // This loop then checks that all variants up to and including the
         // maximum do occur. This completes the checking.
-        for variant in 1..=data.disambiguation_count {
+        for variant in 1..=disambiguation_count {
             scratch.clear();
             if write!(&mut scratch, "{}{}", username.as_str(), variant).is_err() {
                 let msg = format!("Failed write for {}, {}", username.as_str(), variant);

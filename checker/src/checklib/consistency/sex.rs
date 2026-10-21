@@ -20,7 +20,7 @@ pub fn check_sex_one(
     // will resolve that conflict.
     let username = &meetdata.entry(indices[0]).username;
     if let Some(data) = lifterdata.get(username)
-        && (data.exempt_sex || data.disambiguation_count > 0)
+        && (data.exempt_sex || data.disambiguation_count.is_some())
     {
         return ConsistencyResult::Skipped;
     }

@@ -35,7 +35,7 @@ pub struct UsernameData {
     /// Number of manually-specified lifters sharing the same username.
     ///
     /// Automatic disambiguation may produce a number higher than this amount.
-    pub disambiguation_count: u32,
+    pub disambiguation_count: Option<u32>,
 
     /// True iff a sex conflict with this username is expected.
     ///
@@ -329,7 +329,6 @@ fn check_name_disambiguation(
 
         let row: NameDisambiguationRow = result?;
         let name = &row.name;
-        let count = row.count;
 
         let username = match Username::from_name(name) {
             Ok(s) => s,
@@ -345,19 +344,16 @@ fn check_name_disambiguation(
         if name.contains('#') {
             report.error_on(line, format!("Name '{name}' cannot contain '#'"));
         }
-        if count < 2 {
-            report.error_on(line, "Count must be >= 2");
-        }
 
         let entry = data.map.entry(username).or_default();
-        if entry.disambiguation_count > 0 {
+        if entry.disambiguation_count.is_some() {
             let msg = format!(
                 "Lifter '{}' appears multiple times in name-disambiguation.csv",
                 row.name
             );
             report.error_on(line, msg);
         }
-        entry.disambiguation_count = row.count;
+        entry.disambiguation_count = Some(row.count);
     }
 
     Ok(())

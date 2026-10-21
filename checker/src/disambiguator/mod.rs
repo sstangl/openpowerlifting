@@ -281,7 +281,7 @@ pub fn disambiguate_marked(
 ) {
     // TODO: This filtering is inefficient, but it's fast enough for the moment.
     for (username, data) in lifterdata.iter_usernames() {
-        if data.disambiguation_count == 0 {
+        if data.disambiguation_count.is_none() {
             continue;
         }
 
