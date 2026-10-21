@@ -1,6 +1,6 @@
 # Rulebook: https://web.archive.org/web/20181120160722/http://www.upapower.com/development/wp-content/uploads/2015/11/official_upa_rulebook-3.pdf
 [options]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
     
 [divisions]
     # Untested raw divisions.
