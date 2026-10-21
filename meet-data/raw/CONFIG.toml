@@ -1,7 +1,7 @@
 # Configuration for 100% RAW.
 
 [options]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions]
 	# Youth divisions, only used historically.
