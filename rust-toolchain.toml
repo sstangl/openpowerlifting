@@ -1,0 +1,8 @@
+# This file guarantees that all developers are using the same Rust version.
+#
+# When updating the version here, also update the version for CI in `.gitlab-ci.yml`.
+#
+# Exact versions are used instead of merely "stable" because most developers will never
+# manually run rustup to sync with the update server.
+[toolchain]
+channel = "1.99"
