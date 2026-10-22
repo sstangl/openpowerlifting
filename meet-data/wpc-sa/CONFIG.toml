@@ -433,3 +433,5 @@
 
 [exemptions]
     2503 = ["ExemptWeightClassConsistency", "ExemptDivision"]
+    2603 = ["ExemptWeightClassConsistency"] 
+    2604 = ["ExemptDivision"] # Lily Shumskiy competed at age 10 in F_TCR_1_AAPF
