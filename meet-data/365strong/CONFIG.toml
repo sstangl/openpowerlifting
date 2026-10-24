@@ -303,6 +303,7 @@
     mmpfsrcx = {name = "M-MPFS-RC-X", min=0, max=999, sex="M", equipment="Wraps"}
     mmpfprt = {name = "M-MPFP-R-T", min=0, max=999, sex="M", equipment="Raw", tested="Yes"}
     mmpfbspx = {name = "M-MPFB-SP-X", min=0, max=999, sex="M", equipment=["Single-ply","Unlimited"]}
+    mmpfbspt = {name = "M-MPFB-SP-T", min=0, max=999, sex="M", equipment=["Single-ply","Unlimited"], tested="Yes"}
     mmpfbmpx = {name = "M-MPFB-MP-X", min=0, max=999, sex="M", equipment=["Multi-ply", "Unlimited"]}
     mmpfbrx = {name = "M-MPFB-R-X", min=0, max=999, sex="M", equipment="Raw"}
     mmpfbrt = {name = "M-MPFB-R-T", min=0, max=999, sex="M", equipment="Raw", tested="Yes"}
