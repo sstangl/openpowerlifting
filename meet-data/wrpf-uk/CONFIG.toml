@@ -1,5 +1,5 @@
 [options]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions] 
     #Non Tested
@@ -57,3 +57,4 @@
     2617 = ["ExemptDivision"] #Novice comp
     2620 = ["ExemptDivision"] #Novice comp
     2627 = ["ExemptDivision"] #Novice comp
+    2630 = ["ExemptWeightClassConsistency"]
