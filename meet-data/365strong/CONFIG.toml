@@ -2,7 +2,7 @@
 
 [options]
     valid_federations = ["365Strong"]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions]
     # Generic divisions.
