@@ -1,7 +1,7 @@
 # Configuration for Hungary-UA, unaffiliated meets in Hungary.
 
 [options]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions]
     open = {name ="Open",min=0,max=999}
@@ -42,3 +42,5 @@
 
 [exemptions]
     2601 = ["ExemptWeightClassConsistency"]
+    2602 = ["ExemptWeightClassConsistency","ExemptDivision"]
+    2603 = ["ExemptWeightClassConsistency","ExemptDivision"]
