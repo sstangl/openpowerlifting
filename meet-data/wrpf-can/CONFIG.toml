@@ -1,7 +1,8 @@
 # Configuration for WRPF-Canada.
 
 [options]
-    require_manual_disambiguation = true
+    valid_federations = ["WRPF-CAN"]
+    require_manual_disambiguation = false
 
 [divisions]
     #Official WRPF divisions
