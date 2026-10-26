@@ -66,12 +66,12 @@ pub fn check(
         s.spawn(|_| sex::check_sex_all(entrymap, meetdata, lifterdata, &mut reports_sex));
         s.spawn(|_| name::check_name_all(entrymap, meetdata, &mut reports_name));
         s.spawn(|_| duplicates::check_duplicates_all(entrymap, meetdata, &mut reports_dup));
-        s.spawn(|_| privacy::check_privacy_all(entrymap, lifterdata, &mut reports_privacy));
 
         // bodyweight::check_bodyweight_all(entrymap, meetdata, lifterdata, &mut reports);
 
-        // The checks below require the full meet-data tree, not a subset.
+        // The checks below require the full meet-data tree.
         if !is_partial {
+            s.spawn(|_| privacy::check_privacy_all(entrymap, lifterdata, &mut reports_privacy));
             s.spawn(|_| {
                 disambiguations::check_disambiguations_all(entrymap, lifterdata, &mut reports_dis)
             });
