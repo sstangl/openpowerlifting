@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ $# -ne 1 ]; then
-	echo " Usage: $0 pdf"
-	exit 1
-fi
-
-# Convert a modern USPA PDF to an HTML file with word bounding box information.
-pdftotext -bbox "$1"
