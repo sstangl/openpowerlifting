@@ -67,6 +67,7 @@ impl EntryIndex {
 ///
 /// Note that because internal self-references are disallowed, this map
 /// must maintain a copy of the String and EntryIndex.
+#[derive(Clone)]
 pub struct EntryMap {
     map: FxHashMap<Username, Vec<EntryIndex>>,
 

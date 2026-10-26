@@ -42,6 +42,11 @@ struct Args {
     /// Prints timing info for various phases of compilation or checking.
     debug_timing: bool,
 
+    /// Disambiguate every lifter.
+    ///
+    /// This is intended for local development, to see how automatic disambiguation is doing.
+    disambig_all: bool,
+
     /// Whether the database should be compiled for the server.
     compile: bool,
 
@@ -258,6 +263,7 @@ USAGE:
 FLAGS:
     -c, --compile            Compiles the database into build/*.csv
     -1, --compile-onefile    Compiles build/openpowerlifting.csv, the easy-use variant
+    --disambig-all           Run automatic disambiguation on every lifter
     -h, --help               Prints this help information
 
 OPTIONS:
@@ -288,6 +294,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         debug_country_username: args.opt_value_from_str("--country")?,
         debug_disambig_username: args.opt_value_from_str("--disambig")?,
         debug_timing: args.contains("--timing"),
+        disambig_all: args.contains("--disambig-all"),
         compile: args.contains(["-c", "--compile"]),
         compile_onefile: args.contains(["-1", "--compile-onefile"]),
         allow_crlf: args.contains("--allow-crlf"),
@@ -507,7 +514,11 @@ fn main() -> Result<(), Box<dyn Error>> {
             process::exit(0); // TODO: Complain if someone passes --compile.
         }
         let timing = instant_if(args.debug_timing);
-        disambiguator::disambiguate_marked(&mut meetdata, &mut entrymap, &lifterdata);
+        if args.disambig_all {
+            disambiguator::disambiguate_all(&mut meetdata, &mut entrymap, &lifterdata);
+        } else {
+            disambiguator::disambiguate_marked(&mut meetdata, &mut entrymap, &lifterdata);
+        }
         maybe_print_elapsed_for("disambig", timing);
 
         // Perform country interpolation.

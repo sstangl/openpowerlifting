@@ -293,3 +293,38 @@ pub fn disambiguate_marked(
         apply_labels(meetdata, entrymap, &groups, &labels, username);
     }
 }
+
+/// Disambiguates all usernames.
+///
+/// This is equivalent to `disambiguate_marked`, but isn't limited to just the names
+/// specified in the disambiguation file.
+pub fn disambiguate_all(
+    meetdata: &mut AllMeetData,
+    entrymap: &mut EntryMap,
+    lifterdata: &LifterData,
+) {
+    let orig_entrymap = entrymap.clone(); // Very expensive.
+
+    // TODO: This filtering is inefficient, but it's fast enough for the moment.
+    for username in orig_entrymap.keys() {
+        // Skip already-disambiguated lifters.
+        if username.has_variant() {
+            continue;
+        }
+        // Leave alone usernames that have requested privacy.
+        if let Some(data) = lifterdata.get(username)
+            && data.privacy
+        {
+            continue;
+        }
+
+        // TODO: This disambiguation breaks lifterdata: IGs, colors, etc.
+
+        let variants: Vec<Username> = entrymap.get_variants_of(username);
+        let groups: Vec<Vec<EntryIndex>> =
+            disambiguate_one(meetdata, entrymap, username, &variants);
+        let labels: Vec<GroupLabel> = make_labels(meetdata, entrymap, &groups, username, &variants);
+
+        apply_labels(meetdata, entrymap, &groups, &labels, username);
+    }
+}
