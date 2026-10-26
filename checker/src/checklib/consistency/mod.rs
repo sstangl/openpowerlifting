@@ -7,6 +7,7 @@ mod bodyweight;
 mod disambiguations;
 mod duplicates;
 mod name;
+mod privacy;
 mod sex;
 
 /// Return type for consistency check functions.
@@ -57,6 +58,7 @@ pub fn check(
     let mut reports_sex: Vec<Report> = Vec::new();
     let mut reports_name: Vec<Report> = Vec::new();
     let mut reports_dup: Vec<Report> = Vec::new();
+    let mut reports_privacy: Vec<Report> = Vec::new();
     let mut reports_dis: Vec<Report> = Vec::new();
 
     // Execute checks in parallel.
@@ -64,6 +66,7 @@ pub fn check(
         s.spawn(|_| sex::check_sex_all(entrymap, meetdata, lifterdata, &mut reports_sex));
         s.spawn(|_| name::check_name_all(entrymap, meetdata, &mut reports_name));
         s.spawn(|_| duplicates::check_duplicates_all(entrymap, meetdata, &mut reports_dup));
+        s.spawn(|_| privacy::check_privacy_all(entrymap, lifterdata, &mut reports_privacy));
 
         // bodyweight::check_bodyweight_all(entrymap, meetdata, lifterdata, &mut reports);
 
@@ -79,6 +82,7 @@ pub fn check(
     reports.append(&mut reports_sex);
     reports.append(&mut reports_name);
     reports.append(&mut reports_dup);
+    reports.append(&mut reports_privacy);
     reports.append(&mut reports_dis);
     reports
 }

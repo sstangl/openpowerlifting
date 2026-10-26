@@ -83,6 +83,9 @@ pub struct EntryMap {
 
 impl EntryMap {
     // HashMap-like read-only interface.
+    pub fn contains_key(&self, u: &Username) -> bool {
+        self.map.contains_key(u)
+    }
     pub fn get(&self, u: &Username) -> Option<&Vec<EntryIndex>> {
         self.map.get(u)
     }
