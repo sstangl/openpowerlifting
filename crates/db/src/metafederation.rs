@@ -937,9 +937,7 @@ impl MetaFederation {
             }
             MetaFederation::IPC => {
                 meet.federation == Federation::IPC
-                    || (meet.federation == USPC
-                        && meet.date <= date!(2026-01-01)
-                        && meet.name.starts_with("Americas Championship"))
+                    || (meet.federation == USPC && meet.name.starts_with("America"))
             }
             MetaFederation::IPFAndAffiliates => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
