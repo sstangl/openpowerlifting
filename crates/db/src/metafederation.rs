@@ -937,7 +937,7 @@ impl MetaFederation {
             }
             MetaFederation::IPC => {
                 meet.federation == Federation::IPC
-                    || (meet.federation == USPC && meet.name.starts_with("America"))
+                    || (meet.federation == USPC && meet.name.starts_with("Americas"))
             }
             MetaFederation::IPFAndAffiliates => {
                 meet.federation.sanctioning_body(meet.date) == Some(Federation::IPF)
