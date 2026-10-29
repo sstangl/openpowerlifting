@@ -4,8 +4,10 @@
     require_manual_disambiguation = false
 
 [divisions]
+	# Untested.
     open = {name = "Open", min = 0, max = 999}
     youth = {name = "Youth", min = 4, max = 12.5}
+	y_5_12 = {name = "Y5-12", min = 5, max = 12}
     teen_13_15 = {name = "T13-15", min = 13, max = 15}
     teen_16_17 = {name = "T16-17", min = 16, max = 17}	
 	teen_18_19 = {name = "T18-19", min = 18, max = 19}	
@@ -21,6 +23,26 @@
     masters_75_79 = {name = "M75-79", min = 75, max = 79}
     masters_80_84 = {name = "M80-84", min = 80, max = 84}
     masters_80p = {name = "M80+", min = 80, max = 999}
+
+	# Tested.
+    opent = {name = "OpenT", min = 0, max = 999, tested = "Yes"}
+    youtht = {name = "YouthT", min = 4, max = 12.5, tested = "Yes"}
+	y_5_12t = {name = "Y5-12T", min = 5, max = 12, tested = "Yes"}
+    teen_13_15t = {name = "T13-15T", min = 13, max = 15, tested = "Yes"}
+    teen_16_17t = {name = "T16-17T", min = 16, max = 17, tested = "Yes"}
+	teen_18_19t = {name = "T18-19T", min = 18, max = 19, tested = "Yes"}
+    juniors_20_23t = {name = "J20-23T", min = 20, max = 23, tested = "Yes"}
+    submasterst = {name = "S35-39T", min = 35, max = 39, tested = "Yes"}
+    masters_40_44t = {name = "M40-44T", min = 40, max = 44, tested = "Yes"}
+    masters_45_49t = {name = "M45-49T", min = 45, max = 49, tested = "Yes"}
+    masters_50_54t = {name = "M50-54T", min = 50, max = 54, tested = "Yes"}
+    masters_55_59t = {name = "M55-59T", min = 55, max = 59, tested = "Yes"}
+    masters_60_64t = {name = "M60-64T", min = 60, max = 64, tested = "Yes"}
+    masters_65_69t = {name = "M65-69T", min = 65, max = 69, tested = "Yes"}
+    masters_70_74t = {name = "M70-74T", min = 70, max = 74, tested = "Yes"}
+    masters_75_79t = {name = "M75-79T", min = 75, max = 79, tested = "Yes"}
+    masters_80_84t = {name = "M80-84T", min = 80, max = 84, tested = "Yes"}
+    masters_80pt = {name = "M80+T", min = 80, max = 999, tested = "Yes"}
 
 
 [weightclasses.default_M]
