@@ -21,6 +21,7 @@
 
 [exemptions]
     1701 = ["ExemptWeightClassConsistency"] # 125+ instead of 140/140+.
+    1702 = ["ExemptWeightClassConsistency", "ExemptLiftOrder"] # 125+ instead of 140/140+. Steve Franklin was allowed to go down in weight.
     1801 = ["ExemptWeightClassConsistency"] # 125+ instead of 140/140+.
     1901 = ["ExemptWeightClassConsistency"] # 125+ instead of 140/140+.
     1902 = ["ExemptWeightClassConsistency"] # 125+ instead of 140/140+.
