@@ -175,6 +175,9 @@ pub enum Country {
     Morocco,
     Myanmar,
     Namibia,
+    #[serde(alias = "Naoero")]
+    #[strum(serialize = "Naoero")]
+    #[strum(serialize = "Nauru")]
     Nauru,
     Nepal,
     Netherlands,
