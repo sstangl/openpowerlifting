@@ -4069,7 +4069,14 @@ impl Federation {
             Federation::GermanyUA => PointsSystem::Wilks,
             Federation::GFP => PointsSystem::Wilks,
             Federation::GlobalPU => PointsSystem::Glossbrenner,
-            Federation::GPA => PointsSystem::Wilks,
+            Federation::GPA => {
+                 // Switched from Wilks in 2026
+                if date.year() >= 2026 {
+                    Federation::ipl_rules_on(date)
+                } else {
+                    PointsSystem::Reshel
+                }
+            }
             Federation::GPABrazil => PointsSystem::Wilks,
             Federation::GPACOL => PointsSystem::Wilks,
             Federation::GPACRO => PointsSystem::Wilks,
