@@ -575,6 +575,7 @@
 <optgroup label="{{strings.country.southkorea}}">
   <option value="kpa" {% if selection.federation == "KPA" %}selected{% endif %}>KPA - Korean Powerlifting Association</option>
   <option value="posk" {% if selection.federation == "POSK" %}selected{% endif %}>POSK - Powerlifting of South Korea [IPF]</option>
+  <option value="rokpl" {% if selection.federation == "ROKPL" %}selected{% endif %}>ROKPL - Republic of Korea Powerlifting [IntDFPA]</option>
   </optgroup>
 <optgroup label="{{strings.country.spain}}">
   <option value="aep" {% if selection.federation == "AEP" %}selected{% endif %}>AEP - Asociación Española de Powerlifting [IPF]</option>
