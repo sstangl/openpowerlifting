@@ -547,6 +547,7 @@
   <option value="sssc" {% if selection.federation == "SSSC" %}selected{% endif %}>SSSC - Saudi Strength Sports Committee [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.serbia}}">
+  <option value="gpa-serbia" {% if selection.federation == "GPA-Serbia" %}selected{% endif %}>Global Powerlifting Alliance Serbia [GPA]</option>
   <option value="plss" {% if selection.federation == "PLSS" %}selected{% endif %}>PLSS - Power Lifting Savez Srbije [IPF]</option>
   <option value="usps" {% if selection.federation == "USPS" %}selected{% endif %}>USPS - Ujedinjeni Srpski powerlifting savez [GPC]</option>
   <option value="wrpf-serbia" {% if selection.federation == "WRPF-Serbia" %}selected{% endif %}>WRPF Srbija - Republika Srpska</option>

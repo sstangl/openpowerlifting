@@ -608,6 +608,11 @@ pub enum Federation {
     #[strum(to_string = "GPA-Russia", serialize = "gpa-russia")]
     GPARussia,
 
+    /// Serbian branch of the GPA.
+    #[serde(rename = "GPA-Serbia")]
+    #[strum(to_string = "GPA-Serbia", serialize = "gpa-serbia")]
+    GPASerbia,
+
     /// Global Powerlifting Committee.
     #[strum(to_string = "GPC", serialize = "gpc")]
     GPC,
@@ -2379,6 +2384,7 @@ impl Federation {
             Federation::GPAFinland => false,
             Federation::GPAMex => false,
             Federation::GPARussia => false,
+            Federation::GPASerbia => false,
             Federation::GPC => false,
             Federation::GPCAUS => false,
             Federation::GPCBrazil => false,
@@ -2893,6 +2899,7 @@ impl Federation {
             Federation::GPAFinland => Some(Country::Finland),
             Federation::GPAMex => Some(Country::Mexico),
             Federation::GPARussia => Some(Country::Russia),
+            Federation::GPASerbia => Some(Country::Serbia),
             Federation::GPC => None,
             Federation::GPCAUS => Some(Country::Australia),
             Federation::GPCBrazil => Some(Country::Brazil),
@@ -3454,6 +3461,7 @@ impl Federation {
             Federation::GPAFinland => Some(Federation::GPA),
             Federation::GPAMex => Some(Federation::GPA),
             Federation::GPARussia => Some(Federation::GPA),
+            Federation::GPASerbia => Some(Federation::GPA),
             Federation::GPC => Some(Federation::GPC),
             Federation::GPCAUS => Some(Federation::GPC),
             Federation::GPCBrazil => Some(Federation::GPC),
@@ -4071,7 +4079,7 @@ impl Federation {
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => {
                  // Switched from Wilks in 2026
-                if date.year() >= 2026 {
+                if date.year() <= 2026 {
                     Federation::ipl_rules_on(date)
                 } else {
                     PointsSystem::Reshel
@@ -4083,6 +4091,7 @@ impl Federation {
             Federation::GPAFinland => PointsSystem::Wilks,
             Federation::GPAMex => PointsSystem::Wilks,
             Federation::GPARussia => PointsSystem::Wilks,
+            Federation::GPASerbia => PointsSystem::Reshel,
             Federation::GPC => PointsSystem::Reshel,
             Federation::GPCAUS => PointsSystem::Glossbrenner,
             Federation::GPCBrazil => PointsSystem::Glossbrenner,

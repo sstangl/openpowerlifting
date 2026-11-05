@@ -1,85 +1,231 @@
-Name,Sex,Event,Division,WeightClassKg,Equipment,BirthDate,Country,BodyweightKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,TotalKg,Place,Deadlift4Kg
-Todor Borisov,M,D,Open,125,Raw,2002-02-25,Bulgaria,120,,,,,305,325,-335,325,325,1,
-Arpad Pahert,M,D,Open,90,Raw,1994-02-28,Serbia,89.5,,,,,260,-270,270,270,270,1,
-Sejfo Šehović,M,D,Masters 65-69,82.5,Raw,1959-08-13,Bosnia and Herzegovina,79,,,,,240,-260,260,260,260,1,
-Jovan Mastilović,M,B,Open,110,Raw,1995-10-26,Serbia,110,220,230,235,235,,,,,235,1,
-Luka Mišković,M,D,Teen 18-19,82.5,Raw,2007-01-22,Bosnia and Herzegovina,82.2,,,,,-185,200,225,225,225,1,
-Mihajlo Spasić,M,D,Open,100,Raw,2000-06-29,Serbia,97.9,,,,,210,225,-240,225,225,1,
-Radovan Repac,M,D,Juniors 20-23,75,Raw,2004-10-16,Serbia,71,,,,,190,210,222.5,222.5,222.5,1,
-Božidar Vuković,M,D,Open,100,Raw,1991-12-19,Serbia,100,,,,,-220,220,-240,220,220,2,
-Viktor Pavlov,M,D,Teen 16-17,100,Raw,2008-09-27,Serbia,100,,,,,200,212.5,220,220,220,1,225.5
-Kristóf Lajos Szalai,M,B,Juniors 20-23,140+,Raw,2006-01-24,Hungary,145.8,205,215,220,220,,,,,220,1,
-Vuk Roncevic,M,D,Teen 16-17,82.5,Raw,2010-07-01,Serbia,82,,,,,-200,210,220,220,220,1,
-Milos Nesic,M,D,Teen 18-19,110,Raw,2008-07-10,Serbia,104.5,,,,,200,215,-227.5,215,215,1,
-Aleksandar Sutalo,M,D,Juniors 20-23,67.5,Raw,2005-06-23,Bosnia and Herzegovina,67,,,,,190,200,215,215,215,1,
-Gabrijel Krakan,M,D,Teen 18-19,110,Raw,2008-05-16,Croatia,108.3,,,,,-200,212.5,-225,212.5,212.5,2,
-Vasilii Matsur,M,B,Masters 40-44,125,Raw,1984-02-02,Montenegro,124.5,200,210,-220,210,,,,,210,1,
-Ivan Odak,M,B,Open,140+,Raw,1994-07-07,Serbia,161,190,200,210,210,,,,,210,1,
-Samuel Vicjan,M,D,Teen 18-19,100,Raw,2008-09-01,Serbia,96.3,,,,,190,210,-220,210,210,1,
-Uroš Eraković,M,B,Open,140,Raw,1995-10-05,Serbia,130,190,-205,205,205,,,,,205,1,
-Rajko Sukno,M,D,Juniors 20-23,82.5,Raw,2004-06-20,Serbia,82,,,,,190,205,-222.5,205,205,1,
-Dragan Kovačević,M,D,Open,100,Raw,1989-06-08,Bosnia and Herzegovina,91.6,,,,,170,185,200,200,200,3,
-David Šegrt,M,B,Open,100,Raw,1999-03-19,Serbia,99.9,190,200,-210,200,,,,,200,1,
-Sergej Pavlović,M,D,Teen 16-17,67.5,Raw,2009-02-16,Bosnia and Herzegovina,66.4,,,,,165,185,192.5,192.5,192.5,1,
-Marko Horvatovic,M,D,Juniors 20-23,100,Raw,2006-07-28,Serbia,98,,,,,-165,175,187.5,187.5,187.5,1,
-Nemanja Micić,M,D,Juniors 20-23,90,Raw,2006-08-09,Serbia,83.9,,,,,170,185,-195,185,185,1,
-Mirko Poljak,M,B,Open,125,Raw,1996-10-28,Croatia,121,172.5,182.5,,182.5,,,,,182.5,1,
-Artem Kvitćatij,M,D,Teen 18-19,82.5,Raw,2008-07-21,Serbia,76,,,,,160,170,180,180,180,2,
-Julijana Kovačić,F,D,Open,82.5,Raw,1992-01-28,Serbia,81,,,,,130,152.5,165.5,165.5,165.5,1,
-Todor Borisov,M,B,Open,125,Raw,2002-02-25,Bulgaria,120,155,-165,165,165,,,,,165,2,
-Lazar Coric,M,D,Teen 18-19,67.5,Raw,2008-07-25,Serbia,66.1,,,,,150,165,-180,165,165,1,
-Gabrijel Krakan,M,B,Teen 18-19,110,Raw,2008-05-16,Croatia,108.3,150,160,-165,160,,,,,160,1,
-Anita Vaht,F,D,Open,75,Raw,2000-10-22,Serbia,70.9,,,,,150,160,-165,160,160,1,
-Radovan Repac,M,B,Juniors 20-23,75,Raw,2004-10-16,Serbia,71,135,150,155,155,,,,,155,1,
-Jovan Mirković,M,D,Teen 16-17,90,Raw,2008-12-26,Serbia,90,,,,,-137.5,137.5,152.5,152.5,152.5,1,
-Arpad Pahert,M,B,Open,90,Raw,1994-02-28,Serbia,89.5,140,-150,150,150,,,,,150,1,
-Dejan Hadžić,M,D,Open,125,Raw,1991-03-18,Bosnia and Herzegovina,123,,,,,130,140,145,145,145,2,
-Damjan Blagojevic,M,B,Teen 18-19,90,Raw,2008-01-18,Serbia,85.5,125,135,142.5,142.5,,,,,142.5,1,
-Krasimir Dinev,M,D,Masters 60-64,90,Raw,1965-05-28,Serbia,82.7,,,,,130,140,-160,140,140,1,
-Dragan Kovačević,M,B,Open,100,Raw,1989-06-08,Bosnia and Herzegovina,91.6,120,130,140,140,,,,,140,2,
-Božidar Vuković,M,B,Open,100,Raw,1991-12-19,Serbia,100,130,-137.5,137.5,137.5,,,,,137.5,3,
-Arben Murtezić,M,B,Masters 50-54,110,Raw,1973-01-21,Bosnia and Herzegovina,104.6,120,127.5,130,130,,,,,130,1,
-Alexandra Eitler-Mérten,F,D,Open,90+,Raw,1997-07-17,Hungary,116,,,,,125,130,,130,130,1,
-Luka Mišković,M,B,Teen 18-19,82.5,Raw,2007-01-22,Bosnia and Herzegovina,82.2,110,120,130,130,,,,,130,1,
-Vuk Roncevic,M,B,Teen 16-17,82.5,Raw,2010-07-01,Serbia,82,117.5,122.5,127.5,127.5,,,,,127.5,1,
-Milan Mihajlović,M,B,Open,110,Unlimited,,Serbia,108,110,125,-135,125,,,,,125,1,
-Nemanja Micić,M,B,Juniors 20-23,90,Raw,2006-08-09,Serbia,83.9,115,120,125,125,,,,,125,1,
-Pavel Martin Jašo,M,B,Juniors 20-23,100,Raw,2005-09-28,Serbia,99.2,125,-135,,125,,,,,125,1,
-Marjan Babić,M,B,Masters 50-54,100,Raw,1975-04-30,Serbia,97.6,-115,115,-122.5,115,,,,,115,1,
-Bojana Tasić,F,D,Masters 40-44,56,Raw,1982-02-04,Serbia,56,,,,,100,120,-125,120,120,1,
-Elena Petrovic,F,D,Juniors 20-23,67.5,Raw,2006-03-06,Serbia,64.9,,,,,107.5,112.5,120,120,120,1,
-Krasimir Dinev,M,B,Masters 60-64,90,Raw,1965-05-28,Serbia,87.7,110,120,-125,120,,,,,120,1,
-Milos Nesic,M,B,Teen 18-19,110,Raw,2008-07-10,Serbia,104.5,110,117.5,-122.5,117.5,,,,,117.5,2,
-Andjela Milošević,F,D,Open,75,Raw,1999-01-29,Serbia,75,,,,,100,107.5,115,115,115,2,
-Dejan Hadžić,M,B,Open,125,Raw,1991-03-18,Bosnia and Herzegovina,123,110,-115,,110,,,,,110,3,
-Mia Nikolic,F,D,Juniors 20-23,56,Raw,2006-02-25,Serbia,55,,,,,90,100,110,110,110,1,
-Tea Todorovic,F,D,Juniors 20-23,67.5,Raw,2005-10-02,Serbia,62.1,,,,,100,110,-120,110,110,2,
-Alexandra Eitler-Mérten,F,B,Open,90+,Unlimited,1997-07-17,Hungary,116,-100,100,107.5,107.5,,,,,107.5,1,
-Aleksandar Sutalo,M,B,Juniors 20-23,67.5,Raw,2005-06-23,Bosnia and Herzegovina,67,100,107.5,-112.5,107.5,,,,,107.5,1,
-Nemanja Kurtesanin,M,D,Teen 16-17,60,Raw,2010-09-13,Serbia,60,,,,,-95,105,-115,105,105,1,
-Maja Botić,F,D,Teen 16-17,67.5,Raw,2010-03-08,Serbia,63.9,,,,,70,87.5,100,100,100,1,
-Sara Gajinov,F,D,Open,75,Raw,2002-05-28,Serbia,71,,,,,80,100,-115,100,100,3,
-Tatiana Magulová,F,B,Masters 45-49,75,Raw,1981-06-30,Slovakia,73,90,95,100,100,,,,,100,1,
-Mónika Kistót,F,D,Masters 45-49,56,Raw,1978-11-03,Hungary,54.7,,,,,90,97.5,-102.5,97.5,97.5,1,
-Katarina Milovanović,F,D,Teen 16-17,67.5,Raw,2009-03-24,Serbia,63.6,,,,,90,97.5,-100,97.5,97.5,2,
-Jovan Mirković,M,B,Teen 16-17,90,Raw,2008-12-26,Serbia,90,82.5,87.5,92.5,92.5,,,,,92.5,1,
-Sofija Bukejlović,F,D,Juniors 20-23,67.5,Raw,2004-09-30,Bosnia and Herzegovina,67.5,,,,,70,80,90,90,90,3,
-Jelena Marjanović,F,B,Teen 18-19,90+,Raw,2007-01-03,Serbia,114,80,87.5,-92.5,87.5,,,,,87.5,1,
-Teodora Basarić,F,D,Juniors 20-23,75,Raw,2003-01-30,Serbia,70.5,,,,,72.5,82.5,87.5,87.5,87.5,1,92.5
-Anja Drvar,F,D,Teen 18-19,48,Raw,2008-05-23,Serbia,47,,,,,70,80,85,85,85,1,87.5
-Natasa Janjić-Perko,F,B,Masters 45-49,60,Raw,1980-04-08,Serbia,57.5,75,80,85,85,,,,,85,1,
-Sergej Pavlović,M,B,Teen 16-17,67.5,Raw,2009-02-16,Bosnia and Herzegovina,66.4,85,-95,-95,85,,,,,85,1,
-Andrej Radulovic,M,B,Juniors 20-23,52,Raw,2004-10-18,Serbia,52,70,80,83.5,83.5,,,,,83.5,1,
-Lazar Coric,M,B,Teen 18-19,67.5,Raw,2008-07-25,Serbia,66.1,70,-75,-75,70,,,,,70,1,
-Julijana Kovačić,F,B,Open,82.5,Raw,1992-01-28,Serbia,81,62.5,67.5,-72.5,67.5,,,,,67.5,1,
-Mia Nikolic,F,B,Juniors 20-23,56,Raw,2006-02-25,Serbia,55,55,-62.5,65,65,,,,,65,1,
-Nemanja Kurtesanin,M,B,Teen 16-17,60,Raw,2010-09-13,Serbia,60,57.5,62.5,-65,62.5,,,,,62.5,1,
-Mónika Kistót,F,B,Masters 45-49,56,Raw,1978-11-03,Hungary,54.7,50,52.5,-55,52.5,,,,,52.5,1,
-Bojana Tasić,F,B,Masters 40-44,56,Raw,1982-02-04,Serbia,56,40,50,-55,50,,,,,50,1,
-Tea Todorovic,F,B,Juniors 20-23,67.5,Raw,2005-10-02,Serbia,62.1,50,-60,-62.5,50,,,,,50,1,
-Andjela Milošević,F,B,Open,75,Raw,1999-01-29,Serbia,75,42.5,47.5,-50,47.5,,,,,47.5,1,
-Sofija Bukejlović,F,B,Juniors 20-23,67.5,Raw,2004-09-30,Bosnia and Herzegovina,67.5,30,40,-45,40,,,,,40,2,
-Teodora Basarić,F,B,Juniors 20-23,75,Raw,2003-01-30,Serbia,70.5,35,40,-42.5,40,,,,,40,1,
-Sara Gajinov,F,B,Open,75,Raw,2002-05-28,Serbia,71,-40,-45,-45,,,,,,,DQ,
-Samuel Vicjan,M,B,Teen 18-19,100,Raw,2008-09-01,Serbia,96.3,-125,-137.5,-137.5,,,,,,,DQ,
-Károly József Szuder,M,B,Open,100,Unlimited,1987-03-16,Hungary,99.7,-275,-275,-275,,,,,,,DQ,
+Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
+1,Klaudia Vágó,,F,1973,53,Slovakia,,Unlimited,Masters 50-54,66,67.5,,,,,,,,,,120,-130,130,130,,130,D
+1,Beáta Pusztai,,F,1967,59,Hungary,,Multi-ply,Masters 55-59,66.2,67.5,,,,,110,112.5,115,115,,,,,,,115,B
+1,Mária Hegedűs,,F,1965,61,,,Multi-ply,Masters 60-64,71.7,75,,,,,90,100,-110,100,,,,,,,100,B
+1,Adrienn Sarkany,,F,1990,36,Hungary,,Multi-ply,Open,67.1,67.5,,,,,110,-120,120,120,-135,,,,,,120,B
+1,Jelena Marjanović,,F,2007,19,Serbia,,Raw,Teen 18-19,108.2,90+,130,137.5,-150,137.5,80,-87.5,-87.5,80,,125,135,145,145,,362.5,SBD
+1,Lili Katalin Csukás,,F,2002,24,Hungary,,Raw,Open,57,60,-85,85,-92.5,85,47.5,-52.5,-52.5,47.5,,115,120,-125,120,,252.5,SBD
+1,Anita Vaht,,F,2000,26,Serbia,,Raw,Open,70.9,75,120,125,130,130,52.5,-57.5,-57.5,52.5,,157.5,165,170,170,,352.5,SBD
+1,Hajnalka Málik-Roffa,,F,1991,35,Hungary,,Raw,Open,97.1,90+,100,120,140,140,65,-70,-72.5,65,,140,155,160,160,,365,SBD
+1,Orsolya Tábori,,F,2009,17,Hungary,,Raw,Teen 16-17,63.7,67.5,,,,,52.5,60,-62.5,60,,,,,,,60,B
+1,Anna Toth,,F,,,Hungary,,Raw,Teen 16-17,83.6,90,,,,,57.5,60,-65,60,,,,,,,60,B
+1,Laura Czagány,,F,2008,18,Hungary,,Raw,Teen 18-19,48,48,,,,,52.5,55,-57.5,55,,,,,,,55,B
+1,Ibolya Palánkai,,F,1983,43,Hungary,,Raw,Masters 40-44,123.1,90+,,,,,70,-72.5,-72.5,70,,,,,,,70,B
+1,Zeljka Terzo,,F,1977,49,Croatia,,Raw,Masters 45-49,78.5,82.5,,,,,100,110,115,115,,,,,,,115,B
+1,Anita Nagy,,F,1974,52,Hungary,,Raw,Masters 50-54,59.4,60,,,,,70,77.5,-82.5,77.5,,,,,,,77.5,B
+1,Rita Nagy,,F,1974,52,Hungary,,Raw,Masters 50-54,72,75,,,,,100,107.5,110,110,117.5,,,,,,110,B
+2,Henrietta Tuba,,F,1975,51,Hungary,,Raw,Masters 50-54,68.6,75,,,,,-95,-95,100,100,,,,,,,100,B
+1,Beáta Pusztai,,F,1967,59,Hungary,,Raw,Masters 55-59,66.2,67.5,,,,,80,-85,-85,80,,,,,,,80,B
+1,Andrea Szaló,,F,1966,60,Hungary,,Raw,Masters 60-64,66,67.5,,,,,40,-42.5,-42.5,40,,,,,,,40,B
+1,Ilona Egri,,F,,,Hungary,,Raw,Masters 65-69,59.1,60,,,,,50,52.5,-55,52.5,,,,,,,52.5,B
+1,Flóra Kosztin,,F,1955,71,Hungary,,Raw,Masters 70-74,65.4,67.5,,,,,110,115,117.5,117.5,-120.5,,,,,,117.5,B
+1,Heléna Szabó,,F,1987,39,Hungary,,Raw,Open,55.2,56,,,,,52.5,-55,55,55,,,,,,,55,B
+1,Ilona Egri,,F,1972,53,Hungary,,Raw,Open,59.1,60,,,,,50,52.5,-55,52.5,,,,,,,52.5,B
+1,Flóra Kosztin,,F,1955,71,Hungary,,Raw,Open,65.4,67.5,,,,,110,115,117.5,117.5,-120.5,,,,,,117.5,B
+1,Boglárka Vona,,F,2001,25,Hungary,,Raw,Open,68.15,75,,,,,57.5,60,-62.5,60,,,,,,,60,B
+1,Zeljka Terzo,,F,1977,49,,,Raw,Open,78.5,82.5,,,,,100,110,115,115,,,,,,,115,B
+1,Tünde Bartus,,F,1986,39,Hungary,,Raw,Open,92.4,90+,,,,,57.5,62.5,67.5,67.5,,,,,,,67.5,B
+1,Flóra Tóth,,F,2009,17,Hungary,,Raw,Teen 16-17,80.8,82.5,,,,,70,-75,-75,70,,140,-145,-145,140,,210,BD
+1,Flávia Portugal,,F,1985,40,,,Raw,Masters 40-44,66.05,67.5,,,,,70,80,90,90,,130,140,150,150,,240,BD
+1,Zeljka Terzo,,F,1977,49,,,Raw,Masters 45-49,78.3,82.5,,,,,100,110,115,115,,200,210,215,215,,330,BD
+1,Helena Portugal,,F,1953,73,,,Raw,Masters 70-74,70.15,75,,,,,25,32.5,-37.5,32.5,,50,55,,55,,87.5,BD
+1,Zeljka Terzo,,F,1977,49,,,Raw,Open,78.3,82.5,,,,,100,110,115,115,,200,210,215,215,,330,BD
+1,Fédra Krista,,F,2009,17,Hungary,,Raw,Teen 16-17,57.7,60,,,,,,,,,,110,120,130,130,,130,D
+1,Renata Dvoynina,,F,2009,17,Hungary,,Raw,Teen 16-17,73.9,75,,,,,,,,,,-145,145,147.5,147.5,,147.5,D
+1,Réka Koncz,,F,2003,23,Hungary,,Raw,Juniors 20-23,65.7,67.5,,,,,,,,,,110,120,-125,120,,120,D
+1,Bernadett Soltész,,F,1983,42,Hungary,,Raw,Masters 40-44,54.3,56,,,,,,,,,,95,105,-110,105,,105,D
+1,Gabriella Benke,,F,1982,44,Hungary,,Raw,Masters 40-44,58.25,60,,,,,,,,,,92.5,-102.5,102.5,102.5,,102.5,D
+1,Judit Dalló,,F,1982,44,Hungary,,Raw,Masters 40-44,62.2,67.5,,,,,,,,,,115,-120,-120,115,,115,D
+1,Ibolya Renner,,F,1978,48,Hungary,,Raw,Masters 45-49,51.8,52,,,,,,,,,,115.5,120,-130,120,,120,D
+1,Rita Varga,,F,1979,46,Hungary,,Raw,Masters 45-49,54.9,56,,,,,,,,,,115,122.5,130,130,,130,D
+2,Krisztina Szepesi,,F,1980,46,Hungary,,Raw,Masters 45-49,54.9,56,,,,,,,,,,95,102.5,-107.5,102.5,,102.5,D
+1,Terzo Zeljka,,F,1977,49,,,Raw,Masters 45-49,79.3,82.5,,,,,,,,,,200.5,-210,-210,200.5,,200.5,D
+2,Mariann Temesvári,,F,1977,49,Hungary,,Raw,Masters 45-49,81.3,82.5,,,,,,,,,,135,150,-160,150,,150,D
+1,Tímea Ujvári,,F,1980,46,Hungary,,Raw,Masters 45-49,85.8,90,,,,,,,,,,170,180,190,190,,190,D
+DQ,Henrietta Tuba,,F,1975,51,Hungary,,Raw,Masters 50-54,70.2,75,,,,,,,,,,-160,,,,,,D
+1,Jánosné Ivanics,,F,1975,51,Hungary,,Raw,Masters 50-54,125.4,90+,,,,,,,,,,105,115,120,120,,120,D
+1,Emőke Rózsavölgyi,,F,1969,57,Hungary,,Raw,Masters 55-59,60.6,67.5,,,,,,,,,,102.5,-112.5,-112.5,102.5,,102.5,D
+1,Luca Menyhárt,,F,2001,25,Hungary,,Raw,Open,40,44,,,,,,,,,,82.5,92.5,97.5,97.5,,97.5,D
+1,Nikolett Boros,,F,1999,26,Hungary,,Raw,Open,54.9,56,,,,,,,,,,115,-125,-125,115,,115,D
+1,Kata Kocsis,,F,1988,38,Hungary,,Raw,Open,58.45,60,,,,,,,,,,105,115,-120,115,,115,D
+DQ,Szabina Erdei,,F,1980,46,Hungary,,Raw,Open,65.5,67.5,,,,,,,,,,-200,-200,-200,,,,D
+1,Mahira Amidžić,,F,2002,24,Croatia,,Raw,Open,72,75,,,,,,,,,,145,155,170,170,,170,D
+1,Annamária Isaszegi,,F,1999,27,Hungary,,Raw,Open,112,90+,,,,,,,,,,90,100,-110,100,,100,D
+1,Mariša Golob,,F,1990,36,Hungary,,Wraps,Elite,55.7,56,170,177.5,-183,177.5,-105,105,-110,105,,180,-187.5,,180,,462.5,SBD
+1,Viktória Majoros,,F,2000,26,Hungary,,Wraps,Elite,81,82.5,165,175,182.5,182.5,122.5,-127.5,127.5,127.5,,160,170,-177.5,170,,480,SBD
+1,Zsófia Lengyel,,F,2009,17,Hungary,,Wraps,Teen 16-17,65.8,67.5,145,157.5,165,165,65,75,-80,75,,165,180,192.5,192.5,,432.5,SBD
+1,Boglárka Nagy,,F,2003,23,Hungary,,Wraps,Juniors 20-23,64.6,67.5,110,120,125,125,47.5,52.5,55,55,,110,-120,120,120,,300,SBD
+2,Elena Petrovic,,F,2006,20,Serbia,,Wraps,Juniors 20-23,64.8,67.5,-90,90,-105,90,50,-55,-55,50,,105,112.5,122.5,122.5,,262.5,SBD
+1,Mónika Schmidt,,F,1984,42,Hungary,,Wraps,Masters 40-44,64.2,67.5,75,-87.5,-87.5,75,32.5,37.5,-42.5,37.5,,95,107.5,-115,107.5,,220,SBD
+1,Cintia Csordás,,F,1995,31,Hungary,,Wraps,Open,55.5,56,-125,125,132.5,132.5,60,65,-67.5,65,,-110,110,,110,,307.5,SBD
+2,Tetiana Shynkaruk,,F,1991,34,Ukraine,,Wraps,Open,54.15,56,90,-105,105,105,50,-55,-55,50,,105,-115,115,115,,270,SBD
+1,Zsófia Lengyel,,F,2009,17,,,Wraps,Open,65.8,67.5,145,157.5,165,165,65,75,-80,75,,165,180,192.5,192.5,,432.5,SBD
+2,Andrea Becske,,F,1997,28,Hungary,,Wraps,Open,66.35,67.5,130,-140,140,140,60,67.5,-70,67.5,,145,-162.5,-162.5,145,,352.5,SBD
+1,Némethné Tál Lívia,,F,1971,55,Hungary,,Single-ply,Masters 55-59,73.7,75,,,,,-92.5,-100,100,100,,,,,,,100,B
+1,Hunor Hablicsek,,M,2007,19,Hungary,,Unlimited,Teen 18-19,77.1,82.5,,,,,,,,,,190,205,215,215,222,215,D
+DQ,Michal Švajka,,M,1978,48,,,Unlimited,Masters 45-49,91.1,100,,,,,,,,,,-185,-205,-205,,,,D
+1,Norbert Hablicsek,,M,1974,52,Hungary,,Unlimited,Masters 50-54,108.4,110,,,,,,,,,,260,-282.5,282.5,282.5,,282.5,D
+2,Martin Martinka,,M,1975,51,Slovakia,,Unlimited,Masters 50-54,108.4,110,,,,,,,,,,235,255,-280,255,,255,D
+1,Dávid Mader,,M,1994,32,Hungary,,Unlimited,Open,117.6,125,,,,,,,,,,190,205,-212.5,205,,205,D
+1,Márk Tóth,,M,2009,17,Hungary,,Multi-ply,Teen 16-17,137.3,140,,,,,200,-220,-230,200,,,,,,,200,B
+1,Géza Mezei,,M,1986,40,Hungary,,Multi-ply,Masters 40-44,80.95,82.5,,,,,210,220,-230,220,,,,,,,220,B
+DQ,Zoltán Nagy,,M,1985,41,Hungary,,Multi-ply,Masters 40-44,87,90,,,,,-290,-290,,,,,,,,,,B
+1,Mihály Balázs,,M,1982,44,Hungary,,Multi-ply,Masters 40-44,112.2,125,,,,,170,180,-190,180,,,,,,,180,B
+1,Zsolt Néger,,M,1986,40,Hungary,,Multi-ply,Masters 40-44,128.55,140,,,,,300,315,330,330,,,,,,,330,B
+1,Tibor Tóth,,M,1979,46,Hungary,,Multi-ply,Masters 45-49,74.6,75,,,,,100,105,110,110,,,,,,,110,B
+1,Gábor Koloványi,,M,1976,49,Hungary,,Multi-ply,Masters 45-49,112.1,125,,,,,-260,260,-265,260,,,,,,,260,B
+1,Attila Marosi,,M,1972,53,Hungary,,Multi-ply,Masters 50-54,98.15,100,,,,,270,-285,,270,,,,,,,270,B
+1,Károly Németh,,M,1971,55,Hungary,,Multi-ply,Masters 55-59,127.5,140,,,,,250,-280,-280,250,,,,,,,250,B
+1,Tahvo Jauhojärvi,,M,1961,64,Sweden,,Multi-ply,Masters 60-64,76.1,82.5,,,,,160,-170,,160,,,,,,,160,B
+1,Živorad Marković,,M,1960,66,Hungary,,Multi-ply,Masters 65-69,101.6,110,,,,,210,-230,230,230,240,,,,,,230,B
+DQ,Péter Póhr,,M,1979,47,Hungary,,Multi-ply,Open,83.85,90,,,,,-272.5,-280,-280,,,,,,,,,B
+1,Dániel Oláh,,M,1998,28,Hungary,,Multi-ply,Open,97.75,100,,,,,345,-370,370,370,,,,,,,370,B
+2,Levente Péter Szakál,,M,1989,37,Hungary,,Multi-ply,Open,99.8,100,,,,,310,-330,350,350,,,,,,,350,B
+1,Kristóf Sohajda,,M,1993,33,Hungary,,Multi-ply,Open,104.85,110,,,,,260,285,300,300,,,,,,,300,B
+1,Lajos Biró,,M,1996,30,Hungary,,Multi-ply,Open,157.8,140+,,,,,390,-490,-490,390,,,,,,,390,B
+2,Ádám Imre Tóth,,M,1990,36,Hungary,,Multi-ply,Open,144.5,140+,,,,,290,300,315,315,,,,,,,315,B
+1,Balázs Hajdú,,M,1997,29,Hungary,,Sleeves,Elite,87.85,90,260,-275,275,275,180,190,-195,190,,70,,,70,,535,SBD
+1,Dávid Kulcsár,,M,1995,31,Hungary,,Sleeves,Elite,95.3,100,270,290,300,300,160,172.5,180,180,,290,305,-320,305,,785,SBD
+1,Kevin Leonardo Rojas Alonso,,M,2006,20,Mexico,,Raw,Juniors 20-23,65.8,67.5,-160,-160,160,160,90,-100,-100,90,,170,185,200,200,,450,SBD
+1,Gyula Albert,,M,1973,53,Hungary,,Raw,Masters 50-54,73.7,75,120,130,140,140,100,-105,-105,100,,160,170,180,180,,420,SBD
+1,László Tenkei,,M,1972,54,Hungary,,Raw,Masters 50-54,88.2,90,147.5,155,162.5,162.5,97.5,105,110,110,,215,227.5,-232.5,227.5,,500,SBD
+1,Miklós Nagy,,M,1970,56,Hungary,,Raw,Masters 55-59,96.4,100,140,150,-155,150,115,120,125,125,,165,175,180,180,,455,SBD
+1,Gábor Kovács,,M,1962,63,Hungary,,Raw,Masters 60-64,88.3,90,135,145,-150,145,110,116,-117.5,116,,130,140,150,150,,411,SBD
+DQ,Istvan Orsos,,M,1961,65,Hungary,,Raw,Masters 65-69,81.3,82.5,150,160,-170,160,-80,-80,-80,,,,,,,,,SBD
+1,Attila Füstös,,M,1989,37,Hungary,,Raw,Open,82.4,82.5,170,185,190,190,112.5,120,-122.5,120,,225,232.5,-240,232.5,,542.5,SBD
+1,Nikolai Mikheev,,M,1984,42,,,Raw,Open,89,90,-265,265,,265,165,175,185,185,,240,-260,265,265,,715,SBD
+2,Ábel Kerékgyártó,,M,1992,34,Hungary,,Raw,Open,88.5,90,210,225,,225,155,-165,165,165,,245,260,-270,260,,650,SBD
+1,Zoltán Szarka,,M,1988,38,Hungary,,Raw,Open,91,100,130,150,165,165,100,110,122.5,122.5,,170,182.5,195,195,,482.5,SBD
+DQ,Tibor Turzó,,M,1994,32,Hungary,,Raw,Open,93.2,100,180,190,-197.5,190,150,160,-170,160,,-190,-190,-190,,,,SBD
+1,Márk Kerékgyártó,,M,1996,30,Hungary,,Raw,Open,109.55,110,210,225,240,240,-135,135,-145,135,,240,-260,-260,240,,615,SBD
+1,Aleksandr Shafir,,M,2000,26,Israel,,Raw,Open,121.1,125,-240,-240,240,240,152.5,-162.5,165,165,,-235,240,-252.5,240,,645,SBD
+1,András Gábor Verbói,,M,2000,26,Hungary,,Raw,Open,136.6,140,260,275,300,300,140,150,160,160,,250,275,300,300,,760,SBD
+DQ,Laszlo Kotormann,,M,1970,56,Hungary,,Raw,Para,72.1,75,,,,,-117.5,-117.5,-117.5,,,,,,,,,B
+1,Zsombor Varga,,M,2010,16,Hungary,,Raw,Teen 16-17,66.8,67.5,,,,,75,80,-87.5,80,,,,,,,80,B
+1,Tomáš Bari,,M,2010,,Slovakia,,Raw,Teen 16-17,70.7,75,,,,,105,115,-120,115,,,,,,,115,B
+2,Bence Kocsis,,M,2010,16,,,Raw,Teen 16-17,70,75,,,,,85,90,-97.5,90,,,,,,,90,B
+1,Erik Fábián,,M,2009,16,Hungary,,Raw,Teen 16-17,75.3,82.5,,,,,92.5,100,-105,100,,,,,,,100,B
+1,Szabolcs Herczeg,,M,2009,17,Hungary,,Raw,Teen 16-17,88.4,90,,,,,87.5,95,100,100,,,,,,,100,B
+1,Kristóf Kovács,,M,2010,16,Hungary,,Raw,Teen 16-17,97.45,100,,,,,115,-120,125,125,,,,,,,125,B
+2,Alex Endrédi,,M,2010,16,Hungary,,Raw,Teen 16-17,95.35,100,,,,,85,90,-100,90,,,,,,,90,B
+1,Márk Tóth,,M,2009,17,Hungary,,Raw,Teen 16-17,137.3,140,,,,,150,155,165,165,180,,,,,,165,B
+1,Attila Dorozsmai,,M,2007,19,Hungary,,Raw,Teen 18-19,68.5,75,,,,,107.5,115,-120,115,,,,,,,115,B
+1,Tibor Berta,,M,2008,18,Slovakia,,Raw,Teen 18-19,78.6,82.5,,,,,140,150,-155.5,150,,,,,,,150,B
+1,Krisztián Bércesi,,M,2007,19,Hungary,,Raw,Teen 18-19,87.7,90,,,,,105,110,115,115,,,,,,,115,B
+1,Marcell Tornyos,,M,2007,19,Hungary,,Raw,Teen 18-19,101.9,110,,,,,170,175,-180,175,,,,,,,175,B
+1,Štefan Rácz,,M,2004,22,,,Raw,Juniors 20-23,63.8,67.5,,,,,120,127.5,130,130,,,,,,,130,B
+1,Patrik Zsolt Schweiczer,,M,2003,22,,,Raw,Juniors 20-23,80.6,82.5,,,,,115,120,125,125,,,,,,,125,B
+1,Szabolcs Szabados,,M,2005,21,Hungary,,Raw,Juniors 20-23,89.95,90,,,,,137.5,-142.5,-142.5,137.5,,,,,,,137.5,B
+2,Gergő Üveges,,M,2004,22,Hungary,,Raw,Juniors 20-23,86.7,90,,,,,130,-140,-140,130,,,,,,,130,B
+1,Tamás Csaba Antal,,M,2006,20,Hungary,,Raw,Juniors 20-23,93.4,100,,,,,145,155,-165,155,,,,,,,155,B
+DQ,Balázs Róth,,M,1982,44,Hungary,,Raw,Masters 40-44,62.05,67.5,,,,,-90,-90,-90,,,,,,,,,B
+1,Zsolt Pozsgai,,M,1986,40,Hungary,,Raw,Masters 40-44,105,110,,,,,180,192.5,-205,192.5,,,,,,,192.5,B
+2,Roland Jászberényi,,M,1985,41,Hungary,,Raw,Masters 40-44,107.85,110,,,,,165,172.5,-180,172.5,,,,,,,172.5,B
+1,István Répás,,M,1977,49,Hungary,,Raw,Masters 45-49,66.5,67.5,,,,,132.5,-137.5,-137.5,132.5,,,,,,,132.5,B
+1,Norbert Deli,,M,1981,45,Hungary,,Raw,Masters 45-49,73.9,75,,,,,120,125,130,130,,,,,,,130,B
+2,Aleks Piciga,,M,1981,45,Slovenia,,Raw,Masters 45-49,75,75,,,,,100,107.5,110,110,,,,,,,110,B
+1,Ferenc Jakab Orgován,,M,,,Hungary,,Raw,Masters 45-49,88.9,90,,,,,150,-155,160,160,,,,,,,160,B
+1,Károly Szalai,,M,1977,49,Hungary,,Raw,Masters 45-49,93.9,100,,,,,160,-170,-170,160,,,,,,,160,B
+2,Rajmund Németh,,M,1978,48,Hungary,,Raw,Masters 45-49,97.3,100,,,,,130,140,-150,140,,,,,,,140,B
+1,Marcel Baláž,,M,1977,49,Slovakia,,Raw,Masters 45-49,106.3,110,,,,,170,-180,-180,170,,,,,,,170,B
+1,Péter Géresi,,M,1977,49,Hungary,,Raw,Masters 45-49,113.9,125,,,,,190,-200,-200,190,,,,,,,190,B
+1,Milutin Banjac,,M,1972,54,Serbia,,Raw,Masters 50-54,69.7,75,,,,,85,-95,-100,85,,,,,,,85,B
+1,József Tóth,,M,1974,52,Hungary,,Raw,Masters 50-54,85.6,90,,,,,185,190,195,195,205,,,,,,195,B
+1,František Sajko,,M,1971,,Slovakia,,Raw,Masters 50-54,96.7,100,,,,,150,160,167.5,167.5,,,,,,,167.5,B
+2,Cédric Hupin,,M,1972,54,France,,Raw,Masters 50-54,91.7,100,,,,,125,135,140,140,,,,,,,140,B
+3,Babic Marjan,,M,1975,51,Serbia,,Raw,Masters 50-54,95,100,,,,,117.5,-125,-130,117.5,,,,,,,117.5,B
+1,Arben Murtezić,,M,1973,53,Croatia,,Raw,Masters 50-54,104.8,110,,,,,125,130,-135,130,,,,,,,130,B
+1,Sándor Katona,,M,1973,53,Hungary,,Raw,Masters 50-54,114,125,,,,,150,-160,-160,150,,,,,,,150,B
+1,Marián Miklovics,,M,1975,51,Hungary,,Raw,Masters 50-54,133.8,140,,,,,205,215,222.5,222.5,,,,,,,222.5,B
+1,Laszlo Kotormann,,M,1970,56,Hungary,,Raw,Masters 55-59,72.1,75,,,,,110,117.5,125,125,,,,,,,125,B
+1,Armand Horváth,,M,1968,58,Hungary,,Raw,Masters 55-59,79.9,82.5,,,,,125,127.5,130,130,,,,,,,130,B
+2,István Bara,,M,1968,57,Hungary,,Raw,Masters 55-59,76.7,82.5,,,,,120,125,-127.5,125,,,,,,,125,B
+1,Norbert Cseke,,M,1971,55,Hungary,,Raw,Masters 55-59,88,90,,,,,155,160,162.5,162.5,,,,,,,162.5,B
+1,László Baross,,M,1970,55,,,Raw,Masters 55-59,107.7,110,,,,,130,140,150,150,,,,,,,150,B
+1,Gábor Kluk,,M,1971,55,Hungary,,Raw,Masters 55-59,129.5,140,,,,,160,-165,165,165,,,,,,,165,B
+1,László Göbölös,,M,1963,62,Hungary,,Raw,Masters 60-64,74.4,75,,,,,100,105,-107.5,105,,,,,,,105,B
+1,Tahvo Jauhojärvi,,M,1961,64,Sweden,,Raw,Masters 60-64,76.1,82.5,,,,,110,120,125,125,,,,,,,125,B
+2,Oleg Mendlin,,M,1962,63,Israel,,Raw,Masters 60-64,81.55,82.5,,,,,120,-125,125,125,,,,,,,125,B
+1,Lajos Dudás,,M,1962,64,Hungary,,Raw,Masters 60-64,88.85,90,,,,,115,-120,120,120,,,,,,,120,B
+1,Zsolt Mohácsi,,M,1966,60,Hungary,,Raw,Masters 60-64,98.05,100,,,,,140,147.5,-150,147.5,,,,,,,147.5,B
+1,Imre Nagy,,M,1962,63,Hungary,,Raw,Masters 60-64,104.1,110,,,,,115,125,-130,125,,,,,,,125,B
+1,Francesco De Siero,,M,1956,69,Italy,,Raw,Masters 65-69,65.75,67.5,,,,,75,80,-82.5,80,,,,,,,80,B
+1,Leo Malarsten,,M,1960,65,Sweden,,Raw,Masters 65-69,71.3,75,,,,,70,77.5,-87.5,77.5,,,,,,,77.5,B
+1,László Kozma,,M,1957,69,Hungary,,Raw,Masters 65-69,89.1,90,,,,,115,120,125,125,,,,,,,125,B
+DQ,Sándor Bezsenyi,,M,1948,77,Hungary,,Raw,Masters 75-79,82,82.5,,,,,-70,,,,,,,,,,,B
+1,Filip Stanko,,M,1990,36,Slovakia,,Raw,Open,88.1,90,,,,,200,-207.5,-207.5,200,,,,,,,200,B
+2,Balázs Hadházi,,M,1989,37,Hungary,,Raw,Open,87.4,90,,,,,165,170,172.5,172.5,,,,,,,172.5,B
+3,Tamás Horváth,,M,2000,26,Hungary,,Raw,Open,89.2,90,,,,,160,165,-167.5,165,,,,,,,165,B
+1,David Šegrt,,M,1999,27,Serbia,,Raw,Open,97.4,100,,,,,-200,200,-212.5,200,,,,,,,200,B
+2,Károly József Szuder,,M,1987,39,Hungary,,Raw,Open,99.7,100,,,,,170,177.5,180,180,,,,,,,180,B
+3,Ádám Szabó,,M,1990,36,Hungary,,Raw,Open,94,100,,,,,130,137.5,-142.5,137.5,,,,,,,137.5,B
+1,Ferenc Mata,,M,2001,25,Hungary,,Raw,Open,104.3,110,,,,,175,182.5,192.5,192.5,,,,,,,192.5,B
+2,Zsolt Pozsgai,,M,1986,40,Hungary,,Raw,Open,105,110,,,,,180,192.5,-205,192.5,,,,,,,192.5,B
+1,Norbert Kirsztián Gáleg,,M,1996,30,Hungary,,Raw,Open,114.3,125,,,,,260,270,-275,270,,,,,,,270,B
+2,László Bujdosó,,M,1993,33,Hungary,,Raw,Open,122,125,,,,,-215,220,-230,220,,,,,,,220,B
+1,Portugal Felippe,,M,1983,43,,,Raw,Masters 40-44,65.1,67.5,,,,,80,90,100,100,,130,140,150,150,,250,BD
+1,Ferenc Som,,M,1974,52,Hungary,,Raw,Masters 50-54,118.2,125,,,,,170,180,190,190,-200,250,260,276,276,-285,466,BD
+1,Gábor Kovács,,M,1962,63,,,Raw,Masters 60-64,88.3,90,,,,,110,,,110,,130,140,150,150,,260,BD
+1,Portugal Clotário,,M,1953,73,,,Raw,Masters 70-74,68.4,75,,,,,85,87.5,90,90,,-90,90,,90,,180,BD
+1,József Sztanke,,M,1954,72,Hungary,,Raw,Masters 70-74,93.2,100,,,,,-115,115,120,120,,180,-195,195,195,-213,315,BD
+1,Valery Frenklah,,M,1943,83,Israel,,Raw,Masters 80+,67.3,67.5,,,,,35,-40,40,40,,100,,,100,,140,BD
+1,Dániel Ökrös,,M,1995,31,Hungary,,Raw,Open,66.7,67.5,,,,,125,130,-135,130,,145,170,-177.5,170,,300,BD
+1,Viktor Simon,,M,1995,31,Hungary,,Raw,Open,77.2,82.5,,,,,120,125,-130,125,,200,210,220,220,,345,BD
+1,Edhem Mujkic,,M,1992,34,Croatia,,Raw,Open,87,90,,,,,150,160,-170,160,,220,230,240,240,,400,BD
+1,Bence Marekkel,,M,2001,25,Hungary,,Raw,Open,91.75,100,,,,,135,-145,145,145,,-200,225,240,240,,385,BD
+1,Terzo Mirsad,,M,1980,46,Hungary,,Raw,Para,108.7,110,,,,,,,,,,-145,145,155,155,,155,D
+1,Damir Vatreš,,M,1988,38,Croatia,,Raw,Para,113.2,125,,,,,,,,,,-220,230,245,245,-250,245,D
+DQ,Márton Csiszár,,M,2010,16,Hungary,,Raw,Teen 16-17,73.1,75,,,,,,,,,,-190,-205,-205,,,,D
+DQ,Zsombor Dávidházi,,M,2010,16,Hungary,,Raw,Teen 16-17,88.5,90,,,,,,,,,,-210,-230,-230,,,,D
+1,Zénó Zoltán Czinkó,,M,2009,17,,,Raw,Teen 16-17,109.8,110,,,,,,,,,,205,220,240,240,-251,240,D
+1,Róbert Orsós,,M,2006,19,,,Raw,Teen 18-19,143,140+,,,,,,,,,,175,190,210,210,,210,D
+1,Arnold Mencser,,M,2004,22,Hungary,,Raw,Juniors 20-23,89.1,90,,,,,,,,,,235,-250,250,250,,250,D
+1,Štefan Elischer,,M,1982,43,Slovakia,,Raw,Masters 40-44,108.4,110,,,,,,,,,,270,-285,,270,,270,D
+1,Michal Krvál,,M,1982,44,,,Raw,Masters 40-44,119,125,,,,,,,,,,200,220,,220,,220,D
+1,Aleks Piciga,,M,1981,45,Slovenia,,Raw,Masters 45-49,74.6,75,,,,,,,,,,170,180,-185,180,,180,D
+1,József Kovács,,M,1977,49,,,Raw,Masters 45-49,88.8,90,,,,,,,,,,210,225,-235,225,,225,D
+2,Károly Tölli,,M,1980,46,Hungary,,Raw,Masters 45-49,89.2,90,,,,,,,,,,170,-180,185,185,,185,D
+1,Tamás Deli,,M,1977,49,Hungary,,Raw,Masters 45-49,96.7,100,,,,,,,,,,-265,265,275,275,,275,D
+1,Gyula Ujvári,,M,1978,48,Hungary,,Raw,Masters 45-49,138.65,140,,,,,,,,,,-230,240,250,250,,250,D
+1,János Illés,,M,1972,54,Hungary,,Raw,Masters 50-54,88.1,90,,,,,,,,,,190,200,-205,200,,200,D
+1,Zoltán Csepregi,,M,1975,51,Hungary,,Raw,Masters 50-54,99,100,,,,,,,,,,270,282.5,290,290,-300,290,D
+1,Tibor Bulátkó,,M,1975,51,Hungary,,Raw,Masters 50-54,108,110,,,,,,,,,,260,270,-280,270,,270,D
+1,Tibor Karalyos,,M,1973,52,Hungary,,Raw,Masters 50-54,144.7,140+,,,,,,,,,,280,-302.5,,280,,280,D
+1,Attila Zsolt Porcellán,,M,1969,57,Hungary,,Raw,Masters 55-59,79.45,82.5,,,,,,,,,,190,207.5,212.5,212.5,,212.5,D
+1,Imre Hajdú-Kemény,,M,1966,60,Hungary,,Raw,Masters 60-64,134.1,140,,,,,,,,,,150,175,-182.5,175,,175,D
+1,Leo Malarsten,,M,1960,65,Sweden,,Raw,Masters 65-69,71.95,75,,,,,,,,,,130,145,-160,145,,145,D
+1,Sejfo Šehović,,M,1959,67,Croatia,,Raw,Masters 65-69,79.5,82.5,,,,,,,,,,240,265,-280,265,,265,D
+2,Peter Herák,,M,1960,65,Slovakia,,Raw,Masters 65-69,81,82.5,,,,,,,,,,-180,200,-210,200,,200,D
+1,Milorad Dražić,,M,1955,71,Austria,,Raw,Masters 70-74,73.8,75,,,,,,,,,,-80,-80,100,100,,100,D
+1,József Károly Gellért,,M,1944,82,Hungary,,Raw,Masters 80+,73.1,75,,,,,,,,,,110,120,-132.5,120,,120,D
+1,Ovcharov Artur,,M,1991,35,Ukraine,,Raw,Open,80.95,82.5,,,,,,,,,,215,230,-245,230,,230,D
+1,József Kovács,,M,1977,49,Hungary,,Raw,Open,88.8,90,,,,,,,,,,210,225,-235,225,,225,D
+2,Dominik Besta,,M,1995,31,Czechia,,Raw,Open,85.15,90,,,,,,,,,,-160,160,-175,160,,160,D
+1,Pecar Ammar,,M,1997,29,Croatia,,Raw,Open,95.6,100,,,,,,,,,,280,300,307.5,307.5,,307.5,D
+2,Pál Tóth,,M,1991,35,Hungary,,Raw,Open,93.5,100,,,,,,,,,,290,300,-305,300,,300,D
+1,Péter Czentye,,M,1989,37,Hungary,,Raw,Open,102.4,110,,,,,,,,,,310,320,-327.5,320,,320,D
+1,Tamás Kurcz,,M,1988,37,Hungary,,Raw,Open,123.8,125,,,,,,,,,,300,-320,320,320,,320,D
+1,Dávid Kecskés,,M,1993,33,Hungary,,Raw,Open,135.2,140,,,,,,,,,,365,-385,385,385,-401,385,D
+1,Dominik Šafránek,,M,1992,34,Slovakia,,Wraps,Elite,80.2,82.5,230,240,247.5,247.5,162.5,170,177.5,177.5,,290,305,315,315,,740,SBD
+1,Miklós Kelemen,,M,2000,26,Hungary,,Wraps,Elite,98.05,100,265,-285,-285,265,-175,175,185,185,,-260,280,-300,280,,730,SBD
+DQ,János Fazekas,,M,1987,39,,,Wraps,Elite,96.9,100,280,300,-315,300,-180,,,,,,,,,,,SBD
+1,Csaba Mihály Kollár,,M,1970,56,Hungary,,Wraps,Elite,104.5,110,280,,,280,180,-190,-190,180,,300,310,-320,310,,770,SBD
+1,Mihály Horváth,,M,1999,27,Hungary,,Wraps,Elite,131.2,140,310,-330,330,330,215,225,-230,225,,300,-310,-310,300,,855,SBD
+2,Hristo Muskov,,M,1985,40,Bulgaria,,Wraps,Elite,134.2,140,-280,-280,280,280,150,,,150,,-320,320,-352.5,320,,750,SBD
+1,Gergő Szabó,,M,2007,19,Hungary,,Wraps,Teen 18-19,58.5,60,120,135,-145,135,95,-100,-100,95,,170,-175,-175,170,,400,SBD
+1,Samuel Vicjan,,M,2008,18,Serbia,,Wraps,Teen 18-19,97.6,100,-185,185,210,210,120,135,-142.5,135,,-180,200,220,220,,565,SBD
+1,Dávid Ladányi,,M,2008,18,Hungary,,Wraps,Teen 18-19,116.1,125,-170,170,-200,170,90,100,105,105,,215,-235,240,240,,515,SBD
+1,Oleg Ivanyukov,,M,1980,46,Israel,,Wraps,Masters 45-49,72.3,75,140,-160,160,160,105,-112.5,112.5,112.5,,170,180,190,190,,462.5,SBD
+1,Zoltán Mihályi,,M,1978,48,UK,,Wraps,Masters 45-49,119.6,125,265,285,-300,285,172.5,182.5,187.5,187.5,,250,270,-280,270,,742.5,SBD
+1,Erni Gregorčič,,M,1976,50,Slovenia,,Wraps,Masters 50-54,74.4,75,205,-215,215,215,140,-145,145,145,,240,253,263,263,,623,SBD
+1,Richárd Nagy,,M,1973,52,Hungary,,Wraps,Masters 50-54,113.4,125,-250,-250,250,250,170,180,,180,,260,270,-275,270,,700,SBD
+1,Zoltán Németh,,M,1967,59,Hungary,,Wraps,Masters 55-59,111.6,125,215,225,230,230,147.5,155,157.5,157.5,,200,212.5,,212.5,,600,SBD
+2,László Huszics,,M,1969,57,Hungary,,Wraps,Masters 55-59,114.8,125,-170,-170,170,170,90,100,110,110,,170,200,-210,200,,480,SBD
+1,Csaba Csenteri,,M,1990,36,Hungary,,Wraps,Open,65.2,67.5,135,142.5,-150,142.5,70,77.5,82.5,82.5,,150,162.5,167.5,167.5,,392.5,SBD
+1,Balázs Dudás,,M,2000,26,Hungary,,Wraps,Open,72.85,75,150,160,170,170,117.5,125,130,130,,150,170,190,190,,490,SBD
+1,Krisztofer Dani,,M,1998,28,Hungary,,Wraps,Open,79.9,82.5,150,-160,160,160,110,115,122.5,122.5,,220,230,-232.5,230,,512.5,SBD
+DQ,Edhem Mujkic,,M,1992,34,Croatia,,Wraps,Open,87,90,-205,-210,-210,,150,160,-170,160,,220,230,240,240,,,SBD
+1,Ádám Majzik,,M,1999,27,Hungary,,Wraps,Open,109.3,110,220,240,-250,240,160,175,-180,175,,240,265,270,270,,685,SBD
+1,Zoltán Mihályi,,M,1978,48,UK,,Wraps,Open,124.5,125,250,,,250,150,170,180,180,,240,260,270,270,,700,SBD
+1,Norbert Deli,,M,1981,45,Hungary,,Single-ply,Masters 45-49,73.9,75,,,,,130,140,150,150,,,,,,,150,B
+1,Tahvo Jauhojärvi,,M,1961,64,Sweden,,Single-ply,Masters 60-64,76.1,82.5,,,,,130,140,,140,,,,,,,140,B
