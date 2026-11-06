@@ -7,7 +7,7 @@
     juniors_16_17 = {name = "J16-17", min = 16, max = 17}
     juniors_18_19 = {name = "J18-19", min = 18, max = 19}
     juniors_20_23 = {name = "J20-23", min = 20, max = 23}
-    subm= {name = "Subm35-39", min = 35, max = 39}
+    submasters35_39 = {name = "S35-39", min = 35, max = 39}
     masters_40_44 = {name = "M40-44", min = 40, max = 44}
     masters_45_49 = {name = "M45-49", min = 45, max = 49}
     masters_50_54 = {name = "M50-54", min = 50, max = 54}
@@ -19,8 +19,67 @@
     masters_80_84 = {name = "M80-84", min = 80, max = 84}
     masters_80p = {name = "M80+", min = 80, max = 999}
 
-    # Miscellaneous
+    # Amateur divisions.
+    ama_open = {name = "OpenA", min = 0, max = 999, tested="Yes"}
+    ama_youth = {name = "YouthA", min = 4, max = 12.5, tested="Yes"}
+    ama_juniors_13_15 = {name = "J13-15A", min = 13, max = 15, tested="Yes"} 
+    ama_juniors_16_17 = {name = "J16-17A", min = 16, max = 17, tested="Yes"}
+    ama_juniors_18_19 = {name = "J18-19A", min = 18, max = 19, tested="Yes"}
+    ama_juniors_20_23 = {name = "J20-23A", min = 20, max = 23, tested="Yes"}
+    ama_submasters35_39 = {name = "S35-39A", min = 35, max = 39, tested="Yes"}
+    ama_masters_40_44 = {name = "M40-44A", min = 40, max = 44, tested="Yes"}
+    ama_masters_45_49 = {name = "M45-49A", min = 45, max = 49, tested="Yes"}
+    ama_masters_50_54 = {name = "M50-54A", min = 50, max = 54, tested="Yes"}
+    ama_masters_55_59 = {name = "M55-59A", min = 55, max = 59, tested="Yes"}
+    ama_masters_60_64 = {name = "M60-64A", min = 60, max = 64, tested="Yes"}
+    ama_masters_65_69 = {name = "M65-69A", min = 65, max = 69, tested="Yes"}
+    ama_masters_70_74 = {name = "M70-74A", min = 70, max = 74, tested="Yes"}
+    ama_masters_75_79 = {name = "M75-79A", min = 75, max = 79, tested="Yes"}
+    ama_masters_80_84 = {name = "M80-84A", min = 80, max = 84, tested="Yes"}
+    ama_masters_80p = {name = "M80+A", min = 80, max = 999, tested="Yes"}
+
+    # Military/Police/Fire divisions.
+    mpf_open = {name = "Open MPF", min = 0, max = 999}
+    mpf_youth = {name = "Youth MPF", min = 4, max = 12.5}
+    mpf_juniors_13_15 = {name = "J13-15 MPF", min = 13, max = 15} 
+    mpf_juniors_16_17 = {name = "J16-17 MPF", min = 16, max = 17}
+    mpf_juniors_18_19 = {name = "J18-19 MPF", min = 18, max = 19}
+    mpf_juniors_20_23 = {name = "J20-23 MPF", min = 20, max = 23}
+    mpf_submasters35_39 = {name = "S35-39 MPF", min = 35, max = 39}
+    mpf_masters_40_44 = {name = "M40-44 MPF", min = 40, max = 44}
+    mpf_masters_45_49 = {name = "M45-49 MPF", min = 45, max = 49}
+    mpf_masters_50_54 = {name = "M50-54 MPF", min = 50, max = 54}
+    mpf_masters_55_59 = {name = "M55-59 MPF", min = 55, max = 59}
+    mpf_masters_60_64 = {name = "M60-64 MPF", min = 60, max = 64}
+    mpf_masters_65_69 = {name = "M65-69 MPF", min = 65, max = 69}
+    mpf_masters_70_74 = {name = "M70-74 MPF", min = 70, max = 74}
+    mpf_masters_75_79 = {name = "M75-79 MPF", min = 75, max = 79}
+    mpf_masters_80_84 = {name = "M80-84 MPF", min = 80, max = 84}
+    mpf_masters_80p = {name = "M80+ MPF", min = 80, max = 999}
+
+    
+    # Amateur Military/Police/Fire divisions.
+    ama_mpf_open = {name = "OpenA MPF", min = 0, max = 999, tested="Yes"}
+    ama_mpf_youth = {name = "YouthA MPF", min = 4, max = 12.5, tested="Yes"}
+    ama_mpf_juniors_13_15 = {name = "J13-15A MPF", min = 13, max = 15, tested="Yes"} 
+    ama_mpf_juniors_16_17 = {name = "J16-17A MPF", min = 16, max = 17, tested="Yes"}
+    ama_mpf_juniors_18_19 = {name = "J18-19A MPF", min = 18, max = 19, tested="Yes"}
+    ama_mpf_juniors_20_23 = {name = "J20-23A MPF", min = 20, max = 23, tested="Yes"}
+    ama_mpf_submasters35_39 = {name = "S35-39A MPF", min = 35, max = 39, tested="Yes"}
+    ama_mpf_masters_40_44 = {name = "M40-44A MPF", min = 40, max = 44, tested="Yes"}
+    ama_mpf_masters_45_49 = {name = "M45-49A MPF", min = 45, max = 49, tested="Yes"}
+    ama_mpf_masters_50_54 = {name = "M50-54A MPF", min = 50, max = 54, tested="Yes"}
+    ama_mpf_masters_55_59 = {name = "M55-59A MPF", min = 55, max = 59, tested="Yes"}
+    ama_mpf_masters_60_64 = {name = "M60-64A MPF", min = 60, max = 64, tested="Yes"}
+    ama_mpf_masters_65_69 = {name = "M65-69A MPF", min = 65, max = 69, tested="Yes"}
+    ama_mpf_masters_70_74 = {name = "M70-74A MPF", min = 70, max = 74, tested="Yes"}
+    ama_mpf_masters_75_79 = {name = "M75-79A MPF", min = 75, max = 79, tested="Yes"}
+    ama_mpf_masters_80_84 = {name = "M80-84A MPF", min = 80, max = 84, tested="Yes"}
+    ama_mpf_masters_80p = {name = "M80+A MPF", min = 80, max = 999, tested="Yes"}
+
+    # Miscellaneous.
     juniors_15_19 = {name = "J15-19", min = 15, max = 19} 
+    juniors_16_19 = {name = "J16-19", min = 16, max = 19} 
 
 [weightclasses.default_M]
     classes = ["52","56","60","67.5","75","82.5","90","100","110","125","140","140+"]
