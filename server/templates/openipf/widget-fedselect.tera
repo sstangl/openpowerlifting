@@ -48,6 +48,7 @@
   <option value="femepo" {% if selection.federation == "FEMEPO" %}selected{% endif %}>FEMEPO / {{strings.country.mexico}}</option>
   <option value="fevepo" {% if selection.federation == "FEVEPO" %}selected{% endif %}>FEVEPO / {{strings.country.venezuela}}</option>
   <option value="ffforce" {% if selection.federation == "FFForce" %}selected{% endif %}>FFForce / {{strings.country.france}}</option>
+  <option value="fijipf" {% if selection.federation == "FijiPF" %}selected{% endif %}>FijiPF / {{strings.country.fiji}}</option>
   <option value="fipl" {% if selection.federation == "FIPL" %}selected{% endif %}>FIPL / {{strings.country.italy}}</option>
   <option value="fmpb" {% if selection.federation == "FMPB" %}selected{% endif %}>FMPB / {{strings.country.morocco}}</option>
   <option value="fpp" {% if selection.federation == "FPP" %}selected{% endif %}>FPP / {{strings.country.panama}}</option>

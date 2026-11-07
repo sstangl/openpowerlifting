@@ -223,6 +223,10 @@ pub enum MetaFederation {
     #[strum(to_string = "ffforce")]
     FFForce,
 
+    /// FijiPF, but with international results also.
+    #[strum(to_string = "fijipf")]
+    FijiPF,
+
     /// FIPL, but with international results also.
     #[strum(to_string = "fipl")]
     FIPL,
@@ -895,6 +899,7 @@ impl MetaFederation {
                         && (meet.federation == Federation::IPF || meet.federation == Federation::EPF)
                     )
             }
+            MetaFederation::FijiPF => affiliation!(meet, entry, FijiPF, IPF, ORPF, CommonwealthPF),
             MetaFederation::FIPL => affiliation!(meet, entry, FIPL, IPF, EPF),
             MetaFederation::FPP => affiliation!(meet, entry, FPP, IPF, NAPF),
             MetaFederation::FMPB => affiliation!(meet, entry, FMPB, AfricanPF, IPF),
