@@ -1,6 +1,6 @@
 [options]
     valid_federations = ["WelshPA"]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions]
     #Men's divisions old style
