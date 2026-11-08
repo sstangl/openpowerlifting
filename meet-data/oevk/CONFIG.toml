@@ -105,3 +105,9 @@
 
     2617 = ["ExemptDuplicates"] # With 2618
     2618 = ["ExemptDuplicates"] # With 2617
+
+    2619 = ["ExemptDuplicates"] # With 2623
+    2620 = ["ExemptDuplicates"] # With 2622
+    2621 = ["ExemptDuplicates"] # With 2623
+    2622 = ["ExemptDuplicates"] # With 2620
+    2623 = ["ExemptDuplicates"] # With 2619, 2621
