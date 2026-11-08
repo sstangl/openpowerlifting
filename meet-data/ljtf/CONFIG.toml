@@ -44,7 +44,7 @@
     masters2 = {name = "Master II",min=49.5,max=58.5}
     masters3 = {name = "Master III",min=59.5,max=68.5}
     masters4 = {name = "Master IV",min=69.5,max=999}
-
+    masters = {name = "Masters", min=39.5, max=999}
 
 	
 [weightclasses.new_F]
@@ -170,6 +170,8 @@
     1102 = ["ExemptWeightClassConsistency"] # Mismatched male/female classes.
     1201 = ["ExemptWeightClassConsistency"] # Mismatched female classes.
     1202 = ["ExemptWeightClassConsistency"] # Mismatched male/female classes.
+    1203 = ["ExemptWeightClassConsistency"] # Reduced classes
+    1204 = ["ExemptWeightClassConsistency"] # Reduced classes
     1401 = ["ExemptWeightClassConsistency"] # Lower SHW classes for some divisions.
     1402 = ["ExemptWeightClassConsistency"] # Mismatched female classes.
     1501 = ["ExemptWeightClassConsistency"] # Lower SHW classes for some divisions.
@@ -217,3 +219,4 @@
     2601 = ["ExemptWeightClassConsistency"] # Reduced classes
     2604 = ["ExemptWeightClassConsistency"] # Reduced classes
     2605 = ["ExemptWeightClassConsistency"] # Reduced classes
+    
