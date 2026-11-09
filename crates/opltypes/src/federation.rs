@@ -253,6 +253,10 @@ pub enum Federation {
     #[strum(to_string = "Canada-UA", serialize = "canada-ua")]
     CanadaUA,
 
+    /// Canadian Powerlifting, IPF. Same as CPU, just renamed.
+    #[strum(to_string = "CANPL", serialize = "canpl")]
+    CANPL,
+
     /// Australian WPC/GPA affiliate.
     #[strum(to_string = "CAPO", serialize = "capo")]
     CAPO,
@@ -325,7 +329,7 @@ pub enum Federation {
     #[strum(to_string = "CPO", serialize = "cpo")]
     CPO,
 
-    /// Canadian Powerlifting Union, IPF.
+    /// Canadian Powerlifting Union, IPF. Renamed in 2025 to CANPL.
     #[strum(to_string = "CPU", serialize = "cpu")]
     CPU,
 
@@ -2305,6 +2309,7 @@ impl Federation {
             Federation::BVDG => FULLY_TESTED,
             Federation::BVDK => FULLY_TESTED,
             Federation::CanadaUA => false,
+            Federation::CANPL => FULLY_TESTED,
             Federation::CAPO => false,
             Federation::CAPONZ => false,
             Federation::CAST => false,
@@ -2822,6 +2827,7 @@ impl Federation {
             Federation::BVDG => Some(Country::Germany),
             Federation::BVDK => Some(Country::Germany),
             Federation::CanadaUA => Some(Country::Canada),
+            Federation::CANPL => Some(Country::Canada),
             Federation::CAPO => Some(Country::Australia),
             Federation::CAPONZ => Some(Country::NewZealand),
             Federation::CAST => Some(Country::Czechia),
@@ -3365,6 +3371,7 @@ impl Federation {
             Federation::BVDG => Some(Federation::IPF),
             Federation::BVDK => Some(Federation::IPF),
             Federation::CanadaUA => None,
+            Federation::CANPL => Some(Federation::IPF),
             Federation::CAPO => Some(Federation::GPA),
             Federation::CAPONZ => Some(Federation::GPA),
             Federation::CAST => Some(Federation::GPC),
@@ -4009,6 +4016,7 @@ impl Federation {
                 }
             }
             Federation::CanadaUA => PointsSystem::Wilks,
+            Federation::CANPL => Federation::ipf_rules_on(date),
             Federation::CAPO => PointsSystem::Glossbrenner,
             Federation::CAPONZ => PointsSystem::Glossbrenner,
             Federation::CAST => PointsSystem::Wilks,
@@ -4086,7 +4094,7 @@ impl Federation {
             Federation::GFP => PointsSystem::Wilks,
             Federation::GlobalPU => PointsSystem::Glossbrenner,
             Federation::GPA => {
-                 // Switched from Wilks in 2026
+                // Switched from Wilks in 2026
                 if date.year() <= 2026 {
                     Federation::ipl_rules_on(date)
                 } else {

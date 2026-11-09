@@ -1,0 +1,66 @@
+# Configuration for Canadian Powerlifting, copied from the CPU.
+
+[options]
+    valid_federations = ["CANPL"]
+    require_manual_disambiguation = false
+
+[divisions]
+    open = {name ="Open",min=0,max=999}
+    junior = {name = "Juniors",min=18.5,max=22.5}
+    subjunior = {name = "Sub-Juniors",min=0,max=17.5}
+    master1 = {name = "Masters 1",min=39.5,max=48.5}
+    master2 = {name = "Masters 2",min=49.5,max=58.5}
+    master3 = {name = "Masters 3",min=59.5,max=68.5}
+    master4 = {name = "Masters 4",min=69.5,max=999}
+    specialolympics = {name = "SO",min=0,max=999}
+    specialolympicsjr = {name = "SO Juniors",min=18.5,max=22.5}
+    specialolympicssj = {name = "SO Sub-Juniors",min=23.5,max=32.5}
+    specialolympicsm1 = {name = "SO Masters 1",min=39.5,max=48.5}
+    specialolympicsm2 = {name = "SO Masters 2",min=49.5,max=58.5}
+    para = {name = "Para",min=0,max=999}
+    blind = {name = "Blind",min=0,max=999}
+    disabled = {name = "Disabled",min=0,max=999}
+    guest = {name ="Guest",min=0,max=999}
+
+    youth1 = {name ="Youth 1",min=8,max=9}
+    youth2 = {name ="Youth 2",min=10,max=11}
+    youth3 = {name ="Youth 3",min=12,max=13}
+    specialolympicsy1 = {name ="SO Youth 1",min=14,max=15}  
+    specialolympicsy2 = {name ="SO Youth 2",min=24,max=25}
+    specialolympicsy3 = {name ="SO Youth 3",min=34,max=35}
+
+[weightclasses.default_M]
+    classes = ["59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+
+[weightclasses.junior_M]
+    classes = ["53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[weightclasses.youth_M]
+    classes = ["30","35","40","44","48","53","59","66","74","83","93","105","120","120+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "M"
+    divisions = ["Youth 1","Youth 2","Youth 3","SO Youth 1","SO Youth 2","SO Youth 3"]
+
+[weightclasses.youth_F]
+    classes = ["30","35","40","43","47","52","57","63","69","76","84","84+"]
+    date_range=["2011-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Youth 1","Youth 2","Youth 3"]
+    
+[weightclasses.junior_F]
+    classes = ["43","47","52","57","63","69","76","84","84+"]
+    date_range=["2021-01-01","9999-01-01"]
+    sex = "F"
+    divisions = ["Juniors","Sub-Juniors"]
+
+[exemptions]

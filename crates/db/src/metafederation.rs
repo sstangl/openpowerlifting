@@ -131,6 +131,10 @@ pub enum MetaFederation {
     #[strum(to_string = "bvdk")]
     BVDK,
 
+    /// CANPL, including CPU results prior to the rename.
+    #[strum(to_string = "canpl")]
+    CANPL,
+
     /// CBLB, but with international results also.
     #[strum(to_string = "cblb")]
     CBLB,
@@ -853,6 +857,13 @@ impl MetaFederation {
                     entry.lifter_country.is_none() || entry.lifter_country == Some(Country::Germany)
                 }
                 Federation::IPF | Federation::EPF => entry.lifter_country == Some(Country::Germany),
+                _ => false,
+            },
+            MetaFederation::CANPL => match meet.federation {
+                Federation::CANPL | Federation::CPU => {
+                    entry.lifter_country.is_none() || entry.lifter_country == Some(Country::Canada)
+                }
+                NAPF | CommonwealthPF | IPF => entry.lifter_country == Some(Country::Canada),
                 _ => false,
             },
             MetaFederation::CBLB => affiliation!(meet, entry, CBLB, IPF, FESUPO, NAPF),
