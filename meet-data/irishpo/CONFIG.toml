@@ -2,7 +2,7 @@
 
 [options]
     valid_federations = ["IrishPO"]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [divisions]
     # IPO divisions
@@ -58,6 +58,7 @@
     mmt3cripo = {name ="M_TCR_3_IPO",min=18,max=19,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mmt3sipo = {name ="M_TES_3_IPO",min=18,max=19,equipment="Single-ply",sex="M",tested="No"}
     mmt3mipo = {name ="M_TEM_3_IPO",min=18,max=19,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
+    mmtxripo = {name ="M_TR_X_IPO",min=13,max=19,equipment="Raw",sex="M",tested="No"}
     mmtxcripo = {name ="M_TCR_X_IPO",min=13,max=19,equipment=["Raw","Wraps"],sex="M",tested="No"}
     mmtxmipo = {name ="M_TEM_X_IPO",min=13,max=19,equipment=["Multi-ply","Unlimited"],sex="M",tested="No"}
     mjripo = {name ="M_JR_IPO",min=20,max=23,equipment="Raw",sex="M",tested="No"}
@@ -404,3 +405,4 @@
     2403 = ["ExemptDivision"] # Some SP used in MP divisions
     2502 = ["ExemptDivision"] # Allow single-ply in multi-ply division.   
     2602 = ["ExemptDivision", "ExemptDuplicates"] # Nationals and Pro held in the same meet, with 2603.
+    2606 = ["ExemptWeightClassConsistency"] # 90+ used for women
