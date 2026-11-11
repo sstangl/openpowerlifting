@@ -1,7 +1,9 @@
 # Configuration for the RBPF (Belgium)
 
-[divisions]
+[options]
+    valid_federations = ["RBPF"]
 
+[divisions]
     subjuniors = {name="Sub-Juniors", min=14, max=18.5}
     juniors = {name="Juniors", min=18.5, max=22.5}
     seniors = {name="Seniors", min=22.5, max=38.5}
@@ -32,6 +34,5 @@
     date_range = ["0000-01-01","9999-01-01"]
     sex = "F"
     divisions = ["Juniors","Sub-Juniors"]
-
 
 [exemptions]
