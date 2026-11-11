@@ -1,17 +1,21 @@
 ### General info
 
-Country: Belgium (Flemish regional, see LFPH for Walloon regional and KBGV for national)
-Full name: Vlaamse Gewichtheffers en Powerlifting Federatie
-Abbreviation: VGPF
-Founded: 1977
+Country: Belgium (Flemish regional, see LFPH for Walloon regional and KBGV/RBPF for national)
+Full name: Vlaamse (Gewichtheffers en) Powerlifting Federatie
+Abbreviation: VGPF - later became VPF when the weightlifting split off into VGF
+Founded: 1977 - renamed to VPF as of 12/11/2024
 
-Website: http://www.vgpf.be/ ([results page](http://www.vgpf.be/VGPF/Powerlifting.html), [records page](http://www.vgpf.be/VGPF/Records.html))
+Website: https://powerlifting.vlaanderen/ ([results page](https://powerlifting.vlaanderen/resultaten/), [records page](https://powerlifting.vlaanderen/records/))
+Facebook: 
 Facebook: https://www.facebook.com/VGPF0/
 
-Quick Note: Belgium has two IPF recognized federations: VGPF (Flemish) and LFPH (Walloon).
-When competing internationally, athletes compete under the national federation KBGV instead.
-National competitions are held jointly by the VGPF and LFPH, alternatingly hosted by one or the other each year.
-These national competitions are listed under the KBGV as a parent federation, though they are technically organized by the regional federations.
+Quick Note: Belgium has two IPF recognized federations: V(G)PF (Flemish) and LFPH (Walloon).
+When competing internationally, athletes compete under the national federation instead.
+Prior to 2026, the national federation was KBGV, a joint federation with weightlifting.
+Due to limitations imposed by the IWF, a split was mandatory and the powerlifting branch split off to become the new RBPF.
+While KBGV still exists, it is now exclusively a weightlifting federation.
+National competitions are helt jointly by the V(G)PF and LFPH, alternatingly hosted by one or the other each year.
+These national competitions are listed under the KBGV (or RBPF after 2026) as a parent federation, though they are technically organized by the regional federations.
 Regional competitions are seperate.
 
 ### Weight classes

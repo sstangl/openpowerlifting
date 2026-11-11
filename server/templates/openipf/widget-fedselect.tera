@@ -103,6 +103,7 @@
   <option value="pwfl" {% if selection.federation == "PWFL" %}selected{% endif %}>PWFL / {{strings.country.luxembourg}}</option>
   <option value="pzkfits" {% if selection.federation == "PZKFiTS" %}selected{% endif %}>PZKFiTS / {{strings.country.poland}}</option>
   <option value="qatarpl" {% if selection.federation == "QatarPL" %}selected{% endif %}>QatarPL / {{strings.country.qatar}}</option>
+  <option value="rbpf" {% if selection.federation == "RBPF" %}selected{% endif %}>RBPF / {{strings.country.belgium}}</option>
   <option value="safkst" {% if selection.federation == "SAFKST" %}selected{% endif %}>SAFKST / {{strings.country.slovakia}}</option>
   <option value="safp" {% if selection.federation == "SAFP" %}selected{% endif %}>SAFP / {{strings.country.syria}}</option>
   <option value="sapf" {% if selection.federation == "SAPF" %}selected{% endif %}>SAPF / {{strings.country.southafrica}}</option>

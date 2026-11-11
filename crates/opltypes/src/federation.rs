@@ -947,7 +947,7 @@ pub enum Federation {
     #[strum(to_string = "JPA", serialize = "jpa")]
     JPA,
 
-    /// Koninklijk Belgisch Gewichtheffers Verbond, Belgian IPF affiliate.
+    /// Koninklijk Belgisch Gewichtheffers Verbond, Belgian IPF affiliate prior to 2026.
     #[strum(to_string = "KBGV", serialize = "kbgv")]
     KBGV,
 
@@ -1331,6 +1331,10 @@ pub enum Federation {
     /// Republic of Korea Powerlifting, a South Korean IntDFPA affiliate, formerly USAPL Korea.
     #[strum(to_string = "ROKPL", serialize = "rokpl")]
     ROKPL,
+
+    /// Royal Belgian Powerlifting Federation, Belgian IPF affiliate after 2026.
+    #[strum(to_string = "RBPF", serialize = "rbpf")]
+    RBPF,
 
     /// Revolution Powerlifting Syndicate.
     #[strum(to_string = "RPS", serialize = "rps")]
@@ -2571,6 +2575,7 @@ impl Federation {
             Federation::RDFPF => FULLY_TESTED,
             Federation::RhinoPC => false,
             Federation::ROKPL => FULLY_TESTED,
+            Federation::RBPF => FULLY_TESTED,
             Federation::TaiwanUA => false,
             Federation::RPS => false,
             Federation::RPU => false,
@@ -3076,6 +3081,7 @@ impl Federation {
             Federation::RDFPF => Some(Country::Russia),
             Federation::RhinoPC => Some(Country::SouthAfrica),
             Federation::ROKPL => Some(Country::SouthKorea),
+            Federation::RBPF => Some(Country::Belgium),
             Federation::TaiwanUA => Some(Country::Taiwan),
             Federation::RPS => Some(Country::USA),
             Federation::RPU => Some(Country::Russia),
@@ -3667,6 +3673,7 @@ impl Federation {
             Federation::RDFPF => Some(Federation::WDFPF),
             Federation::RhinoPC => Some(Federation::GPC),
             Federation::ROKPL => Some(Federation::IntDFPA),
+            Federation::RBPF => Some(Federation::IPF),
             Federation::TaiwanUA => None,
             Federation::RPS => None,
             Federation::RPU => None,
@@ -4306,6 +4313,7 @@ impl Federation {
             Federation::RDFPF => PointsSystem::SchwartzMalone,
             Federation::RhinoPC => PointsSystem::Glossbrenner,
             Federation::ROKPL => PointsSystem::Dots,
+            Federation::RBPF => Federation::ipf_rules_on(date),
             Federation::TaiwanUA => Federation::ipf_rules_on(date),
             Federation::RPS => PointsSystem::Wilks,
             Federation::RPU => PointsSystem::Wilks,

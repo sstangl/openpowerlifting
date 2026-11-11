@@ -515,6 +515,10 @@ pub enum MetaFederation {
     #[strum(to_string = "qatarpl")]
     QatarPL,
 
+    /// RBPF, but with international results also.
+    #[strum(to_string = "rbpf")]
+    RBPF,
+
     /// SAFKST, but with international results also.
     #[strum(to_string = "safkst")]
     SAFKST,
@@ -732,6 +736,7 @@ impl MetaFederation {
             MetaFederation::AllIPFBelgium => {
                 is_from(Country::Belgium, entry, meet)
                     && (meet.federation == Federation::KBGV
+                        || meet.federation == Federation::RBPF
                         || meet.federation == Federation::LFPH
                         || meet.federation == Federation::VGPF
                         || meet.federation == Federation::IPF
@@ -987,10 +992,10 @@ impl MetaFederation {
             MetaFederation::IrishPF => affiliation!(meet, entry, IrishPF, IPF, EPF),
             MetaFederation::IrishPO => affiliation!(meet, entry, IrishPO, WPC),
             MetaFederation::JPA => affiliation!(meet, entry, JPA, IPF, AsianPF),
-            MetaFederation::KBGV => affiliation!(meet, entry, KBGV, IPF, EPF),
+            MetaFederation::KBGV => affiliation!(meet, entry, KBGV, IPF, EPF, RBPF, LFPH, VGPF), // include flemish + walloon + belgian national + international results
             MetaFederation::KNKFSP => affiliation!(meet, entry, KNKFSP, NPB, IPF, EPF),
             MetaFederation::LebanonPF => affiliation!(meet, entry, LebanonPF, IPF, AsianPF),
-            MetaFederation::LFPH => affiliation!(meet, entry, LFPH, IPF, EPF, KBGV),
+            MetaFederation::LFPH => affiliation!(meet, entry, LFPH, IPF, EPF, KBGV, RBPF), // include walloon + belgian national + international results
             MetaFederation::LibyaPF => affiliation!(meet, entry, LibyaPF, IPF, AfricanPF),
             MetaFederation::LJTF => affiliation!(meet, entry, LJTF, IPF, EPF),
             MetaFederation::LPF => affiliation!(meet, entry, LPF, IPF, EPF),
@@ -1035,6 +1040,7 @@ impl MetaFederation {
             MetaFederation::PWFL => affiliation!(meet, entry, PWFL, IPF, EPF),
             MetaFederation::PZKFiTS => affiliation!(meet, entry, PZKFiTS, IPF, EPF),
             MetaFederation::QatarPL => affiliation!(meet, entry, QatarPL, IPF, AsianPF),
+            MetaFederation::RBPF => affiliation!(meet, entry, KBGV, IPF, EPF, RBPF, LFPH, VGPF), // include flemish + walloon + belgian national + international results
             MetaFederation::SAFKST => affiliation!(meet, entry, SAFKST, IPF, EPF),
             MetaFederation::SAFP => affiliation!(meet, entry, SAFP, IPF, AsianPF),
             MetaFederation::SAPF => affiliation!(meet, entry, SAPF, IPF, AfricanPF, CommonwealthPF),
@@ -1098,7 +1104,7 @@ impl MetaFederation {
             MetaFederation::USPCTested => {
                 entry.tested && MetaFederation::USPC.contains(entry, meets)
             }
-            MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF, KBGV),
+            MetaFederation::VGPF => affiliation!(meet, entry, VGPF, IPF, EPF, KBGV, RBPF), // include flemish + belgian national + international results
             MetaFederation::VPF => affiliation!(meet, entry, VPF, IPF, AsianPF),
             MetaFederation::WelshPA => {
                 affiliation!(meet, entry, WelshPA, IPF, EPF, BP, CommonwealthPF)

@@ -406,6 +406,7 @@ fn set_hardcoded_strings(statuses: &mut [FederationStatus]) {
     statuses[PS as usize].maintainers = ig_mayed;
     statuses[QatarPL as usize].maintainers = ig_mayed;
     statuses[RPS as usize].maintainers = email_sean;
+    statuses[RBPF as usize].maintainers = email_stefanie;
     statuses[ScottishPL as usize].maintainers = email_robby;
     statuses[SPF as usize].maintainers = email_sean;
     statuses[SSSC as usize].maintainers = ig_mayed;

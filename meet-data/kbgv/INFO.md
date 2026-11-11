@@ -1,20 +1,24 @@
 ### General info
 
-Country: Belgium (National, see LFPH for Walloon and see VGPF for Flemish)
+Country: Belgium (National, see LFPH for Walloon and see V(G)PF for Flemish)
 Full name: Koninklijk Belgisch Gewichtheffers Verbond - Federation Royale Belge Des Poids Et Halteres
 Abbreviation: KBGV / FRBPH
+Stopped as a powerlifting federation (became weightlifting only): 2026
 
 Website: 
 - https://www.lfph.be/ ([results page](https://lfph.be/resultats/), [records page](https://lfph.be/records/))
-- http://www.vgpf.be/ ([results page](http://www.vgpf.be/VGPF/Powerlifting.html), [records page](http://www.vgpf.be/VGPF/Records.html))
+- https://powerlifting.vlaanderen/ ([results page](https://powerlifting.vlaanderen/resultaten/), [records page](https://powerlifting.vlaanderen/records/))
 Facebook: 
 - https://www.facebook.com/VGPF0/
 - https://www.facebook.com/LigueFPH/
 
-Quick Note: Belgium has two IPF recognized federations: VGPF (Flemish) and LFPH (Walloon).
-When competing internationally, athletes compete under the national federation KBGV instead.
-National competitions are helt jointly by the VGPF and LFPH, alternatingly hosted by one or the other each year.
-These national competitions are listed under the KBGV as a parent federation, though they are technically organized by the regional federations.
+Quick Note: Belgium has two IPF recognized federations: V(G)PF (Flemish) and LFPH (Walloon).
+When competing internationally, athletes compete under the national federation instead.
+Prior to 2026, the national federation was KBGV, a joint federation with weightlifting.
+Due to limitations imposed by the IWF, a split was mandatory and the powerlifting branch split off to become the new RBPF.
+While KBGV still exists, it is now exclusively a weightlifting federation.
+National competitions are helt jointly by the V(G)PF and LFPH, alternatingly hosted by one or the other each year.
+These national competitions are listed under the KBGV (or RBPF after 2026) as a parent federation, though they are technically organized by the regional federations.
 Regional competitions are seperate.
 
 Records: Athletes can break national records in meets hosted by both the regional and national federation, as well as international federations.

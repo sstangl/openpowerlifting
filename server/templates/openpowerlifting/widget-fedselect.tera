@@ -176,6 +176,7 @@
   <option value="lfph" {% if selection.federation == "LFPH" %}selected{% endif %}>LFPH - Ligue Francophone des Poids & Haltères [IPF]</option>
   <option value="vgpf" {% if selection.federation == "VGPF" %}selected{% endif %}>VGPF - Vlaamse Gewichtheffers en Powerlifting Federatie [IPF]</option>
   <option value="kbgv" {% if selection.federation == "KBGV" %}selected{% endif %}>KBGV - Koninklijk Belgisch Gewichtheffers Verbond [IPF]</option>
+  <option value="rbpf" {% if selection.federation == "RBPF" %}selected{% endif %}>RBPF - Royal Belgian Powerlifting Federation [IPF]</option>
 </optgroup>
 <optgroup label="{{strings.country.belize}}">
   <option value="bpa" {% if selection.federation == "BPA" %}selected{% endif %}>BPA - Belize Powerlifting Association [IPF]</option>
