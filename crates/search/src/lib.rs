@@ -56,8 +56,8 @@ pub fn search_rankings(
     }
 
     // TODO: Use a better algorithm; this is really a MVP.
-    for i in start_row..list.0.len() {
-        let entry = db.entry(list.0[i]);
+    for (i, entry_id) in list.0.iter().enumerate().skip(start_row) {
+        let entry = db.entry(*entry_id);
         let lifter = db.lifter(entry.lifter_id);
 
         // First, check if there's a match based on the username or IG.

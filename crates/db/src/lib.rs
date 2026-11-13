@@ -494,8 +494,8 @@ impl OplDb {
 
     /// Looks up the meet_id by MeetPath.
     pub fn meet_id(&self, meetpath: &str) -> Option<u32> {
-        for i in 0..self.meets.len() {
-            if self.meets[i].path == meetpath {
+        for (i, meet) in self.meets.iter().enumerate() {
+            if meet.path == meetpath {
                 return Some(i as u32);
             }
         }

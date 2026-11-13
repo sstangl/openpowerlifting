@@ -145,7 +145,7 @@ python-style:
 # Published at https://openpowerlifting.gitlab.io/opl-data/
 pages:
   stage: deploy
-  image: rust:1.99
+  image: rust:1.100
   variables:
     CARGO_HOME: $CI_PROJECT_DIR/cargo
   cache:
