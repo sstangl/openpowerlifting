@@ -1,7 +1,6 @@
 Place,Name,BirthDate,Sex,BirthYear,Age,Country,State,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Best3SquatKg,Squat4Kg,Bench1Kg,Bench2Kg,Bench3Kg,Best3BenchKg,Bench4Kg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Best3DeadliftKg,Deadlift4Kg,TotalKg,Event
 1,Lara Dragičević,,F,2004,21,Croatia,,Raw,Juniors,68.6,69,90,100,-105,100,,52.5,55,60,60,,100,112.5,120,120,,280,SBD
 1,Tanya Nedyalkova,,F,2005,20,Bulgaria,,Raw,Juniors,74.8,76,92.5,100,-105,100,,50,55,-57.5,55,,127.5,135,142.5,142.5,,297.5,SBD
-DQ,Ana Jozinović,,F,2005,20,Croatia,,Raw,Juniors,,76,,,,,,,,,,,,,,,,,SBD
 1,Emina Kondić,,F,2005,20,Croatia,,Raw,Juniors,82.5,84,135,142.5,150,150,,65,-70,70,70,,140,150,-155,150,,370,SBD
 1,Aleksandra Stjepanović,,F,1983,42,Croatia,,Raw,Masters 1,50.4,52,87.5,92.5,-97.5,92.5,,50,55,-57.5,55,,117.5,125,-127.5,125,,272.5,SBD
 1,Dunja Hafner,,F,1992,33,Croatia,,Raw,Open,45.2,47,55,60,65,65,,40,-42.5,-42.5,40,,55,65,70,70,,175,SBD
@@ -25,7 +24,6 @@ DQ,Ana Jozinović,,F,2005,20,Croatia,,Raw,Juniors,,76,,,,,,,,,,,,,,,,,SBD
 1,Karla Škvorc,,F,1999,26,Croatia,,Raw,Open,54.4,57,,,,,,57.5,60,-65,60,,,,,,,60,B
 2,Sofija Ječmenica,,F,1999,26,Serbia,,Raw,Open,52.4,57,,,,,,47.5,52.5,-55,52.5,,,,,,,52.5,B
 1,Dunja Janković,,F,2001,24,Serbia,,Raw,Open,61.6,63,,,,,,70,75,-77.5,75,,,,,,,75,B
-DQ,Ana Jozinović,,F,2005,20,Croatia,,Raw,Open,,76,,,,,,,,,,,,,,,,,B
 1,Tara Baće,,F,2002,23,Croatia,,Raw,Open,81.4,84,,,,,,90,-95,97.5,97.5,,,,,,,97.5,B
 1,Marina Kunac,,F,1996,29,Croatia,,Raw,Open,86.6,84+,,,,,,57.5,-62.5,-67.5,57.5,,,,,,,57.5,B
 1,Anamarija Mamić,,F,2009,16,Croatia,,Raw,Sub-Juniors,55.2,57,,,,,,67.5,72.5,-78,72.5,,,,,,,72.5,B
@@ -54,7 +52,6 @@ G,Emil Krastev,,M,1997,28,Bulgaria,,Raw,Open,95.9,105,280,295,310,310,,-215,225,
 4,Matija Ilić,,M,1998,27,Croatia,,Raw,Open,82.6,83,192.5,205,210,210,,127.5,132.5,135,135,,225,-227.5,-227.5,225,,570,SBD
 5,Benjámin Cserna,,M,1998,27,Hungary,,Raw,Open,81.4,83,160,170,-175,170,,95,102.5,107.5,107.5,,185,200,205,205,,482.5,SBD
 6,Davor Tivanovac,,M,1990,35,Croatia,,Raw,Open,82.4,83,132.5,-140,150,150,,97.5,105,-110,105,,165,172.5,180,180,,435,SBD
-DQ,Luka Turković,,M,2000,25,Croatia,,Raw,Open,,83,,,,,,,,,,,,,,,,,SBD
 1,Gabriel Višek,,M,2002,23,Croatia,,Raw,Open,88.6,93,230,242.5,250,250,,147.5,155,160,160,,282.5,300,-313,300,,710,SBD
 2,Leon Piskač,,M,2002,23,Croatia,,Raw,Open,92.5,93,242.5,255,-260,255,,157.5,165,170,170,,265,-280,280,280,,705,SBD
 3,Nikola Zgrebec,,M,2006,19,Croatia,,Raw,Open,92,93,225,237.5,245,245,,140,150,155,155,,245,262.5,-275,262.5,,662.5,SBD
@@ -79,11 +76,9 @@ DQ,Luka Turković,,M,2000,25,Croatia,,Raw,Open,,83,,,,,,,,,,,,,,,,,SBD
 1,Jakov Sirovica,,M,2007,18,Croatia,,Raw,Sub-Juniors,64.2,66,120,130,137.5,137.5,,75,-80,82.5,82.5,,175,187.5,195,195,,415,SBD
 1,Juraj Kostelić,,M,2009,16,Croatia,,Raw,Sub-Juniors,76.6,83,190,197.5,-202.5,197.5,,130,135,137.5,137.5,,190,200,215,215,,550,SBD
 2,Luka Filjak,,M,2008,17,Croatia,,Raw,Sub-Juniors,82.2,83,-120,120,-125,120,,95,97.5,100,100,,190,200,210,210,,430,SBD
-DQ,Mihael Bogdan,,M,2009,16,Croatia,,Raw,Sub-Juniors,,93,,,,,,,,,,,,,,,,,SBD
 G,Duje Spajić,,M,2004,21,Croatia,,Raw,Juniors,108,120,,,,,,140,145,-150,145,,,,,,,145,B
 1,David Šlezak,,M,2006,19,Croatia,,Raw,Juniors,76.6,83,,,,,,137.5,145,152.5,152.5,,,,,,,152.5,B
 2,Andrija Železnjak,,M,2006,19,Croatia,,Raw,Juniors,76.7,83,,,,,,127.5,135,140,140,,,,,,,140,B
-DQ,Leon Lorber,,M,2006,19,Croatia,,Raw,Juniors,,83,,,,,,,,,,,,,,,,,B
 1,Mihailo Mičić,,M,2004,21,Serbia,,Raw,Juniors,86.1,93,,,,,,142.5,150,155,155,,,,,,,155,B
 2,Dino Radinović,,M,2003,22,Croatia,,Raw,Juniors,86.9,93,,,,,,130,137.5,-142.5,137.5,,,,,,,137.5,B
 1,Jovan Kreić,,M,2005,20,Serbia,,Raw,Juniors,95.4,105,,,,,,145,152.5,165,165,,,,,,,165,B
@@ -108,7 +103,6 @@ DQ,Goran Karamarković,,M,1979,46,Croatia,,Raw,Open,79.1,83,,,,,,-150,-150,-150,
 2,Josip Torić,,M,1997,28,Croatia,,Raw,Open,115.7,120,,,,,,170,175,-192.5,175,,,,,,,175,B
 3,Sebastijan Špoljarić,,M,2000,25,Croatia,,Raw,Open,118.3,120,,,,,,160,170,-187.5,170,,,,,,,170,B
 1,Josip Jureta,,M,1998,27,Croatia,,Raw,Open,125,120+,,,,,,175,182.5,-185,182.5,,,,,,,182.5,B
-DQ,Filip Vinko,,M,2007,18,Croatia,,Raw,Sub-Juniors,,74,,,,,,,,,,,,,,,,,B
 1,Juraj Kostelić,,M,2009,16,Croatia,,Raw,Sub-Juniors,78.5,83,,,,,,115,127.5,132.5,132.5,,,,,,,132.5,B
 1,Matej Bračko,,M,2009,16,Croatia,,Raw,Sub-Juniors,86.3,93,,,,,,-127.5,127.5,135,135,,,,,,,135,B
 2,Tin Troha,,M,2009,16,Croatia,,Raw,Sub-Juniors,86.8,93,,,,,,80,85,90,90,,,,,,,90,B
