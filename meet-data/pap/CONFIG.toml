@@ -74,3 +74,4 @@
     2303 = ["ExemptWeightClassConsistency", "ExemptDivision"] 	
     2506 = ["ExemptWeightClassConsistency"]  # No weightclasses for guest lifters
     2507 = ["ExemptWeightClassConsistency"]  # No weightclasses for guest lifters
+    2508 = ["ExemptLiftOrder"]  # Apilado squat 3 lower than missed 2nd, as recorded by LiftingCast
