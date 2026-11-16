@@ -1,8 +1,8 @@
 # Configuration for the APA.
 
 [options]
-    require_manual_disambiguation = true
-
+    valid_federations = ["APA", "WPA", "ACPA"]
+    require_manual_disambiguation = false
 
 [rulesets.default]
     ruleset = ["CombineRawAndWraps"]
