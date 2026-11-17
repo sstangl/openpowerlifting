@@ -1,0 +1,20 @@
+# Find additional rules at https://docs.astral.sh/ruff/rules.
+
+line-length = 99
+indent-width = 4
+
+[lint]
+extend-select = [
+  # "D",     # pydocstyle
+  "E",     # pycodestyle
+  "UP",    # pyupgrade
+  "W291",  # trailing-whitespace
+  "W293",  # blank-line-with-whitespace
+]
+
+ignore = [
+  "D203",    # incorrect-blank-line-before-class
+  "D213",    # multi-line-summary-second-line
+  "E402",    # module-import-not-at-top-of-file (to append to sys.path before import)
+  "SIM114",  # if-with-same-arms (to allow divergent reasoning in comments)
+]
