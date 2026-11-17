@@ -8,17 +8,18 @@
 # RSNOPFKR
 # COPF
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
 except ImportError:
     sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
-    import oplprobe
     import allpowerlifting_probe
+    import oplprobe
 
 
 MAIN_URLS = [
@@ -56,29 +57,29 @@ FPYNAO_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPYNAO/'
 FPSK_URL = 'http://power.lekks.ru/?page_id=70'
 FPSK_URL2 = 'https://en.allpowerlifting.com/federations/IPF/RPF/FPSK/'
 
-RSNOPFKR_URLS = ['http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
-                 '%D0%BA%D0%BE%D0%BB%D1%8B/2020-%D0%B3%D0%BE%D0%B4-2/']
+RSNOPFKR_URLS = [('http://xn----ptbjibfifei2b9dl.xn--p1ai/%D0%BF%D1%80%D0%BE%D1%82%D0%BE'
+                 '%D0%BA%D0%BE%D0%BB%D1%8B/2020-%D0%B3%D0%BE%D0%B4-2/')]
 
-SFNRP_URLS = ['https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=0',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=40',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=80',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=120',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=160',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=200',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=240',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=280',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=320',
-              'https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
-              '?limitstart=360']
+SFNRP_URLS = [('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=0'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=40'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=80'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=120'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=160'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=200'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=240'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=280'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=320'),
+              ('https://xn----8sbhccegpecailstnhaynip6au2a4u.xn--p1ai/index.php/protokoly'
+              '?limitstart=360')]
 
 SBRPF_URL = 'https://en.allpowerlifting.com/federations/IPF/RPF/SBRPF/'
 

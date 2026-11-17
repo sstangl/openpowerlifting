@@ -12,8 +12,8 @@ import re
 import subprocess
 import sys
 
-from oplcsv import Csv
 import usernames
+from oplcsv import Csv
 
 REPOROOTDIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 MEETDATADIR = os.path.join(REPOROOTDIR, "meet-data")
@@ -29,7 +29,7 @@ def get_meetdirs_containing(name):
     try:
         re_filter = f"^{name},|,{name},|,{name}$|^{name} #|,{name} #"
         res = subprocess.run(["rg", "--files-with-matches", re_filter, MEETDATADIR],
-                             capture_output=True, text=True)
+                             check=True, capture_output=True, text=True)
         return [os.path.dirname(os.path.realpath(x)) for x in res.stdout.splitlines()
                 if x.endswith("entries.csv")]
 

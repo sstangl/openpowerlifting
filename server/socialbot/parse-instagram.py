@@ -2,8 +2,8 @@
 # Parses the OpenPowerlifting account on Instagram for follower counts.
 
 import datetime
-import urllib.request
 import random
+import urllib.request
 
 URL_BASE = "https://www.instagram.com/"
 
@@ -50,7 +50,7 @@ def main(ig_account):
     followers = get_followers(html)
     date = get_date()
     label = random.choice(LABELS)
-    print(date + ": (@" + ig_account + ") **" + '{:,}'.format(followers) + "** " + label)
+    print(date + ": (@" + ig_account + ") **" + f'{followers:,}' + "** " + label)
 
 
 if __name__ == "__main__":

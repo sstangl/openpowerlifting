@@ -2,8 +2,8 @@
 
 import sys
 
-from oplcsv import Csv
 from coefficient import wilks
+from oplcsv import Csv
 
 
 def bounded_search(is_male, totalkg, target, lower, upper):

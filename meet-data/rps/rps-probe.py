@@ -26,7 +26,7 @@ MEETSURLS = [
     "http://meets.revolutionpowerlifting.com/results/2025-meet-results/",
     "http://meets.revolutionpowerlifting.com/results/2026-meet-results/",
 ]
-if datetime.datetime.now(datetime.timezone.utc).strftime("%Y") != "2026":
+if datetime.datetime.now(datetime.UTC).strftime("%Y") != "2026":
     print("Warning: RPS fetch URL needs updating for new year.", file=sys.stderr)
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 

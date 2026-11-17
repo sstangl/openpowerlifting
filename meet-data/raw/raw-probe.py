@@ -4,10 +4,11 @@
 # Probes for meet results from the 100%RAW Federation (RAW).
 # RAW posts meets to a page separated by year.
 
-from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

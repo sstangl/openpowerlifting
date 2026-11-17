@@ -6,11 +6,12 @@
 #
 
 
-from bs4 import BeautifulSoup
 import errno
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -277,8 +278,8 @@ def makeentriescsv(soup):
         else:
             cells = row.find_all('td')
             for i, cell in enumerate(cells):
-                print("%d: %s" % (i, cell))
-            error("Unexpected row length: %s, debug information above" % str(k))
+                print(f"{i}: {cell}")
+            error(f"Unexpected row length: {k!s}, debug information above")
 
     return csv
 
@@ -287,7 +288,7 @@ def makeentriescsv(soup):
 def removeemptycolumns(csv):
 
     def getemptycol(csv):
-        for i in range(0, len(csv.fieldnames)):
+        for i in range(len(csv.fieldnames)):
             hasdata = False
             for row in csv.rows:
                 if row[i]:
@@ -453,7 +454,7 @@ def makemeetcsv(soup):
     if len(trs) >= 3:
         state = table.find_all('tr')[2].find('td').text.strip()
         if state not in states:
-            error("State not in the abbreviation lookup table: %s" % state)
+            error(f"State not in the abbreviation lookup table: {state}")
         state = states[state]
 
     csv = Csv()
@@ -519,7 +520,7 @@ def main(url, importdir):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w', newline='\n') as fd:
         entriescsv.write(fd)
@@ -528,12 +529,12 @@ def main(url, importdir):
     with open(dirname + os.sep + 'URL', 'w', newline='\n') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: %s url <importdir>" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url <importdir>")
 
     url = sys.argv[1]
     importdir = sys.argv[2] if len(sys.argv) > 2 else None

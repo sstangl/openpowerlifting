@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 
-import oplcsv
 import sys
+
+import oplcsv
 
 filename = sys.argv[1]
 

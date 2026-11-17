@@ -8,14 +8,15 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+import io
+import logging
 import os
 import sys
 import time
-import logging
-import io
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
@@ -62,8 +63,7 @@ def getpages(url, pagerange):
         for page in pagerange:
             if page != 1:
                 driver.execute_script(
-                    "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
-                    'Page$%i')" % page)
+                    f"javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView','Page${page}')")
             time.sleep(DELAY)
 
             pages.append(driver.page_source)
@@ -116,10 +116,10 @@ def main(folders):
     for folder in folders:
         folderpath = os.getcwd() + os.sep + folder
         url = ''
-        with open(folderpath + os.sep + 'URL', 'r') as fd:
+        with open(folderpath + os.sep + 'URL') as fd:
             url = fd.readline().strip()
 
-        if url in meet_info.keys():
+        if url in meet_info:
             meetcsv = Csv(folderpath + os.sep + 'meet.csv')
             date = meet_info[url]
             meetcsv.rows[0][meetcsv.index('Date')] = date
@@ -128,6 +128,6 @@ def main(folders):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: %s meet_folder" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} meet_folder")
     else:
         main(sys.argv[1:])

@@ -5,12 +5,13 @@
 # After running this run ./assign_date (Folder number)
 
 
-from bs4 import BeautifulSoup
 import errno
+import io
 import os
 import sys
 import urllib.request
-import io
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -93,7 +94,7 @@ def expand_colspans(tr, enclosing_soup):
     ths = tr.find_all('th')
     for ii in range(len(ths)-1, -1, -1):
         if ths[ii].has_attr('colspan') and int(ths[ii]['colspan']) > 1:
-            for jj in range(0, (int(ths[ii]['colspan'])-1)):
+            for jj in range(int(ths[ii]['colspan'])-1):
                 blank_th = enclosing_soup.new_tag('th')
                 ths[ii].insert_after(blank_th)
     del ths[ii]['colspan']
@@ -170,7 +171,7 @@ def getresults(soup):
                 elif h == '':
                     csv.fieldnames += ['IGNORE']
                 else:
-                    error("Unknown column name: \"%s\"" % h)
+                    error(f"Unknown column name: \"{h}\"")
 
             # These columns are added from the category rows.
             csv.fieldnames += ['Division', 'Sex', 'WeightClassKg']
@@ -198,7 +199,7 @@ def getresults(soup):
             if div:
                 divstate = div
             else:
-                error("Unknown state: \"%s\"" % row[0])
+                error(f"Unknown state: \"{row[0]}\"")
 
         elif row != []:
             assert divstate
@@ -258,7 +259,7 @@ def capitalise_names(csv):
     nameidx = csv.index('Name')
     for row in csv.rows:
         split_name = [name for name in row[nameidx].split(' ') if name != '']
-        for ii in range(0, len(split_name)):
+        for ii in range(len(split_name)):
             if len(split_name[ii]) > 3:
                 split_name[ii] = split_name[ii].title()
         row[nameidx] = ' '.join(split_name)
@@ -388,7 +389,7 @@ def main(url, verbose=True):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     # Use the function for each CSV file
     write_csv_with_lf(entriescsv, os.path.join(dirname, 'entries.csv'))
@@ -399,12 +400,12 @@ def main(url, verbose=True):
         fd.write(url + "\n")
 
     if verbose:
-        print("Imported into %s." % dirname)
+        print(f"Imported into {dirname}.")
         print("Don't forget to run assign_date!")
     return dirname
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url")
     main(sys.argv[1])

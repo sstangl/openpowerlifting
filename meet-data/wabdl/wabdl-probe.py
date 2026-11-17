@@ -3,10 +3,11 @@
 #
 # Probes for new WABDL meets.
 
-from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

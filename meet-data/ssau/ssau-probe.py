@@ -3,9 +3,10 @@
 #
 # Probes for new meets from Strength Sports Australia
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

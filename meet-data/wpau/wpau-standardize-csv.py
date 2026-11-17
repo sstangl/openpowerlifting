@@ -5,9 +5,9 @@
 # internal format.
 #
 
-import sys
 import os
 import re
+import sys
 
 try:
     import oplcsv
@@ -187,7 +187,7 @@ def parse_sheetname(s):
         elif word.isdigit():
             pass
         else:
-            die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
+            die(f'Fix parse_sheetname(): Unknown word "{word}" in "{s}"')
 
     obj['event'] = event
     obj['tested'] = tested
@@ -206,12 +206,10 @@ def get_header_linenum(sheet):
 
 # Returns whether a line is a header
 def is_header(line):
-    if len(line) > 1 and line[1] in ['П.І.', 'Имя', 'NAME', 'Name',
-                                     "Прізвище та ім'я", 'Nme', 'Name Surname',
-                                     'Фамилия и имя', "Прізвище/Ім'я", 'Full name',
-                                     'Lifters']:
-        return True
-    return False
+    options = ['П.І.', 'Имя', 'NAME', 'Name', "Прізвище та ім'я", 'Nme', 'Name Surname', \
+               'Фамилия и имя', "Прізвище/Ім'я", 'Full name', 'Lifters']
+
+    return bool(len(line) > 1 and line[1] in options)
 
 
 def parse_fieldnames(sheet, obj):
@@ -371,7 +369,7 @@ def parse_fieldnames(sheet, obj):
             fieldnames.append('IGNORE')
 
         else:
-            die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+            die(f'Fix parse_fieldnames(): Unknown column header text: "{text}"')
 
     return fieldnames
 
@@ -627,8 +625,7 @@ def standardize_division_age(csv):
             division = 'Open'
 
         else:
-            die('Fix standardize_division_age(): Unknown division "%s"' %
-                row[dividx])
+            die(f'Fix standardize_division_age(): Unknown division "{row[dividx]}"')
 
         if row[testedidx] == 'No':
             division = 'Pro ' + division
@@ -734,10 +731,10 @@ def cleanup_bodyweight(csv):
 
 
 def assign_best(csv, liftname):
-    idx1 = csv.index('%s1Kg' % liftname)
-    idx2 = csv.index('%s2Kg' % liftname)
-    idx3 = csv.index('%s3Kg' % liftname)
-    bestidx = csv.index('Best3%sKg' % liftname)
+    idx1 = csv.index(f'{liftname}1Kg')
+    idx2 = csv.index(f'{liftname}2Kg')
+    idx3 = csv.index(f'{liftname}3Kg')
+    bestidx = csv.index(f'Best3{liftname}Kg')
 
     def weight(str):
         try:
@@ -797,7 +794,7 @@ def unreverse_names(csv):
 def main(filename):
     # Since the input is comma-separated, store the file as a list of lists.
     with open(filename) as fd:
-        lines = [x.strip().split(',') for x in fd.readlines()]
+        lines = [x.strip().split(',') for x in fd]
 
     # Split the input filename into sheets, each of which is an independent
     # CSV.
@@ -847,6 +844,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
+        print(f" Usage: {sys.argv[0]} original.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

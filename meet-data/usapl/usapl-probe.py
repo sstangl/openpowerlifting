@@ -8,10 +8,11 @@
 #
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
-from os.path import join, realpath, dirname
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

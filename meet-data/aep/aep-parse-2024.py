@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 import argparse
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import dateparser
 import os
 from math import isnan
-import numpy as np
 
+import dateparser
+import numpy as np
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 
 # For checking whether a parameter is a pandas df, let's use some abbreviation
 df_type = pd.core.frame.DataFrame
@@ -120,7 +120,7 @@ def get_meet_data(df: df_type):
     meet, such as federation, date, country, state, town and meet name
     """
     date_row = get_row_by_index(df, 3)
-    for col_index, cell_content in date_row.items():
+    for cell_content in date_row.values():
         if not (check_empty_cell(cell_content)):
             # Date
             date_string = cell_content.split(' - ')[-1]
@@ -130,7 +130,7 @@ def get_meet_data(df: df_type):
             town = cell_content.split(' - ')[0].split(',')[0]
             # Federation
     name_row = get_row_by_index(df, 1)
-    for col_index, cell_content in name_row.items():
+    for cell_content in name_row.values():
         if not (check_empty_cell(cell_content)):
             # Name
             name = cell_content
@@ -156,7 +156,7 @@ def get_newdir_paths(year: str):
                    if os.path.isdir(file) and file.isdigit() and
                    file.startswith(year)]
     # Sort the list, get the last element, and add 1 for the new dir
-    newdirname = str(int(sorted(directories)[-1]) + 1)
+    newdirname = str(int(max(directories)) + 1)
     # Return the full path of the previous calculation
     return script_path + '/' + newdirname
 
@@ -185,7 +185,7 @@ def write_meet_csv(meet_data: dict, filename: str):
         header = ','.join(meet_data.keys()) + '\n'
         file.write(header)
         # Write data
-        row = ','.join(str(meet_data[key]) for key in meet_data.keys()) + '\n'
+        row = ','.join(str(meet_data[key]) for key in meet_data) + '\n'
         file.write(row)
 
 
@@ -201,12 +201,10 @@ def name_columns(df: df_type, col_dict: dict):
     """
     Renames the columns of the DF according to the rules in the dict
     """
-    i = 0
     keys = list(col_dict.keys())
     columns = list(df.columns)
-    for column in columns:
+    for i, column in enumerate(columns):
         df.rename(columns={column: keys[i]}, inplace=True)
-        i += 1
 
 
 def populate_meet_equipment_types(df: df_type, meet_types: dict, equipment_types: dict):
@@ -225,7 +223,7 @@ def populate_meet_equipment_types(df: df_type, meet_types: dict, equipment_types
     # Just to play safe, let's loop through all row 5
     # row = df.iloc[meet_sheet_row_index]
     row = get_row_by_index(df, meet_sheet_row_index)
-    for col_index, cell_content in row.items():
+    for cell_content in row.values():
         if not (check_empty_cell(cell_content)):
             if 'powerlifting' in cell_content.lower():
                 meet_types[sheet] = 'SBD'
@@ -303,11 +301,10 @@ def switch_firstname_order_to_beginning(fullname: str):
             prev_word = ""
 
     # Check if the last part is a compound name
-    if processed_name:
-        if is_compound_name(processed_name[-1].split()):
-            # Swap first name and last part
-            first_name = processed_name.pop(0)
-            processed_name.append(first_name)
+    if processed_name and is_compound_name(processed_name[-1].split()):
+        # Swap first name and last part
+        first_name = processed_name.pop(0)
+        processed_name.append(first_name)
 
     # Special handling for initials
     processed_name_with_initials = []

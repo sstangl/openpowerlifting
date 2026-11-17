@@ -9,7 +9,7 @@ from usernames import SubstitutionMap, sub_from
 
 def standardize_upper_ascii(s):
     s = s.lower()
-    s = ''.join(map(lambda c: sub_from(SubstitutionMap, c), s))
+    s = ''.join(sub_from(SubstitutionMap, c) for c in s)
     s = s.upper()
 
     # Uppercase-only changes.
@@ -59,7 +59,7 @@ def phonex(s):
 
     # 2. Convert leading letter-pairs is follows:
     #    KN -> N, PH -> F, WR -> R
-    if s.startswith('KN') or s.startswith('WR'):
+    if s.startswith(('KN', 'WR')):
         s = s[1:]
     elif s.startswith('PH'):
         s = 'F' + s[2:]
@@ -123,7 +123,7 @@ def phonex(s):
             if c_next not in 'AEIOUY':
                 n = '6'
         else:
-            raise ValueError("Unhandled character: %s" % c)
+            raise ValueError(f"Unhandled character: {c}")
 
         # Ignore repeats.
         if not k or n != k[-1]:
@@ -140,8 +140,9 @@ def phonex(s):
 
 # By default, try to establish names that collide, testing the algorithms.
 if __name__ == '__main__':
-    import oplcsv
     import os
+
+    import oplcsv
 
     # Build an index of Names.
     names = []
@@ -170,7 +171,7 @@ if __name__ == '__main__':
         first = phonex(comps[0])
         second = phonex(comps[1])
 
-        key = '%s-%s' % (first, second)
+        key = f'{first}-{second}'
 
         if key not in h:
             h[key] = [name]
@@ -182,7 +183,7 @@ if __name__ == '__main__':
         else:
             counts[name] += 1
 
-    for k, v in h.items():
+    for v in h.values():
         if len(v) == 1:
             continue
 

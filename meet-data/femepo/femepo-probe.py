@@ -4,9 +4,10 @@
 # Probes for new meets from the FEMEPO
 
 
-from bs4 import BeautifulSoup
-import sys
 import os
+import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

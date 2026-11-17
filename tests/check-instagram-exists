@@ -2,10 +2,10 @@
 # Checks if instagrams exist in lifter-data/social-instagram.csv
 # Takes a while to open all these urls
 
-import urllib.request
+import os
 import sys
 import time
-import os
+import urllib.request
 
 try:
     import oplcsv
@@ -33,9 +33,9 @@ def check_ig_handle(handle, name):
             return True
         except urllib.error.HTTPError as e:
             if e.code == 404:
-                pwarning("{0} - {1} - not found".format(name, handle))
+                pwarning(f"{name} - {handle} - not found")
                 return False
-    pwarning("{0} - {1} - could not check".format(name, handle))
+    pwarning(f"{name} - {handle} - could not check")
     return False
 
 
@@ -54,12 +54,12 @@ def main(filename):
         total += 1
         time.sleep(1)
 
-    print("{0} / {1} errors".format(errors, total))
+    print(f"{errors} / {total} errors")
     return 0
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s social-instagram.csv" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} social-instagram.csv")
         sys.exit(1)
     sys.exit(main(sys.argv[1]))

@@ -7,11 +7,12 @@
 #
 
 
-from bs4 import BeautifulSoup
 import errno
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -39,13 +40,13 @@ def strtokg(s):
         f = float(s)
         if f == 0.0:
             return ''
-        r = "{:.2f}".format(f / 2.20462262)
+        r = f"{f / 2.20462262:.2f}"
         r = r.replace('.00', '')
         if '.' in r and r[-1] == '0':
             r = r[:-1]
         return r
     except ValueError:
-        print("Field not a float: \"%s\"" % s, file=sys.stderr)
+        print(f"Field not a float: \"{s}\"", file=sys.stderr)
         sys.exit(1)
 
 
@@ -89,7 +90,7 @@ def weightclass2kg(s, sex):
     if s == 'N/A':
         return ''
 
-    error("Unknown weight class: %s" % (s))
+    error(f"Unknown weight class: {s}")
 
 
 def makeentriescsv():
@@ -188,7 +189,7 @@ def enterdivision(csv, divurl):
                 [last, jr, first] = name.split(',')
                 jr = ' ' + jr
             else:
-                error("Don't know how to split name: %s" % name)
+                error(f"Don't know how to split name: {name}")
 
             # Sometimes only the first name is all-caps, for no good reason.
             if len(last) >= 3 and (last.isupper() or last.islower()):
@@ -231,7 +232,7 @@ def enterdivision(csv, divurl):
 
 def removeemptycolumns(csv):
     def getemptycol(csv):
-        for i in range(0, len(csv.fieldnames)):
+        for i in range(len(csv.fieldnames)):
             hasdata = False
             for row in csv.rows:
                 if row[i]:
@@ -296,10 +297,10 @@ def makemeetcsv(soup):
                                           for x in heading.split(' - ')]
     elif heading.count(' - ') == 3:
         # Division is ignored.
-        [meetname, division, location, origdate] = [x.strip()
+        [meetname, _division, location, origdate] = [x.strip()
                                                     for x in heading.split(' - ')]
     else:
-        error('Unknown header format: "%s"' % heading)
+        error(f'Unknown header format: "{heading}"')
 
     # Date is given as MM/DD/YYYY
     assert '/' in origdate
@@ -347,7 +348,7 @@ def main(url):
     # Since the dirname is derived from the URL, we can fail early.
     dirname = getdirname(url)
     if os.path.isdir(dirname):
-        error("Directory '%s' already exists." % dirname)
+        error(f"Directory '{dirname}' already exists.")
 
     entriescsv = makeentriescsv()
     soup = BeautifulSoup(gethtml(url), 'html.parser')
@@ -368,7 +369,7 @@ def main(url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -377,10 +378,10 @@ def main(url):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url")
     main(sys.argv[1])

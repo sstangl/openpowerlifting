@@ -4,9 +4,10 @@
 # Probes for new USPF meets.
 # Also checks the results archive.
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -36,7 +37,7 @@ def uspf_getmeetlist(html):
     assert links, "No <a> elements found."
 
     return list(filter(lambda link: '.pdf' in link,
-                       set(map(lambda link: FED_URL + link['href'].strip(), links))))
+                       {FED_URL + link['href'].strip() for link in links}))
 
 
 def uspf_illinois_getmeetlist(html):
@@ -49,7 +50,7 @@ def uspf_illinois_getmeetlist(html):
     assert links, 'No <a> elements found.'
 
     return list(filter(lambda link: 'results/' in link,
-                       set(map(lambda link: link['href'].strip(), links))))
+                       {link['href'].strip() for link in links}))
 
 
 def main():

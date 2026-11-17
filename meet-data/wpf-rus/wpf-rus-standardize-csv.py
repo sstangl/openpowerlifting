@@ -2,9 +2,9 @@
 # Given a original.csv as outputted by wpc-rus-parse, parse each sheet one at a time
 # and join all the sheets together into an OpenPowerlifting-formatted CSV file.
 
-import sys
 import os
 import re
+import sys
 
 try:
     import oplcsv
@@ -85,7 +85,7 @@ def parse_sheetname(s):
         # We want to remove all strings that start with 'без эк'
         s = s.replace('без', '')
         split_str = s.split()
-        index = [ii for ii, s in enumerate(split_str) if 'эк' in s][0]
+        index = next(ii for ii, s in enumerate(split_str) if 'эк' in s)
         del split_str[index]
         s = ' '.join(split_str)
 
@@ -263,7 +263,7 @@ def parse_sheetname(s):
         elif word == 'c':
             pass
         else:
-            die('Fix parse_sheetname(): Unknown word "%s" in "%s"' % (word, s))
+            die(f'Fix parse_sheetname(): Unknown word "{word}" in "{s}"')
 
     assert event
 
@@ -307,12 +307,12 @@ def fix_headers(sheet):
     # Name has split below rest of data
     if header[1] == '' and lineabove[1] != '':
         header = [(lineabove[ii] + " " + header[ii]).strip()
-                  for ii in range(0, len(header))]
+                  for ii in range(len(header))]
         sheet[headernum] = ['' for x in header]
         headernum = headernum - 1
     elif header[1] == '' and linebelow[1] != '':
         header = [(header[ii] + " " + linebelow[ii]).strip()
-                  for ii in range(0, len(header))]
+                  for ii in range(len(header))]
         sheet[headernum - 1] = ['' for x in linebelow]
     else:  # Attempt numbers always split below
         header = [header[0]] + [header[1]] + \
@@ -453,7 +453,7 @@ def parse_fieldnames(sheet):
         elif text == 'subtotal':
             fieldnames.append('IGNORE')
         else:
-            die('Fix parse_fieldnames(): Unknown column header text: "%s"' % text)
+            die(f'Fix parse_fieldnames(): Unknown column header text: "{text}"')
     return fieldnames
 
 
@@ -724,8 +724,7 @@ def standardize_division_age(csv):
         elif any(x in row[idx] for x in ['открытая', 'open', 'откртыая', 'оpen']):
             division = 'Open'
         elif row[idx] != '':
-            die('Fix standardize_division_age(): Unknown division "%s"' %
-                row[idx])
+            die(f'Fix standardize_division_age(): Unknown division "{row[idx]}"')
         else:  # Sometimes division is left blank for whatever reason
             division = ''
 
@@ -846,7 +845,7 @@ def cleanup_bodyweight(csv):
 def main(filename):
     # Since the input is comma-separated, store the file as a list of lists.
     with open(filename) as fd:
-        lines = [x.strip().split(',') for x in fd.readlines()]
+        lines = [x.strip().split(',') for x in fd]
 
     # Split the input filename into sheets, each of which is an independent
     # CSV.
@@ -883,6 +882,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv > entries.csv" % sys.argv[0])
+        print(f" Usage: {sys.argv[0]} original.csv > entries.csv")
         sys.exit(1)
     sys.exit(main(sys.argv[1]))

@@ -5,15 +5,16 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
+import os
+import shutil
+import sys
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import os
-import sys
-import time
-import shutil
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 def download_file(url, resultsname):
@@ -64,12 +65,12 @@ def download_file(url, resultsname):
         os.remove("geckodriver.log")
 
     # Rename the file
-    filename = sorted([os.path.join(os.getcwd(), basename)
-                       for basename in os.listdir(os.getcwd())], key=os.path.getctime)[0]
+    filename = min([os.path.join(os.getcwd(), basename)
+                       for basename in os.listdir(os.getcwd())], key=os.path.getctime)
     shutil.move(filename, os.path.join(os.getcwd(), resultsname))
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s url results-name" % sys.argv[1])
+        print(f"Usage: {sys.argv[1]} url results-name")
     download_file(sys.argv[1], sys.argv[2])

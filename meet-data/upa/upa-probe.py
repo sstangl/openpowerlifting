@@ -8,10 +8,11 @@
 # Uses a similar system as the SPF (WordPress, Tribe).
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

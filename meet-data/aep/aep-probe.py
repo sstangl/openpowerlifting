@@ -3,11 +3,12 @@
 #
 # Probes for new event results from the AEP.
 
-from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

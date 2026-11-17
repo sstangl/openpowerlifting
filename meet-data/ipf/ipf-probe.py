@@ -5,10 +5,11 @@
 # One main page branches to a page per-year, all of which must be checked.
 #
 
-from bs4 import BeautifulSoup
-import sys
 import os
-from os.path import join, realpath, dirname
+import sys
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

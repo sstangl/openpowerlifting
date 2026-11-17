@@ -4,9 +4,10 @@
 # Probes for meet results from WRPF-CAN, all of which are on one page
 # as HTML tables.
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

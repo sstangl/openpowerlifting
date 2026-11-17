@@ -2,9 +2,10 @@
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

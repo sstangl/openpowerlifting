@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # Gets the sheet names of an excel file
 
-import xlrd
-import openpyxl
 import sys
+
+import openpyxl
+import xlrd
 
 
 def getSheetName_xlsx(file_name):
@@ -17,7 +18,7 @@ def getSheetName_xlsx(file_name):
             if 'Sheet' not in name:
                 print(name)
             else:
-                print("")
+                print()
 
 
 def getSheetName_xls(file_name):
@@ -31,12 +32,12 @@ def getSheetName_xls(file_name):
             if 'Sheet' not in name:
                 print(name)
             else:
-                print("")
+                print()
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv > entries.csv" % sys.argv[0])
+        print(f" Usage: {sys.argv[0]} original.csv > entries.csv")
         sys.exit(1)
     if 'xlsx' in sys.argv[1]:
         sys.exit(getSheetName_xlsx(sys.argv[1]))

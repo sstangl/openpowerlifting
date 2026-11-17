@@ -4,10 +4,11 @@
 # IPA posts meets to a different page each year.
 #
 
-from bs4 import BeautifulSoup
 import datetime
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -47,7 +48,7 @@ def main():
     meetlist = getmeetlist(html)
 
     with open(FEDDIR + os.sep + 'URLLIST') as fd:
-        for k in fd.readlines():
+        for k in fd:
             meetlist.append(k.strip())
 
     entered = oplprobe.getenteredurls(FEDDIR)

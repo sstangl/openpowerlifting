@@ -3,9 +3,9 @@
 # Outputs the history of a record over time.
 # Change the filters in matches_category() to select the record category.
 
-import oplcsv
 import sys
 
+import oplcsv
 
 RECORD_FIELDS = ["Best3SquatKg", "Squat4Kg"]
 
@@ -31,10 +31,7 @@ def filter_category(csv):
         if "S" not in row[evt]:
             return False
 
-        if row[plc] in ["DQ", "DD", "NS"]:
-            return False
-
-        return True
+        return row[plc] not in ["DQ", "DD", "NS"]
 
     csv.rows = list(filter(matches_category, csv.rows))
 
@@ -52,17 +49,17 @@ def main(csvfile):
 
     best = 0.0
     for row in csv.rows:
-        lifter_best = max(map(lambda f: float(row[csv.index(f)] or 0), RECORD_FIELDS))
+        lifter_best = max(float(row[csv.index(f)] or 0) for f in RECORD_FIELDS)
         if lifter_best > best:
             best = lifter_best
 
             date = row[csv.index("Date")]
             name = row[csv.index("Name")]
-            print("%s %s - %s" % (date, name, str(lifter_best)))
+            print(f"{date} {name} - {lifter_best!s}")
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: %s openpowerlifting.csv" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} openpowerlifting.csv")
         sys.exit(1)
     main(sys.argv[1])

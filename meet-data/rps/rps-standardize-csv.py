@@ -21,7 +21,7 @@ weirdspace = '  '
 
 
 def error(msg):
-    print("Error: %s" % msg, file=sys.stderr)
+    print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
 
 
@@ -57,7 +57,7 @@ def remove_rows_by_empty_column(csv, colname):
 
     colidx = csv.index(colname)
     if colidx < 0:
-        error("Column %s not found in remove_rows_by_empty_column()." % colname)
+        error(f"Column {colname} not found in remove_rows_by_empty_column().")
 
     while True:
         idx = getemptyidx(csv, colidx)
@@ -230,7 +230,7 @@ def standardize_fieldnames(csv):
         elif s == 'coef.' or s == 'total coef.':
             x = 'DELETEME'
         else:
-            error("Teach me what to do with column '%s'" % x)
+            error(f"Teach me what to do with column '{x}'")
 
         csv.fieldnames[i] = x
 
@@ -292,8 +292,8 @@ def fixequipment(csv):
             x = csv.rows[i - 1][idx]
 
         else:
-            print("Full row: %s" % ','.join(row), file=sys.stderr)
-            error("Teach fixequipment() what to do with '%s'" % s)
+            print("Full row: {}".format(','.join(row)), file=sys.stderr)
+            error(f"Teach fixequipment() what to do with '{s}'")
 
         row[idx] = x
 
@@ -312,7 +312,7 @@ def fixsex(csv):
         elif s == '' and i > 0:
             x = csv.rows[i - 1][idx]
         else:
-            error("Teach fixsex() what to do with '%s'" % s)
+            error(f"Teach fixsex() what to do with '{s}'")
 
         row[idx] = x
 
@@ -404,7 +404,7 @@ def fixclass(csv):
             x = csv.rows[i - 1][idx]
 
         else:
-            error("Teach fixclass() what to do with '%s'" % s)
+            error(f"Teach fixclass() what to do with '{s}'")
 
         row[idx] = x
 
@@ -424,7 +424,7 @@ def fixweightclass(csv):
             elif row[sexidx] == 'F':
                 row[idx] = '242+'
             else:
-                error("Unknown sex in fixweightclass(): '%s'" % row[sexidx])
+                error(f"Unknown sex in fixweightclass(): '{row[sexidx]}'")
         elif row[idx] == '' and i > 0:
             row[idx] = csv.rows[i - 1][idx]
 
@@ -464,7 +464,7 @@ def fixplace(csv):
         x = x.strip()
 
         if not isnumber(x) and x != 'DQ':
-            error("Unknown place in fixplace(): '%s'" % x)
+            error(f"Unknown place in fixplace(): '{x}'")
 
         row[idx] = x
 
@@ -472,7 +472,7 @@ def fixplace(csv):
 def fixlift(csv, liftfield):
     idx = csv.index(liftfield)
     if idx < 0:
-        error("No %s column in fixlift()." % liftfield)
+        error(f"No {liftfield} column in fixlift().")
 
     # Get rid of things like 'bomb' and 'no lift'.
     for row in csv.rows:
@@ -502,7 +502,7 @@ def fixtotals(csv):
             total += float(row[csv.index('Best3DeadliftLBS')])
 
         if total != 0.0:
-            row[csv.index('TotalLBS')] = "{:.2f}".format(total)
+            row[csv.index('TotalLBS')] = f"{total:.2f}"
 
 
 def mergeclassintodivision(csv):
@@ -514,7 +514,7 @@ def mergeclassintodivision(csv):
         error("No Division column in mergeclassintodivision().")
 
     for row in csv.rows:
-        x = "%s %s" % (row[classidx], row[dividx])
+        x = f"{row[classidx]} {row[dividx]}"
         row[dividx] = x.strip()
 
     csv.remove_column_by_index(classidx)
@@ -571,6 +571,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
+        print(f" Usage: {sys.argv[0]} original.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

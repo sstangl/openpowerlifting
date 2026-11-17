@@ -4,18 +4,14 @@
 # Probes for new meets from the NSF.
 
 
-from bs4 import BeautifulSoup
-import sys
 import os
-from os.path import join, realpath, dirname
+import sys
+from os.path import dirname, join, realpath
 
-try:
-    import oplprobe
-except ImportError:
-    sys.path.append(
-        join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
-    import oplprobe
+from bs4 import BeautifulSoup
 
+sys.path.append(join(dirname(dirname(dirname(realpath(__file__)))), "scripts"))
+import oplprobe
 
 URLS = ["https://styrkeloft.no/stevner/?page=protokoller"]
 BASEURL = "https://styrkeloft.no/"
@@ -44,7 +40,7 @@ def getmeetlist(html):
 
         # Easy way to visually see EPF and IPF meets.
         klubb = a.next.next.next.next.text
-        url = url + ' (%s)' % klubb
+        url = url + f' ({klubb})'
 
         if 'http' not in url:
             url = BASEURL + url

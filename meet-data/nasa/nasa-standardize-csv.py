@@ -250,7 +250,7 @@ def rename_fields(csv):
         elif field == 'Division':
             pass
         else:
-            error("Unknown fieldname: \"%s\"" % field)
+            error(f"Unknown fieldname: \"{field}\"")
 
 
 # The column names appear again and again.
@@ -407,7 +407,7 @@ def integrate_equipment_event_sex(csv):
             elif category == 'men':
                 pass
             else:
-                error("Unknown category: \"%s\"" % (category))
+                error(f"Unknown category: \"{category}\"")
             first_category_detected = True
 
         # elif row[nameidx] and (row[wtidx] or row[stateidx]) and
@@ -446,7 +446,7 @@ def remove_category_rows(csv):
 def internal_to_string(f):
     try:
         f = float(f)
-        r = "{:.2f}".format(f)
+        r = f"{f:.2f}"
         r = r.replace('.00', '')
         if '.' in r and r[-1] == '0':
             r = r[:-1]
@@ -632,9 +632,8 @@ def hunt_curl_only(csv):
     dividx = csv.index("Division")
     eventidx = csv.index("Event")
     for row in csv.rows:
-        if len(row[dividx]) > 0:
-            if 'c' == row[dividx][0]:
-                row[eventidx] = 'delete'
+        if len(row[dividx]) > 0 and 'c' == row[dividx][0]:
+            row[eventidx] = 'delete'
 
 
 def main(filename):

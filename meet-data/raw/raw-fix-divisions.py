@@ -8,8 +8,8 @@
 # This is also set up to be importable as a library, so that importation
 # scripts can use it directly.
 
-import sys
 import os
+import sys
 
 try:
     import oplcsv

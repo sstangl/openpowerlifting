@@ -4,8 +4,9 @@
 # probably Cyrillic, transliterates the names into the Latin character set.
 #
 
-import oplcsv
 import sys
+
+import oplcsv
 
 try:
     import romkan
@@ -38,7 +39,7 @@ def sub_from(m, c):
 
 
 def cyrillic_to_latin(s):
-    s = ''.join(list(map(lambda c: sub_from(CyrillicMap, c), s)))
+    s = ''.join([sub_from(CyrillicMap, c) for c in s])
 
     # Fix some common names.
     s = s.replace('Mukhammad', 'Muhammad')
@@ -87,6 +88,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s file.csv" % sys.argv[0], file=sys.stderr)
+        print(f"Usage: {sys.argv[0]} file.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

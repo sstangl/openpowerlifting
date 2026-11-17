@@ -5,6 +5,7 @@
 # into "Country" and "State" columns.
 
 import sys
+
 from oplcsv import Csv
 
 
@@ -42,7 +43,7 @@ def main(filename):
         if team == '':
             continue
         if team not in teammap:
-            print('Unknown Team "%s"' % team)
+            print(f'Unknown Team "{team}"')
             errored = True
             continue
 
@@ -62,6 +63,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(' Usage: %s csvfile' % sys.argv[0], file=sys.stderr)
+        print(f' Usage: {sys.argv[0]} csvfile', file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

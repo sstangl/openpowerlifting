@@ -5,9 +5,10 @@
 # Results are in a database, but the front page only shows the current year.
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

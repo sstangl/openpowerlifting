@@ -16,13 +16,12 @@ import argparse
 import io
 import os
 import re
+from datetime import datetime
 
 import pandas as pd
 import requests
 import xlrd
 from bs4 import BeautifulSoup
-from datetime import datetime
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Constants
@@ -98,10 +97,9 @@ def switch_firstname_order_to_beginning(fullname: str) -> str:
                 prev_word.strip() + ' ' + word if prev_word else word)
             prev_word = ""
 
-    if processed_name:
-        if is_compound_name(processed_name[-1].split()):
-            first_name = processed_name.pop(0)
-            processed_name.append(first_name)
+    if processed_name and is_compound_name(processed_name[-1].split()):
+        first_name = processed_name.pop(0)
+        processed_name.append(first_name)
 
     processed_name_with_initials = []
     for part in processed_name:
@@ -622,25 +620,24 @@ def _process_openlifter_df(df: pd.DataFrame, sex: str) -> pd.DataFrame:
         if birth_date.endswith('-01-01'):
             birth_date = ''
 
-        def g(col):
+        def g(row, col):
             v = row.get(col, float('nan'))
             return float('nan') if pd.isna(v) else float(v)
 
-        s1, s2, s3 = g('Squat 1'), g('Squat 2'), g('Squat 3')
-        b1, b2, b3 = g('Bench 1'), g('Bench 2'), g('Bench 3')
-        d1, d2, d3 = g('Deadlift 1'), g('Deadlift 2'), g('Deadlift 3')
-        total = g('Total')
+        s1, s2, s3 = g(row, 'Squat 1'), g(row, 'Squat 2'), g(row, 'Squat 3')
+        b1, b2, b3 = g(row, 'Bench 1'), g(row, 'Bench 2'), g(row, 'Bench 3')
+        d1, d2, d3 = g(row, 'Deadlift 1'), g(row, 'Deadlift 2'), g(row, 'Deadlift 3')
+        total = g(row, 'Total')
 
         all_squats_empty = all(pd.isna(x) for x in [s1, s2, s3])
         event = 'B' if all_squats_empty else 'SBD'
 
         # If event is SBD but bench or deadlift data is entirely missing,
         # the athlete bombed out and should be DQ with no total.
-        if event == 'SBD':
-            if (all(pd.isna(x) for x in [b1, b2, b3])
-                    or all(pd.isna(x) for x in [d1, d2, d3])):
-                place = 'DQ'
-                total = float('nan')
+        if event == 'SBD' and (all(pd.isna(x) for x in [b1, b2, b3])
+                or all(pd.isna(x) for x in [d1, d2, d3])):
+            place = 'DQ'
+            total = float('nan')
 
         entries.append({
             'Place': place,
@@ -733,20 +730,20 @@ def parse_opl_csv(content: bytes):
         team = clean_apostrophe(row.get('Team', '')).strip()
         event = clean_apostrophe(row.get('Event', 'SBD')).strip()
 
-        def gf(col):
+        def gf(row, col):
             v = clean_apostrophe(row.get(col, ''))
             try:
                 return float(v)
             except (ValueError, TypeError):
                 return float('nan')
 
-        s1, s2, s3 = gf('Squat1Kg'), gf('Squat2Kg'), gf('Squat3Kg')
-        b1, b2, b3 = gf('Bench1Kg'), gf('Bench2Kg'), gf('Bench3Kg')
-        d1, d2, d3 = gf('Deadlift1Kg'), gf('Deadlift2Kg'), gf('Deadlift3Kg')
-        best_s = gf('Best3SquatKg')
-        best_b = gf('Best3BenchKg')
-        best_d = gf('Best3DeadliftKg')
-        total = gf('TotalKg')
+        s1, s2, s3 = gf(row, 'Squat1Kg'), gf(row, 'Squat2Kg'), gf(row, 'Squat3Kg')
+        b1, b2, b3 = gf(row, 'Bench1Kg'), gf(row, 'Bench2Kg'), gf(row, 'Bench3Kg')
+        d1, d2, d3 = gf(row, 'Deadlift1Kg'), gf(row, 'Deadlift2Kg'), gf(row, 'Deadlift3Kg')
+        best_s = gf(row, 'Best3SquatKg')
+        best_b = gf(row, 'Best3BenchKg')
+        best_d = gf(row, 'Best3DeadliftKg')
+        total = gf(row, 'TotalKg')
 
         try:
             bw_f = float(bw)
@@ -830,23 +827,23 @@ def parse_data_csv(content: bytes, page_url: str):
         wc = row.get('Weight Class', row.get('WeightClassKg', '')).strip()
         team = row.get('Team', '').strip()
 
-        def gf(col1, col2=None):
+        def gf(row, col1, col2=None):
             v = row.get(col1, row.get(col2, '') if col2 else '').strip()
             try:
                 return float(v)
             except (ValueError, TypeError):
                 return float('nan')
 
-        s1 = gf('Squat 1', 'Squat1Kg')
-        s2 = gf('Squat 2', 'Squat2Kg')
-        s3 = gf('Squat 3', 'Squat3Kg')
-        b1 = gf('Bench 1', 'Bench1Kg')
-        b2 = gf('Bench 2', 'Bench2Kg')
-        b3 = gf('Bench 3', 'Bench3Kg')
-        d1 = gf('Deadlift 1', 'Deadlift1Kg')
-        d2 = gf('Deadlift 2', 'Deadlift2Kg')
-        d3 = gf('Deadlift 3', 'Deadlift3Kg')
-        total = gf('Total', 'TotalKg')
+        s1 = gf(row, 'Squat 1', 'Squat1Kg')
+        s2 = gf(row, 'Squat 2', 'Squat2Kg')
+        s3 = gf(row, 'Squat 3', 'Squat3Kg')
+        b1 = gf(row, 'Bench 1', 'Bench1Kg')
+        b2 = gf(row, 'Bench 2', 'Bench2Kg')
+        b3 = gf(row, 'Bench 3', 'Bench3Kg')
+        d1 = gf(row, 'Deadlift 1', 'Deadlift1Kg')
+        d2 = gf(row, 'Deadlift 2', 'Deadlift2Kg')
+        d3 = gf(row, 'Deadlift 3', 'Deadlift3Kg')
+        total = gf(row, 'Total', 'TotalKg')
         event_raw = row.get('Event', '').strip()
         event = event_raw if event_raw else (
             'B' if all(pd.isna(x) for x in [s1, s2, s3]) else 'SBD')
@@ -868,11 +865,11 @@ def parse_data_csv(content: bytes, page_url: str):
             'WeightClassKg': wc,
             'Team': team,
             'Squat1Kg': s1, 'Squat2Kg': s2, 'Squat3Kg': s3,
-            'Best3SquatKg': gf('Best Squat', 'Best3SquatKg'),
+            'Best3SquatKg': gf(row, 'Best Squat', 'Best3SquatKg'),
             'Bench1Kg': b1, 'Bench2Kg': b2, 'Bench3Kg': b3,
-            'Best3BenchKg': gf('Best Bench', 'Best3BenchKg'),
+            'Best3BenchKg': gf(row, 'Best Bench', 'Best3BenchKg'),
             'Deadlift1Kg': d1, 'Deadlift2Kg': d2, 'Deadlift3Kg': d3,
-            'Best3DeadliftKg': gf('Best Deadlift', 'Best3DeadliftKg'),
+            'Best3DeadliftKg': gf(row, 'Best Deadlift', 'Best3DeadliftKg'),
             'TotalKg': total,
             'Event': event,
         })
@@ -924,7 +921,7 @@ def get_newdir_path(year_2digit: str) -> str:
     if not dirs:
         raise ValueError(
             f"No existing directories found for year prefix '{year_2digit}'")
-    return os.path.join(script_path, str(int(sorted(dirs)[-1]) + 1))
+    return os.path.join(script_path, str(int(max(dirs)) + 1))
 
 
 def write_outputs(entries_df: pd.DataFrame, meet_data: dict,

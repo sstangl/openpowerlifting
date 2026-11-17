@@ -5,16 +5,17 @@
 # Overwrites the input file in-place.
 #
 
-import oplcsv
 import sys
-from coefficient import glossbrenner, wilks, mcculloch, ipf
+
+import oplcsv
+from coefficient import glossbrenner, ipf, mcculloch, wilks
 
 
 def to_string(f):
     try:
-        return "{:.2f}".format(f)
+        return f"{f:.2f}"
     except ValueError:
-        print("Field not a float: %f" % f, file=sys.stderr)
+        print(f"Field not a float: {f:f}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -33,7 +34,7 @@ def main(filename):
     # Age is for the McCulloch/Foster total, but we'll include it.
     for col in ['Sex', 'Age', 'BodyweightKg', 'TotalKg']:
         if col not in csv.fieldnames:
-            print(' Missing necessary column: %s' % col, file=sys.stderr)
+            print(f' Missing necessary column: {col}', file=sys.stderr)
             return 1
 
     # Ensure points columns exist.
@@ -100,6 +101,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(' Usage: %s csv' % sys.argv[0], file=sys.stderr)
+        print(f' Usage: {sys.argv[0]} csv', file=sys.stderr)
         sys.exit(1)
     sys.exit(main(sys.argv[1]))

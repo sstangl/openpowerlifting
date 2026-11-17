@@ -5,14 +5,15 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
+import errno
+import os
+import re
+import sys
+import time
+
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-import errno
-import os
-import sys
-import re
-import time
 
 try:
     from oplcsv import Csv
@@ -32,7 +33,7 @@ def expand_colspans(tr):
     tds = tr.find_all('td')
 
     # Deal with colspans
-    for ii in range(0, len(tds)):
+    for ii in range(len(tds)):
         if tds[ii].has_attr('colspan') and int(tds[ii]['colspan']) > 1:
             for jj in range(int(tds[ii]['colspan'])-1):
                 blank_td = enclosing_soup.new_tag('td')
@@ -42,7 +43,7 @@ def expand_colspans(tr):
     ths = tr.find_all('th')
 
     # Deal with colspans
-    for ii in range(0, len(ths)):
+    for ii in range(len(ths)):
         if ths[ii].has_attr('colspan') and int(ths[ii]['colspan']) > 1:
             for jj in range(int(ths[ii]['colspan'])-1):
                 blank_th = enclosing_soup.new_tag('th')
@@ -164,7 +165,7 @@ def getresults(soup):
         elif h in ['Rack Height', '']:
             csv.fieldnames += ['IGNORE']
         else:
-            error("Unknown column name: \"%s\"" % h)
+            error(f"Unknown column name: \"{h}\"")
 
     # These columns are added from the description.
     csv.fieldnames += ['Sex', 'WeightClassKg', 'Division']
@@ -205,7 +206,7 @@ def getresults(soup):
         wcstate = re.search('(?<=Over ).*?(?=kg)', text).group(0)
         wcstate = wcstate + '+'
     else:
-        error("No weightclass in descriptor: \"%s\"" % text)
+        error(f"No weightclass in descriptor: \"{text}\"")
 
     for tr in restable.find_all('tr'):
         tr = expand_colspans(tr)
@@ -376,7 +377,7 @@ def main(dirname, url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -385,10 +386,10 @@ def main(dirname, url):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s dirname url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} dirname url")
     main(sys.argv[1], sys.argv[2])

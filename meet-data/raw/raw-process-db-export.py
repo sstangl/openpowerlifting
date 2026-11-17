@@ -10,8 +10,8 @@
 # For a sample database dump file, use the attachment on GitLab issue #9172.
 # But use LibreOffice to process it into a CSV file, not XLS.
 
-import sys
 import os
+import sys
 
 try:
     import oplcsv
@@ -32,7 +32,7 @@ def make_iso8601_dates(csv):
         (m, d, yyyy) = date.split('/')
         mm = m.zfill(2)
         dd = d.zfill(2)
-        date = "%s-%s-%s" % (yyyy, mm, dd)
+        date = f"{yyyy}-{mm}-{dd}"
         row[idx] = date
 
 
@@ -112,7 +112,7 @@ def combine_names(csv):
             first = ""
 
         # Store it in the 'LastName' column for now.
-        name = "%s %s" % (first, last)
+        name = f"{first} {last}"
         name = name.strip()
         row[lastidx] = name
 
@@ -142,7 +142,7 @@ def fill_missing_totals(csv):
         return float(s)
 
     def to_at_most_one_decimal_place(f64):
-        s = "{:.1f}".format(f64)
+        s = f"{f64:.1f}"
         s = s.replace('.0', '')
         return s
 
@@ -351,7 +351,7 @@ def write_entries_meet_csvs(csv, unique_id, outdir):
 def main(csv_filename, outdir):
     print("loading CSV", end="...")
     csv = oplcsv.Csv(csv_filename)
-    print("%u rows" % len(csv.rows))
+    print(f"{len(csv.rows)} rows")
 
     print("converting dates", end="...")
     make_iso8601_dates(csv)
@@ -359,7 +359,7 @@ def main(csv_filename, outdir):
 
     print("folding entries", end="...")
     fold_entries(csv)
-    print("%u rows" % len(csv.rows))
+    print(f"{len(csv.rows)} rows")
 
     print("combining name columns", end="...")
     combine_names(csv)
@@ -393,7 +393,7 @@ def main(csv_filename, outdir):
 
     print("filtering into per-meet CSV files", end="...")
     csvs = split_by_meet(csv)
-    print("%u meets" % len(csvs))
+    print(f"{len(csvs)} meets")
 
     print("building set of already-entered lifters/dates", end="...")
     lifterdateset = build_lifterdateset()
@@ -401,7 +401,7 @@ def main(csv_filename, outdir):
 
     print("filtering out already-entered meets", end="...")
     csvs = retain_unentered(csvs, lifterdateset)
-    print("%u meets" % len(csvs))
+    print(f"{len(csvs)} meets")
 
     print("formatting into entries/meet csvs", end="...")
     os.makedirs(outdir, exist_ok=True)  # Guarantee the outdir exists.
@@ -414,7 +414,7 @@ def main(csv_filename, outdir):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s export.csv outdir" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} export.csv outdir")
         print(" This script will create many folders in the outdir.")
         sys.exit(1)
     main(csv_filename=sys.argv[1], outdir=sys.argv[2])

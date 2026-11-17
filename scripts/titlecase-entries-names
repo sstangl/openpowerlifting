@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 
 import os
-
 from pathlib import Path
 
 from oplcsv import Csv
-
 
 # Define common name suffixes that should remain uppercase
 SUFFIXES = {'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'}
 
 
 def transform_name(name):
-    ret_name_tokens = list()
+    ret_name_tokens = []
     name_tokens = name.title().split(' ')
 
     for name_token in name_tokens:

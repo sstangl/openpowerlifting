@@ -108,7 +108,7 @@ def integrate_4ths(csv):
                 elif 'Deadlift' in fieldname:
                     target = 'Deadlift4Kg'
                 else:
-                    raise Exception("Unknown column type '%s'" % fieldname)
+                    raise Exception(f"Unknown column type '{fieldname}'")
 
                 # The lift gets credited to the lifter in the previous row.
                 assert i > 0
@@ -158,7 +158,7 @@ def integrate_stateful_data(csv):
             # 2) Division rows, like "67.5kg Master 50-54".
             #    These always begin with a weightclass (can be "SHW").
             stateinfo = row[1].replace('  ', ' ')
-            if stateinfo.startswith('Women') or stateinfo.startswith('Men'):
+            if stateinfo.startswith(('Women', 'Men')):
                 # It's a competition row. Reset everything.
                 state_event = ''
                 state_equipment = ''
@@ -197,7 +197,7 @@ def integrate_stateful_data(csv):
                     elif part == 'Only':
                         pass
                     else:
-                        raise Exception("Unknown word '%s' in '%s'" % (part, stateinfo))
+                        raise Exception(f"Unknown word '{part}' in '{stateinfo}'")
             else:
                 # It's a division row. Ignore the weightclass.
                 division = stateinfo[stateinfo.index(' ')+1:].strip()

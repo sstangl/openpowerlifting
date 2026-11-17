@@ -10,9 +10,10 @@
 # and can be identified by URL.
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

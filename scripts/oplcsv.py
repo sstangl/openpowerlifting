@@ -11,10 +11,10 @@ class Csv:
 
     def __init__(self, filename=None):
         if filename:
-            with open(filename, 'r', encoding='utf-8') as fd:
+            with open(filename, encoding='utf-8') as fd:
                 self.fieldnames = fd.readline().rstrip().split(',')
                 self.rows = [x.rstrip("\r\n").split(',')
-                             for x in fd.readlines()]
+                             for x in fd]
         else:
             self.fieldnames = []
             self.rows = []
@@ -92,7 +92,7 @@ class Csv:
         mapping = [self.index(header) for header in other.fieldnames]
 
         for row in other.rows:
-            build = ['' for x in range(0, len(self.fieldnames))]
+            build = ['' for x in range(len(self.fieldnames))]
 
             for i, cell in enumerate(row):
                 build[mapping[i]] = cell

@@ -10,15 +10,15 @@
 import sys
 
 if len(sys.argv) != 2:
-    print(' Usage: %s original.txt' % sys.argv[0], file=sys.stderr)
+    print(f' Usage: {sys.argv[0]} original.txt', file=sys.stderr)
     sys.exit(1)
 
-with open(sys.argv[1], 'r') as fd:
+with open(sys.argv[1]) as fd:
     pages = fd.read().split("\f")
 
 for i, page in enumerate(pages):
     if not page.strip():
         continue
-    filename = 'page%u.csv' % i
+    filename = f"page{i}.csv"
     with open(filename, 'w') as fd:
         fd.write(page)

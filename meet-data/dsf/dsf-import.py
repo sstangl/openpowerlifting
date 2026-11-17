@@ -4,13 +4,14 @@
 # Import data from the DSF database
 
 
-from bs4 import BeautifulSoup
 import errno
 import os
-import sys
-import urllib.request
 import re
+import sys
 import urllib.parse
+import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -44,7 +45,7 @@ def add_bodyweights(csv, url):
     headers = [x.text for x in trs[0].find_all('td')]
 
     bwidx = -1
-    for ii in range(0, len(headers)):
+    for ii in range(len(headers)):
         if headers[ii] == 'Vægt':
             bwidx = ii
             break
@@ -215,7 +216,7 @@ def getresults(soup):
         elif h == 'Rekorder':
             csv.fieldnames += ['Records']
         else:
-            error("Unknown column name: \"%s\"" % h)
+            error(f"Unknown column name: \"{h}\"")
 
     # These columns are added from the category rows.
     csv.fieldnames += ['Division', 'Sex', 'WeightClassKg', 'lifter_code']
@@ -268,7 +269,7 @@ def getresults(soup):
                     elif text == '':
                         divstate = 'Open'
                     else:
-                        error("Unknown state: \"%s\"" % row[0])
+                        error(f"Unknown state: \"{row[0]}\"")
 
             else:
                 assert divstate
@@ -346,7 +347,7 @@ def fixequipment(csv, meetcsv):
             elif row[eqidx] == '':
                 row[eqidx] = 'Single-ply'
             else:
-                error("Unknown equipment: \"%s\"" % row[eqidx])
+                error(f"Unknown equipment: \"{row[eqidx]}\"")
 
 # The birthyear column sometimes also contains age division, remove this.
 
@@ -456,8 +457,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -568,17 +568,17 @@ def main(url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     entriescsv.write_filename(dirname + os.sep + 'entries.csv')
     meetcsv.write_filename(dirname + os.sep + 'meet.csv')
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url")
     main(sys.argv[1])

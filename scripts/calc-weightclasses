@@ -3,15 +3,16 @@
 # Given a CSV with only BodyweightKg but no WeightClassKg,
 # this creates a WeightClassKg column.
 
-import oplcsv
 import sys
+
+import oplcsv
 
 
 def getwtcls(classtype, sex, bw):
     try:
         bw = float(bw)
     except ValueError:
-        print(" Could not convert bodyweight to float: %s" % bw)
+        print(f" Could not convert bodyweight to float: {bw}")
         sys.exit(1)
 
     if classtype == 'trad':
@@ -55,7 +56,7 @@ def getwtcls(classtype, sex, bw):
         weights = [0, 51.71, 55.79, 59.87, 67.13, 74.84, 82.1,
                    89.81, 99.79, 109.77, 124.74]
     else:
-        print("Unknown classtype %s" % classtype)
+        print(f"Unknown classtype {classtype}")
         sys.exit(1)
 
     assert weights[0] == 0

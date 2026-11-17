@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
+import re
 import shutil
 import subprocess
 import sys
-import re
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 OPL_DATA_DIR = BASE_DIR.parent.parent
@@ -344,7 +344,7 @@ def process_all_meets(import_dir: Path, base_dir: Path) -> list[str]:
 
     try:
         # Filter for only the relevant files first
-        input_files = sorted(list(import_dir.glob("*.opl.csv")))
+        input_files = sorted(import_dir.glob("*.opl.csv"))
         if not input_files:
             print(f"No .opl.csv files found to process in {import_dir}.")
             return []
@@ -360,7 +360,7 @@ def process_all_meets(import_dir: Path, base_dir: Path) -> list[str]:
                 processed_meets.append(str(meet_dir))
                 print(f"Processed meet {meet_file.name} -> {meet_number}/")
             except Exception as e:
-                print(f"Error processing {meet_file.name}: {str(e)}", file=sys.stderr)
+                print(f"Error processing {meet_file.name}: {e!s}", file=sys.stderr)
                 failed_meets.append((meet_file.name, str(e)))
                 # Remove the directory if processing failed
                 if meet_dir.exists():
@@ -375,7 +375,7 @@ def process_all_meets(import_dir: Path, base_dir: Path) -> list[str]:
         return processed_meets
 
     except Exception as e:
-        print(f"Critical error: {str(e)}")
+        print(f"Critical error: {e!s}")
         raise
 
 
@@ -398,5 +398,5 @@ if __name__ == "__main__":
             print("No meets found to process.")
 
     except Exception as e:
-        print(f"Error: {str(e)}", file=sys.stderr)
+        print(f"Error: {e!s}", file=sys.stderr)
         sys.exit(1)

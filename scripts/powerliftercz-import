@@ -5,17 +5,18 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
+import errno
+import logging
+import os
+import re
+import subprocess
+import sys
+import time
+
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-import os
-import sys
-import time
-import errno
-import logging
-import re
 from selenium.webdriver.remote.remote_connection import LOGGER
-import subprocess
 
 scriptsdir = os.path.dirname(os.path.realpath(__file__))
 importdir = os.getcwd()
@@ -101,7 +102,7 @@ def expand_colspans(tr, enclosing_soup):
     ths = tr.find_all('th')
     for ii in range(len(ths)-1, -1, -1):
         if ths[ii].has_attr('colspan') and int(ths[ii]['colspan']) > 1:
-            for jj in range(0, (int(ths[ii]['colspan'])-1)):
+            for jj in range(int(ths[ii]['colspan'])-1):
                 blank_th = enclosing_soup.new_tag('th')
                 ths[ii].insert_after(blank_th)
     del ths[ii]['colspan']
@@ -332,8 +333,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -558,7 +558,7 @@ def main(dirname, url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w', encoding='utf-8') as fd:
         entriescsv.write(fd)
@@ -568,12 +568,12 @@ def main(dirname, url):
         fd.write(url + "\n")
 
     subprocess.run([scriptsdir+os.sep+"countries.py",
-                    importdir+os.sep+dirname+os.sep+"entries.csv"])
+                    importdir+os.sep+dirname+os.sep+"entries.csv"], check=False)
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s dirname url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} dirname url")
     main(sys.argv[1], sys.argv[2])

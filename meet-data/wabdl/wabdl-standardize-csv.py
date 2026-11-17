@@ -15,7 +15,7 @@ except ImportError:
 
 
 def error(msg):
-    print("Error: %s" % msg, file=sys.stderr)
+    print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
 
 
@@ -28,7 +28,7 @@ def standardize_column_event(csv):
         elif row[csv.index('Event')] == "PP":
             row[csv.index('Event')] = "BD"
         else:
-            error("Unknown Event '%s'" % row[csv.index('Event')])
+            error("Unknown Event '{}'".format(row[csv.index('Event')]))
 
 
 def standardize_column_sex(csv):
@@ -41,7 +41,7 @@ def standardize_column_sex(csv):
         elif row[csv.index('Sex')].lower() == "women":
             row[csv.index('Sex')] = "F"
         else:
-            error("Unknown Sex '%s'" % row[csv.index('Sex')])
+            error("Unknown Sex '{}'".format(row[csv.index('Sex')]))
 
 
 def standardize_column_weightclass(csv):
@@ -72,7 +72,7 @@ def standardize_column_equipment(csv):
         elif row[ei] == '':
             row[ei] = 'Multi-ply'
         else:
-            error("Unknown Equipment '%s'" % row[csv.index('Equipment')])
+            error("Unknown Equipment '{}'".format(row[csv.index('Equipment')]))
 
 
 def standardize_column_name(csv):
@@ -123,8 +123,7 @@ def integrate_lifts(csv):
         elif event == 'BD':
             row[total] = row[lift]
         else:
-            error("Unknown Event (in integrate_lifts) '%s'" %
-                  row[csv.index('Event')])
+            error("Unknown Event (in integrate_lifts) '{}'".format(row[csv.index('Event')]))
 
     # Push-Pull lifters don't have their Best3BenchLBS and Best3DeadliftLBS.
     # See if we can derive those from the other entries -- usually, yes.
@@ -153,20 +152,21 @@ def main():
     # Isolate table lines.
     # The UTF-8 is malformed, so also replace errors.
     found_fieldnames = False
-    for line in open("original.csv", errors="backslashreplace"):
-        lower = line.lower()
+    with open("original.csv", errors="backslashreplace") as fd:
+        for line in fd:
+            lower = line.lower()
 
-        # Detect the fieldnames line.
-        if not found_fieldnames and 'type,' in lower and 'sorted' not in lower:
-            found_fieldnames = True
-            csv.fieldnames = line.strip().split(',')
+            # Detect the fieldnames line.
+            if not found_fieldnames and 'type,' in lower and 'sorted' not in lower:
+                found_fieldnames = True
+                csv.fieldnames = line.strip().split(',')
 
-        # Data lines contain sex information.
-        elif 'men,' in lower or 'women,' in lower:
-            csv.rows.append(line.strip().split(','))
-        # Data lines contain sex information.
-        elif ' men ' in lower or ' women ' in lower:
-            csv.rows.append(line.strip().split(','))
+            # Data lines contain sex information.
+            elif 'men,' in lower or 'women,' in lower:
+                csv.rows.append(line.strip().split(','))
+            # Data lines contain sex information.
+            elif ' men ' in lower or ' women ' in lower:
+                csv.rows.append(line.strip().split(','))
 
     # Remove unnecessary columns.
     csv.remove_column_by_name("SR")  # "State Record"

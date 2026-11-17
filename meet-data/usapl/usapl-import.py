@@ -8,12 +8,12 @@
 #
 
 
-from bs4 import BeautifulSoup
 import errno
 import os
 import sys
 from urllib.request import Request, urlopen
 
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -311,8 +311,8 @@ def makeentriescsv(soup):
         else:
             cells = row.find_all('td')
             for i, cell in enumerate(cells):
-                print("%d: %s" % (i, cell))
-            error("Unexpected row length: %s, debug information above" % str(k))
+                print(f"{i}: {cell}")
+            error(f"Unexpected row length: {k!s}, debug information above")
 
     return csv
 
@@ -321,7 +321,7 @@ def makeentriescsv(soup):
 def removeemptycolumns(csv):
 
     def getemptycol(csv):
-        for i in range(0, len(csv.fieldnames)):
+        for i in range(len(csv.fieldnames)):
             hasdata = False
             for row in csv.rows:
                 if row[i]:
@@ -493,8 +493,7 @@ def removepointzeros(csv):
     for kgfield in [f for f in csv.fieldnames if f.endswith('Kg')]:
         idx = csv.index(kgfield)
         for row in csv.rows:
-            if row[idx].endswith(".0"):
-                row[idx] = row[idx][:-2]
+            row[idx] = row[idx].removesuffix(".0")
 
 
 def makemeetcsv(soup):
@@ -530,7 +529,7 @@ def makemeetcsv(soup):
             country = 'USA'
             state = states[state]
         else:
-            error("State not in the abbreviation lookup table: %s" % state)
+            error(f"State not in the abbreviation lookup table: {state}")
 
     csv = Csv()
     csv.append_column('Federation')
@@ -598,7 +597,7 @@ def main(url, importdir):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w', newline='\n',
               encoding='utf-8') as fd:
@@ -608,13 +607,13 @@ def main(url, importdir):
     with open(dirname + os.sep + 'URL', 'w', newline='\n') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Usage: %s url <importdir>" % sys.argv[0])
-        exit(1)
+        print(f"Usage: {sys.argv[0]} url <importdir>")
+        sys.exit(1)
 
     url = sys.argv[1]
     importdir = sys.argv[2] if len(sys.argv) > 2 else None

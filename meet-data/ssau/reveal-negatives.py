@@ -14,7 +14,7 @@ MAGIC_SPACE = "­"  # Not actually a normal space character.
 
 
 def main(filename):
-    with open(filename, "r") as fd:
+    with open(filename) as fd:
         text = fd.read()
 
     text = text.replace(MAGIC_SPACE, "-")

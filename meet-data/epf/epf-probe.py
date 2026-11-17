@@ -5,9 +5,10 @@
 # Probably run by the same people, I imagine.
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

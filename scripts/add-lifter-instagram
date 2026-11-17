@@ -10,13 +10,11 @@ Usage:
     ./scripts/add-lifter-instagram --from-file input.csv
 """
 
-import os
-import csv
 import argparse
-import unicodedata
+import csv
+import os
 import sys
-
-from typing import Dict, List
+import unicodedata
 
 
 def parse_args() -> argparse.Namespace:
@@ -56,7 +54,7 @@ def strip_accents(value: str) -> str:
     return str(decoded)
 
 
-def insert_instagram_entry(current_contents: List[str], name: str, instagram: str):
+def insert_instagram_entry(current_contents: list[str], name: str, instagram: str):
     line_entry = f"{name},{instagram}\n"
 
     # Ignoring the header
@@ -78,7 +76,7 @@ def insert_instagram_entry(current_contents: List[str], name: str, instagram: st
     current_contents.append(line_entry)
 
 
-def instagram_is_not_empty(row: Dict[str, str]) -> bool:
+def instagram_is_not_empty(row: dict[str, str]) -> bool:
     return row["Instagram"] != ""
 
 
@@ -98,12 +96,12 @@ def main():
     )
 
     # Read the file into memory and make adjustments
-    with open(social_instagram_path, "r", encoding="utf-8") as f:
+    with open(social_instagram_path, encoding="utf-8") as f:
         contents = f.readlines()
 
     # If this is a batch request, the input is a CSV file of Name,Instagram pairs.
     if args.from_file:
-        with open(args.from_file, "r", encoding="utf-8") as f:
+        with open(args.from_file, encoding="utf-8") as f:
             reader = csv.DictReader(f)
 
             for row in filter(instagram_is_not_empty, reader):

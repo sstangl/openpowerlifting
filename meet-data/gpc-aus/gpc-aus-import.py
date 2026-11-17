@@ -9,16 +9,17 @@
 # sudo apt-get install python3-pip firefox-geckodriver
 # sudo pip3 install selenium
 
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.by import By
 import errno
 import os
-import sys
 import re
+import sys
 import time
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import Select
 
 try:
     from oplcsv import Csv
@@ -198,7 +199,7 @@ def getresults(soup):
                     csv.fieldnames[csv.fieldnames.index('Division')] = 'IGNORE'
                 csv.fieldnames += ['Division']
             else:
-                error("Unknown column name: \"%s\"" % h)
+                error(f"Unknown column name: \"{h}\"")
 
     for tr in data.find_all('tr'):
         row = [x.text if x.text != 'null' else '' for x in tr.find_all('td')]
@@ -336,8 +337,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -387,7 +387,7 @@ def main(dirname, url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -396,10 +396,10 @@ def main(dirname, url):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s dirname url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} dirname url")
     main(sys.argv[1], sys.argv[2])

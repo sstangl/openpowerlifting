@@ -3,12 +3,13 @@
 #
 # Import data from the new CSST website
 
-from bs4 import BeautifulSoup
 import errno
 import os
-import sys
 import re
+import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -49,7 +50,7 @@ def getmeetinfo(soup):
     if len(month) == 1:
         month = '0'+month
     year = year.strip()
-    date = '%s-%s-%s' % (year, month, day)
+    date = f'{year}-{month}-{day}'
 
     fed = 'CSST'
     country = 'Czechia'
@@ -80,7 +81,7 @@ def getresults(soup, meetcsv):
 
     descriptors = results_table.find_all('div', {'class': 'table-title'})
 
-    for ii in range(0, len(subtables)):
+    for ii in range(len(subtables)):
         if ii >= len(descriptors):
             break
         curr_table = subtables[ii]
@@ -148,7 +149,7 @@ def getresults(soup, meetcsv):
                 elif h == 'VT':  # I think this is a ranking?
                     csv.fieldnames += ['Ranking']
                 else:
-                    error("Unknown column name: \"%s\"" % h)
+                    error(f"Unknown column name: \"{h}\"")
 
             # These columns are added from the category rows.
             csv.fieldnames += ['Division', 'Sex', 'WeightClassKg']
@@ -291,8 +292,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -453,7 +453,7 @@ def main(dirname, url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -462,11 +462,11 @@ def main(dirname, url):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s dirname url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} dirname url")
         sys.exit(1)
     main(sys.argv[1], sys.argv[2])

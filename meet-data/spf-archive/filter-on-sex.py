@@ -2,8 +2,8 @@
 #
 # Rewrites entries.csv so that it only contains rows with Sex data.
 
-import sys
 import os
+import sys
 
 try:
     import oplcsv

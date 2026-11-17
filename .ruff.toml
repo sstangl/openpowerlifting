@@ -13,8 +13,11 @@ extend-select = [
 ]
 
 ignore = [
+  "BLE001",  # blind-except (allow except clauses that catch all exceptions)
   "D203",    # incorrect-blank-line-before-class
   "D213",    # multi-line-summary-second-line
   "E402",    # module-import-not-at-top-of-file (to append to sys.path before import)
+  "S110",    # try-except-pass
   "SIM114",  # if-with-same-arms (to allow divergent reasoning in comments)
+  "TRY002",  # raise-vanilla-class (allow raising Exception directly)
 ]

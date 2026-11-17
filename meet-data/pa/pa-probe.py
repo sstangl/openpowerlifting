@@ -4,9 +4,10 @@
 # Probes for new meets from Powerlifting Australia.
 # What a nice federation! Results are already in tables!
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -59,8 +60,8 @@ def getenteredurls(feddir):
     urls = set()
     for dirname, subdirs, files in os.walk(feddir):
         if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
+            with open(dirname + os.sep + 'URL') as fd:
+                for k in fd:
                     url = k.strip()
                     urls.add(url)
 
@@ -77,7 +78,7 @@ def main():
         meetlist = meetlist + getmeetlist(html)
 
     with open(FEDDIR + os.sep + 'URLLIST') as fd:
-        for k in fd.readlines():
+        for k in fd:
             meetlist.append(k.strip())
 
     entered = getenteredurls(FEDDIR)

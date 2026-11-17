@@ -8,10 +8,10 @@
 # This is also set up to be importable as a library, so that importation
 # scripts can use it directly.
 
-import oplcsv
-import sys
 import os
+import sys
 
+import oplcsv
 
 # Map of substitutions.
 COUNTRY_MAP = {

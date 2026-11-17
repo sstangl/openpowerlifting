@@ -4,11 +4,11 @@
 # Probes for new meets from the NSF.
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
 import urllib.parse
 
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -119,8 +119,8 @@ def getenteredurls():
     urls = []
     for dirname, subdirs, files in os.walk(FEDDIR):
         if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
+            with open(dirname + os.sep + 'URL') as fd:
+                for k in fd:
                     urls.append(k.strip())
     return urls
 

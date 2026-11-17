@@ -5,9 +5,10 @@
 # CPA posts all of their meets on a single HTML page. Thanks, CPA!
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

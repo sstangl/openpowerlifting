@@ -6,8 +6,8 @@
 
 import os
 import sys
-import urllib.request
 import urllib.parse
+import urllib.request
 
 
 class UnexpectedRedirect(Exception):
@@ -33,8 +33,8 @@ def getenteredurls(feddir):
     urls = set()
     for dirname, subdirs, files in os.walk(feddir):
         if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r', encoding='utf-8') as fd:
-                for k in fd.readlines():
+            with open(dirname + os.sep + 'URL', encoding='utf-8') as fd:
+                for k in fd:
                     urls.add(k.strip())
     return urls
 
@@ -100,9 +100,9 @@ def print_meets(fedstr, meetlist):
 
     try:
         for url in meetlist:
-            print("%s %s" % (fedstr, url.replace(' ', '%20')))
+            print("{} {}".format(fedstr, url.replace(' ', '%20')))
 
         if count > 3:
-            print("%s %d meets remaining." % (fedstr, count))
+            print(f"{fedstr} {count} meets remaining.")
     except BrokenPipeError:
         pass

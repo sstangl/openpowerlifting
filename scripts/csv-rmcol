@@ -7,8 +7,9 @@
 # Overwrites the input file.
 #
 
-from oplcsv import Csv
 import sys
+
+from oplcsv import Csv
 
 if len(sys.argv) < 3:
     print(' Usage: %s csvfile col1 col2 ...', file=sys.stderr)

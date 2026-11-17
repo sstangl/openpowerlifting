@@ -7,11 +7,12 @@
 # Outputs to stdout.
 #
 
-from oplcsv import Csv
 import sys
 
+from oplcsv import Csv
+
 if len(sys.argv) < 3:
-    print(' Usage: %s csv1 csv2 ...' % sys.argv[0], file=sys.stderr)
+    print(f' Usage: {sys.argv[0]} csv1 csv2 ...', file=sys.stderr)
     sys.exit(1)
 
 csv = Csv(sys.argv[1])

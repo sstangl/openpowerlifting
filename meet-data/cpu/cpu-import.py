@@ -3,12 +3,13 @@
 #
 # Adds a single meet from the CPU in the new-style database-generated format.
 
-from bs4 import BeautifulSoup
 import errno
-from meethash import meethash
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
+from meethash import meethash
 
 try:
     from oplcsv import Csv
@@ -173,7 +174,7 @@ def parsehtml(html):
                 elif 'BENCHPRESS' in cells[0].text:
                     current_event = 'B'
                 else:
-                    error("Unknown control row event: %s" % cells[0].text)
+                    error(f"Unknown control row event: {cells[0].text}")
 
                 # Equipment.
                 if 'UNEQUIPPED' in cells[0].text:
@@ -231,15 +232,15 @@ def parsehtml(html):
 
         else:
             for i, cell in enumerate(cells):
-                print("%d: %s" % (i, cell))
-            error("Unexpected row length: %d, debug information above" % num_cells)
+                print(f"{i}: {cell}")
+            error(f"Unexpected row length: {num_cells}, debug information above")
 
     return (meetcsv, entriescsv)
 
 
 def remove_empty_lift_columns(csv):
     def getemptycol(csv):
-        for i in range(0, len(csv.fieldnames)):
+        for i in range(len(csv.fieldnames)):
             if 'Squat' not in csv.fieldnames[i] and 'Bench' not in csv.fieldnames[i] \
                     and 'Deadlift' not in csv.fieldnames[i]:
                 continue
@@ -384,20 +385,20 @@ def main(url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     entriescsv.write_filename(dirname + os.sep + 'entries.csv')
     meetcsv.write_filename(dirname + os.sep + 'meet.csv')
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + '\n')
 
-    print("Imported into %s" % dirname)
+    print(f"Imported into {dirname}")
     return 0
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s <URL>" % sys.argv[0])
+        print(f" Usage: {sys.argv[0]} <URL>")
         sys.exit(1)
 
     main(sys.argv[1])

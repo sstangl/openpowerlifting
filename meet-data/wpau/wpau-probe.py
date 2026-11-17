@@ -4,11 +4,12 @@
 # Probes for new meets from the WPAU
 #
 
-from bs4 import BeautifulSoup
-import sys
-import os
 import datetime
-from os.path import join, realpath, dirname
+import os
+import sys
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

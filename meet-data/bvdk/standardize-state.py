@@ -2,8 +2,8 @@
 #
 # Helper script that reformats the State column to use proper abbreviations.
 
-import sys
 import os
+import sys
 
 try:
     from oplcsv import Csv

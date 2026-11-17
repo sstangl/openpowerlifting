@@ -5,9 +5,8 @@
 # Given that list, determine which meets haven't been entered yet.
 
 
-import sys
 import os
-
+import sys
 
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -25,8 +24,8 @@ def getmeetlist():
     listnames = ['URLLIST']
     meetlist = []
     for list in listnames:
-        with open(FEDDIR + os.sep + list, 'r') as fd:
-            for line in fd.readlines():
+        with open(FEDDIR + os.sep + list) as fd:
+            for line in fd:
                 meet = line.strip()
                 if len(meet) == 0 or meet.startswith("#"):
                     continue
@@ -38,8 +37,8 @@ def getenteredurls():
     urls = []
     for dirname, subdirs, files in os.walk(FEDDIR):
         if 'URL' in files:
-            with open(dirname + os.sep + 'URL', 'r') as fd:
-                for k in fd.readlines():
+            with open(dirname + os.sep + 'URL') as fd:
+                for k in fd:
                     k = k.strip()
                     if k not in urls:
                         urls.append(k)
@@ -65,7 +64,7 @@ def main():
                     return
 
     if count > 0:
-        print(color('[CPF] ') + "%d meets remaining." % count)
+        print(color('[CPF] ') + f"{count} meets remaining.")
 
 
 if __name__ == '__main__':

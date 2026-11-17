@@ -5,10 +5,11 @@
 # The FQD is part of the CPU, but maintains their own database and in practice
 # fails to upload meets to the national CPU database.
 
-from bs4 import BeautifulSoup
-import sys
 import os
-from os.path import join, realpath, dirname
+import sys
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

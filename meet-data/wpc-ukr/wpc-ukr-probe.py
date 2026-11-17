@@ -11,8 +11,8 @@ try:
 except ImportError:
     sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
         os.path.dirname(os.path.realpath(__file__)))), "scripts"))
-    import oplprobe
     import allpowerlifting_probe
+    import oplprobe
 
 WPC_UKR_URL = 'https://en.allpowerlifting.com/federations/WPC/WPC-UKR/'
 

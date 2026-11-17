@@ -37,23 +37,23 @@ SubstitutionMap = {
 
 EastAsianRanges = [
     # compatibility ideographs
-    {"from": ord(u"\u3300"), "to": ord(u"\u33ff")},
+    {"from": ord("\u3300"), "to": ord("\u33ff")},
     # compatibility ideographs
-    {"from": ord(u"\ufe30"), "to": ord(u"\ufe4f")},
+    {"from": ord("\ufe30"), "to": ord("\ufe4f")},
     # compatibility ideographs
-    {"from": ord(u"\uf900"), "to": ord(u"\ufaff")},
+    {"from": ord("\uf900"), "to": ord("\ufaff")},
     # compatibility ideographs
-    {"from": ord(u"\U0002F800"), "to": ord(u"\U0002fa1f")},
-    {"from": ord(u"\u30a0"), "to": ord(u"\u30ff")},          # Japanese Kana
+    {"from": ord("\U0002F800"), "to": ord("\U0002fa1f")},
+    {"from": ord("\u30a0"), "to": ord("\u30ff")},          # Japanese Kana
     # cjk radicals supplement
-    {"from": ord(u"\u2e80"), "to": ord(u"\u2eff")},
-    {"from": ord(u"\u4e00"), "to": ord(u"\u9fff")},
-    {"from": ord(u"\u3400"), "to": ord(u"\u4dbf")},
-    {"from": ord(u"\U00020000"), "to": ord(u"\U0002a6df")},
-    {"from": ord(u"\U0002a700"), "to": ord(u"\U0002b73f")},
-    {"from": ord(u"\U0002b740"), "to": ord(u"\U0002b81f")},
+    {"from": ord("\u2e80"), "to": ord("\u2eff")},
+    {"from": ord("\u4e00"), "to": ord("\u9fff")},
+    {"from": ord("\u3400"), "to": ord("\u4dbf")},
+    {"from": ord("\U00020000"), "to": ord("\U0002a6df")},
+    {"from": ord("\U0002a700"), "to": ord("\U0002b73f")},
+    {"from": ord("\U0002b740"), "to": ord("\U0002b81f")},
     # included as of Unicode 8.0
-    {"from": ord(u"\U0002b820"), "to": ord(u"\U0002ceaf")}
+    {"from": ord("\U0002b820"), "to": ord("\U0002ceaf")}
 ]
 
 
@@ -65,7 +65,7 @@ def sub_from(m, c):
 
 
 def is_eastasian(char):
-    return any([range["from"] <= ord(char) <= range["to"] for range in EastAsianRanges])
+    return any(range["from"] <= ord(char) <= range["to"] for range in EastAsianRanges)
 
 
 def get_username(name):
@@ -78,7 +78,7 @@ def get_username(name):
         ret = 'jp-'+''.join([str(ord(c))for c in name])
     else:  # Name is latin
         name_lower = name.lower()
-        name_ascii = map(lambda c: sub_from(SubstitutionMap, c), name_lower)
+        name_ascii = (sub_from(SubstitutionMap, c) for c in name_lower)
         name_alnum = filter(str.isalnum, name_ascii)
         ret = ''.join(name_alnum)
     return ret

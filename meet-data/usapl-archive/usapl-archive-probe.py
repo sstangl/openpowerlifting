@@ -5,9 +5,9 @@
 # Given that list, determine which meets haven't been entered yet.
 
 
-import sys
 import os
-from os.path import join, realpath, dirname
+import sys
+from os.path import dirname, join, realpath
 
 try:
     import oplprobe
@@ -28,8 +28,8 @@ def getmeetlist():
     listnames = ['URLLIST', 'URL-CA', 'URL-MA', 'URL-MI', 'URL-MS', 'URL-TX', 'URL-WA']
     meetlist = []
     for list in listnames:
-        with open(FEDDIR + os.sep + list, 'r') as fd:
-            meetlist = meetlist + [x.strip() for x in fd.readlines()]
+        with open(FEDDIR + os.sep + list) as fd:
+            meetlist = meetlist + [x.strip() for x in fd]
     return meetlist
 
 

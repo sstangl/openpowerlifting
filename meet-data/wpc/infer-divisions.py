@@ -2,8 +2,8 @@
 #
 # Tries to create a well-formatted Division column from surrounding information.
 
-import sys
 import os
+import sys
 
 try:
     import oplcsv
@@ -76,15 +76,15 @@ def main(filename):
                 fed = 'AWPC'
 
         if div not in DIVMAP:
-            print("DIVMAP is missing '%s'" % div)
+            print(f"DIVMAP is missing '{div}'")
             return
 
         div = DIVMAP[div]
 
         if len(div) == 2:
-            row[newdividx] = "%s_%s%s_%s_%s" % (sex, div[0], eqp, div[1], fed)
+            row[newdividx] = f"{sex}_{div[0]}{eqp}_{div[1]}_{fed}"
         else:
-            row[newdividx] = "%s_%s%s_%s" % (sex, div, eqp, fed)
+            row[newdividx] = f"{sex}_{div}{eqp}_{fed}"
 
     csv.write_filename(filename)
 

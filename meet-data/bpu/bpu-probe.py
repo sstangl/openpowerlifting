@@ -4,9 +4,10 @@
 # Probes for new British Powerlifting Union meets.
 # All results are helpfully posted on a single page.
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

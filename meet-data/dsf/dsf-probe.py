@@ -4,11 +4,11 @@
 # Probes for new meets from the NSF.
 
 
-from bs4 import BeautifulSoup
 import os
 import sys
 import urllib.parse
 
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

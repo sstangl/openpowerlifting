@@ -5,9 +5,9 @@
 # internal format.
 #
 
-import sys
 import os
 import shutil
+import sys
 
 try:
     from oplcsv import Csv
@@ -18,7 +18,7 @@ except ImportError:
 
 
 def error(msg):
-    print("Error: %s" % msg, file=sys.stderr)
+    print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
 
 
@@ -44,7 +44,7 @@ def assign_class(csv):
 
 def get_meet_name(csv):
     meet_info = [""]
-    for ii in range(0, 3):
+    for ii in range(3):
         if len(csv.rows[ii]) != 0:
             meet_info = csv.rows[ii][0].split('.')
             if len(meet_info) > 3:  # Looks like we've found the meet info
@@ -157,10 +157,10 @@ def fixup_total(csv):
 
 
 def assign_best(csv, liftname):
-    idx1 = csv.index('%s1Kg' % liftname)
-    idx2 = csv.index('%s2Kg' % liftname)
-    idx3 = csv.index('%s3Kg' % liftname)
-    bestidx = csv.index('Best3%sKg' % liftname)
+    idx1 = csv.index(f'{liftname}1Kg')
+    idx2 = csv.index(f'{liftname}2Kg')
+    idx3 = csv.index(f'{liftname}3Kg')
+    bestidx = csv.index(f'Best3{liftname}Kg')
 
     def weight(str):
         try:
@@ -233,7 +233,7 @@ def add_equipment(csv):
     # Check the field that usually has the meet name to see if it tells us the
     # equipment
     meet_info = [""]
-    for ii in range(0, 3):
+    for ii in range(3):
         if len(csv.rows[ii]) != 0:
             meet_info = csv.rows[ii][0].split('.')
             if len(meet_info) > 3:  # Looks like we've found the meet info
@@ -402,8 +402,8 @@ def standardize_bench_only(csv):
 
 def main(filename):
     csv = Csv()
-    with open(filename, 'r') as fd:
-        csv.rows = [x.strip().split(',') for x in fd.readlines()]
+    with open(filename) as fd:
+        csv.rows = [x.strip().split(',') for x in fd]
 
     # Fieldnames given for the detailed spreadsheet.
     if len(csv.rows[0]) in [21, 22]:
@@ -411,7 +411,7 @@ def main(filename):
     elif len(csv.rows[0]) in [12, 13, 14]:  # Bench only
         standardize_bench_only(csv)
     else:  # Leave the csv exactly the same as the original file
-        with open(filename, "r") as fd:
+        with open(filename) as fd:
             shutil.copyfileobj(fd, sys.stdout)
         return
 
@@ -420,6 +420,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
+        print(f" Usage: {sys.argv[0]} original.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

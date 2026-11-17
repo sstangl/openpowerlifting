@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # Gets the sheet names of an excel file
 
-import xlrd
 import sys
+
+import xlrd
 
 
 def getSheetName(file_name):
@@ -18,6 +19,6 @@ def getSheetName(file_name):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv > entries.csv" % sys.argv[0])
+        print(f" Usage: {sys.argv[0]} original.csv > entries.csv")
         sys.exit(1)
 sys.exit(getSheetName(sys.argv[1]))

@@ -9,7 +9,7 @@ from usernames import SubstitutionMap, sub_from
 
 def standardize_upper_ascii(s):
     s = s.lower()
-    s = ''.join(map(lambda c: sub_from(SubstitutionMap, c), s))
+    s = ''.join(sub_from(SubstitutionMap, c) for c in s)
     s = s.upper()
 
     # Uppercase-only changes.

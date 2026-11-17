@@ -7,9 +7,9 @@
 # This script uses the `glab` CLI tool to automate repetitive actions when dealing
 # with USPA data, allowing for faster importation.
 
+import os
 import subprocess
 import sys
-import os
 
 try:
     from oplcsv import Csv
@@ -32,7 +32,7 @@ issue = sys.argv[1]
 ###############################################################################
 
 # Connect to GitLab and download the textual description of the issue.
-res = subprocess.run(("glab issue view " + issue).split(), capture_output=True)
+res = subprocess.run(("glab issue view " + issue).split(), capture_output=True, check=True)
 assert res.returncode == 0
 body = res.stdout.decode('utf-8')
 
@@ -112,7 +112,7 @@ if len(day) == 1:
 # USPA meets are numbered sequentially. Numbers <= 2565 were assigned by the USPA.
 # At that point, they redesigned their website and made those numbers difficult to find.
 # So now, we just make up our own by adding one each time.
-res = subprocess.run("ls | sort -n | tail -n 1", shell=True, capture_output=True)
+res = subprocess.run("ls | sort -n | tail -n 1", shell=True, capture_output=True, check=True)
 folder_id = int(res.stdout.decode('utf-8').strip()) + 1
 os.system("mkdir " + str(folder_id))
 os.chdir(str(folder_id))
@@ -134,7 +134,7 @@ xlsx_url = "https://gitlab.com/openpowerlifting/opl-data" + xlsx_url
 xlsx_filename = xlsx_url.split('/')[-1]
 
 # Download the spreadsheet.
-res = subprocess.run(["wget", xlsx_url])
+res = subprocess.run(["wget", xlsx_url], check=True)
 assert res.returncode == 0
 
 ###############################################################################
@@ -160,7 +160,7 @@ meetcsv.write_filename("meet.csv")
 # Run our XLSX importation scripts.
 ###############################################################################
 
-res = subprocess.run(["../uspa-xlsx.sh", xlsx_filename])
+res = subprocess.run(["../uspa-xlsx.sh", xlsx_filename], check=True)
 if res.returncode == 0:
     os.system("rm " + xlsx_filename)
 

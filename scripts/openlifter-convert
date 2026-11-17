@@ -33,7 +33,7 @@ def separate_original(
 
     # when we write output lines, strip the existing newline
     # and explicitly write with LF
-    with open(input_path, 'rt') as input_f:
+    with open(input_path) as input_f:
 
         # OPL header
         _ = input_f.readline()

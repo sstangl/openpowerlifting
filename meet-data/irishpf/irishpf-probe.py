@@ -4,10 +4,11 @@
 # Probes the IrishPF website for any new meets.
 
 
-from bs4 import BeautifulSoup
-import sys
 import os
-from os.path import join, realpath, dirname
+import sys
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

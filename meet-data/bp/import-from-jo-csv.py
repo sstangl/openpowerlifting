@@ -31,7 +31,7 @@ def process_row(csv, dirs, row):
         (month, day, year) = row[csv.index('Date')].split('/')
         meetcsv.rows = [[
             "BP",
-            "%s-%s-%s" % (year, month.zfill(2), day.zfill(2)),
+            f"{year}-{month.zfill(2)}-{day.zfill(2)}",
             "Britain",
             "",
             "",
@@ -77,7 +77,7 @@ def main(filename):
     for row in csv.rows:
         meetnames.add(row[csv.index('Competition')])
 
-    dirs = dict()
+    dirs = {}
     for meetname in meetnames:
         meetcsv = Csv()
         meetcsv.fieldnames = ["Federation", "Date",
@@ -99,16 +99,14 @@ def main(filename):
     for row in csv.rows:
         process_row(csv, dirs, row)
 
-    num = 0
-    for meetname in sorted(list(meetnames)):
-        num += 1
+    for num, meetname in enumerate(sorted(meetnames)):
         dirname = '17' + str(num).zfill(2)
 
         (meetcsv, entriescsv, url, subfed) = dirs[meetname]
 
         # These aren't great names, but at least they'll be unique.
         if subfed:
-            dirname = "%s-%s" % (subfed, dirname)
+            dirname = f"{subfed}-{dirname}"
 
         os.mkdir(dirname)
 

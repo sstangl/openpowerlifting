@@ -5,11 +5,12 @@
 # Their data format is actually standardised!
 
 
-from bs4 import BeautifulSoup
 import errno
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -63,7 +64,7 @@ def getmeetinfo(soup):
 
     assert '-' in dashdate
     [day, month, year] = dashdate.split('-')
-    date = '%s-%s-%s' % (year, month, day)
+    date = f'{year}-{month}-{day}'
 
     fed = 'KRAFT'
     country = 'Iceland'
@@ -80,7 +81,7 @@ def expand_colspans(tr, enclosing_soup):
     ths = tr.find_all('th')
     for ii in range(len(ths)-1, -1, -1):
         if ths[ii].has_attr('colspan') and int(ths[ii]['colspan']) > 1:
-            for jj in range(0, (int(ths[ii]['colspan'])-1)):
+            for jj in range(int(ths[ii]['colspan'])-1):
                 blank_th = enclosing_soup.new_tag('th')
                 ths[ii].insert_after(blank_th)
     del ths[ii]['colspan']
@@ -178,7 +179,7 @@ def getresults(soup):
             elif h == '':
                 curr_csv.fieldnames += ['IGNORE']
             else:
-                error("Unknown column name: \"%s\"" % h)
+                error(f"Unknown column name: \"{h}\"")
 
         # These columns are added from the category rows.
         curr_csv.fieldnames += ['Division', 'Sex', 'WeightClassKg']
@@ -204,7 +205,7 @@ def getresults(soup):
                 if div:
                     divstate = div
                 else:
-                    error("Unknown state: \"%s\"" % row[0])
+                    error(f"Unknown state: \"{row[0]}\"")
 
             elif row != [] and row[0].strip() not in ['#', '']:
                 assert divstate
@@ -300,8 +301,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -422,21 +422,16 @@ def main(url, input_dir):
     # If after removing empty columns, only one lift is left, then that's a
     # Best3 column.
     remove_empty_cols_ignore_fieldname(entriescsv)
-    if 'Squat1Kg' in entriescsv.fieldnames:
-        if ('Squat2Kg' not in entriescsv.fieldnames and
-                'Squat3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index(
-                'Squat1Kg')] = 'Best3SquatKg'
-    if 'Bench1Kg' in entriescsv.fieldnames:
-        if ('Bench2Kg' not in entriescsv.fieldnames and
-                'Bench3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index(
-                'Bench1Kg')] = 'Best3BenchKg'
-    if 'Deadlift1Kg' in entriescsv.fieldnames:
-        if ('Deadlift2Kg' not in entriescsv.fieldnames and
+    if 'Squat1Kg' in entriescsv.fieldnames and ('Squat2Kg' not in entriescsv.fieldnames and
+            'Squat3Kg' not in entriescsv.fieldnames):
+        entriescsv.fieldnames[entriescsv.index('Squat1Kg')] = 'Best3SquatKg'
+    if 'Bench1Kg' in entriescsv.fieldnames and ('Bench2Kg' not in entriescsv.fieldnames and
+            'Bench3Kg' not in entriescsv.fieldnames):
+        entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'Best3BenchKg'
+    if 'Deadlift1Kg' in entriescsv.fieldnames and \
+            ('Deadlift2Kg' not in entriescsv.fieldnames and
                 'Deadlift3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index(
-                'Deadlift1Kg')] = 'Best3DeadliftKg'
+        entriescsv.fieldnames[entriescsv.index('Deadlift1Kg')] = 'Best3DeadliftKg'
 
     # Wilks will be automatically calculated later.
     # Feds get it wrong all the time.
@@ -467,7 +462,7 @@ def main(url, input_dir):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -476,10 +471,10 @@ def main(url, input_dir):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s url importdir" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url importdir")
     main(sys.argv[1], sys.argv[2])

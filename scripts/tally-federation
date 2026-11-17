@@ -8,8 +8,9 @@
 # Outputs to stdout.
 #
 
-from oplcsv import Csv
 import sys
+
+from oplcsv import Csv
 
 
 def main(fed, oplcsv):
@@ -23,7 +24,7 @@ def main(fed, oplcsv):
     csv.rows = list(filter(lambda row: row[fedidx] == fed, csv.rows))
 
     # Map from Year to (Name set).
-    year_map = dict()
+    year_map = {}
 
     # Collect data per-year.
     for row in csv.rows:
@@ -41,12 +42,12 @@ def main(fed, oplcsv):
         lifter_set = year_map[year]
         count = len(lifter_set)
 
-        print("%s: %u" % (year, count))
+        print(f"{year}: {count}")
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: %s <federation> <openpowerlifting.csv>" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} <federation> <openpowerlifting.csv>")
         sys.exit(1)
 
     main(sys.argv[1], sys.argv[2])

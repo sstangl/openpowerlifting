@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 import os
-import sys
-import subprocess
 import shutil
+import subprocess
+import sys
 import urllib.request
 from datetime import datetime
 
@@ -26,6 +26,7 @@ def run_goodlift_import(cid, temp_dir):
         cwd=OPL_DATA_ROOT,
         capture_output=True,
         text=True,
+        check=True,
     )
 
     if result.returncode != 0:
@@ -291,7 +292,7 @@ def main(cids):
             f"Results are in the {os.path.relpath(output_dir, SCRIPT_DIR)} directory."
         )
     except Exception as e:
-        print(f"An error occurred during processing: {str(e)}")
+        print(f"An error occurred during processing: {e!s}")
         if not os.listdir(output_dir):
             os.rmdir(output_dir)
             print(f"Removed empty output directory: {output_dir}")

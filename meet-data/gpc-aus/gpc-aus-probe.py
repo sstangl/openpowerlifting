@@ -5,13 +5,14 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
+import logging
 import os
 import sys
 import time
-import logging
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:

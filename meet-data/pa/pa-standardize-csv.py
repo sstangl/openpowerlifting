@@ -17,7 +17,7 @@ except ImportError:
 
 
 def error(msg):
-    print("Error: %s" % msg, file=sys.stderr)
+    print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
 
 
@@ -140,7 +140,7 @@ def remove_rows_by_empty_column(csv, colname):
 
     colidx = csv.index(colname)
     if colidx < 0:
-        error("Column %s not found in remove_rows_by_empty_column()." % colname)
+        error(f"Column {colname} not found in remove_rows_by_empty_column().")
 
     while True:
         idx = getemptyidx(csv, colidx)
@@ -241,7 +241,7 @@ def standardize_column_names(csv):
         elif col == 'WC':
             csv.fieldnames[i] = 'WeightClassKg'
         else:
-            error("Unknown column: \"%s\"" % col)
+            error(f"Unknown column: \"{col}\"")
 
 
 def isint(s):
@@ -332,7 +332,7 @@ def consume_first_column(csv):
                 event = 'D'
                 equipment = 'Single-ply'
             else:
-                error("Unknown state change in first column: \"%s\"" % row[0])
+                error(f"Unknown state change in first column: \"{row[0]}\"")
 
             row[0] = ''
 
@@ -384,8 +384,7 @@ def consume_old_format(csv):
             row[0] = ''
         # If no sex is specified, this is probabaly an unknown control row.
         elif not row[sexidx]:
-            error("Unknown state change in old-style first column: \"%s\"" %
-                  row[0])
+            error(f"Unknown state change in old-style first column: \"{row[0]}\"")
         else:
             assert equipment
             assert event
@@ -425,8 +424,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -528,6 +526,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
+        print(f" Usage: {sys.argv[0]} original.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

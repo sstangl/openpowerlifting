@@ -3,14 +3,18 @@
 # Import data from the AllPowerlifting website. This script should only be used
 # for meets where AllPowerlifting is the primary source.
 
-from bs4 import BeautifulSoup
 import errno
-from oplcsv import Csv
 import os
-import sys
-import urllib.request
 import re
 import subprocess
+import sys
+import urllib.request
+
+from bs4 import BeautifulSoup
+
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+from oplcsv import Csv
 
 scriptsdir = os.path.dirname(os.path.realpath(__file__))
 importdir = os.getcwd()
@@ -151,9 +155,9 @@ def getmeetinfo(soup):
         if "-" in day:
             day = day.split("-")[0]
 
-        for month_key in month_dict.keys():
+        for month_key, value in month_dict.items():
             if month.lower() in month_key:
-                month = month_dict[month_key]
+                month = value
                 break
         if len(day) == 1:
             day = '0' + day
@@ -375,7 +379,7 @@ def getpagedata(soup):
         elif h in ['Coach', 'Тренер', 'Trainer', 'Location']:
             csv.fieldnames += ['IGNORE']
         else:
-            error("Unknown column name: \"%s\"" % h)
+            error(f"Unknown column name: \"{h}\"")
 
     # These columns are added from the category rows.
     csv.fieldnames += ['WeightClassKg', 'Sex']
@@ -853,7 +857,7 @@ def main(url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -864,12 +868,12 @@ def main(url):
 
     if 'Name' not in entriescsv.fieldnames:
         subprocess.run([scriptsdir+os.sep+"calc-latin-names",
-                        importdir+os.sep+dirname+os.sep+"entries.csv"])
+                        importdir+os.sep+dirname+os.sep+"entries.csv"], check=True)
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url")
     main(sys.argv[1])

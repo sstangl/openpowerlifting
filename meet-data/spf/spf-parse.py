@@ -5,10 +5,11 @@
 # a standardized table instead of freeform text! So now it's easier to import
 # future results.
 
-from bs4 import BeautifulSoup
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
 
 try:
     from oplcsv import Csv
@@ -147,7 +148,7 @@ def fixequipment(csv):
         elif eq == '':
             pass  # This means copy from the row above, usually.
         else:
-            error("Unknown equipment: %s" % row[eqidx])
+            error(f"Unknown equipment: {row[eqidx]}")
 
 
 def fixdivision(csv):
@@ -181,5 +182,5 @@ def main(url):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url")
     main(sys.argv[1])

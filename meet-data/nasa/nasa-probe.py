@@ -5,10 +5,11 @@
 # All the results are on one page!
 
 
-from bs4 import BeautifulSoup
-import sys
 import os
-from os.path import join, realpath, dirname
+import sys
+from os.path import dirname, join, realpath
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -66,7 +67,7 @@ def main():
     if not quick or len(unentered) <= 5:
         oplprobe.print_meets(color('[NASA]'), unentered)
     else:
-        print(color('[NASA] ') + '%d meets remaining.' % len(unentered))
+        print(color('[NASA] ') + f"{len(unentered)} meets remaining.")
 
 
 if __name__ == '__main__':

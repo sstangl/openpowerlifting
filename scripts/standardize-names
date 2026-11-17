@@ -18,8 +18,9 @@
 
 # NEW! Now with error handling for missing files or erroneous lifter names.
 
-import oplcsv
 import os
+
+import oplcsv
 
 RED = "\u001b[31m"
 RESET = "\u001b[0m"
@@ -30,8 +31,8 @@ def load_names(datafilepath):
     try:
         h = {}
 
-        with open(datafilepath, "r", encoding="utf-8") as fd:
-            for line in fd.readlines():
+        with open(datafilepath, encoding="utf-8") as fd:
+            for line in fd:
                 names = line.split(",")
                 if len(names) < 2:
                     print(RED + f"error: invalid format in {datafilepath}:"

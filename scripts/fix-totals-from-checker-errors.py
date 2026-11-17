@@ -4,7 +4,7 @@ import sys
 from csv import DictReader, DictWriter
 
 # argv[1] is path to captured checker output
-with open(sys.argv[1], "rt") as in_f:
+with open(sys.argv[1]) as in_f:
     entries_file = None
     fix_map = {}
     for line in in_f:
@@ -26,7 +26,7 @@ with open(sys.argv[1], "rt") as in_f:
 for (entries_file, fixes,) in fix_map.items():
     fixed_entries = []
     print(f"Fixing {entries_file}")
-    with open(entries_file, "rt") as entries_f:
+    with open(entries_file) as entries_f:
         for (entry_i, entry,) in enumerate(DictReader(entries_f)):
             # 0th entry happens on line 2
             if len(fixes) > 0 and (entry_i + 2) == fixes[0]["line_num"]:
@@ -52,7 +52,7 @@ for (entries_file, fixes,) in fix_map.items():
                     fixed_entries.append(fixed_entry)
             else:
                 fixed_entries.append(entry)
-    with open(entries_file, "wt") as entries_f:
+    with open(entries_file, "w") as entries_f:
         dw = DictWriter(entries_f, fixed_entries[0].keys())
         dw.writeheader()
         dw.writerows(fixed_entries)

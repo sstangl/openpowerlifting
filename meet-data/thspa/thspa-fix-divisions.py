@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import oplcsv
-import sys
 import os
+import sys
 
+import oplcsv
 
 # Map of substitutions.
 DIVISION_MAP = {

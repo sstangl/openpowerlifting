@@ -6,17 +6,18 @@
 # stdout.
 #
 
-from bs4 import BeautifulSoup
 import sys
+
+from bs4 import BeautifulSoup
 
 
 def error(msg):
-    print("Error: %s" % msg, file=sys.stderr)
+    print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
 
 
 def main(filename):
-    with open(filename, 'r', encoding='windows-1252') as fd:
+    with open(filename, encoding='windows-1252') as fd:
         html = fd.read()
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -31,6 +32,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s results.html" % sys.argv[0], file=sys.stderr)
+        print(f" Usage: {sys.argv[0]} results.html", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

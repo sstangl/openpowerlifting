@@ -9,6 +9,7 @@
 #
 
 import sys
+
 from oplcsv import Csv
 
 
@@ -16,13 +17,13 @@ from oplcsv import Csv
 def internal_to_kg_string(s):
     try:
         # NOTE: SPF uses "2.2046". Greater accuracy actually makes it worse.
-        r = "{:.2f}".format(float(s) / 2.20462262)
+        r = f"{float(s) / 2.20462262:.2f}"
         r = r.replace('.00', '')
         if '.' in r and r[-1] == '0':
             r = r[:-1]
         return r
     except ValueError:
-        print("Field not a float: \"%s\"" % s, file=sys.stderr)
+        print(f"Field not a float: \"{s}\"", file=sys.stderr)
         sys.exit(1)
 
 
@@ -54,7 +55,7 @@ def main(filename):
         if 'LBS' not in field:
             continue
 
-        print(' Converting column "%s"' % field)
+        print(f' Converting column "{field}"')
         changed = True
 
         csv.fieldnames[i] = field.replace('LBS', 'Kg')
@@ -80,6 +81,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(' Usage: %s csvfile' % sys.argv[0], file=sys.stderr)
+        print(f' Usage: {sys.argv[0]} csvfile', file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

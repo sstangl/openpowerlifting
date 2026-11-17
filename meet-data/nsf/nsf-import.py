@@ -10,18 +10,16 @@
 #
 
 
-from bs4 import BeautifulSoup
 import errno
 import os
 import sys
 import urllib.request
 
-try:
-    from oplcsv import Csv
-except ImportError:
-    sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
-        os.path.dirname(os.path.realpath(__file__)))), "scripts"))
-    from oplcsv import Csv
+from bs4 import BeautifulSoup
+
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.realpath(__file__)))), "scripts"))
+from oplcsv import Csv
 
 
 def gethtml(url):
@@ -59,7 +57,7 @@ def getmeetinfo(soup):
     # The date is formatted as dd.mm.yyyy.
     assert '.' in dotdate
     [day, month, year] = dotdate.split('.')
-    date = '%s-%s-%s' % (year, month, day)
+    date = f'{year}-{month}-{day}'
 
     # Get the town.
     sted = tbody.find('td', text='Sted')
@@ -124,9 +122,9 @@ def getresults(soup):
         elif h == 'Poeng':
             csv.fieldnames += ['Wilks']
         elif h == '':
-            None
+            pass
         else:
-            error("Unknown column name: \"%s\"" % h)
+            error(f"Unknown column name: \"{h}\"")
 
     # These columns are added from the category rows.
     csv.fieldnames += ['Division', 'Sex']
@@ -160,7 +158,7 @@ def getresults(soup):
             elif 'rekrutt' in text:
                 divstate = text.capitalize()
             else:
-                error("Unknown state: \"%s\"" % row[0])
+                error(f"Unknown state: \"{row[0]}\"")
 
         else:
             assert divstate
@@ -171,7 +169,7 @@ def getresults(soup):
             row = []
             for td in tr.find_all('td'):
                 text = td.text
-                if not text == 'Diplom':
+                if text != 'Diplom':
                     c = td.get('class')
                     if c and 'underkjent' in c:  # Failed lift.
                         text = '-' + text
@@ -214,7 +212,7 @@ def fixequipment(csv):
         elif row[eqidx] == '':
             row[eqidx] = 'Single-ply'
         else:
-            error("Unknown equipment: \"%s\"" % row[eqidx])
+            error(f"Unknown equipment: \"{row[eqidx]}\"")
 
 
 # Attempts are given, but not the Best3SquatKg columns, etc.
@@ -234,8 +232,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -332,18 +329,16 @@ def main(url):
     # If after removing empty columns, only one lift is left, then that's a
     # Best3 column.
     remove_empty_cols_ignore_fieldname(entriescsv)
-    if 'Squat1Kg' in entriescsv.fieldnames:
-        if ('Squat2Kg' not in entriescsv.fieldnames and
-                'Squat3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index('Squat1Kg')] = 'Best3SquatKg'
-    if 'Bench1Kg' in entriescsv.fieldnames:
-        if ('Bench2Kg' not in entriescsv.fieldnames and
-                'Bench3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'Best3BenchKg'
-    if 'Deadlift1Kg' in entriescsv.fieldnames:
-        if ('Deadlift2Kg' not in entriescsv.fieldnames and
+    if 'Squat1Kg' in entriescsv.fieldnames and ('Squat2Kg' not in entriescsv.fieldnames and
+            'Squat3Kg' not in entriescsv.fieldnames):
+        entriescsv.fieldnames[entriescsv.index('Squat1Kg')] = 'Best3SquatKg'
+    if 'Bench1Kg' in entriescsv.fieldnames and ('Bench2Kg' not in entriescsv.fieldnames and
+            'Bench3Kg' not in entriescsv.fieldnames):
+        entriescsv.fieldnames[entriescsv.index('Bench1Kg')] = 'Best3BenchKg'
+    if 'Deadlift1Kg' in entriescsv.fieldnames and \
+        ('Deadlift2Kg' not in entriescsv.fieldnames and
                 'Deadlift3Kg' not in entriescsv.fieldnames):
-            entriescsv.fieldnames[entriescsv.index('Deadlift1Kg')] = 'Best3DeadliftKg'
+        entriescsv.fieldnames[entriescsv.index('Deadlift1Kg')] = 'Best3DeadliftKg'
 
     # Wilks will be automatically calculated later.
     # Feds get it wrong all the time.
@@ -376,7 +371,7 @@ def main(url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w') as fd:
         entriescsv.write(fd)
@@ -385,10 +380,10 @@ def main(url):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} url")
     main(sys.argv[1])

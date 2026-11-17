@@ -3,9 +3,10 @@
 #
 # Probes for new FPO meets from the official calendar.
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe

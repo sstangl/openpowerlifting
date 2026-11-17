@@ -4,8 +4,8 @@
 # Library for probing AllPowerlifting
 #
 
-from bs4 import BeautifulSoup
 import oplprobe
+from bs4 import BeautifulSoup
 
 
 def getmeets(html):

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-import oplcsv
 import sys
+
+import oplcsv
 
 
 def getcategory(csv, row):
@@ -60,7 +61,7 @@ def main(filename):
     for i in ['Division', 'Equipment', 'Sex', 'Event', 'BodyweightKg',
               'WeightClassKg', 'TotalKg']:
         if i not in csv.fieldnames:
-            print("Missing field: %s" % i, file=sys.stderr)
+            print(f"Missing field: {i}", file=sys.stderr)
             sys.exit(1)
 
     totalidx = csv.index('TotalKg')
@@ -88,9 +89,8 @@ def main(filename):
 
         # Get a list of all the rows in this category that placed.
         for row in csv.rows:
-            if getcategory(csv, row) == category:
-                if row[totalidx]:
-                    lifters.append(row)
+            if getcategory(csv, row) == category and row[totalidx]:
+                lifters.append(row)
 
         # Ignore DQs
         if len(lifters) == 0:
@@ -125,6 +125,6 @@ def main(filename):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s file.csv" % sys.argv[0], file=sys.stderr)
+        print(f"Usage: {sys.argv[0]} file.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1])

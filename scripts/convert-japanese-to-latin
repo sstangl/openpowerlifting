@@ -8,15 +8,16 @@
 # Each data file is formatted with one lifter per line, with the first name being
 # the Japanese form and the second the Latin.
 
-import oplcsv
 import os
+
+import oplcsv
 
 
 # Creates a hashmap keyed on misspellings.
 def load_names(datafilepath):
     h = {}
-    with open(datafilepath, 'r', encoding='utf-8') as fd:
-        for line in fd.readlines():
+    with open(datafilepath, encoding='utf-8') as fd:
+        for line in fd:
             names = line.split(',')
             assert len(names) == 2
 

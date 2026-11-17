@@ -5,13 +5,14 @@
 # Note that to use this script you will need Selenium installed
 # and geckodriver on your path.
 
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+import logging
 import os
 import sys
 import time
-import logging
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.remote.remote_connection import LOGGER
 
 try:
@@ -50,8 +51,7 @@ def getpages(url, pagerange):
         for page in pagerange:
             if page != 1:
                 driver.execute_script(
-                    "javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView',\
-                    'Page$%i')" % page)
+                    f"javascript:__doPostBack('ctl00$ContentPlaceHolder2$usersGridView','Page${page}')")
                 time.sleep(DELAY)
 
             pages.append(driver.page_source)

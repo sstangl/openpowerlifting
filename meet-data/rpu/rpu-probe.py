@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # vim: set ts=8 sts=4 et sw=4 tw=99:
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
@@ -20,8 +21,8 @@ URLS = ["http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/2015",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2019",
         "http://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2020",
         "https://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/protokoly-2022",
-        "https://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/"
-        "itogovye-protokoly-2021"]
+        ("https://russia-powerlifting.ru/sorevnovaniya/itogovye-protokoly/"
+        "itogovye-protokoly-2021")]
 BASEURL = "http://russia-powerlifting.ru"
 FEDDIR = os.path.dirname(os.path.realpath(__file__))
 

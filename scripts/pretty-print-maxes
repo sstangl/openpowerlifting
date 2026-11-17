@@ -13,8 +13,9 @@
 # can provide some more context for the lifter's attempt selection.
 #
 
-import oplcsv
 import sys
+
+import oplcsv
 
 
 def collect_maxes(name, csv):
@@ -64,7 +65,7 @@ def p(s):
 
 
 def lbs(f):
-    return "{:.1f}".format(f * 2.20462262)
+    return f"{f * 2.20462262:.1f}"
 
 
 def main(input_filename, oplcsv_filename):
@@ -73,23 +74,18 @@ def main(input_filename, oplcsv_filename):
 
     csv = oplcsv.Csv(oplcsv_filename)
 
-    print("%s\tSquat\tLBS\tBench\tLBS\tDL\tLBS\tTotal\tLBS" % ("Name".ljust(20)))
+    print("{}\tSquat\tLBS\tBench\tLBS\tDL\tLBS\tTotal\tLBS".format("Name".ljust(20)))
 
     for lifter in lifters:
         maxes = collect_maxes(lifter, csv)
         in_lbs = [lbs(x) for x in maxes]
         maxes = list(map(str, maxes))
 
-        print("%s\t%s\t(%s)\t%s\t(%s)\t%s\t(%s)\t%s\t(%s)" %
-              (lifter.ljust(20), p(maxes[0]), p(in_lbs[0]),
-               p(maxes[1]), p(in_lbs[1]),
-               p(maxes[2]), p(in_lbs[2]),
-               p(maxes[3]), p(in_lbs[3])))
+        print(f"{lifter.ljust(20)}\t{p(maxes[0])}\t({p(in_lbs[0])})\t{p(maxes[1])}\t({p(in_lbs[1])})\t{p(maxes[2])}\t({p(in_lbs[2])})\t{p(maxes[3])}\t({p(in_lbs[3])})")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s input openpowerlifting.csv" %
-              sys.argv[0], file=sys.stderr)
+        print(f"Usage: {sys.argv[0]} input openpowerlifting.csv", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1], sys.argv[2])

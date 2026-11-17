@@ -3,8 +3,8 @@
 #
 # Partially populates meet.csv from the original file
 
-import sys
 import csv
+import sys
 
 # Lets us share a codebase for all the feds that use this format
 fed_dict = {'INTERNATIONAL POWERLIFTING FEDERATION': 'IPF',
@@ -43,10 +43,9 @@ def remove_all(s, substrs):
 
 def main(*filenames):
 
-    original_file = open(filenames[0], 'r')
-    original_reader = csv.reader(original_file)
-    original = list(original_reader)
-    original_file.close()
+    with open(filenames[0]) as fd:
+        original_reader = csv.reader(fd)
+        original = list(original_reader)
 
     fed = original[0][0]
 
@@ -58,7 +57,7 @@ def main(*filenames):
 
     meet_info = []
     # Have a hunt around for the meet info
-    for ii in range(0, 3):
+    for ii in range(3):
         if len(original[ii]) != 0:
             meet_info = split_no_brackets(original[ii][0], '.')
             if len(meet_info) > 3:  # Looks like we've found the meet info
@@ -101,39 +100,34 @@ def main(*filenames):
         # extract more information
         if len(filenames) > 1:
             for filename in filenames[1:]:
-                original_file = open(filename, 'r')
-                original_reader = csv.reader(original_file)
-                original = list(original_reader)
+                with open(filename) as original_file:
+                    original_reader = csv.reader(original_file)
+                    original = list(original_reader)
 
-                for ii in range(0, 5):
-                    meet_info = split_no_brackets(original[ii][0], '.')
-                    if len(meet_info) > 3:  # Looks like we've found the meet info
-                        break
-                if meet_info != []:
-                    # Men and womens original are named under different meets
-                    # even though they were the same
-                    new_meet_name = meet_info[0]
-                    if new_meet_name != meet_name:
-                        men_text = [" mens", " Mens",
-                                    " Men's", " men's", "men"]
-                        women_text = [" womens", " Womens",
-                                      " Women's", " women's", "women"]
-                        if (any(text in meet_name for text in men_text) and
-                                any(text in new_meet_name for text in women_text)):
-                            meet_name = remove_all(meet_name, men_text)
-                        elif (any(text in meet_name for text in women_text) and
-                                any(text in new_meet_name for text in men_text)):
-                            meet_name = remove_all(meet_name, women_text)
-                    # Still need to deal with meets that cross over months
-                    new_meet_day = meet_info[2].split(
-                        '-')[0].strip()  # Date starts from first day
-                    new_meet_date = meet_info[-1] + '-' + \
-                        meet_info[-2] + '-' + new_meet_day
+                    for ii in range(5):
+                        meet_info = split_no_brackets(original[ii][0], '.')
+                        if len(meet_info) > 3:  # Looks like we've found the meet info
+                            break
+                    if meet_info != []:
+                        # Men and womens original are named under different meets
+                        # even though they were the same
+                        new_meet_name = meet_info[0]
+                        if new_meet_name != meet_name:
+                            men_text = [" mens", " Mens", " Men's", " men's", "men"]
+                            women_text = [" womens", " Womens", " Women's", " women's", "women"]
+                            if (any(text in meet_name for text in men_text) and
+                                    any(text in new_meet_name for text in women_text)):
+                                meet_name = remove_all(meet_name, men_text)
+                            elif (any(text in meet_name for text in women_text) and
+                                    any(text in new_meet_name for text in men_text)):
+                                meet_name = remove_all(meet_name, women_text)
+                        # Still need to deal with meets that cross over months
+                        new_meet_day = meet_info[2].split(
+                            '-')[0].strip()  # Date starts from first day
+                        new_meet_date = meet_info[-1] + '-' + \
+                            meet_info[-2] + '-' + new_meet_day
 
-                    if new_meet_date < meet_date:
-                        meet_date = new_meet_date
-
-                original_file.close()
+                        meet_date = min(meet_date, new_meet_date)
 
         meet_file.writerow([fed_code, meet_date, meet_country,
                             meet_state, meet_town, meet_name])
@@ -141,6 +135,6 @@ def main(*filenames):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print(" Usage: %s original.csv" % sys.argv[0], file=sys.stderr)
+        print(f" Usage: {sys.argv[0]} original.csv", file=sys.stderr)
         sys.exit(1)
     main(*sys.argv[1:])

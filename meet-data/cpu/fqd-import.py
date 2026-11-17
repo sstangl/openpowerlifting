@@ -3,12 +3,13 @@
 #
 # Adds a single meet from the FQD as if it were from the CPU database.
 
-from bs4 import BeautifulSoup
 import errno
-from meethash import meethash
 import os
 import sys
 import urllib.request
+
+from bs4 import BeautifulSoup
+from meethash import meethash
 
 try:
     from oplcsv import Csv
@@ -82,7 +83,7 @@ def parsehtml(html):
         'December': '12'
     }
     month = MONTHMAP[month_text]
-    date = "%s-%s-%s" % (year, month, day)
+    date = f"{year}-{month}-{day}"
 
     meetcsv = Csv()
     meetcsv.append_column('Federation')
@@ -146,7 +147,7 @@ def parsehtml(html):
         # Skip the first two rows: they're the header.
         for tr in table.find_all('tr')[2:]:
             # Construct a new row.
-            row = ['' for x in range(0, len(entriescsv.fieldnames))]
+            row = ['' for x in range(len(entriescsv.fieldnames))]
             row[entriescsv.index('Event')] = event
 
             for (i, td) in enumerate(tr.find_all('td')):
@@ -170,7 +171,7 @@ def parsehtml(html):
 
 def remove_empty_lift_columns(csv):
     def getemptycol(csv):
-        for i in range(0, len(csv.fieldnames)):
+        for i in range(len(csv.fieldnames)):
             if 'Squat' not in csv.fieldnames[i] and 'Bench' not in csv.fieldnames[i] \
                     and 'Deadlift' not in csv.fieldnames[i]:
                 continue
@@ -311,20 +312,20 @@ def main(url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     entriescsv.write_filename(dirname + os.sep + 'entries.csv')
     meetcsv.write_filename(dirname + os.sep + 'meet.csv')
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + '\n')
 
-    print("Imported into %s" % dirname)
+    print(f"Imported into {dirname}")
     return 0
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print(" Usage: %s <URL>" % sys.argv[0])
+        print(f" Usage: {sys.argv[0]} <URL>")
         sys.exit(1)
 
     main(sys.argv[1])

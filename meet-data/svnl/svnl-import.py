@@ -3,13 +3,14 @@
 #
 # Import script for SVNL
 
-from bs4 import BeautifulSoup
 import errno
 import os
-import sys
-import requests
-import urllib.parse
 import re
+import sys
+import urllib.parse
+
+import requests
+from bs4 import BeautifulSoup
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 \
@@ -181,7 +182,7 @@ def getmeetinfo(soup):
             year = '19'+year
         else:
             year = '20'+year
-    date = '%s-%s-%s' % (year.strip(), month.strip(), day.strip())
+    date = f'{year.strip()}-{month.strip()}-{day.strip()}'
     date = date.replace(',', '')
 
     fed = 'SVNL'
@@ -200,7 +201,7 @@ def expand_colspans(tr, enclosing_soup):
     tds = tr.find_all('td')
     for ii in range(len(tds)-1, -1, -1):
         if tds[ii].has_attr('colspan') and int(tds[ii]['colspan']) > 1:
-            for jj in range(0, (int(tds[ii]['colspan'])-1)):
+            for jj in range(int(tds[ii]['colspan'])-1):
                 blank_td = enclosing_soup.new_tag('td')
                 tds[ii].insert_after(blank_td)
             del tds[ii]['colspan']
@@ -215,7 +216,7 @@ def combine_header(trs):
     while not isinstance(enclosing_soup, BeautifulSoup):
         enclosing_soup = enclosing_soup.parent
 
-    for ii in range(0, len(trs)):
+    for ii in range(len(trs)):
         text = [x.text.strip()
                 for x in trs[ii].find_all('td') if x.text.strip() != '']
 
@@ -228,7 +229,7 @@ def combine_header(trs):
             bottom_tds = trs[ii+1].find_all('td')
 
             # Deal with rowspans
-            for jj in range(0, len(top_tds)):
+            for jj in range(len(top_tds)):
                 if top_tds[jj].has_attr('rowspan') and int(top_tds[jj]['rowspan']) > 1:
                     blank_td = enclosing_soup.new_tag('td')
                     if jj < len(bottom_tds):
@@ -241,7 +242,7 @@ def combine_header(trs):
             # Combine the header lines if they're split
             if (any('sij' in col.text.lower() for col in bottom_tds) or
                     bottom_tds[0].text.strip() == ''):
-                for jj in range(0, min(len(bottom_tds), len(top_tds))):
+                for jj in range(min(len(bottom_tds), len(top_tds))):
                     top_tds[jj].string = top_tds[jj].text.strip(
                     ) + " " + bottom_tds[jj].text.strip()
                 trs.pop(ii+1)
@@ -412,7 +413,7 @@ def getresults(soup, meet_name, url):
                     csv.fieldnames.append('IGNORE')
 
                 else:
-                    error("Unknown column name: \"%s\"" % h)
+                    error(f"Unknown column name: \"{h}\"")
 
             csv.fieldnames += ['Division']
 
@@ -464,7 +465,7 @@ def getresults(soup, meet_name, url):
                     [divstate, div_text] = get_division(div_text)
 
                     if len(div_text) != 0 and divstate == '':
-                        error("Unknown state: \"%s\"" % div_text)
+                        error(f"Unknown state: \"{div_text}\"")
 
         elif (len(text) > 3 and 'Joukkueen tulos' not in text
                 and 'Joukk. tulos' not in text):  # Lifter data
@@ -527,7 +528,6 @@ def getresults(soup, meet_name, url):
 
                 if col_idx == DivisionColumnIndex:
                     [divstate, div_text] = get_division(col_text)
-                    pass
                 col_idx = col_idx + 1
 
             lifter_data = lifter_data + [divstate]
@@ -589,7 +589,7 @@ def fixequipment(csv, meetcsv):
                 elif row[eqidx] == '':
                     row[eqidx] = 'Single-ply'
                 else:
-                    error("Unknown equipment: \"%s\"" % row[eqidx])
+                    error(f"Unknown equipment: \"{row[eqidx]}\"")
 
 # Change M/N  and M/W to M/F
 
@@ -840,8 +840,7 @@ def calc_best_lift(csv, col, attemptlist):
                 attempt = float(row[csv.index(k)])
             except ValueError:
                 attempt = 0
-            if attempt > best:
-                best = attempt
+            best = max(best, attempt)
         if best > 0:
             row[csv.index(col)] = str(best)
 
@@ -1006,7 +1005,7 @@ def main(dirname, url):
         if exception.errno != errno.EEXIST:
             raise
         else:
-            error("Directory '%s' already exists." % dirname)
+            error(f"Directory '{dirname}' already exists.")
 
     with open(dirname + os.sep + 'entries.csv', 'w', encoding='utf-8') as fd:
         entriescsv.write(fd)
@@ -1015,10 +1014,10 @@ def main(dirname, url):
     with open(dirname + os.sep + 'URL', 'w') as fd:
         fd.write(url + "\n")
 
-    print("Imported into %s." % dirname)
+    print(f"Imported into {dirname}.")
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: %s dirname url" % sys.argv[0])
+        print(f"Usage: {sys.argv[0]} dirname url")
     main(sys.argv[1], sys.argv[2])

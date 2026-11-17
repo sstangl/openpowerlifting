@@ -4,9 +4,10 @@
 # AAU posts all results to a single page.
 #
 
-from bs4 import BeautifulSoup
 import os
 import sys
+
+from bs4 import BeautifulSoup
 
 try:
     import oplprobe
