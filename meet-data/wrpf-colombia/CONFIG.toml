@@ -1,7 +1,8 @@
 # Configuration for the WRPF-Colombia.
 
 [options]
-    require_manual_disambiguation = true
+    valid_federations = ["WRPF-Colombia"]
+    require_manual_disambiguation = false
 
 [divisions]
     # OpenLifter-style divisions.
