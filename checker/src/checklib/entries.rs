@@ -889,6 +889,8 @@ fn check_weight_kg(s: &str, line: u64, header: Header, report: &mut Report) -> W
     // Disallow zeros.
     if s == "0" {
         report.error_on(line, format!("{header} cannot be zero"));
+    } else if s == "-0" {
+        report.error_on(line, format!("{header} cannot be negative zero"));
     } else if s.starts_with('0') {
         report.error_on(line, format!("{header} cannot start with 0 in '{s}'"));
     }
