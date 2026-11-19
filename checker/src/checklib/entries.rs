@@ -543,6 +543,17 @@ fn check_column_name(name: &str, line: u64, report: &mut Report) -> CompactStrin
         );
     }
 
+    // Names should not be all-uppercase. Detect the simple ASCII subset.
+    if s.len() > 5  // Ignore obvious initialized names and the empty string.
+        && s.chars()
+            .all(|c| c.is_ascii_uppercase() || c.is_ascii_punctuation() || c.is_ascii_whitespace())
+    {
+        report.error_on(
+            line,
+            format!("Name '{name}' must not be completely uppercase"),
+        )
+    }
+
     canonicalize_name_utf8(name).into()
 }
 
