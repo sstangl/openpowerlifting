@@ -1,6 +1,6 @@
 Name,Sex,Age,Country,Equipment,Division,BodyweightKg,WeightClassKg,Squat1Kg,Squat2Kg,Squat3Kg,Squat4Kg,Best3SquatKg,Bench1Kg,Bench2Kg,Bench3Kg,Bench4Kg,Best3BenchKg,Deadlift1Kg,Deadlift2Kg,Deadlift3Kg,Deadlift4Kg,Best3DeadliftKg,TotalKg,Event,BirthDate,Place
 Hollie Cullen,F,14,Australia,Sleeves,J14-16,51.6,52,80,87.5,-91,,87.5,30,35,-38,,35,75,85,88,90,88,210.5,SBD,,1
-Lily Hollister,F,15,Australia,Sleeves,J14-16,80.9,82.5,115,127.5,130,,130,47.5,52.5,-55,,52.5,130,145,-155,-0,145,327.5,SBD,,1
+Lily Hollister,F,15,Australia,Sleeves,J14-16,80.9,82.5,115,127.5,130,,130,47.5,52.5,-55,,52.5,130,145,-155,,145,327.5,SBD,,1
 Jorja Love,F,19,Australia,Sleeves,J17-19,67.5,67.5,100,110,115,,115,40,42.5,-45,,42.5,120,130,-132.5,,130,287.5,SBD,,1
 Holly Miller,F,17,Australia,Sleeves,J17-19,71,75,100,110,-117.5,,110,55,60,62.5,,62.5,145,155,162.5,,162.5,335,SBD,,1
 Stella Reid,F,19,Australia,Wraps,J17-19,72.5,75,117.5,125,132.5,,132.5,55,-60,-60,,55,130,140,-150,,140,327.5,SBD,,1
@@ -11,7 +11,7 @@ Alex McMullan,F,40,Australia,Wraps,M40-49,71.3,75,110,-115,115,,115,52.5,55,-57.
 Catherine Moylan,F,46,Australia,Sleeves,M40-49,87.9,90,105,117.5,122.5,,122.5,65,70,-72.5,,70,140,155,-160,,155,347.5,SBD,,1
 Jackelyn Hegger,F,52,Australia,Sleeves,M50-59,96.3,90+,100,107.5,112.5,-117.5,112.5,55,60,-62.5,,60,112.5,122.5,130,,130,302.5,SBD,,1
 Gayle Gorringe,F,62,Australia,Wraps,M60-69,81.8,82.5,132.5,140,-147.5,,140,65,70,-72.5,,70,135,142.5,150,152.5,150,360,SBD,,1
-Anna Down,F,24,Australia,Wraps,S24-39,55.4,56,95,105,-110,,105,55,57.5,60,,60,105,112.5,-115,-0,112.5,277.5,SBD,,1
+Anna Down,F,24,Australia,Wraps,S24-39,55.4,56,95,105,-110,,105,55,57.5,60,,60,105,112.5,-115,,112.5,277.5,SBD,,1
 Caitlin Mulligan,F,24,Australia,Sleeves,S24-39,59.1,60,145,157.5,-162.5,,157.5,72.5,-77.5,77.5,,77.5,140,155,165,170,165,400,SBD,,1
 Danielle Hansson,F,33,Australia,Wraps,S24-39,58,60,95,-100,100,,100,-62.5,62.5,-67.5,,62.5,112.5,117.5,-122.5,,117.5,280,SBD,,1
 Pieta Rice,F,24,Australia,Wraps,S24-39,61.9,67.5,-107.5,107.5,115,,115,47.5,52.5,55,,55,115,125,130,,130,300,SBD,,1
@@ -37,7 +37,7 @@ Lawson Roberts,M,17,Australia,Wraps,J17-19,86.9,90,180,200,210,,210,100,105,110,
 Harry Bartlett,M,18,Australia,Wraps,J17-19,84.3,90,195,-207.5,207.5,,207.5,102.5,107.5,-112.5,,107.5,215,230,235,,235,550,SBD,,2
 Tristan Fawdry,M,17,Australia,Sleeves,J17-19,88.3,90,110,120,130,,130,75,-85,85,,85,-190,-210,210,,210,425,SBD,,1
 Kayden Randall,M,22,Australia,Wraps,J20-23,,,,,,,,,,,,,,,,,,,SBD,,NS
-Josh Geeves,M,20,Australia,Wraps,J20-23,67.8,75,160,-180,-180,,160,90,-100,,-0,90,170,175,-185,,175,425,SBD,,1
+Josh Geeves,M,20,Australia,Wraps,J20-23,67.8,75,160,-180,-180,,160,90,-100,,,90,170,175,-185,,175,425,SBD,,1
 Jonty Lucas,M,20,Australia,Wraps,J20-23,99.5,100,220,230,235,,235,120,127.5,-135,,127.5,250,265,275,,275,637.5,SBD,,1
 Josh Bula,M,20,Australia,Sleeves,J20-23,95.2,100,170,185,-200,,185,125,132.5,-140,,132.5,190,210,227.5,,227.5,545,SBD,,1
 Toby Barnett,M,22,Australia,Wraps,J20-23,109.9,110,350,380,,,380,180,-187.5,187.5,,187.5,320,332.5,-340,,332.5,900,SBD,,1
