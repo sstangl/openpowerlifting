@@ -31,3 +31,4 @@
     sex = "F"
 
 [exemptions]
+	2601 = ["ExemptWeightClassConsistency", "ExemptDivision"] # No weightclasses and non-standard divisions used
