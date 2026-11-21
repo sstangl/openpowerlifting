@@ -1,3 +1,6 @@
+[options]
+    valid_federations = ["IDFPA"]
+
 [divisions]
     # Age in 100% RAW is determined by exact age on date of meet.
     open = {name = "Open", min = 0, max = 999}
