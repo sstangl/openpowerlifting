@@ -2,7 +2,7 @@
 
 [options]
     valid_federations = ["GPC-NZ"]
-    require_manual_disambiguation = true
+    require_manual_disambiguation = false
 
 [rulesets.default]
     ruleset = ["CombineRawAndWraps", "CombineSingleAndMulti"]
@@ -26,6 +26,7 @@
     ft3r = {name ="F-T3R", min=18, max=19, sex="F", equipment=["Raw","Wraps"]}
     mjr = {name ="M-JR", min=20, max=23, sex="M", equipment=["Raw","Wraps"]}
     fjr = {name ="F-JR", min=20, max=23, sex="F", equipment=["Raw","Wraps"]}
+    fje = {name ="F-JE", min=20, max=23, sex="F", equipment=["Single-ply","Multi-ply","Unlimited"]}
     msr = {name ="M-SR", min=33, max=39, sex="M", equipment=["Raw","Wraps"]}
     fsr = {name ="F-SR", min=33, max=39, sex="F", equipment=["Raw","Wraps"]}
     mm1r = {name ="M-M1R", min=40, max=44, sex="M", equipment=["Raw","Wraps"]}
