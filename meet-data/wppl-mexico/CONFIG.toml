@@ -1,6 +1,6 @@
 [options]
     valid_federations = ["WPPL-Mexico"]
-	require_manual_disambiguation = false
+    require_manual_disambiguation = false
 
 [divisions]
     open = {name ="Open",min=0,max=999}
