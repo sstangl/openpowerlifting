@@ -1,4 +1,4 @@
-{% import "build/static-asset-map" as statics %}
+{% include "build/static-asset-map" %}
 
 <!DOCTYPE html>
 <html lang="{{language}}">
@@ -17,7 +17,7 @@
   <meta name="description" content="{{page_description}}">
 
   {# Internal sources. #}
-  <link rel="stylesheet" type="text/css" href="/static/css/{{statics::style_css()}}"/>
+  <link rel="stylesheet" type="text/css" href="/static/css/{{<style_css />}}"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   {# Preload close icon to prevent blinking on mobile #}
   <link rel="preload" as="image" href="/static/images/close_icon.png">
@@ -35,7 +35,7 @@
   {# Main script, capable of initializing every kind of page. #}
   {# The kind of page is passed by templates in JS, by setting the global PAGE_KIND. #}
   {# If the page kind is unspecified, it just loads locale scripts. #}
-  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
+  <script defer src="/static/scripts/{{<main_js />}}"></script>
 </head>
 <body>
   <div id="mobile-wrapper">
@@ -81,7 +81,7 @@
 
       {% block footer_middle_content %}
         <a id="headerLogoMobile" class="mobile-header-logo-link" href="https://www.openpowerlifting.org">
-          <img class="header-logo" src="/static/images/{{statics::logo_compressed_svg()}}" alt="OpenPowerlifting"/>
+          <img class="header-logo" src="/static/images/{{<logo_compressed_svg />}}" alt="OpenPowerlifting"/>
         </a>
       {% endblock footer_middle_content %}
 

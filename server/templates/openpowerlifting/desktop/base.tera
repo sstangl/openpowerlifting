@@ -1,4 +1,4 @@
-{% import "build/static-asset-map" as statics %}
+{% include "build/static-asset-map" %}
 
 <!DOCTYPE html>
 <html lang="{{language}}">
@@ -13,7 +13,7 @@
   <meta name="description" content="{{page_description}}">
 
   {# Internal sources. #}
-  <link rel="stylesheet" type="text/css" href="/static/css/{{statics::style_css()}}"/>
+  <link rel="stylesheet" type="text/css" href="/static/css/{{<style_css />}}"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="OpenPowerlifting">
 
@@ -26,7 +26,7 @@
   {# Main script, capable of initializing every kind of page. #}
   {# The kind of page is passed by templates in JS, by setting the global PAGE_KIND. #}
   {# If the page kind is unspecified, it just loads locale scripts. #}
-  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
+  <script defer src="/static/scripts/{{<main_js />}}"></script>
 </head>
 <body>
   {# This isn't great. The Rankings page wants one huge Flexbox, and the other

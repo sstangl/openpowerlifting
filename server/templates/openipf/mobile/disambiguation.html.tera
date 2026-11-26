@@ -1,13 +1,5 @@
 {% extends "openipf/mobile/base" %}
 
-{% block footer_hack %}
-  <footer>
-{% endblock footer_hack %}
-
-{% block footer_hack_end %}
-  </footer>
-{% endblock footer_hack_end %}
-
 {% block controlsbutton %}
 {% endblock controlsbutton %}
 

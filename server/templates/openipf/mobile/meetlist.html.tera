@@ -9,14 +9,6 @@
   </script>
 {% endblock includes %}
 
-{% block footer_hack %}
-  <footer>
-{% endblock footer_hack %}
-
-{% block footer_hack_end %}
-  </footer>
-{% endblock footer_hack_end %}
-
 {% block controls %}
 <div id="controls-mobile-filters">
   {% include "openipf/widget-fedselect" %}

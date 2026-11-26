@@ -14,16 +14,7 @@
   </script>
 {% endblock includes %}
 
-{% block footer_hack %}
-  <footer>
-{% endblock footer_hack %}
-
-{% block footer_hack_end %}
-  </footer>
-{% endblock footer_hack_end %}
-
 {% block controls %}
-
     <div id="controls-mobile-filters">
       {% include "openpowerlifting/widget-fedselect" %}
       {% include "openpowerlifting/widget-nationalityselect" %}
@@ -42,11 +33,9 @@
       {% include "openpowerlifting/widget-ageselect" %}
       {% include "widget-yearselect" %}
     </div>
-
 {% endblock controls %}
 
 {% block body %}
-
   <div class="mixed-content-with-controls">
     <div id="selectedFilters" class="records-selected-filters"></div>
     {% for table in tables %}

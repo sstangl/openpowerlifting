@@ -40,7 +40,7 @@
     const translation_column_dots = "{{strings.columns.dots}}";
   </script>
 
-  <script defer src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>
+  <script defer src="/static/scripts/{{<slickgrid_min_js />}}"></script>
 {% endblock includes %}
 
 {# Zero out the mobile-content div. It's not used for Rankings. #}

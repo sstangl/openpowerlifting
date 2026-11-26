@@ -79,8 +79,8 @@ pub fn index(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/rankings", &cx),
-        Device::Mobile => Template::render("openipf/mobile/rankings", &cx),
+        Device::Desktop => Template::render("openipf/desktop/rankings.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/rankings.html", &cx),
     })
 }
 
@@ -107,8 +107,8 @@ pub fn rankings(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/rankings", &cx),
-        Device::Mobile => Template::render("openipf/mobile/rankings", &cx),
+        Device::Desktop => Template::render("openipf/desktop/rankings.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/rankings.html", &cx),
     })
 }
 
@@ -223,8 +223,8 @@ pub fn records(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/records", &cx),
-        Device::Mobile => Template::render("openipf/mobile/records", &cx),
+        Device::Desktop => Template::render("openipf/desktop/records.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/records.html", &cx),
     })
 }
 
@@ -323,8 +323,8 @@ pub fn lifter(
             }
 
             Some(Ok(match device {
-                Device::Desktop => Template::render("openipf/desktop/lifter", cx),
-                Device::Mobile => Template::render("openipf/mobile/lifter", cx),
+                Device::Desktop => Template::render("openipf/desktop/lifter.html", cx),
+                Device::Mobile => Template::render("openipf/mobile/lifter.html", cx),
             }))
         }
 
@@ -340,8 +340,8 @@ pub fn lifter(
             cx.urlprefix = local_prefix(&host);
 
             Some(Ok(match device {
-                Device::Desktop => Template::render("openipf/desktop/disambiguation", cx),
-                Device::Mobile => Template::render("openipf/mobile/disambiguation", cx),
+                Device::Desktop => Template::render("openipf/desktop/disambiguation.html", cx),
+                Device::Mobile => Template::render("openipf/mobile/disambiguation.html", cx),
             }))
         }
     }
@@ -391,8 +391,8 @@ pub fn meetlist(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/meetlist", &cx),
-        Device::Mobile => Template::render("openipf/mobile/meetlist", &cx),
+        Device::Desktop => Template::render("openipf/desktop/meetlist.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/meetlist.html", &cx),
     })
 }
 
@@ -465,8 +465,8 @@ pub fn meet(
     }
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/meet", &cx),
-        Device::Mobile => Template::render("openipf/mobile/meet", &cx),
+        Device::Desktop => Template::render("openipf/desktop/meet.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/meet.html", &cx),
     })
 }
 
@@ -484,8 +484,8 @@ pub fn status(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/status", &cx),
-        Device::Mobile => Template::render("openipf/mobile/status", &cx),
+        Device::Desktop => Template::render("openipf/desktop/status.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/status.html", &cx),
     })
 }
 
@@ -502,8 +502,8 @@ pub fn faq(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/faq", &cx),
-        Device::Mobile => Template::render("openipf/mobile/faq", &cx),
+        Device::Desktop => Template::render("openipf/desktop/faq.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/faq.html", &cx),
     })
 }
 
@@ -527,7 +527,7 @@ pub fn contact(
     cx.urlprefix = local_prefix(&host);
 
     Some(match device {
-        Device::Desktop => Template::render("openipf/desktop/contact", &cx),
-        Device::Mobile => Template::render("openipf/mobile/contact", &cx),
+        Device::Desktop => Template::render("openipf/desktop/contact.html", &cx),
+        Device::Mobile => Template::render("openipf/mobile/contact.html", &cx),
     })
 }

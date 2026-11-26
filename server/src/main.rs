@@ -127,8 +127,8 @@ fn rankings(
     let cx = pages::rankings::Context::new(opldb, &locale, &selection, &defaults, false)?;
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),
-        Device::Mobile => Template::render("openpowerlifting/mobile/rankings", &cx),
+        Device::Desktop => Template::render("openpowerlifting/desktop/rankings.html", &cx),
+        Device::Mobile => Template::render("openpowerlifting/mobile/rankings.html", &cx),
     })
 }
 
@@ -161,8 +161,8 @@ fn records(
     );
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/records", &context),
-        Device::Mobile => Template::render("openpowerlifting/mobile/records", &context),
+        Device::Desktop => Template::render("openpowerlifting/desktop/records.html", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/records.html", &context),
     })
 }
 
@@ -222,8 +222,8 @@ fn lifter(
                 None,
             );
             Some(Ok(match device {
-                Device::Desktop => Template::render("openpowerlifting/desktop/lifter", cx),
-                Device::Mobile => Template::render("openpowerlifting/mobile/lifter", cx),
+                Device::Desktop => Template::render("openpowerlifting/desktop/lifter.html", cx),
+                Device::Mobile => Template::render("openpowerlifting/mobile/lifter.html", cx),
             }))
         }
 
@@ -239,8 +239,12 @@ fn lifter(
                 &lifter_ids,
             );
             Some(Ok(match device {
-                Device::Desktop => Template::render("openpowerlifting/desktop/disambiguation", cx),
-                Device::Mobile => Template::render("openpowerlifting/mobile/disambiguation", cx),
+                Device::Desktop => {
+                    Template::render("openpowerlifting/desktop/disambiguation.html", cx)
+                }
+                Device::Mobile => {
+                    Template::render("openpowerlifting/mobile/disambiguation.html", cx)
+                }
             }))
         }
     }
@@ -301,8 +305,8 @@ fn meetlist(
     let cx = pages::meetlist::Context::new(opldb, &locale, &mselection, None);
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/meetlist", &cx),
-        Device::Mobile => Template::render("openpowerlifting/mobile/meetlist", &cx),
+        Device::Desktop => Template::render("openpowerlifting/desktop/meetlist.html", &cx),
+        Device::Mobile => Template::render("openpowerlifting/mobile/meetlist.html", &cx),
     })
 }
 
@@ -356,8 +360,8 @@ fn meet(
     );
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/meet", &context),
-        Device::Mobile => Template::render("openpowerlifting/mobile/meet", &context),
+        Device::Desktop => Template::render("openpowerlifting/desktop/meet.html", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/meet.html", &context),
     })
 }
 
@@ -373,8 +377,8 @@ fn status(
     let context = pages::status::Context::new(opldb, &locale, None);
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/status", &context),
-        Device::Mobile => Template::render("openpowerlifting/mobile/status", &context),
+        Device::Desktop => Template::render("openpowerlifting/desktop/status.html", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/status.html", &context),
     })
 }
 
@@ -389,8 +393,8 @@ fn faq(
     let context = pages::faq::Context::new(&locale);
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/faq", &context),
-        Device::Mobile => Template::render("openpowerlifting/mobile/faq", &context),
+        Device::Desktop => Template::render("openpowerlifting/desktop/faq.html", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/faq.html", &context),
     })
 }
 
@@ -412,8 +416,8 @@ fn contact(
     );
 
     Some(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/contact", &context),
-        Device::Mobile => Template::render("openpowerlifting/mobile/contact", &context),
+        Device::Desktop => Template::render("openpowerlifting/desktop/contact.html", &context),
+        Device::Mobile => Template::render("openpowerlifting/mobile/contact.html", &context),
     })
 }
 
@@ -446,8 +450,8 @@ fn index(
     let cx = pages::rankings::Context::new(opldb, &locale, &defaults, &defaults, false);
 
     Some(IndexReturn::Template(match device {
-        Device::Desktop => Template::render("openpowerlifting/desktop/rankings", &cx),
-        Device::Mobile => Template::render("openpowerlifting/mobile/rankings", &cx),
+        Device::Desktop => Template::render("openpowerlifting/desktop/rankings.html", &cx),
+        Device::Mobile => Template::render("openpowerlifting/mobile/rankings.html", &cx),
     }))
 }
 
@@ -700,7 +704,7 @@ fn rocket(opldb: ManagedOplDb) -> Rocket<Build> {
                 old_contact,
             ],
         )
-        .attach(Template::fairing())
+        .attach(rocket_dyn_templates::Templating::new())
         .register("/", catchers![not_found, internal_error])
         .attach(rocket::fairing::AdHoc::on_response(
             "Delete Server Header",

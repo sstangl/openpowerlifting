@@ -41,7 +41,7 @@
     const translation_column_wilks2020 = "{{strings.columns.wilks2020}}";
   </script>
 
-  <script defer src="/static/scripts/{{statics::slickgrid_min_js()}}"></script>
+  <script defer src="/static/scripts/{{<slickgrid_min_js />}}"></script>
 {% endblock includes %}
 
 {% block flexbox_hack %}

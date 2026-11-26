@@ -1,4 +1,4 @@
-{% import "build/static-asset-map" as statics %}
+{% include "build/static-asset-map" %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@ label {
 }
   </style>
 
-  <script defer src="/static/scripts/{{statics::checker_js()}}"></script>
+  <script defer src="/static/scripts/{{<checker_js />}}"></script>
 </head>
 <body>
   <h2>OpenPowerlifting Online Checker: "Clippy" Edition</h2>

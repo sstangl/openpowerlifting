@@ -1,4 +1,4 @@
-{% import "build/static-asset-map" as statics %}
+{% include "build/static-asset-map" %}
 
 <!DOCTYPE html>
 <html lang="{{language}}">
@@ -10,7 +10,7 @@
   <title>{{page_title}}</title>
 
   {# Internal sources. #}
-  <link rel="stylesheet" type="text/css" href="/static/css/{{statics::openipf_css()}}"/>
+  <link rel="stylesheet" type="text/css" href="/static/css/{{<openipf_css />}}"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="OpenIPF">
 
@@ -31,6 +31,6 @@
     {% block body %}{% endblock body %}
   {% block flexbox_hack_end %}{% endblock flexbox_hack_end %}
 
-  <script defer src="/static/scripts/{{statics::main_js()}}"></script>
+  <script defer src="/static/scripts/{{<main_js />}}"></script>
 </body>
 </html>
