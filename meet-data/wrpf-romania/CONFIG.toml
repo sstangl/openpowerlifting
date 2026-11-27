@@ -1,0 +1,38 @@
+# WRPF Romania: https://wrpfromania.ro/
+# Official WRPF age divisions; tested variants use a trailing T.
+# J10-12 is retained for Andreas Vasile (12), as specifically requested in review.
+
+[options]
+    valid_federations = ["WRPF-Romania"]
+
+[divisions]
+    open = {name = "Open", min=0, max=999}
+    j10_12 = {name = "J10-12", min=10, max=12}
+    t14_16 = {name = "T14-16", min=14, max=16}
+    t17_19 = {name = "T17-19", min=17, max=19}
+    j20_23 = {name = "J20-23", min=20, max=23}
+    m40_49 = {name = "M40-49", min=40, max=49}
+    m50_59 = {name = "M50-59", min=50, max=59}
+    m60_69 = {name = "M60-69", min=60, max=69}
+    m70_79 = {name = "M70-79", min=70, max=79}
+    m80_89 = {name = "M80-89", min=80, max=89}
+    opent = {name = "OpenT", min=0, max=999, tested="Yes"}
+    j10_12t = {name = "J10-12T", min=10, max=12, tested="Yes"}
+    t14_16t = {name = "T14-16T", min=14, max=16, tested="Yes"}
+    t17_19t = {name = "T17-19T", min=17, max=19, tested="Yes"}
+    j20_23t = {name = "J20-23T", min=20, max=23, tested="Yes"}
+    m40_49t = {name = "M40-49T", min=40, max=49, tested="Yes"}
+    m50_59t = {name = "M50-59T", min=50, max=59, tested="Yes"}
+    m60_69t = {name = "M60-69T", min=60, max=69, tested="Yes"}
+    m70_79t = {name = "M70-79T", min=70, max=79, tested="Yes"}
+    m80_89t = {name = "M80-89T", min=80, max=89, tested="Yes"}
+
+[weightclasses.default_M]
+    classes = ["52", "56", "60", "67.5", "75", "82.5", "90", "100", "110", "125", "140", "140+"]
+    date_range = ["2026-01-01", "9999-12-31"]
+    sex = "M"
+
+[weightclasses.default_F]
+    classes = ["44", "48", "52", "56", "60", "67.5", "75", "82.5", "90", "90+"]
+    date_range = ["2026-01-01", "9999-12-31"]
+    sex = "F"

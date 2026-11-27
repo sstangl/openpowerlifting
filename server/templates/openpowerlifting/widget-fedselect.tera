@@ -528,6 +528,7 @@
 
 <optgroup label="{{strings.country.romania}}">
   <option value="frpl" {% if selection.federation == "FRPL" %}selected{% endif %}>FRPL - Federatia Romana de Powerlifting [IPF]</option>
+  <option value="wrpf-romania" {% if selection.federation == "WRPF-Romania" %}selected{% endif %}>WRPF Romania</option>
 </optgroup>
 <optgroup label="{{strings.country.russia}}">
   <option value="bb" {% if selection.federation == "BB" %}selected{% endif %}>BB - Bogatyr Brotherhood [GPA]</option>

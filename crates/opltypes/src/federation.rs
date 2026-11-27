@@ -2125,6 +2125,11 @@ pub enum Federation {
     #[strum(to_string = "WRPF-Portugal", serialize = "wrpf-portugal")]
     WRPFPortugal,
 
+    /// Romanian WRPF affiliate.
+    #[serde(rename = "WRPF-Romania")]
+    #[strum(to_string = "WRPF-Romania", serialize = "wrpf-romania")]
+    WRPFRomania,
+
     /// Serbian WRPF affiliate.
     #[serde(rename = "WRPF-Serbia")]
     #[strum(to_string = "WRPF-Serbia", serialize = "wrpf-serbia")]
@@ -2748,6 +2753,7 @@ impl Federation {
             Federation::WRPFQatar => false,
             Federation::WRPFPeru => false,
             Federation::WRPFPortugal => false,
+            Federation::WRPFRomania => false,
             Federation::WRPFSerbia => false,
             Federation::WRPFSlovakia => false,
             Federation::WRPFSlovenia => false,
@@ -3253,6 +3259,7 @@ impl Federation {
             Federation::WRPFPOL => Some(Country::Poland),
             Federation::WRPFQatar => Some(Country::Qatar),
             Federation::WRPFPortugal => Some(Country::Portugal),
+            Federation::WRPFRomania => Some(Country::Romania),
             Federation::WRPFSerbia => Some(Country::Serbia),
             Federation::WRPFSlovakia => Some(Country::Slovakia),
             Federation::WRPFSlovenia => Some(Country::Slovenia),
@@ -3882,6 +3889,7 @@ impl Federation {
             Federation::WRPFPOL => Some(Federation::WRPF),
             Federation::WRPFQatar => Some(Federation::WRPF),
             Federation::WRPFPortugal => Some(Federation::WRPF),
+            Federation::WRPFRomania => Some(Federation::WRPF),
             Federation::WRPFSerbia => Some(Federation::WRPF),
             Federation::WRPFSlovakia => Some(Federation::WRPF),
             Federation::WRPFSlovenia => Some(Federation::WRPF),
@@ -4514,6 +4522,7 @@ impl Federation {
             Federation::WRPFPOL => PointsSystem::Wilks,
             Federation::WRPFQatar => PointsSystem::Wilks,
             Federation::WRPFPortugal => PointsSystem::Wilks,
+            Federation::WRPFRomania => PointsSystem::Wilks,
             Federation::WRPFSerbia => PointsSystem::Wilks,
             Federation::WRPFSlovakia => PointsSystem::Wilks,
             Federation::WRPFSlovenia => PointsSystem::Wilks,
