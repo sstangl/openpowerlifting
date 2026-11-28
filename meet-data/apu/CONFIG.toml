@@ -1,7 +1,8 @@
 # Configuration for the APU.
 
 [options]
-require_manual_disambiguation = true
+    valid_federations = ["APU", "ORPF"]  # ORPF likely an error?
+    require_manual_disambiguation = false
 
 [divisions]
 # IPF divisions.
